@@ -1,0 +1,2 @@
+# verticeqr
+Repo de VerticeQR
