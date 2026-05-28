@@ -74,6 +74,13 @@ const operations: Record<string, Op> = {
       return rows;
     },
   },
+  apply_migrations: {
+    description: "Aplica las migraciones pendientes ahora mismo.",
+    run: async () => {
+      const { applyPendingMigrations } = await import("@/lib/migrations");
+      return await applyPendingMigrations();
+    },
+  },
 };
 
 function checkAuth(req: Request): NextResponse | null {
