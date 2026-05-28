@@ -1,8 +1,5 @@
-import { readFile, readdir } from "node:fs/promises";
-import path from "node:path";
 import mysql from "mysql2/promise";
-
-const MIGRATIONS_DIR = path.join(process.cwd(), "db", "migrations");
+import { migrations } from "../../db/migrations";
 
 async function openConn() {
   return mysql.createConnection({
@@ -11,8 +8,9 @@ async function openConn() {
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-    // Necesario para que las migraciones puedan tener varias sentencias en un mismo archivo.
+    // Necesario para que una migración pueda contener varias sentencias.
     multipleStatements: true,
+    connectTimeout: 10_000,
   });
 }
 
@@ -31,42 +29,31 @@ export async function applyPendingMigrations(): Promise<
     const [rows] = await conn.query("SELECT name FROM _migrations");
     const appliedNames = new Set((rows as { name: string }[]).map((r) => r.name));
 
-    let files: string[];
-    try {
-      files = (await readdir(MIGRATIONS_DIR))
-        .filter((f) => f.endsWith(".sql"))
-        .sort();
-    } catch (e) {
-      console.warn("[migrations] No se pudo leer", MIGRATIONS_DIR, e);
-      return { applied: [], skipped: [] };
-    }
-
     const applied: string[] = [];
     const skipped: string[] = [];
 
-    for (const file of files) {
-      if (appliedNames.has(file)) {
-        skipped.push(file);
+    for (const { name, sql } of migrations) {
+      if (appliedNames.has(name)) {
+        skipped.push(name);
         continue;
       }
-      const sql = await readFile(path.join(MIGRATIONS_DIR, file), "utf8");
-      console.log(`[migrations] Aplicando ${file}`);
+      console.log(`[migrations] Aplicando ${name}`);
       try {
         await conn.beginTransaction();
         await conn.query(sql);
-        await conn.query("INSERT INTO _migrations (name) VALUES (?)", [file]);
+        await conn.query("INSERT INTO _migrations (name) VALUES (?)", [name]);
         await conn.commit();
-        applied.push(file);
-        console.log(`[migrations]   OK ${file}`);
+        applied.push(name);
+        console.log(`[migrations]   OK ${name}`);
       } catch (e) {
         await conn.rollback();
-        console.error(`[migrations]   FALLO ${file}`, e);
+        console.error(`[migrations]   FALLO ${name}`, e);
         throw e;
       }
     }
 
     if (applied.length === 0) {
-      console.log("[migrations] Nada pendiente");
+      console.log(`[migrations] Nada pendiente (saltadas: ${skipped.length})`);
     }
     return { applied, skipped };
   } finally {
