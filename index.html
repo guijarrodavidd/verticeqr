@@ -2,919 +2,203 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>El Fogón Paisa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VerticeQR · Demos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Boldonse&family=Bungee&family=Caveat:wght@500;600;700&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Fraunces:ital,wght@0,500;0,700;1,500;1,700&family=Manrope:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,500;0,600;1,500;1,600&family=JetBrains+Mono:wght@300;400;500&display=swap">
 <style>
   :root{
-    --bg:#efe1c4;            /* parchment cream */
-    --bg-deep:#e6d4b0;       /* darker cream for headers */
-    --card:#fbf4e0;          /* lighter cream card */
-    --paper:#f5e9cd;         /* input paper */
-    --ink:#1a1410;           /* ink */
-    --ink-soft:#3a2b1f;
-    --muted:#8a7757;
-    --line:#1a1410;          /* sharp black hairlines */
-    --line-soft:#c9b487;     /* secondary warm hairline */
-    --mustard:#e0a020;       /* primary accent */
-    --mustard-dark:#b77f15;
-    --granate:#7a2228;       /* deep burgundy — CTA */
-    --granate-dark:#5d1b1e;
-    --olive:#566834;
-    --olive-dark:#3e4926;
-    --copper:#b85a2a;
-    --hard-shadow:4px 4px 0 var(--ink);
-    --hard-shadow-sm:3px 3px 0 var(--ink);
-    --display:"Boldonse",ui-serif,Georgia,serif;
+    --bg:#0a0807;
+    --bg-2:#13110d;
+    --ink:#f3e7cd;
+    --ink-bright:#fffaeb;
+    --ink-soft:#8a7a5e;
+    --muted:#5a4e3a;
+    --line:#23201a;
+    --line-soft:#1e1c17;
+    --accent:#d9b04c;
+    --display:"Fraunces",ui-serif,Georgia,serif;
     --body:"Manrope",-apple-system,system-ui,sans-serif;
-    --mono:"DM Mono",ui-monospace,"SF Mono",monospace;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
   }
   *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-  html,body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;font-weight:500}
-  body{
-    padding-bottom:100px;max-width:520px;margin:0 auto;position:relative;overflow-x:hidden;
-    background-image:
-      radial-gradient(circle at 12% 0%, rgba(224,160,32,.18), transparent 38%),
-      radial-gradient(circle at 100% 88%, rgba(122,34,40,.10), transparent 42%),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .1 0 0 0 0 .08 0 0 0 0 .06 0 0 0 .12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;font-weight:400;min-height:100%}
+  body{position:relative;overflow-x:hidden}
+
+  /* ===== NAV ===== */
+  nav{position:sticky;top:0;z-index:40;background:rgba(10,8,7,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1100px;margin:0 auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .logo{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+  .logo b{font-family:var(--display);font-style:italic;font-weight:600;font-size:18px;color:var(--ink-bright);letter-spacing:-.3px;text-transform:lowercase}
+  .logo span{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;font-weight:400}
+  .nav-link{font-family:var(--mono);font-size:10px;color:var(--ink-soft);text-decoration:none;text-transform:uppercase;letter-spacing:1.5px;transition:.15s}
+  .nav-link:hover{color:var(--accent)}
+
+  /* ===== HERO ===== */
+  .hero{max-width:1100px;margin:0 auto;padding:120px 28px 60px;position:relative}
+  .hero-tag{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-bottom:32px;display:inline-block;opacity:0;animation:fadeIn .8s 1.4s forwards}
+  .hero-tag::before{content:"// ";color:var(--ink-soft)}
+  .hero h1{font-family:var(--display);font-size:clamp(40px,7vw,84px);font-weight:600;font-style:italic;line-height:.95;letter-spacing:-2px;color:var(--ink-bright);margin-bottom:24px;max-width:880px;opacity:0;animation:fadeUp 1s 1.6s forwards}
+  .hero h1 em{font-style:italic;color:var(--accent);font-weight:600}
+  .hero p{font-size:15.5px;line-height:1.55;color:var(--ink-soft);max-width:520px;font-weight:400;opacity:0;animation:fadeUp .9s 1.9s forwards}
+  @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+  @keyframes fadeUp{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
+
+  /* ===== SECTION LABEL ===== */
+  .sec-label{max-width:1100px;margin:0 auto;padding:0 28px 24px;display:flex;align-items:baseline;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line-soft);margin-bottom:0;padding-bottom:20px}
+  .sec-label-l{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:2px;text-transform:uppercase;font-weight:500}
+  .sec-label-r{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;font-weight:400}
+  .sec-label-r b{color:var(--accent);font-family:var(--display);font-style:italic;font-weight:600;font-size:13px;letter-spacing:-.2px}
+
+  /* ===== GRID DE DEMOS — minimal ===== */
+  .demos{max-width:1100px;margin:0 auto;padding:0 28px 100px;display:grid;grid-template-columns:repeat(3,1fr)}
+  @media(max-width:900px){.demos{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.demos{grid-template-columns:1fr}}
+  .card{background:transparent;border-bottom:1px solid var(--line-soft);border-right:1px solid var(--line-soft);padding:44px 28px 32px;position:relative;transition:background .25s,border-color .25s;display:flex;flex-direction:column;gap:0;text-decoration:none;color:inherit;min-height:240px}
+  .card:nth-child(3n){border-right:none}
+  @media(max-width:900px){.card:nth-child(3n){border-right:1px solid var(--line-soft)}.card:nth-child(2n){border-right:none}}
+  @media(max-width:600px){.card{border-right:none}.demos{grid-template-columns:1fr}}
+  .card:hover{background:rgba(217,176,76,.04)}
+  .card:hover .card-arrow{transform:translate(4px,-4px);opacity:1}
+  .card-eyebrow{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:2px;font-weight:500;margin-bottom:auto}
+  .card-title{margin-top:34px;font-family:var(--display);font-size:34px;font-weight:600;font-style:italic;color:var(--ink-bright);letter-spacing:-.5px;line-height:1.02}
+  /* Brand font per card */
+  .card.f-fogon .card-title{font-family:"Boldonse",serif;font-style:normal;font-weight:400;letter-spacing:-.5px;font-size:30px;text-transform:lowercase}
+  .card.f-sereno .card-title{font-family:"EB Garamond",serif;font-style:italic;font-weight:600;letter-spacing:-1.2px;font-size:46px;text-transform:lowercase}
+  .card.f-burger .card-title{font-family:"Bungee",sans-serif;font-style:normal;font-weight:400;letter-spacing:.5px;font-size:28px;text-transform:uppercase;color:#ff3a3a}
+  .card.f-pizza .card-title{font-family:"Caveat",cursive;font-style:normal;font-weight:700;letter-spacing:.3px;font-size:46px;line-height:.95;transform:rotate(-1.5deg);transform-origin:left;color:#e0c060}
+  .card.f-cafe .card-title{font-family:"Newsreader",serif;font-style:italic;font-weight:500;letter-spacing:-.5px;font-size:38px;text-transform:lowercase}
+  .card.f-magma .card-title{font-family:"Abril Fatface",serif;font-style:normal;font-weight:400;letter-spacing:.5px;font-size:38px;text-transform:lowercase;color:#a82c14}
+  .card-arrow{position:absolute;top:36px;right:28px;color:var(--ink-soft);font-family:var(--mono);font-size:14px;font-weight:400;transition:transform .35s cubic-bezier(.5,1.4,.4,1),opacity .25s;opacity:.5}
+
+  /* ===== SCROLL REVEAL ===== */
+  .card{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.5,0,.15,1),transform .8s cubic-bezier(.5,0,.15,1),background .25s,border-color .25s}
+  .card.in-view{opacity:1;transform:translateY(0)}
+  .card.in-view{transition-delay:calc(var(--i,0) * 70ms)}
+
+  /* ===== INTRO CURTAIN ===== */
+  .intro-curtain{position:fixed;inset:0;z-index:300;background:var(--bg);pointer-events:none;animation:curtainOut 1.2s .6s cubic-bezier(.76,0,.24,1) forwards;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .intro-mark{font-family:var(--display);font-size:72px;font-style:italic;font-weight:600;color:var(--ink-bright);letter-spacing:-1.5px;line-height:.9;opacity:0;animation:markIn .9s cubic-bezier(.5,1.3,.4,1) forwards}
+  @keyframes markIn{0%{opacity:0;transform:translateY(14px) scale(.96)}100%{opacity:1;transform:translateY(0) scale(1)}}
+  @keyframes curtainOut{0%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 100% 0)}}
+
+  /* ===== FOOTER ===== */
+  footer{max-width:1100px;margin:60px auto 50px;padding:24px 28px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--muted);font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:400}
+
+  /* ===== MOBILE ===== */
+  @media(max-width:600px){
+    .nav-inner{padding:14px 20px}
+    .logo b{font-size:16px}
+    .logo span{font-size:8.5px;letter-spacing:1.2px}
+    .nav-link{font-size:9.5px;letter-spacing:1.2px}
+    .hero{padding:60px 20px 36px}
+    .hero-tag{font-size:9.5px;letter-spacing:1.5px;margin-bottom:22px}
+    .hero h1{font-size:42px;letter-spacing:-1.2px;margin-bottom:20px}
+    .hero p{font-size:14.5px;line-height:1.5}
+    .sec-label{padding:0 20px 16px}
+    .sec-label-l, .sec-label-r{font-size:9px;letter-spacing:1.5px}
+    .sec-label-r b{font-size:12px}
+    .demos{padding:0 20px 70px}
+    .card{padding:28px 20px 24px;min-height:160px}
+    .card-eyebrow{font-size:8.5px;letter-spacing:1.6px}
+    .card-arrow{top:24px;right:20px;font-size:13px}
+    .card-title{margin-top:24px;font-size:30px}
+    .card.f-fogon .card-title{font-size:26px}
+    .card.f-sereno .card-title{font-size:38px;letter-spacing:-1px}
+    .card.f-burger .card-title{font-size:24px;letter-spacing:.3px}
+    .card.f-pizza .card-title{font-size:38px}
+    .card.f-cafe .card-title{font-size:32px}
+    .card.f-magma .card-title{font-size:32px}
+    .intro-mark{font-size:54px}
+    footer{margin:30px auto;padding:20px 20px 26px;font-size:9.5px}
   }
-
-  /* ===== HEADER : MASTHEAD ===== */
-  header{position:sticky;top:0;z-index:40;background:var(--bg-deep);border-bottom:2px solid var(--ink)}
-  .head-top{display:flex;align-items:stretch;justify-content:space-between;padding:14px 18px 12px;gap:12px}
-  .brand{display:flex;align-items:center;gap:10px;min-width:0;flex:1}
-  .brand-mark{flex:0 0 38px;width:38px;height:38px;background:var(--mustard);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:18px;color:var(--ink);line-height:1;letter-spacing:-1px;box-shadow:var(--hard-shadow-sm);transform:rotate(-2deg)}
-  .brand-text{display:flex;flex-direction:column;line-height:.95;min-width:0}
-  .brand h1{font-family:var(--display);font-size:18px;font-weight:400;letter-spacing:-.2px;color:var(--ink);text-transform:uppercase}
-  .brand span{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);margin-top:4px;text-transform:uppercase;letter-spacing:.6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .head-right{display:flex;align-items:center;gap:8px;flex:0 0 auto}
-  .mesa{display:flex;align-items:center;gap:6px;background:var(--ink);color:var(--mustard);padding:7px 11px;border:2px solid var(--ink);font-family:var(--mono);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
-  .mesa strong{color:#fff;font-weight:500}
-  .mesa svg{width:12px;height:12px}
-
-  /* ===== LANG SELECTOR ===== */
-  .lang{position:relative;flex:0 0 auto}
-  .lang-btn{display:flex;align-items:center;gap:5px;background:var(--card);border:2px solid var(--ink);padding:6px 9px;font-family:var(--mono);font-size:11px;font-weight:500;color:var(--ink);cursor:pointer;text-transform:uppercase}
-  .lang-btn .fl{font-size:14px;line-height:1}
-  .lang-btn .ar{font-size:9px}
-  .lang-menu{position:absolute;top:calc(100% + 6px);right:0;background:var(--card);border:2px solid var(--ink);box-shadow:var(--hard-shadow);padding:6px;min-width:150px;opacity:0;transform:translateY(-6px);pointer-events:none;transition:.16s;z-index:50}
-  .lang-menu.open{opacity:1;transform:none;pointer-events:auto}
-  .lang-opt{display:flex;align-items:center;gap:10px;padding:9px 11px;font-size:13px;font-weight:600;cursor:pointer;color:var(--ink)}
-  .lang-opt .fl{font-size:16px}
-  .lang-opt:active{background:var(--bg)}
-  .lang-opt.active{background:var(--mustard);color:var(--ink)}
-
-  /* ===== TABS ===== */
-  .tabs{display:flex;gap:0;overflow-x:auto;padding:0 18px 14px;scrollbar-width:none;background:var(--bg-deep)}
-  .tabs::-webkit-scrollbar{display:none}
-  .tab{flex:0 0 auto;border:none;background:transparent;color:var(--ink-soft);padding:6px 14px 8px;font-family:var(--mono);font-size:11px;font-weight:500;cursor:pointer;text-transform:uppercase;letter-spacing:.8px;white-space:nowrap;border-bottom:3px solid transparent;transition:.18s}
-  .tab.active{color:var(--ink);border-bottom-color:var(--granate);font-weight:500}
-  .tab:first-child{padding-left:0}
-
-  main{padding:18px 18px 24px}
-
-  /* ===== SECTION TITLE ===== */
-  .sec-title{margin:32px 0 16px;display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;padding-bottom:10px;border-bottom:2px solid var(--ink);position:relative}
-  .sec-title:first-of-type{margin-top:8px}
-  .sec-title::before{content:attr(data-num);font-family:var(--mono);font-size:11px;color:var(--granate);font-weight:500;letter-spacing:.5px;align-self:flex-start;padding-top:6px}
-  .sec-title-text{font-family:var(--display);font-size:26px;font-weight:400;color:var(--ink);text-transform:uppercase;letter-spacing:-.5px;line-height:1;flex:1}
-  .promo-tag{font-family:var(--mono);font-size:10px;font-weight:500;color:var(--ink);background:var(--mustard);padding:5px 10px;border:2px solid var(--ink);letter-spacing:.5px;text-transform:uppercase;align-self:center;transform:rotate(-2deg);animation:wiggle 3s ease-in-out infinite}
-  @keyframes wiggle{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
-
-  /* ===== DRINK BANNER ===== */
-  .drink-banner{display:flex;align-items:center;gap:14px;background:var(--olive);color:#f6f1df;border:2px solid var(--ink);padding:14px 16px;margin:0 0 18px;box-shadow:var(--hard-shadow);position:relative}
-  .drink-banner.hide{display:none}
-  .db-ic{flex:0 0 42px;width:42px;height:42px;background:var(--mustard);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center}
-  .db-ic svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:2.2}
-  .db-txt h4{font-family:var(--display);font-size:14px;font-weight:400;text-transform:uppercase;letter-spacing:.3px;color:#fff}
-  .db-txt p{font-family:var(--mono);font-size:11px;color:#e8dfb8;margin-top:2px;line-height:1.4;letter-spacing:.2px}
-
-  /* ===== ITEM CARD : MERCADO LABEL ===== */
-  .item{display:flex;gap:14px;background:var(--card);border:2px solid var(--ink);padding:14px;margin-bottom:16px;box-shadow:var(--hard-shadow);cursor:pointer;transition:transform .12s,box-shadow .12s;position:relative}
-  .item:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
-  .item.soldout{opacity:.55;cursor:default}
-  .item.soldout .add,.item.soldout .qty-ctrl{display:none}
-  .item.soldout .item-foot{justify-content:flex-start}
-  .soldout-tag{font-family:var(--mono);font-size:10px;font-weight:500;color:var(--card);background:var(--ink);padding:5px 10px;border:1.5px solid var(--ink);letter-spacing:.5px;text-transform:uppercase;margin-left:auto}
-  .dt-soldout{display:inline-block;font-family:var(--mono);font-size:11px;color:var(--card);background:var(--ink);padding:6px 12px;border:2px solid var(--ink);margin-top:12px;letter-spacing:.5px;text-transform:uppercase}
-  .dt-add.disabled{background:var(--muted);color:var(--card);cursor:not-allowed;box-shadow:none}
-  .item.flash{animation:flash .55s}
-  @keyframes flash{0%{background:var(--card)}30%{background:var(--mustard)}100%{background:var(--card)}}
-  .item-img{flex:0 0 92px;width:92px;height:92px;background:var(--paper);border:2px solid var(--ink);overflow:hidden;position:relative}
-  .item-img img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.03)}
-  .fav{position:absolute;top:-8px;left:-8px;background:var(--granate);color:var(--mustard);font-family:var(--mono);font-size:9px;font-weight:500;padding:4px 8px;border:2px solid var(--ink);letter-spacing:.5px;transform:rotate(-6deg);box-shadow:2px 2px 0 var(--ink);z-index:2}
-  .item-body{flex:1;min-width:0;display:flex;flex-direction:column}
-  .item-name{font-family:var(--display);font-size:16px;font-weight:400;letter-spacing:-.2px;line-height:1.1;color:var(--ink);text-transform:uppercase}
-  .item-desc{font-size:12.5px;color:var(--ink-soft);margin-top:6px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:500}
-  .item-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:10px;border-top:1px dashed var(--line-soft)}
-  .price{font-family:var(--mono);font-size:15px;font-weight:500;color:var(--ink);letter-spacing:-.3px}
-  .add{border:2px solid var(--ink);background:var(--mustard);color:var(--ink);width:38px;height:34px;font-size:22px;font-weight:400;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.12s;line-height:1;box-shadow:2px 2px 0 var(--ink);font-family:var(--display)}
-  .add:active{transform:translate(2px,2px);box-shadow:none}
-  .qty-ctrl{display:flex;align-items:center;gap:10px;background:var(--mustard);border:2px solid var(--ink);padding:2px 3px;box-shadow:2px 2px 0 var(--ink)}
-  .qty-ctrl button{border:none;background:transparent;color:var(--ink);width:28px;height:28px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;font-family:var(--display);font-weight:400}
-  .qty-ctrl button:active{background:var(--ink);color:var(--mustard)}
-  .qty-ctrl span{font-family:var(--mono);font-size:13px;font-weight:500;min-width:14px;text-align:center;color:var(--ink)}
-
-  /* ===== CART BAR ===== */
-  .cart-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;padding:12px 18px calc(12px + env(safe-area-inset-bottom));background:var(--bg-deep);border-top:2px solid var(--ink);z-index:45;transition:transform .3s}
-  .cart-bar.hidden{transform:translateX(-50%) translateY(120%)}
-  .cart-btn{width:100%;border:2px solid var(--ink);background:var(--granate);color:var(--mustard);padding:15px 18px;font-family:var(--display);font-size:15px;font-weight:400;cursor:pointer;display:flex;align-items:center;justify-content:space-between;text-transform:uppercase;letter-spacing:.3px;box-shadow:var(--hard-shadow)}
-  .cart-btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
-  .cart-count{background:var(--mustard);color:var(--ink);font-family:var(--mono);font-size:12px;font-weight:500;padding:3px 9px;border:1.5px solid var(--ink);min-width:26px;text-align:center}
-  .cart-left{display:flex;align-items:center;gap:10px}
-  #cartTotal{font-family:var(--mono);font-size:14px;font-weight:500;color:#fff}
-
-  /* ===== OVERLAY ===== */
-  .overlay{position:fixed;inset:0;background:rgba(26,20,16,.5);z-index:50;opacity:0;pointer-events:none;transition:.25s}
-  .overlay.open{opacity:1;pointer-events:auto}
-
-  /* ===== DETALLE ===== */
-  .detail{position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);width:100%;max-width:520px;max-height:92vh;background:var(--bg);border-top:3px solid var(--ink);z-index:58;transition:transform .32s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;overflow:hidden}
-  .detail.open{transform:translateX(-50%) translateY(0)}
-  .dt-imgwrap{position:relative;width:100%;height:240px;background:var(--paper);flex:0 0 auto;border-bottom:2px solid var(--ink)}
-  .dt-imgwrap img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.04)}
-  .dt-close{position:absolute;top:14px;right:14px;background:var(--card);border:2px solid var(--ink);width:38px;height:38px;font-size:20px;cursor:pointer;color:var(--ink);display:flex;align-items:center;justify-content:center;line-height:1;box-shadow:var(--hard-shadow-sm);font-family:var(--display)}
-  .dt-close:active{transform:translate(2px,2px);box-shadow:none}
-  .dt-fav{position:absolute;top:16px;left:16px;background:var(--granate);color:var(--mustard);font-family:var(--mono);font-size:10px;font-weight:500;padding:6px 12px;border:2px solid var(--ink);letter-spacing:.5px;transform:rotate(-4deg);box-shadow:var(--hard-shadow-sm)}
-  .dt-body{padding:22px 22px;overflow-y:auto;flex:1}
-  .dt-name{font-family:var(--display);font-size:28px;font-weight:400;letter-spacing:-.6px;line-height:1.02;color:var(--ink);text-transform:uppercase}
-  .dt-price{font-family:var(--mono);font-size:22px;font-weight:500;color:var(--granate);margin-top:12px;display:inline-block;padding:4px 10px;background:var(--mustard);border:2px solid var(--ink);box-shadow:2px 2px 0 var(--ink)}
-  .dt-desc{font-size:14.5px;color:var(--ink-soft);line-height:1.6;margin-top:18px;font-weight:500}
-  .dt-foot{padding:14px 22px calc(18px + env(safe-area-inset-bottom));border-top:2px solid var(--ink);background:var(--card);display:flex;align-items:center;gap:12px}
-  .dt-qty{display:flex;align-items:center;gap:12px;background:var(--mustard);border:2px solid var(--ink);padding:6px 8px;box-shadow:2px 2px 0 var(--ink)}
-  .dt-qty button{border:none;background:transparent;color:var(--ink);width:32px;height:32px;font-size:22px;cursor:pointer;line-height:1;font-family:var(--display)}
-  .dt-qty button:active{background:var(--ink);color:var(--mustard)}
-  .dt-qty span{font-family:var(--mono);font-size:15px;font-weight:500;min-width:18px;text-align:center}
-  .dt-add{flex:1;border:2px solid var(--ink);background:var(--granate);color:var(--mustard);padding:14px;font-family:var(--display);font-size:14px;font-weight:400;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;text-transform:uppercase;letter-spacing:.4px;box-shadow:2px 2px 0 var(--ink)}
-  .dt-add:active{transform:translate(2px,2px);box-shadow:none}
-
-  /* ===== SHEET / CART ===== */
-  .sheet{position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);width:100%;max-width:520px;max-height:88vh;background:var(--bg);border-top:3px solid var(--ink);z-index:55;transition:transform .3s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column}
-  .sheet.open{transform:translateX(-50%) translateY(0)}
-  .sheet-head{padding:20px 20px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--ink);background:var(--bg-deep)}
-  .sheet-head h2{font-family:var(--display);font-size:18px;font-weight:400;text-transform:uppercase;letter-spacing:-.2px}
-  .close{background:var(--card);border:2px solid var(--ink);width:34px;height:34px;font-size:18px;cursor:pointer;color:var(--ink);font-family:var(--display);line-height:1;display:flex;align-items:center;justify-content:center}
-  .sheet-body{overflow-y:auto;padding:16px 20px;flex:1}
-  .cart-item{background:var(--card);border:2px solid var(--ink);padding:14px;margin-bottom:12px;box-shadow:var(--hard-shadow-sm)}
-  .ci-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
-  .ci-name{font-family:var(--display);font-size:14px;font-weight:400;text-transform:uppercase;letter-spacing:-.1px;line-height:1.15}
-  .ci-price{font-family:var(--mono);font-size:14px;font-weight:500;white-space:nowrap;color:var(--ink)}
-  .ci-foot{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
-  .note-input{width:100%;margin-top:10px;border:2px solid var(--ink);background:var(--paper);padding:9px 11px;font-size:12.5px;font-family:var(--body);resize:none;color:var(--ink);font-weight:500}
-  .note-input::placeholder{color:var(--muted);font-style:italic}
-  .note-input:focus{outline:none;background:var(--card)}
-  .empty{text-align:center;color:var(--muted);padding:50px 20px;font-size:14px;font-family:var(--body);font-style:italic;line-height:1.6}
-  .sheet-foot{padding:14px 20px calc(20px + env(safe-area-inset-bottom));border-top:2px solid var(--ink);background:var(--bg-deep)}
-  .total-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
-  .total-row .lbl{font-family:var(--mono);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.6px}
-  .total-row .val{font-family:var(--display);font-size:26px;font-weight:400;color:var(--ink);letter-spacing:-.5px}
-  .send-btn{width:100%;border:2px solid var(--ink);background:var(--granate);color:var(--mustard);padding:16px;font-family:var(--display);font-size:15px;font-weight:400;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;text-transform:uppercase;letter-spacing:.4px;box-shadow:var(--hard-shadow)}
-  .send-btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
-  .send-btn:disabled{background:var(--muted);color:var(--bg);box-shadow:none;cursor:not-allowed}
-
-  /* ===== PROMO ===== */
-  .promo-line{display:flex;justify-content:space-between;align-items:center;background:var(--olive);color:#f6f1df;border:2px solid var(--ink);padding:12px 14px;margin-bottom:12px;box-shadow:var(--hard-shadow-sm)}
-  .promo-line .pl-txt{font-family:var(--display);font-size:13px;font-weight:400;text-transform:uppercase;letter-spacing:.2px;line-height:1.2}
-  .promo-line .pl-txt small{display:block;font-family:var(--mono);font-weight:500;color:#e8dfb8;font-size:10.5px;margin-top:3px;text-transform:none;letter-spacing:.2px}
-  .promo-line .pl-val{font-family:var(--mono);font-size:14px;font-weight:500;color:var(--mustard);white-space:nowrap}
-
-  /* ===== UPSELL TOAST ===== */
-  .upsell{position:fixed;bottom:96px;left:50%;transform:translateX(-50%) translateY(160%);width:calc(100% - 28px);max-width:492px;background:var(--card);border:2px solid var(--ink);box-shadow:var(--hard-shadow);z-index:46;padding:14px 14px 12px;transition:transform .32s cubic-bezier(.2,1.1,.3,1)}
-  .upsell.show{transform:translateX(-50%) translateY(0)}
-  .up-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px}
-  .up-title{font-family:var(--display);font-size:12px;font-weight:400;color:var(--granate);text-transform:uppercase;letter-spacing:.3px}
-  .up-close{background:none;border:none;color:var(--ink);font-size:22px;cursor:pointer;line-height:1;padding:0 4px;font-family:var(--display)}
-  .up-row{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
-  .up-row::-webkit-scrollbar{display:none}
-  .up-card{flex:0 0 auto;width:136px;background:var(--paper);border:2px solid var(--ink);padding:10px;cursor:pointer;transition:.15s}
-  .up-card:active{transform:translate(1px,1px)}
-  .up-img{width:100%;height:62px;background:var(--bg-deep);border:1.5px solid var(--ink);overflow:hidden;margin-bottom:8px}
-  .up-img img{width:100%;height:100%;object-fit:cover;display:block}
-  .up-name{font-family:var(--display);font-size:11.5px;font-weight:400;line-height:1.15;height:28px;overflow:hidden;text-transform:uppercase}
-  .up-foot{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
-  .up-price{font-family:var(--mono);font-size:11.5px;font-weight:500}
-  .up-add{background:var(--mustard);color:var(--ink);border:1.5px solid var(--ink);width:26px;height:24px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;font-family:var(--display)}
-
-  .cart-upsell{background:var(--mustard);border:2px solid var(--ink);padding:14px;margin-bottom:16px;box-shadow:var(--hard-shadow-sm)}
-  .cu-head{font-family:var(--display);font-size:13px;font-weight:400;color:var(--ink);margin-bottom:11px;text-transform:uppercase;letter-spacing:.2px}
-  .cu-item{display:flex;align-items:center;gap:11px;background:var(--card);border:1.5px solid var(--ink);padding:9px 10px;margin-bottom:8px}
-  .cu-item:last-child{margin-bottom:0}
-  .cu-img{width:42px;height:42px;background:var(--paper);border:1.5px solid var(--ink);overflow:hidden;flex:0 0 auto}
-  .cu-img img{width:100%;height:100%;object-fit:cover;display:block}
-  .cu-body{flex:1;min-width:0}
-  .cu-name{font-family:var(--display);font-size:13px;font-weight:400;line-height:1.15;text-transform:uppercase}
-  .cu-price{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);margin-top:2px}
-  .cu-add{flex:0 0 auto;background:var(--granate);color:var(--mustard);border:1.5px solid var(--ink);padding:7px 14px;font-family:var(--display);font-size:11px;font-weight:400;cursor:pointer;text-transform:uppercase;letter-spacing:.4px}
-  .cu-add:active{transform:translate(1px,1px)}
-
-  /* ===== ASK MODAL ===== */
-  .ask{position:fixed;inset:0;z-index:65;background:rgba(26,20,16,.55);display:flex;align-items:center;justify-content:center;padding:28px;opacity:0;pointer-events:none;transition:.25s}
-  .ask.open{opacity:1;pointer-events:auto}
-  .ask-box{background:var(--card);border:2px solid var(--ink);padding:28px 24px 22px;max-width:340px;width:100%;text-align:center;transform:scale(.92);transition:.25s;box-shadow:6px 6px 0 var(--ink)}
-  .ask.open .ask-box{transform:scale(1)}
-  .ask-box h3{font-family:var(--display);font-size:20px;font-weight:400;margin-bottom:10px;text-transform:uppercase;letter-spacing:-.3px;line-height:1.05}
-  .ask-box p{font-size:13.5px;color:var(--ink-soft);line-height:1.5;margin-bottom:22px;font-weight:500}
-  .ask-btns{display:flex;flex-direction:column;gap:10px}
-  .ask-primary{border:2px solid var(--ink);background:var(--granate);color:var(--mustard);padding:14px;font-family:var(--display);font-size:13.5px;font-weight:400;cursor:pointer;text-transform:uppercase;letter-spacing:.4px;box-shadow:3px 3px 0 var(--ink)}
-  .ask-primary:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
-  .ask-secondary{border:2px solid var(--ink);background:var(--card);color:var(--ink);padding:13px;font-family:var(--mono);font-size:12px;font-weight:500;cursor:pointer;text-transform:uppercase;letter-spacing:.4px}
-
-  /* ===== WELCOME : POSTER ===== */
-  .welcome{position:fixed;inset:0;z-index:90;max-width:520px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 32px;background:var(--mustard);transition:opacity .5s,transform .5s;overflow:hidden}
-  .welcome::before{content:"";position:absolute;top:0;left:0;right:0;height:18%;background:repeating-linear-gradient(90deg,var(--ink) 0 22px,transparent 22px 44px);opacity:.85;clip-path:polygon(0 0,100% 0,100% 60%,80% 70%,60% 60%,40% 75%,20% 65%,0 70%)}
-  .welcome::after{content:"";position:absolute;bottom:0;left:0;right:0;height:14%;background:var(--granate);clip-path:polygon(0 40%,15% 25%,40% 35%,65% 20%,85% 30%,100% 20%,100% 100%,0 100%)}
-  .welcome.gone{opacity:0;transform:scale(1.06);pointer-events:none}
-  .w-lang{position:absolute;top:calc(18px + env(safe-area-inset-top));right:18px;z-index:3}
-  .w-logo{width:104px;height:104px;background:var(--card);border:3px solid var(--ink);display:flex;align-items:center;justify-content:center;color:var(--ink);font-family:var(--display);font-weight:400;font-size:42px;letter-spacing:-2px;box-shadow:6px 6px 0 var(--ink);margin-bottom:30px;animation:logoIn .8s cubic-bezier(.2,1.3,.4,1);position:relative;z-index:2;transform:rotate(-3deg)}
-  @keyframes logoIn{0%{transform:scale(0) rotate(-15deg);opacity:0}100%{transform:scale(1) rotate(-3deg);opacity:1}}
-  .w-hi{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--ink);letter-spacing:1.4px;text-transform:uppercase;opacity:0;animation:fadeUp .6s .3s forwards;position:relative;z-index:2;padding:5px 11px;background:var(--ink);color:var(--mustard)}
-  .w-title{font-family:var(--display);font-size:42px;font-weight:400;letter-spacing:-1.5px;line-height:.95;margin:14px 0 16px;color:var(--ink);opacity:0;animation:fadeUp .6s .45s forwards;text-transform:uppercase;position:relative;z-index:2}
-  .w-sub{font-size:14.5px;color:var(--ink-soft);line-height:1.55;max-width:320px;opacity:0;animation:fadeUp .6s .6s forwards;position:relative;z-index:2;font-weight:500}
-  .w-mesa{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--mustard);padding:9px 18px;border:2px solid var(--ink);font-family:var(--mono);font-size:12px;font-weight:500;margin-top:28px;opacity:0;animation:fadeUp .6s .75s forwards;letter-spacing:.5px;text-transform:uppercase;position:relative;z-index:2;box-shadow:3px 3px 0 rgba(0,0,0,.18)}
-  .w-btn{margin-top:36px;border:3px solid var(--ink);background:var(--granate);color:var(--mustard);padding:17px 42px;font-family:var(--display);font-size:16px;font-weight:400;cursor:pointer;box-shadow:5px 5px 0 var(--ink);opacity:0;animation:fadeUp .6s .9s forwards;display:flex;align-items:center;gap:11px;text-transform:uppercase;letter-spacing:.6px;position:relative;z-index:2}
-  .w-btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
-  @keyframes fadeUp{0%{opacity:0;transform:translateY(16px)}100%{opacity:1;transform:translateY(0)}}
-
-  /* ===== ONBOARD ===== */
-  .onboard{position:fixed;inset:0;z-index:85;background:var(--bg);max-width:520px;margin:0 auto;display:flex;flex-direction:column;transition:opacity .4s,transform .4s;opacity:0;transform:translateY(20px);pointer-events:none}
-  .onboard.show{opacity:1;transform:translateY(0);pointer-events:auto}
-  .onboard.gone{opacity:0;transform:scale(1.04);pointer-events:none}
-  .ob-head{padding:44px 30px 8px;text-align:center}
-  .ob-head h1{font-family:var(--display);font-size:30px;font-weight:400;letter-spacing:-.8px;text-transform:uppercase;line-height:1}
-  .ob-head .sub{color:var(--ink-soft);font-family:var(--mono);font-size:11.5px;margin-top:10px;text-transform:uppercase;letter-spacing:.5px}
-  .ob-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:10px 28px;gap:14px}
-  .step{display:flex;align-items:center;gap:16px;background:var(--card);border:2px solid var(--ink);padding:16px 18px;box-shadow:var(--hard-shadow);opacity:0;transform:translateX(-16px)}
-  .onboard.show .step{animation:stepIn .5s forwards}
-  .onboard.show .step:nth-child(1){animation-delay:.15s}
-  .onboard.show .step:nth-child(2){animation-delay:.3s}
-  .onboard.show .step:nth-child(3){animation-delay:.45s}
-  .onboard.show .step:nth-child(4){animation-delay:.6s}
-  @keyframes stepIn{to{opacity:1;transform:translateX(0)}}
-  .step-num{flex:0 0 46px;width:46px;height:46px;background:var(--mustard);border:2px solid var(--ink);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:22px;font-weight:400;box-shadow:2px 2px 0 var(--ink)}
-  .step-txt h3{font-family:var(--display);font-size:15px;font-weight:400;margin-bottom:3px;text-transform:uppercase;letter-spacing:-.1px}
-  .step-txt p{font-size:12.5px;color:var(--ink-soft);line-height:1.45;font-weight:500}
-  .ob-foot{padding:18px 28px calc(28px + env(safe-area-inset-bottom))}
-  .ob-btn{width:100%;border:2px solid var(--ink);background:var(--granate);color:var(--mustard);padding:17px;font-family:var(--display);font-size:16px;font-weight:400;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;text-transform:uppercase;letter-spacing:.4px;box-shadow:var(--hard-shadow)}
-  .ob-btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
-  .ob-skip{display:block;width:100%;text-align:center;background:none;border:none;color:var(--ink-soft);font-family:var(--mono);font-size:11px;font-weight:500;margin-top:16px;cursor:pointer;text-transform:uppercase;letter-spacing:.5px}
-
-  /* ===== SUCCESS / TICKET ===== */
-  .success{position:fixed;inset:0;z-index:60;background:rgba(26,20,16,.78);backdrop-filter:blur(3px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:.3s;overflow-y:auto;max-width:520px;margin:0 auto}
-  .success.open{opacity:1;pointer-events:auto}
-  .success-inner{width:100%;max-width:360px;display:flex;flex-direction:column;align-items:center}
-  .check{width:80px;height:80px;background:var(--mustard);border:3px solid var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:18px;animation:pop .5s cubic-bezier(.2,1.5,.4,1);box-shadow:5px 5px 0 var(--ink)}
-  .check svg{width:42px;height:42px;stroke:var(--ink);stroke-width:3.2;fill:none;stroke-dasharray:30;stroke-dashoffset:30;animation:draw .4s .25s forwards}
-  @keyframes draw{to{stroke-dashoffset:0}}
-  @keyframes pop{0%{transform:scale(0) rotate(-12deg)}100%{transform:scale(1) rotate(0)}}
-  .success h2{font-family:var(--display);font-size:28px;font-weight:400;margin-bottom:6px;color:var(--mustard);text-align:center;text-transform:uppercase;letter-spacing:-.5px;line-height:1.02}
-  .success .glad{color:rgba(255,255,255,.78);font-family:var(--mono);font-size:11.5px;margin-bottom:20px;text-align:center;text-transform:uppercase;letter-spacing:.4px}
-  .ticket{background:var(--card);width:100%;padding:22px 22px 8px;position:relative;border:2px solid var(--ink);box-shadow:7px 7px 0 rgba(0,0,0,.4);animation:ticketIn .5s .15s both}
-  @keyframes ticketIn{0%{transform:translateY(24px) rotate(-1deg);opacity:0}100%{transform:translateY(0) rotate(0);opacity:1}}
-  .tk-zig{height:12px;background-image:linear-gradient(135deg,var(--card) 50%,transparent 50%),linear-gradient(-135deg,var(--card) 50%,transparent 50%);background-size:14px 14px;background-repeat:repeat-x;margin:0 -22px -2px;background-position:bottom}
-  .tk-top{text-align:center;border-bottom:2px dashed var(--ink);padding-bottom:14px;margin-bottom:14px}
-  .tk-top h3{font-family:var(--display);font-size:18px;font-weight:400;letter-spacing:.2px}
-  .tk-top .meta{font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-top:5px;letter-spacing:.5px;text-transform:uppercase}
-  .tk-no{display:inline-block;background:var(--mustard);color:var(--ink);font-family:var(--mono);font-weight:500;font-size:12px;padding:5px 14px;border:1.5px solid var(--ink);margin-top:10px;letter-spacing:.5px}
-  .tk-line{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:10px;align-items:flex-start}
-  .tk-line .ql{display:flex;gap:9px;min-width:0}
-  .tk-line .q{font-family:var(--mono);color:var(--granate);font-weight:500;flex:0 0 auto;font-size:13px}
-  .tk-line .nm{font-family:var(--display);font-weight:400;line-height:1.2;text-transform:uppercase;font-size:13px;letter-spacing:-.1px}
-  .tk-line .nm small{display:block;font-family:var(--body);color:var(--muted);font-weight:500;font-size:11px;margin-top:2px;text-transform:none;letter-spacing:0;font-style:italic}
-  .tk-line .pr{font-family:var(--mono);font-weight:500;white-space:nowrap;font-size:13px}
-  .tk-line.free .pr{color:var(--olive)}
-  .tk-sep{border-top:2px dashed var(--ink);margin:14px 0}
-  .tk-sub{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);margin-bottom:6px;text-transform:uppercase;letter-spacing:.3px}
-  .tk-disc{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;color:var(--olive);font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.3px}
-  .tk-total{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--display);font-size:22px;font-weight:400;margin-top:8px;text-transform:uppercase;letter-spacing:-.4px}
-  .tk-foot{text-align:center;font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);padding:14px 0 6px;line-height:1.6;text-transform:uppercase;letter-spacing:.4px}
-  .success-actions{width:100%;margin-top:20px;display:flex;flex-direction:column;gap:11px}
-  .sa-status{display:flex;align-items:center;justify-content:center;gap:9px;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.25);color:#fff;padding:12px;font-family:var(--mono);font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.4px}
-  .sa-dot{width:9px;height:9px;background:var(--olive);animation:blink 1.4s infinite}
-  @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-  .ghost-btn{border:2px solid var(--mustard);background:transparent;color:var(--mustard);padding:13px 26px;font-family:var(--display);font-size:13px;font-weight:400;cursor:pointer;text-transform:uppercase;letter-spacing:.4px}
-
-  /* ===== CONFETTI ===== */
-  .confetti{position:fixed;inset:0;z-index:70;pointer-events:none;overflow:hidden;max-width:520px;margin:0 auto}
-  .confetti i{position:absolute;top:-12px;width:10px;height:14px;opacity:.95;animation:fall linear forwards}
-  @keyframes fall{0%{transform:translateY(-20px) rotate(0)}100%{transform:translateY(105vh) rotate(540deg)}}
-
-  .bump{animation:bump .35s}
-  @keyframes bump{0%,100%{transform:scale(1)}40%{transform:scale(1.28)}}
+  @media(max-width:380px){
+    .hero h1{font-size:36px}
+    .card.f-sereno .card-title{font-size:34px}
+    .card.f-pizza .card-title{font-size:34px}
+    .card.f-cafe .card-title{font-size:28px}
+    .card.f-magma .card-title{font-size:28px}
+  }
 </style>
 </head>
 <body>
 
-<!-- BIENVENIDA -->
-<div class="welcome" id="welcome">
-  <div class="w-lang" id="wLang"></div>
-  <div class="w-logo">FP</div>
-  <div class="w-hi" data-t="hi">Bienvenido a</div>
-  <div class="w-title">El Fogón Paisa</div>
-  <div class="w-sub" data-t="welcomeSub">Cocina colombiana hecha con cariño, como en casa. Hoy nos encargamos nosotros: tú solo relájate y disfruta.</div>
-  <div class="w-mesa"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h18M3 9l1-4h16l1 4M5 9v11M19 9v11M5 20h14"/></svg><span data-t="table">Estás en la Mesa</span>&nbsp;<span id="wMesa">7</span></div>
-  <button class="w-btn" id="welcomeBtn"><span data-t="start">Empezar</span>
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-  </button>
+<div class="intro-curtain" id="introCurtain"><span class="intro-mark">verticeqr</span></div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="index.html"><b>verticeqr</b><span>seis demos</span></a>
+    <a class="nav-link" href="#demos">demos</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag">6 demos · 6 identidades</div>
+  <h1>Un sistema <em>por cada</em> negocio.</h1>
+  <p>Mismo motor. Marca propia para cada local.</p>
+</section>
+
+<div class="sec-label" id="demos">
+  <span class="sec-label-l">// demos</span>
+  <span class="sec-label-r">seis identidades · <b>elige una</b></span>
 </div>
 
-<!-- PASO A PASO -->
-<div class="onboard" id="onboard">
-  <div class="ob-head"><h1 data-t="howTitle">¿Cómo funciona?</h1><div class="sub" data-t="howSub">Pedir es muy fácil, te lo contamos en 4 pasos</div></div>
-  <div class="ob-body">
-    <div class="step"><div class="step-num">1</div><div class="step-txt"><h3 data-t="s1t">Elige tu bebida</h3><p data-t="s1p">Empieza por algo para tomar y luego desliza por la carta tocando +.</p></div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-txt"><h3 data-t="s2t">Revisa tu pedido</h3><p data-t="s2p">Abre "Ver pedido" abajo. Ajusta cantidades y añade notas.</p></div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-txt"><h3 data-t="s3t">Envía a cocina</h3><p data-t="s3p">Pulsa "Enviar pedido" y va directo a cocina, sin esperar al camarero.</p></div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-txt"><h3 data-t="s4t">Disfruta</h3><p data-t="s4p">Te llevamos los platos a la mesa en cuanto estén listos. ¡Buen provecho!</p></div></div>
-  </div>
-  <div class="ob-foot">
-    <button class="ob-btn" id="startBtn"><span data-t="seeMenu">Ver la carta</span>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    </button>
-    <button class="ob-skip" id="skipBtn" data-t="callWaiter">Avisa a un mesero si necesitas algo</button>
-  </div>
+<div class="demos">
+
+  <a class="card f-fogon" href="fogon-paisa/index.html?mesa=7">
+    <span class="card-eyebrow">Restaurante colombiano</span>
+    <h2 class="card-title">el fogón paisa</h2>
+    <span class="card-arrow">→</span>
+  </a>
+
+  <a class="card f-sereno" href="sereno/index.html?mesa=7">
+    <span class="card-eyebrow">Coctelería · Sky bar</span>
+    <h2 class="card-title">sereno</h2>
+    <span class="card-arrow">→</span>
+  </a>
+
+  <a class="card f-burger" href="hamburgueseria/index.html?mesa=7">
+    <span class="card-eyebrow">Hamburguesería · Diner</span>
+    <h2 class="card-title">Bonfire</h2>
+    <span class="card-arrow">→</span>
+  </a>
+
+  <a class="card f-pizza" href="pizzeria/index.html?mesa=7">
+    <span class="card-eyebrow">Pizzería napolitana</span>
+    <h2 class="card-title">Forno Sessanta</h2>
+    <span class="card-arrow">→</span>
+  </a>
+
+  <a class="card f-cafe" href="cafeteria/index.html?mesa=7">
+    <span class="card-eyebrow">Cafetería · Brunch</span>
+    <h2 class="card-title">ostra & sol</h2>
+    <span class="card-arrow">→</span>
+  </a>
+
+  <a class="card f-magma" href="cachimbas/index.html?mesa=7">
+    <span class="card-eyebrow">Lounge · Cachimbas</span>
+    <h2 class="card-title">magma</h2>
+    <span class="card-arrow">→</span>
+  </a>
+
 </div>
 
-<header>
-  <div class="head-top">
-    <div class="brand">
-      <div class="brand-mark">FP</div>
-      <div class="brand-text"><h1>El Fogón Paisa</h1><span data-t="tagline">Cocina colombiana · Sabor de casa</span></div>
-    </div>
-    <div class="head-right">
-      <div class="mesa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h18M3 9l1-4h16l1 4M5 9v11M19 9v11M5 20h14"/></svg><span data-t="tableShort">Mesa</span>&nbsp;<strong id="mesaNum">7</strong></div>
-      <div class="lang" id="hLang"></div>
-    </div>
-  </div>
-  <div class="tabs" id="tabs"></div>
-</header>
-
-<main id="menu"></main>
-
-<div class="cart-bar hidden" id="cartBar">
-  <button class="cart-btn" id="cartBtn">
-    <span class="cart-left"><span class="cart-count" id="cartCount">0</span> <span data-t="viewOrder">Ver pedido</span></span>
-    <span id="cartTotal">0,00 €</span>
-  </button>
-</div>
-
-<div class="overlay" id="overlay"></div>
-
-<!-- DETALLE PRODUCTO -->
-<div class="detail" id="detail">
-  <div class="dt-imgwrap"><div id="dtFav"></div><div id="dtImg" style="width:100%;height:100%"></div><button class="dt-close" id="dtClose">×</button></div>
-  <div class="dt-body">
-    <div class="dt-name" id="dtName"></div>
-    <div class="dt-price" id="dtPrice"></div>
-    <div class="dt-desc" id="dtDesc"></div>
-  </div>
-  <div class="dt-foot">
-    <div class="dt-qty"><button id="dtMinus">−</button><span id="dtQty">1</span><button id="dtPlus">+</button></div>
-    <button class="dt-add" id="dtAdd"></button>
-  </div>
-</div>
-
-<div class="upsell" id="upsell">
-  <div class="up-top"><div class="up-title" id="upHeadline"></div><button class="up-close" id="upClose">×</button></div>
-  <div class="up-row" id="upRow"></div>
-</div>
-
-<div class="sheet" id="sheet">
-  <div class="sheet-head"><h2><span data-t="yourOrder">Tu pedido</span> · <span data-t="tableShort">Mesa</span> <span id="mesaNum2">7</span></h2><button class="close" id="closeSheet">×</button></div>
-  <div class="sheet-body" id="cartList"></div>
-  <div class="sheet-foot">
-    <div class="total-row"><span class="lbl" data-t="total">Total</span><span class="val" id="grandTotal">0,00 €</span></div>
-    <button class="send-btn" id="sendBtn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-      <span data-t="sendOrder">Enviar pedido a cocina</span>
-    </button>
-  </div>
-</div>
-
-<div class="ask" id="askDrink">
-  <div class="ask-box">
-    <h3 data-t="askTitle">¿Sin algo para beber?</h3>
-    <p data-t="askBody">¿Quieres añadir una bebida antes de enviar tu pedido? Tenemos limonada de coco, jugos naturales y más.</p>
-    <div class="ask-btns">
-      <button class="ask-primary" id="askGoDrinks" data-t="askSee">Ver bebidas</button>
-      <button class="ask-secondary" id="askSkip" data-t="askSkipBtn">No, enviar así</button>
-    </div>
-  </div>
-</div>
-
-<div class="confetti" id="confetti"></div>
-
-<div class="success" id="success">
-  <div class="success-inner">
-    <div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
-    <h2 data-t="sentTitle">¡Pedido enviado!</h2>
-    <div class="glad" data-t="sentGlad">Gracias por tu pedido, ya está en cocina</div>
-    <div class="ticket" id="ticket"></div>
-    <div class="success-actions">
-      <div class="sa-status"><span class="sa-dot"></span> <span data-t="preparing">Preparando tu pedido…</span></div>
-      <button class="ghost-btn" id="newOrder" data-t="orderMore">Pedir algo más</button>
-    </div>
-  </div>
-</div>
+<footer>
+  <span>verticeqr · 2026</span>
+  <span>demos en vivo</span>
+</footer>
 
 <script>
-// ====== Idiomas ======
-const LANGS = [
-  {code:"ES", flag:"🇪🇸", label:"Español"},
-  {code:"EN", flag:"🇬🇧", label:"English"},
-  {code:"FR", flag:"🇫🇷", label:"Français"},
-  {code:"DE", flag:"🇩🇪", label:"Deutsch"},
-  {code:"IT", flag:"🇮🇹", label:"Italiano"},
-];
-let lang = "ES";
-
-// Textos de interfaz por idioma
-const T = {
-  ES:{hi:"Bienvenido a",welcomeSub:"Cocina colombiana hecha con cariño, como en casa. Hoy nos encargamos nosotros: tú solo relájate y disfruta.",table:"Estás en la Mesa",tableShort:"Mesa",start:"Empezar",howTitle:"¿Cómo funciona?",howSub:"Pedir es muy fácil, te lo contamos en 4 pasos",s1t:"Elige tu bebida",s1p:"Empieza por algo para tomar y luego desliza por la carta tocando +.",s2t:"Revisa tu pedido",s2p:"Abre \"Ver pedido\" abajo. Ajusta cantidades y añade notas.",s3t:"Envía a cocina",s3p:"Pulsa \"Enviar pedido\" y va directo a cocina, sin esperar al camarero.",s4t:"Disfruta",s4p:"Te llevamos los platos a la mesa en cuanto estén listos. ¡Buen provecho!",seeMenu:"Ver la carta",callWaiter:"Avisa a un mesero si necesitas algo",tagline:"Cocina colombiana · Sabor de casa",viewOrder:"Ver pedido",yourOrder:"Tu pedido",total:"Total",sendOrder:"Enviar pedido a cocina",askTitle:"¿Sin algo para beber?",askBody:"¿Quieres añadir una bebida antes de enviar tu pedido? Tenemos limonada de coco, jugos naturales y más.",askSee:"Ver bebidas",askSkipBtn:"No, enviar así",sentTitle:"¡Pedido enviado!",sentGlad:"Gracias por tu pedido, ya está en cocina",preparing:"Preparando tu pedido…",orderMore:"Pedir algo más",emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.",notePh:"Nota: sin cebolla, término medio…",drinkH:"Empieza por la bebida",drinkP:"Elige qué tomar mientras preparamos tu pedido. ¡Salud!",addToOrder:"Añadir al pedido",add:"Añadir",missing:"¿Le falta algo a tu pedido?",promoApplied:"¡Promo 3x2 aplicada!",freeOne:"postre gratis en tu pedido",freeMany:"postres gratis en tu pedido",promoDesserts:"Promo 3x2 en postres",promoHintOne:"Añade 1 postre más y el 3º te sale gratis",promoHintMany:"Añade {n} postres más y el 3º te sale gratis",subtotal:"Subtotal",discount:"Descuento 3x2",freeDessert:"Postre gratis (Promo 3x2)",free:"GRATIS",thanks:"¡Gracias por tu pedido!",onWay:"Tu comida está en camino a la cocina.",top:"★ TOP",
-    up:{Bebidas:"Para picar mientras llega",Cócteles:"Acompáñalo con algo rico",Entradas:"Y de plato fuerte…",Sopas:"Va perfecto con","Platos Fuertes":"Remátalo bien",Asados:"El maridaje de la casa",Postres:"¿Te animas con otro? (3x2)"},
-    cat:{Bebidas:"Bebidas",Cócteles:"Cócteles",Entradas:"Entradas",Sopas:"Sopas","Platos Fuertes":"Platos Fuertes",Asados:"Asados",Postres:"Postres"}},
-  EN:{hi:"Welcome to",welcomeSub:"Colombian home cooking, made with love. Today we take care of everything — just relax and enjoy.",table:"You're at Table",tableShort:"Table",start:"Start",howTitle:"How does it work?",howSub:"Ordering is easy — here it is in 4 steps",s1t:"Pick your drink",s1p:"Start with something to drink, then browse the menu and tap +.",s2t:"Review your order",s2p:"Open \"View order\" below. Adjust quantities and add notes.",s3t:"Send to kitchen",s3p:"Tap \"Send order\" and it goes straight to the kitchen, no waiting.",s4t:"Enjoy",s4p:"We'll bring your dishes to the table as soon as they're ready. Enjoy!",seeMenu:"See the menu",callWaiter:"Let a waiter know if you need anything",tagline:"Colombian cuisine · Homemade taste",viewOrder:"View order",yourOrder:"Your order",total:"Total",sendOrder:"Send order to kitchen",askTitle:"Nothing to drink?",askBody:"Would you like to add a drink before sending your order? We have coconut lemonade, fresh juices and more.",askSee:"See drinks",askSkipBtn:"No, send anyway",sentTitle:"Order sent!",sentGlad:"Thanks for your order, it's in the kitchen",preparing:"Preparing your order…",orderMore:"Order more",emptyCart:"Your order is empty.<br>Add something tasty from the menu.",notePh:"Note: no onion, medium rare…",drinkH:"Start with a drink",drinkP:"Choose what to drink while we prepare your order. Cheers!",addToOrder:"Add to order",add:"Add",missing:"Anything missing from your order?",promoApplied:"3-for-2 deal applied!",freeOne:"free dessert in your order",freeMany:"free desserts in your order",promoDesserts:"3-for-2 on desserts",promoHintOne:"Add 1 more dessert and the 3rd is free",promoHintMany:"Add {n} more desserts and the 3rd is free",subtotal:"Subtotal",discount:"3-for-2 discount",freeDessert:"Free dessert (3-for-2)",free:"FREE",thanks:"Thanks for your order!",onWay:"Your food is on its way to the kitchen.",top:"★ TOP",
-    up:{Bebidas:"To nibble while you wait",Cócteles:"Pair it with something tasty",Entradas:"And for a main…",Sopas:"Goes perfectly with","Platos Fuertes":"Round it off",Asados:"The house pairing",Postres:"Fancy another? (3-for-2)"},
-    cat:{Bebidas:"Drinks",Cócteles:"Cocktails",Entradas:"Starters",Sopas:"Soups","Platos Fuertes":"Mains",Asados:"Grill",Postres:"Desserts"}},
-  FR:{hi:"Bienvenue chez",welcomeSub:"Cuisine colombienne faite maison, avec amour. Aujourd'hui on s'occupe de tout — détendez-vous et profitez.",table:"Vous êtes à la Table",tableShort:"Table",start:"Commencer",howTitle:"Comment ça marche ?",howSub:"Commander est très simple, en 4 étapes",s1t:"Choisissez votre boisson",s1p:"Commencez par une boisson, puis parcourez la carte en touchant +.",s2t:"Vérifiez votre commande",s2p:"Ouvrez \"Voir la commande\" en bas. Ajustez les quantités et ajoutez des notes.",s3t:"Envoyez en cuisine",s3p:"Touchez \"Envoyer\" et ça part directement en cuisine, sans attendre.",s4t:"Régalez-vous",s4p:"On vous apporte les plats dès qu'ils sont prêts. Bon appétit !",seeMenu:"Voir la carte",callWaiter:"Appelez un serveur si besoin",tagline:"Cuisine colombienne · Goût maison",viewOrder:"Voir la commande",yourOrder:"Votre commande",total:"Total",sendOrder:"Envoyer en cuisine",askTitle:"Rien à boire ?",askBody:"Voulez-vous ajouter une boisson avant d'envoyer ? Nous avons limonade de coco, jus frais et plus.",askSee:"Voir les boissons",askSkipBtn:"Non, envoyer ainsi",sentTitle:"Commande envoyée !",sentGlad:"Merci pour votre commande, elle est en cuisine",preparing:"Préparation en cours…",orderMore:"Commander encore",emptyCart:"Votre commande est vide.<br>Ajoutez quelque chose de bon.",notePh:"Note : sans oignon, à point…",drinkH:"Commencez par une boisson",drinkP:"Choisissez quoi boire pendant la préparation. Santé !",addToOrder:"Ajouter à la commande",add:"Ajouter",missing:"Il manque quelque chose ?",promoApplied:"Offre 3 pour 2 appliquée !",freeOne:"dessert offert",freeMany:"desserts offerts",promoDesserts:"3 pour 2 sur les desserts",promoHintOne:"Ajoutez 1 dessert et le 3e est offert",promoHintMany:"Ajoutez {n} desserts et le 3e est offert",subtotal:"Sous-total",discount:"Remise 3 pour 2",freeDessert:"Dessert offert (3 pour 2)",free:"OFFERT",thanks:"Merci pour votre commande !",onWay:"Votre repas part en cuisine.",top:"★ TOP",
-    up:{Bebidas:"À grignoter en attendant",Cócteles:"Accompagnez-le",Entradas:"Et en plat…",Sopas:"Parfait avec","Platos Fuertes":"Complétez bien",Asados:"L'accord maison",Postres:"Encore un ? (3 pour 2)"},
-    cat:{Bebidas:"Boissons",Cócteles:"Cocktails",Entradas:"Entrées",Sopas:"Soupes","Platos Fuertes":"Plats",Asados:"Grillades",Postres:"Desserts"}},
-  DE:{hi:"Willkommen im",welcomeSub:"Kolumbianische Hausmannskost, mit Liebe gemacht. Heute kümmern wir uns um alles — entspann dich und genieße.",table:"Du bist an Tisch",tableShort:"Tisch",start:"Loslegen",howTitle:"Wie funktioniert es?",howSub:"Bestellen ist einfach, in 4 Schritten",s1t:"Wähle dein Getränk",s1p:"Beginne mit einem Getränk und tippe dann auf + in der Karte.",s2t:"Bestellung prüfen",s2p:"Öffne unten \"Bestellung ansehen\". Mengen anpassen und Notizen hinzufügen.",s3t:"An Küche senden",s3p:"Tippe auf \"Senden\" — geht direkt in die Küche, ohne Warten.",s4t:"Genießen",s4p:"Wir bringen die Gerichte an den Tisch, sobald sie fertig sind. Guten Appetit!",seeMenu:"Zur Karte",callWaiter:"Sag einem Kellner Bescheid, wenn du etwas brauchst",tagline:"Kolumbianische Küche · Hausgemacht",viewOrder:"Bestellung ansehen",yourOrder:"Deine Bestellung",total:"Gesamt",sendOrder:"An Küche senden",askTitle:"Nichts zu trinken?",askBody:"Möchtest du ein Getränk hinzufügen? Wir haben Kokos-Limonade, frische Säfte und mehr.",askSee:"Getränke ansehen",askSkipBtn:"Nein, so senden",sentTitle:"Bestellung gesendet!",sentGlad:"Danke für deine Bestellung, sie ist in der Küche",preparing:"Bestellung wird zubereitet…",orderMore:"Mehr bestellen",emptyCart:"Deine Bestellung ist leer.<br>Füge etwas Leckeres hinzu.",notePh:"Notiz: ohne Zwiebel, medium…",drinkH:"Beginne mit einem Getränk",drinkP:"Wähle ein Getränk, während wir vorbereiten. Prost!",addToOrder:"Hinzufügen",add:"Hinzufügen",missing:"Fehlt noch etwas?",promoApplied:"3-für-2-Angebot aktiv!",freeOne:"Dessert gratis",freeMany:"Desserts gratis",promoDesserts:"3 für 2 bei Desserts",promoHintOne:"Füge 1 Dessert hinzu, das 3. ist gratis",promoHintMany:"Füge {n} Desserts hinzu, das 3. ist gratis",subtotal:"Zwischensumme",discount:"3-für-2-Rabatt",freeDessert:"Gratis-Dessert (3 für 2)",free:"GRATIS",thanks:"Danke für deine Bestellung!",onWay:"Dein Essen geht in die Küche.",top:"★ TOP",
-    up:{Bebidas:"Zum Knabbern",Cócteles:"Dazu etwas Leckeres",Entradas:"Und als Hauptgericht…",Sopas:"Passt perfekt zu","Platos Fuertes":"Rund es ab",Asados:"Die Empfehlung des Hauses",Postres:"Noch eins? (3 für 2)"},
-    cat:{Bebidas:"Getränke",Cócteles:"Cocktails",Entradas:"Vorspeisen",Sopas:"Suppen","Platos Fuertes":"Hauptgerichte",Asados:"Grill",Postres:"Desserts"}},
-  IT:{hi:"Benvenuto da",welcomeSub:"Cucina colombiana fatta in casa, con amore. Oggi pensiamo a tutto noi — rilassati e goditela.",table:"Sei al Tavolo",tableShort:"Tavolo",start:"Iniziare",howTitle:"Come funziona?",howSub:"Ordinare è facilissimo, in 4 passi",s1t:"Scegli la bevanda",s1p:"Inizia con qualcosa da bere, poi scorri il menù toccando +.",s2t:"Controlla l'ordine",s2p:"Apri \"Vedi ordine\" in basso. Modifica le quantità e aggiungi note.",s3t:"Invia in cucina",s3p:"Tocca \"Invia\" e va dritto in cucina, senza aspettare.",s4t:"Gustati tutto",s4p:"Ti portiamo i piatti al tavolo appena pronti. Buon appetito!",seeMenu:"Vedi il menù",callWaiter:"Chiama un cameriere se ti serve qualcosa",tagline:"Cucina colombiana · Gusto casalingo",viewOrder:"Vedi ordine",yourOrder:"Il tuo ordine",total:"Totale",sendOrder:"Invia in cucina",askTitle:"Niente da bere?",askBody:"Vuoi aggiungere una bevanda prima di inviare? Abbiamo limonata al cocco, succhi freschi e altro.",askSee:"Vedi bevande",askSkipBtn:"No, invia così",sentTitle:"Ordine inviato!",sentGlad:"Grazie per l'ordine, è in cucina",preparing:"Stiamo preparando il tuo ordine…",orderMore:"Ordina ancora",emptyCart:"Il tuo ordine è vuoto.<br>Aggiungi qualcosa di buono.",notePh:"Nota: senza cipolla, media cottura…",drinkH:"Inizia con una bevanda",drinkP:"Scegli cosa bere mentre prepariamo. Salute!",addToOrder:"Aggiungi all'ordine",add:"Aggiungi",missing:"Manca qualcosa al tuo ordine?",promoApplied:"Offerta 3x2 applicata!",freeOne:"dolce gratis",freeMany:"dolci gratis",promoDesserts:"3x2 sui dolci",promoHintOne:"Aggiungi 1 dolce e il 3º è gratis",promoHintMany:"Aggiungi {n} dolci e il 3º è gratis",subtotal:"Subtotale",discount:"Sconto 3x2",freeDessert:"Dolce gratis (3x2)",free:"GRATIS",thanks:"Grazie per il tuo ordine!",onWay:"Il tuo cibo sta andando in cucina.",top:"★ TOP",
-    up:{Bebidas:"Da stuzzicare nell'attesa",Cócteles:"Accompagnalo con qualcosa",Entradas:"E come primo…",Sopas:"Perfetto con","Platos Fuertes":"Completa il pasto",Asados:"L'abbinamento della casa",Postres:"Ne vuoi un altro? (3x2)"},
-    cat:{Bebidas:"Bevande",Cócteles:"Cocktail",Entradas:"Antipasti",Sopas:"Zuppe","Platos Fuertes":"Secondi",Asados:"Griglia",Postres:"Dolci"}},
-};
-
-// ====== Carta. Nombres iguales en todos los idiomas. desc=corta, long=extensa, ambas con traducciones ======
-const MENU = [
-  { cat:"Bebidas", items:[
-    { id:"b1", name:"Limonada de Coco", best:true, price:4.50, img:"",
-      desc:{ES:"Cremosa, refrescante, hecha al momento",EN:"Creamy, refreshing, freshly made",FR:"Crémeuse, rafraîchissante, fraîche",DE:"Cremig, erfrischend, frisch gemacht",IT:"Cremosa, rinfrescante, fatta al momento"},
-      long:{ES:"Nuestra bebida estrella: limón fresco licuado con leche de coco hasta lograr una textura sedosa y espumosa. Refrescante y dulce en su punto, perfecta para acompañar cualquier plato.",EN:"Our signature drink: fresh lime blended with coconut milk into a silky, frothy texture. Refreshing and just sweet enough — perfect with any dish.",FR:"Notre boisson phare : citron vert frais mixé au lait de coco pour une texture soyeuse et mousseuse. Rafraîchissante et juste sucrée, parfaite avec tout plat.",DE:"Unser Signature-Drink: frische Limette mit Kokosmilch zu einer seidigen, schaumigen Textur gemixt. Erfrischend und angenehm süß — passt zu jedem Gericht.",IT:"La nostra bevanda simbolo: lime fresco frullato con latte di cocco per una texture setosa e spumosa. Rinfrescante e dolce al punto giusto, perfetta con ogni piatto."}},
-    { id:"b2", name:"Jugo de Lulo", price:3.90, img:"",
-      desc:{ES:"En agua o leche, fruta natural",EN:"With water or milk, natural fruit",FR:"À l'eau ou au lait, fruit naturel",DE:"Mit Wasser oder Milch, natürliche Frucht",IT:"Con acqua o latte, frutta naturale"},
-      long:{ES:"El lulo es una fruta colombiana cítrica y tropical, entre el kiwi y la naranja. Servido bien frío, en agua o en leche, es un clásico que sorprende a quien lo prueba por primera vez.",EN:"Lulo is a tropical Colombian citrus fruit, somewhere between kiwi and orange. Served ice-cold with water or milk, it's a classic that surprises first-timers.",FR:"Le lulo est un fruit colombien tropical et acidulé, entre le kiwi et l'orange. Servi bien frais, à l'eau ou au lait, un classique qui surprend.",DE:"Lulo ist eine tropische kolumbianische Zitrusfrucht, zwischen Kiwi und Orange. Eiskalt mit Wasser oder Milch serviert — ein Klassiker, der überrascht.",IT:"Il lulo è un frutto colombiano tropicale e agrumato, tra il kiwi e l'arancia. Servito ben freddo, con acqua o latte, un classico che sorprende."}},
-    { id:"b3", name:"Aguapanela con Limón", price:2.90, img:"",
-      desc:{ES:"Caliente o fría, tradicional",EN:"Hot or cold, traditional",FR:"Chaude ou froide, traditionnelle",DE:"Heiß oder kalt, traditionell",IT:"Calda o fredda, tradizionale"},
-      long:{ES:"La bebida más tradicional del campo colombiano: panela (caña de azúcar sin refinar) disuelta en agua con un toque de limón. Reconfortante caliente, deliciosa fría.",EN:"The most traditional drink of the Colombian countryside: panela (unrefined cane sugar) dissolved in water with a touch of lime. Comforting hot, delicious cold.",FR:"La boisson la plus traditionnelle de la campagne colombienne : panela (sucre de canne brut) dissoute dans l'eau avec une touche de citron. Réconfortante chaude, délicieuse froide.",DE:"Das traditionellste Getränk des kolumbianischen Landes: Panela (unraffinierter Rohrzucker) in Wasser gelöst mit einem Spritzer Limette. Heiß wohltuend, kalt köstlich.",IT:"La bevanda più tradizionale della campagna colombiana: panela (zucchero di canna grezzo) sciolta in acqua con un tocco di limone. Confortante calda, deliziosa fredda."}},
-    { id:"b4", name:"Gaseosa / Agua", price:2.50, img:"",
-      desc:{ES:"Surtido de la casa",EN:"House selection",FR:"Sélection maison",DE:"Auswahl des Hauses",IT:"Selezione della casa"},
-      long:{ES:"Refrescos variados y agua mineral, con o sin gas. Pregunta a tu mesero por las opciones disponibles del día.",EN:"Assorted soft drinks and mineral water, still or sparkling. Ask your waiter about today's options.",FR:"Sodas variés et eau minérale, plate ou gazeuse. Demandez les options du jour à votre serveur.",DE:"Verschiedene Erfrischungsgetränke und Mineralwasser, still oder sprudelnd. Frag deinen Kellner nach den Optionen.",IT:"Bibite assortite e acqua minerale, naturale o frizzante. Chiedi al cameriere le opzioni del giorno."}},
-  ]},
-  { cat:"Cócteles", items:[
-    { id:"c1", name:"Coco Loco", best:true, price:8.50, img:"",
-      desc:{ES:"Ron, coco, piña y un toque de lima",EN:"Rum, coconut, pineapple and a touch of lime",FR:"Rhum, coco, ananas et une touche de citron vert",DE:"Rum, Kokos, Ananas und ein Hauch Limette",IT:"Rum, cocco, ananas e un tocco di lime"},
-      long:{ES:"Servido en el propio coco, este cóctel caribeño mezcla ron, crema de coco y piña con un toque de lima. Tropical, dulce y peligrosamente fácil de beber.",EN:"Served in a real coconut, this Caribbean cocktail blends rum, coconut cream and pineapple with a touch of lime. Tropical, sweet and dangerously easy to drink.",FR:"Servi dans une vraie noix de coco, ce cocktail caribéen mêle rhum, crème de coco et ananas avec une touche de citron vert. Tropical, doux et dangereusement bon.",DE:"In einer echten Kokosnuss serviert, vereint dieser karibische Cocktail Rum, Kokoscreme und Ananas mit einem Hauch Limette. Tropisch, süß und gefährlich gut.",IT:"Servito nella noce di cocco, questo cocktail caraibico unisce rum, crema di cocco e ananas con un tocco di lime. Tropicale, dolce e pericolosamente buono."}},
-    { id:"c2", name:"Canelazo", price:6.50, img:"",
-      desc:{ES:"Aguardiente, canela y panela, servido caliente",EN:"Aguardiente, cinnamon and panela, served hot",FR:"Aguardiente, cannelle et panela, servi chaud",DE:"Aguardiente, Zimt und Panela, heiß serviert",IT:"Aguardiente, cannella e panela, servito caldo"},
-      long:{ES:"Bebida andina caliente a base de aguardiente, agua de panela y canela. Calienta el cuerpo y el alma; un trago tradicional de las noches frías de montaña.",EN:"A hot Andean drink made with aguardiente, panela water and cinnamon. It warms body and soul — a traditional sip for cold mountain nights.",FR:"Boisson andine chaude à base d'aguardiente, d'eau de panela et de cannelle. Elle réchauffe le corps et l'âme, traditionnelle des nuits froides de montagne.",DE:"Ein heißes Andengetränk aus Aguardiente, Panela-Wasser und Zimt. Es wärmt Körper und Seele — ein traditioneller Schluck für kalte Bergnächte.",IT:"Bevanda andina calda a base di aguardiente, acqua di panela e cannella. Scalda il corpo e l'anima, tradizionale delle fredde notti di montagna."}},
-    { id:"c3", name:"Michelada Colombiana", price:5.50, img:"",
-      desc:{ES:"Cerveza, limón, sal y ají",EN:"Beer, lime, salt and chili",FR:"Bière, citron vert, sel et piment",DE:"Bier, Limette, Salz und Chili",IT:"Birra, lime, sale e peperoncino"},
-      long:{ES:"Cerveza bien fría preparada con limón, sal y un toque de ají en el borde del vaso. Refrescante y con carácter, ideal para el calor.",EN:"Ice-cold beer prepared with lime, salt and a touch of chili on the rim. Refreshing and full of character — ideal for the heat.",FR:"Bière bien fraîche préparée avec citron vert, sel et une touche de piment sur le bord du verre. Rafraîchissante et pleine de caractère.",DE:"Eiskaltes Bier mit Limette, Salz und einem Hauch Chili am Glasrand. Erfrischend und charaktervoll — ideal bei Hitze.",IT:"Birra ghiacciata preparata con lime, sale e un tocco di peperoncino sul bordo del bicchiere. Rinfrescante e con carattere."}},
-  ]},
-  { cat:"Entradas", items:[
-    { id:"e1", name:"Empanadas Vallunas (3 und)", best:true, price:5.50, img:"",
-      desc:{ES:"Maíz crocante rellenas de carne y papa, con ají casero",EN:"Crispy corn pockets filled with beef and potato, with house chili",FR:"Chaussons de maïs croustillants à la viande et pomme de terre, sauce piquante maison",DE:"Knusprige Maistaschen mit Rind und Kartoffel, Hauschili",IT:"Sfoglie di mais croccanti con carne e patate, salsa piccante della casa"},
-      long:{ES:"Tres empanadas de masa de maíz fritas hasta quedar doradas y crujientes, rellenas de un guiso de carne y papa. Se sirven con nuestro ají casero de cilantro y cebolla. Imposible comer solo una.",EN:"Three corn-dough empanadas fried until golden and crispy, filled with a beef and potato stew. Served with our homemade cilantro-and-onion chili. Impossible to eat just one.",FR:"Trois empanadas de maïs frites jusqu'à être dorées et croustillantes, garnies d'un ragoût de viande et pomme de terre. Servies avec notre sauce piquante maison à la coriandre et oignon.",DE:"Drei Maisteig-Empanadas goldgelb und knusprig frittiert, gefüllt mit Rind-Kartoffel-Eintopf. Serviert mit hausgemachtem Koriander-Zwiebel-Chili. Unmöglich, nur eine zu essen.",IT:"Tre empanadas di mais fritte fino a doratura croccante, ripiene di stufato di carne e patate. Servite con la nostra salsa piccante di coriandolo e cipolla."}},
-    { id:"e2", name:"Patacones con Hogao", price:6.00, img:"",
-      desc:{ES:"Plátano verde frito y aplastado con salsa criolla",EN:"Fried smashed green plantain with creole sauce",FR:"Banane plantain verte frite et écrasée, sauce créole",DE:"Frittierte, gestampfte grüne Kochbanane mit Kreolensauce",IT:"Platano verde fritto e schiacciato con salsa creola"},
-      long:{ES:"Rodajas de plátano verde fritas, aplastadas y vueltas a freír hasta quedar crujientes. Acompañadas de hogao, una salsa criolla de tomate y cebolla cocinada a fuego lento. Un clásico para compartir.",EN:"Slices of green plantain fried, smashed and fried again until crispy. Served with hogao, a slow-cooked creole sauce of tomato and onion. A classic for sharing.",FR:"Tranches de banane plantain verte frites, écrasées et refrites jusqu'à être croustillantes. Avec le hogao, sauce créole de tomate et oignon mijotée. Un classique à partager.",DE:"Scheiben grüner Kochbanane frittiert, gestampft und erneut knusprig frittiert. Dazu Hogao, eine langsam gekochte Kreolensauce aus Tomate und Zwiebel. Ein Klassiker zum Teilen.",IT:"Fette di platano verde fritte, schiacciate e rifritte fino a croccantezza. Con l'hogao, salsa creola di pomodoro e cipolla cotta lentamente. Un classico da condividere."}},
-    { id:"e3", name:"Arepa de Chócolo", price:5.00, img:"",
-      desc:{ES:"Arepa dulce de maíz tierno con quesito antioqueño",EN:"Sweet tender-corn arepa with Antioquian cheese",FR:"Arepa sucrée de maïs tendre au fromage d'Antioquia",DE:"Süße Arepa aus zartem Mais mit Antioquia-Käse",IT:"Arepa dolce di mais tenero con formaggio antioqueño"},
-      long:{ES:"Arepa hecha con maíz tierno y dulce, dorada a la plancha y rellena de quesito antioqueño fresco que se derrite por dentro. El contraste entre lo dulce y lo salado la hace irresistible.",EN:"An arepa made with sweet tender corn, griddled golden and filled with fresh Antioquian cheese that melts inside. The sweet-savory contrast makes it irresistible.",FR:"Arepa au maïs tendre et sucré, dorée à la plancha et garnie de fromage frais d'Antioquia fondant. Le contraste sucré-salé la rend irrésistible.",DE:"Arepa aus süßem, zartem Mais, goldbraun gegrillt und mit frischem Antioquia-Käse gefüllt, der innen schmilzt. Der süß-herzhafte Kontrast macht sie unwiderstehlich.",IT:"Arepa di mais tenero e dolce, dorata in piastra e farcita con formaggio antioqueño fresco che si scioglie dentro. Il contrasto dolce-salato la rende irresistibile."}},
-    { id:"e4", name:"Chicharrón Carnudo", price:7.50, img:"",
-      desc:{ES:"Crujiente por fuera, jugoso por dentro, con limón",EN:"Crispy outside, juicy inside, with lime",FR:"Croustillant dehors, juteux dedans, avec citron vert",DE:"Außen knusprig, innen saftig, mit Limette",IT:"Croccante fuori, succoso dentro, con lime"},
-      long:{ES:"Panceta de cerdo cocinada lentamente hasta lograr una corteza dorada y crujiente que esconde una carne jugosa y tierna. Se sirve con limón fresco para realzar todo su sabor.",EN:"Pork belly slow-cooked to a golden, crispy crust hiding juicy, tender meat. Served with fresh lime to lift every bit of flavor.",FR:"Poitrine de porc cuite lentement jusqu'à une croûte dorée et croustillante cachant une viande juteuse et tendre. Servie avec citron vert frais.",DE:"Schweinebauch langsam gegart bis zu einer goldenen, knusprigen Kruste, die saftiges, zartes Fleisch verbirgt. Mit frischer Limette serviert.",IT:"Pancetta di maiale cotta lentamente fino a una crosta dorata e croccante che nasconde una carne succosa e tenera. Servita con lime fresco."}},
-  ]},
-  { cat:"Sopas", items:[
-    { id:"s1", name:"Ajiaco Santafereño", best:true, price:11.50, img:"",
-      desc:{ES:"Pollo, tres papas, mazorca, crema, alcaparras y aguacate",EN:"Chicken, three potatoes, corn, cream, capers and avocado",FR:"Poulet, trois pommes de terre, maïs, crème, câpres et avocat",DE:"Huhn, drei Kartoffelsorten, Mais, Sahne, Kapern und Avocado",IT:"Pollo, tre patate, mais, panna, capperi e avocado"},
-      long:{ES:"La sopa más emblemática de Bogotá: caldo espeso de pollo con tres variedades de papa y guascas (hierba andina), servido con mazorca, crema de leche, alcaparras y aguacate aparte. Un plato completo y reconfortante.",EN:"Bogotá's most iconic soup: a thick chicken broth with three potato varieties and guascas (an Andean herb), served with corn, cream, capers and avocado on the side. A complete, comforting dish.",FR:"La soupe la plus emblématique de Bogotá : bouillon de poulet épais avec trois variétés de pommes de terre et guascas (herbe andine), servie avec maïs, crème, câpres et avocat. Un plat complet et réconfortant.",DE:"Bogotás berühmteste Suppe: dicke Hühnerbrühe mit drei Kartoffelsorten und Guascas (Andenkraut), serviert mit Mais, Sahne, Kapern und Avocado. Ein vollständiges, wohltuendes Gericht.",IT:"La zuppa più emblematica di Bogotá: brodo denso di pollo con tre varietà di patate e guascas (erba andina), servito con mais, panna, capperi e avocado a parte. Un piatto completo e confortante."}},
-    { id:"s2", name:"Sancocho de Gallina", price:12.00, img:"",
-      desc:{ES:"Caldo tradicional con yuca, plátano y mazorca",EN:"Traditional broth with cassava, plantain and corn",FR:"Bouillon traditionnel avec manioc, plantain et maïs",DE:"Traditionelle Brühe mit Maniok, Kochbanane und Mais",IT:"Brodo tradizionale con manioca, platano e mais"},
-      long:{ES:"Sopa campesina de gallina cocida a fuego lento con yuca, plátano, mazorca y cilantro. Sustanciosa y llena de sabor, es el plato de los domingos en familia en toda Colombia.",EN:"A rustic hen soup simmered slowly with cassava, plantain, corn and cilantro. Hearty and full of flavor — the Sunday family dish across Colombia.",FR:"Soupe paysanne de poule mijotée avec manioc, plantain, maïs et coriandre. Consistante et savoureuse, le plat du dimanche en famille en Colombie.",DE:"Eine rustikale Hühnersuppe, langsam geköchelt mit Maniok, Kochbanane, Mais und Koriander. Herzhaft und voller Geschmack — das Sonntagsgericht in ganz Kolumbien.",IT:"Zuppa contadina di gallina cotta lentamente con manioca, platano, mais e coriandolo. Sostanziosa e saporita, il piatto della domenica in famiglia in Colombia."}},
-    { id:"s3", name:"Mondongo", price:10.50, img:"",
-      desc:{ES:"Sopa espesa de panza, verduras y hierbas frescas",EN:"Thick tripe soup with vegetables and fresh herbs",FR:"Soupe épaisse de tripes, légumes et herbes fraîches",DE:"Dicke Kuttelsuppe mit Gemüse und frischen Kräutern",IT:"Zuppa densa di trippa, verdure ed erbe fresche"},
-      long:{ES:"Guiso espeso y tradicional de mondongo (panza de res) cocinado largamente con verduras, papa y hierbas frescas. Un plato de raíces, intenso y muy querido en la cocina colombiana.",EN:"A thick, traditional stew of tripe slow-cooked with vegetables, potato and fresh herbs. A deeply rooted, intense dish much loved in Colombian cooking.",FR:"Ragoût épais et traditionnel de tripes longuement cuit avec légumes, pomme de terre et herbes fraîches. Un plat de racines, intense et très apprécié.",DE:"Ein dicker, traditioneller Kutteleintopf, lange gekocht mit Gemüse, Kartoffel und frischen Kräutern. Ein bodenständiges, intensives und sehr beliebtes Gericht.",IT:"Stufato denso e tradizionale di trippa cotto a lungo con verdure, patate ed erbe fresche. Un piatto dalle radici profonde, intenso e molto amato."}},
-  ]},
-  { cat:"Platos Fuertes", items:[
-    { id:"p1", name:"Bandeja Paisa", best:true, price:15.90, img:"",
-      desc:{ES:"Frijoles, arroz, chicharrón, carne, chorizo, huevo, arepa, aguacate y plátano",EN:"Beans, rice, pork crackling, beef, chorizo, egg, arepa, avocado and plantain",FR:"Haricots, riz, couenne, viande, chorizo, œuf, arepa, avocat et plantain",DE:"Bohnen, Reis, Schweinekruste, Fleisch, Chorizo, Ei, Arepa, Avocado und Kochbanane",IT:"Fagioli, riso, cotenna, carne, chorizo, uovo, arepa, avocado e platano"},
-      long:{ES:"El plato más famoso de Colombia y todo un festín: frijoles, arroz blanco, carne molida, chicharrón, chorizo, huevo frito, arepa, aguacate y plátano maduro, todo en un solo plato. Ven con hambre.",EN:"Colombia's most famous dish and a true feast: beans, white rice, ground beef, pork crackling, chorizo, fried egg, arepa, avocado and sweet plantain, all on one plate. Come hungry.",FR:"Le plat le plus célèbre de Colombie, un vrai festin : haricots, riz blanc, viande hachée, couenne, chorizo, œuf au plat, arepa, avocat et plantain mûr, le tout dans une assiette. Venez affamé.",DE:"Kolumbiens berühmtestes Gericht und ein wahres Festmahl: Bohnen, weißer Reis, Hackfleisch, Schweinekruste, Chorizo, Spiegelei, Arepa, Avocado und süße Kochbanane auf einem Teller. Komm hungrig.",IT:"Il piatto più famoso della Colombia e un vero banchetto: fagioli, riso bianco, carne macinata, cotenna, chorizo, uovo fritto, arepa, avocado e platano maturo, tutto in un piatto. Vieni affamato."}},
-    { id:"p2", name:"Lechona Tolimense", price:13.50, img:"",
-      desc:{ES:"Cerdo relleno de arroz y arvejas, con arepa",EN:"Pork stuffed with rice and peas, with arepa",FR:"Porc farci de riz et petits pois, avec arepa",DE:"Schwein gefüllt mit Reis und Erbsen, mit Arepa",IT:"Maiale ripieno di riso e piselli, con arepa"},
-      long:{ES:"Especialidad del Tolima: cerdo entero relleno de arroz, arvejas y especias, horneado durante horas hasta que la piel queda crujiente. Se sirve con arepa. Una delicia festiva.",EN:"A Tolima specialty: whole pork stuffed with rice, peas and spices, roasted for hours until the skin turns crackling-crisp. Served with arepa. A festive delight.",FR:"Spécialité du Tolima : porc entier farci de riz, petits pois et épices, rôti des heures jusqu'à une peau croustillante. Servi avec arepa. Un délice festif.",DE:"Eine Tolima-Spezialität: ganzes Schwein gefüllt mit Reis, Erbsen und Gewürzen, stundenlang gebraten bis die Haut knusprig ist. Mit Arepa serviert. Ein festlicher Genuss.",IT:"Specialità del Tolima: maiale intero ripieno di riso, piselli e spezie, arrostito per ore fino a una pelle croccante. Servito con arepa. Una delizia festosa."}},
-    { id:"p3", name:"Sobrebarriga en Salsa", price:14.90, img:"",
-      desc:{ES:"Res a fuego lento con papa criolla y arroz",EN:"Slow-cooked beef with creole potato and rice",FR:"Bœuf mijoté avec pomme de terre créole et riz",DE:"Geschmortes Rind mit Kreolenkartoffel und Reis",IT:"Manzo cotto lentamente con patata creola e riso"},
-      long:{ES:"Corte de res cocinado a fuego lento durante horas en una salsa criolla hasta quedar tan tierno que se deshace. Acompañado de papa criolla dorada y arroz blanco.",EN:"A cut of beef slow-cooked for hours in creole sauce until fork-tender. Served with golden creole potatoes and white rice.",FR:"Pièce de bœuf mijotée des heures dans une sauce créole jusqu'à fondre. Servie avec pommes de terre créoles dorées et riz blanc.",DE:"Ein Rindfleischstück stundenlang in Kreolensauce geschmort, bis es zart zerfällt. Mit goldenen Kreolenkartoffeln und weißem Reis.",IT:"Taglio di manzo cotto lentamente per ore in salsa creola fino a sfaldarsi. Servito con patate creole dorate e riso bianco."}},
-    { id:"p4", name:"Cazuela de Mariscos", price:17.50, img:"",
-      desc:{ES:"Camarón, calamar y pescado en leche de coco",EN:"Shrimp, squid and fish in coconut milk",FR:"Crevettes, calamar et poisson au lait de coco",DE:"Garnelen, Tintenfisch und Fisch in Kokosmilch",IT:"Gamberi, calamari e pesce nel latte di cocco"},
-      long:{ES:"Guiso cremoso de la costa caribeña con camarones, calamar y pescado fresco cocinados en leche de coco con verduras. Aromático y reconfortante, sabe a mar y a trópico.",EN:"A creamy Caribbean-coast stew of shrimp, squid and fresh fish cooked in coconut milk with vegetables. Aromatic and comforting — it tastes of sea and tropics.",FR:"Ragoût crémeux de la côte caraïbe avec crevettes, calamar et poisson frais cuits au lait de coco et légumes. Aromatique et réconfortant, un goût de mer et de tropiques.",DE:"Ein cremiger Eintopf der Karibikküste mit Garnelen, Tintenfisch und frischem Fisch in Kokosmilch mit Gemüse. Aromatisch und wohltuend — schmeckt nach Meer und Tropen.",IT:"Stufato cremoso della costa caraibica con gamberi, calamari e pesce fresco cotti nel latte di cocco con verdure. Aromatico e confortante, sa di mare e tropici."}},
-  ]},
-  { cat:"Asados", items:[
-    { id:"a1", name:"Punta de Anca", best:true, price:18.90, img:"",
-      desc:{ES:"300g a la parrilla con chimichurri y papas",EN:"300g grilled with chimichurri and potatoes",FR:"300g grillé avec chimichurri et pommes de terre",DE:"300g gegrillt mit Chimichurri und Kartoffeln",IT:"300g alla griglia con chimichurri e patate"},
-      long:{ES:"Jugoso corte de punta de anca de 300g asado a la parrilla en su punto, con nuestro chimichurri de hierbas frescas y papas asadas. Para los amantes de la buena carne.",EN:"A juicy 300g sirloin cap grilled to your liking, with our fresh-herb chimichurri and roasted potatoes. For lovers of good meat.",FR:"Savoureux aiguillette de rumsteck de 300g grillé à point, avec notre chimichurri d'herbes fraîches et pommes de terre rôties. Pour les amateurs de bonne viande.",DE:"Saftiges 300g-Tafelspitz-Stück nach Wunsch gegrillt, mit unserem Kräuter-Chimichurri und Bratkartoffeln. Für Liebhaber von gutem Fleisch.",IT:"Succoso taglio di punta di anca da 300g grigliato al punto giusto, con il nostro chimichurri di erbe fresche e patate arrosto. Per gli amanti della buona carne."}},
-    { id:"a2", name:"Costillas BBQ a la Brasa", price:16.50, img:"",
-      desc:{ES:"Cerdo glaseado con salsa de panela y maracuyá",EN:"Pork glazed with panela and passion-fruit sauce",FR:"Porc glacé sauce panela et fruit de la passion",DE:"Schwein glasiert mit Panela-Maracuja-Sauce",IT:"Maiale glassato con salsa di panela e maracujá"},
-      long:{ES:"Costillas de cerdo a la brasa glaseadas con una salsa BBQ de panela y maracuyá que equilibra lo dulce y lo ácido. Tiernas, melosas y con un toque tropical inconfundible.",EN:"Char-grilled pork ribs glazed with a panela-and-passion-fruit BBQ sauce balancing sweet and tangy. Tender, sticky and with an unmistakable tropical touch.",FR:"Côtes de porc grillées glacées d'une sauce BBQ panela-fruit de la passion équilibrant sucré et acidulé. Tendres, fondantes, touche tropicale unique.",DE:"Vom Grill glasierte Schweinerippchen mit einer Panela-Maracuja-BBQ-Sauce, die süß und säuerlich ausbalanciert. Zart, klebrig und mit unverkennbar tropischem Touch.",IT:"Costine di maiale alla brace glassate con salsa BBQ di panela e maracujá che bilancia dolce e acido. Tenere, morbide e con un tocco tropicale inconfondibile."}},
-    { id:"a3", name:"Pechuga a la Plancha", price:12.90, img:"",
-      desc:{ES:"Con ensalada fresca y arroz blanco",EN:"With fresh salad and white rice",FR:"Avec salade fraîche et riz blanc",DE:"Mit frischem Salat und weißem Reis",IT:"Con insalata fresca e riso bianco"},
-      long:{ES:"Pechuga de pollo a la plancha, jugosa y ligera, servida con una ensalada fresca de la casa y arroz blanco. La opción más sana sin renunciar al sabor.",EN:"Grilled chicken breast, juicy and light, served with a fresh house salad and white rice. The healthiest option without giving up flavor.",FR:"Blanc de poulet grillé, juteux et léger, servi avec une salade fraîche maison et riz blanc. L'option la plus saine sans renoncer au goût.",DE:"Gegrillte Hähnchenbrust, saftig und leicht, mit frischem Haussalat und weißem Reis. Die gesündeste Option ohne Geschmacksverzicht.",IT:"Petto di pollo alla piastra, succoso e leggero, servito con insalata fresca della casa e riso bianco. L'opzione più sana senza rinunciare al gusto."}},
-  ]},
-  { cat:"Postres", promo3x2:true, items:[
-    { id:"d1", name:"Mazamorra con Panela", price:4.50, img:"",
-      desc:{ES:"Maíz cocido en leche con bocadillo",EN:"Corn cooked in milk with guava paste",FR:"Maïs cuit au lait avec pâte de goyave",DE:"In Milch gekochter Mais mit Guavenpaste",IT:"Mais cotto nel latte con pasta di guava"},
-      long:{ES:"Postre tradicional antioqueño: maíz cocido servido en leche fría, acompañado de panela y un trozo de bocadillo de guayaba. Sencillo, dulce y nostálgico.",EN:"A traditional Antioquian dessert: cooked corn served in cold milk with panela and a piece of guava paste. Simple, sweet and nostalgic.",FR:"Dessert traditionnel d'Antioquia : maïs cuit servi dans du lait froid avec panela et un morceau de pâte de goyave. Simple, doux et nostalgique.",DE:"Ein traditionelles Antioquia-Dessert: gekochter Mais in kalter Milch mit Panela und einem Stück Guavenpaste. Schlicht, süß und nostalgisch.",IT:"Dolce tradizionale antioqueño: mais cotto servito nel latte freddo con panela e un pezzo di pasta di guava. Semplice, dolce e nostalgico."}},
-    { id:"d2", name:"Tres Leches", best:true, price:5.50, img:"",
-      desc:{ES:"Bizcocho bañado, suave y cremoso",EN:"Soaked sponge cake, soft and creamy",FR:"Génoise imbibée, moelleuse et crémeuse",DE:"Getränkter Biskuit, weich und cremig",IT:"Pan di Spagna imbevuto, soffice e cremoso"},
-      long:{ES:"Bizcocho esponjoso empapado en tres tipos de leche (evaporada, condensada y crema) hasta quedar húmedo y cremoso. Coronado con un toque de canela. El postre que todos repiten.",EN:"A fluffy sponge soaked in three milks (evaporated, condensed and cream) until moist and creamy. Topped with a hint of cinnamon. The dessert everyone goes back for.",FR:"Génoise moelleuse imbibée de trois laits (évaporé, concentré et crème) jusqu'à être humide et crémeuse. Saupoudrée de cannelle. Le dessert dont on reprend.",DE:"Ein luftiger Biskuit, getränkt in drei Milchsorten (evaporiert, kondensiert und Sahne), bis er feucht und cremig ist. Mit einem Hauch Zimt. Das Dessert, das alle nachbestellen.",IT:"Pan di Spagna soffice imbevuto di tre tipi di latte (evaporato, condensato e panna) fino a essere umido e cremoso. Con un tocco di cannella. Il dolce che tutti ripetono."}},
-    { id:"d3", name:"Postre de Natas", price:4.90, img:"",
-      desc:{ES:"Tradicional, dulce y artesanal",EN:"Traditional, sweet and homemade",FR:"Traditionnel, doux et artisanal",DE:"Traditionell, süß und hausgemacht",IT:"Tradizionale, dolce e artigianale"},
-      long:{ES:"Dulce artesanal hecho con las natas de la leche cocidas lentamente con azúcar y canela hasta lograr una textura densa y suave. Una receta de la abuela, tal cual.",EN:"A homemade sweet made from milk skins slowly cooked with sugar and cinnamon into a dense, smooth texture. Grandma's recipe, exactly as it should be.",FR:"Douceur artisanale faite de peaux de lait cuites lentement avec sucre et cannelle jusqu'à une texture dense et douce. La recette de grand-mère, telle quelle.",DE:"Eine hausgemachte Süßigkeit aus Milchhäuten, langsam mit Zucker und Zimt zu einer dichten, weichen Textur gekocht. Großmutters Rezept, genau richtig.",IT:"Dolce artigianale fatto con le pelli del latte cotte lentamente con zucchero e cannella fino a una texture densa e morbida. La ricetta della nonna, tale e quale."}},
-  ]},
-];
-
-let cart = {};
-const fmt = n => n.toFixed(2).replace(".",",") + " €";
-function tt(k){ return T[lang][k] || T.ES[k] || k; }
-
-// ====== Overrides desde el panel de administración ======
-const OVERRIDES_KEY = "fogon_menu_overrides_v1";
-const BASE_PRICES = {};
-MENU.forEach(s => s.items.forEach(it => { BASE_PRICES[it.id] = it.price; }));
-function applyMenuOverrides(){
-  let ov={};
-  try{ ov=JSON.parse(localStorage.getItem(OVERRIDES_KEY)||"{}"); }catch(e){}
-  MENU.forEach(s => s.items.forEach(it => {
-    const o = ov[it.id] || {};
-    it.price  = (o.price!=null) ? Number(o.price) : BASE_PRICES[it.id];
-    it.soldOut = !!o.soldOut;
-  }));
-}
-applyMenuOverrides();
-const SOLD_OUT_LABEL = {ES:"Agotado",EN:"Sold out",FR:"Épuisé",DE:"Ausverkauft",IT:"Esaurito"};
-function soldOutTxt(){ return SOLD_OUT_LABEL[lang] || SOLD_OUT_LABEL.ES; }
-window.addEventListener("storage", e=>{ if(e.key===OVERRIDES_KEY){ applyMenuOverrides(); if(typeof renderMenu==="function"){ renderMenu(); updateBar(); } } });
-
-const PAIRINGS = {
-  b1:["e1","e2"], b2:["e1","e3"], b3:["d2","e3"], b4:["e1","e4"],
-  c1:["e4","e1"], c2:["e3","d1"], c3:["e1","e4"],
-  e1:["p1","b1"], e2:["a1","b1"], e3:["s1","b2"], e4:["c1","p1"],
-  s1:["e3","b1"], s2:["e2","b3"], s3:["b1","e3"],
-  p1:["b1","d2"], p2:["b3","d1"], p3:["b1","d2"], p4:["c1","d2"],
-  a1:["c1","e2"], a2:["b1","e4"], a3:["b2","e1"],
-  d1:["b3","d2"], d2:["b1","d1"], d3:["b3","d2"],
-};
-let upTimer=null;
-
-function buzz(ms){ if(navigator.vibrate) try{navigator.vibrate(ms)}catch(e){} }
-
-const params = new URLSearchParams(location.search);
-const mesa = params.get("mesa") || "7";
-document.getElementById("mesaNum").textContent = mesa;
-document.getElementById("mesaNum2").textContent = mesa;
-document.getElementById("wMesa").textContent = mesa;
-
-// ====== Idioma: aplicar traducciones ======
-function applyLang(){
-  document.querySelectorAll("[data-t]").forEach(el=>{ el.innerHTML = tt(el.dataset.t); });
-  buildLangSelectors();
-  renderTabs();
-  renderMenu();
-  updateBar();
-  if(document.getElementById("sheet").classList.contains("open")) renderCart();
-}
-
-function buildLangSelectors(){
-  const cur = LANGS.find(l=>l.code===lang);
-  ["hLang","wLang"].forEach(id=>{
-    const host = document.getElementById(id);
-    host.innerHTML = `
-      <button class="lang-btn"><span class="fl">${cur.flag}</span>${cur.code}<span class="ar">▾</span></button>
-      <div class="lang-menu">
-        ${LANGS.map(l=>`<div class="lang-opt ${l.code===lang?'active':''}" data-lang="${l.code}"><span class="fl">${l.flag}</span>${l.label}</div>`).join("")}
-      </div>`;
-    const btn = host.querySelector(".lang-btn");
-    const menu = host.querySelector(".lang-menu");
-    btn.onclick = e=>{ e.stopPropagation(); document.querySelectorAll(".lang-menu").forEach(m=>{ if(m!==menu) m.classList.remove("open"); }); menu.classList.toggle("open"); };
-    menu.querySelectorAll(".lang-opt").forEach(o=>{
-      o.onclick = e=>{ e.stopPropagation(); lang=o.dataset.lang; buzz(6); applyLang(); };
+  document.querySelectorAll(".card").forEach((c,i)=>c.style.setProperty("--i",i));
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add("in-view"); obs.unobserve(e.target); }
     });
-  });
-}
-document.addEventListener("click", ()=> document.querySelectorAll(".lang-menu").forEach(m=>m.classList.remove("open")));
-
-function imgHTML(it){ return it.img ? `<img src="${it.img}" alt="${it.name}">` : ""; }
-
-// ====== Tabs ======
-function renderTabs(){
-  const tabsEl = document.getElementById("tabs");
-  tabsEl.innerHTML = "";
-  MENU.forEach((sec,i)=>{
-    const t = document.createElement("button");
-    t.className = "tab" + (i===0?" active":"");
-    t.textContent = T[lang].cat[sec.cat] || sec.cat;
-    t.onclick = ()=>{
-      document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
-      t.classList.add("active");
-      const y = document.getElementById("sec-"+i).getBoundingClientRect().top + window.scrollY - 110;
-      window.scrollTo({top:y, behavior:"smooth"});
-    };
-    tabsEl.appendChild(t);
-  });
-}
-
-// ====== Menú ======
-function renderMenu(){
-  const menuEl = document.getElementById("menu");
-  menuEl.innerHTML = "";
-  const db = document.createElement("div");
-  db.className = "drink-banner" + (hasDrink()?" hide":"");
-  db.id = "drinkBanner";
-  db.innerHTML = `<div class="db-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 3h14l-1 7a6 6 0 0 1-12 0L5 3zM9 21h6M12 16v5"/></svg></div>
-    <div class="db-txt"><h4>${tt("drinkH")}</h4><p>${tt("drinkP")}</p></div>`;
-  menuEl.appendChild(db);
-
-  MENU.forEach((sec,i)=>{
-    const title = document.createElement("div");
-    title.className = "sec-title"; title.id = "sec-"+i;
-    title.setAttribute("data-num", String(i+1).padStart(2,"0"));
-    const promoTxt = sec.promo3x2 ? ` <span class="promo-tag">3x2 · ${lang==="ES"?"el 3º gratis":lang==="EN"?"3rd free":lang==="FR"?"le 3e offert":lang==="DE"?"3. gratis":"il 3º gratis"}</span>` : "";
-    title.innerHTML = `<span class="sec-title-text">${T[lang].cat[sec.cat]||sec.cat}</span>${promoTxt}`;
-    menuEl.appendChild(title);
-    sec.items.forEach(it=>{
-      const card = document.createElement("div");
-      card.className = "item" + (it.soldOut?" soldout":""); card.id = "card-"+it.id;
-      const footRight = it.soldOut ? `<span class="soldout-tag">${soldOutTxt()}</span>` : `<div id="ctrl-${it.id}" data-stop></div>`;
-      card.innerHTML = `
-        <div class="item-img">${it.best?`<span class="fav">${tt("top")}</span>`:""}${imgHTML(it)}</div>
-        <div class="item-body">
-          <div class="item-name">${it.name}</div>
-          <div class="item-desc">${it.desc[lang]}</div>
-          <div class="item-foot"><span class="price">${fmt(it.price)}</span>${footRight}</div>
-        </div>`;
-      card.onclick = e=>{ if(e.target.closest("[data-stop]")) return; openDetail(it.id); };
-      menuEl.appendChild(card);
-      if(!it.soldOut) renderCtrl(it);
-    });
-  });
-}
-
-function renderCtrl(it){
-  const wrap = document.getElementById("ctrl-"+it.id);
-  if(!wrap) return;
-  const q = cart[it.id]?.qty || 0;
-  wrap.innerHTML = q===0
-    ? `<button class="add" data-add="${it.id}">+</button>`
-    : `<div class="qty-ctrl"><button data-dec="${it.id}">−</button><span>${q}</span><button data-inc="${it.id}">+</button></div>`;
-}
-
-function findItem(id){ for(const s of MENU) for(const it of s.items) if(it.id===id) return it; }
-function catOf(id){ for(const s of MENU) for(const it of s.items) if(it.id===id) return s.cat; }
-
-document.addEventListener("click", e=>{
-  const add=e.target.closest("[data-add]"), inc=e.target.closest("[data-inc]"), dec=e.target.closest("[data-dec]");
-  if(add){ e.stopPropagation(); changeQty(add.dataset.add,1); }
-  if(inc){ e.stopPropagation(); changeQty(inc.dataset.inc,1); }
-  if(dec){ e.stopPropagation(); changeQty(dec.dataset.dec,-1); }
-});
-
-function changeQty(id,delta){
-  const it=findItem(id);
-  if(!it) return;
-  if(it.soldOut && delta>0) return;
-  if(!cart[id]) cart[id]={item:it,qty:0,note:""};
-  cart[id].qty+=delta;
-  if(cart[id].qty<=0) delete cart[id];
-  renderCtrl(it);
-  updateBar();
-  if(delta>0){ buzz(6); flashCard(id); maybeUpsell(id); }
-  if(document.getElementById("sheet").classList.contains("open")) renderCart();
-}
-function flashCard(id){ const c=document.getElementById("card-"+id); if(c){ c.classList.remove("flash"); void c.offsetWidth; c.classList.add("flash"); } }
-
-function totalItems(){ return Object.values(cart).reduce((a,c)=>a+c.qty,0); }
-function totalPrice(){ return Object.values(cart).reduce((a,c)=>a+c.qty*c.item.price,0); }
-function finalTotal(){ return totalPrice()-dessertDiscount().amount; }
-function hasDrink(){ return Object.values(cart).some(c=>{const k=catOf(c.item.id);return k==="Bebidas"||k==="Cócteles";}); }
-
-function dessertDiscount(){
-  const prices=[];
-  Object.values(cart).forEach(c=>{ if(catOf(c.item.id)==="Postres") for(let k=0;k<c.qty;k++) prices.push(c.item.price); });
-  if(prices.length<3) return {free:0,amount:0};
-  prices.sort((a,b)=>a-b);
-  const free=Math.floor(prices.length/3); let amount=0;
-  for(let k=0;k<free;k++) amount+=prices[k];
-  return {free,amount};
-}
-
-function updateBar(){
-  const n=totalItems(), bar=document.getElementById("cartBar");
-  document.getElementById("cartCount").textContent=n;
-  document.getElementById("cartTotal").textContent=fmt(finalTotal());
-  if(n>0){ bar.classList.remove("hidden"); const c=document.getElementById("cartCount"); c.classList.remove("bump"); void c.offsetWidth; c.classList.add("bump"); }
-  else bar.classList.add("hidden");
-  const db=document.getElementById("drinkBanner"); if(db) db.classList.toggle("hide", hasDrink());
-}
-
-// ====== Detalle producto ======
-let detailId=null, detailQty=1;
-const detail=document.getElementById("detail");
-function openDetail(id){
-  const it=findItem(id); if(!it) return;
-  detailId=id; detailQty=1;
-  document.getElementById("dtImg").style.background = it.img? "transparent":"#f1ece4";
-  document.getElementById("dtImg").innerHTML = it.img? `<img src="${it.img}" alt="${it.name}" style="width:100%;height:100%;object-fit:cover">` : "";
-  document.getElementById("dtFav").innerHTML = it.best && !it.soldOut ? `<span class="dt-fav">${tt("top")}</span>`:"";
-  document.getElementById("dtName").textContent = it.name;
-  const priceEl=document.getElementById("dtPrice");
-  priceEl.innerHTML = fmt(it.price) + (it.soldOut?` <span class="dt-soldout">${soldOutTxt()}</span>`:"");
-  document.getElementById("dtDesc").textContent = it.long[lang];
-  document.getElementById("dtQty").textContent = detailQty;
-  const dtAdd=document.getElementById("dtAdd");
-  dtAdd.textContent = it.soldOut ? soldOutTxt() : tt("addToOrder");
-  dtAdd.classList.toggle("disabled", !!it.soldOut);
-  dtAdd.disabled = !!it.soldOut;
-  document.getElementById("overlay").classList.add("open");
-  detail.classList.add("open");
-}
-function closeDetail(){ detail.classList.remove("open"); if(!document.getElementById("sheet").classList.contains("open")) document.getElementById("overlay").classList.remove("open"); }
-document.getElementById("dtClose").onclick=closeDetail;
-document.getElementById("dtMinus").onclick=()=>{ if(detailQty>1){detailQty--; document.getElementById("dtQty").textContent=detailQty;} };
-document.getElementById("dtPlus").onclick=()=>{ detailQty++; document.getElementById("dtQty").textContent=detailQty; };
-document.getElementById("dtAdd").onclick=()=>{
-  for(let k=0;k<detailQty;k++) changeQty(detailId,1);
-  closeDetail();
-};
-
-// ====== Upsell toast ======
-function maybeUpsell(id){
-  const recs=(PAIRINGS[id]||[]).map(findItem).filter(it=>it&&!cart[it.id]&&!it.soldOut);
-  const head=T[lang].up[catOf(id)];
-  if(recs.length===0||!head){ hideUpsell(); return; }
-  document.getElementById("upHeadline").textContent=head;
-  document.getElementById("upRow").innerHTML=recs.slice(0,4).map(it=>`
-    <div class="up-card" data-add="${it.id}">
-      <div class="up-img">${imgHTML(it)}</div>
-      <div class="up-name">${it.name}</div>
-      <div class="up-foot"><span class="up-price">${fmt(it.price)}</span><button class="up-add" data-add="${it.id}">+</button></div>
-    </div>`).join("");
-  const u=document.getElementById("upsell"); u.classList.add("show");
-  clearTimeout(upTimer); upTimer=setTimeout(hideUpsell,6500);
-}
-function hideUpsell(){ document.getElementById("upsell").classList.remove("show"); clearTimeout(upTimer); }
-document.getElementById("upClose").onclick=hideUpsell;
-
-// ====== Sheet ======
-const overlay=document.getElementById("overlay"), sheet=document.getElementById("sheet");
-function openSheet(){ hideUpsell(); renderCart(); overlay.classList.add("open"); sheet.classList.add("open"); }
-function closeSheet(){ overlay.classList.remove("open"); sheet.classList.remove("open"); }
-document.getElementById("cartBtn").onclick=openSheet;
-document.getElementById("closeSheet").onclick=closeSheet;
-overlay.onclick=()=>{ closeSheet(); closeDetail(); };
-
-function renderCart(){
-  const list=document.getElementById("cartList");
-  const entries=Object.entries(cart);
-  if(entries.length===0){
-    list.innerHTML=`<div class="empty">${tt("emptyCart")}</div>`;
-    document.getElementById("grandTotal").textContent="0,00 €";
-    document.getElementById("sendBtn").disabled=true; return;
-  }
-  document.getElementById("sendBtn").disabled=false;
-  list.innerHTML = buildCartUpsell() + buildPromoBox() + entries.map(([id,c])=>`
-    <div class="cart-item">
-      <div class="ci-top"><span class="ci-name">${c.item.name}</span><span class="ci-price">${fmt(c.item.price*c.qty)}</span></div>
-      <div class="ci-foot"><div class="qty-ctrl"><button data-dec="${id}">−</button><span>${c.qty}</span><button data-inc="${id}">+</button></div></div>
-      <textarea class="note-input" rows="1" placeholder="${tt("notePh")}" data-note="${id}">${c.note||""}</textarea>
-    </div>`).join("");
-  const disc=dessertDiscount(), gt=document.getElementById("grandTotal");
-  gt.innerHTML = disc.amount>0
-    ? `<span style="font-size:14px;color:var(--muted);text-decoration:line-through;font-weight:600;margin-right:8px">${fmt(totalPrice())}</span>${fmt(finalTotal())}`
-    : fmt(finalTotal());
-  list.querySelectorAll("[data-note]").forEach(t=>{ t.oninput=()=>{ cart[t.dataset.note]&&(cart[t.dataset.note].note=t.value); }; });
-}
-
-function buildPromoBox(){
-  const qty=Object.values(cart).reduce((a,c)=>a+(catOf(c.item.id)==="Postres"?c.qty:0),0);
-  if(qty===0) return "";
-  const disc=dessertDiscount();
-  if(disc.free>0){
-    const w=disc.free===1?tt("freeOne"):tt("freeMany");
-    return `<div class="promo-line"><div class="pl-txt">${tt("promoApplied")}<small>${disc.free} ${w}</small></div><div class="pl-val">−${fmt(disc.amount)}</div></div>`;
-  }
-  const faltan=3-(qty%3);
-  const hint = faltan===1 ? tt("promoHintOne") : tt("promoHintMany").replace("{n}",faltan);
-  return `<div class="promo-line"><div class="pl-txt">${tt("promoDesserts")}<small>${hint}</small></div><div class="pl-val">3x2</div></div>`;
-}
-
-function buildCartUpsell(){
-  const cats=new Set(Object.values(cart).map(c=>catOf(c.item.id)));
-  const has=c=>cats.has(c); const recs=[];
-  if(!has("Bebidas")&&!has("Cócteles")) recs.push("b1","b2");
-  if(!has("Postres")&&(has("Platos Fuertes")||has("Asados")||has("Sopas"))) recs.push("d2","d1");
-  if((has("Bebidas")||has("Cócteles"))&&!has("Entradas")&&!has("Platos Fuertes")&&!has("Asados")) recs.push("e1","e2");
-  const items=[...new Set(recs)].map(findItem).filter(it=>it&&!cart[it.id]&&!it.soldOut).slice(0,3);
-  if(items.length===0) return "";
-  return `<div class="cart-upsell"><div class="cu-head">${tt("missing")}</div>
-    ${items.map(it=>`<div class="cu-item"><div class="cu-img">${imgHTML(it)}</div>
-      <div class="cu-body"><div class="cu-name">${it.name}</div><div class="cu-price">${fmt(it.price)}</div></div>
-      <button class="cu-add" data-add="${it.id}">${tt("add")}</button></div>`).join("")}</div>`;
-}
-
-// ====== Enviar + ticket ======
-function buildTicket(order){
-  const hora=new Date().toLocaleTimeString(lang==="EN"?"en-GB":lang==="FR"?"fr-FR":lang==="DE"?"de-DE":lang==="IT"?"it-IT":"es-ES",{hour:"2-digit",minute:"2-digit"});
-  const lines=order.items.map(it=>`
-    <div class="tk-line"><div class="ql"><span class="q">${it.qty}×</span><span class="nm">${it.name}${it.note?`<small>${it.note}</small>`:""}</span></div><span class="pr">${fmt(it.price*it.qty)}</span></div>`).join("");
-  const freeLine = order.postresGratis>0
-    ? `<div class="tk-line free"><div class="ql"><span class="q">${order.postresGratis}×</span><span class="nm">${tt("freeDessert")}</span></div><span class="pr">${tt("free")}</span></div>` : "";
-  const discBlock = order.descuento>0
-    ? `<div class="tk-sub"><span>${tt("subtotal")}</span><span>${fmt(order.subtotal)}</span></div><div class="tk-disc"><span>${tt("discount")}</span><span>−${fmt(order.descuento)}</span></div>` : "";
-  return `
-    <div class="tk-top"><h3>EL FOGÓN PAISA</h3><div class="meta">${tt("tableShort").toUpperCase()} ${order.mesa} · ${hora}</div><div class="tk-no">${lang==="ES"?"Pedido":lang==="EN"?"Order":lang==="FR"?"Commande":lang==="DE"?"Bestellung":"Ordine"} #${order.no}</div></div>
-    ${lines}${freeLine}
-    <div class="tk-sep"></div>${discBlock}
-    <div class="tk-total"><span>${tt("total").toUpperCase()}</span><span>${fmt(order.total)}</span></div>
-    <div class="tk-foot">${tt("thanks")}<br>${tt("onWay")}</div>
-    <div class="tk-zig"></div>`;
-}
-
-function fireConfetti(){
-  const cont=document.getElementById("confetti");
-  const colors=["#e0a020","#7a2228","#566834","#1a1410","#b85a2a"];
-  cont.innerHTML="";
-  for(let k=0;k<70;k++){
-    const i=document.createElement("i");
-    i.style.left=Math.random()*100+"%";
-    i.style.background=colors[k%colors.length];
-    i.style.animationDuration=(1.6+Math.random()*1.6)+"s";
-    i.style.animationDelay=(Math.random()*.3)+"s";
-    i.style.transform=`rotate(${Math.random()*360}deg)`;
-    cont.appendChild(i);
-  }
-  setTimeout(()=>cont.innerHTML="",3600);
-}
-
-// ====== Puente con cocina (localStorage) ======
-const STORE_KEY="fogon_orders_v1";
-function pushToKitchen(order){
-  let list;
-  try{ list=JSON.parse(localStorage.getItem(STORE_KEY)||"[]"); }catch(e){ list=[]; }
-  if(!Array.isArray(list)) list=[];
-  list.push(order);
-  try{ localStorage.setItem(STORE_KEY, JSON.stringify(list)); }catch(e){}
-}
-
-function doSend(){
-  const disc=dessertDiscount();
-  const order={ id:"o"+Date.now()+Math.random().toString(36).slice(2,6),
-    no:Math.floor(100+Math.random()*899), mesa, ts:Date.now(), status:"new", _fresh:true,
-    items:Object.values(cart).map(c=>({name:c.item.name,qty:c.qty,note:c.note,price:c.item.price})),
-    subtotal:totalPrice(), descuento:disc.amount, postresGratis:disc.free, total:finalTotal() };
-  pushToKitchen(order);
-  console.log("PEDIDO A COCINA:",order);
-  document.getElementById("ticket").innerHTML=buildTicket(order);
-  closeSheet();
-  document.getElementById("success").classList.add("open");
-  buzz([10,40,10]); fireConfetti();
-}
-
-const askDrink=document.getElementById("askDrink");
-function closeAsk(){ askDrink.classList.remove("open"); }
-document.getElementById("sendBtn").onclick=()=>{
-  if(totalItems()===0) return;
-  if(!hasDrink()){ askDrink.classList.add("open"); return; }
-  doSend();
-};
-document.getElementById("askSkip").onclick=()=>{ closeAsk(); doSend(); };
-document.getElementById("askGoDrinks").onclick=()=>{
-  closeAsk(); closeSheet();
-  const y=document.getElementById("sec-0").getBoundingClientRect().top+window.scrollY-110;
-  window.scrollTo({top:y,behavior:"smooth"});
-};
-askDrink.onclick=e=>{ if(e.target===askDrink) closeAsk(); };
-
-document.getElementById("newOrder").onclick=()=>{
-  cart={};
-  MENU.forEach(s=>s.items.forEach(renderCtrl));
-  updateBar();
-  document.getElementById("success").classList.remove("open");
-  window.scrollTo({top:0,behavior:"smooth"});
-};
-
-// ====== Flujo pantallas ======
-document.getElementById("welcomeBtn").onclick = ()=>{ buzz(8); document.getElementById("welcome").classList.add("gone"); document.getElementById("onboard").classList.add("show"); };
-function goToMenu(){ buzz(8); document.getElementById("onboard").classList.add("gone"); }
-document.getElementById("startBtn").onclick = goToMenu;
-document.getElementById("skipBtn").onclick = goToMenu;
-
-// Init
-applyLang();
+  }, {threshold:0.12, rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".card").forEach(el=>obs.observe(el));
+  setTimeout(()=>{ const c=document.getElementById("introCurtain"); if(c) c.remove(); }, 1900);
 </script>
+
 </body>
 </html>

@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>SERENO · Carta astronómica · Valencia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap">
+<style>
+  :root{
+    --bg:#e8e6dc;
+    --bg-2:#dad7c5;
+    --bg-3:#c8c4ad;
+    --paper:#e8e6dc;
+    --ink:#0e1340;
+    --ink-soft:#3a4068;
+    --ink-faint:#6a6e90;
+    --muted:#9a96ae;
+    --line:#bdb89e;
+    --line-2:#9c977c;
+    --gold:#a8761c;
+    --gold-soft:#c69838;
+    --pompeii:#8a1e0e;
+    --azure:#4a6ea8;
+    --star:rgba(14,19,64,.18);
+    --display:"EB Garamond",ui-serif,Georgia,serif;
+    --body:"Spectral",Georgia,serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;font-weight:400}
+  body{padding-bottom:104px;max-width:520px;margin:0 auto;position:relative;overflow-x:hidden}
+
+  /* ===== PARCHMENT GRAIN ===== */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:200;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='2' seed='5'/><feColorMatrix values='0 0 0 0 0.06 0 0 0 0 0.08 0 0 0 0 0.25 0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    opacity:.14;mix-blend-mode:multiply;
+  }
+  /* ===== STARFIELD (SVG con titileo individual) ===== */
+  .starfield{position:fixed;inset:0;pointer-events:none;z-index:199;width:100%;height:100%}
+  .starfield circle{fill:var(--ink);animation:twinkle var(--dur,6s) ease-in-out infinite;animation-delay:var(--del,0s);transform-origin:center}
+  @keyframes twinkle{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:.18;transform:scale(.55)}}
+  .starfield .bright{fill:var(--gold)}
+  .starfield .bright{animation:twinkleBright var(--dur,7s) ease-in-out infinite;animation-delay:var(--del,0s)}
+  @keyframes twinkleBright{0%,100%{opacity:1;transform:scale(1.1);filter:drop-shadow(0 0 3px var(--gold))}50%{opacity:.4;transform:scale(.7);filter:none}}
+
+  /* ===== INTRO ===== */
+  .intro-curtain{position:fixed;inset:0;z-index:300;background:var(--bg);pointer-events:none;animation:curtainOut 1.4s .6s cubic-bezier(.76,0,.24,1) forwards;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .intro-curtain::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%, rgba(168,118,28,.18), transparent 55%);opacity:0;animation:curtainGlow 1.4s .3s ease-out forwards}
+  .intro-compass{width:220px;height:220px;position:relative;opacity:0;animation:compassIn 1.4s cubic-bezier(.5,1.3,.4,1) forwards}
+  .intro-compass-ring{position:absolute;inset:0;border:1px solid var(--ink);border-radius:50%;animation:compassSpin 12s linear infinite}
+  .intro-compass-ring::before{content:"N";position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-family:var(--display);font-style:italic;font-size:18px;color:var(--ink);background:var(--bg);padding:0 6px}
+  .intro-compass-ring::after{content:"S";position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);font-family:var(--display);font-style:italic;font-size:18px;color:var(--ink);background:var(--bg);padding:0 6px}
+  .intro-compass-cross{position:absolute;inset:0}
+  .intro-compass-cross::before{content:"";position:absolute;left:50%;top:8%;bottom:8%;width:1px;background:var(--ink);transform:translateX(-50%)}
+  .intro-compass-cross::after{content:"";position:absolute;top:50%;left:8%;right:8%;height:1px;background:var(--ink);transform:translateY(-50%)}
+  .intro-mark{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-style:italic;font-size:36px;color:var(--ink);letter-spacing:-.5px;line-height:1;background:var(--bg);width:100px;height:50px;margin:auto;border-radius:0;z-index:2}
+  @keyframes compassIn{0%{opacity:0;transform:scale(.5) rotate(-30deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+  @keyframes compassSpin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+  @keyframes curtainGlow{0%{opacity:0}40%{opacity:1}100%{opacity:0}}
+  @keyframes curtainOut{0%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(100% 0 0 0)}}
+
+  /* ===== HEADER ===== */
+  header{position:sticky;top:0;z-index:40;background:rgba(232,230,220,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .head-top{display:flex;align-items:flex-end;justify-content:space-between;padding:14px 22px 8px;gap:14px}
+  .brand{display:flex;align-items:baseline;gap:0;min-width:0;flex:1}
+  .brand h1{font-family:var(--display);font-style:italic;font-size:30px;font-weight:500;color:var(--ink);letter-spacing:-1px;line-height:.9;text-transform:lowercase}
+  .brand-text{display:flex;flex-direction:column;line-height:1;min-width:0;margin-left:2px}
+  .brand span{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);margin-top:6px;letter-spacing:1.8px;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase}
+  .head-right{display:flex;align-items:center;gap:14px;flex:0 0 auto}
+  .mesa-chip{display:inline-flex;align-items:baseline;gap:5px;background:transparent;color:var(--ink-soft);padding:0;border:none;font-family:var(--mono);font-size:10.5px;font-weight:400;letter-spacing:1.5px;text-transform:uppercase}
+  .mesa-chip strong{color:var(--gold);font-family:var(--display);font-style:italic;font-weight:600;font-size:18px;letter-spacing:-.5px;text-transform:none}
+
+  .lang{position:relative}
+  .lang-btn{display:flex;align-items:center;gap:5px;background:transparent;border:none;padding:0;border-radius:0;font-family:var(--mono);font-size:10.5px;font-weight:400;color:var(--ink);cursor:pointer;letter-spacing:1.5px;text-transform:uppercase}
+  .lang-btn .fl{font-size:13px}
+  .lang-btn .ar{font-size:9px;color:var(--gold)}
+  .lang-menu{position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-2);border:1px solid var(--ink-soft);padding:5px;min-width:160px;opacity:0;transform:translateY(-6px) scale(.96);pointer-events:none;transition:.18s;z-index:50;border-radius:0;box-shadow:6px 6px 0 rgba(14,19,64,.16)}
+  .lang-menu.open{opacity:1;transform:none;pointer-events:auto}
+  .lang-opt{display:flex;align-items:baseline;gap:10px;padding:9px 11px;font-family:var(--body);font-style:italic;font-size:14px;font-weight:400;cursor:pointer;color:var(--ink)}
+  .lang-opt .fl{font-size:14px}
+  .lang-opt.active{color:var(--gold)}
+
+  /* ===== TABS ===== */
+  .tabs{display:flex;gap:0;overflow-x:auto;padding:4px 22px 14px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;border:none;background:transparent;color:var(--ink-faint);padding:6px 0;font-family:var(--body);font-style:italic;font-size:15px;font-weight:400;cursor:pointer;letter-spacing:.4px;white-space:nowrap;transition:.18s;text-transform:lowercase}
+  .tab.active{color:var(--gold)}
+  .tab + .tab::before{content:"·";margin:0 12px;color:var(--ink-faint);font-style:normal}
+  .tab.active::after{content:"";display:block;margin-top:2px;height:1px;background:var(--gold);width:70%;margin-left:auto;margin-right:auto}
+
+  main{padding:0 22px}
+
+  /* ===== TOP DE LA NOCHE (best-sellers carousel) ===== */
+  .top-section{margin:28px 0 40px;position:relative}
+  .top-section-header{display:flex;align-items:baseline;gap:14px;margin-bottom:18px}
+  .top-greek{font-family:var(--display);font-style:italic;font-size:28px;font-weight:500;color:var(--gold);line-height:.85;flex:0 0 auto}
+  .top-title-wrap{flex:1;min-width:0}
+  .top-coord{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;font-weight:400;text-transform:uppercase;display:block;margin-bottom:5px}
+  .top-heading{font-family:var(--display);font-style:italic;font-size:32px;font-weight:600;color:var(--ink);text-transform:lowercase;letter-spacing:-.5px;line-height:.95}
+  .top-meta{font-family:var(--body);font-style:italic;font-size:13px;color:var(--ink-soft);margin-top:6px;font-weight:400}
+  .top-rule{margin:6px 0 18px;border-top:1px solid var(--ink-soft);position:relative;height:0}
+  .top-rule::before{content:"✦";position:absolute;top:-9px;left:30px;font-size:11px;color:var(--gold);background:var(--bg);padding:0 6px;font-family:var(--display);font-style:italic}
+  .top-row{display:flex;gap:18px;overflow-x:auto;scrollbar-width:none;padding:6px 22px 14px;margin:0 -22px;scroll-snap-type:x mandatory}
+  .top-row::-webkit-scrollbar{display:none}
+  .top-card{flex:0 0 auto;width:170px;display:flex;flex-direction:column;align-items:center;cursor:pointer;text-align:center;position:relative;scroll-snap-align:start}
+  .top-rank{font-family:var(--mono);font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;font-weight:500}
+  .top-rank strong{font-family:var(--display);font-style:italic;font-weight:600;font-size:14px;color:var(--ink);letter-spacing:-.3px;text-transform:none}
+  .top-img-wrap{width:150px;height:150px;border-radius:50%;overflow:hidden;border:1.5px solid var(--ink);position:relative;box-shadow:5px 5px 0 var(--gold-soft);transition:transform .25s,box-shadow .25s;background:var(--bg-2);flex:0 0 auto}
+  .top-card:active .top-img-wrap{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--gold-soft)}
+  .top-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(.22) saturate(.92) contrast(1.04);transition:transform .8s cubic-bezier(.4,0,.2,1)}
+  .top-card:hover .top-img-wrap img{transform:scale(1.06)}
+  /* Telescope crosshairs */
+  .top-img-wrap::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:
+      linear-gradient(to bottom, transparent calc(50% - .5px), rgba(168,118,28,.35) 50%, transparent calc(50% + .5px)),
+      linear-gradient(to right, transparent calc(50% - .5px), rgba(168,118,28,.35) 50%, transparent calc(50% + .5px)),
+      radial-gradient(circle, transparent 60%, rgba(14,19,64,.32) 100%);
+  }
+  .top-img-wrap::before{content:"";position:absolute;top:50%;left:50%;width:18px;height:18px;border:1px solid var(--gold);border-radius:50%;transform:translate(-50%,-50%);opacity:.55;pointer-events:none;z-index:2}
+  .top-info{margin-top:14px;width:100%;display:flex;flex-direction:column;gap:4px;align-items:center}
+  .top-name{font-family:var(--display);font-style:italic;font-size:18px;font-weight:600;color:var(--ink);line-height:1.05;letter-spacing:-.3px;text-transform:lowercase}
+  .top-meta-line{font-family:var(--mono);font-size:9px;color:var(--ink-soft);letter-spacing:1.4px;text-transform:uppercase}
+  .top-price{font-family:var(--display);font-style:italic;font-size:18px;color:var(--gold);font-weight:600;letter-spacing:-.2px;margin-top:4px}
+  .top-add{position:absolute;top:18px;right:0;background:var(--ink);color:var(--bg);width:28px;height:28px;border-radius:50%;font-family:var(--display);font-style:italic;font-size:15px;cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;z-index:3;line-height:1;font-weight:500;box-shadow:3px 3px 0 var(--gold-soft)}
+  .top-add:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--gold-soft)}
+
+  /* ===== QUIZ BANNER (the recommendation CTA) ===== */
+  .quiz-banner{margin:18px 0 4px;background:transparent;border:1px solid var(--ink);padding:14px 16px;display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:14px;cursor:pointer;color:var(--ink);position:relative;box-shadow:5px 5px 0 var(--gold-soft);transition:.18s}
+  .quiz-banner:active{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--gold-soft)}
+  .quiz-banner-icon{flex:0 0 42px;width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-style:italic;font-size:18px;color:var(--gold);font-weight:500}
+  .quiz-banner-text{min-width:0}
+  .quiz-banner-eyebrow{font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:3px}
+  .quiz-banner-text h3{font-family:var(--display);font-style:italic;font-size:19px;font-weight:500;letter-spacing:-.2px;line-height:1.1;color:var(--ink)}
+  .quiz-banner-text p{font-family:var(--body);font-style:italic;font-size:13px;font-weight:400;margin-top:2px;color:var(--ink-soft);letter-spacing:.1px}
+  .quiz-banner-arrow{font-family:var(--display);font-style:italic;font-size:22px;color:var(--ink);font-weight:500}
+  /* Compact when cart has items */
+  .quiz-banner.compact{padding:8px 12px;background:transparent;border:1px dotted var(--ink-soft);box-shadow:none;justify-content:center;gap:8px;grid-template-columns:auto auto;width:auto;margin:8px auto 0}
+  .quiz-banner.compact .quiz-banner-icon{width:22px;height:22px;font-size:11px;border-color:var(--gold);color:var(--gold)}
+  .quiz-banner.compact .quiz-banner-eyebrow{display:none}
+  .quiz-banner.compact .quiz-banner-text h3{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-style:normal}
+  .quiz-banner.compact .quiz-banner-text p{display:none}
+  .quiz-banner.compact .quiz-banner-arrow{display:none}
+
+  /* ===== SECTION HEADER ===== */
+  .sec-header{margin:44px 0 22px;padding:0;display:flex;align-items:baseline;gap:14px}
+  .sec-greek{font-family:var(--display);font-style:italic;font-size:32px;font-weight:500;color:var(--gold);letter-spacing:-.5px;line-height:.85;flex:0 0 auto}
+  .sec-title-wrap{flex:1;min-width:0}
+  .sec-coord{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;font-weight:400;text-transform:uppercase;margin-bottom:5px;display:block}
+  .sec-heading{font-family:var(--display);font-size:36px;font-weight:600;color:var(--ink);letter-spacing:-.5px;line-height:.95;text-transform:lowercase;font-style:italic}
+  .sec-meta{font-family:var(--body);font-style:italic;font-size:13px;color:var(--ink-soft);margin-top:6px;font-weight:400;letter-spacing:.1px;line-height:1.4}
+  .sec-rule{margin:6px 0 18px;border-top:1px solid var(--ink-soft);position:relative;height:0}
+  .sec-rule::before{content:"✦";position:absolute;top:-9px;left:30px;font-size:11px;color:var(--gold);background:var(--bg);padding:0 6px;font-family:var(--display);font-style:italic}
+
+  /* ===== ITEM ROW (star catalog entry) ===== */
+  .item{display:grid;grid-template-columns:28px 1fr auto;align-items:baseline;column-gap:12px;padding:14px 0;margin:0;cursor:pointer;position:relative;transition:.18s;background:transparent;border-bottom:1px dotted var(--line-2)}
+  .item:hover{background:rgba(168,118,28,.04)}
+  .item:active{background:rgba(168,118,28,.08)}
+  .item.flash{animation:flashRow .7s}
+  @keyframes flashRow{0%{background:transparent}25%{background:rgba(168,118,28,.14)}100%{background:transparent}}
+  .item.soldout{opacity:.4;cursor:default}
+  .item.soldout .item-name{text-decoration:line-through;text-decoration-thickness:1px}
+  .item.soldout .ctrl-wrap{display:none}
+  .soldout-tag{font-family:var(--mono);font-size:10px;font-weight:400;color:var(--ink-faint);padding:0;letter-spacing:1.5px;text-transform:uppercase;align-self:center}
+
+  .item-greek{font-family:var(--display);font-style:italic;font-size:18px;font-weight:500;color:var(--gold);letter-spacing:0;line-height:1;grid-column:1;align-self:center;text-align:left;position:relative}
+  .item-greek::after{content:"";position:absolute;top:50%;left:50%;width:36px;height:36px;border:1px solid var(--gold);border-radius:50%;transform:translate(-50%,-50%) scale(.4);opacity:0;pointer-events:none}
+  .item:active .item-greek::after{animation:orbitRing .8s cubic-bezier(.5,1.4,.4,1) forwards}
+  .item.flash .item-greek::after{animation:orbitRing .8s cubic-bezier(.5,1.4,.4,1) forwards}
+  @keyframes orbitRing{0%{transform:translate(-50%,-50%) scale(.4);opacity:0}40%{opacity:.85}100%{transform:translate(-50%,-50%) scale(1.8);opacity:0}}
+  .item.soldout .item-greek{color:var(--ink-faint)}
+  .item.has-fav .item-greek{color:var(--pompeii)}
+
+  .item-body{grid-column:2;min-width:0;display:flex;flex-direction:column;gap:3px}
+  .item-name{font-family:var(--display);font-style:italic;font-size:19px;font-weight:500;color:var(--ink);line-height:1.1;letter-spacing:-.1px;white-space:normal;overflow:hidden}
+  .item-meta{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);font-weight:400;letter-spacing:1.4px;line-height:1.3;text-transform:uppercase}
+  .item-meta .dot{margin:0 4px;color:var(--line-2)}
+
+  .price{font-family:var(--display);font-style:italic;font-size:20px;font-weight:600;color:var(--ink);letter-spacing:-.3px;line-height:1;grid-column:3;white-space:nowrap;align-self:center}
+
+  .ctrl-wrap{position:absolute;right:0;top:50%;transform:translateY(-50%) translateX(110%);opacity:0;transition:opacity .25s ease,transform .3s ease}
+  .item:hover .ctrl-wrap, .has-qty .ctrl-wrap{opacity:1;transform:translateY(-50%) translateX(0)}
+  @media(hover:none){.ctrl-wrap{opacity:1;transform:translateY(-50%) translateX(0)}}
+  .add{border:1px solid var(--gold);background:var(--bg);color:var(--gold);width:30px;height:30px;border-radius:50%;font-family:var(--display);font-style:italic;font-size:16px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;line-height:1;padding:0}
+  .add:active{transform:scale(.9);background:var(--gold);color:var(--bg)}
+  .qty-ctrl{display:flex;align-items:center;gap:8px;background:transparent;padding:0;border-radius:0;flex:0 0 auto}
+  .qty-ctrl button{border:1px solid var(--gold);background:var(--bg);color:var(--gold);width:24px;height:24px;border-radius:50%;font-size:13px;cursor:pointer;line-height:1;font-family:var(--display);font-style:italic;font-weight:500;display:flex;align-items:center;justify-content:center;padding:0}
+  .qty-ctrl span{font-family:var(--display);font-style:italic;font-size:18px;font-weight:600;min-width:14px;text-align:center;color:var(--gold);letter-spacing:-.3px}
+
+  /* ===== CART BAR (observation log) ===== */
+  .cart-bar{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);width:calc(100% - 28px);max-width:492px;z-index:88;transition:transform .55s cubic-bezier(.34,1.4,.4,1)}
+  .cart-bar.hidden{transform:translateX(-50%) translateY(180%);transition:transform .5s cubic-bezier(.7,0,.2,1)}
+  .cart-btn{width:100%;border:none;background:var(--ink);color:var(--bg);padding:14px 18px;font-family:var(--body);font-style:italic;font-size:15px;font-weight:400;cursor:pointer;display:flex;align-items:center;justify-content:space-between;letter-spacing:0;border-radius:0;box-shadow:8px 8px 0 var(--gold-soft),0 22px 50px rgba(14,19,64,.32);position:relative;overflow:hidden}
+  .cart-btn:active{transform:translate(2px,2px);box-shadow:6px 6px 0 var(--gold-soft)}
+  .cart-btn::before{content:"✦";position:absolute;left:18px;color:var(--gold-soft);font-size:11px;font-family:var(--display);font-style:italic}
+  .cart-count{background:var(--gold-soft);color:var(--ink);font-family:var(--display);font-style:italic;font-size:14px;font-weight:600;padding:1px 9px;border-radius:0;min-width:28px;text-align:center;letter-spacing:-.3px;transition:background .3s ease;display:inline-block}
+  .cart-count.bump{animation:countBump .55s cubic-bezier(.4,1.6,.5,1)}
+  @keyframes countBump{0%{transform:scale(1)}30%{transform:scale(1.45);background:var(--pompeii);color:var(--bg);box-shadow:0 0 16px var(--pompeii)}100%{transform:scale(1);background:var(--gold-soft);color:var(--ink);box-shadow:none}}
+  .cart-left{display:flex;align-items:baseline;gap:14px;padding-left:22px}
+  .cart-mid{font-family:var(--body);font-style:italic;font-size:14px;color:var(--bg);margin-left:6px}
+  #cartTotal{font-family:var(--display);font-style:italic;font-size:20px;font-weight:600;color:var(--gold-soft);letter-spacing:-.5px}
+
+  /* ===== FLY-TO-CART ===== */
+  .flyer{position:fixed;width:22px;height:22px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:1000;transition:transform .85s cubic-bezier(.55,0,.3,1),opacity .75s ease-out;box-shadow:0 0 18px var(--gold),0 0 32px rgba(168,118,28,.5)}
+
+  /* ===== SCROLL REVEAL ===== */
+  .sec-header, .item, .quiz-banner{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.5,0,.15,1),transform .9s cubic-bezier(.5,0,.15,1)}
+  .sec-header.in-view, .item.in-view, .quiz-banner.in-view{opacity:1;transform:translateY(0)}
+  .item.in-view{transition-delay:calc(var(--i,0) * 50ms)}
+
+  .overlay{position:fixed;inset:0;background:rgba(14,19,64,.72);z-index:90;opacity:0;pointer-events:none;transition:.3s;backdrop-filter:blur(3px)}
+  .overlay.open{opacity:1;pointer-events:auto}
+
+  /* ===== DETAIL ===== */
+  .detail{position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);width:100%;max-width:520px;max-height:94vh;background:var(--bg);z-index:92;transition:transform .45s cubic-bezier(.5,1.3,.4,1);display:flex;flex-direction:column;overflow:hidden;border-top:2px solid var(--ink);box-shadow:0 -20px 50px rgba(14,19,64,.3)}
+  .detail.open{transform:translateX(-50%) translateY(0)}
+  .dt-imgwrap{position:relative;width:100%;height:200px;background:var(--bg-2);flex:0 0 auto;overflow:hidden;border-bottom:1px solid var(--line);background-image:radial-gradient(ellipse at 50% 100%, rgba(168,118,28,.18), transparent 70%),radial-gradient(circle at 50% 30%, rgba(74,110,168,.12), transparent 60%)}
+  .dt-imgwrap img{width:100%;height:100%;object-fit:cover;display:block}
+  .dt-orbit{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:160px;height:160px;border:1px solid var(--ink-soft);border-radius:50%;opacity:.4;animation:orbit 14s linear infinite}
+  .dt-orbit::before{content:"";position:absolute;top:-3px;left:50%;transform:translateX(-50%);width:6px;height:6px;background:var(--gold);border-radius:50%;box-shadow:0 0 12px var(--gold)}
+  .dt-orbit::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:10px;height:10px;background:var(--ink);border-radius:50%}
+  @keyframes orbit{0%{transform:translate(-50%,-50%) rotate(0deg)}100%{transform:translate(-50%,-50%) rotate(360deg)}}
+  .dt-close{position:absolute;top:14px;right:14px;background:var(--bg);border:1px solid var(--ink);width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer;color:var(--ink);display:flex;align-items:center;justify-content:center;line-height:1;font-family:var(--display);font-style:italic;font-weight:500;z-index:2}
+  .dt-fav{position:absolute;top:16px;left:16px;background:var(--pompeii);color:var(--bg);font-family:var(--mono);font-size:9.5px;font-weight:500;padding:5px 11px;border-radius:0;letter-spacing:1.8px;text-transform:uppercase;z-index:2}
+  .dt-fav::before{content:"✦ "}
+  .dt-body{padding:24px 28px 18px;overflow-y:auto;flex:1;background:var(--bg)}
+  .dt-coord{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+  .dt-name{font-family:var(--display);font-style:italic;font-size:38px;font-weight:600;letter-spacing:-.8px;line-height:1;color:var(--ink);margin-bottom:6px;text-transform:lowercase}
+  .dt-cat{font-family:var(--body);font-style:italic;font-size:14px;color:var(--ink-soft);margin-bottom:18px}
+  .dt-price{display:inline-block;font-family:var(--display);font-style:italic;font-size:30px;font-weight:600;color:var(--gold);letter-spacing:-.6px}
+  .dt-soldout{display:inline-block;font-family:var(--mono);font-size:10px;color:var(--ink-faint);padding:2px 0 2px 14px;border-left:1px solid var(--line-2);margin-left:14px;letter-spacing:1.5px;font-weight:400;vertical-align:middle;text-transform:uppercase}
+  .dt-desc{font-family:var(--body);font-style:italic;font-size:16px;color:var(--ink-soft);line-height:1.6;margin-top:20px;font-weight:400;letter-spacing:.1px}
+
+  /* Flavor profile bars (refined) */
+  .flavor-profile{margin-top:24px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .flavor-profile-title{font-family:var(--mono);font-size:9.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:1.8px;font-weight:500;margin-bottom:14px}
+  .flavor-bars{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px}
+  .flavor-bar{display:grid;grid-template-columns:62px 1fr 28px;gap:8px;align-items:center}
+  .flavor-bar-label{font-family:var(--body);font-style:italic;font-size:13px;color:var(--ink);font-weight:400;letter-spacing:0}
+  .flavor-bar-track{height:1px;background:var(--line);position:relative;overflow:hidden}
+  .flavor-bar-fill{height:5px;background:var(--gold);transition:width .6s cubic-bezier(.5,0,.2,1);position:absolute;top:50%;transform:translateY(-50%);left:0}
+  .flavor-bar-val{font-family:var(--mono);font-size:10.5px;color:var(--gold);text-align:right;font-weight:500}
+
+  .dt-foot{padding:14px 28px calc(20px + env(safe-area-inset-bottom));background:var(--bg-2);display:flex;align-items:center;gap:14px;border-top:1px solid var(--line)}
+  .dt-qty{display:flex;align-items:center;gap:14px;background:transparent;padding:0 4px}
+  .dt-qty button{border:1px solid var(--gold);background:var(--bg);color:var(--gold);width:32px;height:32px;border-radius:50%;font-size:16px;cursor:pointer;line-height:1;font-family:var(--display);font-style:italic;font-weight:500;padding:0}
+  .dt-qty span{font-family:var(--display);font-style:italic;font-size:22px;font-weight:600;min-width:20px;text-align:center;color:var(--gold);letter-spacing:-.5px}
+  .dt-add{flex:1;border:none;background:var(--ink);color:var(--bg);padding:14px;font-family:var(--mono);font-size:11px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:12px;letter-spacing:2.5px;border-radius:0;box-shadow:6px 6px 0 var(--gold-soft);text-transform:uppercase}
+  .dt-add::after{content:"→";font-size:14px;font-weight:400}
+  .dt-add:active{transform:translate(2px,2px);box-shadow:4px 4px 0 var(--gold-soft)}
+  .dt-add.disabled{background:var(--muted);color:var(--ink-faint);cursor:not-allowed;box-shadow:none}
+
+  /* ===== SHEET (your log) ===== */
+  .sheet{position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);width:100%;max-width:520px;max-height:88vh;background:var(--bg);z-index:92;transition:transform .45s cubic-bezier(.5,1.3,.4,1);display:flex;flex-direction:column;border-top:2px solid var(--ink);box-shadow:0 -20px 50px rgba(14,19,64,.3)}
+  .sheet.open{transform:translateX(-50%) translateY(0)}
+  .sheet-head{padding:24px 28px 16px;display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line)}
+  .sheet-head h2{font-family:var(--display);font-style:italic;font-size:32px;font-weight:600;letter-spacing:-.8px;color:var(--ink);text-transform:lowercase;line-height:.95}
+  .sheet-head h2 small{font-family:var(--mono);font-size:11px;font-weight:400;color:var(--ink-soft);letter-spacing:1.5px;margin-left:8px;text-transform:uppercase}
+  .close{background:var(--bg);border:1px solid var(--ink);width:34px;height:34px;font-size:16px;cursor:pointer;color:var(--ink);font-family:var(--display);font-style:italic;font-weight:500;line-height:1;display:flex;align-items:center;justify-content:center;border-radius:50%}
+  .sheet-body{overflow-y:auto;padding:8px 28px;flex:1}
+  .cart-item{background:transparent;border:none;border-bottom:1px dotted var(--line-2);border-radius:0;padding:16px 0;position:relative}
+  .ci-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+  .ci-name{font-family:var(--display);font-style:italic;font-size:19px;font-weight:500;line-height:1.1;color:var(--ink);letter-spacing:-.1px}
+  .ci-price{font-family:var(--display);font-style:italic;font-size:20px;font-weight:600;white-space:nowrap;color:var(--gold);letter-spacing:-.4px}
+  .ci-foot{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+  .note-input{width:100%;margin-top:10px;border:1px solid var(--line);background:var(--bg-2);padding:10px 14px;font-family:var(--body);font-style:italic;font-size:14px;resize:none;color:var(--ink);font-weight:400;border-radius:0;letter-spacing:.1px}
+  .note-input::placeholder{color:var(--ink-faint);font-weight:400;font-style:italic}
+  .note-input:focus{outline:none;border-color:var(--gold)}
+  .empty{text-align:center;color:var(--ink-faint);padding:60px 20px;font-family:var(--display);font-style:italic;font-size:22px;line-height:1.4;font-weight:500;letter-spacing:-.3px}
+
+  /* Free shot promo */
+  .promo-banner{background:transparent;border:1px solid var(--gold);padding:13px 16px;margin-bottom:14px;display:flex;align-items:center;gap:13px;color:var(--ink)}
+  .promo-banner.unlocked{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  .promo-emoji{flex:0 0 28px;width:28px;height:28px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-style:italic;font-size:14px;font-weight:600;color:var(--gold)}
+  .promo-banner.unlocked .promo-emoji{border-color:var(--gold-soft);color:var(--gold-soft)}
+  .promo-text{flex:1;min-width:0}
+  .promo-eyebrow{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:inline-block;margin-bottom:3px}
+  .promo-banner.unlocked .promo-eyebrow{color:var(--gold-soft)}
+  .promo-text h4{font-family:var(--display);font-style:italic;font-size:16px;font-weight:600;letter-spacing:-.3px;color:var(--ink);line-height:1.15}
+  .promo-banner.unlocked .promo-text h4{color:var(--bg)}
+  .promo-text p{font-family:var(--body);font-style:italic;font-size:12px;font-weight:400;color:var(--ink-soft);margin-top:3px}
+  .promo-banner.unlocked .promo-text p{color:rgba(232,230,220,.75)}
+  .promo-progress{height:1px;background:rgba(14,19,64,.18);overflow:hidden;margin-top:9px}
+  .promo-progress-fill{height:100%;background:var(--gold);transition:width .4s}
+  .cart-item.free{background:rgba(168,118,28,.05);border:1px dashed var(--gold);padding:14px 16px}
+  .cart-item.free .ci-name{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .free-tag{font-family:var(--mono);font-size:9.5px;font-weight:500;color:var(--gold);background:transparent;border:1px solid var(--gold);padding:2px 8px;border-radius:0;letter-spacing:1.5px;text-transform:uppercase;font-style:normal}
+  .cart-item.free .ci-price{color:var(--gold);font-family:var(--display);font-style:italic;font-size:14px}
+  .free-note{font-family:var(--body);font-style:italic;font-size:12.5px;color:var(--ink-soft);font-weight:400;margin-top:6px;letter-spacing:.1px}
+
+  .sheet-foot{padding:18px 28px calc(24px + env(safe-area-inset-bottom));background:var(--bg-2);border-top:1px solid var(--line)}
+  .total-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
+  .total-row .lbl{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:2px;font-weight:400;text-transform:uppercase}
+  .total-row .val{font-family:var(--display);font-style:italic;font-size:36px;font-weight:600;color:var(--ink);letter-spacing:-1px}
+  .send-btn{width:100%;border:none;background:var(--ink);color:var(--bg);padding:16px;font-family:var(--mono);font-size:11px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:12px;letter-spacing:3px;border-radius:0;box-shadow:8px 8px 0 var(--gold-soft);text-transform:uppercase;transition:.18s}
+  .send-btn::after{content:"→";font-size:14px}
+  .send-btn:active{transform:translate(2px,2px);box-shadow:6px 6px 0 var(--gold-soft)}
+  .send-btn:disabled{background:var(--muted);color:var(--ink-faint);cursor:not-allowed;box-shadow:none}
+
+  /* ===== SHOTS UPSELL ===== */
+  .shot-upsell{position:fixed;bottom:88px;left:50%;transform:translateX(-50%) translateY(160%);width:calc(100% - 28px);max-width:492px;z-index:87;background:var(--bg);border:1px solid var(--ink);padding:14px 16px;box-shadow:8px 8px 0 var(--gold-soft),0 16px 36px rgba(14,19,64,.3);transition:transform .45s cubic-bezier(.5,1.3,.4,1)}
+  .shot-upsell.show{transform:translateX(-50%) translateY(0)}
+  .su-close{position:absolute;top:8px;right:10px;background:transparent;border:none;width:24px;height:24px;font-size:14px;cursor:pointer;color:var(--ink-soft);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:500;line-height:1;z-index:2}
+  .su-head{padding-right:28px}
+  .su-eye{font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-weight:500;display:block;margin-bottom:4px}
+  .su-title{font-family:var(--display);font-style:italic;font-size:20px;font-weight:600;color:var(--ink);line-height:1.05;letter-spacing:-.3px;margin-bottom:3px;text-transform:lowercase}
+  .su-sub{font-family:var(--body);font-style:italic;font-size:13px;color:var(--ink-soft);font-weight:400;letter-spacing:.1px}
+  .su-shots{display:flex;gap:8px;margin-top:11px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  .su-shots::-webkit-scrollbar{display:none}
+  .su-shot{flex:0 0 auto;background:var(--bg-2);border:1px solid var(--ink-soft);border-radius:0;padding:8px 12px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:.15s}
+  .su-shot:active{transform:translate(2px,2px);background:var(--bg-3)}
+  .su-shot-info{display:flex;flex-direction:column;line-height:1.1;text-align:left}
+  .su-shot-name{font-family:var(--display);font-style:italic;font-size:14px;font-weight:500;color:var(--ink);white-space:nowrap;letter-spacing:0}
+  .su-shot-price{font-family:var(--mono);font-size:10.5px;color:var(--gold);font-weight:400;letter-spacing:0;margin-top:2px}
+  .su-shot-add{background:var(--ink);color:var(--bg);width:22px;height:22px;border-radius:50%;font-size:13px;font-family:var(--display);font-weight:400;display:flex;align-items:center;justify-content:center;line-height:1;flex:0 0 22px}
+
+  /* ===== QUIZ ===== */
+  .quiz{position:fixed;inset:0;z-index:80;background:var(--bg);max-width:520px;margin:0 auto;display:flex;flex-direction:column;transition:opacity .4s,transform .4s;opacity:0;transform:translateY(16px);pointer-events:none;overflow:hidden}
+  .quiz.show{opacity:1;transform:translateY(0);pointer-events:auto}
+  .quiz.gone{opacity:0;transform:scale(1.02);pointer-events:none}
+  .quiz-head{padding:36px 24px 6px;text-align:left;position:relative}
+  .quiz-back{position:absolute;top:32px;left:22px;background:var(--bg);border:1px solid var(--ink);width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;color:var(--ink);font-family:var(--display);font-style:italic;font-weight:500;line-height:1;display:flex;align-items:center;justify-content:center}
+  .quiz-back.hidden{visibility:hidden}
+  .quiz-skip{position:absolute;top:38px;right:26px;background:none;border:none;font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);font-weight:400;cursor:pointer;text-transform:uppercase;letter-spacing:1.5px}
+  .quiz-progress{display:flex;justify-content:center;gap:6px;margin:24px 0 18px}
+  .quiz-dot{width:30px;height:1px;background:var(--ink-faint);opacity:.4}
+  .quiz-dot.active{background:var(--gold);opacity:1;height:2px}
+  .quiz-step-label{font-family:var(--mono);font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:2.5px;font-weight:500;margin-bottom:14px;display:block;text-align:center}
+  .quiz-q{font-family:var(--display);font-style:italic;font-size:34px;font-weight:600;color:var(--ink);letter-spacing:-.8px;line-height:1.05;margin-bottom:8px;text-align:center;text-transform:lowercase}
+  .quiz-q-sub{font-family:var(--body);font-style:italic;font-size:14.5px;color:var(--ink-soft);font-weight:400;margin-bottom:24px;line-height:1.4;text-align:center}
+
+  .quiz-body{flex:1;padding:10px 22px 130px;overflow-y:auto}
+  .quiz.no-cart .quiz-body{padding-bottom:32px}
+  .quiz-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .quiz-card{background:var(--bg);border:1px solid var(--line-2);border-radius:0;padding:22px 14px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;cursor:pointer;transition:.18s;text-align:left;font-family:var(--body)}
+  .quiz-card:active{transform:scale(.98)}
+  .quiz-card.selected{background:var(--ink);color:var(--bg);border-color:var(--ink);box-shadow:6px 6px 0 var(--gold-soft);animation:ignite .55s cubic-bezier(.4,1.6,.5,1)}
+  @keyframes ignite{0%{transform:scale(1)}40%{transform:scale(1.025);box-shadow:0 0 40px var(--gold-soft),6px 6px 0 var(--gold-soft)}100%{transform:scale(1);box-shadow:6px 6px 0 var(--gold-soft)}}
+  .quiz-card-emoji{display:none}
+  .quiz-card-num{font-family:var(--display);font-style:italic;font-size:14px;font-weight:500;color:var(--gold);letter-spacing:0;line-height:1}
+  .quiz-card.selected .quiz-card-num{color:var(--gold-soft)}
+  .quiz-card-label{font-family:var(--display);font-style:italic;font-size:20px;font-weight:600;letter-spacing:-.3px;color:var(--ink);line-height:1.05;text-transform:lowercase;margin-top:auto}
+  .quiz-card.selected .quiz-card-label{color:var(--bg)}
+  .quiz-card-sub{font-family:var(--body);font-style:italic;font-size:12.5px;color:var(--ink-soft);font-weight:400;line-height:1.3;margin-top:4px}
+  .quiz-card.selected .quiz-card-sub{color:rgba(232,230,220,.75)}
+
+  .quiz-grid-2{grid-template-columns:1fr 1fr}
+  .quiz-grid-3{grid-template-columns:1fr;gap:10px}
+  .quiz-card.wide{flex-direction:row;justify-content:flex-start;text-align:left;padding:16px 20px;gap:18px;align-items:center}
+  .quiz-card.wide .quiz-card-num{flex:0 0 auto;font-size:24px}
+  .quiz-card.wide .quiz-card-text{flex:1}
+  .quiz-card.wide .quiz-card-label{margin-top:0}
+
+  .quiz-foot{padding:14px 22px calc(94px + env(safe-area-inset-bottom));background:linear-gradient(to top,var(--bg) 60%,transparent);display:flex;flex-direction:column;gap:10px;position:relative;z-index:2}
+  .quiz.no-cart .quiz-foot{padding-bottom:calc(22px + env(safe-area-inset-bottom))}
+  .quiz-next{width:100%;border:none;background:var(--ink);color:var(--bg);padding:16px;font-family:var(--mono);font-size:11px;font-weight:500;cursor:pointer;border-radius:0;letter-spacing:2.5px;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:12px;transition:.15s;box-shadow:6px 6px 0 var(--gold-soft)}
+  .quiz-next::after{content:"→";font-size:14px}
+  .quiz-next:disabled{background:var(--muted);cursor:not-allowed;box-shadow:none}
+  .quiz-next:not(:disabled):active{transform:translate(2px,2px);box-shadow:4px 4px 0 var(--gold-soft)}
+  .quiz-hint{text-align:center;font-family:var(--body);font-style:italic;font-size:12.5px;color:var(--ink-soft);font-weight:400;margin-top:18px;letter-spacing:.1px}
+
+  /* ===== RESULT ===== */
+  .quiz-result{display:flex;flex-direction:column;height:100%;padding:32px 24px 130px;overflow-y:auto}
+  .quiz.no-cart .quiz-result{padding-bottom:32px}
+  .result-header{text-align:left;margin-bottom:24px}
+  .result-eyebrow{font-family:var(--mono);font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:2.5px;font-weight:500;margin-bottom:10px;display:block}
+  .result-title{font-family:var(--display);font-style:italic;font-size:42px;font-weight:600;color:var(--ink);line-height:1;letter-spacing:-1px;text-transform:lowercase}
+  .result-sub{font-family:var(--body);font-style:italic;font-size:14.5px;color:var(--ink-soft);margin-top:14px;font-weight:400;line-height:1.5}
+  .result-summary{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:10px;color:var(--ink);background:transparent;border:1px solid var(--ink);padding:6px 14px;border-radius:0;font-weight:500;letter-spacing:1.5px;text-transform:uppercase}
+
+  .result-cards{display:flex;flex-direction:column;gap:16px;margin-bottom:22px}
+  .result-card{background:var(--bg);border:1px solid var(--line);border-radius:0;padding:0;overflow:hidden;position:relative;transform:translateY(14px);opacity:0;animation:cardIn .5s forwards;box-shadow:6px 6px 0 var(--gold-soft)}
+  .result-card:nth-child(1){animation-delay:.1s}
+  .result-card:nth-child(2){animation-delay:.25s}
+  .result-card:nth-child(3){animation-delay:.4s}
+  @keyframes cardIn{to{transform:translateY(0);opacity:1}}
+  .result-match{position:absolute;top:14px;right:14px;background:var(--bg);color:var(--ink);font-family:var(--mono);font-size:9.5px;font-weight:500;padding:5px 11px;border:1px solid var(--ink);border-radius:0;letter-spacing:1.5px;text-transform:uppercase;z-index:3}
+  .result-match.top{background:var(--ink);color:var(--bg)}
+  .result-img{width:100%;height:140px;background:var(--bg-2);overflow:hidden;position:relative;background-image:radial-gradient(ellipse at 50% 100%, rgba(168,118,28,.16), transparent 70%)}
+  .result-orbit{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:120px;height:120px;border:1px solid var(--ink-soft);border-radius:50%;opacity:.4}
+  .result-orbit::before{content:"";position:absolute;top:-3px;left:50%;transform:translateX(-50%);width:5px;height:5px;background:var(--gold);border-radius:50%}
+  .result-orbit::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:8px;height:8px;background:var(--ink);border-radius:50%}
+  .result-body{padding:18px 20px 18px}
+  .result-coord{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;display:block}
+  .result-name{font-family:var(--display);font-style:italic;font-size:30px;font-weight:600;color:var(--ink);letter-spacing:-.7px;line-height:1;text-transform:lowercase}
+  .result-desc{font-family:var(--body);font-style:italic;font-size:13.5px;color:var(--ink-soft);margin-top:10px;line-height:1.55;font-weight:400}
+  .result-foot{display:flex;align-items:center;justify-content:space-between;margin-top:16px;gap:10px}
+  .result-price{font-family:var(--display);font-style:italic;font-size:26px;color:var(--gold);font-weight:600;letter-spacing:-.6px}
+  .result-actions{display:flex;align-items:center;gap:8px}
+  .result-more{background:transparent;border:1px solid var(--ink);color:var(--ink);padding:8px 14px;font-family:var(--mono);font-size:10.5px;font-weight:500;cursor:pointer;border-radius:0;letter-spacing:1.5px;text-transform:uppercase}
+  .result-add{background:var(--ink);border:none;color:var(--bg);padding:9px 16px;font-family:var(--mono);font-size:10.5px;font-weight:500;cursor:pointer;border-radius:0;display:flex;align-items:center;gap:6px;letter-spacing:1.5px;text-transform:uppercase}
+  .result-add::before{content:"+";font-size:14px;font-family:var(--display);font-style:italic;font-weight:600}
+
+  .result-empty{background:var(--bg-2);border:1px dashed var(--line-2);padding:32px 24px;text-align:center;margin:20px 0}
+  .result-empty h3{font-family:var(--display);font-style:italic;font-size:26px;font-weight:600;color:var(--ink);margin-bottom:8px;letter-spacing:-.4px;text-transform:lowercase}
+  .result-empty p{font-family:var(--body);font-style:italic;font-size:14px;color:var(--ink-soft);font-weight:400;line-height:1.5}
+
+  .result-foot-actions{padding-top:10px;display:flex;flex-direction:column;gap:9px}
+  .result-foot-actions button{width:100%;padding:15px;font-family:var(--mono);font-size:11px;font-weight:500;border:none;cursor:pointer;border-radius:0;letter-spacing:2.5px;text-transform:uppercase}
+  .btn-retake{background:transparent;color:var(--ink);border:1px solid var(--ink) !important}
+  .btn-seeall{background:var(--ink);color:var(--bg);box-shadow:6px 6px 0 var(--gold-soft)}
+  .btn-seeall:active{transform:translate(2px,2px);box-shadow:4px 4px 0 var(--gold-soft)}
+
+  /* ===== ASK MODAL (food before sending if just drinks) ===== */
+  .ask{position:fixed;inset:0;z-index:95;background:rgba(14,19,64,.7);display:flex;align-items:center;justify-content:center;padding:28px;opacity:0;pointer-events:none;transition:.25s;backdrop-filter:blur(4px)}
+  .ask.open{opacity:1;pointer-events:auto}
+  .ask-box{background:var(--bg);padding:28px 24px 22px;max-width:360px;width:100%;text-align:left;transform:scale(.92);transition:.25s;box-shadow:8px 8px 0 var(--gold-soft),0 20px 60px rgba(14,19,64,.4);border:1px solid var(--ink)}
+  .ask.open .ask-box{transform:scale(1)}
+  .ask-box h3{font-family:var(--display);font-style:italic;font-size:28px;font-weight:600;margin-bottom:10px;color:var(--ink);letter-spacing:-.6px;line-height:1.05;text-transform:lowercase}
+  .ask-box p{font-family:var(--body);font-style:italic;font-size:14px;color:var(--ink-soft);line-height:1.55;margin-bottom:22px;font-weight:400}
+  .ask-btns{display:flex;flex-direction:column;gap:10px}
+  .ask-primary{border:none;background:var(--ink);color:var(--bg);padding:14px;font-family:var(--mono);font-size:11px;font-weight:500;cursor:pointer;letter-spacing:2.5px;text-transform:uppercase;border-radius:0;box-shadow:6px 6px 0 var(--gold-soft)}
+  .ask-primary:active{transform:translate(2px,2px);box-shadow:4px 4px 0 var(--gold-soft)}
+  .ask-secondary{border:1px solid var(--line-2);background:transparent;color:var(--ink-soft);padding:13px;font-family:var(--mono);font-size:10.5px;font-weight:500;cursor:pointer;border-radius:0;letter-spacing:1.5px;text-transform:uppercase}
+
+  /* ===== SUCCESS ===== */
+  .success{position:fixed;inset:0;z-index:99;background:var(--bg);background-image:radial-gradient(ellipse at 50% 80%, rgba(168,118,28,.18), transparent 55%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;opacity:0;pointer-events:none;transition:.4s;overflow-y:auto;max-width:520px;margin:0 auto}
+  .shooting{position:absolute;width:2px;height:80px;background:linear-gradient(to bottom, transparent, var(--gold), transparent);transform-origin:center top;pointer-events:none;opacity:0}
+  .success.open .shooting{animation:shoot 1.6s cubic-bezier(.35,0,.2,1) forwards}
+  @keyframes shoot{0%{transform:translate(0,-100px) rotate(-32deg) scaleY(.3);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translate(-220px,420px) rotate(-32deg) scaleY(1);opacity:0}}
+  .success.open .shooting:nth-child(1){left:80%;top:10%;animation-delay:.2s}
+  .success.open .shooting:nth-child(2){left:65%;top:8%;animation-delay:.7s}
+  .success.open .shooting:nth-child(3){left:90%;top:18%;animation-delay:1.1s}
+  .success.open .shooting:nth-child(4){left:78%;top:5%;animation-delay:1.5s}
+  .success.open{opacity:1;pointer-events:auto}
+  .success-inner{width:100%;max-width:380px;display:flex;flex-direction:column;align-items:center}
+  .check{width:84px;height:84px;background:transparent;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:26px;animation:pop2 .5s cubic-bezier(.2,1.5,.4,1);box-shadow:0 0 50px rgba(168,118,28,.3)}
+  .check svg{width:40px;height:40px;stroke:var(--gold);stroke-width:1.8;fill:none;stroke-dasharray:30;stroke-dashoffset:30;animation:draw .6s .3s forwards;stroke-linecap:round}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes pop2{0%{transform:scale(0)}100%{transform:scale(1)}}
+  .success h2{font-family:var(--display);font-style:italic;font-size:48px;font-weight:600;margin-bottom:10px;color:var(--ink);text-align:center;letter-spacing:-1.2px;line-height:1;text-transform:lowercase}
+  .success .glad{color:var(--ink-soft);font-family:var(--body);font-style:italic;font-size:15px;margin-bottom:30px;text-align:center;font-weight:400;letter-spacing:.2px;max-width:300px;line-height:1.5}
+  .ticket{background:var(--bg-2);width:100%;padding:26px 24px 14px;border:1px solid var(--ink);border-radius:0;animation:ticketIn .5s .15s both;box-shadow:8px 8px 0 var(--gold-soft);position:relative}
+  @keyframes ticketIn{0%{transform:translateY(20px);opacity:0}100%{transform:translateY(0);opacity:1}}
+  .tk-top{text-align:left;border-bottom:1px dashed var(--ink);padding-bottom:18px;margin-bottom:18px}
+  .tk-top h3{font-family:var(--display);font-style:italic;font-size:34px;font-weight:600;letter-spacing:-.8px;color:var(--ink);line-height:.95;text-transform:lowercase}
+  .tk-top .meta{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);margin-top:8px;letter-spacing:1.5px;font-weight:400;text-transform:uppercase}
+  .tk-no{display:inline-block;background:var(--ink);color:var(--bg);font-family:var(--mono);font-weight:500;font-size:11px;padding:3px 11px;border-radius:0;margin-top:12px;letter-spacing:1.5px;text-transform:uppercase}
+  .tk-line{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:12px;align-items:flex-start}
+  .tk-line .ql{display:flex;gap:12px;min-width:0;align-items:baseline}
+  .tk-line .q{font-family:var(--display);font-style:italic;color:var(--gold);font-weight:600;flex:0 0 auto;font-size:17px;letter-spacing:-.3px;line-height:1}
+  .tk-line .nm{font-family:var(--display);font-style:italic;font-weight:500;line-height:1.2;font-size:16px;color:var(--ink);letter-spacing:-.1px}
+  .tk-line .nm small{display:block;font-family:var(--body);font-style:italic;color:var(--ink-soft);font-weight:400;font-size:12px;margin-top:3px;letter-spacing:.1px;line-height:1.3}
+  .tk-line .pr{font-family:var(--display);font-style:italic;font-weight:500;white-space:nowrap;font-size:16px;color:var(--ink);letter-spacing:-.2px}
+  .tk-sep{border-top:1px dashed var(--ink);margin:14px 0}
+  .tk-total{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--display);font-style:italic;font-size:28px;font-weight:600;margin-top:8px;color:var(--gold);letter-spacing:-.8px;text-transform:lowercase}
+  .tk-total span:first-child{color:var(--ink)}
+  .tk-foot{text-align:left;font-family:var(--body);font-style:italic;font-size:13px;color:var(--ink-faint);padding:16px 0 6px;line-height:1.5;font-weight:400;letter-spacing:.1px}
+  .success-actions{width:100%;margin-top:24px;display:flex;flex-direction:column;gap:11px}
+  .sa-status{display:flex;align-items:center;justify-content:center;gap:11px;background:transparent;border:1px solid var(--gold);color:var(--gold);padding:14px;font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:2px;border-radius:0;text-transform:uppercase}
+  .sa-dot{width:7px;height:7px;background:var(--gold);border-radius:50%;animation:starPulse 2s infinite}
+  @keyframes starPulse{0%,100%{opacity:1;box-shadow:0 0 8px var(--gold)}50%{opacity:.4;box-shadow:0 0 12px var(--gold)}}
+  .ghost-btn{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:15px 26px;font-family:var(--mono);font-size:11px;font-weight:500;cursor:pointer;letter-spacing:2px;border-radius:0;text-transform:uppercase}
+  .ghost-btn:active{background:var(--bg-2)}
+
+  /* ===== WELCOME (minimal · 3-step orbit) ===== */
+  .welcome{position:fixed;inset:0;z-index:100;max-width:520px;margin:0 auto;display:flex;flex-direction:column;justify-content:space-between;text-align:left;padding:calc(56px + env(safe-area-inset-top)) 28px calc(36px + env(safe-area-inset-bottom));background:var(--bg);transition:opacity .6s cubic-bezier(.7,0,.3,1),transform .6s cubic-bezier(.7,0,.3,1);overflow-y:auto}
+  .welcome::before{content:"";position:absolute;top:-100px;right:-100px;width:280px;height:280px;background:radial-gradient(circle, rgba(168,118,28,.18), transparent 60%);border-radius:50%;filter:blur(40px);z-index:1}
+  .welcome::after{content:"";position:absolute;bottom:-120px;left:-80px;width:280px;height:280px;background:radial-gradient(circle, rgba(74,110,168,.12), transparent 60%);border-radius:50%;filter:blur(50px);z-index:1}
+  .welcome.gone{animation:irisClose 1.1s cubic-bezier(.7,0,.2,1) forwards;pointer-events:none}
+  @keyframes irisClose{0%{clip-path:circle(150% at 50% 50%);opacity:1}70%{opacity:.6}100%{clip-path:circle(0% at 50% 50%);opacity:0}}
+
+  /* Welcome constellation (Cassiopeia drawing on load) */
+  .w-constellation{position:relative;width:260px;height:90px;margin:18px 0 0;z-index:3}
+  .w-constellation svg{width:100%;height:100%;overflow:visible}
+  .w-constellation .c-line{stroke:var(--gold);stroke-width:.8;fill:none;stroke-dasharray:300;stroke-dashoffset:300;animation:drawLines 1.4s .5s cubic-bezier(.65,0,.25,1) forwards}
+  .w-constellation .c-star{fill:var(--gold);opacity:0;transform-origin:center;transform-box:fill-box;animation:starLight .55s cubic-bezier(.4,1.6,.5,1) forwards}
+  .w-constellation .c-star:nth-of-type(1){animation-delay:.5s}
+  .w-constellation .c-star:nth-of-type(2){animation-delay:.75s}
+  .w-constellation .c-star:nth-of-type(3){animation-delay:1s}
+  .w-constellation .c-star:nth-of-type(4){animation-delay:1.25s}
+  .w-constellation .c-star:nth-of-type(5){animation-delay:1.5s}
+  .w-constellation .c-star.bright{filter:drop-shadow(0 0 4px var(--gold))}
+  .w-constellation .c-label{font-family:var(--mono);font-size:8.5px;letter-spacing:3px;fill:var(--ink-soft);opacity:0;animation:fadeIn .8s 1.7s forwards;text-transform:uppercase}
+  @keyframes drawLines{to{stroke-dashoffset:0}}
+  @keyframes starLight{0%{opacity:0;transform:scale(.2)}50%{opacity:1;transform:scale(1.4)}100%{opacity:1;transform:scale(1)}}
+
+  .w-lang{position:absolute;top:calc(20px + env(safe-area-inset-top));right:22px;z-index:5}
+  .w-mark{font-family:var(--mono);font-size:9.5px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;opacity:0;animation:fadeIn 1s .2s forwards;position:relative;z-index:3;font-weight:500}
+  .w-mark::before{content:"✦ ";font-family:var(--display);font-style:italic}
+
+  .w-center{position:relative;z-index:3;display:flex;flex-direction:column;align-items:flex-start;margin:auto 0;padding:24px 0}
+  .w-title{font-family:var(--display);font-style:italic;font-size:88px;font-weight:600;letter-spacing:-2px;line-height:.85;margin:8px 0 8px;color:var(--ink);opacity:0;animation:revealTitle 1.1s 1.4s forwards;text-transform:lowercase;position:relative;z-index:3}
+  @keyframes revealTitle{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+  .w-rule{width:60px;height:1px;background:var(--gold);margin:18px 0 22px;opacity:0;animation:ruleGrow .8s 1.9s forwards;transform-origin:left}
+  @keyframes ruleGrow{0%{transform:scaleX(0);opacity:0}100%{transform:scaleX(1);opacity:1}}
+
+  /* "Cómo se lee" — how it works (3-step) */
+  .w-howto{position:relative;z-index:3;opacity:0;animation:fadeUp .9s 2.2s forwards;max-width:380px}
+  .w-howto-label{display:block;font-family:var(--mono);font-size:9.5px;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:14px;font-weight:500}
+  .w-howto-step{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px dotted var(--line-2)}
+  .w-howto-step:last-child{border-bottom:none}
+  .w-howto-num{font-family:var(--mono);font-size:11px;color:var(--gold);line-height:1;text-align:left;letter-spacing:1.5px;font-weight:500}
+  .w-howto-text{font-family:var(--display);font-style:italic;font-size:18px;color:var(--ink);line-height:1.25;font-weight:500;letter-spacing:-.2px}
+  .w-howto-text small{display:block;font-family:var(--body);font-style:italic;font-size:12.5px;color:var(--ink-soft);margin-top:3px;font-weight:400;letter-spacing:.1px;line-height:1.4}
+
+  .w-bottom{position:relative;z-index:3;opacity:0;animation:fadeUp 1s 2.6s forwards;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+  .w-mesa-line{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:1.8px;display:flex;align-items:baseline;gap:8px;text-transform:uppercase}
+  .w-mesa-line strong{font-family:var(--display);font-style:italic;font-size:24px;font-weight:600;color:var(--gold);letter-spacing:-.5px;text-transform:none}
+  .w-mesa-line::after{content:"";flex:1;margin-left:10px;border-top:1px dotted var(--line-2);align-self:center;height:1px;min-width:60px}
+  .w-btn{align-self:flex-start;border:none;background:var(--ink);color:var(--bg);padding:14px 26px;font-family:var(--mono);font-size:11px;font-weight:500;cursor:pointer;border-radius:0;display:inline-flex;align-items:center;gap:14px;letter-spacing:3px;transition:.2s;text-transform:uppercase;box-shadow:6px 6px 0 var(--gold-soft)}
+  .w-btn::after{content:"→";font-size:14px;font-weight:400;letter-spacing:0}
+  .w-btn:active{transform:translate(2px,2px);box-shadow:4px 4px 0 var(--gold-soft)}
+  @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+  @keyframes fadeUp{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+
+<svg class="starfield" id="starfield" viewBox="0 0 1000 1500" preserveAspectRatio="xMidYMid slice">
+  <circle cx="80" cy="120" r="1.2" style="--dur:6s;--del:0s"/>
+  <circle cx="240" cy="80" r="0.9" style="--dur:7s;--del:1s"/>
+  <circle cx="420" cy="180" r="1.5" class="bright" style="--dur:8s;--del:.5s"/>
+  <circle cx="600" cy="60" r="0.8" style="--dur:5s;--del:2s"/>
+  <circle cx="780" cy="140" r="1.2" style="--dur:6s;--del:1.5s"/>
+  <circle cx="920" cy="200" r="1.8" class="bright" style="--dur:9s;--del:0s"/>
+  <circle cx="160" cy="320" r="0.9" style="--dur:7s;--del:3s"/>
+  <circle cx="340" cy="280" r="1.3" style="--dur:6s;--del:.8s"/>
+  <circle cx="520" cy="380" r="0.8" style="--dur:5s;--del:2.5s"/>
+  <circle cx="700" cy="340" r="2" class="bright" style="--dur:10s;--del:1s"/>
+  <circle cx="860" cy="420" r="1.1" style="--dur:6s;--del:0s"/>
+  <circle cx="100" cy="520" r="1.4" class="bright" style="--dur:8s;--del:2s"/>
+  <circle cx="280" cy="580" r="0.8" style="--dur:6s;--del:1.5s"/>
+  <circle cx="460" cy="540" r="1.2" style="--dur:7s;--del:.5s"/>
+  <circle cx="640" cy="620" r="0.9" style="--dur:5s;--del:3s"/>
+  <circle cx="820" cy="580" r="1.6" class="bright" style="--dur:9s;--del:1s"/>
+  <circle cx="180" cy="740" r="1.1" style="--dur:6s;--del:2s"/>
+  <circle cx="380" cy="780" r="0.9" style="--dur:7s;--del:0s"/>
+  <circle cx="560" cy="720" r="1.3" style="--dur:6s;--del:1.2s"/>
+  <circle cx="740" cy="800" r="1.8" class="bright" style="--dur:8s;--del:.7s"/>
+  <circle cx="920" cy="760" r="0.8" style="--dur:5s;--del:2.5s"/>
+  <circle cx="80" cy="920" r="1.2" style="--dur:7s;--del:1.5s"/>
+  <circle cx="260" cy="960" r="1.5" class="bright" style="--dur:9s;--del:0s"/>
+  <circle cx="440" cy="900" r="0.9" style="--dur:6s;--del:2s"/>
+  <circle cx="620" cy="980" r="1.1" style="--dur:7s;--del:1s"/>
+  <circle cx="800" cy="940" r="0.8" style="--dur:5s;--del:3s"/>
+  <circle cx="980" cy="1000" r="1.4" class="bright" style="--dur:8s;--del:.5s"/>
+  <circle cx="140" cy="1120" r="1" style="--dur:6s;--del:1.8s"/>
+  <circle cx="320" cy="1160" r="1.2" style="--dur:7s;--del:0s"/>
+  <circle cx="520" cy="1100" r="1.6" class="bright" style="--dur:9s;--del:1.2s"/>
+  <circle cx="700" cy="1180" r="0.9" style="--dur:5s;--del:2.5s"/>
+  <circle cx="880" cy="1140" r="1.1" style="--dur:6s;--del:.8s"/>
+  <circle cx="60" cy="1320" r="1.3" style="--dur:7s;--del:1.5s"/>
+  <circle cx="240" cy="1380" r="0.8" style="--dur:5s;--del:3s"/>
+  <circle cx="420" cy="1340" r="1.5" class="bright" style="--dur:8s;--del:0s"/>
+  <circle cx="600" cy="1400" r="0.9" style="--dur:6s;--del:2s"/>
+  <circle cx="780" cy="1320" r="1.2" style="--dur:7s;--del:1s"/>
+  <circle cx="960" cy="1380" r="1.7" class="bright" style="--dur:9s;--del:.5s"/>
+</svg>
+
+<div class="intro-curtain" id="introCurtain">
+  <div class="intro-compass">
+    <div class="intro-compass-ring"></div>
+    <div class="intro-compass-cross"></div>
+    <span class="intro-mark">sereno</span>
+  </div>
+</div>
+
+<div class="welcome" id="welcome">
+  <div class="w-lang" id="wLang"></div>
+
+  <div class="w-mark">obs. valencia · 39°28'N · 0°22'W · UT+1</div>
+
+  <div class="w-constellation">
+    <svg viewBox="0 0 260 90" aria-label="Cassiopeia">
+      <path class="c-line" d="M 20 70 L 70 20 L 120 70 L 170 20 L 230 70"/>
+      <circle class="c-star" cx="20" cy="70" r="2.2"/>
+      <circle class="c-star bright" cx="70" cy="20" r="3.2"/>
+      <circle class="c-star" cx="120" cy="70" r="2.2"/>
+      <circle class="c-star bright" cx="170" cy="20" r="3"/>
+      <circle class="c-star" cx="230" cy="70" r="2.2"/>
+      <text class="c-label" x="125" y="88" text-anchor="middle">cassiopeia</text>
+    </svg>
+  </div>
+
+  <div class="w-center">
+    <h1 class="w-title">sereno</h1>
+    <div class="w-rule"></div>
+
+    <div class="w-howto">
+      <span class="w-howto-label" data-t="howToLabel">cómo se lee</span>
+      <div class="w-howto-step"><span class="w-howto-num">α</span><span class="w-howto-text" data-t="step1">Hojea la carta.<small>Toca cualquier cóctel para verlo en grande.</small></span></div>
+      <div class="w-howto-step"><span class="w-howto-num">β</span><span class="w-howto-text" data-t="step2">¿Sin saber qué pedir?<small>Hacemos un test de 30 segundos y te lo decimos.</small></span></div>
+      <div class="w-howto-step"><span class="w-howto-num">γ</span><span class="w-howto-text" data-t="step3">Cuando lo tengas claro, envía.<small>Pulsa "enviar a barra" y va camino de la mesa.</small></span></div>
+    </div>
+  </div>
+
+  <div class="w-bottom">
+    <div class="w-mesa-line"><span data-t="table">Mesa</span><strong id="wMesa">7</strong></div>
+    <button class="w-btn" id="welcomeBtn"><span data-t="start">Empezar la observación</span></button>
+  </div>
+</div>
+
+<!-- ===== QUIZ ===== -->
+<div class="quiz" id="quiz">
+  <div class="quiz-head">
+    <button class="quiz-back" id="quizBack">←</button>
+    <button class="quiz-skip" id="quizSkip" data-t="quizSkip">Saltar</button>
+    <div class="quiz-progress" id="quizProgress"></div>
+    <div class="quiz-step-label" id="quizStepLabel"></div>
+    <h2 class="quiz-q" id="quizQ"></h2>
+    <p class="quiz-q-sub" id="quizQSub"></p>
+  </div>
+  <div class="quiz-body" id="quizBody"></div>
+  <div class="quiz-foot">
+    <button class="quiz-next" id="quizNext" disabled><span data-t="quizNext">Siguiente</span></button>
+  </div>
+</div>
+
+<!-- ===== RESULT ===== -->
+<div class="quiz" id="result">
+  <div class="quiz-head">
+    <button class="quiz-back" id="resultBack">←</button>
+  </div>
+  <div class="quiz-result" id="resultBody"></div>
+</div>
+
+<header>
+  <div class="head-top">
+    <div class="brand"><div class="brand-text"><h1>sereno</h1><span data-t="tagline">carta astronómica · valencia</span></div></div>
+    <div class="head-right">
+      <div class="mesa-chip"><span data-t="tableShort">m</span><strong id="mesaNum">7</strong></div>
+      <div class="lang" id="hLang"></div>
+    </div>
+  </div>
+  <div class="tabs" id="tabs"></div>
+</header>
+
+<div class="quiz-banner" id="quizBanner">
+  <div class="quiz-banner-icon">✦</div>
+  <div class="quiz-banner-text">
+    <span class="quiz-banner-eyebrow" data-t="bannerEye">Test de la noche</span>
+    <h3 data-t="bannerTitle">¿No sabes qué pedir?</h3>
+    <p data-t="bannerSub">Test de 30 segundos · tu estrella esta noche</p>
+  </div>
+  <div class="quiz-banner-arrow">→</div>
+</div>
+
+<main id="menu"></main>
+
+<div class="shot-upsell" id="shotUpsell">
+  <button class="su-close" id="suClose">×</button>
+  <div class="su-head">
+    <span class="su-eye" id="suEye">cortesía</span>
+    <h4 class="su-title" id="suTitle">¿Le ponemos un chupito?</h4>
+    <p class="su-sub" id="suSub">Recién sacado del congelador.</p>
+  </div>
+  <div class="su-shots" id="suShots"></div>
+</div>
+
+<div class="cart-bar hidden" id="cartBar">
+  <button class="cart-btn" id="cartBtn">
+    <span class="cart-left"><span class="cart-count" id="cartCount">0</span> <span class="cart-mid" data-t="viewOrder">Ver pedido</span></span>
+    <span id="cartTotal">0,00 €</span>
+  </button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="detail" id="detail">
+  <div class="dt-imgwrap"><div id="dtFav"></div><div class="dt-orbit"></div><div id="dtImg" style="width:100%;height:100%"></div><button class="dt-close" id="dtClose">×</button></div>
+  <div class="dt-body">
+    <div class="dt-coord" id="dtCoord"></div>
+    <div class="dt-name" id="dtName"></div>
+    <div class="dt-cat" id="dtCat"></div>
+    <div class="dt-price" id="dtPrice"></div>
+    <div class="dt-desc" id="dtDesc"></div>
+    <div id="dtFlavor"></div>
+  </div>
+  <div class="dt-foot"><div class="dt-qty"><button id="dtMinus">−</button><span id="dtQty">1</span><button id="dtPlus">+</button></div><button class="dt-add" id="dtAdd"></button></div>
+</div>
+
+<div class="sheet" id="sheet">
+  <div class="sheet-head"><h2 id="sheetTitle"></h2><button class="close" id="closeSheet">×</button></div>
+  <div class="sheet-body" id="cartList"></div>
+  <div class="sheet-foot">
+    <div class="total-row"><span class="lbl" data-t="total">Total</span><span class="val" id="grandTotal">0,00 €</span></div>
+    <button class="send-btn" id="sendBtn"><span data-t="sendOrder">Enviar a barra</span></button>
+  </div>
+</div>
+
+<div class="ask" id="askDrink">
+  <div class="ask-box">
+    <h3 data-t="askTitle">¿Y algo para picar?</h3>
+    <p data-t="askBody">Las anchoas, los quesos o las aceitunas acompañan bien una buena copa.</p>
+    <div class="ask-btns">
+      <button class="ask-primary" id="askGoDrinks" data-t="askSee">Sí, mostrar</button>
+      <button class="ask-secondary" id="askSkip" data-t="askSkipBtn">Enviar así</button>
+    </div>
+  </div>
+</div>
+
+<div class="success" id="success">
+  <div class="shooting"></div>
+  <div class="shooting"></div>
+  <div class="shooting"></div>
+  <div class="shooting"></div>
+  <div class="success-inner">
+    <div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+    <h2 data-t="sentTitle">Pedido en órbita</h2>
+    <div class="glad" data-t="sentGlad">La barra ya está agitando tu copa. Camino de la mesa.</div>
+    <div class="ticket" id="ticket"></div>
+    <div class="success-actions">
+      <div class="sa-status"><span class="sa-dot"></span> <span data-t="preparing">Preparando</span></div>
+      <button class="ghost-btn" id="newOrder" data-t="orderMore">Pedir algo más</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const LANGS=[{code:"ES",flag:"🇪🇸",label:"Español"},{code:"EN",flag:"🇬🇧",label:"English"},{code:"FR",flag:"🇫🇷",label:"Français"},{code:"DE",flag:"🇩🇪",label:"Deutsch"},{code:"IT",flag:"🇮🇹",label:"Italiano"}];
+let lang = "ES";
+
+const T = {
+  ES:{table:"Mesa",tableShort:"m",start:"Empezar la observación",tagline:"carta astronómica · valencia",
+    howToLabel:"cómo se lee",step1:"Hojea la carta.<small>Toca cualquier cóctel para verlo en grande.</small>",step2:"¿Sin saber qué pedir?<small>Hacemos un test de 30 segundos y te lo decimos.</small>",step3:"Cuando lo tengas claro, envía.<small>Pulsa enviar a barra y va camino de la mesa.</small>",
+    bannerEye:"Test de la noche",bannerTitle:"¿No sabes qué pedir?",bannerSub:"Test de 30 segundos · tu estrella esta noche",
+    q1Title:"¿Qué te apetece?",q1Sub:"Elige uno o varios sabores",q1Hint:"Puedes marcar varios",
+    q2Title:"¿Con o sin alcohol?",q2Sub:"Tú mandas",
+    q3Title:"¿Intensidad?",q3Sub:"De suave a marcado",
+    quizSkip:"Saltar",quizNext:"Siguiente",
+    resultEyebrow:"Tu estrella esta noche",resultTitle:"Esto es lo tuyo",resultSubOne:"Hemos encontrado tu copa ideal.",resultSubMany:"Las tres copas que más orbitan tu gusto.",
+    matchTop:"α match",matchGood:"β match",matchOk:"γ match",
+    seeAll:"Ver carta completa",retake:"Repetir el test",addThis:"añadir",moreInfo:"más",
+    emptyTitle:"sin coincidencias",emptyText:"Prueba a relajar los filtros — el cielo es ancho.",
+    viewOrder:"Ver pedido",yourOrder:"Tu pedido",total:"Total",sendOrder:"Enviar a barra",askTitle:"¿Y algo para picar?",askBody:"Anchoas, quesos o aceitunas acompañan bien una copa.",askSee:"Sí, mostrar",askSkipBtn:"Enviar así",sentTitle:"pedido en órbita",sentGlad:"La barra ya está agitando tu copa. Camino de la mesa.",preparing:"Preparando",orderMore:"Pedir algo más",emptyCart:"sin pedido",notePh:"sin hielo, doble shot…",addToOrder:"añadir al pedido",add:"añadir",missing:"¿Le falta algo?",thanks:"Gracias",onWay:"Va camino del bar.",top:"FIRMA",
+    cat:{"Signature":"signature","Clásicos":"clásicos","Gin & Tonics":"gin & tonics","Sin alcohol":"sin alcohol","Para picar":"para picar","Chupitos":"cometas","Postres":"postres"},
+    greek:{"Signature":"α","Clásicos":"β","Gin & Tonics":"γ","Sin alcohol":"δ","Para picar":"ε","Chupitos":"ζ","Postres":"η"},
+    eye:{"Signature":"firmas del observatorio","Clásicos":"clásicos del firmamento","Gin & Tonics":"con tónica · cinco aromas","Sin alcohol":"sin spirit · sin alcohol","Para picar":"para acompañar la copa","Chupitos":"chupitos · cometas","Postres":"finales dulces"},
+    coord:{"Signature":"21h 12m +43°","Clásicos":"18h 30m -22°","Gin & Tonics":"06h 45m -16°","Sin alcohol":"03h 18m +12°","Para picar":"15h 47m +08°","Chupitos":"22h 50m -34°","Postres":"01h 25m -42°"},
+    q1opts:[{id:"citrus",label:"Cítrico",sub:"Limón, naranja, lima"},{id:"frutal",label:"Frutal",sub:"Bayas, tropical, dulce"},{id:"herbal",label:"Herbal",sub:"Menta, romero, fresco"},{id:"floral",label:"Floral",sub:"Hibisco, lavanda, rosas"},{id:"smoky",label:"Ahumado",sub:"Mezcal, intenso, brasa"},{id:"bitter",label:"Amargo",sub:"Negroni, café, herbal"}],
+    q2opts:[{id:"alcohol",label:"Con alcohol",sub:"La noche es nuestra"},{id:"none",label:"Sin alcohol",sub:"Frescura sin más"}],
+    q3opts:[{id:"soft",label:"Suave",sub:"Para empezar, refrescante"},{id:"medium",label:"Equilibrado",sub:"Ni mucho ni poco"},{id:"strong",label:"Marcado",sub:"Carácter, alcohol presente"}]},
+  EN:{table:"Table",tableShort:"t",start:"Begin observation",tagline:"astronomical menu · valencia",
+    howToLabel:"how to read",step1:"Browse the menu.<small>Tap any cocktail to see it in detail.</small>",step2:"Don't know what to order?<small>Take our 30-second test and we'll tell you.</small>",step3:"When you've decided, send.<small>Press send to bar and it's on its way.</small>",
+    bannerEye:"tonight's test",bannerTitle:"Not sure what to order?",bannerSub:"30-second test · your star tonight",
+    q1Title:"What's your mood?",q1Sub:"Pick one or several flavors",q1Hint:"You can pick several",
+    q2Title:"With or without alcohol?",q2Sub:"You decide",
+    q3Title:"How intense?",q3Sub:"Soft to bold",
+    quizSkip:"Skip",quizNext:"Next",
+    resultEyebrow:"your star tonight",resultTitle:"This is yours",resultSubOne:"Found your ideal drink.",resultSubMany:"Three drinks orbiting your taste.",
+    matchTop:"α match",matchGood:"β match",matchOk:"γ match",
+    seeAll:"See full menu",retake:"Retake test",addThis:"add",moreInfo:"more",
+    emptyTitle:"no matches",emptyText:"Try relaxing the filters — the sky is wide.",
+    viewOrder:"View order",yourOrder:"Your order",total:"Total",sendOrder:"Send to bar",askTitle:"Anything to nibble?",askBody:"Anchovies, cheese or olives go well with a drink.",askSee:"Yes, show",askSkipBtn:"Send anyway",sentTitle:"in orbit",sentGlad:"The bar is shaking your drink. On the way.",preparing:"Preparing",orderMore:"Order more",emptyCart:"no order",notePh:"no ice, double shot…",addToOrder:"add to order",add:"add",missing:"missing anything?",thanks:"Thanks",onWay:"On the way to your table.",top:"SIGNATURE",
+    cat:{"Signature":"signature","Clásicos":"classics","Gin & Tonics":"gin & tonics","Sin alcohol":"no alcohol","Para picar":"bites","Chupitos":"comets","Postres":"desserts"},
+    greek:{"Signature":"α","Clásicos":"β","Gin & Tonics":"γ","Sin alcohol":"δ","Para picar":"ε","Chupitos":"ζ","Postres":"η"},
+    eye:{"Signature":"observatory signatures","Clásicos":"classics of the firmament","Gin & Tonics":"with tonic · five aromas","Sin alcohol":"no spirit · alcohol-free","Para picar":"to pair with your drink","Chupitos":"shots · comets","Postres":"sweet endings"},
+    coord:{"Signature":"21h 12m +43°","Clásicos":"18h 30m -22°","Gin & Tonics":"06h 45m -16°","Sin alcohol":"03h 18m +12°","Para picar":"15h 47m +08°","Chupitos":"22h 50m -34°","Postres":"01h 25m -42°"},
+    q1opts:[{id:"citrus",label:"Citrus",sub:"Lemon, orange, lime"},{id:"frutal",label:"Fruity",sub:"Berries, tropical, sweet"},{id:"herbal",label:"Herbal",sub:"Mint, rosemary, fresh"},{id:"floral",label:"Floral",sub:"Hibiscus, lavender, rose"},{id:"smoky",label:"Smoky",sub:"Mezcal, intense, fire"},{id:"bitter",label:"Bitter",sub:"Negroni, coffee, herbal"}],
+    q2opts:[{id:"alcohol",label:"With alcohol",sub:"The night is ours"},{id:"none",label:"No alcohol",sub:"Just freshness"}],
+    q3opts:[{id:"soft",label:"Soft",sub:"Refreshing start"},{id:"medium",label:"Balanced",sub:"The classic"},{id:"strong",label:"Bold",sub:"Character, strong"}]},
+  FR:{table:"Table",tableShort:"t",start:"Commencer l'observation",tagline:"carte astronomique · valence",
+    howToLabel:"comment se lit",step1:"Parcourez la carte.<small>Touchez un cocktail pour le voir en grand.</small>",step2:"Pas sûr de quoi prendre ?<small>On fait un test de 30 secondes et on vous le dit.</small>",step3:"Quand c'est clair, envoyez.<small>Appuyez sur envoyer et c'est en route.</small>",
+    bannerEye:"test du soir",bannerTitle:"Pas sûr de quoi prendre ?",bannerSub:"Test de 30 secondes · votre étoile",
+    q1Title:"De quoi avez-vous envie ?",q1Sub:"Un ou plusieurs goûts",q1Hint:"Plusieurs possibles",
+    q2Title:"Avec ou sans alcool ?",q2Sub:"Vous décidez",
+    q3Title:"Intensité ?",q3Sub:"Doux à fort",
+    quizSkip:"Passer",quizNext:"Suivant",
+    resultEyebrow:"votre étoile",resultTitle:"C'est pour vous",resultSubOne:"Votre verre idéal.",resultSubMany:"Trois verres qui orbitent autour de votre goût.",
+    matchTop:"α match",matchGood:"β match",matchOk:"γ match",
+    seeAll:"Voir la carte",retake:"Refaire le test",addThis:"ajouter",moreInfo:"plus",
+    emptyTitle:"aucun résultat",emptyText:"Essayez d'assouplir les filtres — le ciel est large.",
+    viewOrder:"Voir commande",yourOrder:"Votre commande",total:"Total",sendOrder:"Envoyer au bar",askTitle:"À grignoter ?",askBody:"Anchois, fromages ou olives accompagnent bien.",askSee:"Oui, montrer",askSkipBtn:"Envoyer ainsi",sentTitle:"en orbite",sentGlad:"Le bar prépare votre verre. En route.",preparing:"En préparation",orderMore:"Commander encore",emptyCart:"sans commande",notePh:"sans glace, double shot…",addToOrder:"ajouter",add:"ajouter",missing:"il manque quelque chose ?",thanks:"Merci",onWay:"En route vers votre table.",top:"SIGNATURE",
+    cat:{"Signature":"signature","Clásicos":"classiques","Gin & Tonics":"gin & tonics","Sin alcohol":"sans alcool","Para picar":"à grignoter","Chupitos":"comètes","Postres":"desserts"},
+    greek:{"Signature":"α","Clásicos":"β","Gin & Tonics":"γ","Sin alcohol":"δ","Para picar":"ε","Chupitos":"ζ","Postres":"η"},
+    eye:{"Signature":"signatures de l'observatoire","Clásicos":"classiques du firmament","Gin & Tonics":"avec tonic · cinq parfums","Sin alcohol":"sans alcool","Para picar":"pour accompagner","Chupitos":"shots · comètes","Postres":"fins sucrées"},
+    coord:{"Signature":"21h 12m +43°","Clásicos":"18h 30m -22°","Gin & Tonics":"06h 45m -16°","Sin alcohol":"03h 18m +12°","Para picar":"15h 47m +08°","Chupitos":"22h 50m -34°","Postres":"01h 25m -42°"},
+    q1opts:[{id:"citrus",label:"Agrumes",sub:"Citron, orange"},{id:"frutal",label:"Fruité",sub:"Baies, tropical"},{id:"herbal",label:"Herbacé",sub:"Menthe, romarin"},{id:"floral",label:"Floral",sub:"Hibiscus, rose"},{id:"smoky",label:"Fumé",sub:"Mezcal, intense"},{id:"bitter",label:"Amer",sub:"Negroni, café"}],
+    q2opts:[{id:"alcohol",label:"Avec alcool",sub:"La nuit est à nous"},{id:"none",label:"Sans alcool",sub:"Fraîcheur"}],
+    q3opts:[{id:"soft",label:"Doux",sub:"Rafraîchissant"},{id:"medium",label:"Équilibré",sub:"Le classique"},{id:"strong",label:"Fort",sub:"Caractère"}]},
+  DE:{table:"Tisch",tableShort:"t",start:"Beobachtung beginnen",tagline:"astronomische karte · valencia",
+    howToLabel:"so lest ihr",step1:"Karte durchblättern.<small>Tippe einen Cocktail an für Details.</small>",step2:"Unsicher, was bestellen?<small>30-Sekunden-Test und wir sagen es dir.</small>",step3:"Wenn klar, senden.<small>Drück senden, schon ist es unterwegs.</small>",
+    bannerEye:"abend-test",bannerTitle:"Unsicher was du willst?",bannerSub:"30-Sekunden-Test · dein Stern heute",
+    q1Title:"Worauf hast du Lust?",q1Sub:"Ein oder mehrere Geschmäcke",q1Hint:"Mehrere möglich",
+    q2Title:"Mit oder ohne Alkohol?",q2Sub:"Du entscheidest",
+    q3Title:"Wie stark?",q3Sub:"Sanft bis kräftig",
+    quizSkip:"Überspringen",quizNext:"Weiter",
+    resultEyebrow:"dein Stern heute",resultTitle:"das ist es",resultSubOne:"Dein idealer Drink.",resultSubMany:"Drei Drinks, die um deinen Geschmack kreisen.",
+    matchTop:"α match",matchGood:"β match",matchOk:"γ match",
+    seeAll:"Karte ansehen",retake:"Test wiederholen",addThis:"hinzu",moreInfo:"mehr",
+    emptyTitle:"keine Treffer",emptyText:"Lockere die Filter — der Himmel ist weit.",
+    viewOrder:"Bestellung",yourOrder:"Deine Bestellung",total:"Gesamt",sendOrder:"An Bar senden",askTitle:"Etwas zum Knabbern?",askBody:"Sardellen, Käse oder Oliven passen gut.",askSee:"Ja, zeigen",askSkipBtn:"So senden",sentTitle:"im orbit",sentGlad:"Die Bar shakt deinen Drink. Unterwegs.",preparing:"Wird zubereitet",orderMore:"Mehr bestellen",emptyCart:"keine Bestellung",notePh:"ohne Eis, doppelter Shot…",addToOrder:"hinzufügen",add:"hinzufügen",missing:"fehlt etwas?",thanks:"Danke",onWay:"Unterwegs zu deinem Tisch.",top:"SIGNATUR",
+    cat:{"Signature":"signature","Clásicos":"klassiker","Gin & Tonics":"gin & tonics","Sin alcohol":"alkoholfrei","Para picar":"snacks","Chupitos":"kometen","Postres":"desserts"},
+    greek:{"Signature":"α","Clásicos":"β","Gin & Tonics":"γ","Sin alcohol":"δ","Para picar":"ε","Chupitos":"ζ","Postres":"η"},
+    eye:{"Signature":"signaturen des observatoriums","Clásicos":"klassiker des firmaments","Gin & Tonics":"mit tonic · fünf aromen","Sin alcohol":"alkoholfrei","Para picar":"zum drink dazu","Chupitos":"shots · kometen","Postres":"süßes finale"},
+    coord:{"Signature":"21h 12m +43°","Clásicos":"18h 30m -22°","Gin & Tonics":"06h 45m -16°","Sin alcohol":"03h 18m +12°","Para picar":"15h 47m +08°","Chupitos":"22h 50m -34°","Postres":"01h 25m -42°"},
+    q1opts:[{id:"citrus",label:"Zitrus",sub:"Zitrone, Orange"},{id:"frutal",label:"Fruchtig",sub:"Beeren, tropisch"},{id:"herbal",label:"Kräutrig",sub:"Minze, Rosmarin"},{id:"floral",label:"Floral",sub:"Hibiskus, Rose"},{id:"smoky",label:"Rauchig",sub:"Mezcal, intensiv"},{id:"bitter",label:"Bitter",sub:"Negroni, Kaffee"}],
+    q2opts:[{id:"alcohol",label:"Mit Alkohol",sub:"Die Nacht ist unser"},{id:"none",label:"Alkoholfrei",sub:"Nur Frische"}],
+    q3opts:[{id:"soft",label:"Sanft",sub:"Erfrischend"},{id:"medium",label:"Ausgewogen",sub:"Klassisch"},{id:"strong",label:"Kräftig",sub:"Charakter"}]},
+  IT:{table:"Tavolo",tableShort:"t",start:"Inizia l'osservazione",tagline:"carta astronomica · valencia",
+    howToLabel:"come si legge",step1:"Sfoglia il menù.<small>Tocca un cocktail per vederlo in grande.</small>",step2:"Non sai cosa ordinare?<small>Test di 30 secondi e te lo diciamo noi.</small>",step3:"Quando è chiaro, invia.<small>Premi invia e parte verso il bar.</small>",
+    bannerEye:"test della sera",bannerTitle:"Non sai cosa ordinare?",bannerSub:"Test di 30 secondi · la tua stella stasera",
+    q1Title:"Cosa ti va?",q1Sub:"Uno o più sapori",q1Hint:"Puoi sceglierne più",
+    q2Title:"Con o senza alcol?",q2Sub:"Decidi tu",
+    q3Title:"Intensità?",q3Sub:"Morbido o forte",
+    quizSkip:"Salta",quizNext:"Avanti",
+    resultEyebrow:"la tua stella stasera",resultTitle:"è per te",resultSubOne:"Il tuo cocktail ideale.",resultSubMany:"Tre cocktail che orbitano attorno al tuo gusto.",
+    matchTop:"α match",matchGood:"β match",matchOk:"γ match",
+    seeAll:"Vedi il menù",retake:"Rifai il test",addThis:"aggiungi",moreInfo:"più",
+    emptyTitle:"nessun match",emptyText:"Prova ad allentare i filtri — il cielo è ampio.",
+    viewOrder:"Vedi ordine",yourOrder:"Il tuo ordine",total:"Totale",sendOrder:"Invia al bar",askTitle:"Da stuzzicare?",askBody:"Acciughe, formaggi o olive accompagnano bene.",askSee:"Sì, mostra",askSkipBtn:"Invia così",sentTitle:"in orbita",sentGlad:"Il bar sta mixando il tuo cocktail. In arrivo.",preparing:"In preparazione",orderMore:"Ordina ancora",emptyCart:"nessun ordine",notePh:"senza ghiaccio, doppio shot…",addToOrder:"aggiungi all'ordine",add:"aggiungi",missing:"manca qualcosa?",thanks:"Grazie",onWay:"In arrivo al tuo tavolo.",top:"FIRMA",
+    cat:{"Signature":"signature","Clásicos":"classici","Gin & Tonics":"gin & tonics","Sin alcohol":"senza alcol","Para picar":"da stuzzicare","Chupitos":"comete","Postres":"dolci"},
+    greek:{"Signature":"α","Clásicos":"β","Gin & Tonics":"γ","Sin alcohol":"δ","Para picar":"ε","Chupitos":"ζ","Postres":"η"},
+    eye:{"Signature":"firme dell'osservatorio","Clásicos":"classici del firmamento","Gin & Tonics":"con tonica · cinque aromi","Sin alcohol":"senza alcol","Para picar":"per accompagnare","Chupitos":"shot · comete","Postres":"dolci finali"},
+    coord:{"Signature":"21h 12m +43°","Clásicos":"18h 30m -22°","Gin & Tonics":"06h 45m -16°","Sin alcohol":"03h 18m +12°","Para picar":"15h 47m +08°","Chupitos":"22h 50m -34°","Postres":"01h 25m -42°"},
+    q1opts:[{id:"citrus",label:"Agrumato",sub:"Limone, arancia"},{id:"frutal",label:"Fruttato",sub:"Bacche, tropicale"},{id:"herbal",label:"Erbaceo",sub:"Menta, rosmarino"},{id:"floral",label:"Floreale",sub:"Ibisco, rosa"},{id:"smoky",label:"Affumicato",sub:"Mezcal, intenso"},{id:"bitter",label:"Amaro",sub:"Negroni, caffè"}],
+    q2opts:[{id:"alcohol",label:"Con alcol",sub:"La notte è nostra"},{id:"none",label:"Senza alcol",sub:"Freschezza"}],
+    q3opts:[{id:"soft",label:"Morbido",sub:"Rinfrescante"},{id:"medium",label:"Equilibrato",sub:"Classico"},{id:"strong",label:"Intenso",sub:"Carattere"}]}
+};
+
+const FLAVOR_MAP = {
+  citrus:["citrus"], frutal:["sweet","tropical"], herbal:["herbal"], floral:["floral"], smoky:["smoky"], bitter:["bitter"]
+};
+
+const MENU = [
+  { cat:"Signature", items:[
+    { id:"s1", name:"El Sereno", best:true, price:13.50, coord:"21h 12m +43°", hd:"HD 172167", star:"Vega", constel:"Lyra", transit:"23h 14m", img:"https://images.unsplash.com/photo-1574096079513-d8259312b785?w=300&h=300&fit=crop&auto=format&q=70",
+      flavor:{citrus:50,sweet:20,herbal:70,bitter:30,smoky:60,floral:10,spiced:10,tropical:0}, base:"gin", alcohol:true, intensity:3,
+      desc:{ES:"Gin, vermut blanco, naranja sanguina y romero ahumado",EN:"Gin, white vermouth, blood orange and smoked rosemary",FR:"Gin, vermouth blanc, orange sanguine, romarin fumé",DE:"Gin, weißer Wermut, Blutorange, Rosmarin",IT:"Gin, vermouth bianco, arancia sanguigna, rosmarino"},
+      long:{ES:"El cóctel de la casa. Gin local, vermut blanco seco y zumo fresco de naranja sanguina, terminado bajo una nube de humo de romero. Aromático, herbal.",EN:"Our house cocktail. Local gin, dry white vermouth, blood orange juice, smoked rosemary cloud.",FR:"Notre signature.",DE:"Unser Hauscocktail.",IT:"Il nostro cocktail della casa."}},
+    { id:"s2", name:"Llave de Hortensia", best:true, price:12.50, coord:"13h 25m -11°", hd:"HD 116658", star:"Spica", constel:"Virgo", transit:"22h 40m", img:"https://images.unsplash.com/photo-1587223962930-cb7f31384c19?w=300&h=300&fit=crop&auto=format&q=70",
+      flavor:{citrus:30,sweet:60,herbal:10,bitter:0,smoky:0,floral:80,spiced:0,tropical:40}, base:"vodka", alcohol:true, intensity:2,
+      desc:{ES:"Vodka, lichi, hibisco y prosecco",EN:"Vodka, lychee, hibiscus and prosecco",FR:"Vodka, litchi, hibiscus, prosecco",DE:"Wodka, Litschi, Hibiskus, Prosecco",IT:"Vodka, lychee, ibisco, prosecco"},
+      long:{ES:"Vodka premium con licor de lichi, infusión fría de hibisco y un toque de prosecco. Floral, refrescante.",EN:"Premium vodka with lychee, cold hibiscus and prosecco.",FR:"Vodka premium, litchi, hibiscus.",DE:"Premium-Wodka, Litschi.",IT:"Vodka premium, lychee."}},
+    { id:"s3", name:"Albufera Mule", price:11.90, coord:"19h 50m +08°", hd:"HD 187642", star:"Altair", constel:"Aquila", transit:"22h 18m",
+      flavor:{citrus:60,sweet:40,herbal:20,bitter:10,smoky:0,floral:0,spiced:70,tropical:20}, base:"rum", alcohol:true, intensity:3,
+      desc:{ES:"Ron añejo, lima, jengibre y panela",EN:"Aged rum, lime, ginger and panela",FR:"Rhum vieux, citron vert, gingembre",DE:"Alter Rum, Limette, Ingwer",IT:"Rum invecchiato, lime, zenzero"},
+      long:{ES:"Versión de la casa del Moscow Mule: ron añejo, lima fresca, sirope de jengibre casero y panela.",EN:"Our Moscow Mule with aged rum.",FR:"Notre Moscow Mule.",DE:"Unser Moscow Mule.",IT:"Il nostro Moscow Mule."}},
+    { id:"s4", name:"Calle 36", price:12.90, coord:"14h 16m +19°", hd:"HD 124897", star:"Arcturus", constel:"Boötes", transit:"22h 02m",
+      flavor:{citrus:30,sweet:40,herbal:20,bitter:50,smoky:10,floral:30,spiced:40,tropical:0}, base:"whisky", alcohol:true, intensity:4,
+      desc:{ES:"Bourbon, miel de azahar, naranja amarga y bitter casero",EN:"Bourbon, orange blossom honey, bitter orange and bitters",FR:"Bourbon, miel d'oranger, orange amère",DE:"Bourbon, Orangenblütenhonig",IT:"Bourbon, miele di zagara"},
+      long:{ES:"Un Old Fashioned con sello mediterráneo: bourbon, miel de azahar valenciana, naranja amarga y bitter casero.",EN:"Mediterranean Old Fashioned.",FR:"Old Fashioned méditerranéen.",DE:"Mediterraner Old Fashioned.",IT:"Old Fashioned mediterraneo."}},
+    { id:"s5", name:"Sol Negro", price:13.50, coord:"16h 29m -26°", hd:"HD 148478", star:"Antares", constel:"Scorpius", transit:"00h 38m",
+      flavor:{citrus:10,sweet:30,herbal:0,bitter:60,smoky:80,floral:0,spiced:60,tropical:0}, base:"mezcal", alcohol:true, intensity:5,
+      desc:{ES:"Mezcal, café exprés, cacao y sal de habanero",EN:"Mezcal, espresso, cocoa and habanero salt",FR:"Mezcal, espresso, cacao",DE:"Mezcal, Espresso, Kakao",IT:"Mezcal, espresso, cacao"},
+      long:{ES:"Intenso y carnal: mezcal artesanal, café exprés, licor de cacao, borde de sal con habanero ahumado.",EN:"Intense and carnal.",FR:"Intense.",DE:"Intensiv.",IT:"Intenso."}},
+  ]},
+  { cat:"Clásicos", items:[
+    { id:"c1", name:"Negroni", best:true, price:9.50, coord:"04h 35m +16°", hd:"HD 29139", star:"Aldebaran", constel:"Taurus", transit:"21h 50m", img:"https://images.unsplash.com/photo-1582106245687-cbb466a9f07f?w=300&h=300&fit=crop&auto=format&q=70",
+      flavor:{citrus:20,sweet:20,herbal:40,bitter:80,smoky:0,floral:0,spiced:20,tropical:0}, base:"gin", alcohol:true, intensity:4,
+      desc:{ES:"Gin, vermut rojo, Campari",EN:"Gin, red vermouth, Campari",FR:"Gin, vermouth rouge, Campari",DE:"Gin, roter Wermut, Campari",IT:"Gin, vermouth rosso, Campari"},
+      long:{ES:"El clásico italiano por excelencia, on the rocks con piel de naranja.",EN:"The Italian classic.",FR:"Le classique italien.",DE:"Der italienische Klassiker.",IT:"Il classico italiano."}},
+    { id:"c2", name:"Old Fashioned", best:true, price:10.50, coord:"05h 55m +07°", hd:"HD 39801", star:"Betelgeuse", constel:"Orion", transit:"22h 14m", img:"https://images.unsplash.com/photo-1497534547324-0ebb3f052e88?w=300&h=300&fit=crop&auto=format&q=70",
+      flavor:{citrus:20,sweet:30,herbal:10,bitter:30,smoky:10,floral:0,spiced:20,tropical:0}, base:"whisky", alcohol:true, intensity:5,
+      desc:{ES:"Bourbon, azúcar, Angostura, naranja",EN:"Bourbon, sugar, Angostura, orange",FR:"Bourbon, sucre, Angostura",DE:"Bourbon, Zucker, Angostura",IT:"Bourbon, zucchero, Angostura"},
+      long:{ES:"Bourbon, terrón de azúcar, Angostura y piel de naranja flameada.",EN:"Bourbon, sugar cube, Angostura, flamed orange peel.",FR:"Bourbon, sucre, Angostura.",DE:"Bourbon, Zucker, Angostura.",IT:"Bourbon, zucchero, Angostura."}},
+    { id:"c3", name:"Espresso Martini", best:true, price:9.90, coord:"02h 31m +89°", hd:"HD 8890", star:"Polaris", constel:"Ursa Minor", transit:"never sets", img:"https://images.unsplash.com/photo-1545438102-799c3991ffb2?w=300&h=300&fit=crop&auto=format&q=70",
+      flavor:{citrus:0,sweet:40,herbal:0,bitter:50,smoky:10,floral:0,spiced:10,tropical:0}, base:"vodka", alcohol:true, intensity:3,
+      desc:{ES:"Vodka, café exprés, Kahlúa",EN:"Vodka, espresso, Kahlúa",FR:"Vodka, espresso, Kahlúa",DE:"Wodka, Espresso, Kahlúa",IT:"Vodka, espresso, Kahlúa"},
+      long:{ES:"Vodka, café exprés y Kahlúa, agitados con fuerza para una espuma sedosa.",EN:"Vodka, espresso, Kahlúa.",FR:"Vodka, espresso.",DE:"Wodka, Espresso.",IT:"Vodka, espresso."}},
+    { id:"c4", name:"Daiquiri", price:9.00, coord:"07h 39m +05°", hd:"HD 61421", star:"Procyon", constel:"Canis Minor", transit:"22h 50m",
+      flavor:{citrus:80,sweet:40,herbal:0,bitter:10,smoky:0,floral:0,spiced:0,tropical:30}, base:"rum", alcohol:true, intensity:3,
+      desc:{ES:"Ron blanco, lima, azúcar",EN:"White rum, lime, sugar",FR:"Rhum blanc, citron vert",DE:"Weißer Rum, Limette",IT:"Rum bianco, lime"},
+      long:{ES:"La receta original cubana.",EN:"Original Cuban.",FR:"Recette cubaine.",DE:"Original kubanisch.",IT:"Ricetta cubana."}},
+    { id:"c5", name:"Manhattan", price:10.90, coord:"05h 16m +45°", hd:"HD 34029", star:"Capella", constel:"Auriga", transit:"22h 30m",
+      flavor:{citrus:10,sweet:30,herbal:30,bitter:50,smoky:10,floral:0,spiced:30,tropical:0}, base:"whisky", alcohol:true, intensity:5,
+      desc:{ES:"Whisky de centeno, vermut rojo, Angostura",EN:"Rye, red vermouth, Angostura",FR:"Whisky de seigle, vermouth rouge",DE:"Roggen-Whisky, roter Wermut",IT:"Whisky di segale, vermouth rosso"},
+      long:{ES:"Whisky de centeno, vermut rojo y Angostura.",EN:"Rye, red vermouth, Angostura.",FR:"Whisky de seigle.",DE:"Roggen-Whisky.",IT:"Whisky di segale."}},
+  ]},
+  { cat:"Gin & Tonics", items:[
+    { id:"g1", name:"Mediterránea", best:true, price:11.50, coord:"06h 45m -16°", hd:"HD 48915", star:"Sirius", constel:"Canis Major", transit:"22h 56m", img:"https://images.unsplash.com/photo-1551751299-1b51cab2694c?w=300&h=300&fit=crop&auto=format&q=70",
+      flavor:{citrus:50,sweet:10,herbal:80,bitter:20,smoky:0,floral:20,spiced:20,tropical:0}, base:"gin", alcohol:true, intensity:2,
+      desc:{ES:"Mare gin, tónica Mediterranean, romero, oliva",EN:"Mare gin, Mediterranean tonic, rosemary",FR:"Gin Mare, tonic Mediterranean",DE:"Mare Gin, Mediterranean Tonic",IT:"Gin Mare, tonica Mediterranean"},
+      long:{ES:"Gin Mare con tónica Mediterranean, romero fresco y aceituna gordal.",EN:"Gin Mare, Mediterranean tonic, rosemary, gordal olive.",FR:"Gin Mare.",DE:"Gin Mare.",IT:"Gin Mare."}},
+    { id:"g2", name:"Cítrica", price:10.50, coord:"05h 14m -08°", hd:"HD 34085", star:"Rigel", constel:"Orion", transit:"22h 10m",
+      flavor:{citrus:90,sweet:10,herbal:20,bitter:30,smoky:0,floral:10,spiced:30,tropical:10}, base:"gin", alcohol:true, intensity:2,
+      desc:{ES:"Tanqueray No. Ten, tónica premium, pomelo, cardamomo",EN:"Tanqueray Ten, premium tonic, grapefruit",FR:"Tanqueray Ten, pamplemousse",DE:"Tanqueray Ten, Grapefruit",IT:"Tanqueray Ten, pompelmo"},
+      long:{ES:"Tanqueray No. Ten con tónica premium, pomelo rosa y cardamomo.",EN:"Tanqueray Ten with premium tonic.",FR:"Tanqueray Ten.",DE:"Tanqueray Ten.",IT:"Tanqueray Ten."}},
+    { id:"g3", name:"Floral", price:11.90, coord:"07h 45m +28°", hd:"HD 62509", star:"Pollux", constel:"Gemini", transit:"22h 38m",
+      flavor:{citrus:20,sweet:30,herbal:30,bitter:10,smoky:0,floral:90,spiced:0,tropical:10}, base:"gin", alcohol:true, intensity:1,
+      desc:{ES:"Hendrick's, tónica elderflower, pepino, rosa",EN:"Hendrick's, elderflower tonic, cucumber, rose",FR:"Hendrick's, sureau, rose",DE:"Hendrick's, Holunder, Rose",IT:"Hendrick's, sambuco, rosa"},
+      long:{ES:"Hendrick's con tónica de saúco, pepino y pétalos de rosa.",EN:"Hendrick's, elderflower, cucumber, rose petals.",FR:"Hendrick's, sureau.",DE:"Hendrick's, Holunder.",IT:"Hendrick's, sambuco."}},
+    { id:"g4", name:"Especiada", price:10.90, coord:"07h 35m +31°", hd:"HD 60179", star:"Castor", constel:"Gemini", transit:"22h 32m",
+      flavor:{citrus:40,sweet:30,herbal:20,bitter:20,smoky:10,floral:10,spiced:70,tropical:0}, base:"gin", alcohol:true, intensity:2,
+      desc:{ES:"Bulldog, tónica original, canela, naranja",EN:"Bulldog, original tonic, cinnamon",FR:"Bulldog, cannelle, orange",DE:"Bulldog, Zimt, Orange",IT:"Bulldog, cannella, arancia"},
+      long:{ES:"Bulldog gin con canela y naranja deshidratada.",EN:"Bulldog gin with cinnamon and dried orange.",FR:"Bulldog gin.",DE:"Bulldog Gin.",IT:"Bulldog gin."}},
+  ]},
+  { cat:"Sin alcohol", items:[
+    { id:"m1", name:"Jardín", best:true, price:7.50, coord:"20h 41m +45°", hd:"HD 197345", star:"Deneb", constel:"Cygnus", transit:"23h 06m",
+      flavor:{citrus:50,sweet:30,herbal:80,bitter:10,smoky:0,floral:20,spiced:10,tropical:30}, base:"none", alcohol:false, intensity:1,
+      desc:{ES:"Pepino, manzana verde, lima, romero y tónica",EN:"Cucumber, green apple, lime, rosemary, tonic",FR:"Concombre, pomme verte, romarin",DE:"Gurke, grüner Apfel, Rosmarin",IT:"Cetriolo, mela verde, rosmarino"},
+      long:{ES:"Pepino y manzana verde con lima, romero y tónica.",EN:"Cucumber, green apple, lime, rosemary, tonic.",FR:"Concombre, pomme verte.",DE:"Gurke, grüner Apfel.",IT:"Cetriolo, mela verde."}},
+    { id:"m2", name:"Hibisco Helado", price:7.00, coord:"19h 30m +27°", hd:"HD 183912", star:"Albireo", constel:"Cygnus", transit:"22h 22m",
+      flavor:{citrus:40,sweet:50,herbal:0,bitter:20,smoky:0,floral:80,spiced:20,tropical:40}, base:"none", alcohol:false, intensity:1,
+      desc:{ES:"Hibisco, frutos rojos, jengibre, soda",EN:"Hibiscus, red berries, ginger, soda",FR:"Hibiscus, fruits rouges",DE:"Hibiskus, Beeren",IT:"Ibisco, frutti rossi"},
+      long:{ES:"Infusión fría de hibisco con frambuesas, mora y jengibre.",EN:"Cold hibiscus, raspberry, blackberry, ginger.",FR:"Hibiscus, fruits rouges.",DE:"Hibiskus, Beeren.",IT:"Ibisco, frutti rossi."}},
+    { id:"m3", name:"Citrus Spritz", price:6.90, coord:"02h 19m -02°", hd:"HD 14386", star:"Mira", constel:"Cetus", transit:"21h 24m",
+      flavor:{citrus:90,sweet:30,herbal:40,bitter:20,smoky:0,floral:10,spiced:10,tropical:0}, base:"none", alcohol:false, intensity:1,
+      desc:{ES:"Naranja, limón, pomelo, tónica, romero",EN:"Orange, lemon, grapefruit, tonic, rosemary",FR:"Orange, citron, pamplemousse",DE:"Orange, Zitrone, Grapefruit",IT:"Arancia, limone, pompelmo"},
+      long:{ES:"Tres cítricos exprimidos con tónica y romero.",EN:"Three citruses with tonic and rosemary.",FR:"Trois agrumes.",DE:"Drei Zitrusfrüchte.",IT:"Tre agrumi."}},
+  ]},
+  { cat:"Para picar", items:[
+    { id:"e1", name:"Anchoas del Cantábrico", best:true, price:9.50, coord:"15h 47m +08°",
+      desc:{ES:"5 und. Sobre pan de cristal y tomate",EN:"5 pcs. On crystal bread with tomato",FR:"5 anchois sur pain de cristal",DE:"5 Anchovis auf Kristallbrot",IT:"5 acciughe su pane di cristallo"},
+      long:{ES:"Cinco anchoas del Cantábrico Codesa sobre pan de cristal con aceite virgen y tomate rallado.",EN:"Five Cantabrian anchovies.",FR:"Cinq anchois.",DE:"Fünf Sardellen.",IT:"Cinque acciughe."}},
+    { id:"e2", name:"Croquetas de Jamón", price:7.50, coord:"14h 20m +12°",
+      desc:{ES:"4 und. Bechamel cremosa con jamón ibérico",EN:"4 pcs. Creamy béchamel with Iberian ham",FR:"4 croquettes au jambon",DE:"4 Kroketten mit Schinken",IT:"4 crocchette al prosciutto"},
+      long:{ES:"Cuatro croquetas crujientes con bechamel y jamón ibérico.",EN:"Four crispy croquettes.",FR:"Quatre croquettes.",DE:"Vier Kroketten.",IT:"Quattro crocchette."}},
+    { id:"e3", name:"Tabla de Quesos", price:12.50, coord:"16h 05m +02°",
+      desc:{ES:"Tres quesos, frutos secos y mermelada",EN:"Three cheeses, nuts and jam",FR:"Trois fromages, fruits secs",DE:"Drei Käsesorten",IT:"Tre formaggi"},
+      long:{ES:"Tres quesos curados, almendras, nueces y mermelada de naranja amarga.",EN:"Three aged cheeses.",FR:"Trois fromages affinés.",DE:"Drei gereifte Käsesorten.",IT:"Tre formaggi stagionati."}},
+    { id:"e4", name:"Aceitunas Aliñadas", price:4.50, coord:"15h 12m +18°",
+      desc:{ES:"Gordal con hierbas y cítricos",EN:"Gordal with herbs and citrus",FR:"Gordal aux herbes",DE:"Gordal mit Kräutern",IT:"Gordal alle erbe"},
+      long:{ES:"Aceitunas gordales aliñadas con orégano, tomillo y cítricos.",EN:"Gordal olives with herbs and citrus.",FR:"Olives gordales.",DE:"Gordal-Oliven.",IT:"Olive gordales."}},
+  ]},
+  { cat:"Chupitos", items:[
+    { id:"x1", name:"Mezcal artesanal", best:true, price:3.50, coord:"22h 50m -34°",
+      desc:{ES:"Mezcal de agave joven, 4cl",EN:"Young agave mezcal, 4cl",FR:"Mezcal agave jeune, 4cl",DE:"Junger Agaven-Mezcal, 4cl",IT:"Mezcal di agave giovane, 4cl"},
+      long:{ES:"Mezcal artesanal de agave espadín, 4cl.",EN:"Artisanal espadín agave mezcal, 4cl.",FR:"Mezcal artisanal, 4cl.",DE:"Handwerklicher Mezcal, 4cl.",IT:"Mezcal artigianale, 4cl."}},
+    { id:"x2", name:"Tequila Reposado", price:3.50, coord:"22h 28m -29°",
+      desc:{ES:"Patrón Reposado, 4cl",EN:"Patrón Reposado, 4cl",FR:"Patrón Reposado, 4cl",DE:"Patrón Reposado, 4cl",IT:"Patrón Reposado, 4cl"},
+      long:{ES:"Tequila Patrón Reposado, 4cl.",EN:"Patrón Reposado tequila, 4cl.",FR:"Tequila Patrón, 4cl.",DE:"Patrón Tequila, 4cl.",IT:"Tequila Patrón, 4cl."}},
+    { id:"x3", name:"Limoncello", price:3.00, coord:"23h 02m -45°",
+      desc:{ES:"Hecho en casa, 4cl",EN:"House-made, 4cl",FR:"Maison, 4cl",DE:"Hausgemacht, 4cl",IT:"Della casa, 4cl"},
+      long:{ES:"Limoncello hecho en casa.",EN:"Homemade limoncello.",FR:"Limoncello maison.",DE:"Hausgemachter Limoncello.",IT:"Limoncello della casa."}},
+    { id:"x4", name:"Jägermeister", price:3.50, coord:"22h 18m -22°",
+      desc:{ES:"Bien frío del congelador, 4cl",EN:"Ice-cold from freezer, 4cl",FR:"Glacé, 4cl",DE:"Eiskalt, 4cl",IT:"Ghiacciato, 4cl"},
+      long:{ES:"Jägermeister servido a -18°C.",EN:"Jägermeister at -18°C.",FR:"Jägermeister glacé.",DE:"Jägermeister eiskalt.",IT:"Jägermeister ghiacciato."}},
+    { id:"x5", name:"Pacharán", price:3.00, coord:"23h 38m -51°",
+      desc:{ES:"Endrinas y anís, 4cl",EN:"Sloe and anise, 4cl",FR:"Prunelle et anis, 4cl",DE:"Schlehe und Anis, 4cl",IT:"Prugnolo e anice, 4cl"},
+      long:{ES:"Pacharán navarro tradicional.",EN:"Traditional Navarra pacharán.",FR:"Pacharán traditionnel.",DE:"Traditioneller Pacharán.",IT:"Pacharán tradizionale."}},
+    { id:"x6", name:"Chupito Sorpresa", best:true, price:4.00, coord:"21h 12m -48°",
+      desc:{ES:"El bartender elige",EN:"Bartender's choice",FR:"Au choix du barman",DE:"Wahl des Barkeepers",IT:"Sceglie il barman"},
+      long:{ES:"El bartender elige según tu mesa.",EN:"Bartender picks for your table.",FR:"Au choix du barman.",DE:"Der Barkeeper wählt.",IT:"Sceglie il barman."}},
+  ]},
+  { cat:"Postres", items:[
+    { id:"d1", name:"Crema Catalana", price:5.50, coord:"01h 25m -42°",
+      desc:{ES:"Flameada al momento",EN:"Flambéed to order",FR:"Flambée minute",DE:"Frisch flambiert",IT:"Fiammeggiata"},
+      long:{ES:"Crema fina con canela y limón.",EN:"Fine cream with cinnamon and lemon.",FR:"Crème catalane.",DE:"Katalanische Creme.",IT:"Crema catalana."}},
+    { id:"d2", name:"Coulant de Chocolate", best:true, price:6.90, coord:"00h 48m -38°",
+      desc:{ES:"Corazón fundido + helado de vainilla",EN:"Molten heart + vanilla ice cream",FR:"Cœur fondant",DE:"Geschmolzener Kern",IT:"Cuore fondente"},
+      long:{ES:"Chocolate negro 70% con corazón fundido.",EN:"70% chocolate.",FR:"Coulant 70%.",DE:"70% Schoko.",IT:"Tortino 70%."}},
+    { id:"d3", name:"Buñuelos con Chocolate", price:5.00, coord:"01h 02m -52°",
+      desc:{ES:"Tradicionales valencianos",EN:"Traditional Valencian fritters",FR:"Beignets valenciens",DE:"Valencianische Krapfen",IT:"Frittelle valenciane"},
+      long:{ES:"Buñuelos de Fallas.",EN:"Fallas fritters.",FR:"Beignets traditionnels.",DE:"Traditionelle Krapfen.",IT:"Frittelle tradizionali."}},
+  ]},
+];
+
+let cart = {};
+const fmt = n => n.toFixed(2).replace(".",",") + " €";
+function tt(k){ return T[lang][k] || T.ES[k] || k; }
+
+const PROMO_T = {
+  ES:{a:"cortesía",sub:"Cada 3 cócteles, un chupito invita la casa",need:n=>n===1?"1 cóctel más y la casa invita":`${n} cócteles más para chupito cortesía`,unlocked:n=>n===1?"Un chupito cortesía para esta mesa":`${n} chupitos cortesía para esta mesa`,free:"cortesía",houseShot:"Chupito de la casa",houseNote:"Cortesía de la casa",suTitle:"¿Le ponemos un chupito?",suSub:"Recién sacado del congelador."},
+  EN:{a:"on the house",sub:"Every 3 cocktails, one shot on the house",need:n=>n===1?"1 more cocktail and one's on us":`${n} more cocktails for a complimentary shot`,unlocked:n=>n===1?"One complimentary shot for this table":`${n} complimentary shots for this table`,free:"on us",houseShot:"House shot",houseNote:"On the house",suTitle:"Add a shot?",suSub:"Straight from the freezer."},
+  FR:{a:"offert",sub:"Tous les 3 cocktails, un shot offert",need:n=>n===1?"Encore 1 cocktail et le shot est offert":`À ${n} cocktails du shot offert`,unlocked:n=>n===1?"Un shot offert pour cette table":`${n} shots offerts pour cette table`,free:"offert",houseShot:"Shot maison",houseNote:"Offert par la maison",suTitle:"Un shot pour accompagner ?",suSub:"Direct du congélateur."},
+  DE:{a:"aufmerksamkeit",sub:"Alle 3 Cocktails, ein Shot vom Haus",need:n=>n===1?"Noch 1 Cocktail und der Shot geht aufs Haus":`Noch ${n} Cocktails bis zum Gratis-Shot`,unlocked:n=>n===1?"Ein Shot geht aufs Haus":`${n} Shots gehen aufs Haus`,free:"aufs Haus",houseShot:"Hausshot",houseNote:"Geht aufs Haus",suTitle:"Einen Shot dazu?",suSub:"Eiskalt aus dem Gefrierfach."},
+  IT:{a:"offerto",sub:"Ogni 3 cocktail, uno shot offerto dalla casa",need:n=>n===1?"Ancora 1 cocktail e lo shot è offerto":`A ${n} cocktail dallo shot offerto`,unlocked:n=>n===1?"Uno shot offerto per questo tavolo":`${n} shot offerti per questo tavolo`,free:"offerto",houseShot:"Shot della casa",houseNote:"Offerto dalla casa",suTitle:"Uno shot per accompagnare?",suSub:"Direttamente dal congelatore."}
+};
+function pt(){ return PROMO_T[lang] || PROMO_T.ES; }
+
+function isCocktail(it){
+  const c = catOf(it.id);
+  return ["Signature","Clásicos","Gin & Tonics","Sin alcohol"].includes(c);
+}
+function countCocktailsInCart(){
+  return Object.values(cart).filter(c=>!c.free && c.item && isCocktail(c.item)).reduce((a,c)=>a+c.qty, 0);
+}
+const FREE_SHOT_ID = "_free";
+function applyFreeShotPromo(){
+  const n = countCocktailsInCart();
+  const earned = Math.floor(n/3);
+  const tr = pt();
+  if(earned > 0){
+    cart[FREE_SHOT_ID] = {
+      item: { id: FREE_SHOT_ID, name: tr.houseShot, price: 0 },
+      qty: earned, note: tr.houseNote, free: true
+    };
+  } else {
+    delete cart[FREE_SHOT_ID];
+  }
+}
+
+let shotUpsellTimer = null;
+function showShotsUpsell(){
+  const tr = pt();
+  document.getElementById("suEye").textContent = tr.a;
+  document.getElementById("suTitle").textContent = tr.suTitle;
+  document.getElementById("suSub").textContent = tr.suSub;
+  const shots = MENU.find(s=>s.cat==="Chupitos");
+  if(!shots) return;
+  const picks = shots.items.filter(it=>!it.soldOut).slice(0,3);
+  const host = document.getElementById("suShots");
+  host.innerHTML = picks.map(it=>`<button class="su-shot" data-add-quick="${it.id}"><div class="su-shot-info"><span class="su-shot-name">${it.name.toLowerCase()}</span><span class="su-shot-price">${fmt(it.price)}</span></div><span class="su-shot-add">+</span></button>`).join("");
+  const el = document.getElementById("shotUpsell");
+  el.classList.add("show");
+  clearTimeout(shotUpsellTimer);
+  shotUpsellTimer = setTimeout(()=>el.classList.remove("show"), 8000);
+}
+function hideShotsUpsell(){ document.getElementById("shotUpsell").classList.remove("show"); clearTimeout(shotUpsellTimer); }
+
+const OVERRIDES_KEY = "sereno_menu_overrides_v1";
+const BASE_PRICES = {};
+MENU.forEach(s => s.items.forEach(it => { BASE_PRICES[it.id] = it.price; }));
+function applyMenuOverrides(){
+  let ov={}; try{ ov=JSON.parse(localStorage.getItem(OVERRIDES_KEY)||"{}"); }catch(e){}
+  MENU.forEach(s => s.items.forEach(it => {
+    const o = ov[it.id] || {};
+    it.price  = (o.price!=null) ? Number(o.price) : BASE_PRICES[it.id];
+    it.soldOut = !!o.soldOut;
+  }));
+}
+applyMenuOverrides();
+const SOLD_OUT_LABEL = {ES:"agotado",EN:"sold out",FR:"épuisé",DE:"aus",IT:"esaurito"};
+function soldOutTxt(){ return SOLD_OUT_LABEL[lang] || SOLD_OUT_LABEL.ES; }
+
+const PAIRINGS = {
+  s1:["e3","e1"], s2:["e1","d1"], s3:["e2","e4"], s4:["e3","e1"], s5:["d2","e3"],
+  c1:["e1","e3"], c2:["e2","d2"], c3:["d2","d1"], c4:["e4","e1"], c5:["e3","d2"],
+  g1:["e1","e4"], g2:["e2","e4"], g3:["d1","d3"], g4:["e3","d2"],
+  m1:["e4","e1"], m2:["d3","e4"], m3:["e2","e1"],
+  e1:["c1","g1","s1"], e2:["s3","c2"], e3:["s1","c5","s4"], e4:["g1","c4","m1"],
+  d1:["c3","s2"], d2:["c2","c5","s5"], d3:["m2","s4"],
+};
+
+function buzz(ms){ if(navigator.vibrate) try{navigator.vibrate(ms)}catch(e){} }
+
+const params = new URLSearchParams(location.search);
+const mesa = params.get("mesa") || "7";
+document.getElementById("mesaNum").textContent = mesa;
+document.getElementById("wMesa").textContent = mesa;
+
+let quizState = { step:1, flavors:[], alcohol:null, intensity:null };
+
+function applyLang(){
+  document.querySelectorAll("[data-t]").forEach(el=>{ el.innerHTML = tt(el.dataset.t); });
+  buildLangSelectors(); renderTabs(); renderMenu(); applyFreeShotPromo(); updateBar();
+  const st = document.getElementById("sheetTitle");
+  if(st) st.innerHTML = `${tt("yourOrder")} <small>· mesa ${mesa}</small>`;
+  if(document.getElementById("sheet").classList.contains("open")) renderCart();
+}
+function buildLangSelectors(){
+  const cur = LANGS.find(l=>l.code===lang);
+  ["hLang","wLang"].forEach(id=>{
+    const host = document.getElementById(id);
+    host.innerHTML=`<button class="lang-btn"><span class="fl">${cur.flag}</span>${cur.code}<span class="ar">▾</span></button><div class="lang-menu">${LANGS.map(l=>`<div class="lang-opt ${l.code===lang?'active':''}" data-lang="${l.code}"><span class="fl">${l.flag}</span>${l.label}</div>`).join("")}</div>`;
+    const btn=host.querySelector(".lang-btn"), menu=host.querySelector(".lang-menu");
+    btn.onclick=e=>{ e.stopPropagation(); document.querySelectorAll(".lang-menu").forEach(m=>{ if(m!==menu) m.classList.remove("open"); }); menu.classList.toggle("open"); };
+    menu.querySelectorAll(".lang-opt").forEach(o=>{ o.onclick=e=>{ e.stopPropagation(); lang=o.dataset.lang; buzz(6); applyLang(); }; });
+  });
+}
+document.addEventListener("click", ()=> document.querySelectorAll(".lang-menu").forEach(m=>m.classList.remove("open")));
+
+function renderTabs(){
+  const tabsEl=document.getElementById("tabs"); tabsEl.innerHTML="";
+  MENU.forEach((sec,i)=>{
+    const t=document.createElement("button"); t.className="tab"+(i===0?" active":""); t.textContent=T[lang].cat[sec.cat]||sec.cat;
+    t.onclick=()=>{ document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active")); t.classList.add("active");
+      const el=document.getElementById("sec-"+i);
+      if(el){ const y=el.getBoundingClientRect().top+window.scrollY-100; window.scrollTo({top:y,behavior:"smooth"}); }
+    };
+    tabsEl.appendChild(t);
+  });
+}
+
+const TOP_PICKS = ["g1","c1","c2","s1","c3","s2"];
+const TOP_T = {
+  ES:{eyebrow:"observación · α",heading:"top de la noche",meta:"Las copas que más orbitan esta semana, ordenadas por demanda."},
+  EN:{eyebrow:"observation · α",heading:"tonight's top",meta:"The drinks orbiting most this week, ranked by demand."},
+  FR:{eyebrow:"observation · α",heading:"top du soir",meta:"Les verres qui orbitent le plus cette semaine, classés par demande."},
+  DE:{eyebrow:"beobachtung · α",heading:"top des abends",meta:"Die Drinks, die diese Woche am meisten kreisen, nach Nachfrage."},
+  IT:{eyebrow:"osservazione · α",heading:"top della serata",meta:"I drink che orbitano di più questa settimana, per richiesta."}
+};
+
+function renderMenu(){
+  const menuEl=document.getElementById("menu"); menuEl.innerHTML="";
+  const eyeMap = T[lang].eye || T.ES.eye || {};
+  const coordMap = T[lang].coord || T.ES.coord || {};
+  const greekMap = T[lang].greek || T.ES.greek || {};
+
+  // ===== TOP DE LA NOCHE =====
+  const topT = TOP_T[lang] || TOP_T.ES;
+  const topItems = TOP_PICKS.map(id=>findItem(id)).filter(it=>it && !it.soldOut && it.img);
+  if(topItems.length>0){
+    const topSec = document.createElement("section"); topSec.className="top-section";
+    const cards = topItems.map((it,i)=>{
+      const rank = String(i+1).padStart(2,'0');
+      const metaParts = [];
+      if(it.constel) metaParts.push(it.constel.toLowerCase());
+      if(it.intensity>0) metaParts.push(`mag ${(6-it.intensity).toFixed(1)}`);
+      return `<div class="top-card" data-open-detail="${it.id}">
+        <span class="top-rank"><strong>N°</strong> ${rank}</span>
+        <div class="top-img-wrap"><img src="${it.img}" alt="${it.name}" loading="lazy"></div>
+        <div class="top-info">
+          <div class="top-name">${it.name.toLowerCase()}</div>
+          <div class="top-meta-line">${metaParts.join(" · ")}</div>
+          <div class="top-price">${fmt(it.price)}</div>
+        </div>
+        <button class="top-add" data-add-quick="${it.id}" data-stop>+</button>
+      </div>`;
+    }).join("");
+    topSec.innerHTML = `<div class="top-section-header"><div class="top-greek">★</div><div class="top-title-wrap"><span class="top-coord">${topT.eyebrow}</span><h2 class="top-heading">${topT.heading}</h2><div class="top-meta">${topT.meta}</div></div></div><div class="top-rule"></div><div class="top-row">${cards}</div>`;
+    menuEl.appendChild(topSec);
+  }
+
+  MENU.forEach((sec,i)=>{
+    const header=document.createElement("div"); header.className="sec-header"; header.id="sec-"+i;
+    const greek = greekMap[sec.cat] || "•";
+    const coordText = coordMap[sec.cat] || "";
+    const eyeText = eyeMap[sec.cat] || "";
+    const heading = T[lang].cat[sec.cat] || sec.cat;
+    header.innerHTML = `<div class="sec-greek">${greek}</div><div class="sec-title-wrap"><span class="sec-coord">${coordText}</span><h2 class="sec-heading">${heading}</h2>${eyeText?`<div class="sec-meta">${eyeText}</div>`:""}</div>`;
+    menuEl.appendChild(header);
+
+    const rule = document.createElement("div"); rule.className="sec-rule"; menuEl.appendChild(rule);
+
+    sec.items.forEach((it, idx)=>{
+      const card=document.createElement("div"); card.className="item"+(it.soldOut?" soldout":"")+(it.best?" has-fav":""); card.id="card-"+it.id;
+      card.style.setProperty("--i", idx);
+      if(cart[it.id]?.qty>0) card.classList.add("has-qty");
+      const greekIdx = "αβγδεζηθικλμνξοπρστυφχψω"[idx] || (idx+1);
+      const metaParts = [];
+      if(it.constel) metaParts.push(it.constel.toLowerCase());
+      else if(it.coord) metaParts.push(it.coord);
+      if(it.intensity>0) metaParts.push(`mag ${(6-it.intensity).toFixed(1)}`);
+      if(it.transit && !it.constel) metaParts.push(`transit ${it.transit}`);
+      const metaInline = metaParts.length ? `<span class="item-meta">${metaParts.join(" <span class='dot'>·</span> ")}</span>` : ``;
+      const ctrlHtml = it.soldOut ? `<span class="soldout-tag">${soldOutTxt()}</span>` : `<div id="ctrl-${it.id}" class="ctrl-wrap" data-stop></div>`;
+      card.innerHTML = `<span class="item-greek">${greekIdx}</span><div class="item-body"><span class="item-name">${it.name.toLowerCase()}</span>${metaInline}</div><span class="price">${fmt(it.price)}</span>${ctrlHtml}`;
+      card.onclick=e=>{ if(e.target.closest("[data-stop]")) return; openDetail(it.id); };
+      menuEl.appendChild(card);
+      if(!it.soldOut) renderCtrl(it);
+    });
+  });
+  setTimeout(()=>setupRevealObserver(), 50);
+}
+
+function renderCtrl(it){
+  const wrap=document.getElementById("ctrl-"+it.id); if(!wrap) return;
+  const q=cart[it.id]?.qty||0;
+  wrap.innerHTML=q===0?`<button class="add" data-add="${it.id}">+</button>`:`<div class="qty-ctrl"><button data-dec="${it.id}">−</button><span>${q}</span><button data-inc="${it.id}">+</button></div>`;
+  const card = document.getElementById("card-"+it.id);
+  if(card){ if(q>0) card.classList.add("has-qty"); else card.classList.remove("has-qty"); }
+}
+function findItem(id){ for(const s of MENU) for(const it of s.items) if(it.id===id) return it; }
+function catOf(id){ for(const s of MENU) for(const it of s.items) if(it.id===id) return s.cat; }
+
+document.addEventListener("click",e=>{
+  const addQuick=e.target.closest("[data-add-quick]");
+  if(addQuick){ e.stopPropagation(); flyToCart(addQuick); changeQty(addQuick.dataset.addQuick,1); flashCard(addQuick.dataset.addQuick); return; }
+  const add=e.target.closest("[data-add]"),inc=e.target.closest("[data-inc]"),dec=e.target.closest("[data-dec]");
+  if(add){ e.stopPropagation(); flyToCart(add); changeQty(add.dataset.add,1); return; }
+  if(inc){ e.stopPropagation(); flyToCart(inc); changeQty(inc.dataset.inc,1); return; }
+  if(dec){ e.stopPropagation(); changeQty(dec.dataset.dec,-1); return; }
+  const open=e.target.closest("[data-open-detail]");
+  if(open){ openDetail(open.dataset.openDetail); return; }
+});
+
+function changeQty(id,delta){
+  const it=findItem(id); if(!it) return;
+  if(it.soldOut && delta>0) return;
+  if(!cart[id]) cart[id]={item:it,qty:0,note:""};
+  cart[id].qty+=delta; if(cart[id].qty<=0) delete cart[id];
+  applyFreeShotPromo();
+  renderCtrl(it); updateBar();
+  if(delta>0){
+    buzz(6); flashCard(id);
+    if(isCocktail(it)) setTimeout(showShotsUpsell, 320);
+  }
+  if(document.getElementById("sheet").classList.contains("open")) renderCart();
+}
+function flashCard(id){ const c=document.getElementById("card-"+id); if(c){ c.classList.remove("flash"); void c.offsetWidth; c.classList.add("flash"); } }
+function totalItems(){ return Object.values(cart).reduce((a,c)=>a+c.qty,0); }
+function totalPrice(){ return Object.values(cart).reduce((a,c)=>a+c.qty*c.item.price,0); }
+function hasFood(){ return Object.values(cart).some(c=>{const k=catOf(c.item.id); return k==="Para picar"||k==="Postres";}); }
+function hasDrink(){ return Object.values(cart).some(c=>{const k=catOf(c.item.id); return ["Signature","Clásicos","Gin & Tonics","Sin alcohol"].includes(k);}); }
+
+const COMPACT_BANNER_T = {ES:"recomendación",EN:"recommendation",FR:"recommandation",DE:"empfehlung",IT:"consiglio"};
+let _lastN = 0;
+function updateBar(){
+  const n=totalItems(),bar=document.getElementById("cartBar");
+  const countEl = document.getElementById("cartCount");
+  countEl.textContent=n;
+  document.getElementById("cartTotal").textContent=fmt(totalPrice());
+  if(n>0) bar.classList.remove("hidden"); else bar.classList.add("hidden");
+  if(n > _lastN){
+    countEl.classList.remove("bump");
+    void countEl.offsetWidth;
+    countEl.classList.add("bump");
+  }
+  _lastN = n;
+  const qb = document.getElementById("quizBanner");
+  if(qb){
+    const compact = n > 0;
+    qb.classList.toggle("compact", compact);
+    const h3 = qb.querySelector("h3");
+    if(h3) h3.textContent = compact ? (COMPACT_BANNER_T[lang]||COMPACT_BANNER_T.ES) : (T[lang].bannerTitle||T.ES.bannerTitle);
+  }
+  const quizEl = document.getElementById("quiz");
+  const resultEl = document.getElementById("result");
+  if(quizEl) quizEl.classList.toggle("no-cart", n === 0);
+  if(resultEl) resultEl.classList.toggle("no-cart", n === 0);
+}
+
+function flyToCart(originEl){
+  const cartBar = document.getElementById("cartBar");
+  const r = originEl.getBoundingClientRect();
+  const cb = cartBar.getBoundingClientRect();
+  const startX = r.left + r.width/2 - 11;
+  const startY = r.top + r.height/2 - 11;
+  const endX = cb.left + 40;
+  const endY = cb.top + cb.height/2;
+  const flyer = document.createElement("div");
+  flyer.className = "flyer";
+  flyer.style.left = startX + "px";
+  flyer.style.top = startY + "px";
+  document.body.appendChild(flyer);
+  requestAnimationFrame(()=>{
+    flyer.style.transform = `translate(${endX-startX}px, ${endY-startY}px) scale(.25)`;
+    flyer.style.opacity = "0";
+  });
+  setTimeout(()=>flyer.remove(), 900);
+}
+
+let _sectionObserver = null;
+function setupRevealObserver(){
+  if(_sectionObserver) _sectionObserver.disconnect();
+  _sectionObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add("in-view");
+        _sectionObserver.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".sec-header, .item, .quiz-banner").forEach(el => _sectionObserver.observe(el));
+}
+
+let detailId=null,detailQty=1;
+const detail=document.getElementById("detail");
+
+function buildFlavorBars(it){
+  if(!it.flavor) return "";
+  const flavorNames={ES:{citrus:"Cítrico",sweet:"Dulce",herbal:"Herbal",bitter:"Amargo",smoky:"Ahumado",floral:"Floral",spiced:"Especiado",tropical:"Tropical"},EN:{citrus:"Citrus",sweet:"Sweet",herbal:"Herbal",bitter:"Bitter",smoky:"Smoky",floral:"Floral",spiced:"Spiced",tropical:"Tropical"},FR:{citrus:"Agrumes",sweet:"Sucré",herbal:"Herbacé",bitter:"Amer",smoky:"Fumé",floral:"Floral",spiced:"Épicé",tropical:"Tropical"},DE:{citrus:"Zitrus",sweet:"Süß",herbal:"Kräutrig",bitter:"Bitter",smoky:"Rauchig",floral:"Floral",spiced:"Würzig",tropical:"Tropisch"},IT:{citrus:"Agrumato",sweet:"Dolce",herbal:"Erbaceo",bitter:"Amaro",smoky:"Affumicato",floral:"Floreale",spiced:"Speziato",tropical:"Tropicale"}};
+  const fn = flavorNames[lang] || flavorNames.ES;
+  const sorted = Object.entries(it.flavor).sort((a,b)=>b[1]-a[1]);
+  const bars = sorted.slice(0,6).map(([fid,val])=>{
+    return `<div class="flavor-bar"><div class="flavor-bar-label">${fn[fid]||fid}</div><div class="flavor-bar-track"><div class="flavor-bar-fill" style="width:${val}%"></div></div><div class="flavor-bar-val">${val}</div></div>`;
+  }).join("");
+  const profileTitle = {ES:"Perfil de sabores",EN:"Flavor profile",FR:"Profil aromatique",DE:"Aromaprofil",IT:"Profilo aromatico"}[lang];
+  return `<div class="flavor-profile"><div class="flavor-profile-title">${profileTitle}</div><div class="flavor-bars">${bars}</div></div>`;
+}
+
+function openDetail(id){
+  const it=findItem(id); if(!it) return;
+  detailId=id; detailQty=1;
+  document.getElementById("dtImg").innerHTML="";
+  document.getElementById("dtFav").innerHTML=it.best&&!it.soldOut?`<span class="dt-fav">${tt("top").toLowerCase()}</span>`:"";
+  const coordParts = [];
+  if(it.hd) coordParts.push(it.hd);
+  if(it.star) coordParts.push(it.star);
+  if(it.coord) coordParts.push(it.coord);
+  document.getElementById("dtCoord").innerHTML = coordParts.length ? coordParts.join(" <span style='color:var(--line-2)'>·</span> ") : catOf(it.id).toLowerCase();
+  document.getElementById("dtName").textContent=it.name.toLowerCase();
+  const catParts = [];
+  if(it.constel) catParts.push(`<em style="color:var(--gold);font-style:italic">${it.constel.toLowerCase()}</em>`);
+  if(it.transit) catParts.push(`transit ${it.transit}`);
+  if(it.desc) catParts.push(it.desc[lang]);
+  document.getElementById("dtCat").innerHTML = catParts.join(" · ");
+  document.getElementById("dtPrice").innerHTML=fmt(it.price)+(it.soldOut?` <span class="dt-soldout">${soldOutTxt()}</span>`:"");
+  document.getElementById("dtDesc").textContent=it.long[lang];
+  document.getElementById("dtFlavor").innerHTML = buildFlavorBars(it);
+  document.getElementById("dtQty").textContent=detailQty;
+  const dtAdd=document.getElementById("dtAdd");
+  dtAdd.textContent=it.soldOut?soldOutTxt():tt("addToOrder");
+  dtAdd.classList.toggle("disabled",!!it.soldOut); dtAdd.disabled=!!it.soldOut;
+  document.getElementById("overlay").classList.add("open"); detail.classList.add("open");
+  document.querySelector(".dt-body").scrollTop = 0;
+}
+function closeDetail(){ detail.classList.remove("open"); if(!document.getElementById("sheet").classList.contains("open")) document.getElementById("overlay").classList.remove("open"); }
+document.getElementById("dtClose").onclick=closeDetail;
+document.getElementById("dtMinus").onclick=()=>{ if(detailQty>1){detailQty--; document.getElementById("dtQty").textContent=detailQty;} };
+document.getElementById("dtPlus").onclick=()=>{ detailQty++; document.getElementById("dtQty").textContent=detailQty; };
+document.getElementById("dtAdd").onclick=()=>{ if(document.getElementById("dtAdd").disabled) return; for(let k=0;k<detailQty;k++) changeQty(detailId,1); closeDetail(); };
+
+// QUIZ
+function startQuiz(){
+  quizState = { step:1, flavors:[], alcohol:null, intensity:null };
+  document.getElementById("welcome").classList.add("gone");
+  document.getElementById("result").classList.remove("show");
+  document.getElementById("quiz").classList.add("show");
+  renderQuizStep();
+}
+function renderQuizStep(){
+  const step = quizState.step;
+  document.getElementById("quizProgress").innerHTML = [1,2,3].map(i=>`<div class="quiz-dot ${i===step?'active':''} ${i<step?'done':''}"></div>`).join("");
+  const stepWord = {ES:'Paso',EN:'Step',FR:'Étape',DE:'Schritt',IT:'Passo'}[lang] || 'Paso';
+  document.getElementById("quizStepLabel").textContent = `${stepWord} ${step} / 3`;
+  document.getElementById("quizBack").classList.toggle("hidden", step===1);
+
+  const body = document.getElementById("quizBody");
+  if(step===1){
+    document.getElementById("quizQ").textContent = tt('q1Title').toLowerCase();
+    document.getElementById("quizQSub").textContent = tt('q1Sub');
+    const opts = T[lang].q1opts;
+    body.innerHTML = `<div class="quiz-grid">${opts.map((o,i)=>{
+      const sel = quizState.flavors.includes(o.id) ? 'selected' : '';
+      const greekL = "αβγδεζηθ"[i] || (i+1);
+      return `<button class="quiz-card ${sel}" data-quiz="flavor" data-val="${o.id}"><span class="quiz-card-num">${greekL}</span><div class="quiz-card-text"><div class="quiz-card-label">${o.label.toLowerCase()}</div><div class="quiz-card-sub">${o.sub}</div></div></button>`;
+    }).join("")}</div><div class="quiz-hint">${tt('q1Hint')}</div>`;
+  } else if(step===2){
+    document.getElementById("quizQ").textContent = tt('q2Title').toLowerCase();
+    document.getElementById("quizQSub").textContent = tt('q2Sub');
+    const opts = T[lang].q2opts;
+    body.innerHTML = `<div class="quiz-grid quiz-grid-2">${opts.map((o,i)=>{
+      const sel = quizState.alcohol===o.id ? 'selected' : '';
+      const greekL = "αβ"[i];
+      return `<button class="quiz-card ${sel}" data-quiz="alcohol" data-val="${o.id}"><span class="quiz-card-num">${greekL}</span><div class="quiz-card-text"><div class="quiz-card-label">${o.label.toLowerCase()}</div><div class="quiz-card-sub">${o.sub}</div></div></button>`;
+    }).join("")}</div>`;
+  } else if(step===3){
+    document.getElementById("quizQ").textContent = tt('q3Title').toLowerCase();
+    document.getElementById("quizQSub").textContent = tt('q3Sub');
+    const opts = T[lang].q3opts;
+    body.innerHTML = `<div class="quiz-grid quiz-grid-3">${opts.map((o,i)=>{
+      const sel = quizState.intensity===o.id ? 'selected' : '';
+      const greekL = "αβγ"[i];
+      return `<button class="quiz-card wide ${sel}" data-quiz="intensity" data-val="${o.id}"><span class="quiz-card-num">${greekL}</span><div class="quiz-card-text"><div class="quiz-card-label">${o.label.toLowerCase()}</div><div class="quiz-card-sub">${o.sub}</div></div></button>`;
+    }).join("")}</div>`;
+  }
+  updateNextBtn();
+}
+function updateNextBtn(){
+  const next = document.getElementById("quizNext");
+  let enabled = false;
+  if(quizState.step===1) enabled = quizState.flavors.length>0;
+  if(quizState.step===2) enabled = quizState.alcohol!==null;
+  if(quizState.step===3) enabled = quizState.intensity!==null;
+  next.disabled = !enabled;
+  const seeResults = {ES:"Ver resultados",EN:"See results",FR:"Voir résultats",DE:"Ergebnisse",IT:"Vedi risultati"}[lang];
+  next.querySelector("span").textContent = quizState.step===3 ? seeResults : tt('quizNext');
+}
+
+document.getElementById("quizBody").addEventListener("click", e=>{
+  const t = e.target.closest("[data-quiz]"); if(!t) return;
+  const kind = t.dataset.quiz, val = t.dataset.val;
+  if(kind==="flavor"){
+    const idx = quizState.flavors.indexOf(val);
+    if(idx>=0){ quizState.flavors.splice(idx,1); t.classList.remove("selected"); }
+    else { quizState.flavors.push(val); t.classList.add("selected"); }
+  } else if(kind==="alcohol"){
+    quizState.alcohol = val;
+    document.querySelectorAll('[data-quiz="alcohol"]').forEach(b=>b.classList.toggle("selected", b.dataset.val===val));
+  } else if(kind==="intensity"){
+    quizState.intensity = val;
+    document.querySelectorAll('[data-quiz="intensity"]').forEach(b=>b.classList.toggle("selected", b.dataset.val===val));
+  }
+  buzz(4);
+  updateNextBtn();
+});
+
+document.getElementById("quizNext").onclick=()=>{
+  if(quizState.step<3){ quizState.step++; renderQuizStep(); buzz(6); }
+  else { showResults(); buzz([6,30,6]); }
+};
+document.getElementById("quizBack").onclick=()=>{
+  if(quizState.step>1){ quizState.step--; renderQuizStep(); buzz(4); }
+};
+document.getElementById("quizSkip").onclick=()=>{
+  document.getElementById("quiz").classList.remove("show");
+  document.getElementById("welcome").classList.add("gone");
+};
+document.getElementById("welcomeBtn").onclick=()=>{ buzz(6); document.getElementById("welcome").classList.add("gone"); };
+document.getElementById("quizBanner").onclick=()=>{ buzz(6); startQuiz(); };
+
+function scoreItem(it){
+  if(!it.flavor || it.alcohol===undefined) return -1;
+  let score = 0;
+  if(quizState.flavors.length>0){
+    quizState.flavors.forEach(fid=>{
+      (FLAVOR_MAP[fid]||[]).forEach(key=>{
+        score += (it.flavor[key]||0);
+      });
+    });
+  } else {
+    score = 30;
+  }
+  if(quizState.alcohol==="alcohol" && !it.alcohol) return -1;
+  if(quizState.alcohol==="none" && it.alcohol) return -1;
+  if(quizState.intensity){
+    const targetIntensity = {soft:[1,2], medium:[3], strong:[4,5]}[quizState.intensity];
+    if(it.alcohol){
+      if(targetIntensity.includes(it.intensity)) score += 60;
+      else score -= 30;
+    }
+  }
+  return score;
+}
+function showResults(){
+  document.getElementById("quiz").classList.remove("show");
+  document.getElementById("result").classList.add("show");
+  renderResults();
+}
+function renderResults(){
+  const body = document.getElementById("resultBody");
+  const all = MENU.flatMap(s=>s.items).filter(it=>it.flavor!==undefined && !it.soldOut);
+  const scored = all.map(it=>({it, score:scoreItem(it)})).filter(x=>x.score>=0).sort((a,b)=>b.score-a.score);
+  const top = scored.slice(0,3);
+
+  const summaryParts = [];
+  if(quizState.flavors.length>0) summaryParts.push(quizState.flavors.map(f=>T[lang].q1opts.find(o=>o.id===f)?.label.toLowerCase()).filter(Boolean).join(" · "));
+  if(quizState.alcohol==="none") summaryParts.push("sin alcohol");
+  if(quizState.intensity){
+    const i = T[lang].q3opts.find(o=>o.id===quizState.intensity);
+    if(i) summaryParts.push(i.label.toLowerCase());
+  }
+  const summary = summaryParts.length ? summaryParts.join(" · ") : "todo";
+
+  let cardsHtml = "";
+  if(top.length===0){
+    cardsHtml = `<div class="result-empty"><h3>${tt('emptyTitle')}</h3><p>${tt('emptyText')}</p></div>`;
+  } else {
+    const labels = [tt('matchTop'), tt('matchGood'), tt('matchOk')];
+    const labelClasses = ["top","",""];
+    cardsHtml = top.map((x,i)=>{
+      const it = x.it;
+      return `<div class="result-card"><span class="result-match ${labelClasses[i]}">${labels[i]}</span><div class="result-img"><div class="result-orbit"></div></div><div class="result-body"><span class="result-coord">${it.coord||""}</span><div class="result-name">${it.name.toLowerCase()}</div><div class="result-desc">${it.desc[lang]}</div><div class="result-foot"><span class="result-price">${fmt(it.price)}</span><div class="result-actions"><button class="result-more" data-open-detail="${it.id}">${tt('moreInfo')}</button><button class="result-add" data-add-quick="${it.id}">${tt('addThis')}</button></div></div></div></div>`;
+    }).join("");
+  }
+
+  body.innerHTML = `
+    <div class="result-header">
+      <span class="result-eyebrow">${tt('resultEyebrow')}</span>
+      <h2 class="result-title">${tt('resultTitle')}</h2>
+      <p class="result-sub">${top.length===1?tt('resultSubOne'):tt('resultSubMany')}</p>
+      <div class="result-summary">${summary}</div>
+    </div>
+    <div class="result-cards">${cardsHtml}</div>
+    <div class="result-foot-actions">
+      <button class="btn-seeall" id="resultSeeAll">${tt('seeAll')} →</button>
+      <button class="btn-retake" id="resultRetake">↻ ${tt('retake')}</button>
+    </div>
+  `;
+  document.getElementById("resultSeeAll").onclick=()=>{
+    document.getElementById("result").classList.remove("show");
+    buzz(6);
+  };
+  document.getElementById("resultRetake").onclick=()=>{
+    startQuiz();
+  };
+}
+document.getElementById("resultBack").onclick=()=>{
+  document.getElementById("result").classList.remove("show");
+};
+
+const overlay=document.getElementById("overlay"),sheet=document.getElementById("sheet");
+function openSheet(){ renderCart(); overlay.classList.add("open"); sheet.classList.add("open"); }
+function closeSheet(){ overlay.classList.remove("open"); sheet.classList.remove("open"); }
+document.getElementById("cartBtn").onclick=openSheet;
+document.getElementById("closeSheet").onclick=closeSheet;
+overlay.onclick=()=>{ closeSheet(); closeDetail(); };
+
+function renderCart(){
+  const list=document.getElementById("cartList"), entries=Object.entries(cart);
+  if(entries.length===0){ list.innerHTML=`<div class="empty">${tt("emptyCart")}</div>`; document.getElementById("grandTotal").textContent="0,00 €"; document.getElementById("sendBtn").disabled=true; return; }
+  document.getElementById("sendBtn").disabled=false;
+
+  const tr = pt();
+  const n = countCocktailsInCart();
+  const earned = Math.floor(n/3);
+  let banner = "";
+  if(n > 0){
+    if(earned > 0){
+      banner = `<div class="promo-banner unlocked"><div class="promo-emoji">✦</div><div class="promo-text"><span class="promo-eyebrow">${tr.a}</span><h4>${tr.unlocked(earned)}</h4><p>${tr.sub}</p></div></div>`;
+    } else {
+      const pct = (n/3)*100;
+      const tilNext = 3 - n;
+      banner = `<div class="promo-banner"><div class="promo-emoji">✦</div><div class="promo-text"><span class="promo-eyebrow">${tr.a}</span><h4>${tr.need(tilNext)}</h4><p>${tr.sub}</p><div class="promo-progress"><div class="promo-progress-fill" style="width:${pct}%"></div></div></div></div>`;
+    }
+  }
+
+  const itemsHtml = entries.map(([id,c])=>{
+    if(c.free){
+      return `<div class="cart-item free"><div class="ci-top"><span class="ci-name">${c.item.name.toLowerCase()} <span class="free-tag">×${c.qty} · ${tr.free}</span></span><span class="ci-price">0,00 €</span></div><div class="free-note">✦ ${tr.houseNote}</div></div>`;
+    }
+    return `<div class="cart-item"><div class="ci-top"><span class="ci-name">${c.item.name.toLowerCase()}</span><span class="ci-price">${fmt(c.item.price*c.qty)}</span></div><div class="ci-foot"><div class="qty-ctrl"><button data-dec="${id}">−</button><span>${c.qty}</span><button data-inc="${id}">+</button></div></div><textarea class="note-input" rows="1" placeholder="${tt("notePh")}" data-note="${id}">${c.note||""}</textarea></div>`;
+  }).join("");
+
+  list.innerHTML = banner + itemsHtml;
+  document.getElementById("grandTotal").textContent=fmt(totalPrice());
+  list.querySelectorAll("[data-note]").forEach(t=>{ t.oninput=()=>{ cart[t.dataset.note]&&(cart[t.dataset.note].note=t.value); }; });
+}
+
+function buildTicket(order){
+  const hora=new Date().toLocaleTimeString(lang==="EN"?"en-GB":lang==="FR"?"fr-FR":lang==="DE"?"de-DE":lang==="IT"?"it-IT":"es-ES",{hour:"2-digit",minute:"2-digit"});
+  const tr = pt();
+  const lines=order.items.map(it=>{
+    const isFree = it.price===0;
+    const priceStr = isFree ? `<span style="color:var(--gold);font-family:var(--display);font-style:italic">${tr.free}</span>` : fmt(it.price*it.qty);
+    const noteStr = it.note ? `<small>${it.note}</small>` : "";
+    return `<div class="tk-line"><div class="ql"><span class="q">${it.qty}×</span><span class="nm">${it.name.toLowerCase()}${noteStr}</span></div><span class="pr">${priceStr}</span></div>`;
+  }).join("");
+  return `<div class="tk-top"><h3>sereno</h3><div class="meta">${tt("tableShort")} ${order.mesa} · ${hora}</div><div class="tk-no">obs. № ${order.no}</div></div>${lines}<div class="tk-sep"></div><div class="tk-total"><span>${tt("total")}</span><span>${fmt(order.total)}</span></div><div class="tk-foot">${tt("thanks")} · ${tt("onWay")}</div>`;
+}
+
+const STORE_KEY="sereno_orders_v1";
+function pushToBar(order){
+  let list; try{ list=JSON.parse(localStorage.getItem(STORE_KEY)||"[]"); }catch(e){ list=[]; }
+  if(!Array.isArray(list)) list=[]; list.push(order);
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify(list)); }catch(e){}
+}
+
+function doSend(){
+  const order={ id:"o"+Date.now()+Math.random().toString(36).slice(2,6), no:Math.floor(100+Math.random()*899),
+    mesa, ts:Date.now(), status:"new", _fresh:true,
+    items:Object.values(cart).map(c=>({name:c.item.name,qty:c.qty,note:c.note,price:c.item.price})),
+    subtotal:totalPrice(), total:totalPrice() };
+  pushToBar(order);
+  document.getElementById("ticket").innerHTML=buildTicket(order);
+  closeSheet(); document.getElementById("success").classList.add("open");
+  buzz([10,40,10]);
+}
+const askDrink=document.getElementById("askDrink");
+function closeAsk(){ askDrink.classList.remove("open"); }
+document.getElementById("sendBtn").onclick=()=>{ if(totalItems()===0) return; if(!hasFood() && hasDrink() && totalItems()>=2){ askDrink.classList.add("open"); return; } doSend(); };
+document.getElementById("askSkip").onclick=()=>{ closeAsk(); doSend(); };
+document.getElementById("askGoDrinks").onclick=()=>{
+  closeAsk(); closeSheet();
+  const idx = MENU.findIndex(s=>s.cat==="Para picar");
+  if(idx>=0){ const el=document.getElementById("sec-"+idx); if(el){ const y=el.getBoundingClientRect().top+window.scrollY-100; window.scrollTo({top:y,behavior:"smooth"}); } }
+};
+askDrink.onclick=e=>{ if(e.target===askDrink) closeAsk(); };
+
+document.getElementById("newOrder").onclick=()=>{ cart={}; MENU.forEach(s=>s.items.forEach(it=>{ if(!it.soldOut) renderCtrl(it); })); updateBar(); document.getElementById("success").classList.remove("open"); window.scrollTo({top:0,behavior:"smooth"}); };
+
+window.addEventListener("storage", e=>{ if(e.key===OVERRIDES_KEY){ applyMenuOverrides(); renderMenu(); updateBar(); } });
+
+document.getElementById("suClose").onclick = hideShotsUpsell;
+document.getElementById("suShots").addEventListener("click", e=>{
+  const t = e.target.closest("[data-add-quick]");
+  if(t) setTimeout(hideShotsUpsell, 350);
+});
+
+setTimeout(()=>{ const c=document.getElementById("introCurtain"); if(c) c.remove(); }, 2000);
+
+applyLang();
+</script>
+</body>
+</html>

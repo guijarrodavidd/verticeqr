@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bonfire Burger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap">
+<style>
+  :root{
+    --bg:#0a0a0c;            /* deep diner night */
+    --bg-2:#13131a;
+    --card:#16161e;
+    --card-2:#1f1f28;
+    --line:#2a2a36;
+    --line-soft:#1c1c24;
+    --ink:#f4ebd9;           /* warm cream */
+    --ink-soft:#a8a8a4;
+    --muted:#6a6a6e;
+    --neon-red:#ff3a3a;       /* OPEN sign */
+    --neon-red-dark:#cc1a1a;
+    --neon-yellow:#ffcc00;    /* prices, highlights */
+    --neon-yellow-dark:#cc9900;
+    --neon-green:#39ff70;     /* available status */
+    --neon-pink:#ff3a8c;
+    --neon-cyan:#3ad9ff;
+    --usa-navy:#1e3a5c;        /* americana navy */
+    --usa-navy-light:#2a4a72;
+    --display:"Bungee",ui-sans-serif,system-ui,sans-serif;
+    --display-line:"Bungee Inline",ui-sans-serif,sans-serif;
+    --body:"Inter",-apple-system,system-ui,sans-serif;
+    --mono:"Space Mono",ui-monospace,monospace;
+    --glow-red:0 0 12px rgba(255,58,58,.6),0 0 24px rgba(255,58,58,.3);
+    --glow-yellow:0 0 10px rgba(255,204,0,.5),0 0 20px rgba(255,204,0,.25);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;font-weight:500}
+  body{padding-bottom:104px;max-width:520px;margin:0 auto;position:relative;overflow-x:hidden;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255,58,58,.08), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 100% 100%, rgba(255,204,0,.06), transparent 60%),
+      repeating-linear-gradient(0deg, transparent 0, transparent 2px, rgba(255,255,255,.012) 2px, rgba(255,255,255,.012) 4px);
+  }
+
+  /* ===== MASTHEAD with neon sign ===== */
+  header{position:sticky;top:0;z-index:40;background:rgba(10,10,12,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--neon-red);box-shadow:0 0 24px rgba(255,58,58,.2)}
+  .head-top{display:flex;align-items:center;justify-content:space-between;padding:16px 20px 12px;gap:12px}
+  .brand{display:flex;align-items:center;gap:12px;min-width:0;flex:1}
+  .brand-mark{flex:0 0 42px;width:42px;height:42px;background:var(--neon-red);border:none;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:18px;color:var(--ink);line-height:1;letter-spacing:0;text-shadow:var(--glow-red);box-shadow:0 0 12px rgba(255,58,58,.5)}
+  .brand-text{display:flex;flex-direction:column;line-height:.9;min-width:0}
+  .brand h1{font-family:var(--display);font-size:18px;font-weight:400;letter-spacing:.5px;color:var(--neon-yellow);text-transform:uppercase;text-shadow:var(--glow-yellow)}
+  .brand span{font-family:var(--mono);font-size:9px;color:var(--ink-soft);margin-top:3px;text-transform:uppercase;letter-spacing:1.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .head-right{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+  .mesa{display:flex;align-items:center;gap:6px;background:transparent;color:var(--neon-green);padding:6px 10px;border:1.5px solid var(--neon-green);font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;box-shadow:0 0 8px rgba(57,255,112,.3)}
+  .mesa strong{color:var(--ink)}
+  .mesa svg{width:11px;height:11px}
+
+  .lang{position:relative;flex:0 0 auto}
+  .lang-btn{display:flex;align-items:center;gap:5px;background:var(--card);border:1.5px solid var(--neon-yellow);padding:5px 9px;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--neon-yellow);cursor:pointer;text-transform:uppercase;letter-spacing:1px}
+  .lang-btn .fl{font-size:14px;line-height:1}
+  .lang-btn .ar{font-size:9px}
+  .lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--card);border:1.5px solid var(--neon-yellow);padding:6px;min-width:150px;opacity:0;transform:translateY(-6px);pointer-events:none;transition:.16s;z-index:50;box-shadow:0 0 16px rgba(255,204,0,.3)}
+  .lang-menu.open{opacity:1;transform:none;pointer-events:auto}
+  .lang-opt{display:flex;align-items:center;gap:10px;padding:9px 11px;font-family:var(--body);font-size:13px;font-weight:600;cursor:pointer;color:var(--ink);letter-spacing:.3px}
+  .lang-opt .fl{font-size:16px}
+  .lang-opt.active{background:var(--neon-red);color:var(--ink)}
+
+  /* ===== TABS ===== */
+  .tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 20px 14px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;border:1.5px solid var(--line);background:transparent;color:var(--ink-soft);padding:8px 14px;font-family:var(--display);font-size:11px;font-weight:400;cursor:pointer;text-transform:uppercase;letter-spacing:1.5px;white-space:nowrap;transition:.18s}
+  .tab.active{color:var(--bg);background:var(--neon-yellow);border-color:var(--neon-yellow);box-shadow:0 0 14px rgba(255,204,0,.5)}
+
+  main{padding:18px 20px 24px}
+
+  /* ===== SECTION ===== */
+  .sec-title{margin:36px 0 18px;display:flex;align-items:center;gap:12px;position:relative}
+  .sec-title:first-of-type{margin-top:8px}
+  .sec-title::before{content:attr(data-num);font-family:var(--mono);font-size:11px;color:var(--neon-red);font-weight:700;letter-spacing:1px;flex:0 0 auto;padding:4px 8px;border:1.5px solid var(--neon-red);text-shadow:0 0 6px rgba(255,58,58,.4)}
+  .sec-title-text{font-family:var(--display);font-size:34px;font-weight:400;color:var(--ink);text-transform:uppercase;letter-spacing:.5px;line-height:1;flex:1;text-shadow:0 0 8px rgba(244,235,217,.15)}
+  .sec-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--neon-red),transparent);max-width:60px}
+
+  /* ===== ITEM CARD ===== */
+  .item{display:flex;gap:14px;background:var(--card);border:1.5px solid var(--line);padding:14px;margin-bottom:14px;box-shadow:0 4px 14px rgba(0,0,0,.4);cursor:pointer;transition:transform .12s,border-color .12s,box-shadow .12s;position:relative;overflow:hidden}
+  .item:active{transform:translate(1px,1px)}
+  .item:hover{border-color:var(--neon-red);box-shadow:0 0 20px rgba(255,58,58,.2),0 4px 14px rgba(0,0,0,.4)}
+  .item.flash{animation:flash .6s}
+  @keyframes flash{0%{border-color:var(--line)}30%{border-color:var(--neon-yellow);box-shadow:0 0 24px rgba(255,204,0,.5)}100%{border-color:var(--line)}}
+  .item.soldout{opacity:.4;cursor:default}
+  .item.soldout .add,.item.soldout .qty-ctrl{display:none}
+  .item.soldout .item-foot{justify-content:flex-start}
+  .soldout-tag{font-family:var(--display);font-size:11px;font-weight:400;color:var(--neon-red);background:transparent;padding:4px 8px;border:1.5px solid var(--neon-red);letter-spacing:1px;text-transform:uppercase;margin-left:auto;transform:rotate(-4deg)}
+
+  .item-img{flex:0 0 96px;width:96px;height:96px;background:var(--card-2);border:1px solid var(--line);overflow:hidden;position:relative}
+  .item-img img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.1) contrast(1.05)}
+  .fav{position:absolute;top:-4px;right:-4px;background:var(--neon-yellow);color:var(--bg);font-family:var(--display);font-size:9px;font-weight:400;padding:3px 7px;letter-spacing:.5px;transform:rotate(8deg);box-shadow:0 0 10px rgba(255,204,0,.6);z-index:2}
+  .fav::before{content:"★ "}
+  .item-body{flex:1;min-width:0;display:flex;flex-direction:column}
+  .item-name{font-family:var(--display);font-size:17px;font-weight:400;letter-spacing:.3px;line-height:1;color:var(--ink);text-transform:uppercase}
+  .item-desc{font-size:12.5px;color:var(--ink-soft);margin-top:6px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:500}
+  .item-customize{margin-top:6px;font-family:var(--mono);font-size:9px;color:var(--neon-yellow);text-transform:uppercase;letter-spacing:1.2px;font-weight:700}
+  .item-customize::before{content:"⚙ "}
+  .item-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:10px}
+  .price{font-family:var(--mono);font-size:16px;font-weight:700;color:var(--neon-yellow);letter-spacing:0;text-shadow:0 0 6px rgba(255,204,0,.4)}
+  .add{border:none;background:var(--neon-red);color:var(--ink);width:36px;height:36px;font-size:22px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.12s;line-height:1;font-family:var(--display);box-shadow:0 0 12px rgba(255,58,58,.5)}
+  .add:active{transform:scale(.9)}
+  .qty-ctrl{display:flex;align-items:center;gap:10px;background:var(--neon-red);padding:2px 6px;box-shadow:0 0 12px rgba(255,58,58,.5)}
+  .qty-ctrl button{border:none;background:transparent;color:var(--ink);width:28px;height:30px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;font-family:var(--display);font-weight:400}
+  .qty-ctrl span{font-family:var(--mono);font-size:13px;font-weight:700;min-width:14px;text-align:center;color:var(--ink)}
+
+  /* ===== CART BAR ===== */
+  .cart-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;padding:14px 20px calc(14px + env(safe-area-inset-bottom));background:rgba(10,10,12,.96);backdrop-filter:blur(12px);border-top:2px solid var(--neon-red);box-shadow:0 -8px 24px rgba(255,58,58,.15);z-index:45;transition:transform .3s}
+  .cart-bar.hidden{transform:translateX(-50%) translateY(120%)}
+  .cart-btn{width:100%;border:none;background:var(--neon-red);color:var(--ink);padding:16px 22px;font-family:var(--display);font-size:18px;font-weight:400;cursor:pointer;display:flex;align-items:center;justify-content:space-between;text-transform:uppercase;letter-spacing:1.5px;box-shadow:0 0 20px rgba(255,58,58,.6),0 0 40px rgba(255,58,58,.3);text-shadow:0 1px 0 rgba(0,0,0,.3)}
+  .cart-btn:active{opacity:.92}
+  .cart-count{background:var(--neon-yellow);color:var(--bg);font-family:var(--mono);font-size:12px;font-weight:700;padding:3px 8px;min-width:26px;text-align:center}
+  .cart-left{display:flex;align-items:center;gap:10px}
+  #cartTotal{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--ink)}
+
+  .overlay{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:50;opacity:0;pointer-events:none;transition:.25s;backdrop-filter:blur(3px)}
+  .overlay.open{opacity:1;pointer-events:auto}
+
+  /* ===== DETAIL ===== */
+  .detail{position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);width:100%;max-width:520px;max-height:92vh;background:var(--bg);border-top:3px solid var(--neon-red);box-shadow:0 -8px 24px rgba(255,58,58,.3);z-index:58;transition:transform .32s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;overflow:hidden}
+  .detail.open{transform:translateX(-50%) translateY(0)}
+  .dt-imgwrap{position:relative;width:100%;height:260px;background:var(--card-2);flex:0 0 auto;border-bottom:1.5px solid var(--neon-red)}
+  .dt-imgwrap img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.1) contrast(1.05)}
+  .dt-close{position:absolute;top:14px;right:14px;background:var(--bg);border:1.5px solid var(--ink);width:38px;height:38px;font-size:22px;cursor:pointer;color:var(--ink);display:flex;align-items:center;justify-content:center;line-height:1;font-family:var(--display)}
+  .dt-fav{position:absolute;top:14px;left:14px;background:var(--neon-yellow);color:var(--bg);font-family:var(--display);font-size:11px;font-weight:400;padding:4px 10px;letter-spacing:.8px;transform:rotate(-4deg);box-shadow:0 0 14px rgba(255,204,0,.5)}
+  .dt-fav::before{content:"★ "}
+  .dt-body{padding:22px 22px;overflow-y:auto;flex:1}
+  .dt-name{font-family:var(--display);font-size:32px;font-weight:400;letter-spacing:.5px;line-height:1;color:var(--ink);text-transform:uppercase;text-shadow:0 0 10px rgba(244,235,217,.15)}
+  .dt-price{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--bg);margin-top:14px;display:inline-block;padding:5px 12px;background:var(--neon-yellow);letter-spacing:0;box-shadow:0 0 14px rgba(255,204,0,.5)}
+  .dt-soldout{display:inline-block;font-family:var(--display);font-size:13px;color:var(--neon-red);background:transparent;padding:6px 10px;border:1.5px solid var(--neon-red);margin-left:10px;letter-spacing:.8px;text-transform:uppercase}
+  .dt-desc{font-size:14.5px;color:var(--ink-soft);line-height:1.6;margin-top:18px;font-weight:500}
+
+  /* ===== CUSTOMIZATION ===== */
+  .mods{margin-top:24px;border-top:1.5px dashed var(--line);padding-top:20px}
+  .mod-group{margin-bottom:22px}
+  .mod-label{font-family:var(--display);font-size:13px;color:var(--neon-yellow);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;text-shadow:0 0 6px rgba(255,204,0,.3);display:flex;align-items:center;gap:8px}
+  .mod-label::before{content:"";flex:0 0 12px;width:12px;height:12px;background:var(--neon-yellow);box-shadow:0 0 8px rgba(255,204,0,.6)}
+  .mod-radios,.mod-checks{display:flex;flex-direction:column;gap:6px}
+  .mod-pills{display:flex;flex-wrap:wrap;gap:8px}
+  .mod-pill{flex:0 0 auto;background:transparent;border:1.5px solid var(--line);color:var(--ink-soft);padding:9px 14px;font-family:var(--body);font-size:12.5px;font-weight:600;cursor:pointer;text-transform:uppercase;letter-spacing:.5px;transition:.15s}
+  .mod-pill.active{background:var(--neon-red);color:var(--ink);border-color:var(--neon-red);box-shadow:0 0 12px rgba(255,58,58,.4)}
+  .mod-pill em{font-style:normal;color:var(--neon-yellow);font-family:var(--mono);font-size:11px;margin-left:6px;font-weight:700}
+  .mod-pill.active em{color:var(--neon-yellow)}
+
+  .mod-row{display:flex;align-items:center;gap:10px;padding:11px 14px;background:var(--card);border:1.5px solid var(--line);cursor:pointer;transition:.12s;user-select:none}
+  .mod-row.active{border-color:var(--neon-red);background:var(--card-2)}
+  .mod-row input{display:none}
+  .mod-check-box{flex:0 0 18px;width:18px;height:18px;border:1.5px solid var(--ink-soft);display:flex;align-items:center;justify-content:center;transition:.12s;position:relative}
+  .mod-row.active .mod-check-box{background:var(--neon-red);border-color:var(--neon-red);box-shadow:0 0 8px rgba(255,58,58,.5)}
+  .mod-row.active .mod-check-box::after{content:"✓";color:var(--ink);font-family:var(--display);font-size:13px;font-weight:400;line-height:1}
+  .mod-row .mod-name{flex:1;font-family:var(--body);font-size:13.5px;font-weight:600;color:var(--ink);letter-spacing:.2px}
+  .mod-row.active .mod-name{color:var(--ink)}
+  .mod-row .mod-extra-price{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--neon-yellow);text-shadow:0 0 4px rgba(255,204,0,.3)}
+
+  .mod-row.removed{border-color:var(--neon-red);background:rgba(255,58,58,.08)}
+  .mod-row.removed .mod-check-box{background:var(--neon-red);border-color:var(--neon-red)}
+  .mod-row.removed .mod-check-box::after{content:"−"}
+  .mod-row.removed .mod-name{color:var(--ink-soft);text-decoration:line-through;text-decoration-color:var(--neon-red);text-decoration-thickness:2px}
+
+  .dt-foot{padding:14px 22px calc(18px + env(safe-area-inset-bottom));border-top:1.5px solid var(--neon-red);background:var(--bg-2);display:flex;align-items:center;gap:12px;box-shadow:0 -4px 14px rgba(255,58,58,.1)}
+  .dt-qty{display:flex;align-items:center;gap:12px;background:transparent;border:1.5px solid var(--ink);padding:5px 8px}
+  .dt-qty button{border:none;background:transparent;color:var(--ink);width:30px;height:32px;font-size:22px;cursor:pointer;line-height:1;font-family:var(--display);font-weight:400}
+  .dt-qty span{font-family:var(--mono);font-size:14px;font-weight:700;min-width:18px;text-align:center;color:var(--ink)}
+  .dt-add{flex:1;border:none;background:var(--neon-red);color:var(--ink);padding:14px;font-family:var(--display);font-size:15px;font-weight:400;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:12px;text-transform:uppercase;letter-spacing:1px;box-shadow:0 0 18px rgba(255,58,58,.5)}
+  .dt-add b{font-family:var(--mono);color:var(--neon-yellow);font-weight:700;font-size:14px;text-shadow:0 0 6px rgba(255,204,0,.4)}
+  .dt-add.disabled{background:var(--muted);color:var(--ink-soft);cursor:not-allowed;box-shadow:none}
+  .dt-add.disabled b{color:var(--ink-soft);text-shadow:none}
+
+  /* ===== SHEET ===== */
+  .sheet{position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);width:100%;max-width:520px;max-height:88vh;background:var(--bg);border-top:3px solid var(--neon-red);box-shadow:0 -8px 24px rgba(255,58,58,.3);z-index:55;transition:transform .3s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column}
+  .sheet.open{transform:translateX(-50%) translateY(0)}
+  .sheet-head{padding:20px 22px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1.5px solid var(--line);background:var(--bg-2)}
+  .sheet-head h2{font-family:var(--display);font-size:22px;font-weight:400;text-transform:uppercase;letter-spacing:.5px;color:var(--ink)}
+  .close{background:transparent;border:1.5px solid var(--ink);width:34px;height:34px;font-size:18px;cursor:pointer;color:var(--ink);font-family:var(--display);font-weight:400;line-height:1;display:flex;align-items:center;justify-content:center}
+  .sheet-body{overflow-y:auto;padding:18px 22px;flex:1}
+  .cart-item{background:var(--card);border:1.5px solid var(--line);padding:14px;margin-bottom:12px}
+  .ci-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+  .ci-name{font-family:var(--display);font-size:14px;font-weight:400;text-transform:uppercase;letter-spacing:.4px;line-height:1.1;color:var(--ink)}
+  .ci-price{font-family:var(--mono);font-size:14px;font-weight:700;white-space:nowrap;color:var(--neon-yellow)}
+  .ci-mods{margin-top:8px;font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);line-height:1.6;text-transform:uppercase;letter-spacing:.4px}
+  .ci-mods .mod-chunk{display:inline-block;margin-right:8px}
+  .ci-mods .mod-chunk b{color:var(--neon-yellow);font-weight:700}
+  .ci-mods .mod-chunk.rm{color:var(--neon-red)}
+  .ci-mods .mod-chunk.rm b{color:var(--neon-red)}
+  .ci-mods .mod-chunk.add b{color:var(--neon-green)}
+  .ci-foot{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+  .note-input{width:100%;margin-top:10px;border:1.5px solid var(--line);background:var(--card-2);padding:9px 11px;font-size:12.5px;font-family:var(--body);resize:none;color:var(--ink);font-weight:500}
+  .note-input::placeholder{color:var(--muted);font-style:italic}
+  .note-input:focus{outline:none;border-color:var(--neon-yellow)}
+  .empty{text-align:center;color:var(--muted);padding:50px 20px;font-family:var(--display);font-size:18px;line-height:1.5;font-weight:400;letter-spacing:.5px;text-transform:uppercase}
+  .sheet-foot{padding:16px 22px calc(20px + env(safe-area-inset-bottom));border-top:1.5px solid var(--neon-red);background:var(--bg-2)}
+  .total-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+  .total-row .lbl{font-family:var(--mono);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:2px;font-weight:700}
+  .total-row .val{font-family:var(--display);font-size:30px;font-weight:400;color:var(--neon-yellow);letter-spacing:.5px;text-shadow:var(--glow-yellow)}
+  .send-btn{width:100%;border:none;background:var(--neon-red);color:var(--ink);padding:18px;font-family:var(--display);font-size:18px;font-weight:400;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:12px;text-transform:uppercase;letter-spacing:1.5px;box-shadow:0 0 20px rgba(255,58,58,.6)}
+  .send-btn:disabled{background:var(--muted);color:var(--ink-soft);box-shadow:none;cursor:not-allowed}
+
+  /* ===== UPSELL ===== */
+  .upsell{position:fixed;bottom:100px;left:50%;transform:translateX(-50%) translateY(160%);width:calc(100% - 28px);max-width:492px;background:var(--card);border:1.5px solid var(--neon-yellow);box-shadow:0 0 20px rgba(255,204,0,.3),0 8px 20px rgba(0,0,0,.4);z-index:46;padding:14px 14px 12px;transition:transform .32s cubic-bezier(.2,1.1,.3,1)}
+  .upsell.show{transform:translateX(-50%) translateY(0)}
+  .up-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px}
+  .up-title{font-family:var(--display);font-size:13px;font-weight:400;color:var(--neon-yellow);text-transform:uppercase;letter-spacing:1.2px;text-shadow:var(--glow-yellow)}
+  .up-close{background:none;border:none;color:var(--ink);font-size:20px;cursor:pointer;line-height:1;padding:0 4px;font-family:var(--display)}
+  .up-row{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}
+  .up-row::-webkit-scrollbar{display:none}
+  .up-card{flex:0 0 auto;width:136px;background:var(--bg);border:1.5px solid var(--line);padding:10px;cursor:pointer}
+  .up-img{width:100%;height:62px;background:var(--card-2);overflow:hidden;margin-bottom:8px}
+  .up-img img{width:100%;height:100%;object-fit:cover}
+  .up-name{font-family:var(--display);font-size:11.5px;font-weight:400;line-height:1.05;height:28px;overflow:hidden;text-transform:uppercase;letter-spacing:.3px;color:var(--ink)}
+  .up-foot{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+  .up-price{font-family:var(--mono);font-size:11.5px;font-weight:700;color:var(--neon-yellow)}
+  .up-add{background:var(--neon-red);color:var(--ink);border:none;width:26px;height:24px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;font-family:var(--display);box-shadow:0 0 8px rgba(255,58,58,.4)}
+
+  .cart-upsell{background:var(--card-2);border:1.5px dashed var(--neon-yellow);padding:14px;margin-bottom:14px}
+  .cu-head{font-family:var(--display);font-size:13px;font-weight:400;color:var(--neon-yellow);margin-bottom:11px;text-transform:uppercase;letter-spacing:1.2px}
+  .cu-item{display:flex;align-items:center;gap:11px;background:var(--card);border:1px solid var(--line);padding:9px 10px;margin-bottom:8px}
+  .cu-item:last-child{margin-bottom:0}
+  .cu-img{width:42px;height:42px;background:var(--card-2);overflow:hidden;flex:0 0 auto}
+  .cu-img img{width:100%;height:100%;object-fit:cover}
+  .cu-body{flex:1;min-width:0}
+  .cu-name{font-family:var(--display);font-size:13px;font-weight:400;line-height:1.05;text-transform:uppercase;letter-spacing:.3px;color:var(--ink)}
+  .cu-price{font-family:var(--mono);font-size:11.5px;color:var(--neon-yellow);margin-top:2px;font-weight:700}
+  .cu-add{flex:0 0 auto;background:var(--neon-red);color:var(--ink);border:none;padding:7px 14px;font-family:var(--display);font-size:11px;font-weight:400;cursor:pointer;text-transform:uppercase;letter-spacing:.8px}
+
+  /* ===== ASK ===== */
+  .ask{position:fixed;inset:0;z-index:65;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;padding:28px;opacity:0;pointer-events:none;transition:.25s;backdrop-filter:blur(4px)}
+  .ask.open{opacity:1;pointer-events:auto}
+  .ask-box{background:var(--card);border:2px solid var(--neon-yellow);padding:28px 24px 22px;max-width:340px;width:100%;text-align:center;transform:scale(.92);transition:.25s;box-shadow:0 0 30px rgba(255,204,0,.3)}
+  .ask.open .ask-box{transform:scale(1)}
+  .ask-box h3{font-family:var(--display);font-size:22px;font-weight:400;margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px;line-height:1.05;color:var(--ink)}
+  .ask-box p{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-bottom:22px;font-weight:500}
+  .ask-btns{display:flex;flex-direction:column;gap:10px}
+  .ask-primary{border:none;background:var(--neon-red);color:var(--ink);padding:14px;font-family:var(--display);font-size:15px;font-weight:400;cursor:pointer;text-transform:uppercase;letter-spacing:1.2px;box-shadow:0 0 16px rgba(255,58,58,.5)}
+  .ask-secondary{border:1.5px solid var(--ink-soft);background:transparent;color:var(--ink);padding:13px;font-family:var(--mono);font-size:11px;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:1.2px}
+
+  /* ===== WELCOME : full neón sign · americana ===== */
+  .welcome{position:fixed;inset:0;z-index:90;max-width:520px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 32px;background:var(--bg);transition:opacity .5s,transform .5s;overflow:hidden}
+  .welcome::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(ellipse 80% 50% at 50% 30%, rgba(255,58,58,.15), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 50% 80%, rgba(30,58,92,.18), transparent 70%),
+    repeating-linear-gradient(0deg, transparent 0, transparent 2px, rgba(255,255,255,.018) 2px, rgba(255,255,255,.018) 4px);
+    pointer-events:none}
+  .w-stripes{position:absolute;top:0;left:0;right:0;height:18px;background:repeating-linear-gradient(90deg,var(--neon-red) 0 20px,var(--ink) 20px 40px,var(--usa-navy) 40px 60px);opacity:.85;z-index:1}
+  .w-stripes-bot{position:absolute;bottom:0;left:0;right:0;height:18px;background:repeating-linear-gradient(90deg,var(--usa-navy) 0 20px,var(--ink) 20px 40px,var(--neon-red) 40px 60px);opacity:.85;z-index:1}
+  .w-est{font-family:var(--mono);font-size:10px;color:var(--ink);letter-spacing:3px;text-transform:uppercase;font-weight:700;opacity:0;animation:fadeUp .6s .2s forwards;position:relative;z-index:2;margin-bottom:8px}
+  .w-est span{color:var(--neon-yellow);text-shadow:0 0 6px rgba(255,204,0,.5)}
+  .welcome::after{content:"OPEN";position:absolute;top:36px;right:30px;font-family:var(--display);font-size:22px;color:var(--neon-green);letter-spacing:2px;text-shadow:0 0 12px rgba(57,255,112,.7);border:1.5px solid var(--neon-green);padding:4px 10px;box-shadow:0 0 12px rgba(57,255,112,.4);transform:rotate(-4deg);animation:flicker 4s infinite}
+  @keyframes flicker{0%,18%,22%,25%,53%,57%,100%{opacity:1}19%,21%,23%,24%,54%,56%{opacity:.5}}
+  .welcome.gone{opacity:0;transform:scale(1.06);pointer-events:none}
+  .w-lang{position:absolute;top:calc(20px + env(safe-area-inset-top));left:20px;z-index:3}
+  .w-logo{width:110px;height:110px;background:var(--neon-red);display:flex;align-items:center;justify-content:center;color:var(--ink);font-family:var(--display);font-weight:400;font-size:42px;letter-spacing:.5px;margin-bottom:28px;animation:logoIn .8s cubic-bezier(.2,1.3,.4,1);position:relative;z-index:2;box-shadow:0 0 30px rgba(255,58,58,.6),0 0 60px rgba(255,58,58,.3);text-shadow:0 0 14px rgba(255,255,255,.4)}
+  @keyframes logoIn{0%{transform:scale(0) rotate(-15deg);opacity:0}100%{transform:scale(1) rotate(0);opacity:1}}
+  .w-hi{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--neon-green);letter-spacing:2.5px;text-transform:uppercase;opacity:0;animation:fadeUp .6s .3s forwards;position:relative;z-index:2;padding:4px 12px;border:1px solid var(--neon-green);text-shadow:0 0 6px rgba(57,255,112,.5)}
+  .w-title{font-family:var(--display);font-size:64px;font-weight:400;letter-spacing:1.5px;line-height:.9;margin:18px 0 20px;color:var(--neon-yellow);opacity:0;animation:fadeUp .6s .45s forwards;text-transform:uppercase;position:relative;z-index:2;text-shadow:0 0 16px rgba(255,204,0,.6),0 0 32px rgba(255,204,0,.3)}
+  .w-subtitle{font-family:var(--display-line);font-size:20px;color:var(--neon-red);letter-spacing:1px;margin-bottom:18px;opacity:0;animation:fadeUp .6s .55s forwards;position:relative;z-index:2;text-transform:uppercase;text-shadow:0 0 10px rgba(255,58,58,.5)}
+  .w-sub{font-family:var(--body);font-size:14.5px;color:var(--ink-soft);line-height:1.55;max-width:320px;opacity:0;animation:fadeUp .6s .65s forwards;position:relative;z-index:2;font-weight:500}
+  .w-mesa{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--neon-green);padding:10px 18px;border:1.5px solid var(--neon-green);font-family:var(--mono);font-size:12px;font-weight:700;margin-top:30px;opacity:0;animation:fadeUp .6s .8s forwards;letter-spacing:1.2px;text-transform:uppercase;position:relative;z-index:2;box-shadow:0 0 10px rgba(57,255,112,.3)}
+  .w-btn{margin-top:36px;border:none;background:var(--neon-red);color:var(--ink);padding:18px 46px;font-family:var(--display);font-size:20px;font-weight:400;cursor:pointer;box-shadow:0 0 30px rgba(255,58,58,.6),0 0 60px rgba(255,58,58,.3);opacity:0;animation:fadeUp .6s .9s forwards;display:flex;align-items:center;gap:14px;letter-spacing:1.2px;position:relative;z-index:2;text-transform:uppercase}
+  .w-btn:active{transform:scale(.96)}
+  @keyframes fadeUp{0%{opacity:0;transform:translateY(16px)}100%{opacity:1;transform:translateY(0)}}
+
+  /* ===== ONBOARD ===== */
+  .onboard{position:fixed;inset:0;z-index:85;background:var(--bg);max-width:520px;margin:0 auto;display:flex;flex-direction:column;transition:opacity .4s,transform .4s;opacity:0;transform:translateY(20px);pointer-events:none}
+  .onboard.show{opacity:1;transform:translateY(0);pointer-events:auto}
+  .onboard.gone{opacity:0;transform:scale(1.04);pointer-events:none}
+  .ob-head{padding:48px 30px 10px;text-align:center}
+  .ob-head h1{font-family:var(--display);font-size:32px;font-weight:400;letter-spacing:.5px;text-transform:uppercase;line-height:1;color:var(--neon-yellow);text-shadow:var(--glow-yellow)}
+  .ob-head .sub{color:var(--ink-soft);font-family:var(--mono);font-size:11.5px;margin-top:14px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700}
+  .ob-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:10px 28px;gap:14px}
+  .step{display:flex;align-items:center;gap:16px;background:var(--card);border:1.5px solid var(--line);padding:16px 18px;opacity:0;transform:translateX(-16px)}
+  .onboard.show .step{animation:stepIn .5s forwards}
+  .onboard.show .step:nth-child(1){animation-delay:.15s}
+  .onboard.show .step:nth-child(2){animation-delay:.3s}
+  .onboard.show .step:nth-child(3){animation-delay:.45s}
+  .onboard.show .step:nth-child(4){animation-delay:.6s}
+  @keyframes stepIn{to{opacity:1;transform:translateX(0)}}
+  .step-num{flex:0 0 46px;width:46px;height:46px;background:var(--neon-red);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:22px;font-weight:400;box-shadow:0 0 14px rgba(255,58,58,.5)}
+  .step-txt h3{font-family:var(--display);font-size:14px;font-weight:400;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px;color:var(--ink)}
+  .step-txt p{font-size:12.5px;color:var(--ink-soft);line-height:1.5;font-weight:500}
+  .ob-foot{padding:18px 28px calc(28px + env(safe-area-inset-bottom))}
+  .ob-btn{width:100%;border:none;background:var(--neon-red);color:var(--ink);padding:17px;font-family:var(--display);font-size:18px;font-weight:400;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:12px;text-transform:uppercase;letter-spacing:1.2px;box-shadow:0 0 20px rgba(255,58,58,.5)}
+  .ob-skip{display:block;width:100%;text-align:center;background:none;border:none;color:var(--ink-soft);font-family:var(--mono);font-size:11px;font-weight:700;margin-top:16px;cursor:pointer;text-transform:uppercase;letter-spacing:1.5px}
+
+  /* ===== SUCCESS ===== */
+  .success{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.88);backdrop-filter:blur(4px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:.3s;overflow-y:auto;max-width:520px;margin:0 auto}
+  .success.open{opacity:1;pointer-events:auto}
+  .success-inner{width:100%;max-width:360px;display:flex;flex-direction:column;align-items:center}
+  .check{width:84px;height:84px;background:var(--neon-green);display:flex;align-items:center;justify-content:center;margin-bottom:20px;animation:pop .5s cubic-bezier(.2,1.5,.4,1);box-shadow:0 0 30px rgba(57,255,112,.6),0 0 60px rgba(57,255,112,.3)}
+  .check svg{width:42px;height:42px;stroke:var(--bg);stroke-width:3.5;fill:none;stroke-dasharray:30;stroke-dashoffset:30;animation:draw .4s .25s forwards;stroke-linecap:round}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes pop{0%{transform:scale(0)}100%{transform:scale(1)}}
+  .success h2{font-family:var(--display);font-size:30px;font-weight:400;margin-bottom:6px;color:var(--neon-yellow);text-align:center;text-transform:uppercase;letter-spacing:1px;line-height:1;text-shadow:var(--glow-yellow)}
+  .success .glad{color:var(--ink-soft);font-family:var(--mono);font-size:11.5px;margin-bottom:22px;text-align:center;text-transform:uppercase;letter-spacing:1.5px;font-weight:700}
+  .ticket{background:var(--card);width:100%;padding:22px 22px 8px;position:relative;border:1.5px solid var(--neon-red);box-shadow:0 0 30px rgba(255,58,58,.3),0 8px 24px rgba(0,0,0,.5);animation:ticketIn .5s .15s both}
+  @keyframes ticketIn{0%{transform:translateY(20px);opacity:0}100%{transform:translateY(0);opacity:1}}
+  .tk-zig{height:10px;background-image:linear-gradient(135deg,var(--card) 50%,transparent 50%),linear-gradient(-135deg,var(--card) 50%,transparent 50%);background-size:12px 12px;background-repeat:repeat-x;margin:0 -22px -2px;background-position:bottom}
+  .tk-top{text-align:center;border-bottom:1.5px dashed var(--line);padding-bottom:14px;margin-bottom:14px}
+  .tk-top h3{font-family:var(--display);font-size:20px;font-weight:400;letter-spacing:.8px;color:var(--neon-yellow);text-shadow:var(--glow-yellow);text-transform:uppercase}
+  .tk-top .meta{font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-top:6px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+  .tk-no{display:inline-block;background:var(--neon-red);color:var(--ink);font-family:var(--mono);font-weight:700;font-size:12px;padding:5px 12px;margin-top:10px;letter-spacing:1px}
+  .tk-line{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:10px;align-items:flex-start}
+  .tk-line .ql{display:flex;gap:9px;min-width:0;flex:1}
+  .tk-line .q{font-family:var(--mono);color:var(--neon-yellow);font-weight:700;flex:0 0 auto;font-size:13px}
+  .tk-line .nm{font-family:var(--display);font-weight:400;line-height:1.1;text-transform:uppercase;font-size:14px;letter-spacing:.3px;color:var(--ink)}
+  .tk-line .nm .mods-summary{display:block;font-family:var(--mono);color:var(--ink-soft);font-weight:500;font-size:10px;margin-top:3px;text-transform:uppercase;letter-spacing:.4px;line-height:1.5;font-style:normal}
+  .tk-line .nm .mods-summary b{color:var(--neon-yellow);font-weight:700}
+  .tk-line .nm .mods-summary .rm{color:var(--neon-red)}
+  .tk-line .nm small{display:block;font-family:var(--body);color:var(--ink-soft);font-weight:500;font-size:11px;margin-top:3px;font-style:italic}
+  .tk-line .pr{font-family:var(--mono);font-weight:700;white-space:nowrap;font-size:13px;color:var(--ink)}
+  .tk-sep{border-top:1.5px dashed var(--line);margin:14px 0}
+  .tk-total{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--display);font-size:24px;font-weight:400;margin-top:8px;text-transform:uppercase;letter-spacing:.5px;color:var(--neon-yellow);text-shadow:var(--glow-yellow)}
+  .tk-foot{text-align:center;font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);padding:14px 0 6px;line-height:1.6;text-transform:uppercase;letter-spacing:1px;font-weight:700}
+  .success-actions{width:100%;margin-top:20px;display:flex;flex-direction:column;gap:11px}
+  .sa-status{display:flex;align-items:center;justify-content:center;gap:10px;background:transparent;border:1.5px solid var(--neon-green);color:var(--neon-green);padding:13px;font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;box-shadow:0 0 14px rgba(57,255,112,.2)}
+  .sa-dot{width:9px;height:9px;background:var(--neon-green);animation:blink 1.4s infinite;box-shadow:0 0 6px rgba(57,255,112,.6)}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+  .ghost-btn{border:1.5px solid var(--neon-yellow);background:transparent;color:var(--neon-yellow);padding:13px 26px;font-family:var(--display);font-size:14px;font-weight:400;cursor:pointer;text-transform:uppercase;letter-spacing:1.2px}
+
+  .confetti{position:fixed;inset:0;z-index:70;pointer-events:none;overflow:hidden;max-width:520px;margin:0 auto}
+  .confetti i{position:absolute;top:-12px;width:10px;height:14px;opacity:.95;animation:fall linear forwards}
+  @keyframes fall{0%{transform:translateY(-20px) rotate(0)}100%{transform:translateY(105vh) rotate(540deg)}}
+
+  /* ===== ANIM PACK · DINER NEON ===== */
+  /* Intro curtain — neon OPEN sign flicker reveal */
+  .intro-curtain{position:fixed;inset:0;z-index:300;background:var(--bg);pointer-events:none;animation:curtainOut 1.3s .5s cubic-bezier(.76,0,.24,1) forwards;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .intro-curtain::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%, rgba(255,58,58,.18), transparent 55%);opacity:0;animation:curtainGlow 1.3s .2s ease-out forwards}
+  .intro-mark{font-family:var(--display);font-size:88px;color:var(--neon-red);letter-spacing:2px;line-height:1;text-transform:uppercase;text-shadow:0 0 24px rgba(255,58,58,.8),0 0 50px rgba(255,58,58,.4);animation:neonFlicker 1.4s ease-out forwards;opacity:0}
+  .intro-sub{position:absolute;bottom:36%;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:11px;color:var(--neon-green);letter-spacing:3px;text-transform:uppercase;border:1px solid var(--neon-green);padding:5px 14px;box-shadow:0 0 10px rgba(57,255,112,.4);opacity:0;animation:fadeIn .5s 1s forwards}
+  @keyframes neonFlicker{0%{opacity:0}10%{opacity:1}12%{opacity:.3}14%{opacity:1}30%{opacity:.6}32%{opacity:1}55%{opacity:.4}57%{opacity:1}90%{opacity:1}100%{opacity:1}}
+  @keyframes curtainGlow{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+  @keyframes curtainOut{0%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 100% 0)}}
+  @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+
+  /* Scroll reveal */
+  .item, .sec-title{opacity:0;transform:translateY(22px);transition:opacity .85s cubic-bezier(.5,0,.15,1),transform .85s cubic-bezier(.5,0,.15,1)}
+  .item.in-view, .sec-title.in-view{opacity:1;transform:translateY(0)}
+  .item.in-view{transition-delay:calc(var(--i,0) * 55ms)}
+
+  /* Count bump — neon pulse */
+  .cart-count{transition:background .3s,color .3s,box-shadow .3s;display:inline-block}
+  .cart-count.bump{animation:countBumpNeon .55s cubic-bezier(.4,1.6,.5,1)}
+  @keyframes countBumpNeon{0%{transform:scale(1)}30%{transform:scale(1.45);background:var(--neon-red);color:var(--ink);box-shadow:0 0 20px rgba(255,58,58,.8),0 0 40px rgba(255,58,58,.4)}100%{transform:scale(1);background:var(--neon-yellow);color:var(--bg);box-shadow:none}}
+
+  /* Fly-to-cart — neon dot trail */
+  .flyer{position:fixed;width:22px;height:22px;background:radial-gradient(circle, var(--neon-yellow) 0%, var(--neon-red) 70%, transparent 90%);border-radius:50%;pointer-events:none;z-index:1000;transition:transform .85s cubic-bezier(.55,0,.3,1),opacity .75s ease-out;box-shadow:0 0 20px var(--neon-yellow),0 0 40px rgba(255,58,58,.5)}
+</style>
+</head>
+<body>
+
+<div class="intro-curtain" id="introCurtain">
+  <span class="intro-mark">OPEN</span>
+  <span class="intro-sub">// EST. 2024 / VALENCIA</span>
+</div>
+
+<div class="welcome" id="welcome">
+  <div class="w-stripes"></div>
+  <div class="w-stripes-bot"></div>
+  <div class="w-lang" id="wLang"></div>
+  <div class="w-logo">BB</div>
+  <div class="w-est">★ ★ ★ &nbsp; <span>USDA PRIME · EST. 2024</span> &nbsp; ★ ★ ★</div>
+  <div class="w-hi" data-t="hi">// Welcome to</div>
+  <div class="w-title">BONFIRE<br>BURGER</div>
+  <div class="w-subtitle">★ BURGERS · SHAKES · FRIES ★</div>
+  <div class="w-sub" data-t="welcomeSub">Auténticas smash burgers al estilo americano. 100% ternera USDA Prime, plancha ardiendo y papel listo — vienen jugosas.</div>
+  <div class="w-mesa"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h18M3 9l1-4h16l1 4M5 9v11M19 9v11M5 20h14"/></svg><span data-t="table">Mesa</span>&nbsp;<span id="wMesa">7</span></div>
+  <button class="w-btn" id="welcomeBtn"><span data-t="start">Empezar</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</div>
+
+<div class="onboard" id="onboard">
+  <div class="ob-head"><h1 data-t="howTitle">¿Cómo funciona?</h1><div class="sub" data-t="howSub">4 pasos · sin app · directo</div></div>
+  <div class="ob-body">
+    <div class="step"><div class="step-num">1</div><div class="step-txt"><h3 data-t="s1t">Elige tu burger</h3><p data-t="s1p">Personaliza punto, pan y extras.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-txt"><h3 data-t="s2t">Añade entrantes</h3><p data-t="s2p">Nachos, papas cheese-bacon, alitas BBQ…</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-txt"><h3 data-t="s3t">A la plancha</h3><p data-t="s3p">Pulsa enviar y va directo a la plancha.</p></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-txt"><h3 data-t="s4t">Disfruta</h3><p data-t="s4p">Te lo llevamos al momento.</p></div></div>
+  </div>
+  <div class="ob-foot">
+    <button class="ob-btn" id="startBtn"><span data-t="seeMenu">Ver la carta</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    <button class="ob-skip" id="skipBtn" data-t="callWaiter">Llama al camarero si necesitas algo</button>
+  </div>
+</div>
+
+<header>
+  <div class="head-top">
+    <div class="brand"><div class="brand-mark">BB</div><div class="brand-text"><h1>★ Bonfire Burger ★</h1><span data-t="tagline">American Smash Burgers · Est. 2024</span></div></div>
+    <div class="head-right">
+      <div class="mesa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h18M3 9l1-4h16l1 4M5 9v11M19 9v11M5 20h14"/></svg><span data-t="tableShort">Mesa</span>&nbsp;<strong id="mesaNum">7</strong></div>
+      <div class="lang" id="hLang"></div>
+    </div>
+  </div>
+  <div class="tabs" id="tabs"></div>
+</header>
+
+<main id="menu"></main>
+
+<div class="cart-bar hidden" id="cartBar">
+  <button class="cart-btn" id="cartBtn">
+    <span class="cart-left"><span class="cart-count" id="cartCount">0</span> <span data-t="viewOrder">Ver pedido</span></span>
+    <span id="cartTotal">0,00 €</span>
+  </button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="detail" id="detail">
+  <div class="dt-imgwrap"><div id="dtFav"></div><div id="dtImg" style="width:100%;height:100%"></div><button class="dt-close" id="dtClose">×</button></div>
+  <div class="dt-body"><div class="dt-name" id="dtName"></div><div class="dt-price" id="dtPrice"></div><div class="dt-desc" id="dtDesc"></div><div id="dtMods"></div></div>
+  <div class="dt-foot"><div class="dt-qty"><button id="dtMinus">−</button><span id="dtQty">1</span><button id="dtPlus">+</button></div><button class="dt-add" id="dtAdd"></button></div>
+</div>
+
+<div class="upsell" id="upsell"><div class="up-top"><div class="up-title" id="upHeadline"></div><button class="up-close" id="upClose">×</button></div><div class="up-row" id="upRow"></div></div>
+
+<div class="sheet" id="sheet">
+  <div class="sheet-head"><h2><span data-t="yourOrder">Tu pedido</span> · <span data-t="tableShort">Mesa</span> <span id="mesaNum2">7</span></h2><button class="close" id="closeSheet">×</button></div>
+  <div class="sheet-body" id="cartList"></div>
+  <div class="sheet-foot">
+    <div class="total-row"><span class="lbl" data-t="total">Total</span><span class="val" id="grandTotal">0,00 €</span></div>
+    <button class="send-btn" id="sendBtn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><span data-t="sendOrder">Enviar a plancha</span></button>
+  </div>
+</div>
+
+<div class="ask" id="askDrink">
+  <div class="ask-box">
+    <h3 data-t="askTitle">¿Sin bebida?</h3>
+    <p data-t="askBody">Una hamburguesa sin un buen milkshake o cerveza fría sabe a la mitad.</p>
+    <div class="ask-btns">
+      <button class="ask-primary" id="askGoDrinks" data-t="askSee">Ver bebidas</button>
+      <button class="ask-secondary" id="askSkip" data-t="askSkipBtn">Enviar así</button>
+    </div>
+  </div>
+</div>
+
+<div class="confetti" id="confetti"></div>
+
+<div class="success" id="success">
+  <div class="success-inner">
+    <div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+    <h2 data-t="sentTitle">¡A la plancha!</h2>
+    <div class="glad" data-t="sentGlad">Pedido recibido · plancha encendida</div>
+    <div class="ticket" id="ticket"></div>
+    <div class="success-actions">
+      <div class="sa-status"><span class="sa-dot"></span> <span data-t="preparing">Preparando…</span></div>
+      <button class="ghost-btn" id="newOrder" data-t="orderMore">Pedir algo más</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const LANGS=[{code:"ES",flag:"🇪🇸",label:"Español"},{code:"EN",flag:"🇬🇧",label:"English"},{code:"FR",flag:"🇫🇷",label:"Français"},{code:"DE",flag:"🇩🇪",label:"Deutsch"},{code:"IT",flag:"🇮🇹",label:"Italiano"}];
+let lang = "ES";
+
+const T = {
+  ES:{hi:"// Bienvenido a",welcomeSub:"Auténticas smash burgers al estilo americano. 100% ternera USDA Prime, plancha ardiendo y papel listo — vienen jugosas.",table:"Mesa",tableShort:"Mesa",start:"Empezar",howTitle:"¿Cómo funciona?",howSub:"4 pasos · sin app · directo",s1t:"Elige tu burger",s1p:"Personaliza punto, pan y extras.",s2t:"Añade entrantes",s2p:"Nachos, papas cheese-bacon, alitas BBQ…",s3t:"A la plancha",s3p:"Pulsa enviar y va directo.",s4t:"Disfruta",s4p:"Te lo llevamos al momento.",seeMenu:"Ver la carta",callWaiter:"Llama al camarero si necesitas algo",tagline:"American Smash Burgers · Est. 2024",viewOrder:"Ver pedido",yourOrder:"Tu pedido",total:"Total",sendOrder:"Enviar a plancha",askTitle:"¿Sin bebida?",askBody:"Una hamburguesa sin un buen milkshake o cerveza fría sabe a la mitad.",askSee:"Ver bebidas",askSkipBtn:"Enviar así",sentTitle:"¡A la plancha!",sentGlad:"Pedido recibido · plancha encendida",preparing:"Preparando…",orderMore:"Pedir algo más",emptyCart:"Tu pedido está vacío",notePh:"Nota: sin cebolla, poco hecha…",addToOrder:"Añadir al pedido",add:"Añadir",missing:"¿Le falta algo?",thanks:"¡A disfrutar!",onWay:"Tu pedido va en camino.",top:"TOP",
+    cookLbl:"Punto de cocción",bunLbl:"Tipo de pan",removeLbl:"Quitar ingredientes",extrasLbl:"Extras · Añade carne, queso, bacon…",noExtras:"Sin extras",customizeTag:"PERSONALÍZALA",
+    up:{"Smash":"Acompáñalo con","Gourmet":"Pídelo con","Carnes":"Más extras","Sides":"Añade salsas","Salsas":"Picotea algo","Bebidas":"¿Postre?","Postres":"Salud"},
+    cat:{"Smash":"Smash Burgers","Gourmet":"De la casa","Carnes":"Carnes & Extras","Sides":"Entrantes","Salsas":"Salsas","Bebidas":"Bebidas","Postres":"Postres"}},
+  EN:{hi:"// Welcome to",welcomeSub:"American-style smash burgers. 100% USDA Prime beef, screaming-hot griddle and napkins ready — they come juicy.",table:"Table",tableShort:"Table",start:"Start",howTitle:"How does it work?",howSub:"4 steps · no app · direct",s1t:"Pick your burger",s1p:"Customize cook, bun and extras.",s2t:"Add starters",s2p:"Nachos, cheese-bacon fries, BBQ wings…",s3t:"To the grill",s3p:"Tap send and it goes straight.",s4t:"Enjoy",s4p:"We'll bring it right away.",seeMenu:"See the menu",callWaiter:"Call the server if you need anything",tagline:"American Smash Burgers · Est. 2024",viewOrder:"View order",yourOrder:"Your order",total:"Total",sendOrder:"Send to grill",askTitle:"No drink?",askBody:"A burger without a milkshake or cold beer is half a meal.",askSee:"See drinks",askSkipBtn:"Send anyway",sentTitle:"On the grill!",sentGlad:"Order received · grill is hot",preparing:"Preparing…",orderMore:"Order more",emptyCart:"Your order is empty",notePh:"Note: no onion, rare…",addToOrder:"Add to order",add:"Add",missing:"Anything missing?",thanks:"Enjoy!",onWay:"Your order is on its way.",top:"TOP",
+    cookLbl:"Cook level",bunLbl:"Bun type",removeLbl:"Remove ingredients",extrasLbl:"Extras · Add meat, cheese, bacon…",noExtras:"No extras",customizeTag:"CUSTOMIZE",
+    up:{"Smash":"Pair with","Gourmet":"Order with","Carnes":"More extras","Sides":"Add sauces","Salsas":"Bites","Bebidas":"Dessert?","Postres":"Cheers"},
+    cat:{"Smash":"Smash Burgers","Gourmet":"House Burgers","Carnes":"Meat & Extras","Sides":"Starters","Salsas":"Sauces","Bebidas":"Drinks","Postres":"Desserts"}},
+  FR:{hi:"// Bienvenue chez",welcomeSub:"Smash burgers, braise et fumée.",table:"Table",tableShort:"Table",start:"Commencer",howTitle:"Comment ça marche ?",howSub:"4 étapes",s1t:"Choisissez votre burger",s1p:"Cuisson, pain, extras.",s2t:"Entrées",s2p:"Nachos, frites cheese-bacon…",s3t:"À la plancha",s3p:"Touchez envoyer.",s4t:"Régalez-vous",s4p:"On vous l'apporte.",seeMenu:"Voir la carte",callWaiter:"Appelez le serveur",tagline:"American Smash Burgers · Est. 2024",viewOrder:"Voir la commande",yourOrder:"Votre commande",total:"Total",sendOrder:"À la plancha",askTitle:"Sans boisson ?",askBody:"Un burger sans milkshake ou bière fraîche…",askSee:"Voir les boissons",askSkipBtn:"Envoyer ainsi",sentTitle:"À la plancha !",sentGlad:"Commande reçue",preparing:"Préparation…",orderMore:"Commander encore",emptyCart:"Votre commande est vide",notePh:"Note : sans oignon…",addToOrder:"Ajouter",add:"Ajouter",missing:"Il manque quelque chose ?",thanks:"Régalez-vous !",onWay:"En route.",top:"TOP",
+    cookLbl:"Cuisson",bunLbl:"Pain",removeLbl:"Retirer",extrasLbl:"Extras",noExtras:"Sans extras",customizeTag:"PERSONNALISER",
+    up:{"Smash":"Accompagnez","Gourmet":"Avec","Carnes":"Plus d'extras","Sides":"Sauces","Salsas":"Grignoter","Bebidas":"Dessert ?","Postres":"Santé"},
+    cat:{"Smash":"Smash Burgers","Gourmet":"Maison","Carnes":"Viande & Extras","Sides":"Entrées","Salsas":"Sauces","Bebidas":"Boissons","Postres":"Desserts"}},
+  DE:{hi:"// Willkommen bei",welcomeSub:"Smash Burgers, Glut und Rauch.",table:"Tisch",tableShort:"Tisch",start:"Loslegen",howTitle:"Wie funktioniert es?",howSub:"4 Schritte",s1t:"Wähle deinen Burger",s1p:"Garstufe, Brötchen, Extras.",s2t:"Vorspeisen",s2p:"Nachos, Cheese-Bacon Pommes…",s3t:"An den Grill",s3p:"Tippe senden.",s4t:"Genießen",s4p:"Wir bringen's frisch.",seeMenu:"Zur Karte",callWaiter:"Ruf den Kellner",tagline:"American Smash Burgers · Est. 2024",viewOrder:"Bestellung",yourOrder:"Deine Bestellung",total:"Gesamt",sendOrder:"An den Grill",askTitle:"Kein Getränk?",askBody:"Burger ohne Milkshake oder kaltes Bier…",askSee:"Getränke ansehen",askSkipBtn:"So senden",sentTitle:"Am Grill!",sentGlad:"Bestellung erhalten",preparing:"Wird zubereitet…",orderMore:"Mehr bestellen",emptyCart:"Deine Bestellung ist leer",notePh:"Notiz: ohne Zwiebel…",addToOrder:"Hinzufügen",add:"Hinzufügen",missing:"Fehlt etwas?",thanks:"Guten Appetit!",onWay:"Auf dem Weg.",top:"TOP",
+    cookLbl:"Garstufe",bunLbl:"Brötchen",removeLbl:"Entfernen",extrasLbl:"Extras",noExtras:"Keine Extras",customizeTag:"ANPASSEN",
+    up:{"Smash":"Dazu passt","Gourmet":"Bestelle mit","Carnes":"Mehr Extras","Sides":"Saucen","Salsas":"Snacks","Bebidas":"Dessert?","Postres":"Prost"},
+    cat:{"Smash":"Smash Burgers","Gourmet":"Haus","Carnes":"Fleisch & Extras","Sides":"Vorspeisen","Salsas":"Saucen","Bebidas":"Getränke","Postres":"Desserts"}},
+  IT:{hi:"// Benvenuto da",welcomeSub:"Smash burger, brace e fumo.",table:"Tavolo",tableShort:"Tavolo",start:"Iniziare",howTitle:"Come funziona?",howSub:"4 passi",s1t:"Scegli il burger",s1p:"Cottura, pane, extra.",s2t:"Antipasti",s2p:"Nachos, patate cheese-bacon…",s3t:"In piastra",s3p:"Tocca invia.",s4t:"Gustati tutto",s4p:"Te lo portiamo subito.",seeMenu:"Vedi il menù",callWaiter:"Chiama il cameriere",tagline:"American Smash Burgers · Est. 2024",viewOrder:"Vedi ordine",yourOrder:"Il tuo ordine",total:"Totale",sendOrder:"In piastra",askTitle:"Senza bevanda?",askBody:"Burger senza milkshake o birra fredda…",askSee:"Vedi bevande",askSkipBtn:"Invia così",sentTitle:"In piastra!",sentGlad:"Ordine ricevuto",preparing:"In preparazione…",orderMore:"Ordina ancora",emptyCart:"Il tuo ordine è vuoto",notePh:"Nota: senza cipolla…",addToOrder:"Aggiungi",add:"Aggiungi",missing:"Manca qualcosa?",thanks:"Buon appetito!",onWay:"In arrivo.",top:"TOP",
+    cookLbl:"Cottura",bunLbl:"Pane",removeLbl:"Togliere",extrasLbl:"Extra",noExtras:"Senza extra",customizeTag:"PERSONALIZZA",
+    up:{"Smash":"Accompagnalo","Gourmet":"Ordinalo con","Carnes":"Più extra","Sides":"Salse","Salsas":"Stuzzichini","Bebidas":"Dolce?","Postres":"Salute"},
+    cat:{"Smash":"Smash Burgers","Gourmet":"Della casa","Carnes":"Carne & Extra","Sides":"Antipasti","Salsas":"Salse","Bebidas":"Bevande","Postres":"Dolci"}},
+};
+
+// ===== Common modifiers =====
+const COOK_OPTS = [
+  {id:"rare",name:{ES:"Poco hecha",EN:"Rare",FR:"Saignant",DE:"Selten",IT:"Al sangue"}},
+  {id:"medium",name:{ES:"Al punto",EN:"Medium",FR:"À point",DE:"Medium",IT:"Media"}},
+  {id:"well",name:{ES:"Muy hecha",EN:"Well done",FR:"Bien cuit",DE:"Durch",IT:"Ben cotta"}},
+];
+const BUN_OPTS = [
+  {id:"brioche",name:{ES:"Brioche",EN:"Brioche",FR:"Brioche",DE:"Brioche",IT:"Brioche"},price:0},
+  {id:"potato",name:{ES:"Pan de patata",EN:"Potato bun",FR:"Pain pomme de terre",DE:"Kartoffelbrötchen",IT:"Pane di patata"},price:0},
+  {id:"sourdough",name:{ES:"Masa madre",EN:"Sourdough",FR:"Levain",DE:"Sauerteig",IT:"Lievitazione naturale"},price:0},
+  {id:"gluten",name:{ES:"Sin gluten",EN:"Gluten-free",FR:"Sans gluten",DE:"Glutenfrei",IT:"Senza glutine"},price:1.5},
+];
+const EXTRAS = [
+  {id:"meat",name:{ES:"Carne extra 100g",EN:"Extra patty 100g",FR:"Steak extra 100g",DE:"Extra Patty 100g",IT:"Carne extra 100g"},price:3.50},
+  {id:"cheese",name:{ES:"Cheddar fundido",EN:"Melted cheddar",FR:"Cheddar fondu",DE:"Geschmolzener Cheddar",IT:"Cheddar fuso"},price:1.50},
+  {id:"bacon",name:{ES:"Bacon ahumado (2 tiras)",EN:"Smoked bacon (2 strips)",FR:"Bacon fumé (2 tranches)",DE:"Räucherspeck (2 Streifen)",IT:"Bacon affumicato (2 fette)"},price:2.00},
+  {id:"egg",name:{ES:"Huevo a la plancha",EN:"Grilled egg",FR:"Œuf à la plancha",DE:"Spiegelei",IT:"Uovo in piastra"},price:1.00},
+  {id:"avo",name:{ES:"Aguacate",EN:"Avocado",FR:"Avocat",DE:"Avocado",IT:"Avocado"},price:2.00},
+  {id:"truffle",name:{ES:"Mayo de trufa",EN:"Truffle mayo",FR:"Mayo truffe",DE:"Trüffel-Mayo",IT:"Maionese al tartufo"},price:1.50},
+];
+
+const MENU = [
+  { cat:"Smash", items:[
+    { id:"s1", name:"Smash Classic", best:true, price:8.90, img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=300&fit=crop&auto=format&q=75", customize:true,
+      desc:{ES:"Doble smash, queso americano, cebolla a la plancha y pickles",EN:"Double smash, American cheese, grilled onion and pickles",FR:"Double smash, cheddar américain, oignon grillé et pickles",DE:"Doppelter Smash, American Cheese, gegrillte Zwiebel und Pickles",IT:"Doppio smash, cheddar americano, cipolla in piastra e pickles"},
+      long:{ES:"Dos patties de ternera aplastadas en la plancha ardiendo hasta lograr la costra crujiente perfecta, dos lonchas de queso americano fundido, cebolla blanca a la plancha y pickles agridulces. Pan brioche tostado con manteca.",EN:"Two beef patties smashed on a screaming-hot griddle, two slices of melted American cheese, grilled white onion and sweet-sour pickles. Toasted brioche bun.",FR:"Deux steaks de bœuf écrasés sur la plancha brûlante, deux tranches de cheddar fondu, oignon blanc grillé et pickles.",DE:"Zwei Rindfleisch-Patties auf brennend heißer Plancha, zwei Scheiben Cheddar, gegrillte weiße Zwiebel und Pickles.",IT:"Due hamburger di manzo schiacciati sulla piastra rovente, due fette di cheddar americano fuso, cipolla bianca e pickles."},
+      removeIngs:{ES:["Cebolla","Pickles","Queso"],EN:["Onion","Pickles","Cheese"],FR:["Oignon","Pickles","Fromage"],DE:["Zwiebel","Pickles","Käse"],IT:["Cipolla","Pickles","Formaggio"]}},
+    { id:"s2", name:"Smash Double", price:10.90, img:"https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=300&h=300&fit=crop&auto=format&q=75", customize:true,
+      desc:{ES:"Triple smash, doble queso, cebolla y bonfire sauce",EN:"Triple smash, double cheese, onion and bonfire sauce",FR:"Triple smash, double fromage, oignon et sauce bonfire",DE:"Triple Smash, Doppelkäse, Zwiebel und Bonfire-Sauce",IT:"Triplo smash, doppio formaggio, cipolla e salsa bonfire"},
+      long:{ES:"Tres patties smasheadas, tres lonchas de queso, cebolla a la plancha y nuestra salsa bonfire (mayo ahumada con paprika y miel). Para los que vienen con hambre de verdad.",EN:"Three smashed patties, three slices of cheese, grilled onion and our bonfire sauce. For when you arrive really hungry.",FR:"Trois steaks, trois tranches de fromage, oignon grillé, sauce bonfire.",DE:"Drei Patties, drei Scheiben Käse, Zwiebel und Bonfire-Sauce.",IT:"Tre hamburger, tre fette di formaggio, cipolla e salsa bonfire."},
+      removeIngs:{ES:["Cebolla","Salsa bonfire"],EN:["Onion","Bonfire sauce"],FR:["Oignon","Sauce bonfire"],DE:["Zwiebel","Bonfire-Sauce"],IT:["Cipolla","Salsa bonfire"]}},
+    { id:"s3", name:"Smash BBQ Bacon", price:10.50, img:"https://images.unsplash.com/photo-1606131731446-5568d87113aa?w=300&h=300&fit=crop&auto=format&q=75", customize:true,
+      desc:{ES:"Doble smash, bacon crujiente, BBQ y aros de cebolla",EN:"Double smash, crispy bacon, BBQ and onion rings",FR:"Double smash, bacon, BBQ et anneaux d'oignon",DE:"Doppelter Smash, knuspriger Speck, BBQ und Zwiebelringe",IT:"Doppio smash, bacon, BBQ e anelli di cipolla"},
+      long:{ES:"Doble smash con cuatro lonchas de bacon ahumado, salsa BBQ casera y aros de cebolla crujientes coronando. Indulgente y sucio en el mejor sentido.",EN:"Double smash with four slices of smoked bacon, house BBQ sauce and crispy onion rings on top. Indulgent and messy.",FR:"Double smash, bacon fumé, BBQ maison et anneaux d'oignon.",DE:"Doppelter Smash, geräucherter Speck, BBQ-Sauce und Zwiebelringe.",IT:"Doppio smash, bacon affumicato, salsa BBQ e anelli di cipolla."},
+      removeIngs:{ES:["Aros de cebolla","Salsa BBQ"],EN:["Onion rings","BBQ sauce"],FR:["Anneaux d'oignon","BBQ"],DE:["Zwiebelringe","BBQ-Sauce"],IT:["Anelli di cipolla","BBQ"]}},
+    { id:"s4", name:"Smash Trufa", price:12.50, img:"https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=300&h=300&fit=crop&auto=format&q=75", customize:true,
+      desc:{ES:"Doble smash, mayo de trufa, rúcula y parmesano",EN:"Double smash, truffle mayo, rocket and parmesan",FR:"Double smash, mayo truffe, roquette et parmesan",DE:"Doppelter Smash, Trüffelmayo, Rucola und Parmesan",IT:"Doppio smash, maionese al tartufo, rucola e parmigiano"},
+      long:{ES:"Doble smash con mayonesa de trufa negra, rúcula fresca y láminas de parmesano reggiano. Pan brioche con aceite de trufa.",EN:"Double smash with black truffle mayo, fresh rocket and parmigiano shavings.",FR:"Double smash avec mayonnaise à la truffe, roquette et parmesan.",DE:"Doppelter Smash mit Trüffelmayo, Rucola und Parmesan.",IT:"Doppio smash con maionese al tartufo, rucola e parmigiano."},
+      removeIngs:{ES:["Rúcula","Mayo de trufa"],EN:["Rocket","Truffle mayo"],FR:["Roquette","Mayo truffe"],DE:["Rucola","Trüffelmayo"],IT:["Rucola","Maionese al tartufo"]}},
+    { id:"s5", name:"Smash Veggie", price:9.50, img:"https://images.unsplash.com/photo-1520072959219-c595dc870360?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Hamburguesa de garbanzo y remolacha con queso de cabra",EN:"Chickpea and beetroot patty with goat cheese",FR:"Galette de pois chiches et betterave au fromage de chèvre",DE:"Kichererbsen-Rote-Bete-Patty mit Ziegenkäse",IT:"Hamburger di ceci e barbabietola con formaggio di capra"},
+      long:{ES:"Hamburguesa vegetariana hecha con garbanzos, remolacha asada, comino y cilantro, plancheada hasta dorar. Con queso de cabra cremoso, rúcula y mayonesa de aguacate.",EN:"Veggie burger made with chickpeas, roasted beetroot, cumin and coriander. With creamy goat cheese, rocket and avocado mayo.",FR:"Burger végétarien aux pois chiches, betterave, fromage de chèvre.",DE:"Veggie-Burger aus Kichererbsen, Roter Bete, Ziegenkäse.",IT:"Hamburger vegetariano con ceci, barbabietola, formaggio di capra."}},
+  ]},
+  { cat:"Gourmet", items:[
+    { id:"g1", name:"Bonfire Signature", best:true, price:13.90, img:"https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=300&h=300&fit=crop&auto=format&q=75", customize:true,
+      desc:{ES:"Ternera madurada 30 días, queso ahumado, cebolla caramelizada al PX",EN:"30-day aged beef, smoked cheese, PX-caramelized onion",FR:"Bœuf maturé 30j, fromage fumé, oignon caramélisé PX",DE:"30 Tage gereiftes Rind, geräucherter Käse, PX-Zwiebel",IT:"Manzo maturato 30g, formaggio affumicato, cipolla al PX"},
+      long:{ES:"Nuestra hamburguesa insignia: 180g de ternera madurada 30 días, queso ahumado de Idiazábal, cebolla caramelizada al Pedro Ximénez y bonfire sauce. Pan de patata tostado.",EN:"Signature: 180g 30-day aged beef, smoked Idiazábal cheese, PX-caramelized onion and bonfire sauce. Potato bun.",FR:"Signature : 180g de bœuf 30 jours, Idiazábal fumé, oignon PX.",DE:"Signature: 180g 30 Tage gereiftes Rind, Idiazábal, PX-Zwiebel.",IT:"Della casa: 180g manzo 30 giorni, Idiazábal affumicato, cipolla PX."},
+      removeIngs:{ES:["Cebolla caramelizada","Salsa bonfire"],EN:["Caramelized onion","Bonfire sauce"],FR:["Oignon caramélisé","Sauce bonfire"],DE:["Karamellisierte Zwiebel","Bonfire-Sauce"],IT:["Cipolla caramellata","Salsa bonfire"]}},
+    { id:"g2", name:"Blue Cheese", price:13.50, img:"https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=300&h=300&fit=crop&auto=format&q=75", customize:true,
+      desc:{ES:"Ternera, queso azul, cebolla morada y rúcula",EN:"Beef, blue cheese, red onion and rocket",FR:"Bœuf, fromage bleu, oignon rouge, roquette",DE:"Rind, Blauschimmel, rote Zwiebel, Rucola",IT:"Manzo, formaggio blu, cipolla rossa, rucola"},
+      long:{ES:"Ternera de 180g, queso azul (Cabrales) fundido, cebolla morada en juliana, hojas frescas de rúcula y mayonesa con miel.",EN:"180g beef, melted Cabrales blue cheese, julienned red onion, rocket and honey mayo.",FR:"Bœuf 180g, bleu Cabrales, oignon rouge, roquette, mayo miel.",DE:"180g Rind, Cabrales, rote Zwiebel, Rucola, Honig-Mayo.",IT:"Manzo 180g, Cabrales, cipolla rossa, rucola, maionese al miele."},
+      removeIngs:{ES:["Cebolla morada","Queso azul"],EN:["Red onion","Blue cheese"],FR:["Oignon rouge","Fromage bleu"],DE:["Rote Zwiebel","Blauschimmel"],IT:["Cipolla rossa","Formaggio blu"]}},
+    { id:"g3", name:"Pollo Crispy", price:11.90, img:"https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=300&h=300&fit=crop&auto=format&q=75", customize:true,
+      desc:{ES:"Pollo crujiente buttermilk, coleslaw y mayo de chipotle",EN:"Buttermilk crispy chicken, coleslaw and chipotle mayo",FR:"Poulet croustillant buttermilk, coleslaw, chipotle",DE:"Buttermilch-Knusperhuhn, Coleslaw, Chipotle-Mayo",IT:"Pollo croccante buttermilk, coleslaw, chipotle"},
+      long:{ES:"Pechuga de pollo marinada en buttermilk 24h, empanada y frita al momento. Con coleslaw, pickles y mayo de chipotle ahumado.",EN:"24h buttermilk-marinated chicken, breaded and fresh-fried. With coleslaw, pickles and smoked chipotle mayo.",FR:"Poulet mariné buttermilk 24h, pané, coleslaw, mayo chipotle.",DE:"24h buttermilk-mariniertes Huhn, paniert, Coleslaw, Chipotle-Mayo.",IT:"Pollo marinato 24h buttermilk, impanato, coleslaw, chipotle."},
+      noCook:true,
+      removeIngs:{ES:["Coleslaw","Pickles","Mayo chipotle"],EN:["Coleslaw","Pickles","Chipotle mayo"],FR:["Coleslaw","Pickles","Chipotle"],DE:["Coleslaw","Pickles","Chipotle-Mayo"],IT:["Coleslaw","Pickles","Chipotle"]}},
+    { id:"g4", name:"Cordero a la Brasa", price:14.50, img:"https://images.unsplash.com/photo-1535473895227-bdecb20fb157?w=300&h=300&fit=crop&auto=format&q=75", customize:true,
+      desc:{ES:"Hamburguesa de cordero, queso feta, tomate y yogur de menta",EN:"Lamb burger, feta, tomato and mint yogurt",FR:"Burger d'agneau, feta, tomate, yaourt menthe",DE:"Lamm-Burger, Feta, Tomate, Minze-Joghurt",IT:"Hamburger di agnello, feta, pomodoro, yogurt menta"},
+      long:{ES:"Hamburguesa de cordero especiada con comino, cilantro y harissa, a la brasa. Queso feta, tomate, pepino y yogur griego con menta.",EN:"Char-grilled spiced lamb with feta, tomato, cucumber and mint Greek yogurt.",FR:"Agneau épicé grillé, feta, tomate, yaourt menthe.",DE:"Gegrilltes Lamm, Feta, Tomate, Minze-Joghurt.",IT:"Agnello speziato alla brace, feta, pomodoro, yogurt menta."},
+      removeIngs:{ES:["Feta","Yogur de menta","Pepino"],EN:["Feta","Mint yogurt","Cucumber"],FR:["Feta","Yaourt menthe","Concombre"],DE:["Feta","Minze-Joghurt","Gurke"],IT:["Feta","Yogurt menta","Cetriolo"]}},
+  ]},
+  { cat:"Carnes", items:[
+    { id:"x1", name:"Carne Extra 100g", best:true, price:3.50, img:"",
+      desc:{ES:"Patty extra de ternera madurada para añadir",EN:"Extra aged beef patty",FR:"Steak extra de bœuf maturé",DE:"Extra Patty gereiftes Rind",IT:"Patty extra di manzo maturato"},
+      long:{ES:"Patty extra de ternera madurada 30 días, smashed en plancha. Súmala a cualquier burger o pídela suelta. Cocción al punto por defecto.",EN:"Extra 100g 30-day aged beef patty, smashed on griddle. Add to any burger or order solo. Medium by default.",FR:"Steak extra 100g, bœuf maturé 30j.",DE:"Extra 100g 30 Tage gereiftes Rind.",IT:"Patty extra 100g manzo maturato 30 giorni."}},
+    { id:"x2", name:"Doble Cheddar", price:1.50, img:"",
+      desc:{ES:"Dos lonchas extra de cheddar fundido",EN:"Two extra slices of melted cheddar",FR:"Deux tranches extra de cheddar",DE:"Zwei extra Cheddar-Scheiben",IT:"Due fette extra di cheddar"},
+      long:{ES:"Dos lonchas extra de cheddar curado, fundidas sobre la carne. Más queso, más vida.",EN:"Two extra slices of aged cheddar, melted over the meat. More cheese, more life.",FR:"Deux tranches extra de cheddar affiné fondu.",DE:"Zwei extra gereifte Cheddar-Scheiben.",IT:"Due fette extra di cheddar stagionato."}},
+    { id:"x3", name:"Bacon Doble", price:2.50, img:"",
+      desc:{ES:"Cuatro tiras de bacon ahumado crujiente",EN:"Four crispy smoked bacon strips",FR:"Quatre tranches de bacon fumé",DE:"Vier knusprige Speckstreifen",IT:"Quattro strisce di bacon affumicato"},
+      long:{ES:"Cuatro tiras de bacon ahumado a la plancha hasta quedar crujientes. Pídelo suelto o súmalo a la burger.",EN:"Four strips of smoked bacon, griddled until crispy. Add to a burger or order solo.",FR:"Quatre tranches de bacon fumé croustillant.",DE:"Vier knusprige geräucherte Speckstreifen.",IT:"Quattro strisce di bacon affumicato croccante."}},
+    { id:"x4", name:"Huevo a la Plancha", price:1.20, img:"",
+      desc:{ES:"Huevo de corral con yema líquida",EN:"Free-range egg with runny yolk",FR:"Œuf bio à la plancha",DE:"Bio-Spiegelei mit flüssigem Eigelb",IT:"Uovo bio in piastra"},
+      long:{ES:"Huevo de corral hecho a la plancha con la yema líquida. Sobre cualquier burger o suelto con tu plato favorito.",EN:"Free-range egg with runny yolk. On any burger or with your favorite side.",FR:"Œuf bio à la plancha, jaune coulant.",DE:"Freilandei mit flüssigem Eigelb.",IT:"Uovo biologico in piastra, tuorlo liquido."}},
+  ]},
+  { cat:"Sides", items:[
+    { id:"e1", name:"Nachos Cargados", best:true, price:8.50, img:"https://images.unsplash.com/photo-1582169296194-e4d644c48063?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Nachos con cheddar fundido, pico de gallo, jalapeños y guacamole",EN:"Nachos with melted cheddar, pico de gallo, jalapeños and guac",FR:"Nachos cheddar, pico de gallo, jalapeños, guacamole",DE:"Nachos mit Cheddar, Pico de Gallo, Jalapeños, Guacamole",IT:"Nachos con cheddar, pico de gallo, jalapeños, guacamole"},
+      long:{ES:"Bandeja de nachos tortilla crujientes, cheddar fundido al gratén, pico de gallo fresco, jalapeños en vinagre, guacamole casero, crema agria y cilantro. Compártelos.",EN:"Crispy tortilla nachos tray, melted cheddar gratin, fresh pico de gallo, pickled jalapeños, homemade guacamole, sour cream and cilantro.",FR:"Plateau de nachos, cheddar gratiné, pico de gallo, jalapeños, guacamole, crème aigre.",DE:"Knusprige Tortilla-Nachos, gratinierter Cheddar, Pico de Gallo, Jalapeños, Guacamole, saure Sahne.",IT:"Vassoio di nachos croccanti, cheddar gratinato, pico de gallo, jalapeños, guacamole, panna acida."}},
+    { id:"e2", name:"Papas Cheese-Bacon", best:true, price:7.90, img:"https://images.unsplash.com/photo-1639024471283-03518883512d?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Papas con cheddar fundido, bacon crujiente y cebollino",EN:"Fries with melted cheddar, crispy bacon and chives",FR:"Frites cheddar fondu, bacon, ciboulette",DE:"Pommes mit geschmolzenem Cheddar, Speck und Schnittlauch",IT:"Patatine con cheddar fuso, bacon e erba cipollina"},
+      long:{ES:"Papas fritas a mano cubiertas de cheddar fundido al horno, generosas tiras de bacon ahumado crujiente y cebollino picado. El side que siempre se acaba.",EN:"Hand-cut fries covered in oven-melted cheddar, generous strips of crispy smoked bacon and chopped chives.",FR:"Frites coupées main, cheddar fondu au four, bacon, ciboulette.",DE:"Handgeschnittene Pommes mit Cheddar überbacken, Speckstreifen, Schnittlauch.",IT:"Patatine tagliate a mano, cheddar fuso al forno, bacon, erba cipollina."}},
+    { id:"e3", name:"Papas Trufadas", price:6.50, img:"https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Papas con aceite de trufa, parmesano y perejil",EN:"Fries with truffle oil, parmesan and parsley",FR:"Frites à la truffe, parmesan, persil",DE:"Pommes mit Trüffelöl, Parmesan, Petersilie",IT:"Patatine al tartufo, parmigiano, prezzemolo"},
+      long:{ES:"Papas frescas cortadas a mano, doble fritura para máxima crujencia, terminadas con aceite de trufa negra, parmesano reggiano rallado y perejil fresco.",EN:"Hand-cut fries, double-fried, finished with black truffle oil, parmigiano and parsley.",FR:"Frites maison, double cuisson, huile de truffe, parmesan.",DE:"Pommes, doppelt frittiert, Trüffelöl, Parmesan.",IT:"Patatine fresche, doppia frittura, olio di tartufo, parmigiano."}},
+    { id:"e4", name:"Aros de Cebolla", price:5.50, img:"https://images.unsplash.com/photo-1639024471283-03518883512d?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Cebolla en aros con tempura crujiente de cerveza",EN:"Onion rings in crispy beer tempura",FR:"Anneaux d'oignon en tempura à la bière",DE:"Zwiebelringe in Bier-Tempura",IT:"Anelli di cipolla in tempura alla birra"},
+      long:{ES:"Cebolla blanca en aros gruesos, rebozada con tempura ligera de cerveza, frita hasta dorada. Servida con mayo bonfire.",EN:"White onion in thick rings, dipped in light beer tempura batter, fried golden. With bonfire mayo.",FR:"Oignon blanc en gros anneaux, tempura à la bière, mayo bonfire.",DE:"Weiße Zwiebel in dicken Ringen, Bier-Tempura, Bonfire-Mayo.",IT:"Cipolla bianca in anelli spessi, tempura alla birra, maionese bonfire."}},
+    { id:"e5", name:"Alitas BBQ (8 und)", best:true, price:9.50, img:"https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Alitas glaseadas con BBQ ahumada y miel",EN:"Wings glazed with smoked BBQ and honey",FR:"Ailes glacées BBQ fumé et miel",DE:"Flügel glasiert mit Räucher-BBQ und Honig",IT:"Ali glassate con BBQ affumicato e miele"},
+      long:{ES:"Ocho alitas de pollo crujientes glaseadas con nuestra salsa BBQ ahumada con un toque de miel. Servidas con ranch y palitos de apio.",EN:"Eight crispy chicken wings glazed with house smoked BBQ and honey. With ranch and celery sticks.",FR:"Huit ailes croustillantes, BBQ fumé, miel, ranch, céleri.",DE:"Acht knusprige Flügel mit BBQ und Honig glasiert, Ranch und Sellerie.",IT:"Otto ali croccanti glassate con BBQ affumicato e miele, ranch e sedano."}},
+    { id:"e6", name:"Tequeños (6 und)", price:6.50, img:"https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Bastoncitos de queso fritos con salsa rosa",EN:"Fried cheese sticks with pink sauce",FR:"Bâtonnets de fromage frits, sauce rose",DE:"Frittierte Käsesticks mit Rosa-Sauce",IT:"Bastoncini di formaggio fritti con salsa rosa"},
+      long:{ES:"Seis tequeños venezolanos: queso telita envuelto en masa de pan crujiente y frito hasta dorado. Servidos con salsa rosa casera.",EN:"Six Venezuelan tequeños: telita cheese wrapped in crispy bread dough, golden-fried. With house pink sauce.",FR:"Six tequeños vénézuéliens, fromage frit en pâte croustillante.",DE:"Sechs venezolanische Tequeños, in knusprigem Teig gebackener Käse.",IT:"Sei tequeños venezuelani, formaggio in pasta croccante."}},
+    { id:"e7", name:"Papas Clásicas", price:4.50, img:"https://images.unsplash.com/photo-1576107232684-1279f390859f?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Papas fritas con sal en escamas",EN:"Classic fries with flake salt",FR:"Frites classiques au sel en flocons",DE:"Klassische Pommes mit Salzflocken",IT:"Patatine classiche con sale in scaglie"},
+      long:{ES:"Las papas de toda la vida pero mejor: cortadas a mano, doble fritura y sal Maldon.",EN:"Classic fries done right: hand-cut, double-fried, Maldon salt.",FR:"Frites classiques, coupées main, sel Maldon.",DE:"Klassische Pommes, handgeschnitten, Maldon-Salz.",IT:"Patatine classiche, tagliate a mano, sale Maldon."}},
+    { id:"e8", name:"Nuggets Caseros (6 und)", price:7.90, img:"https://images.unsplash.com/photo-1562967914-608f82629710?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Nuggets de pollo entero con salsa a elegir",EN:"Whole-chicken nuggets with sauce of choice",FR:"Nuggets poulet entier, sauce au choix",DE:"Hühner-Nuggets mit Sauce nach Wahl",IT:"Nuggets di pollo intero con salsa a scelta"},
+      long:{ES:"Seis nuggets caseros de pollo entero (no de pasta), empanados en panko y fritos hasta dorados. Con la salsa que elijas.",EN:"Six homemade nuggets made with whole chicken (not paste), panko-breaded and golden-fried.",FR:"Six nuggets maison au poulet entier, panko.",DE:"Sechs hausgemachte Nuggets, ganzes Huhn, Panko.",IT:"Sei nuggets della casa con pollo intero, panko."}},
+  ]},
+  { cat:"Salsas", items:[
+    { id:"y1", name:"Salsa Bonfire", price:1.50, img:"",
+      desc:{ES:"Mayo ahumada con paprika y miel",EN:"Smoked mayo with paprika and honey",FR:"Mayo fumée paprika-miel",DE:"Geräucherte Mayo, Paprika, Honig",IT:"Maionese affumicata, paprika, miele"},
+      long:{ES:"Nuestra salsa insignia. Mayonesa casera con paprika ahumada de la Vera, miel y ajo.",EN:"Signature sauce. Homemade mayo with smoked Vera paprika, honey and garlic.",FR:"Sauce signature.",DE:"Signature-Sauce.",IT:"Salsa della casa."}},
+    { id:"y2", name:"BBQ Ahumada", price:1.50, img:"",
+      desc:{ES:"BBQ casera con panela y melaza",EN:"House BBQ with panela and molasses",FR:"BBQ maison panela-mélasse",DE:"Haus-BBQ, Panela, Melasse",IT:"BBQ della casa, panela, melassa"},
+      long:{ES:"BBQ casera a fuego lento durante horas. Dulce, ahumada, profunda.",EN:"House BBQ slow-cooked for hours.",FR:"BBQ maison mijotée.",DE:"Haus-BBQ langsam gekocht.",IT:"BBQ della casa cotta lentamente."}},
+    { id:"y3", name:"Ranch", price:1.50, img:"",
+      desc:{ES:"Ranch clásico con hierbas frescas",EN:"Classic ranch with fresh herbs",FR:"Ranch classique aux herbes",DE:"Klassisches Ranch mit Kräutern",IT:"Ranch classico alle erbe"},
+      long:{ES:"Ranch al estilo americano con buttermilk, eneldo, cebollino y ajo.",EN:"American-style ranch with buttermilk, dill, chives, garlic.",FR:"Ranch américain.",DE:"Amerikanisches Ranch.",IT:"Ranch americano."}},
+    { id:"y4", name:"Sriracha Aioli", price:1.50, img:"",
+      desc:{ES:"Aioli con sriracha y lima",EN:"Aioli with sriracha and lime",FR:"Aïoli sriracha-citron vert",DE:"Aioli mit Sriracha und Limette",IT:"Aioli con sriracha e lime"},
+      long:{ES:"Aioli casero con sriracha, lima y soja. Picante asiático con base mediterránea.",EN:"Homemade aioli with sriracha, lime, soy.",FR:"Aïoli maison sriracha.",DE:"Hausgemachte Aioli mit Sriracha.",IT:"Aioli della casa con sriracha."}},
+  ]},
+  { cat:"Bebidas", items:[
+    { id:"b1", name:"Milkshake Oreo", best:true, price:5.90, img:"https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Helado de vainilla, leche, Oreo y nata",EN:"Vanilla ice cream, milk, Oreo and whipped cream",FR:"Glace vanille, lait, Oreo, chantilly",DE:"Vanilleeis, Milch, Oreo, Schlagsahne",IT:"Gelato alla vaniglia, latte, Oreo, panna"},
+      long:{ES:"Milkshake espeso de vainilla bourbon batido con leche fría y galletas Oreo trituradas. Coronado con nata y media galleta.",EN:"Thick bourbon vanilla milkshake with cold milk and crushed Oreos. With whipped cream.",FR:"Milkshake épais vanille bourbon, Oreo.",DE:"Dicker Bourbon-Vanille-Milchshake, Oreos.",IT:"Milkshake denso vaniglia bourbon, Oreo."}},
+    { id:"b2", name:"Milkshake Fresa", price:5.90, img:"https://images.unsplash.com/photo-1502741224143-90386d7f8c82?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Helado de vainilla, fresas frescas y nata",EN:"Vanilla ice cream, fresh strawberries and cream",FR:"Glace vanille, fraises, chantilly",DE:"Vanilleeis, Erdbeeren, Sahne",IT:"Gelato vaniglia, fragole, panna"},
+      long:{ES:"Helado de vainilla con fresas frescas trituradas al momento, leche fría y nata. Sin colorantes.",EN:"Vanilla ice cream with fresh crushed strawberries. No artificial colorings.",FR:"Glace vanille, fraises fraîches.",DE:"Vanilleeis mit frischen Erdbeeren.",IT:"Gelato vaniglia, fragole fresche."}},
+    { id:"b3", name:"Limonada Casera", price:3.50, img:"https://images.unsplash.com/photo-1556881286-fc6915169721?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Limón fresco, agua con gas y menta",EN:"Fresh lemon, sparkling water and mint",FR:"Citron, eau gazeuse, menthe",DE:"Zitrone, Sprudelwasser, Minze",IT:"Limone, acqua frizzante, menta"},
+      long:{ES:"Zumo de limón recién exprimido con agua con gas, menta fresca y un toque de jarabe natural.",EN:"Freshly squeezed lemon, sparkling water, fresh mint, natural syrup.",FR:"Citron pressé, eau gazeuse, menthe.",DE:"Frisch gepresste Zitrone, Sprudelwasser, Minze.",IT:"Limone spremuto, acqua frizzante, menta."}},
+    { id:"b4", name:"Cerveza IPA Local", price:4.50, img:"https://images.unsplash.com/photo-1608270586620-248524c67de9?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"IPA local de barril, 33cl",EN:"Local IPA on tap, 33cl",FR:"IPA locale pression",DE:"Lokales IPA vom Fass",IT:"IPA locale alla spina"},
+      long:{ES:"IPA artesana lupulada con notas cítricas. Servida a 6°C en pinta congelada.",EN:"Hoppy local craft IPA, citrus notes. At 6°C in frozen pint.",FR:"IPA artisanale locale, agrumes.",DE:"Lokales Craft-IPA, Zitrus.",IT:"IPA artigianale locale, agrumi."}},
+  ]},
+  { cat:"Postres", items:[
+    { id:"d1", name:"Brownie con Helado", best:true, price:5.90, img:"https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Brownie 70%, helado de vainilla y chocolate caliente",EN:"70% brownie, vanilla ice cream and hot chocolate",FR:"Brownie 70%, glace vanille, chocolat chaud",DE:"70% Brownie, Vanilleeis, heiße Schokolade",IT:"Brownie 70%, gelato vaniglia, cioccolato caldo"},
+      long:{ES:"Brownie casero de chocolate 70% recién horneado, helado de vainilla bourbon y bañado en chocolate caliente.",EN:"Freshly baked 70% chocolate brownie, vanilla bean ice cream, hot chocolate drizzle.",FR:"Brownie 70% maison, glace vanille, chocolat chaud.",DE:"Hausgemachter 70% Brownie, Vanilleeis, heiße Schokolade.",IT:"Brownie 70% appena sfornato, gelato alla vaniglia, cioccolato caldo."}},
+    { id:"d2", name:"Cookie Dough", price:4.90, img:"https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Masa de galleta cruda con chocolate y helado",EN:"Edible raw cookie dough with chocolate and ice cream",FR:"Pâte à cookie crue, chocolat, glace",DE:"Roher Cookie-Teig, Schokolade, Eis",IT:"Pasta di biscotto cruda, cioccolato, gelato"},
+      long:{ES:"Masa de galleta cruda segura (sin huevo), pepitas de chocolate, servida tibia con bola de helado.",EN:"Safe edible raw cookie dough, chocolate chips, warm with ice cream scoop.",FR:"Pâte à cookie crue comestible, pépites.",DE:"Essbarer roher Cookie-Teig, Schokostückchen.",IT:"Pasta di biscotto cruda commestibile, gocce di cioccolato."}},
+    { id:"d3", name:"Cheesecake NY", price:5.50, img:"https://images.unsplash.com/photo-1567171466295-4afa63d45416?w=300&h=300&fit=crop&auto=format&q=75",
+      desc:{ES:"Cheesecake estilo Nueva York con coulis",EN:"NY-style cheesecake with coulis",FR:"Cheesecake NY, coulis",DE:"NY Cheesecake mit Coulis",IT:"Cheesecake NY con coulis"},
+      long:{ES:"Cheesecake denso al estilo NY, base de galleta Graham, baño María, coulis de frutos rojos.",EN:"Dense NY-style cheesecake, Graham base, water-bath, red berry coulis.",FR:"Cheesecake NY dense, base Graham.",DE:"Dichter NY-Cheesecake, Graham-Boden.",IT:"Cheesecake NY denso, base Graham."}},
+  ]},
+];
+
+let cart = {};
+const fmt = n => n.toFixed(2).replace(".",",") + " €";
+function tt(k){ return T[lang][k] || T.ES[k] || k; }
+
+const OVERRIDES_KEY = "burger_menu_overrides_v1";
+const BASE_PRICES = {};
+MENU.forEach(s => s.items.forEach(it => { BASE_PRICES[it.id] = it.price; }));
+function applyMenuOverrides(){
+  let ov={};
+  try{ ov=JSON.parse(localStorage.getItem(OVERRIDES_KEY)||"{}"); }catch(e){}
+  MENU.forEach(s => s.items.forEach(it => {
+    const o = ov[it.id] || {};
+    it.price  = (o.price!=null) ? Number(o.price) : BASE_PRICES[it.id];
+    it.soldOut = !!o.soldOut;
+  }));
+}
+applyMenuOverrides();
+const SOLD_OUT_LABEL = {ES:"Agotado",EN:"Sold out",FR:"Épuisé",DE:"Aus",IT:"Esaurito"};
+function soldOutTxt(){ return SOLD_OUT_LABEL[lang] || SOLD_OUT_LABEL.ES; }
+window.addEventListener("storage", e=>{ if(e.key===OVERRIDES_KEY){ applyMenuOverrides(); if(typeof renderMenu==="function"){ renderMenu(); updateBar(); } } });
+
+const PAIRINGS = {
+  s1:["e1","b4","x3"], s2:["e2","b1","x3"], s3:["e2","b4","x4"], s4:["e3","b1","x4"], s5:["e5","b3"],
+  g1:["e1","b4","x3"], g2:["e1","b1","x2"], g3:["e4","y4"], g4:["e1","b3","x4"],
+  x1:["e1","e2"], x2:["s1","g1"], x3:["s1","g1"], x4:["s1","s4"],
+  e1:["s1","b1","y1"], e2:["s3","b4","y1"], e3:["s1","b3"], e4:["y1","y3","s1"], e5:["y2","b4"], e6:["y1","b3"], e7:["s1","b3"], e8:["y1","y3"],
+  y1:["s1","e2"], y2:["s3","e1"], y3:["g3","e4"], y4:["e4","g3"],
+  b1:["d1","d2"], b2:["d1","d3"], b3:["s1","e1"], b4:["s1","s3"],
+  d1:["b1","b3"], d2:["b1","b3"], d3:["b2","b3"],
+};
+let upTimer=null;
+function buzz(ms){ if(navigator.vibrate) try{navigator.vibrate(ms)}catch(e){} }
+
+const params = new URLSearchParams(location.search);
+const mesa = params.get("mesa") || "7";
+document.getElementById("mesaNum").textContent = mesa;
+document.getElementById("mesaNum2").textContent = mesa;
+document.getElementById("wMesa").textContent = mesa;
+
+function applyLang(){
+  document.querySelectorAll("[data-t]").forEach(el=>{ el.innerHTML = tt(el.dataset.t); });
+  buildLangSelectors(); renderTabs(); renderMenu(); updateBar();
+  if(document.getElementById("sheet").classList.contains("open")) renderCart();
+}
+function buildLangSelectors(){
+  const cur = LANGS.find(l=>l.code===lang);
+  ["hLang","wLang"].forEach(id=>{
+    const host = document.getElementById(id);
+    host.innerHTML=`<button class="lang-btn"><span class="fl">${cur.flag}</span>${cur.code}<span class="ar">▾</span></button><div class="lang-menu">${LANGS.map(l=>`<div class="lang-opt ${l.code===lang?'active':''}" data-lang="${l.code}"><span class="fl">${l.flag}</span>${l.label}</div>`).join("")}</div>`;
+    const btn=host.querySelector(".lang-btn"), menu=host.querySelector(".lang-menu");
+    btn.onclick=e=>{ e.stopPropagation(); document.querySelectorAll(".lang-menu").forEach(m=>{ if(m!==menu) m.classList.remove("open"); }); menu.classList.toggle("open"); };
+    menu.querySelectorAll(".lang-opt").forEach(o=>{ o.onclick=e=>{ e.stopPropagation(); lang=o.dataset.lang; buzz(6); applyLang(); }; });
+  });
+}
+document.addEventListener("click", ()=> document.querySelectorAll(".lang-menu").forEach(m=>m.classList.remove("open")));
+function imgHTML(it){ return it.img ? `<img src="${it.img}" alt="${it.name}">` : ""; }
+
+function renderTabs(){
+  const tabsEl=document.getElementById("tabs"); tabsEl.innerHTML="";
+  MENU.forEach((sec,i)=>{
+    const t=document.createElement("button"); t.className="tab"+(i===0?" active":""); t.textContent=T[lang].cat[sec.cat]||sec.cat;
+    t.onclick=()=>{ document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active")); t.classList.add("active");
+      const y=document.getElementById("sec-"+i).getBoundingClientRect().top+window.scrollY-120; window.scrollTo({top:y,behavior:"smooth"}); };
+    tabsEl.appendChild(t);
+  });
+}
+function renderMenu(){
+  const menuEl=document.getElementById("menu"); menuEl.innerHTML="";
+  MENU.forEach((sec,i)=>{
+    const title=document.createElement("div"); title.className="sec-title"; title.id="sec-"+i; title.setAttribute("data-num",String(i+1).padStart(2,"0"));
+    title.innerHTML=`<span class="sec-title-text">${T[lang].cat[sec.cat]||sec.cat}</span>`;
+    menuEl.appendChild(title);
+    sec.items.forEach((it, idx)=>{
+      const card=document.createElement("div"); card.className="item"+(it.soldOut?" soldout":""); card.id="card-"+it.id;
+      card.style.setProperty("--i", idx);
+      const footRight=it.soldOut?`<span class="soldout-tag">${soldOutTxt()}</span>`:`<div id="ctrl-${it.id}" data-stop></div>`;
+      const customTag = it.customize ? `<div class="item-customize">${tt('customizeTag')}</div>` : "";
+      card.innerHTML=`<div class="item-img">${it.best?`<span class="fav">${tt("top")}</span>`:""}${imgHTML(it)}</div><div class="item-body"><div class="item-name">${it.name}</div><div class="item-desc">${it.desc[lang]}</div>${customTag}<div class="item-foot"><span class="price">${fmt(it.price)}</span>${footRight}</div></div>`;
+      card.onclick=e=>{ if(e.target.closest("[data-stop]")) return; openDetail(it.id); };
+      menuEl.appendChild(card);
+      if(!it.soldOut) renderCtrl(it);
+    });
+  });
+  setTimeout(()=>setupRevealObserver(), 50);
+}
+function renderCtrl(it){
+  const wrap=document.getElementById("ctrl-"+it.id); if(!wrap) return;
+  const q=(cart[it.id]?.qty)||0;
+  wrap.innerHTML=q===0?`<button class="add" data-add="${it.id}">+</button>`:`<div class="qty-ctrl"><button data-dec="${it.id}">−</button><span>${q}</span><button data-inc="${it.id}">+</button></div>`;
+}
+function findItem(id){ for(const s of MENU) for(const it of s.items) if(it.id===id) return it; }
+function catOf(id){ for(const s of MENU) for(const it of s.items) if(it.id===id) return s.cat; }
+
+document.addEventListener("click",e=>{
+  const add=e.target.closest("[data-add]"),inc=e.target.closest("[data-inc]"),dec=e.target.closest("[data-dec]");
+  if(add){ e.stopPropagation(); flyToCart(add); addToCartQuick(add.dataset.add); }
+  if(inc){ e.stopPropagation(); flyToCart(inc); incLine(inc.dataset.inc); }
+  if(dec){ e.stopPropagation(); decLine(dec.dataset.dec); }
+});
+
+// ===== ANIM PACK · JS hooks =====
+function flyToCart(originEl){
+  const cartBar = document.getElementById("cartBar");
+  if(!cartBar) return;
+  const r = originEl.getBoundingClientRect();
+  const cb = cartBar.getBoundingClientRect();
+  const startX = r.left + r.width/2 - 11;
+  const startY = r.top + r.height/2 - 11;
+  const endX = cb.left + 40;
+  const endY = cb.top + cb.height/2;
+  const flyer = document.createElement("div");
+  flyer.className = "flyer";
+  flyer.style.left = startX + "px";
+  flyer.style.top = startY + "px";
+  document.body.appendChild(flyer);
+  requestAnimationFrame(()=>{
+    flyer.style.transform = `translate(${endX-startX}px, ${endY-startY}px) scale(.25)`;
+    flyer.style.opacity = "0";
+  });
+  setTimeout(()=>flyer.remove(), 900);
+}
+let _sectionObserver=null;
+function setupRevealObserver(){
+  if(_sectionObserver) _sectionObserver.disconnect();
+  _sectionObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add("in-view");
+        _sectionObserver.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".sec-title, .item").forEach(el => _sectionObserver.observe(el));
+}
+let _lastN=0;
+function triggerCountBump(){
+  const n=totalItems();
+  const countEl=document.getElementById("cartCount");
+  if(countEl && n > _lastN){
+    countEl.classList.remove("bump");
+    void countEl.offsetWidth;
+    countEl.classList.add("bump");
+  }
+  _lastN=n;
+}
+setTimeout(()=>{ const c=document.getElementById("introCurtain"); if(c) c.remove(); }, 1900);
+
+// ===== Cart operations: customized vs simple =====
+function isDefaultCustom(it, custom){
+  if(!it.customize || !custom) return true;
+  const defCook = it.noCook ? null : "medium";
+  if((custom.cook||null) !== defCook) return false;
+  if((custom.bun||"brioche") !== "brioche") return false;
+  if((custom.remove||[]).length > 0) return false;
+  if((custom.extras||[]).length > 0) return false;
+  return true;
+}
+function customHash(custom){
+  const norm = {
+    c: custom.cook||"",
+    b: custom.bun||"",
+    r: (custom.remove||[]).slice().sort().join("|"),
+    x: (custom.extras||[]).slice().sort().join("|")
+  };
+  const s = JSON.stringify(norm);
+  let h=0; for(let i=0;i<s.length;i++){ h=((h<<5)-h+s.charCodeAt(i))|0; }
+  return (h>>>0).toString(36).slice(-5);
+}
+function lineKey(it, custom){
+  if(isDefaultCustom(it, custom)) return it.id;
+  return it.id + "__" + customHash(custom);
+}
+function lineUnitPrice(it, custom){
+  let p = it.price;
+  if(!it.customize || !custom) return p;
+  if(custom.bun){
+    const b = BUN_OPTS.find(o=>o.id===custom.bun);
+    if(b) p += b.price;
+  }
+  if(custom.extras){
+    custom.extras.forEach(eid=>{
+      const e = EXTRAS.find(o=>o.id===eid);
+      if(e) p += e.price;
+    });
+  }
+  return p;
+}
+
+function addToCartQuick(itemId){
+  const it = findItem(itemId); if(!it) return;
+  if(it.soldOut) return;
+  // If item is customizable, open detail instead of adding directly
+  if(it.customize){ openDetail(itemId); return; }
+  const key = it.id;
+  if(!cart[key]) cart[key] = {item:it, qty:0, note:"", custom:null, unitPrice:it.price};
+  cart[key].qty++;
+  renderCtrl(it); updateBar();
+  buzz(6); flashCard(it.id); maybeUpsell(it.id);
+  if(document.getElementById("sheet").classList.contains("open")) renderCart();
+}
+function incLine(key){
+  if(!cart[key]) return;
+  cart[key].qty++;
+  renderCtrl(cart[key].item); updateBar();
+  if(document.getElementById("sheet").classList.contains("open")) renderCart();
+}
+function decLine(key){
+  if(!cart[key]) return;
+  cart[key].qty--;
+  if(cart[key].qty<=0) delete cart[key];
+  // Re-render the card control if it's the default line (key===itemId)
+  const it = findItem(key.split("__")[0]);
+  if(it) renderCtrl(it);
+  updateBar();
+  if(document.getElementById("sheet").classList.contains("open")) renderCart();
+}
+function flashCard(id){ const c=document.getElementById("card-"+id); if(c){ c.classList.remove("flash"); void c.offsetWidth; c.classList.add("flash"); } }
+function totalItems(){ return Object.values(cart).reduce((a,c)=>a+c.qty,0); }
+function totalPrice(){ return Object.values(cart).reduce((a,c)=>a+c.unitPrice*c.qty,0); }
+function hasDrink(){ return Object.values(cart).some(c=>catOf(c.item.id)==="Bebidas"); }
+
+function updateBar(){
+  const n=totalItems(),bar=document.getElementById("cartBar");
+  document.getElementById("cartCount").textContent=n;
+  document.getElementById("cartTotal").textContent=fmt(totalPrice());
+  if(n>0){ bar.classList.remove("hidden"); }
+  else bar.classList.add("hidden");
+  triggerCountBump();
+  // Update card controls to reflect quantities (only simple lines = key without "__")
+  Object.entries(cart).forEach(([key, entry])=>{
+    if(!key.includes("__")){
+      // simple line, refresh its ctrl
+      const it = entry.item;
+      const wrap = document.getElementById("ctrl-"+it.id);
+      if(wrap){
+        wrap.innerHTML = `<div class="qty-ctrl"><button data-dec="${key}">−</button><span>${entry.qty}</span><button data-inc="${key}">+</button></div>`;
+      }
+    }
+  });
+}
+
+// ===== DETAIL with modifiers =====
+let detailId=null, detailQty=1, detailCustom=null;
+const detail=document.getElementById("detail");
+
+function buildModsUI(it){
+  if(!it.customize) return "";
+  const lng = lang;
+  let html = '<div class="mods">';
+
+  // Cook level
+  if(!it.noCook){
+    html += `<div class="mod-group"><div class="mod-label">${tt('cookLbl')}</div><div class="mod-pills">`;
+    COOK_OPTS.forEach(opt=>{
+      const active = detailCustom.cook===opt.id ? 'active' : '';
+      html += `<button class="mod-pill ${active}" data-mod="cook" data-val="${opt.id}">${opt.name[lng]}</button>`;
+    });
+    html += `</div></div>`;
+  }
+
+  // Bun
+  html += `<div class="mod-group"><div class="mod-label">${tt('bunLbl')}</div><div class="mod-pills">`;
+  BUN_OPTS.forEach(opt=>{
+    const active = detailCustom.bun===opt.id ? 'active' : '';
+    const priceTxt = opt.price>0 ? ` <em>+${fmt(opt.price)}</em>` : '';
+    html += `<button class="mod-pill ${active}" data-mod="bun" data-val="${opt.id}">${opt.name[lng]}${priceTxt}</button>`;
+  });
+  html += `</div></div>`;
+
+  // Remove
+  if(it.removeIngs){
+    const ings = it.removeIngs[lng] || it.removeIngs.ES;
+    html += `<div class="mod-group"><div class="mod-label">${tt('removeLbl')}</div><div class="mod-checks">`;
+    ings.forEach(ing=>{
+      const removed = detailCustom.remove.includes(ing) ? 'removed' : '';
+      html += `<div class="mod-row ${removed}" data-mod="remove" data-val="${ing}"><span class="mod-check-box"></span><span class="mod-name">${ing}</span></div>`;
+    });
+    html += `</div></div>`;
+  }
+
+  // Extras
+  html += `<div class="mod-group"><div class="mod-label">${tt('extrasLbl')}</div><div class="mod-checks">`;
+  EXTRAS.forEach(ex=>{
+    const active = detailCustom.extras.includes(ex.id) ? 'active' : '';
+    html += `<div class="mod-row ${active}" data-mod="extras" data-val="${ex.id}"><span class="mod-check-box"></span><span class="mod-name">${ex.name[lng]}</span><span class="mod-extra-price">+${fmt(ex.price)}</span></div>`;
+  });
+  html += `</div></div>`;
+
+  return html + '</div>';
+}
+
+function updateDetailPrice(){
+  const it = findItem(detailId); if(!it) return;
+  const unit = lineUnitPrice(it, detailCustom);
+  const total = unit * detailQty;
+  document.getElementById("dtPrice").innerHTML = fmt(unit) + (it.soldOut?` <span class="dt-soldout">${soldOutTxt()}</span>`:"");
+  const dtAdd = document.getElementById("dtAdd");
+  if(it.soldOut){
+    dtAdd.innerHTML = soldOutTxt();
+    dtAdd.classList.add("disabled"); dtAdd.disabled = true;
+  } else {
+    dtAdd.innerHTML = `${tt("addToOrder")} <b>${fmt(total)}</b>`;
+    dtAdd.classList.remove("disabled"); dtAdd.disabled = false;
+  }
+}
+
+function openDetail(id){
+  const it=findItem(id); if(!it) return;
+  detailId=id; detailQty=1;
+  detailCustom = it.customize ? {
+    cook: it.noCook ? null : "medium",
+    bun: "brioche",
+    remove: [],
+    extras: []
+  } : null;
+  document.getElementById("dtImg").style.background=it.img?"transparent":"var(--card-2)";
+  document.getElementById("dtImg").innerHTML=it.img?`<img src="${it.img}" alt="${it.name}" style="width:100%;height:100%;object-fit:cover">`:"";
+  document.getElementById("dtFav").innerHTML=it.best&&!it.soldOut?`<span class="dt-fav">${tt("top")}</span>`:"";
+  document.getElementById("dtName").textContent=it.name;
+  document.getElementById("dtDesc").textContent=it.long[lang];
+  document.getElementById("dtMods").innerHTML = buildModsUI(it);
+  document.getElementById("dtQty").textContent=detailQty;
+  updateDetailPrice();
+  document.getElementById("overlay").classList.add("open"); detail.classList.add("open");
+}
+function closeDetail(){ detail.classList.remove("open"); if(!document.getElementById("sheet").classList.contains("open")) document.getElementById("overlay").classList.remove("open"); }
+document.getElementById("dtClose").onclick=closeDetail;
+document.getElementById("dtMinus").onclick=()=>{ if(detailQty>1){detailQty--; document.getElementById("dtQty").textContent=detailQty; updateDetailPrice();} };
+document.getElementById("dtPlus").onclick=()=>{ detailQty++; document.getElementById("dtQty").textContent=detailQty; updateDetailPrice(); };
+
+// Click on modifier
+document.getElementById("dtMods").addEventListener("click", e=>{
+  const t = e.target.closest("[data-mod]"); if(!t) return;
+  const mod = t.dataset.mod, val = t.dataset.val;
+  if(mod==="cook"){
+    detailCustom.cook = val;
+    t.parentNode.querySelectorAll(".mod-pill").forEach(p=>p.classList.remove("active"));
+    t.classList.add("active");
+  } else if(mod==="bun"){
+    detailCustom.bun = val;
+    t.parentNode.querySelectorAll(".mod-pill").forEach(p=>p.classList.remove("active"));
+    t.classList.add("active");
+    updateDetailPrice();
+  } else if(mod==="remove"){
+    const idx = detailCustom.remove.indexOf(val);
+    if(idx>=0){ detailCustom.remove.splice(idx,1); t.classList.remove("removed"); }
+    else{ detailCustom.remove.push(val); t.classList.add("removed"); }
+  } else if(mod==="extras"){
+    const idx = detailCustom.extras.indexOf(val);
+    if(idx>=0){ detailCustom.extras.splice(idx,1); t.classList.remove("active"); }
+    else{ detailCustom.extras.push(val); t.classList.add("active"); }
+    updateDetailPrice();
+  }
+});
+
+document.getElementById("dtAdd").onclick=()=>{
+  if(document.getElementById("dtAdd").disabled) return;
+  const it = findItem(detailId); if(!it) return;
+  const key = lineKey(it, detailCustom);
+  if(!cart[key]) cart[key] = {item:it, qty:0, note:"", custom: detailCustom?{...detailCustom, remove:[...detailCustom.remove], extras:[...detailCustom.extras]}:null, unitPrice: lineUnitPrice(it, detailCustom)};
+  cart[key].qty += detailQty;
+  closeDetail();
+  buzz(6); flashCard(it.id);
+  updateBar();
+  maybeUpsell(it.id);
+  if(document.getElementById("sheet").classList.contains("open")) renderCart();
+};
+
+function maybeUpsell(id){
+  const recs=(PAIRINGS[id]||[]).map(findItem).filter(it=>it&&!cart[it.id]&&!it.soldOut);
+  const head=T[lang].up[catOf(id)];
+  if(recs.length===0||!head){ hideUpsell(); return; }
+  document.getElementById("upHeadline").textContent=head;
+  document.getElementById("upRow").innerHTML=recs.slice(0,4).map(it=>`<div class="up-card" data-add="${it.id}"><div class="up-img">${imgHTML(it)}</div><div class="up-name">${it.name}</div><div class="up-foot"><span class="up-price">${fmt(it.price)}</span><button class="up-add" data-add="${it.id}">+</button></div></div>`).join("");
+  document.getElementById("upsell").classList.add("show");
+  clearTimeout(upTimer); upTimer=setTimeout(hideUpsell,6500);
+}
+function hideUpsell(){ document.getElementById("upsell").classList.remove("show"); clearTimeout(upTimer); }
+document.getElementById("upClose").onclick=hideUpsell;
+
+const overlay=document.getElementById("overlay"),sheet=document.getElementById("sheet");
+function openSheet(){ hideUpsell(); renderCart(); overlay.classList.add("open"); sheet.classList.add("open"); }
+function closeSheet(){ overlay.classList.remove("open"); sheet.classList.remove("open"); }
+document.getElementById("cartBtn").onclick=openSheet;
+document.getElementById("closeSheet").onclick=closeSheet;
+overlay.onclick=()=>{ closeSheet(); closeDetail(); };
+
+function modsSummary(custom){
+  if(!custom) return "";
+  const parts = [];
+  if(custom.cook){
+    const c = COOK_OPTS.find(o=>o.id===custom.cook);
+    if(c) parts.push(`<span class="mod-chunk">${c.name[lang]}</span>`);
+  }
+  if(custom.bun && custom.bun!=="brioche"){
+    const b = BUN_OPTS.find(o=>o.id===custom.bun);
+    if(b) parts.push(`<span class="mod-chunk">${b.name[lang]}</span>`);
+  }
+  (custom.remove||[]).forEach(r=>{
+    parts.push(`<span class="mod-chunk rm">− ${r}</span>`);
+  });
+  (custom.extras||[]).forEach(eid=>{
+    const e = EXTRAS.find(o=>o.id===eid);
+    if(e) parts.push(`<span class="mod-chunk add"><b>+</b> ${e.name[lang]}</span>`);
+  });
+  return parts.length ? `<div class="ci-mods">${parts.join("")}</div>` : "";
+}
+
+function renderCart(){
+  const list=document.getElementById("cartList"), entries=Object.entries(cart);
+  if(entries.length===0){ list.innerHTML=`<div class="empty">${tt("emptyCart")}</div>`; document.getElementById("grandTotal").textContent="0,00 €"; document.getElementById("sendBtn").disabled=true; return; }
+  document.getElementById("sendBtn").disabled=false;
+  list.innerHTML=buildCartUpsell()+entries.map(([key,c])=>`<div class="cart-item"><div class="ci-top"><span class="ci-name">${c.item.name}</span><span class="ci-price">${fmt(c.unitPrice*c.qty)}</span></div>${modsSummary(c.custom)}<div class="ci-foot"><div class="qty-ctrl"><button data-dec="${key}">−</button><span>${c.qty}</span><button data-inc="${key}">+</button></div></div><textarea class="note-input" rows="1" placeholder="${tt("notePh")}" data-note="${key}">${c.note||""}</textarea></div>`).join("");
+  document.getElementById("grandTotal").textContent=fmt(totalPrice());
+  list.querySelectorAll("[data-note]").forEach(t=>{ t.oninput=()=>{ cart[t.dataset.note]&&(cart[t.dataset.note].note=t.value); }; });
+}
+function buildCartUpsell(){
+  const cats=new Set(Object.values(cart).map(c=>catOf(c.item.id)));
+  const has=c=>cats.has(c); const recs=[];
+  if(!has("Bebidas") && (has("Smash")||has("Gourmet"))) recs.push("b1","b4");
+  if(!has("Sides") && (has("Smash")||has("Gourmet"))) recs.push("e1","e2");
+  if(!has("Postres") && (has("Smash")||has("Gourmet"))) recs.push("d1","d2");
+  const items=[...new Set(recs)].map(findItem).filter(it=>it&&!cart[it.id]&&!it.soldOut).slice(0,3);
+  if(items.length===0) return "";
+  return `<div class="cart-upsell"><div class="cu-head">${tt("missing")}</div>${items.map(it=>`<div class="cu-item"><div class="cu-img">${imgHTML(it)}</div><div class="cu-body"><div class="cu-name">${it.name}</div><div class="cu-price">${fmt(it.price)}</div></div><button class="cu-add" data-add="${it.id}">+ ${tt("add")}</button></div>`).join("")}</div>`;
+}
+
+function buildTicket(order){
+  const hora=new Date().toLocaleTimeString(lang==="EN"?"en-GB":lang==="FR"?"fr-FR":lang==="DE"?"de-DE":lang==="IT"?"it-IT":"es-ES",{hour:"2-digit",minute:"2-digit"});
+  const lines=order.items.map(it=>{
+    let modsHtml = "";
+    if(it.custom){
+      const parts=[];
+      if(it.custom.cook){
+        const c = COOK_OPTS.find(o=>o.id===it.custom.cook);
+        if(c) parts.push(c.name[lang]);
+      }
+      if(it.custom.bun && it.custom.bun!=="brioche"){
+        const b = BUN_OPTS.find(o=>o.id===it.custom.bun);
+        if(b) parts.push(b.name[lang]);
+      }
+      (it.custom.remove||[]).forEach(r=>parts.push(`<span class="rm">− ${r}</span>`));
+      (it.custom.extras||[]).forEach(eid=>{
+        const e = EXTRAS.find(o=>o.id===eid);
+        if(e) parts.push(`<b>+ ${e.name[lang]}</b>`);
+      });
+      if(parts.length) modsHtml = `<span class="mods-summary">${parts.join(" · ")}</span>`;
+    }
+    return `<div class="tk-line"><div class="ql"><span class="q">${it.qty}×</span><span class="nm">${it.name}${modsHtml}${it.note?`<small>${it.note}</small>`:""}</span></div><span class="pr">${fmt(it.unitPrice*it.qty)}</span></div>`;
+  }).join("");
+  return `<div class="tk-top"><h3>BONFIRE BURGER</h3><div class="meta">${tt("tableShort").toUpperCase()} ${order.mesa} · ${hora}</div><div class="tk-no">${lang==="ES"?"Pedido":lang==="EN"?"Order":lang==="FR"?"Commande":lang==="DE"?"Bestellung":"Ordine"} #${order.no}</div></div>${lines}<div class="tk-sep"></div><div class="tk-total"><span>${tt("total").toUpperCase()}</span><span>${fmt(order.total)}</span></div><div class="tk-foot">${tt("thanks")}<br>${tt("onWay")}</div><div class="tk-zig"></div>`;
+}
+
+function fireConfetti(){
+  const cont=document.getElementById("confetti");
+  const colors=["#ff3a3a","#ffcc00","#39ff70","#ff3a8c","#f4ebd9"];
+  cont.innerHTML="";
+  for(let k=0;k<60;k++){
+    const i=document.createElement("i");
+    i.style.left=Math.random()*100+"%"; i.style.background=colors[k%colors.length];
+    i.style.animationDuration=(1.6+Math.random()*1.6)+"s"; i.style.animationDelay=(Math.random()*.3)+"s";
+    i.style.transform=`rotate(${Math.random()*360}deg)`;
+    i.style.boxShadow = `0 0 8px ${colors[k%colors.length]}`;
+    cont.appendChild(i);
+  }
+  setTimeout(()=>cont.innerHTML="",3600);
+}
+
+const STORE_KEY="burger_orders_v1";
+function pushToKitchen(order){
+  let list; try{ list=JSON.parse(localStorage.getItem(STORE_KEY)||"[]"); }catch(e){ list=[]; }
+  if(!Array.isArray(list)) list=[]; list.push(order);
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify(list)); }catch(e){}
+}
+
+function doSend(){
+  const order={ id:"o"+Date.now()+Math.random().toString(36).slice(2,6), no:Math.floor(100+Math.random()*899),
+    mesa, ts:Date.now(), status:"new", _fresh:true,
+    items:Object.values(cart).map(c=>({
+      name:c.item.name, qty:c.qty, note:c.note,
+      price:c.unitPrice, unitPrice:c.unitPrice,
+      custom: c.custom ? {
+        cook: c.custom.cook ? COOK_OPTS.find(o=>o.id===c.custom.cook)?.name[lang] : null,
+        bun: c.custom.bun && c.custom.bun!=="brioche" ? BUN_OPTS.find(o=>o.id===c.custom.bun)?.name[lang] : null,
+        remove: c.custom.remove||[],
+        extras: (c.custom.extras||[]).map(eid=>EXTRAS.find(o=>o.id===eid)?.name[lang]).filter(Boolean)
+      } : null
+    })),
+    subtotal:totalPrice(), total:totalPrice() };
+  // For local display we keep the full custom object
+  const orderForTicket = {...order, items: Object.values(cart).map(c=>({
+    name:c.item.name, qty:c.qty, note:c.note, unitPrice:c.unitPrice, custom:c.custom
+  }))};
+  pushToKitchen(order);
+  document.getElementById("ticket").innerHTML=buildTicket(orderForTicket);
+  closeSheet(); document.getElementById("success").classList.add("open");
+  buzz([10,40,10]); fireConfetti();
+}
+
+const askDrink=document.getElementById("askDrink");
+function closeAsk(){ askDrink.classList.remove("open"); }
+document.getElementById("sendBtn").onclick=()=>{ if(totalItems()===0) return; if(!hasDrink()){ askDrink.classList.add("open"); return; } doSend(); };
+document.getElementById("askSkip").onclick=()=>{ closeAsk(); doSend(); };
+document.getElementById("askGoDrinks").onclick=()=>{ closeAsk(); closeSheet(); const idx=MENU.findIndex(s=>s.cat==="Bebidas"); if(idx>=0){ const y=document.getElementById("sec-"+idx).getBoundingClientRect().top+window.scrollY-120; window.scrollTo({top:y,behavior:"smooth"}); } };
+askDrink.onclick=e=>{ if(e.target===askDrink) closeAsk(); };
+
+document.getElementById("newOrder").onclick=()=>{ cart={}; MENU.forEach(s=>s.items.forEach(renderCtrl)); updateBar(); document.getElementById("success").classList.remove("open"); window.scrollTo({top:0,behavior:"smooth"}); };
+document.getElementById("welcomeBtn").onclick=()=>{ buzz(8); document.getElementById("welcome").classList.add("gone"); document.getElementById("onboard").classList.add("show"); };
+function goToMenu(){ buzz(8); document.getElementById("onboard").classList.add("gone"); }
+document.getElementById("startBtn").onclick=goToMenu;
+document.getElementById("skipBtn").onclick=goToMenu;
+
+applyLang();
+</script>
+</body>
+</html>

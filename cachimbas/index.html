@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>MAGMA · A record of late nights · Valencia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Italiana&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap">
+<style>
+  :root{
+    --paper:#e7d8b5;
+    --paper-2:#dfcd9e;
+    --paper-3:#d3bd86;
+    --paper-shadow:#beac7a;
+    --ink:#150c06;
+    --ink-soft:#3d2918;
+    --ink-faint:#6c5232;
+    --line:#bca77b;
+    --line-2:#a48d63;
+    --pompeii:#9c2818;
+    --pompeii-dark:#6e1a0e;
+    --gold:#8a6418;
+    --gold-soft:#c69838;
+    --vinyl:#1a0f08;
+    --display:"Abril Fatface",serif;
+    --serif:"Italiana",serif;
+    --body:"Spectral",Georgia,serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{background:var(--paper);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;font-weight:400}
+  body{padding-bottom:104px;max-width:520px;margin:0 auto;position:relative;overflow-x:hidden}
+
+  /* ===== PAPER GRAIN + STAINS (the signature texture) ===== */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:200;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' seed='3'/><feColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.32 0 0 0 0 0.12 0 0 0 0.55 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    opacity:.18;mix-blend-mode:multiply;
+  }
+  /* ===== Foxed paper edges (corner stains) ===== */
+  body::after{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:201;
+    background:
+      radial-gradient(ellipse at 12% 8%, rgba(120,80,30,.18), transparent 18%),
+      radial-gradient(ellipse at 88% 14%, rgba(140,90,30,.22), transparent 20%),
+      radial-gradient(ellipse at 8% 92%, rgba(110,70,20,.16), transparent 22%),
+      radial-gradient(ellipse at 92% 90%, rgba(130,80,20,.2), transparent 20%);
+    mix-blend-mode:multiply;
+  }
+
+  /* ===== INTRO (record drop) ===== */
+  .intro-curtain{position:fixed;inset:0;z-index:300;background:var(--paper);pointer-events:none;animation:curtainOut 1.4s .6s cubic-bezier(.76,0,.24,1) forwards;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .intro-curtain::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%, rgba(156,40,24,.18), transparent 55%);opacity:0;animation:curtainGlow 1.4s .3s ease-out forwards}
+  .intro-disc{width:240px;height:240px;border-radius:50%;background:radial-gradient(circle, var(--vinyl) 0%, var(--vinyl) 24%, var(--pompeii) 26%, var(--pompeii) 28%, var(--vinyl) 30%, var(--vinyl) 100%);border:1px solid var(--ink-soft);box-shadow:0 0 0 1px var(--paper),0 24px 48px rgba(0,0,0,.3),inset 0 0 18px rgba(0,0,0,.5);position:relative;opacity:0;animation:discDrop 1.4s cubic-bezier(.5,1.4,.4,1) forwards;display:flex;align-items:center;justify-content:center}
+  .intro-disc::before{content:"";position:absolute;inset:8%;border-radius:50%;background:repeating-radial-gradient(circle, transparent 0px, transparent 1.5px, rgba(255,255,255,.04) 1.6px, rgba(255,255,255,.04) 2px);opacity:.7}
+  .intro-disc::after{content:"";position:absolute;width:10px;height:10px;background:var(--paper);border-radius:50%;border:1px solid var(--ink)}
+  .intro-mark{position:absolute;color:var(--paper);font-family:var(--display);font-size:42px;letter-spacing:1px;line-height:1;text-transform:lowercase;opacity:0;animation:fadeIn 1s .8s forwards;z-index:2}
+  @keyframes discDrop{0%{opacity:0;transform:translateY(-220px) rotate(-90deg) scale(.6)}50%{opacity:1;transform:translateY(8px) rotate(0deg) scale(1)}75%{transform:translateY(-4px) rotate(8deg) scale(1)}100%{opacity:1;transform:translateY(0) rotate(18deg) scale(1)}}
+  @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+  @keyframes curtainGlow{0%{opacity:0}40%{opacity:1}100%{opacity:0}}
+  @keyframes curtainOut{0%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 100% 0)}}
+
+  /* ===== MARQUEE TICKER (album side label) ===== */
+  .marquee{position:absolute;top:0;left:0;right:0;padding:9px 0;overflow:hidden;display:flex;border-bottom:1px solid var(--line);background:var(--paper-2);z-index:5;mask-image:linear-gradient(90deg,transparent 0%,#000 6%,#000 94%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 6%,#000 94%,transparent 100%)}
+  .marquee-track{display:inline-flex;animation:marquee 42s linear infinite;flex:0 0 auto;will-change:transform}
+  .marquee-track span{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);letter-spacing:1.5px;padding:0 22px;white-space:nowrap;flex:0 0 auto;text-transform:uppercase;font-weight:400}
+  .marquee-track span::after{content:"◉";color:var(--pompeii);margin-left:22px;font-size:9px;letter-spacing:0}
+  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+  /* ===== HEADER ===== */
+  header{position:sticky;top:0;z-index:40;background:rgba(231,216,181,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .head-top{display:flex;align-items:flex-end;justify-content:space-between;padding:14px 22px 8px;gap:14px}
+  .brand{display:flex;align-items:baseline;gap:0;min-width:0;flex:1}
+  .brand h1{font-family:var(--display);font-size:30px;font-weight:400;color:var(--ink);letter-spacing:1px;line-height:.9;text-transform:lowercase}
+  .brand-text{display:flex;flex-direction:column;line-height:1;min-width:0;margin-left:2px}
+  .brand span{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);margin-top:6px;letter-spacing:1.8px;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase}
+  .head-right{display:flex;align-items:center;gap:14px;flex:0 0 auto}
+  .mesa-chip{display:inline-flex;align-items:baseline;gap:5px;background:transparent;color:var(--ink-soft);padding:0;border:none;font-family:var(--mono);font-size:10.5px;font-weight:400;letter-spacing:1.5px;text-transform:uppercase}
+  .mesa-chip strong{color:var(--pompeii);font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:0;text-transform:none}
+
+  .lang{position:relative}
+  .lang-btn{display:flex;align-items:center;gap:5px;background:transparent;border:none;padding:0;border-radius:0;font-family:var(--mono);font-size:10.5px;font-weight:400;color:var(--ink);cursor:pointer;letter-spacing:1.5px;text-transform:uppercase}
+  .lang-btn .fl{font-size:13px}
+  .lang-btn .ar{font-size:9px;color:var(--pompeii)}
+  .lang-menu{position:absolute;top:calc(100% + 10px);right:0;background:var(--paper-2);border:1px solid var(--ink-soft);padding:5px;min-width:160px;opacity:0;transform:translateY(-6px) scale(.96);pointer-events:none;transition:.18s;z-index:50;border-radius:0;box-shadow:6px 6px 0 rgba(29,19,12,.16)}
+  .lang-menu.open{opacity:1;transform:none;pointer-events:auto}
+  .lang-opt{display:flex;align-items:baseline;gap:10px;padding:9px 11px;font-family:var(--serif);font-size:15px;font-weight:400;cursor:pointer;color:var(--ink)}
+  .lang-opt .fl{font-size:15px}
+  .lang-opt.active{color:var(--pompeii)}
+
+  /* ===== TABS ===== */
+  .tabs{display:flex;gap:0;overflow-x:auto;padding:4px 22px 14px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;border:none;background:transparent;color:var(--ink-faint);padding:6px 0;font-family:var(--mono);font-size:10.5px;font-weight:400;cursor:pointer;letter-spacing:1.5px;white-space:nowrap;transition:.18s;text-transform:uppercase;position:relative}
+  .tab.active{color:var(--pompeii)}
+  .tab + .tab::before{content:"·";margin:0 14px;color:var(--line-2);letter-spacing:0}
+  .tab.active::after{content:"";display:block;margin-top:3px;height:1px;background:var(--pompeii);width:70%;margin-left:auto;margin-right:auto}
+
+  main{padding:0 22px}
+
+  /* ===== SIDE LABEL HEADER (album-style) ===== */
+  .sec-header{margin:48px 0 28px;padding:0;display:flex;align-items:baseline;gap:14px}
+  .sec-side{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:2px;font-weight:400;text-transform:uppercase;flex:0 0 auto;padding-top:5px;writing-mode:horizontal-tb;border:1px solid var(--ink-soft);padding:5px 10px;border-radius:0;line-height:1}
+  .sec-side strong{color:var(--pompeii);font-family:var(--display);font-weight:400;font-size:14px;letter-spacing:0;text-transform:none}
+  .sec-title-wrap{flex:1;min-width:0}
+  .sec-heading{font-family:var(--display);font-size:48px;font-weight:400;color:var(--ink);letter-spacing:0;line-height:.9;text-transform:lowercase}
+  .sec-meta{font-family:var(--serif);font-size:14.5px;color:var(--ink-soft);margin-top:8px;font-weight:400;letter-spacing:.1px;line-height:1.4;font-style:italic}
+  .sec-rule{margin:4px 0 20px;border-top:1px solid var(--ink);position:relative;height:0}
+  .sec-rule::before{content:"◉";position:absolute;top:-8px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--pompeii);background:var(--paper);padding:0 8px}
+
+  /* ===== ITEM ROW (tracklist style) ===== */
+  .item{display:grid;grid-template-columns:32px 1fr 60px 70px;align-items:baseline;column-gap:12px;padding:16px 0 14px;margin:0;cursor:pointer;position:relative;transition:.18s;background:transparent;border-bottom:1px dotted var(--line)}
+  .item:hover{background:rgba(156,40,24,.04)}
+  .item:active{background:rgba(156,40,24,.07)}
+  .item.flash{animation:flashRow .7s}
+  @keyframes flashRow{0%{background:transparent}25%{background:rgba(156,40,24,.12)}100%{background:transparent}}
+  .item.soldout{opacity:.4;cursor:default}
+  .item.soldout .item-name{text-decoration:line-through;text-decoration-thickness:1px}
+  .item.soldout .ctrl-wrap{display:none}
+  .soldout-tag{font-family:var(--mono);font-size:10px;font-weight:400;color:var(--ink-faint);padding:0;letter-spacing:1.5px;text-transform:uppercase;grid-column:4;text-align:right}
+
+  .item-num{font-family:var(--display);font-size:22px;font-weight:400;color:var(--pompeii);letter-spacing:0;line-height:.85;grid-column:1;align-self:center;text-align:left}
+  .item.soldout .item-num{color:var(--ink-faint)}
+
+  .item-body{grid-column:2;min-width:0;display:flex;flex-direction:column;gap:3px}
+  .item-name{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--ink);line-height:1.05;letter-spacing:0;white-space:normal;overflow:hidden;font-style:italic}
+  .item-name .fav-mark{display:inline-block;color:var(--pompeii);font-style:normal;font-family:var(--display);margin-right:4px;font-weight:400;font-size:14px;vertical-align:middle}
+  .item-meta{font-family:var(--mono);font-size:10px;color:var(--ink-faint);font-weight:400;letter-spacing:1.2px;line-height:1.3;text-transform:uppercase}
+
+  .duration{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);grid-column:3;text-align:right;align-self:center;letter-spacing:.5px;font-weight:400}
+
+  .price{font-family:var(--display);font-size:21px;font-weight:400;color:var(--ink);letter-spacing:0;line-height:1;grid-column:4;white-space:nowrap;align-self:center;text-align:right}
+
+  .ctrl-wrap{position:absolute;right:0;top:50%;transform:translateY(-50%) translateX(110%);opacity:0;transition:opacity .25s ease,transform .3s ease}
+  .item:hover .ctrl-wrap, .item:active .ctrl-wrap, .has-qty .ctrl-wrap{opacity:1;transform:translateY(-50%) translateX(0)}
+  .add{border:1px solid var(--ink);background:var(--paper);color:var(--ink);width:30px;height:30px;border-radius:50%;font-family:var(--display);font-size:16px;font-weight:400;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;line-height:1;padding:0}
+  .add:active{transform:scale(.9);background:var(--ink);color:var(--paper)}
+  .qty-ctrl{display:flex;align-items:center;gap:8px;background:transparent;padding:0;border-radius:0;flex:0 0 auto}
+  .qty-ctrl button{border:1px solid var(--ink);background:var(--paper);color:var(--ink);width:24px;height:24px;border-radius:50%;font-size:13px;cursor:pointer;line-height:1;font-family:var(--display);font-weight:400;display:flex;align-items:center;justify-content:center;padding:0}
+  .qty-ctrl span{font-family:var(--display);font-size:18px;font-weight:400;min-width:14px;text-align:center;color:var(--pompeii);letter-spacing:0}
+
+  /* ===== CART BAR (now-playing widget) ===== */
+  .cart-bar{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);width:calc(100% - 28px);max-width:492px;z-index:88;transition:transform .55s cubic-bezier(.34,1.4,.4,1)}
+  .cart-bar.hidden{transform:translateX(-50%) translateY(180%);transition:transform .5s cubic-bezier(.7,0,.2,1)}
+  .cart-btn{width:100%;border:none;background:var(--ink);color:var(--paper);padding:14px 18px;font-family:var(--body);font-size:15px;font-weight:400;cursor:pointer;display:flex;align-items:center;justify-content:space-between;letter-spacing:0;border-radius:0;box-shadow:8px 8px 0 var(--pompeii),0 26px 50px rgba(0,0,0,.32);position:relative;overflow:hidden}
+  .cart-btn:active{transform:translate(2px,2px);box-shadow:6px 6px 0 var(--pompeii),0 18px 36px rgba(0,0,0,.3)}
+  .cart-btn::before{content:"◉";position:absolute;left:18px;color:var(--pompeii);font-size:10px;animation:nowPlaying 2.4s ease-in-out infinite}
+  @keyframes nowPlaying{0%,100%{opacity:.4}50%{opacity:1}}
+  .cart-count{background:var(--pompeii);color:var(--paper);font-family:var(--display);font-size:14px;font-weight:400;padding:1px 9px;border-radius:0;min-width:28px;text-align:center;letter-spacing:0;transition:background .3s ease;display:inline-block}
+  .cart-count.bump{animation:countBump .55s cubic-bezier(.4,1.6,.5,1)}
+  @keyframes countBump{0%{transform:scale(1)}30%{transform:scale(1.45);background:var(--gold-soft);color:var(--ink);box-shadow:0 0 16px var(--pompeii)}100%{transform:scale(1);background:var(--pompeii);color:var(--paper);box-shadow:none}}
+  .cart-left{display:flex;align-items:baseline;gap:14px;padding-left:22px}
+  .cart-lbl{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(231,216,181,.6)}
+  .cart-mid{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--paper);margin-left:6px}
+  #cartTotal{font-family:var(--display);font-size:20px;font-weight:400;color:var(--gold-soft);letter-spacing:0}
+
+  /* ===== FLY-TO-CART ===== */
+  .flyer{position:fixed;width:22px;height:22px;background:var(--pompeii);border-radius:50%;pointer-events:none;z-index:1000;transition:transform .85s cubic-bezier(.55,0,.3,1),opacity .75s ease-out;box-shadow:0 0 18px var(--pompeii),0 0 32px rgba(156,40,24,.5)}
+
+  /* ===== SCROLL REVEAL ===== */
+  .sec-header, .item{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.5,0,.15,1),transform .9s cubic-bezier(.5,0,.15,1)}
+  .sec-header.in-view, .item.in-view{opacity:1;transform:translateY(0)}
+  .item.in-view{transition-delay:calc(var(--i,0) * 55ms)}
+
+  .overlay{position:fixed;inset:0;background:rgba(29,19,12,.75);z-index:90;opacity:0;pointer-events:none;transition:.3s;backdrop-filter:blur(3px)}
+  .overlay.open{opacity:1;pointer-events:auto}
+
+  /* ===== DETAIL ===== */
+  .detail{position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);width:100%;max-width:520px;max-height:94vh;background:var(--paper);z-index:92;transition:transform .45s cubic-bezier(.5,1.3,.4,1);display:flex;flex-direction:column;overflow:hidden;border-top:2px solid var(--ink);box-shadow:0 -20px 50px rgba(0,0,0,.3)}
+  .detail.open{transform:translateX(-50%) translateY(0)}
+  .dt-imgwrap{position:relative;width:100%;height:180px;background:var(--paper-2);flex:0 0 auto;overflow:hidden;border-bottom:1px solid var(--line);background-image:radial-gradient(circle at 50% 50%, var(--paper-3), var(--paper-shadow))}
+  .dt-vinyl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:180px;height:180px;border-radius:50%;background:radial-gradient(circle, var(--vinyl) 0%, var(--vinyl) 22%, var(--pompeii) 24%, var(--pompeii) 26%, var(--vinyl) 28%, var(--vinyl) 100%);box-shadow:inset 0 0 16px rgba(0,0,0,.4);animation:vinylSpin 8s linear infinite;opacity:.92}
+  .dt-vinyl::before{content:"";position:absolute;inset:8%;border-radius:50%;background:repeating-radial-gradient(circle, transparent 0px, transparent 1.5px, rgba(255,255,255,.05) 1.6px, rgba(255,255,255,.05) 2px)}
+  .dt-vinyl::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:8px;height:8px;background:var(--paper);border-radius:50%;border:1px solid var(--ink)}
+  @keyframes vinylSpin{0%{transform:translate(-50%,-50%) rotate(0deg)}100%{transform:translate(-50%,-50%) rotate(360deg)}}
+  .dt-close{position:absolute;top:14px;right:14px;background:var(--paper);border:1px solid var(--ink);width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer;color:var(--ink);display:flex;align-items:center;justify-content:center;line-height:1;font-family:var(--display);font-weight:400}
+  .dt-fav{position:absolute;top:16px;left:16px;background:var(--pompeii);color:var(--paper);font-family:var(--mono);font-size:9.5px;font-weight:400;padding:5px 11px;border-radius:0;letter-spacing:1.8px;text-transform:uppercase}
+  .dt-fav::before{content:"◉ "}
+  .dt-body{padding:24px 28px 18px;overflow-y:auto;flex:1;background:var(--paper)}
+  .dt-num{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+  .dt-name{font-family:var(--display);font-size:42px;font-weight:400;letter-spacing:0;line-height:1;color:var(--ink);margin-bottom:6px;text-transform:lowercase}
+  .dt-cat{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink-soft);margin-bottom:18px}
+  .dt-price{display:inline-block;font-family:var(--display);font-size:28px;font-weight:400;color:var(--pompeii);letter-spacing:0}
+  .dt-soldout{display:inline-block;font-family:var(--mono);font-size:10px;color:var(--ink-faint);padding:2px 0 2px 14px;border-left:1px solid var(--line-2);margin-left:14px;letter-spacing:1.5px;font-weight:400;vertical-align:middle;text-transform:uppercase}
+  .dt-desc{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink-soft);line-height:1.5;margin-top:22px;font-weight:400;letter-spacing:.1px}
+  .dt-meta{margin-top:24px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .dt-meta-row{display:flex;flex-direction:column;gap:5px}
+  .dt-meta-label{font-family:var(--mono);font-size:9.5px;color:var(--ink-faint);letter-spacing:1.5px;text-transform:uppercase}
+  .dt-meta-val{font-family:var(--display);font-size:20px;color:var(--ink);font-weight:400;letter-spacing:0;line-height:1}
+
+  .dt-foot{padding:14px 28px calc(20px + env(safe-area-inset-bottom));background:var(--paper-2);display:flex;align-items:center;gap:14px;border-top:1px solid var(--line)}
+  .dt-qty{display:flex;align-items:center;gap:14px;background:transparent;padding:0 4px}
+  .dt-qty button{border:1px solid var(--ink);background:var(--paper);color:var(--ink);width:32px;height:32px;border-radius:50%;font-size:16px;cursor:pointer;line-height:1;font-family:var(--display);font-weight:400;padding:0}
+  .dt-qty span{font-family:var(--display);font-size:22px;font-weight:400;min-width:20px;text-align:center;color:var(--pompeii);letter-spacing:0}
+  .dt-add{flex:1;border:none;background:var(--ink);color:var(--paper);padding:14px;font-family:var(--mono);font-size:11px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:12px;letter-spacing:2.5px;border-radius:0;box-shadow:6px 6px 0 var(--pompeii);text-transform:uppercase}
+  .dt-add::after{content:"→";font-size:14px;font-weight:400}
+  .dt-add:active{transform:translate(2px,2px);box-shadow:4px 4px 0 var(--pompeii)}
+  .dt-add.disabled{background:var(--muted);color:var(--ink-faint);cursor:not-allowed;box-shadow:none}
+
+  /* ===== SHEET ===== */
+  .sheet{position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);width:100%;max-width:520px;max-height:88vh;background:var(--paper);z-index:92;transition:transform .45s cubic-bezier(.5,1.3,.4,1);display:flex;flex-direction:column;border-top:2px solid var(--ink);box-shadow:0 -20px 50px rgba(0,0,0,.3)}
+  .sheet.open{transform:translateX(-50%) translateY(0)}
+  .sheet-head{padding:24px 28px 16px;display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line)}
+  .sheet-head h2{font-family:var(--display);font-size:34px;font-weight:400;letter-spacing:0;color:var(--ink);line-height:.95;text-transform:lowercase}
+  .sheet-head h2 small{font-family:var(--mono);font-size:11px;font-weight:400;color:var(--ink-soft);letter-spacing:1.5px;margin-left:8px;text-transform:uppercase}
+  .close{background:var(--paper);border:1px solid var(--ink);width:34px;height:34px;font-size:16px;cursor:pointer;color:var(--ink);font-family:var(--display);font-weight:400;line-height:1;display:flex;align-items:center;justify-content:center;border-radius:50%}
+  .sheet-body{overflow-y:auto;padding:8px 28px;flex:1}
+  .cart-item{background:transparent;border:none;border-bottom:1px dotted var(--line);border-radius:0;padding:16px 0}
+  .ci-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+  .ci-name{font-family:var(--serif);font-style:italic;font-size:19px;font-weight:400;line-height:1.1;color:var(--ink);letter-spacing:0}
+  .ci-price{font-family:var(--display);font-size:21px;font-weight:400;white-space:nowrap;color:var(--pompeii);letter-spacing:0}
+  .ci-foot{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+  .note-input{width:100%;margin-top:10px;border:1px solid var(--line);background:var(--paper-2);padding:10px 14px;font-family:var(--serif);font-style:italic;font-size:14px;resize:none;color:var(--ink);font-weight:400;border-radius:0;letter-spacing:.1px}
+  .note-input::placeholder{color:var(--ink-faint);font-weight:400;font-style:italic}
+  .note-input:focus{outline:none;border-color:var(--pompeii)}
+  .empty{text-align:center;color:var(--ink-faint);padding:60px 20px;font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.4;font-weight:400;letter-spacing:0}
+  .sheet-foot{padding:18px 28px calc(24px + env(safe-area-inset-bottom));background:var(--paper-2);border-top:1px solid var(--line)}
+  .total-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
+  .total-row .lbl{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:2px;font-weight:400;text-transform:uppercase}
+  .total-row .val{font-family:var(--display);font-size:36px;font-weight:400;color:var(--ink);letter-spacing:0}
+  .send-btn{width:100%;border:none;background:var(--ink);color:var(--paper);padding:16px;font-family:var(--mono);font-size:11px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:12px;letter-spacing:3px;border-radius:0;box-shadow:8px 8px 0 var(--pompeii);text-transform:uppercase;transition:.18s}
+  .send-btn::after{content:"→";font-size:14px}
+  .send-btn:active{transform:translate(2px,2px);box-shadow:6px 6px 0 var(--pompeii)}
+  .send-btn:disabled{background:var(--muted);color:var(--ink-faint);cursor:not-allowed;box-shadow:none}
+
+  /* ===== WELCOME (album cover) ===== */
+  .welcome{position:fixed;inset:0;z-index:100;max-width:520px;margin:0 auto;display:flex;flex-direction:column;justify-content:space-between;text-align:left;padding:calc(56px + env(safe-area-inset-top)) 28px calc(36px + env(safe-area-inset-bottom));background:var(--paper);transition:opacity .6s cubic-bezier(.7,0,.3,1),transform .6s cubic-bezier(.7,0,.3,1);overflow-y:auto}
+  .w-lang{position:absolute;top:calc(20px + env(safe-area-inset-top));right:22px;z-index:5}
+  .welcome.gone{opacity:0;transform:scale(1.02);pointer-events:none}
+
+  /* Spinning vinyl decoration in welcome — corner only, doesn't overlap text */
+  .w-vinyl{position:absolute;top:-90px;right:-100px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle, var(--vinyl) 0%, var(--vinyl) 22%, var(--pompeii) 24%, var(--pompeii) 26%, var(--vinyl) 28%, var(--vinyl) 100%);animation:vinylSpin 16s linear infinite;opacity:.5;z-index:1;box-shadow:0 12px 30px rgba(0,0,0,.3),inset 0 0 18px rgba(0,0,0,.5)}
+  .w-vinyl::before{content:"";position:absolute;inset:7%;border-radius:50%;background:repeating-radial-gradient(circle, transparent 0px, transparent 1.8px, rgba(255,255,255,.04) 2px, rgba(255,255,255,.04) 2.5px)}
+  .w-vinyl::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:9px;height:9px;background:var(--paper);border-radius:50%;border:1px solid var(--ink)}
+
+  .w-top{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;opacity:0;animation:fadeIn 1s 1.2s forwards}
+  .w-meta{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);line-height:1.6;letter-spacing:1.5px;font-weight:400;text-transform:uppercase}
+  .w-meta-acc{color:var(--pompeii);display:block;margin-top:2px}
+  .w-lang{flex:0 0 auto}
+
+  .w-center{position:relative;z-index:3;display:flex;flex-direction:column;align-items:flex-start;margin:auto 0;padding:18px 0}
+  .w-cat{font-family:var(--mono);font-size:10px;font-weight:400;color:var(--ink-soft);letter-spacing:2.5px;text-transform:uppercase;opacity:0;animation:fadeIn 1s 1.3s forwards;padding:5px 10px;border:1px solid var(--ink-soft);margin-bottom:14px}
+  .w-title{font-family:var(--display);font-size:84px;font-weight:400;letter-spacing:-1px;line-height:.85;margin:0 0 6px;color:var(--ink);opacity:0;animation:revealTitle 1.2s .4s forwards;text-transform:lowercase;position:relative;z-index:3}
+  @keyframes revealTitle{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+  .w-rule{width:64px;height:1px;background:var(--pompeii);margin:14px 0 22px;opacity:0;animation:ruleGrow .8s .9s forwards;transform-origin:left}
+  @keyframes ruleGrow{0%{transform:scaleX(0);opacity:0}100%{transform:scaleX(1);opacity:1}}
+  .w-tag{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink);line-height:1.4;max-width:280px;opacity:0;animation:fadeUp .9s 1.8s forwards;font-weight:400;letter-spacing:.2px;margin-top:6px}
+  .w-tracks{font-family:var(--mono);font-size:10px;font-weight:500;color:var(--ink-soft);letter-spacing:1.8px;text-transform:uppercase;margin-top:22px;opacity:0;animation:fadeIn 1s 2.1s forwards;line-height:1.7}
+  .w-tracks-line{display:flex;justify-content:space-between;gap:24px;max-width:320px;border-bottom:1px dotted var(--ink-soft);padding:3px 0}
+  .w-tracks-line:last-child{border-bottom:none}
+
+  /* "Cómo suena" — how it plays (3-step guide) */
+  .w-howto{position:relative;z-index:3;opacity:0;animation:fadeUp .9s 1.2s forwards;max-width:380px}
+  .w-howto-label{display:block;font-family:var(--mono);font-size:10px;color:var(--pompeii);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:14px;font-weight:500}
+  .w-howto-step{display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px dotted var(--line-2)}
+  .w-howto-step:last-child{border-bottom:none}
+  .w-howto-num{font-family:var(--display);font-size:24px;color:var(--pompeii);line-height:.85;text-align:left}
+  .w-howto-text{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink);line-height:1.3;font-weight:400}
+  .w-howto-text small{display:block;font-family:var(--body);font-style:normal;font-size:12.5px;color:var(--ink-soft);margin-top:3px;font-weight:400;letter-spacing:.1px}
+
+  /* House notes (side notes) */
+  .w-notes{position:relative;z-index:3;opacity:0;animation:fadeUp .9s 2.2s forwards;font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--ink);line-height:1.55;max-width:340px;padding:10px 0 10px 14px;margin-top:22px;font-weight:400;border-left:2px solid var(--pompeii)}
+  .w-notes-label{display:block;font-family:var(--mono);font-size:9px;color:var(--pompeii);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:6px;font-style:normal;font-weight:500}
+
+  /* ===== UPSELL TOAST (after adding a hookah) ===== */
+  .upsell{position:fixed;bottom:82px;left:50%;transform:translateX(-50%) translateY(160%);width:calc(100% - 28px);max-width:492px;z-index:87;background:var(--paper);border:1px solid var(--ink);padding:14px 16px;box-shadow:8px 8px 0 var(--pompeii),0 18px 36px rgba(0,0,0,.3);transition:transform .45s cubic-bezier(.5,1.3,.4,1)}
+  .upsell.show{transform:translateX(-50%) translateY(0)}
+  .upsell-close{position:absolute;top:8px;right:10px;background:transparent;border:none;width:24px;height:24px;font-size:14px;cursor:pointer;color:var(--ink-soft);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:400;line-height:1;z-index:2}
+  .upsell-head{padding-right:28px}
+  .upsell-eye{font-family:var(--mono);font-size:9px;color:var(--pompeii);letter-spacing:2px;text-transform:uppercase;font-weight:500;display:block;margin-bottom:4px}
+  .upsell-title{font-family:var(--display);font-size:22px;font-weight:400;color:var(--ink);line-height:1;text-transform:lowercase;margin-bottom:3px}
+  .upsell-sub{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--ink-soft);font-weight:400;letter-spacing:.1px}
+  .upsell-row{display:flex;gap:8px;margin-top:11px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  .upsell-row::-webkit-scrollbar{display:none}
+  .upsell-pick{flex:0 0 auto;background:var(--paper-2);border:1px solid var(--ink-soft);border-radius:0;padding:8px 12px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:.15s}
+  .upsell-pick:active{transform:translate(2px,2px);background:var(--paper-3)}
+  .upsell-pick-info{display:flex;flex-direction:column;line-height:1.1;text-align:left}
+  .upsell-pick-name{font-family:var(--serif);font-style:italic;font-size:13.5px;font-weight:400;color:var(--ink);white-space:nowrap;letter-spacing:0}
+  .upsell-pick-price{font-family:var(--display);font-size:12px;color:var(--pompeii);font-weight:400;letter-spacing:0;margin-top:2px}
+  .upsell-pick-add{background:var(--ink);color:var(--paper);width:22px;height:22px;border-radius:50%;font-size:13px;font-family:var(--display);font-weight:400;display:flex;align-items:center;justify-content:center;line-height:1;flex:0 0 22px}
+
+  /* ===== CART NOTE (before checkout) ===== */
+  .cart-note{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--ink-soft);line-height:1.45;padding:12px 14px;background:var(--paper-2);border-left:2px solid var(--pompeii);margin-bottom:14px;letter-spacing:.1px}
+  .cart-note-label{display:block;font-family:var(--mono);font-size:8.5px;color:var(--pompeii);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;font-style:normal;font-weight:500}
+  .cart-warn{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--pompeii);line-height:1.4;padding:12px 14px;background:rgba(156,40,24,.06);border:1px solid var(--pompeii);margin-bottom:14px;letter-spacing:.1px;display:flex;align-items:flex-start;gap:10px}
+  .cart-warn::before{content:"◉";color:var(--pompeii);font-size:10px;flex:0 0 auto;padding-top:4px}
+
+  .w-bottom{position:relative;z-index:3;opacity:0;animation:fadeUp 1s 1.5s forwards;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+  .w-mesa-line{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:1.8px;display:flex;align-items:baseline;gap:8px;text-transform:uppercase}
+  .w-mesa-line strong{font-family:var(--display);font-size:28px;font-weight:400;color:var(--pompeii);letter-spacing:0;text-transform:none}
+  .w-mesa-line::after{content:"";flex:1;margin-left:10px;border-top:1px dotted var(--line-2);align-self:center;height:1px;min-width:60px}
+  .w-btn{align-self:flex-start;border:none;background:var(--ink);color:var(--paper);padding:14px 24px;font-family:var(--mono);font-size:11px;font-weight:500;cursor:pointer;border-radius:0;display:inline-flex;align-items:center;gap:14px;letter-spacing:3px;transition:.2s;text-transform:uppercase;box-shadow:6px 6px 0 var(--pompeii)}
+  .w-btn::after{content:"→";font-size:14px;font-weight:400;letter-spacing:0}
+  .w-btn:active{transform:translate(2px,2px);box-shadow:4px 4px 0 var(--pompeii)}
+  @keyframes fadeUp{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
+
+  /* ===== SUCCESS ===== */
+  .success{position:fixed;inset:0;z-index:99;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;opacity:0;pointer-events:none;transition:.4s;overflow-y:auto;max-width:520px;margin:0 auto}
+  .success.open{opacity:1;pointer-events:auto}
+  .success-inner{width:100%;max-width:380px;display:flex;flex-direction:column;align-items:center}
+  .check{width:84px;height:84px;background:var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:28px;animation:pop2 .5s cubic-bezier(.2,1.5,.4,1);box-shadow:8px 8px 0 var(--pompeii)}
+  .check svg{width:42px;height:42px;stroke:var(--paper);stroke-width:2.5;fill:none;stroke-dasharray:30;stroke-dashoffset:30;animation:draw .5s .3s forwards;stroke-linecap:square}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes pop2{0%{transform:scale(0)}100%{transform:scale(1)}}
+  .success h2{font-family:var(--display);font-size:54px;font-weight:400;margin-bottom:10px;color:var(--ink);text-align:center;letter-spacing:0;line-height:.95;text-transform:lowercase}
+  .success .glad{color:var(--ink-soft);font-family:var(--serif);font-style:italic;font-size:16px;margin-bottom:30px;text-align:center;font-weight:400;letter-spacing:.2px;max-width:280px;line-height:1.5}
+  .ticket{background:var(--paper-2);width:100%;padding:26px 24px 14px;border:1px solid var(--ink);border-radius:0;animation:ticketIn .5s .15s both;box-shadow:8px 8px 0 var(--pompeii);position:relative}
+  @keyframes ticketIn{0%{transform:translateY(20px);opacity:0}100%{transform:translateY(0);opacity:1}}
+  .tk-top{text-align:left;border-bottom:1px dashed var(--ink);padding-bottom:18px;margin-bottom:18px}
+  .tk-top h3{font-family:var(--display);font-size:36px;font-weight:400;letter-spacing:0;color:var(--ink);line-height:.95;text-transform:lowercase}
+  .tk-top .meta{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);margin-top:8px;letter-spacing:1.5px;font-weight:400;text-transform:uppercase}
+  .tk-no{display:inline-block;background:var(--pompeii);color:var(--paper);font-family:var(--mono);font-weight:500;font-size:11px;padding:3px 11px;border-radius:0;margin-top:12px;letter-spacing:1.5px;text-transform:uppercase}
+  .tk-line{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:13px;align-items:flex-start}
+  .tk-line .ql{display:flex;gap:12px;min-width:0;align-items:baseline}
+  .tk-line .q{font-family:var(--display);color:var(--pompeii);font-weight:400;flex:0 0 auto;font-size:18px;letter-spacing:0;line-height:1}
+  .tk-line .nm{font-family:var(--serif);font-style:italic;font-weight:400;line-height:1.2;font-size:16px;color:var(--ink);letter-spacing:0}
+  .tk-line .nm small{display:block;font-family:var(--serif);font-style:italic;color:var(--ink-soft);font-weight:400;font-size:12px;margin-top:3px;letter-spacing:.1px;line-height:1.3}
+  .tk-line .pr{font-family:var(--display);font-weight:400;white-space:nowrap;font-size:16px;color:var(--ink);letter-spacing:0}
+  .tk-sep{border-top:1px dashed var(--ink);margin:14px 0}
+  .tk-total{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--display);font-size:30px;font-weight:400;margin-top:8px;color:var(--pompeii);letter-spacing:0;text-transform:lowercase}
+  .tk-total span:first-child{color:var(--ink)}
+  .tk-foot{text-align:left;font-family:var(--serif);font-style:italic;font-size:13px;color:var(--ink-faint);padding:16px 0 6px;line-height:1.5;font-weight:400;letter-spacing:.1px}
+  .success-actions{width:100%;margin-top:26px;display:flex;flex-direction:column;gap:11px}
+  .sa-status{display:flex;align-items:center;justify-content:center;gap:11px;background:transparent;border:1px solid var(--ink);color:var(--pompeii);padding:14px;font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:2.5px;border-radius:0;text-transform:uppercase}
+  .sa-dot{width:7px;height:7px;background:var(--pompeii);border-radius:50%;animation:nowPlaying 2s infinite}
+  .ghost-btn{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:15px 26px;font-family:var(--mono);font-size:11px;font-weight:400;cursor:pointer;letter-spacing:2.5px;border-radius:0;text-transform:uppercase}
+  .ghost-btn:active{background:var(--paper-2)}
+</style>
+</head>
+<body>
+
+<div class="intro-curtain" id="introCurtain"><div class="intro-disc"><span class="intro-mark">magma</span></div></div>
+
+<div class="welcome" id="welcome">
+  <div class="w-vinyl"></div>
+  <div class="w-lang" id="wLang"></div>
+
+  <div class="w-center">
+    <h1 class="w-title">magma</h1>
+    <div class="w-rule"></div>
+
+    <div class="w-howto">
+      <span class="w-howto-label" data-t="howToLabel">cómo suena</span>
+      <div class="w-howto-step"><span class="w-howto-num">01</span><span class="w-howto-text" data-t="step1">Hojea las caras del disco.<small>Toca cualquier pista para verla en grande.</small></span></div>
+      <div class="w-howto-step"><span class="w-howto-num">02</span><span class="w-howto-text" data-t="step2">Marca lo que te apetece.<small>Con el + lo añades a la mesa.</small></span></div>
+      <div class="w-howto-step"><span class="w-howto-num">03</span><span class="w-howto-text" data-t="step3">Le damos al play.<small>Pulsa enviar y va camino de la barra.</small></span></div>
+    </div>
+  </div>
+
+  <div class="w-bottom">
+    <div class="w-mesa-line"><span data-t="table">Mesa</span><strong id="wMesa">07</strong></div>
+    <button class="w-btn" id="welcomeBtn"><span data-t="start">Press play</span></button>
+  </div>
+</div>
+
+<header>
+  <div class="head-top">
+    <div class="brand"><div class="brand-text"><h1>magma</h1><span data-t="tagline">Side · Tonight / Lounge · Valencia</span></div></div>
+    <div class="head-right">
+      <div class="mesa-chip"><span data-t="tableShort">M</span><strong id="mesaNum">07</strong></div>
+      <div class="lang" id="hLang"></div>
+    </div>
+  </div>
+  <div class="tabs" id="tabs"></div>
+</header>
+
+<main id="menu"></main>
+
+<div class="upsell" id="upsell">
+  <button class="upsell-close" id="upsellClose">×</button>
+  <div class="upsell-head">
+    <span class="upsell-eye" id="upsellEye">maridado</span>
+    <h4 class="upsell-title" id="upsellTitle">Pídete la copa también</h4>
+    <p class="upsell-sub" id="upsellSub">El humo entra mejor con algo fresco al lado.</p>
+  </div>
+  <div class="upsell-row" id="upsellRow"></div>
+</div>
+
+<div class="cart-bar hidden" id="cartBar">
+  <button class="cart-btn" id="cartBtn">
+    <span class="cart-left"><span class="cart-count" id="cartCount">0</span> <span class="cart-mid" data-t="viewOrder">now playing · your order</span></span>
+    <span id="cartTotal">0,00 €</span>
+  </button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="detail" id="detail">
+  <div class="dt-imgwrap"><div id="dtFav"></div><div class="dt-vinyl"></div><button class="dt-close" id="dtClose">×</button></div>
+  <div class="dt-body">
+    <div class="dt-num" id="dtNum"></div>
+    <div class="dt-name" id="dtName"></div>
+    <div class="dt-cat" id="dtCat"></div>
+    <div class="dt-price" id="dtPrice"></div>
+    <div class="dt-desc" id="dtDesc"></div>
+    <div id="dtMeta"></div>
+  </div>
+  <div class="dt-foot"><div class="dt-qty"><button id="dtMinus">−</button><span id="dtQty">1</span><button id="dtPlus">+</button></div><button class="dt-add" id="dtAdd"></button></div>
+</div>
+
+<div class="sheet" id="sheet">
+  <div class="sheet-head"><h2 id="sheetTitle"></h2><button class="close" id="closeSheet">×</button></div>
+  <div class="sheet-body" id="cartList"></div>
+  <div class="sheet-foot">
+    <div class="total-row"><span class="lbl" data-t="total">Total</span><span class="val" id="grandTotal">0,00 €</span></div>
+    <button class="send-btn" id="sendBtn"><span data-t="sendOrder">Send to service</span></button>
+  </div>
+</div>
+
+<div class="success" id="success">
+  <div class="success-inner">
+    <div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+    <h2 data-t="sentTitle">on its way</h2>
+    <div class="glad" data-t="sentGlad">The charcoal is being lit. We're bringing your order to the table.</div>
+    <div class="ticket" id="ticket"></div>
+    <div class="success-actions">
+      <div class="sa-status"><span class="sa-dot"></span> <span data-t="preparing">In preparation</span></div>
+      <button class="ghost-btn" id="newOrder" data-t="orderMore">Add another track</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const LANGS=[{code:"ES",flag:"🇪🇸",label:"Español"},{code:"EN",flag:"🇬🇧",label:"English"},{code:"FR",flag:"🇫🇷",label:"Français"},{code:"DE",flag:"🇩🇪",label:"Deutsch"},{code:"IT",flag:"🇮🇹",label:"Italiano"}];
+let lang = "ES";
+
+const T = {
+  ES:{hi:"cara · esta noche / vol. i",welcomeSub:"Un disco de cachimbas, cocteles y noches largas. Pon el play y tómatelo con calma.",table:"Mesa",tableShort:"M",start:"Empieza el disco",tagline:"cara esta noche / lounge · valencia",
+    viewOrder:"now playing · tu pedido",yourOrder:"tu pedido",total:"Total",sendOrder:"Enviar al servicio",sentTitle:"en marcha",sentGlad:"El carbón se está encendiendo. Te llevamos lo tuyo a la mesa.",preparing:"En preparación",orderMore:"Otra pista, por favor",emptyCart:"Aún no hay tracks",notePh:"Una nota para el servicio…",addToOrder:"Añadir al disco",add:"Añadir",thanks:"Gracias",onWay:"Va camino de tu mesa.",top:"FIRMA",intensity:"Intensidad",duration:"Duración",base:"Base",
+    sideNotesLabel:"side notes",houseRules:"Por aquí servimos así: una cachimba para dos, una copa por cabeza. El carbón tarda lo suyo; el ritmo lo pones tú.",howToLabel:"cómo suena",step1:"Hojea las caras del disco.<small>Toca cualquier pista para verla en grande.</small>",step2:"Marca lo que te apetece.<small>Con el + lo añades a la mesa.</small>",step3:"Le damos al play.<small>Pulsa enviar y va camino de la barra.</small>",upsellEye:"maridado",upsellTitle:"Pídete la copa también",upsellSub:"El humo entra mejor con algo fresco al lado.",cartNoteLabel:"antes de pedir",cartNote:"Una copa por cabeza, una cachimba por cada dos. Lo bordamos así.",cartWarn:"Tu cachimba va mejor con algo de beber al lado. ¿Le añadimos una copa?",
+    cat:{"Cachimbas":"cachimbas","Mixes":"mixes de la casa","Cocteles":"cocteles","Copas":"copas","Bebidas":"bebidas"},
+    side:{"Bebidas":"A·I","Cocteles":"A·II","Copas":"B·I","Cachimbas":"B·II","Mixes":"BONUS"},
+    eye:{"Cachimbas":"el catálogo del tabaco","Mixes":"creaciones de la casa","Cocteles":"clásicos y de autor","Copas":"licores selectos","Bebidas":"cervezas, refrescos & co."},
+    meta:{"Cachimbas":"Con carbón natural de coco. Cambios y recargas incluidos.","Mixes":"Mezclas que solo escucharás aquí.","Cocteles":"Hechos como toca. Hielo grande, copa fría.","Copas":"Servidas con la tónica o refresco a elegir.","Bebidas":"Cervezas frías y refrescos para acompañar."}},
+  EN:{hi:"side · tonight / vol. i",welcomeSub:"An album of hookah, cocktails and long evenings. Press play and take your time.",table:"Table",tableShort:"T",start:"Press play",tagline:"side tonight / lounge · valencia",
+    viewOrder:"now playing · your order",yourOrder:"your order",total:"Total",sendOrder:"Send to service",sentTitle:"on its way",sentGlad:"The charcoal is being lit. We're bringing your order to the table.",preparing:"In preparation",orderMore:"Add another track",emptyCart:"No tracks yet",notePh:"A note for service…",addToOrder:"Add to the record",add:"Add",thanks:"Thank you",onWay:"On the way to your table.",top:"SIGNATURE",intensity:"Intensity",duration:"Duration",base:"Base",
+    sideNotesLabel:"side notes",houseRules:"Here's how we serve: one hookah for two, one drink per head. The charcoal takes its time; you set the pace.",howToLabel:"how it plays",step1:"Browse the sides of the record.<small>Tap any track to see it big.</small>",step2:"Mark what you fancy.<small>The + adds it to your table.</small>",step3:"Press play.<small>Hit send and it goes to the bar.</small>",upsellEye:"pairs with",upsellTitle:"Don't forget the drink",upsellSub:"Smoke goes down easier with something cold beside it.",cartNoteLabel:"before ordering",cartNote:"One drink per head, one hookah for every two. That's how we do it.",cartWarn:"Your hookah is better with something to drink. Want to add one?",
+    cat:{"Cachimbas":"hookah","Mixes":"house mixes","Cocteles":"cocktails","Copas":"spirits","Bebidas":"drinks"},
+    side:{"Bebidas":"A·I","Cocteles":"A·II","Copas":"B·I","Cachimbas":"B·II","Mixes":"BONUS"},
+    eye:{"Cachimbas":"the tobacco catalogue","Mixes":"creations from the house","Cocteles":"classics & signatures","Copas":"select spirits","Bebidas":"beer, soda & co."},
+    meta:{"Cachimbas":"Natural coconut charcoal. Refills included.","Mixes":"Blends you'll only hear here.","Cocteles":"Made properly. Large ice, cold glass.","Copas":"Served with your mixer of choice.","Bebidas":"Ice-cold beers and soft drinks alongside."}},
+  FR:{hi:"face · ce soir / vol. i",welcomeSub:"Un album de chichas, cocktails et longues soirées. Mettez le play, prenez votre temps.",table:"Table",tableShort:"T",start:"Lancer le disque",tagline:"face ce soir / salon · valence",
+    viewOrder:"now playing · votre commande",yourOrder:"votre commande",total:"Total",sendOrder:"Envoyer au service",sentTitle:"en route",sentGlad:"Le charbon s'allume. On apporte votre commande à la table.",preparing:"En préparation",orderMore:"Ajouter une piste",emptyCart:"Aucune piste pour l'instant",notePh:"Une note pour le service…",addToOrder:"Ajouter au disque",add:"Ajouter",thanks:"Merci",onWay:"En route vers votre table.",top:"SIGNATURE",intensity:"Intensité",duration:"Durée",base:"Base",
+    sideNotesLabel:"notes de salle",houseRules:"Voici comment on sert : une chicha pour deux, un verre par tête. Le charbon prend son temps ; vous donnez le rythme.",howToLabel:"comment ça tourne",step1:"Parcourez les faces du disque.<small>Touchez une piste pour la voir en grand.</small>",step2:"Marquez ce qui vous plaît.<small>Le + l'ajoute à votre table.</small>",step3:"On lance la lecture.<small>Appuyez sur envoyer, c'est en route.</small>",upsellEye:"à marier",upsellTitle:"N'oubliez pas le verre",upsellSub:"La fumée passe mieux avec quelque chose de frais à côté.",cartNoteLabel:"avant de commander",cartNote:"Un verre par tête, une chicha pour deux. C'est comme ça qu'on fait.",cartWarn:"Votre chicha va mieux avec quelque chose à boire. On vous ajoute un verre ?",
+    cat:{"Cachimbas":"chichas","Mixes":"mélanges maison","Cocteles":"cocktails","Copas":"alcools","Bebidas":"boissons"},
+    side:{"Bebidas":"A·I","Cocteles":"A·II","Copas":"B·I","Cachimbas":"B·II","Mixes":"BONUS"},
+    eye:{"Cachimbas":"le catalogue du tabac","Mixes":"les créations de la maison","Cocteles":"classiques & signatures","Copas":"alcools sélectionnés","Bebidas":"bières, softs & co."},
+    meta:{"Cachimbas":"Charbon naturel de coco. Recharges incluses.","Mixes":"Mélanges que vous n'entendrez qu'ici.","Cocteles":"Préparés comme il faut. Glace large, verre froid.","Copas":"Servis avec votre tonic ou soda.","Bebidas":"Bières fraîches et softs à côté."}},
+  DE:{hi:"seite · heute / vol. i",welcomeSub:"Ein Album aus Shisha, Cocktails und langen Abenden. Drück Play, lass dir Zeit.",table:"Tisch",tableShort:"T",start:"Platte starten",tagline:"seite heute / lounge · valencia",
+    viewOrder:"now playing · deine bestellung",yourOrder:"deine bestellung",total:"Gesamt",sendOrder:"An den Service",sentTitle:"unterwegs",sentGlad:"Die Kohle wird angezündet. Wir bringen alles an den Tisch.",preparing:"Wird vorbereitet",orderMore:"Noch eine Spur",emptyCart:"Noch keine Spuren",notePh:"Eine Notiz für den Service…",addToOrder:"Zur Platte hinzufügen",add:"Hinzufügen",thanks:"Danke",onWay:"Unterwegs zu deinem Tisch.",top:"SIGNATUR",intensity:"Intensität",duration:"Dauer",base:"Basis",
+    sideNotesLabel:"haus-notizen",houseRules:"So servieren wir hier: eine Shisha für zwei, ein Drink pro Kopf. Die Kohle nimmt sich Zeit; das Tempo bestimmst du.",howToLabel:"so spielt es",step1:"Durchblättere die Seiten der Platte.<small>Tippe eine Spur an für Großansicht.</small>",step2:"Markiere, was dir gefällt.<small>Mit dem + landet es am Tisch.</small>",step3:"Drück Play.<small>Senden, schon ist es unterwegs.</small>",upsellEye:"passt zu",upsellTitle:"Vergiss den Drink nicht",upsellSub:"Der Rauch geht mit etwas Kaltem dazu leichter runter.",cartNoteLabel:"bevor du bestellst",cartNote:"Ein Drink pro Kopf, eine Shisha für zwei. So machen wir es.",cartWarn:"Deine Shisha ist mit etwas zu Trinken besser. Was dazubestellen?",
+    cat:{"Cachimbas":"shisha","Mixes":"haus-mixes","Cocteles":"cocktails","Copas":"spirituosen","Bebidas":"getränke"},
+    side:{"Bebidas":"A·I","Cocteles":"A·II","Copas":"B·I","Cachimbas":"B·II","Mixes":"BONUS"},
+    eye:{"Cachimbas":"der tabak-katalog","Mixes":"kreationen des hauses","Cocteles":"klassiker & signaturen","Copas":"ausgewählte spirituosen","Bebidas":"bier, softs & co."},
+    meta:{"Cachimbas":"Natürliche Kokoskohle. Nachfüllungen inklusive.","Mixes":"Mischungen, die du nur hier hörst.","Cocteles":"Wie sich's gehört. Großes Eis, kaltes Glas.","Copas":"Mit deinem Wunsch-Filler.","Bebidas":"Eiskalte Biere und Softdrinks dazu."}},
+  IT:{hi:"facciata · stasera / vol. i",welcomeSub:"Un album di cachimbe, cocktail e serate lunghe. Premi play, prenditi tempo.",table:"Tavolo",tableShort:"T",start:"Premi play",tagline:"facciata stasera / salotto · valencia",
+    viewOrder:"now playing · il tuo ordine",yourOrder:"il tuo ordine",total:"Totale",sendOrder:"Invia al servizio",sentTitle:"in arrivo",sentGlad:"Il carbone si sta accendendo. Te lo portiamo al tavolo.",preparing:"In preparazione",orderMore:"Aggiungi una traccia",emptyCart:"Nessuna traccia ancora",notePh:"Una nota per il servizio…",addToOrder:"Aggiungi al disco",add:"Aggiungi",thanks:"Grazie",onWay:"In arrivo al tuo tavolo.",top:"FIRMA",intensity:"Intensità",duration:"Durata",base:"Base",
+    sideNotesLabel:"note di sala",houseRules:"Qui serviamo così: una cachimba per due, un bicchiere a testa. Il carbone prende il suo tempo; il ritmo lo fai tu.",howToLabel:"come gira",step1:"Sfoglia le facciate del disco.<small>Tocca una traccia per vederla grande.</small>",step2:"Segna quel che ti va.<small>Il + lo aggiunge al tavolo.</small>",step3:"Premi play.<small>Invia e parte verso il bar.</small>",upsellEye:"abbinato a",upsellTitle:"Non dimenticare il bicchiere",upsellSub:"Il fumo va meglio con qualcosa di fresco accanto.",cartNoteLabel:"prima di ordinare",cartNote:"Un bicchiere a testa, una cachimba per due. Facciamo così.",cartWarn:"La tua cachimba sta meglio con qualcosa da bere. Aggiungiamo un drink?",
+    cat:{"Cachimbas":"cachimbe","Mixes":"mix della casa","Cocteles":"cocktail","Copas":"distillati","Bebidas":"bevande"},
+    side:{"Bebidas":"A·I","Cocteles":"A·II","Copas":"B·I","Cachimbas":"B·II","Mixes":"BONUS"},
+    eye:{"Cachimbas":"il catalogo del tabacco","Mixes":"creazioni della casa","Cocteles":"classici & firme","Copas":"distillati selezionati","Bebidas":"birre, bibite & co."},
+    meta:{"Cachimbas":"Carbone naturale di cocco. Ricariche incluse.","Mixes":"Miscele che senti solo qui.","Cocteles":"Fatti come si deve. Ghiaccio grande, bicchiere freddo.","Copas":"Serviti con la tua bibita preferita.","Bebidas":"Birre ghiacciate e bibite a fianco."}},
+};
+
+const MENU = [
+  { cat:"Bebidas", items:[
+    { id:"b1", num:"01", name:"Mahou Caña", price:3.00, intensity:0, duration:"33cl",
+      desc:{ES:"Cerveza de barril, 33cl.",EN:"Draft beer, 33cl.",FR:"Bière pression, 33cl.",DE:"Fassbier, 33cl.",IT:"Birra alla spina, 33cl."}},
+    { id:"b2", num:"02", name:"Estrella Galicia", price:4.00, intensity:0, duration:"33cl",
+      desc:{ES:"Cerveza botellín 33cl.",EN:"Bottle beer 33cl.",FR:"Bière bouteille 33cl.",DE:"Flaschenbier 33cl.",IT:"Birra bottiglia 33cl."}},
+    { id:"b3", num:"03", name:"Heineken", price:4.00, intensity:0, duration:"33cl",
+      desc:{ES:"Cerveza holandesa 33cl.",EN:"Dutch beer 33cl.",FR:"Bière hollandaise 33cl.",DE:"Holländisches Bier 33cl.",IT:"Birra olandese 33cl."}},
+    { id:"b4", num:"04", name:"Corona Extra", best:true, price:4.00, intensity:0, duration:"33cl",
+      desc:{ES:"Mexicana 33cl, con lima.",EN:"Mexican 33cl, with lime.",FR:"Mexicaine 33cl, citron vert.",DE:"Mexikanisch 33cl, mit Limette.",IT:"Messicana 33cl, con lime."}},
+    { id:"b5", num:"05", name:"Coca-Cola", price:3.00, intensity:0, duration:"33cl",
+      desc:{ES:"Botellín 33cl.",EN:"Bottle 33cl.",FR:"Bouteille 33cl.",DE:"Flasche 33cl.",IT:"Bottiglia 33cl."}},
+    { id:"b6", num:"06", name:"Aquarius Limón", price:3.00, intensity:0, duration:"33cl",
+      desc:{ES:"Isotónica de limón 33cl.",EN:"Lemon isotonic 33cl.",FR:"Isotonique citron 33cl.",DE:"Isotonisch Zitrone 33cl.",IT:"Isotonica limone 33cl."}},
+    { id:"b7", num:"07", name:"Schweppes Premium", price:4.00, intensity:0, duration:"20cl",
+      desc:{ES:"Tónica premium, botellín 20cl.",EN:"Premium tonic, 20cl.",FR:"Tonic premium, 20cl.",DE:"Premium-Tonic, 20cl.",IT:"Tonica premium, 20cl."}},
+    { id:"b8", num:"08", name:"Agua Mineral", price:2.50, intensity:0, duration:"50cl",
+      desc:{ES:"Agua mineral natural 50cl.",EN:"Natural mineral water 50cl.",FR:"Eau minérale 50cl.",DE:"Mineralwasser 50cl.",IT:"Acqua minerale 50cl."}},
+  ]},
+  { cat:"Cocteles", items:[
+    { id:"c1", num:"01", name:"Negroni", price:11.00, intensity:4, duration:"≈05",
+      desc:{ES:"Gin, vermut rojo, Campari. Sobre piedra de hielo.",EN:"Gin, red vermouth, Campari. Over stone ice.",FR:"Gin, vermouth rouge, Campari.",DE:"Gin, roter Wermut, Campari.",IT:"Gin, vermouth rosso, Campari."}},
+    { id:"c2", num:"02", name:"Old Fashioned", best:true, price:13.00, intensity:5, duration:"≈06",
+      desc:{ES:"Bourbon, azúcar, Angostura, naranja.",EN:"Bourbon, sugar, Angostura, orange.",FR:"Bourbon, sucre, Angostura, orange.",DE:"Bourbon, Zucker, Angostura, Orange.",IT:"Bourbon, zucchero, Angostura, arancia."}},
+    { id:"c3", num:"03", name:"Espresso Martini", price:11.00, intensity:3, duration:"≈04",
+      desc:{ES:"Vodka, café exprés, Kahlúa. Espuma sedosa.",EN:"Vodka, espresso, Kahlúa. Silky foam.",FR:"Vodka, espresso, Kahlúa.",DE:"Wodka, Espresso, Kahlúa.",IT:"Vodka, espresso, Kahlúa."}},
+    { id:"c4", num:"04", name:"Mojito", price:9.00, intensity:2, duration:"≈05",
+      desc:{ES:"Ron blanco, menta fresca, lima, soda.",EN:"White rum, fresh mint, lime, soda.",FR:"Rhum blanc, menthe fraîche, citron vert.",DE:"Weißer Rum, frische Minze, Limette.",IT:"Rum bianco, menta fresca, lime."}},
+    { id:"c5", num:"05", name:"Gin Tonic Premium", price:11.00, intensity:2, duration:"≈04",
+      desc:{ES:"Hendrick's, tónica premium, pepino, pétalos.",EN:"Hendrick's, premium tonic, cucumber, petals.",FR:"Hendrick's, tonic premium, concombre.",DE:"Hendrick's, Premium-Tonic, Gurke.",IT:"Hendrick's, tonica premium, cetriolo."}},
+    { id:"c6", num:"06", name:"Aperol Spritz", price:9.00, intensity:1, duration:"≈03",
+      desc:{ES:"Aperol, prosecco, soda. Refrescante.",EN:"Aperol, prosecco, soda. Refreshing.",FR:"Aperol, prosecco, soda.",DE:"Aperol, Prosecco, Soda.",IT:"Aperol, prosecco, soda."}},
+  ]},
+  { cat:"Copas", items:[
+    { id:"p1", num:"01", name:"Macallan 12", price:11.00, intensity:5, duration:"≈04",
+      desc:{ES:"Whisky escocés single malt 12 años.",EN:"Scotch single malt 12 years.",FR:"Whisky écossais single malt 12 ans.",DE:"Scotch Single Malt 12 Jahre.",IT:"Whisky scozzese single malt 12 anni."}},
+    { id:"p2", num:"02", name:"Grey Goose", price:9.00, intensity:4, duration:"≈03",
+      desc:{ES:"Vodka francés premium, servido frío.",EN:"Premium French vodka, served cold.",FR:"Vodka française premium, servie froide.",DE:"Französischer Premium-Wodka.",IT:"Vodka francese premium."}},
+    { id:"p3", num:"03", name:"Havana 7", price:8.00, intensity:4, duration:"≈03",
+      desc:{ES:"Ron cubano añejo 7 años.",EN:"Cuban aged rum 7 years.",FR:"Rhum cubain vieilli 7 ans.",DE:"Kubanischer Rum 7 Jahre.",IT:"Rum cubano invecchiato 7 anni."}},
+    { id:"p4", num:"04", name:"Gin Mare", best:true, price:8.00, intensity:3, duration:"≈03",
+      desc:{ES:"Gin español mediterráneo, botánicos.",EN:"Spanish Mediterranean gin, botanicals.",FR:"Gin espagnol méditerranéen.",DE:"Spanischer Mittelmeer-Gin.",IT:"Gin spagnolo mediterraneo."}},
+    { id:"p5", num:"05", name:"Cubata Premium", price:9.00, intensity:3, duration:"≈04",
+      desc:{ES:"Ron Bacardi o vodka con refresco. Servido alto.",EN:"Bacardi rum or vodka with soda.",FR:"Rhum Bacardi ou vodka avec soda.",DE:"Bacardi Rum oder Wodka mit Soda.",IT:"Rum Bacardi o vodka con soda."}},
+  ]},
+  { cat:"Cachimbas", items:[
+    { id:"h1", num:"01", name:"Doble Menta", best:true, price:16.00, intensity:2, duration:"1·00",
+      desc:{ES:"Doble menta cristal. Refrescante, fresco, base limpia.",EN:"Double crystal mint. Fresh, clean base.",FR:"Double menthe cristal. Frais, base nette.",DE:"Doppelte Kristallminze. Frisch, klare Basis.",IT:"Doppia menta cristallo. Fresca, base pulita."}},
+    { id:"h2", num:"02", name:"Frutos Rojos", price:17.00, intensity:2, duration:"1·00",
+      desc:{ES:"Fresa, frambuesa y arándano. Dulce, frutal.",EN:"Strawberry, raspberry, blueberry. Sweet, fruity.",FR:"Fraise, framboise, myrtille. Sucré, fruité.",DE:"Erdbeere, Himbeere, Heidelbeere. Süß, fruchtig.",IT:"Fragola, lampone, mirtillo. Dolce, fruttato."}},
+    { id:"h3", num:"03", name:"Sandía Glacé", price:18.00, intensity:1, duration:"1·00",
+      desc:{ES:"Sandía cristal con notas heladas. Suave.",EN:"Crystal watermelon with icy notes. Soft.",FR:"Pastèque cristal aux notes glacées.",DE:"Wassermelone mit eisigen Noten.",IT:"Anguria cristallo con note ghiacciate."}},
+    { id:"h4", num:"04", name:"Manzana Persa", price:17.00, intensity:3, duration:"1·00",
+      desc:{ES:"Manzana doble con especias persas. Intenso.",EN:"Double apple with Persian spices. Intense.",FR:"Double pomme aux épices persanes.",DE:"Doppelapfel mit persischen Gewürzen.",IT:"Doppia mela con spezie persiane."}},
+    { id:"h5", num:"05", name:"Maracuyá Tropical", price:19.00, intensity:2, duration:"1·00",
+      desc:{ES:"Maracuyá y mango. Exótico, dulce.",EN:"Passion fruit and mango. Exotic, sweet.",FR:"Fruit de la passion et mangue.",DE:"Passionsfrucht und Mango.",IT:"Frutto della passione e mango."}},
+    { id:"h6", num:"06", name:"Uva Helada", price:18.00, intensity:1, duration:"1·00",
+      desc:{ES:"Uva moscatel con frío extra. Sutil, refrescante.",EN:"Muscat grape extra iced. Subtle.",FR:"Raisin muscat extra glacé.",DE:"Moscato-Traube extra eisig.",IT:"Uva moscato extra ghiacciata."}},
+    { id:"h7", num:"07", name:"Coco Café", best:true, price:21.00, intensity:3, duration:"1·00",
+      desc:{ES:"Coco rallado y espresso. Cremoso, intenso, postre.",EN:"Coconut and espresso. Creamy, intense.",FR:"Noix de coco et espresso.",DE:"Kokos und Espresso.",IT:"Cocco ed espresso."}},
+    { id:"h8", num:"08", name:"Té Verde Limón", price:19.00, intensity:2, duration:"1·00",
+      desc:{ES:"Té verde matcha y limón fresco. Herbal.",EN:"Matcha green tea and fresh lemon.",FR:"Thé vert matcha et citron frais.",DE:"Matcha-Grüntee und frische Zitrone.",IT:"Tè verde matcha e limone fresco."}},
+    { id:"h9", num:"09", name:"Pistacho Cremoso", price:22.00, intensity:3, duration:"1·00",
+      desc:{ES:"Pistacho persa, cremoso, casi postre.",EN:"Persian pistachio, creamy, dessert-like.",FR:"Pistache persane, crémeuse.",DE:"Persische Pistazie, cremig.",IT:"Pistacchio persiano, cremoso."}},
+  ]},
+  { cat:"Mixes", items:[
+    { id:"m1", num:"01", name:"Magma", best:true, price:24.00, intensity:3, duration:"1·00",
+      desc:{ES:"Menta cristal + sandía + frío de hielo. La firma de la casa.",EN:"Crystal mint + watermelon + extra ice. House signature.",FR:"Menthe cristal + pastèque + glace extra.",DE:"Kristallminze + Wassermelone + extra Eis.",IT:"Menta cristallo + anguria + ghiaccio extra."}},
+    { id:"m2", num:"02", name:"Brasa", price:26.00, intensity:3, duration:"1·00",
+      desc:{ES:"Frutos rojos + miel + jengibre. Dulce con calor.",EN:"Red berries + honey + ginger. Sweet with warmth.",FR:"Fruits rouges + miel + gingembre.",DE:"Beeren + Honig + Ingwer.",IT:"Frutti rossi + miele + zenzero."}},
+    { id:"m3", num:"03", name:"Caldera", price:25.00, intensity:3, duration:"1·00",
+      desc:{ES:"Coco + caramelo + crema. Postre líquido.",EN:"Coconut + caramel + cream. Liquid dessert.",FR:"Noix de coco + caramel + crème.",DE:"Kokos + Karamell + Sahne.",IT:"Cocco + caramello + crema."}},
+    { id:"m4", num:"04", name:"Eclipse", price:26.00, intensity:4, duration:"1·15",
+      desc:{ES:"Uva moscatel + moras + violeta. Floral oscuro.",EN:"Muscat + blackberries + violet. Dark floral.",FR:"Muscat + mûres + violette.",DE:"Moscato + Brombeeren + Veilchen.",IT:"Moscato + more + viola."}},
+    { id:"m5", num:"05", name:"Vesubio", best:true, price:28.00, intensity:4, duration:"1·15",
+      desc:{ES:"Fresa + cardamomo + cava. Frutal con burbujas.",EN:"Strawberry + cardamom + cava. Fruity with bubbles.",FR:"Fraise + cardamome + cava.",DE:"Erdbeere + Kardamom + Cava.",IT:"Fragola + cardamomo + cava."}},
+  ]},
+];
+
+let cart = {};
+const fmt = n => n.toFixed(2).replace(".",",") + " €";
+function tt(k){ return T[lang][k] || T.ES[k] || k; }
+
+const OVERRIDES_KEY = "hookah_menu_overrides_v1";
+const BASE_PRICES = {};
+MENU.forEach(s => s.items.forEach(it => { BASE_PRICES[it.id] = it.price; }));
+function applyMenuOverrides(){
+  let ov={}; try{ ov=JSON.parse(localStorage.getItem(OVERRIDES_KEY)||"{}"); }catch(e){}
+  MENU.forEach(s => s.items.forEach(it => {
+    const o = ov[it.id] || {};
+    it.price  = (o.price!=null) ? Number(o.price) : BASE_PRICES[it.id];
+    it.soldOut = !!o.soldOut;
+  }));
+}
+applyMenuOverrides();
+const SOLD_OUT_LABEL = {ES:"agotado",EN:"sold out",FR:"épuisé",DE:"aus",IT:"esaurito"};
+function soldOutTxt(){ return SOLD_OUT_LABEL[lang] || SOLD_OUT_LABEL.ES; }
+
+function buzz(ms){ if(navigator.vibrate) try{navigator.vibrate(ms)}catch(e){} }
+
+const params = new URLSearchParams(location.search);
+const mesa = params.get("mesa") || "07";
+document.getElementById("mesaNum").textContent = mesa;
+document.getElementById("wMesa").textContent = mesa;
+
+function applyLang(){
+  document.querySelectorAll("[data-t]").forEach(el=>{ el.innerHTML = tt(el.dataset.t); });
+  buildLangSelectors(); renderTabs(); renderMenu(); updateBar();
+  const st = document.getElementById("sheetTitle");
+  if(st) st.innerHTML = `${tt("yourOrder")} <small>mesa ${mesa}</small>`;
+  if(document.getElementById("sheet").classList.contains("open")) renderCart();
+}
+function buildLangSelectors(){
+  const cur = LANGS.find(l=>l.code===lang);
+  ["hLang","wLang"].forEach(id=>{
+    const host = document.getElementById(id);
+    host.innerHTML=`<button class="lang-btn"><span class="fl">${cur.flag}</span>${cur.code}<span class="ar">▾</span></button><div class="lang-menu">${LANGS.map(l=>`<div class="lang-opt ${l.code===lang?'active':''}" data-lang="${l.code}"><span class="fl">${l.flag}</span>${l.label}</div>`).join("")}</div>`;
+    const btn=host.querySelector(".lang-btn"), menu=host.querySelector(".lang-menu");
+    btn.onclick=e=>{ e.stopPropagation(); document.querySelectorAll(".lang-menu").forEach(m=>{ if(m!==menu) m.classList.remove("open"); }); menu.classList.toggle("open"); };
+    menu.querySelectorAll(".lang-opt").forEach(o=>{ o.onclick=e=>{ e.stopPropagation(); lang=o.dataset.lang; buzz(6); applyLang(); }; });
+  });
+}
+document.addEventListener("click", ()=> document.querySelectorAll(".lang-menu").forEach(m=>m.classList.remove("open")));
+
+function renderTabs(){
+  const tabsEl=document.getElementById("tabs"); tabsEl.innerHTML="";
+  MENU.forEach((sec,i)=>{
+    const t=document.createElement("button"); t.className="tab"+(i===0?" active":""); t.textContent=(T[lang].cat[sec.cat]||sec.cat).toLowerCase();
+    t.onclick=()=>{ document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active")); t.classList.add("active");
+      const el=document.getElementById("sec-"+i);
+      if(el){ const y=el.getBoundingClientRect().top+window.scrollY-100; window.scrollTo({top:y,behavior:"smooth"}); }
+    };
+    tabsEl.appendChild(t);
+  });
+}
+
+function renderMenu(){
+  const menuEl=document.getElementById("menu"); menuEl.innerHTML="";
+  const eyeMap = T[lang].eye || T.ES.eye || {};
+  const metaMap = T[lang].meta || T.ES.meta || {};
+  const sideMap = T[lang].side || T.ES.side || {};
+  MENU.forEach((sec,i)=>{
+    const header=document.createElement("div"); header.className="sec-header"; header.id="sec-"+i;
+    const sideLabel = sideMap[sec.cat] || `${String(i+1).padStart(2,'0')}`;
+    const eyeText = eyeMap[sec.cat] || "";
+    const metaText = metaMap[sec.cat] || "";
+    const heading = T[lang].cat[sec.cat] || sec.cat;
+    header.innerHTML = `<div class="sec-side">side <strong>${sideLabel}</strong></div><div class="sec-title-wrap"><h2 class="sec-heading">${heading}</h2>${eyeText ? `<div class="sec-meta">${eyeText}. ${metaText}</div>` : ""}</div>`;
+    menuEl.appendChild(header);
+
+    const rule = document.createElement("div"); rule.className="sec-rule"; menuEl.appendChild(rule);
+
+    sec.items.forEach((it, idx)=>{
+      const card=document.createElement("div"); card.className="item"+(it.soldOut?" soldout":""); card.id="card-"+it.id;
+      card.style.setProperty("--i", idx);
+      if(cart[it.id]?.qty>0) card.classList.add("has-qty");
+      const favMark = (it.best && !it.soldOut) ? `<span class="fav-mark">◉</span>` : "";
+      const metaInline = it.intensity>0 ? `<span class="item-meta">${"◆".repeat(Math.min(it.intensity,5))}${"◇".repeat(Math.max(0,5-it.intensity))}</span>` : ``;
+      const ctrlHtml = it.soldOut ? `<span class="soldout-tag">${soldOutTxt()}</span>` : `<div id="ctrl-${it.id}" class="ctrl-wrap" data-stop></div>`;
+      card.innerHTML = `<span class="item-num">${it.num||""}</span><div class="item-body"><span class="item-name">${favMark}${it.name.toLowerCase()}</span>${metaInline}</div><span class="duration">${it.duration||""}</span><span class="price">${fmt(it.price)}</span>${ctrlHtml}`;
+      card.onclick=e=>{ if(e.target.closest("[data-stop]")) return; openDetail(it.id); };
+      menuEl.appendChild(card);
+      if(!it.soldOut) renderCtrl(it);
+    });
+  });
+  setTimeout(()=>setupRevealObserver(), 50);
+}
+
+function renderCtrl(it){
+  const wrap=document.getElementById("ctrl-"+it.id); if(!wrap) return;
+  const q=cart[it.id]?.qty||0;
+  wrap.innerHTML=q===0?`<button class="add" data-add="${it.id}">+</button>`:`<div class="qty-ctrl"><button data-dec="${it.id}">−</button><span>${q}</span><button data-inc="${it.id}">+</button></div>`;
+  const card = document.getElementById("card-"+it.id);
+  if(card){ if(q>0) card.classList.add("has-qty"); else card.classList.remove("has-qty"); }
+}
+function findItem(id){ for(const s of MENU) for(const it of s.items) if(it.id===id) return it; }
+function catOf(id){ for(const s of MENU) for(const it of s.items) if(it.id===id) return s.cat; }
+
+document.addEventListener("click",e=>{
+  const open=e.target.closest("[data-open-detail]");
+  if(open){ openDetail(open.dataset.openDetail); return; }
+  const add=e.target.closest("[data-add]"),inc=e.target.closest("[data-inc]"),dec=e.target.closest("[data-dec]");
+  if(add){ e.stopPropagation(); flyToCart(add); changeQty(add.dataset.add,1); }
+  if(inc){ e.stopPropagation(); flyToCart(inc); changeQty(inc.dataset.inc,1); }
+  if(dec){ e.stopPropagation(); changeQty(dec.dataset.dec,-1); }
+});
+
+function isHookah(it){ const c = catOf(it.id); return c === "Cachimbas" || c === "Mixes"; }
+function isDrink(it){ const c = catOf(it.id); return c === "Cocteles" || c === "Copas" || c === "Bebidas"; }
+function totalHookahs(){ return Object.values(cart).filter(c=>isHookah(c.item)).reduce((a,c)=>a+c.qty,0); }
+function totalDrinks(){ return Object.values(cart).filter(c=>isDrink(c.item)).reduce((a,c)=>a+c.qty,0); }
+
+let upsellTimer = null;
+function showUpsell(){
+  const picks = ["c2","c4","b4"].map(id=>findItem(id)).filter(it=>it && !it.soldOut);
+  if(picks.length===0) return;
+  document.getElementById("upsellEye").textContent = tt("upsellEye");
+  document.getElementById("upsellTitle").textContent = tt("upsellTitle");
+  document.getElementById("upsellSub").textContent = tt("upsellSub");
+  const row = document.getElementById("upsellRow");
+  row.innerHTML = picks.map(p=>`<button class="upsell-pick" data-add-quick="${p.id}"><div class="upsell-pick-info"><span class="upsell-pick-name">${p.name.toLowerCase()}</span><span class="upsell-pick-price">${fmt(p.price)}</span></div><span class="upsell-pick-add">+</span></button>`).join("");
+  const el = document.getElementById("upsell");
+  el.classList.add("show");
+  clearTimeout(upsellTimer);
+  upsellTimer = setTimeout(()=>el.classList.remove("show"), 9000);
+}
+function hideUpsell(){ document.getElementById("upsell").classList.remove("show"); clearTimeout(upsellTimer); }
+
+function changeQty(id,delta){
+  const it=findItem(id); if(!it) return;
+  if(it.soldOut && delta>0) return;
+  if(!cart[id]) cart[id]={item:it,qty:0,note:""};
+  cart[id].qty+=delta; if(cart[id].qty<=0) delete cart[id];
+  renderCtrl(it); updateBar();
+  if(delta>0){
+    buzz(6); flashCard(id);
+    if(isHookah(it) && totalDrinks() < totalHookahs()*2) setTimeout(showUpsell, 320);
+  }
+  if(document.getElementById("sheet").classList.contains("open")) renderCart();
+}
+function flashCard(id){ const c=document.getElementById("card-"+id); if(c){ c.classList.remove("flash"); void c.offsetWidth; c.classList.add("flash"); } }
+function totalItems(){ return Object.values(cart).reduce((a,c)=>a+c.qty,0); }
+function totalPrice(){ return Object.values(cart).reduce((a,c)=>a+c.qty*c.item.price,0); }
+
+let _lastN=0;
+function updateBar(){
+  const n=totalItems(),bar=document.getElementById("cartBar");
+  const countEl = document.getElementById("cartCount");
+  countEl.textContent=n;
+  document.getElementById("cartTotal").textContent=fmt(totalPrice());
+  if(n>0) bar.classList.remove("hidden"); else bar.classList.add("hidden");
+  if(n > _lastN){
+    countEl.classList.remove("bump");
+    void countEl.offsetWidth;
+    countEl.classList.add("bump");
+  }
+  _lastN = n;
+}
+
+function flyToCart(originEl){
+  const cartBar = document.getElementById("cartBar");
+  const r = originEl.getBoundingClientRect();
+  const cb = cartBar.getBoundingClientRect();
+  const startX = r.left + r.width/2 - 11;
+  const startY = r.top + r.height/2 - 11;
+  const endX = cb.left + 40;
+  const endY = cb.top + cb.height/2;
+  const flyer = document.createElement("div");
+  flyer.className = "flyer";
+  flyer.style.left = startX + "px";
+  flyer.style.top = startY + "px";
+  document.body.appendChild(flyer);
+  requestAnimationFrame(()=>{
+    flyer.style.transform = `translate(${endX-startX}px, ${endY-startY}px) scale(.25)`;
+    flyer.style.opacity = "0";
+  });
+  setTimeout(()=>flyer.remove(), 900);
+}
+
+let _sectionObserver = null;
+function setupRevealObserver(){
+  if(_sectionObserver) _sectionObserver.disconnect();
+  _sectionObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add("in-view");
+        _sectionObserver.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".sec-header, .item").forEach(el => _sectionObserver.observe(el));
+}
+
+let detailId=null,detailQty=1;
+const detail=document.getElementById("detail");
+
+function buildDetailMeta(it){
+  const rows=[];
+  if(it.intensity>0){
+    rows.push({label:tt("intensity"),val:"◆".repeat(Math.min(it.intensity,5))+"◇".repeat(Math.max(0,5-it.intensity))});
+  }
+  if(it.duration){
+    rows.push({label:tt("duration"),val:it.duration});
+  }
+  if(rows.length===0) return "";
+  return `<div class="dt-meta">${rows.map(r=>`<div class="dt-meta-row"><span class="dt-meta-label">${r.label}</span><span class="dt-meta-val">${r.val}</span></div>`).join("")}</div>`;
+}
+
+function openDetail(id){
+  const it=findItem(id); if(!it) return;
+  detailId=id; detailQty=1;
+  document.getElementById("dtFav").innerHTML=it.best&&!it.soldOut?`<span class="dt-fav">${tt("top").toLowerCase()}</span>`:"";
+  document.getElementById("dtNum").textContent = (T[lang].cat[catOf(it.id)]||catOf(it.id))+" · "+(it.num||"");
+  document.getElementById("dtCat").textContent = "";
+  document.getElementById("dtName").textContent=it.name.toLowerCase();
+  document.getElementById("dtPrice").innerHTML=fmt(it.price)+(it.soldOut?` <span class="dt-soldout">${soldOutTxt()}</span>`:"");
+  document.getElementById("dtDesc").textContent=it.desc[lang];
+  document.getElementById("dtMeta").innerHTML = buildDetailMeta(it);
+  document.getElementById("dtQty").textContent=detailQty;
+  const dtAdd=document.getElementById("dtAdd");
+  dtAdd.textContent=it.soldOut?soldOutTxt():tt("addToOrder");
+  dtAdd.classList.toggle("disabled",!!it.soldOut); dtAdd.disabled=!!it.soldOut;
+  document.getElementById("overlay").classList.add("open"); detail.classList.add("open");
+  document.querySelector(".dt-body").scrollTop = 0;
+}
+function closeDetail(){ detail.classList.remove("open"); if(!document.getElementById("sheet").classList.contains("open")) document.getElementById("overlay").classList.remove("open"); }
+document.getElementById("dtClose").onclick=closeDetail;
+document.getElementById("dtMinus").onclick=()=>{ if(detailQty>1){detailQty--; document.getElementById("dtQty").textContent=detailQty;} };
+document.getElementById("dtPlus").onclick=()=>{ detailQty++; document.getElementById("dtQty").textContent=detailQty; };
+document.getElementById("dtAdd").onclick=()=>{ if(document.getElementById("dtAdd").disabled) return; for(let k=0;k<detailQty;k++) changeQty(detailId,1); closeDetail(); };
+
+const overlay=document.getElementById("overlay"),sheet=document.getElementById("sheet");
+function openSheet(){ renderCart(); overlay.classList.add("open"); sheet.classList.add("open"); }
+function closeSheet(){ overlay.classList.remove("open"); sheet.classList.remove("open"); }
+document.getElementById("cartBtn").onclick=openSheet;
+document.getElementById("closeSheet").onclick=closeSheet;
+overlay.onclick=()=>{ closeSheet(); closeDetail(); };
+
+function renderCart(){
+  const list=document.getElementById("cartList"), entries=Object.entries(cart);
+  if(entries.length===0){ list.innerHTML=`<div class="empty">${tt("emptyCart")}</div>`; document.getElementById("grandTotal").textContent="0,00 €"; document.getElementById("sendBtn").disabled=true; return; }
+  document.getElementById("sendBtn").disabled=false;
+  const hookahCount = totalHookahs();
+  const drinkCount = totalDrinks();
+  const warnHtml = (hookahCount>0 && drinkCount===0) ? `<div class="cart-warn">${tt("cartWarn")}</div>` : "";
+  const noteHtml = `<div class="cart-note"><span class="cart-note-label">${tt("cartNoteLabel")}</span>${tt("cartNote")}</div>`;
+  list.innerHTML = warnHtml + noteHtml + entries.map(([id,c])=>`<div class="cart-item"><div class="ci-top"><span class="ci-name">${c.item.name.toLowerCase()}</span><span class="ci-price">${fmt(c.item.price*c.qty)}</span></div><div class="ci-foot"><div class="qty-ctrl"><button data-dec="${id}">−</button><span>${c.qty}</span><button data-inc="${id}">+</button></div></div><textarea class="note-input" rows="1" placeholder="${tt("notePh")}" data-note="${id}">${c.note||""}</textarea></div>`).join("");
+  document.getElementById("grandTotal").textContent=fmt(totalPrice());
+  list.querySelectorAll("[data-note]").forEach(t=>{ t.oninput=()=>{ cart[t.dataset.note]&&(cart[t.dataset.note].note=t.value); }; });
+}
+
+function buildTicket(order){
+  const hora=new Date().toLocaleTimeString(lang==="EN"?"en-GB":lang==="FR"?"fr-FR":lang==="DE"?"de-DE":lang==="IT"?"it-IT":"es-ES",{hour:"2-digit",minute:"2-digit"});
+  const lines=order.items.map(it=>`<div class="tk-line"><div class="ql"><span class="q">${String(it.qty).padStart(2,'0')}</span><span class="nm">${it.name.toLowerCase()}${it.note?`<small>${it.note}</small>`:""}</span></div><span class="pr">${fmt(it.price*it.qty)}</span></div>`).join("");
+  return `<div class="tk-top"><h3>magma</h3><div class="meta">${tt("tableShort")} ${order.mesa} · ${hora}</div><div class="tk-no">cat. № ${order.no}</div></div>${lines}<div class="tk-sep"></div><div class="tk-total"><span>${tt("total")}</span><span>${fmt(order.total)}</span></div><div class="tk-foot">${tt("thanks")} · ${tt("onWay")}</div>`;
+}
+
+const STORE_KEY="hookah_orders_v1";
+function pushToBar(order){
+  let list; try{ list=JSON.parse(localStorage.getItem(STORE_KEY)||"[]"); }catch(e){ list=[]; }
+  if(!Array.isArray(list)) list=[]; list.push(order);
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify(list)); }catch(e){}
+}
+
+function doSend(){
+  const order={ id:"o"+Date.now()+Math.random().toString(36).slice(2,6), no:Math.floor(100+Math.random()*899),
+    mesa, ts:Date.now(), status:"new", _fresh:true,
+    items:Object.values(cart).map(c=>({name:c.item.name,qty:c.qty,note:c.note,price:c.item.price})),
+    subtotal:totalPrice(), total:totalPrice() };
+  pushToBar(order);
+  document.getElementById("ticket").innerHTML=buildTicket(order);
+  closeSheet(); document.getElementById("success").classList.add("open");
+  buzz([10,40,10]);
+}
+document.getElementById("sendBtn").onclick=()=>{ if(totalItems()===0) return; doSend(); };
+document.getElementById("newOrder").onclick=()=>{ cart={}; MENU.forEach(s=>s.items.forEach(it=>{ if(!it.soldOut) renderCtrl(it); })); updateBar(); document.getElementById("success").classList.remove("open"); window.scrollTo({top:0,behavior:"smooth"}); };
+
+document.getElementById("welcomeBtn").onclick=()=>{ buzz(6); document.getElementById("welcome").classList.add("gone"); };
+
+window.addEventListener("storage", e=>{ if(e.key===OVERRIDES_KEY){ applyMenuOverrides(); renderMenu(); updateBar(); } });
+
+setTimeout(()=>{ const c=document.getElementById("introCurtain"); if(c) c.remove(); }, 1900);
+
+// Upsell interactions
+document.getElementById("upsellClose").onclick = hideUpsell;
+document.getElementById("upsellRow").addEventListener("click", e=>{
+  const btn = e.target.closest("[data-add-quick]");
+  if(!btn) return;
+  e.stopPropagation();
+  flyToCart(btn);
+  changeQty(btn.dataset.addQuick, 1);
+  setTimeout(hideUpsell, 350);
+});
+
+applyLang();
+</script>
+</body>
+</html>
