@@ -115,8 +115,8 @@ export default async function Home() {
         </div>
         <div style={{ display: "flex", gap: "1.5rem", fontSize: "0.9rem", opacity: 0.85 }}>
           <a href="#producto" style={enlace}>Producto</a>
+          <a href="/demos" style={enlace}>Demos</a>
           <a href="#clientes" style={enlace}>Clientes</a>
-          <a href="#estado" style={enlace}>Estado</a>
           <a href="#contacto" style={enlace}>Contacto</a>
         </div>
       </nav>
@@ -169,8 +169,8 @@ export default async function Home() {
           Diseño, analítica y enlaces dinámicos sin complicarte.
         </p>
         <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
-          <a href="#contacto" style={botonPrimario}>Empezar gratis</a>
-          <a href="#producto" style={botonSecundario}>Ver cómo funciona →</a>
+          <a href="/demos" style={botonPrimario}>Demos gratuitas →</a>
+          <a href="#contacto" style={botonSecundario}>Hablar con ventas</a>
         </div>
       </section>
 
