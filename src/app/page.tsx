@@ -2,25 +2,99 @@ import { getPool } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
-type Fila = { id: number; mensaje: string };
+type Mensaje = { id: number; mensaje: string };
+type CasoExito = {
+  id: number;
+  empresa: string;
+  sector: string;
+  qr_activos: number;
+  escaneos_mes: number;
+  destacado: number;
+};
 
-async function leerMensajes(): Promise<
-  { ok: true; filas: Fila[] } | { ok: false; error: string }
-> {
-  try {
-    const [rows] = await getPool().query(
-      "SELECT id, mensaje FROM prueba ORDER BY id DESC LIMIT 10",
+// Datos sembrados la primera vez que se levanta la app. Inventados pero creíbles
+// para dar vida a la landing mientras no hay datos reales.
+const SEED_CASOS: Array<Omit<CasoExito, "id">> = [
+  { empresa: "Cervezas Volcán", sector: "Hostelería", qr_activos: 24, escaneos_mes: 18452, destacado: 1 },
+  { empresa: "Floristería Lila", sector: "Retail", qr_activos: 8, escaneos_mes: 3210, destacado: 0 },
+  { empresa: "Hotel Mediterránea", sector: "Turismo", qr_activos: 56, escaneos_mes: 41200, destacado: 1 },
+  { empresa: "Museo de Artes Vivas", sector: "Cultura", qr_activos: 12, escaneos_mes: 9870, destacado: 0 },
+  { empresa: "Logística Norte", sector: "B2B", qr_activos: 132, escaneos_mes: 73500, destacado: 1 },
+];
+
+async function asegurarTablaCasosExito() {
+  const pool = getPool();
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS casos_exito (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      empresa VARCHAR(100) NOT NULL,
+      sector VARCHAR(50) NOT NULL,
+      qr_activos INT NOT NULL DEFAULT 0,
+      escaneos_mes INT NOT NULL DEFAULT 0,
+      destacado TINYINT(1) NOT NULL DEFAULT 0
+    )
+  `);
+  const [countRows] = await pool.query("SELECT COUNT(*) AS n FROM casos_exito");
+  const n = (countRows as Array<{ n: number }>)[0]?.n ?? 0;
+  if (n === 0) {
+    const values = SEED_CASOS.map(() => "(?, ?, ?, ?, ?)").join(", ");
+    const params = SEED_CASOS.flatMap((c) => [
+      c.empresa,
+      c.sector,
+      c.qr_activos,
+      c.escaneos_mes,
+      c.destacado,
+    ]);
+    await pool.query(
+      `INSERT INTO casos_exito (empresa, sector, qr_activos, escaneos_mes, destacado) VALUES ${values}`,
+      params,
     );
-    return { ok: true, filas: rows as Fila[] };
-  } catch (e) {
-    return { ok: false, error: e instanceof Error ? e.message : String(e) };
   }
 }
 
+async function leerLanding(): Promise<{
+  ok: boolean;
+  error?: string;
+  mensajes: Mensaje[];
+  casos: CasoExito[];
+  totalEscaneos: number;
+}> {
+  try {
+    await asegurarTablaCasosExito();
+    const pool = getPool();
+    const [mensajes] = await pool.query(
+      "SELECT id, mensaje FROM prueba ORDER BY id DESC LIMIT 10",
+    );
+    const [casos] = await pool.query(
+      "SELECT id, empresa, sector, qr_activos, escaneos_mes, destacado FROM casos_exito ORDER BY escaneos_mes DESC",
+    );
+    const totalEscaneos = (casos as CasoExito[]).reduce(
+      (sum, c) => sum + c.escaneos_mes,
+      0,
+    );
+    return {
+      ok: true,
+      mensajes: mensajes as Mensaje[],
+      casos: casos as CasoExito[],
+      totalEscaneos,
+    };
+  } catch (e) {
+    return {
+      ok: false,
+      error: e instanceof Error ? e.message : String(e),
+      mensajes: [],
+      casos: [],
+      totalEscaneos: 0,
+    };
+  }
+}
+
+function formatNumero(n: number): string {
+  return n.toLocaleString("es-ES");
+}
+
 export default async function Home() {
-  const resultado = await leerMensajes();
-  const dbOk = resultado.ok;
-  const numFilas = resultado.ok ? resultado.filas.length : 0;
+  const data = await leerLanding();
 
   return (
     <>
@@ -41,6 +115,7 @@ export default async function Home() {
         </div>
         <div style={{ display: "flex", gap: "1.5rem", fontSize: "0.9rem", opacity: 0.85 }}>
           <a href="#producto" style={enlace}>Producto</a>
+          <a href="#clientes" style={enlace}>Clientes</a>
           <a href="#estado" style={enlace}>Estado</a>
           <a href="#contacto" style={enlace}>Contacto</a>
         </div>
@@ -68,7 +143,7 @@ export default async function Home() {
             letterSpacing: "0.04em",
           }}
         >
-          EN DESARROLLO · v0.1
+          EN DESARROLLO · v0.2
         </div>
         <h1
           style={{
@@ -108,22 +183,93 @@ export default async function Home() {
             gap: "1.25rem",
           }}
         >
-          <Feature
-            icono="◉"
-            titulo="Diseño a medida"
-            texto="Logos, colores y formas. Tu marca, también en cada escaneo."
-          />
-          <Feature
-            icono="⇄"
-            titulo="QR dinámicos"
-            texto="Cambia el destino sin reimprimir. Un código, infinitas campañas."
-          />
-          <Feature
-            icono="📊"
-            titulo="Analítica en vivo"
-            texto="Sabe quién, cuándo y desde dónde escanea. Decisiones con datos."
-          />
+          <Feature icono="◉" titulo="Diseño a medida" texto="Logos, colores y formas. Tu marca, también en cada escaneo." />
+          <Feature icono="⇄" titulo="QR dinámicos" texto="Cambia el destino sin reimprimir. Un código, infinitas campañas." />
+          <Feature icono="📊" titulo="Analítica en vivo" texto="Sabe quién, cuándo y desde dónde escanea. Decisiones con datos." />
         </div>
+      </section>
+
+      {/* CASOS DE ÉXITO (datos en vivo de la tabla casos_exito) */}
+      <section
+        id="clientes"
+        style={{
+          maxWidth: 1100,
+          margin: "4rem auto 2rem",
+          padding: "0 2rem",
+        }}
+      >
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", marginBottom: "1.5rem", gap: "0.5rem" }}>
+          <h2 style={{ fontSize: "1.75rem", margin: 0, letterSpacing: "-0.02em" }}>
+            Quienes ya confían en nosotros
+          </h2>
+          {data.ok && (
+            <span style={{ fontSize: "0.85rem", color: "#9ca3af" }}>
+              <strong style={{ color: "#a78bfa" }}>{formatNumero(data.totalEscaneos)}</strong> escaneos este mes
+            </span>
+          )}
+        </div>
+
+        {data.ok && data.casos.length > 0 ? (
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: "1rem",
+            }}
+          >
+            {data.casos.map((c) => (
+              <div
+                key={c.id}
+                style={{
+                  background: c.destacado ? "#15101f" : "#0f0f17",
+                  border: c.destacado ? "1px solid #3b2a5a" : "1px solid #1d1d28",
+                  borderRadius: 14,
+                  padding: "1.25rem",
+                  position: "relative",
+                }}
+              >
+                {c.destacado === 1 && (
+                  <span
+                    style={{
+                      position: "absolute",
+                      top: 12,
+                      right: 12,
+                      fontSize: "0.65rem",
+                      letterSpacing: "0.06em",
+                      color: "#a78bfa",
+                      background: "#2a1f4a",
+                      padding: "0.15rem 0.5rem",
+                      borderRadius: 999,
+                      fontWeight: 600,
+                    }}
+                  >
+                    DESTACADO
+                  </span>
+                )}
+                <div style={{ fontWeight: 700, fontSize: "1.05rem", marginBottom: "0.25rem" }}>
+                  {c.empresa}
+                </div>
+                <div style={{ fontSize: "0.78rem", color: "#9ca3af", marginBottom: "1rem", textTransform: "uppercase", letterSpacing: "0.04em" }}>
+                  {c.sector}
+                </div>
+                <div style={{ display: "flex", gap: "1.25rem" }}>
+                  <div>
+                    <div style={{ fontSize: "0.7rem", color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.04em" }}>QR activos</div>
+                    <div style={{ fontSize: "1.15rem", fontWeight: 700 }}>{c.qr_activos}</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: "0.7rem", color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.04em" }}>Escaneos/mes</div>
+                    <div style={{ fontSize: "1.15rem", fontWeight: 700 }}>{formatNumero(c.escaneos_mes)}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div style={{ color: "#9ca3af", fontSize: "0.9rem" }}>
+            Aún no hay casos para mostrar.
+          </div>
+        )}
       </section>
 
       {/* ESTADO DEL SISTEMA (datos vivos de la BD) */}
@@ -145,34 +291,35 @@ export default async function Home() {
           <span
             style={{
               fontSize: "0.78rem",
-              color: dbOk ? "#4ade80" : "#f87171",
+              color: data.ok ? "#4ade80" : "#f87171",
               fontWeight: 600,
             }}
           >
-            ● {dbOk ? "Operativo" : "Sin conexión a BD"}
+            ● {data.ok ? "Operativo" : "Sin conexión a BD"}
           </span>
         </div>
         <div style={{ display: "flex", gap: "2rem", marginTop: "1.5rem", flexWrap: "wrap" }}>
           <Stat etiqueta="API" valor="OK" />
-          <Stat etiqueta="Base de datos" valor={dbOk ? "Conectada" : "Error"} />
-          <Stat etiqueta="Mensajes registrados" valor={dbOk ? String(numFilas) : "—"} />
+          <Stat etiqueta="Base de datos" valor={data.ok ? "Conectada" : "Error"} />
+          <Stat etiqueta="Mensajes" valor={data.ok ? String(data.mensajes.length) : "—"} />
+          <Stat etiqueta="Casos en BD" valor={data.ok ? String(data.casos.length) : "—"} />
         </div>
 
-        {resultado.ok && resultado.filas.length > 0 && (
+        {data.ok && data.mensajes.length > 0 && (
           <details style={{ marginTop: "1.5rem" }}>
             <summary style={{ cursor: "pointer", color: "#9ca3af", fontSize: "0.9rem" }}>
               Ver últimos mensajes
             </summary>
             <ul style={{ marginTop: "0.75rem", paddingLeft: "1.2rem", color: "#cdcdd9", fontSize: "0.92rem" }}>
-              {resultado.filas.map((f) => (
-                <li key={f.id} style={{ marginBottom: "0.25rem" }}>
-                  <span style={{ color: "#6b7280" }}>#{f.id}</span> — {f.mensaje}
+              {data.mensajes.map((m) => (
+                <li key={m.id} style={{ marginBottom: "0.25rem" }}>
+                  <span style={{ color: "#6b7280" }}>#{m.id}</span> — {m.mensaje}
                 </li>
               ))}
             </ul>
           </details>
         )}
-        {!resultado.ok && (
+        {!data.ok && data.error && (
           <pre
             style={{
               marginTop: "1rem",
@@ -184,7 +331,7 @@ export default async function Home() {
               overflowX: "auto",
             }}
           >
-            {resultado.error}
+            {data.error}
           </pre>
         )}
       </section>
