@@ -1,5 +1,4 @@
 import { getPool } from "@/lib/db";
-import { ensureSchema } from "@/lib/schema";
 
 export const dynamic = "force-dynamic";
 
@@ -61,9 +60,6 @@ async function leerLanding(): Promise<{
   totalEscaneos: number;
 }> {
   try {
-    // Esquema multitenant completo (locales, mesas, productos, pedidos…).
-    // Idempotente y cacheado en memoria: solo se ejecuta una vez por proceso.
-    await ensureSchema();
     await asegurarTablaCasosExito();
     const pool = getPool();
     const [mensajes] = await pool.query(
