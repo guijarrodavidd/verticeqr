@@ -505,6 +505,29 @@
   .w-btn:active{transform:translate(2px,2px);box-shadow:4px 4px 0 var(--gold-soft)}
   @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
   @keyframes fadeUp{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
+
+  /* ===== REVIEW MODAL (after payment at register) ===== */
+  .review-modal{position:fixed;inset:0;z-index:120;background:rgba(14,19,64,.78);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .35s ease;max-width:520px;margin:0 auto}
+  .review-modal.open{opacity:1;pointer-events:auto}
+  .review-box{background:var(--bg);border:1px solid var(--ink);padding:32px 26px 26px;max-width:380px;width:100%;text-align:center;transform:scale(.92);transition:transform .35s cubic-bezier(.5,1.3,.4,1);box-shadow:8px 8px 0 var(--gold-soft);position:relative}
+  .review-modal.open .review-box{transform:scale(1)}
+  .review-close{position:absolute;top:10px;right:12px;background:transparent;border:none;width:30px;height:30px;font-size:18px;cursor:pointer;color:var(--ink-soft);font-family:var(--display);font-weight:500;line-height:1}
+  .review-eye{font-family:var(--mono);font-size:10px;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;margin-bottom:12px;display:block}
+  .review-h3{font-family:var(--display);font-style:italic;font-size:28px;font-weight:600;letter-spacing:-.6px;color:var(--ink);line-height:1.1;margin-bottom:8px;text-transform:lowercase}
+  .review-p{font-family:var(--body);font-style:italic;font-size:14.5px;color:var(--ink-soft);line-height:1.55;margin-bottom:24px;font-weight:400}
+  .review-stars{display:flex;justify-content:center;gap:8px;margin:8px 0 18px}
+  .review-stars button{background:transparent;border:none;font-size:42px;line-height:1;cursor:pointer;color:var(--line-2);font-family:var(--display);font-weight:600;padding:4px 6px;transition:.18s;transform-origin:center bottom}
+  .review-stars button:hover{color:var(--gold);transform:scale(1.15) rotate(-6deg)}
+  .review-stars button.active{color:var(--gold);animation:starPop .5s cubic-bezier(.4,1.6,.5,1)}
+  @keyframes starPop{0%{transform:scale(1)}50%{transform:scale(1.3) rotate(-8deg);filter:drop-shadow(0 0 8px var(--gold))}100%{transform:scale(1) rotate(0);filter:none}}
+  .review-cta{display:inline-block;border:none;background:var(--ink);color:var(--bg);padding:14px 26px;font-family:var(--mono);font-size:11px;font-weight:500;cursor:pointer;letter-spacing:2.5px;text-transform:uppercase;border-radius:0;box-shadow:6px 6px 0 var(--gold-soft);text-decoration:none;transition:.18s}
+  .review-cta:active{transform:translate(2px,2px);box-shadow:4px 4px 0 var(--gold-soft)}
+  .review-cta::after{content:"→";margin-left:8px;font-size:14px}
+  .review-textarea{width:100%;border:1px solid var(--line);background:var(--bg-2);padding:12px 14px;font-family:var(--body);font-style:italic;font-size:14px;resize:none;color:var(--ink);font-weight:400;border-radius:0;letter-spacing:.1px;min-height:90px;margin-bottom:14px}
+  .review-textarea:focus{outline:none;border-color:var(--gold)}
+  .review-textarea::placeholder{color:var(--ink-faint);font-style:italic}
+  .review-step{transition:opacity .3s}
+  .review-step[hidden]{display:none}
 </style>
 </head>
 <body>
@@ -692,6 +715,42 @@
   </div>
 </div>
 
+<div class="review-modal" id="reviewModal">
+  <div class="review-box">
+    <button class="review-close" id="reviewClose">×</button>
+    <div class="review-step" data-step="rate">
+      <span class="review-eye">una observación más</span>
+      <h3 class="review-h3">¿cómo ha estado la noche?</h3>
+      <p class="review-p">Tu mesa acaba de saldar la cuenta. Cuéntanos.</p>
+      <div class="review-stars" id="reviewStars">
+        <button data-rate="1">★</button>
+        <button data-rate="2">★</button>
+        <button data-rate="3">★</button>
+        <button data-rate="4">★</button>
+        <button data-rate="5">★</button>
+      </div>
+    </div>
+    <div class="review-step" data-step="positive" hidden>
+      <span class="review-eye">gracias por la observación</span>
+      <h3 class="review-h3">¿nos echas una mano?</h3>
+      <p class="review-p">Una reseña corta en Google nos ayuda a brillar más fuerte que Vega.</p>
+      <a class="review-cta" id="googleLink" href="https://search.google.com/local/writereview?placeid=ChIJ_demo_sereno" target="_blank" rel="noopener">dejar reseña</a>
+    </div>
+    <div class="review-step" data-step="negative" hidden>
+      <span class="review-eye">cuéntanos qué falló</span>
+      <h3 class="review-h3">sentimos no haber estado a la altura</h3>
+      <p class="review-p">Lee el dueño, no se hace público. Lo arreglamos.</p>
+      <textarea class="review-textarea" id="reviewText" placeholder="¿Qué mejorarías? Lo leemos todo…"></textarea>
+      <button class="review-cta" id="sendFeedback">enviar al dueño</button>
+    </div>
+    <div class="review-step" data-step="thanks" hidden>
+      <span class="review-eye">recibido</span>
+      <h3 class="review-h3">gracias</h3>
+      <p class="review-p">Tu feedback ya está en la barra. Lo leemos esta noche.</p>
+    </div>
+  </div>
+</div>
+
 <div class="success" id="success">
   <div class="shooting"></div>
   <div class="shooting"></div>
@@ -704,6 +763,7 @@
     <div class="ticket" id="ticket"></div>
     <div class="success-actions">
       <div class="sa-status"><span class="sa-dot"></span> <span data-t="preparing">Preparando</span></div>
+      <button class="ghost-btn" id="notifBtn" style="display:none">activar avisos</button>
       <button class="ghost-btn" id="newOrder" data-t="orderMore">Pedir algo más</button>
     </div>
   </div>
@@ -1502,16 +1562,111 @@ function pushToBar(order){
   try{ localStorage.setItem(STORE_KEY, JSON.stringify(list)); }catch(e){}
 }
 
+let _myOrderIds = [];
 function doSend(){
   const order={ id:"o"+Date.now()+Math.random().toString(36).slice(2,6), no:Math.floor(100+Math.random()*899),
     mesa, ts:Date.now(), status:"new", _fresh:true,
     items:Object.values(cart).map(c=>({name:c.item.name,qty:c.qty,note:c.note,price:c.item.price})),
     subtotal:totalPrice(), total:totalPrice() };
   pushToBar(order);
+  _myOrderIds.push(order.id);
   document.getElementById("ticket").innerHTML=buildTicket(order);
   closeSheet(); document.getElementById("success").classList.add("open");
   buzz([10,40,10]);
+  setTimeout(maybeShowNotifButton, 600);
 }
+
+// ===== REVIEW GATING (after payment at register) =====
+const PAID_KEY = "sereno_paid_v1";
+const FEEDBACK_KEY = "sereno_feedback_v1";
+const GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJ_demo_sereno";
+let _reviewShown = false;
+let _selectedRating = 0;
+
+function checkPayment(){
+  if(_reviewShown || _myOrderIds.length===0) return;
+  let paid=[]; try{ paid = JSON.parse(localStorage.getItem(PAID_KEY)||"[]"); }catch(e){}
+  if(!Array.isArray(paid)) return;
+  const match = _myOrderIds.find(id => paid.includes(id));
+  if(match){ openReviewModal(match); _reviewShown=true; }
+}
+function openReviewModal(orderId){
+  document.getElementById("reviewModal").classList.add("open");
+  document.getElementById("reviewModal").dataset.orderId = orderId;
+  // reset to first step
+  document.querySelectorAll(".review-step").forEach(s=>s.hidden = s.dataset.step!=="rate");
+  document.querySelectorAll(".review-stars button").forEach(b=>b.classList.remove("active"));
+  _selectedRating = 0;
+  buzz([8,40,8]);
+  // Push notification if permitted and page is hidden / blurred
+  if("Notification" in window && Notification.permission==="granted"){
+    try{
+      const n = new Notification("¿Cómo ha estado la noche en sereno?", {
+        body: "Cuéntanos. Tomamos 30 segundos. ★",
+        icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%23e8e6dc'/><text x='32' y='42' text-anchor='middle' font-family='Georgia' font-style='italic' font-size='32' fill='%23a8761c'>★</text></svg>",
+        tag: "sereno-review-"+orderId,
+        requireInteraction: false,
+        silent: false
+      });
+      n.onclick = ()=>{ window.focus(); n.close(); };
+      setTimeout(()=>{ try{n.close();}catch(e){} }, 12000);
+    }catch(e){}
+  }
+}
+
+// Notification permission button (shown in success screen)
+function maybeShowNotifButton(){
+  if(!("Notification" in window)) return;
+  const btn = document.getElementById("notifBtn");
+  if(Notification.permission === "default"){
+    btn.style.display = "block";
+    btn.onclick = async ()=>{
+      const result = await Notification.requestPermission();
+      if(result === "granted"){
+        btn.textContent = "✓ avisos activos";
+        btn.style.color = "var(--gold)";
+        btn.style.borderColor = "var(--gold)";
+        setTimeout(()=>{ btn.style.display = "none"; }, 1800);
+      } else {
+        btn.textContent = "permiso denegado";
+        btn.style.opacity = .5;
+      }
+    };
+  }
+}
+function closeReviewModal(){ document.getElementById("reviewModal").classList.remove("open"); }
+function showStep(name){ document.querySelectorAll(".review-step").forEach(s=>s.hidden = s.dataset.step!==name); }
+
+// Star ratings
+document.getElementById("reviewStars").addEventListener("click", e=>{
+  const btn = e.target.closest("button[data-rate]"); if(!btn) return;
+  const rate = parseInt(btn.dataset.rate,10);
+  _selectedRating = rate;
+  document.querySelectorAll(".review-stars button").forEach(b=>{
+    b.classList.toggle("active", parseInt(b.dataset.rate,10) <= rate);
+  });
+  buzz(6);
+  // Branch: positive ≥4, negative ≤3
+  setTimeout(()=>{
+    if(rate >= 4) showStep("positive");
+    else showStep("negative");
+  }, 550);
+});
+document.getElementById("reviewClose").onclick = closeReviewModal;
+document.getElementById("sendFeedback").onclick = ()=>{
+  const text = document.getElementById("reviewText").value.trim();
+  const orderId = document.getElementById("reviewModal").dataset.orderId;
+  let fb=[]; try{ fb = JSON.parse(localStorage.getItem(FEEDBACK_KEY)||"[]"); }catch(e){}
+  if(!Array.isArray(fb)) fb=[];
+  fb.push({ orderId, mesa, ts:Date.now(), rating:_selectedRating, text });
+  try{ localStorage.setItem(FEEDBACK_KEY, JSON.stringify(fb)); }catch(e){}
+  showStep("thanks");
+  setTimeout(closeReviewModal, 2400);
+  buzz([8,30,8]);
+};
+document.getElementById("reviewModal").onclick = e=>{
+  if(e.target.id === "reviewModal") closeReviewModal();
+};
 const askDrink=document.getElementById("askDrink");
 function closeAsk(){ askDrink.classList.remove("open"); }
 document.getElementById("sendBtn").onclick=()=>{ if(totalItems()===0) return; if(!hasFood() && hasDrink() && totalItems()>=2){ askDrink.classList.add("open"); return; } doSend(); };
@@ -1525,7 +1680,12 @@ askDrink.onclick=e=>{ if(e.target===askDrink) closeAsk(); };
 
 document.getElementById("newOrder").onclick=()=>{ cart={}; MENU.forEach(s=>s.items.forEach(it=>{ if(!it.soldOut) renderCtrl(it); })); updateBar(); document.getElementById("success").classList.remove("open"); window.scrollTo({top:0,behavior:"smooth"}); };
 
-window.addEventListener("storage", e=>{ if(e.key===OVERRIDES_KEY){ applyMenuOverrides(); renderMenu(); updateBar(); } });
+window.addEventListener("storage", e=>{
+  if(e.key===OVERRIDES_KEY){ applyMenuOverrides(); renderMenu(); updateBar(); }
+  if(e.key===PAID_KEY){ checkPayment(); }
+});
+// also poll on visibility return (in case storage event was missed)
+document.addEventListener("visibilitychange", ()=>{ if(document.visibilityState==="visible") checkPayment(); });
 
 document.getElementById("suClose").onclick = hideShotsUpsell;
 document.getElementById("suShots").addEventListener("click", e=>{

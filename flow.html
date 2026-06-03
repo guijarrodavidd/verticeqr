@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatización · Reseña post-pago</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap">
+<style>
+  :root{
+    --bg:#ffffff;
+    --paper:#fafaf7;
+    --ink:#14140f;
+    --ink-soft:#6a6a64;
+    --ink-faint:#a8a8a0;
+    --line:#e6e6df;
+    --line-soft:#f0f0e8;
+    --display:"Fraunces",ui-serif,Georgia,serif;
+    --body:"Inter",-apple-system,system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:400;min-height:100%;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+  /* Header */
+  header{padding:60px 32px 40px;max-width:1080px;margin:0 auto;border-bottom:1px solid var(--line)}
+  .back{font-family:var(--mono);font-size:10px;color:var(--ink-soft);text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;display:inline-block;margin-bottom:36px;transition:color .15s}
+  .back:hover{color:var(--ink)}
+  .eye{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;margin-bottom:18px;display:inline-block}
+  h1{font-family:var(--display);font-style:italic;font-size:clamp(34px,5vw,52px);font-weight:600;color:var(--ink);line-height:1.02;letter-spacing:-1.5px;margin-bottom:18px;max-width:780px}
+  .sub{font-family:var(--body);font-size:15px;color:var(--ink-soft);line-height:1.55;font-weight:400;max-width:580px}
+
+  /* Legend */
+  .legend{max-width:1080px;margin:0 auto;padding:18px 32px;display:flex;gap:28px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  .leg-item{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase}
+  .leg-dot{width:9px;height:9px;background:var(--bg);border:1px solid var(--ink-soft)}
+  .leg-dot.trigger{background:var(--ink);border-color:var(--ink)}
+  .leg-dot.decision{border:1px solid var(--ink);transform:rotate(45deg)}
+
+  /* Canvas */
+  main{max-width:1080px;margin:0 auto;padding:24px 32px 100px;position:relative}
+
+  /* Flow column */
+  .flow{display:flex;flex-direction:column;align-items:center;gap:0;position:relative}
+
+  /* Node base */
+  .node{position:relative;background:var(--bg);border:1px solid var(--line);padding:18px 22px;display:grid;grid-template-columns:38px 1fr;gap:16px;align-items:flex-start;width:100%;max-width:480px;transition:border-color .18s;z-index:2}
+  .node:hover{border-color:var(--ink-soft)}
+  .node-ic{width:38px;height:38px;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-style:italic;font-size:16px;color:var(--ink);font-weight:600;letter-spacing:-.3px;flex:0 0 38px}
+  .node-body{min-width:0}
+  .node-type{font-family:var(--mono);font-size:9px;color:var(--ink-soft);letter-spacing:1.8px;text-transform:uppercase;font-weight:500;margin-bottom:6px}
+  .node-title{font-family:var(--display);font-style:italic;font-size:18px;font-weight:600;color:var(--ink);letter-spacing:-.3px;line-height:1.2;margin-bottom:6px}
+  .node-desc{font-family:var(--body);font-size:13px;color:var(--ink-soft);line-height:1.55;font-weight:400}
+  .node-desc code{font-family:var(--mono);font-size:11px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--line);letter-spacing:0}
+  .node-desc b{color:var(--ink);font-weight:500}
+  .node-tag{font-family:var(--mono);font-size:9px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;display:inline-block;margin-top:10px;padding:3px 8px;border:1px solid var(--line)}
+
+  /* Trigger node — slightly darker fill */
+  .node.trigger{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  .node.trigger .node-ic{background:var(--bg);color:var(--ink);border-color:var(--bg)}
+  .node.trigger .node-type{color:var(--ink-faint)}
+  .node.trigger .node-title{color:var(--bg)}
+  .node.trigger .node-desc{color:var(--ink-faint)}
+  .node.trigger .node-desc b{color:var(--bg)}
+  .node.trigger .node-desc code{background:rgba(255,255,255,.06);color:var(--bg);border-color:rgba(255,255,255,.18)}
+  .node.trigger .node-tag{color:var(--ink-faint);border-color:rgba(255,255,255,.2)}
+
+  /* Decision diamond */
+  .decision{margin:24px 0;display:flex;flex-direction:column;align-items:center;position:relative;z-index:2}
+  .decision-shape{width:140px;height:140px;background:var(--bg);border:1px solid var(--ink);transform:rotate(45deg);position:relative}
+  .decision-content{position:absolute;inset:0;transform:rotate(-45deg);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;text-align:center;gap:6px}
+  .decision-eye{font-family:var(--mono);font-size:9px;color:var(--ink-soft);letter-spacing:2px;text-transform:uppercase;font-weight:500}
+  .decision-q{font-family:var(--display);font-style:italic;font-size:17px;font-weight:600;color:var(--ink);letter-spacing:-.3px;line-height:1.05}
+
+  /* Connector — thin vertical line + small ▼ */
+  .conn{width:1px;height:40px;background:var(--ink-faint);position:relative;margin:0 auto}
+  .conn::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%) translateY(50%);width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:6px solid var(--ink-faint)}
+  .conn.short{height:24px}
+
+  /* Branches */
+  .branches{display:grid;grid-template-columns:1fr 1fr;gap:30px;width:100%;max-width:840px;margin-top:24px;position:relative}
+  .branch{display:flex;flex-direction:column;align-items:center;gap:0;min-width:0}
+  .branch-label{font-family:var(--mono);font-size:9.5px;color:var(--ink);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;padding:4px 12px;border:1px solid var(--ink);font-weight:500;background:var(--bg)}
+  .branch .node{max-width:none}
+
+  /* Stage label */
+  .stage{font-family:var(--mono);font-size:9.5px;color:var(--ink-faint);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;padding:30px 0 16px;display:flex;align-items:center;gap:14px;width:100%;max-width:480px;margin:0 auto}
+  .stage::before, .stage::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  /* Final note */
+  .note{max-width:700px;margin:60px auto 0;padding:26px 28px;background:var(--paper);border:1px solid var(--line);text-align:left}
+  .note-eye{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-bottom:10px;display:inline-block}
+  .note h3{font-family:var(--display);font-style:italic;font-size:19px;font-weight:600;color:var(--ink);margin-bottom:10px;letter-spacing:-.3px;line-height:1.2}
+  .note p{font-family:var(--body);font-size:13.5px;color:var(--ink-soft);line-height:1.6;font-weight:400}
+  .note b{color:var(--ink);font-weight:500}
+
+  /* Study section */
+  .study{max-width:1080px;margin:90px auto 0;padding:60px 32px 0;border-top:1px solid var(--line)}
+  .study-head{margin-bottom:36px}
+  .study-eye{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;margin-bottom:14px;display:inline-block}
+  .study-eye::before{content:"// "}
+  .study h2{font-family:var(--display);font-style:italic;font-size:clamp(28px,4vw,40px);font-weight:600;color:var(--ink);line-height:1.05;letter-spacing:-1.2px;margin-bottom:14px;max-width:760px}
+  .study-lead{font-family:var(--body);font-size:14.5px;color:var(--ink-soft);line-height:1.6;font-weight:400;max-width:680px}
+
+  .block{margin-top:48px}
+  .block-label{font-family:var(--mono);font-size:9.5px;color:var(--ink-faint);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:24px;display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+  .block-label small{font-family:var(--body);font-style:italic;font-size:11.5px;color:var(--ink-faint);letter-spacing:0;text-transform:none;font-weight:400}
+
+  /* Assumptions grid */
+  .assumes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border:1px solid var(--line);background:var(--bg)}
+  .assume{padding:20px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .assume:nth-child(2n){border-right:none}
+  @media(min-width:680px){.assume{border-right:1px solid var(--line)}.assume:nth-child(2n){border-right:1px solid var(--line)}.assume:nth-child(4n){border-right:none}}
+  .assume-k{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-bottom:8px}
+  .assume-v{font-family:var(--display);font-style:italic;font-size:26px;font-weight:600;color:var(--ink);letter-spacing:-.8px;line-height:1;margin-bottom:6px}
+  .assume-v small{font-family:var(--body);font-style:normal;font-size:13px;color:var(--ink-soft);letter-spacing:0;margin-left:4px;font-weight:400}
+  .assume-d{font-family:var(--body);font-size:11.5px;color:var(--ink-soft);line-height:1.5;font-weight:400}
+
+  /* Funnel */
+  .funnel{border:1px solid var(--line);background:var(--bg)}
+  .funnel-row{display:grid;grid-template-columns:48px 1fr 100px 90px;align-items:center;gap:14px;padding:14px 22px;border-bottom:1px solid var(--line)}
+  .funnel-row:last-child{border-bottom:none}
+  .funnel-row.head{background:var(--paper);font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;padding:11px 22px}
+  .funnel-step{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:1px}
+  .funnel-label{font-family:var(--body);font-size:13.5px;color:var(--ink);font-weight:500;line-height:1.3}
+  .funnel-label small{display:block;font-family:var(--body);font-style:italic;font-size:12px;color:var(--ink-soft);font-weight:400;margin-top:2px}
+  .funnel-pct{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);letter-spacing:.5px;text-align:right;font-weight:500}
+  .funnel-n{font-family:var(--display);font-style:italic;font-size:18px;color:var(--ink);font-weight:600;letter-spacing:-.4px;text-align:right}
+
+  /* Projection cards */
+  .proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+  .proj-card{border:1px solid var(--line);background:var(--bg);padding:22px 22px 20px;display:flex;flex-direction:column;gap:8px}
+  .proj-card.highlight{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  .proj-card.highlight .proj-k{color:rgba(255,255,255,.55)}
+  .proj-card.highlight .proj-v{color:var(--bg)}
+  .proj-card.highlight .proj-d{color:rgba(255,255,255,.7)}
+  .proj-card.highlight .proj-delta{color:#b8e0a8;background:rgba(184,224,168,.12);border-color:rgba(184,224,168,.3)}
+  .proj-k{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;font-weight:500}
+  .proj-v{font-family:var(--display);font-style:italic;font-size:36px;font-weight:600;color:var(--ink);letter-spacing:-1.4px;line-height:1}
+  .proj-v small{font-family:var(--body);font-style:normal;font-size:13px;color:var(--ink-soft);letter-spacing:0;margin-left:4px;font-weight:400}
+  .proj-delta{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border:1px solid var(--ink-soft);color:var(--ink-soft);width:max-content;font-weight:500}
+  .proj-d{font-family:var(--body);font-size:11.5px;color:var(--ink-soft);line-height:1.45;font-weight:400;margin-top:6px}
+
+  /* Caveats */
+  .caveats{border:1px solid var(--line);background:var(--paper)}
+  .caveat{padding:18px 22px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:32px 1fr;gap:14px;align-items:flex-start}
+  .caveat:last-child{border-bottom:none}
+  .caveat-mark{font-family:var(--display);font-style:italic;font-size:20px;color:var(--ink-soft);line-height:1;font-weight:600}
+  .caveat-title{font-family:var(--display);font-style:italic;font-size:15px;font-weight:600;color:var(--ink);letter-spacing:-.2px;margin-bottom:4px;line-height:1.25}
+  .caveat-desc{font-family:var(--body);font-size:12.5px;color:var(--ink-soft);line-height:1.55;font-weight:400}
+
+  /* Sources */
+  .sources{margin-top:32px;padding:18px 22px;border:1px dashed var(--line);font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:.4px;line-height:1.7}
+  .sources b{color:var(--ink);font-weight:500}
+
+  /* Cases by niche */
+  .cases{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .case{border:1px solid var(--line);background:var(--bg);display:flex;flex-direction:column}
+  .case-head{padding:22px 24px 18px;border-bottom:1px solid var(--line)}
+  .case-tag{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:2px;text-transform:uppercase;font-weight:500;display:inline-block;margin-bottom:10px}
+  .case-head h3{font-family:var(--display);font-style:italic;font-size:22px;font-weight:600;color:var(--ink);letter-spacing:-.5px;line-height:1.1;margin-bottom:6px}
+  .case-sub{font-family:var(--body);font-size:12.5px;color:var(--ink-soft);line-height:1.45;font-weight:400}
+  .case-inputs{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
+  .case-i{padding:13px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .case-i:nth-child(2n){border-right:none}
+  .case-i:nth-last-child(-n+2){border-bottom:none}
+  .case-i span{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.3px;text-transform:uppercase;font-weight:500}
+  .case-i b{font-family:var(--display);font-style:italic;font-size:17px;color:var(--ink);font-weight:600;letter-spacing:-.3px}
+  .case-result{padding:0;border-bottom:1px solid var(--line)}
+  .case-r-row{display:grid;grid-template-columns:1fr auto auto;align-items:baseline;gap:12px;padding:13px 24px;border-bottom:1px solid var(--line)}
+  .case-r-row:last-child{border-bottom:none}
+  .case-r-row.hero{background:var(--ink)}
+  .case-r-row.hero span{color:rgba(255,255,255,.55)}
+  .case-r-row.hero b{color:var(--bg)}
+  .case-r-row.hero em{color:#b8e0a8;border-color:rgba(184,224,168,.4)}
+  .case-r-row span{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:1.3px;text-transform:uppercase;font-weight:500}
+  .case-r-row b{font-family:var(--display);font-style:italic;font-size:22px;color:var(--ink);font-weight:600;letter-spacing:-.5px;line-height:1}
+  .case-r-row em{font-family:var(--mono);font-style:normal;font-size:9.5px;color:var(--ink-soft);letter-spacing:1px;text-transform:uppercase;font-weight:500;padding:2px 7px;border:1px solid var(--ink-soft)}
+  .case-take{padding:18px 24px;font-family:var(--body);font-style:italic;font-size:12.5px;color:var(--ink-soft);line-height:1.55;font-weight:400;background:var(--paper)}
+  .case-take b{font-style:normal;color:var(--ink);font-weight:500}
+  @media(max-width:780px){
+    .cases{grid-template-columns:1fr}
+    .case-head h3{font-size:20px}
+    .case-i{padding:11px 16px}
+    .case-i b{font-size:15px}
+    .case-r-row{padding:12px 18px}
+    .case-r-row b{font-size:19px}
+    .case-take{padding:16px 18px}
+  }
+
+  @media(max-width:680px){
+    .study{padding:40px 22px 0;margin-top:60px}
+    .study h2{font-size:26px}
+    .block{margin-top:36px}
+    .funnel-row{grid-template-columns:38px 1fr 70px;gap:10px;padding:12px 16px}
+    .funnel-row.head{padding:10px 16px}
+    .funnel-pct{display:none}
+    .funnel-label{font-size:12.5px}
+    .funnel-n{font-size:16px}
+    .assume{padding:16px 18px}
+    .assume-v{font-size:22px}
+    .proj-card{padding:18px}
+    .proj-v{font-size:30px}
+    .caveat{padding:14px 16px}
+  }
+
+  @media(max-width:680px){
+    header{padding:36px 22px 28px}
+    .legend{padding:14px 22px;gap:16px}
+    main{padding:18px 22px 70px}
+    h1{font-size:32px;letter-spacing:-1.2px}
+    .node{padding:14px 16px;grid-template-columns:32px 1fr;gap:12px;max-width:none}
+    .node-ic{width:32px;height:32px;flex:0 0 32px;font-size:14px}
+    .node-title{font-size:16px}
+    .node-desc{font-size:12.5px}
+    .branches{grid-template-columns:1fr;gap:18px;margin-top:18px}
+    .decision-shape{width:120px;height:120px}
+    .decision-q{font-size:15px}
+    .note{padding:20px;margin-top:40px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="index.html">← volver</a>
+  <span class="eye">// automatización</span>
+  <h1>Reseña post-pago, paso a paso</h1>
+  <p class="sub">El cliente paga en caja, recibe el aviso en el móvil, las reseñas 4-5★ van a Google y las 1-3★ al dueño en privado.</p>
+</header>
+
+<div class="legend">
+  <div class="leg-item"><span class="leg-dot"></span> acción</div>
+  <div class="leg-item"><span class="leg-dot trigger"></span> trigger</div>
+  <div class="leg-item"><span class="leg-dot decision"></span> decisión</div>
+</div>
+
+<main>
+<div class="flow">
+
+  <div class="stage">en la mesa</div>
+
+  <div class="node">
+    <div class="node-ic">01</div>
+    <div class="node-body">
+      <div class="node-type">cliente</div>
+      <div class="node-title">Escanea el QR de la mesa</div>
+      <div class="node-desc">El móvil abre <code>/sereno/?mesa=7</code>. Sin app, sin login.</div>
+      <span class="node-tag">browser</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">02</div>
+    <div class="node-body">
+      <div class="node-type">cliente</div>
+      <div class="node-title">Pide desde la carta</div>
+      <div class="node-desc">Añade items, ajusta cantidades, deja notas y pulsa enviar a barra.</div>
+      <span class="node-tag">localStorage · orders_v1</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">03</div>
+    <div class="node-body">
+      <div class="node-type">cliente · permiso</div>
+      <div class="node-title">Activa los avisos del navegador</div>
+      <div class="node-desc">En el ticket de éxito aparece el botón "activar avisos". El navegador pide permiso una vez y queda persistente.</div>
+      <span class="node-tag">Notification.requestPermission()</span>
+    </div>
+  </div>
+
+  <div class="stage">en la cocina</div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">04</div>
+    <div class="node-body">
+      <div class="node-type">cocina · tablet</div>
+      <div class="node-title">El pedido aparece en el tablero</div>
+      <div class="node-desc">La barra lo mueve por <b>nuevo → preparando → servido</b>. Al servir se archiva.</div>
+      <span class="node-tag">orders_archive_v1</span>
+    </div>
+  </div>
+
+  <div class="stage">el pago</div>
+
+  <div class="conn"></div>
+
+  <div class="node trigger">
+    <div class="node-ic">05</div>
+    <div class="node-body">
+      <div class="node-type">camarero · admin</div>
+      <div class="node-title">Marca el pedido como pagado</div>
+      <div class="node-desc">En admin · Historial, sobre el pedido servido, pulsa <b>marcar pagado</b>. Aquí arranca toda la automatización.</div>
+      <span class="node-tag">trigger event</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">06</div>
+    <div class="node-body">
+      <div class="node-type">sistema</div>
+      <div class="node-title">Guarda paid + emite storage event</div>
+      <div class="node-desc">El order_id se añade a <code>paid_v1</code>. El navegador del cliente con la pestaña abierta recibe el evento <code>storage</code> automáticamente, cross-tab.</div>
+      <span class="node-tag">broadcast</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">07</div>
+    <div class="node-body">
+      <div class="node-type">cliente · móvil</div>
+      <div class="node-title">Recibe la notificación push</div>
+      <div class="node-desc">El sistema operativo muestra el banner: <b>"¿Cómo ha estado la noche en sereno?"</b>. Al pulsarla enfoca la pestaña y abre el modal de rating.</div>
+      <span class="node-tag">Notification API</span>
+    </div>
+  </div>
+
+  <div class="stage">la reseña</div>
+
+  <div class="conn"></div>
+
+  <div class="decision">
+    <div class="decision-shape">
+      <div class="decision-content">
+        <span class="decision-eye">decisión</span>
+        <span class="decision-q">¿rating?</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="branches">
+
+    <div class="branch">
+      <span class="branch-label">4 ★ — 5 ★</span>
+      <div class="conn short"></div>
+      <div class="node">
+        <div class="node-ic">✓</div>
+        <div class="node-body">
+          <div class="node-type">resultado · público</div>
+          <div class="node-title">Va directo a Google Reviews</div>
+          <div class="node-desc">Modal: "¿Nos echas una mano?" → botón abre <code>writereview</code> con el placeID del local. Reseña pública.</div>
+          <span class="node-tag">Google Maps</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="branch">
+      <span class="branch-label">1 ★ — 3 ★</span>
+      <div class="conn short"></div>
+      <div class="node">
+        <div class="node-ic">!</div>
+        <div class="node-body">
+          <div class="node-type">resultado · privado</div>
+          <div class="node-title">Form privado al dueño</div>
+          <div class="node-desc">Modal: "Cuéntanos qué falló". Textarea + envío. Se guarda en <code>feedback_v1</code>. No se hace público.</div>
+          <span class="node-tag">interno</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="conn" style="margin-top:24px"></div>
+
+  <div class="node">
+    <div class="node-ic">⇣</div>
+    <div class="node-body">
+      <div class="node-type">admin · feedback tab</div>
+      <div class="node-title">El dueño lee las negativas en privado</div>
+      <div class="node-desc">En el admin, tab <b>04 Feedback</b>, ve cada queja con mesa, hora, rating y texto. Lo arregla antes de que se vuelva público.</div>
+      <span class="node-tag">solo dueño</span>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="note-eye">por qué importa</span>
+    <h3>Más reseñas en Google, mejor puntuación media.</h3>
+    <p>Las positivas suben el ranking del local en Maps. Las negativas, antes de hacerse públicas, llegan al dueño para resolver el problema. <b>Resultado: más reseñas en Google, mejor puntuación media, problemas resueltos en privado.</b></p>
+  </div>
+
+</div>
+</main>
+
+<section class="study">
+  <div class="study-head">
+    <span class="study-eye">estudio</span>
+    <h2>Qué esperar en la práctica</h2>
+    <p class="study-lead">Modelo con benchmarks reales del sector hostelero (BrightLocal, Local Consumer Review Survey, Google Business Profile). Sin pintarlo de color rosa: los ratios de conversión en hostelería son bajos y hay caveats legales que conviene tener claros.</p>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Asunciones del modelo <small>local mediano · viernes-domingo medio en Valencia</small></div>
+    <div class="assumes">
+      <div class="assume"><div class="assume-k">cubiertos / día</div><div class="assume-v">80<small>mesas</small></div><div class="assume-d">Local mediano nocturno. Coctelería, restaurante o cachimbería.</div></div>
+      <div class="assume"><div class="assume-k">ticket medio</div><div class="assume-v">25 €<small>/persona</small></div><div class="assume-d">Una bebida + algo de picar. Más en cocteleras premium.</div></div>
+      <div class="assume"><div class="assume-k">escanea QR carta</div><div class="assume-v">60 %<small></small></div><div class="assume-d">El resto sigue pidiendo a camarero. Benchmark UE 2024.</div></div>
+      <div class="assume"><div class="assume-k">acepta avisos</div><div class="assume-v">28 %<small></small></div><div class="assume-d">Ratio típico de permission de notificaciones en web móvil.</div></div>
+      <div class="assume"><div class="assume-k">abre el modal</div><div class="assume-v">72 %<small></small></div><div class="assume-d">Lo que pulsa el banner / mira la pestaña tras pagar.</div></div>
+      <div class="assume"><div class="assume-k">completa la reseña</div><div class="assume-v">42 %<small></small></div><div class="assume-d">De los que abren el modal, la mayoría puntúa pero no todos completan en Google.</div></div>
+      <div class="assume"><div class="assume-k">baseline Google</div><div class="assume-v">2 %<small></small></div><div class="assume-d">% de clientes que deja reseña espontánea sin pedírselo.</div></div>
+      <div class="assume"><div class="assume-k">rating positivo</div><div class="assume-v">70 %<small>4-5 ★</small></div><div class="assume-d">Distribución típica en hostelería de calidad media-alta.</div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Embudo de conversión <small>número de personas por etapa, por día</small></div>
+    <div class="funnel">
+      <div class="funnel-row head"><div>etapa</div><div>paso</div><div>conv.</div><div>n / día</div></div>
+      <div class="funnel-row"><div class="funnel-step">01</div><div class="funnel-label">Mesas servidas<small>cubiertos totales</small></div><div class="funnel-pct">100 %</div><div class="funnel-n">80</div></div>
+      <div class="funnel-row"><div class="funnel-step">02</div><div class="funnel-label">Escanean el QR<small>abren la carta digital</small></div><div class="funnel-pct">60 %</div><div class="funnel-n">48</div></div>
+      <div class="funnel-row"><div class="funnel-step">03</div><div class="funnel-label">Activan avisos<small>conceden permiso al navegador</small></div><div class="funnel-pct">28 %</div><div class="funnel-n">14</div></div>
+      <div class="funnel-row"><div class="funnel-step">04</div><div class="funnel-label">Reciben push tras pago<small>el camarero marca pagado</small></div><div class="funnel-pct">100 %</div><div class="funnel-n">14</div></div>
+      <div class="funnel-row"><div class="funnel-step">05</div><div class="funnel-label">Abren el modal de rating<small>tap notification + interact</small></div><div class="funnel-pct">72 %</div><div class="funnel-n">10</div></div>
+      <div class="funnel-row"><div class="funnel-step">06</div><div class="funnel-label">Puntúan 4-5 ★<small>fork hacia Google Reviews</small></div><div class="funnel-pct">70 %</div><div class="funnel-n">7</div></div>
+      <div class="funnel-row"><div class="funnel-step">07</div><div class="funnel-label">Completan en Google<small>de los positivos, los que finalizan</small></div><div class="funnel-pct">42 %</div><div class="funnel-n">3</div></div>
+      <div class="funnel-row"><div class="funnel-step">→</div><div class="funnel-label">Puntúan 1-3 ★ → form privado<small>no es público, va al dueño</small></div><div class="funnel-pct">30 %</div><div class="funnel-n">3</div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Proyección mensual <small>asumiendo 30 días operativos</small></div>
+    <div class="proj">
+      <div class="proj-card highlight">
+        <div class="proj-k">reseñas google / mes</div>
+        <div class="proj-v">90<small>nuevas</small></div>
+        <div class="proj-delta">vs baseline +50 %</div>
+        <div class="proj-d">Sin automatización serían ~60 (2% de 80 × 30 días).</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">feedback privado / mes</div>
+        <div class="proj-v">90<small>mensajes</small></div>
+        <div class="proj-delta">interno</div>
+        <div class="proj-d">Insight cualitativo que antes no llegaba. Al dueño, no público.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">puntuación google</div>
+        <div class="proj-v">+0.3 ★<small></small></div>
+        <div class="proj-delta">3 meses · estimado</div>
+        <div class="proj-d">Por filtrado de negativas y mayor volumen de 4-5★ recientes.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">clics google maps</div>
+        <div class="proj-v">+22 %<small></small></div>
+        <div class="proj-delta">BrightLocal 2024</div>
+        <div class="proj-d">Locales con 4.5+ ★ obtienen 27% más clics en local pack que 3.5-4.0.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">visitas atribuibles</div>
+        <div class="proj-v">+12<small>mesas/mes</small></div>
+        <div class="proj-delta">conservador</div>
+        <div class="proj-d">Lift en visibilidad → más reservas/walk-ins. Rango 8-18.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">ingreso atribuible</div>
+        <div class="proj-v">300 €<small>/mes</small></div>
+        <div class="proj-delta">+12 mesas × 25€</div>
+        <div class="proj-d">Cálculo conservador con ticket medio. Sube proporcional al ticket del local.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Ejemplos por nicho <small>mismo modelo, inputs adaptados al tipo de local</small></div>
+    <div class="cases">
+
+      <div class="case">
+        <div class="case-head">
+          <span class="case-tag">caso 01 · cachimbería</span>
+          <h3>Local nocturno · jueves a domingo</h3>
+          <p class="case-sub">Público 20-32, ticket alto por sesión larga (cachimba + bebidas), móvil-first.</p>
+        </div>
+        <div class="case-inputs">
+          <div class="case-i"><span>cubiertos / día</span><b>55</b></div>
+          <div class="case-i"><span>días operativos</span><b>25</b></div>
+          <div class="case-i"><span>ticket medio</span><b>35 €</b></div>
+          <div class="case-i"><span>estancia media</span><b>2,5 h</b></div>
+          <div class="case-i"><span>escanea QR</span><b>78 %</b></div>
+          <div class="case-i"><span>acepta avisos</span><b>38 %</b></div>
+          <div class="case-i"><span>abre modal</span><b>72 %</b></div>
+          <div class="case-i"><span>completa Google</span><b>32 %</b></div>
+          <div class="case-i"><span>baseline reseñas</span><b>1,5 %</b></div>
+          <div class="case-i"><span>rating actual</span><b>4,1 ★</b></div>
+        </div>
+        <div class="case-result">
+          <div class="case-r-row hero"><span>reseñas Google / mes</span><b>62</b><em>+195 %</em></div>
+          <div class="case-r-row"><span>feedback privado / mes</span><b>74</b><em>interno</em></div>
+          <div class="case-r-row"><span>puntuación esperada</span><b>+0,4 ★</b><em>3 meses</em></div>
+          <div class="case-r-row"><span>visitas atribuibles</span><b>+9</b><em>mesas/mes</em></div>
+          <div class="case-r-row"><span>ingreso atribuible</span><b>315 €</b><em>/mes</em></div>
+        </div>
+        <div class="case-take">El público joven escanea casi todo y activa más permisos, pero <b>convierte peor a reseña en Google</b> (prefiere Instagram). Aun así el lift en volumen es brutal — partía de un baseline del 1,5%. La cachimbería gana sobre todo en <b>visibilidad en Maps</b>, que hoy es casi inexistente para el sector.</div>
+      </div>
+
+      <div class="case">
+        <div class="case-head">
+          <span class="case-tag">caso 02 · restaurante</span>
+          <h3>Cocina mediterránea · todo el día</h3>
+          <p class="case-sub">Comidas + cenas, público mixto (familias + 35-65), reseñas Google ya integradas en hábito de compra.</p>
+        </div>
+        <div class="case-inputs">
+          <div class="case-i"><span>cubiertos / día</span><b>110</b></div>
+          <div class="case-i"><span>días operativos</span><b>30</b></div>
+          <div class="case-i"><span>ticket medio</span><b>32 €</b></div>
+          <div class="case-i"><span>estancia media</span><b>1,2 h</b></div>
+          <div class="case-i"><span>escanea QR</span><b>55 %</b></div>
+          <div class="case-i"><span>acepta avisos</span><b>22 %</b></div>
+          <div class="case-i"><span>abre modal</span><b>76 %</b></div>
+          <div class="case-i"><span>completa Google</span><b>52 %</b></div>
+          <div class="case-i"><span>baseline reseñas</span><b>2,8 %</b></div>
+          <div class="case-i"><span>rating actual</span><b>4,3 ★</b></div>
+        </div>
+        <div class="case-result">
+          <div class="case-r-row hero"><span>reseñas Google / mes</span><b>106</b><em>+15 %</em></div>
+          <div class="case-r-row"><span>feedback privado / mes</span><b>92</b><em>interno</em></div>
+          <div class="case-r-row"><span>puntuación esperada</span><b>+0,2 ★</b><em>3 meses</em></div>
+          <div class="case-r-row"><span>visitas atribuibles</span><b>+18</b><em>mesas/mes</em></div>
+          <div class="case-r-row"><span>ingreso atribuible</span><b>575 €</b><em>/mes</em></div>
+        </div>
+        <div class="case-take">El restaurante parte ya con buen baseline y rating alto, así que el lift <b>en porcentaje es más bajo</b>. Pero el volumen absoluto es mayor (+18 mesas/mes vs +9) y el ingreso atribuible casi duplica al caso 01. Aquí el valor real es <b>blindar el rating</b> ante un cliente puntual cabreado que arrastra la media.</div>
+      </div>
+
+    </div>
+
+    <div class="sources" style="margin-top:18px">
+      <b>Diferencias clave entre nichos:</b> el público joven acepta más notificaciones pero convierte peor a Google; el público familiar acepta menos pero, cuando entra, suele completar. La cachimbería gana más en lift porque parte de menos. El restaurante gana más en ingreso absoluto porque mueve más volumen. Mismo sistema, dos palancas distintas — ambas se ofrecen.
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Riesgos y caveats <small>lo que el dueño debe saber antes de activarlo</small></div>
+    <div class="caveats">
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">Review gating · zona gris en políticas Google</div>
+          <div class="caveat-desc">Google prohíbe filtrar quién deja reseña pública. Aquí pedimos a TODOS, pero la fricción extra para los negativos (form interno antes de Google) puede interpretarse como gating soft. Riesgo bajo si el form negativo termina ofreciendo también un botón "déjala en Google igualmente" — recomendado añadir.</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">Notification permission tiene techo bajo</div>
+          <div class="caveat-desc">El ratio realista de aceptación de notificaciones es 20-35%. Mejorable con un copy claro de por qué activar ("te avisamos cuando esté listo y para tu reseña"). Fallback: QR de papel en el ticket de caja con link directo al modal.</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">Pestaña debe estar abierta</div>
+          <div class="caveat-desc">La notificación funciona solo si el navegador del cliente tiene la pestaña activa (background o foreground). Si la cerró, no la recibe. Solución producción: Service Worker + Push API real con backend, o el fallback del QR en el ticket.</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">Las negativas no desaparecen</div>
+          <div class="caveat-desc">El cliente cabreado que quiera dejar 1★ en Google lo va a hacer igualmente. El sistema captura insight de los que prefieren no escarbar en público pero sí quieren ser oídos. No es un escudo perfecto.</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">El efecto en ranking tarda 2-3 meses</div>
+          <div class="caveat-desc">Google pondera reseñas recientes pero el cambio en posicionamiento de local pack no es inmediato. Esperar resultados visibles en 8-12 semanas con volumen sostenido.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Fuentes <small>benchmarks del modelo</small></div>
+    <div class="sources">
+      <b>BrightLocal · Local Consumer Review Survey 2024</b> — % de consumidores que leen reseñas, decisión de compra, conversión de Maps. · <b>Google Business Profile · benchmarks oficiales</b> — peso de reseñas recientes en local pack. · <b>Web Almanac · Notification API adoption</b> — ratios de permission grant en navegadores móviles. · <b>Stripe Hospitality Trends 2024</b> — ticket medio Valencia coctelería 22-32€. · <b>Modelo asume conversiones conservadoras dentro de los rangos publicados.</b>
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>

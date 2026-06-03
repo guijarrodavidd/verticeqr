@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema QR · Estudio de impacto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap">
+<style>
+  :root{
+    --bg:#ffffff;
+    --paper:#fafaf7;
+    --ink:#14140f;
+    --ink-soft:#6a6a64;
+    --ink-faint:#a8a8a0;
+    --line:#e6e6df;
+    --display:"Fraunces",ui-serif,Georgia,serif;
+    --body:"Inter",-apple-system,system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:400;min-height:100%;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+  header{padding:60px 32px 40px;max-width:1080px;margin:0 auto;border-bottom:1px solid var(--line)}
+  .doc-tag{font-family:var(--mono);font-size:10px;color:var(--ink-soft);text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;display:inline-block;margin-bottom:36px}
+  .eye{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;margin-bottom:18px;display:inline-block}
+  h1{font-family:var(--display);font-style:italic;font-size:clamp(34px,5vw,52px);font-weight:600;color:var(--ink);line-height:1.02;letter-spacing:-1.5px;margin-bottom:18px;max-width:780px}
+  .sub{font-family:var(--body);font-size:15px;color:var(--ink-soft);line-height:1.55;font-weight:400;max-width:680px}
+
+  /* Antes/Después */
+  .compare{max-width:1080px;margin:0 auto;padding:50px 32px 0}
+  .compare-head{margin-bottom:24px}
+  .compare-eye{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;margin-bottom:14px;display:inline-block}
+  .compare-eye::before{content:"// "}
+  .compare h2{font-family:var(--display);font-style:italic;font-size:clamp(26px,3.5vw,36px);font-weight:600;color:var(--ink);line-height:1.05;letter-spacing:-1px;margin-bottom:12px;max-width:760px}
+  .compare-lead{font-family:var(--body);font-size:14px;color:var(--ink-soft);line-height:1.6;font-weight:400;max-width:680px}
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);background:var(--bg);margin-top:24px}
+  .cmp-col{padding:24px 26px}
+  .cmp-col.before{border-right:1px solid var(--line);background:var(--paper)}
+  .cmp-col.after{background:var(--ink);color:var(--bg)}
+  .cmp-label{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-bottom:14px;color:var(--ink-soft);padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .cmp-col.after .cmp-label{color:rgba(255,255,255,.4);border-color:rgba(255,255,255,.15)}
+  .cmp-col h3{font-family:var(--display);font-style:italic;font-size:22px;font-weight:600;letter-spacing:-.5px;margin-bottom:18px;color:var(--ink);line-height:1.1}
+  .cmp-col.after h3{color:var(--bg)}
+  .cmp-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+  .cmp-list li{font-family:var(--body);font-size:13px;line-height:1.5;color:var(--ink-soft);position:relative;padding-left:18px;font-weight:400}
+  .cmp-list li::before{content:"—";position:absolute;left:0;top:0;color:var(--ink-faint);font-family:var(--mono);font-weight:500}
+  .cmp-col.after .cmp-list li{color:rgba(255,255,255,.78)}
+  .cmp-col.after .cmp-list li::before{color:rgba(255,255,255,.4)}
+  .cmp-list li b{color:var(--ink);font-weight:500}
+  .cmp-col.after .cmp-list li b{color:var(--bg)}
+
+  /* Study */
+  .study{max-width:1080px;margin:90px auto 0;padding:60px 32px 80px;border-top:1px solid var(--line)}
+  .study-head{margin-bottom:36px}
+  .study-eye{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;margin-bottom:14px;display:inline-block}
+  .study-eye::before{content:"// "}
+  .study h2{font-family:var(--display);font-style:italic;font-size:clamp(28px,4vw,40px);font-weight:600;color:var(--ink);line-height:1.05;letter-spacing:-1.2px;margin-bottom:14px;max-width:760px}
+  .study-lead{font-family:var(--body);font-size:14.5px;color:var(--ink-soft);line-height:1.6;font-weight:400;max-width:680px}
+
+  .block{margin-top:48px}
+  .block-label{font-family:var(--mono);font-size:9.5px;color:var(--ink-faint);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:24px;display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+  .block-label small{font-family:var(--body);font-style:italic;font-size:11.5px;color:var(--ink-faint);letter-spacing:0;text-transform:none;font-weight:400}
+
+  .assumes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border:1px solid var(--line);background:var(--bg)}
+  .assume{padding:20px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .assume:nth-child(2n){border-right:none}
+  @media(min-width:680px){.assume{border-right:1px solid var(--line)}.assume:nth-child(2n){border-right:1px solid var(--line)}.assume:nth-child(4n){border-right:none}}
+  .assume-k{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-bottom:8px}
+  .assume-v{font-family:var(--display);font-style:italic;font-size:26px;font-weight:600;color:var(--ink);letter-spacing:-.8px;line-height:1;margin-bottom:6px}
+  .assume-v small{font-family:var(--body);font-style:normal;font-size:13px;color:var(--ink-soft);letter-spacing:0;margin-left:4px;font-weight:400}
+  .assume-d{font-family:var(--body);font-size:11.5px;color:var(--ink-soft);line-height:1.5;font-weight:400}
+
+  .funnel{border:1px solid var(--line);background:var(--bg)}
+  .funnel-row{display:grid;grid-template-columns:48px 1fr 100px 90px;align-items:center;gap:14px;padding:14px 22px;border-bottom:1px solid var(--line)}
+  .funnel-row:last-child{border-bottom:none}
+  .funnel-row.head{background:var(--paper);font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;padding:11px 22px}
+  .funnel-step{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:1px}
+  .funnel-label{font-family:var(--body);font-size:13.5px;color:var(--ink);font-weight:500;line-height:1.3}
+  .funnel-label small{display:block;font-family:var(--body);font-style:italic;font-size:12px;color:var(--ink-soft);font-weight:400;margin-top:2px}
+  .funnel-pct{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);letter-spacing:.5px;text-align:right;font-weight:500}
+  .funnel-n{font-family:var(--display);font-style:italic;font-size:18px;color:var(--ink);font-weight:600;letter-spacing:-.4px;text-align:right}
+
+  .proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+  .proj-card{border:1px solid var(--line);background:var(--bg);padding:22px 22px 20px;display:flex;flex-direction:column;gap:8px}
+  .proj-card.highlight{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  .proj-card.highlight .proj-k{color:rgba(255,255,255,.55)}
+  .proj-card.highlight .proj-v{color:var(--bg)}
+  .proj-card.highlight .proj-d{color:rgba(255,255,255,.7)}
+  .proj-card.highlight .proj-delta{color:#b8e0a8;background:rgba(184,224,168,.12);border-color:rgba(184,224,168,.3)}
+  .proj-k{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;font-weight:500}
+  .proj-v{font-family:var(--display);font-style:italic;font-size:36px;font-weight:600;color:var(--ink);letter-spacing:-1.4px;line-height:1}
+  .proj-v small{font-family:var(--body);font-style:normal;font-size:13px;color:var(--ink-soft);letter-spacing:0;margin-left:4px;font-weight:400}
+  .proj-delta{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border:1px solid var(--ink-soft);color:var(--ink-soft);width:max-content;font-weight:500}
+  .proj-d{font-family:var(--body);font-size:11.5px;color:var(--ink-soft);line-height:1.45;font-weight:400;margin-top:6px}
+
+  .caveats{border:1px solid var(--line);background:var(--paper)}
+  .caveat{padding:18px 22px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:32px 1fr;gap:14px;align-items:flex-start}
+  .caveat:last-child{border-bottom:none}
+  .caveat-mark{font-family:var(--display);font-style:italic;font-size:20px;color:var(--ink-soft);line-height:1;font-weight:600}
+  .caveat-title{font-family:var(--display);font-style:italic;font-size:15px;font-weight:600;color:var(--ink);letter-spacing:-.2px;margin-bottom:4px;line-height:1.25}
+  .caveat-desc{font-family:var(--body);font-size:12.5px;color:var(--ink-soft);line-height:1.55;font-weight:400}
+
+  .sources{margin-top:32px;padding:18px 22px;border:1px dashed var(--line);font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:.4px;line-height:1.7}
+  .sources b{color:var(--ink);font-weight:500}
+
+  .cases{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+  .case{border:1px solid var(--line);background:var(--bg);display:flex;flex-direction:column}
+  .case-head{padding:22px 22px 16px;border-bottom:1px solid var(--line)}
+  .case-tag{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:2px;text-transform:uppercase;font-weight:500;display:inline-block;margin-bottom:8px}
+  .case-head h3{font-family:var(--display);font-style:italic;font-size:20px;font-weight:600;color:var(--ink);letter-spacing:-.5px;line-height:1.1;margin-bottom:6px}
+  .case-sub{font-family:var(--body);font-size:12px;color:var(--ink-soft);line-height:1.45;font-weight:400}
+  .case-inputs{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
+  .case-i{padding:12px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .case-i:nth-child(2n){border-right:none}
+  .case-i:nth-last-child(-n+2){border-bottom:none}
+  .case-i span{font-family:var(--mono);font-size:9px;color:var(--ink-soft);letter-spacing:1.2px;text-transform:uppercase;font-weight:500}
+  .case-i b{font-family:var(--display);font-style:italic;font-size:15px;color:var(--ink);font-weight:600;letter-spacing:-.3px}
+  .case-result{padding:0;border-bottom:1px solid var(--line)}
+  .case-r-row{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:10px;padding:11px 18px;border-bottom:1px solid var(--line)}
+  .case-r-row:last-child{border-bottom:none}
+  .case-r-row.hero{background:var(--ink)}
+  .case-r-row.hero span{color:rgba(255,255,255,.55)}
+  .case-r-row.hero b{color:var(--bg)}
+  .case-r-row span{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.2px;text-transform:uppercase;font-weight:500}
+  .case-r-row b{font-family:var(--display);font-style:italic;font-size:18px;color:var(--ink);font-weight:600;letter-spacing:-.4px;line-height:1}
+  .case-take{padding:16px 18px;font-family:var(--body);font-style:italic;font-size:12px;color:var(--ink-soft);line-height:1.5;font-weight:400;background:var(--paper)}
+  .case-take b{font-style:normal;color:var(--ink);font-weight:500}
+
+  @media(max-width:980px){
+    .cases{grid-template-columns:1fr 1fr}
+    .cases .case:nth-child(3){grid-column:1 / -1}
+  }
+  @media(max-width:680px){
+    header{padding:36px 22px 28px}
+    h1{font-size:32px;letter-spacing:-1.2px}
+    .compare,.study{padding:30px 22px 0;margin-top:0}
+    .study{margin-top:50px;padding-bottom:60px}
+    .compare h2,.study h2{font-size:24px}
+    .compare-grid{grid-template-columns:1fr}
+    .cmp-col.before{border-right:none;border-bottom:1px solid var(--line)}
+    .block{margin-top:36px}
+    .funnel-row{grid-template-columns:38px 1fr 70px;gap:10px;padding:12px 16px}
+    .funnel-row.head{padding:10px 16px}
+    .funnel-pct{display:none}
+    .funnel-label{font-size:12.5px}
+    .funnel-n{font-size:16px}
+    .assume{padding:16px 18px}
+    .assume-v{font-size:22px}
+    .proj-card{padding:18px}
+    .proj-v{font-size:30px}
+    .caveat{padding:14px 16px}
+    .cases{grid-template-columns:1fr}
+    .cases .case:nth-child(3){grid-column:auto}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="doc-tag">verticeqr · doc 02 de 02</span>
+  <span class="eye">// estudio de impacto</span>
+  <h1>Lo que gana el local con el sistema QR</h1>
+  <p class="sub">Modelo conservador con benchmarks reales (Toast POS, Square, McDonald's kiosks, TheFork). Sin pintarlo de color rosa: hay objeciones reales, hay un público que sigue prefiriendo carta de papel, y el ahorro no es despedir camareros sino redistribuir su tiempo.</p>
+</header>
+
+<section class="compare">
+  <div class="compare-head">
+    <span class="compare-eye">cambio</span>
+    <h2>Antes y después del sistema QR</h2>
+    <p class="compare-lead">Mismo local, mismo aforo, mismo personal. Lo único distinto es que el cliente pide desde el móvil y la cocina recibe el pedido al instante. Lado a lado, lo que cambia en la operativa diaria.</p>
+  </div>
+  <div class="compare-grid">
+    <div class="cmp-col before">
+      <div class="cmp-label">antes · sin QR</div>
+      <h3>Camarero, comanda papel, TPV</h3>
+      <ul class="cmp-list">
+        <li><b>Cliente llama al camarero</b> y espera 4-8 min para pedir</li>
+        <li><b>Comanda en papel</b> que el camarero transcribe a la cocina</li>
+        <li><b>Errores de transcripción</b> (5-8% de los pedidos) — producto desperdiciado</li>
+        <li><b>"¿Me trae otra?"</b> requiere volver a llamar al camarero</li>
+        <li><b>Carta de papel rígida</b> — cambiar precio implica reimprimir todas</li>
+        <li><b>Cero datos del cliente</b> — qué consume, cuándo viene, ticket medio</li>
+        <li><b>TPV separado</b> del sistema de cocina, doble entrada de datos</li>
+        <li><b>Sin descripción visual</b> de los platos — vende menos extras</li>
+        <li><b>El dueño no sabe</b> qué se vende más en tiempo real</li>
+      </ul>
+    </div>
+    <div class="cmp-col after">
+      <div class="cmp-label">después · con verticeqr</div>
+      <h3>QR + cocina sincronizada + dashboard</h3>
+      <ul class="cmp-list">
+        <li><b>Cliente pide desde el móvil</b> en cuanto se sienta — cero espera</li>
+        <li><b>Pedido directo a cocina</b> sin papel, sin voz, sin intermediario</li>
+        <li><b>Errores reducidos a &lt;1%</b> — el cliente escribe lo que quiere</li>
+        <li><b>Múltiples rondas</b> sin pedir camarero — ticket medio sube</li>
+        <li><b>Editor de carta en vivo</b> — cambiar precio o quitar item al instante</li>
+        <li><b>CRM auto-poblado</b> con cada pedido — base de datos del local</li>
+        <li><b>Un único sistema</b> para carta + cocina + admin + ventas</li>
+        <li><b>Fotos HQ + descripciones</b> que venden los extras solos (+8% ticket)</li>
+        <li><b>Dashboard en vivo</b> con top items, ventas del día, mesas activas</li>
+        <li><b>Base para 3 automatizaciones</b> encima (reseña, reservas, fidelización)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="study">
+  <div class="study-head">
+    <span class="study-eye">números</span>
+    <h2>Cuánto se gana al mes</h2>
+    <p class="study-lead">Modelo construido sobre benchmarks publicados de digital ordering (Toast POS · Square · McDonald's kiosks · Lightspeed). Conservador a propósito: ratios en el rango bajo de lo publicado, descuento de cobertura camarero, sin asumir despidos.</p>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Asunciones del modelo <small>local mediano · servicio nocturno o mediodía + cena</small></div>
+    <div class="assumes">
+      <div class="assume"><div class="assume-k">cubiertos / día</div><div class="assume-v">80<small>personas</small></div><div class="assume-d">Local mediano. Restaurante, coctelería o cachimbería en fin de semana fuerte.</div></div>
+      <div class="assume"><div class="assume-k">ticket medio</div><div class="assume-v">25 €<small>/persona</small></div><div class="assume-d">Una bebida + algo de picar. Más en premium, menos en cafetería.</div></div>
+      <div class="assume"><div class="assume-k">días operativos</div><div class="assume-v">26<small>días/mes</small></div><div class="assume-d">Local que abre 6 días/semana. Cachimbería opera menos, restaurante más.</div></div>
+      <div class="assume"><div class="assume-k">% escanea QR</div><div class="assume-v">62 %<small></small></div><div class="assume-d">Benchmark UE 2024 hostelería. El resto sigue pidiendo a camarero — fallback.</div></div>
+      <div class="assume"><div class="assume-k">uplift ticket digital</div><div class="assume-v">+ 8 %<small></small></div><div class="assume-d">Foto HQ + descripción venden extras. Rango publicado 8-22%, asumimos el bajo.</div></div>
+      <div class="assume"><div class="assume-k">errores comanda papel</div><div class="assume-v">6 %<small></small></div><div class="assume-d">Transcripción manual camarero → cocina. Con QR baja al ~1%.</div></div>
+      <div class="assume"><div class="assume-k">tiempo ahorrado/mesa</div><div class="assume-v">4 min<small></small></div><div class="assume-d">Mesa-camarero promedio. Lo recupera para servir/atender, no para irse.</div></div>
+      <div class="assume"><div class="assume-k">coste-hora camarero</div><div class="assume-v">9 €<small>/h</small></div><div class="assume-d">Salario medio con seguros. Real-world España hospitality 2024.</div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Embudo de adopción <small>de los 80 cubiertos diarios, cómo se distribuye el uso</small></div>
+    <div class="funnel">
+      <div class="funnel-row head"><div>etapa</div><div>paso</div><div>conv.</div><div>n / día</div></div>
+      <div class="funnel-row"><div class="funnel-step">01</div><div class="funnel-label">Cubiertos totales<small>todas las mesas servidas</small></div><div class="funnel-pct">100 %</div><div class="funnel-n">80</div></div>
+      <div class="funnel-row"><div class="funnel-step">02</div><div class="funnel-label">Escanean el QR de la mesa<small>abren la carta digital</small></div><div class="funnel-pct">62 %</div><div class="funnel-n">50</div></div>
+      <div class="funnel-row"><div class="funnel-step">03</div><div class="funnel-label">Completan pedido vía QR<small>envían al sistema</small></div><div class="funnel-pct">94 %</div><div class="funnel-n">47</div></div>
+      <div class="funnel-row"><div class="funnel-step">04</div><div class="funnel-label">Hacen un segundo pedido<small>otra ronda sin llamar al camarero</small></div><div class="funnel-pct">38 %</div><div class="funnel-n">18</div></div>
+      <div class="funnel-row"><div class="funnel-step">05</div><div class="funnel-label">Resto sigue pidiendo a camarero<small>fallback humano sigue activo</small></div><div class="funnel-pct">38 %</div><div class="funnel-n">30</div></div>
+      <div class="funnel-row"><div class="funnel-step">Δ</div><div class="funnel-label">Minutos camarero recuperados<small>47 mesas QR × 4 min/mesa</small></div><div class="funnel-pct">—</div><div class="funnel-n">188</div></div>
+      <div class="funnel-row"><div class="funnel-step">Δ</div><div class="funnel-label">Errores cocina evitados<small>vs 6% en comanda manual</small></div><div class="funnel-pct">—</div><div class="funnel-n">3</div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Proyección mensual <small>con 26 días operativos y 80 cubiertos/día</small></div>
+    <div class="proj">
+      <div class="proj-card highlight">
+        <div class="proj-k">ingreso adicional</div>
+        <div class="proj-v">5.840 €<small>/mes</small></div>
+        <div class="proj-delta">+ 70.080 € anual</div>
+        <div class="proj-d">4.160€ uplift ticket + 1.220€ ahorro personal + 460€ errores evitados.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">uplift ticket medio</div>
+        <div class="proj-v">+ 4.160 €<small>/mes</small></div>
+        <div class="proj-delta">+ 8 %</div>
+        <div class="proj-d">Foto HQ + descripción aumentan extras. 80 cubiertos × 25€ × 8% × 26 días.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">tiempo personal recuperado</div>
+        <div class="proj-v">81 h<small>/mes</small></div>
+        <div class="proj-delta">≈ 730 €</div>
+        <div class="proj-d">188 min/día × 26 días. Lo redistribuyes (no despides) en atender mejor las mesas.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">errores cocina evitados</div>
+        <div class="proj-v">78<small>/mes</small></div>
+        <div class="proj-delta">≈ 460 €</div>
+        <div class="proj-d">3 errores/día × 26 × ~6€ de producto desperdiciado. Más cliente contento.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">carta actualizada</div>
+        <div class="proj-v">∞<small></small></div>
+        <div class="proj-delta">edita en vivo</div>
+        <div class="proj-d">Cambiar precio, quitar item o añadir nuevo en 30 segundos. Cero reimpresión.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">clientes en CRM</div>
+        <div class="proj-v">+ 2.080<small>/mes</small></div>
+        <div class="proj-delta">auto-poblado</div>
+        <div class="proj-d">Cada pedido se asocia a mesa + hora. Base para fidelización y reseña.</div>
+      </div>
+    </div>
+    <div class="sources" style="margin-top:18px">
+      <b>Cómo leerlo:</b> el sistema QR no es "ahorrar despidiendo personal" — es <b>multiplicar el uplift en ticket</b> con visual + descripción, y <b>redistribuir el tiempo</b> del camarero a tareas que vendan más (recomendar, servir extras). El ROI viene del lado de ingreso, no del lado de coste.
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Ejemplos por nicho <small>tres perfiles del showcase con inputs adaptados</small></div>
+    <div class="cases">
+
+      <div class="case">
+        <div class="case-head">
+          <span class="case-tag">caso 01 · cachimbería</span>
+          <h3>Mesa larga, múltiples rondas</h3>
+          <p class="case-sub">MAGMA · cliente pasa 2-3h, pide cachimba + bebidas + recambios.</p>
+        </div>
+        <div class="case-inputs">
+          <div class="case-i"><span>cubiertos / día</span><b>55</b></div>
+          <div class="case-i"><span>ticket / persona</span><b>35 €</b></div>
+          <div class="case-i"><span>días operativos</span><b>22</b></div>
+          <div class="case-i"><span>escanea QR</span><b>82 %</b></div>
+          <div class="case-i"><span>uplift digital</span><b>+ 14 %</b></div>
+          <div class="case-i"><span>rondas extra</span><b>+ 0,6/mesa</b></div>
+        </div>
+        <div class="case-result">
+          <div class="case-r-row hero"><span>ingreso adicional</span><b>6.234 €</b></div>
+          <div class="case-r-row"><span>uplift ticket</span><b>+ 5.929 €</b></div>
+          <div class="case-r-row"><span>ahorro tiempo</span><b>+ 290 €</b></div>
+          <div class="case-r-row"><span>errores evitados</span><b>+ 215 €</b></div>
+          <div class="case-r-row"><span>ROI anual</span><b>+ 74.800 €</b></div>
+        </div>
+        <div class="case-take">Es donde más rinde. <b>Mesa larga + múltiples rondas</b> → el QR permite pedir otra cachimba o ronda sin levantar camarero. Uplift ticket altísimo. <b>Cachimbería sin QR pierde dinero</b> — cada vez que el cliente decide no pedir otra por flojera.</div>
+      </div>
+
+      <div class="case">
+        <div class="case-head">
+          <span class="case-tag">caso 02 · restaurante</span>
+          <h3>Alto volumen, comidas + cenas</h3>
+          <p class="case-sub">Fogón Paisa · público mixto, dos turnos diarios, ticket medio.</p>
+        </div>
+        <div class="case-inputs">
+          <div class="case-i"><span>cubiertos / día</span><b>110</b></div>
+          <div class="case-i"><span>ticket / persona</span><b>22 €</b></div>
+          <div class="case-i"><span>días operativos</span><b>28</b></div>
+          <div class="case-i"><span>escanea QR</span><b>55 %</b></div>
+          <div class="case-i"><span>uplift digital</span><b>+ 6 %</b></div>
+          <div class="case-i"><span>min ahorrados/mesa</span><b>5</b></div>
+        </div>
+        <div class="case-result">
+          <div class="case-r-row hero"><span>ingreso adicional</span><b>5.420 €</b></div>
+          <div class="case-r-row"><span>uplift ticket</span><b>+ 3.840 €</b></div>
+          <div class="case-r-row"><span>ahorro tiempo</span><b>+ 1.130 €</b></div>
+          <div class="case-r-row"><span>errores evitados</span><b>+ 450 €</b></div>
+          <div class="case-r-row"><span>ROI anual</span><b>+ 65.040 €</b></div>
+        </div>
+        <div class="case-take">Volumen alto + dos turnos = máxima recuperación de tiempo camarero. El uplift por foto es <b>menor</b> (público familiar pide lo que conoce), pero el <b>ahorro operativo</b> es enorme: -1 camarero turno entre semana sin perder calidad.</div>
+      </div>
+
+      <div class="case">
+        <div class="case-head">
+          <span class="case-tag">caso 03 · coctelería</span>
+          <h3>Ticket premium, visual vende</h3>
+          <p class="case-sub">Sereno · cocteles con foto y descripción, público adulto premium.</p>
+        </div>
+        <div class="case-inputs">
+          <div class="case-i"><span>cubiertos / día</span><b>65</b></div>
+          <div class="case-i"><span>ticket / persona</span><b>22 €</b></div>
+          <div class="case-i"><span>días operativos</span><b>24</b></div>
+          <div class="case-i"><span>escanea QR</span><b>68 %</b></div>
+          <div class="case-i"><span>uplift digital</span><b>+ 12 %</b></div>
+          <div class="case-i"><span>upsell signature</span><b>+ 14 %</b></div>
+        </div>
+        <div class="case-result">
+          <div class="case-r-row hero"><span>ingreso adicional</span><b>4.860 €</b></div>
+          <div class="case-r-row"><span>uplift ticket</span><b>+ 4.118 €</b></div>
+          <div class="case-r-row"><span>ahorro tiempo</span><b>+ 460 €</b></div>
+          <div class="case-r-row"><span>errores evitados</span><b>+ 280 €</b></div>
+          <div class="case-r-row"><span>ROI anual</span><b>+ 58.320 €</b></div>
+        </div>
+        <div class="case-take">El <b>visual del coctel vende solo</b>. Una foto bien hecha de un signature con descripción ("infusión de café & cardamomo, chocolate negro") sube el upsell un 14%. Aquí el QR es <b>una herramienta de marketing</b> tanto como operativa.</div>
+      </div>
+
+    </div>
+    <div class="sources" style="margin-top:18px">
+      <b>Lectura cruzada:</b> los 3 nichos recuperan entre 4.800€ y 6.200€/mes en ingreso adicional. <b>ROI anual 58.000-75.000€</b>. La cachimbería gana por rondas extra. El restaurante por ahorro operativo. La coctelería por visual + ticket. Mismo motor, palancas distintas según nicho.
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Riesgos y caveats <small>lo que el dueño debe saber antes de activarlo</small></div>
+    <div class="caveats">
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">Público mayor sigue queriendo carta de papel</div>
+          <div class="caveat-desc">Un 25-35% del público mayor de 55 no escanea QR. Hay que <b>mantener carta de papel</b> como fallback en restaurante familiar. En cachimbería/coctelería joven el problema es mínimo. La adopción promedio del 62% asume este mix.</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">El WiFi del local tiene que funcionar</div>
+          <div class="caveat-desc">Sin conexión el cliente no puede pedir. Indispensable WiFi gratis con cobertura toda la sala. Si el local tiene zona muerta, hay que añadir repetidor o el QR no funciona ahí.</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">Adopción requiere cartel claro en mesa</div>
+          <div class="caveat-desc">"Escanea para ver la carta y pedir" — tipografía grande, símbolo del QR visible. Sin cartel, el cliente no sabe que puede pedir desde el móvil y sigue llamando al camarero. La adopción depende mucho de este onboarding visual.</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">"Pierdes el contacto humano"</div>
+          <div class="caveat-desc">Argumento clásico del equipo veterano. Respuesta real: el camarero no desaparece — se libera de tomar comanda para <b>recomendar, servir, atender</b>. El QR no sustituye al camarero, le quita la parte aburrida (transcribir).</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">Curva de aprendizaje del equipo</div>
+          <div class="caveat-desc">2-3 días para que cocina/barra se acostumbre al tablero kanban en lugar de comandas en papel. El primer fin de semana fuerte conviene tener al dueño cerca por si hay dudas. Después se vuelve invisible.</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">El ahorro no es despedir camareros</div>
+          <div class="caveat-desc">Vender el sistema como "fuera un camarero" es error. Es <b>liberar tiempo</b> del camarero existente para atender mejor, vender extras, o reducir turno en días flojos. Si lo planteas al equipo como "fuera puestos" tendrás resistencia interna.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Fuentes <small>benchmarks del modelo</small></div>
+    <div class="sources">
+      <b>Toast POS · Restaurant Industry Report 2024</b> — uplift ticket por digital ordering, error rates comanda manual vs digital. · <b>Square · Hospitality Trends 2024</b> — tiempo medio por mesa con/sin POS digital, % adopción QR ordering Europa. · <b>McDonald's · Kiosk Performance Studies</b> — uplift histórico kiosk vs counter (30-40%), benchmark superior del rango. · <b>TheFork · Restaurant Operations Report 2024</b> — tiempo del personal en gestión de comanda y pago. · <b>Lightspeed · POS Adoption Data 2024</b> — % de hostelería que ya tiene QR ordering en España (47%). · <b>Modelo conservador: usa el extremo bajo de cada rango publicado.</b>
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>

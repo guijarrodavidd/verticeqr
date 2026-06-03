@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema QR · Flujo end-to-end</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap">
+<style>
+  :root{
+    --bg:#ffffff;
+    --paper:#fafaf7;
+    --ink:#14140f;
+    --ink-soft:#6a6a64;
+    --ink-faint:#a8a8a0;
+    --line:#e6e6df;
+    --display:"Fraunces",ui-serif,Georgia,serif;
+    --body:"Inter",-apple-system,system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:400;min-height:100%;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+  header{padding:60px 32px 40px;max-width:1080px;margin:0 auto;border-bottom:1px solid var(--line)}
+  .doc-tag{font-family:var(--mono);font-size:10px;color:var(--ink-soft);text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;display:inline-block;margin-bottom:36px}
+  .eye{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;margin-bottom:18px;display:inline-block}
+  h1{font-family:var(--display);font-style:italic;font-size:clamp(34px,5vw,52px);font-weight:600;color:var(--ink);line-height:1.02;letter-spacing:-1.5px;margin-bottom:18px;max-width:780px}
+  .sub{font-family:var(--body);font-size:15px;color:var(--ink-soft);line-height:1.55;font-weight:400;max-width:620px}
+
+  .legend{max-width:1080px;margin:0 auto;padding:18px 32px;display:flex;gap:28px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  .leg-item{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase}
+  .leg-dot{width:9px;height:9px;background:var(--bg);border:1px solid var(--ink-soft)}
+  .leg-dot.trigger{background:var(--ink);border-color:var(--ink)}
+  .leg-dot.decision{border:1px solid var(--ink);transform:rotate(45deg)}
+
+  main{max-width:1080px;margin:0 auto;padding:24px 32px 100px;position:relative}
+
+  .flow{display:flex;flex-direction:column;align-items:center;gap:0;position:relative}
+
+  .node{position:relative;background:var(--bg);border:1px solid var(--line);padding:18px 22px;display:grid;grid-template-columns:38px 1fr;gap:16px;align-items:flex-start;width:100%;max-width:480px;z-index:2}
+  .node-ic{width:38px;height:38px;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-style:italic;font-size:16px;color:var(--ink);font-weight:600;letter-spacing:-.3px;flex:0 0 38px}
+  .node-body{min-width:0}
+  .node-type{font-family:var(--mono);font-size:9px;color:var(--ink-soft);letter-spacing:1.8px;text-transform:uppercase;font-weight:500;margin-bottom:6px}
+  .node-title{font-family:var(--display);font-style:italic;font-size:18px;font-weight:600;color:var(--ink);letter-spacing:-.3px;line-height:1.2;margin-bottom:6px}
+  .node-desc{font-family:var(--body);font-size:13px;color:var(--ink-soft);line-height:1.55;font-weight:400}
+  .node-desc code{font-family:var(--mono);font-size:11px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--line);letter-spacing:0}
+  .node-desc b{color:var(--ink);font-weight:500}
+  .node-tag{font-family:var(--mono);font-size:9px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;display:inline-block;margin-top:10px;padding:3px 8px;border:1px solid var(--line)}
+
+  .node.trigger{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  .node.trigger .node-ic{background:var(--bg);color:var(--ink);border-color:var(--bg)}
+  .node.trigger .node-type{color:var(--ink-faint)}
+  .node.trigger .node-title{color:var(--bg)}
+  .node.trigger .node-desc{color:var(--ink-faint)}
+  .node.trigger .node-desc b{color:var(--bg)}
+  .node.trigger .node-desc code{background:rgba(255,255,255,.06);color:var(--bg);border-color:rgba(255,255,255,.18)}
+  .node.trigger .node-tag{color:var(--ink-faint);border-color:rgba(255,255,255,.2)}
+
+  .decision{margin:24px 0;display:flex;flex-direction:column;align-items:center;position:relative;z-index:2}
+  .decision-shape{width:140px;height:140px;background:var(--bg);border:1px solid var(--ink);transform:rotate(45deg);position:relative}
+  .decision-content{position:absolute;inset:0;transform:rotate(-45deg);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;text-align:center;gap:6px}
+  .decision-eye{font-family:var(--mono);font-size:9px;color:var(--ink-soft);letter-spacing:2px;text-transform:uppercase;font-weight:500}
+  .decision-q{font-family:var(--display);font-style:italic;font-size:16px;font-weight:600;color:var(--ink);letter-spacing:-.3px;line-height:1.05}
+
+  .conn{width:1px;height:40px;background:var(--ink-faint);position:relative;margin:0 auto}
+  .conn::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%) translateY(50%);width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:6px solid var(--ink-faint)}
+  .conn.short{height:24px}
+
+  .branches{display:grid;grid-template-columns:1fr 1fr;gap:30px;width:100%;max-width:840px;margin-top:24px}
+  .branch{display:flex;flex-direction:column;align-items:center;gap:0;min-width:0}
+  .branch-label{font-family:var(--mono);font-size:9.5px;color:var(--ink);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;padding:4px 12px;border:1px solid var(--ink);font-weight:500;background:var(--bg)}
+  .branch .node{max-width:none}
+
+  .stage{font-family:var(--mono);font-size:9.5px;color:var(--ink-faint);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;padding:30px 0 16px;display:flex;align-items:center;gap:14px;width:100%;max-width:480px;margin:0 auto}
+  .stage::before, .stage::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .note{max-width:700px;margin:60px auto 0;padding:26px 28px;background:var(--paper);border:1px solid var(--line);text-align:left}
+  .note-eye{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-bottom:10px;display:inline-block}
+  .note h3{font-family:var(--display);font-style:italic;font-size:19px;font-weight:600;color:var(--ink);margin-bottom:10px;letter-spacing:-.3px;line-height:1.2}
+  .note p{font-family:var(--body);font-size:13.5px;color:var(--ink-soft);line-height:1.6;font-weight:400}
+  .note b{color:var(--ink);font-weight:500}
+
+  .ecosystem{max-width:1080px;margin:90px auto 0;padding:60px 32px 60px;border-top:1px solid var(--line)}
+  .eco-head{margin-bottom:36px}
+  .eco-eye{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;margin-bottom:14px;display:inline-block}
+  .eco-eye::before{content:"// "}
+  .ecosystem h2{font-family:var(--display);font-style:italic;font-size:clamp(28px,4vw,40px);font-weight:600;color:var(--ink);line-height:1.05;letter-spacing:-1.2px;margin-bottom:14px;max-width:760px}
+  .eco-lead{font-family:var(--body);font-size:14.5px;color:var(--ink-soft);line-height:1.6;font-weight:400;max-width:680px}
+  .eco-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:32px}
+  .eco-card{border:1px solid var(--line);background:var(--bg);padding:24px 22px}
+  .eco-card.core{background:var(--ink);border-color:var(--ink)}
+  .eco-tag{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.8px;text-transform:uppercase;font-weight:500;margin-bottom:12px;display:inline-block}
+  .eco-card.core .eco-tag{color:rgba(255,255,255,.55)}
+  .eco-card h3{font-family:var(--display);font-style:italic;font-size:20px;font-weight:600;color:var(--ink);letter-spacing:-.4px;line-height:1.15;margin-bottom:10px}
+  .eco-card.core h3{color:var(--bg)}
+  .eco-card p{font-family:var(--body);font-size:12.5px;color:var(--ink-soft);line-height:1.55;font-weight:400}
+  .eco-card.core p{color:rgba(255,255,255,.72)}
+  .eco-card b{color:var(--ink);font-weight:500}
+  .eco-card.core b{color:var(--bg)}
+
+  @media(max-width:980px){
+    .eco-grid{grid-template-columns:1fr}
+  }
+  @media(max-width:680px){
+    header{padding:36px 22px 28px}
+    .legend{padding:14px 22px;gap:16px}
+    main{padding:18px 22px 70px}
+    h1{font-size:32px;letter-spacing:-1.2px}
+    .node{padding:14px 16px;grid-template-columns:32px 1fr;gap:12px;max-width:none}
+    .node-ic{width:32px;height:32px;flex:0 0 32px;font-size:14px}
+    .node-title{font-size:16px}
+    .node-desc{font-size:12.5px}
+    .branches{grid-template-columns:1fr;gap:18px;margin-top:18px}
+    .decision-shape{width:120px;height:120px}
+    .decision-q{font-size:14px}
+    .note{padding:20px;margin-top:40px}
+    .ecosystem{padding:40px 22px 40px;margin-top:60px}
+    .ecosystem h2{font-size:26px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="doc-tag">verticeqr · doc 01 de 02</span>
+  <span class="eye">// sistema base</span>
+  <h1>Cómo funciona el sistema QR de principio a fin</h1>
+  <p class="sub">El cliente escanea, pide y paga. La cocina recibe el pedido en tiempo real y el dueño lo gestiona todo desde un panel. Sin app, sin login, sin servidor — todo síncrono y operativo en minutos.</p>
+</header>
+
+<div class="legend">
+  <div class="leg-item"><span class="leg-dot"></span> acción</div>
+  <div class="leg-item"><span class="leg-dot trigger"></span> trigger</div>
+  <div class="leg-item"><span class="leg-dot decision"></span> decisión</div>
+</div>
+
+<main>
+<div class="flow">
+
+  <div class="stage">el cliente pide</div>
+
+  <div class="node">
+    <div class="node-ic">01</div>
+    <div class="node-body">
+      <div class="node-type">cliente · móvil</div>
+      <div class="node-title">Escanea el QR de la mesa</div>
+      <div class="node-desc">Cualquier móvil con cámara abre la carta del local en <code>/{local}/?mesa=7</code>. Sin descargas, sin registro, sin esperar al camarero.</div>
+      <span class="node-tag">browser · sin app</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">02</div>
+    <div class="node-body">
+      <div class="node-type">cliente · navega</div>
+      <div class="node-title">Recorre la carta digital</div>
+      <div class="node-desc">Categorías, items con foto HQ, precio, descripción, alérgenos. Filtros por tipo (vegetariano, sin gluten). Selector de extras y opciones cuando aplica.</div>
+      <span class="node-tag">carta_v1</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">03</div>
+    <div class="node-body">
+      <div class="node-type">cliente · carrito</div>
+      <div class="node-title">Añade items con cantidad y notas</div>
+      <div class="node-desc">Total visible siempre. Notas por item ("sin cebolla", "punto medio"). Animación <code>fly-to-cart</code> da feedback visual al añadir.</div>
+      <span class="node-tag">localStorage · cart_v1</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="node trigger">
+    <div class="node-ic">04</div>
+    <div class="node-body">
+      <div class="node-type">cliente · trigger</div>
+      <div class="node-title">Envía el pedido a barra</div>
+      <div class="node-desc">Pulsa <b>"enviar a barra"</b>. El pedido cruza al sistema vía evento <code>storage</code>. Aparece en cocina <b>al instante</b>, sin papel ni voz, sin error de transcripción.</div>
+      <span class="node-tag">trigger event · orders_v1</span>
+    </div>
+  </div>
+
+  <div class="stage">cocina · tablet</div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">05</div>
+    <div class="node-body">
+      <div class="node-type">cocina · tablet</div>
+      <div class="node-title">El pedido aparece en el tablero</div>
+      <div class="node-desc">Tablet/pantalla en cocina muestra cada pedido con mesa, items, notas y hora. Cards organizadas en columnas <b>nuevo → preparando → servido</b>.</div>
+      <span class="node-tag">kanban · kitchen_v1</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">06</div>
+    <div class="node-body">
+      <div class="node-type">cocina · gestión</div>
+      <div class="node-title">Mueve la card por las columnas</div>
+      <div class="node-desc">Al empezar a preparar, drag a "preparando". Al servir, drag a "servido" y la card se archiva. Sonido opcional al entrar pedido nuevo.</div>
+      <span class="node-tag">orders_archive_v1</span>
+    </div>
+  </div>
+
+  <div class="stage">el servicio</div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">07</div>
+    <div class="node-body">
+      <div class="node-type">camarero · mesa</div>
+      <div class="node-title">Entrega el pedido al cliente</div>
+      <div class="node-desc">El camarero solo entrega — no toma comanda ni transcribe. Lleva la bandeja directamente a la mesa indicada. <b>Cero errores de transcripción.</b></div>
+      <span class="node-tag">servicio en sala</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="decision">
+    <div class="decision-shape">
+      <div class="decision-content">
+        <span class="decision-eye">decisión</span>
+        <span class="decision-q">¿pide<br>más?</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="branches">
+
+    <div class="branch">
+      <span class="branch-label">sí — añade más</span>
+      <div class="conn short"></div>
+      <div class="node">
+        <div class="node-ic">↺</div>
+        <div class="node-body">
+          <div class="node-type">cliente · pide otra ronda</div>
+          <div class="node-title">Vuelve a la carta y pide más</div>
+          <div class="node-desc">El cliente no necesita llamar al camarero — pide otra ronda directamente desde el móvil. Cada pedido extra incrementa el ticket sin esfuerzo del personal.</div>
+          <span class="node-tag">+ ticket medio</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="branch">
+      <span class="branch-label">no — pide la cuenta</span>
+      <div class="conn short"></div>
+      <div class="node">
+        <div class="node-ic">€</div>
+        <div class="node-body">
+          <div class="node-type">cliente · pide cuenta</div>
+          <div class="node-title">Solicita la cuenta o paga en caja</div>
+          <div class="node-desc">El total ya está calculado. El cliente paga en caja o en mesa con TPV. El sistema espera a que el admin confirme el cobro.</div>
+          <span class="node-tag">cuenta automática</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="stage">pago + admin</div>
+
+  <div class="conn" style="margin-top:24px"></div>
+
+  <div class="node">
+    <div class="node-ic">08</div>
+    <div class="node-body">
+      <div class="node-type">admin · histórico</div>
+      <div class="node-title">Marca el pedido como pagado</div>
+      <div class="node-desc">En admin · Historial, el dueño/encargado pulsa <b>"marcar pagado"</b> sobre el pedido servido. Esto cierra el ciclo y deja la mesa libre para el siguiente turno.</div>
+      <span class="node-tag">paid_v1 · libera mesa</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">⌘</div>
+    <div class="node-body">
+      <div class="node-type">admin · dashboard</div>
+      <div class="node-title">El dueño ve todo el negocio en una pantalla</div>
+      <div class="node-desc">Ventas del día y semana, top items más vendidos, mesas activas, histórico completo, editor de carta en vivo (cambiar precio o quitar item sin reimprimir nada). Reemplaza TPV + libreta + Excel.</div>
+      <span class="node-tag">dashboard + editor carta</span>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="note-eye">por qué este sistema es el motor</span>
+    <h3>Una sola base. Tres automatizaciones encima.</h3>
+    <p>El sistema QR no es solo "carta digital" — es el motor que hace posibles las automatizaciones del catálogo. El mismo trigger <b>"marcar pagado"</b> dispara la cadena de reseña post-pago, el mismo CRM se alimenta automáticamente desde cada reserva, la misma base de clientes activa la fidelización. <b>Instalas el sistema una vez, activas las capas que quieras.</b></p>
+  </div>
+
+</div>
+</main>
+
+<section class="ecosystem">
+  <div class="eco-head">
+    <span class="eco-eye">ecosistema</span>
+    <h2>El sistema QR como base, las automatizaciones encima</h2>
+    <p class="eco-lead">Una vez instalado el sistema QR, las tres automatizaciones del catálogo verticeqr se enchufan sobre él sin coste adicional. Comparten <b>el mismo CRM, el mismo trigger de pago, el mismo motor de notificaciones</b>. El dueño decide qué activar y cuándo.</p>
+  </div>
+  <div class="eco-grid">
+    <div class="eco-card core">
+      <span class="eco-tag">núcleo · este documento</span>
+      <h3>Sistema QR base</h3>
+      <p>Carta digital + cocina + admin sincronizados. <b>Reemplaza TPV + comanda papel + Excel.</b> Sin app, sin servidor, sin coste recurrente por pedido. Es la base sobre la que todo lo demás opera.</p>
+    </div>
+    <div class="eco-card">
+      <span class="eco-tag">automatización 01</span>
+      <h3>Reseña post-pago</h3>
+      <p>Al marcar pagado, el cliente recibe push en el móvil pidiendo reseña. Las 4-5★ van a Google, las 1-3★ al dueño en privado. <b>+50% reseñas Google, +0.3★ en 3 meses.</b></p>
+    </div>
+    <div class="eco-card">
+      <span class="eco-tag">automatización 02</span>
+      <h3>Reservas con confirmación</h3>
+      <p>Cliente reserva sin pagar nada. 24h antes recibe WhatsApp para confirmar — si no responde, se libera la mesa al pool. <b>No-show del 19% al 11% sin pedir tarjeta.</b></p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

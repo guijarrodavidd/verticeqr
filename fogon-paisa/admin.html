@@ -144,6 +144,67 @@
   .hist-status.cancelled{background:var(--granate);color:var(--card)}
   .hist-status.cleared{background:var(--muted);color:var(--card)}
 
+  /* ===== RESERVAS ===== */
+  .res-toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px;padding:12px 16px;background:var(--card);border:2px solid var(--ink);box-shadow:var(--hard-shadow-sm)}
+  .res-toolbar .filter-grp{display:flex;align-items:center;gap:8px}
+  .res-toolbar .seed-btn{margin-left:auto;background:var(--copper);color:var(--card);border:2px solid var(--ink);padding:8px 14px;font-family:var(--display);font-size:11.5px;cursor:pointer;text-transform:uppercase;letter-spacing:.4px;box-shadow:2px 2px 0 var(--ink);transition:.1s}
+  .res-toolbar .seed-btn:active{transform:translate(2px,2px);box-shadow:none}
+
+  .res-grid{display:grid;gap:12px}
+  .res-card{background:var(--card);border:2px solid var(--ink);padding:0;box-shadow:var(--hard-shadow-sm);display:grid;grid-template-columns:100px 1fr auto;gap:0;overflow:hidden;position:relative}
+  .res-card::before{content:"";position:absolute;top:0;left:0;bottom:0;width:6px;z-index:1}
+  .res-card.pendiente::before{background:var(--mustard)}
+  .res-card.confirmada::before{background:var(--olive)}
+  .res-card.llego::before{background:var(--teal)}
+  .res-card.no_show::before{background:var(--granate)}
+  .res-card.cancelada::before{background:var(--muted)}
+
+  .res-time{background:var(--paper);padding:18px 14px;text-align:center;display:flex;flex-direction:column;justify-content:center;gap:4px;border-right:2px solid var(--ink);min-width:100px}
+  .res-time-h{font-family:var(--display);font-size:26px;font-weight:400;color:var(--ink);letter-spacing:-.7px;line-height:1}
+  .res-time-d{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+
+  .res-body{padding:16px 20px;min-width:0}
+  .res-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+  .res-name{font-family:var(--display);font-size:17px;color:var(--ink);text-transform:uppercase;letter-spacing:-.3px;font-weight:400}
+  .res-status{font-family:var(--mono);font-size:10px;font-weight:500;padding:3px 9px;border:1.5px solid var(--ink);text-transform:uppercase;letter-spacing:.4px;background:var(--mustard);color:var(--ink)}
+  .res-status.confirmada{background:var(--olive);color:var(--card)}
+  .res-status.llego{background:var(--teal);color:var(--card)}
+  .res-status.no_show{background:var(--granate);color:var(--card)}
+  .res-status.cancelada{background:var(--muted);color:var(--card)}
+  .res-meta{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:.3px;display:flex;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+  .res-meta b{font-family:var(--display);color:var(--ink);font-weight:400;letter-spacing:-.1px;font-size:12.5px;margin-left:4px}
+  .res-contact{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.3px}
+  .res-actions{padding:14px 16px;display:flex;flex-direction:column;gap:6px;align-items:flex-end;justify-content:center;border-left:1.5px dashed var(--line-soft);min-width:170px}
+  .res-act{border:1.5px solid var(--ink);background:var(--card);color:var(--ink);padding:7px 12px;font-family:var(--mono);font-size:10.5px;font-weight:500;cursor:pointer;text-transform:uppercase;letter-spacing:.4px;box-shadow:2px 2px 0 var(--ink);transition:.1s;width:100%;text-align:center}
+  .res-act:active{transform:translate(2px,2px);box-shadow:none}
+  .res-act.primary{background:var(--olive);color:var(--card)}
+  .res-act.danger{background:var(--granate);color:var(--mustard)}
+  .res-act.teal{background:var(--teal);color:var(--card)}
+  .res-act.sim{background:var(--mustard);color:var(--ink);border-style:dashed}
+
+  /* ===== WA SIMULATOR (ADMIN-SIDE) ===== */
+  .wa-overlay{position:fixed;inset:0;background:rgba(26,20,16,.65);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
+  .wa-overlay.show{display:flex}
+  .wa-phone{width:360px;max-width:100%;background:#0e1c1a;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);position:relative;overflow:hidden}
+  .wa-status{background:#0a1413;color:#9aada8;padding:8px 18px;font-family:var(--mono);font-size:11px;display:flex;justify-content:space-between;letter-spacing:.4px}
+  .wa-bar{background:#075e54;color:#fff;padding:12px 18px;display:flex;align-items:center;gap:12px}
+  .wa-bar svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+  .wa-avatar{width:34px;height:34px;background:var(--mustard);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:14px;color:var(--ink);letter-spacing:-.5px}
+  .wa-name{font-family:var(--body);font-size:14px;font-weight:600;letter-spacing:-.1px}
+  .wa-sub{font-family:var(--body);font-size:11px;color:#bdf4dc;font-weight:500;margin-top:1px}
+  .wa-chat{background:#0e1c1a;padding:20px 16px 18px;min-height:280px}
+  .wa-time-divider{text-align:center;margin:0 0 18px}
+  .wa-time-divider span{background:#1f3735;color:#bdf4dc;font-family:var(--mono);font-size:9.5px;padding:3px 10px;letter-spacing:.4px;border-radius:8px}
+  .wa-msg{background:#1f3735;color:#fff;padding:12px 14px 18px;border-radius:8px;border-bottom-left-radius:2px;max-width:88%;font-family:var(--body);font-size:13.5px;line-height:1.5;font-weight:500;position:relative;margin-bottom:14px}
+  .wa-msg b{font-weight:700;color:#fff}
+  .wa-msg-time{position:absolute;bottom:4px;right:8px;font-family:var(--mono);font-size:9px;color:#94b8b3;letter-spacing:.3px}
+  .wa-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+  .wa-btn{background:#1f3735;border:1px solid #2a4d4a;padding:11px 8px;font-family:var(--body);font-size:13px;font-weight:600;color:#bdf4dc;cursor:pointer;text-align:center;border-radius:6px;letter-spacing:.2px;transition:.12s}
+  .wa-btn:active{background:#283f3c}
+  .wa-btn.primary{color:#00d4a8;font-weight:700}
+  .wa-btn.danger{color:#ff8a8a}
+  .wa-close{position:absolute;top:8px;right:12px;background:transparent;border:none;color:#94b8b3;font-size:24px;cursor:pointer;z-index:5;line-height:1;padding:0;font-family:var(--mono)}
+
   /* ===== EDITOR DE CARTA ===== */
   .cat-block{margin-bottom:26px}
   .cat-head{display:flex;align-items:center;gap:10px;padding:10px 0 12px;border-bottom:2px solid var(--ink);margin-bottom:14px}
@@ -235,7 +296,8 @@
     <button class="tab active" data-panel="dashboard"><span class="ord">01</span> Dashboard</button>
     <button class="tab" data-panel="top"><span class="ord">02</span> Top platos</button>
     <button class="tab" data-panel="historial"><span class="ord">03</span> Historial</button>
-    <button class="tab" data-panel="carta"><span class="ord">04</span> Editor de carta</button>
+    <button class="tab" data-panel="reservas"><span class="ord">04</span> Reservas</button>
+    <button class="tab" data-panel="carta"><span class="ord">05</span> Editor de carta</button>
   </div>
 </header>
 
@@ -345,9 +407,66 @@
     <div class="hist-grid" id="histGrid"></div>
   </div>
 
+  <!-- ===== RESERVAS ===== -->
+  <div class="panel" id="panel-reservas">
+    <div class="sec-title" data-num="04">
+      <span class="sec-title-text">Reservas</span>
+      <span class="sec-sub" id="resCount">0 reservas</span>
+    </div>
+
+    <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr)">
+      <div class="kpi">
+        <div class="kpi-lbl">Reservas hoy</div>
+        <div class="kpi-val" id="kpiResHoy">0</div>
+        <div class="kpi-foot"><span id="kpiResHoyFoot">Próximas + pasadas</span></div>
+      </div>
+      <div class="kpi olive">
+        <div class="kpi-lbl">% Confirmación 24h</div>
+        <div class="kpi-val" id="kpiResConf">0<small>%</small></div>
+        <div class="kpi-foot"><span>Reservas con WhatsApp confirmado</span></div>
+      </div>
+      <div class="kpi granate">
+        <div class="kpi-lbl">No-shows mes</div>
+        <div class="kpi-val" id="kpiResNS">0</div>
+        <div class="kpi-foot"><span id="kpiResNSFoot">Reservas perdidas</span></div>
+      </div>
+      <div class="kpi teal">
+        <div class="kpi-lbl">Próxima reserva</div>
+        <div class="kpi-val" id="kpiResNext" style="font-size:22px">—</div>
+        <div class="kpi-foot"><span id="kpiResNextFoot">—</span></div>
+      </div>
+    </div>
+
+    <div class="res-toolbar">
+      <div class="filter-grp">
+        <label>Día</label>
+        <select id="resDay">
+          <option value="hoy">Hoy</option>
+          <option value="manana">Mañana</option>
+          <option value="semana">Próximos 7 días</option>
+          <option value="all">Todas</option>
+        </select>
+      </div>
+      <div class="filter-grp">
+        <label>Estado</label>
+        <select id="resEstado">
+          <option value="all">Todos</option>
+          <option value="pendiente">Pendiente</option>
+          <option value="confirmada">Confirmada</option>
+          <option value="llego">Llegó</option>
+          <option value="no_show">No-show</option>
+          <option value="cancelada">Cancelada</option>
+        </select>
+      </div>
+      <button class="seed-btn" id="seedBtn">Cargar reservas demo</button>
+    </div>
+
+    <div class="res-grid" id="resGrid"></div>
+  </div>
+
   <!-- ===== EDITOR DE CARTA ===== -->
   <div class="panel" id="panel-carta">
-    <div class="sec-title" data-num="04">
+    <div class="sec-title" data-num="05">
       <span class="sec-title-text">Editor de carta</span>
       <span class="sec-sub">Precios y disponibilidad</span>
     </div>
@@ -363,6 +482,37 @@
   </div>
 
 </main>
+
+<!-- ===== WHATSAPP SIMULATOR ===== -->
+<div class="wa-overlay" id="waOverlay">
+  <div class="wa-phone">
+    <button class="wa-close" onclick="closeWa()">×</button>
+    <div class="wa-status"><span id="waNow">21:14</span><span>📶 WiFi · 87%</span></div>
+    <div class="wa-bar">
+      <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <div class="wa-avatar">FP</div>
+      <div>
+        <div class="wa-name">El Fogón Paisa</div>
+        <div class="wa-sub">en línea</div>
+      </div>
+    </div>
+    <div class="wa-chat">
+      <div class="wa-time-divider"><span id="waDivider">HOY · 21:14</span></div>
+      <div class="wa-msg">
+        Hola <b id="waNombre">María</b> 👋<br><br>
+        Te recordamos tu reserva en <b>El Fogón Paisa</b> para mañana:<br><br>
+        🗓 <b id="waFecha">viernes 6 jun · 21:00</b><br>
+        👥 <b id="waPax">4 personas · interior</b><br><br>
+        ¿Confirmas que vienes? Si no respondes en 6h, liberamos la mesa.
+        <div class="wa-msg-time" id="waTime">21:14</div>
+      </div>
+      <div class="wa-actions">
+        <button class="wa-btn primary" onclick="respondWa('confirmar')">✓ CONFIRMAR</button>
+        <button class="wa-btn danger" onclick="respondWa('cancelar')">✕ CANCELAR</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="toast" id="toast"></div>
 
@@ -446,6 +596,7 @@ document.getElementById("tabs").addEventListener("click", e=>{
   if(b.dataset.panel==="dashboard") renderDashboard();
   if(b.dataset.panel==="top") renderTop();
   if(b.dataset.panel==="historial") renderHist();
+  if(b.dataset.panel==="reservas") renderReservas();
   if(b.dataset.panel==="carta") renderEditor();
 });
 
@@ -690,6 +841,203 @@ function toast(msg){
   t.classList.add("show");
   clearTimeout(t._t);
   t._t=setTimeout(()=>t.classList.remove("show"),2200);
+}
+
+// ===== RESERVAS =====
+const RESERVAS_KEY="fp_reservas_v1";
+const ZONAS_ADM={interior:"Interior",terraza:"Terraza",reservado:"Reservado VIP"};
+const DOW_ADM=['dom','lun','mar','mié','jue','vie','sáb'];
+const MON_ADM=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+let _waActiveReservaId=null;
+
+function loadReservas(){
+  try{ const a=JSON.parse(localStorage.getItem(RESERVAS_KEY)||"[]"); return Array.isArray(a)?a:[]; }
+  catch(e){ return []; }
+}
+function saveReservas(arr){ localStorage.setItem(RESERVAS_KEY, JSON.stringify(arr)); }
+
+function fmtFechaAdm(iso){
+  const d=new Date(iso+"T00:00:00");
+  return `${DOW_ADM[d.getDay()]} ${d.getDate()} ${MON_ADM[d.getMonth()]}`;
+}
+function todayIso(){ return new Date().toISOString().slice(0,10); }
+function tomorrowIso(){ const d=new Date(); d.setDate(d.getDate()+1); return d.toISOString().slice(0,10); }
+function in7Iso(){ const d=new Date(); d.setDate(d.getDate()+7); return d.toISOString().slice(0,10); }
+
+function filterReservas(){
+  const day=document.getElementById("resDay").value;
+  const est=document.getElementById("resEstado").value;
+  let arr=loadReservas();
+  const today=todayIso();
+  if(day==="hoy") arr=arr.filter(r=>r.fecha===today);
+  else if(day==="manana") arr=arr.filter(r=>r.fecha===tomorrowIso());
+  else if(day==="semana"){ const lim=in7Iso(); arr=arr.filter(r=>r.fecha>=today && r.fecha<=lim); }
+  if(est!=="all") arr=arr.filter(r=>r.estado===est);
+  return arr.sort((a,b)=>{
+    if(a.fecha!==b.fecha) return a.fecha.localeCompare(b.fecha);
+    return a.hora.localeCompare(b.hora);
+  });
+}
+
+function renderReservas(){
+  const all=loadReservas();
+  const today=todayIso();
+  const hoy=all.filter(r=>r.fecha===today);
+  document.getElementById("resCount").textContent=`${all.length} reservas en total`;
+  document.getElementById("kpiResHoy").textContent=hoy.length;
+  const confirmadas=all.filter(r=>r.estado==="confirmada"||r.estado==="llego").length;
+  const tot=all.filter(r=>r.estado!=="cancelada").length;
+  const pct=tot>0 ? Math.round(confirmadas*100/tot) : 0;
+  document.getElementById("kpiResConf").innerHTML=`${pct}<small>%</small>`;
+  const ns=all.filter(r=>r.estado==="no_show").length;
+  document.getElementById("kpiResNS").textContent=ns;
+  // próxima
+  const future=all.filter(r=>r.estado!=="cancelada"&&r.estado!=="no_show"&&r.estado!=="llego"&&(r.fecha>today||(r.fecha===today)))
+    .sort((a,b)=>(a.fecha+a.hora).localeCompare(b.fecha+b.hora));
+  if(future.length>0){
+    const n=future[0];
+    document.getElementById("kpiResNext").textContent=n.hora;
+    document.getElementById("kpiResNextFoot").textContent=`${fmtFechaAdm(n.fecha)} · ${n.nombre.split(' ')[0]} · ${n.personas}p`;
+  } else {
+    document.getElementById("kpiResNext").textContent="—";
+    document.getElementById("kpiResNextFoot").textContent="Sin reservas próximas";
+  }
+
+  const grid=document.getElementById("resGrid");
+  const list=filterReservas();
+  if(list.length===0){
+    grid.innerHTML=`<div class="empty-state"><b>Sin reservas en este filtro</b>Cambia el día o el estado para ver otras.<br><br>O pulsa <b style="display:inline">Cargar reservas demo</b> arriba para poblar con ejemplos.</div>`;
+    return;
+  }
+  grid.innerHTML="";
+  list.forEach(r=>{
+    const card=document.createElement("div");
+    card.className=`res-card ${r.estado}`;
+    const statusLabel={pendiente:"PENDIENTE",confirmada:"CONFIRMADA",llego:"LLEGÓ",no_show:"NO-SHOW",cancelada:"CANCELADA"}[r.estado];
+    let actions="";
+    if(r.estado==="pendiente"){
+      actions=`
+        <button class="res-act sim" data-id="${r.id}" data-act="sim">▶ Simular WhatsApp 24h</button>
+        <button class="res-act primary" data-id="${r.id}" data-act="llego">✓ Llegó</button>
+        <button class="res-act danger" data-id="${r.id}" data-act="cancelar">✕ Cancelar</button>
+      `;
+    } else if(r.estado==="confirmada"){
+      actions=`
+        <button class="res-act primary" data-id="${r.id}" data-act="llego">✓ Llegó</button>
+        <button class="res-act" data-id="${r.id}" data-act="no_show">⚠ No-show</button>
+        <button class="res-act danger" data-id="${r.id}" data-act="cancelar">✕ Cancelar</button>
+      `;
+    } else if(r.estado==="llego"){
+      actions=`<div style="font-family:var(--mono);font-size:10.5px;color:var(--olive-dark);text-transform:uppercase;letter-spacing:.4px;text-align:center;padding:8px">✓ atendida<br>${fmtTime(r.llegoAt)}</div>`;
+    } else if(r.estado==="no_show"){
+      actions=`<div style="font-family:var(--mono);font-size:10.5px;color:var(--granate);text-transform:uppercase;letter-spacing:.4px;text-align:center;padding:8px">⚠ no se presentó</div>`;
+    } else if(r.estado==="cancelada"){
+      actions=`<div style="font-family:var(--mono);font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;text-align:center;padding:8px">✕ cancelada</div>`;
+    }
+    card.innerHTML=`
+      <div class="res-time">
+        <div class="res-time-h">${r.hora}</div>
+        <div class="res-time-d">${fmtFechaAdm(r.fecha)}</div>
+      </div>
+      <div class="res-body">
+        <div class="res-head">
+          <span class="res-name">${r.nombre}</span>
+          <span class="res-status ${r.estado}">${statusLabel}</span>
+        </div>
+        <div class="res-meta">
+          <span>Personas <b>${r.personas}</b></span>
+          <span>Zona <b>${ZONAS_ADM[r.zona]}</b></span>
+          <span>ID <b>#${r.id.slice(-6).toUpperCase()}</b></span>
+        </div>
+        <div class="res-contact">${r.whatsapp} · ${r.email}</div>
+      </div>
+      <div class="res-actions">${actions}</div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+document.getElementById("resDay").addEventListener("change", renderReservas);
+document.getElementById("resEstado").addEventListener("change", renderReservas);
+
+document.getElementById("resGrid").addEventListener("click", e=>{
+  const b=e.target.closest(".res-act"); if(!b) return;
+  const id=b.dataset.id, act=b.dataset.act;
+  const all=loadReservas();
+  const r=all.find(x=>x.id===id); if(!r) return;
+  if(act==="sim"){ openWa(r); return; }
+  if(act==="llego"){ r.estado="llego"; r.llegoAt=Date.now(); toast("Marcada como llegada"); }
+  if(act==="no_show"){ r.estado="no_show"; r.noShowAt=Date.now(); toast("Marcada como no-show"); }
+  if(act==="cancelar"){ r.estado="cancelada"; toast("Reserva cancelada"); }
+  saveReservas(all);
+  renderReservas();
+});
+
+// WA modal
+function openWa(r){
+  _waActiveReservaId=r.id;
+  document.getElementById("waNombre").textContent=r.nombre.split(' ')[0];
+  document.getElementById("waFecha").textContent=fmtFechaAdm(r.fecha)+' · '+r.hora;
+  document.getElementById("waPax").textContent=r.personas+' personas · '+ZONAS_ADM[r.zona].toLowerCase();
+  const now=new Date().toLocaleTimeString("es-ES",{hour:"2-digit",minute:"2-digit"});
+  document.getElementById("waNow").textContent=now;
+  document.getElementById("waTime").textContent=now;
+  document.getElementById("waDivider").textContent="HOY · "+now;
+  document.getElementById("waOverlay").classList.add("show");
+  const all=loadReservas();
+  const rr=all.find(x=>x.id===r.id); if(rr){ rr.notifiedAt=Date.now(); saveReservas(all); }
+}
+function closeWa(){ document.getElementById("waOverlay").classList.remove("show"); _waActiveReservaId=null; }
+function respondWa(resp){
+  if(!_waActiveReservaId) return;
+  const all=loadReservas();
+  const r=all.find(x=>x.id===_waActiveReservaId); if(!r) return;
+  if(resp==="confirmar"){ r.estado="confirmada"; r.confirmedAt=Date.now(); toast("Cliente confirmó · mesa asegurada"); }
+  else { r.estado="cancelada"; toast("Cliente canceló · mesa liberada al pool"); }
+  saveReservas(all);
+  closeWa();
+  renderReservas();
+}
+
+// Seed demo data
+document.getElementById("seedBtn").addEventListener("click", ()=>{
+  const today=todayIso();
+  const tom=tomorrowIso();
+  const d2=new Date(); d2.setDate(d2.getDate()+2);
+  const iso2=d2.toISOString().slice(0,10);
+  const samples=[
+    {nombre:"María García",whatsapp:"+34 666 11 22 33",email:"maria@example.com",fecha:today,hora:"14:00",personas:4,zona:"interior",estado:"confirmada",confirmedAt:Date.now()-3600000},
+    {nombre:"Andrés Restrepo",whatsapp:"+34 666 22 33 44",email:"andres@example.com",fecha:today,hora:"14:30",personas:2,zona:"terraza",estado:"llego",confirmedAt:Date.now()-7200000,llegoAt:Date.now()-1800000},
+    {nombre:"Lucía Méndez",whatsapp:"+34 666 33 44 55",email:"lucia@example.com",fecha:today,hora:"21:00",personas:6,zona:"reservado",estado:"pendiente"},
+    {nombre:"Diego Cárdenas",whatsapp:"+34 666 44 55 66",email:"diego@example.com",fecha:today,hora:"21:30",personas:3,zona:"interior",estado:"confirmada",confirmedAt:Date.now()-1800000},
+    {nombre:"Sofía Vargas",whatsapp:"+34 666 55 66 77",email:"sofia@example.com",fecha:today,hora:"22:00",personas:2,zona:"interior",estado:"pendiente"},
+    {nombre:"Tomás Aguilar",whatsapp:"+34 666 66 77 88",email:"tomas@example.com",fecha:tom,hora:"13:30",personas:8,zona:"reservado",estado:"pendiente"},
+    {nombre:"Elena Posada",whatsapp:"+34 666 77 88 99",email:"elena@example.com",fecha:tom,hora:"15:00",personas:2,zona:"terraza",estado:"pendiente"},
+    {nombre:"Carlos Velasco",whatsapp:"+34 666 88 99 00",email:"carlos@example.com",fecha:tom,hora:"20:30",personas:4,zona:"interior",estado:"confirmada",confirmedAt:Date.now()-86400000},
+    {nombre:"Paula Henao",whatsapp:"+34 666 99 00 11",email:"paula@example.com",fecha:tom,hora:"21:30",personas:5,zona:"terraza",estado:"pendiente"},
+    {nombre:"Joaquín Mora",whatsapp:"+34 666 10 11 12",email:"joaquin@example.com",fecha:iso2,hora:"21:00",personas:6,zona:"reservado",estado:"pendiente"},
+  ];
+  const all=loadReservas();
+  let added=0;
+  samples.forEach(s=>{
+    const id='r_'+Date.now().toString(36)+Math.random().toString(36).slice(2,6)+(added++);
+    all.push({...s,id,createdAt:Date.now()-Math.random()*604800000,notifiedAt:null,llegoAt:s.llegoAt||null,noShowAt:null});
+  });
+  saveReservas(all);
+  renderReservas();
+  toast(`${samples.length} reservas demo añadidas`);
+});
+
+// Listener cross-tab: si el cliente confirma/cancela desde reservar.html, refrescar aquí
+window.addEventListener("storage", e=>{
+  if(e.key===RESERVAS_KEY && document.getElementById("panel-reservas").classList.contains("active")){
+    renderReservas();
+  }
+});
+
+// Si el hash es #reservas, abrir directamente esa tab
+if(location.hash==="#reservas"){
+  document.querySelector('.tab[data-panel="reservas"]').click();
 }
 
 // ===== INIT =====

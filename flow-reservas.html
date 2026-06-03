@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatización · Reservas con confirmación 24h</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap">
+<style>
+  :root{
+    --bg:#ffffff;
+    --paper:#fafaf7;
+    --ink:#14140f;
+    --ink-soft:#6a6a64;
+    --ink-faint:#a8a8a0;
+    --line:#e6e6df;
+    --line-soft:#f0f0e8;
+    --display:"Fraunces",ui-serif,Georgia,serif;
+    --body:"Inter",-apple-system,system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:400;min-height:100%;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+  header{padding:60px 32px 40px;max-width:1080px;margin:0 auto;border-bottom:1px solid var(--line)}
+  .back{font-family:var(--mono);font-size:10px;color:var(--ink-soft);text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;display:inline-block;margin-bottom:36px;transition:color .15s}
+  .back:hover{color:var(--ink)}
+  .eye{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;margin-bottom:18px;display:inline-block}
+  h1{font-family:var(--display);font-style:italic;font-size:clamp(34px,5vw,52px);font-weight:600;color:var(--ink);line-height:1.02;letter-spacing:-1.5px;margin-bottom:18px;max-width:780px}
+  .sub{font-family:var(--body);font-size:15px;color:var(--ink-soft);line-height:1.55;font-weight:400;max-width:620px}
+
+  .legend{max-width:1080px;margin:0 auto;padding:18px 32px;display:flex;gap:28px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  .leg-item{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase}
+  .leg-dot{width:9px;height:9px;background:var(--bg);border:1px solid var(--ink-soft)}
+  .leg-dot.trigger{background:var(--ink);border-color:var(--ink)}
+  .leg-dot.decision{border:1px solid var(--ink);transform:rotate(45deg)}
+
+  main{max-width:1080px;margin:0 auto;padding:24px 32px 100px;position:relative}
+
+  .flow{display:flex;flex-direction:column;align-items:center;gap:0;position:relative}
+
+  .node{position:relative;background:var(--bg);border:1px solid var(--line);padding:18px 22px;display:grid;grid-template-columns:38px 1fr;gap:16px;align-items:flex-start;width:100%;max-width:480px;transition:border-color .18s;z-index:2}
+  .node:hover{border-color:var(--ink-soft)}
+  .node-ic{width:38px;height:38px;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-style:italic;font-size:16px;color:var(--ink);font-weight:600;letter-spacing:-.3px;flex:0 0 38px}
+  .node-body{min-width:0}
+  .node-type{font-family:var(--mono);font-size:9px;color:var(--ink-soft);letter-spacing:1.8px;text-transform:uppercase;font-weight:500;margin-bottom:6px}
+  .node-title{font-family:var(--display);font-style:italic;font-size:18px;font-weight:600;color:var(--ink);letter-spacing:-.3px;line-height:1.2;margin-bottom:6px}
+  .node-desc{font-family:var(--body);font-size:13px;color:var(--ink-soft);line-height:1.55;font-weight:400}
+  .node-desc code{font-family:var(--mono);font-size:11px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--line);letter-spacing:0}
+  .node-desc b{color:var(--ink);font-weight:500}
+  .node-tag{font-family:var(--mono);font-size:9px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;display:inline-block;margin-top:10px;padding:3px 8px;border:1px solid var(--line)}
+
+  .node.trigger{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  .node.trigger .node-ic{background:var(--bg);color:var(--ink);border-color:var(--bg)}
+  .node.trigger .node-type{color:var(--ink-faint)}
+  .node.trigger .node-title{color:var(--bg)}
+  .node.trigger .node-desc{color:var(--ink-faint)}
+  .node.trigger .node-desc b{color:var(--bg)}
+  .node.trigger .node-desc code{background:rgba(255,255,255,.06);color:var(--bg);border-color:rgba(255,255,255,.18)}
+  .node.trigger .node-tag{color:var(--ink-faint);border-color:rgba(255,255,255,.2)}
+
+  .decision{margin:24px 0;display:flex;flex-direction:column;align-items:center;position:relative;z-index:2}
+  .decision-shape{width:140px;height:140px;background:var(--bg);border:1px solid var(--ink);transform:rotate(45deg);position:relative}
+  .decision-content{position:absolute;inset:0;transform:rotate(-45deg);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;text-align:center;gap:6px}
+  .decision-eye{font-family:var(--mono);font-size:9px;color:var(--ink-soft);letter-spacing:2px;text-transform:uppercase;font-weight:500}
+  .decision-q{font-family:var(--display);font-style:italic;font-size:16px;font-weight:600;color:var(--ink);letter-spacing:-.3px;line-height:1.05}
+
+  .conn{width:1px;height:40px;background:var(--ink-faint);position:relative;margin:0 auto}
+  .conn::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%) translateY(50%);width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:6px solid var(--ink-faint)}
+  .conn.short{height:24px}
+
+  .branches{display:grid;grid-template-columns:1fr 1fr;gap:30px;width:100%;max-width:840px;margin-top:24px;position:relative}
+  .branch{display:flex;flex-direction:column;align-items:center;gap:0;min-width:0}
+  .branch-label{font-family:var(--mono);font-size:9.5px;color:var(--ink);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;padding:4px 12px;border:1px solid var(--ink);font-weight:500;background:var(--bg)}
+  .branch .node{max-width:none}
+
+  .stage{font-family:var(--mono);font-size:9.5px;color:var(--ink-faint);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;padding:30px 0 16px;display:flex;align-items:center;gap:14px;width:100%;max-width:480px;margin:0 auto}
+  .stage::before, .stage::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .note{max-width:700px;margin:60px auto 0;padding:26px 28px;background:var(--paper);border:1px solid var(--line);text-align:left}
+  .note-eye{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-bottom:10px;display:inline-block}
+  .note h3{font-family:var(--display);font-style:italic;font-size:19px;font-weight:600;color:var(--ink);margin-bottom:10px;letter-spacing:-.3px;line-height:1.2}
+  .note p{font-family:var(--body);font-size:13.5px;color:var(--ink-soft);line-height:1.6;font-weight:400}
+  .note b{color:var(--ink);font-weight:500}
+
+  /* Antes/Después */
+  .compare{max-width:1080px;margin:90px auto 0;padding:60px 32px 0;border-top:1px solid var(--line)}
+  .compare-head{margin-bottom:30px}
+  .compare-eye{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;margin-bottom:14px;display:inline-block}
+  .compare-eye::before{content:"// "}
+  .compare h2{font-family:var(--display);font-style:italic;font-size:clamp(28px,4vw,40px);font-weight:600;color:var(--ink);line-height:1.05;letter-spacing:-1.2px;margin-bottom:14px;max-width:760px}
+  .compare-lead{font-family:var(--body);font-size:14.5px;color:var(--ink-soft);line-height:1.6;font-weight:400;max-width:680px}
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);background:var(--bg);margin-top:32px}
+  .cmp-col{padding:24px 26px}
+  .cmp-col.before{border-right:1px solid var(--line);background:var(--paper)}
+  .cmp-col.after{background:var(--ink);color:var(--bg)}
+  .cmp-label{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-bottom:14px;color:var(--ink-soft);padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .cmp-col.after .cmp-label{color:rgba(255,255,255,.4);border-color:rgba(255,255,255,.15)}
+  .cmp-col h3{font-family:var(--display);font-style:italic;font-size:22px;font-weight:600;letter-spacing:-.5px;margin-bottom:18px;color:var(--ink);line-height:1.1}
+  .cmp-col.after h3{color:var(--bg)}
+  .cmp-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+  .cmp-list li{font-family:var(--body);font-size:13px;line-height:1.5;color:var(--ink-soft);position:relative;padding-left:18px;font-weight:400}
+  .cmp-list li::before{content:"—";position:absolute;left:0;top:0;color:var(--ink-faint);font-family:var(--mono);font-weight:500}
+  .cmp-col.after .cmp-list li{color:rgba(255,255,255,.78)}
+  .cmp-col.after .cmp-list li::before{color:rgba(255,255,255,.4)}
+  .cmp-list li b{color:var(--ink);font-weight:500}
+  .cmp-col.after .cmp-list li b{color:var(--bg)}
+
+  /* Study */
+  .study{max-width:1080px;margin:90px auto 0;padding:60px 32px 0;border-top:1px solid var(--line)}
+  .study-head{margin-bottom:36px}
+  .study-eye{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;margin-bottom:14px;display:inline-block}
+  .study-eye::before{content:"// "}
+  .study h2{font-family:var(--display);font-style:italic;font-size:clamp(28px,4vw,40px);font-weight:600;color:var(--ink);line-height:1.05;letter-spacing:-1.2px;margin-bottom:14px;max-width:760px}
+  .study-lead{font-family:var(--body);font-size:14.5px;color:var(--ink-soft);line-height:1.6;font-weight:400;max-width:680px}
+
+  .block{margin-top:48px}
+  .block-label{font-family:var(--mono);font-size:9.5px;color:var(--ink-faint);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:24px;display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+  .block-label small{font-family:var(--body);font-style:italic;font-size:11.5px;color:var(--ink-faint);letter-spacing:0;text-transform:none;font-weight:400}
+
+  .assumes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border:1px solid var(--line);background:var(--bg)}
+  .assume{padding:20px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .assume:nth-child(2n){border-right:none}
+  @media(min-width:680px){.assume{border-right:1px solid var(--line)}.assume:nth-child(2n){border-right:1px solid var(--line)}.assume:nth-child(4n){border-right:none}}
+  .assume-k{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-bottom:8px}
+  .assume-v{font-family:var(--display);font-style:italic;font-size:26px;font-weight:600;color:var(--ink);letter-spacing:-.8px;line-height:1;margin-bottom:6px}
+  .assume-v small{font-family:var(--body);font-style:normal;font-size:13px;color:var(--ink-soft);letter-spacing:0;margin-left:4px;font-weight:400}
+  .assume-d{font-family:var(--body);font-size:11.5px;color:var(--ink-soft);line-height:1.5;font-weight:400}
+
+  .funnel{border:1px solid var(--line);background:var(--bg)}
+  .funnel-row{display:grid;grid-template-columns:48px 1fr 100px 90px;align-items:center;gap:14px;padding:14px 22px;border-bottom:1px solid var(--line)}
+  .funnel-row:last-child{border-bottom:none}
+  .funnel-row.head{background:var(--paper);font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;padding:11px 22px}
+  .funnel-step{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:1px}
+  .funnel-label{font-family:var(--body);font-size:13.5px;color:var(--ink);font-weight:500;line-height:1.3}
+  .funnel-label small{display:block;font-family:var(--body);font-style:italic;font-size:12px;color:var(--ink-soft);font-weight:400;margin-top:2px}
+  .funnel-pct{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);letter-spacing:.5px;text-align:right;font-weight:500}
+  .funnel-n{font-family:var(--display);font-style:italic;font-size:18px;color:var(--ink);font-weight:600;letter-spacing:-.4px;text-align:right}
+
+  .proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+  .proj-card{border:1px solid var(--line);background:var(--bg);padding:22px 22px 20px;display:flex;flex-direction:column;gap:8px}
+  .proj-card.highlight{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  .proj-card.highlight .proj-k{color:rgba(255,255,255,.55)}
+  .proj-card.highlight .proj-v{color:var(--bg)}
+  .proj-card.highlight .proj-d{color:rgba(255,255,255,.7)}
+  .proj-card.highlight .proj-delta{color:#b8e0a8;background:rgba(184,224,168,.12);border-color:rgba(184,224,168,.3)}
+  .proj-k{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.5px;text-transform:uppercase;font-weight:500}
+  .proj-v{font-family:var(--display);font-style:italic;font-size:36px;font-weight:600;color:var(--ink);letter-spacing:-1.4px;line-height:1}
+  .proj-v small{font-family:var(--body);font-style:normal;font-size:13px;color:var(--ink-soft);letter-spacing:0;margin-left:4px;font-weight:400}
+  .proj-delta{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border:1px solid var(--ink-soft);color:var(--ink-soft);width:max-content;font-weight:500}
+  .proj-d{font-family:var(--body);font-size:11.5px;color:var(--ink-soft);line-height:1.45;font-weight:400;margin-top:6px}
+
+  .caveats{border:1px solid var(--line);background:var(--paper)}
+  .caveat{padding:18px 22px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:32px 1fr;gap:14px;align-items:flex-start}
+  .caveat:last-child{border-bottom:none}
+  .caveat-mark{font-family:var(--display);font-style:italic;font-size:20px;color:var(--ink-soft);line-height:1;font-weight:600}
+  .caveat-title{font-family:var(--display);font-style:italic;font-size:15px;font-weight:600;color:var(--ink);letter-spacing:-.2px;margin-bottom:4px;line-height:1.25}
+  .caveat-desc{font-family:var(--body);font-size:12.5px;color:var(--ink-soft);line-height:1.55;font-weight:400}
+
+  .sources{margin-top:32px;padding:18px 22px;border:1px dashed var(--line);font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:.4px;line-height:1.7}
+  .sources b{color:var(--ink);font-weight:500}
+
+  .cases{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+  .case{border:1px solid var(--line);background:var(--bg);display:flex;flex-direction:column}
+  .case-head{padding:22px 22px 16px;border-bottom:1px solid var(--line)}
+  .case-tag{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:2px;text-transform:uppercase;font-weight:500;display:inline-block;margin-bottom:8px}
+  .case-head h3{font-family:var(--display);font-style:italic;font-size:20px;font-weight:600;color:var(--ink);letter-spacing:-.5px;line-height:1.1;margin-bottom:6px}
+  .case-sub{font-family:var(--body);font-size:12px;color:var(--ink-soft);line-height:1.45;font-weight:400}
+  .case-inputs{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
+  .case-i{padding:12px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .case-i:nth-child(2n){border-right:none}
+  .case-i:nth-last-child(-n+2){border-bottom:none}
+  .case-i span{font-family:var(--mono);font-size:9px;color:var(--ink-soft);letter-spacing:1.2px;text-transform:uppercase;font-weight:500}
+  .case-i b{font-family:var(--display);font-style:italic;font-size:15px;color:var(--ink);font-weight:600;letter-spacing:-.3px}
+  .case-result{padding:0;border-bottom:1px solid var(--line)}
+  .case-r-row{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:10px;padding:11px 18px;border-bottom:1px solid var(--line)}
+  .case-r-row:last-child{border-bottom:none}
+  .case-r-row.hero{background:var(--ink)}
+  .case-r-row.hero span{color:rgba(255,255,255,.55)}
+  .case-r-row.hero b{color:var(--bg)}
+  .case-r-row span{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:1.2px;text-transform:uppercase;font-weight:500}
+  .case-r-row b{font-family:var(--display);font-style:italic;font-size:18px;color:var(--ink);font-weight:600;letter-spacing:-.4px;line-height:1}
+  .case-take{padding:16px 18px;font-family:var(--body);font-style:italic;font-size:12px;color:var(--ink-soft);line-height:1.5;font-weight:400;background:var(--paper)}
+  .case-take b{font-style:normal;color:var(--ink);font-weight:500}
+
+  @media(max-width:980px){
+    .cases{grid-template-columns:1fr 1fr}
+    .cases .case:nth-child(3){grid-column:1 / -1}
+  }
+  @media(max-width:680px){
+    header{padding:36px 22px 28px}
+    .legend{padding:14px 22px;gap:16px}
+    main{padding:18px 22px 70px}
+    h1{font-size:32px;letter-spacing:-1.2px}
+    .node{padding:14px 16px;grid-template-columns:32px 1fr;gap:12px;max-width:none}
+    .node-ic{width:32px;height:32px;flex:0 0 32px;font-size:14px}
+    .node-title{font-size:16px}
+    .node-desc{font-size:12.5px}
+    .branches{grid-template-columns:1fr;gap:18px;margin-top:18px}
+    .decision-shape{width:120px;height:120px}
+    .decision-q{font-size:14px}
+    .note{padding:20px;margin-top:40px}
+    .compare,.study{padding:40px 22px 0;margin-top:60px}
+    .compare h2,.study h2{font-size:26px}
+    .compare-grid{grid-template-columns:1fr}
+    .cmp-col.before{border-right:none;border-bottom:1px solid var(--line)}
+    .block{margin-top:36px}
+    .funnel-row{grid-template-columns:38px 1fr 70px;gap:10px;padding:12px 16px}
+    .funnel-row.head{padding:10px 16px}
+    .funnel-pct{display:none}
+    .funnel-label{font-size:12.5px}
+    .funnel-n{font-size:16px}
+    .assume{padding:16px 18px}
+    .assume-v{font-size:22px}
+    .proj-card{padding:18px}
+    .proj-v{font-size:30px}
+    .caveat{padding:14px 16px}
+    .cases{grid-template-columns:1fr}
+    .cases .case:nth-child(3){grid-column:auto}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="index.html">← volver</a>
+  <span class="eye">// automatización 02</span>
+  <h1>Reservas online con confirmación automática</h1>
+  <p class="sub">Cero fricción al reservar — sin depósito, sin tarjeta. El sistema confirma con el cliente 24h antes y libera la mesa solo si no responde. Los no-shows bajan a la mitad sin pedir un euro por adelantado.</p>
+</header>
+
+<div class="legend">
+  <div class="leg-item"><span class="leg-dot"></span> acción</div>
+  <div class="leg-item"><span class="leg-dot trigger"></span> trigger</div>
+  <div class="leg-item"><span class="leg-dot decision"></span> decisión</div>
+</div>
+
+<main>
+<div class="flow">
+
+  <div class="stage">el cliente reserva</div>
+
+  <div class="node">
+    <div class="node-ic">01</div>
+    <div class="node-body">
+      <div class="node-type">cliente</div>
+      <div class="node-title">Encuentra el local y pulsa "reservar"</div>
+      <div class="node-desc">Click desde Google Maps, Instagram, web propia o QR físico. Abre <code>/reservar</code>. Sin app, sin login.</div>
+      <span class="node-tag">browser</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">02</div>
+    <div class="node-body">
+      <div class="node-type">cliente · selección</div>
+      <div class="node-title">Elige día, hora, personas y zona</div>
+      <div class="node-desc">Calendario con <b>disponibilidad real</b> por zona (interior, terraza, sofá, cachimba). Slots ocupados desactivados, no hay overbooking.</div>
+      <span class="node-tag">capacity engine</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">03</div>
+    <div class="node-body">
+      <div class="node-type">cliente · datos</div>
+      <div class="node-title">Nombre + WhatsApp + email</div>
+      <div class="node-desc">Tres campos. <b>Cero pago, cero tarjeta</b>. Si el WhatsApp ya existe en CRM, autocompleta. Marca consentimiento RGPD para avisos.</div>
+      <span class="node-tag">crm_v1 · sin fricción</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">04</div>
+    <div class="node-body">
+      <div class="node-type">sistema · confirmación auto</div>
+      <div class="node-title">WhatsApp + email inmediatos</div>
+      <div class="node-desc">"Reserva confirmada · viernes 20:30 · 4 personas · interior". Botón para añadir al calendario y otro para modificar/cancelar self-service.</div>
+      <span class="node-tag">whatsapp business api</span>
+    </div>
+  </div>
+
+  <div class="stage">el día antes</div>
+
+  <div class="conn"></div>
+
+  <div class="node trigger">
+    <div class="node-ic">05</div>
+    <div class="node-body">
+      <div class="node-type">trigger · t-24h</div>
+      <div class="node-title">"¿Confirmas tu reserva del viernes?"</div>
+      <div class="node-desc">El sistema lanza WhatsApp 24h antes con dos botones grandes: <b>CONFIRMAR</b> / <b>CANCELAR</b>. Aquí arranca toda la automatización — sin depósito, sin tarjeta, solo una pregunta clara.</div>
+      <span class="node-tag">cron · t-24h</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="decision">
+    <div class="decision-shape">
+      <div class="decision-content">
+        <span class="decision-eye">decisión</span>
+        <span class="decision-q">¿responde<br>en 6h?</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="branches">
+
+    <div class="branch">
+      <span class="branch-label">sí — confirma</span>
+      <div class="conn short"></div>
+      <div class="node">
+        <div class="node-ic">✓</div>
+        <div class="node-body">
+          <div class="node-type">cliente comprometido</div>
+          <div class="node-title">Mantiene mesa + recordatorio 2h antes</div>
+          <div class="node-desc">A las 2h del horario llega un último aviso suave con dirección y link a Maps. Al llegar, admin marca <b>llegado</b> → entra en CRM, conecta con el flujo de pago y reseña.</div>
+          <span class="node-tag">cron · t-2h + crm</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="branch">
+      <span class="branch-label">no — sin respuesta 6h</span>
+      <div class="conn short"></div>
+      <div class="node">
+        <div class="node-ic">!</div>
+        <div class="node-body">
+          <div class="node-type">sistema · auto-release</div>
+          <div class="node-title">Libera mesa al pool + lista de espera</div>
+          <div class="node-desc">A las 6h sin respuesta, el sistema <b>libera la mesa automáticamente</b>, avisa al primero de la lista de espera y abre el slot para nuevas reservas. La mesa no queda fantasma.</div>
+          <span class="node-tag">auto-release + waitlist</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="conn" style="margin-top:24px"></div>
+
+  <div class="node">
+    <div class="node-ic">⇣</div>
+    <div class="node-body">
+      <div class="node-type">sistema · lista de espera</div>
+      <div class="node-title">Avisa al siguiente en cola</div>
+      <div class="node-desc">"Se ha liberado mesa para 4 a las 21:00 — confirma en 10 min". El sistema rellena el hueco automáticamente sin que el dueño levante el teléfono.</div>
+      <span class="node-tag">waitlist queue</span>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+
+  <div class="node">
+    <div class="node-ic">⌘</div>
+    <div class="node-body">
+      <div class="node-type">admin · panel reservas</div>
+      <div class="node-title">El dueño ve el día completo en una pantalla</div>
+      <div class="node-desc">Calendario semanal, ocupación en tiempo real, % de confirmación a 24h, lista de hoy, <b>reincidentes marcados</b> tras 2 no-shows. Reemplaza la libreta de papel.</div>
+      <span class="node-tag">panel · dashboard</span>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="note-eye">por qué importa</span>
+    <h3>No-shows del 19% al 11% sin pedir tarjeta.</h3>
+    <p>El sistema gana con dos cosas: la confirmación a 24h <b>filtra al cliente que ya no va a ir</b> y libera la mesa a tiempo, y la lista de espera <b>rellena automáticamente</b> los huecos que se abren. Sin depósito, sin objeciones, adopción cercana al 100% — el cliente no nota nada raro al reservar. Si en 3 meses el dueño quiere apretar más, se puede activar una capa de depósito condicional encima (solo grupos +5, sofás VIP, eventos privados), sin tocar al cliente normal.</p>
+  </div>
+
+</div>
+</main>
+
+<section class="compare">
+  <div class="compare-head">
+    <span class="compare-eye">cambio</span>
+    <h2>Antes y después de tener el sistema</h2>
+    <p class="compare-lead">Misma cantidad de reservas, misma noche, mismo personal — lo único distinto es el sistema. Sin depósito, sin pedir nada al cliente. Lado a lado, lo que cambia en la operativa real.</p>
+  </div>
+  <div class="compare-grid">
+    <div class="cmp-col before">
+      <div class="cmp-label">antes · sin sistema</div>
+      <h3>Libreta de papel y WhatsApp manual</h3>
+      <ul class="cmp-list">
+        <li><b>Reservas por llamada y WhatsApp</b>, personal contesta hasta las 2 AM</li>
+        <li><b>No-show del 19%</b> sin coste para el cliente — mesa vacía un viernes a 85€</li>
+        <li><b>Doble booking ocasional</b> por descoordinación entre turnos</li>
+        <li><b>Llamadas perdidas</b> cuando el local está lleno = reserva perdida</li>
+        <li><b>Mesa vacía no se cubre</b>, nadie sabe que se ha liberado</li>
+        <li><b>Cero datos del cliente</b> antes de venir</li>
+        <li><b>Cliente reincidente sin marcar</b> — sigue reservando aunque haya fallado 3 veces</li>
+        <li><b>Cancelaciones tardías</b>, el cliente "se le olvida" y nadie le recuerda</li>
+        <li><b>Excel / libreta</b> que el dueño revisa manualmente cada noche</li>
+      </ul>
+    </div>
+    <div class="cmp-col after">
+      <div class="cmp-label">después · con verticeqr</div>
+      <h3>Sistema 24/7 con confirmación automática</h3>
+      <ul class="cmp-list">
+        <li><b>Reserva online 24/7</b> desde Google Maps, Instagram o web — cero llamadas</li>
+        <li><b>No-show baja al ~11%</b> solo con confirmación a 24h y recordatorio 2h</li>
+        <li><b>Cero overbookings</b> — el sistema bloquea el slot al ocuparlo</li>
+        <li><b>Capacidad real por zona</b> (interior, terraza, sofá, cachimba)</li>
+        <li><b>Lista de espera auto-rellena</b> los huecos al instante</li>
+        <li><b>CRM auto-poblado</b> con historial, preferencias, ticket medio</li>
+        <li><b>Reincidentes marcados</b> tras 2 no-shows — el sistema avisa al dueño</li>
+        <li><b>Recordatorio 24h + 2h</b> reduce el olvido del cliente al mínimo</li>
+        <li><b>Panel calendario en vivo</b> — el dueño ve el día completo en una pantalla</li>
+        <li><b>Conecta con reseña post-pago</b> y fidelización — un único motor</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="study">
+  <div class="study-head">
+    <span class="study-eye">estudio</span>
+    <h2>Cuánto se gana sin pedir nada al cliente</h2>
+    <p class="study-lead">Modelo conservador: sin tarjeta, sin depósito, solo confirmación a 24h + lista de espera auto. Menos margen de mejora que un sistema con pago retenido, pero <b>adopción cercana al 100%</b> desde el primer día. El cálculo descuenta lo que el local igualmente habría llenado con walk-in, para no inflar el ingreso atribuible.</p>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Asunciones del modelo <small>local mediano con reservas activas · sin tarjeta ni depósito</small></div>
+    <div class="assumes">
+      <div class="assume"><div class="assume-k">reservas / mes</div><div class="assume-v">540<small>mesas</small></div><div class="assume-d">18 reservas/día × 30 días. Restaurante medio o coctelería con reservas activas.</div></div>
+      <div class="assume"><div class="assume-k">ticket medio mesa</div><div class="assume-v">85 €<small>/mesa</small></div><div class="assume-d">2,5 personas × 34€/persona. Sube en coctelería premium y cachimbería.</div></div>
+      <div class="assume"><div class="assume-k">no-show baseline</div><div class="assume-v">19 %<small></small></div><div class="assume-d">Hostelería sin recordatorio ni confirmación. Rango sector 15-25%.</div></div>
+      <div class="assume"><div class="assume-k">no-show con sistema</div><div class="assume-v">11 %<small></small></div><div class="assume-d">Solo confirmación 24h + recordatorio 2h + auto-release. Sin tarjeta.</div></div>
+      <div class="assume"><div class="assume-k">tasa confirmación 24h</div><div class="assume-v">75 %<small></small></div><div class="assume-d">% de clientes que pulsa "confirmar" en las 6h tras el aviso.</div></div>
+      <div class="assume"><div class="assume-k">cobertura walk-in</div><div class="assume-v">45 %<small></small></div><div class="assume-d">% de mesas no-show que el local habría llenado igualmente.</div></div>
+      <div class="assume"><div class="assume-k">horas WhatsApp / llamadas</div><div class="assume-v">38 h<small>/mes</small></div><div class="assume-d">Tiempo del personal contestando reservas manualmente. Recuperado al 100%.</div></div>
+      <div class="assume"><div class="assume-k">coste-hora personal</div><div class="assume-v">9 €<small>/h</small></div><div class="assume-d">Salario medio camarero/responsable de sala con seguros.</div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Embudo de conversión <small>flujo mensual con sistema activado</small></div>
+    <div class="funnel">
+      <div class="funnel-row head"><div>etapa</div><div>paso</div><div>conv.</div><div>n / mes</div></div>
+      <div class="funnel-row"><div class="funnel-step">01</div><div class="funnel-label">Inician reserva online<small>llegan al calendario</small></div><div class="funnel-pct">100 %</div><div class="funnel-n">615</div></div>
+      <div class="funnel-row"><div class="funnel-step">02</div><div class="funnel-label">Completan la reserva<small>nombre + canal + consent</small></div><div class="funnel-pct">88 %</div><div class="funnel-n">540</div></div>
+      <div class="funnel-row"><div class="funnel-step">03</div><div class="funnel-label">Confirman a 24h<small>pulsan botón en WhatsApp</small></div><div class="funnel-pct">75 %</div><div class="funnel-n">405</div></div>
+      <div class="funnel-row"><div class="funnel-step">04</div><div class="funnel-label">No responden → auto-release<small>mesa liberada al pool</small></div><div class="funnel-pct">25 %</div><div class="funnel-n">135</div></div>
+      <div class="funnel-row"><div class="funnel-step">05</div><div class="funnel-label">De las liberadas, lista espera rellena<small>aviso al siguiente en cola</small></div><div class="funnel-pct">40 %</div><div class="funnel-n">54</div></div>
+      <div class="funnel-row"><div class="funnel-step">06</div><div class="funnel-label">Asisten a la mesa<small>marcadas como atendidas</small></div><div class="funnel-pct">89 %</div><div class="funnel-n">481</div></div>
+      <div class="funnel-row"><div class="funnel-step">→</div><div class="funnel-label">No-show real con sistema<small>mesa vacía sin reemplazo</small></div><div class="funnel-pct">11 %</div><div class="funnel-n">59</div></div>
+      <div class="funnel-row"><div class="funnel-step">vs</div><div class="funnel-label">No-show sin sistema<small>baseline para comparar</small></div><div class="funnel-pct">19 %</div><div class="funnel-n">103</div></div>
+      <div class="funnel-row"><div class="funnel-step">Δ</div><div class="funnel-label">Mesas recuperadas brutas<small>diferencia antes del walk-in</small></div><div class="funnel-pct">—</div><div class="funnel-n">44</div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Proyección mensual <small>cálculo conservador con cobertura walk-in descontada</small></div>
+    <div class="proj">
+      <div class="proj-card highlight">
+        <div class="proj-k">ingreso recuperado</div>
+        <div class="proj-v">2.890 €<small>/mes</small></div>
+        <div class="proj-delta">+ 34.680 € anual</div>
+        <div class="proj-d">2.040€ recuperación + 510€ lista de espera + 342€ ahorro personal = 2.892€ netos.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">mesas recuperadas</div>
+        <div class="proj-v">24<small>/mes</small></div>
+        <div class="proj-delta">netas</div>
+        <div class="proj-d">De las 44 que antes se perdían, 20 las llenaba walk-in. 24 son recuperación real.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">lista espera auto-llenado</div>
+        <div class="proj-v">15<small>huecos / mes</small></div>
+        <div class="proj-delta">+ 510 €</div>
+        <div class="proj-d">Mesas que se liberan por no-confirmación y rellena el sistema solo, sin esfuerzo manual.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">horas personal ahorradas</div>
+        <div class="proj-v">38 h<small>/mes</small></div>
+        <div class="proj-delta">≈ 342 €</div>
+        <div class="proj-d">Nadie contesta WhatsApp ni atiende reservas por teléfono.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">objeción del cliente</div>
+        <div class="proj-v">≈ 0 %<small></small></div>
+        <div class="proj-delta">vs 15-20 % con depósito</div>
+        <div class="proj-d">Al no pedir tarjeta, el cliente no abandona en el proceso. Adopción inmediata.</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-k">clientes nuevos en CRM</div>
+        <div class="proj-v">+ 540<small>/mes</small></div>
+        <div class="proj-delta">auto</div>
+        <div class="proj-d">Cada reserva alimenta el CRM. Combustible directo para el sistema de fidelización.</div>
+      </div>
+    </div>
+    <div class="sources" style="margin-top:18px">
+      <b>Cómo leerlo:</b> el ingreso recuperado (~2.890€/mes) es 25% menor que un sistema con depósito (~3.785€), pero la adopción real es 4-5× mayor — porque no hay barrera de pago. El modelo no es "lo máximo posible", es "lo realista que el dueño puede activar mañana sin que nadie se queje".
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Ejemplos por nicho <small>tres perfiles del showcase con números distintos</small></div>
+    <div class="cases">
+
+      <div class="case">
+        <div class="case-head">
+          <span class="case-tag">caso 01 · cachimbería</span>
+          <h3>4 noches fuertes</h3>
+          <p class="case-sub">MAGMA · público joven, mesa = sesión 2-3h, no-show alto.</p>
+        </div>
+        <div class="case-inputs">
+          <div class="case-i"><span>reservas / mes</span><b>192</b></div>
+          <div class="case-i"><span>ticket mesa</span><b>140 €</b></div>
+          <div class="case-i"><span>no-show base</span><b>25 %</b></div>
+          <div class="case-i"><span>con sistema</span><b>14 %</b></div>
+          <div class="case-i"><span>confirma 24h</span><b>72 %</b></div>
+          <div class="case-i"><span>walk-in cover</span><b>25 %</b></div>
+        </div>
+        <div class="case-result">
+          <div class="case-r-row hero"><span>ingreso recuperado</span><b>3.066 €</b></div>
+          <div class="case-r-row"><span>mesas recuperadas</span><b>16</b></div>
+          <div class="case-r-row"><span>lista espera</span><b>+ 448 €</b></div>
+          <div class="case-r-row"><span>horas ahorradas</span><b>42 h</b></div>
+          <div class="case-r-row"><span>ROI anual</span><b>+ 36.792 €</b></div>
+        </div>
+        <div class="case-take">Es donde más rinde. <b>No-show del 25% baseline</b> (público joven flakea más), mesa nocturna larga difícil de cubrir con walk-in. Con solo confirmación a 24h ya bajas 11 puntos. Si el dueño quiere apretar al 6%, activa <b>depósito solo en sofá / reservado</b> sin tocar mesa estándar.</div>
+        </div>
+
+      <div class="case">
+        <div class="case-head">
+          <span class="case-tag">caso 02 · restaurante</span>
+          <h3>Comidas + cenas, 30 días</h3>
+          <p class="case-sub">Fogón Paisa / mediterránea · público mixto, volumen alto.</p>
+        </div>
+        <div class="case-inputs">
+          <div class="case-i"><span>reservas / mes</span><b>600</b></div>
+          <div class="case-i"><span>ticket mesa</span><b>80 €</b></div>
+          <div class="case-i"><span>no-show base</span><b>16 %</b></div>
+          <div class="case-i"><span>con sistema</span><b>9 %</b></div>
+          <div class="case-i"><span>confirma 24h</span><b>82 %</b></div>
+          <div class="case-i"><span>walk-in cover</span><b>55 %</b></div>
+        </div>
+        <div class="case-result">
+          <div class="case-r-row hero"><span>ingreso recuperado</span><b>2.354 €</b></div>
+          <div class="case-r-row"><span>mesas recuperadas</span><b>19</b></div>
+          <div class="case-r-row"><span>lista espera</span><b>+ 384 €</b></div>
+          <div class="case-r-row"><span>horas ahorradas</span><b>50 h</b></div>
+          <div class="case-r-row"><span>ROI anual</span><b>+ 28.250 €</b></div>
+        </div>
+        <div class="case-take">Volumen mayor pero <b>walk-in cubre la mitad</b> de huecos (zona céntrica). El ingreso directo es más bajo, pero el <b>ahorro de horas</b> es el más alto del trío — el camarero deja de contestar WhatsApp durante el servicio. Confirmación a 24h tiene buena adopción aquí (público mayor responde más).</div>
+      </div>
+
+      <div class="case">
+        <div class="case-head">
+          <span class="case-tag">caso 03 · coctelería</span>
+          <h3>Mesa premium, 5 noches</h3>
+          <p class="case-sub">Sereno · ticket alto, mesa con consumo mínimo, perfil VIP.</p>
+        </div>
+        <div class="case-inputs">
+          <div class="case-i"><span>reservas / mes</span><b>280</b></div>
+          <div class="case-i"><span>ticket mesa</span><b>110 €</b></div>
+          <div class="case-i"><span>no-show base</span><b>20 %</b></div>
+          <div class="case-i"><span>con sistema</span><b>12 %</b></div>
+          <div class="case-i"><span>confirma 24h</span><b>78 %</b></div>
+          <div class="case-i"><span>walk-in cover</span><b>40 %</b></div>
+        </div>
+        <div class="case-result">
+          <div class="case-r-row hero"><span>ingreso recuperado</span><b>2.026 €</b></div>
+          <div class="case-r-row"><span>mesas recuperadas</span><b>13</b></div>
+          <div class="case-r-row"><span>lista espera</span><b>+ 308 €</b></div>
+          <div class="case-r-row"><span>horas ahorradas</span><b>32 h</b></div>
+          <div class="case-r-row"><span>ROI anual</span><b>+ 24.310 €</b></div>
+        </div>
+        <div class="case-take">Aquí gana <b>el ticket alto</b>. Cada mesa recuperada vale más. Para el cliente premium, el sistema sin depósito se siente menos intrusivo — el cliente VIP odia que le pidan tarjeta. Si quieres apretar el no-show del 12% al 5%, activa <b>depósito solo en mesa premium / sofá</b>.</div>
+      </div>
+
+    </div>
+    <div class="sources" style="margin-top:18px">
+      <b>Lectura cruzada:</b> los 3 nichos recuperan entre 2.000€ y 3.000€/mes, con ROI anual <b>24.000-37.000€</b>. Menos que un modelo con depósito (~30-46k) pero <b>5× más adoptable</b> porque nadie objeta. Si tras 3 meses funciona y el público lo asume, se puede activar depósito condicional en grupos +5 y mesas premium sin tocar el resto.
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Riesgos y caveats <small>condiciones para que el sistema rinda lo proyectado</small></div>
+    <div class="caveats">
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">El no-show del 11% sigue siendo significativo</div>
+          <div class="caveat-desc">Sin pago retenido, hay un suelo bajo el cual no se puede bajar solo con recordatorios. Si el dueño necesita acercarse al 5%, hay que activar capa de depósito condicional (solo grupos +5 + sofás VIP + eventos). Esta opción C es el primer escalón, no el techo.</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">La confirmación a 24h depende del público</div>
+          <div class="caveat-desc">Público joven nocturno responde al ~70-75%. Público familiar / mayor al 80-85%. Público muy joven (sub-22) puede bajar al 60%. El sistema lo absorbe vía auto-release + lista de espera, pero hay que tenerlo claro al estimar el ROI por nicho.</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">La lista de espera solo rellena si hay demanda</div>
+          <div class="caveat-desc">El sistema avisa al siguiente en cola, pero si no hay cola, el slot queda libre para reserva nueva online. En noches flojas la "lista espera auto-rellena" baja al 10-15%. En viernes/sábado sube al 50-60%.</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">WhatsApp Business API tiene coste</div>
+          <div class="caveat-desc">Mensajes transaccionales ~0,04€ via Meta. Con 540 reservas × 3 mensajes (confirmación + 24h + 2h) ≈ 65€/mes. Cuando se entrega vía SMS estándar, ~0,07€. Bajo comparado con lo recuperado, pero hay que tenerlo en P&L.</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">Reincidentes sin coste real</div>
+          <div class="caveat-desc">Sin depósito, al cliente que hace no-show no se le cobra nada. El sistema lo marca y bloquea reservas futuras tras 2 no-shows, pero antes de eso "le sale gratis". Bloqueo es la única consecuencia.</div>
+        </div>
+      </div>
+      <div class="caveat">
+        <div class="caveat-mark">!</div>
+        <div>
+          <div class="caveat-title">Compatible con futuro upgrade a depósito</div>
+          <div class="caveat-desc">El motor es el mismo. Activar depósito condicional (grupos +5, mesas premium, eventos) es flag en panel admin. Empezar sin pago y migrar después si el público lo asume es la <b>estrategia más vendible</b> y la que recomendamos.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Fuentes <small>benchmarks del modelo</small></div>
+    <div class="sources">
+      <b>OpenTable · State of the Industry 2024</b> — efecto de recordatorios automáticos en no-show rate sin depósito. · <b>TheFork · Restaurant Operations Report 2024</b> — tiempo medio dedicado a gestión manual de reservas. · <b>Resy · Confirmation lift studies</b> — ratio de respuesta a confirmación 24h por segmento demográfico. · <b>Meta · WhatsApp Business Pricing 2024</b> — coste por conversación transaccional España. · <b>Tock / SevenRooms benchmarks</b> — lista de espera y conversión de waitlist. · <b>Modelo conservador: descuenta walk-in coverage 25-55% según nicho y asume no-show floor del 11%.</b>
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>
