@@ -113,11 +113,24 @@ export default async function Home() {
         <div style={{ fontWeight: 700, fontSize: "1.15rem", letterSpacing: "-0.01em" }}>
           <span style={{ color: "#a78bfa" }}>▲</span> VerticeQR
         </div>
-        <div style={{ display: "flex", gap: "1.5rem", fontSize: "0.9rem", opacity: 0.85 }}>
+        <div style={{ display: "flex", gap: "1.5rem", fontSize: "0.9rem", opacity: 0.85, alignItems: "center" }}>
           <a href="#producto" style={enlace}>Producto</a>
           <a href="/demos" style={enlace}>Demos</a>
           <a href="#clientes" style={enlace}>Clientes</a>
           <a href="#contacto" style={enlace}>Contacto</a>
+          <a
+            href="/login"
+            style={{
+              ...enlace,
+              padding: "0.45rem 0.95rem",
+              borderRadius: 999,
+              border: "1px solid #2a2a3a",
+              background: "#15151f",
+              fontWeight: 600,
+            }}
+          >
+            Iniciar sesión
+          </a>
         </div>
       </nav>
 

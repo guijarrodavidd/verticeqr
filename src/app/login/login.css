@@ -1,0 +1,110 @@
+.vqr-login-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(167, 139, 250, 0.12), transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(244, 114, 182, 0.08), transparent 50%),
+    #0a0a0f;
+}
+
+.vqr-login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #0f0f17;
+  border: 1px solid #1d1d28;
+  border-radius: 16px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+.vqr-login-brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.vqr-login-title {
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.4rem;
+}
+
+.vqr-login-sub {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin: 0 0 1.75rem;
+}
+
+.vqr-login-error {
+  background: #2a1518;
+  border: 1px solid #5c2a2f;
+  color: #fca5a5;
+  padding: 0.7rem 0.85rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.vqr-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vqr-login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: #9ca3af;
+}
+
+.vqr-login-form input {
+  background: #15151f;
+  border: 1px solid #2a2a3a;
+  color: #f2f2f5;
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 120ms ease, background 120ms ease;
+}
+
+.vqr-login-form input:focus {
+  outline: none;
+  border-color: #a78bfa;
+  background: #181826;
+}
+
+.vqr-login-btn {
+  margin-top: 0.5rem;
+  background: #a78bfa;
+  color: #0a0a0f;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 120ms ease;
+}
+
+.vqr-login-btn:hover {
+  opacity: 0.9;
+}
+
+.vqr-login-back {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #6b7280;
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.vqr-login-back:hover {
+  color: #cdcdd9;
+}
