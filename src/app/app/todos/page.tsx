@@ -1,61 +1,75 @@
 import { revalidatePath } from "next/cache";
+import Link from "next/link";
 import { getSession } from "@/lib/auth";
 import {
   listarTareas,
   crearTarea,
   toggleTarea,
   borrarTarea,
+  actualizarTarea,
   parsePrioridad,
+  parseEstadoFiltro,
+  parsePrioridadFiltro,
+  parseFechaFiltro,
   PRIORIDADES,
-  type FiltroTareas,
-  type Prioridad,
+  type EstadoFiltro,
+  type PrioridadFiltro,
+  type FechaFiltro,
+  type Filtros,
 } from "@/lib/todos";
+import TaskList from "./TaskList";
 
 export const dynamic = "force-dynamic";
 
-const FILTROS: { key: FiltroTareas; label: string }[] = [
-  { key: "todas", label: "Todas" },
-  { key: "pendientes", label: "Pendientes" },
-  { key: "hechas", label: "Hechas" },
+type SP = {
+  estado?: string;
+  prioridad?: string;
+  fecha?: string;
+  // backwards compat con el querystring antiguo
+  filtro?: string;
+};
+
+function hrefFiltros(filtros: Filtros): string {
+  const sp = new URLSearchParams();
+  if (filtros.estado !== "todas") sp.set("estado", filtros.estado);
+  if (filtros.prioridad !== "todas") sp.set("prioridad", filtros.prioridad);
+  if (filtros.fecha !== "todas") sp.set("fecha", filtros.fecha);
+  const qs = sp.toString();
+  return qs ? `/app/todos?${qs}` : "/app/todos";
+}
+
+const ESTADOS: { value: EstadoFiltro; label: string }[] = [
+  { value: "todas", label: "Todas" },
+  { value: "pendientes", label: "Pendientes" },
+  { value: "hechas", label: "Hechas" },
 ];
 
-function parseFiltro(v: string | undefined): FiltroTareas {
-  if (v === "pendientes" || v === "hechas") return v;
-  return "todas";
-}
+const PRIORIDADES_FILTRO: { value: PrioridadFiltro; label: string; color?: string }[] = [
+  { value: "todas", label: "Todas" },
+  ...PRIORIDADES.map((p) => ({ value: p.value as PrioridadFiltro, label: p.label, color: p.color })),
+];
 
-function formateaFecha(fecha: string | null): { label: string; vencida: boolean } | null {
-  if (!fecha) return null;
-  const d = new Date(fecha);
-  if (isNaN(d.getTime())) return null;
-  const now = new Date();
-  const vencida = d.getTime() < now.getTime();
-  const label = d.toLocaleString("es-ES", {
-    day: "2-digit",
-    month: "short",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-  return { label, vencida };
-}
-
-function colorDePrioridad(p: Prioridad): string {
-  return PRIORIDADES.find((x) => x.value === p)?.color ?? "#fbbf24";
-}
-
-function labelDePrioridad(p: Prioridad): string {
-  return PRIORIDADES.find((x) => x.value === p)?.label ?? "Media";
-}
+const FECHAS: { value: FechaFiltro; label: string }[] = [
+  { value: "todas", label: "Todas" },
+  { value: "hoy", label: "Hoy" },
+  { value: "semana", label: "Esta semana" },
+  { value: "vencidas", label: "Vencidas" },
+  { value: "sin_fecha", label: "Sin fecha" },
+];
 
 export default async function TodosPage({
   searchParams,
 }: {
-  searchParams: Promise<{ filtro?: string }>;
+  searchParams: Promise<SP>;
 }) {
   const user = (await getSession())!;
-  const { filtro: filtroRaw } = await searchParams;
-  const filtro = parseFiltro(filtroRaw);
-  const tareas = await listarTareas(filtro);
+  const sp = await searchParams;
+  const filtros: Filtros = {
+    estado: parseEstadoFiltro(sp.estado ?? sp.filtro),
+    prioridad: parsePrioridadFiltro(sp.prioridad),
+    fecha: parseFechaFiltro(sp.fecha),
+  };
+  const tareas = await listarTareas(filtros);
 
   async function crear(formData: FormData) {
     "use server";
@@ -92,6 +106,30 @@ export default async function TodosPage({
     revalidatePath("/app/todos");
   }
 
+  async function actualizar(formData: FormData) {
+    "use server";
+    const id = Number(formData.get("id"));
+    if (!Number.isInteger(id) || id <= 0) return;
+    const titulo = String(formData.get("titulo") ?? "").trim();
+    const descripcionRaw = formData.get("descripcion");
+    const fechaInput = String(formData.get("fecha_limite") ?? "").trim();
+    const fechaLimite = fechaInput ? fechaInput.replace("T", " ") + ":00" : null;
+    const prioridad = parsePrioridad(formData.get("prioridad"));
+    await actualizarTarea(id, {
+      titulo: titulo || undefined,
+      descripcion: descripcionRaw === null ? undefined : String(descripcionRaw).trim() || null,
+      fechaLimite,
+      prioridad,
+    });
+    revalidatePath("/app/todos");
+  }
+
+  const empty = tareas.length === 0;
+  const filtrosActivos =
+    filtros.estado !== "todas" ||
+    filtros.prioridad !== "todas" ||
+    filtros.fecha !== "todas";
+
   return (
     <div style={{ maxWidth: 900 }}>
       <div style={{ fontSize: "0.78rem", color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "0.5rem" }}>
@@ -126,7 +164,6 @@ export default async function TodosPage({
             Añadir
           </button>
 
-          {/* Prioridad: segunda fila del form, span completo */}
           <div className="vqr-prio-row">
             <span className="vqr-prio-label">Prioridad</span>
             <div className="vqr-prio-segmented" role="radiogroup" aria-label="Prioridad">
@@ -151,91 +188,104 @@ export default async function TodosPage({
       </div>
 
       {/* Filtros */}
-      <div className="vqr-todo-filters">
-        {FILTROS.map((f) => (
-          <a
-            key={f.key}
-            href={f.key === "todas" ? "/app/todos" : `/app/todos?filtro=${f.key}`}
-            className={`vqr-todo-filter ${filtro === f.key ? "vqr-todo-filter-active" : ""}`}
-          >
-            {f.label}
-          </a>
-        ))}
+      <div className="vqr-filters-grid">
+        <FilterGroup
+          label="Estado"
+          options={ESTADOS.map((o) => ({ value: o.value, label: o.label }))}
+          current={filtros.estado}
+          onSelect={(v) => hrefFiltros({ ...filtros, estado: v as EstadoFiltro })}
+        />
+        <FilterGroup
+          label="Prioridad"
+          options={PRIORIDADES_FILTRO.map((o) => ({ value: o.value, label: o.label, color: o.color }))}
+          current={filtros.prioridad}
+          onSelect={(v) => hrefFiltros({ ...filtros, prioridad: v as PrioridadFiltro })}
+        />
+        <FilterGroup
+          label="Fecha"
+          options={FECHAS.map((o) => ({ value: o.value, label: o.label }))}
+          current={filtros.fecha}
+          onSelect={(v) => hrefFiltros({ ...filtros, fecha: v as FechaFiltro })}
+        />
+        {filtrosActivos && (
+          <Link href="/app/todos" className="vqr-filter-clear">
+            Limpiar filtros
+          </Link>
+        )}
       </div>
 
-      {/* Lista */}
-      {tareas.length === 0 ? (
+      {empty ? (
         <div className="vqr-todo-empty">
-          {filtro === "hechas"
-            ? "No hay tareas completadas todavía."
-            : filtro === "pendientes"
-              ? "No hay tareas pendientes. 🎉"
-              : "Aún no hay tareas. Crea la primera arriba."}
+          {filtrosActivos
+            ? "Ninguna tarea coincide con esos filtros."
+            : "Aún no hay tareas. Crea la primera arriba."}
         </div>
       ) : (
-        <div className="vqr-todo-list">
-          {tareas.map((t) => {
-            const fecha = formateaFecha(t.fecha_limite);
-            const hecha = t.hecha === 1;
-            const prio = parsePrioridad(t.prioridad);
-            const prioColor = colorDePrioridad(prio);
-            return (
-              <div
-                key={t.id}
-                className={`vqr-todo-item ${hecha ? "vqr-todo-item-done" : ""}`}
-                style={{
-                  borderLeft: `3px solid ${prioColor}`,
-                  paddingLeft: "calc(1rem - 3px)",
-                }}
-              >
-                <form action={toggle} style={{ margin: 0 }}>
-                  <input type="hidden" name="id" value={t.id} />
-                  <button
-                    type="submit"
-                    className={`vqr-todo-check ${hecha ? "vqr-todo-check-done" : ""}`}
-                    aria-label={hecha ? "Marcar como pendiente" : "Marcar como hecha"}
-                  >
-                    {hecha ? "✓" : ""}
-                  </button>
-                </form>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
-                    <span
-                      className="vqr-prio-badge"
-                      style={{
-                        color: prioColor,
-                        background: `${prioColor}1f`,
-                        borderColor: `${prioColor}55`,
-                      }}
-                    >
-                      {labelDePrioridad(prio)}
-                    </span>
-                    <span className={`vqr-todo-titulo ${hecha ? "vqr-todo-titulo-done" : ""}`}>
-                      {t.titulo}
-                    </span>
-                  </div>
-                  {t.descripcion && <div className="vqr-todo-desc">{t.descripcion}</div>}
-                  <div className="vqr-todo-meta">
-                    {fecha && (
-                      <span className={!hecha && fecha.vencida ? "vqr-todo-overdue" : ""}>
-                        ⏱ {fecha.label}
-                        {!hecha && fecha.vencida ? " · vencida" : ""}
-                      </span>
-                    )}
-                    {t.creado_por && <span>👤 {t.creado_por}</span>}
-                  </div>
-                </div>
-                <form action={borrar} style={{ margin: 0 }}>
-                  <input type="hidden" name="id" value={t.id} />
-                  <button type="submit" className="vqr-todo-delete" aria-label="Borrar tarea">
-                    ✕
-                  </button>
-                </form>
-              </div>
-            );
-          })}
-        </div>
+        <TaskList
+          tareas={tareas}
+          toggleAction={toggle}
+          borrarAction={borrar}
+          actualizarAction={actualizar}
+        />
       )}
+    </div>
+  );
+}
+
+function FilterGroup({
+  label,
+  options,
+  current,
+  onSelect,
+}: {
+  label: string;
+  options: { value: string; label: string; color?: string }[];
+  current: string;
+  onSelect: (v: string) => string;
+}) {
+  return (
+    <div className="vqr-filter-group">
+      <div className="vqr-filter-label">{label}</div>
+      <div className="vqr-filter-chips">
+        {options.map((o) => {
+          const active = o.value === current;
+          return (
+            <Link
+              key={o.value}
+              href={onSelect(o.value)}
+              className={`vqr-filter-chip ${active ? "vqr-filter-chip-active" : ""}`}
+              style={
+                active && o.color
+                  ? {
+                      background: `${o.color}22`,
+                      borderColor: `${o.color}66`,
+                      color: o.color,
+                    }
+                  : o.color
+                    ? {
+                        // pequeño punto del color del filtro (cuando es de prioridad)
+                      }
+                    : undefined
+              }
+            >
+              {o.color && (
+                <span
+                  style={{
+                    display: "inline-block",
+                    width: 7,
+                    height: 7,
+                    borderRadius: 999,
+                    background: o.color,
+                    marginRight: 6,
+                    verticalAlign: "middle",
+                  }}
+                />
+              )}
+              {o.label}
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 }
