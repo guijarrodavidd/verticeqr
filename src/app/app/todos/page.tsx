@@ -5,7 +5,10 @@ import {
   crearTarea,
   toggleTarea,
   borrarTarea,
+  parsePrioridad,
+  PRIORIDADES,
   type FiltroTareas,
+  type Prioridad,
 } from "@/lib/todos";
 
 export const dynamic = "force-dynamic";
@@ -23,7 +26,6 @@ function parseFiltro(v: string | undefined): FiltroTareas {
 
 function formateaFecha(fecha: string | null): { label: string; vencida: boolean } | null {
   if (!fecha) return null;
-  // MySQL devuelve "YYYY-MM-DD HH:mm:ss" o un Date dependiendo del driver.
   const d = new Date(fecha);
   if (isNaN(d.getTime())) return null;
   const now = new Date();
@@ -35,6 +37,14 @@ function formateaFecha(fecha: string | null): { label: string; vencida: boolean 
     minute: "2-digit",
   });
   return { label, vencida };
+}
+
+function colorDePrioridad(p: Prioridad): string {
+  return PRIORIDADES.find((x) => x.value === p)?.color ?? "#fbbf24";
+}
+
+function labelDePrioridad(p: Prioridad): string {
+  return PRIORIDADES.find((x) => x.value === p)?.label ?? "Media";
 }
 
 export default async function TodosPage({
@@ -53,13 +63,14 @@ export default async function TodosPage({
     if (!titulo) return;
     const descripcion = String(formData.get("descripcion") ?? "").trim() || undefined;
     const fechaInput = String(formData.get("fecha_limite") ?? "").trim();
-    // <input type="datetime-local"> da "YYYY-MM-DDTHH:mm" — MySQL DATETIME acepta "YYYY-MM-DD HH:mm:00".
     const fechaLimite = fechaInput ? fechaInput.replace("T", " ") + ":00" : null;
+    const prioridad = parsePrioridad(formData.get("prioridad"));
     const session = await getSession();
     await crearTarea({
       titulo,
       descripcion,
       fechaLimite,
+      prioridad,
       creadoPor: session?.email,
     });
     revalidatePath("/app/todos");
@@ -90,8 +101,7 @@ export default async function TodosPage({
         Todo List
       </h1>
       <p style={{ color: "#9ca3af", marginBottom: "2rem" }}>
-        Tareas compartidas del equipo. {user.nombre}, lo que crees aquí lo ve
-        todo el equipo.
+        Tareas compartidas del equipo. {user.nombre}, lo que crees aquí lo ve todo el equipo.
       </p>
 
       {/* Formulario crear */}
@@ -115,6 +125,28 @@ export default async function TodosPage({
           <button type="submit" className="vqr-todo-add">
             Añadir
           </button>
+
+          {/* Prioridad: segunda fila del form, span completo */}
+          <div className="vqr-prio-row">
+            <span className="vqr-prio-label">Prioridad</span>
+            <div className="vqr-prio-segmented" role="radiogroup" aria-label="Prioridad">
+              {PRIORIDADES.map((p, i) => (
+                <label
+                  key={p.value}
+                  className={`vqr-prio-opt vqr-prio-opt-${p.value}`}
+                  style={{ ["--prio-color" as string]: p.color }}
+                >
+                  <input
+                    type="radio"
+                    name="prioridad"
+                    value={p.value}
+                    defaultChecked={i === 1}
+                  />
+                  <span>{p.label}</span>
+                </label>
+              ))}
+            </div>
+          </div>
         </form>
       </div>
 
@@ -145,10 +177,16 @@ export default async function TodosPage({
           {tareas.map((t) => {
             const fecha = formateaFecha(t.fecha_limite);
             const hecha = t.hecha === 1;
+            const prio = parsePrioridad(t.prioridad);
+            const prioColor = colorDePrioridad(prio);
             return (
               <div
                 key={t.id}
                 className={`vqr-todo-item ${hecha ? "vqr-todo-item-done" : ""}`}
+                style={{
+                  borderLeft: `3px solid ${prioColor}`,
+                  paddingLeft: "calc(1rem - 3px)",
+                }}
               >
                 <form action={toggle} style={{ margin: 0 }}>
                   <input type="hidden" name="id" value={t.id} />
@@ -161,12 +199,22 @@ export default async function TodosPage({
                   </button>
                 </form>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div className={`vqr-todo-titulo ${hecha ? "vqr-todo-titulo-done" : ""}`}>
-                    {t.titulo}
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
+                    <span
+                      className="vqr-prio-badge"
+                      style={{
+                        color: prioColor,
+                        background: `${prioColor}1f`,
+                        borderColor: `${prioColor}55`,
+                      }}
+                    >
+                      {labelDePrioridad(prio)}
+                    </span>
+                    <span className={`vqr-todo-titulo ${hecha ? "vqr-todo-titulo-done" : ""}`}>
+                      {t.titulo}
+                    </span>
                   </div>
-                  {t.descripcion && (
-                    <div className="vqr-todo-desc">{t.descripcion}</div>
-                  )}
+                  {t.descripcion && <div className="vqr-todo-desc">{t.descripcion}</div>}
                   <div className="vqr-todo-meta">
                     {fecha && (
                       <span className={!hecha && fecha.vencida ? "vqr-todo-overdue" : ""}>
