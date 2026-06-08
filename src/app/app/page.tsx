@@ -27,6 +27,42 @@ export default async function DashboardHome() {
         }}
       >
         <a
+          href="/app/locales"
+          style={{
+            display: "block",
+            background: "#0f0f17",
+            border: "1px solid #1d1d28",
+            borderRadius: 14,
+            padding: "1.25rem",
+            color: "inherit",
+            textDecoration: "none",
+          }}
+        >
+          <div
+            style={{
+              width: 40,
+              height: 40,
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: 10,
+              background: "#15151f",
+              color: "#60a5fa",
+              fontSize: "1.3rem",
+              marginBottom: "0.75rem",
+            }}
+          >
+            ▥
+          </div>
+          <div style={{ fontWeight: 700, marginBottom: "0.3rem" }}>Locales</div>
+          <div style={{ color: "#9ca3af", fontSize: "0.88rem" }}>
+            Clientes contratados. Alta, plan, contacto, branding.
+          </div>
+          <div style={{ fontSize: "0.82rem", color: "#a78bfa", fontWeight: 600, marginTop: "0.75rem" }}>
+            Abrir →
+          </div>
+        </a>
+        <a
           href="/app/todos"
           style={{
             display: "block",

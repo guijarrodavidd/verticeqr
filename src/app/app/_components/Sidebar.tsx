@@ -13,6 +13,7 @@ type SectionItem = {
 
 const SECTIONS: SectionItem[] = [
   { href: "/app", label: "Inicio", icono: "◧", acento: "#a78bfa" },
+  { href: "/app/locales", label: "Locales", icono: "▥", acento: "#60a5fa" },
   { href: "/app/todos", label: "Todo List", icono: "✓", acento: "#4ade80" },
 ];
 

@@ -567,6 +567,197 @@
   50%      { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
 }
 
+/* ---------- LOCALES: form de alta + grid + tarjeta ---------- */
+.vqr-loc-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem 0.85rem;
+}
+
+@media (max-width: 860px) {
+  .vqr-loc-form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .vqr-loc-form {
+    grid-template-columns: 1fr;
+  }
+  .vqr-loc-form .vqr-todo-field[style*="span 2"] {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+.vqr-loc-form select,
+.vqr-loc-form input[type="text"],
+.vqr-loc-form input[type="email"],
+.vqr-loc-form input[type="tel"],
+.vqr-loc-form input[type="url"] {
+  width: 100%;
+  background: #15151f;
+  border: 1px solid #2a2a3a;
+  color: #f2f2f5;
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.92rem;
+  font-family: inherit;
+}
+
+.vqr-loc-form select:focus,
+.vqr-loc-form input:focus {
+  outline: none;
+  border-color: #a78bfa;
+}
+
+.vqr-loc-form input[type="color"] {
+  width: 100%;
+  height: 42px;
+  background: #15151f;
+  border: 1px solid #2a2a3a;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.vqr-loc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.vqr-loc-card {
+  background: #0f0f17;
+  border: 1px solid #1d1d28;
+  border-radius: 14px;
+  padding: 1.1rem;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.vqr-loc-card:hover {
+  background: #131320;
+  border-color: #2a2a3a;
+  transform: translateY(-1px);
+}
+
+.vqr-loc-card:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+.vqr-loc-card-inactive {
+  opacity: 0.6;
+}
+
+.vqr-loc-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.vqr-loc-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.vqr-loc-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vqr-loc-nombre {
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vqr-loc-slug {
+  font-size: 0.78rem;
+  color: #6b7280;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  margin-top: 0.15rem;
+}
+
+.vqr-loc-status {
+  font-size: 0.9rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.vqr-loc-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.vqr-loc-meta {
+  font-size: 0.82rem;
+  color: #cdcdd9;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* Modal de local: grid de campos a 2 columnas */
+.vqr-loc-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+@media (max-width: 560px) {
+  .vqr-loc-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vqr-loc-modal-grid select,
+.vqr-loc-modal-grid input[type="text"],
+.vqr-loc-modal-grid input[type="email"],
+.vqr-loc-modal-grid input[type="tel"],
+.vqr-loc-modal-grid input[type="url"] {
+  width: 100%;
+  background: #15151f;
+  border: 1px solid #2a2a3a;
+  color: #f2f2f5;
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.92rem;
+  font-family: inherit;
+}
+
+.vqr-loc-modal-grid input[type="color"] {
+  width: 100%;
+  height: 42px;
+  background: #15151f;
+  border: 1px solid #2a2a3a;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.vqr-loc-modal-grid select:focus,
+.vqr-loc-modal-grid input:focus {
+  outline: none;
+  border-color: #a78bfa;
+}
+
 .vqr-todo-filters {
   display: flex;
   gap: 0.5rem;
