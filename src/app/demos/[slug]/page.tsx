@@ -160,9 +160,50 @@ export default async function DemoPage({
         </div>
       </div>
 
+      {/* CTA — pasar al form de contacto con el origen pre-rellenado */}
+      <div
+        style={{
+          marginTop: "2rem",
+          padding: "1.75rem",
+          background: `linear-gradient(135deg, ${demo.acento}1a, #0f0f17)`,
+          border: `1px solid ${demo.acento}44`,
+          borderRadius: 14,
+          display: "flex",
+          alignItems: "center",
+          gap: "1.5rem",
+          flexWrap: "wrap",
+        }}
+      >
+        <div style={{ flex: 1, minWidth: 220 }}>
+          <div style={{ fontWeight: 700, fontSize: "1.1rem", marginBottom: "0.3rem" }}>
+            ¿Quieres esto en tu {demo.nombre.toLowerCase()}?
+          </div>
+          <div style={{ color: "#9ca3af", fontSize: "0.9rem" }}>
+            Pídenos una demo personalizada con tu carta. Te respondemos en 24h.
+          </div>
+        </div>
+        <a
+          href={`/?origen=demo:${demo.slug}#contacto`}
+          style={{
+            display: "inline-block",
+            background: demo.acento,
+            color: "#0a0a0f",
+            padding: "0.7rem 1.4rem",
+            borderRadius: 10,
+            fontWeight: 600,
+            textDecoration: "none",
+            fontSize: "0.95rem",
+            whiteSpace: "nowrap",
+          }}
+        >
+          Solicitar demo →
+        </a>
+      </div>
+
       {/* Nota de placeholder */}
       <div
         style={{
+          marginTop: "1.25rem",
           padding: "1.25rem 1.5rem",
           background: "#15101f",
           border: "1px solid #2a1f4a",

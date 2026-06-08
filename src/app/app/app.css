@@ -1086,6 +1086,123 @@
   gap: 1.1rem 1rem;
 }
 
+/* ---------- LEADS / SOLICITUDES ---------- */
+.vqr-leads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.vqr-lead-card {
+  background: #0f0f17;
+  border: 1px solid #1d1d28;
+  border-radius: 12px;
+  padding: 1rem 1.15rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.vqr-lead-card:hover {
+  background: #131320;
+  border-color: #2a2a3a;
+  transform: translateY(-1px);
+}
+
+.vqr-lead-card:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+.vqr-lead-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.vqr-lead-nombre {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.005em;
+}
+
+.vqr-lead-empresa {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-top: 0.15rem;
+}
+
+.vqr-lead-meta {
+  font-size: 0.82rem;
+  color: #cdcdd9;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.vqr-lead-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  border-top: 1px solid #1d1d28;
+}
+
+/* Pills de pipeline de estados en el modal */
+.vqr-lead-states {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.vqr-lead-state {
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid;
+  font-size: 0.82rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+.vqr-lead-state:hover:not(:disabled) {
+  background: #15151f;
+}
+
+.vqr-lead-state:disabled {
+  opacity: 0.65;
+  cursor: progress;
+}
+
+/* Grid de info clave en el modal de lead */
+.vqr-lead-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.85rem 1.25rem;
+  padding: 1rem 0;
+  border-top: 1px solid #1d1d28;
+  border-bottom: 1px solid #1d1d28;
+  font-size: 0.9rem;
+}
+
+.vqr-lead-info-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.vqr-lead-mensaje {
+  background: #0d0d14;
+  border: 1px solid #1d1d28;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+  color: #cdcdd9;
+}
+
 /* ---------- GENERADOR QR ---------- */
 .vqr-qr-form {
   display: grid;

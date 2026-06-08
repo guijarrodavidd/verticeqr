@@ -63,6 +63,42 @@ export default async function DashboardHome() {
           </div>
         </a>
         <a
+          href="/app/leads"
+          style={{
+            display: "block",
+            background: "#0f0f17",
+            border: "1px solid #1d1d28",
+            borderRadius: 14,
+            padding: "1.25rem",
+            color: "inherit",
+            textDecoration: "none",
+          }}
+        >
+          <div
+            style={{
+              width: 40,
+              height: 40,
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: 10,
+              background: "#15151f",
+              color: "#fbbf24",
+              fontSize: "1.3rem",
+              marginBottom: "0.75rem",
+            }}
+          >
+            ✉
+          </div>
+          <div style={{ fontWeight: 700, marginBottom: "0.3rem" }}>Solicitudes</div>
+          <div style={{ color: "#9ca3af", fontSize: "0.88rem" }}>
+            Leads desde la landing y las demos. Pipeline básico.
+          </div>
+          <div style={{ fontSize: "0.82rem", color: "#a78bfa", fontWeight: 600, marginTop: "0.75rem" }}>
+            Abrir →
+          </div>
+        </a>
+        <a
           href="/app/qr"
           style={{
             display: "block",

@@ -1,4 +1,6 @@
+import { redirect } from "next/navigation";
 import { getPool } from "@/lib/db";
+import { crearLead } from "@/lib/leads";
 
 export const dynamic = "force-dynamic";
 
@@ -93,7 +95,45 @@ function formatNumero(n: number): string {
   return n.toLocaleString("es-ES");
 }
 
-export default async function Home() {
+type LandingSP = { origen?: string; ok?: string; error?: string };
+
+async function enviarLead(formData: FormData) {
+  "use server";
+  // Honeypot anti-bot: si el campo "hp" trae algo, asumimos bot y simulamos OK.
+  if (String(formData.get("hp") ?? "").trim() !== "") {
+    redirect("/?ok=1#contacto");
+  }
+  const nombre = String(formData.get("nombre") ?? "").trim();
+  const email = String(formData.get("email") ?? "").trim();
+  const sectorRaw = String(formData.get("sector") ?? "").trim();
+  if (!nombre || !email) {
+    redirect("/?error=campos#contacto");
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    redirect("/?error=email#contacto");
+  }
+  const mesasRaw = Number(formData.get("mesas"));
+  const num_mesas =
+    Number.isInteger(mesasRaw) && mesasRaw > 0 && mesasRaw < 1000 ? mesasRaw : null;
+  await crearLead({
+    nombre,
+    email,
+    telefono: String(formData.get("telefono") ?? "").trim() || null,
+    empresa: String(formData.get("empresa") ?? "").trim() || null,
+    sector: sectorRaw || null,
+    num_mesas,
+    mensaje: String(formData.get("mensaje") ?? "").trim() || null,
+    origen: String(formData.get("origen") ?? "").trim() || "landing",
+  });
+  redirect("/?ok=1#contacto");
+}
+
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<LandingSP>;
+}) {
+  const sp = await searchParams;
   const data = await leerLanding();
 
   return (
@@ -353,21 +393,126 @@ export default async function Home() {
       <section
         id="contacto"
         style={{
-          maxWidth: 700,
+          maxWidth: 720,
           margin: "0 auto",
           padding: "4rem 2rem",
-          textAlign: "center",
         }}
       >
-        <h2 style={{ fontSize: "1.75rem", letterSpacing: "-0.02em", margin: "0 0 0.75rem" }}>
-          ¿Te interesa probarlo?
-        </h2>
-        <p style={{ color: "#b3b3c2", margin: "0 0 1.5rem" }}>
-          Estamos en fase privada. Déjanos tu correo y avisamos cuando abramos.
-        </p>
-        <a href="mailto:vertice605@gmail.com" style={botonPrimario}>
-          vertice605@gmail.com
-        </a>
+        <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+          <h2 style={{ fontSize: "1.85rem", letterSpacing: "-0.02em", margin: "0 0 0.6rem" }}>
+            ¿Te interesa probarlo en tu local?
+          </h2>
+          <p style={{ color: "#b3b3c2", margin: 0 }}>
+            Cuéntanos brevemente sobre tu negocio y te enseñamos cómo funcionaría
+            en tu carta. Te respondemos en menos de 24 horas.
+          </p>
+        </div>
+
+        {sp.ok === "1" ? (
+          <div
+            style={{
+              padding: "1.25rem 1.5rem",
+              background: "#0f1a14",
+              border: "1px solid #1f3d2a",
+              borderRadius: 12,
+              textAlign: "center",
+            }}
+          >
+            <div style={{ fontSize: "1.6rem", color: "#4ade80", marginBottom: "0.5rem" }}>✓</div>
+            <div style={{ fontWeight: 700, fontSize: "1.05rem" }}>
+              ¡Solicitud recibida!
+            </div>
+            <div style={{ color: "#b3b3c2", marginTop: "0.4rem", fontSize: "0.92rem" }}>
+              Nos pondremos en contacto contigo en menos de 24h. Mientras, puedes
+              <a href="/demos" style={{ color: "#a78bfa", marginLeft: "0.25rem", textDecoration: "underline" }}>
+                ver las demos
+              </a>.
+            </div>
+          </div>
+        ) : (
+          <form
+            action={enviarLead}
+            style={{
+              background: "#0f0f17",
+              border: "1px solid #1d1d28",
+              borderRadius: 16,
+              padding: "1.75rem",
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "1.1rem 1rem",
+            }}
+          >
+            <input type="hidden" name="origen" value={sp.origen ?? "landing"} />
+            {/* Honeypot anti-bot, oculto a humanos */}
+            <input
+              type="text"
+              name="hp"
+              tabIndex={-1}
+              autoComplete="off"
+              style={{ position: "absolute", left: "-9999px", width: 1, height: 1 }}
+              aria-hidden
+            />
+
+            {sp.error && (
+              <div style={{ gridColumn: "1 / -1", padding: "0.7rem 0.85rem", background: "#2a1518", border: "1px solid #5c2a2f", borderRadius: 10, color: "#fca5a5", fontSize: "0.85rem" }}>
+                {sp.error === "email" ? "El email no parece válido." : "Faltan campos obligatorios."}
+              </div>
+            )}
+
+            <Field label="Tu nombre *" htmlFor="lead-nombre">
+              <input id="lead-nombre" name="nombre" type="text" required placeholder="Cómo te llamas" style={inputStyle} />
+            </Field>
+            <Field label="Email *" htmlFor="lead-email">
+              <input id="lead-email" name="email" type="email" required placeholder="tu@email.com" style={inputStyle} />
+            </Field>
+
+            <Field label="Teléfono" htmlFor="lead-telefono">
+              <input id="lead-telefono" name="telefono" type="tel" placeholder="+34 600 000 000" style={inputStyle} />
+            </Field>
+            <Field label="Nombre del local" htmlFor="lead-empresa">
+              <input id="lead-empresa" name="empresa" type="text" placeholder="Tu bar / restaurante" style={inputStyle} />
+            </Field>
+
+            <Field label="Tipo de local" htmlFor="lead-sector">
+              <select id="lead-sector" name="sector" defaultValue="" style={inputStyle}>
+                <option value="">— Elige uno —</option>
+                <option value="lounge-club">Lounge Club</option>
+                <option value="cocteleria">Coctelería</option>
+                <option value="pub">Pub</option>
+                <option value="bar-restaurante">Bar / Restaurante</option>
+                <option value="cafeteria">Cafetería</option>
+                <option value="discoteca">Discoteca</option>
+                <option value="brewery">Brewery</option>
+                <option value="hotel">Hotel</option>
+                <option value="otro">Otro</option>
+              </select>
+            </Field>
+            <Field label="Mesas aprox." htmlFor="lead-mesas">
+              <input id="lead-mesas" name="mesas" type="number" min="1" max="999" placeholder="ej. 12" style={inputStyle} />
+            </Field>
+
+            <div style={{ gridColumn: "1 / -1" }}>
+              <Field label="Cuéntanos lo que necesitas" htmlFor="lead-mensaje">
+                <textarea
+                  id="lead-mensaje"
+                  name="mensaje"
+                  rows={4}
+                  placeholder="Lo que quieras: timing, dudas, lo que esperas de la herramienta…"
+                  style={{ ...inputStyle, resize: "vertical" as const, minHeight: 100, lineHeight: 1.5 }}
+                />
+              </Field>
+            </div>
+
+            <div style={{ gridColumn: "1 / -1", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "0.75rem", marginTop: "0.25rem" }}>
+              <div style={{ fontSize: "0.78rem", color: "#6b7280" }}>
+                * campos obligatorios
+              </div>
+              <button type="submit" style={botonPrimario}>
+                Solicitar demo →
+              </button>
+            </div>
+          </form>
+        )}
       </section>
 
       {/* FOOTER */}
@@ -405,6 +550,33 @@ function Feature({ icono, titulo, texto }: { icono: string; titulo: string; text
   );
 }
 
+function Field({
+  label,
+  htmlFor,
+  children,
+}: {
+  label: string;
+  htmlFor: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <label
+        htmlFor={htmlFor}
+        style={{
+          fontSize: "0.78rem",
+          color: "#9ca3af",
+          marginBottom: "0.45rem",
+          fontWeight: 500,
+        }}
+      >
+        {label}
+      </label>
+      {children}
+    </div>
+  );
+}
+
 function Stat({ etiqueta, valor }: { etiqueta: string; valor: string }) {
   return (
     <div>
@@ -430,6 +602,28 @@ const botonPrimario = {
   fontWeight: 600,
   textDecoration: "none",
   fontSize: "0.95rem",
+  border: "none",
+  cursor: "pointer",
+  fontFamily: "inherit",
+};
+
+// Estilo base de los inputs y selects del formulario de la landing
+const inputStyle = {
+  width: "100%",
+  background: "#15151f",
+  border: "1px solid #2a2a3a",
+  color: "#f2f2f5",
+  borderRadius: 9,
+  padding: "0.7rem 0.9rem",
+  fontSize: "0.93rem",
+  fontFamily: "inherit",
+  boxSizing: "border-box" as const,
+  lineHeight: 1.4,
+};
+
+const formField: React.CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
 };
 
 const botonSecundario = {
