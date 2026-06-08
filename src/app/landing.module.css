@@ -569,70 +569,185 @@ html { scroll-behavior: smooth; }
 
 .demoCard > * { position: relative; z-index: 1; }
 
-/* Animaciones específicas por sector activadas en hover */
-.demoCard[data-sector="discoteca"]:hover .demoBg {
-  animation: vqSpin 4s linear infinite;
+/* Contenedor genérico de las escenas SVG/animadas */
+.scene {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+/* ===== DISCOTECA — bola con rayos rotando + chispas ===== */
+.discoCable {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 28%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.35), transparent);
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.discoBall {
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  right: 18px;
+  bottom: 16px;
+  z-index: 2;
+  animation: vqSpin 6s linear infinite;
+  filter: drop-shadow(0 0 12px rgba(236,72,153,0.25));
+}
+.discoBeams {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: -75px;
+  bottom: -65px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(236, 72, 153, 0.18) 12deg,
+    transparent 24deg,
+    rgba(96, 165, 250, 0.16) 60deg,
+    transparent 75deg,
+    rgba(251, 191, 36, 0.16) 120deg,
+    transparent 135deg,
+    rgba(74, 222, 128, 0.14) 180deg,
+    transparent 195deg,
+    rgba(167, 139, 250, 0.18) 240deg,
+    transparent 252deg,
+    rgba(244, 114, 182, 0.16) 300deg,
+    transparent 312deg
+  );
+  border-radius: 999px;
+  filter: blur(4px);
+  opacity: 0.35;
+  animation: vqSpinSlow 12s linear infinite reverse;
+  z-index: 1;
+  transition: opacity 300ms ease;
+}
+.demoCard[data-sector="discoteca"]:hover .discoBeams {
+  opacity: 0.95;
+  filter: blur(2px);
+  animation-duration: 5s;
+}
+.demoCard[data-sector="discoteca"]:hover .discoBall {
+  animation-duration: 2.4s;
 }
 .demoCard[data-sector="discoteca"]:hover {
-  background: radial-gradient(circle at 60% 60%, rgba(236, 72, 153, 0.18), rgba(96, 165, 250, 0.10) 60%, transparent 80%);
-  border-color: rgba(236, 72, 153, 0.45);
+  background: radial-gradient(circle at 70% 70%, rgba(236, 72, 153, 0.22), rgba(96, 165, 250, 0.08) 55%, transparent 80%);
+  border-color: rgba(236, 72, 153, 0.5);
 }
 
-.demoCard[data-sector="cocteleria"]:hover .demoBg {
-  animation: vqClink 1.2s ease-in-out infinite;
+/* Chispas de luz titilando */
+.spark {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  filter: blur(0.5px);
+  box-shadow: 0 0 12px currentColor;
+  opacity: 0;
+  z-index: 1;
 }
-.demoCard[data-sector="cocteleria"]:hover {
-  background: rgba(244, 114, 182, 0.08);
-  border-color: rgba(244, 114, 182, 0.4);
-}
+.spark1 { top: 18%; right: 12%;  animation: vqTwinkle 1.4s 0s    infinite; }
+.spark2 { top: 65%; right: 6%;   animation: vqTwinkle 1.6s 0.3s  infinite; }
+.spark3 { top: 25%; right: 70%;  animation: vqTwinkle 1.5s 0.6s  infinite; }
+.spark4 { top: 75%; right: 60%;  animation: vqTwinkle 1.7s 0.9s  infinite; }
+.spark5 { top: 8%;  right: 35%;  animation: vqTwinkle 1.3s 1.2s  infinite; }
 
-.demoCard[data-sector="pub"]:hover .demoBg {
-  animation: vqFoamPulse 1.6s ease-in-out infinite;
+/* ===== LOUNGE — shisha con humo permanente ===== */
+.demoCard[data-sector="lounge-club"] .demoBg { display: none; }
+.shisha {
+  position: absolute;
+  width: 85px;
+  height: 120px;
+  right: 14px;
+  bottom: 4px;
+  z-index: 2;
+  filter: drop-shadow(0 8px 20px rgba(167,139,250,0.18));
 }
-.demoCard[data-sector="pub"]:hover {
-  background: rgba(251, 191, 36, 0.08);
-  border-color: rgba(251, 191, 36, 0.4);
+.smoke {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(220, 220, 230, 0.75), rgba(220,220,230,0) 70%);
+  bottom: 70px;
+  right: 36px;
+  filter: blur(4px);
+  opacity: 0;
+  z-index: 3;
 }
-
-.demoCard[data-sector="bar-restaurante"]:hover .demoBg {
-  animation: vqWiggle 1.6s ease-in-out infinite;
-}
-.demoCard[data-sector="bar-restaurante"]:hover {
-  background: rgba(74, 222, 128, 0.08);
-  border-color: rgba(74, 222, 128, 0.4);
-}
-
-.demoCard[data-sector="cafeteria"]:hover .demoBg {
-  animation: vqSteam 2s ease-in-out infinite;
-}
-.demoCard[data-sector="cafeteria"]:hover {
-  background: rgba(251, 146, 60, 0.08);
-  border-color: rgba(251, 146, 60, 0.4);
-}
-
-.demoCard[data-sector="brewery"]:hover .demoBg {
-  animation: vqClink 1.4s ease-in-out infinite;
-}
-.demoCard[data-sector="brewery"]:hover {
-  background: rgba(250, 204, 21, 0.08);
-  border-color: rgba(250, 204, 21, 0.4);
-}
-
-.demoCard[data-sector="hotel"]:hover .demoBg {
-  animation: vqRing 0.8s ease-in-out infinite;
-}
-.demoCard[data-sector="hotel"]:hover {
-  background: rgba(96, 165, 250, 0.08);
-  border-color: rgba(96, 165, 250, 0.4);
-}
-
-.demoCard[data-sector="lounge-club"]:hover .demoBg {
-  animation: vqShine 2.4s ease-in-out infinite;
+.smoke1 { animation: vqSmoke 3.2s 0s    ease-out infinite; }
+.smoke2 { animation: vqSmoke 3.6s 1.1s  ease-out infinite; }
+.smoke3 { animation: vqSmoke 3.0s 2.2s  ease-out infinite; right: 50px; }
+.demoCard[data-sector="lounge-club"]:hover .smoke {
+  animation-duration: 2.2s;
 }
 .demoCard[data-sector="lounge-club"]:hover {
-  background: rgba(167, 139, 250, 0.10);
-  border-color: rgba(167, 139, 250, 0.45);
+  background: radial-gradient(circle at 70% 80%, rgba(167, 139, 250, 0.16), transparent 70%);
+  border-color: rgba(167, 139, 250, 0.5);
 }
+
+/* ===== COCTELERÍA — dos copas chocando ===== */
+.demoCard[data-sector="cocteleria"] .demoBg { display: none; }
+.glass {
+  position: absolute;
+  width: 56px;
+  height: 84px;
+  bottom: 8px;
+  z-index: 2;
+  filter: drop-shadow(0 8px 12px rgba(244,114,182,0.25));
+  transform-origin: 50% 92%;
+}
+.glassLeft  { right: 60px; animation: vqClinkLeft  2.4s ease-in-out infinite; }
+.glassRight { right: 16px; animation: vqClinkRight 2.4s ease-in-out infinite; }
+.demoCard[data-sector="cocteleria"]:hover .glassLeft  { animation-duration: 1.4s; }
+.demoCard[data-sector="cocteleria"]:hover .glassRight { animation-duration: 1.4s; }
+.demoCard[data-sector="cocteleria"]:hover {
+  background: radial-gradient(circle at 70% 60%, rgba(244, 114, 182, 0.18), transparent 70%);
+  border-color: rgba(244, 114, 182, 0.5);
+}
+
+.clinkSpark {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 0 10px #fbbf24, 0 0 4px #fff;
+  opacity: 0;
+  bottom: 60px;
+  z-index: 3;
+}
+.clinkSpark1 { right: 80px; animation: vqClinkSpark 2.4s 0.95s ease-out infinite; }
+.clinkSpark2 { right: 70px; animation: vqClinkSpark 2.4s 1.05s ease-out infinite; }
+.clinkSpark3 { right: 75px; bottom: 70px; animation: vqClinkSpark 2.4s 1.10s ease-out infinite; }
+
+/* ===== Resto: emojis pero con animaciones always-on más vivas ===== */
+.demoCard[data-sector="pub"] .demoBg            { animation: vqFoamPulse 2.4s ease-in-out infinite; }
+.demoCard[data-sector="pub"]:hover .demoBg      { animation-duration: 1s; }
+.demoCard[data-sector="pub"]:hover              { background: rgba(251,191,36,0.10); border-color: rgba(251,191,36,0.45); }
+
+.demoCard[data-sector="bar-restaurante"] .demoBg      { animation: vqWiggle 3s ease-in-out infinite; }
+.demoCard[data-sector="bar-restaurante"]:hover .demoBg{ animation-duration: 1.2s; }
+.demoCard[data-sector="bar-restaurante"]:hover        { background: rgba(74,222,128,0.10); border-color: rgba(74,222,128,0.45); }
+
+.demoCard[data-sector="cafeteria"] .demoBg      { animation: vqSteam 3s ease-in-out infinite; }
+.demoCard[data-sector="cafeteria"]:hover .demoBg{ animation-duration: 1.4s; }
+.demoCard[data-sector="cafeteria"]:hover        { background: rgba(251,146,60,0.10); border-color: rgba(251,146,60,0.45); }
+
+.demoCard[data-sector="brewery"] .demoBg        { animation: vqClink 3s ease-in-out infinite; }
+.demoCard[data-sector="brewery"]:hover .demoBg  { animation-duration: 1.4s; }
+.demoCard[data-sector="brewery"]:hover          { background: rgba(250,204,21,0.10); border-color: rgba(250,204,21,0.45); }
+
+.demoCard[data-sector="hotel"] .demoBg          { animation: vqRing 2s ease-in-out infinite; }
+.demoCard[data-sector="hotel"]:hover .demoBg    { animation-duration: 0.8s; }
+.demoCard[data-sector="hotel"]:hover            { background: rgba(96,165,250,0.10); border-color: rgba(96,165,250,0.45); }
 
 .demoIcon {
   width: 36px;
@@ -651,6 +766,39 @@ html { scroll-behavior: smooth; }
 @keyframes vqSpin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
+}
+@keyframes vqSpinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes vqTwinkle {
+  0%, 100% { opacity: 0; transform: scale(0.6); }
+  50%      { opacity: 1; transform: scale(1.2); }
+}
+@keyframes vqSmoke {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0) scale(0.6);
+  }
+  20% { opacity: 0.85; }
+  100% {
+    opacity: 0;
+    transform: translateY(-90px) translateX(-12px) scale(2.2);
+  }
+}
+@keyframes vqClinkLeft {
+  0%, 100% { transform: rotate(-12deg) translateX(0); }
+  45%, 55% { transform: rotate(0deg) translateX(20px); }
+}
+@keyframes vqClinkRight {
+  0%, 100% { transform: rotate(12deg) translateX(0); }
+  45%, 55% { transform: rotate(0deg) translateX(-20px); }
+}
+@keyframes vqClinkSpark {
+  0%, 35%   { opacity: 0; transform: scale(0.5) translate(0, 0); }
+  40%       { opacity: 1; transform: scale(1) translate(0, 0); }
+  60%       { opacity: 0.8; transform: scale(1.4) translate(var(--sx, 4px), -10px); }
+  80%, 100% { opacity: 0; transform: scale(0.4) translate(var(--sx, 4px), -16px); }
 }
 @keyframes vqClink {
   0%, 100% { transform: rotate(-8deg) translateX(0); }

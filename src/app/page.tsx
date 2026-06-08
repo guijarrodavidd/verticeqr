@@ -4,6 +4,12 @@ import { crearLead } from "@/lib/leads";
 import Nav from "./_components/Nav";
 import Reveal from "./_components/Reveal";
 import Counter from "./_components/Counter";
+import {
+  DiscoBallScene,
+  ShishaScene,
+  GlassesScene,
+  EmojiScene,
+} from "./_components/SectorScenes";
 import styles from "./landing.module.css";
 
 export const dynamic = "force-dynamic";
@@ -402,9 +408,16 @@ export default async function Home({
                 className={styles.demoCard}
                 data-sector={d.slug}
               >
-                <span className={styles.demoBg} aria-hidden>
-                  {d.bg}
-                </span>
+                {/* Escena de fondo por sector */}
+                {d.slug === "discoteca" ? (
+                  <DiscoBallScene />
+                ) : d.slug === "lounge-club" ? (
+                  <ShishaScene />
+                ) : d.slug === "cocteleria" ? (
+                  <GlassesScene />
+                ) : (
+                  <EmojiScene glyph={d.bg} />
+                )}
                 <div className={styles.demoIcon} style={{ color: d.color }}>
                   {d.icono}
                 </div>
