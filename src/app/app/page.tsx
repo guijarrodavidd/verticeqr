@@ -63,6 +63,42 @@ export default async function DashboardHome() {
           </div>
         </a>
         <a
+          href="/app/qr"
+          style={{
+            display: "block",
+            background: "#0f0f17",
+            border: "1px solid #1d1d28",
+            borderRadius: 14,
+            padding: "1.25rem",
+            color: "inherit",
+            textDecoration: "none",
+          }}
+        >
+          <div
+            style={{
+              width: 40,
+              height: 40,
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: 10,
+              background: "#15151f",
+              color: "#f472b6",
+              fontSize: "1.3rem",
+              marginBottom: "0.75rem",
+            }}
+          >
+            ▦
+          </div>
+          <div style={{ fontWeight: 700, marginBottom: "0.3rem" }}>Generador QR</div>
+          <div style={{ color: "#9ca3af", fontSize: "0.88rem" }}>
+            Un QR por mesa, branded con el local. Listo para imprimir.
+          </div>
+          <div style={{ fontSize: "0.82rem", color: "#a78bfa", fontWeight: 600, marginTop: "0.75rem" }}>
+            Abrir →
+          </div>
+        </a>
+        <a
           href="/app/todos"
           style={{
             display: "block",

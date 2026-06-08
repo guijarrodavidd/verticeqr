@@ -1086,6 +1086,163 @@
   gap: 1.1rem 1rem;
 }
 
+/* ---------- GENERADOR QR ---------- */
+.vqr-qr-form {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr auto;
+  gap: 1.1rem 1rem;
+  background: #0f0f17;
+  border: 1px solid #1d1d28;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  align-items: end;
+}
+
+@media (max-width: 720px) {
+  .vqr-qr-form { grid-template-columns: 1fr; }
+}
+
+.vqr-qr-summary {
+  margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
+  padding: 0.75rem 1rem;
+  background: #0d0d14;
+  border: 1px dashed #2a2a3a;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  color: #cdcdd9;
+}
+
+.vqr-qr-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.vqr-qr-card {
+  background: #fafafa;
+  color: #0a0a0f;
+  border: 2px solid;
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  break-inside: avoid;
+}
+
+.vqr-qr-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  text-align: left;
+}
+
+.vqr-qr-card-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.vqr-qr-card-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vqr-qr-card-brand {
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vqr-qr-card-tagline {
+  font-size: 0.72rem;
+  color: #6b7280;
+  margin-top: 0.15rem;
+}
+
+.vqr-qr-canvas {
+  background: #fff;
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 240px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vqr-qr-canvas svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.vqr-qr-card-mesa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.vqr-qr-card-mesa span:first-child {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.vqr-qr-card-foot {
+  font-size: 0.78rem;
+  color: #6b7280;
+  letter-spacing: 0.01em;
+  border-top: 1px dashed #d4d4d8;
+  padding-top: 0.75rem;
+  width: 100%;
+}
+
+/* Estilos solo para impresión: oculta nav y sidebar, cards en 2 columnas
+   tamaño tarjeta de mesa. */
+@media print {
+  body { background: #fff !important; }
+  .vqr-app-sidebar,
+  .vqr-app-toggle,
+  .vqr-app-overlay,
+  .vqr-no-print {
+    display: none !important;
+  }
+  .vqr-app-main {
+    padding: 0 !important;
+  }
+  .vqr-qr-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1cm;
+  }
+  .vqr-qr-card {
+    box-shadow: none;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  h1, p, code { color: #000 !important; }
+}
+
 .vqr-todo-filters {
   display: flex;
   gap: 0.5rem;
