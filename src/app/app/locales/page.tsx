@@ -1,6 +1,8 @@
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import Link from "next/link";
 import { getSession } from "@/lib/auth";
+import { seedLocalDemo } from "@/lib/seed-demo";
 import {
   listarLocales,
   contarLocales,
@@ -53,6 +55,13 @@ export default async function LocalesPage({
     contarLocales(),
   ]);
 
+  async function seedDemo() {
+    "use server";
+    const { slug } = await seedLocalDemo();
+    revalidatePath("/app/locales");
+    redirect(`/app/locales/${slug}`);
+  }
+
   async function crear(formData: FormData) {
     "use server";
     const nombre = String(formData.get("nombre") ?? "").trim();
@@ -93,6 +102,24 @@ export default async function LocalesPage({
         contacto y branding. Cada local arrastra después sus mesas, productos
         y pedidos.
       </p>
+
+      {/* Seed de demo */}
+      <form action={seedDemo} style={{ marginBottom: "1rem" }}>
+        <div className="vqr-loc-seed">
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontWeight: 600, marginBottom: "0.2rem" }}>
+              <span style={{ color: "#fbbf24" }}>✨</span> ¿Quieres ver la app llena de datos?
+            </div>
+            <div style={{ fontSize: "0.85rem", color: "#9ca3af" }}>
+              Crea "El Fogón Paisa" con 8 categorías, 20 productos, alérgenos
+              e imágenes — todo de un click.
+            </div>
+          </div>
+          <button type="submit" className="vqr-modal-btn vqr-modal-btn-primary">
+            Crear local demo →
+          </button>
+        </div>
+      </form>
 
       {/* Form crear */}
       <div className="vqr-todo-card">

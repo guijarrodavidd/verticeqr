@@ -758,6 +758,18 @@
   border-color: #a78bfa;
 }
 
+/* ---------- BANNER SEED DEMO ---------- */
+.vqr-loc-seed {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #1a1530, #0f0f17);
+  border: 1px solid #2a1f4a;
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+
 /* ---------- DETALLE DE LOCAL ---------- */
 .vqr-loc-detail-head {
   display: flex;
