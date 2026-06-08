@@ -8,6 +8,10 @@ import {
   DiscoBallScene,
   ShishaScene,
   GlassesScene,
+  BeerMugsScene,
+  HotelBellScene,
+  PubGamesScene,
+  MeatCutScene,
   EmojiScene,
 } from "./_components/SectorScenes";
 import styles from "./landing.module.css";
@@ -102,7 +106,7 @@ const DEMOS_PREVIEW = [
   { slug: "bar-restaurante", nombre: "Bar / Restaurante", icono: "▢", color: "#4ade80", bg: "🍽️" },
   { slug: "cafeteria", nombre: "Cafetería", icono: "◯", color: "#fb923c", bg: "☕" },
   { slug: "discoteca", nombre: "Discoteca", icono: "✧", color: "#ec4899", bg: "🪩" },
-  { slug: "brewery", nombre: "Brewery", icono: "▤", color: "#facc15", bg: "🍻" },
+  { slug: "cerveceria", nombre: "Cervecería", icono: "▤", color: "#facc15", bg: "🍻" },
   { slug: "hotel", nombre: "Hotel", icono: "▥", color: "#60a5fa", bg: "🛎️" },
 ];
 
@@ -415,6 +419,16 @@ export default async function Home({
                   <ShishaScene />
                 ) : d.slug === "cocteleria" ? (
                   <GlassesScene />
+                ) : d.slug === "cerveceria" ? (
+                  <BeerMugsScene />
+                ) : d.slug === "hotel" ? (
+                  <HotelBellScene />
+                ) : d.slug === "pub" ? (
+                  <PubGamesScene />
+                ) : d.slug === "bar-restaurante" ? (
+                  <MeatCutScene />
+                ) : d.slug === "cafeteria" ? (
+                  <EmojiScene glyph={d.bg} centered />
                 ) : (
                   <EmojiScene glyph={d.bg} />
                 )}
@@ -669,7 +683,7 @@ export default async function Home({
                   <option value="bar-restaurante">Bar / Restaurante</option>
                   <option value="cafeteria">Cafetería</option>
                   <option value="discoteca">Discoteca</option>
-                  <option value="brewery">Brewery</option>
+                  <option value="cerveceria">Cervecería</option>
                   <option value="hotel">Hotel</option>
                   <option value="otro">Otro</option>
                 </select>

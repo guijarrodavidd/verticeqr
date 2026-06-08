@@ -728,6 +728,196 @@ html { scroll-behavior: smooth; }
 .clinkSpark2 { right: 70px; animation: vqClinkSpark 2.4s 1.05s ease-out infinite; }
 .clinkSpark3 { right: 75px; bottom: 70px; animation: vqClinkSpark 2.4s 1.10s ease-out infinite; }
 
+/* ===== CERVECERÍA — dos jarras de cerveza chocando con espuma ===== */
+.demoCard[data-sector="cerveceria"] .demoBg { display: none; }
+.beerMug {
+  position: absolute;
+  width: 70px;
+  height: 100px;
+  bottom: 0;
+  z-index: 2;
+  transform-origin: 50% 95%;
+  filter: drop-shadow(0 8px 14px rgba(245,158,11,0.25));
+}
+.beerMugLeft  { right: 62px; animation: vqBeerLeft  2.6s ease-in-out infinite; }
+.beerMugRight { right: 6px;  animation: vqBeerRight 2.6s ease-in-out infinite; }
+.demoCard[data-sector="cerveceria"]:hover .beerMugLeft,
+.demoCard[data-sector="cerveceria"]:hover .beerMugRight {
+  animation-duration: 1.4s;
+}
+.demoCard[data-sector="cerveceria"]:hover {
+  background: radial-gradient(circle at 70% 70%, rgba(245,158,11,0.18), transparent 70%);
+  border-color: rgba(250,204,21,0.5);
+}
+
+/* Partículas de espuma que saltan al chocar */
+.foamSpark {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: #fff;
+  opacity: 0;
+  bottom: 70px;
+  z-index: 3;
+  filter: blur(0.5px);
+}
+.foamSpark1 { right: 70px; animation: vqFoamFly 2.6s 1.0s ease-out infinite; --fx: -10px; --fy: -20px; }
+.foamSpark2 { right: 66px; animation: vqFoamFly 2.6s 1.05s ease-out infinite; --fx: 0px;  --fy: -25px; }
+.foamSpark3 { right: 62px; animation: vqFoamFly 2.6s 1.10s ease-out infinite; --fx: 8px;  --fy: -20px; }
+.foamSpark4 { right: 74px; animation: vqFoamFly 2.6s 1.15s ease-out infinite; --fx: -16px; --fy: -10px; }
+.foamSpark5 { right: 58px; animation: vqFoamFly 2.6s 1.20s ease-out infinite; --fx: 16px;  --fy: -10px; }
+
+/* ===== HOTEL — campana con dedo pulsando ===== */
+.demoCard[data-sector="hotel"] .demoBg { display: none; }
+.bell {
+  position: absolute;
+  width: 90px;
+  height: 70px;
+  right: 12px;
+  bottom: 8px;
+  z-index: 2;
+  filter: drop-shadow(0 6px 12px rgba(245,158,11,0.30));
+  transform-origin: 50% 90%;
+  animation: vqBellWobble 1.8s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+.finger {
+  position: absolute;
+  width: 38px;
+  height: 60px;
+  right: 38px;
+  top: -2px;
+  z-index: 3;
+  transform-origin: 50% 0%;
+  animation: vqFingerPress 1.8s ease-in-out infinite;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+.demoCard[data-sector="hotel"]:hover .finger    { animation-duration: 1s; }
+.demoCard[data-sector="hotel"]:hover .bell      { animation-duration: 1s; }
+.demoCard[data-sector="hotel"]:hover            { background: rgba(96,165,250,0.10); border-color: rgba(96,165,250,0.45); }
+
+/* Ondas que salen tras pulsar */
+.bellWave {
+  position: absolute;
+  border: 1.5px solid rgba(245,158,11,0.6);
+  border-radius: 999px;
+  right: 30px;
+  bottom: 60px;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.bellWave1 { animation: vqBellWave 1.8s 0.7s ease-out infinite; }
+.bellWave2 { animation: vqBellWave 1.8s 0.85s ease-out infinite; }
+.bellDing {
+  position: absolute;
+  width: 14px;
+  height: 2px;
+  background: #fbbf24;
+  border-radius: 999px;
+  opacity: 0;
+  z-index: 1;
+  filter: blur(0.5px);
+}
+.bellDingL { right: 95px; bottom: 50px; animation: vqDingFlash 1.8s 0.7s ease-out infinite; transform: rotate(-15deg); }
+.bellDingR { right: -5px; bottom: 50px; animation: vqDingFlash 1.8s 0.7s ease-out infinite; transform: rotate(15deg); }
+
+/* ===== PUB — dartboard + mesa de billar ===== */
+.demoCard[data-sector="pub"] .demoBg { display: none; }
+.poolTable {
+  position: absolute;
+  width: 90px;
+  height: 60px;
+  left: 8px;
+  bottom: 16px;
+  z-index: 1;
+  opacity: 0.7;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  transition: opacity 240ms ease;
+}
+.demoCard[data-sector="pub"]:hover .poolTable { opacity: 1; }
+
+.dartboard {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: 8px;
+  bottom: 0;
+  z-index: 2;
+  filter: drop-shadow(0 6px 10px rgba(220,38,38,0.25));
+}
+.dart {
+  position: absolute;
+  font-size: 1.3rem;
+  color: #fbbf24;
+  filter: drop-shadow(0 0 4px rgba(251,191,36,0.6));
+  right: 0;
+  z-index: 3;
+  opacity: 0;
+}
+.dart1 { top: 30%; animation: vqDartFly 3s 0s    ease-in infinite; }
+.dart2 { top: 50%; animation: vqDartFly 3s 0.8s  ease-in infinite; }
+.dart3 { top: 70%; animation: vqDartFly 3s 1.6s  ease-in infinite; }
+.demoCard[data-sector="pub"]:hover .dart  { animation-duration: 1.6s; }
+.demoCard[data-sector="pub"]:hover         { background: rgba(251,191,36,0.10); border-color: rgba(251,191,36,0.45); }
+
+/* ===== BAR / RESTAURANTE — chuletón siendo cortado ===== */
+.demoCard[data-sector="bar-restaurante"] .demoBg { display: none; }
+.board {
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  right: 4px;
+  bottom: 12px;
+  z-index: 1;
+}
+.steak {
+  position: absolute;
+  width: 100px;
+  height: 55px;
+  right: 12px;
+  bottom: 22px;
+  z-index: 2;
+  filter: drop-shadow(0 4px 6px rgba(127,29,29,0.35));
+}
+.knife {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  right: 8px;
+  bottom: 42px;
+  z-index: 3;
+  filter: drop-shadow(0 6px 6px rgba(0,0,0,0.4));
+  animation: vqKnifeSaw 1.4s ease-in-out infinite;
+  transform-origin: 75% 50%;
+}
+.demoCard[data-sector="bar-restaurante"]:hover .knife { animation-duration: 0.7s; }
+.demoCard[data-sector="bar-restaurante"]:hover { background: rgba(74,222,128,0.10); border-color: rgba(74,222,128,0.45); }
+
+/* Cafetería: café centrado en lugar de bottom-right */
+.demoBgCenter {
+  position: absolute;
+  font-size: 5.5rem !important;
+  right: auto !important;
+  bottom: auto !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  opacity: 0.13 !important;
+}
+.demoCard[data-sector="cafeteria"] .demoBgCenter {
+  animation: vqSteam 3s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+.demoCard[data-sector="cafeteria"]:hover .demoBgCenter {
+  opacity: 0.45 !important;
+  animation-duration: 1.4s;
+}
+.demoCard[data-sector="cafeteria"]:hover { background: rgba(251,146,60,0.10); border-color: rgba(251,146,60,0.45); }
+
 /* ===== Resto: emojis pero con animaciones always-on más vivas ===== */
 .demoCard[data-sector="pub"] .demoBg            { animation: vqFoamPulse 2.4s ease-in-out infinite; }
 .demoCard[data-sector="pub"]:hover .demoBg      { animation-duration: 1s; }
@@ -799,6 +989,62 @@ html { scroll-behavior: smooth; }
   40%       { opacity: 1; transform: scale(1) translate(0, 0); }
   60%       { opacity: 0.8; transform: scale(1.4) translate(var(--sx, 4px), -10px); }
   80%, 100% { opacity: 0; transform: scale(0.4) translate(var(--sx, 4px), -16px); }
+}
+
+/* CERVEZAS — jarras chocando con vibración fuerte en el impacto */
+@keyframes vqBeerLeft {
+  0%, 100% { transform: rotate(-14deg) translateX(0); }
+  42%, 52% { transform: rotate(2deg) translateX(28px); }
+  47%      { transform: rotate(0deg) translateX(28px) scale(1.04); }
+}
+@keyframes vqBeerRight {
+  0%, 100% { transform: rotate(14deg) translateX(0); }
+  42%, 52% { transform: rotate(-2deg) translateX(-28px); }
+  47%      { transform: rotate(0deg) translateX(-28px) scale(1.04); }
+}
+@keyframes vqFoamFly {
+  0%, 38%   { opacity: 0; transform: translate(0, 0) scale(0.6); }
+  44%       { opacity: 1; transform: translate(0, 0) scale(1); }
+  100%      { opacity: 0; transform: translate(var(--fx, 0), var(--fy, -30px)) scale(0.3); }
+}
+
+/* HOTEL — dedo presionando y campana sonando */
+@keyframes vqFingerPress {
+  0%, 100% { transform: translateY(-18px); }
+  42%, 50% { transform: translateY(6px); }
+}
+@keyframes vqBellWobble {
+  0%, 100%  { transform: scale(1) rotate(0deg); }
+  42%       { transform: scale(0.96) rotate(-2deg); }
+  50%       { transform: scale(1.04) rotate(0deg); }
+  58%       { transform: scale(0.98) rotate(2deg); }
+}
+@keyframes vqBellWave {
+  0%, 35%  { opacity: 0; transform: scale(0.6); }
+  45%      { opacity: 0.85; transform: scale(1); }
+  100%     { opacity: 0; transform: scale(2.4); }
+}
+@keyframes vqDingFlash {
+  0%, 38%  { opacity: 0; transform: scaleX(0.3); }
+  45%      { opacity: 1; transform: scaleX(1); }
+  70%, 100%{ opacity: 0; transform: scaleX(1.2); }
+}
+
+/* PUB — dardos volando */
+@keyframes vqDartFly {
+  0%       { opacity: 0; transform: translateX(120px) rotate(-15deg); }
+  20%      { opacity: 1; }
+  35%      { opacity: 1; transform: translateX(0) rotate(0deg); }
+  65%      { opacity: 1; transform: translateX(0) rotate(0deg); }
+  85%, 100%{ opacity: 0; transform: translateX(0) rotate(0deg); }
+}
+
+/* RESTAURANTE — cuchillo serrando */
+@keyframes vqKnifeSaw {
+  0%, 100% { transform: rotate(-6deg) translateX(0) translateY(-4px); }
+  25%      { transform: rotate(-2deg) translateX(8px) translateY(-1px); }
+  50%      { transform: rotate(4deg) translateX(0) translateY(2px); }
+  75%      { transform: rotate(-2deg) translateX(-8px) translateY(-1px); }
 }
 @keyframes vqClink {
   0%, 100% { transform: rotate(-8deg) translateX(0); }

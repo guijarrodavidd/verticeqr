@@ -71,8 +71,8 @@ export const DEMOS: TipoDemo[] = [
     ticketMedio: "120 €",
   },
   {
-    slug: "brewery",
-    nombre: "Brewery",
+    slug: "cerveceria",
+    nombre: "Cervecería",
     icono: "▤",
     tagline: "Cervezas propias, tablas degustación y maridaje.",
     acento: "#facc15",

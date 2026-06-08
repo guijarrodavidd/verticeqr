@@ -7,7 +7,7 @@ export type SectorLocal =
   | "bar-restaurante"
   | "cafeteria"
   | "discoteca"
-  | "brewery"
+  | "cerveceria"
   | "hotel"
   | "otro";
 
@@ -18,7 +18,7 @@ export const SECTORES: { value: SectorLocal; label: string; icono: string; color
   { value: "bar-restaurante", label: "Bar / Restaurante", icono: "▢", color: "#4ade80" },
   { value: "cafeteria", label: "Cafetería", icono: "◯", color: "#fb923c" },
   { value: "discoteca", label: "Discoteca", icono: "✧", color: "#ec4899" },
-  { value: "brewery", label: "Brewery", icono: "▤", color: "#facc15" },
+  { value: "cerveceria", label: "Cervecería", icono: "▤", color: "#facc15" },
   { value: "hotel", label: "Hotel", icono: "▥", color: "#60a5fa" },
   { value: "otro", label: "Otro", icono: "▦", color: "#9ca3af" },
 ];
