@@ -5,9 +5,6 @@ import {
   listarLocales,
   contarLocales,
   crearLocal,
-  actualizarLocal,
-  borrarLocal,
-  toggleActivo,
   parseSector,
   parsePlan,
   parseEstadoFiltroLocal,
@@ -70,49 +67,6 @@ export default async function LocalesPage({
       telefono: String(formData.get("telefono") ?? "").trim() || null,
       color_primario: String(formData.get("color_primario") ?? "").trim() || "#a78bfa",
     });
-    revalidatePath("/app/locales");
-  }
-
-  async function actualizar(formData: FormData) {
-    "use server";
-    const id = Number(formData.get("id"));
-    if (!Number.isInteger(id) || id <= 0) return;
-    const nombre = String(formData.get("nombre") ?? "").trim();
-    const slug = String(formData.get("slug") ?? "").trim();
-    const sector = parseSector(formData.get("sector"));
-    const plan = parsePlan(formData.get("plan"));
-    const email = String(formData.get("email") ?? "").trim();
-    const telefono = String(formData.get("telefono") ?? "").trim();
-    const color = String(formData.get("color_primario") ?? "").trim();
-    const logo = String(formData.get("logo_url") ?? "").trim();
-    const tz = String(formData.get("timezone") ?? "").trim();
-    await actualizarLocal(id, {
-      nombre: nombre || undefined,
-      slug: slug || undefined,
-      sector,
-      plan,
-      email: email || null,
-      telefono: telefono || null,
-      color_primario: color || null,
-      logo_url: logo || null,
-      timezone: tz || undefined,
-    });
-    revalidatePath("/app/locales");
-  }
-
-  async function toggle(formData: FormData) {
-    "use server";
-    const id = Number(formData.get("id"));
-    if (!Number.isInteger(id) || id <= 0) return;
-    await toggleActivo(id);
-    revalidatePath("/app/locales");
-  }
-
-  async function borrar(formData: FormData) {
-    "use server";
-    const id = Number(formData.get("id"));
-    if (!Number.isInteger(id) || id <= 0) return;
-    await borrarLocal(id);
     revalidatePath("/app/locales");
   }
 
@@ -215,12 +169,7 @@ export default async function LocalesPage({
             : "Aún no hay locales. Crea el primero arriba."}
         </div>
       ) : (
-        <LocalesList
-          locales={locales}
-          toggleAction={toggle}
-          borrarAction={borrar}
-          actualizarAction={actualizar}
-        />
+        <LocalesList locales={locales} />
       )}
     </div>
   );

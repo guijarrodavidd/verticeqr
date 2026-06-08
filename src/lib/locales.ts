@@ -74,6 +74,19 @@ export async function listarLocales(f: FiltrosLocales): Promise<Local[]> {
   return rows as Local[];
 }
 
+export async function obtenerLocalPorSlug(slug: string): Promise<Local | null> {
+  await ensureLocalesTable();
+  const pool = getPool();
+  const [rows] = await pool.query(
+    `SELECT id, slug, nombre, sector, email, telefono, plan, activo,
+            color_primario, logo_url, timezone, created_at, updated_at
+     FROM locales WHERE slug = ? LIMIT 1`,
+    [slug],
+  );
+  const arr = rows as Local[];
+  return arr[0] ?? null;
+}
+
 export async function contarLocales(): Promise<{
   total: number;
   activos: number;

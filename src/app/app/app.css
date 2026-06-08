@@ -758,6 +758,377 @@
   border-color: #a78bfa;
 }
 
+/* ---------- DETALLE DE LOCAL ---------- */
+.vqr-loc-detail-head {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: #0f0f17;
+  border: 1px solid #1d1d28;
+  border-radius: 14px;
+  padding: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- CATEGORÍAS ---------- */
+.vqr-cat-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  background: #0f0f17;
+  border: 1px solid #1d1d28;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.vqr-cat-create {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.vqr-cat-create input {
+  flex: 1;
+  background: #15151f;
+  border: 1px solid #2a2a3a;
+  color: #f2f2f5;
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.92rem;
+  font-family: inherit;
+}
+
+.vqr-cat-create input:focus {
+  outline: none;
+  border-color: #a78bfa;
+}
+
+.vqr-cat-chips {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.vqr-cat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.7rem;
+  background: #15151f;
+  border: 1px solid #2a2a3a;
+  color: #cdcdd9;
+  border-radius: 999px;
+  font-size: 0.84rem;
+}
+
+.vqr-cat-chip-x {
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0 0.15rem;
+  cursor: pointer;
+}
+
+.vqr-cat-chip-x:hover { color: #f87171; }
+
+/* ---------- PRODUCTOS — FORM DE ALTA ---------- */
+.vqr-prod-create summary::-webkit-details-marker { display: none; }
+.vqr-prod-create[open] summary { margin-bottom: 1rem; }
+
+.vqr-prod-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem 0.85rem;
+}
+
+@media (max-width: 760px) {
+  .vqr-prod-form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .vqr-prod-form [style*="span 4"] { grid-column: 1 / -1 !important; }
+  .vqr-prod-form [style*="span 3"] { grid-column: 1 / -1 !important; }
+  .vqr-prod-form [style*="span 2"] { grid-column: 1 / -1 !important; }
+}
+
+.vqr-prod-form select,
+.vqr-prod-form input[type="text"],
+.vqr-prod-form input[type="email"],
+.vqr-prod-form input[type="url"],
+.vqr-prod-form input[type="number"],
+.vqr-prod-form textarea {
+  width: 100%;
+  background: #15151f;
+  border: 1px solid #2a2a3a;
+  color: #f2f2f5;
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.92rem;
+  font-family: inherit;
+}
+
+.vqr-prod-form textarea { resize: vertical; min-height: 60px; }
+
+.vqr-prod-form select:focus,
+.vqr-prod-form input:focus,
+.vqr-prod-form textarea:focus {
+  outline: none;
+  border-color: #a78bfa;
+}
+
+/* Alérgenos: grid de píldoras */
+.vqr-alergenos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.vqr-alergeno-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.32rem 0.7rem;
+  background: #15151f;
+  border: 1px solid #2a2a3a;
+  color: #9ca3af;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  font-family: inherit;
+  user-select: none;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+.vqr-alergeno-pill:hover {
+  color: #f2f2f5;
+}
+
+.vqr-alergeno-pill input[type="checkbox"] {
+  margin: 0;
+  accent-color: #a78bfa;
+}
+
+.vqr-alergeno-pill-on {
+  background: #2a1f4a;
+  border-color: #3b2a5a;
+  color: #f2f2f5;
+}
+
+/* Filtros por categoría dentro de productos */
+.vqr-prod-cat-filters {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin: 1.25rem 0 1rem;
+}
+
+.vqr-prod-cat-filters .vqr-filter-chip {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ---------- TARJETA DE PRODUCTO ---------- */
+.vqr-prod-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.85rem;
+}
+
+.vqr-prod-card {
+  background: #0f0f17;
+  border: 1px solid #1d1d28;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color 120ms ease, transform 120ms ease;
+}
+
+.vqr-prod-card:hover {
+  border-color: #2a2a3a;
+  transform: translateY(-1px);
+}
+
+.vqr-prod-card:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+.vqr-prod-card-inactive { opacity: 0.55; }
+
+.vqr-prod-img {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, #15151f, #0a0a0f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.vqr-prod-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vqr-prod-img-placeholder {
+  font-size: 2.4rem;
+  color: #2a2a3a;
+}
+
+.vqr-prod-star {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fbbf24;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.vqr-prod-body {
+  padding: 0.85rem 1rem 0.7rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.vqr-prod-nombre {
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: -0.005em;
+}
+
+.vqr-prod-precio {
+  font-weight: 700;
+  color: #a78bfa;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.vqr-prod-desc {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.vqr-prod-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  margin-top: 0.25rem;
+}
+
+.vqr-prod-aler {
+  letter-spacing: 0.1em;
+}
+
+.vqr-prod-actions {
+  display: flex;
+  gap: 0.3rem;
+  padding: 0 1rem 0.85rem;
+}
+
+.vqr-prod-quick {
+  background: transparent;
+  border: 1px solid #2a2a3a;
+  color: #6b7280;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+.vqr-prod-quick:hover {
+  background: #15151f;
+  color: #f2f2f5;
+}
+
+.vqr-prod-quick-on {
+  background: #2a1f4a;
+  border-color: #3b2a5a;
+  color: #a78bfa;
+}
+
+.vqr-prod-quick:disabled { opacity: 0.55; cursor: progress; }
+
+/* ---------- MODAL DE PRODUCTO ---------- */
+.vqr-prod-modal-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .vqr-prod-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vqr-prod-modal-preview {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(135deg, #15151f, #0a0a0f);
+  border: 1px solid #1d1d28;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.vqr-prod-modal-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vqr-prod-modal-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 0.85rem;
+}
+
+.vqr-prod-modal-fields .vqr-todo-field input[type="text"],
+.vqr-prod-modal-fields .vqr-todo-field input[type="number"],
+.vqr-prod-modal-fields .vqr-todo-field input[type="url"],
+.vqr-prod-modal-fields .vqr-todo-field select {
+  width: 100%;
+  background: #15151f;
+  border: 1px solid #2a2a3a;
+  color: #f2f2f5;
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.92rem;
+  font-family: inherit;
+}
+
+.vqr-prod-modal-fields .vqr-todo-field input:focus,
+.vqr-prod-modal-fields .vqr-todo-field select:focus {
+  outline: none;
+  border-color: #a78bfa;
+}
+
 .vqr-todo-filters {
   display: flex;
   gap: 0.5rem;
