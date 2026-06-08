@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Romanssera · Accés propietari</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Yellowtail&family=Oswald:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#efe1d0; --card:#f8ecde; --ink:#2b2118; --ink-soft:#7a4d39; --muted:#a6826a;
+    --line-soft:#d3bda3; --mustard:#e7d6b8; --granate:#650b0d; --granate-dark:#440607;
+    --granate-bright:#8c1518; --orange:#8c1518; --blau:#3a3128;
+    --display:"Cinzel",Georgia,serif; --script:"Yellowtail",cursive;
+    --head:"Oswald","Arial Narrow",sans-serif; --body:"Manrope",system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%}
+  body{font-family:var(--body);color:var(--ink);background:var(--granate-dark);
+    display:flex;align-items:center;justify-content:center;padding:24px;position:relative;overflow:hidden}
+  /* Fons: pintura tipus Sorolla amb vel granate */
+  body::before{content:"";position:absolute;inset:0;background:url("img/art-terreta.png") center 28%/cover no-repeat;opacity:.5;filter:saturate(1.05)}
+  body::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 30%, rgba(68,6,7,.25), transparent 70%),
+      linear-gradient(180deg, rgba(68,6,7,.55), rgba(68,6,7,.78))}
+
+  .card{position:relative;z-index:2;width:100%;max-width:400px;background:rgba(248,236,222,.97);
+    border-radius:22px;padding:40px 32px 30px;box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 0 1px rgba(231,214,184,.4);
+    text-align:center;animation:up .6s cubic-bezier(.2,.9,.3,1) both;overflow:hidden}
+  .card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:
+    linear-gradient(90deg,var(--blau) 0 22px,transparent 22px),
+    linear-gradient(90deg,var(--mustard) 0 22px,transparent 22px),
+    repeating-linear-gradient(90deg,var(--granate) 22px,var(--granate) 29px,var(--mustard) 29px,var(--mustard) 36px);
+    background-size:100% 2px,100% 100%,100% 100%;background-repeat:no-repeat}
+  @keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+  .logo{width:88px;height:88px;object-fit:contain;margin:6px auto 14px;display:block;
+    filter:drop-shadow(0 8px 16px rgba(58,32,20,.3));animation:pop .7s cubic-bezier(.2,1.3,.4,1) both}
+  @keyframes pop{0%{transform:scale(0) rotate(-12deg);opacity:0}100%{transform:scale(1) rotate(0);opacity:1}}
+  h1{font-family:var(--display);font-size:26px;font-weight:700;color:var(--granate);text-transform:uppercase;letter-spacing:1px;line-height:1}
+  .flourish{font-family:var(--script);font-size:18px;color:var(--orange);margin:4px 0 2px;transform:rotate(-1.5deg)}
+  .sub{font-family:var(--head);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:3px;margin-bottom:26px}
+
+  form{text-align:left;display:flex;flex-direction:column;gap:14px}
+  .fld{display:flex;flex-direction:column;gap:6px}
+  .fld label{font-family:var(--head);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:1px}
+  .inp{position:relative;display:flex;align-items:center}
+  .inp input{width:100%;border:1.5px solid var(--line-soft);background:#fff;border-radius:11px;padding:13px 14px;font-size:15px;color:var(--ink);transition:.15s}
+  .inp input:focus{outline:none;border-color:var(--granate);box-shadow:0 0 0 3px rgba(101,11,13,.1)}
+  .inp .eye{position:absolute;right:10px;background:none;border:none;cursor:pointer;color:var(--muted);font-size:16px;padding:4px}
+  .row{display:flex;align-items:center;justify-content:space-between;font-size:12.5px;margin-top:-2px}
+  .rem{display:flex;align-items:center;gap:7px;color:var(--ink-soft);cursor:pointer;user-select:none}
+  .rem input{width:15px;height:15px;accent-color:var(--granate)}
+  .link{color:var(--granate);text-decoration:none;font-weight:600} .link:hover{text-decoration:underline}
+  .err{display:none;background:rgba(184,52,43,.12);border:1px solid rgba(184,52,43,.4);color:#9a2a22;
+    font-size:12.5px;padding:9px 12px;border-radius:9px;text-align:center}
+  .err.show{display:block;animation:shake .3s}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+
+  .btn{border:none;border-radius:12px;padding:15px;font-family:var(--display);font-size:15px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.5px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;transition:.16s}
+  .btn-primary{background:var(--granate);color:var(--card);box-shadow:0 8px 0 rgba(68,6,7,.35)}
+  .btn-primary:hover{background:var(--granate-bright);transform:translateY(-1px)}
+  .btn-primary:active{transform:translateY(2px);box-shadow:0 4px 0 rgba(68,6,7,.35)}
+  .btn-primary.loading{pointer-events:none;opacity:.85}
+  .btn-primary .spin{width:16px;height:16px;border:2.5px solid rgba(248,236,222,.4);border-top-color:var(--card);border-radius:50%;animation:rot .7s linear infinite;display:none}
+  .btn-primary.loading .spin{display:inline-block} .btn-primary.loading .lbl{opacity:.7}
+  @keyframes rot{to{transform:rotate(360deg)}}
+  .divider{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin:4px 0}
+  .divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line-soft)}
+  .btn-ghost{background:transparent;color:var(--granate);border:1.5px solid var(--granate)}
+  .btn-ghost:hover{background:rgba(101,11,13,.07)}
+
+  .foot{margin-top:22px;font-size:12px;color:var(--ink-soft);line-height:1.6}
+  .badge-demo{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:5;
+    background:rgba(248,236,222,.92);color:var(--granate);font-family:var(--head);font-size:10.5px;
+    text-transform:uppercase;letter-spacing:1px;padding:6px 14px;border-radius:999px;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+  .toast{position:fixed;bottom:60px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--granate);
+    color:var(--card);padding:11px 20px;border-radius:10px;font-family:var(--head);font-size:12.5px;letter-spacing:.5px;
+    text-transform:uppercase;z-index:9;opacity:0;transition:.3s;box-shadow:0 10px 26px rgba(0,0,0,.35)}
+  .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="logo" src="img/logo.png" alt="Romanssera" onerror="this.style.display='none'">
+    <h1>Romanssera</h1>
+    <div class="flourish">Àrea del propietari</div>
+    <div class="sub">Comptabilitat · Caixa</div>
+
+    <form id="loginForm" novalidate>
+      <div class="err" id="err"></div>
+      <div class="fld">
+        <label for="email">Correu electrònic</label>
+        <div class="inp"><input type="email" id="email" autocomplete="username" placeholder="propietari@romanssera.com"></div>
+      </div>
+      <div class="fld">
+        <label for="pass">Contrasenya</label>
+        <div class="inp">
+          <input type="password" id="pass" autocomplete="current-password" placeholder="••••••••">
+          <button type="button" class="eye" id="eye" title="Mostrar/amagar">👁</button>
+        </div>
+      </div>
+      <div class="row">
+        <label class="rem"><input type="checkbox" id="rem" checked> Recordar-me</label>
+        <a href="#" class="link" id="forgot">Has oblidat la contrasenya?</a>
+      </div>
+      <button type="submit" class="btn btn-primary" id="submit">
+        <span class="spin"></span><span class="lbl">Entrar</span>
+      </button>
+      <div class="divider">o</div>
+      <button type="button" class="btn btn-ghost" id="magic">✉ Enviar enllaç màgic</button>
+    </form>
+
+    <div class="foot">Encara no tens accés?<br><a href="#" class="link">Parla amb l'equip de Romanssera</a></div>
+  </div>
+
+  <div class="badge-demo">Mode demo · sense backend encara</div>
+  <div class="toast" id="toast"></div>
+
+<script>
+// ====== Sessió (placeholder) ======
+const SESSION_KEY="romanssera_session_v1";
+function wait(ms){ return new Promise(r=>setTimeout(r,ms)); }
+function toast(m){ const t=document.getElementById("toast"); t.textContent=m; t.classList.add("show"); setTimeout(()=>t.classList.remove("show"),2400); }
+function showErr(m){ const e=document.getElementById("err"); e.textContent=m; e.classList.add("show"); }
+function clearErr(){ document.getElementById("err").classList.remove("show"); }
+
+// ====== AUTH — capa aïllada (es reemplaçarà per Supabase Auth) ======
+// Quan tinguem backend: ací cridarem supabase.auth.signInWithPassword({email,password})
+async function authLogin(email,password){
+  await wait(750);                       // simula crida de xarxa
+  if(!email || !password) throw new Error("Introdueix el correu i la contrasenya.");
+  if(!/^\S+@\S+\.\S+$/.test(email)) throw new Error("El correu no és vàlid.");
+  // DEMO: accepta qualsevol credencial vàlida en format
+  return { user:{ email }, local:"Romanssera Tapasseria" };
+}
+async function authMagicLink(email){
+  await wait(500);
+  if(!/^\S+@\S+\.\S+$/.test(email)) throw new Error("Posa un correu vàlid per a enviar l'enllaç.");
+  return true;
+}
+
+// ====== UI ======
+document.getElementById("eye").onclick=()=>{
+  const p=document.getElementById("pass"); p.type=p.type==="password"?"text":"password";
+};
+document.getElementById("forgot").onclick=e=>{ e.preventDefault(); toast("Et enviarem instruccions al correu"); };
+document.getElementById("magic").onclick=async()=>{
+  clearErr();
+  try{ await authMagicLink(document.getElementById("email").value.trim()); toast("Enllaç màgic enviat ✓ revisa el correu"); }
+  catch(err){ showErr(err.message); }
+};
+
+document.getElementById("loginForm").addEventListener("submit",async e=>{
+  e.preventDefault(); clearErr();
+  const btn=document.getElementById("submit");
+  const email=document.getElementById("email").value.trim();
+  const pass=document.getElementById("pass").value;
+  btn.classList.add("loading");
+  try{
+    const ses=await authLogin(email,pass);
+    const store=document.getElementById("rem").checked?localStorage:sessionStorage;
+    store.setItem(SESSION_KEY, JSON.stringify({email:ses.user.email,local:ses.local,ts:Date.now()}));
+    toast("Benvingut · entrant…");
+    await wait(500);
+    location.href="inici.html";
+  }catch(err){
+    btn.classList.remove("loading");
+    showErr(err.message);
+  }
+});
+
+// si ja hi ha sessió, ofereix continuar
+(function(){
+  const s=localStorage.getItem(SESSION_KEY)||sessionStorage.getItem(SESSION_KEY);
+  if(s){ try{ const d=JSON.parse(s); if(d.email) document.getElementById("email").value=d.email; }catch(e){} }
+})();
+</script>
+</body>
+</html>

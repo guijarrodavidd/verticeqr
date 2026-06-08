@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romanssera · Tarjeta de mesa QR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Yellowtail&family=Oswald:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap">
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<style>
+  :root{
+    --bg:#efe1d0;
+    --card:#f8ecde;
+    --paper:#f8ecde;
+    --ink:#2b2118;
+    --ink-soft:#7a4d39;
+    --muted:#a6826a;
+    --line:#2b2118;
+    --line-soft:#d3bda3;
+    --mustard:#e7d6b8;
+    --granate:#650b0d;
+    --granate-dark:#440607;
+    --granate-bright:#8c1518;
+    --display:"Cinzel",Georgia,serif;
+    --head:"Oswald","Arial Narrow",sans-serif;
+    --body:"Manrope",-apple-system,system-ui,sans-serif;
+    --mono:"DM Mono",ui-monospace,"SF Mono",monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;min-height:100vh}
+  body{display:flex;flex-direction:column;align-items:center;padding:30px 16px 60px;gap:22px}
+
+  /* ---- top controls ---- */
+  .panel{width:100%;max-width:380px;background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:16px 16px 18px;box-shadow:0 10px 0 rgba(43,33,24,.12)}
+  .panel h2{font-family:var(--head);font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--granate);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .panel h2::before{content:"";width:18px;height:2px;background:var(--granate)}
+  .fld{margin-bottom:10px}
+  .fld label{display:block;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--ink-soft);margin-bottom:4px}
+  .fld input{width:100%;background:#fff;border:1.5px solid var(--line-soft);border-radius:9px;padding:9px 11px;font-family:var(--body);font-size:13px;color:var(--ink);outline:none;transition:.15s}
+  .fld input:focus{border-color:var(--granate)}
+  .row{display:flex;gap:9px}
+  .row .fld{flex:1}
+
+  /* ---- card ---- */
+  .stage{display:flex;flex-direction:column;align-items:center;gap:16px}
+  .card{
+    width:105mm;height:148mm;background:var(--paper);  /* A6 vertical */
+    border-radius:22px;overflow:hidden;position:relative;
+    box-shadow:0 24px 48px rgba(43,33,24,.28),0 4px 0 rgba(43,33,24,.10);
+    border:1px solid rgba(43,33,24,.08);
+  }
+  .face{position:absolute;inset:0;display:flex;flex-direction:column;backface-visibility:hidden;transition:opacity .35s ease}
+  .face.hide{opacity:0;pointer-events:none}
+
+  /* ===== ANVERSO ===== */
+  .front-top{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px 26px 18px;position:relative;background:
+      radial-gradient(120% 80% at 50% -10%, #fffaf2 0%, var(--paper) 60%);}
+  .front-title{font-family:var(--head);font-weight:600;text-transform:uppercase;text-align:center;color:var(--ink);line-height:1.02;letter-spacing:.5px}
+  .front-title .big{display:block;font-family:var(--display);font-weight:700;font-size:30px;color:var(--granate);letter-spacing:.3px;margin-bottom:2px}
+  .front-title .sub{display:block;font-size:21px;font-weight:500}
+  .front-sub{font-family:var(--mono);font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-soft);margin-top:8px}
+
+  .qr-wrap{margin-top:22px;background:#fff;border:3px solid var(--ink);border-radius:22px;padding:16px;box-shadow:0 8px 0 rgba(43,33,24,.14);position:relative}
+  .qr-wrap::after{content:"R";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:26px;color:var(--granate);background:rgba(255,255,255,.92);border-radius:50%;width:46px;height:46px;margin:auto;box-shadow:0 0 0 4px #fff,0 4px 10px rgba(0,0,0,.18);pointer-events:none}
+  #qrcode{width:172px;height:172px;display:flex;align-items:center;justify-content:center}
+  #qrcode img,#qrcode canvas{display:block;width:172px!important;height:172px!important}
+
+  .front-band{background:linear-gradient(160deg,var(--granate) 0%,var(--granate-dark) 100%);color:var(--card);padding:20px 24px 22px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
+  .front-band::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:repeating-linear-gradient(90deg,var(--mustard) 0 14px,transparent 14px 28px)}
+  .biz-name{font-family:var(--display);font-weight:700;font-size:25px;letter-spacing:1px;text-transform:uppercase;line-height:1}
+  .biz-tag{font-family:var(--head);font-weight:400;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--mustard);margin-top:4px}
+  .biz-meta{font-family:var(--mono);font-size:10.5px;color:rgba(248,236,222,.82);margin-top:11px;line-height:1.7;letter-spacing:.3px}
+  .mesa-chip{position:absolute;top:-15px;right:20px;background:var(--mustard);color:var(--granate-dark);font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.5px;text-transform:uppercase;padding:7px 13px;border-radius:999px;border:2px solid var(--granate-dark);box-shadow:0 4px 0 rgba(68,6,7,.3)}
+
+  /* ===== REVERSO ===== */
+  .back{background:linear-gradient(165deg,var(--granate) 0%,var(--granate-dark) 100%);color:var(--card);padding:34px 28px;align-items:center;justify-content:flex-start;gap:0}
+  .back::before{content:"";position:absolute;inset:14px;border:1.5px solid rgba(231,214,184,.35);border-radius:14px;pointer-events:none}
+  .back-logo{width:118px;height:118px;border-radius:50%;background:var(--paper);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.3);margin-bottom:6px;overflow:hidden}
+  .back-logo img{width:100%;height:100%;object-fit:contain;padding:6px}
+  .back h3{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:1px;text-transform:uppercase;margin-top:14px;text-align:center}
+  .back-rule{width:54px;height:2px;background:var(--mustard);margin:11px 0 18px;border-radius:2px}
+  .steps{display:flex;flex-direction:column;gap:13px;width:100%}
+  .step{display:flex;align-items:center;gap:13px}
+  .step .n{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--mustard);color:var(--granate-dark);font-family:var(--display);font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 0 rgba(68,6,7,.4)}
+  .step .t{font-family:var(--head);font-weight:400;font-size:15px;letter-spacing:.4px;text-transform:uppercase;line-height:1.15}
+  .step .t small{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.4px;text-transform:none;color:rgba(248,236,222,.7);margin-top:2px}
+  .back-foot{margin-top:auto;font-family:var(--mono);font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:rgba(231,214,184,.8);text-align:center;padding-top:18px}
+
+  /* ---- toggle ---- */
+  .toggle{display:inline-flex;background:#fff;border:2px solid var(--ink);border-radius:14px;padding:5px;gap:4px;box-shadow:0 5px 0 rgba(43,33,24,.12)}
+  .toggle button{border:none;background:transparent;font-family:var(--head);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft);padding:9px 26px;border-radius:9px;cursor:pointer;transition:.18s}
+  .toggle button.active{background:var(--granate);color:var(--card)}
+
+  .actions{display:flex;gap:10px}
+  .btn{font-family:var(--head);font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.8px;padding:12px 20px;border-radius:12px;cursor:pointer;border:2px solid var(--ink);background:var(--ink);color:var(--mustard);transition:.18s}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn:active{transform:translateY(2px)}
+
+  .hint{font-family:var(--mono);font-size:10px;color:var(--muted);text-align:center;max-width:340px;line-height:1.6;letter-spacing:.3px}
+
+  @page{size:A6;margin:0}
+  @media print{
+    html,body{background:#fff;padding:0;margin:0}
+    .panel,.toggle,.actions,.hint{display:none!important}
+    .stage{gap:0}
+    .card{width:105mm;height:148mm;box-shadow:none;border:none;border-radius:0;page-break-inside:avoid;margin:0 auto}
+    .face.hide{display:none}
+  }
+</style>
+</head>
+<body>
+
+  <div class="panel">
+    <h2>Personaliza la tarjeta</h2>
+    <div class="fld">
+      <label>Nombre del negocio</label>
+      <input id="iName" value="Romanssera">
+    </div>
+    <div class="fld">
+      <label>Eslogan / categoría</label>
+      <input id="iTag" value="Tapasseria">
+    </div>
+    <div class="row">
+      <div class="fld">
+        <label>Nº de mesa</label>
+        <input id="iMesa" value="07">
+      </div>
+      <div class="fld">
+        <label>Teléfono</label>
+        <input id="iPhone" value="96 000 00 00">
+      </div>
+    </div>
+    <div class="fld">
+      <label>Página web</label>
+      <input id="iWeb" value="romanssera.com">
+    </div>
+    <div class="fld">
+      <label>URL del QR (a dónde lleva el pedido)</label>
+      <input id="iUrl" value="https://romanssera.com/carta?mesa=07">
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="card" id="card">
+
+      <!-- ===== ANVERSO ===== -->
+      <div class="face front" id="faceFront">
+        <div class="front-top">
+          <div class="front-title">
+            <span class="big">Haz tu pedido</span>
+            <span class="sub">desde aquí</span>
+          </div>
+          <div class="front-sub">Escanea · Pide · Disfruta</div>
+
+          <div class="qr-wrap"><div id="qrcode"></div></div>
+        </div>
+
+        <div class="front-band">
+          <span class="mesa-chip" id="mesaChip">Mesa 07</span>
+          <div class="biz-name" id="bizName">Romanssera</div>
+          <div class="biz-tag" id="bizTag">Tapasseria</div>
+          <div class="biz-meta">
+            <span id="metaPhone">96 000 00 00</span> &nbsp;·&nbsp; <span id="metaWeb">romanssera.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== REVERSO ===== -->
+      <div class="face back hide" id="faceBack">
+        <div class="back-logo"><img src="img/logo.png" alt="Romanssera" id="backLogo"></div>
+        <h3 id="backName">Romanssera</h3>
+        <div class="back-rule"></div>
+        <div class="steps">
+          <div class="step"><div class="n">1</div><div class="t">Escanea el QR<small>Apunta con la cámara de tu móvil</small></div></div>
+          <div class="step"><div class="n">2</div><div class="t">Elige tus tapas<small>Toda la carta en tu pantalla</small></div></div>
+          <div class="step"><div class="n">3</div><div class="t">Pide sin esperar<small>Tu mesa queda registrada al instante</small></div></div>
+        </div>
+        <div class="back-foot">tapes d'ahir, hui i sempre!</div>
+      </div>
+
+    </div>
+
+    <div class="toggle">
+      <button class="active" id="bFront" onclick="show('front')">Anverso</button>
+      <button id="bBack" onclick="show('back')">Reverso</button>
+    </div>
+
+    <div class="actions">
+      <button class="btn" onclick="window.print()">Imprimir / PDF</button>
+    </div>
+    <div class="hint">Edita los campos de arriba y el QR se regenera solo. Imprime a doble cara (anverso/reverso) para montar la tarjeta de mesa.</div>
+  </div>
+
+<script>
+  var qr=null;
+  function makeQR(url){
+    var box=document.getElementById('qrcode');
+    box.innerHTML='';
+    if(window.QRCode){
+      qr=new QRCode(box,{text:url,width:172,height:172,colorDark:'#2b2118',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});
+    }else{
+      var img=document.createElement('img');
+      img.src='https://api.qrserver.com/v1/create-qr-code/?size=172x172&margin=0&data='+encodeURIComponent(url);
+      box.appendChild(img);
+    }
+  }
+  function sync(){
+    var name=document.getElementById('iName').value||'Romanssera';
+    var tag=document.getElementById('iTag').value||'';
+    var mesa=document.getElementById('iMesa').value||'';
+    var phone=document.getElementById('iPhone').value||'';
+    var web=document.getElementById('iWeb').value||'';
+    var url=document.getElementById('iUrl').value||'https://romanssera.com';
+    document.getElementById('bizName').textContent=name;
+    document.getElementById('backName').textContent=name;
+    document.getElementById('bizTag').textContent=tag;
+    document.getElementById('mesaChip').textContent=mesa?('Mesa '+mesa):'';
+    document.getElementById('metaPhone').textContent=phone;
+    document.getElementById('metaWeb').textContent=web;
+    makeQR(url);
+  }
+  function show(which){
+    var f=which==='front';
+    document.getElementById('faceFront').classList.toggle('hide',!f);
+    document.getElementById('faceBack').classList.toggle('hide',f);
+    document.getElementById('bFront').classList.toggle('active',f);
+    document.getElementById('bBack').classList.toggle('active',!f);
+  }
+  ['iName','iTag','iMesa','iPhone','iWeb','iUrl'].forEach(function(id){
+    document.getElementById(id).addEventListener('input',sync);
+  });
+  window.addEventListener('load',sync);
+  // fallback if logo file missing when sharing standalone
+  document.getElementById('backLogo').addEventListener('error',function(){
+    this.parentNode.innerHTML='<div style="font-family:var(--display);font-weight:700;font-size:54px;color:var(--granate)">R</div>';
+  });
+</script>
+</body>
+</html>

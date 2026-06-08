@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trellat · Comptabilitat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:wght@300;400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#f8f4ec; --bg-deep:#efe9db; --card:#fbf9f3; --paper:#fbf9f3;
+    --ink:#1a1a17; --ink-soft:#5a5a52; --muted:#9b9588; --line-soft:#d8d1c0;
+    --mustard:#efe9db; --mustard-dark:#9b9588;
+    --granate:#1a1a17; --granate-dark:#000000; --granate-bright:#3a4a3a;
+    --orange:#3a4a3a; --blau:#d8d1c0; --olive:#5a6a43; --olive-dark:#3d4b28;
+    --red:#b8342b; --green:#4a7c3f;
+    --display:"Newsreader",Georgia,serif; --head:"Inter",system-ui,sans-serif;
+    --body:"Inter",-apple-system,system-ui,sans-serif; --mono:"Inter",ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;font-weight:500}
+  body{max-width:1100px;margin:0 auto;padding:0 0 60px;min-height:100vh;
+    background-image:
+      radial-gradient(circle at 8% 0%, rgba(58,74,58,.08), transparent 30%),
+      radial-gradient(circle at 100% 92%, rgba(26,26,23,.08), transparent 38%),
+      ;
+  }
+  button,input,select{font:inherit}
+  /* HEADER */
+  header{position:sticky;top:0;z-index:30;background:rgba(248,244,236,.97);backdrop-filter:blur(8px);box-shadow:0 8px 20px rgba(26,26,23,.08)}
+  header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line-soft)}
+  .head-top{display:flex;align-items:center;gap:14px;padding:14px 22px}
+  .brand-mark{width:42px;height:42px;object-fit:cover;border-radius:50%;flex:0 0 42px}
+  .brand-text h1{font-family:var(--display);font-size:18px;font-weight:700;color:var(--granate);text-transform:uppercase;letter-spacing:.5px}
+  .brand-text span{font-family:var(--head);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:2px}
+  .head-actions{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .month-pick{font-family:var(--mono);font-size:13px;border:1.5px solid var(--granate);background:var(--card);color:var(--ink);padding:7px 10px;border-radius:8px}
+  .btn{border:none;border-radius:9px;padding:9px 14px;font-family:var(--head);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;cursor:pointer;transition:.15s}
+  .btn-granate{background:var(--granate);color:var(--card)} .btn-granate:hover{background:var(--granate-bright)}
+  .btn-ghost{background:transparent;color:var(--granate);border:1.5px solid var(--granate)} .btn-ghost:hover{background:rgba(26,26,23,.08)}
+  .period-btn.active{background:var(--granate);color:var(--card)}
+  .btn-mini{padding:6px 10px;font-size:11px;border-radius:7px}
+  /* TABS */
+  .tabs{display:flex;gap:6px;padding:10px 22px 0;overflow-x:auto;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;border:none;background:transparent;color:var(--ink-soft);font-family:var(--head);font-size:13.5px;font-weight:500;text-transform:uppercase;letter-spacing:1px;padding:10px 14px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+  .tab.active{color:var(--granate);border-color:var(--orange)}
+  main{padding:22px}
+  .view{display:none;animation:fade .25s} .view.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-h{font-family:var(--head);font-size:22px;font-weight:600;color:var(--granate);text-transform:uppercase;letter-spacing:.6px;margin:4px 0 16px;display:flex;align-items:center;gap:10px}
+  .sec-h small{font-family:var(--mono);font-size:11px;color:var(--ink-soft);text-transform:none;letter-spacing:0;font-weight:400}
+  /* KPI CARDS */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:24px}
+  .kpi{background:var(--paper);border:1.5px solid rgba(26,26,23,.16);border-radius:14px;padding:16px 18px;position:relative;overflow:hidden;box-shadow:0 8px 18px rgba(26,26,23,.06)}
+  .kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--granate),var(--orange))}
+  .kpi .lbl{font-family:var(--head);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:1px}
+  .kpi .val{font-family:var(--display);font-size:27px;font-weight:700;color:var(--granate);margin-top:6px;line-height:1}
+  .kpi .val small{font-size:14px;color:var(--ink-soft)}
+  .kpi .sub{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:6px}
+  .kpi.good .val{color:var(--green)} .kpi.bad .val{color:var(--red)}
+  /* PANEL */
+  .panel{background:var(--paper);border:1.5px solid rgba(26,26,23,.14);border-radius:14px;padding:18px 20px;margin-bottom:18px;box-shadow:0 8px 18px rgba(26,26,23,.05)}
+  .panel h3{font-family:var(--head);font-size:15px;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .panel h3 .dot{width:8px;height:8px;border-radius:50%;background:var(--orange)}
+  /* CHART */
+  .chart{display:flex;align-items:flex-end;gap:5px;height:160px;padding-top:10px}
+  .bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
+  .bar{width:100%;max-width:26px;background:linear-gradient(180deg,var(--granate-bright),var(--granate));border-radius:4px 4px 0 0;transition:height .4s;position:relative}
+  .bar:hover{background:var(--orange)}
+  .bar-lbl{font-family:var(--mono);font-size:9px;color:var(--muted);white-space:nowrap}
+  /* grouped annual chart */
+  .gchart{display:flex;align-items:flex-end;gap:8px;height:180px;padding-top:8px}
+  .gcol{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
+  .gbars{display:flex;align-items:flex-end;gap:3px;height:148px;width:100%;justify-content:center}
+  .gb{width:10px;border-radius:3px 3px 0 0;transition:height .4s}
+  .gb.ing{background:linear-gradient(180deg,var(--granate-bright),var(--granate))}
+  .gb.gas{background:linear-gradient(180deg,var(--mustard),var(--mustard-dark))}
+  .legend{display:flex;gap:16px;margin-bottom:12px;font-family:var(--mono);font-size:11px;color:var(--ink-soft)}
+  .legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+  .chip{display:inline-flex;align-items:center;gap:6px;background:rgba(26,26,23,.08);border:1px solid rgba(26,26,23,.2);color:var(--granate);border-radius:999px;padding:5px 10px;font-family:var(--mono);font-size:12px;margin:0 6px 6px 0}
+  .chip button{background:none;border:none;color:var(--red);cursor:pointer;font-size:14px;line-height:1;padding:0}
+  .act{background:none;border:none;cursor:pointer;font-size:15px;line-height:1;padding:0 4px}
+  .act.edit{color:var(--blau)} .act.del{color:var(--red)}
+  .editing-flag{font-family:var(--mono);font-size:11px;color:var(--mustard-dark);background:rgba(231,214,184,.18);padding:3px 8px;border-radius:6px;margin-left:8px}
+  /* TABLE */
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{font-family:var(--head);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.8px;text-align:left;padding:8px 10px;border-bottom:2px solid var(--granate)}
+  td{padding:9px 10px;border-bottom:1px solid var(--line-soft)}
+  td.num,th.num{text-align:right;font-family:var(--mono)}
+  tr:hover td{background:rgba(26,26,23,.03)}
+  .pill{display:inline-block;font-family:var(--mono);font-size:10.5px;padding:2px 8px;border-radius:999px;background:rgba(26,26,23,.1);color:var(--granate)}
+  .pill.cat{background:rgba(58,74,58,.14);color:var(--mustard-dark)}
+  /* FORMS */
+  .form-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;align-items:end}
+  .fld{display:flex;flex-direction:column;gap:4px}
+  .fld label{font-family:var(--head);font-size:10.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.6px}
+  .fld input,.fld select{border:1.5px solid var(--line-soft);background:var(--card);border-radius:8px;padding:9px 10px;color:var(--ink);font-size:13.5px}
+  .fld input:focus,.fld select:focus{outline:none;border-color:var(--granate)}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.split{grid-template-columns:1fr}}
+  .empty{text-align:center;color:var(--muted);font-style:italic;padding:30px;font-size:13px}
+  .row-line{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line-soft);font-size:14px}
+  .row-line.big{font-family:var(--display);font-size:19px;color:var(--granate);border-bottom:none;border-top:2px solid var(--granate);margin-top:6px;padding-top:12px}
+  .row-line .neg{color:var(--red)} .row-line .pos{color:var(--green)}
+  .note{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:8px;line-height:1.5}
+  .del{background:none;border:none;color:var(--red);cursor:pointer;font-size:16px;line-height:1}
+  .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--granate);color:var(--card);padding:12px 22px;border-radius:10px;font-family:var(--head);font-size:13px;letter-spacing:.5px;text-transform:uppercase;z-index:90;opacity:0;transition:.3s;box-shadow:0 10px 24px rgba(26,26,23,.3)}
+  .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+  .demo-banner{background:rgba(231,214,184,.16);border:1.5px solid var(--mustard);border-radius:10px;padding:10px 14px;font-family:var(--mono);font-size:12px;color:var(--mustard-dark);margin-bottom:18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  @media print{
+    header,.tabs,.head-actions,.no-print{display:none!important}
+    body{background:#fff;max-width:none}
+    .view{display:none!important}.view.print-on{display:block!important}
+    .panel{break-inside:avoid;box-shadow:none;border-color:#ccc}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="head-top">
+    <img class="brand-mark" src="img/logo-real.jpg" alt="Trellat" onerror="this.style.display='none'">
+    <div class="brand-text"><h1>Trellat</h1><span>Comptabilitat · Caixa</span></div>
+    <div class="head-actions">
+      <a href="inici.html" class="btn btn-ghost btn-mini" style="text-decoration:none">← Inici</a>
+      <input type="month" id="monthPick" class="month-pick">
+      <button class="btn btn-ghost btn-mini" id="demoBtn">Dades demo</button>
+      <button class="btn btn-granate btn-mini" id="printBtn">Imprimir informe</button>
+    </div>
+  </div>
+  <div class="tabs" id="tabs">
+    <button class="tab active" data-v="resum">Resum</button>
+    <button class="tab" data-v="vendes">Vendes</button>
+    <button class="tab" data-v="productes">Productes</button>
+    <button class="tab" data-v="despeses">Despeses</button>
+    <button class="tab" data-v="caixa">Caixa</button>
+    <button class="tab" data-v="informe">Informe IVA</button>
+  </div>
+</header>
+
+<main>
+  <!-- ===== RESUM ===== -->
+  <section class="view active" id="v-resum">
+    <div class="sec-h">Resum del mes <small id="resumMonth"></small></div>
+    <div class="kpis" id="resumKpis"></div>
+    <div class="panel">
+      <h3><span class="dot"></span>Vendes dels últims 14 dies</h3>
+      <div class="chart" id="chart14"></div>
+    </div>
+    <div class="split">
+      <div class="panel">
+        <h3><span class="dot"></span>Vendes per categoria (mes)</h3>
+        <div id="catBreak"></div>
+      </div>
+      <div class="panel">
+        <h3><span class="dot"></span>Compte de resultats (mes)</h3>
+        <div id="pnlBox"></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3><span class="dot"></span>Ingressos vs Despeses <small id="annualYear" style="font-family:var(--mono);font-size:11px;color:var(--ink-soft);font-weight:400"></small></h3>
+      <div class="legend"><span><i style="background:var(--granate)"></i>Ingressos</span><span><i style="background:var(--mustard)"></i>Despeses</span></div>
+      <div class="gchart" id="annualChart"></div>
+    </div>
+  </section>
+
+  <!-- ===== VENDES ===== -->
+  <section class="view" id="v-vendes">
+    <div class="sec-h">Vendes <small>tiquets generats per la carta digital</small></div>
+    <div class="kpis" id="vendesKpis"></div>
+    <div class="panel">
+      <h3><span class="dot"></span>Tiquets del mes</h3>
+      <div style="overflow-x:auto"><table id="vendesTable"></table></div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTES ===== -->
+  <section class="view" id="v-productes">
+    <div class="sec-h">Productes més venuts <small id="prodMonth"></small></div>
+    <div class="kpis" id="prodKpis"></div>
+    <div class="panel">
+      <h3><span class="dot"></span>Rànquing del mes</h3>
+      <div style="overflow-x:auto"><table id="prodTable"></table></div>
+    </div>
+  </section>
+
+  <!-- ===== DESPESES ===== -->
+  <section class="view" id="v-despeses">
+    <div class="sec-h">Despeses i proveïdors</div>
+    <div class="panel no-print">
+      <h3><span class="dot"></span><span id="gFormTitle">Afegir despesa</span><span id="gEditFlag" class="editing-flag" style="display:none">editant</span></h3>
+      <div class="form-row">
+        <div class="fld"><label>Data</label><input type="date" id="gFecha"></div>
+        <div class="fld"><label>Proveïdor</label><input type="text" id="gProv" placeholder="Ex: Mercavalència"></div>
+        <div class="fld"><label>Concepte</label><input type="text" id="gConc" placeholder="Ex: Verdura"></div>
+        <div class="fld"><label>Categoria</label><select id="gCat"></select></div>
+        <div class="fld"><label>Base (€)</label><input type="number" id="gBase" step="0.01" placeholder="0,00"></div>
+        <div class="fld"><label>IVA %</label><select id="gIva"><option>21</option><option selected>10</option><option>4</option><option>0</option></select></div>
+        <div class="fld"><button class="btn btn-granate" id="gAdd" style="width:100%">Afegir</button></div>
+      </div>
+      <button class="btn btn-ghost btn-mini" id="gCancel" style="display:none;margin-top:10px">Cancel·lar edició</button>
+    </div>
+
+    <div class="split">
+      <div class="panel no-print">
+        <h3><span class="dot" style="background:var(--blau)"></span>Despeses fixes (recurrents)</h3>
+        <div class="note" style="margin:0 0 12px">Cuotes que es repetixen cada mes: lloguer, nòmines, gestoria, assegurances… Es generen soles cada mes.</div>
+        <div class="form-row">
+          <div class="fld"><label>Dia del mes</label><input type="number" id="fDia" min="1" max="28" value="1"></div>
+          <div class="fld"><label>Concepte</label><input type="text" id="fConc" placeholder="Ex: Lloguer local"></div>
+          <div class="fld"><label>Categoria</label><select id="fCat"></select></div>
+          <div class="fld"><label>Base (€)</label><input type="number" id="fBase" step="0.01" placeholder="0,00"></div>
+          <div class="fld"><label>IVA %</label><select id="fIva"><option>21</option><option selected>10</option><option>4</option><option>0</option></select></div>
+          <div class="fld"><button class="btn btn-granate" id="fAdd" style="width:100%">Afegir fixa</button></div>
+        </div>
+        <div id="fijosList" style="margin-top:14px"></div>
+        <button class="btn btn-ghost btn-mini" id="fGen" style="margin-top:10px">↻ Generar fixes del mes seleccionat</button>
+      </div>
+      <div class="panel no-print">
+        <h3><span class="dot" style="background:var(--orange)"></span>Categories de despesa</h3>
+        <div id="catChips" style="margin-bottom:12px"></div>
+        <div class="form-row" style="grid-template-columns:1fr auto">
+          <div class="fld"><label>Nova categoria</label><input type="text" id="catNew" placeholder="Ex: Neteja"></div>
+          <div class="fld"><button class="btn btn-granate" id="catAdd" style="width:100%">Afegir</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3><span class="dot"></span>Despeses del mes</h3>
+      <div style="overflow-x:auto"><table id="gastosTable"></table></div>
+    </div>
+  </section>
+
+  <!-- ===== CAIXA ===== -->
+  <section class="view" id="v-caixa">
+    <div class="sec-h">Tancament de caixa <small>arqueig diari</small></div>
+    <div class="split">
+      <div class="panel no-print">
+        <h3><span class="dot"></span>Nou tancament</h3>
+        <div class="fld" style="margin-bottom:12px"><label>Data</label><input type="date" id="cFecha"></div>
+        <div class="row-line"><span>Vendes registrades (carta)</span><b id="cVentasReg">0,00 €</b></div>
+        <div class="form-row" style="margin-top:12px">
+          <div class="fld"><label>Efectiu comptat (€)</label><input type="number" id="cEfectivo" step="0.01" placeholder="0,00"></div>
+          <div class="fld"><label>Targeta (€)</label><input type="number" id="cTarjeta" step="0.01" placeholder="0,00"></div>
+        </div>
+        <div class="row-line big" style="margin-top:10px"><span>Descuadre</span><span id="cDescuadre">0,00 €</span></div>
+        <button class="btn btn-granate" id="cSave" style="width:100%;margin-top:14px">Guardar tancament</button>
+        <div class="note">El descuadre compara (efectiu + targeta) amb les vendes registrades per la carta del dia triat.</div>
+      </div>
+      <div class="panel">
+        <h3><span class="dot"></span>Històric de tancaments</h3>
+        <div style="overflow-x:auto"><table id="arqueoTable"></table></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INFORME ===== -->
+  <section class="view" id="v-informe">
+    <div class="sec-h">Informe d'IVA i resultats <small id="infMonth"></small></div>
+    <div class="demo-banner no-print" style="background:rgba(26,26,23,.06);border-color:rgba(26,26,23,.2);color:var(--ink-soft)">
+      <span>Període:</span>
+      <button class="btn btn-ghost btn-mini period-btn active" data-p="mes">Mes</button>
+      <button class="btn btn-ghost btn-mini period-btn" data-p="tri">Trimestre</button>
+      <button class="btn btn-ghost btn-mini period-btn" data-p="any">Any</button>
+      <span style="margin-left:auto;font-weight:600;color:var(--granate)" id="infPeriodLbl"></span>
+    </div>
+    <div class="split">
+      <div class="panel">
+        <h3><span class="dot"></span>Liquidació d'IVA (model 303)</h3>
+        <div id="ivaBox"></div>
+      </div>
+      <div class="panel">
+        <h3><span class="dot"></span>Resultat del mes</h3>
+        <div id="resBox"></div>
+      </div>
+    </div>
+    <div class="panel no-print">
+      <h3><span class="dot"></span>Exportar per a la gestoria</h3>
+      <button class="btn btn-ghost" id="csvVentas">⬇ Vendes (CSV)</button>
+      <button class="btn btn-ghost" id="csvGastos">⬇ Despeses (CSV)</button>
+      <button class="btn btn-granate" id="printBtn2">🖨 Informe (PDF)</button>
+      <div class="note">El CSV s'obri en Excel/Numbers. L'informe PDF es genera amb la funció d'imprimir del navegador (tria "Guardar com a PDF").</div>
+      <hr style="border:none;border-top:1px dashed var(--line-soft);margin:16px 0">
+      <h3 style="margin-bottom:10px"><span class="dot" style="background:var(--blau)"></span>Còpia de seguretat</h3>
+      <button class="btn btn-ghost" id="backupBtn">⬇ Exportar tot (JSON)</button>
+      <button class="btn btn-ghost" id="restoreBtn">⬆ Importar còpia</button>
+      <input type="file" id="restoreFile" accept="application/json" style="display:none">
+      <div class="note">Com que les dades viuen en este navegador, descarrega una còpia de tant en tant. Importar substitueix les despeses i tancaments actuals.</div>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ===== Claus localStorage =====
+const K_ORDERS="trellat_orders_v1";          // generades per index.html (carta)
+const K_ARCHIVE="trellat_orders_archive_v1";  // arxivades per admin.html
+const K_GASTOS="trellat_conta_gastos_v1";
+const K_ARQUEOS="trellat_conta_arqueos_v1";
+const K_DEMO="trellat_conta_demo_v1";          // vendes demo aïllades (no embruten cuina/admin)
+const K_FIJOS="trellat_conta_fijos_v1";        // despeses recurrents (plantilles)
+const K_CATS="trellat_conta_cats_v1";          // categories de despesa
+const DEFAULT_CATS=["Compres / Gènere","Begudes","Subministraments","Lloguer","Personal","Gestoria","Màrqueting","Assegurances","Altres"];
+const IVA_VENTAS=10; // hostaleria: servei en local 10%
+
+// ===== Mapa nom de plat -> categoria (per al desglossament) =====
+const NAME2CAT={};
+const CATS={
+  "Menú del Dia":["Menú del Dia"],
+  "Entrants":["Ensalada Valenciana","Sopa Castellana","Crema de Verdures","Salmorejo Cordobés"],
+  "Segons":["Paella Valenciana","Llom a la Planxa","Bacaladilla Arrebossada"],
+  "Postres":["Tarta de Formatge i Nous","Tiramisú","Quallada","Pinya Natural","Poma Esperiega","Cucurutxo de Torró","Cucurutxo Xocolata i Vainilla","Cucurutxo de Nata","Cucurutxo de Llima","Gelat Bombó","Iogurt Natural"],
+  "Begudes":["Canya / Terç","Copa de Vi","Clara","Refresc","Aigua"],
+  "Cafès i Copes":["Café","Cremaet","Carajillo","Copa / Licor"]
+};
+Object.entries(CATS).forEach(([c,arr])=>arr.forEach(n=>NAME2CAT[n]=c));
+function catOf(name){ return NAME2CAT[name]||"Altres"; }
+
+// ===== Estat =====
+let curMonth = isoMonth(new Date());
+function isoMonth(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0"); }
+function isoDay(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function load(k){ try{const v=JSON.parse(localStorage.getItem(k)||"[]");return Array.isArray(v)?v:[];}catch(e){return[];} }
+function save(k,v){ localStorage.setItem(k,JSON.stringify(v)); }
+const eur=n=>(n||0).toLocaleString("es-ES",{minimumFractionDigits:2,maximumFractionDigits:2})+" €";
+const fdate=ts=>new Date(ts).toLocaleDateString("es-ES",{day:"2-digit",month:"2-digit",year:"2-digit"});
+const ftime=ts=>new Date(ts).toLocaleTimeString("es-ES",{hour:"2-digit",minute:"2-digit"});
+
+// ===== Vendes: combina carta + arxiu, dedup per id =====
+function allSales(){
+  const seen={}, out=[];
+  [...load(K_ORDERS),...load(K_ARCHIVE),...load(K_DEMO)].forEach(o=>{
+    if(!o||o.id==null) return;
+    if(seen[o.id]) return; seen[o.id]=1;
+    const ts=o.ts||Date.now();
+    out.push({id:o.id,ts,total:Number(o.total||o.subtotal||0),mesa:o.mesa||"-",
+      items:Array.isArray(o.items)?o.items:[],_demo:!!o._demo});
+  });
+  return out.sort((a,b)=>b.ts-a.ts);
+}
+function salesOfMonth(m){ return allSales().filter(s=>isoMonth(new Date(s.ts))===m); }
+function gastosOfMonth(m){ return load(K_GASTOS).filter(g=>g.fecha&&g.fecha.slice(0,7)===m); }
+function baseFromTotal(total,iva){ return total/(1+iva/100); }
+function prevMonth(m){ const [y,mo]=m.split("-").map(Number); const d=new Date(y,mo-2,1); return isoMonth(d); }
+let infPeriod="mes";
+function periodRange(){
+  const [y,mo]=curMonth.split("-").map(Number);
+  if(infPeriod==="tri"){ const q=Math.floor((mo-1)/3); return {from:new Date(y,q*3,1),to:new Date(y,q*3+3,1),label:"Trimestre "+(q+1)+" · "+y}; }
+  if(infPeriod==="any"){ return {from:new Date(y,0,1),to:new Date(y+1,0,1),label:"Any "+y}; }
+  return {from:new Date(y,mo-1,1),to:new Date(y,mo,1),label:monthLabel(curMonth)};
+}
+function salesInRange(r){ return allSales().filter(s=>{const t=new Date(s.ts);return t>=r.from&&t<r.to;}); }
+function gastosInRange(r){ return load(K_GASTOS).filter(g=>{ if(!g.fecha)return false; const t=new Date(g.fecha+"T12:00"); return t>=r.from&&t<r.to; }); }
+
+function toast(msg){ const t=document.getElementById("toast"); t.textContent=msg; t.classList.add("show"); setTimeout(()=>t.classList.remove("show"),2200); }
+
+// ===== Categories de despesa =====
+function getCats(){ let c=load(K_CATS); if(!c.length){ c=DEFAULT_CATS.slice(); save(K_CATS,c); } return c; }
+function populateCatSelects(){
+  const cats=getCats();
+  ["gCat","fCat"].forEach(id=>{ const sel=document.getElementById(id); if(!sel) return; const cur=sel.value;
+    sel.innerHTML=cats.map(c=>`<option>${c}</option>`).join(""); if(cats.includes(cur)) sel.value=cur; });
+}
+function renderCatChips(){
+  const box=document.getElementById("catChips");
+  box.innerHTML=getCats().map(c=>`<span class="chip">${c}<button data-cat="${c}" title="Esborrar">×</button></span>`).join("");
+}
+function addCat(){
+  const v=document.getElementById("catNew").value.trim(); if(!v) return;
+  const cats=getCats(); if(cats.includes(v)){ toast("Ja existix"); return; }
+  cats.push(v); save(K_CATS,cats); document.getElementById("catNew").value="";
+  populateCatSelects(); renderCatChips(); toast("Categoria afegida");
+}
+function delCat(c){ let cats=getCats().filter(x=>x!==c); if(!cats.length) cats=["Altres"]; save(K_CATS,cats); populateCatSelects(); renderCatChips(); toast("Categoria esborrada"); }
+
+// ===== Despeses fixes (recurrents) =====
+function renderFijos(){
+  const list=load(K_FIJOS); const box=document.getElementById("fijosList");
+  if(!list.length){ box.innerHTML='<div class="note" style="margin:0">Encara no hi ha despeses fixes.</div>'; return; }
+  box.innerHTML=list.map(f=>`<div class="row-line"><span><b>Dia ${f.dia}</b> · ${f.conc} <span class="pill cat">${f.cat}</span></span><span style="display:flex;align-items:center;gap:12px"><b style="font-family:var(--mono)">${eur(Number(f.base)*(1+Number(f.ivaPct)/100))}</b><button class="act del" data-delfijo="${f.id}">🗑</button></span></div>`).join("");
+}
+function addFijo(){
+  const base=parseFloat(document.getElementById("fBase").value);
+  if(!base||base<=0){ toast("Import no vàlid"); return; }
+  const f={id:"f"+Date.now(),dia:Math.min(28,Math.max(1,parseInt(document.getElementById("fDia").value)||1)),
+    conc:document.getElementById("fConc").value.trim()||"Despesa fixa",cat:document.getElementById("fCat").value,
+    base:base,ivaPct:Number(document.getElementById("fIva").value)};
+  const list=load(K_FIJOS); list.push(f); save(K_FIJOS,list);
+  document.getElementById("fBase").value=""; document.getElementById("fConc").value="";
+  applyFijos(curMonth); toast("Despesa fixa afegida"); refresh();
+}
+function applyFijos(month){
+  const fijos=load(K_FIJOS); if(!fijos.length) return 0;
+  const gastos=load(K_GASTOS); let added=0;
+  fijos.forEach(f=>{
+    const exists=gastos.some(g=>g.recurId===f.id && g.fecha && g.fecha.slice(0,7)===month);
+    if(!exists){ gastos.push({id:"g"+Date.now()+Math.floor(Math.random()*9999),recurId:f.id,fecha:month+"-"+String(f.dia).padStart(2,"0"),prov:"(fixa)",conc:f.conc,cat:f.cat,base:f.base,ivaPct:f.ivaPct}); added++; }
+  });
+  if(added) save(K_GASTOS,gastos);
+  return added;
+}
+function genFijosMes(){ const n=applyFijos(curMonth); toast(n?`${n} fixes generades`:"Ja estaven generades"); refresh(); }
+
+// ===== Editar despesa =====
+let editId=null;
+function startEdit(id){
+  const g=load(K_GASTOS).find(x=>x.id===id); if(!g) return;
+  editId=id; populateCatSelects();
+  document.getElementById("gFecha").value=g.fecha; document.getElementById("gProv").value=g.prov||"";
+  document.getElementById("gConc").value=g.conc||""; document.getElementById("gBase").value=g.base;
+  document.getElementById("gCat").value=g.cat; document.getElementById("gIva").value=g.ivaPct;
+  document.getElementById("gAdd").textContent="Guardar canvis"; document.getElementById("gFormTitle").textContent="Editar despesa";
+  document.getElementById("gEditFlag").style.display=""; document.getElementById("gCancel").style.display="";
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function cancelEdit(){
+  editId=null;
+  document.getElementById("gAdd").textContent="Afegir"; document.getElementById("gFormTitle").textContent="Afegir despesa";
+  document.getElementById("gEditFlag").style.display="none"; document.getElementById("gCancel").style.display="none";
+  document.getElementById("gBase").value=""; document.getElementById("gProv").value=""; document.getElementById("gConc").value="";
+}
+
+// ===== Gràfic anual ingressos vs despeses =====
+function renderAnnual(){
+  const y=Number(curMonth.split("-")[0]);
+  document.getElementById("annualYear").textContent="· "+y;
+  const ing=new Array(12).fill(0), gas=new Array(12).fill(0);
+  allSales().forEach(s=>{ const d=new Date(s.ts); if(d.getFullYear()===y) ing[d.getMonth()]+=s.total; });
+  load(K_GASTOS).forEach(g=>{ if(g.fecha && Number(g.fecha.slice(0,4))===y){ const m=Number(g.fecha.slice(5,7))-1; gas[m]+=Number(g.base||0)*(1+Number(g.ivaPct||0)/100); } });
+  const max=Math.max(...ing,...gas,1);
+  const ML=["Gen","Feb","Mar","Abr","Mai","Jun","Jul","Ago","Set","Oct","Nov","Des"];
+  document.getElementById("annualChart").innerHTML=ML.map((m,i)=>`<div class="gcol"><div class="gbars"><div class="gb ing" style="height:${Math.max(Math.round(ing[i]/max*140),1)}px" title="Ingressos ${m}: ${eur(ing[i])}"></div><div class="gb gas" style="height:${Math.max(Math.round(gas[i]/max*140),1)}px" title="Despeses ${m}: ${eur(gas[i])}"></div></div><div class="bar-lbl">${m}</div></div>`).join("");
+}
+
+// ===== RESUM =====
+function renderResum(){
+  document.getElementById("resumMonth").textContent="· "+monthLabel(curMonth);
+  const sales=salesOfMonth(curMonth);
+  const ingresos=sales.reduce((a,s)=>a+s.total,0);
+  const baseV=sales.reduce((a,s)=>a+baseFromTotal(s.total,IVA_VENTAS),0);
+  const ivaRep=ingresos-baseV;
+  const today=isoDay(new Date());
+  const ventasHoy=allSales().filter(s=>isoDay(new Date(s.ts))===today).reduce((a,s)=>a+s.total,0);
+  const gastos=gastosOfMonth(curMonth);
+  const gastoBase=gastos.reduce((a,g)=>a+Number(g.base||0),0);
+  const ticket=sales.length?ingresos/sales.length:0;
+  const resultado=baseV-gastoBase;
+  const prevIng=salesOfMonth(prevMonth(curMonth)).reduce((a,s)=>a+s.total,0);
+  const delta=prevIng>0?Math.round((ingresos-prevIng)/prevIng*100):null;
+  const deltaTxt=delta===null?(sales.length+" tiquets"):`${sales.length} tiquets · ${delta>=0?"▲ +":"▼ "}${delta}% vs mes ant.`;
+  document.getElementById("resumKpis").innerHTML=`
+    ${kpi("Vendes del mes",eur(ingresos),deltaTxt)}
+    ${kpi("Vendes hui",eur(ventasHoy),today.split("-").reverse().join("/"))}
+    ${kpi("IVA repercutit",eur(ivaRep),"base "+eur(baseV))}
+    ${kpi("Tiquet mitjà",eur(ticket),"per comanda")}
+    ${kpi("Resultat (mes)",eur(resultado),resultado>=0?"benefici":"pèrdua",resultado>=0?"good":"bad")}
+  `;
+  renderChart();
+  renderCatBreak(sales);
+  renderPnl(baseV,gastoBase);
+}
+function kpi(lbl,val,sub,cls=""){ return `<div class="kpi ${cls}"><div class="lbl">${lbl}</div><div class="val">${val}</div><div class="sub">${sub}</div></div>`; }
+function renderChart(){
+  const days=[]; const now=new Date();
+  for(let i=13;i>=0;i--){ const d=new Date(now); d.setDate(now.getDate()-i); days.push(d); }
+  const sales=allSales();
+  const totals=days.map(d=>sales.filter(s=>isoDay(new Date(s.ts))===isoDay(d)).reduce((a,s)=>a+s.total,0));
+  const max=Math.max(...totals,1);
+  document.getElementById("chart14").innerHTML=days.map((d,i)=>{
+    const h=Math.round(totals[i]/max*130);
+    return `<div class="bar-wrap"><div class="bar" style="height:${Math.max(h,2)}px" title="${eur(totals[i])}"></div><div class="bar-lbl">${d.getDate()}/${d.getMonth()+1}</div></div>`;
+  }).join("");
+}
+function renderCatBreak(sales){
+  const tot={};
+  sales.forEach(s=>s.items.forEach(it=>{ const c=catOf(it.name); tot[c]=(tot[c]||0)+Number(it.price||0)*Number(it.qty||0); }));
+  const entries=Object.entries(tot).sort((a,b)=>b[1]-a[1]);
+  const sum=entries.reduce((a,e)=>a+e[1],0)||1;
+  const box=document.getElementById("catBreak");
+  if(!entries.length){ box.innerHTML='<div class="empty">Encara no hi ha vendes este mes.</div>'; return; }
+  box.innerHTML=entries.map(([c,v])=>{
+    const pct=Math.round(v/sum*100);
+    return `<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span><span class="pill cat">${c}</span></span><b style="font-family:var(--mono)">${eur(v)} · ${pct}%</b></div>
+      <div style="height:8px;background:rgba(26,26,23,.1);border-radius:6px;overflow:hidden"><div style="height:100%;width:${pct}%;background:linear-gradient(90deg,var(--granate),var(--orange))"></div></div></div>`;
+  }).join("");
+}
+function renderPnl(baseV,gastoBase){
+  const res=baseV-gastoBase;
+  document.getElementById("pnlBox").innerHTML=`
+    <div class="row-line"><span>Ingressos (base imposable)</span><b class="pos">${eur(baseV)}</b></div>
+    <div class="row-line"><span>Despeses (base)</span><b class="neg">−${eur(gastoBase)}</b></div>
+    <div class="row-line big"><span>Resultat</span><span class="${res>=0?'pos':'neg'}">${eur(res)}</span></div>`;
+}
+
+// ===== VENDES =====
+function renderVendes(){
+  const sales=salesOfMonth(curMonth);
+  const ingresos=sales.reduce((a,s)=>a+s.total,0);
+  const baseV=sales.reduce((a,s)=>a+baseFromTotal(s.total,IVA_VENTAS),0);
+  document.getElementById("vendesKpis").innerHTML=`
+    ${kpi("Tiquets",sales.length,"este mes")}
+    ${kpi("Facturació",eur(ingresos),"IVA inclòs")}
+    ${kpi("Base imposable",eur(baseV),"sense IVA")}
+    ${kpi("IVA repercutit",eur(ingresos-baseV),IVA_VENTAS+"% hostaleria")}`;
+  const t=document.getElementById("vendesTable");
+  if(!sales.length){ t.innerHTML=`<tr><td><div class="empty">No hi ha vendes en ${monthLabel(curMonth)}.<br>Genera comandes des de la carta o prem "Dades demo".</div></td></tr>`; return; }
+  t.innerHTML=`<thead><tr><th>Data</th><th>Hora</th><th>Taula</th><th>Articles</th><th class="num">Base</th><th class="num">IVA</th><th class="num">Total</th></tr></thead><tbody>`+
+    sales.map(s=>{ const base=baseFromTotal(s.total,IVA_VENTAS); const n=s.items.reduce((a,i)=>a+Number(i.qty||0),0);
+      return `<tr><td>${fdate(s.ts)}</td><td>${ftime(s.ts)}</td><td><span class="pill">${s.mesa}</span></td><td>${n} art.${s._demo?' <span class="pill cat">demo</span>':''}</td><td class="num">${eur(base)}</td><td class="num">${eur(s.total-base)}</td><td class="num"><b>${eur(s.total)}</b></td></tr>`;
+    }).join("")+`</tbody>`;
+}
+
+// ===== DESPESES =====
+function renderGastos(){
+  const t=document.getElementById("gastosTable");
+  const gastos=gastosOfMonth(curMonth).sort((a,b)=>b.fecha.localeCompare(a.fecha));
+  if(!gastos.length){ t.innerHTML=`<tr><td><div class="empty">Cap despesa en ${monthLabel(curMonth)}.</div></td></tr>`; return; }
+  t.innerHTML=`<thead><tr><th>Data</th><th>Proveïdor</th><th>Concepte</th><th>Cat.</th><th class="num">Base</th><th class="num">IVA</th><th class="num">Total</th><th></th></tr></thead><tbody>`+
+    gastos.map(g=>{ const iva=Number(g.base)*Number(g.ivaPct)/100; const tot=Number(g.base)+iva;
+      return `<tr><td>${g.fecha.split("-").reverse().join("/")}</td><td>${g.prov||"-"}</td><td>${g.conc||"-"}${g.recurId?' <span class="pill cat">fixa</span>':''}</td><td><span class="pill cat">${g.cat}</span></td><td class="num">${eur(Number(g.base))}</td><td class="num">${eur(iva)} <small style="color:var(--muted)">${g.ivaPct}%</small></td><td class="num"><b>${eur(tot)}</b></td><td style="white-space:nowrap"><button class="act edit" data-edit="${g.id}" title="Editar">✎</button><button class="act del" data-del="${g.id}" title="Esborrar">🗑</button></td></tr>`;
+    }).join("")+`</tbody>`;
+}
+function addGasto(){
+  const base=parseFloat(document.getElementById("gBase").value);
+  if(!base||base<=0){ toast("Posa un import vàlid"); return; }
+  const data={fecha:document.getElementById("gFecha").value||isoDay(new Date()),
+    prov:document.getElementById("gProv").value.trim(),conc:document.getElementById("gConc").value.trim(),
+    cat:document.getElementById("gCat").value,base:base,ivaPct:Number(document.getElementById("gIva").value)};
+  const list=load(K_GASTOS);
+  if(editId){ const g=list.find(x=>x.id===editId); if(g) Object.assign(g,data); save(K_GASTOS,list); cancelEdit(); toast("Despesa actualitzada"); }
+  else { list.push({id:"g"+Date.now(),...data}); save(K_GASTOS,list);
+    document.getElementById("gBase").value=""; document.getElementById("gProv").value=""; document.getElementById("gConc").value=""; toast("Despesa afegida"); }
+  refresh();
+}
+
+// ===== CAIXA =====
+function ventasDia(day){ return allSales().filter(s=>isoDay(new Date(s.ts))===day).reduce((a,s)=>a+s.total,0); }
+function updCaixaForm(){
+  const day=document.getElementById("cFecha").value||isoDay(new Date());
+  const reg=ventasDia(day);
+  document.getElementById("cVentasReg").textContent=eur(reg);
+  const ef=parseFloat(document.getElementById("cEfectivo").value)||0;
+  const ta=parseFloat(document.getElementById("cTarjeta").value)||0;
+  const desc=(ef+ta)-reg;
+  const el=document.getElementById("cDescuadre");
+  el.textContent=(desc>=0?"+":"")+eur(desc);
+  el.className=Math.abs(desc)<0.01?"":(desc<0?"neg":"pos");
+}
+function saveArqueo(){
+  const day=document.getElementById("cFecha").value||isoDay(new Date());
+  const ef=parseFloat(document.getElementById("cEfectivo").value)||0;
+  const ta=parseFloat(document.getElementById("cTarjeta").value)||0;
+  const reg=ventasDia(day);
+  const list=load(K_ARQUEOS).filter(a=>a.fecha!==day);
+  list.push({id:"a"+Date.now(),fecha:day,efectivo:ef,tarjeta:ta,reg:reg,desc:(ef+ta)-reg});
+  save(K_ARQUEOS,list);
+  document.getElementById("cEfectivo").value=""; document.getElementById("cTarjeta").value="";
+  toast("Tancament guardat"); refresh();
+}
+function renderArqueos(){
+  const t=document.getElementById("arqueoTable");
+  const list=load(K_ARQUEOS).sort((a,b)=>b.fecha.localeCompare(a.fecha)).slice(0,30);
+  if(!list.length){ t.innerHTML=`<tr><td><div class="empty">Encara no hi ha tancaments.</div></td></tr>`; return; }
+  t.innerHTML=`<thead><tr><th>Data</th><th class="num">Efectiu</th><th class="num">Targeta</th><th class="num">Registrat</th><th class="num">Descuadre</th></tr></thead><tbody>`+
+    list.map(a=>`<tr><td>${a.fecha.split("-").reverse().join("/")}</td><td class="num">${eur(a.efectivo)}</td><td class="num">${eur(a.tarjeta)}</td><td class="num">${eur(a.reg)}</td><td class="num" style="color:${Math.abs(a.desc)<0.01?'var(--green)':(a.desc<0?'var(--red)':'var(--mustard-dark)')}"><b>${(a.desc>=0?"+":"")+eur(a.desc)}</b></td></tr>`).join("")+`</tbody>`;
+}
+
+// ===== INFORME =====
+function renderInforme(){
+  const r=periodRange();
+  document.getElementById("infMonth").textContent="· "+r.label;
+  document.getElementById("infPeriodLbl").textContent=r.label;
+  const sales=salesInRange(r);
+  const ingresos=sales.reduce((a,s)=>a+s.total,0);
+  const baseV=sales.reduce((a,s)=>a+baseFromTotal(s.total,IVA_VENTAS),0);
+  const ivaRep=ingresos-baseV;
+  const gastos=gastosInRange(r);
+  const gastoBase=gastos.reduce((a,g)=>a+Number(g.base||0),0);
+  const ivaSop=gastos.reduce((a,g)=>a+Number(g.base||0)*Number(g.ivaPct||0)/100,0);
+  const aLiquidar=ivaRep-ivaSop;
+  document.getElementById("ivaBox").innerHTML=`
+    <div class="row-line"><span>IVA repercutit (vendes)</span><b>${eur(ivaRep)}</b></div>
+    <div class="row-line"><span>IVA suportat (despeses)</span><b>−${eur(ivaSop)}</b></div>
+    <div class="row-line big"><span>${aLiquidar>=0?'A ingressar':'A compensar'}</span><span>${eur(Math.abs(aLiquidar))}</span></div>
+    <div class="note">Estimació orientativa per a la gestoria. No substitueix la declaració oficial.</div>`;
+  const res=baseV-gastoBase;
+  document.getElementById("resBox").innerHTML=`
+    <div class="row-line"><span>Ingressos (base)</span><b class="pos">${eur(baseV)}</b></div>
+    <div class="row-line"><span>Despeses (base)</span><b class="neg">−${eur(gastoBase)}</b></div>
+    <div class="row-line big"><span>Resultat</span><span class="${res>=0?'pos':'neg'}">${eur(res)}</span></div>
+    <div class="note">${sales.length} tiquets · ${gastos.length} despeses registrades.</div>`;
+}
+
+// ===== PRODUCTES =====
+function renderProductes(){
+  document.getElementById("prodMonth").textContent="· "+monthLabel(curMonth);
+  const sales=salesOfMonth(curMonth);
+  const agg={};
+  sales.forEach(s=>s.items.forEach(it=>{
+    const k=it.name||"—"; if(!agg[k]) agg[k]={name:k,cat:catOf(k),units:0,rev:0};
+    agg[k].units+=Number(it.qty||0); agg[k].rev+=Number(it.price||0)*Number(it.qty||0);
+  }));
+  const rows=Object.values(agg).sort((a,b)=>b.rev-a.rev);
+  const totUnits=rows.reduce((a,r)=>a+r.units,0);
+  const totRev=rows.reduce((a,r)=>a+r.rev,0);
+  document.getElementById("prodKpis").innerHTML=`
+    ${kpi("Articles venuts",totUnits,"unitats este mes")}
+    ${kpi("Top producte",rows[0]?rows[0].name:"—",rows[0]?eur(rows[0].rev):"")}
+    ${kpi("Referències",rows.length,"productes distints")}`;
+  const t=document.getElementById("prodTable");
+  if(!rows.length){ t.innerHTML=`<tr><td><div class="empty">Sense vendes en ${monthLabel(curMonth)}.</div></td></tr>`; return; }
+  const max=rows[0].rev||1;
+  t.innerHTML=`<thead><tr><th>#</th><th>Producte</th><th>Categoria</th><th class="num">Unitats</th><th class="num">Facturació</th><th class="num">% del total</th></tr></thead><tbody>`+
+    rows.map((r,i)=>`<tr><td><b style="color:var(--granate)">${i+1}</b></td><td><b>${r.name}</b><div style="height:5px;margin-top:5px;background:rgba(26,26,23,.1);border-radius:5px;overflow:hidden"><div style="height:100%;width:${Math.round(r.rev/max*100)}%;background:linear-gradient(90deg,var(--granate),var(--orange))"></div></div></td><td><span class="pill cat">${r.cat}</span></td><td class="num">${r.units}</td><td class="num"><b>${eur(r.rev)}</b></td><td class="num">${totRev?Math.round(r.rev/totRev*100):0}%</td></tr>`).join("")+`</tbody>`;
+}
+
+// ===== CÒPIA DE SEGURETAT =====
+function backupAll(){
+  const data={_app:"trellat-conta",_v:1,_date:new Date().toISOString(),
+    gastos:load(K_GASTOS),arqueos:load(K_ARQUEOS),demo:load(K_DEMO)};
+  const a=document.createElement("a");
+  a.href="data:application/json;charset=utf-8,"+encodeURIComponent(JSON.stringify(data,null,2));
+  a.download="trellat_conta_backup_"+isoDay(new Date())+".json"; a.click();
+  toast("Còpia descarregada");
+}
+function restoreAll(file){
+  const rd=new FileReader();
+  rd.onload=()=>{ try{
+    const d=JSON.parse(rd.result);
+    if(d._app!=="trellat-conta"){ toast("Fitxer no vàlid"); return; }
+    if(Array.isArray(d.gastos)) save(K_GASTOS,d.gastos);
+    if(Array.isArray(d.arqueos)) save(K_ARQUEOS,d.arqueos);
+    if(Array.isArray(d.demo)) save(K_DEMO,d.demo);
+    document.getElementById("demoBtn").textContent=load(K_DEMO).length?"Esborrar demo":"Dades demo";
+    toast("Còpia importada"); refresh();
+  }catch(e){ toast("Error en el fitxer"); } };
+  rd.readAsText(file);
+}
+
+// ===== EXPORT CSV =====
+function dl(name,rows){
+  const csv=rows.map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(";")).join("\n");
+  const a=document.createElement("a");
+  a.href="data:text/csv;charset=utf-8,﻿"+encodeURIComponent(csv); a.download=name; a.click();
+}
+function exportVentas(){
+  const rows=[["Data","Hora","Taula","Articles","Base","IVA","Total"]];
+  salesOfMonth(curMonth).forEach(s=>{ const b=baseFromTotal(s.total,IVA_VENTAS);
+    rows.push([fdate(s.ts),ftime(s.ts),s.mesa,s.items.reduce((a,i)=>a+Number(i.qty||0),0),b.toFixed(2),(s.total-b).toFixed(2),s.total.toFixed(2)]); });
+  dl(`trellat_vendes_${curMonth}.csv`,rows); toast("CSV de vendes descarregat");
+}
+function exportGastos(){
+  const rows=[["Data","Proveïdor","Concepte","Categoria","Base","IVA%","IVA","Total"]];
+  gastosOfMonth(curMonth).forEach(g=>{ const iva=Number(g.base)*Number(g.ivaPct)/100;
+    rows.push([g.fecha,g.prov,g.conc,g.cat,Number(g.base).toFixed(2),g.ivaPct,iva.toFixed(2),(Number(g.base)+iva).toFixed(2)]); });
+  dl(`trellat_despeses_${curMonth}.csv`,rows); toast("CSV de despeses descarregat");
+}
+
+// ===== DEMO DATA =====
+function loadDemo(){
+  if(load(K_DEMO).length){ // ja hi ha demo -> esborra-la
+    save(K_DEMO,[]); document.getElementById("demoBtn").textContent="Dades demo";
+    toast("Dades demo esborrades"); refresh(); return;
+  }
+  const orders=[]; const now=new Date(); const pool=Object.values(CATS).flat();
+  for(let d=0;d<30;d++){
+    const day=new Date(now); day.setDate(now.getDate()-d);
+    const nOrders=2+Math.floor(Math.random()*9);
+    for(let k=0;k<nOrders;k++){
+      const items=[]; const ni=1+Math.floor(Math.random()*4); let total=0;
+      for(let j=0;j<ni;j++){ const name=pool[Math.floor(Math.random()*pool.length)]; const qty=1+Math.floor(Math.random()*2); const price=Math.round((3+Math.random()*16)*10)/10; items.push({name,qty,price}); total+=qty*price; }
+      const ts=day.getTime()-Math.floor(Math.random()*36000000);
+      orders.push({id:"demo"+ts+k,no:Math.floor(100+Math.random()*899),mesa:String(1+Math.floor(Math.random()*12)),ts,status:"done",items,subtotal:total,descuento:0,total:Math.round(total*100)/100,_demo:true});
+    }
+  }
+  save(K_DEMO,orders);
+  document.getElementById("demoBtn").textContent="Esborrar demo";
+  toast("Dades demo carregades (30 dies)"); refresh();
+}
+
+// ===== Utils & navegació =====
+function monthLabel(m){ const [y,mo]=m.split("-"); return new Date(y,mo-1,1).toLocaleDateString("es-ES",{month:"long",year:"numeric"}); }
+function refresh(){ renderResum(); renderVendes(); renderProductes(); renderGastos(); renderFijos(); renderAnnual(); renderArqueos(); renderInforme(); updCaixaForm(); }
+
+document.getElementById("tabs").addEventListener("click",e=>{
+  const b=e.target.closest(".tab"); if(!b) return;
+  document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active")); b.classList.add("active");
+  document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
+  document.getElementById("v-"+b.dataset.v).classList.add("active");
+});
+document.getElementById("monthPick").addEventListener("change",e=>{ curMonth=e.target.value||curMonth; refresh(); });
+document.getElementById("demoBtn").onclick=loadDemo;
+document.getElementById("gAdd").onclick=addGasto;
+document.getElementById("gCancel").onclick=cancelEdit;
+document.getElementById("gastosTable").addEventListener("click",e=>{
+  const del=e.target.closest("[data-del]"), ed=e.target.closest("[data-edit]");
+  if(del){ save(K_GASTOS,load(K_GASTOS).filter(g=>g.id!==del.dataset.del)); if(editId===del.dataset.del) cancelEdit(); toast("Despesa esborrada"); refresh(); }
+  else if(ed){ startEdit(ed.dataset.edit); }
+});
+document.getElementById("catAdd").onclick=addCat;
+document.getElementById("catNew").addEventListener("keydown",e=>{ if(e.key==="Enter") addCat(); });
+document.getElementById("catChips").addEventListener("click",e=>{ const b=e.target.closest("[data-cat]"); if(b) delCat(b.dataset.cat); });
+document.getElementById("fAdd").onclick=addFijo;
+document.getElementById("fGen").onclick=genFijosMes;
+document.getElementById("fijosList").addEventListener("click",e=>{ const b=e.target.closest("[data-delfijo]"); if(b){ save(K_FIJOS,load(K_FIJOS).filter(f=>f.id!==b.dataset.delfijo)); toast("Fixa esborrada"); refresh(); } });
+["cFecha","cEfectivo","cTarjeta"].forEach(id=>document.getElementById(id).addEventListener("input",updCaixaForm));
+document.getElementById("cSave").onclick=saveArqueo;
+document.getElementById("csvVentas").onclick=exportVentas;
+document.getElementById("csvGastos").onclick=exportGastos;
+document.querySelectorAll(".period-btn").forEach(b=>b.onclick=()=>{
+  infPeriod=b.dataset.p;
+  document.querySelectorAll(".period-btn").forEach(x=>x.classList.remove("active")); b.classList.add("active");
+  renderInforme();
+});
+document.getElementById("backupBtn").onclick=backupAll;
+document.getElementById("restoreBtn").onclick=()=>document.getElementById("restoreFile").click();
+document.getElementById("restoreFile").onchange=e=>{ if(e.target.files[0]) restoreAll(e.target.files[0]); e.target.value=""; };
+function printInforme(){ document.querySelectorAll(".view").forEach(v=>v.classList.remove("print-on")); document.getElementById("v-informe").classList.add("print-on"); window.print(); }
+document.getElementById("printBtn").onclick=printInforme;
+document.getElementById("printBtn2").onclick=printInforme;
+
+// init
+const todayStr=isoDay(new Date());
+document.getElementById("monthPick").value=curMonth;
+document.getElementById("gFecha").value=todayStr;
+document.getElementById("cFecha").value=todayStr;
+if(load(K_DEMO).length) document.getElementById("demoBtn").textContent="Esborrar demo";
+populateCatSelects();
+renderCatChips();
+applyFijos(isoMonth(new Date())); // genera les fixes del mes actual real
+refresh();
+</script>
+</body>
+</html>

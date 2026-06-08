@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forno Sessanta · Tarjeta de mesa QR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Special+Elite&display=swap">
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<style>
+  :root{
+    --board:#1d2e22;
+    --board-deep:#142016;
+    --board-light:#28402e;
+    --frame:#3a2818;
+    --frame-light:#5a3a24;
+    --chalk:#f0e9d2;
+    --chalk-soft:#b8b09c;
+    --chalk-faint:#7a7460;
+    --tomato:#d65a3f;
+    --tomato-dark:#a8401f;
+    --mustard:#e0c060;
+    --mozza:#f5e9d4;
+    --basil:#7aa05a;
+    --hand:"Caveat",cursive;
+    --body:"Inter",-apple-system,system-ui,sans-serif;
+    --type:"Special Elite",ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#0f1711;color:var(--chalk);font-family:var(--body);-webkit-font-smoothing:antialiased;min-height:100vh}
+  body{display:flex;flex-direction:column;align-items:center;padding:30px 16px 60px;gap:22px}
+
+  /* ---- controls ---- */
+  .panel{width:100%;max-width:380px;background:var(--board-light);border:2px solid var(--frame-light);border-radius:16px;padding:16px 16px 18px;box-shadow:0 10px 0 rgba(0,0,0,.3)}
+  .panel h2{font-family:var(--hand);font-size:24px;font-weight:700;color:var(--mustard);margin-bottom:12px;transform:rotate(-1deg)}
+  .fld{margin-bottom:10px}
+  .fld label{display:block;font-family:var(--type);font-size:9.5px;text-transform:uppercase;letter-spacing:1px;color:var(--chalk-soft);margin-bottom:4px}
+  .fld input{width:100%;background:var(--board-deep);border:1.5px solid var(--frame-light);border-radius:9px;padding:9px 11px;font-family:var(--body);font-size:13px;color:var(--chalk);outline:none;transition:.15s}
+  .fld input:focus{border-color:var(--mustard)}
+  .row{display:flex;gap:9px}.row .fld{flex:1}
+
+  /* ---- card ---- */
+  .stage{display:flex;flex-direction:column;align-items:center;gap:16px}
+  .card{
+    width:105mm;height:148mm;position:relative;overflow:hidden;border-radius:14px;
+    background:var(--frame);
+    box-shadow:0 24px 48px rgba(0,0,0,.5),0 4px 0 rgba(0,0,0,.3);
+    padding:9px; /* wooden frame thickness */
+  }
+  .board{position:absolute;inset:9px;border-radius:7px;overflow:hidden;
+    background:
+      radial-gradient(120% 90% at 50% 0%, var(--board-light) 0%, var(--board) 55%, var(--board-deep) 100%);
+    box-shadow:inset 0 0 60px rgba(0,0,0,.45),inset 0 0 0 1px rgba(0,0,0,.4);}
+  /* faint chalk dust texture */
+  .board::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+    background:radial-gradient(circle at 20% 30%,rgba(240,233,210,.05) 0,transparent 40%),radial-gradient(circle at 80% 70%,rgba(240,233,210,.04) 0,transparent 45%);}
+
+  .face{position:absolute;inset:9px;display:flex;flex-direction:column;transition:opacity .35s ease;z-index:2}
+  .face.hide{opacity:0;pointer-events:none}
+
+  /* ===== ANVERSO ===== */
+  .front-top{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px 24px 14px;text-align:center}
+  .front-title{font-family:var(--hand);color:var(--chalk);line-height:.9}
+  .front-title .big{display:block;font-size:46px;font-weight:700;color:var(--mustard);transform:rotate(-1.5deg);text-shadow:0 2px 4px rgba(0,0,0,.3)}
+  .front-title .sub{display:block;font-size:34px;font-weight:600;transform:rotate(-.5deg);margin-top:-2px}
+  .front-sub{font-family:var(--type);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mustard);margin-top:10px}
+
+  .qr-wrap{margin-top:20px;background:var(--mozza);border-radius:6px;padding:14px;position:relative;
+    box-shadow:0 10px 22px rgba(0,0,0,.45);transform:rotate(-1.2deg);}
+  .qr-wrap::before{content:"";position:absolute;top:-9px;left:50%;transform:translateX(-50%) rotate(45deg);width:20px;height:20px;background:var(--tomato);border-radius:3px;box-shadow:0 2px 4px rgba(0,0,0,.4)} /* pin */
+  #qrcode{width:166px;height:166px;display:flex;align-items:center;justify-content:center}
+  #qrcode img,#qrcode canvas{display:block;width:166px!important;height:166px!important}
+
+  .front-band{padding:16px 24px 20px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
+  .front-band::before{content:"";position:absolute;top:0;left:24px;right:24px;height:2px;background:repeating-linear-gradient(90deg,var(--chalk-soft) 0 10px,transparent 10px 20px);opacity:.5}
+  .biz-name{font-family:var(--hand);font-weight:700;font-size:38px;color:var(--chalk);line-height:.9;transform:rotate(-1deg)}
+  .biz-tag{font-family:var(--type);font-weight:400;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--mustard);margin-top:5px}
+  .biz-meta{font-family:var(--type);font-size:10px;color:var(--chalk-soft);margin-top:9px;line-height:1.6;letter-spacing:.3px}
+  .mesa-chip{position:absolute;top:-14px;right:18px;background:var(--tomato);color:var(--chalk);font-family:var(--hand);font-weight:700;font-size:18px;letter-spacing:.3px;padding:3px 14px;transform:rotate(3deg);box-shadow:3px 3px 0 var(--tomato-dark)}
+
+  /* ===== REVERSO ===== */
+  .back{align-items:center;justify-content:flex-start;padding:30px 26px;text-align:center}
+  .back-mark{width:96px;height:96px;border-radius:50%;border:3px solid var(--chalk);display:flex;align-items:center;justify-content:center;font-family:var(--hand);font-size:60px;font-weight:700;color:var(--chalk);transform:rotate(-4deg);margin-bottom:6px;position:relative}
+  .back-mark::after{content:"";position:absolute;inset:-7px;border:1.5px dashed rgba(240,233,210,.35);border-radius:50%}
+  .back h3{font-family:var(--hand);font-weight:700;font-size:38px;color:var(--mustard);margin-top:14px;line-height:.9;transform:rotate(-1deg)}
+  .back-tag{font-family:var(--type);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--chalk-soft);margin-top:6px}
+  .back-rule{width:56px;height:2px;background:var(--tomato);margin:16px 0 18px;border-radius:2px}
+  .steps{display:flex;flex-direction:column;gap:15px;width:100%}
+  .step{display:flex;align-items:center;gap:14px;text-align:left}
+  .step .n{flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:2.5px solid var(--mustard);color:var(--mustard);font-family:var(--hand);font-weight:700;font-size:22px;display:flex;align-items:center;justify-content:center;transform:rotate(-4deg)}
+  .step .t{font-family:var(--hand);font-weight:600;font-size:23px;color:var(--chalk);line-height:.95}
+  .step .t small{display:block;font-family:var(--body);font-size:10px;font-weight:400;letter-spacing:.2px;color:var(--chalk-soft);margin-top:2px;line-height:1.3}
+  .back-foot{margin-top:auto;font-family:var(--type);font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--chalk-faint);padding-top:18px}
+
+  /* ---- toggle / actions ---- */
+  .toggle{display:inline-flex;background:var(--board-light);border:2px solid var(--frame-light);border-radius:14px;padding:5px;gap:4px;box-shadow:0 5px 0 rgba(0,0,0,.3)}
+  .toggle button{border:none;background:transparent;font-family:var(--hand);font-weight:700;font-size:20px;color:var(--chalk-soft);padding:7px 26px;border-radius:9px;cursor:pointer;transition:.18s}
+  .toggle button.active{background:var(--tomato);color:var(--chalk)}
+  .actions{display:flex;gap:10px}
+  .btn{font-family:var(--hand);font-weight:700;font-size:20px;padding:9px 24px;border-radius:12px;cursor:pointer;border:2.5px solid var(--mustard);background:var(--mustard);color:var(--board);transition:.18s}
+  .btn:active{transform:translateY(2px)}
+  .hint{font-family:var(--type);font-size:9.5px;color:var(--chalk-faint);text-align:center;max-width:340px;line-height:1.7;letter-spacing:.3px}
+
+  @page{size:A6;margin:0}
+  @media print{
+    html,body{background:#fff;padding:0;margin:0}
+    .panel,.toggle,.actions,.hint{display:none!important}
+    .stage{gap:0}
+    .card{width:105mm;height:148mm;box-shadow:none;border-radius:0;page-break-inside:avoid;margin:0 auto;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .face.hide{display:none}
+  }
+</style>
+</head>
+<body>
+
+  <div class="panel">
+    <h2>Personaliza la tarjeta</h2>
+    <div class="fld"><label>Nombre del negocio</label><input id="iName" value="Forno Sessanta"></div>
+    <div class="fld"><label>Eslogan / categoría</label><input id="iTag" value="Pizzería al horno"></div>
+    <div class="row">
+      <div class="fld"><label>Nº de mesa</label><input id="iMesa" value="07"></div>
+      <div class="fld"><label>Teléfono</label><input id="iPhone" value="96 000 00 00"></div>
+    </div>
+    <div class="fld"><label>Página web</label><input id="iWeb" value="fornosessanta.com"></div>
+    <div class="fld"><label>URL del QR (a dónde lleva el pedido)</label><input id="iUrl" value="https://fornosessanta.com/carta?mesa=07"></div>
+  </div>
+
+  <div class="stage">
+    <div class="card" id="card">
+      <div class="board"></div>
+
+      <!-- ===== ANVERSO ===== -->
+      <div class="face front" id="faceFront">
+        <div class="front-top">
+          <div class="front-title">
+            <span class="big">Haz tu pedido</span>
+            <span class="sub">desde aquí</span>
+          </div>
+          <div class="front-sub">Escanea · Pide · Disfruta</div>
+          <div class="qr-wrap"><div id="qrcode"></div></div>
+        </div>
+        <div class="front-band">
+          <span class="mesa-chip" id="mesaChip">Mesa 07</span>
+          <div class="biz-name" id="bizName">Forno Sessanta</div>
+          <div class="biz-tag" id="bizTag">Pizzería al horno</div>
+          <div class="biz-meta"><span id="metaPhone">96 000 00 00</span> &nbsp;·&nbsp; <span id="metaWeb">fornosessanta.com</span></div>
+        </div>
+      </div>
+
+      <!-- ===== REVERSO ===== -->
+      <div class="face back hide" id="faceBack">
+        <div class="back-mark" id="backMark">F</div>
+        <h3 id="backName">Forno Sessanta</h3>
+        <div class="back-tag" id="backTag">Pizzería al horno</div>
+        <div class="back-rule"></div>
+        <div class="steps">
+          <div class="step"><div class="n">1</div><div class="t">Escanea el QR<small>Apunta con la cámara de tu móvil</small></div></div>
+          <div class="step"><div class="n">2</div><div class="t">Elige tus pizzas<small>Toda la carta en tu pantalla</small></div></div>
+          <div class="step"><div class="n">3</div><div class="t">Pide sin esperar<small>Tu mesa queda registrada al instante</small></div></div>
+        </div>
+        <div class="back-foot">Forno a legna · dal 1960</div>
+      </div>
+
+    </div>
+
+    <div class="toggle">
+      <button class="active" id="bFront" onclick="show('front')">Anverso</button>
+      <button id="bBack" onclick="show('back')">Reverso</button>
+    </div>
+    <div class="actions"><button class="btn" onclick="window.print()">Imprimir / PDF</button></div>
+    <div class="hint">Edita los campos y el QR se regenera solo. Imprime en A6 a doble cara para montar la tarjeta de mesa.</div>
+  </div>
+
+<script>
+  var qr=null;
+  function makeQR(url){
+    var box=document.getElementById('qrcode');box.innerHTML='';
+    if(window.QRCode){
+      qr=new QRCode(box,{text:url,width:166,height:166,colorDark:'#1d2e22',colorLight:'#f5e9d4',correctLevel:QRCode.CorrectLevel.H});
+    }else{
+      var img=document.createElement('img');
+      img.src='https://api.qrserver.com/v1/create-qr-code/?size=166x166&margin=0&data='+encodeURIComponent(url);
+      box.appendChild(img);
+    }
+  }
+  function sync(){
+    var name=document.getElementById('iName').value||'Forno Sessanta';
+    var tag=document.getElementById('iTag').value||'';
+    var mesa=document.getElementById('iMesa').value||'';
+    var phone=document.getElementById('iPhone').value||'';
+    var web=document.getElementById('iWeb').value||'';
+    var url=document.getElementById('iUrl').value||'https://fornosessanta.com';
+    document.getElementById('bizName').textContent=name;
+    document.getElementById('backName').textContent=name;
+    document.getElementById('bizTag').textContent=tag;
+    document.getElementById('backTag').textContent=tag;
+    document.getElementById('backMark').textContent=(name.trim()[0]||'F').toUpperCase();
+    document.getElementById('mesaChip').textContent=mesa?('Mesa '+mesa):'';
+    document.getElementById('metaPhone').textContent=phone;
+    document.getElementById('metaWeb').textContent=web;
+    makeQR(url);
+  }
+  function show(which){
+    var f=which==='front';
+    document.getElementById('faceFront').classList.toggle('hide',!f);
+    document.getElementById('faceBack').classList.toggle('hide',f);
+    document.getElementById('bFront').classList.toggle('active',f);
+    document.getElementById('bBack').classList.toggle('active',!f);
+  }
+  ['iName','iTag','iMesa','iPhone','iWeb','iUrl'].forEach(function(id){
+    document.getElementById(id).addEventListener('input',sync);
+  });
+  window.addEventListener('load',sync);
+</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romanssera · Inici</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Yellowtail&family=Oswald:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#efe1d0;--card:#f8ecde;--ink:#2b2118;--ink-soft:#7a4d39;--muted:#a6826a;--line-soft:#d3bda3;
+    --mustard:#e7d6b8;--granate:#650b0d;--granate-dark:#440607;--granate-bright:#8c1518;--orange:#8c1518;--blau:#3a3128;--olive:#5a6a43;
+    --display:"Cinzel",Georgia,serif;--script:"Yellowtail",cursive;--head:"Oswald","Arial Narrow",sans-serif;--body:"Manrope",system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased}
+  body{max-width:960px;margin:0 auto;padding:0 0 50px;min-height:100vh;
+    background-image:
+      radial-gradient(circle at 8% 0%, rgba(140,21,24,.08), transparent 30%),
+      radial-gradient(circle at 100% 90%, rgba(101,11,13,.08), transparent 38%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cg fill='none' stroke='%23650b0d' stroke-width='1.3' opacity='0.06'%3E%3Cpath d='M32 9C41 19 41 45 32 55 23 45 23 19 32 9Z'/%3E%3Cpath d='M9 32C19 23 45 23 55 32 45 41 19 41 9 32Z'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='3' fill='%23e8741e' opacity='0.07'/%3E%3C/svg%3E");
+  }
+  /* HERO HEADER amb pintura */
+  .hero{position:relative;overflow:hidden;padding:26px 24px 30px;color:var(--card);
+    background:linear-gradient(135deg,var(--granate),var(--granate-dark))}
+  .hero::before{content:"";position:absolute;inset:0;background:url("img/art-terreta.png") center 30%/cover no-repeat;opacity:.22}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:
+    linear-gradient(90deg,var(--blau) 0 24px,transparent 24px),
+    linear-gradient(90deg,var(--mustard) 0 24px,transparent 24px),
+    repeating-linear-gradient(90deg,var(--card) 24px,var(--card) 31px,var(--mustard) 31px,var(--mustard) 38px);
+    background-size:100% 2px,100% 100%,100% 100%;background-repeat:no-repeat;opacity:.9}
+  .hero-top{position:relative;z-index:2;display:flex;align-items:center;gap:14px}
+  .logo{width:54px;height:54px;object-fit:contain;flex:0 0 54px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.3))}
+  .hbrand h1{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;line-height:1}
+  .hbrand span{font-family:var(--head);font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.85}
+  .logout{margin-left:auto;background:rgba(248,236,222,.16);border:1.5px solid rgba(248,236,222,.5);color:var(--card);
+    font-family:var(--head);font-size:11px;text-transform:uppercase;letter-spacing:1px;padding:8px 13px;border-radius:9px;cursor:pointer;transition:.15s}
+  .logout:hover{background:rgba(248,236,222,.28)}
+  .hello{position:relative;z-index:2;margin-top:22px}
+  .hello .flourish{font-family:var(--script);font-size:30px;color:var(--mustard);line-height:1.1}
+  .hello .date{font-family:var(--head);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;opacity:.85;margin-top:4px}
+
+  /* SNAPSHOT */
+  .snap{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:20px 24px 4px}
+  .snap-c{background:var(--card);border:1.5px solid rgba(101,11,13,.15);border-radius:14px;padding:14px 16px;position:relative;overflow:hidden;box-shadow:0 8px 18px rgba(101,11,13,.06)}
+  .snap-c::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--granate),var(--orange))}
+  .snap-c .l{font-family:var(--head);font-size:10.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:1px}
+  .snap-c .v{font-family:var(--display);font-size:24px;font-weight:700;color:var(--granate);margin-top:5px;line-height:1}
+
+  /* TOOL GRID */
+  .grid-h{font-family:var(--head);font-size:13px;color:var(--granate);text-transform:uppercase;letter-spacing:2px;padding:24px 24px 4px;display:flex;align-items:center;gap:10px}
+  .grid-h::after{content:"";flex:1;height:2px;background:var(--orange);opacity:.4}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;padding:14px 24px}
+  .tool{background:var(--card);border:1.5px solid rgba(101,11,13,.15);border-radius:16px;padding:22px 20px;text-decoration:none;color:var(--ink);
+    display:flex;flex-direction:column;gap:6px;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s;box-shadow:0 8px 20px rgba(101,11,13,.06)}
+  .tool:hover{transform:translateY(-3px);box-shadow:0 18px 32px rgba(101,11,13,.14);border-color:var(--granate)}
+  .tool .ic{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--granate),var(--granate-dark));display:flex;align-items:center;justify-content:center;margin-bottom:8px;box-shadow:0 4px 10px rgba(101,11,13,.25)}
+  .tool .ic svg{width:24px;height:24px;stroke:var(--mustard);fill:none;stroke-width:2}
+  .tool h3{font-family:var(--head);font-size:17px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--granate)}
+  .tool p{font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+  .tool .go{font-family:var(--head);font-size:11px;color:var(--orange);text-transform:uppercase;letter-spacing:1px;margin-top:6px;display:flex;align-items:center;gap:5px}
+  .tool.soon{opacity:.6;pointer-events:none}
+  .tool .tag{position:absolute;top:12px;right:12px;font-family:var(--head);font-size:9px;text-transform:uppercase;letter-spacing:1px;background:rgba(231,214,184,.2);color:var(--mustard);padding:3px 8px;border-radius:999px}
+
+  .foot{text-align:center;color:var(--muted);font-family:var(--head);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-top:24px}
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-top">
+      <img class="logo" src="img/logo.png" alt="Romanssera" onerror="this.style.display='none'">
+      <div class="hbrand"><h1>Romanssera</h1><span id="localName">Tapasseria · Esmorzaret</span></div>
+      <button class="logout" id="logout">Tancar sessió</button>
+    </div>
+    <div class="hello">
+      <div class="flourish" id="hello">Bon dia!</div>
+      <div class="date" id="today"></div>
+    </div>
+  </div>
+
+  <div class="snap" id="snap"></div>
+
+  <div class="grid-h">Gestió del local</div>
+  <div class="grid">
+    <a class="tool" href="index.html">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v4H4zM4 10h16v10H4zM8 14h8"/></svg></div>
+      <h3>La Carta</h3>
+      <p>La carta digital amb QR: benvinguda, productes i comandes a cuina.</p>
+      <div class="go">Obrir →</div>
+    </a>
+    <a class="tool" href="cocina.html">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 2v7M9 2v7M7.5 9v13M14 2c-1 2-1 5 0 7v13"/></svg></div>
+      <h3>Cuina</h3>
+      <p>Comandes en temps real, marcar com a preparades i servides.</p>
+      <div class="go">Obrir →</div>
+    </a>
+    <a class="tool" href="admin.html">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 3h18v4H3zM3 10h18v4H3zM3 17h18v4H3z"/></svg></div>
+      <h3>Administració</h3>
+      <p>Gestió de comandes, preus de la carta i productes esgotats.</p>
+      <div class="go">Obrir →</div>
+    </a>
+    <a class="tool" href="reservar.html">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 4h18v18H3zM3 9h18M8 2v4M16 2v4"/></svg></div>
+      <h3>Reserves</h3>
+      <p>Reserves de taules amb confirmació per WhatsApp 24h abans.</p>
+      <div class="go">Obrir →</div>
+    </a>
+    <a class="tool" href="contabilidad.html">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l3-4 3 3 5-7"/></svg></div>
+      <h3>Comptabilitat</h3>
+      <p>Vendes, IVA, despeses, tancament de caixa i informes per a la gestoria.</p>
+      <div class="go">Obrir →</div>
+    </a>
+    <div class="tool soon">
+      <span class="tag">Prompte</span>
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M12 6v6l4 2"/></svg></div>
+      <h3>Reputació</h3>
+      <p>Automatització de ressenyes de Google després de pagar.</p>
+      <div class="go">Prompte →</div>
+    </div>
+  </div>
+
+  <div class="foot">Romanssera Tapasseria · Panell del propietari</div>
+
+<script>
+const SESSION_KEY="romanssera_session_v1";
+// ===== Sessió (placeholder; passarà a Supabase Auth) =====
+function getSession(){ try{ return JSON.parse(localStorage.getItem(SESSION_KEY)||sessionStorage.getItem(SESSION_KEY)||"null"); }catch(e){ return null; } }
+const ses=getSession();
+if(!ses){ location.replace("login.html"); }
+else{
+  if(ses.local) document.getElementById("localName").textContent=ses.local;
+  const h=new Date().getHours();
+  const salut=h<14?"Bon dia":h<21?"Bona vesprada":"Bona nit";
+  const nom=(ses.email||"").split("@")[0];
+  document.getElementById("hello").textContent=`${salut}${nom?", "+nom:""}!`;
+  document.getElementById("today").textContent=new Date().toLocaleDateString("ca-ES",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+}
+document.getElementById("logout").onclick=()=>{ localStorage.removeItem(SESSION_KEY); sessionStorage.removeItem(SESSION_KEY); location.replace("login.html"); };
+
+// ===== Snapshot del dia (llig vendes del localStorage de la carta) =====
+const eur=n=>(n||0).toLocaleString("es-ES",{minimumFractionDigits:2,maximumFractionDigits:2})+" €";
+function load(k){ try{ const v=JSON.parse(localStorage.getItem(k)||"[]"); return Array.isArray(v)?v:[]; }catch(e){ return []; } }
+function isoDay(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+(function snapshot(){
+  const seen={}, all=[];
+  ["romanssera_orders_v1","romanssera_orders_archive_v1","romanssera_conta_demo_v1"].forEach(k=>load(k).forEach(o=>{
+    if(!o||o.id==null||seen[o.id])return; seen[o.id]=1; all.push({ts:o.ts||Date.now(),total:Number(o.total||0)}); }));
+  const today=isoDay(new Date());
+  const hoy=all.filter(o=>isoDay(new Date(o.ts))===today);
+  const ventas=hoy.reduce((a,o)=>a+o.total,0);
+  const mes=isoDay(new Date()).slice(0,7);
+  const ventasMes=all.filter(o=>isoDay(new Date(o.ts)).slice(0,7)===mes).reduce((a,o)=>a+o.total,0);
+  document.getElementById("snap").innerHTML=`
+    <div class="snap-c"><div class="l">Vendes hui</div><div class="v">${eur(ventas)}</div></div>
+    <div class="snap-c"><div class="l">Comandes hui</div><div class="v">${hoy.length}</div></div>
+    <div class="snap-c"><div class="l">Vendes del mes</div><div class="v">${eur(ventasMes)}</div></div>`;
+})();
+</script>
+</body>
+</html>

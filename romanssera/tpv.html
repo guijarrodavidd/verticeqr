@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romanssera · TPV Sala</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#efe1d0;--bg-deep:#e6d2bd;--card:#f8ecde;--paper:#f8ecde;
+    --ink:#2b2118;--ink-soft:#7a4d39;--muted:#a6826a;
+    --line:#2b2118;--line-soft:#d3bda3;
+    --mustard:#e7d6b8;--mustard-dark:#a98f6a;
+    --granate:#650b0d;--granate-dark:#440607;--granate-bright:#8c1518;
+    --olive:#5a6a43;--olive-dark:#3d4b28;
+    --display:"Cinzel",Georgia,serif;--head:"Oswald","Arial Narrow",sans-serif;
+    --body:"Manrope",-apple-system,system-ui,sans-serif;--mono:"DM Mono",ui-monospace,monospace;
+    --green:#3d7a4e;--amber:#c98a1e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;height:100vh;overflow:hidden}
+
+  /* ===== top bar ===== */
+  .topbar{flex:0 0 auto;display:flex;align-items:center;gap:14px;padding:11px 18px;background:var(--ink);color:var(--card);border-bottom:3px solid var(--granate)}
+  .tb-brand{display:flex;flex-direction:column;line-height:1}
+  .tb-brand b{font-family:var(--display);font-size:18px;font-weight:700;letter-spacing:1px;color:var(--mustard);text-transform:uppercase}
+  .tb-brand span{font-family:var(--mono);font-size:9.5px;letter-spacing:2px;color:var(--mustard-dark);text-transform:uppercase;margin-top:2px}
+  .tb-stats{display:flex;gap:10px;margin-left:auto;align-items:center}
+  .stat{background:rgba(255,255,255,.07);border:1px solid rgba(231,214,184,.18);border-radius:10px;padding:6px 12px;text-align:center;min-width:78px}
+  .stat .v{font-family:var(--display);font-size:18px;font-weight:700;color:#fff;line-height:1}
+  .stat .l{font-family:var(--mono);font-size:8.5px;letter-spacing:1px;text-transform:uppercase;color:var(--mustard-dark);margin-top:3px}
+  .tb-clock{font-family:var(--mono);font-size:13px;color:var(--mustard);letter-spacing:1px;padding-left:6px}
+  .tb-link{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--mustard);text-decoration:none;border:1.5px solid rgba(231,214,184,.3);border-radius:8px;padding:7px 11px;transition:.15s}
+  .tb-link:hover{background:rgba(231,214,184,.12)}
+
+  /* ===== tables grid ===== */
+  .floor{flex:1;overflow:auto;padding:18px}
+  .floor-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+  .floor-head h2{font-family:var(--head);font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--granate)}
+  .floor-head .legend{display:flex;gap:14px;margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.5px}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+  .cfg{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;color:var(--ink-soft)}
+  .cfg input{width:52px;background:#fff;border:1.5px solid var(--line-soft);border-radius:7px;padding:5px 7px;font-family:var(--mono);font-size:12px;color:var(--ink);text-align:center}
+
+  .zone-ttl{display:flex;align-items:center;gap:9px;font-family:var(--head);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink-soft);margin:4px 0 12px}
+  .zone-ttl::after{content:"";flex:1;height:1.5px;background:var(--line-soft)}
+  .zone-ttl .cnt{background:var(--mustard);color:var(--ink);font-family:var(--mono);font-size:10px;padding:2px 8px;border-radius:999px;letter-spacing:.3px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:13px;margin-bottom:26px}
+
+  .mesa{position:relative;background:var(--card);border:2px solid var(--line-soft);border-radius:16px;padding:0;cursor:pointer;transition:.16s;min-height:132px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 4px 0 rgba(43,33,24,.07)}
+  .mesa:hover{transform:translateY(-3px);box-shadow:0 9px 0 rgba(43,33,24,.1)}
+  .mesa .accent{height:6px;background:var(--line-soft);flex:0 0 auto}
+  .mesa.occ{border-color:var(--granate)}
+  .mesa.occ .accent{background:var(--granate)}
+  .mesa.occ.age-mid .accent{background:var(--amber)}
+  .mesa.occ.age-old .accent{background:var(--granate-bright)}
+  .mesa-in{padding:12px 13px 12px;display:flex;flex-direction:column;flex:1}
+  .mesa-top{display:flex;align-items:center;justify-content:space-between;gap:6px}
+  .mesa-no{font-family:var(--display);font-size:26px;font-weight:700;color:var(--ink);line-height:1}
+  .mesa.occ .mesa-no{color:var(--granate)}
+  .dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto}
+  .dot.free{background:var(--green);box-shadow:0 0 0 3px #e9f0e6}
+  .dot.occ{background:var(--granate);box-shadow:0 0 0 3px #f3dcd0}
+  .mesa-body{margin-top:auto;padding-top:10px}
+  .mesa-total{font-family:var(--display);font-size:24px;font-weight:700;color:var(--granate);line-height:1}
+  .mesa-meta{display:flex;align-items:center;gap:6px;margin-top:9px;font-family:var(--mono);font-size:9.5px;letter-spacing:.2px}
+  .chip{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:7px}
+  .chip.uds{background:var(--mustard);color:var(--ink)}
+  .chip.time{background:#ece2d2;color:var(--ink-soft)}
+  .mesa.age-mid .chip.time{background:#f6e6c4;color:#8a5d12}
+  .mesa.age-old .chip.time{background:#f3dcd0;color:var(--granate)}
+  .mesa.free .mesa-in{align-items:center;justify-content:center;text-align:center}
+  .mesa.free .mesa-body{padding-top:6px}
+  .mesa.free .free-hint{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.3px;display:flex;flex-direction:column;align-items:center;gap:4px}
+  .mesa.free .free-hint .pluss{width:30px;height:30px;border-radius:50%;border:2px dashed var(--line-soft);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:20px;color:var(--muted)}
+  .mesa.barra .mesa-no{font-size:18px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  .mesa .bell{position:absolute;top:8px;right:8px;background:var(--amber);color:#fff;font-size:13px;width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--card);box-shadow:0 2px 5px rgba(0,0,0,.25);animation:pulse 1.3s infinite;z-index:2}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+  .mesa .kflag{display:inline-flex;align-items:center;gap:5px;background:#fde7d6;color:var(--granate-bright);font-family:var(--mono);font-size:9px;margin-top:8px;letter-spacing:.2px;padding:4px 8px;border-radius:7px;width:fit-content}
+
+  /* ===== ticket drawer ===== */
+  .scrim{position:fixed;inset:0;background:rgba(26,20,16,.5);opacity:0;pointer-events:none;transition:.25s;z-index:40}
+  .scrim.open{opacity:1;pointer-events:auto}
+  .drawer{position:fixed;top:0;right:0;height:100%;width:min(940px,100%);background:var(--bg);box-shadow:-20px 0 50px rgba(0,0,0,.3);transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);z-index:50;display:flex;flex-direction:column}
+  .drawer.open{transform:none}
+  .dr-head{flex:0 0 auto;display:flex;align-items:center;gap:14px;padding:15px 20px;background:var(--ink);color:var(--card);border-bottom:3px solid var(--granate)}
+  .dr-head .num{font-family:var(--display);font-size:26px;font-weight:700;color:var(--mustard);line-height:1}
+  .dr-head .sub{font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--mustard-dark);text-transform:uppercase}
+  .dr-close{margin-left:auto;background:transparent;border:1.5px solid rgba(231,214,184,.35);color:var(--mustard);width:38px;height:38px;border-radius:10px;font-size:20px;cursor:pointer;line-height:1;font-family:var(--display)}
+  .dr-body{flex:1;display:flex;min-height:0}
+
+  /* ticket column */
+  .ticket-col{flex:0 0 360px;display:flex;flex-direction:column;background:var(--card);border-right:2px solid var(--line-soft)}
+  .tk-h{padding:14px 18px 10px;border-bottom:1px dashed var(--line-soft);display:flex;align-items:center;justify-content:space-between}
+  .tk-h b{font-family:var(--head);font-size:14px;text-transform:uppercase;letter-spacing:1.5px;color:var(--granate)}
+  .tk-h .open-t{font-family:var(--mono);font-size:10px;color:var(--ink-soft)}
+  .tk-lines{flex:1;overflow:auto;padding:8px 14px}
+  .tk-empty{text-align:center;color:var(--muted);font-family:var(--mono);font-size:12px;padding:40px 14px;line-height:1.7}
+  .ln{display:flex;align-items:flex-start;gap:9px;padding:9px 4px;border-bottom:1px dashed var(--line-soft)}
+  .ln .q{flex:0 0 auto;background:var(--ink);color:var(--mustard);font-family:var(--mono);font-size:12px;font-weight:500;min-width:26px;text-align:center;padding:3px 6px;border-radius:7px}
+  .ln .info{flex:1;min-width:0}
+  .ln .nm{font-family:var(--body);font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.15}
+  .ln .tags{display:flex;gap:5px;margin-top:3px;flex-wrap:wrap}
+  .tag{font-family:var(--mono);font-size:8px;text-transform:uppercase;letter-spacing:.5px;padding:2px 6px;border-radius:5px}
+  .tag.qr{background:#e7eef5;color:#2f5d86}
+  .tag.cam{background:var(--mustard);color:var(--ink)}
+  .tag.pend{background:#fbe9c8;color:var(--amber)}
+  .tag.sent{background:#e9f0e6;color:var(--green)}
+  .ln .note{font-family:var(--mono);font-size:10px;color:var(--ink-soft);margin-top:3px}
+  .ln .pr{font-family:var(--mono);font-size:12.5px;color:var(--ink);font-weight:500;text-align:right;white-space:nowrap}
+  .ln .ed{display:flex;gap:3px;margin-top:5px}
+  .ln .ed button{width:22px;height:22px;border:1.5px solid var(--line-soft);background:#fff;border-radius:6px;cursor:pointer;font-size:13px;line-height:1;color:var(--ink);font-family:var(--display)}
+  .ln .ed button.del{margin-left:4px;border-color:#e3b3b3;color:var(--granate)}
+
+  .tk-foot{flex:0 0 auto;border-top:2px solid var(--line);padding:14px 18px calc(14px + env(safe-area-inset-bottom));background:var(--bg-deep)}
+  .tk-row{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:12px;color:var(--ink-soft);margin-bottom:5px}
+  .tk-row.tot{margin-top:8px;padding-top:9px;border-top:1px dashed var(--mustard-dark)}
+  .tk-row.tot .l{font-family:var(--head);font-size:14px;text-transform:uppercase;letter-spacing:1px;color:var(--ink)}
+  .tk-row.tot .v{font-family:var(--display);font-size:26px;font-weight:700;color:var(--granate)}
+  .tk-actions{display:flex;gap:9px;margin-top:12px}
+  .btn{flex:1;border:2px solid var(--ink);border-radius:13px;padding:13px 10px;font-family:var(--head);font-size:12.5px;font-weight:500;text-transform:uppercase;letter-spacing:.6px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;transition:.15s}
+  .btn:active{transform:translateY(2px)}
+  .btn.kitchen{background:var(--olive);color:#f3f0e2;border-color:var(--olive-dark);box-shadow:0 4px 0 var(--olive-dark)}
+  .btn.kitchen:disabled{background:var(--line-soft);border-color:var(--muted);color:var(--paper);box-shadow:none;cursor:not-allowed}
+  .btn.pay{background:var(--granate);color:var(--card);box-shadow:0 4px 0 var(--granate-dark)}
+  .btn.pay:disabled{background:var(--line-soft);border-color:var(--muted);color:var(--paper);box-shadow:none;cursor:not-allowed}
+  .pill{display:inline-flex;align-items:center;justify-content:center;background:var(--card);color:var(--olive-dark);border-radius:999px;font-size:11px;min-width:18px;height:18px;padding:0 5px;margin-left:2px;font-weight:700}
+
+  /* menu picker column */
+  .menu-col{flex:1;display:flex;flex-direction:column;min-width:0;background:var(--bg)}
+  .mc-h{flex:0 0 auto;padding:13px 18px 10px;border-bottom:1px solid var(--line-soft)}
+  .mc-h b{font-family:var(--head);font-size:14px;text-transform:uppercase;letter-spacing:1.5px;color:var(--granate);display:block;margin-bottom:9px}
+  .search{width:100%;background:#fff;border:2px solid var(--line-soft);border-radius:11px;padding:10px 13px;font-family:var(--body);font-size:14px;color:var(--ink);outline:none}
+  .search:focus{border-color:var(--granate)}
+  .cats{display:flex;gap:7px;overflow-x:auto;padding:11px 18px;flex:0 0 auto;border-bottom:1px solid var(--line-soft)}
+  .cats button{flex:0 0 auto;border:1.5px solid var(--line-soft);background:var(--card);color:var(--ink-soft);border-radius:999px;padding:7px 14px;font-family:var(--head);font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;white-space:nowrap;transition:.15s}
+  .cats button.active{background:var(--granate);color:var(--card);border-color:var(--granate)}
+  .items{flex:1;overflow:auto;padding:14px 18px 30px}
+  .cat-block{margin-bottom:22px}
+  .cat-ttl{font-family:var(--head);font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink-soft);border-bottom:2px solid var(--granate);padding-bottom:6px;margin-bottom:11px}
+  .prods{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:9px}
+  .prod{display:flex;flex-direction:column;justify-content:space-between;gap:8px;background:var(--card);border:1.5px solid var(--line-soft);border-radius:12px;padding:11px 12px;cursor:pointer;transition:.13s;text-align:left;min-height:74px}
+  .prod:hover{border-color:var(--granate);transform:translateY(-2px);box-shadow:0 6px 0 rgba(43,33,24,.08)}
+  .prod:active{transform:translateY(0)}
+  .prod .pn{font-family:var(--body);font-size:13px;font-weight:600;color:var(--ink);line-height:1.15}
+  .prod .pf{display:flex;align-items:center;justify-content:space-between}
+  .prod .pp{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--granate)}
+  .prod .plus{width:26px;height:26px;background:var(--granate);color:var(--card);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:18px;font-weight:700;line-height:1}
+
+  /* toast */
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--mustard);font-family:var(--mono);font-size:13px;padding:13px 22px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:.25s;z-index:80;letter-spacing:.3px}
+  .toast.show{opacity:1;transform:translateX(-50%)}
+
+  /* confirm modal */
+  .modal{position:fixed;inset:0;z-index:70;background:rgba(26,20,16,.55);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:.2s}
+  .modal.open{opacity:1;pointer-events:auto}
+  .mbox{background:var(--card);border:2px solid var(--ink);border-radius:18px;max-width:380px;width:100%;padding:24px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+  .mbox h3{font-family:var(--display);font-size:22px;font-weight:700;color:var(--granate);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+  .mbox p{font-family:var(--body);font-size:14px;color:var(--ink-soft);line-height:1.5;margin-bottom:8px}
+  .mbox .big{font-family:var(--display);font-size:30px;font-weight:700;color:var(--ink);margin:6px 0 16px}
+  .mbox .mbtns{display:flex;gap:10px}
+  .mbox .mbtns button{flex:1;border-radius:12px;padding:13px;font-family:var(--head);font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.6px;cursor:pointer;border:2px solid var(--ink)}
+  .mbox .cancel{background:transparent;color:var(--ink)}
+  .mbox .ok{background:var(--granate);color:var(--card)}
+  .mbox .ok:disabled{background:var(--line-soft);border-color:var(--muted);color:var(--paper);cursor:not-allowed}
+
+  /* pay box */
+  .pay-box{max-width:430px;text-align:left}
+  .pay-box h3{text-align:center;margin-bottom:2px}
+  .pay-mesa{text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.5px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px}
+  .pay-total-card{background:var(--ink);border-radius:14px;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+  .pay-total-card .pl{font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--mustard-dark)}
+  .pay-total{font-family:var(--display);font-size:30px;font-weight:700;color:var(--mustard);line-height:1}
+  .pay-method{display:flex;gap:10px;margin-bottom:14px}
+  .pm{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;border:2px solid var(--line-soft);background:var(--paper);border-radius:14px;padding:13px;font-family:var(--head);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;color:var(--ink-soft);cursor:pointer;transition:.15s}
+  .pm .pmi{font-size:24px;line-height:1}
+  .pm.active{border-color:var(--granate);background:#fff6ea;color:var(--granate);box-shadow:0 4px 0 rgba(101,11,13,.15)}
+  .cash-pane{max-height:0;overflow:hidden;opacity:0;transition:.25s}
+  .cash-pane.show{max-height:520px;opacity:1;margin-bottom:14px}
+  .cash-grid{display:flex;gap:10px;margin-bottom:11px}
+  .cash-field{flex:1;background:var(--paper);border:2px solid var(--line-soft);border-radius:12px;padding:9px 12px}
+  .cash-field .cl{font-family:var(--mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--ink-soft);display:block}
+  .cash-amount{font-family:var(--display);font-size:23px;font-weight:700;color:var(--ink);line-height:1.1;margin-top:3px}
+  .cash-field.change{background:#eef4ec;border-color:#bcd6bf}
+  .change-amount{font-family:var(--display);font-size:23px;font-weight:700;color:var(--green);line-height:1.1;margin-top:3px}
+  .cash-field.change.neg{background:#fae9e8;border-color:#e3b3b3}
+  .cash-field.change.neg .change-amount{color:var(--granate)}
+  .quick-bills{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:9px}
+  .quick-bills button{border:1.5px solid var(--line-soft);background:var(--card);border-radius:9px;padding:9px 4px;font-family:var(--mono);font-size:12px;font-weight:500;color:var(--ink);cursor:pointer;transition:.12s}
+  .quick-bills button:hover{border-color:var(--granate)}
+  .quick-bills button.exact{background:var(--mustard);border-color:var(--mustard-dark);color:var(--ink)}
+  .keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+  .keypad button{border:1.5px solid var(--line-soft);background:#fff;border-radius:10px;padding:13px 0;font-family:var(--display);font-size:18px;font-weight:600;color:var(--ink);cursor:pointer;transition:.1s}
+  .keypad button:active{background:var(--ink);color:var(--mustard)}
+  .keypad button.act{background:var(--paper);color:var(--ink-soft);font-size:15px}
+  .print-toggle{display:flex;align-items:center;gap:9px;background:var(--paper);border:1.5px solid var(--line-soft);border-radius:11px;padding:11px 13px;margin-bottom:14px;cursor:pointer;font-family:var(--body);font-size:13px;font-weight:600;color:var(--ink)}
+  .print-toggle input{width:18px;height:18px;accent-color:var(--granate);cursor:pointer}
+
+  @media(max-width:760px){
+    .dr-body{flex-direction:column}
+    .ticket-col{flex:0 0 auto;max-height:46%;border-right:none;border-bottom:2px solid var(--line-soft)}
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="tb-brand"><b>Romanssera</b><span>TPV · Sala</span></div>
+    <div class="tb-stats">
+      <div class="stat"><div class="v" id="sOcc">0</div><div class="l">Mesas activas</div></div>
+      <div class="stat"><div class="v" id="sSala">0,00</div><div class="l">En sala (€)</div></div>
+      <div class="tb-clock" id="clock">--:--</div>
+      <a class="tb-link" href="cocina.html" target="_blank">Cocina ↗</a>
+    </div>
+  </div>
+
+  <div class="floor">
+    <div class="floor-head">
+      <h2>Plano de mesas</h2>
+      <div class="cfg">Mesas <input id="cfgCount" type="number" min="1" max="60" value="16"></div>
+      <div class="legend">
+        <span><i style="background:#e9f0e6;border:1px solid var(--green)"></i>Libre</span>
+        <span><i style="background:var(--granate)"></i>Ocupada</span>
+        <span><i style="background:var(--amber)"></i>Llamada</span>
+      </div>
+    </div>
+    <div id="grid"></div>
+  </div>
+
+  <!-- ===== drawer ===== -->
+  <div class="scrim" id="scrim" onclick="closeMesa()"></div>
+  <div class="drawer" id="drawer">
+    <div class="dr-head">
+      <div><div class="num" id="drNum">Mesa</div><div class="sub" id="drSub">—</div></div>
+      <button class="dr-close" onclick="closeMesa()">✕</button>
+    </div>
+    <div class="dr-body">
+      <!-- ticket -->
+      <div class="ticket-col">
+        <div class="tk-h"><b>Ticket</b><span class="open-t" id="openT"></span></div>
+        <div class="tk-lines" id="tkLines"></div>
+        <div class="tk-foot">
+          <div class="tk-row" id="rowSub"><span class="l">Subtotal</span><span class="v" id="vSub">0,00 €</span></div>
+          <div class="tk-row" id="rowDisc" style="display:none"><span class="l">Descuento 3x2</span><span class="v" id="vDisc">0,00 €</span></div>
+          <div class="tk-row tot"><span class="l">Total</span><span class="v" id="vTot">0,00 €</span></div>
+          <div class="tk-actions">
+            <button class="btn kitchen" id="btnKitchen" onclick="sendKitchen()">A cocina <span class="pill" id="pendCount">0</span></button>
+            <button class="btn pay" id="btnPay" onclick="askPay()">Cobrar</button>
+          </div>
+        </div>
+      </div>
+      <!-- menu picker -->
+      <div class="menu-col">
+        <div class="mc-h"><b>Añadir productos (sin QR)</b><input class="search" id="search" placeholder="Buscar plato o bebida…" oninput="renderItems()"></div>
+        <div class="cats" id="cats"></div>
+        <div class="items" id="items"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- pay modal -->
+  <div class="modal" id="payModal">
+    <div class="mbox pay-box">
+      <h3>Cobrar</h3>
+      <div class="pay-mesa" id="payMesaTxt">Mesa</div>
+
+      <div class="pay-total-card">
+        <span class="pl">Total a cobrar</span>
+        <div class="pay-total" id="payTot">0,00 €</div>
+      </div>
+
+      <div class="pay-method">
+        <button class="pm" id="pmCash" onclick="setMethod('efectivo')"><span class="pmi">💶</span>Efectivo</button>
+        <button class="pm" id="pmCard" onclick="setMethod('tarjeta')"><span class="pmi">💳</span>Tarjeta</button>
+      </div>
+
+      <div class="cash-pane" id="cashPane">
+        <div class="cash-grid">
+          <div class="cash-field">
+            <span class="cl">Paga con</span>
+            <div class="cash-amount" id="cashAmount">0,00 €</div>
+          </div>
+          <div class="cash-field change">
+            <span class="cl">Cambio</span>
+            <div class="change-amount" id="changeVal">0,00 €</div>
+          </div>
+        </div>
+        <div class="quick-bills" id="quickBills"></div>
+        <div class="keypad" id="keypad"></div>
+      </div>
+
+      <label class="print-toggle"><input type="checkbox" id="printChk" checked><span>Imprimir ticket al cobrar</span></label>
+
+      <div class="mbtns">
+        <button class="cancel" onclick="closePay()">Cancelar</button>
+        <button class="ok" id="payConfirm" onclick="doPay()" disabled>Cobrar y cerrar</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+/* ===================== DATOS ===================== */
+const MENU = [{"cat": "aperitiu","label": "El Aperitivo","items": [{"id": "ap1","name": "Vermut Benvolgut","price": 3.8},{"id": "ap2","name": "Spritz Benvolgut","price": 5.5},{"id": "ap3","name": "VermuTonic","price": 6.0},{"id": "ap4","name": "VermuTonic Rosse","price": 6.0},{"id": "ap5","name": "VermuBitter","price": 6.0},{"id": "ap6","name": "Canya / Terç","price": 2.8},{"id": "ap7","name": "Aigua / Refresc","price": 2.2}]},{"cat": "picaeta","label": "La Picaeta","items": [{"id": "pi1","name": "Boquerons en Vinagre","price": 6.8},{"id": "pi2","name": "Ensaladilla Russa Kimchi","price": 7.5},{"id": "pi3","name": "Ajoarriero","price": 8.0},{"id": "pi4","name": "Braves Romansseres","price": 6.0},{"id": "pi5","name": "Torrezno de Sòria","price": 5.2},{"id": "pi6","name": "Orella de Porc","price": 13.5}]},{"cat": "tapes","label": "Tapas de siempre","items": [{"id": "ta1","name": "Montat d'Anxova","price": 3.8},{"id": "ta2","name": "Tomata de l'Horta","price": 12.5},{"id": "ta3","name": "Bunyol de Bacallà","price": 3.0},{"id": "ta4","name": "Croquetes Artesanes","price": 9.0},{"id": "ta5","name": "Ous Trencats","price": 9.8},{"id": "ta6","name": "Formatge Fregit","price": 11.5},{"id": "ta7","name": "Tellines a la Planxa","price": 13.0}]},{"cat": "pitiesquena","label": "Entre Pecho y Espalda","items": [{"id": "pe1","name": "Polp Planxat","price": 19.8},{"id": "pe2","name": "Calamar de Platja","price": 21.5},{"id": "pe3","name": "Secret de Porc","price": 18.5},{"id": "pe4","name": "Peça de CARNAÇA","price": 24.0}]},{"cat": "populars","label": "Bocatas Populares","items": [{"id": "po1","name": "TRUITER","price": 7.0},{"id": "po2","name": "SAN ROC","price": 7.0},{"id": "po3","name": "BATALLER","price": 7.0},{"id": "po4","name": "FALLER","price": 7.0},{"id": "po5","name": "LOS SILOS","price": 7.0}]},{"cat": "categoria","label": "Bocatas de Categoría","items": [{"id": "ca1","name": "PÉRGOLA","price": 8.5},{"id": "ca2","name": "ROMANSSERA","price": 8.5},{"id": "ca3","name": "MANCHEGUITO","price": 8.5},{"id": "ca4","name": "L'HORTA NORD","price": 8.5},{"id": "ca5","name": "POTRASCADA","price": 8.5},{"id": "ca6","name": "BRAVERO","price": 8.5}]},{"cat": "esmorzar","label": "El Almuerzo","items": [{"id": "es1","name": "Esmorzaret Gasto","price": 8.5},{"id": "es2","name": "Bocadillo Gasto sol","price": 6.0}]},{"cat": "nanos","label": "Los Peques","items": [{"id": "na1","name": "3 Croquetes de Pernil","price": 6.0},{"id": "na2","name": "Crispetes de Pollastre","price": 6.0},{"id": "na3","name": "2 Llonganisses","price": 6.0},{"id": "na4","name": "Ou Ferrat o Francesa","price": 6.0}]},{"cat": "dolços","label": "Sin Remordimientos","items": [{"id": "do1","name": "Torrija Brioix","price": 6.2},{"id": "do2","name": "Tarta de Formatge","price": 6.2},{"id": "do3","name": "Tiramisú","price": 6.2}]},{"cat": "digestius","label": "Digestivos","items": [{"id": "di1","name": "Cremaet","price": 1.8},{"id": "di2","name": "Carajillo","price": 1.8},{"id": "di3","name": "Xupito","price": 1.5},{"id": "di4","name": "Vaquerito","price": 2.0},{"id": "di5","name": "Copa","price": 3.0},{"id": "di6","name": "Cubata / Gintònic","price": 6.0},{"id": "di7","name": "Mistela de la casa","price": 2.5}]}];
+
+/* claves compartidas con la carta QR y la cocina */
+const STORE_KEY   = "romanssera_orders_v1";       // pedidos -> cocina
+const WAITER_KEY  = "romanssera_waiter_v1";        // llamadas de camarero
+const TPV_KEY     = "romanssera_tpv_tables_v1";    // estado de mesas (TPV)
+const SALES_KEY   = "romanssera_tpv_sales_v1";     // ventas cerradas
+const CFG_KEY     = "romanssera_tpv_cfg_v1";
+
+const fmt = n => (Number(n)||0).toFixed(2).replace('.',',')+' €';
+
+/* tables = { "1": {opened:ts, lines:[{name,qty,price,note,src,sent,ts}], ingested:[orderIds], discount:0}, ... } */
+function loadTables(){ try{return JSON.parse(localStorage.getItem(TPV_KEY))||{};}catch(e){return {};} }
+function saveTables(t){ try{localStorage.setItem(TPV_KEY,JSON.stringify(t));}catch(e){} }
+function loadOrders(){ try{return JSON.parse(localStorage.getItem(STORE_KEY))||[];}catch(e){return [];} }
+function saveOrders(o){ try{localStorage.setItem(STORE_KEY,JSON.stringify(o));}catch(e){} }
+function loadWaiter(){ try{return JSON.parse(localStorage.getItem(WAITER_KEY))||[];}catch(e){return [];} }
+function loadCfg(){ try{return JSON.parse(localStorage.getItem(CFG_KEY))||{};}catch(e){return {};} }
+function saveCfg(c){ try{localStorage.setItem(CFG_KEY,JSON.stringify(c));}catch(e){} }
+
+let tables = loadTables();
+let cfg = loadCfg();
+let tableCount = cfg.count || 16;
+let activeMesa = null;
+let activeCat = "ALL";
+
+function ensure(m){ if(!tables[m]) tables[m]={opened:null,lines:[],ingested:[],discount:0}; return tables[m]; }
+function mesaTotal(m){ const t=tables[m]; if(!t) return 0; const sub=t.lines.reduce((a,l)=>a+l.price*l.qty,0); return Math.max(0,sub-(t.discount||0)); }
+function mesaUnits(m){ const t=tables[m]; if(!t) return 0; return t.lines.reduce((a,l)=>a+l.qty,0); }
+function isOcc(m){ const t=tables[m]; return !!(t && t.lines.length); }
+
+/* ====== SYNC: pedidos QR entrantes -> ticket de su mesa ====== */
+function syncFromKitchen(){
+  const orders = loadOrders();
+  let changed=false;
+  orders.forEach(o=>{
+    const m = String(o.mesa==null?"?":o.mesa);
+    const t = ensure(m);
+    if(t.ingested.includes(o.id)) return;          // ya integrado
+    t.ingested.push(o.id);
+    if(!t.opened) t.opened = o.ts || Date.now();
+    (o.items||[]).forEach(it=>{
+      t.lines.push({name:it.name, qty:it.qty, price:it.price||0, note:it.note||"", src:"qr", sent:true, ts:o.ts||Date.now()});
+    });
+    if(o.descuento) t.discount += o.descuento;     // mantiene el total que pagó el cliente
+    changed=true;
+  });
+  if(changed) saveTables(tables);
+  return changed;
+}
+
+/* ===================== PLANO DE MESAS ===================== */
+function ageClass(ts){ if(!ts) return ''; const m=(Date.now()-ts)/60000; if(m>=45) return 'age-old'; if(m>=20) return 'age-mid'; return 'age-new'; }
+
+function mesaCard(m,callSet,isBarra){
+  const o=isOcc(m);
+  const bell=callSet.has(m)?'<div class="bell">🔔</div>':'';
+  const pend=(tables[m]?tables[m].lines.filter(l=>l.src==="cam"&&!l.sent).length:0);
+  const kflag=pend?`<div class="kflag">● ${pend} sin enviar</div>`:'';
+  const age=o?ageClass(tables[m].opened):'';
+  const noLabel=isBarra?'Barra':m;
+  if(!o){
+    return `<div class="mesa free ${isBarra?'barra':''}" onclick="openMesa('${m}')">
+      <div class="accent"></div>
+      <div class="mesa-in">
+        <div class="mesa-top" style="width:100%"><span class="mesa-no">${noLabel}</span><span class="dot free"></span></div>
+        <div class="mesa-body"><div class="free-hint"><span class="pluss">+</span>Libre</div></div>
+      </div></div>`;
+  }
+  return `<div class="mesa occ ${age} ${isBarra?'barra':''}" onclick="openMesa('${m}')">
+    ${bell}
+    <div class="accent"></div>
+    <div class="mesa-in">
+      <div class="mesa-top"><span class="mesa-no">${noLabel}</span><span class="dot occ"></span></div>
+      <div class="mesa-body">
+        <div class="mesa-total">${fmt(mesaTotal(m))}</div>
+        <div class="mesa-meta">
+          <span class="chip uds">🍽 ${mesaUnits(m)}</span>
+          <span class="chip time">⏱ ${sinceTxt(tables[m].opened)}</span>
+        </div>
+        ${kflag}
+      </div>
+    </div></div>`;
+}
+
+function renderGrid(){
+  const wrap=document.getElementById('grid');
+  const callSet=new Set(loadWaiter().filter(c=>c.status==="pending").map(c=>String(c.mesa)));
+  let salon=[]; for(let i=1;i<=tableCount;i++) salon.push(String(i));
+  // mesas con actividad fuera del rango configurado (p.ej. QR mesa 30)
+  Object.keys(tables).forEach(m=>{ if(isOcc(m) && m!=='Barra' && !salon.includes(m)) salon.push(m); });
+  salon.sort((a,b)=>(parseInt(a)||999)-(parseInt(b)||999));
+  let occ=0, sala=0;
+  const all=[...salon,'Barra'];
+  all.forEach(m=>{ if(isOcc(m)){occ++; sala+=mesaTotal(m);} });
+
+  wrap.innerHTML =
+    `<div class="zone-ttl">Salón <span class="cnt">${salon.filter(isOcc).length}/${salon.length}</span></div>
+     <div class="grid" style="margin-bottom:6px">${salon.map(m=>mesaCard(m,callSet,false)).join('')}</div>
+     <div class="zone-ttl">Barra</div>
+     <div class="grid">${mesaCard('Barra',callSet,true)}</div>`;
+
+  document.getElementById('sOcc').textContent=occ;
+  document.getElementById('sSala').textContent=fmt(sala).replace(' €','');
+}
+
+function sinceTxt(ts){ if(!ts) return ''; const m=Math.max(0,Math.round((Date.now()-ts)/60000)); if(m<1) return 'ahora'; if(m<60) return m+' min'; const h=Math.floor(m/60); return h+'h '+(m%60)+'m'; }
+
+/* ===================== DRAWER ===================== */
+function openMesa(m){
+  activeMesa=m; activeCat="ALL"; document.getElementById('search').value="";
+  ensure(m);
+  document.getElementById('drNum').textContent = m==='Barra'?'Barra':('Mesa '+m);
+  renderTicket(); renderCats(); renderItems();
+  document.getElementById('scrim').classList.add('open');
+  document.getElementById('drawer').classList.add('open');
+}
+function closeMesa(){
+  // si la mesa quedó vacía sin abrir, límpiala
+  if(activeMesa && tables[activeMesa] && !tables[activeMesa].lines.length && !tables[activeMesa].ingested.length){ delete tables[activeMesa]; saveTables(tables); }
+  activeMesa=null;
+  document.getElementById('scrim').classList.remove('open');
+  document.getElementById('drawer').classList.remove('open');
+  renderGrid();
+}
+
+function renderTicket(){
+  const m=activeMesa, t=tables[m]; if(!t) return;
+  document.getElementById('drSub').textContent = t.opened?('Abierta '+sinceTxt(t.opened)):'Mesa nueva';
+  document.getElementById('openT').textContent = t.lines.length?(mesaUnits(m)+' uds'):'';
+  const box=document.getElementById('tkLines');
+  if(!t.lines.length){ box.innerHTML=`<div class="tk-empty">Mesa sin consumos todavía.<br>Añade productos a la derecha →<br>o llegarán solos al escanear el QR.</div>`; }
+  else{
+    box.innerHTML=t.lines.map((l,i)=>{
+      const srcTag = l.src==="qr"?'<span class="tag qr">QR cliente</span>':'<span class="tag cam">Camarero</span>';
+      const sentTag = l.src==="cam"?(l.sent?'<span class="tag sent">en cocina</span>':'<span class="tag pend">sin enviar</span>'):'';
+      const ed = `<div class="ed">
+          <button onclick="chQty(${i},-1)">−</button>
+          <button onclick="chQty(${i},1)">+</button>
+          <button class="del" onclick="delLine(${i})">🗑</button></div>`;
+      return `<div class="ln">
+        <span class="q">${l.qty}×</span>
+        <div class="info"><div class="nm">${l.name}</div>
+          <div class="tags">${srcTag}${sentTag}</div>
+          ${l.note?`<div class="note">⚠ ${l.note}</div>`:''}
+          ${ed}
+        </div>
+        <span class="pr">${fmt(l.price*l.qty)}</span>
+      </div>`;
+    }).join('');
+  }
+  const sub=t.lines.reduce((a,l)=>a+l.price*l.qty,0);
+  document.getElementById('vSub').textContent=fmt(sub);
+  document.getElementById('rowDisc').style.display = t.discount>0?'flex':'none';
+  document.getElementById('vDisc').textContent='−'+fmt(t.discount);
+  document.getElementById('vTot').textContent=fmt(mesaTotal(m));
+  const pend=t.lines.filter(l=>l.src==="cam"&&!l.sent).reduce((a,l)=>a+l.qty,0);
+  document.getElementById('pendCount').textContent=pend;
+  document.getElementById('btnKitchen').disabled = pend===0;
+  document.getElementById('btnPay').disabled = t.lines.length===0;
+}
+
+function chQty(i,d){ const t=tables[activeMesa]; const l=t.lines[i]; if(!l) return;
+  l.qty+=d; if(l.qty<=0){ t.lines.splice(i,1); } else if(l.src==="qr"){ l.note=(l.note||"")?l.note:""; }
+  saveTables(tables); renderTicket();
+}
+function delLine(i){ const t=tables[activeMesa]; t.lines.splice(i,1); saveTables(tables); renderTicket(); }
+
+function addProduct(it){
+  const t=ensure(activeMesa);
+  if(!t.opened) t.opened=Date.now();
+  const ex=t.lines.find(l=>l.src==="cam"&&!l.sent&&l.name===it.name&&!l.note);
+  if(ex){ ex.qty++; } else { t.lines.push({name:it.name,qty:1,price:it.price,note:"",src:"cam",sent:false,ts:Date.now()}); }
+  saveTables(tables); renderTicket(); toast(it.name+' añadido');
+}
+
+/* ====== enviar líneas de camarero a cocina ====== */
+function sendKitchen(){
+  const t=tables[activeMesa]; if(!t) return;
+  const nuevos=t.lines.filter(l=>l.src==="cam"&&!l.sent);
+  if(!nuevos.length) return;
+  const order={
+    id:"o"+Date.now()+Math.random().toString(36).slice(2,6),
+    no:Math.floor(100+Math.random()*899),
+    mesa: activeMesa, ts:Date.now(), status:"new", _fresh:true, origin:"tpv",
+    items:nuevos.map(l=>({name:l.name,qty:l.qty,note:l.note,price:l.price})),
+    subtotal:nuevos.reduce((a,l)=>a+l.price*l.qty,0), descuento:0, postresGratis:0,
+    total:nuevos.reduce((a,l)=>a+l.price*l.qty,0)
+  };
+  const orders=loadOrders(); orders.push(order); saveOrders(orders);
+  t.ingested.push(order.id);                 // evita re-ingesta por el sync
+  nuevos.forEach(l=>l.sent=true);
+  saveTables(tables); renderTicket(); renderGrid();
+  toast('Comanda enviada a cocina 🔥');
+}
+
+/* ====== cobrar ====== */
+let payMethod=null;       // 'efectivo' | 'tarjeta'
+let cashDigits="";        // céntimos tecleados (string)
+
+function askPay(){
+  const t=tables[activeMesa]; if(!t||!t.lines.length) return;
+  payMethod=null; cashDigits="";
+  document.getElementById('payMesaTxt').textContent = (activeMesa==='Barra'?'Barra':'Mesa '+activeMesa)+' · '+mesaUnits(activeMesa)+' uds';
+  document.getElementById('payTot').textContent = fmt(mesaTotal(activeMesa));
+  document.getElementById('pmCash').classList.remove('active');
+  document.getElementById('pmCard').classList.remove('active');
+  document.getElementById('cashPane').classList.remove('show');
+  document.getElementById('payConfirm').disabled=true;
+  buildKeypad(); buildQuickBills();
+  updateCash();
+  document.getElementById('payModal').classList.add('open');
+}
+function closePay(){ document.getElementById('payModal').classList.remove('open'); }
+
+function setMethod(mth){
+  payMethod=mth;
+  document.getElementById('pmCash').classList.toggle('active',mth==='efectivo');
+  document.getElementById('pmCard').classList.toggle('active',mth==='tarjeta');
+  const cash=document.getElementById('cashPane');
+  if(mth==='efectivo'){ cash.classList.add('show'); cashDigits=""; updateCash(); }
+  else{ cash.classList.remove('show'); document.getElementById('payConfirm').disabled=false; }
+}
+
+function cashValue(){ return (parseInt(cashDigits||"0",10))/100; }
+function updateCash(){
+  const tot=mesaTotal(activeMesa);
+  const given=cashValue();
+  document.getElementById('cashAmount').textContent=fmt(given);
+  const change=given-tot;
+  const box=document.querySelector('.cash-field.change');
+  document.getElementById('changeVal').textContent=fmt(Math.max(0,change));
+  box.classList.toggle('neg', given>0 && change<0);
+  if(payMethod==='efectivo') document.getElementById('payConfirm').disabled = given<tot;
+}
+function buildQuickBills(){
+  const tot=mesaTotal(activeMesa);
+  const bills=[5,10,20,50];
+  const opts=[{lbl:'Exacto',val:tot,cls:'exact'}];
+  bills.forEach(b=>{ if(b>=tot) opts.push({lbl:b+' €',val:b}); });
+  // siguiente billete redondo por encima del total si no está
+  [tot<=20?20:tot<=50?50:100].forEach(b=>{ if(b>tot && !opts.find(o=>o.val===b)) opts.push({lbl:b+' €',val:b}); });
+  const wrap=document.getElementById('quickBills');
+  wrap.innerHTML=opts.slice(0,4).map(o=>`<button class="${o.cls||''}" onclick="setCash(${o.val.toFixed(2)})">${o.lbl}</button>`).join('');
+}
+function setCash(v){ cashDigits=String(Math.round(v*100)); updateCash(); }
+function buildKeypad(){
+  const keys=['1','2','3','4','5','6','7','8','9','C','0','⌫'];
+  document.getElementById('keypad').innerHTML=keys.map(k=>{
+    const act=(k==='C'||k==='⌫')?'act':'';
+    return `<button class="${act}" onclick="keyCash('${k}')">${k}</button>`;
+  }).join('');
+}
+function keyCash(k){
+  if(k==='C') cashDigits="";
+  else if(k==='⌫') cashDigits=cashDigits.slice(0,-1);
+  else { if(cashDigits.length<7) cashDigits=(cashDigits+k).replace(/^0+/,''); }
+  updateCash();
+}
+
+function doPay(){
+  const m=activeMesa, t=tables[m];
+  if(!payMethod){ toast('Elige efectivo o tarjeta'); return; }
+  const tot=mesaTotal(m);
+  const given = payMethod==='efectivo'?cashValue():tot;
+  const change = payMethod==='efectivo'?Math.max(0,given-tot):0;
+  const sale={mesa:m, ts:Date.now(), total:tot, units:mesaUnits(m), method:payMethod,
+    paid:given, change:change,
+    items:t.lines.map(l=>({name:l.name,qty:l.qty,price:l.price}))};
+  try{ const s=JSON.parse(localStorage.getItem(SALES_KEY))||[]; s.push(sale); localStorage.setItem(SALES_KEY,JSON.stringify(s)); }catch(e){}
+  if(document.getElementById('printChk').checked) printTicket(sale);
+  // limpia los pedidos de esa mesa que sigan en el tablero de cocina
+  const orders=loadOrders().filter(o=>String(o.mesa)!==String(m)); saveOrders(orders);
+  delete tables[m]; saveTables(tables);
+  closePay(); closeMesa();
+  toast('Mesa cobrada · '+fmt(tot)+(payMethod==='efectivo'&&change>0?(' · cambio '+fmt(change)):''));
+}
+
+/* ====== ticket imprimible (80mm) ====== */
+function printTicket(sale){
+  const d=new Date(sale.ts);
+  const fecha=d.toLocaleDateString('es-ES')+' '+d.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'});
+  const mesaTxt = sale.mesa==='Barra'?'Barra':'Mesa '+sale.mesa;
+  const rows=sale.items.map(it=>`<tr><td class="q">${it.qty}</td><td class="n">${it.name}</td><td class="p">${fmt(it.price*it.qty)}</td></tr>`).join('');
+  const metodo = sale.method==='efectivo'?'EFECTIVO':'TARJETA';
+  const cashBlock = sale.method==='efectivo'
+    ? `<div class="ln"><span>Entregado</span><span>${fmt(sale.paid)}</span></div><div class="ln"><span>Cambio</span><span>${fmt(sale.change)}</span></div>`
+    : '';
+  const html=`<!DOCTYPE html><html><head><meta charset="utf-8"><title>Ticket ${mesaTxt}</title>
+  <style>
+    @page{size:80mm auto;margin:0}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{width:80mm;padding:6mm 5mm;font-family:'DM Mono',ui-monospace,monospace;color:#000;font-size:12px;line-height:1.45}
+    .c{text-align:center}
+    .name{font-family:'Cinzel',Georgia,serif;font-size:20px;font-weight:700;letter-spacing:1px}
+    .tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-top:2px}
+    .hr{border-top:1px dashed #000;margin:8px 0}
+    .meta{font-size:11px;display:flex;justify-content:space-between}
+    table{width:100%;border-collapse:collapse;margin:6px 0}
+    td{vertical-align:top;padding:2px 0;font-size:12px}
+    td.q{width:26px}
+    td.p{text-align:right;white-space:nowrap;padding-left:6px}
+    .ln{display:flex;justify-content:space-between;font-size:12px;margin:2px 0}
+    .tot{display:flex;justify-content:space-between;font-size:16px;font-weight:700;margin:6px 0;font-family:'Cinzel',serif}
+    .met{text-align:center;border:1.5px solid #000;border-radius:6px;padding:5px;margin:8px 0;font-weight:700;letter-spacing:1px}
+    .foot{text-align:center;font-size:10px;margin-top:10px;letter-spacing:.5px}
+  </style></head><body>
+    <div class="c"><div class="name">ROMANSSERA</div><div class="tag">Tapasseria</div></div>
+    <div class="hr"></div>
+    <div class="meta"><span>${mesaTxt}</span><span>${fecha}</span></div>
+    <div class="meta"><span>${sale.units} uds</span><span>Ticket #${String(sale.ts).slice(-5)}</span></div>
+    <div class="hr"></div>
+    <table>${rows}</table>
+    <div class="hr"></div>
+    <div class="tot"><span>TOTAL</span><span>${fmt(sale.total)}</span></div>
+    <div class="met">${metodo}</div>
+    ${cashBlock}
+    <div class="hr"></div>
+    <div class="foot">IVA incluido · Gracias por su visita<br>tapes d'ahir, hui i sempre!</div>
+  </body></html>`;
+  const w=window.open('','_ticket','width=380,height=640');
+  if(!w){ toast('Permite ventanas emergentes para imprimir'); return; }
+  w.document.write(html); w.document.close();
+  w.focus();
+  setTimeout(()=>{ w.print(); }, 350);
+}
+
+/* ===================== MENÚ ===================== */
+function renderCats(){
+  const c=document.getElementById('cats');
+  c.innerHTML = `<button class="${activeCat==='ALL'?'active':''}" onclick="setCat('ALL')">Todo</button>` +
+    MENU.map(cat=>`<button class="${activeCat===cat.cat?'active':''}" onclick="setCat('${cat.cat}')">${cat.label}</button>`).join('');
+}
+function setCat(c){ activeCat=c; document.getElementById('search').value=""; renderCats(); renderItems(); }
+function renderItems(){
+  const q=document.getElementById('search').value.trim().toLowerCase();
+  const box=document.getElementById('items');
+  let html="";
+  MENU.forEach(cat=>{
+    if(activeCat!=='ALL' && activeCat!==cat.cat && !q) return;
+    let items=cat.items;
+    if(q) items=items.filter(it=>it.name.toLowerCase().includes(q));
+    else if(activeCat!=='ALL' && activeCat!==cat.cat) items=[];
+    if(!items.length) return;
+    html+=`<div class="cat-block"><div class="cat-ttl">${cat.label}</div><div class="prods">`+
+      items.map(it=>`<button class="prod" onclick='addProduct(${JSON.stringify(it).replace(/'/g,"&#39;")})'>
+        <div class="pn">${it.name}</div>
+        <div class="pf"><span class="pp">${fmt(it.price)}</span><span class="plus">+</span></div>
+      </button>`).join('')+`</div></div>`;
+  });
+  box.innerHTML = html || `<div class="tk-empty">Sin resultados para "${q}"</div>`;
+}
+
+/* ===================== UI helpers ===================== */
+let toastT;
+function toast(msg){ const el=document.getElementById('toast'); el.textContent=msg; el.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(()=>el.classList.remove('show'),1600); }
+
+document.getElementById('cfgCount').addEventListener('change',e=>{
+  let v=Math.max(1,Math.min(60,parseInt(e.target.value)||16)); tableCount=v; e.target.value=v;
+  cfg.count=v; saveCfg(cfg); renderGrid();
+});
+document.getElementById('cfgCount').value=tableCount;
+
+function tick(){
+  const d=new Date();
+  document.getElementById('clock').textContent=d.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'});
+  if(syncFromKitchen() && activeMesa) renderTicket();
+  renderGrid();
+}
+window.addEventListener('storage',e=>{ if([STORE_KEY,WAITER_KEY,TPV_KEY].includes(e.key)){ tables=loadTables(); syncFromKitchen(); if(activeMesa) renderTicket(); renderGrid(); } });
+
+syncFromKitchen();
+renderGrid();
+tick();
+setInterval(tick,3000);
+</script>
+</body>
+</html>

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserva · Romanssera Tapasseria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Yellowtail&family=Oswald:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#efe1d0;
+    --bg-deep:#e6d2bd;
+    --card:#f8ecde;
+    --paper:#f8ecde;
+    --ink:#2b2118;
+    --ink-soft:#7a4d39;
+    --muted:#a6826a;
+    --line:#2b2118;
+    --line-soft:#d3bda3;
+    --mustard:#e7d6b8;
+    --mustard-dark:#a98f6a;
+    --granate:#650b0d;
+    --granate-dark:#440607;
+    --granate-bright:#8c1518;
+    --orange:#8c1518;
+    --blau:#3a3128;
+    --olive:#8c1518;          /* confirmada → granate (minimal) */
+    --olive-dark:#8e5c2f;
+    --copper:#b96f33;
+    --teal:#3a3128;           /* sense turquesa → blau senyera */
+    --hard-shadow:0 14px 30px rgba(101,11,13,.12);
+    --hard-shadow-sm:0 8px 18px rgba(101,11,13,.09);
+    --hard-shadow-lg:0 20px 40px rgba(101,11,13,.18);
+    --display:"Cinzel",Georgia,serif;
+    --head:"Oswald","Arial Narrow",sans-serif;
+    --script:"Yellowtail",cursive;
+    --body:"Manrope",-apple-system,system-ui,sans-serif;
+    --mono:"DM Mono",ui-monospace,"SF Mono",monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;font-weight:500;min-height:100%}
+  body{
+    padding-bottom:60px;position:relative;
+    background-image:
+      radial-gradient(circle at 10% 0%, rgba(140,21,24,.08), transparent 32%),
+      radial-gradient(circle at 100% 90%, rgba(101,11,13,.08), transparent 40%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cg fill='none' stroke='%23650b0d' stroke-width='1.3' opacity='0.07'%3E%3Cpath d='M32 9C41 19 41 45 32 55 23 45 23 19 32 9Z'/%3E%3Cpath d='M9 32C19 23 45 23 55 32 45 41 19 41 9 32Z'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='3' fill='%23e8741e' opacity='0.08'/%3E%3C/svg%3E");
+  }
+
+  /* ===== HEADER ===== */
+  header{position:sticky;top:0;z-index:40;background:rgba(248,236,222,.97);backdrop-filter:blur(8px);border-bottom:none;box-shadow:0 8px 20px rgba(58,32,20,.08)}
+  header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:
+    linear-gradient(90deg,var(--blau) 0 24px,transparent 24px),
+    linear-gradient(90deg,var(--mustard) 0 24px,transparent 24px),
+    repeating-linear-gradient(90deg,var(--granate) 24px,var(--granate) 31px,var(--mustard) 31px,var(--mustard) 38px);
+    background-size:100% 2px,100% 100%,100% 100%;background-repeat:no-repeat}
+  .head-top{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;gap:14px;max-width:1100px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:12px;min-width:0}
+  .brand-mark{flex:0 0 44px;width:44px;height:44px;object-fit:contain;display:block;filter:drop-shadow(1px 1px 0 rgba(58,32,20,.12))}
+  .brand-text h1{font-family:var(--display);font-size:19px;font-weight:700;letter-spacing:.4px;color:var(--granate);text-transform:uppercase;line-height:1}
+  .brand-text span{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);margin-top:5px;text-transform:uppercase;letter-spacing:.6px;display:block}
+  .head-right{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+  .nav-link{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:2px solid var(--ink);padding:8px 14px;font-family:var(--mono);font-size:11px;font-weight:500;color:var(--ink);text-decoration:none;text-transform:uppercase;letter-spacing:.5px;box-shadow:2px 2px 0 var(--ink);transition:.1s}
+  .nav-link:active{transform:translate(2px,2px);box-shadow:none}
+  .nav-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.2}
+
+  main{max-width:1100px;margin:0 auto;padding:28px 22px 40px}
+
+  /* ===== HERO ===== */
+  .hero{margin-bottom:24px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:end;padding-bottom:18px;border-bottom:2px solid var(--ink)}
+  .hero-eye{font-family:var(--mono);font-size:11px;color:var(--granate);text-transform:uppercase;letter-spacing:1.4px;font-weight:500;margin-bottom:8px;display:inline-block}
+  .hero-eye::before{content:"·· ";color:var(--mustard-dark)}
+  .hero h2{font-family:var(--display);font-size:clamp(34px,5vw,52px);font-weight:400;color:var(--ink);text-transform:uppercase;letter-spacing:-1.2px;line-height:.95;margin-bottom:10px}
+  .hero p{font-family:var(--body);font-size:14px;color:var(--ink-soft);line-height:1.55;max-width:540px;font-weight:500}
+  .hero-stamp{background:var(--granate);color:var(--mustard);border:2px solid var(--ink);padding:12px 16px;text-align:center;font-family:var(--display);font-size:13px;text-transform:uppercase;letter-spacing:.4px;box-shadow:var(--hard-shadow);transform:rotate(-2deg);min-width:170px}
+  .hero-stamp b{display:block;font-size:24px;letter-spacing:-.5px;margin-bottom:2px}
+
+  /* ===== STEPPER ===== */
+  .stepper{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--ink);background:var(--card);margin-bottom:28px;box-shadow:var(--hard-shadow)}
+  .step{padding:14px 18px;border-right:2px solid var(--ink);display:flex;flex-direction:column;gap:4px;cursor:default;background:var(--card);transition:.18s;position:relative}
+  .step:last-child{border-right:none}
+  .step-num{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.6px;text-transform:uppercase;font-weight:500}
+  .step-label{font-family:var(--display);font-size:14px;color:var(--ink);text-transform:uppercase;letter-spacing:-.2px;font-weight:400}
+  .step.done{background:var(--paper);cursor:pointer}
+  .step.done:hover{background:var(--bg-deep)}
+  .step.done .step-num{color:var(--olive-dark)}
+  .step.done .step-num::after{content:" ✓"}
+  .step.active{background:var(--mustard)}
+  .step.active::before{content:"";position:absolute;bottom:-2px;left:0;right:0;height:4px;background:var(--granate)}
+  .step.active .step-num{color:var(--ink-soft)}
+
+  /* ===== STEP CONTENT ===== */
+  .step-content{display:none;animation:fadeIn .25s ease}
+  .step-content.active{display:block}
+  @keyframes fadeIn{0%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:none}}
+
+  .step-title{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:20px;padding-bottom:10px;border-bottom:1.5px dashed var(--line-soft)}
+  .step-title h3{font-family:var(--display);font-size:24px;color:var(--ink);text-transform:uppercase;letter-spacing:-.5px;font-weight:400}
+  .step-help{font-family:var(--mono);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.4px}
+  .step-help b{font-family:var(--display);color:var(--granate);font-weight:400;letter-spacing:-.2px}
+
+  /* Day grid */
+  .day-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:12px;margin-bottom:24px}
+  .day-card{background:var(--card);border:2px solid var(--ink);padding:14px 12px;cursor:pointer;text-align:center;box-shadow:var(--hard-shadow-sm);transition:.12s;position:relative}
+  .day-card:hover{background:var(--paper)}
+  .day-card:active{transform:translate(2px,2px);box-shadow:none}
+  .day-card.selected{background:var(--mustard);box-shadow:var(--hard-shadow)}
+  .day-card.closed{opacity:.45;cursor:not-allowed;background:var(--bg-deep)}
+  .day-card.closed:hover{background:var(--bg-deep)}
+  .day-card.closed::after{content:"CERRADO";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-12deg);font-family:var(--mono);font-size:11px;color:var(--granate);background:var(--card);padding:2px 8px;border:1.5px solid var(--ink);letter-spacing:.4px}
+  .day-dow{font-family:var(--mono);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px}
+  .day-num{font-family:var(--display);font-size:32px;font-weight:400;color:var(--ink);line-height:1;letter-spacing:-1px}
+  .day-mon{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.4px;margin-top:4px}
+  .day-card.selected .day-dow,.day-card.selected .day-mon{color:var(--ink-soft)}
+  .day-card.selected .day-num{color:var(--granate)}
+
+  /* Time slots */
+  .turn-block{margin-bottom:22px}
+  .turn-head{display:flex;align-items:baseline;gap:10px;padding-bottom:8px;border-bottom:1.5px dashed var(--line-soft);margin-bottom:14px}
+  .turn-name{font-family:var(--display);font-size:16px;color:var(--ink);text-transform:uppercase;letter-spacing:-.3px;font-weight:400}
+  .turn-range{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:.4px}
+  .slot-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:10px}
+  .slot{background:var(--card);border:2px solid var(--ink);padding:11px 6px;cursor:pointer;text-align:center;box-shadow:2px 2px 0 var(--ink);transition:.1s;font-family:var(--display);font-size:15px;letter-spacing:-.2px;font-weight:400;color:var(--ink)}
+  .slot:hover{background:var(--paper)}
+  .slot:active{transform:translate(2px,2px);box-shadow:none}
+  .slot.selected{background:var(--granate);color:var(--mustard);box-shadow:var(--hard-shadow-sm)}
+  .slot.full{opacity:.45;cursor:not-allowed;background:var(--bg-deep);text-decoration:line-through}
+  .slot.full:hover{background:var(--bg-deep)}
+
+  /* Personas + zona */
+  .pz-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:18px}
+  @media(max-width:680px){.pz-grid{grid-template-columns:1fr}}
+  .pz-block{background:var(--card);border:2px solid var(--ink);padding:18px 20px;box-shadow:var(--hard-shadow-sm)}
+  .pz-label{font-family:var(--mono);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;display:block}
+
+  .counter{display:flex;align-items:center;gap:14px;justify-content:center}
+  .counter-btn{width:44px;height:44px;background:var(--mustard);border:2px solid var(--ink);font-family:var(--display);font-size:22px;color:var(--ink);cursor:pointer;box-shadow:2px 2px 0 var(--ink);transition:.1s;display:flex;align-items:center;justify-content:center;line-height:0;padding-bottom:4px}
+  .counter-btn:active{transform:translate(2px,2px);box-shadow:none}
+  .counter-btn:disabled{opacity:.35;cursor:not-allowed;background:var(--bg-deep);box-shadow:none}
+  .counter-val{font-family:var(--display);font-size:42px;color:var(--ink);min-width:62px;text-align:center;letter-spacing:-1.5px;line-height:1}
+  .counter-cap{font-family:var(--mono);font-size:10.5px;color:var(--muted);text-align:center;margin-top:6px;text-transform:uppercase;letter-spacing:.4px}
+
+  .zona-list{display:grid;gap:10px}
+  .zona{background:var(--paper);border:2px solid var(--ink);padding:13px 16px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:14px;cursor:pointer;box-shadow:2px 2px 0 var(--ink);transition:.1s}
+  .zona:hover{background:var(--card)}
+  .zona:active{transform:translate(2px,2px);box-shadow:none}
+  .zona.selected{background:var(--granate);color:var(--card);box-shadow:var(--hard-shadow-sm)}
+  .zona.full{opacity:.45;cursor:not-allowed}
+  .zona-name{font-family:var(--display);font-size:15px;text-transform:uppercase;letter-spacing:-.2px;font-weight:400}
+  .zona-desc{font-family:var(--body);font-size:11.5px;color:var(--ink-soft);margin-top:3px;font-weight:500}
+  .zona.selected .zona-desc{color:rgba(251,244,224,.78)}
+  .zona-cap{font-family:var(--mono);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.4px;background:var(--card);border:1.5px solid var(--ink);padding:4px 9px;white-space:nowrap}
+  .zona.selected .zona-cap{background:var(--card);color:var(--ink)}
+
+  /* Datos form */
+  .form-grid{display:grid;gap:14px;max-width:560px}
+  .field label{font-family:var(--mono);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;display:block}
+  .field input{width:100%;background:var(--card);border:2px solid var(--ink);padding:12px 14px;font-family:var(--body);font-size:15px;font-weight:500;color:var(--ink);box-shadow:2px 2px 0 var(--ink);transition:.1s}
+  .field input:focus{outline:none;background:var(--paper);box-shadow:var(--hard-shadow-sm);transform:translate(-1px,-1px)}
+  .rgpd{display:flex;align-items:flex-start;gap:10px;background:var(--paper);border:1.5px dashed var(--line);padding:12px 14px;font-family:var(--body);font-size:12px;color:var(--ink-soft);font-weight:500;line-height:1.5}
+  .rgpd input{flex:0 0 auto;margin-top:2px;width:18px;height:18px;accent-color:var(--granate)}
+  .rgpd b{color:var(--ink);font-weight:600}
+
+  /* Footer actions */
+  .step-foot{position:sticky;bottom:14px;background:var(--card);border:2px solid var(--ink);padding:14px 18px;margin-top:28px;box-shadow:var(--hard-shadow);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;z-index:30}
+  .foot-summary{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.4px;display:flex;gap:14px;flex-wrap:wrap}
+  .foot-summary span b{font-family:var(--display);color:var(--granate);font-weight:400;letter-spacing:-.2px;font-size:13px;margin-left:5px}
+  .foot-summary span.empty{opacity:.45}
+  .foot-actions{display:flex;gap:10px}
+  .btn-primary{border:2px solid var(--ink);background:var(--granate);color:var(--mustard);padding:12px 22px;font-family:var(--display);font-size:14px;font-weight:400;cursor:pointer;text-transform:uppercase;letter-spacing:.4px;box-shadow:3px 3px 0 var(--ink);transition:.1s}
+  .btn-primary:active{transform:translate(3px,3px);box-shadow:none}
+  .btn-primary:disabled{background:var(--muted);color:var(--paper);cursor:not-allowed;box-shadow:none}
+  .btn-ghost{border:2px solid var(--ink);background:var(--card);color:var(--ink);padding:12px 18px;font-family:var(--display);font-size:14px;font-weight:400;cursor:pointer;text-transform:uppercase;letter-spacing:.4px}
+  .btn-ghost:active{background:var(--paper)}
+
+  /* ===== CONFIRMATION ===== */
+  .confirmation{display:none;animation:slamIn .45s cubic-bezier(.4,.7,.3,1.4)}
+  .confirmation.active{display:block}
+  @keyframes slamIn{0%{opacity:0;transform:scale(.85) rotate(-2deg)}60%{transform:scale(1.02) rotate(.5deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+
+  .confirm-hero{background:linear-gradient(135deg,var(--granate),var(--granate-dark));color:var(--card);border:none;border-radius:18px;padding:36px 32px;box-shadow:var(--hard-shadow-lg);margin-bottom:22px;text-align:center;position:relative;overflow:hidden}
+  .confirm-hero::before{content:"";position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:var(--mustard);border:2px solid var(--ink);transform:rotate(20deg);opacity:.3}
+  .confirm-mark{display:inline-flex;align-items:center;justify-content:center;width:78px;height:78px;background:var(--mustard);border:2.5px solid var(--ink);color:var(--ink);font-family:var(--display);font-size:46px;line-height:1;margin-bottom:14px;box-shadow:var(--hard-shadow);transform:rotate(-4deg);position:relative}
+  .confirm-eye{font-family:var(--mono);font-size:12px;color:rgba(251,244,224,.7);text-transform:uppercase;letter-spacing:1.8px;margin-bottom:8px;display:block;font-weight:500}
+  .confirm-hero h3{font-family:var(--display);font-size:clamp(32px,5vw,42px);font-weight:400;color:var(--card);text-transform:uppercase;letter-spacing:-1px;line-height:1;margin-bottom:14px}
+  .confirm-hero p{font-family:var(--body);font-size:14px;color:rgba(251,244,224,.85);line-height:1.55;max-width:520px;margin:0 auto;font-weight:500}
+
+  .confirm-card{background:var(--card);border:2px solid var(--ink);padding:22px 24px;box-shadow:var(--hard-shadow);margin-bottom:18px}
+  .confirm-card-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:14px;border-bottom:2px solid var(--ink);margin-bottom:18px}
+  .confirm-card-title{font-family:var(--display);font-size:18px;color:var(--ink);text-transform:uppercase;letter-spacing:-.3px;font-weight:400}
+  .confirm-card-id{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase}
+  .confirm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+  .confirm-cell{padding:10px 12px;background:var(--paper);border:1.5px solid var(--ink)}
+  .confirm-cell-k{font-family:var(--mono);font-size:10px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+  .confirm-cell-v{font-family:var(--display);font-size:18px;color:var(--ink);font-weight:400;letter-spacing:-.3px;line-height:1.1}
+  .confirm-cell-v small{font-family:var(--mono);font-size:12px;color:var(--muted);font-weight:500;letter-spacing:.2px;margin-left:4px}
+
+  /* Demo simulator */
+  .demo-box{background:var(--bg-deep);border:2px dashed var(--ink);padding:20px 22px;margin-top:18px}
+  .demo-head{display:flex;align-items:baseline;gap:10px;margin-bottom:10px}
+  .demo-eye{font-family:var(--mono);font-size:10px;color:var(--granate);text-transform:uppercase;letter-spacing:1.4px;font-weight:500;background:var(--mustard);padding:3px 8px;border:1.5px solid var(--ink)}
+  .demo-title{font-family:var(--display);font-size:15px;color:var(--ink);text-transform:uppercase;letter-spacing:-.2px;font-weight:400}
+  .demo-desc{font-family:var(--body);font-size:12.5px;color:var(--ink-soft);line-height:1.55;margin-bottom:14px;font-weight:500}
+  .demo-actions{display:flex;gap:10px;flex-wrap:wrap}
+  .btn-demo{border:2px solid var(--ink);background:var(--teal);color:var(--card);padding:11px 18px;font-family:var(--display);font-size:12.5px;font-weight:400;cursor:pointer;text-transform:uppercase;letter-spacing:.4px;box-shadow:2px 2px 0 var(--ink);transition:.1s;display:inline-flex;align-items:center;gap:8px}
+  .btn-demo:active{transform:translate(2px,2px);box-shadow:none}
+  .btn-demo svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.2}
+  .btn-demo.copper{background:var(--copper)}
+
+  /* ===== WHATSAPP MODAL ===== */
+  .wa-overlay{position:fixed;inset:0;background:rgba(26,20,16,.65);display:none;align-items:center;justify-content:center;z-index:100;padding:20px;animation:fadeIn .2s}
+  .wa-overlay.show{display:flex}
+  .wa-phone{width:360px;max-width:100%;background:#0e1c1a;border:3px solid var(--ink);box-shadow:var(--hard-shadow-lg);position:relative;overflow:hidden;animation:slamIn .35s cubic-bezier(.4,.7,.3,1.4)}
+  .wa-status{background:#0a1413;color:#9aada8;padding:8px 18px;font-family:var(--mono);font-size:11px;display:flex;justify-content:space-between;letter-spacing:.4px}
+  .wa-bar{background:#075e54;color:#fff;padding:12px 18px;display:flex;align-items:center;gap:12px}
+  .wa-bar svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+  .wa-avatar{width:34px;height:34px;background:var(--mustard);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:14px;color:var(--ink);letter-spacing:-.5px}
+  .wa-name{font-family:var(--body);font-size:14px;font-weight:600;letter-spacing:-.1px}
+  .wa-sub{font-family:var(--body);font-size:11px;color:#bdf4dc;font-weight:500;margin-top:1px}
+  .wa-chat{background:#0e1c1a;padding:20px 16px 18px;min-height:280px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .1 0 0 0 0 .12 0 0 0 0 .11 0 0 0 .12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .wa-time-divider{text-align:center;margin:0 0 18px}
+  .wa-time-divider span{background:#1f3735;color:#bdf4dc;font-family:var(--mono);font-size:9.5px;padding:3px 10px;letter-spacing:.4px;border-radius:8px}
+  .wa-msg{background:#1f3735;color:#fff;padding:12px 14px 18px;border-radius:8px;border-bottom-left-radius:2px;max-width:88%;font-family:var(--body);font-size:13.5px;line-height:1.5;font-weight:500;position:relative;margin-bottom:14px}
+  .wa-msg b{font-weight:700;color:#fff}
+  .wa-msg-time{position:absolute;bottom:4px;right:8px;font-family:var(--mono);font-size:9px;color:#94b8b3;letter-spacing:.3px}
+  .wa-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+  .wa-btn{background:#1f3735;border:1px solid #2a4d4a;padding:11px 8px;font-family:var(--body);font-size:13px;font-weight:600;color:#bdf4dc;cursor:pointer;text-align:center;border-radius:6px;letter-spacing:.2px;transition:.12s}
+  .wa-btn:active{background:#283f3c}
+  .wa-btn.primary{color:#00d4a8;font-weight:700}
+  .wa-btn.danger{color:#ff8a8a}
+  .wa-close{position:absolute;top:8px;right:12px;background:transparent;border:none;color:#94b8b3;font-size:24px;cursor:pointer;z-index:5;line-height:1;padding:0;font-family:var(--mono)}
+
+  /* ===== TOAST ===== */
+  .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--mustard);padding:14px 24px;font-family:var(--display);font-weight:400;font-size:13px;border:2px solid var(--ink);box-shadow:5px 5px 0 rgba(0,0,0,.4);z-index:120;opacity:0;pointer-events:none;transition:.3s;text-transform:uppercase;letter-spacing:.5px}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* ===== MOBILE ===== */
+  @media(max-width:680px){
+    .head-top{padding:14px;flex-wrap:wrap}
+    .brand-text h1{font-size:18px}
+    .brand-text span{font-size:9.5px}
+    .nav-link span{display:none}
+    .nav-link{padding:8px 10px}
+    main{padding:22px 14px 30px}
+    .hero{grid-template-columns:1fr;gap:14px}
+    .hero-stamp{justify-self:flex-start}
+    .stepper{grid-template-columns:repeat(2,1fr)}
+    .step{border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:10px 12px}
+    .step:nth-child(2){border-right:none}
+    .step:nth-child(3),.step:nth-child(4){border-bottom:none}
+    .step:last-child{border-right:none}
+    .step-label{font-size:12px}
+    .step-num{font-size:9px}
+    .day-grid{grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px}
+    .day-card{padding:11px 8px}
+    .day-num{font-size:26px}
+    .slot-grid{grid-template-columns:repeat(auto-fill,minmax(70px,1fr));gap:8px}
+    .slot{font-size:13px;padding:9px 4px}
+    .step-foot{position:static;flex-direction:column;align-items:stretch}
+    .foot-actions{justify-content:space-between}
+    .step-title h3{font-size:20px}
+    .confirm-hero{padding:28px 22px}
+    .confirm-hero h3{font-size:26px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-top">
+    <div class="brand">
+      <img class="brand-mark" src="img/logo.png" alt="Romanssera" onerror="this.style.display='none'">
+      <div class="brand-text"><h1>Reserves</h1><span>Romanssera Tapasseria · Reserva la teua taula</span></div>
+    </div>
+    <div class="head-right">
+      <a class="nav-link" href="index.html"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Carta</span></a>
+      <a class="nav-link" href="admin.html"><svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg><span>Admin</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero" id="heroWrap">
+    <div>
+      <span class="hero-eye">verticeqr · reserva online</span>
+      <h2>Mesa reservada<br>en un par de toques</h2>
+      <p>Elige día, hora y zona. Sin pagar nada, sin tarjeta, sin descargas. Recibirás un WhatsApp 24h antes para confirmar — si por lo que sea no puedes, lo cancelas con un botón.</p>
+    </div>
+    <div class="hero-stamp">
+      <b>0 €</b>
+      depósito
+    </div>
+  </div>
+
+  <!-- ===== STEPPER ===== -->
+  <div class="stepper" id="stepper">
+    <div class="step active" data-step="dia">
+      <span class="step-num">01</span>
+      <span class="step-label">Día</span>
+    </div>
+    <div class="step" data-step="hora">
+      <span class="step-num">02</span>
+      <span class="step-label">Hora</span>
+    </div>
+    <div class="step" data-step="mesa">
+      <span class="step-num">03</span>
+      <span class="step-label">Personas + zona</span>
+    </div>
+    <div class="step" data-step="datos">
+      <span class="step-num">04</span>
+      <span class="step-label">Tus datos</span>
+    </div>
+  </div>
+
+  <!-- ===== STEP 1 · DIA ===== -->
+  <div class="step-content active" id="content-dia">
+    <div class="step-title">
+      <h3>¿Qué día vienes?</h3>
+      <span class="step-help">Próximos <b>14 días</b> · cerramos los lunes</span>
+    </div>
+    <div class="day-grid" id="dayGrid"></div>
+    <div class="step-foot">
+      <div class="foot-summary">
+        <span class="empty" id="sumDia">Día: —</span>
+      </div>
+      <div class="foot-actions">
+        <button class="btn-primary" id="goHora" disabled>Continuar →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STEP 2 · HORA ===== -->
+  <div class="step-content" id="content-hora">
+    <div class="step-title">
+      <h3>¿A qué hora?</h3>
+      <span class="step-help" id="horaHelp">—</span>
+    </div>
+    <div id="slotWrap"></div>
+    <div class="step-foot">
+      <div class="foot-summary">
+        <span id="sumDia2">Día: —</span>
+        <span class="empty" id="sumHora">Hora: —</span>
+      </div>
+      <div class="foot-actions">
+        <button class="btn-ghost" onclick="goToStep('dia')">← Volver</button>
+        <button class="btn-primary" id="goMesa" disabled>Continuar →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STEP 3 · MESA ===== -->
+  <div class="step-content" id="content-mesa">
+    <div class="step-title">
+      <h3>Personas y zona</h3>
+      <span class="step-help">Capacidad real, sin overbooking</span>
+    </div>
+    <div class="pz-grid">
+      <div class="pz-block">
+        <span class="pz-label">¿Cuántos sois?</span>
+        <div class="counter">
+          <button class="counter-btn" id="counterMinus">−</button>
+          <div>
+            <div class="counter-val" id="counterVal">2</div>
+            <div class="counter-cap">personas</div>
+          </div>
+          <button class="counter-btn" id="counterPlus">+</button>
+        </div>
+        <div class="counter-cap" style="margin-top:14px;text-align:center">Máximo <b style="color:var(--granate)">12 personas</b> por reserva online — si sois más, llama al local</div>
+      </div>
+      <div class="pz-block">
+        <span class="pz-label">Zona del local</span>
+        <div class="zona-list" id="zonaList"></div>
+      </div>
+    </div>
+    <div class="step-foot">
+      <div class="foot-summary">
+        <span id="sumDia3">Día: —</span>
+        <span id="sumHora3">Hora: —</span>
+        <span class="empty" id="sumMesa">Personas: —</span>
+        <span class="empty" id="sumZona">Zona: —</span>
+      </div>
+      <div class="foot-actions">
+        <button class="btn-ghost" onclick="goToStep('hora')">← Volver</button>
+        <button class="btn-primary" id="goDatos" disabled>Continuar →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STEP 4 · DATOS ===== -->
+  <div class="step-content" id="content-datos">
+    <div class="step-title">
+      <h3>Tus datos</h3>
+      <span class="step-help">Para mandarte la confirmación</span>
+    </div>
+    <div class="form-grid">
+      <div class="field">
+        <label for="fNombre">Nombre completo</label>
+        <input type="text" id="fNombre" placeholder="María García" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="fWhatsapp">WhatsApp</label>
+        <input type="tel" id="fWhatsapp" placeholder="+34 666 12 34 56" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="fEmail">Email</label>
+        <input type="email" id="fEmail" placeholder="maria@example.com" autocomplete="email">
+      </div>
+      <label class="rgpd">
+        <input type="checkbox" id="fRgpd">
+        <span>Acepto recibir <b>WhatsApp / email</b> con la confirmación de la reserva y un recordatorio 24h antes. Mis datos solo se usan para esta gestión. <b>Cero spam.</b></span>
+      </label>
+    </div>
+    <div class="step-foot">
+      <div class="foot-summary">
+        <span id="sumDia4">Día: —</span>
+        <span id="sumHora4">Hora: —</span>
+        <span id="sumMesa4">Personas: —</span>
+        <span id="sumZona4">Zona: —</span>
+      </div>
+      <div class="foot-actions">
+        <button class="btn-ghost" onclick="goToStep('mesa')">← Volver</button>
+        <button class="btn-primary" id="btnReservar" disabled>Confirmar reserva</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CONFIRMATION ===== -->
+  <div class="confirmation" id="confirmation">
+    <div class="confirm-hero">
+      <div class="confirm-mark">✓</div>
+      <span class="confirm-eye">reserva guardada</span>
+      <h3 id="confName">¡Te esperamos!</h3>
+      <p>Te hemos mandado la confirmación al WhatsApp y al email. <b>24 horas antes</b> de tu reserva recibirás otro mensaje para confirmar que vienes — si no respondes, liberamos la mesa.</p>
+    </div>
+
+    <div class="confirm-card">
+      <div class="confirm-card-head">
+        <span class="confirm-card-title">Detalles de tu reserva</span>
+        <span class="confirm-card-id" id="confId">—</span>
+      </div>
+      <div class="confirm-grid">
+        <div class="confirm-cell"><div class="confirm-cell-k">Día</div><div class="confirm-cell-v" id="confDia">—</div></div>
+        <div class="confirm-cell"><div class="confirm-cell-k">Hora</div><div class="confirm-cell-v" id="confHora">—</div></div>
+        <div class="confirm-cell"><div class="confirm-cell-k">Personas</div><div class="confirm-cell-v" id="confPersonas">—</div></div>
+        <div class="confirm-cell"><div class="confirm-cell-k">Zona</div><div class="confirm-cell-v" id="confZona">—</div></div>
+      </div>
+    </div>
+
+    <div class="demo-box">
+      <div class="demo-head">
+        <span class="demo-eye">demo</span>
+        <span class="demo-title">Simulador de la automatización</span>
+      </div>
+      <p class="demo-desc">En producción, el WhatsApp de confirmación a 24h llega solo. Aquí lo puedes <b>disparar a mano</b> para ver cómo le aparece al cliente y qué pasa según responda o no.</p>
+      <div class="demo-actions">
+        <button class="btn-demo" id="btnSimWhatsapp">
+          <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Simular WhatsApp 24h antes
+        </button>
+        <button class="btn-demo copper" onclick="window.location.href='admin.html#reservas'">
+          <svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg>
+          Ver en panel admin
+        </button>
+      </div>
+    </div>
+
+    <div style="margin-top:22px;text-align:center">
+      <button class="btn-ghost" onclick="resetFlow()">Hacer otra reserva</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== WHATSAPP SIMULATOR MODAL ===== -->
+<div class="wa-overlay" id="waOverlay">
+  <div class="wa-phone">
+    <button class="wa-close" onclick="closeWa()">×</button>
+    <div class="wa-status">
+      <span>20:47</span>
+      <span>📶 WiFi · 87%</span>
+    </div>
+    <div class="wa-bar">
+      <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <div class="wa-avatar">R</div>
+      <div>
+        <div class="wa-name">Romanssera Tapasseria</div>
+        <div class="wa-sub">en línea</div>
+      </div>
+    </div>
+    <div class="wa-chat">
+      <div class="wa-time-divider"><span>HOY · 20:47</span></div>
+      <div class="wa-msg">
+        Hola <b id="waNombre">María</b> 👋<br><br>
+        Te recordamos tu reserva en <b>Romanssera Tapasseria</b> para mañana:<br><br>
+        🗓 <b id="waFecha">viernes 6 jun · 21:00</b><br>
+        👥 <b id="waPax">4 personas · interior</b><br><br>
+        ¿Confirmas que vienes? Si no respondes en 6h, liberamos la mesa para otro cliente.
+        <div class="wa-msg-time">20:47</div>
+      </div>
+      <div class="wa-actions">
+        <button class="wa-btn primary" onclick="respondWa('confirmar')">✓ CONFIRMAR</button>
+        <button class="wa-btn danger" onclick="respondWa('cancelar')">✕ CANCELAR</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ==================== DATA ==================== */
+const RESERVAS_KEY = 'romanssera_reservas_v1';
+const ZONAS = {
+  interior: { name: 'Interior', desc: 'Salón principal, ambiente acogedor', cap: 12 },
+  terraza: { name: 'Terraza', desc: 'Aire libre con vistas a la calle', cap: 8 },
+  reservado: { name: 'Reservado VIP', desc: 'Sala privada para grupos · solo 2 espacios', cap: 2 }
+};
+const TURNOS = {
+  comida: { name: 'Comidas', slots: ['13:00','13:30','14:00','14:30','15:00','15:30'] },
+  cena: { name: 'Cenas', slots: ['20:00','20:30','21:00','21:30','22:00','22:30'] }
+};
+const DOW_NAMES = ['dom','lun','mar','mié','jue','vie','sáb'];
+const MONTH_NAMES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+
+/* state */
+let state = {
+  step: 'dia',
+  fecha: null,
+  hora: null,
+  personas: 2,
+  zona: null,
+  nombre: '',
+  whatsapp: '',
+  email: '',
+  rgpd: false,
+  lastReservaId: null
+};
+
+function loadReservas(){
+  try { return JSON.parse(localStorage.getItem(RESERVAS_KEY) || '[]'); }
+  catch(e){ return []; }
+}
+function saveReservas(arr){
+  localStorage.setItem(RESERVAS_KEY, JSON.stringify(arr));
+}
+
+/* ==================== STEPPER ==================== */
+function goToStep(step){
+  state.step = step;
+  document.querySelectorAll('.step-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('content-'+step).classList.add('active');
+  document.querySelectorAll('.step').forEach(s => {
+    s.classList.remove('active');
+    if (s.dataset.step === step) s.classList.add('active');
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+document.querySelectorAll('.step').forEach(s => {
+  s.addEventListener('click', () => {
+    if (s.classList.contains('done')) goToStep(s.dataset.step);
+  });
+});
+
+function markStepDone(step){
+  document.querySelectorAll('.step').forEach(s => {
+    if (s.dataset.step === step) s.classList.add('done');
+  });
+}
+
+/* ==================== STEP 1 · DÍA ==================== */
+function renderDays(){
+  const grid = document.getElementById('dayGrid');
+  grid.innerHTML = '';
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  for (let i=0; i<14; i++){
+    const d = new Date(today);
+    d.setDate(today.getDate() + i);
+    const dow = d.getDay();
+    const isClosed = dow === 1; // lunes cerrado
+    const iso = d.toISOString().slice(0,10);
+    const card = document.createElement('div');
+    card.className = 'day-card' + (isClosed ? ' closed' : '');
+    card.dataset.fecha = iso;
+    card.innerHTML = `
+      <div class="day-dow">${i===0 ? 'HOY' : DOW_NAMES[dow]}</div>
+      <div class="day-num">${d.getDate()}</div>
+      <div class="day-mon">${MONTH_NAMES[d.getMonth()]}</div>
+    `;
+    if (!isClosed){
+      card.addEventListener('click', () => selectDay(iso, card));
+    }
+    grid.appendChild(card);
+  }
+}
+
+function selectDay(fecha, card){
+  state.fecha = fecha;
+  document.querySelectorAll('.day-card').forEach(c => c.classList.remove('selected'));
+  card.classList.add('selected');
+  document.getElementById('goHora').disabled = false;
+  const lbl = formatFecha(fecha);
+  document.getElementById('sumDia').innerHTML = `Día: <b>${lbl}</b>`;
+  document.getElementById('sumDia').classList.remove('empty');
+  document.getElementById('sumDia2').innerHTML = `Día: <b>${lbl}</b>`;
+  document.getElementById('sumDia3').innerHTML = `Día: <b>${lbl}</b>`;
+  document.getElementById('sumDia4').innerHTML = `Día: <b>${lbl}</b>`;
+}
+
+function formatFecha(iso){
+  const d = new Date(iso + 'T00:00:00');
+  return `${DOW_NAMES[d.getDay()]} ${d.getDate()} ${MONTH_NAMES[d.getMonth()]}`;
+}
+
+document.getElementById('goHora').addEventListener('click', () => {
+  markStepDone('dia');
+  goToStep('hora');
+  renderSlots();
+});
+
+/* ==================== STEP 2 · HORA ==================== */
+function countAtSlot(fecha, hora){
+  const reservas = loadReservas();
+  return reservas.filter(r => r.fecha === fecha && r.hora === hora && r.estado !== 'cancelada' && r.estado !== 'no_show').length;
+}
+
+function renderSlots(){
+  document.getElementById('horaHelp').innerHTML = `Para el <b>${formatFecha(state.fecha)}</b>`;
+  const wrap = document.getElementById('slotWrap');
+  wrap.innerHTML = '';
+  Object.entries(TURNOS).forEach(([key, turno]) => {
+    const block = document.createElement('div');
+    block.className = 'turn-block';
+    block.innerHTML = `
+      <div class="turn-head">
+        <span class="turn-name">${turno.name}</span>
+        <span class="turn-range">${turno.slots[0]} – ${turno.slots[turno.slots.length-1]}</span>
+      </div>
+      <div class="slot-grid" data-turno="${key}"></div>
+    `;
+    wrap.appendChild(block);
+    const grid = block.querySelector('.slot-grid');
+    turno.slots.forEach(s => {
+      const count = countAtSlot(state.fecha, s);
+      const isFull = count >= 14; // total capacity across zones
+      const el = document.createElement('div');
+      el.className = 'slot' + (isFull ? ' full' : '');
+      el.textContent = s;
+      if (!isFull){
+        el.addEventListener('click', () => selectSlot(s, el));
+      }
+      grid.appendChild(el);
+    });
+  });
+}
+
+function selectSlot(hora, el){
+  state.hora = hora;
+  document.querySelectorAll('.slot').forEach(s => s.classList.remove('selected'));
+  el.classList.add('selected');
+  document.getElementById('goMesa').disabled = false;
+  document.getElementById('sumHora').innerHTML = `Hora: <b>${hora}</b>`;
+  document.getElementById('sumHora').classList.remove('empty');
+  document.getElementById('sumHora3').innerHTML = `Hora: <b>${hora}</b>`;
+  document.getElementById('sumHora4').innerHTML = `Hora: <b>${hora}</b>`;
+}
+
+document.getElementById('goMesa').addEventListener('click', () => {
+  markStepDone('hora');
+  goToStep('mesa');
+  renderZonas();
+  syncPersonas();
+});
+
+/* ==================== STEP 3 · MESA ==================== */
+function syncPersonas(){
+  document.getElementById('counterVal').textContent = state.personas;
+  document.getElementById('counterMinus').disabled = state.personas <= 1;
+  document.getElementById('counterPlus').disabled = state.personas >= 12;
+  document.getElementById('sumMesa').innerHTML = `Personas: <b>${state.personas}</b>`;
+  document.getElementById('sumMesa').classList.remove('empty');
+  document.getElementById('sumMesa4').innerHTML = `Personas: <b>${state.personas}</b>`;
+  validateMesa();
+}
+
+document.getElementById('counterMinus').addEventListener('click', () => {
+  if (state.personas > 1){ state.personas--; syncPersonas(); }
+});
+document.getElementById('counterPlus').addEventListener('click', () => {
+  if (state.personas < 12){ state.personas++; syncPersonas(); }
+});
+
+function zonaOcupacion(zona){
+  const reservas = loadReservas();
+  return reservas.filter(r =>
+    r.fecha === state.fecha &&
+    r.hora === state.hora &&
+    r.zona === zona &&
+    r.estado !== 'cancelada' &&
+    r.estado !== 'no_show'
+  ).length;
+}
+
+function renderZonas(){
+  const list = document.getElementById('zonaList');
+  list.innerHTML = '';
+  Object.entries(ZONAS).forEach(([key, z]) => {
+    const ocup = zonaOcupacion(key);
+    const libre = z.cap - ocup;
+    const isFull = libre <= 0;
+    const el = document.createElement('div');
+    el.className = 'zona' + (isFull ? ' full' : '') + (state.zona === key ? ' selected' : '');
+    el.innerHTML = `
+      <div>
+        <div class="zona-name">${z.name}</div>
+        <div class="zona-desc">${z.desc}</div>
+      </div>
+      <div class="zona-cap">${isFull ? 'COMPLETO' : libre + ' libres'}</div>
+    `;
+    if (!isFull){
+      el.addEventListener('click', () => selectZona(key));
+    }
+    list.appendChild(el);
+  });
+}
+
+function selectZona(key){
+  state.zona = key;
+  renderZonas();
+  document.getElementById('sumZona').innerHTML = `Zona: <b>${ZONAS[key].name}</b>`;
+  document.getElementById('sumZona').classList.remove('empty');
+  document.getElementById('sumZona4').innerHTML = `Zona: <b>${ZONAS[key].name}</b>`;
+  validateMesa();
+}
+
+function validateMesa(){
+  document.getElementById('goDatos').disabled = !state.zona;
+}
+
+document.getElementById('goDatos').addEventListener('click', () => {
+  markStepDone('mesa');
+  goToStep('datos');
+});
+
+/* ==================== STEP 4 · DATOS ==================== */
+function validateDatos(){
+  const nombre = document.getElementById('fNombre').value.trim();
+  const wa = document.getElementById('fWhatsapp').value.trim();
+  const email = document.getElementById('fEmail').value.trim();
+  const rgpd = document.getElementById('fRgpd').checked;
+  const ok = nombre.length >= 3 && wa.length >= 9 && /^[^@]+@[^@]+\.[^@]+$/.test(email) && rgpd;
+  document.getElementById('btnReservar').disabled = !ok;
+  state.nombre = nombre;
+  state.whatsapp = wa;
+  state.email = email;
+  state.rgpd = rgpd;
+}
+
+['fNombre','fWhatsapp','fEmail','fRgpd'].forEach(id => {
+  document.getElementById(id).addEventListener('input', validateDatos);
+  document.getElementById(id).addEventListener('change', validateDatos);
+});
+
+document.getElementById('btnReservar').addEventListener('click', submitReserva);
+
+function submitReserva(){
+  const id = 'r_' + Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+  const reserva = {
+    id,
+    nombre: state.nombre,
+    whatsapp: state.whatsapp,
+    email: state.email,
+    fecha: state.fecha,
+    hora: state.hora,
+    personas: state.personas,
+    zona: state.zona,
+    estado: 'pendiente',
+    createdAt: Date.now(),
+    confirmedAt: null,
+    notifiedAt: null,
+    llegoAt: null,
+    noShowAt: null
+  };
+  const all = loadReservas();
+  all.push(reserva);
+  saveReservas(all);
+  state.lastReservaId = id;
+  showConfirmation(reserva);
+  markStepDone('datos');
+  toast('Reserva confirmada');
+}
+
+/* ==================== CONFIRMATION ==================== */
+function showConfirmation(r){
+  document.getElementById('heroWrap').style.display = 'none';
+  document.getElementById('stepper').style.display = 'none';
+  document.querySelectorAll('.step-content').forEach(c => c.classList.remove('active'));
+  const conf = document.getElementById('confirmation');
+  conf.classList.add('active');
+
+  document.getElementById('confName').textContent = `¡Te esperamos, ${r.nombre.split(' ')[0]}!`;
+  document.getElementById('confId').textContent = '#' + r.id.slice(-6).toUpperCase();
+  document.getElementById('confDia').textContent = formatFecha(r.fecha);
+  document.getElementById('confHora').textContent = r.hora;
+  document.getElementById('confPersonas').innerHTML = `${r.personas}<small>${r.personas === 1 ? 'persona' : 'personas'}</small>`;
+  document.getElementById('confZona').textContent = ZONAS[r.zona].name;
+}
+
+function resetFlow(){
+  state = { step: 'dia', fecha:null, hora:null, personas:2, zona:null, nombre:'', whatsapp:'', email:'', rgpd:false, lastReservaId: null };
+  document.getElementById('heroWrap').style.display = '';
+  document.getElementById('stepper').style.display = '';
+  document.getElementById('confirmation').classList.remove('active');
+  document.querySelectorAll('.step').forEach(s => s.classList.remove('done'));
+  document.getElementById('fNombre').value = '';
+  document.getElementById('fWhatsapp').value = '';
+  document.getElementById('fEmail').value = '';
+  document.getElementById('fRgpd').checked = false;
+  document.getElementById('counterVal').textContent = '2';
+  renderDays();
+  goToStep('dia');
+  document.getElementById('goHora').disabled = true;
+  document.getElementById('goMesa').disabled = true;
+  document.getElementById('goDatos').disabled = true;
+  document.getElementById('btnReservar').disabled = true;
+  document.getElementById('sumDia').innerHTML = 'Día: —';
+  document.getElementById('sumDia').classList.add('empty');
+  ['sumHora','sumMesa','sumZona'].forEach(id => {
+    document.getElementById(id).classList.add('empty');
+  });
+}
+
+/* ==================== WHATSAPP SIMULATOR ==================== */
+document.getElementById('btnSimWhatsapp').addEventListener('click', () => {
+  const reservas = loadReservas();
+  const r = reservas.find(x => x.id === state.lastReservaId);
+  if (!r) return;
+  document.getElementById('waNombre').textContent = r.nombre.split(' ')[0];
+  document.getElementById('waFecha').textContent = formatFecha(r.fecha) + ' · ' + r.hora;
+  document.getElementById('waPax').textContent = r.personas + ' personas · ' + ZONAS[r.zona].name.toLowerCase();
+  document.getElementById('waOverlay').classList.add('show');
+
+  // mark notified
+  r.notifiedAt = Date.now();
+  saveReservas(reservas);
+});
+
+function closeWa(){
+  document.getElementById('waOverlay').classList.remove('show');
+}
+
+function respondWa(response){
+  const reservas = loadReservas();
+  const r = reservas.find(x => x.id === state.lastReservaId);
+  if (!r) return;
+
+  if (response === 'confirmar'){
+    r.estado = 'confirmada';
+    r.confirmedAt = Date.now();
+    toast('Reserva confirmada');
+  } else {
+    r.estado = 'cancelada';
+    toast('Reserva cancelada · mesa liberada');
+  }
+  saveReservas(reservas);
+  closeWa();
+}
+
+/* ==================== TOAST ==================== */
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._t);
+  t._t = setTimeout(() => t.classList.remove('show'), 2400);
+}
+
+/* ==================== INIT ==================== */
+renderDays();
+syncPersonas();
+</script>
+
+</body>
+</html>
