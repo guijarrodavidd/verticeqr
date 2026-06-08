@@ -4,13 +4,15 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import styles from "../landing.module.css";
 
 // Envoltura que aplica un fade-up cuando el contenido entra en el viewport.
-// Una sola vez (no se "desactiva" al salir).
+// Acepta className extra (útil para que el wrapper sea el item de un grid).
 export default function Reveal({
   children,
   delay = 0,
+  className: extraClass = "",
 }: {
   children: ReactNode;
   delay?: number;
+  className?: string;
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -38,11 +40,13 @@ export default function Reveal({
     return () => obs.disconnect();
   }, []);
 
-  const className = `${styles.reveal} ${visible ? styles.revealVisible : ""}`.trim();
+  const cls = `${styles.reveal} ${visible ? styles.revealVisible : ""} ${extraClass}`
+    .replace(/\s+/g, " ")
+    .trim();
   const style = delay ? { transitionDelay: `${delay}ms` } : undefined;
 
   return (
-    <div ref={ref} className={className} style={style}>
+    <div ref={ref} className={cls} style={style}>
       {children}
     </div>
   );

@@ -420,15 +420,20 @@ html { scroll-behavior: smooth; }
   line-height: 1.55;
 }
 
-/* ---------- FEATURES grid ---------- */
+/* ---------- FEATURES — bento asimétrico ---------- */
 .features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
 }
 @media (max-width: 860px) {
   .features { grid-template-columns: 1fr; }
+  .featureBig, .featureSmall, .featureWide { grid-column: 1 / -1 !important; }
 }
+.featureBig   { grid-column: span 7; }
+.featureSmall { grid-column: span 5; }
+.featureWide  { grid-column: span 12; }
+
 .featureCard {
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
   border: 1px solid rgba(255, 255, 255, 0.07);
@@ -437,6 +442,9 @@ html { scroll-behavior: smooth; }
   position: relative;
   overflow: hidden;
   transition: transform 200ms ease, border-color 200ms ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
 }
 .featureCard::before {
   content: "";
@@ -446,12 +454,16 @@ html { scroll-behavior: smooth; }
   width: 60%;
   height: 100%;
   background: radial-gradient(circle, var(--feature-color, #a78bfa) 0%, transparent 70%);
-  opacity: 0.08;
+  opacity: 0.10;
   pointer-events: none;
 }
 .featureCard:hover {
   transform: translateY(-3px);
-  border-color: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+.featureBig::before {
+  opacity: 0.18;
+  width: 70%;
 }
 .featureIcon {
   width: 44px;
@@ -465,6 +477,12 @@ html { scroll-behavior: smooth; }
   font-weight: 800;
   margin-bottom: 1rem;
 }
+.featureBig .featureIcon {
+  width: 56px;
+  height: 56px;
+  font-size: 1.7rem;
+  margin-bottom: 1.25rem;
+}
 .featureTitle {
   font-family: var(--font-display);
   font-size: 1.25rem;
@@ -472,31 +490,150 @@ html { scroll-behavior: smooth; }
   letter-spacing: -0.015em;
   margin: 0 0 0.4rem;
 }
+.featureBig .featureTitle {
+  font-size: 1.7rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.55rem;
+}
 .featureDesc { font-size: 0.95rem; color: #9ca3af; line-height: 1.55; }
+.featureBig .featureDesc { font-size: 1.02rem; line-height: 1.6; }
 
-/* ---------- DEMOS por sector ---------- */
+/* Bloque opcional de stat destacado dentro del feature grande */
+.featureStat {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+}
+.featureStatNum {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  color: var(--feature-color, #a78bfa);
+}
+.featureStatLabel {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  max-width: 200px;
+  line-height: 1.4;
+}
+
+/* ---------- DEMOS por sector con fondo temático + hover animado ---------- */
 .demos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 0.85rem;
 }
 .demoCard {
+  position: relative;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 14px;
   padding: 1.25rem;
+  min-height: 170px;
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  transition: transform 200ms ease, border-color 200ms ease, background 200ms ease;
+  overflow: hidden;
+  transition: transform 240ms ease, border-color 240ms ease, background 240ms ease;
+  isolation: isolate;
 }
 .demoCard:hover {
-  transform: translateY(-2px);
-  border-color: rgba(167, 139, 250, 0.4);
-  background: rgba(167, 139, 250, 0.06);
+  transform: translateY(-3px);
 }
+
+/* Fondo temático grande detrás del contenido */
+.demoBg {
+  position: absolute;
+  font-size: 7rem;
+  right: -8px;
+  bottom: -18px;
+  line-height: 1;
+  opacity: 0.10;
+  filter: grayscale(40%);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 280ms ease, transform 600ms cubic-bezier(0.22, 1, 0.36, 1), filter 280ms ease;
+  transform-origin: 70% 70%;
+}
+.demoCard:hover .demoBg {
+  opacity: 0.55;
+  filter: grayscale(0%);
+}
+
+.demoCard > * { position: relative; z-index: 1; }
+
+/* Animaciones específicas por sector activadas en hover */
+.demoCard[data-sector="discoteca"]:hover .demoBg {
+  animation: vqSpin 4s linear infinite;
+}
+.demoCard[data-sector="discoteca"]:hover {
+  background: radial-gradient(circle at 60% 60%, rgba(236, 72, 153, 0.18), rgba(96, 165, 250, 0.10) 60%, transparent 80%);
+  border-color: rgba(236, 72, 153, 0.45);
+}
+
+.demoCard[data-sector="cocteleria"]:hover .demoBg {
+  animation: vqClink 1.2s ease-in-out infinite;
+}
+.demoCard[data-sector="cocteleria"]:hover {
+  background: rgba(244, 114, 182, 0.08);
+  border-color: rgba(244, 114, 182, 0.4);
+}
+
+.demoCard[data-sector="pub"]:hover .demoBg {
+  animation: vqFoamPulse 1.6s ease-in-out infinite;
+}
+.demoCard[data-sector="pub"]:hover {
+  background: rgba(251, 191, 36, 0.08);
+  border-color: rgba(251, 191, 36, 0.4);
+}
+
+.demoCard[data-sector="bar-restaurante"]:hover .demoBg {
+  animation: vqWiggle 1.6s ease-in-out infinite;
+}
+.demoCard[data-sector="bar-restaurante"]:hover {
+  background: rgba(74, 222, 128, 0.08);
+  border-color: rgba(74, 222, 128, 0.4);
+}
+
+.demoCard[data-sector="cafeteria"]:hover .demoBg {
+  animation: vqSteam 2s ease-in-out infinite;
+}
+.demoCard[data-sector="cafeteria"]:hover {
+  background: rgba(251, 146, 60, 0.08);
+  border-color: rgba(251, 146, 60, 0.4);
+}
+
+.demoCard[data-sector="brewery"]:hover .demoBg {
+  animation: vqClink 1.4s ease-in-out infinite;
+}
+.demoCard[data-sector="brewery"]:hover {
+  background: rgba(250, 204, 21, 0.08);
+  border-color: rgba(250, 204, 21, 0.4);
+}
+
+.demoCard[data-sector="hotel"]:hover .demoBg {
+  animation: vqRing 0.8s ease-in-out infinite;
+}
+.demoCard[data-sector="hotel"]:hover {
+  background: rgba(96, 165, 250, 0.08);
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+.demoCard[data-sector="lounge-club"]:hover .demoBg {
+  animation: vqShine 2.4s ease-in-out infinite;
+}
+.demoCard[data-sector="lounge-club"]:hover {
+  background: rgba(167, 139, 250, 0.10);
+  border-color: rgba(167, 139, 250, 0.45);
+}
+
 .demoIcon {
   width: 36px;
   height: 36px;
@@ -508,15 +645,64 @@ html { scroll-behavior: smooth; }
   font-size: 1.2rem;
 }
 .demoName { font-weight: 700; font-size: 0.98rem; }
-.demoLink { font-size: 0.8rem; color: #a78bfa; font-weight: 600; margin-top: 0.4rem; }
+.demoLink { font-size: 0.8rem; color: #a78bfa; font-weight: 600; margin-top: auto; }
 
-/* ---------- CASOS (DB) ---------- */
-.casos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+/* Keyframes temáticos */
+@keyframes vqSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes vqClink {
+  0%, 100% { transform: rotate(-8deg) translateX(0); }
+  50%      { transform: rotate(8deg) translateX(4px); }
+}
+@keyframes vqFoamPulse {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50%      { transform: scale(1.06) translateY(-4px); }
+}
+@keyframes vqWiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50%      { transform: rotate(3deg); }
+}
+@keyframes vqSteam {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-6px) scale(1.04); }
+}
+@keyframes vqRing {
+  0%, 100% { transform: rotate(0deg); }
+  25%      { transform: rotate(-10deg); }
+  75%      { transform: rotate(10deg); }
+}
+@keyframes vqShine {
+  0%, 100% { transform: scale(1); filter: brightness(1) grayscale(0%); }
+  50%      { transform: scale(1.08); filter: brightness(1.4) grayscale(0%); }
+}
+
+/* ---------- CASOS (DB) — marquee infinito ---------- */
+.casosMarqueeWrap {
+  position: relative;
+  overflow: hidden;
+  /* Fade en los bordes laterales para que no aparezcan "de la nada" */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  padding: 0.5rem 0;
+}
+.casosMarqueeTrack {
+  display: flex;
   gap: 1rem;
+  width: max-content;
+  animation: vqMarquee 38s linear infinite;
+}
+.casosMarqueeWrap:hover .casosMarqueeTrack {
+  animation-play-state: paused;
+}
+@keyframes vqMarquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 .casoCard {
+  flex: 0 0 auto;
+  width: 280px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 14px;
@@ -524,8 +710,8 @@ html { scroll-behavior: smooth; }
   transition: transform 200ms ease, border-color 200ms ease;
 }
 .casoCard:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.14);
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 .casoDestacado {
   background: linear-gradient(160deg, rgba(167, 139, 250, 0.08), rgba(255, 255, 255, 0.02));

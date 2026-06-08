@@ -88,41 +88,61 @@ async function enviarLead(formData: FormData) {
   redirect("/?ok=1#contacto");
 }
 
+// bg = emoji temático que va de fondo en la tarjeta, animado en hover
 const DEMOS_PREVIEW = [
-  { slug: "lounge-club", nombre: "Lounge Club", icono: "✦", color: "#a78bfa" },
-  { slug: "cocteleria", nombre: "Coctelería", icono: "◆", color: "#f472b6" },
-  { slug: "pub", nombre: "Pub", icono: "◐", color: "#fbbf24" },
-  { slug: "bar-restaurante", nombre: "Bar / Restaurante", icono: "▢", color: "#4ade80" },
-  { slug: "cafeteria", nombre: "Cafetería", icono: "◯", color: "#fb923c" },
-  { slug: "discoteca", nombre: "Discoteca", icono: "✧", color: "#ec4899" },
-  { slug: "brewery", nombre: "Brewery", icono: "▤", color: "#facc15" },
-  { slug: "hotel", nombre: "Hotel", icono: "▥", color: "#60a5fa" },
+  { slug: "lounge-club", nombre: "Lounge Club", icono: "✦", color: "#a78bfa", bg: "🥂" },
+  { slug: "cocteleria", nombre: "Coctelería", icono: "◆", color: "#f472b6", bg: "🍸" },
+  { slug: "pub", nombre: "Pub", icono: "◐", color: "#fbbf24", bg: "🍺" },
+  { slug: "bar-restaurante", nombre: "Bar / Restaurante", icono: "▢", color: "#4ade80", bg: "🍽️" },
+  { slug: "cafeteria", nombre: "Cafetería", icono: "◯", color: "#fb923c", bg: "☕" },
+  { slug: "discoteca", nombre: "Discoteca", icono: "✧", color: "#ec4899", bg: "🪩" },
+  { slug: "brewery", nombre: "Brewery", icono: "▤", color: "#facc15", bg: "🍻" },
+  { slug: "hotel", nombre: "Hotel", icono: "▥", color: "#60a5fa", bg: "🛎️" },
 ];
 
-const FEATURES = [
+// Bento: cada feature lleva su "size" — big (col-7) o small (col-5).
+// Filas: row1 = big + small, row2 = small + big. Asimétrico.
+type FeatureSize = "big" | "small";
+const FEATURES: {
+  size: FeatureSize;
+  icono: string;
+  color: string;
+  titulo: string;
+  desc: string;
+  statNum?: string;
+  statLabel?: string;
+}[] = [
   {
-    icono: "⚡",
-    color: "#a78bfa",
-    titulo: "Sin descargas, sin esperas",
-    desc: "El cliente escanea con su cámara y entra a tu carta. Web abierta, ni una sola app que instalar.",
-  },
-  {
+    size: "big",
     icono: "💸",
     color: "#4ade80",
     titulo: "Vende más por mesa",
-    desc: "Upsells automáticos, productos destacados, fotos que abren el apetito. Ticket medio +30% reportado por nuestros clientes.",
+    desc: "Upsells automáticos, productos destacados con foto, sugerencias inteligentes. La gente pide más cuando lo ve.",
+    statNum: "+30%",
+    statLabel: "ticket medio reportado por nuestros locales en los primeros 90 días",
   },
   {
+    size: "small",
     icono: "⏱",
     color: "#fbbf24",
     titulo: "Sirve más rápido",
-    desc: "El pedido sale directo a barra/cocina. Tu equipo deja de tomar nota y empieza a atender de verdad.",
+    desc: "El pedido sale directo a cocina y barra. Tu equipo deja de tomar nota.",
   },
   {
+    size: "small",
+    icono: "⚡",
+    color: "#a78bfa",
+    titulo: "Cero apps",
+    desc: "El cliente escanea con la cámara y abre tu carta. Nada que instalar.",
+  },
+  {
+    size: "big",
     icono: "📊",
     color: "#60a5fa",
-    titulo: "Tu carta, en datos",
-    desc: "Productos más pedidos, horas pico, ticket medio. Saber qué funciona deja de ser intuición.",
+    titulo: "Tu carta convertida en datos",
+    desc: "Qué se pide, cuándo, con qué se combina, qué se queda en el carrito. Decidir el menú deja de ser intuición — pasa a ser información.",
+    statNum: "12 min",
+    statLabel: "que ahorra cada mesa, según el reporte de Sunday sobre la industria",
   },
 ];
 
@@ -335,16 +355,26 @@ export default async function Home({
 
         <div className={styles.features}>
           {FEATURES.map((f, i) => (
-            <Reveal key={f.titulo} delay={i * 80}>
+            <Reveal
+              key={f.titulo}
+              delay={i * 80}
+              className={f.size === "big" ? styles.featureBig : styles.featureSmall}
+            >
               <div
                 className={styles.featureCard}
-                style={{ ["--feature-color" as string]: f.color }}
+                style={{ ["--feature-color" as string]: f.color, height: "100%" }}
               >
                 <div className={styles.featureIcon} style={{ background: f.color }}>
                   {f.icono}
                 </div>
                 <h3 className={styles.featureTitle}>{f.titulo}</h3>
                 <p className={styles.featureDesc}>{f.desc}</p>
+                {f.statNum && (
+                  <div className={styles.featureStat}>
+                    <div className={styles.featureStatNum}>{f.statNum}</div>
+                    <div className={styles.featureStatLabel}>{f.statLabel}</div>
+                  </div>
+                )}
               </div>
             </Reveal>
           ))}
@@ -367,7 +397,14 @@ export default async function Home({
         <div className={styles.demos}>
           {DEMOS_PREVIEW.map((d, i) => (
             <Reveal key={d.slug} delay={i * 40}>
-              <a href={`/demos/${d.slug}`} className={styles.demoCard}>
+              <a
+                href={`/demos/${d.slug}`}
+                className={styles.demoCard}
+                data-sector={d.slug}
+              >
+                <span className={styles.demoBg} aria-hidden>
+                  {d.bg}
+                </span>
                 <div className={styles.demoIcon} style={{ color: d.color }}>
                   {d.icono}
                 </div>
@@ -393,11 +430,15 @@ export default async function Home({
             </p>
           </Reveal>
 
-          <div className={styles.casos}>
-            {casos.map((c, i) => (
-              <Reveal key={c.id} delay={i * 60}>
+          <div className={styles.casosMarqueeWrap}>
+            <div className={styles.casosMarqueeTrack}>
+              {/* Duplicamos la lista — el track se traslada -50% y reinicia
+                  sin saltos: el segundo set ocupa el hueco del primero. */}
+              {[...casos, ...casos].map((c, i) => (
                 <div
+                  key={`${c.id}-${i}`}
                   className={`${styles.casoCard} ${c.destacado === 1 ? styles.casoDestacado : ""}`}
+                  aria-hidden={i >= casos.length}
                 >
                   {c.destacado === 1 && <span className={styles.casoBadge}>DESTACADO</span>}
                   <div className={styles.casoEmpresa}>{c.empresa}</div>
@@ -415,8 +456,8 @@ export default async function Home({
                     </div>
                   </div>
                 </div>
-              </Reveal>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
       )}
