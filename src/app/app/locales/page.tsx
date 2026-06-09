@@ -103,26 +103,28 @@ export default async function LocalesPage({
         y pedidos.
       </p>
 
-      {/* Seed de demo */}
-      <form action={seedDemo} style={{ marginBottom: "1rem" }}>
-        <div className="vqr-loc-seed">
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ fontWeight: 600, marginBottom: "0.2rem" }}>
-              <span style={{ color: "#fbbf24" }}>✨</span> ¿Quieres ver la app llena de datos?
+      {/* Seed de demo — solo cuando no hay ningún local */}
+      {contadores.total === 0 && (
+        <form action={seedDemo} style={{ marginBottom: "1rem" }}>
+          <div className="vqr-loc-seed">
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ fontWeight: 600, marginBottom: "0.2rem" }}>
+                <span style={{ color: "#fbbf24" }}>✨</span> ¿Quieres ver la app llena de datos?
+              </div>
+              <div style={{ fontSize: "0.85rem", color: "#9ca3af" }}>
+                Crea "El Fogón Paisa" con 8 categorías, 20 productos, alérgenos
+                e imágenes — todo de un click.
+              </div>
             </div>
-            <div style={{ fontSize: "0.85rem", color: "#9ca3af" }}>
-              Crea "El Fogón Paisa" con 8 categorías, 20 productos, alérgenos
-              e imágenes — todo de un click.
-            </div>
+            <button type="submit" className="vqr-modal-btn vqr-modal-btn-primary">
+              Crear local demo →
+            </button>
           </div>
-          <button type="submit" className="vqr-modal-btn vqr-modal-btn-primary">
-            Crear local demo →
-          </button>
-        </div>
-      </form>
+        </form>
+      )}
 
       {/* Form crear */}
-      <div className="vqr-todo-card">
+      <div id="nuevo" className="vqr-todo-card" style={{ scrollMarginTop: "1rem" }}>
         <div style={{ fontWeight: 600, marginBottom: "0.75rem" }}>Nuevo local</div>
         <form action={crear} className="vqr-loc-form">
           <div className="vqr-todo-field" style={{ gridColumn: "span 2" }}>
