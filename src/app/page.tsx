@@ -217,8 +217,8 @@ export default async function Home({
               <a href="#contacto" className={styles.ctaPrimary}>
                 Solicita una demo <span>→</span>
               </a>
-              <a href="/demos" className={styles.ctaSecondary}>
-                Ver demos por sector
+              <a href="#producto" className={styles.ctaSecondary}>
+                Ver cómo funciona
               </a>
             </div>
             <div className={styles.heroTrust}>
@@ -408,7 +408,7 @@ export default async function Home({
           {DEMOS_PREVIEW.map((d, i) => (
             <Reveal key={d.slug} delay={i * 40}>
               <a
-                href={`/demos/${d.slug}`}
+                href={`/?origen=demo:${d.slug}#contacto`}
                 className={styles.demoCard}
                 data-sector={d.slug}
               >
@@ -436,7 +436,7 @@ export default async function Home({
                   {d.icono}
                 </div>
                 <div className={styles.demoName}>{d.nombre}</div>
-                <div className={styles.demoLink}>Ver demo →</div>
+                <div className={styles.demoLink}>Pedir demo de mi {d.nombre.toLowerCase()} →</div>
               </a>
             </Reveal>
           ))}
@@ -638,8 +638,8 @@ export default async function Home({
               <div style={{ fontWeight: 700, fontSize: "1.15rem" }}>¡Solicitud recibida!</div>
               <div style={{ color: "#b3b3c2", marginTop: "0.5rem", fontSize: "0.94rem" }}>
                 Nos pondremos en contacto contigo en menos de 24h. Mientras,{" "}
-                <a href="/demos" style={{ color: "#a78bfa", textDecoration: "underline" }}>
-                  echa un ojo a las demos
+                <a href="#producto" style={{ color: "#a78bfa", textDecoration: "underline" }}>
+                  mira cómo funciona
                 </a>
                 .
               </div>
@@ -726,7 +726,7 @@ export default async function Home({
           <div className={styles.footerCol}>
             <h4>Producto</h4>
             <a href="#como-funciona">Cómo funciona</a>
-            <a href="/demos">Demos por sector</a>
+            <a href="#contacto">Pedir demo</a>
             <a href="#planes">Precios</a>
             <a href="/login">Acceder</a>
           </div>
