@@ -934,6 +934,51 @@
   flex-wrap: wrap;
 }
 
+/* ---------- TABS dentro del local (Carta/TPV/Demo/Admin) ---------- */
+.vqr-local-tabs {
+  display: flex;
+  gap: 0.3rem;
+  margin: 1.75rem 0 0.25rem;
+  padding-bottom: 0;
+  border-bottom: 1px solid #1d1d28;
+  overflow-x: auto;
+}
+
+.vqr-local-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.92rem;
+  color: #9ca3af;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 120ms ease, background 120ms ease, border-color 120ms ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.vqr-local-tab:hover {
+  color: #cdcdd9;
+  background: #15151f;
+}
+
+.vqr-local-tab-active {
+  color: #f2f2f5;
+  font-weight: 600;
+  border-bottom-color: #a78bfa;
+  background: #15151f;
+}
+
+.vqr-local-tab-icon {
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.85;
+}
+
 /* ---------- DETALLE DE LOCAL ---------- */
 .vqr-loc-detail-head {
   display: flex;
