@@ -240,15 +240,15 @@ export default async function Home({
             </p>
             <div className={styles.heroCtas}>
               <a href="#contacto" className={styles.ctaPrimary}>
-                Agenda 15 min y te montamos tu demo <span>→</span>
+                Pide tu demo a medida <span>→</span>
               </a>
               <a href="#producto" className={styles.ctaSecondary}>
                 Ver cómo funciona
               </a>
             </div>
             <p className={styles.heroCtaNote}>
-              Videollamada de 15 min · te enseñamos cómo quedaría{" "}
-              <strong>tu local</strong> funcionando, no una plantilla · sin compromiso
+              <strong>Hacemos la tuya en menos de 24 horas</strong>, con tu marca y
+              tu carta. Sin compromiso.
             </p>
             <div className={styles.heroTrust}>
               <span className={styles.heroTrustStars}>★★★★★</span>
