@@ -130,7 +130,7 @@ const FEATURES: {
   {
     size: "small",
     iconKey: "rapido",
-    color: "#d6452f",
+    color: "#9a1f2b",
     titulo: "Sirve más rápido",
     desc: "El pedido sale directo a cocina y barra. Tu equipo deja de tomar nota y de perseguir mesas.",
   },
@@ -177,33 +177,12 @@ const FEATURE_ICONS: Record<string, ReactNode> = {
   ),
 };
 
-// Cómo funciona: 3 pasos con icono + texto corto (mejor en móvil).
-const STEPS: { num: string; iconKey: "scan" | "dish" | "pay"; title: string; desc: string }[] = [
-  { num: "01 · Escanea", iconKey: "scan", title: "Se sienta y ya tiene tu carta", desc: "Sin esperas y sin descargar nada." },
-  { num: "02 · Pide", iconKey: "dish", title: "Pide él, sin malentendidos", desc: "Entra tal cual a cocina. Cero errores de oído." },
-  { num: "03 · Paga", iconKey: "pay", title: "Paga y te deja reseña", desc: "Sin que tu equipo cruce la sala para cobrar." },
+// Cómo funciona: 3 pasos con foto real + texto corto.
+const STEPS: { num: string; img: string; title: string; desc: string }[] = [
+  { num: "01 · Escanea", img: "/steps/escanea.jpg", title: "Se sienta y ya tiene tu carta", desc: "Sin esperas y sin descargar nada." },
+  { num: "02 · Pide", img: "/steps/pide.jpg", title: "Pide él, sin malentendidos", desc: "Entra tal cual a cocina. Cero errores de oído." },
+  { num: "03 · Paga", img: "/steps/paga.jpg", title: "Paga y te deja reseña", desc: "Sin que tu equipo cruce la sala para cobrar." },
 ];
-
-const STEP_ICONS: Record<string, ReactNode> = {
-  scan: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3" />
-      <path d="M3 12h18" />
-    </svg>
-  ),
-  dish: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M7 3v8M4.5 3v4a2.5 2.5 0 0 0 2.5 2.5M9.5 3v4A2.5 2.5 0 0 1 7 9.5M7 11v10" />
-      <path d="M18 3c-1.7 0-3 2.2-3 5s1.3 4.5 3 4.5M18 3v18" />
-    </svg>
-  ),
-  pay: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="5" width="20" height="14" rx="2.5" />
-      <path d="M2 10h20M6 15h4" />
-    </svg>
-  ),
-};
 
 // Diferenciador: tabla comparativa criterio a criterio.
 const COMPARE_ROWS: { crit: string; bad: string; good: string }[] = [
@@ -330,10 +309,13 @@ export default async function Home({
           {STEPS.map((s, i) => (
             <Reveal key={s.num} delay={i * 120}>
               <div className={styles.stepCard}>
-                <div className={styles.stepIcon}>{STEP_ICONS[s.iconKey]}</div>
-                <div className={styles.stepNum}>{s.num}</div>
-                <h3 className={styles.stepTitle}>{s.title}</h3>
-                <p className={styles.stepDesc}>{s.desc}</p>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className={styles.stepImg} src={s.img} alt="" loading="lazy" />
+                <div className={styles.stepBody}>
+                  <div className={styles.stepNum}>{s.num}</div>
+                  <h3 className={styles.stepTitle}>{s.title}</h3>
+                  <p className={styles.stepDesc}>{s.desc}</p>
+                </div>
               </div>
             </Reveal>
           ))}
@@ -473,7 +455,7 @@ export default async function Home({
             <div className={styles.sectionEyebrow}>Clientes</div>
             <h2 className={styles.sectionTitle}>Quienes ya confían en nosotros</h2>
             <p className={styles.sectionSub}>
-              <strong style={{ color: "#b1331d" }}>
+              <strong style={{ color: "#7c1622" }}>
                 {totalEscaneos.toLocaleString("es-ES")}
               </strong>{" "}
               escaneos este mes entre los locales activos.
@@ -625,7 +607,7 @@ export default async function Home({
               <div style={{ fontWeight: 700, fontSize: "1.15rem" }}>¡Solicitud recibida!</div>
               <div style={{ color: "#6d5f4e", marginTop: "0.5rem", fontSize: "0.94rem" }}>
                 Nos pondremos en contacto contigo en menos de 24h. Mientras,{" "}
-                <a href="#producto" style={{ color: "#b1331d", textDecoration: "underline" }}>
+                <a href="#producto" style={{ color: "#7c1622", textDecoration: "underline" }}>
                   mira cómo funciona
                 </a>
                 .
