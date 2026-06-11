@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Inter, Manrope } from "next/font/google";
+import { Manrope, Fraunces } from "next/font/google";
 
-// Inter para texto general (cuerpo) y Manrope para display/headlines.
-const inter = Inter({
+// Manrope para cuerpo (limpio, cálido) y Fraunces para display/headlines
+// (serif editorial con carácter, lejos de las fuentes genéricas).
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-sans",
   display: "swap",
 });
-const manrope = Manrope({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["400", "500", "600", "700", "900"],
+  style: ["normal", "italic"],
   variable: "--font-display",
   display: "swap",
 });
@@ -24,14 +26,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="es" className={`${inter.variable} ${manrope.variable}`}>
+    <html lang="es" className={`${manrope.variable} ${fraunces.variable}`}>
       <body
         style={{
           fontFamily: "var(--font-sans), system-ui, -apple-system, sans-serif",
           margin: 0,
           padding: 0,
-          background: "#0a0a0f",
-          color: "#f2f2f5",
+          background: "#f6efe3",
+          color: "#241d15",
           minHeight: "100vh",
           WebkitFontSmoothing: "antialiased",
           MozOsxFontSmoothing: "grayscale",

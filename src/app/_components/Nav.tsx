@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import styles from "../landing.module.css";
+import Logo from "./Logo";
 
 // Nav que añade fondo opaco con blur al hacer scroll.
 export default function Nav() {
@@ -19,8 +20,8 @@ export default function Nav() {
   return (
     <header className={`${styles.nav} ${scrolled ? styles.navScrolled : ""}`}>
       <div className={styles.navInner}>
-        <a href="/" className={styles.brand}>
-          <span className={styles.brandMark}>▲</span> VerticeQR
+        <a href="/" className={styles.brand} aria-label="Vértice — inicio">
+          <Logo />
         </a>
         <nav className={styles.navLinks}>
           <a href="#como-funciona" className={styles.navLink}>Cómo funciona</a>

@@ -1,19 +1,13 @@
+import type { ReactNode } from "react";
 import { redirect } from "next/navigation";
 import { getPool } from "@/lib/db";
 import { crearLead } from "@/lib/leads";
 import Nav from "./_components/Nav";
 import Reveal from "./_components/Reveal";
 import Counter from "./_components/Counter";
-import {
-  DiscoBallScene,
-  ShishaScene,
-  GlassesScene,
-  BeerMugsScene,
-  HotelBellScene,
-  PubGamesScene,
-  MeatCutScene,
-  EmojiScene,
-} from "./_components/SectorScenes";
+import HeroPhone from "./_components/HeroPhone";
+import ScrollProgress from "./_components/ScrollProgress";
+import Logo from "./_components/Logo";
 import styles from "./landing.module.css";
 
 export const dynamic = "force-dynamic";
@@ -98,62 +92,128 @@ async function enviarLead(formData: FormData) {
   redirect("/?ok=1#contacto");
 }
 
-// bg = emoji temático que va de fondo en la tarjeta, animado en hover
 const DEMOS_PREVIEW = [
-  { slug: "lounge-club", nombre: "Lounge Club", icono: "✦", color: "#a78bfa", bg: "🥂" },
-  { slug: "cocteleria", nombre: "Coctelería", icono: "◆", color: "#f472b6", bg: "🍸" },
-  { slug: "pub", nombre: "Pub", icono: "◐", color: "#fbbf24", bg: "🍺" },
-  { slug: "bar-restaurante", nombre: "Bar / Restaurante", icono: "▢", color: "#4ade80", bg: "🍽️" },
-  { slug: "cafeteria", nombre: "Cafetería", icono: "◯", color: "#fb923c", bg: "☕" },
-  { slug: "discoteca", nombre: "Discoteca", icono: "✧", color: "#ec4899", bg: "🪩" },
-  { slug: "cerveceria", nombre: "Cervecería", icono: "▤", color: "#facc15", bg: "🍻" },
-  { slug: "hotel", nombre: "Hotel", icono: "▥", color: "#60a5fa", bg: "🛎️" },
+  { slug: "romanssera", nombre: "Romanssera", tipo: "Tapassería", color: "#b03326" },
+  { slug: "pizzeria", nombre: "Forno Sessanta", tipo: "Pizzería", color: "#cf6233" },
+  { slug: "hamburgueseria", nombre: "Bonfire Burger", tipo: "Burgers a la brasa", color: "#d4402f" },
+  { slug: "cafeteria", nombre: "Ostra & Sol", tipo: "Cafetería & brunch", color: "#c07a4a" },
+  { slug: "cachimbas", nombre: "Magma", tipo: "Lounge & cachimbas", color: "#c2871f" },
+  { slug: "fogon-paisa", nombre: "El Fogón Paisa", tipo: "Cocina paisa", color: "#b3392f" },
+  { slug: "sereno", nombre: "Sereno", tipo: "Coctelería de autor", color: "#b58620" },
+  { slug: "trellat", nombre: "Trellat", tipo: "Bar de barrio", color: "#7a7a4a" },
 ];
 
-// Bento: cada feature lleva su "size" — big (col-7) o small (col-5).
-// Filas: row1 = big + small, row2 = small + big. Asimétrico.
+// Bento 2×2. iconKey → SVG de línea (sin emojis).
 type FeatureSize = "big" | "small";
 const FEATURES: {
   size: FeatureSize;
-  icono: string;
+  iconKey: "venta" | "rapido" | "scan" | "datos";
   color: string;
   titulo: string;
   desc: string;
-  statNum?: string;
+  statValue?: number;
+  statPrefix?: string;
+  statSuffix?: string;
   statLabel?: string;
 }[] = [
   {
     size: "big",
-    icono: "💸",
-    color: "#4ade80",
-    titulo: "Vende más por mesa",
-    desc: "Upsells automáticos, productos destacados con foto, sugerencias inteligentes. La gente pide más cuando lo ve.",
-    statNum: "+30%",
-    statLabel: "ticket medio reportado por nuestros locales en los primeros 90 días",
+    iconKey: "venta",
+    color: "#c2871f",
+    titulo: "Sube el ticket medio",
+    desc: "Diseñamos los upsells y los destacados según TU carta: la sugerencia justa, en el momento justo. La gente pide más cuando se lo pones fácil.",
+    statValue: 30,
+    statPrefix: "+",
+    statSuffix: "%",
+    statLabel: "de ticket medio en los locales con upsells a medida, primeros 90 días",
   },
   {
     size: "small",
-    icono: "⏱",
-    color: "#fbbf24",
+    iconKey: "rapido",
+    color: "#d6452f",
     titulo: "Sirve más rápido",
-    desc: "El pedido sale directo a cocina y barra. Tu equipo deja de tomar nota.",
+    desc: "El pedido sale directo a cocina y barra. Tu equipo deja de tomar nota y de perseguir mesas.",
   },
   {
     size: "small",
-    icono: "⚡",
-    color: "#a78bfa",
+    iconKey: "scan",
+    color: "#6c7a43",
     titulo: "Cero apps",
-    desc: "El cliente escanea con la cámara y abre tu carta. Nada que instalar.",
+    desc: "El cliente escanea con la cámara y abre tu carta. Nada que descargar ni instalar.",
   },
   {
     size: "big",
-    icono: "📊",
-    color: "#60a5fa",
+    iconKey: "datos",
+    color: "#8c1518",
     titulo: "Tu carta convertida en datos",
-    desc: "Qué se pide, cuándo, con qué se combina, qué se queda en el carrito. Decidir el menú deja de ser intuición — pasa a ser información.",
-    statNum: "12 min",
+    desc: "Qué se pide, cuándo, con qué se combina, qué se queda en el carrito. Decidir el menú deja de ser intuición — y nosotros lo afinamos contigo.",
+    statValue: 12,
+    statSuffix: " min",
     statLabel: "que ahorra cada mesa, según el reporte de Sunday sobre la industria",
   },
+];
+
+// Iconos de línea minimalistas (stroke = color del feature).
+const FEATURE_ICONS: Record<string, ReactNode> = {
+  venta: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 17l6-6 4 4 7-7" /><path d="M21 8v5h-5" />
+    </svg>
+  ),
+  rapido: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M13 2L4.5 13H11l-1 9 8.5-11H12l1-9z" />
+    </svg>
+  ),
+  scan: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3" /><path d="M7 12h10" />
+    </svg>
+  ),
+  datos: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
+    </svg>
+  ),
+};
+
+// Cómo funciona: 3 pasos con icono + texto corto (mejor en móvil).
+const STEPS: { num: string; iconKey: "scan" | "dish" | "pay"; title: string; desc: string }[] = [
+  { num: "01 · Escanea", iconKey: "scan", title: "Se sienta y ya tiene tu carta", desc: "Sin esperas y sin descargar nada." },
+  { num: "02 · Pide", iconKey: "dish", title: "Pide él, sin malentendidos", desc: "Entra tal cual a cocina. Cero errores de oído." },
+  { num: "03 · Paga", iconKey: "pay", title: "Paga y te deja reseña", desc: "Sin que tu equipo cruce la sala para cobrar." },
+];
+
+const STEP_ICONS: Record<string, ReactNode> = {
+  scan: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3" />
+      <path d="M3 12h18" />
+    </svg>
+  ),
+  dish: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M7 3v8M4.5 3v4a2.5 2.5 0 0 0 2.5 2.5M9.5 3v4A2.5 2.5 0 0 1 7 9.5M7 11v10" />
+      <path d="M18 3c-1.7 0-3 2.2-3 5s1.3 4.5 3 4.5M18 3v18" />
+    </svg>
+  ),
+  pay: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="5" width="20" height="14" rx="2.5" />
+      <path d="M2 10h20M6 15h4" />
+    </svg>
+  ),
+};
+
+// Diferenciador: tabla comparativa criterio a criterio.
+const COMPARE_ROWS: { crit: string; bad: string; good: string }[] = [
+  { crit: "Tu carta", bad: "La misma plantilla que a todos", good: "Con tu branding: logo, colores y tus platos" },
+  { crit: "Quién la monta", bad: "Te peleas tú con el editor", good: "La montamos nosotros, llave en mano" },
+  { crit: "Las fotos", bad: "De stock, no venden", good: "Reales y profesionales, dan hambre" },
+  { crit: "Upsells", bad: "Genéricos o ninguno", good: "Diseñados para tu margen" },
+  { crit: "Operativa", bad: "Solo la carta", good: "Cocina, barra, TPV o reservas, según tu caso" },
+  { crit: "Contabilidad", bad: "Aparte, a mano y en Excel", good: "Automatizada, dentro del sistema" },
+  { crit: "Soporte", bad: "El enlace y a apañarte", good: "Te acompañamos y lo afinamos contigo" },
 ];
 
 const TESTIMONIOS = [
@@ -163,7 +223,7 @@ const TESTIMONIOS = [
     rol: "Propietaria",
     local: "El Fogón Paisa",
     avatar: "LV",
-    color: "#a78bfa",
+    color: "#8c1518",
   },
   {
     quote: "En tres meses, ticket medio +27%. La gente cuando ve la foto del cocktail signature lo pide, así de simple.",
@@ -171,7 +231,7 @@ const TESTIMONIOS = [
     rol: "Manager",
     local: "Hotel Mediterránea",
     avatar: "MR",
-    color: "#f472b6",
+    color: "#c2871f",
   },
   {
     quote: "Los chicos del turno de tarde ahora se centran en servir mesas y no en cobrar. Las propinas se han disparado.",
@@ -179,7 +239,7 @@ const TESTIMONIOS = [
     rol: "CEO",
     local: "Logística Norte",
     avatar: "EC",
-    color: "#60a5fa",
+    color: "#6c7a43",
   },
 ];
 
@@ -193,6 +253,7 @@ export default async function Home({
 
   return (
     <div className={styles.page}>
+      <ScrollProgress />
       <Nav />
 
       {/* ============ HERO ============ */}
@@ -201,17 +262,22 @@ export default async function Home({
         <div className={styles.heroGrid}>
           <div>
             <div className={styles.heroBadge}>
-              <span className={styles.heroBadgeDot}>NUEVO</span>
-              Pedidos por QR para hostelería
+              <span className={styles.heroBadgeDot}>A MEDIDA</span>
+              No es una plantilla. Es tu sistema.
             </div>
             <h1 className={styles.heroTitle}>
-              Tu cliente <span className={styles.heroAccent}>escanea</span>,
-              <br /> pide y paga.
+              <span className={styles.heroLine}>
+                <span>Tu cliente <i className={styles.heroAccent}>escanea</i>,</span>
+              </span>
+              <span className={styles.heroLine}>
+                <span>pide y paga.</span>
+              </span>
             </h1>
             <p className={styles.heroSub}>
-              VerticeQR es la carta digital con la que tu cliente pide y paga
-              desde su mesa. Tu equipo sirve más rápido, vendes más por ticket
-              y dejas atrás las apps que nunca instala nadie.
+              No vendemos cartas digitales en serie. Estudiamos tu local y te
+              montamos el sistema a medida — tu carta con tu branding, fotos,
+              upsells y hasta la contabilidad automatizada — para servir más
+              rápido y subir el ticket medio. Cada local es un mundo.
             </p>
             <div className={styles.heroCtas}>
               <a href="#contacto" className={styles.ctaPrimary}>
@@ -226,82 +292,24 @@ export default async function Home({
               <span>
                 <strong>4.9/5</strong> · valoración media
               </span>
-              <span style={{ color: "#4b5563" }}>•</span>
+              <span style={{ color: "#b9a98f" }}>•</span>
               <span>
                 Confían <strong>+2.500</strong> locales
               </span>
             </div>
           </div>
 
-          <div className={styles.heroMockup}>
-            <div className={styles.phoneFrame}>
-              <div className={styles.phoneScreen}>
-                <div className={styles.phoneTop}>
-                  <span>verticeqr.com/m</span>
-                  <span>9:41</span>
-                </div>
-                <div>
-                  <div className={styles.phoneBrand}>El Fogón Paisa</div>
-                  <div className={styles.phoneMesa}>MESA 07 · Abierta</div>
-                </div>
-                <div className={styles.phoneItem}>
-                  <div>
-                    <div className={styles.phoneItemName}>Bandeja paisa</div>
-                    <div className={styles.phoneItemDesc}>Plato estrella · 6 ingredientes</div>
-                  </div>
-                  <div className={styles.phoneItemPrice}>18,90 €</div>
-                </div>
-                <div className={styles.phoneItem}>
-                  <div>
-                    <div className={styles.phoneItemName}>Sancocho trifásico</div>
-                    <div className={styles.phoneItemDesc}>Sopa tradicional</div>
-                  </div>
-                  <div className={styles.phoneItemPrice}>11,50 €</div>
-                </div>
-                <div className={styles.phoneItem}>
-                  <div>
-                    <div className={styles.phoneItemName}>Limonada de coco</div>
-                    <div className={styles.phoneItemDesc}>Refrescante</div>
-                  </div>
-                  <div className={styles.phoneItemPrice}>4,20 €</div>
-                </div>
-                <div className={styles.phoneCart}>3 productos · Pedir 34,60 €</div>
-              </div>
-            </div>
-            <div className={styles.qrFloat}>
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <rect width="100" height="100" fill="#fff" />
-                <g fill="#0a0a0f">
-                  <rect x="8" y="8" width="22" height="22" rx="2" />
-                  <rect x="70" y="8" width="22" height="22" rx="2" />
-                  <rect x="8" y="70" width="22" height="22" rx="2" />
-                  <rect x="14" y="14" width="10" height="10" fill="#fff" />
-                  <rect x="76" y="14" width="10" height="10" fill="#fff" />
-                  <rect x="14" y="76" width="10" height="10" fill="#fff" />
-                  <rect x="38" y="8" width="6" height="6" />
-                  <rect x="50" y="14" width="6" height="6" />
-                  <rect x="38" y="22" width="14" height="6" />
-                  <rect x="42" y="38" width="6" height="6" />
-                  <rect x="56" y="42" width="6" height="14" />
-                  <rect x="38" y="56" width="20" height="6" />
-                  <rect x="68" y="40" width="6" height="6" />
-                  <rect x="80" y="56" width="6" height="6" />
-                  <rect x="44" y="72" width="6" height="6" />
-                  <rect x="60" y="78" width="14" height="6" />
-                </g>
-              </svg>
-            </div>
-          </div>
+          <HeroPhone />
         </div>
       </section>
 
       {/* ============ STATS ============ */}
       <section className={styles.stats}>
         <div className={styles.statsInner}>
-          <Stat valor={2500} suffix="+" label="locales que confían" />
-          <Stat valor={Math.max(30000000, totalEscaneos * 1000)} suffix="" label="escaneos al mes" />
-          <Stat valor={30} suffix="%" label="más de ticket medio" />
-          <Stat valor={12} suffix=" min" label="ahorrados por mesa" />
+          <Stat valor={30} prefix="+" suffix="%" label="de ticket medio con upsells pensados para tu carta" />
+          <Stat valor={1} prefix="+" suffix=" ronda" label="por visita: el cliente repite sin tener que buscar al camarero" />
+          <Stat valor={30} suffix=" seg" label="y el cliente ya está pidiendo, sin esperar a nadie" />
+          <Stat valor={3} prefix="×" suffix="" label="más reseñas en Google, pedidas en automático al pagar" />
         </div>
       </section>
 
@@ -309,44 +317,26 @@ export default async function Home({
       <section className={styles.section} id="como-funciona">
         <Reveal>
           <div className={styles.sectionEyebrow}>Cómo funciona</div>
-          <h2 className={styles.sectionTitle}>Tres pasos. Cero apps.</h2>
+          <h2 className={styles.sectionTitle}>Tres pasos para tu cliente. Cero líos para ti.</h2>
           <p className={styles.sectionSub}>
-            No prometemos un cambio de software. Prometemos que la próxima
-            mesa que se siente, en menos de 30 segundos esté pidiendo.
+            No tienes que cambiar de software ni formar a nadie. Tu cliente
+            escanea y pide en segundos — sin errores de comanda, sin que tu
+            equipo cruce la sala diez veces, sin notas perdidas. Tú solo ves
+            llegar los pedidos, listos para preparar.
           </p>
         </Reveal>
 
         <div className={styles.steps}>
-          <Reveal delay={0}>
-            <div className={styles.stepCard}>
-              <div className={styles.stepNum}>01 · ESCANEA</div>
-              <h3 className={styles.stepTitle}>Apunta la cámara</h3>
-              <p className={styles.stepDesc}>
-                Cada mesa tiene su QR único impreso. Lo escanea, se le abre la
-                carta de tu local en su móvil — sin descargar nada.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <div className={styles.stepCard}>
-              <div className={styles.stepNum}>02 · PIDE</div>
-              <h3 className={styles.stepTitle}>Elige y pide</h3>
-              <p className={styles.stepDesc}>
-                Ve fotos, alérgenos, descripciones. Añade lo que quiera al
-                carrito y manda el pedido. Llega directo a tu cocina.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={240}>
-            <div className={styles.stepCard}>
-              <div className={styles.stepNum}>03 · PAGA</div>
-              <h3 className={styles.stepTitle}>Cobra sin tocarlo</h3>
-              <p className={styles.stepDesc}>
-                Cuando termina, paga desde el mismo móvil. Reseña automática
-                en Google. Tu equipo libera la mesa más rápido.
-              </p>
-            </div>
-          </Reveal>
+          {STEPS.map((s, i) => (
+            <Reveal key={s.num} delay={i * 120}>
+              <div className={styles.stepCard}>
+                <div className={styles.stepIcon}>{STEP_ICONS[s.iconKey]}</div>
+                <div className={styles.stepNum}>{s.num}</div>
+                <h3 className={styles.stepTitle}>{s.title}</h3>
+                <p className={styles.stepDesc}>{s.desc}</p>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
@@ -372,16 +362,19 @@ export default async function Home({
             >
               <div
                 className={styles.featureCard}
-                style={{ ["--feature-color" as string]: f.color, height: "100%" }}
+                style={{ ["--feature-color" as string]: f.color }}
               >
-                <div className={styles.featureIcon} style={{ background: f.color }}>
-                  {f.icono}
+                <div className={styles.featureIcon}>
+                  {FEATURE_ICONS[f.iconKey]}
                 </div>
                 <h3 className={styles.featureTitle}>{f.titulo}</h3>
                 <p className={styles.featureDesc}>{f.desc}</p>
-                {f.statNum && (
+                {f.statValue != null && (
                   <div className={styles.featureStat}>
-                    <div className={styles.featureStatNum}>{f.statNum}</div>
+                    <div className={styles.featureStatNum}>
+                      {f.statPrefix}
+                      <Counter value={f.statValue} suffix={f.statSuffix ?? ""} />
+                    </div>
                     <div className={styles.featureStatLabel}>{f.statLabel}</div>
                   </div>
                 )}
@@ -391,16 +384,67 @@ export default async function Home({
         </div>
       </section>
 
-      {/* ============ DEMOS POR SECTOR ============ */}
+      {/* ============ A MEDIDA (diferenciador) ============ */}
+      <section className={styles.section} style={{ paddingTop: 0 }}>
+        <Reveal>
+          <div className={styles.sectionEyebrow}>Por qué nosotros</div>
+          <h2 className={styles.sectionTitle}>
+            Una plantilla no te resuelve el día. Tu sistema, sí.
+          </h2>
+          <p className={styles.sectionSub}>
+            La mayoría te vende la misma carta digital que a todos y te deja
+            solo. Nosotros estudiamos tu local y te lo montamos a medida. Mira
+            la diferencia:
+          </p>
+        </Reveal>
+
+        <Reveal>
+          <div className={styles.vstable}>
+            {/* cabecera */}
+            <div className={`${styles.vstCell} ${styles.vstCorner}`} />
+            <div className={`${styles.vstCell} ${styles.vstHeadBad}`}>Una plantilla</div>
+            <div className={`${styles.vstCell} ${styles.vstHeadGood}`}>
+              <span className={styles.vstBrand}>VerticeQR</span>
+              <span className={styles.vstBadge}>a medida</span>
+            </div>
+
+            {/* filas */}
+            {COMPARE_ROWS.map((r) => (
+              <div key={r.crit} className={styles.vstRowContents}>
+                <div className={`${styles.vstCell} ${styles.vstCrit}`}>{r.crit}</div>
+                <div className={`${styles.vstCell} ${styles.vstBad}`}>
+                  <span className={styles.vstX}>✕</span>
+                  <span>{r.bad}</span>
+                </div>
+                <div className={`${styles.vstCell} ${styles.vstGood}`}>
+                  <span className={styles.vstCheck}>✓</span>
+                  <span>{r.good}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <div className={styles.compareFooter}>
+          <p className={styles.compareClose}>
+            Cada local es un mundo. <strong>El tuyo también.</strong>
+          </p>
+          <a href="#contacto" className={styles.compareCta}>
+            Quiero el mío a medida <span>→</span>
+          </a>
+        </div>
+      </section>
+
+      {/* ============ DEMOS ============ */}
       <section className={styles.section} style={{ paddingTop: 0 }}>
         <Reveal>
           <div className={styles.sectionEyebrow}>Demos</div>
           <h2 className={styles.sectionTitle}>
-            Cada sector tiene su carta. Y su demo.
+            Cartas reales, funcionando.
           </h2>
           <p className={styles.sectionSub}>
-            Elige el tipo de local que más se parece al tuyo y míralo
-            funcionar. Después lo personalizamos con tu marca.
+            Cada una es una carta digital de verdad. Ábrela, navega el menú y
+            pide como lo haría tu cliente. Después la personalizamos con tu marca.
           </p>
         </Reveal>
 
@@ -410,33 +454,12 @@ export default async function Home({
               <a
                 href={`/?origen=demo:${d.slug}#contacto`}
                 className={styles.demoCard}
-                data-sector={d.slug}
+                style={{ ["--demo-color" as string]: d.color }}
               >
-                {/* Escena de fondo por sector */}
-                {d.slug === "discoteca" ? (
-                  <DiscoBallScene />
-                ) : d.slug === "lounge-club" ? (
-                  <ShishaScene />
-                ) : d.slug === "cocteleria" ? (
-                  <GlassesScene />
-                ) : d.slug === "cerveceria" ? (
-                  <BeerMugsScene />
-                ) : d.slug === "hotel" ? (
-                  <HotelBellScene />
-                ) : d.slug === "pub" ? (
-                  <PubGamesScene />
-                ) : d.slug === "bar-restaurante" ? (
-                  <MeatCutScene />
-                ) : d.slug === "cafeteria" ? (
-                  <EmojiScene glyph={d.bg} centered />
-                ) : (
-                  <EmojiScene glyph={d.bg} />
-                )}
-                <div className={styles.demoIcon} style={{ color: d.color }}>
-                  {d.icono}
-                </div>
+                <div className={styles.demoIcon}>{d.nombre.charAt(0)}</div>
                 <div className={styles.demoName}>{d.nombre}</div>
-                <div className={styles.demoLink}>Pedir demo de mi {d.nombre.toLowerCase()} →</div>
+                <div className={styles.demoTipo}>{d.tipo}</div>
+                <div className={styles.demoLink}>Ver demo →</div>
               </a>
             </Reveal>
           ))}
@@ -450,7 +473,7 @@ export default async function Home({
             <div className={styles.sectionEyebrow}>Clientes</div>
             <h2 className={styles.sectionTitle}>Quienes ya confían en nosotros</h2>
             <p className={styles.sectionSub}>
-              <strong style={{ color: "#a78bfa" }}>
+              <strong style={{ color: "#b1331d" }}>
                 {totalEscaneos.toLocaleString("es-ES")}
               </strong>{" "}
               escaneos este mes entre los locales activos.
@@ -524,81 +547,45 @@ export default async function Home({
       {/* ============ PLANES ============ */}
       <section className={styles.section} id="planes" style={{ paddingTop: 0 }}>
         <Reveal>
-          <div className={styles.sectionEyebrow}>Planes</div>
-          <h2 className={styles.sectionTitle}>Empieza con lo que necesitas hoy.</h2>
+          <div className={styles.sectionEyebrow}>Presupuesto</div>
+          <h2 className={styles.sectionTitle}>Sin planes de catálogo. Tu sistema, tu presupuesto.</h2>
           <p className={styles.sectionSub}>
-            Precios por local. Sin permanencia, sin comisión sobre tus
-            ventas. Si crece tu negocio, crece el plan — nunca al revés.
+            No tenemos paquetes cerrados con precio de góndola. Estudiamos tu
+            local y te pasamos un presupuesto a medida — pagas por lo que tu
+            negocio necesita, ni más ni menos.
           </p>
         </Reveal>
 
-        <div className={styles.planes}>
-          <Reveal delay={0}>
-            <div className={styles.planCard}>
-              <div className={styles.planName}>Básico</div>
-              <div className={styles.planPrice}>
-                <span className={styles.planPriceAmount}>39 €</span>
-                <span className={styles.planPriceUnit}>/local/mes</span>
-              </div>
-              <p style={{ color: "#9ca3af", fontSize: "0.92rem", margin: 0 }}>
-                Para locales de hasta 30 mesas. Lo justo para arrancar.
+        <Reveal>
+          <div className={styles.planMedida}>
+            <div className={styles.planMedidaMain}>
+              <span className={styles.planMedidaTag}>Hecho a medida</span>
+              <div className={styles.planMedidaName}>Tu sistema, a tu medida</div>
+              <p className={styles.planMedidaSub}>
+                Cada local es un mundo. Montamos solo lo que mueve la aguja en el tuyo:
               </p>
-              <ul className={styles.planList}>
-                <li>Hasta 30 QR de mesa</li>
-                <li>Carta digital ilimitada</li>
-                <li>Categorías y alérgenos</li>
-                <li>Soporte por email</li>
+              <ul className={styles.planMedidaList}>
+                <li>Carta a medida con tu branding y tus fotos</li>
+                <li>Upsells y destacados según tu carta</li>
+                <li>QR por mesa con tu identidad</li>
+                <li>Cocina, barra, TPV o reservas — según tu caso</li>
+                <li>Contabilidad automatizada: ventas y cierres sin Excel</li>
+                <li>Analítica por mesa y acompañamiento continuo</li>
+                <li>Sin permanencia · sin comisión sobre tus ventas</li>
               </ul>
-              <a href="#contacto" className={styles.ctaSecondary} style={{ marginTop: "auto" }}>
-                Empezar
+            </div>
+            <div className={styles.planMedidaAside}>
+              <div className={styles.planMedidaPriceLabel}>Inversión</div>
+              <div className={styles.planMedidaPrice}>A medida</div>
+              <p className={styles.planMedidaNote}>
+                Te pasamos el presupuesto en menos de 24&nbsp;h, sin compromiso.
+              </p>
+              <a href="#contacto" className={styles.ctaPrimary} style={{ justifyContent: "center" }}>
+                Pide tu presupuesto <span>→</span>
               </a>
             </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <div className={`${styles.planCard} ${styles.planPopular}`}>
-              <span className={styles.planTag}>MÁS ELEGIDO</span>
-              <div className={styles.planName}>Profesional</div>
-              <div className={styles.planPrice}>
-                <span className={styles.planPriceAmount}>79 €</span>
-                <span className={styles.planPriceUnit}>/local/mes</span>
-              </div>
-              <p style={{ color: "#9ca3af", fontSize: "0.92rem", margin: 0 }}>
-                Para locales que ya tienen volumen y quieren analytics.
-              </p>
-              <ul className={styles.planList}>
-                <li>Hasta 80 QR de mesa</li>
-                <li>Pago integrado en el QR</li>
-                <li>Analítica completa por mesa</li>
-                <li>Productos destacados y upsells</li>
-                <li>Soporte por WhatsApp</li>
-              </ul>
-              <a href="#contacto" className={styles.ctaPrimary} style={{ marginTop: "auto", justifyContent: "center" }}>
-                Probar 14 días <span>→</span>
-              </a>
-            </div>
-          </Reveal>
-          <Reveal delay={240}>
-            <div className={styles.planCard}>
-              <div className={styles.planName}>Enterprise</div>
-              <div className={styles.planPrice}>
-                <span className={styles.planPriceAmount}>A medida</span>
-              </div>
-              <p style={{ color: "#9ca3af", fontSize: "0.92rem", margin: 0 }}>
-                Cadenas, franquicias y grupos hoteleros con múltiples locales.
-              </p>
-              <ul className={styles.planList}>
-                <li>Multilocal centralizado</li>
-                <li>Integraciones POS, TPV, ERPs</li>
-                <li>Branding personalizado</li>
-                <li>Manager de cuenta dedicado</li>
-                <li>SLA de soporte 24/7</li>
-              </ul>
-              <a href="#contacto" className={styles.ctaSecondary} style={{ marginTop: "auto" }}>
-                Hablar con ventas
-              </a>
-            </div>
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
       </section>
 
       {/* ============ CTA grande ============ */}
@@ -626,7 +613,7 @@ export default async function Home({
             <div style={{ textAlign: "center", marginBottom: "2rem" }}>
               <div className={styles.sectionEyebrow}>Contacto</div>
               <h2 className={styles.sectionTitle}>Cuéntanos tu caso</h2>
-              <p style={{ color: "#b3b3c2", marginTop: 0 }}>
+              <p style={{ color: "#6d5f4e", marginTop: 0 }}>
                 Te respondemos en menos de 24 horas con una demo personalizada.
               </p>
             </div>
@@ -634,11 +621,11 @@ export default async function Home({
 
           {sp.ok === "1" ? (
             <div className={styles.formSuccess}>
-              <div style={{ fontSize: "1.8rem", color: "#4ade80", marginBottom: "0.5rem" }}>✓</div>
+              <div style={{ fontSize: "1.8rem", color: "#6c7a43", marginBottom: "0.5rem" }}>✓</div>
               <div style={{ fontWeight: 700, fontSize: "1.15rem" }}>¡Solicitud recibida!</div>
-              <div style={{ color: "#b3b3c2", marginTop: "0.5rem", fontSize: "0.94rem" }}>
+              <div style={{ color: "#6d5f4e", marginTop: "0.5rem", fontSize: "0.94rem" }}>
                 Nos pondremos en contacto contigo en menos de 24h. Mientras,{" "}
-                <a href="#producto" style={{ color: "#a78bfa", textDecoration: "underline" }}>
+                <a href="#producto" style={{ color: "#b1331d", textDecoration: "underline" }}>
                   mira cómo funciona
                 </a>
                 .
@@ -716,11 +703,11 @@ export default async function Home({
         <div className={styles.footerInner}>
           <div>
             <div className={styles.footerBrand}>
-              <span style={{ color: "#a78bfa" }}>▲</span> VerticeQR
+              <Logo />
             </div>
             <p className={styles.footerTagline}>
-              Carta digital y pedidos por QR para hostelería. Pensado para la
-              barra real, no para la oficina.
+              Sistemas de pedido por QR hechos a medida para hostelería. No
+              plantillas: el sistema que tu local necesita. Cada local es un mundo.
             </p>
           </div>
           <div className={styles.footerCol}>
@@ -752,10 +739,21 @@ export default async function Home({
   );
 }
 
-function Stat({ valor, suffix, label }: { valor: number; suffix: string; label: string }) {
+function Stat({
+  valor,
+  suffix,
+  label,
+  prefix = "",
+}: {
+  valor: number;
+  suffix: string;
+  label: string;
+  prefix?: string;
+}) {
   return (
     <div className={styles.statCell}>
       <div className={styles.statNum}>
+        {prefix}
         <Counter value={valor} suffix={suffix} />
       </div>
       <div className={styles.statLabel}>{label}</div>
