@@ -151,9 +151,9 @@ const FEATURES: {
     color: "#8c1518",
     titulo: "Tu carta convertida en datos",
     desc: "Qué se pide, cuándo, con qué se combina, qué se queda en el carrito. Decidir el menú deja de ser intuición — y nosotros lo afinamos contigo.",
-    statValue: 12,
-    statSuffix: " min",
-    statLabel: "que ahorra cada mesa, según el reporte de Sunday sobre la industria",
+    statValue: 100,
+    statSuffix: "%",
+    statLabel: "de tus pedidos quedan medidos, sin apuntar nada a mano",
   },
 ];
 
