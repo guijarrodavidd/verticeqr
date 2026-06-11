@@ -139,7 +139,7 @@ const FEATURES: {
   {
     size: "small",
     img: "/features/apps.jpg",
-    imgPos: "top center",
+    imgPos: "center center",
     color: "#6c7a43",
     titulo: "Cero apps",
     desc: "El cliente escanea con la cámara y abre tu carta. Nada que descargar ni instalar.",
