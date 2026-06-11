@@ -1,55 +1,22 @@
 "use client";
 
-import { useRef } from "react";
 import styles from "../landing.module.css";
 
-// Móvil del hero con la carta REAL incrustada + parallax 3D al mover el ratón.
+// Móvil del hero con la carta REAL de Romanssera, navegable de verdad.
+// Recto y centrado; el QR flota al lado sin bloquear la interacción.
 export default function HeroPhone() {
-  const wrap = useRef<HTMLDivElement>(null);
-  const frame = useRef<HTMLDivElement>(null);
-  const qr = useRef<HTMLDivElement>(null);
-
-  function onMove(e: React.MouseEvent<HTMLDivElement>) {
-    const el = wrap.current;
-    if (!el) return;
-    const r = el.getBoundingClientRect();
-    const px = (e.clientX - r.left) / r.width - 0.5; // -0.5 … 0.5
-    const py = (e.clientY - r.top) / r.height - 0.5;
-    if (frame.current) {
-      frame.current.style.transform = `rotateX(${(-py * 8).toFixed(2)}deg) rotateY(${(
-        -7 + px * 14
-      ).toFixed(2)}deg)`;
-    }
-    if (qr.current) {
-      qr.current.style.transform = `translate3d(${(px * 26).toFixed(1)}px, ${(
-        py * 18
-      ).toFixed(1)}px, 0) rotate(7deg)`;
-    }
-  }
-
-  function onLeave() {
-    if (frame.current) frame.current.style.transform = "";
-    if (qr.current) qr.current.style.transform = "";
-  }
-
   return (
-    <div
-      ref={wrap}
-      className={styles.heroMockup}
-      onMouseMove={onMove}
-      onMouseLeave={onLeave}
-    >
-      <div ref={frame} className={styles.phoneFrame}>
+    <div className={styles.heroMockup}>
+      <div className={styles.phoneFrame}>
         <div className={styles.phoneScreen}>
           <iframe
             src="/demos/romanssera/index.html"
             title="Carta digital de Romanssera Tapassería"
             className={styles.phoneIframe}
-            loading="lazy"
           />
         </div>
       </div>
-      <div ref={qr} className={styles.qrFloat}>
+      <div className={styles.qrFloat} aria-hidden="true">
         <div className={styles.qrFloatInner}>
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <rect width="100" height="100" fill="#fff" />

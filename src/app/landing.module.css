@@ -290,7 +290,6 @@ html { scroll-behavior: smooth; }
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1200px;
   animation: vqFadeUp 900ms 200ms ease both;
 }
 .phoneFrame {
@@ -301,10 +300,7 @@ html { scroll-behavior: smooth; }
   padding: 11px;
   box-shadow: var(--shadow-lg), 0 0 0 1px rgba(34, 27, 19, 0.06);
   position: relative;
-  transform: rotateX(0) rotateY(-7deg);
-  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
-  transform-style: preserve-3d;
-  will-change: transform;
+  transform: none;
 }
 .phoneScreen {
   position: relative;
@@ -328,7 +324,6 @@ html { scroll-behavior: smooth; }
   background: #faf1e1;
   transform: scale(0.641);
   transform-origin: top left;
-  pointer-events: none; /* showcase visual: el parallax manda, sin atrapar el scroll */
 }
 .phoneTop {
   display: flex;
@@ -396,9 +391,8 @@ html { scroll-behavior: smooth; }
   box-shadow: var(--shadow-md);
   border: 1px solid var(--line);
   transform: rotate(7deg);
-  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
   z-index: 3;
-  will-change: transform;
+  pointer-events: none; /* no bloquea la navegación de la carta */
 }
 .qrFloatInner { width: 100%; height: 100%; animation: vqFloat 4.5s ease-in-out infinite; }
 .qrFloat svg { width: 100%; height: 100%; border-radius: 6px; display: block; }
