@@ -397,7 +397,45 @@ html { scroll-behavior: smooth; }
   pointer-events: none; /* no bloquea la navegación de la carta */
 }
 .qrFloatInner { width: 100%; height: 100%; animation: vqFloat 4.5s ease-in-out infinite; }
-.qrFloat svg { width: 100%; height: 100%; border-radius: 6px; display: block; }
+.qrFloat svg, .qrFloat img { width: 100%; height: 100%; border-radius: 6px; display: block; object-fit: contain; }
+
+/* Etiqueta "demo en vivo / haz un pedido de prueba" junto al móvil */
+.heroDemoBadge {
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+  padding: 0.6rem 1.05rem;
+  border-radius: 999px;
+  box-shadow: 0 14px 30px -10px rgba(154, 31, 43, 0.55);
+  z-index: 4;
+}
+.heroDemoDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  animation: vqPulse 1.6s ease-out infinite;
+}
+@keyframes vqPulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+@media (max-width: 420px) {
+  .heroDemoBadge { font-size: 0.72rem; padding: 0.5rem 0.85rem; white-space: normal; max-width: 90%; text-align: center; }
+}
 @media (max-width: 980px) {
   .qrFloat { right: 8px; }
 }
