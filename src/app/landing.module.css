@@ -290,6 +290,8 @@ html { scroll-behavior: smooth; }
   display: flex;
   align-items: center;
   justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
   animation: vqFadeUp 900ms 200ms ease both;
 }
 .phoneFrame {
@@ -306,7 +308,7 @@ html { scroll-behavior: smooth; }
   position: relative;
   width: 100%;
   height: 100%;
-  background: #faf1e1;
+  background: #0a0a0c;
   border-radius: 30px;
   padding: 0;
   overflow: hidden;
@@ -321,7 +323,7 @@ html { scroll-behavior: smooth; }
   height: 828px;
   border: 0;
   display: block;
-  background: #faf1e1;
+  background: #0a0a0c;
   transform: scale(0.641);
   transform-origin: top left;
 }
