@@ -120,7 +120,7 @@ const FEATURES: {
     size: "big",
     img: "/features/ticket.jpg",
     imgPos: "center center",
-    color: "#c2871f",
+    color: "#9a1f2b",
     titulo: "Sube el ticket medio",
     desc: "Diseñamos los upsells y los destacados según TU carta: la sugerencia justa, en el momento justo. La gente pide más cuando se lo pones fácil.",
     statValue: 30,
