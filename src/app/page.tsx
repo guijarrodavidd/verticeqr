@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import { redirect } from "next/navigation";
 import { getPool } from "@/lib/db";
 import { crearLead } from "@/lib/leads";
@@ -103,11 +102,12 @@ const DEMOS_PREVIEW = [
   { slug: "trellat", nombre: "Trellat", tipo: "Bar de barrio", color: "#7a7a4a" },
 ];
 
-// Bento 2×2. iconKey → SVG de línea (sin emojis).
+// Bento 2×2 con captura real del producto (de nuestras demos).
 type FeatureSize = "big" | "small";
 const FEATURES: {
   size: FeatureSize;
-  iconKey: "venta" | "rapido" | "scan" | "datos";
+  img: string;
+  imgPos?: string;
   color: string;
   titulo: string;
   desc: string;
@@ -118,7 +118,8 @@ const FEATURES: {
 }[] = [
   {
     size: "big",
-    iconKey: "venta",
+    img: "/features/ticket.jpg",
+    imgPos: "center center",
     color: "#c2871f",
     titulo: "Sube el ticket medio",
     desc: "Diseñamos los upsells y los destacados según TU carta: la sugerencia justa, en el momento justo. La gente pide más cuando se lo pones fácil.",
@@ -129,21 +130,24 @@ const FEATURES: {
   },
   {
     size: "small",
-    iconKey: "rapido",
+    img: "/features/rapido.jpg",
+    imgPos: "top left",
     color: "#9a1f2b",
     titulo: "Sirve más rápido",
     desc: "El pedido sale directo a cocina y barra. Tu equipo deja de tomar nota y de perseguir mesas.",
   },
   {
     size: "small",
-    iconKey: "scan",
+    img: "/features/apps.jpg",
+    imgPos: "top center",
     color: "#6c7a43",
     titulo: "Cero apps",
     desc: "El cliente escanea con la cámara y abre tu carta. Nada que descargar ni instalar.",
   },
   {
     size: "big",
-    iconKey: "datos",
+    img: "/features/datos.jpg",
+    imgPos: "top center",
     color: "#8c1518",
     titulo: "Tu carta convertida en datos",
     desc: "Qué se pide, cuándo, con qué se combina, qué se queda en el carrito. Decidir el menú deja de ser intuición — y nosotros lo afinamos contigo.",
@@ -152,30 +156,6 @@ const FEATURES: {
     statLabel: "que ahorra cada mesa, según el reporte de Sunday sobre la industria",
   },
 ];
-
-// Iconos de línea minimalistas (stroke = color del feature).
-const FEATURE_ICONS: Record<string, ReactNode> = {
-  venta: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 17l6-6 4 4 7-7" /><path d="M21 8v5h-5" />
-    </svg>
-  ),
-  rapido: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M13 2L4.5 13H11l-1 9 8.5-11H12l1-9z" />
-    </svg>
-  ),
-  scan: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3" /><path d="M7 12h10" />
-    </svg>
-  ),
-  datos: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
-    </svg>
-  ),
-};
 
 // Cómo funciona: 3 pasos con foto real + texto corto.
 const STEPS: { num: string; img: string; title: string; desc: string }[] = [
@@ -346,20 +326,28 @@ export default async function Home({
                 className={styles.featureCard}
                 style={{ ["--feature-color" as string]: f.color }}
               >
-                <div className={styles.featureIcon}>
-                  {FEATURE_ICONS[f.iconKey]}
+                <div className={styles.featureShot}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={f.img}
+                    alt=""
+                    loading="lazy"
+                    style={{ objectPosition: f.imgPos ?? "top center" }}
+                  />
                 </div>
-                <h3 className={styles.featureTitle}>{f.titulo}</h3>
-                <p className={styles.featureDesc}>{f.desc}</p>
-                {f.statValue != null && (
-                  <div className={styles.featureStat}>
-                    <div className={styles.featureStatNum}>
-                      {f.statPrefix}
-                      <Counter value={f.statValue} suffix={f.statSuffix ?? ""} />
+                <div className={styles.featureInner}>
+                  <h3 className={styles.featureTitle}>{f.titulo}</h3>
+                  <p className={styles.featureDesc}>{f.desc}</p>
+                  {f.statValue != null && (
+                    <div className={styles.featureStat}>
+                      <div className={styles.featureStatNum}>
+                        {f.statPrefix}
+                        <Counter value={f.statValue} suffix={f.statSuffix ?? ""} />
+                      </div>
+                      <div className={styles.featureStatLabel}>{f.statLabel}</div>
                     </div>
-                    <div className={styles.featureStatLabel}>{f.statLabel}</div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </Reveal>
           ))}
