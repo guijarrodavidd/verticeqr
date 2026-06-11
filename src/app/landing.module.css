@@ -226,9 +226,18 @@ html { scroll-behavior: smooth; }
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   animation: vqFadeUp 800ms 240ms ease both;
 }
+.heroCtaNote {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  max-width: 470px;
+  margin: 0 0 1.6rem;
+  animation: vqFadeUp 800ms 300ms ease both;
+}
+.heroCtaNote strong { color: var(--accent); font-weight: 700; }
 .ctaPrimary {
   background: var(--accent);
   color: #fff;
