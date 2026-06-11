@@ -131,7 +131,7 @@ const FEATURES: {
   {
     size: "small",
     img: "/features/rapido.jpg",
-    imgPos: "top left",
+    imgPos: "center 32%",
     color: "#9a1f2b",
     titulo: "Sirve más rápido",
     desc: "El pedido sale directo a cocina y barra. Tu equipo deja de tomar nota y de perseguir mesas.",
@@ -139,7 +139,7 @@ const FEATURES: {
   {
     size: "small",
     img: "/features/apps.jpg",
-    imgPos: "top center",
+    imgPos: "center center",
     color: "#6c7a43",
     titulo: "Cero apps",
     desc: "El cliente escanea con la cámara y abre tu carta. Nada que descargar ni instalar.",
@@ -147,7 +147,7 @@ const FEATURES: {
   {
     size: "big",
     img: "/features/datos.jpg",
-    imgPos: "top center",
+    imgPos: "center center",
     color: "#8c1518",
     titulo: "Tu carta convertida en datos",
     desc: "Qué se pide, cuándo, con qué se combina, qué se queda en el carrito. Decidir el menú deja de ser intuición — y nosotros lo afinamos contigo.",
