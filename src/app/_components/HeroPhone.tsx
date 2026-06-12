@@ -26,7 +26,7 @@ export default function HeroPhone() {
 
       <div className={styles.heroDemoBadge}>
         <span className={styles.heroDemoDot} />
-        Demo · pruébala
+        Pruébala
       </div>
     </div>
   );
