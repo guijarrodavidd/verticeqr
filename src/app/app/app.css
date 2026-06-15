@@ -922,6 +922,16 @@
   }
 }
 
+/* ---------- DASHBOARD HOME (tema claro cream) ---------- */
+.vqr-light-card {
+  cursor: pointer;
+}
+.vqr-light-card:hover {
+  border-color: #a78bfa !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(167, 139, 250, 0.15), 0 1px 0 rgba(0,0,0,0.02) !important;
+}
+
 /* ---------- BANNER SEED DEMO ---------- */
 .vqr-loc-seed {
   display: flex;
