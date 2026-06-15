@@ -6,22 +6,38 @@ import DemoPhone from "./_components/DemoPhone";
 
 export const dynamic = "force-dynamic";
 
-// Mapeo provisional sector → carta REAL disponible en /public/demos/.
-// A medida que Cavani añada más cartas (cafetería, coctelería, etc.) este
-// mapeo se amplía. Mientras tanto, todo sector cae en la carta más cercana.
-const SECTOR_TO_CARTA: Record<string, { slug: string; nombre: string }> = {
-  "bar-restaurante": { slug: "romanssera", nombre: "Romanssera" },
-  "cafeteria":        { slug: "romanssera", nombre: "Romanssera" },
-  "cocteleria":       { slug: "romanssera", nombre: "Romanssera" },
-  "lounge-club":      { slug: "romanssera", nombre: "Romanssera" },
-  "discoteca":        { slug: "romanssera", nombre: "Romanssera" },
-  "hotel":            { slug: "romanssera", nombre: "Romanssera" },
-  "pub":              { slug: "hamburgueseria", nombre: "Bonfire Burger" },
-  "cerveceria":       { slug: "hamburgueseria", nombre: "Bonfire Burger" },
+// Cartas reales que viven en /public/demos/. Se amplía cada vez que
+// Cavani sube una nueva.
+const CARTAS_DISPONIBLES: Record<string, string> = {
+  romanssera: "Romanssera",
+  hamburgueseria: "Bonfire Burger",
 };
 
-function cartaParaSector(sector: string): { slug: string; nombre: string } {
-  return SECTOR_TO_CARTA[sector] ?? { slug: "romanssera", nombre: "Romanssera" };
+// Mapeo slug del local → slug de la carta disponible. Si el slug del local
+// coincide con una carta directa, usa esa. Si no, fallback por sector.
+const SLUG_TO_CARTA: Record<string, string> = {
+  romanssera: "romanssera",
+  hamburgueseria: "hamburgueseria",
+};
+
+const SECTOR_TO_CARTA: Record<string, string> = {
+  "bar-restaurante": "romanssera",
+  "cafeteria":       "romanssera",
+  "cocteleria":      "romanssera",
+  "lounge-club":     "romanssera",
+  "discoteca":       "romanssera",
+  "hotel":           "romanssera",
+  "pub":             "hamburgueseria",
+  "cerveceria":      "hamburgueseria",
+};
+
+function cartaParaLocal(
+  localSlug: string,
+  sector: string,
+): { slug: string; nombre: string } {
+  const cartaSlug =
+    SLUG_TO_CARTA[localSlug] ?? SECTOR_TO_CARTA[sector] ?? "romanssera";
+  return { slug: cartaSlug, nombre: CARTAS_DISPONIBLES[cartaSlug] ?? "Romanssera" };
 }
 
 export default async function LocalDemoPage({
@@ -36,9 +52,9 @@ export default async function LocalDemoPage({
   const sector = sectorInfo(local.sector);
   const demo = findDemo(local.sector);
   const accent = local.color_primario || sector.color;
-  const cartaDemo = cartaParaSector(local.sector);
+  const cartaDemo = cartaParaLocal(slug, local.sector);
   const cartaUrl = `/demos/${cartaDemo.slug}/index.html`;
-  const usandoFallback = cartaDemo.nombre !== local.nombre;
+  const usandoFallback = cartaDemo.slug !== slug;
 
   return (
     <div style={{ maxWidth: 1000, marginTop: "1.5rem" }}>

@@ -57,9 +57,10 @@ export default async function LocalesPage({
 
   async function seedDemo() {
     "use server";
-    const { slug } = await seedLocalDemo();
+    void user; // mantenemos referencia para evitar lint
+    await seedLocalDemo();
     revalidatePath("/app/locales");
-    redirect(`/app/locales/${slug}`);
+    redirect(`/app/locales`);
   }
 
   async function crear(formData: FormData) {
@@ -103,21 +104,23 @@ export default async function LocalesPage({
         y pedidos.
       </p>
 
-      {/* Seed de demo — solo cuando no hay ningún local */}
-      {contadores.total === 0 && (
+      {/* Seed de demo — aparece mientras no estén los 8 demos */}
+      {contadores.total < 8 && (
         <form action={seedDemo} style={{ marginBottom: "1rem" }}>
           <div className="vqr-loc-seed">
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontWeight: 600, marginBottom: "0.2rem" }}>
-                <span style={{ color: "#fbbf24" }}>✨</span> ¿Quieres ver la app llena de datos?
+                <span style={{ color: "#fbbf24" }}>✨</span> Cargar los locales de la
+                landing
               </div>
               <div style={{ fontSize: "0.85rem", color: "#9ca3af" }}>
-                Crea "El Fogón Paisa" con 8 categorías, 20 productos, alérgenos
-                e imágenes — todo de un click.
+                Crea Romanssera, Forno Sessanta, Bonfire Burger, Ostra & Sol,
+                Magma, El Fogón Paisa, Sereno y Trellat — cada uno con su carta
+                inicial. Idempotente: los que ya existan se saltan.
               </div>
             </div>
             <button type="submit" className="vqr-modal-btn vqr-modal-btn-primary">
-              Crear local demo →
+              Cargar los 8 demos →
             </button>
           </div>
         </form>

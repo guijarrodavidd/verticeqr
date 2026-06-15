@@ -1,153 +1,489 @@
-// Solo SERVIDOR. Carga un local de demostración completo ("El Fogón Paisa")
-// con categorías, productos, alérgenos e imágenes. Útil para ver la app
-// poblada sin tener que crearlo todo a mano.
+// Seed de los 8 locales DEMO que aparecen en la landing.
+// Idempotente: si un local con ese slug ya existe, lo salta (no duplica).
+// Crea categorías + productos iniciales para cada uno.
 
-import { crearLocal } from "./locales";
+import { crearLocal, obtenerLocalPorSlug } from "./locales";
 import { crearCategoria, crearProducto } from "./productos";
+import type { PlanLocal, SectorLocal } from "./locales-shared";
 
-// URLs de Unsplash estables (CDN público). Las elegimos genéricas para que
-// vivan tiempo. El usuario puede sustituir las imágenes desde el modal.
-const IMG = {
-  empanadas:   "https://images.unsplash.com/photo-1601001815853-3835274403b3?w=800&q=80",
-  arepa:       "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=80",
-  patacones:   "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=800&q=80",
-  sancocho:    "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80",
-  bandeja:     "https://images.unsplash.com/photo-1546964124-0cce460f38ef?w=800&q=80",
-  ajiaco:      "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80",
-  churrasco:   "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=80",
-  costilla:    "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80",
-  pescado:     "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=80",
-  ceviche:     "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80",
-  tresLeches:  "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80",
-  obleas:      "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=80",
-  cerveza:     "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=800&q=80",
-  limonada:    "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80",
-  cafe:        "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80",
-};
-
-type SeedProducto = {
-  cat: number;
+type Prod = {
   nombre: string;
-  desc: string;
-  precio_cents: number;
-  imagen_url: string | null;
-  alergenos: string[];
+  precio: number; // céntimos
+  descripcion?: string;
+  alergenos?: string[];
   destacado?: boolean;
+  imagen?: string;
 };
 
-export async function seedLocalDemo(): Promise<{ slug: string; id: number }> {
-  const { id, slug } = await crearLocal({
+type Cat = { nombre: string; productos: Prod[] };
+
+type DemoLocal = {
+  slug: string;
+  nombre: string;
+  sector: SectorLocal;
+  plan: PlanLocal;
+  color: string;
+  email: string;
+  telefono: string;
+  cats: Cat[];
+};
+
+const DEMO_LOCALES: DemoLocal[] = [
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "romanssera",
+    nombre: "Romanssera",
+    sector: "bar-restaurante",
+    plan: "pro",
+    color: "#b03326",
+    email: "hola@romanssera.es",
+    telefono: "+34 911 010 101",
+    cats: [
+      {
+        nombre: "Tapas frías",
+        productos: [
+          { nombre: "Pulpo a feira", precio: 1490, descripcion: "Patata cocida, aceite y pimentón de la Vera.", alergenos: ["moluscos"], destacado: true },
+          { nombre: "Boquerones en vinagre", precio: 890, descripcion: "En mariposa, con pan de pueblo.", alergenos: ["pescado"] },
+          { nombre: "Ensaladilla rusa", precio: 750, descripcion: "Receta de la abuela, bonito y mahonesa casera.", alergenos: ["pescado", "huevo"] },
+          { nombre: "Tabla de ibéricos", precio: 1690, descripcion: "Jamón, lomo y chorizo de bellota.", destacado: true },
+        ],
+      },
+      {
+        nombre: "Tapas calientes",
+        productos: [
+          { nombre: "Croquetas de jamón", precio: 890, descripcion: "Bechamel cremosa, jamón ibérico.", alergenos: ["gluten", "lactosa", "huevo"], destacado: true },
+          { nombre: "Pimientos de Padrón", precio: 750, descripcion: "Fritos con sal en escamas." },
+          { nombre: "Calamares a la andaluza", precio: 1090, descripcion: "Anillas de calamar fresco con harina de garbanzo.", alergenos: ["moluscos"] },
+          { nombre: "Gambas al ajillo", precio: 1290, descripcion: "Con cayena y un toque de jerez.", alergenos: ["marisco"] },
+        ],
+      },
+      {
+        nombre: "Arroces y especialidades",
+        productos: [
+          { nombre: "Arroz negro de sepia", precio: 1890, descripcion: "Caldo de pescado, alioli aparte.", alergenos: ["moluscos"], destacado: true },
+          { nombre: "Fideuá del Mediterráneo", precio: 1790, descripcion: "Fideo cabello de ángel y mariscos.", alergenos: ["gluten", "marisco"] },
+          { nombre: "Paella de marisco", precio: 2290, descripcion: "Mínimo 2 personas. Arroz bomba.", alergenos: ["marisco"] },
+        ],
+      },
+      {
+        nombre: "Postres",
+        productos: [
+          { nombre: "Crema catalana", precio: 590, alergenos: ["lactosa", "huevo"] },
+          { nombre: "Tarta de queso al horno", precio: 690, descripcion: "Cremosa por dentro.", alergenos: ["lactosa", "huevo"] },
+        ],
+      },
+      {
+        nombre: "Bebidas",
+        productos: [
+          { nombre: "Caña Estrella", precio: 280, alergenos: ["gluten", "sulfitos"] },
+          { nombre: "Vino tinto Rioja", precio: 420, alergenos: ["sulfitos"] },
+          { nombre: "Vermut casero", precio: 380, alergenos: ["sulfitos"] },
+          { nombre: "Agua mineral", precio: 220 },
+        ],
+      },
+    ],
+  },
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "pizzeria",
+    nombre: "Forno Sessanta",
+    sector: "bar-restaurante",
+    plan: "pro",
+    color: "#cf6233",
+    email: "ciao@fornosessanta.it",
+    telefono: "+34 911 020 202",
+    cats: [
+      {
+        nombre: "Antipasti",
+        productos: [
+          { nombre: "Bruschetta clásica", precio: 690, descripcion: "Tomate, ajo y albahaca sobre pan rústico.", alergenos: ["gluten"] },
+          { nombre: "Caprese di búfala", precio: 1190, descripcion: "Mozzarella de búfala, tomate raf y pesto.", alergenos: ["lactosa", "frutos-secos"] },
+          { nombre: "Burrata pugliese", precio: 1390, descripcion: "Burrata fresca con aceite de albahaca.", alergenos: ["lactosa"], destacado: true },
+        ],
+      },
+      {
+        nombre: "Pizzas tradicionales",
+        productos: [
+          { nombre: "Margherita", precio: 1090, descripcion: "Tomate San Marzano, mozzarella fior di latte, albahaca.", alergenos: ["gluten", "lactosa"], destacado: true },
+          { nombre: "Napoletana", precio: 1190, descripcion: "Anchoas, alcaparras, aceitunas.", alergenos: ["gluten", "lactosa", "pescado"] },
+          { nombre: "Diavola", precio: 1290, descripcion: "Mozzarella y salame piccante.", alergenos: ["gluten", "lactosa"] },
+          { nombre: "Quattro Formaggi", precio: 1390, descripcion: "Gorgonzola, mozzarella, parmesano y fontina.", alergenos: ["gluten", "lactosa"] },
+          { nombre: "Capricciosa", precio: 1390, descripcion: "Jamón cocido, champiñones, alcachofas, aceitunas.", alergenos: ["gluten", "lactosa"] },
+          { nombre: "Bianca tartufo", precio: 1690, descripcion: "Crema de trufa, mozzarella y rúcula.", alergenos: ["gluten", "lactosa"], destacado: true },
+        ],
+      },
+      {
+        nombre: "Pasta fresca",
+        productos: [
+          { nombre: "Carbonara romana", precio: 1290, descripcion: "Guanciale, pecorino, yema y pimienta.", alergenos: ["gluten", "lactosa", "huevo"] },
+          { nombre: "Tagliatelle al ragú", precio: 1390, descripcion: "12 horas de cocción, parmesano.", alergenos: ["gluten", "lactosa"] },
+          { nombre: "Lasagna boloñesa", precio: 1290, descripcion: "Bechamel y queso gratinado.", alergenos: ["gluten", "lactosa", "huevo"] },
+        ],
+      },
+      {
+        nombre: "Postres",
+        productos: [
+          { nombre: "Tiramisú della casa", precio: 590, alergenos: ["gluten", "lactosa", "huevo"], destacado: true },
+          { nombre: "Panna cotta de frutos rojos", precio: 590, alergenos: ["lactosa"] },
+          { nombre: "Cannoli sicilianos", precio: 590, alergenos: ["gluten", "lactosa", "frutos-secos"] },
+        ],
+      },
+      {
+        nombre: "Bebidas",
+        productos: [
+          { nombre: "Birra Moretti", precio: 380, alergenos: ["gluten", "sulfitos"] },
+          { nombre: "Aperol Spritz", precio: 690, alergenos: ["sulfitos"] },
+          { nombre: "Chianti DOCG copa", precio: 490, alergenos: ["sulfitos"] },
+          { nombre: "Limoncello chupito", precio: 320 },
+        ],
+      },
+    ],
+  },
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "hamburgueseria",
+    nombre: "Bonfire Burger",
+    sector: "bar-restaurante",
+    plan: "pro",
+    color: "#d4402f",
+    email: "hello@bonfireburger.com",
+    telefono: "+34 911 030 303",
+    cats: [
+      {
+        nombre: "Burgers",
+        productos: [
+          { nombre: "Classic Bonfire", precio: 1190, descripcion: "Cheddar fundido, lechuga, tomate, salsa secreta.", alergenos: ["gluten", "lactosa", "huevo", "mostaza"], destacado: true },
+          { nombre: "BBQ smoky", precio: 1390, descripcion: "Bacon ahumado, queso cheddar, salsa BBQ casera.", alergenos: ["gluten", "lactosa", "soja", "mostaza"] },
+          { nombre: "Double cheese", precio: 1590, descripcion: "Doble carne, triple queso.", alergenos: ["gluten", "lactosa"], destacado: true },
+          { nombre: "Truffle royale", precio: 1790, descripcion: "Mayonesa de trufa, rúcula, parmesano.", alergenos: ["gluten", "lactosa", "huevo"] },
+          { nombre: "Crispy chicken", precio: 1290, descripcion: "Pollo crujiente, kimchi, sriracha.", alergenos: ["gluten", "huevo", "soja"] },
+          { nombre: "Veggie portobello", precio: 1190, descripcion: "Portobello a la brasa, queso de cabra.", alergenos: ["gluten", "lactosa"] },
+        ],
+      },
+      {
+        nombre: "Sides",
+        productos: [
+          { nombre: "Patatas hand-cut", precio: 490, descripcion: "Cortadas a mano, sal Maldon." },
+          { nombre: "Onion rings", precio: 590, alergenos: ["gluten"] },
+          { nombre: "Mac & cheese", precio: 690, descripcion: "Cremoso, gratinado.", alergenos: ["gluten", "lactosa"], destacado: true },
+          { nombre: "Boniato frito", precio: 590, descripcion: "Con mayo de chipotle.", alergenos: ["huevo", "mostaza"] },
+        ],
+      },
+      {
+        nombre: "Para compartir",
+        productos: [
+          { nombre: "Chicken wings BBQ", precio: 990, descripcion: "8 alitas glaseadas.", alergenos: ["soja", "sulfitos"] },
+          { nombre: "Nachos supreme", precio: 890, descripcion: "Queso, jalapeños, guacamole.", alergenos: ["lactosa"] },
+          { nombre: "Mozzarella sticks", precio: 690, alergenos: ["gluten", "lactosa", "huevo"] },
+        ],
+      },
+      {
+        nombre: "Postres y bebidas",
+        productos: [
+          { nombre: "Brownie con helado", precio: 590, alergenos: ["gluten", "lactosa", "huevo", "frutos-secos"], destacado: true },
+          { nombre: "Milkshake Oreo", precio: 590, alergenos: ["gluten", "lactosa"] },
+          { nombre: "IPA local", precio: 420, alergenos: ["gluten", "sulfitos"] },
+          { nombre: "Coca-Cola", precio: 280 },
+        ],
+      },
+    ],
+  },
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "cafeteria",
+    nombre: "Ostra & Sol",
+    sector: "cafeteria",
+    plan: "basic",
+    color: "#c07a4a",
+    email: "hola@ostrasol.cafe",
+    telefono: "+34 911 040 404",
+    cats: [
+      {
+        nombre: "Cafés",
+        productos: [
+          { nombre: "Espresso", precio: 180 },
+          { nombre: "Cortado", precio: 220, alergenos: ["lactosa"] },
+          { nombre: "Flat White", precio: 320, alergenos: ["lactosa"], destacado: true },
+          { nombre: "Cappuccino", precio: 320, alergenos: ["lactosa"] },
+          { nombre: "Latte de avena", precio: 380, alergenos: [] },
+          { nombre: "Cold brew", precio: 380, descripcion: "Lento, 18h de extracción." },
+        ],
+      },
+      {
+        nombre: "Brunch",
+        productos: [
+          { nombre: "Tostada aguacate", precio: 890, descripcion: "Pan masa madre, aguacate, huevo poché, semillas.", alergenos: ["gluten", "huevo"], destacado: true },
+          { nombre: "Huevos Benedict", precio: 1190, descripcion: "Salsa holandesa casera.", alergenos: ["gluten", "huevo", "lactosa"], destacado: true },
+          { nombre: "Pancakes con sirope", precio: 890, descripcion: "Frutos rojos, mantequilla y arce.", alergenos: ["gluten", "lactosa", "huevo"] },
+          { nombre: "French toast", precio: 890, alergenos: ["gluten", "lactosa", "huevo"] },
+        ],
+      },
+      {
+        nombre: "Bowls",
+        productos: [
+          { nombre: "Açaí bowl tropical", precio: 990, descripcion: "Granola, plátano, coco y mango.", alergenos: ["frutos-secos"] },
+          { nombre: "Yogurt griego", precio: 690, descripcion: "Miel, frutos rojos y granola.", alergenos: ["lactosa", "frutos-secos"] },
+        ],
+      },
+      {
+        nombre: "Bollería",
+        productos: [
+          { nombre: "Croissant de mantequilla", precio: 250, alergenos: ["gluten", "lactosa", "huevo"] },
+          { nombre: "Pain au chocolat", precio: 290, alergenos: ["gluten", "lactosa", "huevo"] },
+          { nombre: "Cinnamon roll", precio: 320, descripcion: "Glaseado.", alergenos: ["gluten", "lactosa", "huevo"], destacado: true },
+        ],
+      },
+      {
+        nombre: "Otras bebidas",
+        productos: [
+          { nombre: "Zumo natural de naranja", precio: 380 },
+          { nombre: "Té matcha latte", precio: 380, alergenos: ["lactosa"] },
+          { nombre: "Kombucha de jengibre", precio: 390 },
+        ],
+      },
+    ],
+  },
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "cachimbas",
+    nombre: "Magma",
+    sector: "lounge-club",
+    plan: "pro",
+    color: "#c2871f",
+    email: "info@magmalounge.com",
+    telefono: "+34 911 050 505",
+    cats: [
+      {
+        nombre: "Cachimbas",
+        productos: [
+          { nombre: "Cachimba clásica", precio: 1500, descripcion: "Sabor a elegir, cabeza tradicional." },
+          { nombre: "Cachimba premium", precio: 1900, descripcion: "Cabeza phunnel, melaza premium.", destacado: true },
+          { nombre: "Mix de frutos rojos", precio: 1700, descripcion: "Arándano, frambuesa y menta." },
+          { nombre: "Mint chill", precio: 1700, descripcion: "Menta fresca con hielo extra." },
+        ],
+      },
+      {
+        nombre: "Cócteles signature",
+        productos: [
+          { nombre: "Magma punch", precio: 1100, descripcion: "Ron, mango, lima y especias.", destacado: true },
+          { nombre: "Smoky old fashioned", precio: 1200, descripcion: "Whisky ahumado en mesa.", alergenos: ["sulfitos"] },
+          { nombre: "Espresso martini", precio: 1100, alergenos: ["lactosa"] },
+          { nombre: "Lava margarita", precio: 1000, descripcion: "Tequila, lima y guindilla." },
+        ],
+      },
+      {
+        nombre: "Botellas",
+        productos: [
+          { nombre: "Champagne Moët Brut", precio: 9500, descripcion: "Botella 75cl.", alergenos: ["sulfitos"], destacado: true },
+          { nombre: "Vodka Grey Goose", precio: 8500, alergenos: ["sulfitos"] },
+          { nombre: "Whisky Johnnie Walker Black", precio: 7500, alergenos: ["sulfitos"] },
+          { nombre: "Ron Zacapa 23", precio: 8900, alergenos: ["sulfitos"] },
+        ],
+      },
+      {
+        nombre: "Picoteo",
+        productos: [
+          { nombre: "Tabla de quesos", precio: 1690, alergenos: ["lactosa", "frutos-secos"] },
+          { nombre: "Ibéricos selección", precio: 1990, descripcion: "Jamón, lomo y chorizo bellota." },
+          { nombre: "Patatas trufadas", precio: 990, descripcion: "Con parmesano.", alergenos: ["lactosa"] },
+          { nombre: "Olivas marinadas", precio: 490 },
+        ],
+      },
+    ],
+  },
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "el-fogon-paisa",
     nombre: "El Fogón Paisa",
     sector: "bar-restaurante",
     plan: "pro",
+    color: "#b3392f",
     email: "contacto@elfogonpaisa.com",
-    telefono: "+34 911 234 567",
-    color_primario: "#d4a017",
-  });
+    telefono: "+34 911 060 606",
+    cats: [
+      {
+        nombre: "Entrantes",
+        productos: [
+          { nombre: "Empanadas paisas (3 uds.)", precio: 650, descripcion: "Crujientes de maíz, carne desmechada con hogao.", alergenos: ["gluten", "huevo"] },
+          { nombre: "Arepa rellena de queso", precio: 480, descripcion: "Plancha al momento.", alergenos: ["gluten", "lactosa"] },
+          { nombre: "Patacones con hogao", precio: 590, descripcion: "Plátano verde frito, salsa criolla." },
+        ],
+      },
+      {
+        nombre: "Sopas",
+        productos: [
+          { nombre: "Sancocho trifásico", precio: 1150, descripcion: "Res, cerdo y pollo. Yuca, plátano, mazorca.", alergenos: ["apio"], destacado: true },
+          { nombre: "Ajiaco santafereño", precio: 1450, descripcion: "Pollo, tres papas, mazorca, alcaparras y crema.", alergenos: ["lactosa", "apio"] },
+        ],
+      },
+      {
+        nombre: "Especialidades",
+        productos: [
+          { nombre: "Bandeja paisa completa", precio: 1890, descripcion: "Frijoles, arroz, carne, chicharrón, chorizo, huevo, plátano y arepa.", alergenos: ["gluten", "huevo"], destacado: true },
+          { nombre: "Churrasco con chimichurri", precio: 2200, descripcion: "Solomillo a la parrilla.", alergenos: ["sulfitos"] },
+        ],
+      },
+      {
+        nombre: "Postres",
+        productos: [
+          { nombre: "Tres leches casero", precio: 620, descripcion: "Crema y canela.", alergenos: ["lactosa", "huevo", "frutos-secos"], destacado: true },
+          { nombre: "Obleas con arequipe", precio: 450, alergenos: ["lactosa", "huevo"] },
+        ],
+      },
+      {
+        nombre: "Bebidas",
+        productos: [
+          { nombre: "Cerveza Águila", precio: 380, alergenos: ["gluten", "sulfitos"] },
+          { nombre: "Limonada de coco", precio: 420, descripcion: "Cremosa, frappé.", alergenos: ["lactosa"], destacado: true },
+          { nombre: "Tinto colombiano", precio: 240, descripcion: "Café negro filtrado." },
+        ],
+      },
+    ],
+  },
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "sereno",
+    nombre: "Sereno",
+    sector: "cocteleria",
+    plan: "pro",
+    color: "#b58620",
+    email: "reservas@serenococktail.com",
+    telefono: "+34 911 070 707",
+    cats: [
+      {
+        nombre: "Signature",
+        productos: [
+          { nombre: "Sereno", precio: 1400, descripcion: "Mezcal, lavanda, lima y miel.", alergenos: ["sulfitos"], destacado: true },
+          { nombre: "Espuma del mar", precio: 1500, descripcion: "Gin, pepino, espuma cítrica.", alergenos: ["sulfitos"], destacado: true },
+          { nombre: "Niebla de invierno", precio: 1400, descripcion: "Whisky, vermut blanco, humo de romero.", alergenos: ["sulfitos"] },
+        ],
+      },
+      {
+        nombre: "Clásicos",
+        productos: [
+          { nombre: "Old Fashioned", precio: 1200, alergenos: ["sulfitos"] },
+          { nombre: "Negroni", precio: 1200, alergenos: ["sulfitos"] },
+          { nombre: "Manhattan", precio: 1200, alergenos: ["sulfitos"] },
+          { nombre: "Daiquiri", precio: 1100, alergenos: ["sulfitos"] },
+          { nombre: "Whiskey Sour", precio: 1100, descripcion: "Con clara de huevo.", alergenos: ["huevo", "sulfitos"] },
+        ],
+      },
+      {
+        nombre: "Mocktails",
+        productos: [
+          { nombre: "Garden mojito", precio: 800, descripcion: "Sin alcohol, menta y soda." },
+          { nombre: "Sweet ginger", precio: 800, descripcion: "Jengibre, lima y miel." },
+        ],
+      },
+      {
+        nombre: "Vinos y picoteo",
+        productos: [
+          { nombre: "Champagne Veuve copa", precio: 1500, alergenos: ["sulfitos"] },
+          { nombre: "Cava Brut Nature", precio: 600, alergenos: ["sulfitos"] },
+          { nombre: "Tabla de queso curado", precio: 1490, alergenos: ["lactosa", "frutos-secos"] },
+          { nombre: "Tartar de atún", precio: 1690, alergenos: ["pescado", "soja"], destacado: true },
+        ],
+      },
+    ],
+  },
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "trellat",
+    nombre: "Trellat",
+    sector: "bar-restaurante",
+    plan: "basic",
+    color: "#7a7a4a",
+    email: "trellat@trellat.es",
+    telefono: "+34 911 080 808",
+    cats: [
+      {
+        nombre: "Tapas",
+        productos: [
+          { nombre: "Tortilla española", precio: 350, descripcion: "Pincho. Poco hecha o cuajada.", alergenos: ["huevo"], destacado: true },
+          { nombre: "Croquetas caseras (4 uds.)", precio: 690, alergenos: ["gluten", "lactosa", "huevo"] },
+          { nombre: "Patatas bravas", precio: 590, descripcion: "Salsa picante y alioli.", alergenos: ["huevo"] },
+          { nombre: "Boquerones en vinagre", precio: 590, alergenos: ["pescado"] },
+        ],
+      },
+      {
+        nombre: "Bocadillos",
+        productos: [
+          { nombre: "Bocadillo de tortilla", precio: 450, alergenos: ["gluten", "huevo"] },
+          { nombre: "De calamares", precio: 590, descripcion: "Pan con mahonesa de limón.", alergenos: ["gluten", "huevo", "moluscos"], destacado: true },
+          { nombre: "Lomo con queso", precio: 590, alergenos: ["gluten", "lactosa"] },
+          { nombre: "Jamón con tomate", precio: 590, alergenos: ["gluten"] },
+        ],
+      },
+      {
+        nombre: "Raciones",
+        productos: [
+          { nombre: "Pulpo a la plancha", precio: 1490, alergenos: ["moluscos"], destacado: true },
+          { nombre: "Pimientos del padrón", precio: 590 },
+          { nombre: "Champis al ajillo", precio: 690 },
+        ],
+      },
+      {
+        nombre: "Postres y bebidas",
+        productos: [
+          { nombre: "Flan de huevo casero", precio: 380, alergenos: ["lactosa", "huevo"] },
+          { nombre: "Caña Mahou", precio: 220, alergenos: ["gluten", "sulfitos"] },
+          { nombre: "Vermut rojo casero", precio: 280, alergenos: ["sulfitos"] },
+          { nombre: "Vino de la casa", precio: 250, alergenos: ["sulfitos"] },
+        ],
+      },
+    ],
+  },
+];
 
-  // Categorías en el orden lógico de una carta
-  const cats = {
-    entrantes:       await crearCategoria(id, "Entrantes"),
-    sopas:           await crearCategoria(id, "Sopas y caldos"),
-    especialidades:  await crearCategoria(id, "Especialidades de la casa"),
-    carnes:          await crearCategoria(id, "Carnes a la parrilla"),
-    pescados:        await crearCategoria(id, "Pescados"),
-    postres:         await crearCategoria(id, "Postres"),
-    bebidas:         await crearCategoria(id, "Bebidas"),
-    cafes:           await crearCategoria(id, "Cafés"),
-  };
+export async function seedAllDemoLocales(): Promise<{
+  creados: string[];
+  saltados: string[];
+}> {
+  const creados: string[] = [];
+  const saltados: string[] = [];
 
-  const productos: SeedProducto[] = [
-    // ENTRANTES
-    { cat: cats.entrantes, nombre: "Empanadas paisas (3 uds.)",
-      desc: "Empanadas crujientes de maíz rellenas de carne desmechada con hogao casero.",
-      precio_cents: 650, imagen_url: IMG.empanadas, alergenos: ["gluten", "huevo"] },
-    { cat: cats.entrantes, nombre: "Arepa rellena de queso",
-      desc: "Arepa de maíz blanco rellena de queso fundido, plancha al momento.",
-      precio_cents: 480, imagen_url: IMG.arepa, alergenos: ["gluten", "lactosa"] },
-    { cat: cats.entrantes, nombre: "Patacones con hogao",
-      desc: "Plátano verde frito doble cocción con salsa criolla de tomate y cebolla.",
-      precio_cents: 590, imagen_url: IMG.patacones, alergenos: [] },
+  for (const dl of DEMO_LOCALES) {
+    const existente = await obtenerLocalPorSlug(dl.slug);
+    if (existente) {
+      saltados.push(dl.slug);
+      continue;
+    }
 
-    // SOPAS
-    { cat: cats.sopas, nombre: "Sancocho trifásico",
-      desc: "Sopa tradicional con res, cerdo y pollo. Yuca, plátano, mazorca y cilantro fresco.",
-      precio_cents: 1150, imagen_url: IMG.sancocho, alergenos: ["apio"], destacado: true },
-    { cat: cats.sopas, nombre: "Mondongo paisa",
-      desc: "Sopa de mondongo cocinada a fuego lento con verduras y arroz blanco.",
-      precio_cents: 990, imagen_url: null, alergenos: ["apio"] },
-
-    // ESPECIALIDADES
-    { cat: cats.especialidades, nombre: "Bandeja paisa completa",
-      desc: "Frijoles, arroz, carne molida, chicharrón, chorizo, huevo frito, plátano maduro, aguacate y arepa.",
-      precio_cents: 1890, imagen_url: IMG.bandeja, alergenos: ["gluten", "huevo"], destacado: true },
-    { cat: cats.especialidades, nombre: "Ajiaco santafereño",
-      desc: "Sopa cremosa de pollo con tres tipos de papa, mazorca, alcaparras y crema fresca.",
-      precio_cents: 1450, imagen_url: IMG.ajiaco, alergenos: ["lactosa", "apio"] },
-
-    // CARNES
-    { cat: cats.carnes, nombre: "Churrasco con chimichurri",
-      desc: "Solomillo a la parrilla con chimichurri casero, papas criollas y maíz tierno.",
-      precio_cents: 2200, imagen_url: IMG.churrasco, alergenos: ["sulfitos"] },
-    { cat: cats.carnes, nombre: "Costilla BBQ a baja temperatura",
-      desc: "Costillas de cerdo glaseadas en BBQ casero, 6 horas a 95°C. Caen del hueso.",
-      precio_cents: 1750, imagen_url: IMG.costilla, alergenos: ["soja", "sulfitos", "mostaza"] },
-    { cat: cats.carnes, nombre: "Pechuga a la plancha",
-      desc: "Pechuga jugosa con verduras al wok y arroz blanco.",
-      precio_cents: 1580, imagen_url: null, alergenos: [] },
-
-    // PESCADOS
-    { cat: cats.pescados, nombre: "Pescado del día a la parrilla",
-      desc: "Pescado fresco con limón, ajo, perejil y patatas al horno.",
-      precio_cents: 1980, imagen_url: IMG.pescado, alergenos: ["pescado"] },
-    { cat: cats.pescados, nombre: "Ceviche colombiano",
-      desc: "Pescado blanco marinado en limón con cebolla morada, cilantro y maíz tostado.",
-      precio_cents: 1490, imagen_url: IMG.ceviche, alergenos: ["pescado", "mostaza"] },
-
-    // POSTRES
-    { cat: cats.postres, nombre: "Tres leches casero",
-      desc: "Bizcocho empapado en mezcla de tres leches, crema montada y un toque de canela.",
-      precio_cents: 620, imagen_url: IMG.tresLeches, alergenos: ["lactosa", "huevo", "frutos-secos"], destacado: true },
-    { cat: cats.postres, nombre: "Obleas con arequipe",
-      desc: "Obleas crujientes con dulce de leche, queso rallado y mermelada.",
-      precio_cents: 450, imagen_url: IMG.obleas, alergenos: ["lactosa", "huevo"] },
-
-    // BEBIDAS
-    { cat: cats.bebidas, nombre: "Cerveza Águila",
-      desc: "Cerveza colombiana lager. Botella 33 cl.",
-      precio_cents: 380, imagen_url: IMG.cerveza, alergenos: ["gluten", "sulfitos"] },
-    { cat: cats.bebidas, nombre: "Limonada de coco",
-      desc: "Limonada cremosa con coco rallado y hielo frappé. Refrescante.",
-      precio_cents: 420, imagen_url: IMG.limonada, alergenos: ["lactosa"], destacado: true },
-    { cat: cats.bebidas, nombre: "Aguardiente Antioqueño",
-      desc: "Chupito 4 cl. Servido frío como manda la tradición.",
-      precio_cents: 350, imagen_url: null, alergenos: ["sulfitos"] },
-    { cat: cats.bebidas, nombre: "Refajo",
-      desc: "Mezcla típica de cerveza con refresco rojo.",
-      precio_cents: 480, imagen_url: null, alergenos: ["gluten"] },
-
-    // CAFÉS
-    { cat: cats.cafes, nombre: "Tinto colombiano",
-      desc: "Café negro recién filtrado.",
-      precio_cents: 240, imagen_url: IMG.cafe, alergenos: [] },
-    { cat: cats.cafes, nombre: "Café con leche",
-      desc: "Espresso doble con leche caliente.",
-      precio_cents: 320, imagen_url: null, alergenos: ["lactosa"] },
-  ];
-
-  for (const p of productos) {
-    await crearProducto({
-      local_id: id,
-      categoria_id: p.cat,
-      nombre: p.nombre,
-      descripcion: p.desc,
-      precio_cents: p.precio_cents,
-      imagen_url: p.imagen_url,
-      alergenos: p.alergenos.length ? p.alergenos : null,
-      destacado: p.destacado ? 1 : 0,
-      iva_pct: 10,
+    const { id } = await crearLocal({
+      nombre: dl.nombre,
+      slug: dl.slug,
+      sector: dl.sector,
+      plan: dl.plan,
+      color_primario: dl.color,
+      email: dl.email,
+      telefono: dl.telefono,
     });
+
+    for (const cat of dl.cats) {
+      const catId = await crearCategoria(id, cat.nombre);
+      for (const it of cat.productos) {
+        await crearProducto({
+          local_id: id,
+          categoria_id: catId,
+          nombre: it.nombre,
+          descripcion: it.descripcion || null,
+          precio_cents: it.precio,
+          alergenos: it.alergenos && it.alergenos.length ? it.alergenos : null,
+          destacado: it.destacado ? 1 : 0,
+          iva_pct: 10,
+        });
+      }
+    }
+    creados.push(dl.slug);
   }
 
-  return { id, slug };
+  return { creados, saltados };
+}
+
+// Alias para mantener compatibilidad con el botón antiguo que llamaba a
+// seedLocalDemo. Ahora siembra los 8, y devuelve el primero recién creado
+// (para redirigir) o "romanssera" si todos existían.
+export async function seedLocalDemo(): Promise<{ slug: string }> {
+  const { creados, saltados } = await seedAllDemoLocales();
+  return { slug: creados[0] || saltados[0] || "romanssera" };
 }
