@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Isabella's Llafranc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<style>
+  :root{
+    --sand:#f4ecde;          /* arena clara, fondo */
+    --sand-2:#ebe1cf;
+    --cream:#fbf6ec;         /* tarjetas */
+    --ink:#2e2a24;           /* tinta cálida */
+    --ink-soft:#6b6258;
+    --muted:#9a9085;
+    --line:#e0d4bc;
+    --line-soft:#ece3cf;
+    --sea:#1f4d56;           /* azul mediterráneo profundo */
+    --sea-soft:#3a6b73;
+    --terracotta:#c66f4d;    /* acento cálido */
+    --olive:#7a8a4f;         /* verde olivo */
+    --gold:#b08746;          /* dorado quemado */
+    --shadow-soft:0 8px 28px -12px rgba(46,42,36,.18);
+    --shadow-card:0 14px 40px -22px rgba(46,42,36,.28);
+    --serif:"Cormorant Garamond",ui-serif,Georgia,serif;
+    --body:"Inter",-apple-system,system-ui,sans-serif;
+    --mono:"Space Mono",ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{background:var(--sand);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;font-weight:400}
+  body{padding-bottom:108px;max-width:520px;margin:0 auto;position:relative;overflow-x:hidden;
+    background-image:
+      radial-gradient(ellipse 70% 40% at 50% 0%, rgba(31,77,86,.06), transparent 60%),
+      radial-gradient(ellipse 50% 30% at 100% 100%, rgba(198,111,77,.05), transparent 60%);
+  }
+
+  /* ============== WELCOME CURTAIN ============== */
+  .welcome{position:fixed;inset:0;z-index:100;background:var(--sand);
+    background-image:
+      radial-gradient(ellipse 70% 50% at 50% -10%, rgba(31,77,86,.12), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 50% 110%, rgba(198,111,77,.10), transparent 60%);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 28px;text-align:center;transition:opacity .6s,visibility .6s}
+  .welcome.gone{opacity:0;visibility:hidden;pointer-events:none}
+  .w-lang{position:absolute;top:22px;right:22px}
+  .w-mark{font-family:var(--serif);font-size:14px;font-style:italic;color:var(--sea);letter-spacing:6px;text-transform:uppercase;font-weight:500;margin-bottom:6px;opacity:.7}
+  .w-logo{font-family:var(--serif);font-size:64px;font-weight:500;letter-spacing:-.5px;line-height:.95;color:var(--ink);margin-bottom:4px}
+  .w-logo em{font-style:italic;color:var(--terracotta)}
+  .w-place{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:4px;text-transform:uppercase;margin-bottom:36px}
+  .w-divider{width:60px;height:1px;background:var(--gold);margin:0 auto 28px;position:relative}
+  .w-divider::before,.w-divider::after{content:"";position:absolute;top:50%;width:5px;height:5px;background:var(--gold);border-radius:50%;transform:translateY(-50%)}
+  .w-divider::before{left:-12px}
+  .w-divider::after{right:-12px}
+  .w-hi{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--sea);margin-bottom:14px;font-weight:400}
+  .w-sub{font-family:var(--body);font-size:14.5px;color:var(--ink-soft);line-height:1.65;max-width:340px;margin:0 auto 30px;font-weight:400}
+  .w-btn{border:none;background:var(--sea);color:var(--cream);padding:16px 28px;font-family:var(--body);font-size:14px;font-weight:600;cursor:pointer;text-transform:uppercase;letter-spacing:2.5px;display:inline-flex;align-items:center;gap:10px;border-radius:0;transition:.18s;box-shadow:var(--shadow-soft)}
+  .w-btn:hover{background:var(--ink);transform:translateY(-1px);box-shadow:var(--shadow-card)}
+  .w-btn:active{transform:translate(1px,1px)}
+  .w-btn svg{width:16px;height:16px}
+  .w-room{margin-top:28px;font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+  .w-room strong{color:var(--ink);font-weight:700}
+
+  /* ============== HEADER ============== */
+  header{position:sticky;top:0;z-index:40;background:rgba(244,236,222,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .head-top{display:flex;align-items:center;justify-content:space-between;padding:18px 22px 12px;gap:14px}
+  .brand{display:flex;align-items:center;gap:12px;min-width:0;flex:1}
+  .brand-mark{flex:0 0 42px;width:42px;height:42px;background:var(--sea);color:var(--cream);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:22px;font-weight:500;font-style:italic;line-height:1;border-radius:50%;letter-spacing:-1px}
+  .brand-text{display:flex;flex-direction:column;line-height:1;min-width:0}
+  .brand h1{font-family:var(--serif);font-size:21px;font-weight:500;color:var(--ink);letter-spacing:-.3px}
+  .brand h1 em{font-style:italic;color:var(--terracotta);font-weight:500}
+  .brand span{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);margin-top:4px;text-transform:uppercase;letter-spacing:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .head-right{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+
+  .lang{position:relative}
+  .lang-btn{display:flex;align-items:center;gap:5px;background:transparent;border:1px solid var(--line);padding:7px 11px;font-family:var(--body);font-size:11.5px;font-weight:600;color:var(--ink);cursor:pointer;text-transform:uppercase;letter-spacing:1.2px;border-radius:0;transition:.16s}
+  .lang-btn:hover{border-color:var(--sea);color:var(--sea)}
+  .lang-btn .fl{font-size:13px;line-height:1}
+  .lang-btn .ar{font-size:8.5px;color:var(--ink-soft)}
+  .lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--cream);border:1px solid var(--line);padding:6px;min-width:160px;opacity:0;transform:translateY(-6px);pointer-events:none;transition:.16s;z-index:50;box-shadow:var(--shadow-card)}
+  .lang-menu.open{opacity:1;transform:none;pointer-events:auto}
+  .lang-opt{display:flex;align-items:center;gap:10px;padding:9px 12px;font-family:var(--body);font-size:13px;font-weight:500;cursor:pointer;color:var(--ink);letter-spacing:.2px;transition:.12s}
+  .lang-opt:hover{background:var(--sand-2)}
+  .lang-opt .fl{font-size:15px}
+  .lang-opt.active{background:var(--sea);color:var(--cream)}
+
+  /* ============== TABS ============== */
+  .tabs{display:flex;gap:6px;overflow-x:auto;padding:0 22px 14px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;border:none;background:transparent;color:var(--ink-soft);padding:9px 14px;font-family:var(--body);font-size:12px;font-weight:600;cursor:pointer;text-transform:uppercase;letter-spacing:1.6px;white-space:nowrap;transition:.18s;border-bottom:2px solid transparent;border-radius:0}
+  .tab:hover{color:var(--ink)}
+  .tab.active{color:var(--sea);border-bottom-color:var(--terracotta)}
+
+  main{padding:22px 22px 28px}
+
+  /* ============== SECTION HEADER ============== */
+  .sec-title{margin:40px 0 22px;display:flex;flex-direction:column;gap:6px;position:relative}
+  .sec-title:first-of-type{margin-top:14px}
+  .sec-num{font-family:var(--mono);font-size:10.5px;color:var(--gold);font-weight:700;letter-spacing:3px;text-transform:uppercase}
+  .sec-title-text{font-family:var(--serif);font-size:38px;font-weight:500;color:var(--ink);letter-spacing:-.5px;line-height:1}
+  .sec-title-text em{font-style:italic;color:var(--terracotta)}
+  .sec-sub{font-family:var(--serif);font-style:italic;font-size:15.5px;color:var(--ink-soft);line-height:1.55;margin-top:2px;max-width:90%}
+
+  /* ============== ITEM CARD ============== */
+  .item{display:flex;gap:14px;background:var(--cream);border:1px solid var(--line-soft);padding:14px;margin-bottom:14px;box-shadow:var(--shadow-soft);cursor:pointer;transition:transform .14s,border-color .14s,box-shadow .14s;position:relative;overflow:hidden}
+  .item:hover{border-color:var(--sea);box-shadow:var(--shadow-card);transform:translateY(-1px)}
+  .item:active{transform:translate(1px,1px)}
+  .item-img{flex:0 0 96px;width:96px;height:120px;background:var(--sand-2);overflow:hidden;position:relative}
+  .item-img img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.95) contrast(1.02)}
+  .item-img.tall{height:120px}
+  .fav{position:absolute;top:8px;left:8px;background:var(--cream);color:var(--terracotta);font-family:var(--mono);font-size:9px;font-weight:700;padding:3px 7px;letter-spacing:1.2px;z-index:2;border:1px solid var(--terracotta)}
+  .fav::before{content:"★ "}
+  .item-body{flex:1;min-width:0;display:flex;flex-direction:column}
+  .item-name{font-family:var(--serif);font-size:22px;font-weight:500;line-height:1.05;color:var(--ink);letter-spacing:-.2px}
+  .item-name em{font-style:italic;color:var(--terracotta)}
+  .item-desc{font-size:12.5px;color:var(--ink-soft);margin-top:6px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-weight:400}
+  .item-tag{margin-top:7px;font-family:var(--mono);font-size:9px;color:var(--olive);text-transform:uppercase;letter-spacing:1.4px;font-weight:700}
+  .item-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:10px;gap:10px}
+  .price{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--sea);letter-spacing:-.3px;line-height:1}
+  .price .nightly{font-family:var(--mono);font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;margin-left:4px}
+  .item-cta{border:1px solid var(--sea);background:transparent;color:var(--sea);font-family:var(--body);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:8px 12px;cursor:pointer;white-space:nowrap;transition:.14s}
+  .item-cta:hover{background:var(--sea);color:var(--cream)}
+
+  /* ============== INFO BLOCK (en sección Info) ============== */
+  .info-row{display:flex;gap:14px;background:var(--cream);border:1px solid var(--line-soft);padding:16px 18px;margin-bottom:10px;align-items:flex-start;box-shadow:var(--shadow-soft)}
+  .info-icon{flex:0 0 36px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:var(--sea);background:var(--sand);border-radius:50%}
+  .info-icon svg{width:18px;height:18px}
+  .info-body{flex:1;min-width:0}
+  .info-label{font-family:var(--mono);font-size:9.5px;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:3px;font-weight:700}
+  .info-value{font-family:var(--serif);font-size:17px;color:var(--ink);font-weight:500;line-height:1.3}
+  .info-sub{font-size:12.5px;color:var(--ink-soft);margin-top:3px;line-height:1.5}
+
+  /* ============== BOTTOM ACTION BAR ============== */
+  .action-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;padding:14px 22px calc(14px + env(safe-area-inset-bottom));background:rgba(251,246,236,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);z-index:45;display:flex;gap:10px}
+  .action-btn{flex:1;border:none;padding:14px 18px;font-family:var(--body);font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;text-transform:uppercase;letter-spacing:1.6px;transition:.16s;text-decoration:none}
+  .action-primary{background:var(--sea);color:var(--cream);box-shadow:var(--shadow-soft)}
+  .action-primary:hover{background:var(--ink);transform:translateY(-1px)}
+  .action-primary svg{width:15px;height:15px}
+  .action-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .action-ghost:hover{border-color:var(--sea);color:var(--sea)}
+  .action-ghost svg{width:15px;height:15px}
+
+  /* ============== DETAIL MODAL ============== */
+  .overlay{position:fixed;inset:0;background:rgba(46,42,36,.55);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:.22s;z-index:60}
+  .overlay.open{opacity:1;visibility:visible}
+  .detail{position:fixed;left:50%;bottom:0;transform:translateX(-50%) translateY(100%);width:100%;max-width:520px;max-height:90vh;background:var(--cream);z-index:65;transition:transform .32s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;overflow:hidden}
+  .detail.open{transform:translateX(-50%) translateY(0)}
+  .dt-imgwrap{position:relative;height:260px;background:var(--sand-2);overflow:hidden;flex:0 0 auto}
+  .dt-imgwrap img{width:100%;height:100%;object-fit:cover;display:block}
+  .dt-imgwrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(46,42,36,.5));pointer-events:none}
+  .dt-close{position:absolute;top:14px;right:14px;background:var(--cream);border:none;width:36px;height:36px;font-size:22px;cursor:pointer;color:var(--ink);display:flex;align-items:center;justify-content:center;border-radius:50%;line-height:1;box-shadow:var(--shadow-soft);z-index:3}
+  .dt-body{padding:24px 24px 16px;overflow-y:auto;flex:1}
+  .dt-name{font-family:var(--serif);font-size:32px;font-weight:500;color:var(--ink);line-height:1.05;letter-spacing:-.4px}
+  .dt-name em{font-style:italic;color:var(--terracotta)}
+  .dt-price{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--sea);margin-top:6px}
+  .dt-price .nightly{font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;margin-left:4px}
+  .dt-desc{font-size:14.5px;color:var(--ink-soft);margin-top:14px;line-height:1.7;font-weight:400}
+  .dt-feats{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+  .dt-feat{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink);font-weight:500}
+  .dt-feat::before{content:"";flex:0 0 4px;width:4px;height:4px;background:var(--terracotta);border-radius:50%}
+  .dt-foot{padding:14px 22px calc(14px + env(safe-area-inset-bottom));border-top:1px solid var(--line-soft);background:var(--sand);display:flex;gap:10px}
+  .dt-cta{flex:1;border:none;background:var(--sea);color:var(--cream);padding:15px;font-family:var(--body);font-size:13px;font-weight:600;cursor:pointer;text-transform:uppercase;letter-spacing:1.6px;display:flex;align-items:center;justify-content:center;gap:8px}
+  .dt-cta:hover{background:var(--ink)}
+  .dt-cta svg{width:14px;height:14px}
+
+  /* ============== SECTION RIBBON (intro de cada categoría tipo "01 LA ESTANCIA") ============== */
+  .ribbon{padding:26px 24px;background:var(--sea);color:var(--cream);margin:32px -22px 24px;text-align:center;position:relative}
+  .ribbon::before,.ribbon::after{content:"";position:absolute;left:50%;transform:translateX(-50%);width:50px;height:1px;background:var(--gold)}
+  .ribbon::before{top:14px}
+  .ribbon::after{bottom:14px}
+  .ribbon-eyebrow{font-family:var(--mono);font-size:10.5px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;font-weight:700}
+  .ribbon-title{font-family:var(--serif);font-style:italic;font-size:24px;font-weight:500;line-height:1.25;max-width:340px;margin:0 auto}
+  .ribbon-title em{font-style:normal;color:var(--terracotta);font-weight:600}
+
+  /* ============== NOTAS ============== */
+  .note{padding:18px 22px;background:var(--sand-2);border:1px solid var(--line-soft);margin-top:18px;font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--ink-soft);text-align:center;line-height:1.55}
+  .note strong{color:var(--terracotta);font-style:normal;font-weight:600}
+
+  @media (max-width: 380px){
+    .w-logo{font-size:54px}
+    .sec-title-text{font-size:32px}
+    .item-name{font-family:var(--serif);font-size:19px}
+    .item-img{flex:0 0 84px;width:84px;height:108px}
+  }
+</style>
+</head>
+<body>
+
+<div class="welcome" id="welcome">
+  <div class="w-lang" id="wLang"></div>
+  <div class="w-mark" data-t="brand">Boutique Hotel · Costa Brava</div>
+  <div class="w-logo">Isabella<em>'s</em></div>
+  <div class="w-place">Llafranc · Girona</div>
+  <div class="w-divider"></div>
+  <div class="w-hi" data-t="hi">Benvinguts</div>
+  <div class="w-sub" data-t="welcomeSub">El alma del Mediterráneo en primera línea de mar. Cocina italiana de producto, habitaciones con terraza y la calma del mar antes que el ruido.</div>
+  <button class="w-btn" id="welcomeBtn"><span data-t="start">Explorar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  <div class="w-room"><span data-t="roomLbl">Habitación</span> <strong id="wRoom">14</strong> · <span data-t="floorLbl">Piso</span> <strong>2</strong></div>
+</div>
+
+<header>
+  <div class="head-top">
+    <div class="brand">
+      <div class="brand-mark">I</div>
+      <div class="brand-text">
+        <h1>Isabella<em>'s</em> Llafranc</h1>
+        <span data-t="tagline">Boutique Hotel · Mediterranean Soul</span>
+      </div>
+    </div>
+    <div class="head-right">
+      <div class="lang" id="hLang"></div>
+    </div>
+  </div>
+  <div class="tabs" id="tabs"></div>
+</header>
+
+<main id="content"></main>
+
+<div class="action-bar">
+  <a class="action-btn action-ghost" href="tel:+34872552788">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    <span data-t="callDesk">Recepción</span>
+  </a>
+  <button class="action-btn action-primary" id="requestBtn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+    <span data-t="requestBtn">Solicitar</span>
+  </button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="detail" id="detail">
+  <div class="dt-imgwrap"><img id="dtImg" src="" alt=""><button class="dt-close" id="dtClose">×</button></div>
+  <div class="dt-body">
+    <div class="dt-name" id="dtName"></div>
+    <div class="dt-price" id="dtPrice"></div>
+    <div class="dt-desc" id="dtDesc"></div>
+    <div class="dt-feats" id="dtFeats"></div>
+  </div>
+  <div class="dt-foot">
+    <button class="dt-cta" id="dtCta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      <span data-t="askInfo">Solicitar información</span>
+    </button>
+  </div>
+</div>
+
+<script>
+const LANGS=[
+  {code:"ES",flag:"🇪🇸",label:"Español"},
+  {code:"CA",flag:"🇪🇸",label:"Català"},
+  {code:"EN",flag:"🇬🇧",label:"English"},
+  {code:"PT",flag:"🇵🇹",label:"Português"}
+];
+let lang = "ES";
+
+const T = {
+  ES:{
+    brand:"Boutique Hotel · Costa Brava",
+    hi:"Benvinguts",
+    welcomeSub:"El alma del Mediterráneo en primera línea de mar. Cocina italiana de producto, habitaciones con terraza y la calma del mar antes que el ruido.",
+    start:"Explorar",
+    roomLbl:"Habitación",
+    floorLbl:"Piso",
+    tagline:"Boutique Hotel · Mediterranean Soul",
+    callDesk:"Recepción",
+    requestBtn:"Solicitar",
+    askInfo:"Solicitar información",
+    nightLbl:"/ noche",
+    perPerson:"/ persona",
+    fromLbl:"desde",
+    cat:{stay:"Estancia",dine:"Restaurante",experiences:"Experiencias",spa:"Bienestar",info:"Información"},
+    ribbon:{
+      stay:{eye:"01 · La Estancia",t:"26 habitaciones <em>mediterráneas</em>, todas distintas, todas con su luz."},
+      dine:{eye:"02 · El Restaurante",t:"Cocina italiana y mediterránea, <em>frente al mar</em>, producto del día."},
+      experiences:{eye:"03 · Experiencias",t:"La Costa Brava se descubre <em>despacio</em>. Te lo organizamos todo."},
+      spa:{eye:"04 · Bienestar",t:"Servicio de <em>masajes</em> en la habitación, a la hora que tú elijas."},
+      info:{eye:"05 · Información",t:"Lo práctico, en <em>cuatro líneas</em>. Y siempre puedes llamarnos."}
+    },
+    secSub:{
+      stay:"Dobles, deluxe y suites — algunas con piscina en la terraza.",
+      dine:"Servicio de 12:30 a 15:30 y de 19:30 a 22:15.",
+      experiences:"Paseos por la costa, deportes náuticos y rutas gastronómicas.",
+      spa:"Tratamientos personalizados. Consulta tu opción en recepción.",
+      info:"Horarios, contacto y servicios incluidos."
+    },
+    feats:{
+      seaview:"Vistas al mar",
+      terrace:"Terraza privada",
+      pool:"Piscina en la terraza",
+      ac:"A/C y calefacción",
+      streaming:"Servicios de streaming",
+      minibar:"Minibar",
+      safe:"Caja fuerte",
+      breakfast:"Desayuno 7:30–11:00",
+      tv:"TV pantalla plana",
+      glutenfree:"Opciones sin gluten",
+      vegetarian:"Vegetariano",
+      sharing:"Para compartir",
+      signature:"Plato firma",
+      fresh:"Pescado fresco del día",
+      external:"Servicio externo certificado"
+    }
+  },
+  CA:{
+    brand:"Boutique Hotel · Costa Brava",
+    hi:"Benvinguts",
+    welcomeSub:"L'ànima del Mediterrani a primera línia de mar. Cuina italiana de producte, habitacions amb terrassa i la calma del mar abans que el soroll.",
+    start:"Explorar",
+    roomLbl:"Habitació",
+    floorLbl:"Pis",
+    tagline:"Boutique Hotel · Mediterranean Soul",
+    callDesk:"Recepció",
+    requestBtn:"Sol·licitar",
+    askInfo:"Sol·licitar informació",
+    nightLbl:"/ nit",
+    perPerson:"/ persona",
+    fromLbl:"des de",
+    cat:{stay:"Estada",dine:"Restaurant",experiences:"Experiències",spa:"Benestar",info:"Informació"},
+    ribbon:{
+      stay:{eye:"01 · L'estada",t:"26 habitacions <em>mediterrànies</em>, totes diferents, totes amb la seva llum."},
+      dine:{eye:"02 · El restaurant",t:"Cuina italiana i mediterrània, <em>davant del mar</em>, producte del dia."},
+      experiences:{eye:"03 · Experiències",t:"La Costa Brava es descobreix <em>a poc a poc</em>. T'ho organitzem tot."},
+      spa:{eye:"04 · Benestar",t:"Servei de <em>massatges</em> a l'habitació, a l'hora que vulguis."},
+      info:{eye:"05 · Informació",t:"El pràctic, en <em>quatre línies</em>. I sempre pots trucar-nos."}
+    },
+    secSub:{
+      stay:"Dobles, deluxe i suites — algunes amb piscina a la terrassa.",
+      dine:"Servei de 12:30 a 15:30 i de 19:30 a 22:15.",
+      experiences:"Passejos per la costa, esports nàutics i rutes gastronòmiques.",
+      spa:"Tractaments personalitzats. Consulta la teva opció a recepció.",
+      info:"Horaris, contacte i serveis inclosos."
+    },
+    feats:{
+      seaview:"Vistes al mar",
+      terrace:"Terrassa privada",
+      pool:"Piscina a la terrassa",
+      ac:"A/C i calefacció",
+      streaming:"Serveis de streaming",
+      minibar:"Minibar",
+      safe:"Caixa forta",
+      breakfast:"Esmorzar 7:30–11:00",
+      tv:"TV pantalla plana",
+      glutenfree:"Opcions sense gluten",
+      vegetarian:"Vegetarià",
+      sharing:"Per compartir",
+      signature:"Plat firma",
+      fresh:"Peix fresc del dia",
+      external:"Servei extern certificat"
+    }
+  },
+  EN:{
+    brand:"Boutique Hotel · Costa Brava",
+    hi:"Welcome",
+    welcomeSub:"The Mediterranean soul, beachfront. Italian cooking from the market, rooms with private terrace and the calm of the sea before the noise.",
+    start:"Explore",
+    roomLbl:"Room",
+    floorLbl:"Floor",
+    tagline:"Boutique Hotel · Mediterranean Soul",
+    callDesk:"Front desk",
+    requestBtn:"Request",
+    askInfo:"Request information",
+    nightLbl:"/ night",
+    perPerson:"/ person",
+    fromLbl:"from",
+    cat:{stay:"Stay",dine:"Restaurant",experiences:"Experiences",spa:"Wellness",info:"Information"},
+    ribbon:{
+      stay:{eye:"01 · The Stay",t:"26 <em>Mediterranean</em> rooms, each one different, each one with its own light."},
+      dine:{eye:"02 · The Restaurant",t:"Italian & Mediterranean cooking, <em>by the sea</em>, daily market produce."},
+      experiences:{eye:"03 · Experiences",t:"The Costa Brava is meant to be discovered <em>slowly</em>. We arrange it all."},
+      spa:{eye:"04 · Wellness",t:"In-room <em>massages</em>, on the schedule that suits you."},
+      info:{eye:"05 · Information",t:"The practical, in <em>four lines</em>. And you can always call us."}
+    },
+    secSub:{
+      stay:"Doubles, deluxe and suites — some with a pool on the terrace.",
+      dine:"Service 12:30–15:30 and 19:30–22:15.",
+      experiences:"Coastal walks, water sports and gastronomic routes.",
+      spa:"Tailored treatments. Ask at front desk for your option.",
+      info:"Hours, contact and included services."
+    },
+    feats:{
+      seaview:"Sea view",
+      terrace:"Private terrace",
+      pool:"Pool on the terrace",
+      ac:"A/C and heating",
+      streaming:"Streaming services",
+      minibar:"Minibar",
+      safe:"Safe",
+      breakfast:"Breakfast 7:30–11:00",
+      tv:"Flat-screen TV",
+      glutenfree:"Gluten-free options",
+      vegetarian:"Vegetarian",
+      sharing:"For sharing",
+      signature:"Signature dish",
+      fresh:"Fresh fish of the day",
+      external:"Certified external service"
+    }
+  },
+  PT:{
+    brand:"Hotel Boutique · Costa Brava",
+    hi:"Bem-vindos",
+    welcomeSub:"A alma do Mediterrâneo à beira-mar. Cozinha italiana de mercado, quartos com terraço privado e a calma do mar antes do ruído.",
+    start:"Explorar",
+    roomLbl:"Quarto",
+    floorLbl:"Andar",
+    tagline:"Hotel Boutique · Alma Mediterrânea",
+    callDesk:"Recepção",
+    requestBtn:"Pedir",
+    askInfo:"Pedir informação",
+    nightLbl:"/ noite",
+    perPerson:"/ pessoa",
+    fromLbl:"desde",
+    cat:{stay:"Estadia",dine:"Restaurante",experiences:"Experiências",spa:"Bem-estar",info:"Informação"},
+    ribbon:{
+      stay:{eye:"01 · A estadia",t:"26 quartos <em>mediterrânicos</em>, todos diferentes, todos com a sua luz."},
+      dine:{eye:"02 · O restaurante",t:"Cozinha italiana e mediterrânica, <em>frente ao mar</em>, produto do dia."},
+      experiences:{eye:"03 · Experiências",t:"A Costa Brava descobre-se <em>devagar</em>. Tratamos de tudo."},
+      spa:{eye:"04 · Bem-estar",t:"Serviço de <em>massagens</em> no quarto, à hora que escolher."},
+      info:{eye:"05 · Informação",t:"O prático, em <em>quatro linhas</em>. E pode sempre ligar-nos."}
+    },
+    secSub:{
+      stay:"Duplos, deluxe e suítes — alguns com piscina no terraço.",
+      dine:"Serviço das 12:30 às 15:30 e das 19:30 às 22:15.",
+      experiences:"Passeios pela costa, desportos náuticos e rotas gastronómicas.",
+      spa:"Tratamentos personalizados. Consulte na recepção.",
+      info:"Horários, contacto e serviços incluídos."
+    },
+    feats:{
+      seaview:"Vista para o mar",
+      terrace:"Terraço privado",
+      pool:"Piscina no terraço",
+      ac:"A/C e aquecimento",
+      streaming:"Serviços de streaming",
+      minibar:"Minibar",
+      safe:"Cofre",
+      breakfast:"Pequeno-almoço 7:30–11:00",
+      tv:"TV plana",
+      glutenfree:"Opções sem glúten",
+      vegetarian:"Vegetariano",
+      sharing:"Para partilhar",
+      signature:"Prato de assinatura",
+      fresh:"Peixe fresco do dia",
+      external:"Serviço externo certificado"
+    }
+  }
+};
+
+function tt(k){ return T[lang][k] || T.ES[k] || k; }
+function ttCat(k){ return (T[lang].cat||T.ES.cat)[k] || k; }
+function ttFeat(k){ return (T[lang].feats||T.ES.feats)[k] || k; }
+
+// ===== Imágenes (Unsplash, costa brava / mediterráneo / boutique) =====
+const IMG = {
+  doble:    "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=400&h=500&fit=crop&auto=format&q=75",
+  deluxe:   "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=500&fit=crop&auto=format&q=75",
+  suite:    "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=500&fit=crop&auto=format&q=75",
+  family:   "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=500&fit=crop&auto=format&q=75",
+  burrata:  "https://images.unsplash.com/photo-1542528180-a1208c5169a5?w=400&h=500&fit=crop&auto=format&q=75",
+  tartar:   "https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&h=500&fit=crop&auto=format&q=75",
+  pasta:    "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=500&fit=crop&auto=format&q=75",
+  pescado:  "https://images.unsplash.com/photo-1535140728325-a4d3707eee94?w=400&h=500&fit=crop&auto=format&q=75",
+  risotto:  "https://images.unsplash.com/photo-1633436374961-09b04bbbe635?w=400&h=500&fit=crop&auto=format&q=75",
+  postre:   "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=500&fit=crop&auto=format&q=75",
+  paseo:    "https://images.unsplash.com/photo-1599394022918-6c2776530abb?w=400&h=500&fit=crop&auto=format&q=75",
+  kayak:    "https://images.unsplash.com/photo-1502780402662-acc01917738e?w=400&h=500&fit=crop&auto=format&q=75",
+  ruta:     "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=500&fit=crop&auto=format&q=75",
+  privado:  "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=500&fit=crop&auto=format&q=75",
+  spa1:     "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=500&fit=crop&auto=format&q=75",
+  spa2:     "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&h=500&fit=crop&auto=format&q=75",
+};
+
+// ===== Datos por sección =====
+const SECTIONS = [
+  // ───────────── ESTANCIA ─────────────
+  { id:"stay", items:[
+    { id:"r1", img:IMG.doble, best:true,
+      name:{ES:"Habitación Doble",CA:"Habitació Doble",EN:"Double Room",PT:"Quarto Duplo"},
+      price:165,
+      priceUnit:"nightLbl",
+      tag:{ES:"DESDE 20 m²",CA:"DES DE 20 m²",EN:"FROM 20 m²",PT:"DESDE 20 m²"},
+      desc:{
+        ES:"Habitación cálida con baño completo, A/C y minibar. Ideal para una primera noche sin pensar en nada.",
+        CA:"Habitació càlida amb bany complet, A/C i minibar. Ideal per a una primera nit sense pensar en res.",
+        EN:"Warm room with full bathroom, A/C and minibar. Perfect for a first night with no thinking.",
+        PT:"Quarto acolhedor com banheiro completo, A/C e minibar. Perfeito para uma primeira noite sem pensar em nada."
+      },
+      feats:["ac","streaming","minibar","safe","tv","breakfast"]
+    },
+    { id:"r2", img:IMG.deluxe, best:true,
+      name:{ES:"Deluxe con vistas",CA:"Deluxe amb vistes",EN:"Deluxe Sea View",PT:"Deluxe com Vista Mar"},
+      price:245,
+      priceUnit:"nightLbl",
+      tag:{ES:"VISTAS AL MAR",CA:"VISTES AL MAR",EN:"SEA VIEW",PT:"VISTA MAR"},
+      desc:{
+        ES:"Más espacio, terraza privada y la primera luz de la mañana directamente sobre el mar. Lo justo para no querer salir.",
+        CA:"Més espai, terrassa privada i la primera llum del matí directament sobre el mar.",
+        EN:"More space, private terrace and the first morning light directly over the sea.",
+        PT:"Mais espaço, terraço privado e a primeira luz da manhã diretamente sobre o mar."
+      },
+      feats:["seaview","terrace","ac","streaming","minibar","safe","breakfast"]
+    },
+    { id:"r3", img:IMG.suite,
+      name:{ES:"Suite con Piscina",CA:"Suite amb Piscina",EN:"Suite with Pool",PT:"Suíte com Piscina"},
+      price:520,
+      priceUnit:"nightLbl",
+      tag:{ES:"PISCINA EN TERRAZA",CA:"PISCINA A LA TERRASSA",EN:"POOL ON TERRACE",PT:"PISCINA NO TERRAÇO"},
+      desc:{
+        ES:"Suite con piscina privada en la terraza, vistas abiertas a la bahía y zona de estar separada. La habitación más buscada.",
+        CA:"Suite amb piscina privada a la terrassa, vistes obertes a la badia i zona d'estar separada.",
+        EN:"Suite with private pool on the terrace, open bay views and separate sitting area. The most-asked room.",
+        PT:"Suíte com piscina privada no terraço, vistas amplas da baía e zona de estar separada."
+      },
+      feats:["pool","seaview","terrace","ac","streaming","minibar","safe"]
+    },
+    { id:"r4", img:IMG.family,
+      name:{ES:"Familiar / Conectadas",CA:"Familiar / Connectades",EN:"Family / Connecting",PT:"Familiar / Comunicantes"},
+      price:295,
+      priceUnit:"nightLbl",
+      tag:{ES:"HASTA 4 PERSONAS",CA:"FINS A 4 PERSONES",EN:"UP TO 4",PT:"ATÉ 4 PESSOAS"},
+      desc:{
+        ES:"Dos habitaciones conectadas por puerta interior. Cuna gratuita para menores de 2 años, bajo petición.",
+        CA:"Dues habitacions connectades per porta interior. Bressol gratuït per a menors de 2 anys, sota petició.",
+        EN:"Two rooms connected by an interior door. Free cot for under 2, on request.",
+        PT:"Dois quartos comunicantes. Berço grátis para menores de 2 anos, sob pedido."
+      },
+      feats:["ac","streaming","minibar","tv","breakfast"]
+    },
+  ]},
+
+  // ───────────── RESTAURANTE ─────────────
+  { id:"dine", items:[
+    { id:"d1", img:IMG.burrata, best:true,
+      name:{ES:"Burrata di Puglia",CA:"Burrata di Puglia",EN:"Burrata di Puglia",PT:"Burrata di Puglia"},
+      price:18.5,
+      tag:{ES:"PARA COMPARTIR",CA:"PER COMPARTIR",EN:"FOR SHARING",PT:"PARA PARTILHAR"},
+      desc:{
+        ES:"Burrata fresca, tomate ramaillete del Maresme, albahaca y aceite de oliva virgen extra de Pals.",
+        CA:"Burrata fresca, tomàquet ramellet del Maresme, alfàbrega i oli d'oliva verge extra de Pals.",
+        EN:"Fresh burrata, Maresme tomato, basil and extra virgin Pals olive oil.",
+        PT:"Burrata fresca, tomate Maresme, manjericão e azeite extra virgem de Pals."
+      },
+      feats:["sharing","vegetarian"]
+    },
+    { id:"d2", img:IMG.tartar,
+      name:{ES:"Tartar de atún rojo",CA:"Tàrtar de tonyina vermella",EN:"Bluefin Tuna Tartare",PT:"Tártaro de Atum-rabilho"},
+      price:24,
+      tag:{ES:"PESCA DEL DÍA",CA:"PESCA DEL DIA",EN:"DAILY CATCH",PT:"PESCA DO DIA"},
+      desc:{
+        ES:"Atún rojo de almadraba, aguacate, soja envejecida y wasabi fresco. Crujiente de arroz negro.",
+        CA:"Tonyina vermella d'almadrava, alvocat, soja envellida i wasabi fresc.",
+        EN:"Trap-caught bluefin tuna, avocado, aged soy and fresh wasabi. Black rice crisp.",
+        PT:"Atum-rabilho de armação, abacate, soja envelhecida e wasabi fresco."
+      },
+      feats:["fresh","signature"]
+    },
+    { id:"d3", img:IMG.pasta, best:true,
+      name:{ES:"Spaghetti alle vongole",CA:"Spaghetti alle vongole",EN:"Spaghetti alle vongole",PT:"Spaghetti alle vongole"},
+      price:22,
+      tag:{ES:"PASTA ARTESANAL",CA:"PASTA ARTESANAL",EN:"HOUSE-MADE PASTA",PT:"MASSA ARTESANAL"},
+      desc:{
+        ES:"Spaghetti hechos en casa, almejas de la costa, ajo, perejil y un toque de vino blanco del Empordà.",
+        CA:"Spaghetti fets a casa, cloïsses de la costa, all, julivert i un toc de vi blanc de l'Empordà.",
+        EN:"House spaghetti, coastal clams, garlic, parsley and a touch of Empordà white wine.",
+        PT:"Spaghetti caseiro, amêijoas da costa, alho, salsa e um toque de vinho branco do Empordà."
+      },
+      feats:["signature"]
+    },
+    { id:"d4", img:IMG.pescado,
+      name:{ES:"Lubina a la sal",CA:"Llobarro a la sal",EN:"Salt-Crusted Sea Bass",PT:"Robalo em Crosta de Sal"},
+      price:32,
+      tag:{ES:"PARA 2 PERSONAS",CA:"PER A 2 PERSONES",EN:"FOR 2",PT:"PARA 2"},
+      desc:{
+        ES:"Lubina salvaje del día cocinada bajo costra de sal marina. Acompañada de patata confitada y mojo verde.",
+        CA:"Llobarro salvatge del dia cuinat sota crosta de sal. Patata confitada i mojo verd.",
+        EN:"Day's wild sea bass cooked in sea-salt crust. With confit potato and green mojo.",
+        PT:"Robalo selvagem do dia em crosta de sal marinho. Batata confitada e mojo verde."
+      },
+      feats:["fresh","sharing"]
+    },
+    { id:"d5", img:IMG.risotto,
+      name:{ES:"Risotto al limone",CA:"Risotto al limone",EN:"Risotto al limone",PT:"Risotto al limone"},
+      price:19.5,
+      tag:{ES:"VEGETARIANO",CA:"VEGETARIÀ",EN:"VEGETARIAN",PT:"VEGETARIANO"},
+      desc:{
+        ES:"Arroz carnaroli, mantequilla noisette, limón de Amalfi y parmesano reggiano 24 meses.",
+        CA:"Arròs carnaroli, mantega noisette, llimona d'Amalfi i parmesà reggiano 24 mesos.",
+        EN:"Carnaroli rice, noisette butter, Amalfi lemon and 24-month parmigiano.",
+        PT:"Arroz carnaroli, manteiga noisette, limão de Amalfi e parmigiano 24 meses."
+      },
+      feats:["vegetarian","glutenfree"]
+    },
+    { id:"d6", img:IMG.postre,
+      name:{ES:"Tiramisú della casa",CA:"Tiramisú de la casa",EN:"House Tiramisù",PT:"Tiramisù da casa"},
+      price:9,
+      tag:{ES:"CLÁSICO",CA:"CLÀSSIC",EN:"CLASSIC",PT:"CLÁSSICO"},
+      desc:{
+        ES:"Receta de la nonna, café espresso, mascarpone montado a mano, cacao Valrhona.",
+        CA:"Recepta de la nonna, cafè exprés, mascarpone muntat a mà, cacau Valrhona.",
+        EN:"Nonna's recipe, espresso, hand-whipped mascarpone, Valrhona cocoa.",
+        PT:"Receita da nonna, café expresso, mascarpone batido à mão, cacau Valrhona."
+      },
+      feats:["vegetarian"]
+    },
+  ]},
+
+  // ───────────── EXPERIENCIAS ─────────────
+  { id:"experiences", items:[
+    { id:"e1", img:IMG.paseo, best:true,
+      name:{ES:"Camí de Ronda al alba",CA:"Camí de Ronda a l'alba",EN:"Camí de Ronda at Dawn",PT:"Camí de Ronda ao Amanhecer"},
+      price:0,
+      priceTxt:{ES:"Incluido",CA:"Inclòs",EN:"Included",PT:"Incluído"},
+      tag:{ES:"3 km · 45 min",CA:"3 km · 45 min",EN:"3 km · 45 min",PT:"3 km · 45 min"},
+      desc:{
+        ES:"Sendero histórico de pescadores que une Llafranc con Calella de Palafrugell. Te dejamos preparado un thermo de café.",
+        CA:"Sender històric de pescadors que uneix Llafranc amb Calella de Palafrugell. Et deixem un termo de cafè preparat.",
+        EN:"Historic fishermen's path linking Llafranc and Calella de Palafrugell. We leave a coffee thermos ready for you.",
+        PT:"Trilho histórico de pescadores ligando Llafranc a Calella de Palafrugell. Deixamos um termo de café pronto."
+      },
+      feats:[]
+    },
+    { id:"e2", img:IMG.kayak,
+      name:{ES:"Kayak por las calas",CA:"Caiac per les cales",EN:"Kayak Through the Coves",PT:"Caiaque pelas Calas"},
+      price:55,
+      priceUnit:"perPerson",
+      tag:{ES:"2 H · DEPORTE NÁUTICO",CA:"2 H · ESPORT NÀUTIC",EN:"2 H · WATER SPORT",PT:"2 H · DESPORTO NÁUTICO"},
+      desc:{
+        ES:"Ruta guiada por las calas vírgenes de El Golfet y Aiguablava. Material y instructor incluidos.",
+        CA:"Ruta guiada per les cales verges d'El Golfet i Aiguablava. Material i instructor inclosos.",
+        EN:"Guided route through the virgin coves of El Golfet and Aiguablava. Gear and instructor included.",
+        PT:"Rota guiada pelas calas virgens de El Golfet e Aiguablava. Material e instrutor incluídos."
+      },
+      feats:["external"]
+    },
+    { id:"e3", img:IMG.ruta, best:true,
+      name:{ES:"Ruta del vino del Empordà",CA:"Ruta del vi de l'Empordà",EN:"Empordà Wine Route",PT:"Rota do Vinho do Empordà"},
+      price:120,
+      priceUnit:"perPerson",
+      tag:{ES:"MEDIO DÍA · CON CONDUCTOR",CA:"MIG DIA · AMB CONDUCTOR",EN:"HALF DAY · WITH DRIVER",PT:"MEIO DIA · COM MOTORISTA"},
+      desc:{
+        ES:"Tres bodegas, dos catas, conductor privado. Pequeñas DO de garnacha vieja y cariñena del Cap de Creus.",
+        CA:"Tres cellers, dues tastes, conductor privat. Petites DO de garnatxa vella i carinyena del Cap de Creus.",
+        EN:"Three cellars, two tastings, private driver. Small DOs of old garnacha and Cap de Creus cariñena.",
+        PT:"Três adegas, duas degustações, motorista privado. Pequenas DO de garnacha velha e cariñena."
+      },
+      feats:["signature"]
+    },
+    { id:"e4", img:IMG.privado,
+      name:{ES:"Cena privada en la terraza",CA:"Sopar privat a la terrassa",EN:"Private Dinner on the Terrace",PT:"Jantar Privado no Terraço"},
+      price:0,
+      priceTxt:{ES:"A consultar",CA:"A consultar",EN:"On request",PT:"A consultar"},
+      tag:{ES:"EVENTO PRIVADO",CA:"EVENT PRIVAT",EN:"PRIVATE EVENT",PT:"EVENTO PRIVADO"},
+      desc:{
+        ES:"Menú diseñado por el chef para tu mesa, en la terraza con vistas al mar. Aniversarios, pedidas, celebraciones íntimas.",
+        CA:"Menú dissenyat pel xef per a la teva taula, a la terrassa amb vistes al mar.",
+        EN:"Chef-designed menu for your table on the sea-view terrace. Anniversaries, proposals, intimate celebrations.",
+        PT:"Menu desenhado pelo chef para a sua mesa no terraço com vista mar."
+      },
+      feats:["signature"]
+    },
+  ]},
+
+  // ───────────── BIENESTAR ─────────────
+  { id:"spa", items:[
+    { id:"s1", img:IMG.spa1, best:true,
+      name:{ES:"Masaje relajante",CA:"Massatge relaxant",EN:"Relaxing Massage",PT:"Massagem Relaxante"},
+      price:75,
+      tag:{ES:"50 MIN · EN HABITACIÓN",CA:"50 MIN · A L'HABITACIÓ",EN:"50 MIN · IN-ROOM",PT:"50 MIN · NO QUARTO"},
+      desc:{
+        ES:"Masaje completo de cuerpo con aceite de almendras y romero. Servicio profesional bajo cita previa.",
+        CA:"Massatge complet de cos amb oli d'ametlles i romaní. Servei professional amb cita prèvia.",
+        EN:"Full-body massage with almond and rosemary oil. Professional service by appointment.",
+        PT:"Massagem corporal completa com óleo de amêndoas e alecrim. Serviço profissional com marcação."
+      },
+      feats:["external"]
+    },
+    { id:"s2", img:IMG.spa2,
+      name:{ES:"Ritual mediterráneo",CA:"Ritual mediterrani",EN:"Mediterranean Ritual",PT:"Ritual Mediterrânico"},
+      price:140,
+      tag:{ES:"90 MIN · CON EXFOLIACIÓN",CA:"90 MIN · AMB EXFOLIACIÓ",EN:"90 MIN · WITH SCRUB",PT:"90 MIN · COM ESFOLIAÇÃO"},
+      desc:{
+        ES:"Exfoliación con sal de Cadaqués, masaje con aceites cítricos y envoltura de algas. Sale el mar de la habitación.",
+        CA:"Exfoliació amb sal de Cadaqués, massatge amb olis cítrics i embolcall d'algues.",
+        EN:"Cadaqués salt scrub, citrus-oil massage and algae wrap. The sea fills the room.",
+        PT:"Esfoliação com sal de Cadaqués, massagem com óleos cítricos e envoltório de algas."
+      },
+      feats:["signature","external"]
+    },
+  ]},
+];
+
+// ===== Estado e iniciación =====
+function buildLangMenu(containerId, isWelcome){
+  const root = document.getElementById(containerId);
+  if(!root) return;
+  const current = LANGS.find(l => l.code === lang);
+  root.innerHTML = `
+    <button class="lang-btn" id="${containerId}Btn">
+      <span class="fl">${current.flag}</span>
+      <span>${current.code}</span>
+      <span class="ar">▾</span>
+    </button>
+    <div class="lang-menu" id="${containerId}Menu">
+      ${LANGS.map(l => `
+        <div class="lang-opt ${l.code===lang?'active':''}" data-code="${l.code}">
+          <span class="fl">${l.flag}</span>
+          <span>${l.label}</span>
+        </div>
+      `).join("")}
+    </div>
+  `;
+  const btn = root.querySelector(`#${containerId}Btn`);
+  const menu = root.querySelector(`#${containerId}Menu`);
+  btn.addEventListener("click", e => {
+    e.stopPropagation();
+    document.querySelectorAll(".lang-menu.open").forEach(m => { if(m!==menu) m.classList.remove("open"); });
+    menu.classList.toggle("open");
+  });
+  root.querySelectorAll(".lang-opt").forEach(o => {
+    o.addEventListener("click", e => {
+      e.stopPropagation();
+      lang = o.dataset.code;
+      menu.classList.remove("open");
+      applyLang();
+    });
+  });
+}
+document.addEventListener("click", () => {
+  document.querySelectorAll(".lang-menu.open").forEach(m => m.classList.remove("open"));
+});
+
+function applyLang(){
+  document.documentElement.lang = lang.toLowerCase();
+  document.querySelectorAll("[data-t]").forEach(el => {
+    const k = el.getAttribute("data-t");
+    el.textContent = tt(k);
+  });
+  buildLangMenu("wLang", true);
+  buildLangMenu("hLang", false);
+  renderTabs();
+  renderContent();
+}
+
+let activeTab = "stay";
+
+function renderTabs(){
+  const tabs = document.getElementById("tabs");
+  tabs.innerHTML = SECTIONS.map(s => `
+    <button class="tab ${activeTab===s.id?'active':''}" data-tab="${s.id}">${ttCat(s.id)}</button>
+  `).join("");
+  tabs.querySelectorAll(".tab").forEach(t => {
+    t.addEventListener("click", () => {
+      activeTab = t.dataset.tab;
+      renderTabs();
+      renderContent();
+      window.scrollTo({top:0, behavior:"smooth"});
+    });
+  });
+}
+
+function renderContent(){
+  const root = document.getElementById("content");
+  const sec = SECTIONS.find(s => s.id === activeTab);
+  if(!sec){
+    if(activeTab === "info"){ renderInfo(root); return; }
+    root.innerHTML = "";
+    return;
+  }
+  const ribbon = T[lang].ribbon[sec.id] || T.ES.ribbon[sec.id];
+  const secSub = (T[lang].secSub||T.ES.secSub)[sec.id] || "";
+  const numStr = ribbon.eye.split("·")[0].trim();
+  const ribbonTitle = ribbon.t.split("·").pop().trim();
+  root.innerHTML = `
+    <div class="sec-title">
+      <span class="sec-num">${ribbon.eye}</span>
+      <span class="sec-title-text">${(T[lang].cat||T.ES.cat)[sec.id]}</span>
+      <span class="sec-sub">${secSub}</span>
+    </div>
+    <div class="ribbon">
+      <div class="ribbon-eyebrow">${ribbon.eye.replace(/^\d+\s*·\s*/, "").toUpperCase()}</div>
+      <div class="ribbon-title">${ribbon.t}</div>
+    </div>
+    ${sec.items.map(it => itemCard(it)).join("")}
+    ${sec.id === "stay" ? `<div class="note"><strong>Check-in</strong> 15:00–23:00 · <strong>Check-out</strong> 12:00. Pago con tarjeta.</div>` : ""}
+    ${sec.id === "dine" ? `<div class="note">Servicio de <strong>12:30–15:30</strong> y <strong>19:30–22:15</strong>, todos los días.</div>` : ""}
+    ${sec.id === "spa" ? `<div class="note">Solicita tu hora en <strong>recepción</strong>. Servicio externo certificado.</div>` : ""}
+  `;
+  root.querySelectorAll(".item").forEach(el => {
+    el.addEventListener("click", () => openDetail(el.dataset.id, sec.id));
+  });
+}
+
+function priceStr(it){
+  if(it.priceTxt) return it.priceTxt[lang] || it.priceTxt.ES;
+  const n = it.price;
+  if(!n) return "";
+  const unit = it.priceUnit ? ` <span class="nightly">${tt(it.priceUnit)}</span>` : "";
+  const formatted = Number.isInteger(n) ? `${n}€` : `${n.toFixed(2).replace(".",",")}€`;
+  return `${formatted}${unit}`;
+}
+
+function itemCard(it){
+  const name = (it.name && it.name[lang]) || it.name.ES;
+  const desc = (it.desc && it.desc[lang]) || it.desc.ES;
+  const tag = it.tag ? ((it.tag[lang] || it.tag.ES)) : "";
+  return `
+    <div class="item" data-id="${it.id}">
+      <div class="item-img tall">
+        ${it.best ? `<div class="fav">TOP</div>` : ""}
+        <img src="${it.img}" alt="${name}" loading="lazy">
+      </div>
+      <div class="item-body">
+        <div class="item-name">${name}</div>
+        <div class="item-desc">${desc}</div>
+        ${tag ? `<div class="item-tag">${tag}</div>` : ""}
+        <div class="item-foot">
+          <span class="price">${priceStr(it)}</span>
+          <button class="item-cta">${tt("askInfo")}</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderInfo(root){
+  const ribbon = T[lang].ribbon.info || T.ES.ribbon.info;
+  const secSub = (T[lang].secSub||T.ES.secSub).info;
+  const I = {
+    ES:{
+      check:"Check-in & check-out",
+      checkV:"15:00–23:00 / hasta 12:00",
+      restaurant:"Restaurante",
+      restaurantV:"Lunes a domingo · 12:30–15:30 y 19:30–22:15",
+      breakfast:"Desayuno",
+      breakfastV:"De 7:30 a 11:00 · servicio en el restaurante",
+      reception:"Recepción 24 h",
+      receptionV:"Llama a la 0 · o desde tu móvil al +34 872 552 788",
+      address:"Dirección",
+      addressV:"Carrer Francesc Blanes, 5 · 17211 Llafranc · Girona",
+      services:"Servicios",
+      servicesV:"Parking privado (con reserva) · Servicio de masajes · Guarda equipaje",
+      kids:"Niños",
+      kidsV:"Se admiten niños de cualquier edad · Cuna bajo petición",
+      pay:"Forma de pago",
+      payV:"Solo tarjeta (no efectivo)"
+    },
+    CA:{
+      check:"Check-in & check-out",
+      checkV:"15:00–23:00 / fins a les 12:00",
+      restaurant:"Restaurant",
+      restaurantV:"Dilluns a diumenge · 12:30–15:30 i 19:30–22:15",
+      breakfast:"Esmorzar",
+      breakfastV:"De 7:30 a 11:00 · servei al restaurant",
+      reception:"Recepció 24 h",
+      receptionV:"Truca al 0 · o des del mòbil al +34 872 552 788",
+      address:"Adreça",
+      addressV:"Carrer Francesc Blanes, 5 · 17211 Llafranc · Girona",
+      services:"Serveis",
+      servicesV:"Pàrquing privat (amb reserva) · Servei de massatges · Consigna",
+      kids:"Nens",
+      kidsV:"S'admeten nens de qualsevol edat · Bressol sota petició",
+      pay:"Forma de pagament",
+      payV:"Només targeta (no efectiu)"
+    },
+    EN:{
+      check:"Check-in & check-out",
+      checkV:"15:00–23:00 / by 12:00",
+      restaurant:"Restaurant",
+      restaurantV:"Monday to Sunday · 12:30–15:30 and 19:30–22:15",
+      breakfast:"Breakfast",
+      breakfastV:"7:30–11:00 · served in the restaurant",
+      reception:"24 h Front Desk",
+      receptionV:"Dial 0 · or call +34 872 552 788 from your phone",
+      address:"Address",
+      addressV:"Carrer Francesc Blanes, 5 · 17211 Llafranc · Girona",
+      services:"Services",
+      servicesV:"Private parking (reservation required) · In-room massage · Luggage hold",
+      kids:"Children",
+      kidsV:"Children of any age welcome · Cot on request",
+      pay:"Payment",
+      payV:"Card only (no cash)"
+    },
+    PT:{
+      check:"Check-in & check-out",
+      checkV:"15:00–23:00 / até 12:00",
+      restaurant:"Restaurante",
+      restaurantV:"Segunda a domingo · 12:30–15:30 e 19:30–22:15",
+      breakfast:"Pequeno-almoço",
+      breakfastV:"Das 7:30 às 11:00 · servido no restaurante",
+      reception:"Recepção 24 h",
+      receptionV:"Marque 0 · ou ligue para +34 872 552 788",
+      address:"Morada",
+      addressV:"Carrer Francesc Blanes, 5 · 17211 Llafranc · Girona",
+      services:"Serviços",
+      servicesV:"Estacionamento privado (com reserva) · Massagens · Guarda-bagagem",
+      kids:"Crianças",
+      kidsV:"Crianças de qualquer idade · Berço sob pedido",
+      pay:"Pagamento",
+      payV:"Apenas cartão (sem dinheiro)"
+    }
+  };
+  const txt = I[lang] || I.ES;
+  const ic = {
+    clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+    fork:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3v9c0 1.5 1 2 2 2v8M6 14c1 0 2-.5 2-2V3M11 3l-1 9c0 1 1 2 2 2v8M14 21V11c0-3 2-6 4-6v16"/></svg>',
+    coffee:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>',
+    phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>',
+    pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+    bell:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>',
+    kid:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a7 7 0 0114 0v2"/></svg>',
+    card:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>',
+  };
+  const rows = [
+    {icon:ic.clock,  lbl:txt.check,      val:txt.checkV},
+    {icon:ic.fork,   lbl:txt.restaurant, val:txt.restaurantV},
+    {icon:ic.coffee, lbl:txt.breakfast,  val:txt.breakfastV},
+    {icon:ic.phone,  lbl:txt.reception,  val:txt.receptionV},
+    {icon:ic.pin,    lbl:txt.address,    val:txt.addressV},
+    {icon:ic.bell,   lbl:txt.services,   val:txt.servicesV},
+    {icon:ic.kid,    lbl:txt.kids,       val:txt.kidsV},
+    {icon:ic.card,   lbl:txt.pay,        val:txt.payV},
+  ];
+  root.innerHTML = `
+    <div class="sec-title">
+      <span class="sec-num">${ribbon.eye}</span>
+      <span class="sec-title-text">${(T[lang].cat||T.ES.cat).info}</span>
+      <span class="sec-sub">${secSub}</span>
+    </div>
+    <div class="ribbon">
+      <div class="ribbon-eyebrow">${ribbon.eye.replace(/^\d+\s*·\s*/, "").toUpperCase()}</div>
+      <div class="ribbon-title">${ribbon.t}</div>
+    </div>
+    ${rows.map(r => `
+      <div class="info-row">
+        <div class="info-icon">${r.icon}</div>
+        <div class="info-body">
+          <div class="info-label">${r.lbl}</div>
+          <div class="info-value">${r.val}</div>
+        </div>
+      </div>
+    `).join("")}
+  `;
+}
+
+// La sección "info" no está en SECTIONS — la metemos en tabs manualmente.
+SECTIONS.push({ id:"info", items:[] });
+
+// ===== Detail modal =====
+function openDetail(id, sectionId){
+  const sec = SECTIONS.find(s => s.id === sectionId);
+  if(!sec) return;
+  const it = sec.items.find(i => i.id === id);
+  if(!it) return;
+  document.getElementById("dtImg").src = it.img;
+  document.getElementById("dtName").innerHTML = (it.name && it.name[lang]) || it.name.ES;
+  document.getElementById("dtPrice").innerHTML = priceStr(it);
+  document.getElementById("dtDesc").textContent = (it.desc && it.desc[lang]) || it.desc.ES;
+  const featsRoot = document.getElementById("dtFeats");
+  featsRoot.innerHTML = (it.feats||[]).map(f => `<div class="dt-feat">${ttFeat(f)}</div>`).join("");
+  document.getElementById("overlay").classList.add("open");
+  document.getElementById("detail").classList.add("open");
+}
+function closeDetail(){
+  document.getElementById("overlay").classList.remove("open");
+  document.getElementById("detail").classList.remove("open");
+}
+document.getElementById("dtClose").addEventListener("click", closeDetail);
+document.getElementById("overlay").addEventListener("click", closeDetail);
+document.getElementById("dtCta").addEventListener("click", () => {
+  closeDetail();
+  // Comportamiento simbólico de "solicitar info" — en una integración real,
+  // dispararía una llamada a recepción o un WhatsApp.
+  alert(tt("askInfo"));
+});
+document.getElementById("requestBtn").addEventListener("click", () => {
+  alert(tt("askInfo"));
+});
+
+// ===== Welcome → contenido =====
+document.getElementById("welcomeBtn").addEventListener("click", () => {
+  document.getElementById("welcome").classList.add("gone");
+});
+
+// ===== Init =====
+buildLangMenu("wLang", true);
+buildLangMenu("hLang", false);
+applyLang();
+</script>
+</body>
+</html>

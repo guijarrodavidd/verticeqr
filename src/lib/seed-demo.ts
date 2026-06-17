@@ -412,6 +412,41 @@ const DEMO_LOCALES: DemoLocal[] = [
   },
   // ─────────────────────────────────────────────────────────────
   {
+    slug: "isabellas",
+    nombre: "Isabella's Llafranc",
+    sector: "hotel",
+    plan: "enterprise",
+    color: "#1f4d56",
+    cif: "B17909090",
+    direccion: "Carrer Francesc Blanes, 5",
+    ciudad: "Llafranc (Girona)",
+    email: "hello@isabellasllafranc.com",
+    telefono: "+34 872 552 788",
+    cats: [
+      {
+        nombre: "Restaurante mediterráneo",
+        productos: [
+          { nombre: "Burrata di Puglia", precio: 1850, descripcion: "Burrata fresca, tomate ramaillete del Maresme, albahaca y AOVE de Pals.", alergenos: ["lactosa"], destacado: true },
+          { nombre: "Tartar de atún rojo", precio: 2400, descripcion: "Almadraba, aguacate, soja envejecida y wasabi fresco. Crujiente de arroz negro.", alergenos: ["pescado", "soja"] },
+          { nombre: "Spaghetti alle vongole", precio: 2200, descripcion: "Pasta artesanal, almejas de la costa, ajo, perejil y vino blanco del Empordà.", alergenos: ["gluten", "moluscos", "sulfitos"], destacado: true },
+          { nombre: "Lubina a la sal", precio: 3200, descripcion: "Lubina salvaje del día bajo costra de sal, patata confitada y mojo verde. Para 2.", alergenos: ["pescado"] },
+          { nombre: "Risotto al limone", precio: 1950, descripcion: "Carnaroli, mantequilla noisette, limón de Amalfi y parmesano 24 meses.", alergenos: ["lactosa"] },
+          { nombre: "Tiramisú della casa", precio: 900, descripcion: "Receta de la nonna, espresso, mascarpone montado a mano, cacao Valrhona.", alergenos: ["gluten", "lactosa", "huevo"] },
+        ],
+      },
+      {
+        nombre: "Vinos & cócteles",
+        productos: [
+          { nombre: "Vino blanco Empordà copa", precio: 650, descripcion: "Garnatxa blanca, fresco y mineral.", alergenos: ["sulfitos"] },
+          { nombre: "Cava Brut Nature copa", precio: 750, alergenos: ["sulfitos"] },
+          { nombre: "Negroni della casa", precio: 1200, descripcion: "Vermut artesano del Empordà." },
+          { nombre: "Aperol Spritz", precio: 950, alergenos: ["sulfitos"] },
+        ],
+      },
+    ],
+  },
+  // ─────────────────────────────────────────────────────────────
+  {
     slug: "trellat",
     nombre: "Trellat",
     sector: "bar-restaurante",

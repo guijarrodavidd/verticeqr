@@ -107,23 +107,23 @@ export default async function LocalesPage({
         y pedidos.
       </p>
 
-      {/* Seed de demo — aparece mientras no estén los 8 demos */}
-      {contadores.total < 8 && (
+      {/* Seed de demo — aparece mientras no estén los 9 demos */}
+      {contadores.total < 9 && (
         <form action={seedDemo} style={{ marginBottom: "1rem" }}>
           <div className="vqr-loc-seed">
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontWeight: 600, marginBottom: "0.2rem" }}>
-                <span style={{ color: "#fbbf24" }}>✨</span> Cargar los locales de la
-                landing
+                <span style={{ color: "#fbbf24" }}>✨</span> Cargar los locales demo
               </div>
               <div style={{ fontSize: "0.85rem", color: "#9ca3af" }}>
                 Crea Romanssera, Forno Sessanta, Bonfire Burger, Ostra & Sol,
-                Magma, El Fogón Paisa, Sereno y Trellat — cada uno con su carta
-                inicial. Idempotente: los que ya existan se saltan.
+                Magma, El Fogón Paisa, Sereno, Trellat e Isabella&apos;s Llafranc
+                — cada uno con su carta inicial. Idempotente: los que ya existan
+                se saltan.
               </div>
             </div>
             <button type="submit" className="vqr-modal-btn vqr-modal-btn-primary">
-              Cargar los 8 demos →
+              Cargar los 9 demos →
             </button>
           </div>
         </form>

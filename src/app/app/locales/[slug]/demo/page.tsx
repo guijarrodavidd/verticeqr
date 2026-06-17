@@ -11,6 +11,7 @@ export const dynamic = "force-dynamic";
 const CARTAS_DISPONIBLES: Record<string, string> = {
   romanssera: "Romanssera",
   hamburgueseria: "Bonfire Burger",
+  isabellas: "Isabella's Llafranc",
 };
 
 // Mapeo slug del local → slug de la carta disponible. Si el slug del local
@@ -18,6 +19,7 @@ const CARTAS_DISPONIBLES: Record<string, string> = {
 const SLUG_TO_CARTA: Record<string, string> = {
   romanssera: "romanssera",
   hamburgueseria: "hamburgueseria",
+  isabellas: "isabellas",
 };
 
 const SECTOR_TO_CARTA: Record<string, string> = {
@@ -26,7 +28,7 @@ const SECTOR_TO_CARTA: Record<string, string> = {
   "cocteleria":      "romanssera",
   "lounge-club":     "romanssera",
   "discoteca":       "romanssera",
-  "hotel":           "romanssera",
+  "hotel":           "isabellas",
   "pub":             "hamburgueseria",
   "cerveceria":      "hamburgueseria",
 };
