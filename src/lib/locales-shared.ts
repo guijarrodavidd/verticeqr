@@ -51,6 +51,9 @@ export type Local = {
   slug: string;
   nombre: string;
   sector: SectorLocal;
+  cif: string | null;
+  direccion: string | null;
+  ciudad: string | null;
   email: string | null;
   telefono: string | null;
   plan: PlanLocal;

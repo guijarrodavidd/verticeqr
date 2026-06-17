@@ -73,6 +73,9 @@ export default async function LocalesPage({
       nombre,
       sector,
       plan,
+      cif: String(formData.get("cif") ?? "").trim() || null,
+      direccion: String(formData.get("direccion") ?? "").trim() || null,
+      ciudad: String(formData.get("ciudad") ?? "").trim() || null,
       email: String(formData.get("email") ?? "").trim() || null,
       telefono: String(formData.get("telefono") ?? "").trim() || null,
       color_primario: String(formData.get("color_primario") ?? "").trim() || "#a78bfa",
@@ -149,6 +152,18 @@ export default async function LocalesPage({
                 <option key={p.value} value={p.value}>{p.label}</option>
               ))}
             </select>
+          </div>
+          <div className="vqr-todo-field">
+            <label htmlFor="l-cif">CIF / NIF</label>
+            <input id="l-cif" name="cif" type="text" placeholder="B12345678" autoComplete="off" />
+          </div>
+          <div className="vqr-todo-field">
+            <label htmlFor="l-direccion">Dirección</label>
+            <input id="l-direccion" name="direccion" type="text" placeholder="C/ Mayor, 12" autoComplete="off" />
+          </div>
+          <div className="vqr-todo-field">
+            <label htmlFor="l-ciudad">Ciudad</label>
+            <input id="l-ciudad" name="ciudad" type="text" placeholder="Madrid" autoComplete="off" />
           </div>
           <div className="vqr-todo-field">
             <label htmlFor="l-email">Email contacto</label>

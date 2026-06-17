@@ -23,6 +23,9 @@ type DemoLocal = {
   sector: SectorLocal;
   plan: PlanLocal;
   color: string;
+  cif: string;
+  direccion: string;
+  ciudad: string;
   email: string;
   telefono: string;
   cats: Cat[];
@@ -36,6 +39,9 @@ const DEMO_LOCALES: DemoLocal[] = [
     sector: "bar-restaurante",
     plan: "pro",
     color: "#b03326",
+    cif: "B85101010",
+    direccion: "C/ Augusto Figueroa, 14",
+    ciudad: "Madrid",
     email: "hola@romanssera.es",
     telefono: "+34 911 010 101",
     cats: [
@@ -90,6 +96,9 @@ const DEMO_LOCALES: DemoLocal[] = [
     sector: "bar-restaurante",
     plan: "pro",
     color: "#cf6233",
+    cif: "B85202020",
+    direccion: "Calle Pelayo, 23",
+    ciudad: "Madrid",
     email: "ciao@fornosessanta.it",
     telefono: "+34 911 020 202",
     cats: [
@@ -146,6 +155,9 @@ const DEMO_LOCALES: DemoLocal[] = [
     sector: "bar-restaurante",
     plan: "pro",
     color: "#d4402f",
+    cif: "B85303030",
+    direccion: "C/ Doctor Cortezo, 8",
+    ciudad: "Madrid",
     email: "hello@bonfireburger.com",
     telefono: "+34 911 030 303",
     cats: [
@@ -195,6 +207,9 @@ const DEMO_LOCALES: DemoLocal[] = [
     sector: "cafeteria",
     plan: "basic",
     color: "#c07a4a",
+    cif: "B65404040",
+    direccion: "C/ Verdi, 41",
+    ciudad: "Barcelona",
     email: "hola@ostrasol.cafe",
     telefono: "+34 911 040 404",
     cats: [
@@ -250,6 +265,9 @@ const DEMO_LOCALES: DemoLocal[] = [
     sector: "lounge-club",
     plan: "pro",
     color: "#c2871f",
+    cif: "B97505050",
+    direccion: "C/ Caballeros, 17",
+    ciudad: "Valencia",
     email: "info@magmalounge.com",
     telefono: "+34 911 050 505",
     cats: [
@@ -298,6 +316,9 @@ const DEMO_LOCALES: DemoLocal[] = [
     sector: "bar-restaurante",
     plan: "pro",
     color: "#b3392f",
+    cif: "B85606060",
+    direccion: "C/ Embajadores, 35",
+    ciudad: "Madrid",
     email: "contacto@elfogonpaisa.com",
     telefono: "+34 911 060 606",
     cats: [
@@ -347,6 +368,9 @@ const DEMO_LOCALES: DemoLocal[] = [
     sector: "cocteleria",
     plan: "pro",
     color: "#b58620",
+    cif: "B95707070",
+    direccion: "Gran Vía, 24",
+    ciudad: "Bilbao",
     email: "reservas@serenococktail.com",
     telefono: "+34 911 070 707",
     cats: [
@@ -393,6 +417,9 @@ const DEMO_LOCALES: DemoLocal[] = [
     sector: "bar-restaurante",
     plan: "basic",
     color: "#7a7a4a",
+    cif: "B91808080",
+    direccion: "C/ Sierpes, 67",
+    ciudad: "Sevilla",
     email: "trellat@trellat.es",
     telefono: "+34 911 080 808",
     cats: [
@@ -455,6 +482,9 @@ export async function seedAllDemoLocales(): Promise<{
       sector: dl.sector,
       plan: dl.plan,
       color_primario: dl.color,
+      cif: dl.cif,
+      direccion: dl.direccion,
+      ciudad: dl.ciudad,
       email: dl.email,
       telefono: dl.telefono,
     });

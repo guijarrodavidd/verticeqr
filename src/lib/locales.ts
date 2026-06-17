@@ -24,6 +24,9 @@ export async function ensureLocalesTable() {
       slug VARCHAR(80) NOT NULL UNIQUE,
       nombre VARCHAR(150) NOT NULL,
       sector VARCHAR(50) NOT NULL,
+      cif VARCHAR(20),
+      direccion VARCHAR(200),
+      ciudad VARCHAR(80),
       email VARCHAR(150),
       telefono VARCHAR(30),
       plan VARCHAR(30) NOT NULL DEFAULT 'basic',
@@ -37,6 +40,19 @@ export async function ensureLocalesTable() {
       INDEX idx_locales_sector (sector)
     ) ENGINE=InnoDB
   `);
+  // Migraciones idempotentes — los locales antiguos no tenían estos campos.
+  for (const col of [
+    `cif VARCHAR(20)`,
+    `direccion VARCHAR(200)`,
+    `ciudad VARCHAR(80)`,
+  ]) {
+    try {
+      await pool.query(`ALTER TABLE locales ADD COLUMN ${col}`);
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      if (!/duplicate column|exists/i.test(msg)) throw e;
+    }
+  }
   ensured = true;
 }
 
@@ -64,7 +80,8 @@ export async function listarLocales(f: FiltrosLocales): Promise<Local[]> {
   }
   const where = conds.length ? "WHERE " + conds.join(" AND ") : "";
   const [rows] = await pool.query(
-    `SELECT id, slug, nombre, sector, email, telefono, plan, activo,
+    `SELECT id, slug, nombre, sector, cif, direccion, ciudad,
+            email, telefono, plan, activo,
             color_primario, logo_url, timezone, created_at, updated_at
      FROM locales
      ${where}
@@ -78,7 +95,8 @@ export async function obtenerLocalPorSlug(slug: string): Promise<Local | null> {
   await ensureLocalesTable();
   const pool = getPool();
   const [rows] = await pool.query(
-    `SELECT id, slug, nombre, sector, email, telefono, plan, activo,
+    `SELECT id, slug, nombre, sector, cif, direccion, ciudad,
+            email, telefono, plan, activo,
             color_primario, logo_url, timezone, created_at, updated_at
      FROM locales WHERE slug = ? LIMIT 1`,
     [slug],
@@ -130,6 +148,9 @@ export async function crearLocal(args: {
   nombre: string;
   slug?: string;
   sector: SectorLocal;
+  cif?: string | null;
+  direccion?: string | null;
+  ciudad?: string | null;
   email?: string | null;
   telefono?: string | null;
   plan?: PlanLocal;
@@ -143,12 +164,16 @@ export async function crearLocal(args: {
   const slug = await asegurarSlugUnico(baseSlug);
   const [result] = await pool.query(
     `INSERT INTO locales
-       (slug, nombre, sector, email, telefono, plan, color_primario, logo_url, timezone)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+       (slug, nombre, sector, cif, direccion, ciudad,
+        email, telefono, plan, color_primario, logo_url, timezone)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       slug,
       args.nombre.trim(),
       args.sector,
+      args.cif?.trim() || null,
+      args.direccion?.trim() || null,
+      args.ciudad?.trim() || null,
       args.email?.trim() || null,
       args.telefono?.trim() || null,
       args.plan || "basic",
@@ -167,6 +192,9 @@ export async function actualizarLocal(
     nombre: string;
     slug: string;
     sector: SectorLocal;
+    cif: string | null;
+    direccion: string | null;
+    ciudad: string | null;
     email: string | null;
     telefono: string | null;
     plan: PlanLocal;
@@ -193,6 +221,18 @@ export async function actualizarLocal(
   if (args.sector !== undefined) {
     sets.push("sector = ?");
     params.push(args.sector);
+  }
+  if (args.cif !== undefined) {
+    sets.push("cif = ?");
+    params.push(args.cif?.trim() || null);
+  }
+  if (args.direccion !== undefined) {
+    sets.push("direccion = ?");
+    params.push(args.direccion?.trim() || null);
+  }
+  if (args.ciudad !== undefined) {
+    sets.push("ciudad = ?");
+    params.push(args.ciudad?.trim() || null);
   }
   if (args.email !== undefined) {
     sets.push("email = ?");

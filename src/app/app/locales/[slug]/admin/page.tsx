@@ -35,6 +35,9 @@ export default async function LocalAdminPage({
     const slugRaw = String(formData.get("slug") ?? "").trim();
     const sec = parseSector(formData.get("sector"));
     const plan = parsePlan(formData.get("plan"));
+    const cif = String(formData.get("cif") ?? "").trim();
+    const direccion = String(formData.get("direccion") ?? "").trim();
+    const ciudad = String(formData.get("ciudad") ?? "").trim();
     const email = String(formData.get("email") ?? "").trim();
     const telefono = String(formData.get("telefono") ?? "").trim();
     const color_primario = String(formData.get("color_primario") ?? "").trim();
@@ -45,6 +48,9 @@ export default async function LocalAdminPage({
       slug: slugRaw || undefined,
       sector: sec,
       plan,
+      cif: cif || null,
+      direccion: direccion || null,
+      ciudad: ciudad || null,
       email: email || null,
       telefono: telefono || null,
       color_primario: color_primario || null,
@@ -131,6 +137,41 @@ export default async function LocalAdminPage({
                 </option>
               ))}
             </select>
+          </div>
+
+          <div className="vqr-todo-field">
+            <label htmlFor="a-cif">CIF / NIF</label>
+            <input
+              id="a-cif"
+              name="cif"
+              type="text"
+              defaultValue={local.cif ?? ""}
+              placeholder="B12345678"
+              autoComplete="off"
+            />
+          </div>
+          <div className="vqr-todo-field">
+            <label htmlFor="a-ciudad">Ciudad</label>
+            <input
+              id="a-ciudad"
+              name="ciudad"
+              type="text"
+              defaultValue={local.ciudad ?? ""}
+              placeholder="Madrid"
+              autoComplete="off"
+            />
+          </div>
+
+          <div className="vqr-todo-field" style={{ gridColumn: "span 2" }}>
+            <label htmlFor="a-direccion">Dirección</label>
+            <input
+              id="a-direccion"
+              name="direccion"
+              type="text"
+              defaultValue={local.direccion ?? ""}
+              placeholder="C/ Mayor, 12"
+              autoComplete="off"
+            />
           </div>
 
           <div className="vqr-todo-field">
