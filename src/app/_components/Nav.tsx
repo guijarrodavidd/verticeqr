@@ -26,7 +26,6 @@ export default function Nav() {
         <nav className={styles.navLinks}>
           <a href="#como-funciona" className={styles.navLink}>Cómo funciona</a>
           <a href="#producto" className={styles.navLink}>Producto</a>
-          <a href="#clientes" className={styles.navLink}>Clientes</a>
           <a href="#planes" className={styles.navLink}>Precios</a>
           <a href="/login" className={styles.navLink}>Acceder</a>
           <a href="#contacto" className={styles.navCta}>Solicitar demo</a>

@@ -388,6 +388,57 @@
   .ws-done p{font-size:14px;color:var(--ink-soft);line-height:1.6}
   .w-toast{position:fixed;bottom:120px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--card);padding:12px 20px;border-radius:10px;font-family:var(--body);font-size:13px;font-weight:600;z-index:80;opacity:0;pointer-events:none;transition:.3s;box-shadow:0 10px 26px rgba(43,33,24,.35);max-width:88%;text-align:center}
   .w-toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+  /* ===== PAGAR / MÉTODO DE PAGO ===== */
+  .pay-cta{width:100%;border:2px solid var(--mustard);background:var(--mustard);color:var(--ink);padding:15px 26px;font-family:var(--display);font-size:15px;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:.4px;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:5px 5px 0 rgba(0,0,0,.4);transition:.15s}
+  .pay-cta:active{transform:translate(2px,2px);box-shadow:2px 2px 0 rgba(0,0,0,.4)}
+  .pay-cta svg{width:18px;height:18px;stroke:var(--ink);fill:none;stroke-width:2.2}
+  .pay-sheet{position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);width:100%;max-width:520px;background:var(--card);z-index:75;transition:transform .32s cubic-bezier(.2,.9,.3,1);border-top-left-radius:22px;border-top-right-radius:22px;box-shadow:0 -10px 40px rgba(43,33,24,.32);padding:18px 24px calc(26px + env(safe-area-inset-bottom));overflow:hidden;max-height:92vh;overflow-y:auto}
+  .pay-sheet.open{transform:translateX(-50%) translateY(0)}
+  .pay-sheet::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--granate),var(--granate-bright))}
+  .pay-h{font-family:var(--display);font-size:22px;font-weight:700;color:var(--granate);text-transform:uppercase;letter-spacing:.5px;line-height:1.05;margin-bottom:4px}
+  .pay-total{display:flex;justify-content:space-between;align-items:baseline;background:var(--bg-deep);border:2px solid var(--ink);padding:12px 15px;margin:14px 0 18px;box-shadow:var(--hard-shadow-sm)}
+  .pay-total .lbl{font-family:var(--mono);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.5px}
+  .pay-total .val{font-family:var(--display);font-size:24px;color:var(--ink);letter-spacing:-.4px}
+  .pay-methods{display:flex;flex-direction:column;gap:11px}
+  .pay-method{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:15px 16px;border:2px solid var(--ink);background:var(--paper);cursor:pointer;transition:.14s;box-shadow:var(--hard-shadow-sm);font-family:var(--body)}
+  .pay-method:active{transform:translate(2px,2px);box-shadow:none}
+  .pay-method .pm-ic{flex:0 0 44px;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--granate),var(--granate-dark));display:flex;align-items:center;justify-content:center}
+  .pay-method .pm-ic svg{width:22px;height:22px;stroke:var(--mustard);fill:none;stroke-width:2}
+  .pay-method .pm-txt{min-width:0}
+  .pay-method .pm-name{display:block;font-family:var(--display);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.2px;line-height:1.1;color:var(--ink)}
+  .pay-method .pm-sub{display:block;font-family:var(--body);font-size:12px;color:var(--ink-soft);margin-top:3px;line-height:1.3}
+  .pay-method .pm-arrow{margin-left:auto;font-family:var(--display);color:var(--granate);font-size:22px;flex:0 0 auto}
+  .pay-note{font-family:var(--mono);font-size:10px;color:var(--muted);text-align:center;margin-top:16px;letter-spacing:.4px;text-transform:uppercase}
+  .pay-back{background:none;border:none;color:var(--ink-soft);font-family:var(--mono);font-size:11px;font-weight:600;cursor:pointer;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;padding:2px 0}
+  .pc-field{margin-bottom:13px}
+  .pc-field label{display:block;font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+  .pc-input{width:100%;border:2px solid var(--ink);background:var(--paper);padding:13px 14px;font-family:var(--mono);font-size:15px;color:var(--ink)}
+  .pc-input:focus{outline:none;background:#fff}
+  .pc-row{display:flex;gap:11px}
+  .pc-row .pc-field{flex:1}
+  .pay-submit{width:100%;border:none;border-radius:14px;background:var(--granate);color:var(--card);padding:16px;font-family:var(--display);font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 8px 0 var(--granate-dark);transition:.15s;margin-top:6px}
+  .pay-submit:hover{background:var(--granate-bright)}
+  .pay-submit:active{transform:translateY(2px);box-shadow:0 4px 0 var(--granate-dark)}
+  .pay-submit:disabled{opacity:.75;cursor:wait}
+  .pay-submit svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.2}
+  .pay-spin{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:payspin .7s linear infinite}
+  @keyframes payspin{to{transform:rotate(360deg)}}
+  .pay-done{text-align:center;padding:14px 6px 8px}
+  .pay-done .ic{width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,var(--granate),var(--granate-dark));display:flex;align-items:center;justify-content:center;margin:0 auto 16px;animation:wpop .5s cubic-bezier(.2,1.5,.4,1)}
+  .pay-done .ic svg{width:38px;height:38px;stroke:var(--card);fill:none;stroke-width:2.6}
+  .pay-done h3{font-family:var(--display);font-size:23px;color:var(--granate);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+  .pay-done p{font-size:14px;color:var(--ink-soft);line-height:1.6;max-width:300px;margin:0 auto}
+  /* Monederos · Apple Pay / Google Pay (estilo de marca) */
+  .wallet-row{display:flex;flex-direction:column;gap:10px;margin-bottom:6px}
+  .wallet-btn{width:100%;height:52px;border:none;border-radius:9px;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;font-weight:600;font-size:19px;letter-spacing:.2px;transition:.12s}
+  .wallet-btn:active{transform:scale(.985);opacity:.92}
+  .wallet-btn .wmark{display:inline-flex;align-items:center}
+  .wallet-apple svg{width:21px;height:21px;margin-top:-3px}
+  .wallet-google svg{width:21px;height:21px}
+  .wallet-google .gpay{font-weight:500}
+  .pay-or{display:flex;align-items:center;gap:12px;margin:14px 0 16px;color:var(--muted);font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.6px;white-space:nowrap}
+  .pay-or::before,.pay-or::after{content:"";flex:1;height:1.5px;background:var(--line-soft)}
 </style>
 </head>
 <body>
@@ -475,6 +526,60 @@
 </div>
 <div class="w-toast" id="wToast"></div>
 
+<div class="pay-sheet" id="paySheet">
+  <div class="ws-grip"></div>
+
+  <!-- Vista 1 · elegir método -->
+  <div id="payChoose">
+    <div class="pay-h" data-t="payTitle">¿Cómo quieres pagar?</div>
+    <div class="pay-total"><span class="lbl" data-t="total">Total</span><span class="val" id="payTotalVal">0,00 €</span></div>
+    <div class="pay-methods">
+      <button class="pay-method" id="pmCard">
+        <span class="pm-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>
+        <span class="pm-txt"><span class="pm-name" data-t="payCardM">Pagar con tarjeta</span><span class="pm-sub" data-t="payCardS">Ahora mismo desde tu móvil</span></span>
+        <span class="pm-arrow">›</span>
+      </button>
+      <button class="pay-method" id="pmCash">
+        <span class="pm-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 12h.01M18 12h.01"/></svg></span>
+        <span class="pm-txt"><span class="pm-name" data-t="payCashM">Pagar en efectivo</span><span class="pm-sub" data-t="payCashS">Avisamos al camarero para cobrarte</span></span>
+        <span class="pm-arrow">›</span>
+      </button>
+      <button class="pay-method" id="pmWaiter">
+        <span class="pm-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
+        <span class="pm-txt"><span class="pm-name" data-t="payWaiterM">Que venga el camarero</span><span class="pm-sub" data-t="payWaiterS">Te cobra en la mesa con datáfono</span></span>
+        <span class="pm-arrow">›</span>
+      </button>
+    </div>
+    <div class="pay-note" data-t="payNote">Demo · no se procesa ningún pago real</div>
+  </div>
+
+  <!-- Vista 2 · tarjeta online -->
+  <div id="payCardView" style="display:none">
+    <button class="pay-back" id="payBack" data-t="payBack">‹ Volver</button>
+    <div class="pay-h" data-t="payCardTitle">Pago con tarjeta</div>
+    <div class="pay-total"><span class="lbl" data-t="total">Total</span><span class="val" id="payTotalVal2">0,00 €</span></div>
+    <div class="wallet-row" id="walletRow">
+      <button class="wallet-btn wallet-apple" id="wApple"><span class="wmark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.5 2.04-3.7 2.13-3.76-1.16-1.7-2.97-1.93-3.61-1.96-1.54-.16-3 .9-3.78.9-.77 0-1.97-.88-3.24-.85-1.67.02-3.21.97-4.07 2.46-1.73 3-.44 7.45 1.24 9.89.82 1.19 1.8 2.53 3.07 2.48 1.23-.05 1.7-.8 3.19-.8 1.48 0 1.91.8 3.21.77 1.33-.02 2.17-1.21 2.98-2.41.94-1.38 1.33-2.71 1.35-2.78-.03-.01-2.59-1-2.61-3.94zM14.6 4.84c.68-.83 1.14-1.97 1.01-3.12-.98.04-2.17.65-2.87 1.47-.63.73-1.18 1.9-1.03 3.02 1.09.09 2.21-.55 2.89-1.37z"/></svg></span>Pay</button>
+      <button class="wallet-btn wallet-google" id="wGoogle"><span class="wmark"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.2c0-.7-.06-1.4-.18-2.06H12v3.9h5.9a5.05 5.05 0 0 1-2.19 3.31v2.74h3.54c2.07-1.91 3.26-4.72 3.26-8.05z"/><path fill="#34A853" d="M12 23c2.95 0 5.43-.98 7.24-2.65l-3.54-2.74c-.98.66-2.24 1.05-3.7 1.05-2.85 0-5.26-1.92-6.12-4.5H2.23v2.83A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.88 14.16a6.6 6.6 0 0 1 0-4.32V7.01H2.23a11 11 0 0 0 0 9.98z"/><path fill="#EA4335" d="M12 5.5c1.61 0 3.05.55 4.18 1.64l3.13-3.13C17.43 2.24 14.95 1.27 12 1.27A11 11 0 0 0 2.23 7.01l3.65 2.83C6.74 7.26 9.15 5.5 12 5.5z"/></svg></span><span class="gpay">Pay</span></button>
+    </div>
+    <div class="pay-or" data-t="payOr">o paga con tarjeta</div>
+    <div class="pc-field"><label data-t="phNumL">Número de tarjeta</label><input class="pc-input" id="pcNum" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" maxlength="19"></div>
+    <div class="pc-row">
+      <div class="pc-field"><label data-t="phExpL">Caducidad</label><input class="pc-input" id="pcExp" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/AA" maxlength="5"></div>
+      <div class="pc-field"><label data-t="phCvcL">CVC</label><input class="pc-input" id="pcCvc" inputmode="numeric" autocomplete="cc-csc" placeholder="123" maxlength="4"></div>
+    </div>
+    <button class="pay-submit" id="payCardBtn"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span id="payCardBtnTxt" data-t="payBtn">Pagar</span></button>
+    <div class="pay-note" data-t="payNote">Demo · no se procesa ningún pago real</div>
+  </div>
+
+  <!-- Vista 3 · hecho -->
+  <div id="payDone" class="pay-done" style="display:none">
+    <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+    <h3 id="payDoneT">¡Listo!</h3>
+    <p id="payDoneP"></p>
+  </div>
+</div>
+
 <!-- DETALLE PRODUCTO -->
 <div class="detail" id="detail">
   <div class="dt-imgwrap"><div id="dtFav"></div><div id="dtImg" style="width:100%;height:100%"></div><button class="dt-close" id="dtClose">×</button></div>
@@ -527,6 +632,7 @@
     <div class="ticket" id="ticket"></div>
     <div class="success-actions">
       <div class="sa-status"><span class="sa-dot"></span> <span data-t="preparing">Preparando tu pedido…</span></div>
+      <button class="pay-cta" id="payOpen"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><span data-t="payNow">Pagar y salir</span></button>
       <button class="ghost-btn" id="newOrder" data-t="orderMore">Pedir algo más</button>
     </div>
   </div>
@@ -557,6 +663,14 @@ const T = {
 Object.assign(T.VA,{callShort:"Cambrer",callTitle:"Cridar el cambrer",callSub:"Tria el motiu (opcional) i avisem la teua taula.",rBill:"El compte",rDrink:"Una beguda",rHelp:"Necessite ajuda",rBread:"Pa / coberts",callSend:"Cridar cambrer",callSentT:"Avís enviat!",callSentP:"Un cambrer ve cap a la teua taula {mesa}.",callWaitMsg:"Ja has avisat fa poc, espera uns segons."});
 Object.assign(T.ES,{callShort:"Camarero",callTitle:"Llamar al camarero",callSub:"Elige el motivo (opcional) y avisamos a tu mesa.",rBill:"La cuenta",rDrink:"Una bebida",rHelp:"Necesito ayuda",rBread:"Pan / cubiertos",callSend:"Llamar al camarero",callSentT:"¡Aviso enviado!",callSentP:"Un camarero va hacia tu mesa {mesa}.",callWaitMsg:"Ya has avisado hace poco, espera unos segundos."});
 Object.assign(T.EN,{callShort:"Waiter",callTitle:"Call the waiter",callSub:"Pick a reason (optional) and we'll alert your table.",rBill:"The bill",rDrink:"A drink",rHelp:"I need help",rBread:"Bread / cutlery",callSend:"Call the waiter",callSentT:"Sent!",callSentP:"A waiter is on the way to table {mesa}.",callWaitMsg:"You just called, please wait a few seconds."});
+
+// Textos del flujo de pago
+Object.assign(T.VA,{payNow:"Pagar i eixir",payTitle:"Com vols pagar?",payCardM:"Pagar amb targeta",payCardS:"Ara mateix des del mòbil",payCashM:"Pagar en efectiu",payCashS:"Avisem el cambrer per a cobrar-te",payWaiterM:"Que vinga el cambrer",payWaiterS:"Et cobra a la taula amb datàfon",payNote:"Demo · no es processa cap pagament real",payBack:"‹ Tornar",payCardTitle:"Pagament amb targeta",phNumL:"Número de targeta",phExpL:"Caducitat",phCvcL:"CVC",payBtn:"Pagar",payProcessing:"Processant pagament…",payPaidT:"Pagament fet!",payPaidP:"Gràcies! Ja pots eixir quan vulgues.",payCashT:"Avís enviat!",payCashP:"Un cambrer va cap a la teua taula {mesa} a cobrar-te en efectiu.",payTableT:"Avís enviat!",payTableP:"Un cambrer va cap a la teua taula {mesa} amb el datàfon.",payInvalid:"Revisa les dades de la targeta."});
+Object.assign(T.ES,{payNow:"Pagar y salir",payTitle:"¿Cómo quieres pagar?",payCardM:"Pagar con tarjeta",payCardS:"Ahora mismo desde tu móvil",payCashM:"Pagar en efectivo",payCashS:"Avisamos al camarero para cobrarte",payWaiterM:"Que venga el camarero",payWaiterS:"Te cobra en la mesa con datáfono",payNote:"Demo · no se procesa ningún pago real",payBack:"‹ Volver",payCardTitle:"Pago con tarjeta",phNumL:"Número de tarjeta",phExpL:"Caducidad",phCvcL:"CVC",payBtn:"Pagar",payProcessing:"Procesando pago…",payPaidT:"¡Pago realizado!",payPaidP:"¡Gracias! Ya puedes irte cuando quieras.",payCashT:"¡Aviso enviado!",payCashP:"Un camarero va a tu mesa {mesa} a cobrarte en efectivo.",payTableT:"¡Aviso enviado!",payTableP:"Un camarero va a tu mesa {mesa} con el datáfono.",payInvalid:"Revisa los datos de la tarjeta."});
+Object.assign(T.VA,{payOr:"o paga amb targeta"});
+Object.assign(T.ES,{payOr:"o paga con tarjeta"});
+Object.assign(T.EN,{payOr:"or pay by card"});
+Object.assign(T.EN,{payNow:"Pay & leave",payTitle:"How would you like to pay?",payCardM:"Pay by card",payCardS:"Right now from your phone",payCashM:"Pay with cash",payCashS:"We'll alert the waiter to charge you",payWaiterM:"Call the waiter to charge",payWaiterS:"They bring the card reader to your table",payNote:"Demo · no real payment is processed",payBack:"‹ Back",payCardTitle:"Card payment",phNumL:"Card number",phExpL:"Expiry",phCvcL:"CVC",payBtn:"Pay",payProcessing:"Processing payment…",payPaidT:"Payment done!",payPaidP:"Thanks! You can leave whenever you like.",payCashT:"Waiter alerted!",payCashP:"A waiter is on the way to table {mesa} to take your cash.",payTableT:"Waiter alerted!",payTableP:"A waiter is on the way to table {mesa} with the card reader.",payInvalid:"Please check the card details."});
 
 // ====== Carta. Nombres iguales en todos los idiomas. desc=corta, long=extensa, ambas con traducciones ======
 const MENU = [
@@ -1035,7 +1149,7 @@ function openSheet(){ hideUpsell(); renderCart(); overlay.classList.add("open");
 function closeSheet(){ overlay.classList.remove("open"); sheet.classList.remove("open"); }
 document.getElementById("cartBtn").onclick=openSheet;
 document.getElementById("closeSheet").onclick=closeSheet;
-overlay.onclick=()=>{ closeSheet(); closeDetail(); closeWaiter(); };
+overlay.onclick=()=>{ closeSheet(); closeDetail(); closeWaiter(); closePay(); };
 
 // ====== CRIDAR CAMBRER ======
 const WAITER_KEY="romanssera_waiter_v1";
@@ -1179,6 +1293,7 @@ function pushToKitchen(order){
   try{ localStorage.setItem(STORE_KEY, JSON.stringify(list)); }catch(e){}
 }
 
+let billTotal=0; // suma de todo lo pedido en esta mesa (para "Pagar y salir")
 function doSend(){
   const disc=dessertDiscount();
   const order={ id:"o"+Date.now()+Math.random().toString(36).slice(2,6),
@@ -1186,6 +1301,7 @@ function doSend(){
     items:Object.values(cart).map(c=>({name:c.item.name,qty:c.qty,note:c.note,price:c.item.price})),
     subtotal:totalPrice(), descuento:disc.amount, postresGratis:disc.free, total:finalTotal() };
   pushToKitchen(order);
+  billTotal += order.total;
   console.log("PEDIDO A COCINA:",order);
   document.getElementById("ticket").innerHTML=buildTicket(order);
   closeSheet();
@@ -1221,6 +1337,98 @@ document.getElementById("welcomeBtn").onclick = ()=>{ buzz(8); document.getEleme
 function goToMenu(){ buzz(8); document.getElementById("onboard").classList.add("gone"); }
 document.getElementById("startBtn").onclick = goToMenu;
 document.getElementById("skipBtn").onclick = goToMenu;
+
+// ====== PAGAR / MÉTODO DE PAGO ======
+const paySheet=document.getElementById("paySheet");
+function payShowView(v){
+  document.getElementById("payChoose").style.display   = v==="choose"?"":"none";
+  document.getElementById("payCardView").style.display = v==="card"  ?"":"none";
+  document.getElementById("payDone").style.display     = v==="done"  ?"":"none";
+}
+function openPay(){
+  const amt=fmt(billTotal);
+  document.getElementById("payTotalVal").textContent=amt;
+  document.getElementById("payTotalVal2").textContent=amt;
+  document.getElementById("payCardBtnTxt").textContent=tt("payBtn")+" "+amt;
+  ["pcNum","pcExp","pcCvc"].forEach(id=>{const e=document.getElementById(id); if(e) e.value="";});
+  payShowView("choose");
+  overlay.classList.add("open"); paySheet.classList.add("open"); buzz(6);
+}
+function closePay(){
+  paySheet.classList.remove("open");
+  if(!sheet.classList.contains("open")&&!detail.classList.contains("open")&&!waiterSheet.classList.contains("open")) overlay.classList.remove("open");
+}
+function payDoneView(titleKey,bodyKey){
+  document.getElementById("payDoneT").textContent=tt(titleKey);
+  document.getElementById("payDoneP").textContent=tt(bodyKey).replace("{mesa}",mesa);
+  payShowView("done"); buzz([10,40,10]);
+}
+// Avisa al camarero para cobrar (reutiliza el puente de avisos del camarero)
+function notifyWaiterPay(method){
+  const now=Date.now();
+  let list; try{ list=JSON.parse(localStorage.getItem(WAITER_KEY)||"[]"); }catch(e){ list=[]; }
+  if(!Array.isArray(list)) list=[];
+  list.push({id:"w"+now+Math.random().toString(36).slice(2,5),mesa,ts:now,
+    reasonKey:"rBill", reason:tt("rBill"), payment:method, amount:billTotal, status:"pending"});
+  try{ localStorage.setItem(WAITER_KEY, JSON.stringify(list)); }catch(e){}
+  console.log("AVISO COBRO:",{mesa,payment:method,amount:billTotal});
+}
+// Detecta qué monedero mostrar según el dispositivo (mockup visual)
+function detectWallet(){
+  const ua=navigator.userAgent||"";
+  const isIOS=/iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints>1);
+  const isMacSafari=/Macintosh/.test(ua) && /Safari/.test(ua) && !/Chrome|Chromium|Edg/.test(ua);
+  const isAndroid=/Android/.test(ua);
+  if(isIOS||isMacSafari) return "apple";
+  if(isAndroid) return "google";
+  return "both"; // escritorio/demo: enseñamos los dos
+}
+function setWalletVisibility(){
+  const w=detectWallet();
+  document.getElementById("wApple").style.display  = (w==="apple"||w==="both")?"":"none";
+  document.getElementById("wGoogle").style.display = (w==="google"||w==="both")?"":"none";
+}
+// Simula la hoja nativa del monedero y completa el pago
+function payWallet(){
+  buzz([8,30,8]);
+  payDoneView("payPaidT","payPaidP");
+  fireConfetti();
+  billTotal=0;
+  setTimeout(closePay,3600);
+}
+document.getElementById("wApple").onclick=payWallet;
+document.getElementById("wGoogle").onclick=payWallet;
+document.getElementById("payOpen").onclick=openPay;
+document.getElementById("payBack").onclick=()=>payShowView("choose");
+document.getElementById("pmCard").onclick=()=>{ setWalletVisibility(); payShowView("card"); };
+document.getElementById("pmCash").onclick=()=>{ notifyWaiterPay("cash"); payDoneView("payCashT","payCashP"); setTimeout(closePay,3400); };
+document.getElementById("pmWaiter").onclick=()=>{ notifyWaiterPay("card_table"); payDoneView("payTableT","payTableP"); setTimeout(closePay,3400); };
+// Formateo suave de los campos de tarjeta
+document.getElementById("pcNum").addEventListener("input",e=>{
+  const v=e.target.value.replace(/\D/g,"").slice(0,16);
+  e.target.value=v.replace(/(.{4})/g,"$1 ").trim();
+});
+document.getElementById("pcExp").addEventListener("input",e=>{
+  const v=e.target.value.replace(/\D/g,"").slice(0,4);
+  e.target.value = v.length>2 ? v.slice(0,2)+"/"+v.slice(2) : v;
+});
+document.getElementById("pcCvc").addEventListener("input",e=>{ e.target.value=e.target.value.replace(/\D/g,"").slice(0,4); });
+document.getElementById("payCardBtn").onclick=function(){
+  const num=document.getElementById("pcNum").value.replace(/\s/g,"");
+  const exp=document.getElementById("pcExp").value;
+  const cvc=document.getElementById("pcCvc").value;
+  if(num.length<15 || !/^\d{2}\/\d{2}$/.test(exp) || cvc.length<3){ wToast(tt("payInvalid")); buzz(30); return; }
+  const btn=this; btn.disabled=true;
+  btn.innerHTML='<span class="pay-spin"></span><span>'+tt("payProcessing")+'</span>';
+  setTimeout(()=>{
+    btn.disabled=false;
+    btn.innerHTML='<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span id="payCardBtnTxt">'+tt("payBtn")+' '+fmt(billTotal)+'</span>';
+    payDoneView("payPaidT","payPaidP");
+    fireConfetti();
+    billTotal=0; // pago online completado
+    setTimeout(closePay,3600);
+  },1500);
+};
 
 // Init
 applyLang();

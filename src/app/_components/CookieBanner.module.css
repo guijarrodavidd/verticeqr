@@ -1,0 +1,85 @@
+/* Banner de cookies — tarjeta espresso flotante, acento champán. */
+.wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  pointer-events: none;
+  animation: vqCookieUp 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes vqCookieUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.card {
+  pointer-events: auto;
+  max-width: 940px;
+  width: 100%;
+  background: #1c1a16;
+  color: #efe9dd;
+  border: 1px solid rgba(176, 145, 79, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 32px 70px -28px rgba(0, 0, 0, 0.6);
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+@media (max-width: 720px) {
+  .card { flex-direction: column; align-items: stretch; gap: 1rem; padding: 1.1rem 1.2rem; }
+}
+.title {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  color: #fdf7ea;
+  margin-bottom: 0.35rem;
+}
+.text {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: #c9bfac;
+  margin: 0;
+  max-width: 62ch;
+}
+.text strong { color: #e7dcc4; font-weight: 600; }
+.link { color: #b0915a; text-decoration: underline; text-underline-offset: 2px; }
+.link:hover { color: #c8a866; }
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+@media (max-width: 720px) {
+  .actions { width: 100%; }
+  .actions button { flex: 1; }
+}
+.btnGhost,
+.btnPrimary {
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 150ms ease, background 150ms ease, border-color 150ms ease;
+}
+.btnGhost {
+  background: transparent;
+  color: #d8cdb8;
+  border: 1px solid rgba(216, 205, 184, 0.32);
+}
+.btnGhost:hover { border-color: rgba(216, 205, 184, 0.6); color: #efe9dd; }
+.btnPrimary {
+  background: #b0915a;
+  color: #1c1a16;
+  border: 1px solid #b0915a;
+}
+.btnPrimary:hover { transform: translateY(-1px); background: #c2a263; }

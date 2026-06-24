@@ -1,0 +1,155 @@
+/* ============================================================
+   PÁGINAS LEGALES — VerticeQR
+   Misma paleta quiet-luxury que la landing. Montserrat.
+   ============================================================ */
+.legal {
+  --paper: #eae5da;
+  --paper-2: #f6f2ec;
+  --ink: #1c1a16;
+  --ink-soft: #69604f;
+  --ink-faint: #9a9082;
+  --line: #ddd5c7;
+  --line-2: #c8bea9;
+  --accent: #a07c43;
+  --accent-deep: #7f5f2e;
+
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.back {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  text-decoration: none;
+  margin-bottom: 2.4rem;
+  transition: color 140ms ease;
+}
+.back:hover { color: var(--accent-deep); }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+.title {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 5vw, 2.9rem);
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  margin: 0 0 0.6rem;
+}
+.updated {
+  font-size: 0.84rem;
+  color: var(--ink-faint);
+  margin: 0 0 2.6rem;
+}
+
+.legal h2 {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+  margin: 2.6rem 0 0.7rem;
+  color: var(--ink);
+}
+.legal h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.6rem 0 0.4rem;
+  color: var(--ink);
+}
+.legal p,
+.legal li {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.legal p { margin: 0 0 1rem; }
+.legal ul { margin: 0 0 1.2rem; padding-left: 1.2rem; }
+.legal li { margin-bottom: 0.4rem; }
+.legal a { color: var(--accent-deep); text-decoration: underline; text-underline-offset: 2px; }
+.legal a:hover { color: var(--accent); }
+.legal strong { color: var(--ink); font-weight: 600; }
+
+/* dato pendiente de rellenar (titular, NIF…) */
+.fill {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  border-bottom: 1px dashed var(--accent);
+  padding: 0 0.25rem;
+  border-radius: 3px;
+  font-style: normal;
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+
+/* tabla de cookies */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0 1.6rem;
+  font-size: 0.88rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.table th,
+.table td {
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.table th {
+  background: var(--paper-2);
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.table tr:last-child td { border-bottom: none; }
+.table td { color: var(--ink-soft); }
+
+.prefBtn {
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--ink);
+  color: var(--paper-2);
+  border: none;
+  border-radius: 11px;
+  padding: 0.8rem 1.4rem;
+  cursor: pointer;
+  margin: 0.4rem 0 1rem;
+  transition: transform 150ms ease, background 150ms ease;
+}
+.prefBtn:hover { transform: translateY(-1px); background: var(--accent-deep); }
+
+.footer {
+  border-top: 1px solid var(--line);
+  margin-top: 3.5rem;
+  padding-top: 1.6rem;
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+.footer a { color: var(--ink-soft); text-decoration: none; }
+.footer a:hover { color: var(--accent-deep); }

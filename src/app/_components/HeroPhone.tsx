@@ -10,8 +10,8 @@ export default function HeroPhone() {
       <div className={styles.phoneFrame}>
         <div className={styles.phoneScreen}>
           <iframe
-            src="/demos/hamburgueseria/index.html"
-            title="Carta digital de Bonfire Burger"
+            src="/demos/cala-blava/index.html"
+            title="Room service digital de Cala Blava"
             className={styles.phoneIframe}
           />
         </div>
@@ -20,7 +20,7 @@ export default function HeroPhone() {
       <div className={styles.qrFloat} aria-hidden="true">
         <div className={styles.qrFloatInner}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/qr-hero.png" alt="QR de mesa" />
+          <img src="/qr-hero.png" alt="QR de habitación" />
         </div>
       </div>
 

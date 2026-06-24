@@ -1134,5 +1134,65 @@ document.getElementById("skipBtn").onclick=goToMenu;
 
 applyLang();
 </script>
+
+<!-- VÉRTICE · valorar experiencia tras pagar -->
+<style>
+.vqrev-paybtn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:12px;background:#9a1f2b;color:#fff;font-family:inherit;font-weight:700;font-size:15px;letter-spacing:.2px;padding:14px 18px;border:none;border-radius:14px;cursor:pointer;box-shadow:0 10px 24px -10px rgba(154,31,43,.6)}
+.vqrev-paybtn:active{transform:translateY(1px)}
+.vqrev-scrim{position:fixed;inset:0;z-index:99999;background:rgba(10,8,6,.74);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .28s}
+.vqrev-scrim.open{opacity:1;pointer-events:auto}
+.vqrev-card{width:100%;max-width:360px;background:#fffdf8;color:#221b13;border-radius:24px;padding:32px 26px 24px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.55);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;transform:translateY(18px) scale(.96);transition:transform .32s cubic-bezier(.22,1,.36,1)}
+.vqrev-scrim.open .vqrev-card{transform:none}
+.vqrev-tick{width:54px;height:54px;border-radius:50%;background:#eef3e4;color:#4a7c2f;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:30px;font-weight:800}
+.vqrev-h{font-size:21px;font-weight:800;margin:0 0 6px;letter-spacing:-.01em}
+.vqrev-p{font-size:14px;line-height:1.55;color:#6d5f4e;margin:0 0 18px}
+.vqrev-stars{display:flex;justify-content:center;gap:6px;margin:0 0 20px}
+.vqrev-star{font-size:38px;line-height:1;color:#d9a13a;cursor:pointer;transition:transform .15s ease}
+.vqrev-star:hover{transform:scale(1.18)}
+.vqrev-btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:#9a1f2b;color:#fff;font-weight:700;font-size:15px;padding:15px;border-radius:14px;text-decoration:none;border:none;cursor:pointer;box-shadow:0 12px 26px -10px rgba(154,31,43,.6)}
+.vqrev-g{width:20px;height:20px;background:#fff;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:800;color:#9a1f2b;font-size:13px}
+.vqrev-skip{display:block;width:100%;margin-top:10px;background:none;border:none;color:#a3947d;font-size:13px;cursor:pointer;padding:8px}
+</style>
+<div class="vqrev-scrim" id="vqrevScrim" role="dialog" aria-label="Valora tu experiencia">
+  <div class="vqrev-card">
+    <div class="vqrev-tick">✓</div>
+    <div class="vqrev-h">¡Gracias por tu visita!</div>
+    <div class="vqrev-p">¿Qué tal tu experiencia? Tu opinión nos ayuda muchísimo — déjanos una reseña en Google.</div>
+    <div class="vqrev-stars" id="vqrevStars" aria-hidden="true">
+      <span class="vqrev-star">★</span><span class="vqrev-star">★</span><span class="vqrev-star">★</span><span class="vqrev-star">★</span><span class="vqrev-star">★</span>
+    </div>
+    <a class="vqrev-btn" id="vqrevGoogle" href="#" target="_blank" rel="noopener">
+      <span class="vqrev-g">G</span> Dejar reseña en Google
+    </a>
+    <button class="vqrev-skip" id="vqrevSkip" type="button">Ahora no, gracias</button>
+  </div>
+</div>
+<script>
+(function(){
+  // EJEMPLO — sustituir por el enlace de reseñas de Google del local:
+  var REVIEW_URL = "https://search.google.com/local/writereview?placeid=TU_PLACE_ID";
+  function openRev(){ document.getElementById("vqrevScrim").classList.add("open"); }
+  function closeRev(){ document.getElementById("vqrevScrim").classList.remove("open"); }
+  function addPay(){
+    var host = document.querySelector(".success-actions") || document.querySelector("#success .success-inner") || document.getElementById("success");
+    if(!host || document.getElementById("vqrevPay")) return;
+    var b=document.createElement("button");
+    b.id="vqrevPay"; b.type="button"; b.className="vqrev-paybtn"; b.textContent="Pagar y terminar";
+    b.addEventListener("click", openRev);
+    host.appendChild(b);
+  }
+  function init(){
+    addPay();
+    var sc=document.getElementById("vqrevScrim");
+    document.getElementById("vqrevSkip").addEventListener("click", closeRev);
+    sc.addEventListener("click", function(e){ if(e.target===sc) closeRev(); });
+    document.getElementById("vqrevGoogle").setAttribute("href", REVIEW_URL);
+    document.querySelectorAll("#vqrevStars .vqrev-star").forEach(function(s){
+      s.addEventListener("click", function(){ window.open(REVIEW_URL,"_blank","noopener"); });
+    });
+  }
+  if(document.readyState!=="loading") init(); else document.addEventListener("DOMContentLoaded", init);
+})();
+</script>
 </body>
 </html>

@@ -1,35 +1,36 @@
 /* ============================================================
-   LANDING — VerticeQR
-   Editorial cálido en claro. Crema + tinta + acento persimón/oro.
-   Tipografía: Fraunces (display) · Manrope (texto).
+   LANDING — VerticeQR · para hoteles boutique
+   Quiet luxury elevado. Marfil + espresso casi negro + latón champagne.
+   Lujo discreto: desaturado, mucho aire, un solo metálico, pesos ligeros.
+   Tipografía: Montserrat (display ligero + texto).
    ============================================================ */
 
 html { scroll-behavior: smooth; }
 
 .page {
-  --paper: #f6efe3;
-  --paper-2: #fffdf8;
-  --paper-3: #efe5d4;
-  --ink: #221b13;
-  --ink-soft: #6d5f4e;
-  --ink-faint: #a3947d;
-  --line: #e7dcc7;
-  --line-2: #dccdb2;
-  --accent: #9a1f2b;
-  --accent-deep: #7c1622;
-  --gold: #d99a2b;
-  --olive: #6c7a43;
-  --granate: #8c1518;
-  --shadow-sm: 0 2px 10px rgba(83, 60, 30, 0.06);
-  --shadow-md: 0 18px 50px -22px rgba(83, 60, 30, 0.32);
-  --shadow-lg: 0 40px 90px -40px rgba(83, 60, 30, 0.45);
+  --paper: #eae5da;
+  --paper-2: #f6f2ec;
+  --paper-3: #ded7c9;
+  --ink: #1c1a16;
+  --ink-soft: #69604f;
+  --ink-faint: #9a9082;
+  --line: #ddd5c7;
+  --line-2: #c8bea9;
+  --accent: #a07c43;
+  --accent-deep: #7f5f2e;
+  --gold: #b3924f;
+  --olive: #7c7b62;
+  --granate: #7f5f2e;
+  --shadow-sm: 0 2px 12px rgba(40, 34, 24, 0.05);
+  --shadow-md: 0 22px 58px -26px rgba(40, 34, 24, 0.24);
+  --shadow-lg: 0 48px 104px -48px rgba(28, 24, 17, 0.36);
 
   position: relative;
   background: var(--paper);
   color: var(--ink);
   overflow-x: hidden;
 }
-/* atmósfera cálida muy sutil */
+/* atmósfera mineral muy sutil — apenas perceptible */
 .page::before {
   content: "";
   position: fixed;
@@ -37,8 +38,8 @@ html { scroll-behavior: smooth; }
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(60% 40% at 80% -5%, rgba(154, 31, 43, 0.07), transparent 60%),
-    radial-gradient(50% 35% at 0% 8%, rgba(217, 154, 43, 0.08), transparent 60%);
+    radial-gradient(60% 40% at 80% -5%, rgba(156, 122, 77, 0.05), transparent 60%),
+    radial-gradient(50% 35% at 0% 8%, rgba(99, 92, 78, 0.05), transparent 60%);
 }
 .page > * { position: relative; z-index: 1; }
 
@@ -131,7 +132,7 @@ html { scroll-behavior: smooth; }
 .navCta:hover {
   transform: translateY(-1px);
   background: var(--accent);
-  box-shadow: 0 10px 26px -8px rgba(154, 31, 43, 0.5);
+  box-shadow: 0 10px 26px -8px rgba(124, 96, 56, 0.45);
 }
 
 @media (max-width: 860px) {
@@ -187,13 +188,14 @@ html { scroll-behavior: smooth; }
 
 .heroTitle {
   font-family: var(--font-display);
-  font-size: clamp(2.7rem, 6.4vw, 4.7rem);
-  font-weight: 600;
-  line-height: 1.02;
+  font-size: clamp(2.55rem, 6vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.05;
   letter-spacing: -0.025em;
   margin: 0 0 1.5rem;
   color: var(--ink);
 }
+.heroTitle b, .heroTitle strong { font-weight: 600; }
 .heroLine {
   display: block;
   overflow: hidden;
@@ -209,7 +211,7 @@ html { scroll-behavior: smooth; }
 @keyframes vqLineUp { to { transform: translateY(0); } }
 .heroAccent {
   font-style: italic;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--accent);
 }
 
@@ -239,8 +241,8 @@ html { scroll-behavior: smooth; }
 }
 .heroCtaNote strong { color: var(--accent); font-weight: 700; }
 .ctaPrimary {
-  background: var(--accent);
-  color: #fff;
+  background: var(--ink);
+  color: var(--paper-2);
   padding: 0.9rem 1.6rem;
   border-radius: 12px;
   font-weight: 700;
@@ -252,13 +254,13 @@ html { scroll-behavior: smooth; }
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 12px 30px -12px rgba(154, 31, 43, 0.6);
+  box-shadow: 0 14px 32px -14px rgba(35, 33, 28, 0.5);
   transition: transform 160ms ease, box-shadow 220ms ease, background 160ms ease;
 }
 .ctaPrimary span { transition: transform 200ms ease; }
 .ctaPrimary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 42px -14px rgba(154, 31, 43, 0.7);
+  box-shadow: 0 18px 40px -14px rgba(124, 96, 56, 0.55);
   background: var(--accent-deep);
 }
 .ctaPrimary:hover span { transform: translateX(3px); }
@@ -306,7 +308,7 @@ html { scroll-behavior: smooth; }
 .phoneFrame {
   width: 272px;
   height: 552px;
-  background: #221b13;
+  background: #1c1a16;
   border-radius: 40px;
   padding: 11px;
   box-shadow: var(--shadow-lg), 0 0 0 1px rgba(34, 27, 19, 0.06);
@@ -440,13 +442,13 @@ html { scroll-behavior: smooth; }
   height: 7px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 0 rgba(154, 31, 43, 0.5);
+  box-shadow: 0 0 0 0 rgba(156, 122, 77, 0.5);
   animation: vqPulse 1.8s ease-out infinite;
 }
 @keyframes vqPulse {
-  0% { box-shadow: 0 0 0 0 rgba(154, 31, 43, 0.45); }
-  70% { box-shadow: 0 0 0 7px rgba(154, 31, 43, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(154, 31, 43, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(156, 122, 77, 0.45); }
+  70% { box-shadow: 0 0 0 7px rgba(156, 122, 77, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(156, 122, 77, 0); }
 }
 @media (max-width: 420px) {
   .heroDemoBadge { font-size: 0.68rem; padding: 0.32rem 0.68rem; }
@@ -475,8 +477,8 @@ html { scroll-behavior: smooth; }
 .statCell { text-align: center; }
 .statNum {
   font-family: var(--font-display);
-  font-size: clamp(1.9rem, 4vw, 2.7rem);
-  font-weight: 600;
+  font-size: clamp(1.95rem, 4vw, 2.8rem);
+  font-weight: 300;
   letter-spacing: -0.02em;
   color: var(--ink);
 }
@@ -487,6 +489,15 @@ html { scroll-behavior: smooth; }
   line-height: 1.4;
   max-width: 230px;
 }
+.statsFootnote {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2.2rem;
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  text-align: center;
+  letter-spacing: 0.01em;
+}
 
 /* ---------- COMÚN sections ---------- */
 .section {
@@ -496,22 +507,23 @@ html { scroll-behavior: smooth; }
 }
 .sectionEyebrow {
   display: inline-block;
-  font-size: 0.74rem;
-  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--accent);
-  font-weight: 700;
-  margin-bottom: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.95rem;
 }
 .sectionTitle {
   font-family: var(--font-display);
-  font-size: clamp(2.05rem, 4vw, 2.95rem);
-  font-weight: 600;
+  font-size: clamp(1.95rem, 3.8vw, 2.85rem);
+  font-weight: 400;
   letter-spacing: -0.02em;
   margin: 0 0 0.9rem;
-  line-height: 1.05;
+  line-height: 1.1;
   color: var(--ink);
 }
+.sectionTitle b, .sectionTitle strong { font-weight: 600; }
 .sectionSub {
   font-size: 1.06rem;
   color: var(--ink-soft);
@@ -565,8 +577,8 @@ html { scroll-behavior: smooth; }
 }
 .stepTitle {
   font-family: var(--font-display);
-  font-size: 1.45rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 500;
   letter-spacing: -0.01em;
   margin: 0 0 0.5rem;
   color: var(--ink);
@@ -642,8 +654,8 @@ html { scroll-behavior: smooth; }
 }
 .featureTitle {
   font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.45rem;
+  font-weight: 500;
   letter-spacing: -0.015em;
   margin: 0 0 0.45rem;
   color: var(--ink);
@@ -660,7 +672,7 @@ html { scroll-behavior: smooth; }
 .featureStatNum {
   font-family: var(--font-display);
   font-size: 2.7rem;
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: -0.025em;
   line-height: 1;
   color: var(--feature-color, var(--accent));
@@ -773,14 +785,14 @@ html { scroll-behavior: smooth; }
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--accent);
-  color: #fff;
+  background: var(--ink);
+  color: var(--paper-2);
   font-weight: 700;
   font-size: 0.98rem;
   text-decoration: none;
   padding: 0.9rem 1.7rem;
   border-radius: 12px;
-  box-shadow: 0 14px 32px -12px rgba(154, 31, 43, 0.6);
+  box-shadow: 0 14px 32px -14px rgba(35, 33, 28, 0.5);
   transition: transform 160ms ease, background 160ms ease;
 }
 .compareCta span { transition: transform 200ms ease; }
@@ -974,9 +986,9 @@ html { scroll-behavior: smooth; }
   grid-template-columns: 1.5fr 1fr;
   border-radius: 26px;
   overflow: hidden;
-  background: #221b13;
+  background: #1c1a16;
   box-shadow: var(--shadow-lg);
-  border: 1px solid #221b13;
+  border: 1px solid #1c1a16;
 }
 @media (max-width: 760px) { .planMedida { grid-template-columns: 1fr; } }
 .planMedidaMain {
@@ -998,7 +1010,7 @@ html { scroll-behavior: smooth; }
 }
 .planMedidaName {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 400;
   font-size: clamp(1.6rem, 3vw, 2rem);
   letter-spacing: -0.015em;
   color: #fff;
@@ -1035,7 +1047,7 @@ html { scroll-behavior: smooth; }
 }
 .planMedidaPrice {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 400;
   font-size: clamp(2.2rem, 4vw, 2.8rem);
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -1053,9 +1065,9 @@ html { scroll-behavior: smooth; }
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(70% 120% at 100% 0%, rgba(154, 31, 43, 0.22), transparent 60%),
-    radial-gradient(60% 120% at 0% 100%, rgba(217, 154, 43, 0.2), transparent 60%),
-    #221b13;
+    radial-gradient(70% 120% at 100% 0%, rgba(156, 122, 77, 0.26), transparent 60%),
+    radial-gradient(60% 120% at 0% 100%, rgba(120, 112, 96, 0.18), transparent 60%),
+    #1c1a16;
   border-radius: 28px;
   padding: 4rem 2rem;
   text-align: center;
@@ -1064,9 +1076,9 @@ html { scroll-behavior: smooth; }
 .bigCtaTitle {
   font-family: var(--font-display);
   font-size: clamp(1.9rem, 4vw, 2.7rem);
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: -0.02em;
-  line-height: 1.08;
+  line-height: 1.12;
   margin: 0 auto 1rem;
   max-width: 640px;
   color: #fdf6ea;
