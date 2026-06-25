@@ -28,7 +28,7 @@ html { scroll-behavior: smooth; }
   position: relative;
   background: var(--paper);
   color: var(--ink);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 /* atmósfera mineral muy sutil — apenas perceptible */
 .page::before {
@@ -107,6 +107,16 @@ html { scroll-behavior: smooth; }
   text-transform: uppercase;
   line-height: 1;
   transform: translateY(-0.04em);
+}
+/* Logo real (PNG) tal cual */
+.logoImg {
+  height: 2.6em;
+  width: auto;
+  display: block;
+}
+/* Sobre el hero oscuro (nav sin scroll): en blanco para que se lea */
+.nav:not(.navScrolled) .logoImg {
+  filter: brightness(0) invert(1);
 }
 
 .navLinks {
