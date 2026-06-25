@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { crearLead } from "@/lib/leads";
+import { CALENDLY_URL } from "@/lib/site";
 import Nav from "./_components/Nav";
 import Reveal from "./_components/Reveal";
 import Counter from "./_components/Counter";
@@ -130,31 +131,31 @@ export default async function Home({
             </div>
             <h1 className={styles.heroTitle}>
               <span className={styles.heroLine}>
-                <span>Más <i className={styles.heroAccent}>F&amp;B</i> en cada habitación.</span>
+                <span>Vendes lo mismo.</span>
               </span>
               <span className={styles.heroLine}>
-                <span>Sin sumar personal.</span>
+                <span>Ganas <i className={styles.heroAccent}>menos</i> cada año.</span>
               </span>
             </h1>
             <p className={styles.heroSub}>
-              No vendemos cartas digitales en serie. Estudiamos tu hotel y te
-              montamos el sistema de room service y F&amp;B a medida — tu carta
-              con la marca del hotel, el pedido desde la habitación, la carga a la
-              cuenta del huésped y los datos de cada pedido — para subir tu GOP
-              sin contratar a nadie.
+              Las habitaciones ya no crecen y los costes se comen tu margen. El
+              F&amp;B es el único ingreso que todavía sube — y la mayoría de tu
+              hotel se queda sin pedir. Te montamos el sistema de room service a
+              medida para capturarlo en cada habitación, <strong>sin sumar una
+              sola persona a tu equipo</strong>.
             </p>
             <div className={styles.heroCtas}>
-              <a href="#contacto" className={styles.ctaPrimary}>
-                Mira cuánto ganarías <span>→</span>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>
+                Reserva una reunión con el equipo <span>→</span>
               </a>
               <a href="#producto" className={styles.ctaSecondary}>
                 Ver cómo funciona
               </a>
             </div>
             <p className={styles.heroCtaNote}>
-              <strong>Te enseñamos el cálculo antes de empezar.</strong> Montamos
-              tu demo a medida en menos de 24&nbsp;h. Empiezas por una pieza, sin
-              riesgo.
+              <strong>20 minutos, sin compromiso.</strong> Te enseñamos cuánto
+              F&amp;B estás dejando en la mesa cada mes y cómo recuperarlo en tu
+              hotel.
             </p>
           </div>
 
@@ -300,8 +301,8 @@ export default async function Home({
           <p className={styles.compareClose}>
             Cada hotel es un mundo. <strong>El tuyo también.</strong>
           </p>
-          <a href="#contacto" className={styles.compareCta}>
-            Quiero el mío a medida <span>→</span>
+          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={styles.compareCta}>
+            Reserva una reunión <span>→</span>
           </a>
         </div>
       </section>
@@ -340,11 +341,11 @@ export default async function Home({
               <div className={styles.planMedidaPriceLabel}>Inversión</div>
               <div className={styles.planMedidaPrice}>A medida</div>
               <p className={styles.planMedidaNote}>
-                Primero te enseñamos cuánto ganarías. Luego, presupuesto en menos
-                de 24&nbsp;h, sin compromiso.
+                En la reunión te enseñamos el cálculo y te pasamos el presupuesto
+                a medida. Sin compromiso.
               </p>
-              <a href="#contacto" className={styles.ctaPrimary} style={{ justifyContent: "center" }}>
-                Mira cuánto ganarías <span>→</span>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary} style={{ justifyContent: "center" }}>
+                Reserva una reunión <span>→</span>
               </a>
             </div>
           </div>
@@ -359,11 +360,12 @@ export default async function Home({
               ¿Listo para subir tu GOP sin sumar personal?
             </h2>
             <p className={styles.bigCtaSub}>
-              En 15 minutos te enseñamos cuánto F&amp;B estás dejando en cada
-              habitación y cómo se vería en tu hotel. Sin compromiso, sin tarjeta.
+              En 20 minutos con el equipo te enseñamos cuánto F&amp;B estás
+              dejando en cada habitación y cómo recuperarlo. Sin compromiso, sin
+              tarjeta.
             </p>
-            <a href="#contacto" className={styles.ctaPrimary}>
-              Mira cuánto ganarías <span>→</span>
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>
+              Reserva una reunión con el equipo <span>→</span>
             </a>
           </div>
         </Reveal>
@@ -375,10 +377,14 @@ export default async function Home({
           <Reveal>
             <div style={{ textAlign: "center", marginBottom: "2rem" }}>
               <div className={styles.sectionEyebrow}>Contacto</div>
-              <h2 className={styles.sectionTitle}>Cuéntanos tu hotel</h2>
+              <h2 className={styles.sectionTitle}>Hablemos de tu hotel</h2>
               <p style={{ color: "var(--ink-soft)", marginTop: 0 }}>
-                Te respondemos en menos de 24 horas con una demo a medida y una
-                estimación de lo que ganarías.
+                Lo mejor es verlo juntos:{" "}
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent-deep)", fontWeight: 600, textDecoration: "underline" }}>
+                  reserva una reunión con el equipo
+                </a>
+                . ¿Prefieres que te escribamos? Déjanos tus datos y te respondemos
+                en menos de 24 h.
               </p>
             </div>
           </Reveal>
@@ -452,7 +458,7 @@ export default async function Home({
                   * campos obligatorios
                 </div>
                 <button type="submit" className={styles.ctaPrimary}>
-                  Solicitar demo <span>→</span>
+                  Enviar <span>→</span>
                 </button>
               </div>
             </form>
