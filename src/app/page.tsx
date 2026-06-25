@@ -209,11 +209,11 @@ export default async function Home({
         <Reveal>
           <div className={styles.sectionEyebrow}>Producto</div>
           <h2 className={styles.sectionTitle}>
-            Pensado para tu cuenta de resultados, no para una demo bonita.
+            Solo lo que mueve tu margen.
           </h2>
           <p className={styles.sectionSub}>
-            Cada pieza responde a una pelea concreta de un hotel. Si no sube el
-            GOP o no te quita coste de personal, no entra.
+            Cada función sube el F&amp;B o te quita coste de personal. Ni una
+            pantalla de relleno.
           </p>
         </Reveal>
 
