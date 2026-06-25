@@ -17,13 +17,6 @@ export default function HeroPhone() {
         </div>
       </div>
 
-      <div className={styles.qrFloat} aria-hidden="true">
-        <div className={styles.qrFloatInner}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/qr-hero.png" alt="QR de habitación" />
-        </div>
-      </div>
-
       <div className={styles.heroDemoBadge}>
         <span className={styles.heroDemoDot} />
         Pruébala

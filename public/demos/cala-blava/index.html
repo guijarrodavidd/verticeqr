@@ -6,31 +6,31 @@
 <title>Cala Blava · Room Service</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --sand:#f3ecdf;          /* warm limestone wall */
-    --sand-deep:#ece1cf;     /* deeper sand */
-    --paper:#fbf6ec;         /* cream card */
-    --ink:#173a3d;           /* deep wet-stone teal */
-    --ink-soft:#3f6562;
-    --muted:#90a39c;
-    --line-soft:#e2d6c2;
-    --sea:#0e8a92;           /* mediterranean turquoise */
-    --sea-deep:#0a6068;
-    --sea-bright:#16b0b8;
-    --azure:#3aa7d4;         /* sky / shallow water */
-    --clay:#d2754f;          /* terracotta — experiences */
-    --clay-deep:#b1542f;
-    --sun:#f1b13e;           /* sun gold */
-    --shell:#f6e2d2;
-    --soft-shadow:0 18px 40px -16px rgba(23,58,61,.35);
-    --soft-shadow-sm:0 10px 24px -12px rgba(23,58,61,.28);
+    --sand:#f4efe3;          /* warm ivory */
+    --sand-deep:#ece4d3;     /* deeper ivory */
+    --paper:#fffdf8;         /* white card */
+    --ink:#2a241d;           /* warm espresso */
+    --ink-soft:#6f6454;
+    --muted:#a99c86;
+    --line-soft:#e8dfcc;
+    --sea:#bf9d56;           /* champagne gold (acento principal) */
+    --sea-deep:#997834;
+    --sea-bright:#d6bb7c;
+    --azure:#c2a35c;         /* gold */
+    --clay:#a8804a;          /* bronce — experiences */
+    --clay-deep:#87622f;
+    --sun:#d3ad5b;           /* oro champán */
+    --shell:#f3e7d3;
+    --soft-shadow:0 18px 40px -16px rgba(58,46,26,.30);
+    --soft-shadow-sm:0 10px 24px -12px rgba(58,46,26,.24);
     --r:20px; --r-sm:14px;
-    --display:"Fraunces",Georgia,serif;
-    --body:"Outfit",-apple-system,system-ui,sans-serif;
+    --display:"Cormorant Garamond",Georgia,serif;
+    --body:"Montserrat",-apple-system,system-ui,sans-serif;
     --mono:"DM Mono",ui-monospace,monospace;
-    --script:"Caveat",cursive;
+    --script:"Cormorant Garamond",Georgia,serif;
   }
   *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   html,body{background:var(--sand);color:var(--ink);font-family:var(--body);font-weight:400;-webkit-font-smoothing:antialiased}
@@ -41,7 +41,7 @@
   /* ===== TOPBAR ===== */
   .topbar{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:rgba(243,236,223,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft)}
   .brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:18px;letter-spacing:.2px;color:var(--ink)}
-  .brand .seal{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--sea-bright),var(--sea-deep));display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;box-shadow:0 4px 10px -3px var(--sea-deep)}
+  .brand .seal{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--sea-bright),var(--sea-deep));display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--display);font-weight:600;font-size:16px;box-shadow:0 4px 10px -3px var(--sea-deep)}
   .room-pill{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:11px;padding:6px 11px;border-radius:999px;letter-spacing:.3px}
   .room-pill b{font-weight:500}
   .lang-seg{display:flex;gap:3px;background:var(--sand-deep);padding:3px;border-radius:999px}
@@ -49,14 +49,14 @@
   .lang-seg button.on{background:var(--paper);color:var(--ink);box-shadow:0 2px 6px -2px rgba(23,58,61,.3)}
 
   /* ===== HERO ===== */
-  .hero{position:relative;padding:30px 22px 26px;overflow:hidden;background:linear-gradient(180deg,#bfe6ee 0%,#d8eee5 42%,var(--sand) 100%)}
-  .hero .sun{position:absolute;top:24px;right:30px;width:74px;height:74px;border-radius:50%;background:radial-gradient(circle,#fff3d2 0%,var(--sun) 55%,rgba(241,177,62,0) 72%);filter:blur(.3px);animation:sunpulse 6s ease-in-out infinite}
+  .hero{position:relative;padding:34px 22px 30px;overflow:hidden;background:linear-gradient(180deg,rgba(18,14,9,.42) 0%,rgba(18,14,9,.54) 52%,rgba(16,12,8,.84) 100%),url("img/banner.jpg") center/cover no-repeat}
+  .hero .sun{display:none}
   @keyframes sunpulse{0%,100%{transform:scale(1);opacity:.95}50%{transform:scale(1.08);opacity:1}}
-  .hero .gulls{position:absolute;top:54px;left:36px;color:var(--ink-soft);opacity:.5;font-size:14px;letter-spacing:6px}
-  .hero-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--sea-deep);position:relative;z-index:2}
-  .hero h1{font-family:var(--display);font-weight:600;font-size:42px;line-height:.98;letter-spacing:-.5px;margin:6px 0 2px;color:var(--ink);position:relative;z-index:2}
-  .hero .flourish{font-family:var(--script);font-size:25px;color:var(--clay);transform:rotate(-2deg);position:relative;z-index:2;margin-bottom:8px}
-  .hero p{font-size:14.5px;color:var(--ink-soft);line-height:1.55;max-width:330px;position:relative;z-index:2}
+  .hero .gulls{display:none}
+  .hero-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#e3c789;position:relative;z-index:2}
+  .hero h1{font-family:var(--display);font-weight:600;font-size:44px;line-height:.98;letter-spacing:-.5px;margin:6px 0 2px;color:#fdf8ee;position:relative;z-index:2}
+  .hero .flourish{font-family:var(--script);font-style:italic;font-weight:500;font-size:28px;color:#e3c789;position:relative;z-index:2;margin-bottom:8px}
+  .hero p{font-size:14.5px;color:rgba(247,241,230,.82);line-height:1.55;max-width:330px;position:relative;z-index:2}
   .hero .waves{position:absolute;bottom:0;left:0;right:0;height:30px;background:
      radial-gradient(circle at 12px -6px,transparent 12px,var(--sand) 13px) repeat-x;
      background-size:24px 30px;opacity:.9}
@@ -83,11 +83,12 @@
   /* ===== DISH CARD ===== */
   .dish{display:flex;gap:14px;background:var(--paper);border:1px solid rgba(23,58,61,.06);border-radius:var(--r);padding:12px;margin-bottom:12px;box-shadow:var(--soft-shadow-sm);position:relative;opacity:0;transform:translateY(16px)}
   .dish.in{opacity:1;transform:translateY(0);transition:opacity .7s cubic-bezier(.4,0,.15,1),transform .7s cubic-bezier(.4,0,.15,1);transition-delay:calc(var(--i,0)*45ms)}
-  .dish-img{flex:0 0 88px;width:88px;height:88px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:38px;position:relative;overflow:hidden;background:linear-gradient(140deg,#cfeef0,#9fdfe2)}
-  .dish-img.g-sea{background:linear-gradient(140deg,#cdeef0,#7fd3d8)}
-  .dish-img.g-clay{background:linear-gradient(140deg,#f5dcc8,#e3a984)}
-  .dish-img.g-sun{background:linear-gradient(140deg,#fbedc4,#f3c879)}
+  .dish-img{flex:0 0 88px;width:88px;height:88px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:38px;position:relative;overflow:hidden;background:linear-gradient(140deg,#f1e8d6,#e4d6ba)}
+  .dish-img.g-sea{background:linear-gradient(140deg,#f1e7d4,#e0cfac)}
+  .dish-img.g-clay{background:linear-gradient(140deg,#f6e9d2,#e8cfa0)}
+  .dish-img.g-sun{background:linear-gradient(140deg,#faeecb,#edd089)}
   .dish-img .em{filter:drop-shadow(0 3px 5px rgba(23,58,61,.18))}
+  .dish-img .dish-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .badge{position:absolute;top:7px;left:7px;background:var(--sun);color:var(--ink);font-family:var(--mono);font-size:9px;font-weight:500;padding:3px 7px;border-radius:999px;letter-spacing:.4px;box-shadow:0 3px 7px -2px rgba(0,0,0,.3)}
   .dish-body{flex:1;min-width:0;display:flex;flex-direction:column}
   .dish-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
@@ -150,7 +151,7 @@
   .send-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
 
   /* ===== SUCCESS ===== */
-  .success{position:fixed;inset:0;z-index:60;background:linear-gradient(180deg,rgba(14,138,146,.96),rgba(10,96,104,.97));backdrop-filter:blur(4px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px;opacity:0;pointer-events:none;transition:.34s;overflow-y:auto;max-width:540px;margin:0 auto}
+  .success{position:fixed;inset:0;z-index:60;background:linear-gradient(180deg,rgba(42,36,29,.97),rgba(26,21,16,.98));backdrop-filter:blur(4px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px;opacity:0;pointer-events:none;transition:.34s;overflow-y:auto;max-width:540px;margin:0 auto}
   .success.on{opacity:1;pointer-events:auto}
   .success-inner{width:100%;max-width:360px;display:flex;flex-direction:column;align-items:center}
   .check{width:78px;height:78px;border-radius:50%;background:var(--paper);display:flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 14px 30px -8px rgba(0,0,0,.4);animation:pop .55s cubic-bezier(.2,1.5,.4,1)}
@@ -248,25 +249,23 @@
   .toast.on{transform:translateX(-50%) translateY(0);opacity:1}
 
   /* ===== WELCOME ===== */
-  .welcome{position:fixed;inset:0;z-index:95;max-width:540px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 28px;background:linear-gradient(180deg,#9fd9e6 0%,#cdeae4 40%,var(--sand) 100%);transition:opacity .5s,transform .5s}
+  .welcome{position:fixed;inset:0;z-index:95;max-width:540px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:0 32px calc(52px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(18,14,9,.25) 0%,rgba(18,14,9,.32) 40%,rgba(16,12,8,.92) 100%),url("img/welcome.jpg") center/cover no-repeat;transition:opacity .5s,transform .5s}
   .welcome.gone{opacity:0;transform:scale(1.05);pointer-events:none}
-  .welcome .w-sun{position:absolute;top:14%;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#fff6da 0%,var(--sun) 58%,rgba(241,177,62,0) 74%);animation:rise 1.1s cubic-bezier(.2,1,.4,1) both}
-  @keyframes rise{0%{transform:translateY(60px) scale(.6);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
   .w-lang{position:absolute;top:calc(16px + env(safe-area-inset-top));right:16px}
-  .w-seal{width:84px;height:84px;border-radius:50%;background:rgba(251,246,236,.85);display:flex;align-items:center;justify-content:center;font-size:38px;margin-bottom:22px;position:relative;z-index:2;box-shadow:0 14px 30px -10px rgba(15,40,42,.4);animation:fadeUp .7s .15s both}
-  .w-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--sea-deep);position:relative;z-index:2;animation:fadeUp .6s .3s both}
-  .w-title{font-family:var(--display);font-weight:600;font-size:50px;line-height:.95;letter-spacing:-1px;color:var(--ink);margin:8px 0 2px;position:relative;z-index:2;animation:fadeUp .6s .42s both}
-  .w-flourish{font-family:var(--script);font-size:27px;color:var(--clay);transform:rotate(-2deg);position:relative;z-index:2;animation:fadeUp .6s .52s both}
-  .w-sub{font-size:14.5px;color:var(--ink-soft);line-height:1.7;max-width:330px;margin-top:14px;position:relative;z-index:2;animation:fadeUp .6s .62s both}
-  .w-room{display:inline-flex;align-items:center;gap:8px;background:rgba(251,246,236,.9);color:var(--ink);padding:10px 18px;border-radius:999px;font-family:var(--mono);font-size:12.5px;margin-top:26px;position:relative;z-index:2;box-shadow:var(--soft-shadow-sm);animation:fadeUp .6s .72s both}
-  .w-room svg{width:15px;height:15px;stroke:var(--sea);fill:none;stroke-width:2}
-  .w-btn{margin-top:30px;border:none;background:var(--ink);color:var(--paper);padding:16px 42px;border-radius:16px;font-family:var(--body);font-weight:600;font-size:16px;cursor:pointer;box-shadow:var(--soft-shadow);position:relative;z-index:2;animation:fadeUp .6s .85s both;display:flex;align-items:center;gap:10px}
+  .w-crest{width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(231,210,150,.65);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:25px;color:#e7d296;margin-bottom:18px;position:relative;z-index:2;animation:fadeUp .7s .15s both}
+  .w-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#e3c789;position:relative;z-index:2;animation:fadeUp .6s .3s both}
+  .w-title{font-family:var(--display);font-weight:600;font-size:56px;line-height:.95;letter-spacing:-1px;color:#fdf8ee;margin:6px 0 2px;position:relative;z-index:2;animation:fadeUp .6s .42s both}
+  .w-flourish{font-family:var(--script);font-style:italic;font-size:29px;color:#e3c789;position:relative;z-index:2;animation:fadeUp .6s .52s both}
+  .w-sub{font-size:14.5px;color:rgba(247,241,230,.82);line-height:1.7;max-width:330px;margin-top:14px;position:relative;z-index:2;animation:fadeUp .6s .62s both}
+  .w-room{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);color:#f7f1e6;padding:10px 18px;border-radius:999px;font-family:var(--mono);font-size:12.5px;margin-top:26px;position:relative;z-index:2;border:1px solid rgba(255,255,255,.2);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);animation:fadeUp .6s .72s both}
+  .w-room svg{width:15px;height:15px;stroke:#e3c789;fill:none;stroke-width:2}
+  .w-btn{margin-top:28px;border:none;background:#f5efe3;color:var(--ink);padding:16px 46px;border-radius:14px;font-family:var(--body);font-weight:600;font-size:16px;cursor:pointer;box-shadow:0 16px 40px -14px rgba(0,0,0,.6);position:relative;z-index:2;animation:fadeUp .6s .85s both;display:flex;align-items:center;gap:10px}
   .w-btn:active{transform:translateY(2px)}
   .w-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
   @keyframes fadeUp{0%{opacity:0;transform:translateY(18px)}100%{opacity:1;transform:translateY(0)}}
-  .w-seg{display:flex;gap:3px;background:rgba(251,246,236,.7);padding:3px;border-radius:999px}
-  .w-seg button{border:none;background:none;font-family:var(--mono);font-size:11px;padding:6px 9px;border-radius:999px;cursor:pointer;color:var(--ink-soft)}
-  .w-seg button.on{background:var(--paper);color:var(--ink);box-shadow:0 2px 6px -2px rgba(0,0,0,.3)}
+  .w-seg{display:flex;gap:3px;background:rgba(255,255,255,.14);padding:3px;border-radius:999px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .w-seg button{border:none;background:none;font-family:var(--mono);font-size:11px;padding:6px 9px;border-radius:999px;cursor:pointer;color:rgba(247,241,230,.72)}
+  .w-seg button.on{background:rgba(255,255,255,.92);color:var(--ink)}
 </style>
 </head>
 <body>
@@ -274,8 +273,7 @@
 <!-- ===== WELCOME ===== -->
 <div class="welcome" id="welcome">
   <div class="w-lang"><div class="w-seg" id="wSeg"></div></div>
-  <div class="w-sun"></div>
-  <div class="w-seal">🐚</div>
+  <div class="w-crest">C</div>
   <div class="w-eyebrow" data-t="hi">Bienvenido a</div>
   <div class="w-title">Cala Blava</div>
   <div class="w-flourish">tu rincón en el mar</div>
@@ -286,7 +284,7 @@
 
 <!-- ===== TOPBAR ===== -->
 <div class="topbar">
-  <div class="brand"><span class="seal">🐚</span>Cala Blava</div>
+  <div class="brand"><span class="seal">C</span>Cala Blava</div>
   <div style="display:flex;align-items:center;gap:9px">
     <span class="room-pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5M5 8.5V21h14V8.5"/></svg><b id="hRoom">412</b></span>
     <div class="lang-seg" id="hSeg"></div>
@@ -434,7 +432,7 @@ const T={
   ES:{ hi:"Bienvenido a", welcomeSub:"Room service, experiencias y todo lo que necesites, directo a tu habitación.", roomLbl:"Habitación", start:"Entrar",
     heroKick:"Room service · 24h", heroH:"Pide sin moverte<br>de la hamaca", heroFl:"del mar a tu habitación", heroP:"Cocina mediterránea, experiencias en la cala y todo lo que necesites. Te lo subimos a la habitación.",
     viewOrder:"Ver pedido", yourOrder:"Tu pedido", total:"Total", sendOrder:"Pedir al room service",
-    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"★ Top",
+    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"Top",
     notePhFood:"Alergias, sin cebolla, al punto…", notePhExp:"¿A qué hora? ¿Cuántas personas?", notePhAmen:"¿Algún detalle?",
     freeHint:"Las peticiones gratuitas se suben sin coste",
     sentTitle:"¡Recibido!", glad:"Te lo subimos a la habitación {room}", preparing:"Preparando tu pedido…", orderMore:"Pedir algo más",
@@ -457,7 +455,7 @@ const T={
   EN:{ hi:"Welcome to", welcomeSub:"Room service, experiences and anything you need, straight to your room.", roomLbl:"Room", start:"Enter",
     heroKick:"Room service · 24h", heroH:"Order without leaving<br>your sun lounger", heroFl:"from the sea to your room", heroP:"Mediterranean cuisine, experiences by the cove and whatever you need. We bring it up to your room.",
     viewOrder:"View order", yourOrder:"Your order", total:"Total", sendOrder:"Order room service",
-    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"★ Top",
+    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"Top",
     notePhFood:"Allergies, no onion, well done…", notePhExp:"What time? How many people?", notePhAmen:"Any detail?",
     freeHint:"Free requests are brought up at no charge",
     sentTitle:"Got it!", glad:"We'll bring it up to room {room}", preparing:"Preparing your order…", orderMore:"Order more",
@@ -480,7 +478,7 @@ const T={
   DE:{ hi:"Willkommen im", welcomeSub:"Zimmerservice, Erlebnisse und alles, was Sie brauchen – direkt aufs Zimmer.", roomLbl:"Zimmer", start:"Eintreten",
     heroKick:"Zimmerservice · 24h", heroH:"Bestellen Sie ganz<br>entspannt von der Liege", heroFl:"vom Meer auf Ihr Zimmer", heroP:"Mediterrane Küche, Erlebnisse an der Bucht und alles, was Sie brauchen. Wir bringen es aufs Zimmer.",
     viewOrder:"Bestellung", yourOrder:"Ihre Bestellung", total:"Gesamt", sendOrder:"Zimmerservice bestellen",
-    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"★ Top",
+    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"Top",
     notePhFood:"Allergien, ohne Zwiebel, durch…", notePhExp:"Um wie viel Uhr? Wie viele Personen?", notePhAmen:"Ein Detail?",
     freeHint:"Kostenlose Wünsche werden gratis gebracht",
     sentTitle:"Erhalten!", glad:"Wir bringen es auf Zimmer {room}", preparing:"Bestellung wird vorbereitet…", orderMore:"Mehr bestellen",
@@ -506,52 +504,51 @@ const T={
 // d = descripción por idioma. price 0 = gratis. g = gradiente (sea/clay/sun)
 const MENU=[
   { cat:"desayuno", g:"g-sea", items:[
-    {id:"ds1",em:"🍊",name:"Zumo de naranja natural",price:4,d:{ES:"Recién exprimido cada mañana",EN:"Freshly squeezed every morning",DE:"Jeden Morgen frisch gepresst"}},
-    {id:"ds2",em:"🍅",name:"Tostada de tomate y AOVE",price:5,d:{ES:"Pan de pueblo, tomate y aceite de oliva",EN:"Country bread, tomato and olive oil",DE:"Landbrot, Tomate und Olivenöl"}},
-    {id:"ds3",em:"🥚",name:"Huevos benedictinos",price:9,best:true,d:{ES:"Sobre muffin con salsa holandesa",EN:"On a muffin with hollandaise",DE:"Auf Muffin mit Sauce hollandaise"}},
-    {id:"ds4",em:"🍉",name:"Bowl de frutas del Mediterráneo",price:6,d:{ES:"Melón, sandía, higos y menta",EN:"Melon, watermelon, figs and mint",DE:"Melone, Wassermelone, Feigen, Minze"}},
-    {id:"ds5",em:"🥐",name:"Croissant artesano",price:3,d:{ES:"Mantequilla francesa, recién horneado",EN:"French butter, freshly baked",DE:"Französische Butter, frisch gebacken"}},
-    {id:"ds6",em:"🥣",name:"Yogur con granola y miel",price:5,d:{ES:"Yogur griego y granola casera",EN:"Greek yogurt and homemade granola",DE:"Griechischer Joghurt, hausgemachtes Granola"}},
+    {id:"ds1",em:"🍊",img:"img/ds1.jpg",name:"Zumo de naranja natural",price:4,d:{ES:"Recién exprimido cada mañana",EN:"Freshly squeezed every morning",DE:"Jeden Morgen frisch gepresst"}},
+    {id:"ds2",em:"🍅",img:"img/ds2.jpg",name:"Tostada de tomate y AOVE",price:5,d:{ES:"Pan de pueblo, tomate y aceite de oliva",EN:"Country bread, tomato and olive oil",DE:"Landbrot, Tomate und Olivenöl"}},
+    {id:"ds3",em:"🥚",img:"img/ds3.jpg",name:"Huevos benedictinos",price:9,best:true,d:{ES:"Sobre muffin con salsa holandesa",EN:"On a muffin with hollandaise",DE:"Auf Muffin mit Sauce hollandaise"}},
+    {id:"ds4",em:"🍉",img:"img/ds4.jpg",name:"Bowl de frutas del Mediterráneo",price:6,d:{ES:"Melón, sandía, higos y menta",EN:"Melon, watermelon, figs and mint",DE:"Melone, Wassermelone, Feigen, Minze"}},
+    {id:"ds5",em:"🥐",img:"img/ds5.jpg",name:"Croissant artesano",price:3,d:{ES:"Mantequilla francesa, recién horneado",EN:"French butter, freshly baked",DE:"Französische Butter, frisch gebacken"}},
+    {id:"ds6",em:"🥣",img:"img/ds6.jpg",name:"Yogur con granola y miel",price:5,d:{ES:"Yogur griego y granola casera",EN:"Greek yogurt and homemade granola",DE:"Griechischer Joghurt, hausgemachtes Granola"}},
   ]},
   { cat:"comer", g:"g-sea", items:[
-    {id:"cm1",em:"🥗",name:"Ensalada mediterránea",price:11,d:{ES:"Tomate, pepino, olivas, feta y orégano",EN:"Tomato, cucumber, olives, feta, oregano",DE:"Tomate, Gurke, Oliven, Feta, Oregano"}},
-    {id:"cm2",em:"🍅",name:"Gazpacho andaluz",price:7,d:{ES:"Frío, de tomate maduro y pan",EN:"Cold, of ripe tomato and bread",DE:"Kalt, aus reifen Tomaten und Brot"}},
-    {id:"cm3",em:"🧀",name:"Burrata con tomate de la huerta",price:13,best:true,d:{ES:"Con albahaca y aceite virgen extra",EN:"With basil and extra virgin oil",DE:"Mit Basilikum und nativem Olivenöl"}},
-    {id:"cm4",em:"🐙",name:"Pulpo a la brasa",price:18,d:{ES:"Con parmentier y pimentón",EN:"With potato purée and paprika",DE:"Mit Kartoffelpüree und Paprika"}},
-    {id:"cm5",em:"🥘",name:"Arroz del senyoret",price:19,best:true,d:{ES:"Marisco pelado, para una persona",EN:"Peeled seafood rice, for one",DE:"Reis mit Meeresfrüchten, für eine Person"}},
-    {id:"cm6",em:"🐟",name:"Pescado del día a la sal",price:22,d:{ES:"Según lonja, con verduras",EN:"Catch of the day, with vegetables",DE:"Tagesfang, mit Gemüse"}},
-    {id:"cm7",em:"🫓",name:"Hummus con crudités",price:8,d:{ES:"Garbanzo, tahini y pan de pita",EN:"Chickpea, tahini and pita",DE:"Kichererbse, Tahini und Pita"}},
+    {id:"cm1",em:"🥗",img:"img/cm1.jpg",name:"Ensalada mediterránea",price:11,d:{ES:"Tomate, pepino, olivas, feta y orégano",EN:"Tomato, cucumber, olives, feta, oregano",DE:"Tomate, Gurke, Oliven, Feta, Oregano"}},
+    {id:"cm2",em:"🍅",img:"img/cm2.jpg",name:"Gazpacho andaluz",price:7,d:{ES:"Frío, de tomate maduro y pan",EN:"Cold, of ripe tomato and bread",DE:"Kalt, aus reifen Tomaten und Brot"}},
+    {id:"cm3",em:"🧀",img:"img/cm3.jpg",name:"Burrata con tomate de la huerta",price:13,best:true,d:{ES:"Con albahaca y aceite virgen extra",EN:"With basil and extra virgin oil",DE:"Mit Basilikum und nativem Olivenöl"}},
+    {id:"cm4",em:"🐙",img:"img/cm4.jpg",name:"Pulpo a la brasa",price:18,d:{ES:"Con parmentier y pimentón",EN:"With potato purée and paprika",DE:"Mit Kartoffelpüree und Paprika"}},
+    {id:"cm5",em:"🥘",img:"img/cm5.jpg",name:"Arroz del senyoret",price:19,best:true,d:{ES:"Marisco pelado, para una persona",EN:"Peeled seafood rice, for one",DE:"Reis mit Meeresfrüchten, für eine Person"}},
+    {id:"cm6",em:"🐟",img:"img/cm6.jpg",name:"Pescado del día a la sal",price:22,d:{ES:"Según lonja, con verduras",EN:"Catch of the day, with vegetables",DE:"Tagesfang, mit Gemüse"}},
+    {id:"cm7",em:"🫓",img:"img/cm7.jpg",name:"Hummus con crudités",price:8,d:{ES:"Garbanzo, tahini y pan de pita",EN:"Chickpea, tahini and pita",DE:"Kichererbse, Tahini und Pita"}},
   ]},
   { cat:"dulce", g:"g-sun", items:[
-    {id:"dl1",em:"🍰",name:"Tarta de almendra",price:6,d:{ES:"Receta tradicional, con helado",EN:"Traditional recipe, with ice cream",DE:"Traditionell, mit Eis"}},
-    {id:"dl2",em:"🍨",name:"Helado artesano",price:4,d:{ES:"Vainilla, chocolate o limón",EN:"Vanilla, chocolate or lemon",DE:"Vanille, Schokolade oder Zitrone"}},
-    {id:"dl3",em:"🍉",name:"Fruta de temporada",price:4,d:{ES:"Fresca y de proximidad",EN:"Fresh and local",DE:"Frisch und regional"}},
-    {id:"dl4",em:"🍮",name:"Coca de llanda",price:5,d:{ES:"Bizcocho valenciano de toda la vida",EN:"Classic Valencian sponge cake",DE:"Klassischer valencianischer Kuchen"}},
+    {id:"dl1",em:"🍰",img:"img/dl1.jpg",name:"Tarta de almendra",price:6,d:{ES:"Receta tradicional, con helado",EN:"Traditional recipe, with ice cream",DE:"Traditionell, mit Eis"}},
+    {id:"dl2",em:"🍨",img:"img/dl2.jpg",name:"Helado artesano",price:4,d:{ES:"Vainilla, chocolate o limón",EN:"Vanilla, chocolate or lemon",DE:"Vanille, Schokolade oder Zitrone"}},
+    {id:"dl3",em:"🍉",img:"img/dl3.jpg",name:"Fruta de temporada",price:4,d:{ES:"Fresca y de proximidad",EN:"Fresh and local",DE:"Frisch und regional"}},
   ]},
   { cat:"beber", g:"g-sea", items:[
-    {id:"bb1",em:"💧",name:"Agua mineral",price:2,d:{ES:"",EN:"",DE:""}},
-    {id:"bb2",em:"🍷",name:"Vino blanco D.O.",price:5,d:{ES:"Copa, fresco y afrutado",EN:"Glass, fresh and fruity",DE:"Glas, frisch und fruchtig"}},
-    {id:"bb3",em:"🥂",name:"Sangría de cava",price:7,best:true,d:{ES:"Jarra individual con fruta",EN:"Individual jug with fruit",DE:"Einzelkrug mit Früchten"}},
-    {id:"bb4",em:"🍹",name:"Vermut de la casa",price:4,d:{ES:"Con sifón y aceituna",EN:"With soda and olive",DE:"Mit Soda und Olive"}},
-    {id:"bb5",em:"🍺",name:"Cerveza artesana",price:4,d:{ES:"Rubia local",EN:"Local lager",DE:"Lokales Helles"}},
-    {id:"bb6",em:"🍸",name:"Gin-tonic premium",price:9,d:{ES:"",EN:"",DE:""}},
-    {id:"bb7",em:"🍹",name:"Mojito",price:8,d:{ES:"Ron, hierbabuena y lima",EN:"Rum, mint and lime",DE:"Rum, Minze und Limette"}},
-    {id:"bb8",em:"🧃",name:"Zumo natural",price:4,d:{ES:"",EN:"",DE:""}},
+    {id:"bb1",em:"💧",img:"img/bb1.jpg",name:"Agua mineral",price:2,d:{ES:"",EN:"",DE:""}},
+    {id:"bb2",em:"🍷",img:"img/bb2.jpg",name:"Vino blanco D.O.",price:5,d:{ES:"Copa, fresco y afrutado",EN:"Glass, fresh and fruity",DE:"Glas, frisch und fruchtig"}},
+    {id:"bb3",em:"🥂",img:"img/bb3.jpg",name:"Sangría de cava",price:7,best:true,d:{ES:"Jarra individual con fruta",EN:"Individual jug with fruit",DE:"Einzelkrug mit Früchten"}},
+    {id:"bb4",em:"🍹",img:"img/bb4.jpg",name:"Vermut de la casa",price:4,d:{ES:"Con sifón y aceituna",EN:"With soda and olive",DE:"Mit Soda und Olive"}},
+    {id:"bb5",em:"🍺",img:"img/bb5.jpg",name:"Cerveza artesana",price:4,d:{ES:"Rubia local",EN:"Local lager",DE:"Lokales Helles"}},
+    {id:"bb6",em:"🍸",img:"img/bb6.jpg",name:"Gin-tonic premium",price:9,d:{ES:"",EN:"",DE:""}},
+    {id:"bb7",em:"🍹",img:"img/bb7.jpg",name:"Mojito",price:8,d:{ES:"Ron, hierbabuena y lima",EN:"Rum, mint and lime",DE:"Rum, Minze und Limette"}},
+    {id:"bb8",em:"🧃",img:"img/bb8.jpg",name:"Zumo natural",price:4,d:{ES:"",EN:"",DE:""}},
   ]},
   { cat:"exp", g:"g-clay", items:[
-    {id:"ex1",em:"🤿",name:"Sesión de snorkel guiada",price:25,best:true,d:{ES:"1h con monitor, equipo incluido",EN:"1h with guide, gear included",DE:"1 Std. mit Guide, Ausrüstung inkl."}},
-    {id:"ex2",em:"🛶",name:"Kayak doble",price:20,d:{ES:"2h por la cala, chalecos incluidos",EN:"2h around the cove, vests included",DE:"2 Std. um die Bucht, Westen inkl."}},
-    {id:"ex3",em:"🏄",name:"Paddle surf",price:15,d:{ES:"Tabla por horas",EN:"Board by the hour",DE:"Board stundenweise"}},
-    {id:"ex4",em:"⛵",name:"Excursión en barco al atardecer",price:45,best:true,d:{ES:"2h con copa de cava",EN:"2h with a glass of cava",DE:"2 Std. mit einem Glas Cava"}},
-    {id:"ex5",em:"🐠",name:"Bautizo de buceo",price:60,d:{ES:"Con instructor titulado",EN:"With a certified instructor",DE:"Mit zertifiziertem Tauchlehrer"}},
-    {id:"ex6",em:"🧘",name:"Yoga en la playa",price:18,d:{ES:"Sesión al amanecer",EN:"Sunrise session",DE:"Session bei Sonnenaufgang"}},
-    {id:"ex7",em:"🚲",name:"Alquiler de bici",price:12,d:{ES:"Día completo",EN:"Full day",DE:"Ganzer Tag"}},
-    {id:"ex8",em:"💆",name:"Masaje en la habitación",price:50,d:{ES:"50 min, relajante",EN:"50 min, relaxing",DE:"50 Min., entspannend"}},
+    {id:"ex1",em:"🤿",img:"img/ex1.jpg",name:"Sesión de snorkel guiada",price:25,best:true,d:{ES:"1h con monitor, equipo incluido",EN:"1h with guide, gear included",DE:"1 Std. mit Guide, Ausrüstung inkl."}},
+    {id:"ex2",em:"🛶",img:"img/ex2.jpg",name:"Kayak doble",price:20,d:{ES:"2h por la cala, chalecos incluidos",EN:"2h around the cove, vests included",DE:"2 Std. um die Bucht, Westen inkl."}},
+    {id:"ex3",em:"🏄",img:"img/ex3.jpg",name:"Paddle surf",price:15,d:{ES:"Tabla por horas",EN:"Board by the hour",DE:"Board stundenweise"}},
+    {id:"ex4",em:"⛵",img:"img/ex4.jpg",name:"Excursión en barco al atardecer",price:45,best:true,d:{ES:"2h con copa de cava",EN:"2h with a glass of cava",DE:"2 Std. mit einem Glas Cava"}},
+    {id:"ex5",em:"🐠",img:"img/ex5.jpg",name:"Bautizo de buceo",price:60,d:{ES:"Con instructor titulado",EN:"With a certified instructor",DE:"Mit zertifiziertem Tauchlehrer"}},
+    {id:"ex6",em:"🧘",img:"img/ex6.jpg",name:"Yoga en la playa",price:18,d:{ES:"Sesión al amanecer",EN:"Sunrise session",DE:"Session bei Sonnenaufgang"}},
+    {id:"ex7",em:"🚲",img:"img/ex7.jpg",name:"Alquiler de bici",price:12,d:{ES:"Día completo",EN:"Full day",DE:"Ganzer Tag"}},
+    {id:"ex8",em:"💆",img:"img/ex8.jpg",name:"Masaje en la habitación",price:50,d:{ES:"50 min, relajante",EN:"50 min, relaxing",DE:"50 Min., entspannend"}},
   ]},
   { cat:"amenities", g:"g-sun", items:[
-    {id:"am1",em:"🧺",name:"Toallas extra",price:0,d:{ES:"",EN:"",DE:""}},
-    {id:"am2",em:"🛏️",name:"Almohada adicional",price:0,d:{ES:"",EN:"",DE:""}},
-    {id:"am3",em:"🧴",name:"Kit de aseo",price:0,d:{ES:"Cepillo, pasta, gel y champú",EN:"Brush, paste, gel and shampoo",DE:"Bürste, Paste, Gel und Shampoo"}},
+    {id:"am1",em:"🧺",img:"img/am1.jpg",name:"Toallas extra",price:0,d:{ES:"",EN:"",DE:""}},
+    {id:"am2",em:"🛏️",img:"img/am2.jpg",name:"Almohada adicional",price:0,d:{ES:"",EN:"",DE:""}},
+    {id:"am3",em:"🧴",img:"img/am3.jpg",name:"Kit de aseo",price:0,d:{ES:"Cepillo, pasta, gel y champú",EN:"Brush, paste, gel and shampoo",DE:"Bürste, Paste, Gel und Shampoo"}},
     {id:"am4",em:"🥼",name:"Albornoz",price:0,d:{ES:"",EN:"",DE:""}},
     {id:"am5",em:"🧊",name:"Agua y hielo",price:0,d:{ES:"",EN:"",DE:""}},
     {id:"am6",em:"🧸",name:"Kit infantil",price:0,d:{ES:"Cuna, trona u orinal",EN:"Cot, high chair or potty",DE:"Babybett, Hochstuhl oder Töpfchen"}},
@@ -592,7 +589,7 @@ function applyLang(){
 function buildSegs(){
   ["wSeg","hSeg"].forEach(id=>{
     const el=document.getElementById(id);
-    el.innerHTML=LANGS.map(l=>`<button data-l="${l.c}" class="${l.c===lang?'on':''}">${l.f}</button>`).join("");
+    el.innerHTML=LANGS.map(l=>`<button data-l="${l.c}" class="${l.c===lang?'on':''}">${l.c}</button>`).join("");
   });
 }
 document.addEventListener("click",e=>{
@@ -615,7 +612,7 @@ function renderMenu(){
     const cards=s.items.map((it,i)=>{
       const dsc=desc(it);
       return `<article class="dish" id="card-${it.id}" style="--i:${i}">
-        <div class="dish-img ${s.g}"><span class="em">${it.em}</span>${it.best?`<span class="badge">${tt("best")}</span>`:""}</div>
+        <div class="dish-img ${s.g}">${it.img?`<img class="dish-photo" src="${it.img}" alt="" loading="lazy">`:`<span class="em">${it.em}</span>`}${it.best?`<span class="badge">${tt("best")}</span>`:""}</div>
         <div class="dish-body">
           <div class="dish-head"><h3>${it.name}</h3>${priceLabel(it)}</div>
           ${dsc?`<p class="dish-desc">${dsc}</p>`:""}
@@ -759,7 +756,7 @@ function pushBridge(order){
   try{ localStorage.setItem(BRIDGE,JSON.stringify(list)); }catch(e){}
 }
 function fireConfetti(){
-  const cont=document.getElementById("confetti"), colors=["#0e8a92","#16b0b8","#d2754f","#f1b13e","#3aa7d4"];
+  const cont=document.getElementById("confetti"), colors=["#bf9d56","#d6bb7c","#997834","#e7dcc4","#caa85c"];
   cont.innerHTML="";
   for(let k=0;k<64;k++){ const i=document.createElement("i");
     i.style.left=Math.random()*100+"%"; i.style.background=colors[k%colors.length];
