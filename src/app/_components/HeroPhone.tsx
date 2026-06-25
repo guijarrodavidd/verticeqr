@@ -19,7 +19,7 @@ export default function HeroPhone() {
 
       <div className={styles.heroDemoBadge}>
         <span className={styles.heroDemoDot} />
-        Pruébala
+        Demo real · toca y pruébala
       </div>
     </div>
   );

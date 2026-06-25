@@ -394,11 +394,11 @@ html { scroll-behavior: smooth; }
   top: 0;
   left: 0;
   width: 390px;
-  height: 828px;
+  height: 792px;
   border: 0;
   display: block;
   background: #0a0a0c;
-  transform: scale(0.641);
+  transform: scale(0.6974);
   transform-origin: top left;
 }
 .phoneTop {
