@@ -264,6 +264,10 @@
   .up-foot{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
   .up-price{font-family:var(--display);font-weight:600;font-size:14px;color:var(--sea-deep)}
   .up-add{width:25px;height:25px;border-radius:50%;background:var(--sea);color:#fff;border:none;display:flex;align-items:center;justify-content:center;font-size:17px;line-height:1;cursor:pointer}
+  /* cross-sell dentro del carrito */
+  .cart-cross{margin-top:10px;padding-top:15px;border-top:1px dashed var(--line-soft)}
+  .cc-title{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:-.2px;color:var(--ink);margin-bottom:11px}
+  .cart-cross .up-item{background:var(--sand)}
 
   /* ===== WELCOME ===== */
   .welcome{position:fixed;inset:0;z-index:95;max-width:540px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:0 32px calc(52px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(18,14,9,.25) 0%,rgba(18,14,9,.32) 40%,rgba(16,12,8,.92) 100%),url("img/welcome.jpg") center/cover no-repeat;transition:opacity .5s,transform .5s}
@@ -451,7 +455,7 @@ const T={
   ES:{ hi:"Bienvenido a", welcomeSub:"Room service, experiencias y todo lo que necesites, directo a tu habitación.", roomLbl:"Habitación", start:"Entrar",
     heroKick:"Room service · 24h", heroH:"Pide sin moverte<br>de la hamaca", heroFl:"del mar a tu habitación", heroP:"Cocina mediterránea, experiencias en la cala y todo lo que necesites. Te lo subimos a la habitación.",
     viewOrder:"Ver pedido", yourOrder:"Tu pedido", total:"Total", sendOrder:"Pedir al room service",
-    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"Top", upsellTitle:"¿Un dulce para terminar?",
+    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"Top", upSweet:"¿Un dulce para terminar?", upWine:"¿Vino para acompañar?", upSnack:"¿Algo para picar?", upDrink:"¿Algo para beber?", crossTitle:"¿Lo redondeamos?",
     notePhFood:"Alergias, sin cebolla, al punto…", notePhExp:"¿A qué hora? ¿Cuántas personas?", notePhAmen:"¿Algún detalle?",
     freeHint:"Las peticiones gratuitas se suben sin coste",
     sentTitle:"¡Recibido!", glad:"Te lo subimos a la habitación {room}", preparing:"Preparando tu pedido…", orderMore:"Pedir algo más",
@@ -474,7 +478,7 @@ const T={
   EN:{ hi:"Welcome to", welcomeSub:"Room service, experiences and anything you need, straight to your room.", roomLbl:"Room", start:"Enter",
     heroKick:"Room service · 24h", heroH:"Order without leaving<br>your sun lounger", heroFl:"from the sea to your room", heroP:"Mediterranean cuisine, experiences by the cove and whatever you need. We bring it up to your room.",
     viewOrder:"View order", yourOrder:"Your order", total:"Total", sendOrder:"Order room service",
-    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"Top", upsellTitle:"Something sweet to finish?",
+    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"Top", upSweet:"Something sweet to finish?", upWine:"Wine to go with it?", upSnack:"Something to nibble?", upDrink:"Something to drink?", crossTitle:"Round it off?",
     notePhFood:"Allergies, no onion, well done…", notePhExp:"What time? How many people?", notePhAmen:"Any detail?",
     freeHint:"Free requests are brought up at no charge",
     sentTitle:"Got it!", glad:"We'll bring it up to room {room}", preparing:"Preparing your order…", orderMore:"Order more",
@@ -497,7 +501,7 @@ const T={
   DE:{ hi:"Willkommen im", welcomeSub:"Zimmerservice, Erlebnisse und alles, was Sie brauchen – direkt aufs Zimmer.", roomLbl:"Zimmer", start:"Eintreten",
     heroKick:"Zimmerservice · 24h", heroH:"Bestellen Sie ganz<br>entspannt von der Liege", heroFl:"vom Meer auf Ihr Zimmer", heroP:"Mediterrane Küche, Erlebnisse an der Bucht und alles, was Sie brauchen. Wir bringen es aufs Zimmer.",
     viewOrder:"Bestellung", yourOrder:"Ihre Bestellung", total:"Gesamt", sendOrder:"Zimmerservice bestellen",
-    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"Top", upsellTitle:"Etwas Süßes zum Abschluss?",
+    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"Top", upSweet:"Etwas Süßes zum Abschluss?", upWine:"Wein dazu?", upSnack:"Etwas zum Knabbern?", upDrink:"Etwas zu trinken?", crossTitle:"Abrunden?",
     notePhFood:"Allergien, ohne Zwiebel, durch…", notePhExp:"Um wie viel Uhr? Wie viele Personen?", notePhAmen:"Ein Detail?",
     freeHint:"Kostenlose Wünsche werden gratis gebracht",
     sentTitle:"Erhalten!", glad:"Wir bringen es auf Zimmer {room}", preparing:"Bestellung wird vorbereitet…", orderMore:"Mehr bestellen",
@@ -588,34 +592,56 @@ const catKick=k=> (T[lang].catKick[k]||T.ES.catKick[k]||"");
 const tabName=k=> (T[lang].tab[k]||T.ES.tab[k]||k);
 const findItem=id=>{ for(const s of MENU) for(const it of s.items) if(it.id===id) return it; };
 
-// ===== Upsell de postres =====
+// ===== Upsell / cross-sell contextual =====
 const ITEM_CAT={}; MENU.forEach(s=>s.items.forEach(it=>ITEM_CAT[it.id]=s.cat));
-const DULCES=(MENU.find(s=>s.cat==="dulce")||{items:[]}).items;
-let upsellDismissed=false;
-function cartHasCat(cat){ return Object.keys(cart).some(id=>ITEM_CAT[id]===cat); }
+const inCart=id=>!!cart[id];
+// Pares que tienen sentido entre sí: al añadir X se ofrece Y.
+const PAIRINGS={
+  desayuno:{ t:"upSweet", ids:["dl1","dl2","dl3"] },  // desayuno → dulce
+  comer:   { t:"upWine",  ids:["bb2","bb3","bb6"] },   // comida → vino / copa
+  beber:   { t:"upSnack", ids:["cm7","cm3","cm1"] },   // bebida → algo para picar
+  dulce:   { t:"upDrink", ids:["bb3","bb8","bb6"] },   // dulce → bebida
+  exp:     { t:"upDrink", ids:["bb6","bb3","bb2"] },   // experiencia → copa
+};
+const upsellSeen=new Set();
+function upCard(d){ return `
+  <div class="up-item" onclick="addUpsell('${d.id}')">
+    ${d.img?`<img src="${d.img}" alt="">`:""}
+    <div class="up-b"><div class="up-name">${d.name}</div>
+      <div class="up-foot"><span class="up-price">${fmt(d.price)}</span><button class="up-add" aria-label="añadir">+</button></div>
+    </div>
+  </div>`; }
 function maybeUpsell(it){
-  const cat=ITEM_CAT[it.id];
-  if(cat!=="desayuno" && cat!=="comer") return;   // sólo desayuno y comida
-  if(upsellDismissed || cartHasCat("dulce")) return;
-  showUpsell();
+  const cat=ITEM_CAT[it.id], p=PAIRINGS[cat];
+  if(!p || upsellSeen.has(cat)) return;
+  const items=p.ids.map(findItem).filter(x=>x && !inCart(x.id)).slice(0,3);
+  if(!items.length) return;
+  upsellSeen.add(cat);
+  showUpsell(p.t, items);
 }
-function showUpsell(){
+function showUpsell(titleKey, items){
   const el=document.getElementById("upsell"); if(!el) return;
-  const cards=DULCES.slice(0,3).map(d=>`
-    <div class="up-item" onclick="addUpsell('${d.id}')">
-      ${d.img?`<img src="${d.img}" alt="">`:""}
-      <div class="up-b"><div class="up-name">${d.name}</div>
-        <div class="up-foot"><span class="up-price">${fmt(d.price)}</span><button class="up-add" aria-label="añadir">+</button></div>
-      </div>
-    </div>`).join("");
   el.innerHTML=`<div class="upsell-card">
-    <div class="upsell-head"><h4>${tt("upsellTitle")}</h4><button class="upsell-x" onclick="hideUpsell(true)" aria-label="cerrar">×</button></div>
-    <div class="upsell-row">${cards}</div>
+    <div class="upsell-head"><h4>${tt(titleKey)}</h4><button class="upsell-x" onclick="hideUpsell()" aria-label="cerrar">×</button></div>
+    <div class="upsell-row">${items.map(upCard).join("")}</div>
   </div>`;
   el.classList.add("on");
 }
-function hideUpsell(dismiss){ const el=document.getElementById("upsell"); if(el) el.classList.remove("on"); if(dismiss) upsellDismissed=true; }
-function addUpsell(id){ changeQty(id,1); flash(id); hideUpsell(false); }
+function hideUpsell(){ const el=document.getElementById("upsell"); if(el) el.classList.remove("on"); }
+function addUpsell(id){ changeQty(id,1); flash(id); hideUpsell(); }
+// Cross-sell del carrito según lo ya pedido (lo que falta para redondear).
+function cartSuggestions(){
+  const cats=new Set(Object.keys(cart).map(id=>ITEM_CAT[id]));
+  const out=[], seen=new Set();
+  const push=ids=>ids.forEach(id=>{ if(inCart(id)||seen.has(id))return; const it=findItem(id); if(it){seen.add(id);out.push(it);} });
+  const food=cats.has("comer")||cats.has("desayuno");
+  if(food && !cats.has("beber")) push(["bb2","bb3","bb6"]);   // comida sin bebida → bebidas
+  if(food && !cats.has("dulce")) push(["dl1","dl2","dl3"]);   // comida sin postre → postres
+  if(cats.has("beber") && !food) push(["cm7","cm3","cm1"]);   // bebida sin comida → para picar
+  if(cats.has("dulce") && !cats.has("beber")) push(["bb3","bb8"]); // dulce → bebida
+  if(cats.has("exp") && !cats.has("beber")) push(["bb6","bb3"]);   // experiencia → copa
+  return out.slice(0,4);
+}
 const catOf=id=>{ for(const s of MENU) for(const it of s.items) if(it.id===id) return s.cat; };
 const desc=it=> (it.d&&(it.d[lang]||it.d.ES))||"";
 const priceLabel=it=> it.price===0 ? `<span class="price free">${tt("free")}</span>` : `<span class="price">${fmt(it.price)}</span>`;
@@ -778,6 +804,8 @@ function renderCart(){
       </div>
       <textarea class="note" rows="1" placeholder="${notePh(catOf(id))}" data-note="${id}">${c.note||""}</textarea>
     </div>`).join("");
+  const sugg=cartSuggestions();
+  if(sugg.length){ list.innerHTML+=`<div class="cart-cross"><div class="cc-title">${tt("crossTitle")}</div><div class="upsell-row">${sugg.map(upCard).join("")}</div></div>`; }
   document.getElementById("grandTotal").textContent=fmt(payTotal());
   document.getElementById("freeHint").style.display = Object.values(cart).some(c=>c.item.price===0)?"":"none";
   document.getElementById("freeHint").textContent=tt("freeHint");

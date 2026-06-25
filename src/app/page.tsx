@@ -102,7 +102,7 @@ const COMPARE_ROWS: { crit: string; bad: string; good: string }[] = [
   { crit: "El enfoque", bad: "Vender más volumen", good: "Subir tu GOP: más F&B sin sumar coste" },
   { crit: "Tu carta", bad: "La misma plantilla que a todos", good: "Con la identidad de tu hotel: marca, fotos y carta" },
   { crit: "Quién lo monta", bad: "Te peleas tú con el editor", good: "Lo montamos nosotros, llave en mano" },
-  { crit: "Tus sistemas", bad: "Otra plataforma más que sumar", good: "Convive con tu PMS y tu TPV, no los sustituye" },
+  { crit: "Tus sistemas", bad: "Otra plataforma más que sumar", good: "Convive con tu PMS y tu TPV — o te instalamos el nuestro" },
   { crit: "El personal", bad: "Contratar para dar el servicio", good: "Lo lleva el equipo que ya tienes" },
   { crit: "Puesta en marcha", bad: "Proyecto grande y arriesgado", good: "Empiezas por una pieza, sin riesgo" },
   { crit: "Acompañamiento", bad: "El enlace y a apañarte", good: "Te enseñamos cuánto ganarías y lo afinamos contigo" },
@@ -332,7 +332,7 @@ export default async function Home({
                 <li>Pedido desde la habitación, sin apps ni llamadas</li>
                 <li>Carga a la cuenta del huésped o pago en el momento</li>
                 <li>QR por habitación con tu identidad</li>
-                <li>Convive con tu PMS y tu TPV — no los sustituye</li>
+                <li>Convive con tu PMS y TPV — o te instalamos el nuestro</li>
                 <li>Datos de F&B por habitación y acompañamiento continuo</li>
                 <li>Sin permanencia · sin comisión sobre tus ventas</li>
               </ul>
