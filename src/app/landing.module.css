@@ -108,16 +108,6 @@ html { scroll-behavior: smooth; }
   line-height: 1;
   transform: translateY(-0.04em);
 }
-/* Logo real (PNG) tal cual */
-.logoImg {
-  height: 2.6em;
-  width: auto;
-  display: block;
-}
-/* Sobre el hero oscuro (nav sin scroll): en blanco para que se lea */
-.nav:not(.navScrolled) .logoImg {
-  filter: brightness(0) invert(1);
-}
 
 .navLinks {
   display: flex;
