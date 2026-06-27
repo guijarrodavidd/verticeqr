@@ -5,6 +5,7 @@ import Nav from "./_components/Nav";
 import Reveal from "./_components/Reveal";
 import Counter from "./_components/Counter";
 import HeroPhone from "./_components/HeroPhone";
+import Calculadora from "./_components/Calculadora";
 import ScrollProgress from "./_components/ScrollProgress";
 import Logo from "./_components/Logo";
 import styles from "./landing.module.css";
@@ -254,6 +255,23 @@ export default async function Home({
             </Reveal>
           ))}
         </div>
+      </section>
+
+      {/* ============ CALCULADORA F&B ============ */}
+      <section className={styles.section} id="calculadora" style={{ paddingTop: 0 }}>
+        <Reveal>
+          <div className={styles.sectionEyebrow}>Calculadora</div>
+          <h2 className={styles.sectionTitle}>
+            ¿Cuánto F&amp;B se te escapa cada mes?
+          </h2>
+          <p className={styles.sectionSub}>
+            Ajusta los datos de tu hotel y te damos una estimación al instante.
+            Sin dejar ningún dato.
+          </p>
+        </Reveal>
+        <Reveal>
+          <Calculadora />
+        </Reveal>
       </section>
 
       {/* ============ A MEDIDA (diferenciador) ============ */}
