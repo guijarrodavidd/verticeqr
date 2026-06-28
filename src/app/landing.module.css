@@ -1340,41 +1340,13 @@ html { scroll-behavior: smooth; }
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 32%, transparent);
 }
 
-/* presets de ticket */
-.calcPresets {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
-  margin-top: 0.7rem;
+/* texto de ayuda bajo un label */
+.calcHint {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  line-height: 1.4;
+  margin-top: 0.3rem;
 }
-@media (max-width: 420px) {
-  .calcPresets { grid-template-columns: 1fr; }
-}
-.calcPreset {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  text-align: left;
-  background: var(--paper);
-  border: 1.5px solid var(--line-2);
-  border-radius: 12px;
-  padding: 0.6rem 0.7rem;
-  cursor: pointer;
-  font-family: inherit;
-  transition: border-color 140ms ease, background 140ms ease, transform 140ms ease;
-}
-.calcPreset:hover { border-color: var(--accent); }
-.calcPresetOn {
-  border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 12%, var(--paper));
-}
-.calcPresetVal {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--accent-deep);
-}
-.calcPresetLbl { font-size: 0.72rem; color: var(--ink-soft); line-height: 1.25; }
 
 /* ajuste avanzado plegable */
 .calcAdvanced { border-top: 1px solid var(--line); padding-top: 1rem; }

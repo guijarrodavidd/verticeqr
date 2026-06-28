@@ -7,13 +7,6 @@ import styles from "../landing.module.css";
 // Calculadora interactiva de "ingreso F&B perdido" para directores de hotel.
 // Cálculo 100% en el front, en tiempo real, sin guardar datos.
 
-// Presets de ticket medio por tipo de servicio (€/pedido)
-const PRESETS = [
-  { id: "bebidas", label: "Solo bebidas / cocktails", value: 10 },
-  { id: "comida", label: "Room service con comida", value: 20 },
-  { id: "gourmet", label: "Carta gourmet / lujo", value: 40 },
-];
-
 // ── Supuestos del cálculo (conservadores; tendencias del sector AHLA/CBRE 2025-26) ──
 const PCT_HOY_DEFAULT = 10; // % de habitaciones ocupadas que piden hoy (fricción actual)
 const PCT_CON_SISTEMA = 15; // % que piden con el sistema (pedir es más fácil)
@@ -44,8 +37,6 @@ export default function Calculadora() {
   // Redondeo "~" para transmitir que es una estimación
   const mes = Math.round(extraMes / 10) * 10;
   const anio = Math.round((extraMes * 12) / 100) * 100;
-
-  const activePreset = PRESETS.find((p) => p.value === ticket)?.id ?? null;
 
   return (
     <div className={styles.calc}>
@@ -86,23 +77,13 @@ export default function Calculadora() {
         </div>
 
         <div className={styles.calcField}>
-          <span className={styles.calcLabel}>
-            Ticket medio por pedido <span className={styles.calcVal}>{ticket} €</span>
+          <label htmlFor="calc-ticket" className={styles.calcLabel}>
+            Ticket medio actual por pedido{" "}
+            <span className={styles.calcVal}>{ticket} €</span>
+          </label>
+          <span className={styles.calcHint}>
+            Lo que gasta de media un huésped en un pedido de room service, hoy.
           </span>
-          <div className={styles.calcPresets} role="group" aria-label="Tipo de servicio">
-            {PRESETS.map((p) => (
-              <button
-                key={p.id}
-                type="button"
-                className={`${styles.calcPreset} ${activePreset === p.id ? styles.calcPresetOn : ""}`}
-                aria-pressed={activePreset === p.id}
-                onClick={() => setTicket(p.value)}
-              >
-                <span className={styles.calcPresetVal}>{p.value} €</span>
-                <span className={styles.calcPresetLbl}>{p.label}</span>
-              </button>
-            ))}
-          </div>
           <input
             id="calc-ticket"
             type="range"
@@ -112,7 +93,6 @@ export default function Calculadora() {
             value={ticket}
             onChange={(e) => setTicket(Number(e.target.value))}
             className={styles.calcRange}
-            aria-label="Ajustar ticket medio manualmente"
             style={{ background: fill(ticket, 5, 80) }}
           />
         </div>
