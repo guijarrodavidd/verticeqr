@@ -336,6 +336,29 @@
   .ch-sub{font-size:12.5px;color:rgba(255,255,255,.86)}
   .ch-arrow{position:absolute;right:16px;top:50%;transform:translateY(-50%);z-index:2;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.18);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;border:1px solid rgba(255,255,255,.3)}
   .ch-card:active{transform:scale(.98)}
+  /* ===== Ficha de experiencia ===== */
+  .exp-sheet{max-height:92vh}
+  .exp-hero{position:relative;height:188px;flex:0 0 auto;border-radius:26px 26px 0 0;overflow:hidden;background:var(--sand-deep)}
+  .exp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .exp-hero-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,14,9,.15) 0%,transparent 35%,rgba(18,14,9,.82) 100%)}
+  .exp-x{position:absolute;top:12px;right:12px;z-index:3;width:34px;height:34px;border-radius:50%;border:none;background:rgba(20,16,11,.5);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .exp-hero-t{position:absolute;left:20px;right:20px;bottom:16px;z-index:2;color:#fff}
+  .exp-dur{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.18);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.28);padding:4px 9px;border-radius:999px;margin-bottom:8px}
+  .exp-hero-t h2{font-family:var(--display);font-weight:600;font-size:25px;line-height:1.05;letter-spacing:-.3px}
+  .exp-body{padding:18px 22px 8px}
+  .exp-hace{font-size:14.5px;line-height:1.6;color:var(--ink-soft);margin-bottom:18px}
+  .exp-sec{margin-bottom:18px}
+  .exp-sec h4{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:1.4px;color:var(--sea-deep);margin-bottom:10px}
+  .exp-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .exp-list li{position:relative;padding-left:24px;font-size:14px;color:var(--ink);line-height:1.4}
+  .exp-list li::before{content:"";position:absolute;left:0;top:5px;width:14px;height:14px;border-radius:50%;background:var(--sea);box-shadow:inset 0 0 0 2px var(--paper)}
+  .exp-addons{display:flex;flex-direction:column;gap:9px}
+  .exp-addon{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;background:var(--paper);border:1.5px solid var(--line-soft);border-radius:13px;padding:12px 14px;cursor:pointer;font-family:inherit;text-align:left;transition:border-color .15s,background .15s}
+  .exp-addon-n{font-size:14px;color:var(--ink);font-weight:500}
+  .exp-addon-p{font-family:var(--display);font-weight:600;font-size:14px;color:var(--sea-deep);white-space:nowrap}
+  .exp-addon.on{border-color:var(--sea);background:color-mix(in srgb,var(--sea) 12%,var(--paper))}
+  .dish-exp{cursor:pointer}
+  .dish-detail-hint{margin-top:7px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--sea-deep);font-weight:600}
   .w-seg{display:flex;gap:3px;background:rgba(255,255,255,.14);padding:3px;border-radius:999px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
   .w-seg button{border:none;background:none;font-family:var(--mono);font-size:11px;padding:6px 9px;border-radius:999px;cursor:pointer;color:rgba(247,241,230,.72)}
   .w-seg button.on{background:rgba(255,255,255,.92);color:var(--ink)}
@@ -432,6 +455,24 @@
     <div class="free-hint" id="freeHint" style="display:none"></div>
     <div class="total-row"><span class="lbl" data-t="total">Total</span><span class="v" id="grandTotal">0 €</span></div>
     <button class="send-btn" id="sendBtn"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><span data-t="sendOrder">Pedir al room service</span></button>
+  </div>
+</div>
+
+<!-- ===== FICHA DE EXPERIENCIA ===== -->
+<div class="sheet exp-sheet" id="expSheet">
+  <div class="exp-hero">
+    <img id="expImg" alt=""><span class="exp-hero-ov"></span>
+    <button class="exp-x" id="closeExp" aria-label="Cerrar">×</button>
+    <div class="exp-hero-t"><span class="exp-dur" id="expDur"></span><h2 id="expName"></h2></div>
+  </div>
+  <div class="sheet-body exp-body" id="expBody">
+    <p class="exp-hace" id="expHace"></p>
+    <div class="exp-sec"><h4 data-t="expIncluye">Incluye</h4><ul class="exp-list" id="expIncluye"></ul></div>
+    <div class="exp-sec" id="expAddonsSec"><h4 data-t="expExtras">Añade equipo o extras</h4><div class="exp-addons" id="expAddons"></div></div>
+  </div>
+  <div class="sheet-foot">
+    <div class="total-row"><span class="lbl" data-t="total">Total</span><span class="v" id="expTotal">0 €</span></div>
+    <button class="send-btn" id="expAddBtn"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-t="expAdd">Añadir a mi estancia</span></button>
   </div>
 </div>
 
@@ -535,7 +576,7 @@ const T={
   ES:{ hi:"Bienvenido a", welcomeSub:"Room service, experiencias y todo lo que necesites, directo a tu habitación.", roomLbl:"Habitación", start:"Entrar",
     heroKick:"Room service · 24h", heroH:"Pide sin moverte<br>de la hamaca", heroFl:"del mar a tu habitación", heroP:"Cocina mediterránea, experiencias en la cala y todo lo que necesites. Te lo subimos a la habitación.",
     viewOrder:"Ver pedido", yourOrder:"Tu pedido", total:"Total", sendOrder:"Pedir al room service",
-    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"Top", upSweet:"¿Un dulce para terminar?", upWine:"¿Vino para acompañar?", upSnack:"¿Algo para picar?", upDrink:"¿Algo para beber?", crossTitle:"¿Lo redondeamos?", addOne:"Añadir uno", removeOne:"Quitar uno", essKicker:"Lo que más piden", essTitle:"Para empezar", chEyebrow:"Tu rincón en el mar", chTitle:"¿Por dónde empezamos?", chCarta:"La carta", chCartaSub:"Room service y F&B", chExp:"Experiencias", chExpSub:"Mar, cala y aventura", chServ:"Tu habitación", chServSub:"Toallas, almohadas y más",
+    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"Top", upSweet:"¿Un dulce para terminar?", upWine:"¿Vino para acompañar?", upSnack:"¿Algo para picar?", upDrink:"¿Algo para beber?", crossTitle:"¿Lo redondeamos?", addOne:"Añadir uno", removeOne:"Quitar uno", essKicker:"Lo que más piden", essTitle:"Para empezar", chEyebrow:"Tu rincón en el mar", chTitle:"¿Por dónde empezamos?", chCarta:"La carta", chCartaSub:"Room service y F&B", chExp:"Experiencias", chExpSub:"Mar, cala y aventura", chServ:"Tu habitación", chServSub:"Toallas, almohadas y más", seeDetails:"Ver detalles", expIncluye:"Incluye", expExtras:"Añade equipo o extras", expAdd:"Añadir a mi estancia", expAdded:"Añadido a tu estancia",
     notePhFood:"Alergias, sin cebolla, al punto…", notePhExp:"¿A qué hora? ¿Cuántas personas?", notePhAmen:"¿Algún detalle?",
     freeHint:"Las peticiones gratuitas se suben sin coste",
     sentTitle:"¡Recibido!", glad:"Te lo subimos a la habitación {room}", preparing:"Preparando tu pedido…", orderMore:"Pedir algo más",
@@ -558,7 +599,7 @@ const T={
   EN:{ hi:"Welcome to", welcomeSub:"Room service, experiences and anything you need, straight to your room.", roomLbl:"Room", start:"Enter",
     heroKick:"Room service · 24h", heroH:"Order without leaving<br>your sun lounger", heroFl:"from the sea to your room", heroP:"Mediterranean cuisine, experiences by the cove and whatever you need. We bring it up to your room.",
     viewOrder:"View order", yourOrder:"Your order", total:"Total", sendOrder:"Order room service",
-    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"Top", upSweet:"Something sweet to finish?", upWine:"Wine to go with it?", upSnack:"Something to nibble?", upDrink:"Something to drink?", crossTitle:"Round it off?", addOne:"Add one", removeOne:"Remove one", essKicker:"Most ordered", essTitle:"To start", chEyebrow:"Your spot by the sea", chTitle:"Where shall we start?", chCarta:"The menu", chCartaSub:"Room service & F&B", chExp:"Experiences", chExpSub:"Sea, cove & adventure", chServ:"Your room", chServSub:"Towels, pillows & more",
+    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"Top", upSweet:"Something sweet to finish?", upWine:"Wine to go with it?", upSnack:"Something to nibble?", upDrink:"Something to drink?", crossTitle:"Round it off?", addOne:"Add one", removeOne:"Remove one", essKicker:"Most ordered", essTitle:"To start", chEyebrow:"Your spot by the sea", chTitle:"Where shall we start?", chCarta:"The menu", chCartaSub:"Room service & F&B", chExp:"Experiences", chExpSub:"Sea, cove & adventure", chServ:"Your room", chServSub:"Towels, pillows & more", seeDetails:"See details", expIncluye:"Included", expExtras:"Add gear or extras", expAdd:"Add to my stay", expAdded:"Added to your stay",
     notePhFood:"Allergies, no onion, well done…", notePhExp:"What time? How many people?", notePhAmen:"Any detail?",
     freeHint:"Free requests are brought up at no charge",
     sentTitle:"Got it!", glad:"We'll bring it up to room {room}", preparing:"Preparing your order…", orderMore:"Order more",
@@ -581,7 +622,7 @@ const T={
   DE:{ hi:"Willkommen im", welcomeSub:"Zimmerservice, Erlebnisse und alles, was Sie brauchen – direkt aufs Zimmer.", roomLbl:"Zimmer", start:"Eintreten",
     heroKick:"Zimmerservice · 24h", heroH:"Bestellen Sie ganz<br>entspannt von der Liege", heroFl:"vom Meer auf Ihr Zimmer", heroP:"Mediterrane Küche, Erlebnisse an der Bucht und alles, was Sie brauchen. Wir bringen es aufs Zimmer.",
     viewOrder:"Bestellung", yourOrder:"Ihre Bestellung", total:"Gesamt", sendOrder:"Zimmerservice bestellen",
-    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"Top", upSweet:"Etwas Süßes zum Abschluss?", upWine:"Wein dazu?", upSnack:"Etwas zum Knabbern?", upDrink:"Etwas zu trinken?", crossTitle:"Abrunden?", addOne:"Eins hinzufügen", removeOne:"Eins entfernen", essKicker:"Am beliebtesten", essTitle:"Zum Anfang", chEyebrow:"Dein Platz am Meer", chTitle:"Wo fangen wir an?", chCarta:"Die Karte", chCartaSub:"Zimmerservice & F&B", chExp:"Erlebnisse", chExpSub:"Meer, Bucht & Abenteuer", chServ:"Dein Zimmer", chServSub:"Handtücher, Kissen & mehr",
+    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"Top", upSweet:"Etwas Süßes zum Abschluss?", upWine:"Wein dazu?", upSnack:"Etwas zum Knabbern?", upDrink:"Etwas zu trinken?", crossTitle:"Abrunden?", addOne:"Eins hinzufügen", removeOne:"Eins entfernen", essKicker:"Am beliebtesten", essTitle:"Zum Anfang", chEyebrow:"Dein Platz am Meer", chTitle:"Wo fangen wir an?", chCarta:"Die Karte", chCartaSub:"Zimmerservice & F&B", chExp:"Erlebnisse", chExpSub:"Meer, Bucht & Abenteuer", chServ:"Dein Zimmer", chServSub:"Handtücher, Kissen & mehr", seeDetails:"Details ansehen", expIncluye:"Inklusive", expExtras:"Ausrüstung oder Extras", expAdd:"Zu meinem Aufenthalt", expAdded:"Hinzugefügt",
     notePhFood:"Allergien, ohne Zwiebel, durch…", notePhExp:"Um wie viel Uhr? Wie viele Personen?", notePhAmen:"Ein Detail?",
     freeHint:"Kostenlose Wünsche werden gratis gebracht",
     sentTitle:"Erhalten!", glad:"Wir bringen es auf Zimmer {room}", preparing:"Bestellung wird vorbereitet…", orderMore:"Mehr bestellen",
@@ -764,14 +805,19 @@ function renderMenu(){
   const m=document.getElementById("menu");
   m.innerHTML=MENU.map(s=>{
     const secCls = s.cat==="exp"?"exp":s.cat==="amenities"?"amenities":"";
+    const isExp = s.cat==="exp";
     const cards=s.items.map((it,i)=>{
       const dsc=desc(it);
-      return `<article class="dish" id="card-${it.id}" style="--i:${i}">
+      const foot = isExp
+        ? `<div class="dish-detail-hint">${tt("seeDetails")} →</div>`
+        : `<div class="dish-foot" id="ctrl-${it.id}"></div>`;
+      const open = isExp ? ` onclick="openExp('${it.id}')" role="button" tabindex="0"` : "";
+      return `<article class="dish${isExp?" dish-exp":""}" id="card-${it.id}" style="--i:${i}"${open}>
         <div class="dish-img ${s.g}">${it.img?`<img class="dish-photo" src="${it.img}" alt="" loading="lazy">`:`<span class="em">${it.em}</span>`}${it.best?`<span class="badge">${tt("best")}</span>`:""}</div>
         <div class="dish-body">
           <div class="dish-head"><h3>${it.name}</h3>${priceLabel(it)}</div>
           ${dsc?`<p class="dish-desc">${dsc}</p>`:""}
-          <div class="dish-foot" id="ctrl-${it.id}"></div>
+          ${foot}
         </div>
       </article>`;
     }).join("");
@@ -802,6 +848,40 @@ function renderEssentials(){
   }).join("");
   el.innerHTML=`<div class="ess-head"><div class="ess-kicker">${tt('essKicker')}</div><h2 class="ess-title">${tt('essTitle')}</h2></div><div class="ess-row">${cards}</div>`;
 }
+
+// ===== Ficha de experiencia: detalles, qué incluye y extras (equipo, etc.) =====
+const EXP_DETAILS={
+  ex1:{dur:"1 h",hace:"Ruta guiada de snorkel por la cala con monitor titulado. Verás praderas de posidonia y la fauna de la bahía. Apto para todos los niveles.",incluye:["Monitor titulado","Gafas, tubo y aletas","Chaleco de flotación","Seguro de actividad"],addons:[{n:"Cámara acuática",p:12},{n:"Neopreno",p:8}]},
+  ex2:{dur:"2 h",hace:"Recorrido en kayak doble por la cala y las calas vecinas, a tu ritmo. Paradas para darse un baño donde quieras.",incluye:["Kayak doble","Palas y chalecos","Bolsa estanca","Mapa de la ruta"],addons:[{n:"Set de snorkel",p:6},{n:"Guía privado",p:25}]},
+  ex3:{dur:"Por horas",hace:"Tabla de paddle surf para explorar la costa de pie sobre el agua. Mar en calma, ideal para iniciarse.",incluye:["Tabla y pala","Chaleco","Leash de seguridad"],addons:[{n:"Clase inicial 30 min",p:15},{n:"Neopreno",p:8}]},
+  ex4:{dur:"2 h",hace:"Salida en barco al atardecer costeando las calas, con copa de cava en mano. La mejor luz del día desde el mar.",incluye:["Patrón","Copa de cava","Snacks","Toallas"],addons:[{n:"Botella de cava",p:25},{n:"Tabla de quesos",p:18}]},
+  ex5:{dur:"2 h · 1 inmersión",hace:"Bautizo de buceo con instructor: breve iniciación en superficie y primera inmersión guiada en la cala. Sin experiencia previa.",incluye:["Instructor titulado","Equipo completo de buceo","Botella y plomos","Seguro de buceo"],addons:[{n:"Vídeo de tu inmersión",p:30},{n:"Inmersión extra",p:35}]},
+  ex6:{dur:"1 h",hace:"Sesión de yoga al amanecer en la playa, frente al mar. Todos los niveles, ven como estés.",incluye:["Profesor","Esterilla","Toalla","Agua"],addons:[{n:"Sesión privada",p:25}]},
+  ex7:{dur:"Día completo",hace:"Bicicleta para recorrer el pueblo y la costa a tu aire, todo el día.",incluye:["Bicicleta","Casco","Candado","Mapa de rutas"],addons:[{n:"Bici eléctrica",p:12},{n:"Alforjas",p:5}]},
+  ex8:{dur:"50 min",hace:"Masaje relajante en tu propia habitación, a la hora que elijas. Te montamos la camilla y nos encargamos de todo.",incluye:["Terapeuta en tu habitación","Camilla y aceites","Música ambiente"],addons:[{n:"Aromaterapia",p:10},{n:"50 min extra",p:40}]},
+};
+let expCurrent=null, expBase=0;
+function openExp(id){
+  const it=findItem(id), d=EXP_DETAILS[id]; if(!it||!d) return;
+  expCurrent=id; expBase=it.price;
+  document.getElementById("expImg").src=it.img||"";
+  document.getElementById("expDur").textContent=d.dur;
+  document.getElementById("expName").textContent=it.name;
+  document.getElementById("expHace").textContent=d.hace;
+  document.getElementById("expIncluye").innerHTML=d.incluye.map(x=>`<li>${x}</li>`).join("");
+  const sec=document.getElementById("expAddonsSec");
+  if(d.addons&&d.addons.length){ sec.style.display=""; document.getElementById("expAddons").innerHTML=d.addons.map(a=>`<button type="button" class="exp-addon" data-p="${a.p}" aria-pressed="false"><span class="exp-addon-n">${a.n}</span><span class="exp-addon-p">+${fmt(a.p)}</span></button>`).join(""); }
+  else sec.style.display="none";
+  updateExpTotal();
+  document.getElementById("expBody").scrollTop=0;
+  overlay.classList.add("on","hi"); expSheet.classList.add("on");
+}
+function updateExpTotal(){
+  let t=expBase;
+  document.querySelectorAll("#expAddons .exp-addon.on").forEach(b=>t+=Number(b.dataset.p));
+  document.getElementById("expTotal").textContent=fmt(t);
+}
+function closeExp(){ expSheet.classList.remove("on"); overlay.classList.remove("hi"); maybeOverlayOff(); }
 function renderCtrl(id){
   const el=document.getElementById("ctrl-"+id); if(!el) return;
   const c=cart[id];
@@ -821,7 +901,7 @@ function changeQty(id,delta){
   const it=findItem(id); if(!it) return;
   const cur=cart[id]?cart[id].qty:0;
   const next=Math.max(0,cur+delta);
-  if(next===0){ delete cart[id]; } else { cart[id]={item:it,qty:next,note:cart[id]?cart[id].note:""}; }
+  if(next===0){ delete cart[id]; } else { cart[id]={item:cart[id]?cart[id].item:it,qty:next,note:cart[id]?cart[id].note:""}; }
   renderCtrl(id); updateBar();
   if(cartSheet.classList.contains("on")) renderCart();
   buzz(6);
@@ -878,12 +958,25 @@ const overlay=document.getElementById("overlay");
 const cartSheet=document.getElementById("cartSheet");
 const paySheet=document.getElementById("paySheet");
 const callSheet=document.getElementById("callSheet");
+const expSheet=document.getElementById("expSheet");
 function openCart(){ renderCart(); overlay.classList.add("on"); cartSheet.classList.add("on"); }
 function closeCart(){ cartSheet.classList.remove("on"); maybeOverlayOff(); }
-function maybeOverlayOff(){ if(!cartSheet.classList.contains("on")&&!paySheet.classList.contains("on")&&!callSheet.classList.contains("on")) overlay.classList.remove("on"); }
+function maybeOverlayOff(){ if(!cartSheet.classList.contains("on")&&!paySheet.classList.contains("on")&&!callSheet.classList.contains("on")&&!expSheet.classList.contains("on")) overlay.classList.remove("on"); }
 document.getElementById("cartBtn").onclick=openCart;
 document.getElementById("closeCart").onclick=closeCart;
-overlay.onclick=()=>{ closeCart(); closePay(); closeCall(); };
+overlay.onclick=()=>{ closeCart(); closePay(); closeCall(); closeExp(); };
+// Ficha de experiencia: cerrar, toggle de extras y añadir a la estancia
+document.getElementById("closeExp").onclick=closeExp;
+document.getElementById("expAddons").addEventListener("click",e=>{ const b=e.target.closest(".exp-addon"); if(!b)return; const on=b.classList.toggle("on"); b.setAttribute("aria-pressed",on); buzz(4); updateExpTotal(); });
+document.getElementById("expAddBtn").onclick=()=>{
+  const it=findItem(expCurrent); if(!it)return;
+  const sel=[...document.querySelectorAll("#expAddons .exp-addon.on")];
+  const sum=sel.reduce((a,b)=>a+Number(b.dataset.p),0);
+  const names=sel.map(b=>b.querySelector(".exp-addon-n").textContent);
+  cart[expCurrent]={item:{...it,price:it.price+sum},qty:1,note:names.length?("Con: "+names.join(", ")):""};
+  renderCtrl(expCurrent); updateBar();
+  buzz([8,30]); toast(tt("expAdded")); closeExp();
+};
 
 function renderCart(){
   const list=document.getElementById("cartList"), entries=Object.entries(cart);
