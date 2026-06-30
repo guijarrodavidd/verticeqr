@@ -54,14 +54,14 @@
   .lang-seg button.on{background:var(--paper);color:var(--ink);box-shadow:0 2px 6px -2px rgba(23,58,61,.3)}
 
   /* ===== HERO ===== */
-  .hero{position:relative;padding:34px 22px 30px;overflow:hidden;background:linear-gradient(180deg,rgba(18,14,9,.42) 0%,rgba(18,14,9,.54) 52%,rgba(16,12,8,.84) 100%),url("img/banner.jpg") center/cover no-repeat}
+  .hero{position:relative;padding:34px 22px 30px;overflow:hidden;background:linear-gradient(100deg,rgba(247,243,236,.92) 0%,rgba(247,243,236,.58) 46%,rgba(247,243,236,.14) 100%),url("img/banner.jpg") center/cover no-repeat}
   .hero .sun{display:none}
   @keyframes sunpulse{0%,100%{transform:scale(1);opacity:.95}50%{transform:scale(1.08);opacity:1}}
   .hero .gulls{display:none}
-  .hero-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#e3c789;position:relative;z-index:2}
-  .hero h1{font-family:var(--display);font-weight:600;font-size:44px;line-height:.98;letter-spacing:-.5px;margin:6px 0 2px;color:#fdf8ee;position:relative;z-index:2}
-  .hero .flourish{font-family:var(--script);font-style:italic;font-weight:500;font-size:28px;color:#e3c789;position:relative;z-index:2;margin-bottom:8px}
-  .hero p{font-size:14.5px;color:rgba(247,241,230,.82);line-height:1.55;max-width:330px;position:relative;z-index:2}
+  .hero-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--sea-deep);position:relative;z-index:2}
+  .hero h1{font-family:var(--display);font-weight:600;font-size:44px;line-height:.98;letter-spacing:-.5px;margin:6px 0 2px;color:var(--ink);position:relative;z-index:2}
+  .hero .flourish{font-family:var(--script);font-style:italic;font-weight:500;font-size:28px;color:var(--sea-deep);position:relative;z-index:2;margin-bottom:8px}
+  .hero p{font-size:14.5px;color:var(--ink-soft);line-height:1.55;max-width:330px;position:relative;z-index:2}
   .hero .waves{position:absolute;bottom:0;left:0;right:0;height:30px;background:
      radial-gradient(circle at 12px -6px,transparent 12px,var(--sand) 13px) repeat-x;
      background-size:24px 30px;opacity:.9}
@@ -320,6 +320,22 @@
   body.entered #tabs{animation:fadeUp .55s .3s both}
   body.entered #menu{animation:fadeUp .65s .42s both}
   @keyframes essIn{0%{opacity:0;transform:translateY(20px) scale(.96)}100%{opacity:1;transform:none}}
+  /* ===== SELECTOR (Carta / Experiencias / Habitación) ===== */
+  .chooser{position:fixed;inset:0;z-index:94;max-width:540px;margin:0 auto;background:var(--sand);display:flex;flex-direction:column;justify-content:center;padding:32px 22px calc(34px + env(safe-area-inset-bottom));transition:opacity .5s,transform .5s}
+  .chooser.gone{opacity:0;transform:scale(1.04);pointer-events:none}
+  .ch-head{margin-bottom:22px;text-align:center}
+  .ch-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--sea-deep);margin-bottom:6px}
+  .ch-title{font-family:var(--display);font-weight:600;font-size:30px;letter-spacing:-.5px;color:var(--ink);line-height:1.05}
+  .ch-grid{display:flex;flex-direction:column;gap:13px}
+  .ch-card{position:relative;height:124px;border-radius:18px;overflow:hidden;border:none;padding:0;cursor:pointer;background:var(--sand-deep);box-shadow:var(--soft-shadow);text-align:left;opacity:0;transform:translateY(16px)}
+  .chooser.show .ch-card{animation:essIn .55s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(var(--i)*100ms + .15s)}
+  .ch-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .ch-ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,14,9,.8) 0%,rgba(18,14,9,.34) 58%,transparent 100%)}
+  .ch-info{position:absolute;left:18px;top:50%;transform:translateY(-50%);z-index:2;display:flex;flex-direction:column;gap:3px}
+  .ch-name{font-family:var(--display);font-weight:600;font-size:21px;color:#fff;line-height:1.05}
+  .ch-sub{font-size:12.5px;color:rgba(255,255,255,.86)}
+  .ch-arrow{position:absolute;right:16px;top:50%;transform:translateY(-50%);z-index:2;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.18);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;border:1px solid rgba(255,255,255,.3)}
+  .ch-card:active{transform:scale(.98)}
   .w-seg{display:flex;gap:3px;background:rgba(255,255,255,.14);padding:3px;border-radius:999px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
   .w-seg button{border:none;background:none;font-family:var(--mono);font-size:11px;padding:6px 9px;border-radius:999px;cursor:pointer;color:rgba(247,241,230,.72)}
   .w-seg button.on{background:rgba(255,255,255,.92);color:var(--ink)}
@@ -336,6 +352,31 @@
   <div class="w-sub" data-t="welcomeSub">Room service, experiencias y todo lo que necesites, directo a tu habitación.</div>
   <div class="w-room"><svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5M5 8.5V21h14V8.5M9 21v-6h6v6"/></svg><span data-t="roomLbl">Habitación</span>&nbsp;<b id="wRoom">412</b></div>
   <button class="w-btn" id="welcomeBtn"><span data-t="start">Entrar</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</div>
+
+<!-- ===== SELECTOR (Carta / Experiencias / Habitación) ===== -->
+<div class="chooser" id="chooser">
+  <div class="ch-head">
+    <div class="ch-eyebrow" data-t="chEyebrow">Tu rincón en el mar</div>
+    <h2 class="ch-title" data-t="chTitle">¿Por dónde empezamos?</h2>
+  </div>
+  <div class="ch-grid">
+    <button class="ch-card" data-go="top" style="--i:0">
+      <img src="img/cm5.jpg" alt="" loading="lazy"><span class="ch-ov"></span>
+      <span class="ch-info"><span class="ch-name" data-t="chCarta">La carta</span><span class="ch-sub" data-t="chCartaSub">Room service y F&amp;B</span></span>
+      <span class="ch-arrow" aria-hidden="true">→</span>
+    </button>
+    <button class="ch-card" data-go="exp" style="--i:1">
+      <img src="img/ex4.jpg" alt="" loading="lazy"><span class="ch-ov"></span>
+      <span class="ch-info"><span class="ch-name" data-t="chExp">Experiencias</span><span class="ch-sub" data-t="chExpSub">Mar, cala y aventura</span></span>
+      <span class="ch-arrow" aria-hidden="true">→</span>
+    </button>
+    <button class="ch-card" data-go="amenities" style="--i:2">
+      <img src="img/am2.jpg" alt="" loading="lazy"><span class="ch-ov"></span>
+      <span class="ch-info"><span class="ch-name" data-t="chServ">Tu habitación</span><span class="ch-sub" data-t="chServSub">Toallas, almohadas y más</span></span>
+      <span class="ch-arrow" aria-hidden="true">→</span>
+    </button>
+  </div>
 </div>
 
 <!-- ===== TOPBAR ===== -->
@@ -494,7 +535,7 @@ const T={
   ES:{ hi:"Bienvenido a", welcomeSub:"Room service, experiencias y todo lo que necesites, directo a tu habitación.", roomLbl:"Habitación", start:"Entrar",
     heroKick:"Room service · 24h", heroH:"Pide sin moverte<br>de la hamaca", heroFl:"del mar a tu habitación", heroP:"Cocina mediterránea, experiencias en la cala y todo lo que necesites. Te lo subimos a la habitación.",
     viewOrder:"Ver pedido", yourOrder:"Tu pedido", total:"Total", sendOrder:"Pedir al room service",
-    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"Top", upSweet:"¿Un dulce para terminar?", upWine:"¿Vino para acompañar?", upSnack:"¿Algo para picar?", upDrink:"¿Algo para beber?", crossTitle:"¿Lo redondeamos?", addOne:"Añadir uno", removeOne:"Quitar uno", essKicker:"Lo que más piden", essTitle:"Para empezar",
+    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"Top", upSweet:"¿Un dulce para terminar?", upWine:"¿Vino para acompañar?", upSnack:"¿Algo para picar?", upDrink:"¿Algo para beber?", crossTitle:"¿Lo redondeamos?", addOne:"Añadir uno", removeOne:"Quitar uno", essKicker:"Lo que más piden", essTitle:"Para empezar", chEyebrow:"Tu rincón en el mar", chTitle:"¿Por dónde empezamos?", chCarta:"La carta", chCartaSub:"Room service y F&B", chExp:"Experiencias", chExpSub:"Mar, cala y aventura", chServ:"Tu habitación", chServSub:"Toallas, almohadas y más",
     notePhFood:"Alergias, sin cebolla, al punto…", notePhExp:"¿A qué hora? ¿Cuántas personas?", notePhAmen:"¿Algún detalle?",
     freeHint:"Las peticiones gratuitas se suben sin coste",
     sentTitle:"¡Recibido!", glad:"Te lo subimos a la habitación {room}", preparing:"Preparando tu pedido…", orderMore:"Pedir algo más",
@@ -517,7 +558,7 @@ const T={
   EN:{ hi:"Welcome to", welcomeSub:"Room service, experiences and anything you need, straight to your room.", roomLbl:"Room", start:"Enter",
     heroKick:"Room service · 24h", heroH:"Order without leaving<br>your sun lounger", heroFl:"from the sea to your room", heroP:"Mediterranean cuisine, experiences by the cove and whatever you need. We bring it up to your room.",
     viewOrder:"View order", yourOrder:"Your order", total:"Total", sendOrder:"Order room service",
-    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"Top", upSweet:"Something sweet to finish?", upWine:"Wine to go with it?", upSnack:"Something to nibble?", upDrink:"Something to drink?", crossTitle:"Round it off?", addOne:"Add one", removeOne:"Remove one", essKicker:"Most ordered", essTitle:"To start",
+    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"Top", upSweet:"Something sweet to finish?", upWine:"Wine to go with it?", upSnack:"Something to nibble?", upDrink:"Something to drink?", crossTitle:"Round it off?", addOne:"Add one", removeOne:"Remove one", essKicker:"Most ordered", essTitle:"To start", chEyebrow:"Your spot by the sea", chTitle:"Where shall we start?", chCarta:"The menu", chCartaSub:"Room service & F&B", chExp:"Experiences", chExpSub:"Sea, cove & adventure", chServ:"Your room", chServSub:"Towels, pillows & more",
     notePhFood:"Allergies, no onion, well done…", notePhExp:"What time? How many people?", notePhAmen:"Any detail?",
     freeHint:"Free requests are brought up at no charge",
     sentTitle:"Got it!", glad:"We'll bring it up to room {room}", preparing:"Preparing your order…", orderMore:"Order more",
@@ -540,7 +581,7 @@ const T={
   DE:{ hi:"Willkommen im", welcomeSub:"Zimmerservice, Erlebnisse und alles, was Sie brauchen – direkt aufs Zimmer.", roomLbl:"Zimmer", start:"Eintreten",
     heroKick:"Zimmerservice · 24h", heroH:"Bestellen Sie ganz<br>entspannt von der Liege", heroFl:"vom Meer auf Ihr Zimmer", heroP:"Mediterrane Küche, Erlebnisse an der Bucht und alles, was Sie brauchen. Wir bringen es aufs Zimmer.",
     viewOrder:"Bestellung", yourOrder:"Ihre Bestellung", total:"Gesamt", sendOrder:"Zimmerservice bestellen",
-    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"Top", upSweet:"Etwas Süßes zum Abschluss?", upWine:"Wein dazu?", upSnack:"Etwas zum Knabbern?", upDrink:"Etwas zu trinken?", crossTitle:"Abrunden?", addOne:"Eins hinzufügen", removeOne:"Eins entfernen", essKicker:"Am beliebtesten", essTitle:"Zum Anfang",
+    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"Top", upSweet:"Etwas Süßes zum Abschluss?", upWine:"Wein dazu?", upSnack:"Etwas zum Knabbern?", upDrink:"Etwas zu trinken?", crossTitle:"Abrunden?", addOne:"Eins hinzufügen", removeOne:"Eins entfernen", essKicker:"Am beliebtesten", essTitle:"Zum Anfang", chEyebrow:"Dein Platz am Meer", chTitle:"Wo fangen wir an?", chCarta:"Die Karte", chCartaSub:"Zimmerservice & F&B", chExp:"Erlebnisse", chExpSub:"Meer, Bucht & Abenteuer", chServ:"Dein Zimmer", chServSub:"Handtücher, Kissen & mehr",
     notePhFood:"Allergien, ohne Zwiebel, durch…", notePhExp:"Um wie viel Uhr? Wie viele Personen?", notePhAmen:"Ein Detail?",
     freeHint:"Kostenlose Wünsche werden gratis gebracht",
     sentTitle:"Erhalten!", glad:"Wir bringen es auf Zimmer {room}", preparing:"Bestellung wird vorbereitet…", orderMore:"Mehr bestellen",
@@ -1019,7 +1060,19 @@ document.getElementById("callSend").onclick=()=>{
 };
 
 // ====== Flujo pantallas ======
-document.getElementById("welcomeBtn").onclick=()=>{ buzz(8); document.body.classList.add("entered"); document.getElementById("welcome").classList.add("gone"); };
+// Bienvenida -> revela el selector (Carta / Experiencias / Habitación)
+document.getElementById("welcomeBtn").onclick=()=>{ buzz(8); document.getElementById("welcome").classList.add("gone"); document.getElementById("chooser").classList.add("show"); };
+// Selector -> entra al menú y, si procede, baja a la sección elegida
+document.getElementById("chooser").addEventListener("click",e=>{
+  const b=e.target.closest("[data-go]"); if(!b) return;
+  buzz(8);
+  document.getElementById("chooser").classList.add("gone");
+  document.body.classList.add("entered");
+  const cat=b.dataset.go;
+  if(cat&&cat!=="top"){
+    setTimeout(()=>{ const sec=document.getElementById("sec-"+cat); if(sec) window.scrollTo({top:sec.getBoundingClientRect().top+window.scrollY-112,behavior:"smooth"}); },480);
+  }
+});
 
 // Init
 applyLang();
