@@ -157,8 +157,13 @@ html { scroll-behavior: smooth; }
 /* Foto de hotel con vistas a pantalla completa + capa espresso para legibilidad */
 .heroBg {
   position: absolute;
-  inset: 0;
+  top: -12%;
+  left: 0;
+  right: 0;
+  height: 124%;
   z-index: 0;
+  will-change: transform;
+  backface-visibility: hidden;
   background-image:
     linear-gradient(
       100deg,

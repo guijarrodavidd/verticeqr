@@ -6,6 +6,7 @@ import Reveal from "./_components/Reveal";
 import Counter from "./_components/Counter";
 import HeroPhone from "./_components/HeroPhone";
 import Calculadora from "./_components/Calculadora";
+import SmoothScroll from "./_components/SmoothScroll";
 import ScrollProgress from "./_components/ScrollProgress";
 import Logo from "./_components/Logo";
 import styles from "./landing.module.css";
@@ -119,11 +120,12 @@ export default async function Home({
   return (
     <div className={styles.page}>
       <ScrollProgress />
+      <SmoothScroll />
       <Nav />
 
       {/* ============ HERO ============ */}
       <section className={styles.hero}>
-        <div className={styles.heroBg} />
+        <div className={styles.heroBg} id="heroBg" />
         <div className={styles.heroGrid}>
           <div>
             <div className={styles.heroBadge}>
