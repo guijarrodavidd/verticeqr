@@ -26,7 +26,7 @@ export default function SmoothScroll() {
       return;
     }
 
-    let lenis: ReturnType<NonNullable<Window["Lenis"]>> | null = null;
+    let lenis: InstanceType<NonNullable<Window["Lenis"]>> | null = null;
     let raf = 0;
     let cancelled = false;
 
