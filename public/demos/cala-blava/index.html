@@ -33,6 +33,11 @@
     --script:"Cormorant Garamond",Georgia,serif;
   }
   *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  /* Accesibilidad + pulido móvil (Web Interface Guidelines) */
+  button,a,summary,input,textarea,select,[role=button]{touch-action:manipulation}
+  button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,[role=button]:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
+  .sheet-body,.tabs,.upsell-row,.lang-seg,.w-seg{overscroll-behavior:contain}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
   html,body{background:var(--sand);color:var(--ink);font-family:var(--body);font-weight:400;-webkit-font-smoothing:antialiased}
   body{max-width:540px;margin:0 auto;position:relative;overflow-x:hidden;min-height:100vh}
   img{max-width:100%}
@@ -256,7 +261,7 @@
   .upsell-x{border:none;background:none;font-size:21px;color:var(--muted);cursor:pointer;line-height:1;padding:0 4px}
   .upsell-row{display:flex;gap:9px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
   .upsell-row::-webkit-scrollbar{display:none}
-  .up-item{flex:0 0 118px;background:var(--sand);border-radius:13px;overflow:hidden;cursor:pointer;border:1px solid var(--line-soft);transition:transform .14s}
+  .up-item{flex:0 0 118px;background:var(--sand);border-radius:13px;overflow:hidden;cursor:pointer;border:1px solid var(--line-soft);transition:transform .14s;font-family:inherit;color:inherit;text-align:left;padding:0;display:block}
   .up-item:active{transform:scale(.97)}
   .up-item img{width:100%;height:72px;object-fit:cover;display:block}
   .up-b{padding:7px 9px 9px}
@@ -346,7 +351,7 @@
 <!-- ===== CART SHEET ===== -->
 <div class="sheet" id="cartSheet">
   <div class="grip"></div>
-  <div class="sheet-head"><h2><span data-t="yourOrder">Tu pedido</span></h2><button class="x" id="closeCart">×</button></div>
+  <div class="sheet-head"><h2><span data-t="yourOrder">Tu pedido</span></h2><button class="x" id="closeCart" aria-label="Cerrar">×</button></div>
   <div class="sheet-body" id="cartList"></div>
   <div class="sheet-foot">
     <div class="free-hint" id="freeHint" style="display:none"></div>
@@ -455,7 +460,7 @@ const T={
   ES:{ hi:"Bienvenido a", welcomeSub:"Room service, experiencias y todo lo que necesites, directo a tu habitación.", roomLbl:"Habitación", start:"Entrar",
     heroKick:"Room service · 24h", heroH:"Pide sin moverte<br>de la hamaca", heroFl:"del mar a tu habitación", heroP:"Cocina mediterránea, experiencias en la cala y todo lo que necesites. Te lo subimos a la habitación.",
     viewOrder:"Ver pedido", yourOrder:"Tu pedido", total:"Total", sendOrder:"Pedir al room service",
-    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"Top", upSweet:"¿Un dulce para terminar?", upWine:"¿Vino para acompañar?", upSnack:"¿Algo para picar?", upDrink:"¿Algo para beber?", crossTitle:"¿Lo redondeamos?",
+    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"Top", upSweet:"¿Un dulce para terminar?", upWine:"¿Vino para acompañar?", upSnack:"¿Algo para picar?", upDrink:"¿Algo para beber?", crossTitle:"¿Lo redondeamos?", addOne:"Añadir uno", removeOne:"Quitar uno",
     notePhFood:"Alergias, sin cebolla, al punto…", notePhExp:"¿A qué hora? ¿Cuántas personas?", notePhAmen:"¿Algún detalle?",
     freeHint:"Las peticiones gratuitas se suben sin coste",
     sentTitle:"¡Recibido!", glad:"Te lo subimos a la habitación {room}", preparing:"Preparando tu pedido…", orderMore:"Pedir algo más",
@@ -478,7 +483,7 @@ const T={
   EN:{ hi:"Welcome to", welcomeSub:"Room service, experiences and anything you need, straight to your room.", roomLbl:"Room", start:"Enter",
     heroKick:"Room service · 24h", heroH:"Order without leaving<br>your sun lounger", heroFl:"from the sea to your room", heroP:"Mediterranean cuisine, experiences by the cove and whatever you need. We bring it up to your room.",
     viewOrder:"View order", yourOrder:"Your order", total:"Total", sendOrder:"Order room service",
-    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"Top", upSweet:"Something sweet to finish?", upWine:"Wine to go with it?", upSnack:"Something to nibble?", upDrink:"Something to drink?", crossTitle:"Round it off?",
+    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"Top", upSweet:"Something sweet to finish?", upWine:"Wine to go with it?", upSnack:"Something to nibble?", upDrink:"Something to drink?", crossTitle:"Round it off?", addOne:"Add one", removeOne:"Remove one",
     notePhFood:"Allergies, no onion, well done…", notePhExp:"What time? How many people?", notePhAmen:"Any detail?",
     freeHint:"Free requests are brought up at no charge",
     sentTitle:"Got it!", glad:"We'll bring it up to room {room}", preparing:"Preparing your order…", orderMore:"Order more",
@@ -501,7 +506,7 @@ const T={
   DE:{ hi:"Willkommen im", welcomeSub:"Zimmerservice, Erlebnisse und alles, was Sie brauchen – direkt aufs Zimmer.", roomLbl:"Zimmer", start:"Eintreten",
     heroKick:"Zimmerservice · 24h", heroH:"Bestellen Sie ganz<br>entspannt von der Liege", heroFl:"vom Meer auf Ihr Zimmer", heroP:"Mediterrane Küche, Erlebnisse an der Bucht und alles, was Sie brauchen. Wir bringen es aufs Zimmer.",
     viewOrder:"Bestellung", yourOrder:"Ihre Bestellung", total:"Gesamt", sendOrder:"Zimmerservice bestellen",
-    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"Top", upSweet:"Etwas Süßes zum Abschluss?", upWine:"Wein dazu?", upSnack:"Etwas zum Knabbern?", upDrink:"Etwas zu trinken?", crossTitle:"Abrunden?",
+    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"Top", upSweet:"Etwas Süßes zum Abschluss?", upWine:"Wein dazu?", upSnack:"Etwas zum Knabbern?", upDrink:"Etwas zu trinken?", crossTitle:"Abrunden?", addOne:"Eins hinzufügen", removeOne:"Eins entfernen",
     notePhFood:"Allergien, ohne Zwiebel, durch…", notePhExp:"Um wie viel Uhr? Wie viele Personen?", notePhAmen:"Ein Detail?",
     freeHint:"Kostenlose Wünsche werden gratis gebracht",
     sentTitle:"Erhalten!", glad:"Wir bringen es auf Zimmer {room}", preparing:"Bestellung wird vorbereitet…", orderMore:"Mehr bestellen",
@@ -605,12 +610,12 @@ const PAIRINGS={
 };
 const upsellSeen=new Set();
 function upCard(d){ return `
-  <div class="up-item" onclick="addUpsell('${d.id}')">
+  <button type="button" class="up-item" onclick="addUpsell('${d.id}')" aria-label="${tt('addOne')}: ${d.name}">
     ${d.img?`<img src="${d.img}" alt="">`:""}
     <div class="up-b"><div class="up-name">${d.name}</div>
-      <div class="up-foot"><span class="up-price">${fmt(d.price)}</span><button class="up-add" aria-label="añadir">+</button></div>
+      <div class="up-foot"><span class="up-price">${fmt(d.price)}</span><span class="up-add" aria-hidden="true">+</span></div>
     </div>
-  </div>`; }
+  </button>`; }
 function maybeUpsell(it){
   const cat=ITEM_CAT[it.id], p=PAIRINGS[cat];
   if(!p || upsellSeen.has(cat)) return;
@@ -707,9 +712,9 @@ function renderCtrl(id){
   const el=document.getElementById("ctrl-"+id); if(!el) return;
   const c=cart[id];
   if(c&&c.qty>0){
-    el.innerHTML=`<div class="stepper"><button data-dec="${id}">−</button><span class="n">${c.qty}</span><button data-inc="${id}">+</button></div>`;
+    el.innerHTML=`<div class="stepper"><button data-dec="${id}" aria-label="${tt('removeOne')}">−</button><span class="n" aria-live="polite">${c.qty}</span><button data-inc="${id}" aria-label="${tt('addOne')}">+</button></div>`;
   }else{
-    el.innerHTML=`<button class="add-btn" data-add="${id}">+</button>`;
+    el.innerHTML=`<button class="add-btn" data-add="${id}" aria-label="${tt('addOne')}">+</button>`;
   }
 }
 document.getElementById("menu").addEventListener("click",e=>{
