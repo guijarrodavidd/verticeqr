@@ -3,8 +3,20 @@
 import { useEffect } from "react";
 
 // Smooth scroll premium (Lenis) + parallax sutil de la foto del hero.
-// Ligero: Lenis se carga con import dinámico (~4KB) y solo en cliente.
-// Se desactiva por completo si el usuario prefiere menos movimiento.
+// Lenis se carga como ESTÁTICO desde /public/vendor (sin dependencia npm, así el
+// build del hosting no la necesita). Se desactiva con prefers-reduced-motion.
+
+declare global {
+  interface Window {
+    // build autoejecutable de Lenis -> window.Lenis
+    Lenis?: new (opts?: Record<string, unknown>) => {
+      raf: (t: number) => void;
+      on: (e: string, cb: (a: { scroll: number }) => void) => void;
+      destroy: () => void;
+    };
+  }
+}
+
 export default function SmoothScroll() {
   useEffect(() => {
     if (
@@ -14,13 +26,13 @@ export default function SmoothScroll() {
       return;
     }
 
-    let lenis: { raf: (t: number) => void; on: (e: string, cb: (a: { scroll: number }) => void) => void; destroy: () => void } | null = null;
+    let lenis: ReturnType<NonNullable<Window["Lenis"]>> | null = null;
     let raf = 0;
     let cancelled = false;
 
-    import("lenis").then(({ default: Lenis }) => {
-      if (cancelled) return;
-      lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    function init() {
+      if (cancelled || !window.Lenis) return;
+      lenis = new window.Lenis({ duration: 1.1, smoothWheel: true });
 
       // Parallax muy sutil de la foto del hero (con overscan para no dejar huecos)
       const heroBg = document.getElementById("heroBg");
@@ -37,7 +49,21 @@ export default function SmoothScroll() {
         raf = requestAnimationFrame(loop);
       };
       raf = requestAnimationFrame(loop);
-    });
+    }
+
+    if (window.Lenis) {
+      init();
+    } else {
+      let s = document.getElementById("lenis-script") as HTMLScriptElement | null;
+      if (!s) {
+        s = document.createElement("script");
+        s.id = "lenis-script";
+        s.src = "/vendor/lenis.min.js";
+        s.async = true;
+        document.head.appendChild(s);
+      }
+      s.addEventListener("load", init);
+    }
 
     return () => {
       cancelled = true;
