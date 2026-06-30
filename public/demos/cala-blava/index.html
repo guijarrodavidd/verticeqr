@@ -275,8 +275,8 @@
   .cart-cross .up-item{background:var(--sand)}
 
   /* ===== WELCOME ===== */
-  .welcome{position:fixed;inset:0;z-index:95;max-width:540px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:0 32px calc(52px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(18,14,9,.25) 0%,rgba(18,14,9,.32) 40%,rgba(16,12,8,.92) 100%),url("img/welcome.jpg") center/cover no-repeat;transition:opacity .5s,transform .5s}
-  .welcome.gone{opacity:0;transform:scale(1.05);pointer-events:none}
+  .welcome{position:fixed;inset:0;z-index:95;max-width:540px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:0 32px calc(52px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(18,14,9,.25) 0%,rgba(18,14,9,.32) 40%,rgba(16,12,8,.92) 100%),url("img/welcome.jpg") center/cover no-repeat;transition:opacity .6s ease,transform .75s cubic-bezier(.6,0,.2,1),filter .6s ease}
+  .welcome.gone{opacity:0;transform:scale(1.14);filter:blur(12px);pointer-events:none}
   .w-lang{position:absolute;top:calc(16px + env(safe-area-inset-top));right:16px}
   .w-crest{width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(231,210,150,.65);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:25px;color:#e7d296;margin-bottom:18px;position:relative;z-index:2;animation:fadeUp .7s .15s both}
   .w-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#e3c789;position:relative;z-index:2;animation:fadeUp .6s .3s both}
@@ -289,6 +289,37 @@
   .w-btn:active{transform:translateY(2px)}
   .w-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
   @keyframes fadeUp{0%{opacity:0;transform:translateY(18px)}100%{opacity:1;transform:translateY(0)}}
+  /* ===== PARA EMPEZAR (imprescindibles) ===== */
+  #essentials{padding:20px 0 4px}
+  .ess-head{padding:0 18px;margin-bottom:13px}
+  .ess-kicker{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:1.6px;color:var(--sea-deep);margin-bottom:4px}
+  .ess-title{font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:-.4px;line-height:1.05;color:var(--ink)}
+  .ess-row{display:flex;gap:12px;overflow-x:auto;padding:2px 18px 8px;scrollbar-width:none;scroll-snap-type:x proximity}
+  .ess-row::-webkit-scrollbar{display:none}
+  .ess-card{flex:0 0 196px;height:248px;border-radius:18px;overflow:hidden;position:relative;cursor:pointer;border:none;padding:0;scroll-snap-align:start;background:var(--sand-deep);box-shadow:var(--soft-shadow);transition:transform .18s ease}
+  .ess-card:active{transform:scale(.97)}
+  .ess-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .ess-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(18,14,9,.86))}
+  .ess-tag{position:absolute;top:11px;left:11px;z-index:2;background:rgba(255,255,255,.93);color:var(--ink);font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.06em;padding:4px 8px;border-radius:999px;font-weight:600}
+  .ess-info{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:13px 14px;text-align:left;color:#fff}
+  .ess-name{font-family:var(--display);font-weight:600;font-size:16px;line-height:1.15;margin-bottom:8px;text-shadow:0 1px 6px rgba(0,0,0,.35)}
+  .ess-foot{display:flex;align-items:center;justify-content:space-between}
+  .ess-price{font-family:var(--display);font-weight:600;font-size:16px;color:#fff}
+  .ess-add{width:31px;height:31px;border-radius:50%;background:var(--sea);color:#1c1a16;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;line-height:1;box-shadow:0 3px 10px -3px rgba(0,0,0,.5)}
+  /* ===== Entrada al menú tras "Entrar" ===== */
+  body:not(.entered) .topbar,
+  body:not(.entered) .hero,
+  body:not(.entered) #tabs,
+  body:not(.entered) #menu,
+  body:not(.entered) .ess-head,
+  body:not(.entered) .ess-card{opacity:0}
+  body.entered .topbar{animation:fadeUp .55s .05s both}
+  body.entered .hero{animation:fadeUp .7s .12s both}
+  body.entered .ess-head{animation:fadeUp .6s .22s both}
+  body.entered .ess-card{animation:essIn .6s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(var(--i,0)*90ms + .34s)}
+  body.entered #tabs{animation:fadeUp .55s .3s both}
+  body.entered #menu{animation:fadeUp .65s .42s both}
+  @keyframes essIn{0%{opacity:0;transform:translateY(20px) scale(.96)}100%{opacity:1;transform:none}}
   .w-seg{display:flex;gap:3px;background:rgba(255,255,255,.14);padding:3px;border-radius:999px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
   .w-seg button{border:none;background:none;font-family:var(--mono);font-size:11px;padding:6px 9px;border-radius:999px;cursor:pointer;color:rgba(247,241,230,.72)}
   .w-seg button.on{background:rgba(255,255,255,.92);color:var(--ink)}
@@ -325,6 +356,9 @@
   <div class="flourish" data-t="heroFl">del mar a tu habitación</div>
   <p data-t="heroP">Cocina mediterránea, experiencias en la cala y todo lo que necesites. Te lo subimos a la habitación.</p>
 </div>
+
+<!-- ===== PARA EMPEZAR (imprescindibles) ===== -->
+<section id="essentials"></section>
 
 <!-- ===== TABS ===== -->
 <div class="tabs" id="tabs"></div>
@@ -460,7 +494,7 @@ const T={
   ES:{ hi:"Bienvenido a", welcomeSub:"Room service, experiencias y todo lo que necesites, directo a tu habitación.", roomLbl:"Habitación", start:"Entrar",
     heroKick:"Room service · 24h", heroH:"Pide sin moverte<br>de la hamaca", heroFl:"del mar a tu habitación", heroP:"Cocina mediterránea, experiencias en la cala y todo lo que necesites. Te lo subimos a la habitación.",
     viewOrder:"Ver pedido", yourOrder:"Tu pedido", total:"Total", sendOrder:"Pedir al room service",
-    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"Top", upSweet:"¿Un dulce para terminar?", upWine:"¿Vino para acompañar?", upSnack:"¿Algo para picar?", upDrink:"¿Algo para beber?", crossTitle:"¿Lo redondeamos?", addOne:"Añadir uno", removeOne:"Quitar uno",
+    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"Top", upSweet:"¿Un dulce para terminar?", upWine:"¿Vino para acompañar?", upSnack:"¿Algo para picar?", upDrink:"¿Algo para beber?", crossTitle:"¿Lo redondeamos?", addOne:"Añadir uno", removeOne:"Quitar uno", essKicker:"Lo que más piden", essTitle:"Para empezar",
     notePhFood:"Alergias, sin cebolla, al punto…", notePhExp:"¿A qué hora? ¿Cuántas personas?", notePhAmen:"¿Algún detalle?",
     freeHint:"Las peticiones gratuitas se suben sin coste",
     sentTitle:"¡Recibido!", glad:"Te lo subimos a la habitación {room}", preparing:"Preparando tu pedido…", orderMore:"Pedir algo más",
@@ -483,7 +517,7 @@ const T={
   EN:{ hi:"Welcome to", welcomeSub:"Room service, experiences and anything you need, straight to your room.", roomLbl:"Room", start:"Enter",
     heroKick:"Room service · 24h", heroH:"Order without leaving<br>your sun lounger", heroFl:"from the sea to your room", heroP:"Mediterranean cuisine, experiences by the cove and whatever you need. We bring it up to your room.",
     viewOrder:"View order", yourOrder:"Your order", total:"Total", sendOrder:"Order room service",
-    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"Top", upSweet:"Something sweet to finish?", upWine:"Wine to go with it?", upSnack:"Something to nibble?", upDrink:"Something to drink?", crossTitle:"Round it off?", addOne:"Add one", removeOne:"Remove one",
+    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"Top", upSweet:"Something sweet to finish?", upWine:"Wine to go with it?", upSnack:"Something to nibble?", upDrink:"Something to drink?", crossTitle:"Round it off?", addOne:"Add one", removeOne:"Remove one", essKicker:"Most ordered", essTitle:"To start",
     notePhFood:"Allergies, no onion, well done…", notePhExp:"What time? How many people?", notePhAmen:"Any detail?",
     freeHint:"Free requests are brought up at no charge",
     sentTitle:"Got it!", glad:"We'll bring it up to room {room}", preparing:"Preparing your order…", orderMore:"Order more",
@@ -506,7 +540,7 @@ const T={
   DE:{ hi:"Willkommen im", welcomeSub:"Zimmerservice, Erlebnisse und alles, was Sie brauchen – direkt aufs Zimmer.", roomLbl:"Zimmer", start:"Eintreten",
     heroKick:"Zimmerservice · 24h", heroH:"Bestellen Sie ganz<br>entspannt von der Liege", heroFl:"vom Meer auf Ihr Zimmer", heroP:"Mediterrane Küche, Erlebnisse an der Bucht und alles, was Sie brauchen. Wir bringen es aufs Zimmer.",
     viewOrder:"Bestellung", yourOrder:"Ihre Bestellung", total:"Gesamt", sendOrder:"Zimmerservice bestellen",
-    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"Top", upSweet:"Etwas Süßes zum Abschluss?", upWine:"Wein dazu?", upSnack:"Etwas zum Knabbern?", upDrink:"Etwas zu trinken?", crossTitle:"Abrunden?", addOne:"Eins hinzufügen", removeOne:"Eins entfernen",
+    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"Top", upSweet:"Etwas Süßes zum Abschluss?", upWine:"Wein dazu?", upSnack:"Etwas zum Knabbern?", upDrink:"Etwas zu trinken?", crossTitle:"Abrunden?", addOne:"Eins hinzufügen", removeOne:"Eins entfernen", essKicker:"Am beliebtesten", essTitle:"Zum Anfang",
     notePhFood:"Allergien, ohne Zwiebel, durch…", notePhExp:"Um wie viel Uhr? Wie viele Personen?", notePhAmen:"Ein Detail?",
     freeHint:"Kostenlose Wünsche werden gratis gebracht",
     sentTitle:"Erhalten!", glad:"Wir bringen es auf Zimmer {room}", preparing:"Bestellung wird vorbereitet…", orderMore:"Mehr bestellen",
@@ -662,6 +696,7 @@ function applyLang(){
   buildSegs();
   renderTabs();
   renderMenu();
+  renderEssentials();
   updateBar();
   if(cartSheet.classList.contains("on")) renderCart();
 }
@@ -707,6 +742,24 @@ function renderMenu(){
   MENU.forEach(s=>s.items.forEach(it=>renderCtrl(it.id)));
   setupReveal();
   setupTabSpy();
+}
+
+// "Para empezar": los imprescindibles que más piden los huéspedes (cross-categoría)
+const ESSENTIALS=["ds3","cm3","cm5","bb3","ex4"];
+function renderEssentials(){
+  const el=document.getElementById("essentials"); if(!el) return;
+  const cards=ESSENTIALS.map((id,i)=>{
+    const it=findItem(id); if(!it) return "";
+    return `<button type="button" class="ess-card" style="--i:${i}" onclick="addUpsell('${id}')" aria-label="${tt('addOne')}: ${it.name}">
+      ${it.img?`<img src="${it.img}" alt="" loading="lazy">`:""}
+      ${it.best?`<span class="ess-tag">${tt('best')}</span>`:""}
+      <div class="ess-info">
+        <div class="ess-name">${it.name}</div>
+        <div class="ess-foot"><span class="ess-price">${it.price===0?tt('free'):fmt(it.price)}</span><span class="ess-add" aria-hidden="true">+</span></div>
+      </div>
+    </button>`;
+  }).join("");
+  el.innerHTML=`<div class="ess-head"><div class="ess-kicker">${tt('essKicker')}</div><h2 class="ess-title">${tt('essTitle')}</h2></div><div class="ess-row">${cards}</div>`;
 }
 function renderCtrl(id){
   const el=document.getElementById("ctrl-"+id); if(!el) return;
@@ -966,7 +1019,7 @@ document.getElementById("callSend").onclick=()=>{
 };
 
 // ====== Flujo pantallas ======
-document.getElementById("welcomeBtn").onclick=()=>{ buzz(8); document.getElementById("welcome").classList.add("gone"); };
+document.getElementById("welcomeBtn").onclick=()=>{ buzz(8); document.body.classList.add("entered"); document.getElementById("welcome").classList.add("gone"); };
 
 // Init
 applyLang();
