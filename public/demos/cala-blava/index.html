@@ -45,7 +45,9 @@
 
   /* ===== TOPBAR ===== */
   .topbar{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:rgba(243,236,223,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft)}
-  .brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:18px;letter-spacing:.2px;color:var(--ink)}
+  .brand{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:18px;letter-spacing:.2px;color:var(--ink)}
+  .brand-mark{width:30px;height:30px;flex:0 0 30px;color:var(--sea-deep);display:block}
+  .brand-mark svg{width:100%;height:100%;display:block}
   .brand .seal{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--sea-bright),var(--sea-deep));display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--display);font-weight:600;font-size:16px;box-shadow:0 4px 10px -3px var(--sea-deep)}
   .room-pill{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:11px;padding:6px 11px;border-radius:999px;letter-spacing:.3px}
   .room-pill b{font-weight:500}
@@ -279,6 +281,8 @@
   .welcome.gone{opacity:0;transform:scale(1.14);filter:blur(12px);pointer-events:none}
   .w-lang{position:absolute;top:calc(16px + env(safe-area-inset-top));right:16px}
   .w-crest{width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(231,210,150,.65);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:25px;color:#e7d296;margin-bottom:18px;position:relative;z-index:2;animation:fadeUp .7s .15s both}
+  .w-mark{width:58px;height:58px;margin-bottom:14px;color:#e3c789;position:relative;z-index:2;filter:drop-shadow(0 2px 8px rgba(0,0,0,.35));animation:fadeUp .7s .15s both}
+  .w-mark svg{width:100%;height:100%;display:block}
   .w-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#e3c789;position:relative;z-index:2;animation:fadeUp .6s .3s both}
   .w-title{font-family:var(--display);font-weight:600;font-size:56px;line-height:.95;letter-spacing:-1px;color:#fdf8ee;margin:6px 0 2px;position:relative;z-index:2;animation:fadeUp .6s .42s both}
   .w-flourish{font-family:var(--script);font-style:italic;font-size:29px;color:#e3c789;position:relative;z-index:2;animation:fadeUp .6s .52s both}
@@ -369,6 +373,7 @@
 <!-- ===== WELCOME ===== -->
 <div class="welcome" id="welcome">
   <div class="w-lang"><div class="w-seg" id="wSeg"></div></div>
+  <div class="w-mark"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" aria-hidden="true"><path d="M50 8c23 0 42 19 42 42" stroke-width="2.2" stroke-linecap="round"/><path d="M50 92c-23 0-42-19-42-42" stroke-width="2.2" stroke-linecap="round"/><circle cx="50" cy="12" r="2.4" fill="currentColor" stroke="none"/><circle cx="50" cy="88" r="2.4" fill="currentColor" stroke="none"/><text x="50" y="64" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="600" font-size="44" fill="currentColor" stroke="none">CB</text></svg></div>
   <div class="w-eyebrow" data-t="hi">Bienvenido a</div>
   <div class="w-title">Cala Blava</div>
   <div class="w-flourish">tu rincón en el mar</div>
@@ -404,7 +409,7 @@
 
 <!-- ===== TOPBAR ===== -->
 <div class="topbar">
-  <div class="brand">Cala Blava</div>
+  <div class="brand"><span class="brand-mark"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" aria-hidden="true"><path d="M50 8c23 0 42 19 42 42" stroke-width="2.4" stroke-linecap="round"/><path d="M50 92c-23 0-42-19-42-42" stroke-width="2.4" stroke-linecap="round"/><circle cx="50" cy="12" r="2.6" fill="currentColor" stroke="none"/><circle cx="50" cy="88" r="2.6" fill="currentColor" stroke="none"/><text x="50" y="64" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="600" font-size="45" fill="currentColor" stroke="none">CB</text></svg></span>Cala Blava</div>
   <div style="display:flex;align-items:center;gap:9px">
     <span class="room-pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5M5 8.5V21h14V8.5"/></svg><b id="hRoom">412</b></span>
     <div class="lang-seg" id="hSeg"></div>
