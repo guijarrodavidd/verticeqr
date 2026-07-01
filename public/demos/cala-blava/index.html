@@ -879,14 +879,14 @@ function openExp(id){
   else sec.style.display="none";
   updateExpTotal();
   document.getElementById("expBody").scrollTop=0;
-  overlay.classList.add("on","hi"); expSheet.classList.add("on");
+  overlay.classList.add("on"); expSheet.classList.add("on");
 }
 function updateExpTotal(){
   let t=expBase;
   document.querySelectorAll("#expAddons .exp-addon.on").forEach(b=>t+=Number(b.dataset.p));
   document.getElementById("expTotal").textContent=fmt(t);
 }
-function closeExp(){ expSheet.classList.remove("on"); overlay.classList.remove("hi"); maybeOverlayOff(); }
+function closeExp(){ expSheet.classList.remove("on"); maybeOverlayOff(); }
 function renderCtrl(id){
   const el=document.getElementById("ctrl-"+id); if(!el) return;
   const c=cart[id];
