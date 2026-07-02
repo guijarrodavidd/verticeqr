@@ -310,6 +310,15 @@
   .ess-foot{display:flex;align-items:center;justify-content:space-between}
   .ess-price{font-family:var(--display);font-weight:600;font-size:16px;color:#fff}
   .ess-add{width:31px;height:31px;border-radius:50%;background:var(--sea);color:#1c1a16;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;line-height:1;box-shadow:0 3px 10px -3px rgba(0,0,0,.5)}
+  /* Showcase de experiencias recomendadas (grande) */
+  .exp-feat-h{margin:0 0 12px}
+  .exp-feat-k{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:1.4px;color:var(--clay-deep);margin-bottom:3px}
+  .exp-feat-t{font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:-.3px;line-height:1.05;color:var(--ink)}
+  .exp-feat-row{display:flex;gap:12px;overflow-x:auto;margin:0 0 24px;padding-bottom:6px;scrollbar-width:none;scroll-snap-type:x proximity}
+  .exp-feat-row::-webkit-scrollbar{display:none}
+  .exp-feat-row .ess-card{scroll-snap-align:start}
+  .exp-feat-row .ess-add{background:var(--clay);font-size:17px}
+  .exp-all-h{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:1.4px;color:var(--clay-deep);margin:0 0 12px}
   /* ===== Entrada al menú tras "Entrar" ===== */
   body:not(.entered) .topbar,
   body:not(.entered) .hero,
@@ -589,7 +598,7 @@ const T={
   ES:{ hi:"Bienvenido a", welcomeSub:"Room service, experiencias y todo lo que necesites, directo a tu habitación.", roomLbl:"Habitación", start:"Entrar",
     heroKick:"Room service · 24h", heroH:"Pide sin moverte<br>de la hamaca", heroFl:"del mar a tu habitación", heroP:"Cocina mediterránea, experiencias en la cala y todo lo que necesites. Te lo subimos a la habitación.",
     viewOrder:"Ver pedido", yourOrder:"Tu pedido", total:"Total", sendOrder:"Pedir al room service",
-    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"Top", upSweet:"¿Un dulce para terminar?", upWine:"¿Vino para acompañar?", upSnack:"¿Algo para picar?", upDrink:"¿Algo para beber?", crossTitle:"¿Lo redondeamos?", addOne:"Añadir uno", removeOne:"Quitar uno", essKicker:"Lo que más piden", essTitle:"Para empezar", chEyebrow:"Tu rincón en el mar", chTitle:"¿Por dónde empezamos?", chCarta:"La carta", chCartaSub:"Room service y F&B", chExp:"Experiencias", chExpSub:"Mar, cala y aventura", chServ:"Tu habitación", chServSub:"Toallas, almohadas y más", seeDetails:"Ver detalles", expSugg:"Sugerido", recommended:"Recomendado", expIncluye:"Incluye", expExtras:"Añade equipo o extras", expAdd:"Añadir a mi estancia", expAdded:"Añadido a tu estancia",
+    emptyCart:"Tu pedido está vacío.<br>Añade algo rico de la carta.", add:"Añadir", free:"GRATIS", best:"Top", upSweet:"¿Un dulce para terminar?", upWine:"¿Vino para acompañar?", upSnack:"¿Algo para picar?", upDrink:"¿Algo para beber?", crossTitle:"¿Lo redondeamos?", addOne:"Añadir uno", removeOne:"Quitar uno", essKicker:"Lo que más piden", essTitle:"Para empezar", chEyebrow:"Tu rincón en el mar", chTitle:"¿Por dónde empezamos?", chCarta:"La carta", chCartaSub:"Room service y F&B", chExp:"Experiencias", chExpSub:"Mar, cala y aventura", chServ:"Tu habitación", chServSub:"Toallas, almohadas y más", seeDetails:"Ver detalles", expSugg:"Sugerido", recommended:"Recomendado", expFeatKicker:"Nuestra selección", expFeatTitle:"Experiencias recomendadas", expAll:"Todas las experiencias", expIncluye:"Incluye", expExtras:"Añade equipo o extras", expAdd:"Añadir a mi estancia", expAdded:"Añadido a tu estancia",
     notePhFood:"Alergias, sin cebolla, al punto…", notePhExp:"¿A qué hora? ¿Cuántas personas?", notePhAmen:"¿Algún detalle?",
     freeHint:"Las peticiones gratuitas se suben sin coste",
     sentTitle:"¡Recibido!", glad:"Te lo subimos a la habitación {room}", preparing:"Preparando tu pedido…", orderMore:"Pedir algo más",
@@ -612,7 +621,7 @@ const T={
   EN:{ hi:"Welcome to", welcomeSub:"Room service, experiences and anything you need, straight to your room.", roomLbl:"Room", start:"Enter",
     heroKick:"Room service · 24h", heroH:"Order without leaving<br>your sun lounger", heroFl:"from the sea to your room", heroP:"Mediterranean cuisine, experiences by the cove and whatever you need. We bring it up to your room.",
     viewOrder:"View order", yourOrder:"Your order", total:"Total", sendOrder:"Order room service",
-    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"Top", upSweet:"Something sweet to finish?", upWine:"Wine to go with it?", upSnack:"Something to nibble?", upDrink:"Something to drink?", crossTitle:"Round it off?", addOne:"Add one", removeOne:"Remove one", essKicker:"Most ordered", essTitle:"To start", chEyebrow:"Your spot by the sea", chTitle:"Where shall we start?", chCarta:"The menu", chCartaSub:"Room service & F&B", chExp:"Experiences", chExpSub:"Sea, cove & adventure", chServ:"Your room", chServSub:"Towels, pillows & more", seeDetails:"See details", expSugg:"Suggested", recommended:"Recommended", expIncluye:"Included", expExtras:"Add gear or extras", expAdd:"Add to my stay", expAdded:"Added to your stay",
+    emptyCart:"Your order is empty.<br>Add something tasty from the menu.", add:"Add", free:"FREE", best:"Top", upSweet:"Something sweet to finish?", upWine:"Wine to go with it?", upSnack:"Something to nibble?", upDrink:"Something to drink?", crossTitle:"Round it off?", addOne:"Add one", removeOne:"Remove one", essKicker:"Most ordered", essTitle:"To start", chEyebrow:"Your spot by the sea", chTitle:"Where shall we start?", chCarta:"The menu", chCartaSub:"Room service & F&B", chExp:"Experiences", chExpSub:"Sea, cove & adventure", chServ:"Your room", chServSub:"Towels, pillows & more", seeDetails:"See details", expSugg:"Suggested", recommended:"Recommended", expFeatKicker:"Our picks", expFeatTitle:"Recommended experiences", expAll:"All experiences", expIncluye:"Included", expExtras:"Add gear or extras", expAdd:"Add to my stay", expAdded:"Added to your stay",
     notePhFood:"Allergies, no onion, well done…", notePhExp:"What time? How many people?", notePhAmen:"Any detail?",
     freeHint:"Free requests are brought up at no charge",
     sentTitle:"Got it!", glad:"We'll bring it up to room {room}", preparing:"Preparing your order…", orderMore:"Order more",
@@ -635,7 +644,7 @@ const T={
   DE:{ hi:"Willkommen im", welcomeSub:"Zimmerservice, Erlebnisse und alles, was Sie brauchen – direkt aufs Zimmer.", roomLbl:"Zimmer", start:"Eintreten",
     heroKick:"Zimmerservice · 24h", heroH:"Bestellen Sie ganz<br>entspannt von der Liege", heroFl:"vom Meer auf Ihr Zimmer", heroP:"Mediterrane Küche, Erlebnisse an der Bucht und alles, was Sie brauchen. Wir bringen es aufs Zimmer.",
     viewOrder:"Bestellung", yourOrder:"Ihre Bestellung", total:"Gesamt", sendOrder:"Zimmerservice bestellen",
-    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"Top", upSweet:"Etwas Süßes zum Abschluss?", upWine:"Wein dazu?", upSnack:"Etwas zum Knabbern?", upDrink:"Etwas zu trinken?", crossTitle:"Abrunden?", addOne:"Eins hinzufügen", removeOne:"Eins entfernen", essKicker:"Am beliebtesten", essTitle:"Zum Anfang", chEyebrow:"Dein Platz am Meer", chTitle:"Wo fangen wir an?", chCarta:"Die Karte", chCartaSub:"Zimmerservice & F&B", chExp:"Erlebnisse", chExpSub:"Meer, Bucht & Abenteuer", chServ:"Dein Zimmer", chServSub:"Handtücher, Kissen & mehr", seeDetails:"Details ansehen", expSugg:"Empfohlen", recommended:"Empfohlen", expIncluye:"Inklusive", expExtras:"Ausrüstung oder Extras", expAdd:"Zu meinem Aufenthalt", expAdded:"Hinzugefügt",
+    emptyCart:"Ihre Bestellung ist leer.<br>Fügen Sie etwas Leckeres hinzu.", add:"Hinzu", free:"GRATIS", best:"Top", upSweet:"Etwas Süßes zum Abschluss?", upWine:"Wein dazu?", upSnack:"Etwas zum Knabbern?", upDrink:"Etwas zu trinken?", crossTitle:"Abrunden?", addOne:"Eins hinzufügen", removeOne:"Eins entfernen", essKicker:"Am beliebtesten", essTitle:"Zum Anfang", chEyebrow:"Dein Platz am Meer", chTitle:"Wo fangen wir an?", chCarta:"Die Karte", chCartaSub:"Zimmerservice & F&B", chExp:"Erlebnisse", chExpSub:"Meer, Bucht & Abenteuer", chServ:"Dein Zimmer", chServSub:"Handtücher, Kissen & mehr", seeDetails:"Details ansehen", expSugg:"Empfohlen", recommended:"Empfohlen", expFeatKicker:"Unsere Auswahl", expFeatTitle:"Empfohlene Erlebnisse", expAll:"Alle Erlebnisse", expIncluye:"Inklusive", expExtras:"Ausrüstung oder Extras", expAdd:"Zu meinem Aufenthalt", expAdded:"Hinzugefügt",
     notePhFood:"Allergien, ohne Zwiebel, durch…", notePhExp:"Um wie viel Uhr? Wie viele Personen?", notePhAmen:"Ein Detail?",
     freeHint:"Kostenlose Wünsche werden gratis gebracht",
     sentTitle:"Erhalten!", glad:"Wir bringen es auf Zimmer {room}", preparing:"Bestellung wird vorbereitet…", orderMore:"Mehr bestellen",
@@ -821,10 +830,8 @@ function renderMenu(){
     const isExp = s.cat==="exp";
     const cards=s.items.map((it,i)=>{
       const dsc=desc(it);
-      const sug = isExp && EXP_DETAILS[it.id] && (EXP_DETAILS[it.id].addons||[]).find(a=>a.sug);
-      const suggPill = sug ? `<div class="exp-sugg"><span class="exp-sugg-tag">✦ ${tt("expSugg")}</span><span class="exp-sugg-n">${sug.n}</span><span class="exp-sugg-p">+${fmt(sug.p)}</span></div>` : "";
       const foot = isExp
-        ? `${suggPill}<div class="dish-detail-hint">${tt("seeDetails")} →</div>`
+        ? `<div class="dish-detail-hint">${tt("seeDetails")} →</div>`
         : `<div class="dish-foot" id="ctrl-${it.id}"></div>`;
       const open = isExp ? ` onclick="openExp('${it.id}')" role="button" tabindex="0"` : "";
       return `<article class="dish${isExp?" dish-exp":""}" id="card-${it.id}" style="--i:${i}"${open}>
@@ -838,6 +845,8 @@ function renderMenu(){
     }).join("");
     return `<section class="sec ${secCls}" id="sec-${s.cat}">
       <div class="sec-head"><div><div class="kicker">${catKick(s.cat)}</div><h2>${catName(s.cat)}</h2></div></div>
+      ${isExp?expFeaturedHTML():""}
+      ${isExp?`<div class="exp-all-h">${tt("expAll")}</div>`:""}
       ${cards}
     </section>`;
   }).join("");
@@ -862,6 +871,23 @@ function renderEssentials(){
     </button>`;
   }).join("");
   el.innerHTML=`<div class="ess-head"><div class="ess-kicker">${tt('essKicker')}</div><h2 class="ess-title">${tt('essTitle')}</h2></div><div class="ess-row">${cards}</div>`;
+}
+
+// Experiencias recomendadas: showcase en grande (foto) al principio del apartado.
+const FEATURED_EXP=["ex4","ex5","ex1","ex6"];
+function expFeaturedHTML(){
+  const cards=FEATURED_EXP.map((id,i)=>{
+    const it=findItem(id); if(!it) return "";
+    return `<button type="button" class="ess-card" style="--i:${i}" onclick="openExp('${id}')" aria-label="${tt('seeDetails')}: ${it.name}">
+      ${it.img?`<img src="${it.img}" alt="" loading="lazy">`:""}
+      <span class="ess-tag">✦ ${tt('expSugg')}</span>
+      <div class="ess-info">
+        <div class="ess-name">${it.name}</div>
+        <div class="ess-foot"><span class="ess-price">${fmt(it.price)}</span><span class="ess-add" aria-hidden="true">→</span></div>
+      </div>
+    </button>`;
+  }).join("");
+  return `<div class="exp-feat-h"><div class="exp-feat-k">${tt('expFeatKicker')}</div><div class="exp-feat-t">${tt('expFeatTitle')}</div></div><div class="exp-feat-row">${cards}</div>`;
 }
 
 // ===== Ficha de experiencia: detalles, qué incluye y extras (equipo, etc.) =====
