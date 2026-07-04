@@ -302,7 +302,7 @@
   .ess-row::-webkit-scrollbar{display:none}
   .ess-card{flex:0 0 196px;height:248px;border-radius:18px;overflow:hidden;position:relative;cursor:pointer;border:none;padding:0;scroll-snap-align:start;background:var(--sand-deep);box-shadow:var(--soft-shadow);transition:transform .18s ease}
   .ess-card:active{transform:scale(.97)}
-  .ess-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .ess-card img,.ess-card video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .ess-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(18,14,9,.86))}
   .ess-tag{position:absolute;top:11px;left:11px;z-index:2;background:rgba(255,255,255,.93);color:var(--ink);font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.06em;padding:4px 8px;border-radius:999px;font-weight:600}
   .ess-info{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:13px 14px;text-align:left;color:#fff}
@@ -853,6 +853,16 @@ function renderMenu(){
   MENU.forEach(s=>s.items.forEach(it=>renderCtrl(it.id)));
   setupReveal();
   setupTabSpy();
+  setupFeatVideos();
+}
+// Los vídeos de "Experiencias recomendadas" se reproducen solo cuando están a la vista (ligero).
+function setupFeatVideos(){
+  const vids=document.querySelectorAll(".exp-feat-row video");
+  if(!vids.length) return;
+  if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches){ vids.forEach(v=>{v.autoplay=false; try{v.pause()}catch(_){}}); return; }
+  if(!("IntersectionObserver" in window)) return;
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{const v=e.target; if(e.isIntersecting){const p=v.play(); if(p&&p.catch)p.catch(()=>{});} else { try{v.pause()}catch(_){} }});},{threshold:.2});
+  vids.forEach(v=>io.observe(v));
 }
 
 // "Para empezar": los imprescindibles que más piden los huéspedes (cross-categoría)
@@ -878,8 +888,10 @@ const FEATURED_EXP=["ex4","ex5","ex1","ex6"];
 function expFeaturedHTML(){
   const cards=FEATURED_EXP.map((id,i)=>{
     const it=findItem(id); if(!it) return "";
+    const v=EXP_DETAILS[id]&&EXP_DETAILS[id].vid;
+    const media=v?`<video class="feat-vid" autoplay muted loop playsinline preload="auto" poster="${it.img||''}"><source src="${v}" type="video/mp4"></video>`:(it.img?`<img src="${it.img}" alt="" loading="lazy">`:"");
     return `<button type="button" class="ess-card" style="--i:${i}" onclick="openExp('${id}')" aria-label="${tt('seeDetails')}: ${it.name}">
-      ${it.img?`<img src="${it.img}" alt="" loading="lazy">`:""}
+      ${media}
       <span class="ess-tag">✦ ${tt('expSugg')}</span>
       <div class="ess-info">
         <div class="ess-name">${it.name}</div>
