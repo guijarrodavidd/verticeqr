@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Calculadora de Ingresos Perdidos del Hotel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16181d; --paper:#fafaf9; --line:#e6e6e2; --muted:#6b6d75;
+    --loss:#DC3B3B; --gain:#17936A;
+  }
+  *{margin:0;box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:'Montserrat',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+  button,a,input{touch-action:manipulation}
+  input{font-family:inherit}
+  .tnum{font-variant-numeric:tabular-nums}
+  .wrap{max-width:1120px;margin:0 auto;padding:44px 20px 64px}
+  a{color:inherit}
+
+  /* animaciones */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .fadeUp{animation:fadeUp .6s cubic-bezier(.2,.8,.2,1) both}
+
+  /* Paso 1 */
+  .grid1{display:grid;gap:26px;grid-template-columns:0.82fr 1.18fr}
+  @media(max-width:880px){.grid1{grid-template-columns:1fr}}
+  .panel{background:var(--ink);color:#fff;border-radius:24px;padding:32px;align-self:start}
+  .badge{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.07);border-radius:999px;padding:7px 14px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.78)}
+  .panel h1{margin-top:20px;font-size:38px;line-height:1.08;font-weight:700}
+  .panel h1 u{text-decoration-thickness:2px;text-underline-offset:6px;text-decoration-color:rgba(255,255,255,.28)}
+  .panel .sub{margin-top:16px;max-width:24em;font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.72)}
+  .panel .sub em{color:#fff;font-style:italic}
+  .rule{height:1px;background:rgba(255,255,255,.1);margin:26px 0}
+  .bullets{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .bullets li{display:flex;align-items:center;gap:12px;font-size:13.5px;color:rgba(255,255,255,.78)}
+  .bullets .ck{flex:0 0 auto;width:20px;height:20px;border-radius:999px;background:rgba(255,255,255,.1);display:grid;place-items:center;font-size:11px}
+  .note{margin-top:26px;background:rgba(255,255,255,.06);border-radius:12px;padding:16px;font-size:12px;line-height:1.6;color:rgba(255,255,255,.58)}
+  .note b{color:rgba(255,255,255,.85)} .note em{color:rgba(255,255,255,.8);font-style:italic} .note .low{color:rgba(255,255,255,.72)}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 12px 32px -22px rgba(22,24,29,.25)}
+  .fs{border:0;margin:0 0 26px;padding:0}
+  .fs:last-of-type{margin-bottom:0}
+  .fs-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+  .fs-head h2{font-size:19px;font-weight:700}
+  .fs-head span{font-size:12px;color:var(--muted)}
+  .fields{display:grid;grid-template-columns:repeat(3,1fr);gap:6px 18px}
+  @media(max-width:620px){.fields{grid-template-columns:repeat(2,1fr)}}
+  .field label{display:block;font-size:12.5px;font-weight:500;color:#4a4d55;margin-bottom:6px}
+  .ibox{display:flex;align-items:center;border:1px solid #d9dade;border-radius:12px;background:#fff;transition:.15s}
+  .ibox:focus-within{border-color:var(--ink);box-shadow:0 0 0 3px rgba(22,24,29,.12)}
+  .ibox.err{border-color:var(--loss);box-shadow:0 0 0 3px rgba(220,59,59,.14)}
+  .ibox input{width:100%;border:0;background:transparent;padding:12px 14px;font-size:15px;font-weight:600;outline:none}
+  .ibox .suf{padding:0 14px 0 2px;font-size:13px;font-weight:600;color:var(--muted)}
+  .fmsg{min-height:15px;margin-top:4px;font-size:11px;color:var(--loss)}
+  .cta{width:100%;margin-top:26px;border:0;border-radius:16px;background:var(--ink);color:#fff;padding:16px;font-size:15.5px;font-weight:700;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:10px;transition:.15s}
+  .cta:hover{background:#24262d} .cta:active{transform:scale(.99)}
+  .savenote{margin-top:12px;text-align:center;font-size:11.5px;color:#9a9ba0}
+
+  /* Paso 2 */
+  .d-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+  .eyebrow{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .d-head h1{font-size:26px;font-weight:700;margin-top:2px}
+  .ghost{border:1px solid #d9dade;background:#fff;border-radius:12px;padding:10px 16px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
+  .hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;border-radius:24px;padding:38px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:30px;align-items:center}
+  @media(max-width:820px){.hero{padding:28px}.hero-grid{grid-template-columns:1fr;gap:26px}}
+  .hero .lab{font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+  .hero .big{margin-top:10px;font-size:74px;line-height:1;font-weight:700}
+  @media(max-width:820px){.hero .big{font-size:56px}}
+  .hero .desc{margin-top:16px;font-size:15px;color:rgba(255,255,255,.72)} .hero .desc b{color:#fff}
+  .aud{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:#fff;color:var(--ink);border-radius:14px;padding:14px 24px;font-size:14.5px;font-weight:700;text-decoration:none}
+  .aud:hover{background:#f0f0ee}
+  .donutwrap{display:flex;flex-direction:column;align-items:center}
+  .donut{position:relative;width:220px;height:220px}
+  .donut .ctr{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .donut .ctr .l{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+  .donut .ctr .v{font-size:24px;font-weight:700;margin-top:4px}
+  .legend{margin-top:18px;width:100%;max-width:280px;display:flex;flex-direction:column;gap:9px}
+  .legend .row{display:flex;align-items:center;justify-content:space-between;font-size:13px}
+  .legend .row span{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.75)}
+  .dot{width:10px;height:10px;border-radius:999px;flex:0 0 auto}
+
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+  @media(max-width:720px){.stats{grid-template-columns:1fr}}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+  .stat.gain{border-color:rgba(23,147,106,.35)} .stat.loss{border-color:rgba(220,59,59,.35)}
+  .stat .l{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .stat.gain .l{color:var(--gain)} .stat.loss .l{color:var(--loss)}
+  .stat .r{height:1px;width:32px;margin:12px 0 6px;background:rgba(22,24,29,.15)}
+  .stat.gain .r{background:rgba(23,147,106,.5)} .stat.loss .r{background:rgba(220,59,59,.5)}
+  .stat .v{font-size:34px;font-weight:700}
+  .stat.loss .v{color:var(--loss)}
+  .stat .s{margin-top:8px;font-size:12.5px;color:var(--muted)} .stat.loss .s{color:rgba(220,59,59,.7)}
+
+  .bd{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px;margin-top:22px}
+  .bd h2{font-size:20px;font-weight:700;margin-bottom:8px}
+  .bd .item{padding:16px 0;border-top:1px solid #eeeeec}
+  .bd .item:first-of-type{border-top:0}
+  .bd .top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .bd .name{display:flex;align-items:center;gap:10px;font-weight:600}
+  .bd .amt{font-size:19px;font-weight:700;color:var(--loss)} .bd .amt small{font-size:12px;font-weight:400;color:var(--muted);margin-left:4px}
+  .bar{margin-top:10px;display:flex;align-items:center;gap:12px}
+  .bar .track{flex:1;height:8px;border-radius:999px;background:rgba(22,24,29,.08);overflow:hidden}
+  .bar .fill{height:100%;border-radius:999px;transition:width .8s cubic-bezier(.2,.8,.2,1)}
+  .bar .cur{width:170px;text-align:right;font-size:12px;color:var(--muted)}
+
+  .actions{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+  .actions>*{flex:1;min-width:200px;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:16px;padding:15px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;text-decoration:none}
+  .actions .sec{border:1px solid #d9dade;background:#fff;color:var(--ink)}
+  .actions .prim{border:0;background:var(--ink);color:#fff}
+  .disc{margin-top:22px;font-size:11.5px;line-height:1.6;color:#9a9ba0}
+  .foot{margin-top:44px;border-top:1px solid var(--line);padding-top:22px;text-align:center;font-size:11px;color:#a7a8ac}
+  .hidden{display:none!important}
+
+  @media print{
+    body{background:#fff}
+    .no-print{display:none!important}
+    .wrap{padding:0}
+    .hero,.stat,.bd{break-inside:avoid}
+  }
+</style></head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PASO 1 ===================== -->
+  <div id="step1">
+    <div class="grid1">
+      <aside class="panel fadeUp">
+        <span class="badge">Exclusiva · solo para ti</span>
+        <h1>¿Cuánto dinero dejas <u>sobre la mesa</u>?</h1>
+        <p class="sub">Descúbrelo con los huéspedes que <em>ya tienes alojados</em> — sin aumentar la ocupación ni subir tus tarifas.</p>
+        <div class="rule"></div>
+        <ul class="bullets">
+          <li><span class="ck">✓</span> Estimación en menos de un minuto</li>
+          <li><span class="ck">✓</span> Basada en tus propios datos</li>
+          <li><span class="ck">✓</span> Sin registro ni compromiso</li>
+        </ul>
+        <div class="note"><b>Cómo lo calculamos.</b> Al digitalizar la carta y sugerir en cada pedido, una parte más de tus huéspedes pide (+20–30 %) y el ticket medio sube ligeramente (+7–8 %), siempre sobre los huéspedes que <em>ya tienes alojados</em>. <span class="low">Preferimos quedarnos cortos: son cifras conservadoras y reales.</span></div>
+      </aside>
+
+      <form id="form" class="card fadeUp" style="animation-delay:.09s" novalidate></form>
+    </div>
+  </div>
+
+  <!-- ===================== PASO 2 ===================== -->
+  <div id="step2" class="hidden">
+    <div class="d-head">
+      <div><div class="eyebrow">Tu informe</div><h1>Potencial de ingresos F&amp;B</h1></div>
+      <button class="ghost no-print" id="back">← Recalcular</button>
+    </div>
+
+    <section class="hero fadeUp">
+      <div class="hero-grid">
+        <div>
+          <div class="lab">Dinero que estás dejando de facturar cada mes</div>
+          <div class="big tnum" id="lostBig">0 €</div>
+          <p class="desc">Son <b id="lostYear">0 €</b> al año. Y equivale al <b id="lostPct">0 %</b> del potencial de tu F&amp;B que hoy no se está capturando.</p>
+          <a class="aud no-print" id="aud1" href="#" target="_blank" rel="noopener">Solicitar una auditoría gratuita →</a>
+        </div>
+        <div class="donutwrap">
+          <div class="donut">
+            <svg id="donut" width="220" height="220" viewBox="0 0 220 220"></svg>
+            <div class="ctr"><span class="l">Perdido / mes</span><span class="v tnum" id="donutV">0 €</span></div>
+          </div>
+          <div class="legend" id="legend"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><div class="l">Ingresos actuales</div><div class="r"></div><div class="v tnum" id="cur">0 €</div><div class="s">F&amp;B con los huéspedes de hoy</div></div>
+      <div class="stat gain"><div class="l">Ingresos potenciales</div><div class="r"></div><div class="v tnum" id="pot">0 €</div><div class="s">Con digitalización + upselling</div></div>
+      <div class="stat loss"><div class="l">Ingresos perdidos</div><div class="r"></div><div class="v tnum" id="lost">0 €</div><div class="s" id="lostSub">0 % sin capturar</div></div>
+    </section>
+
+    <section class="bd fadeUp">
+      <h2>Dónde se escapa ese dinero</h2>
+      <div id="breakdown"></div>
+    </section>
+
+    <section class="actions no-print">
+      <button class="sec" onclick="window.print()">↓ Descargar informe (PDF)</button>
+      <button class="sec" id="share">⤴ Compartir</button>
+      <a class="prim" id="aud2" href="#" target="_blank" rel="noopener">Solicitar auditoría gratuita</a>
+    </section>
+
+    <p class="disc">Estimación orientativa calculada a partir de los datos introducidos y de supuestos conservadores de mejora por digitalización y upselling. Los resultados reales dependen de cada hotel y no constituyen una garantía.</p>
+  </div>
+
+  <div class="foot">Estimación orientativa. No constituye una garantía de resultados.</div>
+</div>
+
+<script>
+// ─── Config ─────────────────────────────────────────────
+var CALENDLY_URL = "https://calendly.com/hectorcavani10/30min";
+var STORAGE_KEY = "hotel-calc-inputs-v1";
+var DAYS = 30, MONTHS = 12;
+var UPLIFT = {
+  roomService:{adoption:1.25, spend:1.08},
+  extras:{adoption:1.20, spend:1.07},
+  experiences:{adoption:1.30, spend:1.08},
+  capPct:75
+};
+var DEFAULTS = {rooms:60,occ:72,adr:180,rsTicket:22,rsPct:12,extrasSpend:18,extrasPct:15,expSpend:45,expPct:8};
+var STREAM_COLORS = {roomService:"#cfd1d5", extras:"#a2a4aa", experiences:"#74767d"};
+
+var GROUPS = [
+  {t:"Tu hotel", c:"Los básicos de ocupación.", f:[
+    {k:"rooms", l:"Número de habitaciones"},
+    {k:"occ", l:"Ocupación media", s:"%", max:100},
+    {k:"adr", l:"ADR · precio medio / habitación", s:"€"}]},
+  {t:"Room Service", c:"Lo que se pide a la habitación.", f:[
+    {k:"rsTicket", l:"Ticket medio", s:"€"},
+    {k:"rsPct", l:"% de huéspedes que lo usan", s:"%", max:100}]},
+  {t:"Extras", c:"Minibar, spa, parking, late check-out…", f:[
+    {k:"extrasSpend", l:"Gasto medio", s:"€"},
+    {k:"extrasPct", l:"% de huéspedes que compran", s:"%", max:100}]},
+  {t:"Experiencias", c:"Excursiones, catas, actividades…", f:[
+    {k:"expSpend", l:"Gasto medio", s:"€"},
+    {k:"expPct", l:"% de huéspedes que compran", s:"%", max:100}]}
+];
+
+// ─── Formato ────────────────────────────────────────────
+var eurFmt = new Intl.NumberFormat("es-ES",{style:"currency",currency:"EUR",maximumFractionDigits:0});
+function eur(n){ return eurFmt.format(isFinite(n)?n:0); }
+function pctFmt(f){ return new Intl.NumberFormat("es-ES",{style:"percent",maximumFractionDigits:0}).format(isFinite(f)?f:0); }
+
+// ─── Cálculo (funciones desacopladas) ───────────────────
+function clampPct(p){ return Math.max(0, Math.min(100, p)); }
+function occupied(v){ return Math.max(0,v.rooms) * clampPct(v.occ)/100; }
+function streamMonth(occ, adoptionPct, spend){ return occ * clampPct(adoptionPct)/100 * Math.max(0,spend) * DAYS; }
+function potAdopt(pct, mult){ return Math.min(clampPct(pct)*mult, UPLIFT.capPct); }
+
+function calculate(v){
+  var occ = occupied(v);
+  function build(key,label,pct,spend,up){
+    var current = streamMonth(occ, pct, spend);
+    var potential = streamMonth(occ, potAdopt(pct, up.adoption), spend*up.spend);
+    return {key:key, label:label, current:current, potential:potential, lost:Math.max(0, potential-current)};
+  }
+  var streams = [
+    build("roomService","Room Service", v.rsPct, v.rsTicket, UPLIFT.roomService),
+    build("extras","Extras", v.extrasPct, v.extrasSpend, UPLIFT.extras),
+    build("experiences","Experiencias", v.expPct, v.expSpend, UPLIFT.experiences)
+  ];
+  var cur = streams.reduce(function(a,s){return a+s.current},0);
+  var pot = streams.reduce(function(a,s){return a+s.potential},0);
+  var lost = Math.max(0, pot-cur);
+  return {streams:streams, current:cur, potential:pot, lost:lost, lostPct: pot>0?lost/pot:0, annualLost:lost*MONTHS};
+}
+
+// ─── Render formulario ──────────────────────────────────
+function loadValues(){
+  var v = Object.assign({}, DEFAULTS);
+  try{ var raw = localStorage.getItem(STORAGE_KEY); if(raw){ v = Object.assign(v, JSON.parse(raw)); } }catch(e){}
+  return v;
+}
+function renderForm(){
+  var v = loadValues();
+  var html = "";
+  GROUPS.forEach(function(g){
+    html += '<fieldset class="fs"><div class="fs-head"><h2>'+g.t+'</h2><span>'+g.c+'</span></div><div class="fields">';
+    g.f.forEach(function(f){
+      html += '<div class="field"><label>'+f.l+'</label><div class="ibox" data-box="'+f.k+'">'+
+        '<input type="number" inputmode="decimal" min="0" '+(f.max?'max="'+f.max+'"':'')+' data-k="'+f.k+'" value="'+v[f.k]+'">'+
+        (f.s?'<span class="suf">'+f.s+'</span>':'')+'</div><div class="fmsg" data-msg="'+f.k+'"></div></div>';
+    });
+    html += '</div></fieldset>';
+  });
+  html += '<button type="submit" class="cta">Calcular ingresos perdidos <span>→</span></button>'+
+          '<p class="savenote">Tus datos se guardan solo en tu navegador.</p>';
+  document.getElementById("form").innerHTML = html;
+}
+
+function readForm(){
+  var v = {};
+  document.querySelectorAll('#form input[data-k]').forEach(function(inp){
+    v[inp.getAttribute("data-k")] = inp.value === "" ? "" : Number(inp.value);
+  });
+  return v;
+}
+function validate(v){
+  var e = {};
+  Object.keys(v).forEach(function(k){
+    var val = v[k];
+    if(val==="" || isNaN(Number(val))) e[k]="Requerido";
+    else if(Number(val)<0) e[k]="No puede ser negativo";
+  });
+  ["occ","rsPct","extrasPct","expPct"].forEach(function(k){ if(v[k]!=="" && Number(v[k])>100) e[k]="Máx. 100 %"; });
+  if(v.rooms!=="" && Number(v.rooms)<1) e.rooms="Mínimo 1";
+  return e;
+}
+function showErrors(e){
+  document.querySelectorAll('.ibox').forEach(function(b){ b.classList.remove('err'); });
+  document.querySelectorAll('.fmsg').forEach(function(m){ m.textContent=''; });
+  Object.keys(e).forEach(function(k){
+    var box = document.querySelector('[data-box="'+k+'"]'); if(box) box.classList.add('err');
+    var msg = document.querySelector('[data-msg="'+k+'"]'); if(msg) msg.textContent = e[k];
+  });
+}
+
+// ─── Contador animado ───────────────────────────────────
+function countUp(el, to){
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce){ el.textContent = eur(to); return; }
+  var from = 0, dur = 1300, start = null;
+  function tick(t){ if(start===null) start=t; var p=Math.min(1,(t-start)/dur); var e=1-Math.pow(1-p,3); el.textContent = eur(from+(to-from)*e); if(p<1) requestAnimationFrame(tick); }
+  requestAnimationFrame(tick);
+}
+
+// ─── Donut ──────────────────────────────────────────────
+function drawDonut(streams, total){
+  var svg = document.getElementById("donut");
+  var size=220, thick=26, r=(size-thick)/2, cx=110, cy=110, circ=2*Math.PI*r;
+  var html = '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="'+thick+'"/>';
+  var cum = 0;
+  streams.forEach(function(s,i){
+    var frac = total>0 ? s.lost/total : 0;
+    var len = Math.max(0, frac*circ - 5);
+    var rot = -90 + cum*360; cum += frac;
+    html += '<circle class="seg" cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+STREAM_COLORS[s.key]+'" stroke-width="'+thick+'" stroke-linecap="round" stroke-dasharray="'+len+' '+circ+'" stroke-dashoffset="'+len+'" transform="rotate('+rot+' '+cx+' '+cy+')" style="transition:stroke-dashoffset .95s cubic-bezier(.2,.85,.25,1) '+(180+i*160)+'ms"/>';
+  });
+  svg.innerHTML = html;
+  requestAnimationFrame(function(){ svg.querySelectorAll('.seg').forEach(function(c){ c.setAttribute('stroke-dashoffset','0'); }); });
+}
+
+// ─── Render dashboard ───────────────────────────────────
+function renderDashboard(r){
+  document.getElementById("lostYear").textContent = eur(r.annualLost);
+  document.getElementById("lostPct").textContent = pctFmt(r.lostPct);
+  document.getElementById("lostSub").textContent = pctFmt(r.lostPct) + " sin capturar";
+  document.getElementById("donutV").textContent = eur(r.lost);
+  countUp(document.getElementById("lostBig"), r.lost);
+  countUp(document.getElementById("cur"), r.current);
+  countUp(document.getElementById("pot"), r.potential);
+  countUp(document.getElementById("lost"), r.lost);
+
+  drawDonut(r.streams, r.lost);
+
+  document.getElementById("legend").innerHTML = r.streams.map(function(s){
+    return '<div class="row"><span><span class="dot" style="background:'+STREAM_COLORS[s.key]+'"></span>'+s.label+'</span><b>'+eur(s.lost)+'</b></div>';
+  }).join("");
+
+  document.getElementById("breakdown").innerHTML = r.streams.map(function(s){
+    var share = r.lost>0 ? s.lost/r.lost : 0;
+    return '<div class="item"><div class="top"><span class="name"><span class="dot" style="background:'+STREAM_COLORS[s.key]+'"></span>'+s.label+'</span>'+
+      '<span class="amt">+'+eur(s.lost)+'<small>/ mes</small></span></div>'+
+      '<div class="bar"><div class="track"><div class="fill" style="width:0%;background:'+STREAM_COLORS[s.key]+'" data-w="'+(share*100)+'"></div></div>'+
+      '<span class="cur">hoy '+eur(s.current)+' → '+eur(s.potential)+'</span></div></div>';
+  }).join("");
+  requestAnimationFrame(function(){ document.querySelectorAll('.fill').forEach(function(f){ f.style.width = f.getAttribute('data-w')+'%'; }); });
+}
+
+// ─── Flujo ──────────────────────────────────────────────
+document.getElementById("form").addEventListener("submit", function(ev){
+  ev.preventDefault();
+  var v = readForm();
+  var e = validate(v);
+  showErrors(e);
+  if(Object.keys(e).length) return;
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(v)); }catch(err){}
+  var r = calculate(v);
+  renderDashboard(r);
+  document.getElementById("step1").classList.add("hidden");
+  document.getElementById("step2").classList.remove("hidden");
+  window.scrollTo({top:0, behavior:"smooth"});
+});
+document.getElementById("back").addEventListener("click", function(){
+  document.getElementById("step2").classList.add("hidden");
+  document.getElementById("step1").classList.remove("hidden");
+  window.scrollTo({top:0});
+});
+document.getElementById("aud1").href = CALENDLY_URL;
+document.getElementById("aud2").href = CALENDLY_URL;
+document.getElementById("share").addEventListener("click", async function(){
+  var el = document.getElementById("lost");
+  var txt = "Nuestro hotel deja de facturar "+el.textContent+" al mes en F&B con los huéspedes que ya tenemos.";
+  var url = location.href;
+  if(navigator.share){ try{ await navigator.share({title:"Ingresos perdidos del hotel", text:txt, url:url}); }catch(e){} }
+  else { try{ await navigator.clipboard.writeText(txt+" "+url); this.textContent="✓ Copiado"; var b=this; setTimeout(function(){b.textContent="⤴ Compartir";},1800); }catch(e){} }
+});
+
+renderForm();
+</script>
+</body></html>
