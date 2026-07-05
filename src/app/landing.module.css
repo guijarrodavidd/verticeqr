@@ -108,6 +108,21 @@ html { scroll-behavior: smooth; }
   line-height: 1;
   transform: translateY(-0.04em);
 }
+/* Logo real (imagen): blanco sobre el hero, oscuro al hacer scroll */
+.logoImg {
+  height: 22px;
+  width: auto;
+  display: block;
+}
+.logoImgDark {
+  display: none;
+}
+.navScrolled .logoImgLight {
+  display: none;
+}
+.navScrolled .logoImgDark {
+  display: block;
+}
 
 .navLinks {
   display: flex;

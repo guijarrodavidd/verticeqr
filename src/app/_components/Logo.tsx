@@ -1,17 +1,14 @@
 import styles from "../landing.module.css";
 
-// Logotipo VÉRTICE: V geométrica con acento + "ÉRTICE" en sans.
-// Monocromo (currentColor) → se adapta al fondo (blanco sobre el hero, oscuro en claro).
+// Logotipo VÉRTICE real (imagen). Dos versiones que se alternan según el fondo
+// del nav: blanca sobre el hero, oscura al hacer scroll (fondo claro).
 export default function Logo() {
   return (
     <span className={styles.logo} aria-label="Vértice">
-      <svg className={styles.logoV} viewBox="0 -8 96 128" aria-hidden="true" fill="currentColor">
-        {/* V asimétrica */}
-        <path d="M8 12 L42 12 L50 80 L78 12 L90 12 L49 118 Z" />
-        {/* acento */}
-        <path d="M63 9 L81 -4 L85 1.5 L67 14.5 Z" />
-      </svg>
-      <span className={styles.logoWord}>ertice</span>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className={`${styles.logoImg} ${styles.logoImgLight}`} src="/vertice-wordmark-light.png" alt="Vértice" />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className={`${styles.logoImg} ${styles.logoImgDark}`} src="/vertice-wordmark-dark.png" alt="" aria-hidden="true" />
     </span>
   );
 }
