@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Diagnóstico de ingresos de tu hotel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F2EC; --surface:#FFFFFF; --ink:#1A1917; --ink-soft:#454239;
+    --muted:#7A776E; --faint:#A9A69C; --line:#E5E1D7; --line-soft:#EEEAE0;
+    --brass:#9A7B4F; --brass-soft:#C6A876; --brass-tint:#EFE7D8;
+    --sage:#5E7C63; --terra:#B4674B;
+    --shadow:0 1px 0 rgba(26,25,23,.03), 0 18px 46px -30px rgba(26,25,23,.28);
+    --serif:'Montserrat', system-ui, sans-serif;
+    --sans:'Montserrat', system-ui, -apple-system, sans-serif;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{margin:0;box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:var(--sans); color:var(--ink); background:var(--paper);
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    line-height:1.5; letter-spacing:-0.01em;
+  }
+  ::selection{background:var(--brass-tint)}
+  button{font-family:inherit; cursor:pointer}
+  .tnum{font-variant-numeric:tabular-nums}
+  .serif{font-family:var(--serif)}
+
+  /* atmósfera: papel finísimo + halo latón muy sutil */
+  body::before{
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(120% 80% at 50% -10%, rgba(154,123,79,.06), transparent 55%),
+      radial-gradient(80% 60% at 100% 100%, rgba(94,124,99,.045), transparent 60%);
+  }
+
+  /* barra de progreso superior */
+  .progress{position:fixed; top:0; left:0; right:0; height:2px; z-index:50; background:transparent}
+  .progress>i{display:block; height:100%; width:0; background:linear-gradient(90deg,var(--brass-soft),var(--brass)); transition:width .6s var(--ease)}
+
+  .top{position:fixed; top:0; left:0; right:0; z-index:40; display:flex; align-items:center; justify-content:flex-end;
+       padding:22px 30px; font-size:12px; letter-spacing:.02em}
+  .top .tag{color:var(--faint); font-size:11px; letter-spacing:.14em; text-transform:uppercase}
+
+  .stage{position:relative; z-index:1; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:110px 24px 80px}
+  .wrap{width:100%; max-width:680px}
+  .wrap.wide{max-width:760px}
+
+  .fx{opacity:0; transform:translateY(12px); animation:rise .7s var(--ease) forwards}
+  @keyframes rise{to{opacity:1; transform:none}}
+  .swap-out{animation:fadeOut .28s var(--ease) forwards}
+  @keyframes fadeOut{to{opacity:0; transform:translateY(-8px)}}
+
+  .eyebrow{font-size:11.5px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--brass)}
+  .kicker{font-family:var(--serif); font-style:italic; font-size:17px; color:var(--muted)}
+
+  /* ---------- INTRO ---------- */
+  .hero-name{font-size:13px; font-weight:600; letter-spacing:.34em; text-transform:uppercase; color:var(--ink)}
+  .hero-h{font-family:var(--serif); font-weight:600; font-size:clamp(36px,5.6vw,55px); line-height:1.08; letter-spacing:-.02em; margin-top:26px}
+  .hero-h em{font-style:italic; color:var(--brass)}
+  .hero-sub{margin-top:22px; max-width:30em; font-size:16px; line-height:1.65; color:var(--muted)}
+  .meta{margin-top:34px; display:flex; flex-wrap:wrap; gap:22px; align-items:center; font-size:12.5px; color:var(--muted)}
+  .meta .dot{width:3px; height:3px; border-radius:50%; background:var(--faint)}
+
+  .btn{border:none; border-radius:12px; background:var(--ink); color:#fff; padding:15px 28px; font-size:14.5px; font-weight:500;
+       display:inline-flex; align-items:center; gap:10px; transition:transform .2s var(--ease), background .2s}
+  .btn:hover{transform:translateY(-1px); background:#000}
+  .btn .arw{transition:transform .25s var(--ease)}
+  .btn:hover .arw{transform:translateX(3px)}
+  .btn-ghost{background:transparent; color:var(--ink-soft); border:1px solid var(--line); padding:14px 22px}
+  .btn-ghost:hover{background:transparent; border-color:var(--muted); transform:none}
+  .btn:disabled{opacity:.35; pointer-events:none}
+
+  /* ---------- AUDIT ---------- */
+  .sec-head{display:flex; align-items:baseline; justify-content:space-between; gap:16px}
+  .sec-idx{font-size:12px; letter-spacing:.16em; color:var(--faint); font-weight:500}
+  .sec-title{font-family:var(--serif); font-weight:600; font-size:clamp(26px,4vw,33px); line-height:1.1; letter-spacing:-.02em; margin-top:14px}
+  .sec-intro{margin-top:12px; font-size:15px; color:var(--muted); max-width:34em; line-height:1.6}
+  .rule{height:1px; background:var(--line); margin:34px 0 8px}
+
+  .q{padding:22px 0; border-bottom:1px solid var(--line-soft); display:flex; gap:26px; align-items:flex-start; justify-content:space-between}
+  .q:last-child{border-bottom:none}
+  .q-t{font-size:16px; line-height:1.5; color:var(--ink); max-width:30em; flex:1}
+  .seg{display:inline-flex; gap:6px; flex:0 0 auto}
+  .opt{border:1px solid var(--line); background:var(--surface); border-radius:999px; padding:8px 14px; font-size:12.5px; font-weight:500;
+       color:var(--muted); display:inline-flex; align-items:center; gap:6px; transition:all .18s var(--ease); white-space:nowrap}
+  .opt:hover{border-color:var(--faint); color:var(--ink-soft)}
+  .opt .g{font-size:12px; line-height:1}
+  .opt.sel{transform:translateY(-1px)}
+  .opt.sel.si{background:rgba(94,124,99,.1); border-color:rgba(94,124,99,.5); color:var(--sage)}
+  .opt.sel.partial{background:rgba(154,123,79,.12); border-color:rgba(154,123,79,.55); color:var(--brass)}
+  .opt.sel.no{background:rgba(180,103,75,.1); border-color:rgba(180,103,75,.5); color:var(--terra)}
+
+  .nav{margin-top:38px; display:flex; align-items:center; justify-content:space-between; gap:16px}
+  .nav .count{font-size:12.5px; color:var(--faint)}
+
+  /* ---------- RESULT ---------- */
+  .score-wrap{display:flex; flex-direction:column; align-items:center; text-align:center}
+  .gauge{position:relative; width:230px; height:230px}
+  .gauge svg{transform:rotate(-90deg)}
+  .gauge .num{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center}
+  .gauge .num b{font-family:var(--serif); font-weight:600; font-size:58px; line-height:1; letter-spacing:-.02em}
+  .gauge .num span{font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--faint); margin-top:6px}
+  .verdict{font-family:var(--serif); font-size:22px; line-height:1.35; margin-top:30px; max-width:20em}
+  .verdict em{font-style:italic; color:var(--brass)}
+
+  .cats{margin-top:52px}
+  .cat{display:flex; align-items:center; gap:18px; padding:18px 0; border-top:1px solid var(--line-soft)}
+  .cat:first-child{border-top:none}
+  .cat .nm{width:190px; flex:0 0 auto; font-size:15px; font-weight:500}
+  .cat .bar{flex:1; height:6px; border-radius:999px; background:#e9e5db; overflow:hidden}
+  .cat .bar i{display:block; height:100%; width:0; border-radius:999px; transition:width 1s var(--ease)}
+  .cat .sc{width:56px; flex:0 0 auto; text-align:right; font-size:15px; font-weight:600; letter-spacing:-.02em}
+  @media(max-width:560px){
+    .cat{flex-wrap:wrap; gap:8px 14px}
+    .cat .nm{width:auto} .cat .bar{order:3; flex-basis:100%} .cat .sc{margin-left:auto}
+  }
+
+  /* CTA */
+  .cta{margin-top:56px; background:var(--ink); color:#fff; border-radius:22px; padding:44px; position:relative; overflow:hidden}
+  .cta::before{content:""; position:absolute; right:-80px; top:-80px; width:280px; height:280px; border-radius:50%;
+    background:radial-gradient(circle, rgba(198,168,118,.22), transparent 68%)}
+  .cta .e{font-size:11px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--brass-soft); position:relative}
+  .cta h3{font-family:var(--serif); font-weight:400; font-size:clamp(24px,3.6vw,30px); line-height:1.22; margin-top:16px; max-width:20em; position:relative}
+  .cta ul{margin:20px 0 0; padding:0; list-style:none; position:relative; display:flex; flex-direction:column; gap:10px}
+  .cta li{display:flex; gap:11px; align-items:flex-start; font-size:14px; color:rgba(255,255,255,.72); line-height:1.5}
+  .cta li .tick{color:var(--brass-soft); margin-top:2px}
+  .cta-btn{position:relative; margin-top:30px; display:inline-flex; align-items:center; gap:10px; background:#fff; color:var(--ink);
+    border-radius:12px; padding:15px 28px; font-size:14.5px; font-weight:600; text-decoration:none; transition:transform .2s var(--ease)}
+  .cta-btn:hover{transform:translateY(-1px)}
+  .cta-note{position:relative; margin-top:16px; font-size:12px; color:rgba(255,255,255,.5)}
+  .restart{margin-top:30px; text-align:center}
+  .restart button{background:none; border:none; color:var(--faint); font-size:12.5px; letter-spacing:.02em; text-decoration:underline; text-underline-offset:3px}
+  .restart button:hover{color:var(--muted)}
+
+  @media(max-width:600px){
+    .top{padding:18px 20px}
+    .q{flex-direction:column; gap:14px}
+    .seg{width:100%}
+    .opt{flex:1; justify-content:center}
+    .cta{padding:30px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.001ms !important; transition-duration:.001ms !important}
+  }
+</style></head>
+<body>
+
+<div class="progress"><i id="prog"></i></div>
+<div class="top">
+  <span class="tag" id="topTag">Diagnóstico de ingresos</span>
+</div>
+
+<div class="stage"><div class="wrap" id="app"></div></div>
+
+<script>
+/* ══════════════════════════════════════════════════════════
+   HOTEL REVENUE SCORE™ — herramienta de diagnóstico
+   Arquitectura: data (BLOCKS) → estado (state) → render puro.
+   ══════════════════════════════════════════════════════════ */
+
+const CONFIG = {
+  // ← Cambia aquí tu enlace de Calendly
+  calendly: "https://calendly.com/hectorcavani10/30min",
+};
+
+const VALUE = { si: 1, partial: 0.5, no: 0 };
+const OPTIONS = [
+  { k: "si",      g: "✓", label: "Sí" },
+  { k: "partial", g: "◐", label: "Parcialmente" },
+  { k: "no",      g: "✕", label: "No" },
+];
+
+const BLOCKS = [
+  { key:"room", name:"Room Service", intro:"El servicio a la habitación como canal de ingresos, no solo de atención.",
+    q:[
+      "Los huéspedes pueden pedir room service desde el móvil, sin llamar a recepción.",
+      "La carta incluye fotos y descripciones que invitan a pedir.",
+      "El sistema sugiere maridajes o complementos al hacer un pedido.",
+      "Dispones de datos de qué se pide y a qué hora para optimizar la oferta.",
+    ]},
+  { key:"upsell", name:"Upselling", intro:"La venta incremental, ofrecida en el momento adecuado del viaje del huésped.",
+    q:[
+      "Se ofrece de forma sistemática el upgrade de habitación antes o durante el check-in.",
+      "Cada pedido de F&B sugiere un extra (postre, vino, café premium).",
+      "El equipo cuenta con un método para proponer mejoras sin resultar intrusivo.",
+      "Los upsells aparecen en el momento oportuno, no de forma aleatoria.",
+    ]},
+  { key:"exp", name:"Experiencias", intro:"Nuevas líneas de ingreso más allá del alojamiento.",
+    q:[
+      "El hotel ofrece experiencias (excursiones, catas, spa, actividades) reservables por el huésped.",
+      "Se muestran de forma atractiva durante la estancia, no solo en recepción.",
+      "El huésped puede reservarlas desde su habitación o el móvil.",
+      "Incluyen add-ons o niveles premium que elevan el ticket.",
+    ]},
+  { key:"extras", name:"Extras", intro:"Los servicios complementarios y su visibilidad para el huésped.",
+    q:[
+      "Ofreces extras de pago (late check-out, parking, minibar, amenities) de forma proactiva.",
+      "El huésped conoce estos extras sin tener que preguntarlos.",
+      "Se pueden contratar en segundos, sin fricción.",
+      "Revisas periódicamente qué extras funcionan y a qué precio.",
+    ]},
+  { key:"auto", name:"Automatización", intro:"Ingresos que ocurren sin intervención del personal.",
+    q:[
+      "Buena parte de las ventas durante la estancia ocurren sin intervención del equipo.",
+      "El sistema de pedidos y ventas está integrado con tu PMS/TPV.",
+      "La carta y los precios se actualizan de forma centralizada y sencilla.",
+      "Existen automatismos de seguimiento y sugerencia durante la estancia.",
+    ]},
+  { key:"guest", name:"Experiencia del huésped", intro:"La calidad digital, a la altura de la categoría de tu hotel.",
+    q:[
+      "Pedir o contratar algo es rápido y elegante, acorde a tu categoría.",
+      "La comunicación con el huésped es multi-idioma.",
+      "La experiencia digital refleja la calidad de tu hotel.",
+      "El huésped resuelve sus necesidades 24/7, sin depender del horario de recepción.",
+    ]},
+];
+
+const TOTAL_Q = BLOCKS.reduce((a,b)=>a+b.q.length,0);
+const CAT_COLOR = (s)=> s>=70 ? "var(--sage)" : s>=45 ? "var(--brass)" : "var(--terra)";
+
+const state = { screen:"intro", block:0, answers:{} };
+
+/* ---------- utilidades de render ---------- */
+const app = document.getElementById("app");
+const qid = (bi,qi)=> BLOCKS[bi].key+"_"+qi;
+
+function setProgress(){
+  const answered = Object.keys(state.answers).length;
+  let pct = 0;
+  if(state.screen==="audit") pct = (answered/TOTAL_Q)*100;
+  if(state.screen==="result") pct = 100;
+  document.getElementById("prog").style.width = pct+"%";
+}
+function paint(html, after){
+  app.classList.add("swap-out");
+  setTimeout(()=>{
+    app.classList.remove("swap-out");
+    app.innerHTML = html;
+    app.querySelectorAll("[data-fx]").forEach((el,i)=>{ el.classList.add("fx"); el.style.animationDelay=(i*70)+"ms"; });
+    window.scrollTo({top:0});
+    bind();
+    setProgress();
+    if(typeof after==="function") requestAnimationFrame(after);
+  }, 200);
+}
+
+/* ---------- pantallas ---------- */
+function scoreOf(){
+  let earned=0;
+  BLOCKS.forEach(b=> b.q.forEach((_,qi)=>{ const a=state.answers[qid(BLOCKS.indexOf(b),qi)]; if(a) earned+=VALUE[a]; }));
+  return Math.round((earned/TOTAL_Q)*100);
+}
+function catScore(bi){
+  const b=BLOCKS[bi]; let e=0;
+  b.q.forEach((_,qi)=>{ const a=state.answers[qid(bi,qi)]; if(a) e+=VALUE[a]; });
+  return Math.round((e/b.q.length)*100);
+}
+
+function renderIntro(){
+  state.screen="intro";
+  document.getElementById("topTag").textContent="Diagnóstico de ingresos";
+  paint(`
+    <h1 class="hero-h" data-fx>El diagnóstico de <em>ingresos</em><br>de tu hotel, en 5 minutos.</h1>
+    <p class="hero-sub" data-fx>Una auditoría estratégica de cómo tu hotel monetiza la estancia del huésped. Responde con honestidad y obtén tu puntuación, categoría a categoría.</p>
+    <div class="meta" data-fx>
+      <span>${TOTAL_Q} preguntas</span><span class="dot"></span>
+      <span>6 áreas de ingreso</span><span class="dot"></span>
+      <span>Confidencial</span>
+    </div>
+    <div style="margin-top:40px" data-fx>
+      <button class="btn" id="start">Comenzar auditoría <span class="arw">→</span></button>
+    </div>
+  `);
+}
+
+function renderBlock(bi){
+  state.screen="audit"; state.block=bi;
+  const b=BLOCKS[bi];
+  document.getElementById("topTag").textContent="Auditoría";
+  const answeredInBlock = b.q.filter((_,qi)=>state.answers[qid(bi,qi)]).length;
+  const questions = b.q.map((t,qi)=>{
+    const cur = state.answers[qid(bi,qi)];
+    const opts = OPTIONS.map(o=>`
+      <button class="opt ${o.k} ${cur===o.k?'sel':''}" data-q="${qi}" data-a="${o.k}">
+        <span class="g">${o.g}</span>${o.label}
+      </button>`).join("");
+    return `<div class="q" data-fx><div class="q-t">${t}</div><div class="seg">${opts}</div></div>`;
+  }).join("");
+
+  paint(`
+    <div class="sec-head" data-fx>
+      <span class="eyebrow">Sección ${String(bi+1).padStart(2,"0")} — ${b.name}</span>
+      <span class="sec-idx tnum">${String(bi+1).padStart(2,"0")} / 06</span>
+    </div>
+    <h2 class="sec-title" data-fx>${b.name}</h2>
+    <p class="sec-intro" data-fx>${b.intro}</p>
+    <div class="rule" data-fx></div>
+    <div>${questions}</div>
+    <div class="nav" data-fx>
+      ${bi>0 ? `<button class="btn-ghost" id="back">← Atrás</button>` : `<span></span>`}
+      <div style="display:flex;align-items:center;gap:18px">
+        <span class="count tnum" id="blkCount">${answeredInBlock} / ${b.q.length}</span>
+        <button class="btn" id="next" ${answeredInBlock<b.q.length?'disabled':''}>
+          ${bi===BLOCKS.length-1?'Ver mi resultado':'Continuar'} <span class="arw">→</span>
+        </button>
+      </div>
+    </div>
+  `);
+}
+
+function renderResult(){
+  state.screen="result";
+  document.getElementById("topTag").textContent="Resultado";
+  const s=scoreOf();
+  const band = s>=75 ? {t:"Sólido, con margen de optimización.", c:"var(--sage)"}
+              : s>=50 ? {t:"Un potencial notable sin capturar.", c:"var(--brass)"}
+              : {t:"Amplias oportunidades por activar.", c:"var(--terra)"};
+  const R=100, C=2*Math.PI*R;
+  const rows = BLOCKS.map((b,bi)=>{
+    const cs=catScore(bi);
+    return `<div class="cat" data-fx>
+      <span class="nm">${b.name}</span>
+      <span class="bar"><i data-w="${cs}" style="background:${CAT_COLOR(cs)}"></i></span>
+      <span class="sc tnum">${cs}</span>
+    </div>`;
+  }).join("");
+
+  paint(`
+    <div class="wrap" style="max-width:760px">
+    <div class="score-wrap">
+      <span class="eyebrow" data-fx>Tu resultado</span>
+      <div class="gauge" data-fx style="margin-top:22px">
+        <svg width="230" height="230" viewBox="0 0 230 230">
+          <circle cx="115" cy="115" r="${R}" fill="none" stroke="#e6e2d8" stroke-width="9"/>
+          <circle id="arc" cx="115" cy="115" r="${R}" fill="none" stroke="${band.c}" stroke-width="9"
+            stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C}"/>
+        </svg>
+        <div class="num"><b class="tnum" id="scoreNum">0</b><span>Tu puntuación</span></div>
+      </div>
+      <p class="verdict" data-fx>Tu hotel tiene una <em>puntuación de ${s} sobre 100</em>. ${band.t}</p>
+    </div>
+
+    <div class="cats" data-fx>${rows}</div>
+
+    <div class="cta" data-fx>
+      <span class="e">El siguiente paso</span>
+      <h3>Tu hotel ya tiene potencial para generar más ingresos. Ahora descubre exactamente cómo conseguirlo.</h3>
+      <ul>
+        <li><span class="tick">—</span> Reserva una auditoría personalizada de 30 minutos.</li>
+        <li><span class="tick">—</span> Revisaremos contigo tus resultados.</li>
+        <li><span class="tick">—</span> Analizaremos dónde están las principales oportunidades de mejora.</li>
+        <li><span class="tick">—</span> Verás qué acciones tendrían mayor impacto según tus respuestas.</li>
+      </ul>
+      <a class="cta-btn" id="reserve" href="#" target="_blank" rel="noopener">Reservar Auditoría →</a>
+      <div class="cta-note">30 minutos · Sin compromiso</div>
+    </div>
+
+    <div class="restart"><button id="restart">Repetir la auditoría</button></div>
+    </div>
+  `, ()=>{
+    // animaciones del resultado (se ejecutan ya con el DOM montado)
+    const arc=document.getElementById("arc");
+    if(arc){ arc.style.transition="stroke-dashoffset 1.4s cubic-bezier(.22,.61,.36,1)"; requestAnimationFrame(()=>{ arc.style.strokeDashoffset = C*(1 - s/100); }); }
+    countUp(document.getElementById("scoreNum"), s);
+    setTimeout(()=> document.querySelectorAll(".cat .bar i").forEach(i=> i.style.width=i.dataset.w+"%"), 260);
+    const rb=document.getElementById("reserve"); if(rb) rb.href=CONFIG.calendly;
+  });
+}
+
+function countUp(el,to){
+  if(!el) return;
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce){ el.textContent=to; return; }
+  let start=null, dur=1400;
+  const tick=t=>{ if(start===null)start=t; const p=Math.min(1,(t-start)/dur); el.textContent=Math.round(to*(1-Math.pow(1-p,3))); if(p<1)requestAnimationFrame(tick); };
+  requestAnimationFrame(tick);
+}
+
+/* ---------- eventos ---------- */
+function bind(){
+  const start=document.getElementById("start"); if(start) start.onclick=()=>renderBlock(0);
+  const back=document.getElementById("back"); if(back) back.onclick=()=>renderBlock(state.block-1);
+  const next=document.getElementById("next"); if(next) next.onclick=()=>{
+    if(state.block===BLOCKS.length-1) renderResult(); else renderBlock(state.block+1);
+  };
+  const restart=document.getElementById("restart"); if(restart) restart.onclick=()=>{ state.answers={}; renderIntro(); };
+
+  app.querySelectorAll(".opt").forEach(btn=>{
+    btn.onclick=()=>{
+      const qi=+btn.dataset.q, a=btn.dataset.a, bi=state.block;
+      state.answers[qid(bi,qi)]=a;
+      // actualiza selección visual en su grupo
+      const seg=btn.closest(".seg");
+      seg.querySelectorAll(".opt").forEach(o=>o.classList.remove("sel"));
+      btn.classList.add("sel");
+      // micro-bounce
+      btn.animate([{transform:"scale(.94)"},{transform:"translateY(-1px)"}], {duration:220, easing:"cubic-bezier(.22,.61,.36,1)"});
+      // contador + habilitar continuar
+      const b=BLOCKS[bi];
+      const answered=b.q.filter((_,i)=>state.answers[qid(bi,i)]).length;
+      const c=document.getElementById("blkCount"); if(c) c.textContent=answered+" / "+b.q.length;
+      const nx=document.getElementById("next"); if(nx) nx.disabled = answered<b.q.length;
+      setProgress();
+    };
+  });
+}
+
+renderIntro();
+</script>
+</body></html>
