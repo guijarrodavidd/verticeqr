@@ -110,6 +110,17 @@ const COMPARE_ROWS: { crit: string; bad: string; good: string }[] = [
   { crit: "Acompañamiento", bad: "El enlace y a apañarte", good: "Te enseñamos cuánto ganarías y lo afinamos contigo" },
 ];
 
+// Preguntas frecuentes: rebate objeciones habituales de un director.
+const FAQS: { q: string; a: string }[] = [
+  { q: "¿Se adapta a cómo trabaja mi hotel?", a: "Sí. Lo montamos a la medida de tu hotel y convive con lo que ya usas. No tienes que cambiar tu forma de trabajar." },
+  { q: "¿Complica el día a día de mi equipo?", a: "No. Está pensado para que lo lleve el equipo que ya tienes, sin esfuerzo extra ni procesos nuevos que aprender." },
+  { q: "¿Es un proyecto largo y arriesgado?", a: "No. Empiezas por algo concreto, sin obras ni grandes cambios, y creces a tu ritmo cuando ves los resultados." },
+  { q: "¿Me ata a algo?", a: "No hay permanencia ni comisiones sobre tus ventas. Estás con nosotros porque te compensa, no porque estés atado." },
+  { q: "¿Le complica algo al huésped?", a: "Nada. Es todo tan sencillo que lo usa cualquiera, sin descargar nada ni registrarse. La experiencia sigue siendo la de tu hotel." },
+  { q: "¿Y los datos de mi hotel y mis huéspedes?", a: "Son tuyos y están seguros. Nosotros solo te ayudamos a usarlos a tu favor para decidir mejor tu carta y tus precios." },
+  { q: "¿Cuánto cuesta?", a: "Depende de tu hotel. Antes de hablar de precio te enseñamos lo que podrías estar ganando; el presupuesto va después y sin compromiso." },
+];
+
 export default async function Home({
   searchParams,
 }: {
@@ -372,21 +383,59 @@ export default async function Home({
         </Reveal>
       </section>
 
-      {/* ============ CTA grande ============ */}
+      {/* ============ FAQ ============ */}
+      <section className={styles.section} id="faq" style={{ paddingTop: 0 }}>
+        <Reveal>
+          <div className={styles.sectionEyebrow}>Preguntas frecuentes</div>
+          <h2 className={styles.sectionTitle}>Lo que suelen preguntarnos los directores.</h2>
+          <p className={styles.sectionSub}>
+            Y si tienes cualquier otra duda, la vemos juntos en la reunión — sin
+            compromiso.
+          </p>
+        </Reveal>
+        <Reveal>
+          <div className={styles.faqList}>
+            {FAQS.map((f) => (
+              <details key={f.q} className={styles.faqItem}>
+                <summary className={styles.faqQ}>
+                  <span>{f.q}</span>
+                  <span className={styles.faqIcon} aria-hidden />
+                </summary>
+                <p className={styles.faqA}>{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ============ CTA grande (banda cinematográfica) ============ */}
       <div className={styles.bigCta}>
         <Reveal>
           <div className={styles.bigCtaInner}>
-            <h2 className={styles.bigCtaTitle}>
-              ¿Listo para subir tu GOP sin sumar personal?
-            </h2>
-            <p className={styles.bigCtaSub}>
-              En 20 minutos con el equipo te enseñamos cuánto F&amp;B estás
-              dejando en cada habitación y cómo recuperarlo. Sin compromiso, sin
-              tarjeta.
-            </p>
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>
-              Reserva una reunión con el equipo <span>→</span>
-            </a>
+            <video
+              className={styles.bigCtaVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="/demos/cala-blava/img/banner.jpg"
+            >
+              <source src="/demos/cala-blava/vid/ex4.mp4" type="video/mp4" />
+            </video>
+            <div className={styles.bigCtaContent}>
+              <h2 className={styles.bigCtaTitle}>
+                ¿Listo para subir tu GOP sin sumar personal?
+              </h2>
+              <p className={styles.bigCtaSub}>
+                En 20 minutos con el equipo te enseñamos cuánto F&amp;B estás
+                dejando en cada habitación y cómo recuperarlo. Sin compromiso, sin
+                tarjeta.
+              </p>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>
+                Reserva una reunión con el equipo <span>→</span>
+              </a>
+            </div>
           </div>
         </Reveal>
       </div>
@@ -501,6 +550,7 @@ export default async function Home({
           <div className={styles.footerCol}>
             <h4>Producto</h4>
             <a href="#como-funciona">Cómo funciona</a>
+            <a href="#faq">Preguntas frecuentes</a>
             <a href="#contacto">Pedir demo</a>
             <a href="#planes">Precios</a>
             <a href="/login">Acceder</a>
