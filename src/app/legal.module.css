@@ -3,15 +3,15 @@
    Misma paleta quiet-luxury que la landing. Montserrat.
    ============================================================ */
 .legal {
-  --paper: #eae5da;
-  --paper-2: #f6f2ec;
-  --ink: #1c1a16;
-  --ink-soft: #69604f;
-  --ink-faint: #9a9082;
-  --line: #ddd5c7;
-  --line-2: #c8bea9;
-  --accent: #a07c43;
-  --accent-deep: #7f5f2e;
+  --paper: #f1f1ef;
+  --paper-2: #ffffff;
+  --ink: #111111;
+  --ink-soft: #4f4f4c;
+  --ink-faint: #9a9a96;
+  --line: #e7e7e4;
+  --line-2: #d0d0cc;
+  --accent: #111111;
+  --accent-deep: #111111;
 
   background: var(--paper);
   color: var(--ink);

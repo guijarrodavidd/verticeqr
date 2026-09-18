@@ -55,7 +55,7 @@ const FEATURES: {
     size: "big",
     img: "/features/ticket.jpg",
     imgPos: "center center",
-    color: "#7f5f2e",
+    color: "#111111",
     titulo: "Sube el GOP, no la plantilla",
     desc: "El huésped pide room service y extras desde la habitación, con los destacados que más margen te dejan. El ingreso de F&B sube y, casi sin coste añadido, va directo a tu GOP.",
     statValue: 0,
@@ -67,7 +67,7 @@ const FEATURES: {
     size: "small",
     img: "/features/rapido.jpg",
     imgPos: "center 32%",
-    color: "#7f5f2e",
+    color: "#111111",
     titulo: "Tu equipo deja de subir a las habitaciones",
     desc: "Sin llamadas a recepción ni recados perdidos. El pedido entra directo a cocina y office con el número de habitación.",
   },
@@ -75,7 +75,7 @@ const FEATURES: {
     size: "small",
     img: "/features/apps.jpg",
     imgPos: "center center",
-    color: "#7c7b62",
+    color: "#4f4f4c",
     titulo: "Cero apps para el huésped",
     desc: "Escanea con la cámara el QR de su habitación y ya tiene tu carta. Nada que descargar ni instalar.",
   },
@@ -83,7 +83,7 @@ const FEATURES: {
     size: "big",
     img: "/features/datos.jpg",
     imgPos: "center center",
-    color: "#46413a",
+    color: "#3a3a37",
     titulo: "Tu F&B convertido en datos",
     desc: "Qué se pide en cada habitación, a qué hora, con qué se combina. Decides la carta y los precios con datos, no a intuición — y nosotros lo afinamos contigo.",
     statValue: 100,
@@ -460,11 +460,11 @@ export default async function Home({
 
           {sp.ok === "1" ? (
             <div className={styles.formSuccess}>
-              <div style={{ fontSize: "1.8rem", color: "#7d6038", marginBottom: "0.5rem" }}>✓</div>
+              <div style={{ fontSize: "1.8rem", color: "#1a7f4f", marginBottom: "0.5rem" }}>✓</div>
               <div style={{ fontWeight: 700, fontSize: "1.15rem" }}>¡Solicitud recibida!</div>
-              <div style={{ color: "#6d5f4e", marginTop: "0.5rem", fontSize: "0.94rem" }}>
+              <div style={{ color: "#4f4f4c", marginTop: "0.5rem", fontSize: "0.94rem" }}>
                 Nos pondremos en contacto contigo en menos de 24h. Mientras,{" "}
-                <a href="#producto" style={{ color: "#7d6038", textDecoration: "underline" }}>
+                <a href="#producto" style={{ color: "#111111", textDecoration: "underline" }}>
                   mira cómo funciona
                 </a>
                 .
@@ -523,7 +523,7 @@ export default async function Home({
               </div>
 
               <div className={styles.formFull} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.75rem" }}>
-                <div style={{ fontSize: "0.78rem", color: "#6b7280" }}>
+                <div style={{ fontSize: "0.78rem", color: "#9a9a96" }}>
                   * campos obligatorios
                 </div>
                 <button type="submit" className={styles.ctaPrimary}>
