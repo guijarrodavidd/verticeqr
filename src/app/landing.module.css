@@ -1730,3 +1730,212 @@ html { scroll-behavior: smooth; }
   color: var(--ink-soft);
 }
 .panelQuote b { color: var(--ink); font-weight: 600; }
+
+/* ---------- CAPÍTULOS A SANGRE ---------- */
+.chapter {
+  position: relative;
+  min-height: 86vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: clip;
+  isolation: isolate;
+  background: #0d0d0c;
+}
+.chapterMid { min-height: 62vh; }
+.chapterBg {
+  position: absolute;
+  inset: -8% 0 -8%;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.14) translateY(var(--shift, 0%));
+  transition: transform 1600ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+  z-index: -2;
+}
+.chapterOn .chapterBg { transform: scale(1.02) translateY(var(--shift, 0%)); }
+.chapterScrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to top, rgba(8, 8, 7, 0.92) 0%, rgba(8, 8, 7, 0.55) 42%, rgba(8, 8, 7, 0.12) 78%, rgba(8, 8, 7, 0.3) 100%);
+}
+.chapterLight .chapterScrim {
+  background: linear-gradient(to top, rgba(248, 247, 244, 0.96) 0%, rgba(248, 247, 244, 0.72) 48%, rgba(248, 247, 244, 0.35) 100%);
+}
+.chapterInner {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 5.5rem;
+  color: #f7f6f3;
+}
+.chapterLight .chapterInner { color: var(--ink); }
+.chapterCenter { text-align: center; }
+.chapterCenter .chapterBody { margin-inline: auto; }
+
+.chapterEyebrow,
+.chapterTitle,
+.chapterBody {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 900ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.chapterOn .chapterEyebrow { opacity: 1; transform: none; transition-delay: 120ms; }
+.chapterOn .chapterTitle   { opacity: 1; transform: none; transition-delay: 240ms; }
+.chapterOn .chapterBody    { opacity: 1; transform: none; transition-delay: 400ms; }
+
+.chapterEyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.75;
+  margin-bottom: 1.1rem;
+}
+.chapterTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 5.2vw, 3.9rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  margin: 0;
+  max-width: 17ch;
+}
+.chapterCenter .chapterTitle { max-width: 20ch; margin-inline: auto; }
+.chapterBody {
+  margin-top: 1.5rem;
+  max-width: 54ch;
+  font-size: 1.06rem;
+  line-height: 1.65;
+  opacity: 0.88;
+}
+.chapterBody strong { font-weight: 600; opacity: 1; }
+.chapterCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.8rem;
+  background: #f7f6f3;
+  color: #12120f;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.97rem;
+  padding: 0.95rem 1.5rem;
+  border-radius: 999px;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.chapterCta:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -14px rgba(0,0,0,0.6); }
+.chapterLight .chapterCta { background: var(--ink); color: #fff; }
+
+@media (max-width: 720px) {
+  .chapter { min-height: 76vh; }
+  .chapterInner { padding: 3.5rem 1.25rem 4rem; }
+  .chapterTitle { max-width: 14ch; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chapterBg, .chapterEyebrow, .chapterTitle, .chapterBody { transition: none; transform: none; opacity: 1; }
+}
+
+/* ---------- iPad para el panel ---------- */
+.ipad {
+  position: relative;
+  max-width: 1020px;
+  margin: 0 auto 1.2rem;
+  background: linear-gradient(160deg, #23231f 0%, #121210 60%, #1d1d19 100%);
+  border-radius: 26px;
+  padding: 26px 20px;
+  box-shadow: 0 40px 80px -40px rgba(10, 10, 8, 0.55), 0 2px 0 rgba(255,255,255,0.06) inset;
+}
+.ipadScreen {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08);
+}
+.ipadScreen img { display: block; width: 100%; height: auto; }
+.ipadCam {
+  position: absolute;
+  top: 12px; left: 50%; transform: translateX(-50%);
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #3a3a34;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08);
+}
+.panelCaption {
+  text-align: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 2.6rem;
+}
+@media (max-width: 720px) {
+  .ipad { padding: 14px 10px; border-radius: 18px; }
+  .ipadCam { top: 6px; }
+}
+
+/* ---------- POR QUÉ FIARTE ---------- */
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+  align-items: stretch;
+}
+@media (max-width: 900px) { .trustGrid { grid-template-columns: 1fr; } }
+.trustCard {
+  height: 100%;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.9rem 1.8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.trustCard:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.trustNum {
+  font-family: var(--font-num, inherit);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  color: var(--ink-soft);
+  margin-bottom: 1.1rem;
+}
+.trustTitle {
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.7rem;
+  color: var(--ink);
+}
+.trustDesc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0 0 1.2rem;
+}
+.trustList { list-style: none; margin: 0; padding: 0; }
+.trustList li {
+  font-size: 0.93rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--line);
+}
+.trustList li:first-child { border-top: none; padding-top: 0; }
+.trustList b { color: var(--ink); font-weight: 700; }
+.trustLink {
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-2);
+  padding-bottom: 2px;
+  transition: border-color 200ms ease;
+}
+.trustLink:hover { border-color: var(--ink); }
+.trustLink span { transition: transform 200ms ease; display: inline-block; }
+.trustLink:hover span { transform: translateX(3px); }

@@ -5,6 +5,7 @@ import Nav from "./_components/Nav";
 import Reveal from "./_components/Reveal";
 import Counter from "./_components/Counter";
 import HeroPhone from "./_components/HeroPhone";
+import Chapter from "./_components/Chapter";
 import Calculadora from "./_components/Calculadora";
 import SmoothScroll from "./_components/SmoothScroll";
 import ScrollProgress from "./_components/ScrollProgress";
@@ -46,6 +47,37 @@ const SENALES = [
   { t: "Upsell desaprovechado", d: "Sugerencias mostradas frente a sugerencias aceptadas." },
   { t: "Experiencias infrautilizadas", d: "Qué parte de lo que ofreces no llega ni a abrirse." },
   { t: "Retrasos en hora punta", d: "Entregas por encima del objetivo y en qué franja se concentran." },
+];
+
+const LINEAS = [
+  {
+    id: "comida",
+    img: "/demos/presidente/img/nv_ceviche.jpg",
+    eyebrow: "Línea 01 · Comida y bebida",
+    t: "Lo que ya cocinas, pedido sin llamar a nadie",
+    d: "Room service, desayuno, terraza y piscina. La franja de 19:00 a 23:30 es la que más pesa, y es justo la que menos gente tiene en sala.",
+  },
+  {
+    id: "experiencias",
+    img: "/demos/presidente/img/ex4.jpg",
+    eyebrow: "Línea 02 · Experiencias",
+    t: "Lo que se vive en el hotel también se vende",
+    d: "Catas, spa, excursiones, cenas temáticas. Se reservan el primer día o no se reservan: el huésped que las descubre en el check-out ya no compra.",
+  },
+  {
+    id: "servicios",
+    img: "/demos/presidente/img/sv4.jpg",
+    eyebrow: "Línea 03 · Servicios",
+    t: "Margen casi puro, y casi siempre invisible",
+    d: "Late check-out, parking, transfer, lavandería. Coste marginal cero: lo que entra por aquí llega casi entero al GOP. Y lo que hay que preguntar cuánto cuesta, no se pide.",
+  },
+  {
+    id: "producto",
+    img: "/demos/presidente/img/nv_cafe.jpg",
+    eyebrow: "Línea 04 · Producto",
+    t: "Minibar, amenities y producto local",
+    d: "Sin reponer a ciegas ni vender a quien no lo quiere: se ofrece a quien ya ha demostrado que compra.",
+  },
 ];
 
 const FEATURES: {
@@ -186,16 +218,50 @@ export default async function Home({
         </div>
       </section>
 
-      {/* ============ STATS ============ */}
-      <section className={styles.stats}>
-        <div className={styles.statsInner}>
-          <Stat valor={80} suffix=" %" label="del ingreso no-habitación de un hotel sale del F&B — el punto que aún crece*" />
-          <Stat valor={11} prefix="+" suffix=",2 %" label="de precio sostenible por cada punto que sube tu nota de reseñas*" />
-          <Stat valor={0} suffix="" label="personas extra al equipo: el sistema lo lleva el que ya tienes" />
-          <Stat valor={24} suffix=" h" label="y tienes tu demo a medida, con la marca del hotel, montada" />
-        </div>
-        <div className={styles.statsFootnote}>* Según estudios del sector (AHLA, CBRE 2025-26). Tendencias aplicables a España.</div>
-      </section>
+      {/* ============ CAPÍTULO · EL MOMENTO ============ */}
+      <Chapter
+        id="momento"
+        img="/demos/presidente/img/sv3.jpg"
+        eyebrow="El momento"
+        title={<>Son las 23:40 y tu huésped quiere algo. No lo pide.</>}
+      >
+        <p>
+          No porque no quiera gastar. Porque hay que llamar a recepción a esa
+          hora, preguntar qué hay y no saber ni el precio ni cuánto tarda. El
+          momento pasa. <strong>Y ese ingreso no aparece en ningún informe,
+          porque lo que no se llega a pedir no se registra en ninguna parte.</strong>
+        </p>
+        <p style={{ marginTop: "1rem" }}>
+          No es un problema de demanda. Es de fricción.
+        </p>
+      </Chapter>
+
+      {/* ============ CAPÍTULO · LAS CUATRO LÍNEAS ============ */}
+      <Chapter
+        id="formas"
+        img="/demos/presidente/img/banner.jpg"
+        eyebrow="Qué se vende"
+        title={<>Cuatro formas de que tu huésped te compre más.</>}
+        align="center"
+        height="mid"
+      >
+        <p>
+          No es solo la cocina. Es todo lo que ya tienes dentro del hotel y hoy
+          depende de que el huésped pregunte.
+        </p>
+      </Chapter>
+
+      {LINEAS.map((l) => (
+        <Chapter
+          key={l.id}
+          id={l.id}
+          img={l.img}
+          eyebrow={l.eyebrow}
+          title={l.t}
+        >
+          <p>{l.d}</p>
+        </Chapter>
+      ))}
 
       {/* ============ CÓMO FUNCIONA ============ */}
       <section className={styles.section} id="como-funciona">
@@ -288,21 +354,27 @@ export default async function Home({
           </h2>
           <p className={styles.sectionSub}>
             Tu PMS registra lo que se pagó. Nada registra lo que el huésped
-            intentó comprar y no pudo. Eso es lo que detecta el panel, señal a
-            señal, con el dinero que hay detrás de cada una.
+            intentó comprar y no pudo. El panel recorre el embudo entero —desde
+            que entra en la habitación hasta que se va— y pone un importe a cada
+            punto donde se cae.
           </p>
         </Reveal>
 
         <Reveal delay={80}>
-          <figure className={styles.panelShot}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/panel/oportunidades.png"
-              alt="Panel de dirección: oportunidades detectadas con su importe mensual"
-              loading="lazy"
-            />
-            <figcaption>Vista de oportunidades · cada señal con su importe al mes</figcaption>
-          </figure>
+          <div className={styles.ipad}>
+            <div className={styles.ipadScreen}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/panel/oportunidades.png"
+                alt="Panel de dirección de Vértice: oportunidades detectadas con su importe al mes"
+                loading="lazy"
+              />
+            </div>
+            <span className={styles.ipadCam} aria-hidden />
+          </div>
+          <p className={styles.panelCaption}>
+            Vista de oportunidades · cada señal, con el dinero que hay detrás y la acción para recuperarlo
+          </p>
         </Reveal>
 
         <div className={styles.panelGrid}>
@@ -391,6 +463,83 @@ export default async function Home({
           </a>
         </div>
       </section>
+
+      {/* ============ CAPÍTULO · POR QUÉ FIARTE ============ */}
+      <Chapter
+        id="autoridad"
+        img="/demos/presidente/img/sv1.jpg"
+        eyebrow="Por qué fiarte"
+        title={<>El riesgo lo llevo yo, no tu hotel.</>}
+      >
+        <p>
+          Todavía no te voy a enseñar testimonios. Te enseño tres cosas que
+          puedes comprobar hoy mismo.
+        </p>
+      </Chapter>
+
+      <section className={styles.section} id="garantias" style={{ paddingTop: "4.5rem" }}>
+        <div className={styles.trustGrid}>
+          <Reveal>
+            <div className={styles.trustCard}>
+              <div className={styles.trustNum}>01</div>
+              <h3 className={styles.trustTitle}>El método está publicado</h3>
+              <p className={styles.trustDesc}>
+                Más de 50 hoteles analizados, y el método entero escrito y
+                abierto: la auditoría de room service, el mapa de los seis
+                momentos, la guía del ticket medio. Puedes leerlo antes de
+                hablar conmigo.
+              </p>
+              <a className={styles.trustLink} href="/auditoria-room-service/index.html">
+                Ver la auditoría <span>→</span>
+              </a>
+            </div>
+          </Reveal>
+          <Reveal delay={90}>
+            <div className={styles.trustCard}>
+              <div className={styles.trustNum}>02</div>
+              <h3 className={styles.trustTitle}>El sistema lo he construido yo</h3>
+              <p className={styles.trustDesc}>
+                Carta del huésped, pantalla de cocina, TPV, motor de reseñas y
+                panel de dirección. Nada revendido y nada de licencias de
+                terceros: por eso se adapta a tu hotel y no al revés.
+              </p>
+              <a className={styles.trustLink} href="#panel">
+                Ver el panel <span>→</span>
+              </a>
+            </div>
+          </Reveal>
+          <Reveal delay={180}>
+            <div className={styles.trustCard}>
+              <div className={styles.trustNum}>03</div>
+              <h3 className={styles.trustTitle}>Y si no funciona, no pagas</h3>
+              <ul className={styles.trustList}>
+                <li><b>14 días</b> · si no está funcionando, no se cobra el montaje.</li>
+                <li><b>90 días</b> · si el ingreso no se mueve, se cancela y se devuelve la parte no consumida.</li>
+                <li><b>×3 en 12 meses</b> · si no ha generado tres veces lo que costó, el año siguiente no se paga.</li>
+                <li><b>Sin renovación automática</b> · al año se vuelve a decidir.</li>
+              </ul>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ============ CAPÍTULO · POR DÓNDE EMPIEZAS ============ */}
+      <Chapter
+        id="empezar"
+        img="/demos/presidente/img/ex1.jpg"
+        eyebrow="Por dónde empiezas"
+        title={<>Un punto de partida para cada hotel.</>}
+        align="center"
+        height="mid"
+      >
+        <p>
+          No hace falta empezar por todo. Se empieza por la zona donde más se
+          cae, se mide sesenta días, y se decide con números encima de la mesa.
+        </p>
+        <a className={styles.chapterCta} href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+          Reserva tu llamada de diagnóstico <span>→</span>
+        </a>
+      </Chapter>
 
       {/* ============ PLANES ============ */}
       <section className={styles.section} id="planes" style={{ paddingTop: 0 }}>

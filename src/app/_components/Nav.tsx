@@ -25,9 +25,10 @@ export default function Nav() {
           <Logo />
         </a>
         <nav className={styles.navLinks}>
-          <a href="#como-funciona" className={styles.navLink}>Cómo funciona</a>
-          <a href="#producto" className={styles.navLink}>Producto</a>
-          <a href="#planes" className={styles.navLink}>Precios</a>
+          <a href="#momento" className={styles.navLink}>El momento</a>
+          <a href="#formas" className={styles.navLink}>Qué se vende</a>
+          <a href="#panel" className={styles.navLink}>El panel</a>
+          <a href="#empezar" className={styles.navLink}>Por dónde empiezas</a>
           <a href="/login" className={styles.navLink}>Acceder</a>
           <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={styles.navCta}>Reservar reunión</a>
         </nav>
