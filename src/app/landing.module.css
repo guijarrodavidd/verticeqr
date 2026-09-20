@@ -2386,3 +2386,45 @@ html { scroll-behavior: smooth; }
 @media (max-width: 560px) {
   .calcSplit { grid-template-columns: 1fr; gap: 1.1rem; }
 }
+
+/* ============================================================
+   MÓVIL: en pantallas sin ratón no existe :hover, así que todo
+   el movimiento que dependía de pasar por encima estaba muerto.
+   Aquí va la versión táctil: movimiento continuo y suave.
+   ============================================================ */
+@media (hover: none) {
+  /* las fotos de las escenas respiran solas */
+  .sceneBg {
+    animation: vqKenBurns 22s ease-in-out infinite alternate;
+  }
+  .scene:nth-child(even) .sceneBg { animation-duration: 26s; animation-direction: alternate-reverse; }
+
+  /* las fotos del carril de producto también */
+  .railShot img {
+    animation: vqKenBurnsSoft 20s ease-in-out infinite alternate;
+  }
+  .railCard:nth-child(even) .railShot img { animation-duration: 24s; animation-direction: alternate-reverse; }
+
+  /* la tarjeta que está centrada en el carril se levanta */
+  .railCard { transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 420ms ease; }
+
+  /* el móvil del hero mantiene el flotado y gana una inclinación lenta */
+  .phoneFrame { animation: vqTilt 12s ease-in-out infinite; }
+}
+
+@keyframes vqKenBurns {
+  from { transform: scale(1.04) translate(0, 0); }
+  to   { transform: scale(1.14) translate(-1.5%, -1%); }
+}
+@keyframes vqKenBurnsSoft {
+  from { transform: scale(1.02); }
+  to   { transform: scale(1.10); }
+}
+@keyframes vqTilt {
+  0%, 100% { transform: perspective(1200px) rotateY(0deg); }
+  50%      { transform: perspective(1200px) rotateY(-4deg); }
+}
+
+@media (hover: none) and (prefers-reduced-motion: reduce) {
+  .sceneBg, .railShot img, .phoneFrame { animation: none; }
+}
