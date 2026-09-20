@@ -55,35 +55,35 @@ const LINEAS = [
     img: "/demos/presidente/img/nv_ceviche.jpg",
     eyebrow: "Línea 01 · Comida y bebida",
     t: "Lo que ya cocinas, pedido sin llamar a nadie",
-    d: "Room service, desayuno, terraza y piscina. La franja de 19:00 a 23:30 es la que más pesa, y es justo la que menos gente tiene en sala.",
+    d: "De 19:00 a 23:30 se juega casi todo. Y es la franja con menos gente en sala.",
   },
   {
     id: "experiencias",
     img: "/demos/presidente/img/ex4.jpg",
     eyebrow: "Línea 02 · Experiencias",
     t: "Lo que se vive en el hotel también se vende",
-    d: "Catas, spa, excursiones, cenas temáticas. Se reservan el primer día o no se reservan: el huésped que las descubre en el check-out ya no compra.",
+    d: "Se reservan el primer día. Quien las descubre en el check-out ya no compra.",
   },
   {
     id: "servicios",
     img: "/demos/presidente/img/sv4.jpg",
     eyebrow: "Línea 03 · Servicios",
     t: "Margen casi puro, y casi siempre invisible",
-    d: "Late check-out, parking, transfer, lavandería. Coste marginal cero: lo que entra por aquí llega casi entero al GOP. Y lo que hay que preguntar cuánto cuesta, no se pide.",
+    d: "Coste marginal cero: llega casi entero al GOP. Lo que hay que preguntar, no se pide.",
   },
   {
     id: "colaboraciones",
     img: "/demos/presidente/img/ex6.jpg",
     eyebrow: "Línea 05 · Colaboraciones",
     t: "Lo que hay fuera del hotel también es tuyo",
-    d: "Bodegas, restaurantes de la zona, alquiler de bicis, excursiones, traslados. Tu huésped lo va a contratar igual: la diferencia es si lo reserva desde tu carta y te deja comisión, o si lo busca en Google y no te enteras.",
+    d: "Lo va a contratar igual. O desde tu carta y con comisión, o en Google y sin que te enteres.",
   },
   {
     id: "producto",
     img: "/demos/presidente/img/nv_cafe.jpg",
     eyebrow: "Línea 04 · Producto",
     t: "Minibar, amenities y producto local",
-    d: "Sin reponer a ciegas ni vender a quien no lo quiere: se ofrece a quien ya ha demostrado que compra.",
+    d: "Se ofrece a quien ya ha demostrado que compra.",
   },
 ];
 
@@ -200,11 +200,8 @@ export default async function Home({
               </span>
             </h1>
             <p className={styles.heroSub}>
-              Las habitaciones ya no crecen y los costes se comen tu margen. El
-              F&amp;B es el único ingreso que todavía sube — y la mayoría de tu
-              hotel se queda sin pedir. Te montamos el sistema de room service a
-              medida para capturarlo en cada habitación, <strong>sin sumar una
-              sola persona a tu equipo</strong>.
+              El F&amp;B es el único ingreso que todavía sube. Y la mayoría de
+              tu hotel <strong>se queda sin pedir</strong>.
             </p>
             <div className={styles.heroCtas}>
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>
@@ -215,9 +212,7 @@ export default async function Home({
               </a>
             </div>
             <p className={styles.heroCtaNote}>
-              <strong>20 minutos, sin compromiso.</strong> Te enseñamos cuánto
-              F&amp;B estás dejando en la mesa cada mes y cómo recuperarlo en tu
-              hotel.
+              <strong>20 minutos.</strong> Te decimos cuánto dejas cada mes.
             </p>
           </div>
 
@@ -233,13 +228,8 @@ export default async function Home({
         title={<>Son las 23:40 y tu huésped quiere algo. No lo pide.</>}
       >
         <p>
-          No porque no quiera gastar. Porque hay que llamar a recepción a esa
-          hora, preguntar qué hay y no saber ni el precio ni cuánto tarda. El
-          momento pasa. <strong>Y ese ingreso no aparece en ningún informe,
-          porque lo que no se llega a pedir no se registra en ninguna parte.</strong>
-        </p>
-        <p style={{ marginTop: "1rem" }}>
-          No es un problema de demanda. Es de fricción.
+          Hay que llamar a recepción. A esa hora nadie llama.
+          <strong> No es un problema de demanda: es de fricción.</strong>
         </p>
       </Chapter>
 
@@ -252,10 +242,7 @@ export default async function Home({
         align="center"
         height="mid"
       >
-        <p>
-          No es solo la cocina. Es todo lo que ya tienes dentro del hotel y hoy
-          depende de que el huésped pregunte.
-        </p>
+        <p>Todo lo que ya tienes, y hoy depende de que pregunte.</p>
       </Chapter>
 
       <div className={styles.scenes}>
@@ -329,8 +316,8 @@ export default async function Home({
         <div className={styles.rail}>
           <div className={styles.railTrack}>
             {FEATURES.map((f, i) => (
+              <Reveal key={f.titulo} delay={i * 110} className={styles.railItem}>
               <article
-                key={f.titulo}
                 className={styles.railCard}
                 style={{ ["--feature-color" as string]: f.color }}
               >
@@ -355,6 +342,7 @@ export default async function Home({
                   )}
                 </div>
               </article>
+              </Reveal>
             ))}
             <div className={styles.railEnd} aria-hidden />
           </div>
@@ -374,14 +362,12 @@ export default async function Home({
             El panel no mide ocupación. Mide intención.
           </h2>
           <p className={styles.sectionSub}>
-            Tu PMS registra lo que se pagó. Nada registra lo que el huésped
-            intentó comprar y no pudo. El panel recorre el embudo entero —desde
-            que entra en la habitación hasta que se va— y pone un importe a cada
-            punto donde se cae.
+            Tu PMS registra lo que se pagó. Nada registra lo que intentó
+            comprar y no pudo.
           </p>
         </Reveal>
 
-        <Reveal delay={80}>
+        <Reveal delay={80} variant="wipe">
           <div className={styles.ipad}>
             <div className={styles.ipadScreen}>
               <picture>
@@ -500,10 +486,7 @@ Vista de oportunidades · el dinero detrás de cada señal
         align="center"
         height="mid"
       >
-        <p>
-          No hace falta empezar por todo. Se empieza por la zona donde más se
-          cae, se mide sesenta días, y se decide con números encima de la mesa.
-        </p>
+        <p>Una zona. Sesenta días. Y decides con números.</p>
         <a className={styles.chapterCta} href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
           Reserva tu llamada de diagnóstico <span>→</span>
         </a>

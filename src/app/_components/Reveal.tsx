@@ -9,10 +9,13 @@ export default function Reveal({
   children,
   delay = 0,
   className: extraClass = "",
+  variant = "up",
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
+  /** "up" = fade hacia arriba · "wipe" = la foto se descubre de abajo a arriba */
+  variant?: "up" | "wipe";
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -40,7 +43,7 @@ export default function Reveal({
     return () => obs.disconnect();
   }, []);
 
-  const cls = `${styles.reveal} ${visible ? styles.revealVisible : ""} ${extraClass}`
+  const cls = `${variant === "wipe" ? styles.wipe : styles.reveal} ${visible ? (variant === "wipe" ? styles.wipeVisible : styles.revealVisible) : ""} ${extraClass}`
     .replace(/\s+/g, " ")
     .trim();
   const style = delay ? { transitionDelay: `${delay}ms` } : undefined;
