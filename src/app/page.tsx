@@ -41,12 +41,12 @@ async function enviarLead(formData: FormData) {
 // Bento 2×2 con captura real del producto (de nuestras demos).
 type FeatureSize = "big" | "small";
 const SENALES = [
-  { t: "Demanda sin atender", d: "Pedidos que se intentan con la cocina ya cerrada, con su hora exacta." },
-  { t: "Habitaciones que no consumen", d: "Estancias enteras sin gastar nada, detectadas mientras el huésped sigue dentro." },
-  { t: "Escaneos sin pedido", d: "Quien abre la carta y se va sin comprar. El carrito abandonado del hotel." },
-  { t: "Upsell desaprovechado", d: "Sugerencias mostradas frente a sugerencias aceptadas." },
-  { t: "Experiencias infrautilizadas", d: "Qué parte de lo que ofreces no llega ni a abrirse." },
-  { t: "Retrasos en hora punta", d: "Entregas por encima del objetivo y en qué franja se concentran." },
+  { t: "Demanda sin atender" },
+  { t: "Habitaciones que no consumen" },
+  { t: "Escaneos sin pedido" },
+  { t: "Upsell desaprovechado" },
+  { t: "Experiencias infrautilizadas" },
+  { t: "Retrasos en hora punta" },
 ];
 
 const LINEAS = [
@@ -306,18 +306,15 @@ export default async function Home({
           </p>
         </Reveal>
 
-        <div className={styles.features}>
-          {FEATURES.map((f, i) => (
-            <Reveal
-              key={f.titulo}
-              delay={i * 80}
-              className={f.size === "big" ? styles.featureBig : styles.featureSmall}
-            >
-              <div
-                className={styles.featureCard}
+        <div className={styles.rail}>
+          <div className={styles.railTrack}>
+            {FEATURES.map((f, i) => (
+              <article
+                key={f.titulo}
+                className={styles.railCard}
                 style={{ ["--feature-color" as string]: f.color }}
               >
-                <div className={styles.featureShot}>
+                <div className={styles.railShot}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={f.img}
@@ -325,24 +322,24 @@ export default async function Home({
                     loading="lazy"
                     style={{ objectPosition: f.imgPos ?? "top center" }}
                   />
+                  <span className={styles.railIndex}>{String(i + 1).padStart(2, "0")}</span>
                 </div>
-                <div className={styles.featureInner}>
-                  <h3 className={styles.featureTitle}>{f.titulo}</h3>
-                  <p className={styles.featureDesc}>{f.desc}</p>
+                <div className={styles.railBody}>
+                  <h3 className={styles.railTitle}>{f.titulo}</h3>
+                  <p className={styles.railDesc}>{f.desc}</p>
                   {f.statValue != null && (
-                    <div className={styles.featureStat}>
-                      <div className={styles.featureStatNum}>
-                        {f.statPrefix}
-                        <Counter value={f.statValue} suffix={f.statSuffix ?? ""} />
-                      </div>
-                      <div className={styles.featureStatLabel}>{f.statLabel}</div>
+                    <div className={styles.railStat}>
+                      <b>{f.statPrefix}<Counter value={f.statValue} suffix={f.statSuffix ?? ""} /></b>
+                      <span>{f.statLabel}</span>
                     </div>
                   )}
                 </div>
-              </div>
-            </Reveal>
-          ))}
+              </article>
+            ))}
+            <div className={styles.railEnd} aria-hidden />
+          </div>
         </div>
+        <p className={styles.railHint}>Desliza para ver las cuatro →</p>
       </section>
 
       {/* ============ PANEL DE DIRECCIÓN ============ */}
@@ -363,30 +360,36 @@ export default async function Home({
         <Reveal delay={80}>
           <div className={styles.ipad}>
             <div className={styles.ipadScreen}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/panel/oportunidades.png"
-                alt="Panel de dirección de Vértice: oportunidades detectadas con su importe al mes"
-                loading="lazy"
-              />
+              <picture>
+                <source media="(max-width: 720px)" srcSet="/panel/oportunidades-movil.png" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/panel/oportunidades.png"
+                  alt="Panel de dirección de Vértice: oportunidades detectadas con su importe al mes"
+                  loading="lazy"
+                />
+              </picture>
             </div>
             <span className={styles.ipadCam} aria-hidden />
           </div>
           <p className={styles.panelCaption}>
-            Vista de oportunidades · cada señal, con el dinero que hay detrás y la acción para recuperarlo
+Vista de oportunidades · el dinero detrás de cada señal
           </p>
         </Reveal>
 
-        <div className={styles.panelGrid}>
-          {SENALES.map((s2, i) => (
-            <Reveal key={s2.t} delay={i * 60}>
-              <div className={styles.signal}>
-                <h3 className={styles.signalTitle}>{s2.t}</h3>
-                <p className={styles.signalDesc}>{s2.d}</p>
-              </div>
-            </Reveal>
-          ))}
+        <div className={styles.panelFigs}>
+          <Reveal><div className={styles.panelFig}><b>5</b><span>etapas del embudo</span></div></Reveal>
+          <Reveal delay={90}><div className={styles.panelFig}><b>16</b><span>señales detectadas</span></div></Reveal>
+          <Reveal delay={180}><div className={styles.panelFig}><b>56.219 €</b><span>al mes sobre la mesa</span></div></Reveal>
         </div>
+
+        <Reveal delay={240}>
+          <div className={styles.panelChips}>
+            {SENALES.map((s2) => (
+              <span key={s2.t} className={styles.panelChip}>{s2.t}</span>
+            ))}
+          </div>
+        </Reveal>
 
         <Reveal delay={120}>
           <p className={styles.panelQuote}>
@@ -461,65 +464,6 @@ export default async function Home({
           <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={styles.compareCta}>
             Reserva una reunión <span>→</span>
           </a>
-        </div>
-      </section>
-
-      {/* ============ CAPÍTULO · POR QUÉ FIARTE ============ */}
-      <Chapter
-        id="autoridad"
-        img="/demos/presidente/img/sv1.jpg"
-        eyebrow="Por qué fiarte"
-        title={<>El riesgo lo llevo yo, no tu hotel.</>}
-      >
-        <p>
-          Todavía no te voy a enseñar testimonios. Te enseño tres cosas que
-          puedes comprobar hoy mismo.
-        </p>
-      </Chapter>
-
-      <section className={styles.section} id="garantias" style={{ paddingTop: "4.5rem" }}>
-        <div className={styles.trustGrid}>
-          <Reveal>
-            <div className={styles.trustCard}>
-              <div className={styles.trustNum}>01</div>
-              <h3 className={styles.trustTitle}>El método está publicado</h3>
-              <p className={styles.trustDesc}>
-                Más de 50 hoteles analizados, y el método entero escrito y
-                abierto: la auditoría de room service, el mapa de los seis
-                momentos, la guía del ticket medio. Puedes leerlo antes de
-                hablar conmigo.
-              </p>
-              <a className={styles.trustLink} href="/auditoria-room-service/index.html">
-                Ver la auditoría <span>→</span>
-              </a>
-            </div>
-          </Reveal>
-          <Reveal delay={90}>
-            <div className={styles.trustCard}>
-              <div className={styles.trustNum}>02</div>
-              <h3 className={styles.trustTitle}>El sistema lo he construido yo</h3>
-              <p className={styles.trustDesc}>
-                Carta del huésped, pantalla de cocina, TPV, motor de reseñas y
-                panel de dirección. Nada revendido y nada de licencias de
-                terceros: por eso se adapta a tu hotel y no al revés.
-              </p>
-              <a className={styles.trustLink} href="#panel">
-                Ver el panel <span>→</span>
-              </a>
-            </div>
-          </Reveal>
-          <Reveal delay={180}>
-            <div className={styles.trustCard}>
-              <div className={styles.trustNum}>03</div>
-              <h3 className={styles.trustTitle}>Y si no funciona, no pagas</h3>
-              <ul className={styles.trustList}>
-                <li><b>14 días</b> · si no está funcionando, no se cobra el montaje.</li>
-                <li><b>90 días</b> · si el ingreso no se mueve, se cancela y se devuelve la parte no consumida.</li>
-                <li><b>×3 en 12 meses</b> · si no ha generado tres veces lo que costó, el año siguiente no se paga.</li>
-                <li><b>Sin renovación automática</b> · al año se vuelve a decidir.</li>
-              </ul>
-            </div>
-          </Reveal>
         </div>
       </section>
 

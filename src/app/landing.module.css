@@ -1939,3 +1939,158 @@ html { scroll-behavior: smooth; }
 .trustLink:hover { border-color: var(--ink); }
 .trustLink span { transition: transform 200ms ease; display: inline-block; }
 .trustLink:hover span { transform: translateX(3px); }
+
+/* ---------- Cifras del panel ---------- */
+.panelFigs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.8rem;
+}
+.panelFig {
+  padding: 2rem 1.4rem;
+  text-align: center;
+  border-left: 1px solid var(--line);
+}
+.panelFigs > *:first-child .panelFig { border-left: none; }
+.panelFig b {
+  display: block;
+  font-family: var(--font-num, var(--font-display));
+  font-size: clamp(2.2rem, 5.6vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+}
+.panelFig span {
+  display: block;
+  margin-top: 0.7rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.panelChips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.panelChip {
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  white-space: nowrap;
+}
+@media (max-width: 720px) {
+  .panelFigs { grid-template-columns: 1fr; }
+  .panelFig { border-left: none; border-top: 1px solid var(--line); padding: 1.5rem 1rem; }
+  .panelFigs > *:first-child .panelFig { border-top: none; }
+  .panelChip { font-size: 0.72rem; padding: 0.42rem 0.75rem; }
+}
+
+/* ---------- CARRIL HORIZONTAL (producto) ---------- */
+.rail {
+  margin: 0 calc(-1 * max(1.5rem, (100vw - 1200px) / 2));
+  padding-inline: max(1.5rem, (100vw - 1200px) / 2);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.rail::-webkit-scrollbar { display: none; }
+.railTrack {
+  display: flex;
+  gap: 1.1rem;
+  width: max-content;
+  padding-block: 0.4rem 1.4rem;
+}
+.railCard {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: min(78vw, 420px);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 420ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 260ms ease;
+}
+.railCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--line-2);
+  box-shadow: var(--shadow-md);
+}
+.railShot {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+  background: var(--paper-3);
+  border-bottom: 1px solid var(--line);
+}
+.railShot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.railCard:hover .railShot img { transform: scale(1.09); }
+.railIndex {
+  position: absolute;
+  left: 1rem;
+  bottom: 0.8rem;
+  font-family: var(--font-num, var(--font-display));
+  font-size: 2.6rem;
+  line-height: 1;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+  letter-spacing: -0.04em;
+}
+.railBody { padding: 1.5rem 1.6rem 1.8rem; display: flex; flex-direction: column; flex: 1; }
+.railTitle {
+  font-size: 1.16rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.6rem;
+  color: var(--ink);
+}
+.railDesc { font-size: 0.94rem; line-height: 1.58; color: var(--ink-soft); margin: 0; }
+.railStat { margin-top: auto; padding-top: 1.2rem; display: flex; align-items: baseline; gap: 0.6rem; }
+.railStat b {
+  font-family: var(--font-num, var(--font-display));
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.railStat span { font-size: 0.76rem; line-height: 1.35; color: var(--ink-soft); }
+.railEnd { flex: 0 0 1px; }
+.railHint {
+  margin: 0.2rem 0 0;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+@media (min-width: 1000px) { .railHint { display: none; } }
+@media (max-width: 720px) {
+  .railCard { width: 82vw; }
+  .railShot { height: 190px; }
+}
+
+/* el iPad respira menos en móvil y la captura pierde el bisel enorme */
+@media (max-width: 720px) {
+  .ipad { padding: 10px 8px; border-radius: 16px; }
+  .panelCaption { font-size: 0.68rem; letter-spacing: 0.1em; margin-bottom: 2rem; }
+}
