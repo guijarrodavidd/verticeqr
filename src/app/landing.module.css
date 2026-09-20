@@ -1663,3 +1663,70 @@ html { scroll-behavior: smooth; }
 .heroBg {
   filter: saturate(0.72) contrast(1.04);
 }
+
+/* ---------- PANEL DE DIRECCIÓN ---------- */
+.panelShot {
+  margin: 0 0 2.6rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--paper-2);
+  box-shadow: var(--shadow-md);
+}
+.panelShot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.panelShot figcaption {
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 0.95rem 1.4rem;
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+.panelGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+@media (max-width: 900px) { .panelGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .panelGrid { grid-template-columns: 1fr; } }
+.signal {
+  height: 100%;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--ink);
+  border-radius: 10px;
+  padding: 1.3rem 1.4rem 1.5rem;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.signal:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.signalTitle {
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.45rem;
+  color: var(--ink);
+}
+.signalDesc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.panelQuote {
+  margin: 2.8rem auto 0;
+  max-width: 760px;
+  text-align: center;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  color: var(--ink-soft);
+}
+.panelQuote b { color: var(--ink); font-weight: 600; }

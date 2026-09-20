@@ -39,6 +39,15 @@ async function enviarLead(formData: FormData) {
 
 // Bento 2×2 con captura real del producto (de nuestras demos).
 type FeatureSize = "big" | "small";
+const SENALES = [
+  { t: "Demanda sin atender", d: "Pedidos que se intentan con la cocina ya cerrada, con su hora exacta." },
+  { t: "Habitaciones que no consumen", d: "Estancias enteras sin gastar nada, detectadas mientras el huésped sigue dentro." },
+  { t: "Escaneos sin pedido", d: "Quien abre la carta y se va sin comprar. El carrito abandonado del hotel." },
+  { t: "Upsell desaprovechado", d: "Sugerencias mostradas frente a sugerencias aceptadas." },
+  { t: "Experiencias infrautilizadas", d: "Qué parte de lo que ofreces no llega ni a abrirse." },
+  { t: "Retrasos en hora punta", d: "Entregas por encima del objetivo y en qué franja se concentran." },
+];
+
 const FEATURES: {
   size: FeatureSize;
   img: string;
@@ -141,7 +150,7 @@ export default async function Home({
           <div>
             <div className={styles.heroBadge}>
               <span className={styles.heroBadgeDot}>HOTELES</span>
-              A medida para tu hotel boutique.
+              A medida para tu hotel, sea del tamaño que sea.
             </div>
             <h1 className={styles.heroTitle}>
               <span className={styles.heroLine}>
@@ -268,6 +277,51 @@ export default async function Home({
             </Reveal>
           ))}
         </div>
+      </section>
+
+      {/* ============ PANEL DE DIRECCIÓN ============ */}
+      <section className={styles.section} id="panel" style={{ paddingTop: 0 }}>
+        <Reveal>
+          <div className={styles.sectionEyebrow}>El panel</div>
+          <h2 className={styles.sectionTitle}>
+            El panel no mide ocupación. Mide intención.
+          </h2>
+          <p className={styles.sectionSub}>
+            Tu PMS registra lo que se pagó. Nada registra lo que el huésped
+            intentó comprar y no pudo. Eso es lo que detecta el panel, señal a
+            señal, con el dinero que hay detrás de cada una.
+          </p>
+        </Reveal>
+
+        <Reveal delay={80}>
+          <figure className={styles.panelShot}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/panel/oportunidades.png"
+              alt="Panel de dirección: oportunidades detectadas con su importe mensual"
+              loading="lazy"
+            />
+            <figcaption>Vista de oportunidades · cada señal con su importe al mes</figcaption>
+          </figure>
+        </Reveal>
+
+        <div className={styles.panelGrid}>
+          {SENALES.map((s2, i) => (
+            <Reveal key={s2.t} delay={i * 60}>
+              <div className={styles.signal}>
+                <h3 className={styles.signalTitle}>{s2.t}</h3>
+                <p className={styles.signalDesc}>{s2.d}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal delay={120}>
+          <p className={styles.panelQuote}>
+            Sabes perfectamente lo que has vendido.
+            <b> No sabes lo que te intentaron comprar.</b>
+          </p>
+        </Reveal>
       </section>
 
       {/* ============ CALCULADORA F&B ============ */}
@@ -544,7 +598,8 @@ export default async function Home({
             </div>
             <p className={styles.footerTagline}>
               Sistema de room service y F&amp;B digital a medida para hoteles
-              boutique. Subes el GOP sin sumar personal. Cada hotel es un mundo.
+              independientes y cadenas. Subes el GOP sin sumar personal. Cada
+              hotel es un mundo.
             </p>
           </div>
           <div className={styles.footerCol}>
