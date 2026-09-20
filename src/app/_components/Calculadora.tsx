@@ -122,18 +122,23 @@ export default function Calculadora() {
 
       {/* ── Resultado ── */}
       <div className={styles.calcResult}>
-        <div className={styles.calcResultLabel}>
-          Tu hotel podría estar dejando escapar
-        </div>
-        <div className={styles.calcBig} aria-live="polite">
-          ~{eur(mes)} €<span className={styles.calcBigUnit}>/mes</span>
-        </div>
-        <div className={styles.calcYear}>≈ {eur(anio)} € al año en F&amp;B</div>
+        <div className={styles.calcTag}>Tu hotel</div>
 
-        <p className={styles.calcDisclaimer}>
-          Estimación basada en datos del sector (AHLA, CBRE 2025-26). Cada hotel
-          es un mundo; el cálculo real lo afinamos contigo en la reunión.
-        </p>
+        <div className={styles.calcBig} aria-live="polite">
+          {eur(mes)}<span className={styles.calcBigUnit}>€ al mes</span>
+        </div>
+        <div className={styles.calcResultLabel}>es lo que hoy no estás facturando</div>
+
+        <div className={styles.calcSplit}>
+          <div>
+            <b>{eur(anio)} €</b>
+            <span>al año</span>
+          </div>
+          <div>
+            <b>{eur(mes / 30.4)} €</b>
+            <span>cada día que pasa</span>
+          </div>
+        </div>
 
         <a
           href={CALENDLY_URL}
@@ -141,8 +146,13 @@ export default function Calculadora() {
           rel="noopener noreferrer"
           className={styles.calcCta}
         >
-          Calcula tu caso real con el equipo <span>→</span>
+          Ver tu número real en 20 minutos <span>→</span>
         </a>
+
+        <p className={styles.calcDisclaimer}>
+          Estimación con tus datos y medias del sector. El número real de tu
+          hotel solo se sabe midiéndolo.
+        </p>
       </div>
     </div>
   );

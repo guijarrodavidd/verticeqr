@@ -10,7 +10,7 @@ export default function HeroPhone() {
       <div className={styles.phoneFrame}>
         <div className={styles.phoneScreen}>
           <iframe
-            src="/demos/presidente/index.html"
+            src="/demos/presidente/index.html?auto=1"
             title="Carta digital de room service, demo real"
             className={styles.phoneIframe}
           />

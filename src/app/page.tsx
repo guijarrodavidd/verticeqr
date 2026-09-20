@@ -187,10 +187,6 @@ export default async function Home({
         <div className={styles.heroBg} id="heroBg" />
         <div className={styles.heroGrid}>
           <div>
-            <div className={styles.heroBadge}>
-              <span className={styles.heroBadgeDot}>HOTELES</span>
-              A medida para tu hotel, sea del tamaño que sea.
-            </div>
             <h1 className={styles.heroTitle}>
               <span className={styles.heroLine}>
                 <span>Vendes lo mismo.</span>

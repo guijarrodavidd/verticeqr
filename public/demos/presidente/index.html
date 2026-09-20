@@ -1972,5 +1972,42 @@ document.getElementById("chooser").addEventListener("click",e=>{
 // Init
 applyLang();
 </script>
-</body>
+<script>/*VF-AUTO*/
+// Reproducción automática cuando la carta va incrustada en la web (?auto=1):
+// enseña las transiciones reales del sistema, no una pantalla quieta.
+(function(){
+  if (!/[?&]auto=1/.test(location.search)) return;
+  var idle = true;
+  ['touchstart','wheel','click','keydown'].forEach(function(ev){
+    window.addEventListener(ev, function(){ idle = false; }, { passive: true, once: true });
+  });
+  function paso(fn, ms){ setTimeout(function(){ if (idle) fn(); }, ms); }
+
+  paso(function(){
+    var b = document.getElementById('welcomeBtn');
+    if (b) b.click();
+  }, 2200);
+
+  paso(function(){ suave(560, 2600); }, 4200);
+  paso(function(){ suave(1180, 2600); }, 8200);
+  paso(function(){ suave(0, 2200); }, 13000);
+
+  function suave(destino, dur){
+    var ini = window.scrollY, delta = destino - ini, t0 = performance.now();
+    (function anim(t){
+      var p = Math.min(1, (t - t0) / dur);
+      var e = p < 0.5 ? 4*p*p*p : 1 - Math.pow(-2*p + 2, 3) / 2;
+      window.scrollTo(0, ini + delta * e);
+      if (p < 1 && idle) requestAnimationFrame(anim);
+    })(t0);
+  }
+
+  // en bucle, para que siempre haya algo en movimiento
+  setInterval(function(){
+    if (!idle) return;
+    suave(620, 2600);
+    setTimeout(function(){ if (idle) suave(0, 2400); }, 5200);
+  }, 16000);
+})();
+</script></body>
 </html>
