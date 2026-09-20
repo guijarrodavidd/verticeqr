@@ -2179,3 +2179,44 @@ html { scroll-behavior: smooth; }
 }
 .chapterInner { text-shadow: 0 1px 20px rgba(0, 0, 0, 0.5); }
 .chapterBody { opacity: 0.95; }
+
+/* ---------- Fondos más oscuros: el blanco manda siempre ---------- */
+.chapterBg,
+.sceneBg {
+  filter: brightness(0.52) contrast(1.06) saturate(0.92);
+}
+.chapterLight .chapterBg { filter: brightness(0.96) saturate(0.9); }
+
+/* ---------- El móvil del hero respira ---------- */
+.heroMockup { animation: vqFadeUp 900ms 200ms ease both, vqFloat 7s 1.4s ease-in-out infinite; }
+@keyframes vqFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-14px) rotate(-0.35deg); }
+}
+.phoneFrame {
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 700ms ease;
+}
+.heroMockup:hover .phoneFrame {
+  transform: perspective(1200px) rotateY(-6deg) rotateX(2deg) translateY(-4px);
+  box-shadow: var(--shadow-lg), -26px 34px 60px -30px rgba(0, 0, 0, 0.6);
+}
+/* destello que recorre el cristal cada pocos segundos */
+.phoneFrame::after {
+  content: "";
+  position: absolute;
+  inset: 11px;
+  border-radius: 6px;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 38%, rgba(255,255,255,0.16) 47%, rgba(255,255,255,0.05) 53%, transparent 62%);
+  transform: translateX(-120%);
+  animation: vqSheen 9s 2.5s ease-in-out infinite;
+  z-index: 3;
+}
+@keyframes vqSheen {
+  0%, 72%, 100% { transform: translateX(-120%); }
+  86%           { transform: translateX(120%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .heroMockup { animation: none; }
+  .phoneFrame::after { animation: none; opacity: 0; }
+}
