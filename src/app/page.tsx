@@ -142,9 +142,9 @@ const FEATURES: {
 
 // Cómo funciona: 3 pasos con foto real + texto corto.
 const STEPS: { num: string; img: string; title: string; desc: string }[] = [
-  { num: "01 · Escanea", img: "/steps/escanea.jpg", title: "Escanea el QR de su habitación", desc: "Sin llamar a recepción y sin descargar nada." },
-  { num: "02 · Pide", img: "/steps/pide.jpg", title: "Pide desde la habitación", desc: "Room service, restaurante o extras. Entra directo a cocina, sin malentendidos." },
-  { num: "03 · Carga", img: "/steps/paga.jpg", title: "Lo carga a su cuenta", desc: "A la habitación o paga en el momento. Y te deja reseña al salir." },
+  { num: "01 · Escanea", img: "/steps/escanea.jpg", title: "Escanea el QR de la habitación", desc: "Su propio móvil. Sin app y sin llamar a nadie." },
+  { num: "02 · Elige", img: "/steps/pide.jpg", title: "Ve la carta y pide", desc: "Con foto, precio y tiempo de entrega. Dos toques." },
+  { num: "03 · Recibe", img: "/steps/paga.jpg", title: "Lo recibe y lo carga a la habitación", desc: "El pedido entra en cocina ya desglosado." },
 ];
 
 // Diferenciador: tabla comparativa criterio a criterio.
