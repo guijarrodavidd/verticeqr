@@ -251,17 +251,24 @@ export default async function Home({
         </p>
       </Chapter>
 
-      {LINEAS.map((l) => (
-        <Chapter
-          key={l.id}
-          id={l.id}
-          img={l.img}
-          eyebrow={l.eyebrow}
-          title={l.t}
-        >
-          <p>{l.d}</p>
-        </Chapter>
-      ))}
+      <div className={styles.scenes}>
+        <div className={styles.scenesTrack}>
+          {LINEAS.map((l, n) => (
+            <article key={l.id} id={l.id} className={styles.scene}>
+              <div className={styles.sceneBg} style={{ backgroundImage: `url(${l.img})` }} aria-hidden />
+              <div className={styles.sceneScrim} aria-hidden />
+              <div className={styles.sceneInner}>
+                <div className={styles.sceneIndex}>{String(n + 1).padStart(2, "0")} / 04</div>
+                <div className={styles.sceneEyebrow}>{l.eyebrow}</div>
+                <h3 className={styles.sceneTitle}>{l.t}</h3>
+                <p className={styles.sceneDesc}>{l.d}</p>
+              </div>
+            </article>
+          ))}
+          <div className={styles.sceneEnd} aria-hidden />
+        </div>
+      </div>
+      <p className={styles.railHint}>Desliza para ver las cuatro →</p>
 
       {/* ============ CÓMO FUNCIONA ============ */}
       <section className={styles.section} id="como-funciona">
