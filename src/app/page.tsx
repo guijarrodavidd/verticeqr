@@ -329,7 +329,6 @@ export default async function Home({
                     loading="lazy"
                     style={{ objectPosition: f.imgPos ?? "top center" }}
                   />
-                  <span className={styles.railIndex}>{String(i + 1).padStart(2, "0")}</span>
                 </div>
                 <div className={styles.railBody}>
                   <h3 className={styles.railTitle}>{f.titulo}</h3>
