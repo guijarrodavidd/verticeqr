@@ -282,7 +282,6 @@ export default async function Home({
           <span className={styles.swipeArrow}>→</span>
         </div>
       </div>
-      <p className={styles.railHint}>Desliza para ver las cuatro →</p>
 
       {/* ============ CÓMO FUNCIONA ============ */}
       <section className={styles.section} id="como-funciona">
@@ -359,8 +358,12 @@ export default async function Home({
             ))}
             <div className={styles.railEnd} aria-hidden />
           </div>
+          <div className={`${styles.swipeHint} ${styles.swipeHintLight}`} aria-hidden>
+            <span className={styles.swipeDots}><i /><i /><i /><i /></span>
+            <span className={styles.swipeWord}>Desliza</span>
+            <span className={styles.swipeArrow}>→</span>
+          </div>
         </div>
-        <p className={styles.railHint}>Desliza para ver las cuatro →</p>
       </section>
 
       {/* ============ PANEL DE DIRECCIÓN ============ */}

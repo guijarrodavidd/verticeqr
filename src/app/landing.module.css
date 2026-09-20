@@ -2263,3 +2263,26 @@ html { scroll-behavior: smooth; }
   .swipeDots i, .swipeArrow { animation: none; }
 }
 @media (max-width: 720px) { .swipeHint { margin-left: 1.1rem; font-size: 0.66rem; } }
+
+/* la cápsula de deslizar va dentro de la escena, sin empujar la sección de abajo */
+.swipeHint {
+  position: sticky;
+  margin: 0 0 0 1.6rem;
+  transform: translateY(-4.6rem);
+  height: 0;
+  overflow: visible;
+}
+.scenes { padding-bottom: 0; }
+@media (max-width: 720px) {
+  .swipeHint { margin-left: 1.1rem; transform: translateY(-4rem); }
+}
+
+/* cápsula clara para el carril de producto (fondo claro) */
+.swipeHintLight {
+  background: rgba(255, 255, 255, 0.82);
+  border-color: var(--line);
+  color: var(--ink);
+  transform: translateY(-3.4rem);
+}
+.swipeHintLight .swipeDots i { background: rgba(0,0,0,0.22); animation-name: vqDotDark; }
+@keyframes vqDotDark { 0%,70%,100% { background: rgba(0,0,0,0.18); } 20% { background: var(--ink); } }
