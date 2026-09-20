@@ -72,6 +72,13 @@ const LINEAS = [
     d: "Late check-out, parking, transfer, lavandería. Coste marginal cero: lo que entra por aquí llega casi entero al GOP. Y lo que hay que preguntar cuánto cuesta, no se pide.",
   },
   {
+    id: "colaboraciones",
+    img: "/demos/presidente/img/ex6.jpg",
+    eyebrow: "Línea 05 · Colaboraciones",
+    t: "Lo que hay fuera del hotel también es tuyo",
+    d: "Bodegas, restaurantes de la zona, alquiler de bicis, excursiones, traslados. Tu huésped lo va a contratar igual: la diferencia es si lo reserva desde tu carta y te deja comisión, o si lo busca en Google y no te enteras.",
+  },
+  {
     id: "producto",
     img: "/demos/presidente/img/nv_cafe.jpg",
     eyebrow: "Línea 04 · Producto",
@@ -241,7 +248,7 @@ export default async function Home({
         id="formas"
         img="/demos/presidente/img/banner.jpg"
         eyebrow="Qué se vende"
-        title={<>Cuatro formas de que tu huésped te compre más.</>}
+        title={<>Cinco formas de que tu huésped te compre más.</>}
         align="center"
         height="mid"
       >
@@ -258,7 +265,7 @@ export default async function Home({
               <div className={styles.sceneBg} style={{ backgroundImage: `url(${l.img})` }} aria-hidden />
               <div className={styles.sceneScrim} aria-hidden />
               <div className={styles.sceneInner}>
-                <div className={styles.sceneIndex}>{String(n + 1).padStart(2, "0")} / 04</div>
+                <div className={styles.sceneIndex}>{String(n + 1).padStart(2, "0")} / 05</div>
                 <div className={styles.sceneEyebrow}>{l.eyebrow}</div>
                 <h3 className={styles.sceneTitle}>{l.t}</h3>
                 <p className={styles.sceneDesc}>{l.d}</p>
@@ -266,6 +273,13 @@ export default async function Home({
             </article>
           ))}
           <div className={styles.sceneEnd} aria-hidden />
+        </div>
+        <div className={styles.swipeHint} aria-hidden>
+          <span className={styles.swipeDots}>
+            <i /><i /><i /><i /><i />
+          </span>
+          <span className={styles.swipeWord}>Desliza</span>
+          <span className={styles.swipeArrow}>→</span>
         </div>
       </div>
       <p className={styles.railHint}>Desliza para ver las cuatro →</p>

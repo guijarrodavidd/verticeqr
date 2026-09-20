@@ -2220,3 +2220,46 @@ html { scroll-behavior: smooth; }
   .heroMockup { animation: none; }
   .phoneFrame::after { animation: none; opacity: 0; }
 }
+
+/* ---------- Sin costuras claras entre secciones oscuras ---------- */
+.scenes { display: block; margin-block: -1px; line-height: 0; font-size: 0; }
+.scenesTrack { line-height: normal; font-size: 1rem; }
+.scene { margin-right: 10px; }
+
+/* ---------- Aviso de deslizamiento ---------- */
+.swipeHint {
+  position: sticky;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: -3.6rem 0 0 1.6rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: rgba(10, 10, 9, 0.55);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1;
+  z-index: 3;
+}
+.swipeDots { display: inline-flex; gap: 5px; }
+.swipeDots i {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  animation: vqDot 3.4s ease-in-out infinite;
+}
+.swipeDots i:nth-child(2) { animation-delay: 0.16s; }
+.swipeDots i:nth-child(3) { animation-delay: 0.32s; }
+.swipeDots i:nth-child(4) { animation-delay: 0.48s; }
+.swipeDots i:nth-child(5) { animation-delay: 0.64s; }
+@keyframes vqDot { 0%,70%,100% { background: rgba(255,255,255,0.3); } 20% { background: #fff; } }
+.swipeArrow { display: inline-block; animation: vqNudge 2.2s ease-in-out infinite; }
+@keyframes vqNudge { 0%,100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+@media (prefers-reduced-motion: reduce) {
+  .swipeDots i, .swipeArrow { animation: none; }
+}
+@media (max-width: 720px) { .swipeHint { margin-left: 1.1rem; font-size: 0.66rem; } }
