@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El mapa de ingresos del huésped · Vértice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1d1d28; --ink2:#43434f; --mute:#84848f; --faint:#a9a9b2;
+    --line:#e5e5ea; --line2:#d2d2d9; --paper:#fff; --bg:#f7f7f9;
+    --s:'Inter',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);font-family:var(--s);color:var(--ink);
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:820px;margin:0 auto;padding:0 18px}
+
+  header{background:var(--paper);border-bottom:1px solid var(--line);padding:34px 0 28px}
+  .kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
+  h1{font-size:30px;font-weight:700;letter-spacing:-.025em;line-height:1.16;margin:12px 0 0}
+  h1 em{font-style:normal;font-weight:400;color:var(--ink2)}
+  .lead{font-size:14.5px;line-height:1.6;color:var(--ink2);margin:13px 0 0;max-width:62ch}
+
+  section{margin-top:26px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .h{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:14px}
+
+  /* calculadora */
+  .fields{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
+  .f label{display:block;font-size:12px;color:var(--ink2);margin-bottom:5px}
+  .in{display:flex;align-items:center;border:1px solid var(--line2);border-radius:9px;
+      background:#fff;padding:0 11px}
+  .in input{flex:1;min-width:0;border:0;outline:0;font-family:inherit;font-size:15px;font-weight:500;font-variant-numeric:tabular-nums;
+            color:var(--ink);padding:10px 0;background:none}
+  .in .u{font-size:12px;color:var(--faint);padding-left:6px}
+  .res{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:20px;
+       border-top:1px solid var(--line);padding-top:18px}
+  .res>div{padding:0 14px}
+  .res>div+div{border-left:1px solid var(--line)}
+  .res>div:first-child{padding-left:0}
+  .res .n{font-size:27px;font-weight:600;letter-spacing:-.025em;font-variant-numeric:tabular-nums}
+  .res .k{font-size:11.5px;line-height:1.4;color:var(--mute);margin-top:6px}
+  .note{font-size:12px;line-height:1.55;color:var(--mute);margin-top:16px;
+        border-left:2px solid var(--line2);padding-left:12px}
+
+  /* momentos */
+  .m{background:var(--paper);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;
+     overflow:hidden}
+  .m>button{width:100%;display:flex;align-items:center;gap:13px;background:none;border:0;
+            font-family:inherit;text-align:left;padding:17px 20px;cursor:pointer}
+  .m .num{font-size:12px;font-weight:600;color:var(--faint);flex:0 0 auto;font-variant-numeric:tabular-nums}
+  .m .t{flex:1;font-size:17px;font-weight:600;letter-spacing:-.012em}
+  .m .cnt{font-size:12px;font-weight:500;color:var(--mute);font-variant-numeric:tabular-nums}
+  .m .ar{color:var(--faint);font-size:12px;transition:transform .18s}
+  .m.open .ar{transform:rotate(90deg)}
+  .body{display:none;padding:0 20px 20px;border-top:1px solid var(--line)}
+  .m.open .body{display:block}
+  dl{display:grid;grid-template-columns:62px 1fr;gap:7px 12px;margin:17px 0 0}
+  dt{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);padding-top:3px}
+  dd{margin:0;font-size:13.5px;line-height:1.5;color:var(--ink2)}
+  dd b{color:var(--ink);font-weight:600}
+  .chk{margin-top:18px;border-top:1px solid var(--line);padding-top:15px}
+  .chk .lbl{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:9px}
+  .chk label{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.45;
+             color:var(--ink2);padding:6px 0;cursor:pointer}
+  .chk input{margin:2px 0 0;accent-color:var(--ink);width:16px;height:16px;flex:0 0 16px}
+
+  /* score */
+  .score{display:flex;align-items:baseline;gap:12px}
+  .score .big{font-size:36px;font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+  .score .of{font-size:13px;color:var(--mute)}
+  .bar{height:6px;background:var(--line);border-radius:3px;margin-top:14px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--ink);width:0;transition:width .25s}
+  .verdict{font-size:14px;line-height:1.55;color:var(--ink2);margin-top:14px}
+  .verdict b{color:var(--ink);font-weight:600}
+
+  /* orden */
+  ol.steps{list-style:none;counter-reset:n;margin:0;padding:0}
+  ol.steps li{counter-increment:n;position:relative;padding:8px 0 8px 27px;font-size:13.5px;
+              line-height:1.5;color:var(--ink2)}
+  ol.steps li:before{content:counter(n);position:absolute;left:0;top:9px;
+                     font-size:12px;font-weight:600;color:var(--faint)}
+  ol.steps li b{color:var(--ink);font-weight:600}
+
+  /* cta */
+  .cta{background:var(--ink);color:#fff;border-radius:14px;padding:26px 24px;text-align:center;
+       margin:26px 0 60px}
+  .cta p{margin:0;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);max-width:54ch;
+         margin-inline:auto}
+  .cta p b{color:#fff;font-weight:600}
+  .cta a{display:inline-block;margin-top:16px;background:#fff;color:var(--ink);text-decoration:none;
+         font-size:14px;font-weight:600;padding:12px 22px;border-radius:9px}
+  .foot{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);
+        text-align:center;padding-bottom:40px}
+
+  @media(max-width:640px){
+    h1{font-size:24px}
+    .fields{grid-template-columns:1fr}
+    .res{grid-template-columns:1fr;gap:16px}
+    .res>div{padding:0}
+    .res>div+div{border-left:0;border-top:1px solid var(--line);padding-top:14px}
+    dl{grid-template-columns:1fr;gap:3px}
+    dt{padding-top:8px}
+  }
+</style>
+
+</head>
+<body>
+<header><div class="wrap">
+  <div class="kicker">Vértice · Método Fricción 0</div>
+  <h1>El mapa de ingresos <em>del huésped</em></h1>
+  <p class="lead">Los seis momentos en los que tu hotel puede vender durante la estancia. Qué ofrecer en cada uno, cuándo, y el error que hace que no se venda. Marca lo que ya tienes y al final verás por dónde empezar.</p>
+</div></header>
+
+<div class="wrap">
+
+  <section class="card">
+    <div class="h">Empieza por tu número</div>
+    <div class="fields">
+      <div class="f"><label>Habitaciones</label><div class="in"><input id="hab" type="number" value="60" min="1"></div></div>
+      <div class="f"><label>Ocupación media</label><div class="in"><input id="ocu" type="number" value="70" min="1" max="100"><span class="u">%</span></div></div>
+      <div class="f"><label>Habitaciones que consumen algo</label><div class="in"><input id="pen" type="number" value="8" min="0" max="100"><span class="u">%</span></div></div>
+      <div class="f"><label>Ticket medio por pedido</label><div class="in"><input id="tic" type="number" value="32" min="1"><span class="u">€</span></div></div>
+    </div>
+    <div class="res">
+      <div><div class="n" id="r1">—</div><div class="k">Ingreso en habitación al mes, hoy</div></div>
+      <div><div class="n" id="r2">—</div><div class="k">Si subes 3 puntos la penetración</div></div>
+      <div><div class="n" id="r3">—</div><div class="k">Diferencia, cada día</div></div>
+    </div>
+    <p class="note">Tres puntos de penetración es una mejora conservadora: pasar de que pidan 8 de cada 100 habitaciones a 11. <b>Esto es una estimación con tus propios números, no un dato de tu hotel.</b> El real solo se sabe midiendo.</p>
+  </section>
+
+  <section id="moments"></section>
+
+  <section class="card">
+    <div class="h">Tu diagnóstico</div>
+    <div class="score"><span class="big" id="sc">0</span><span class="of">de 18 comprobaciones</span></div>
+    <div class="bar"><i id="barfill"></i></div>
+    <p class="verdict" id="verdict">Marca las casillas de los seis momentos para ver por dónde empezar.</p>
+  </section>
+
+  <section class="card">
+    <div class="h">El orden correcto</div>
+    <ol class="steps">
+      <li><b>Cronometra.</b> Un martes a las 22:30, desde una habitación: cuánto tardas en saber qué pedir, cuánto cuesta y cuándo llega.</li>
+      <li><b>Puntúa en euros, no en porcentaje.</b> Un 70 % de margen sobre un café son 90 céntimos.</li>
+      <li><b>Ordena por momento de consumo</b>, no por categoría de cocina.</li>
+      <li><b>Ponlo delante</b>, donde el huésped ya está mirando y a la hora en que decide.</li>
+      <li><b>Mide y cambia una cosa al mes</b>, la más cara primero.</li>
+    </ol>
+    <p class="note">La carta es el paso cuatro, no el uno. Primero se mide, después se diseña.</p>
+  </section>
+
+  <div class="cta">
+    <p>Los seis momentos fallan por lo mismo: <b>el huésped tiene que preguntar.</b> Si quieres, lo vemos con tus números en quince minutos.</p>
+    <a href="https://calendly.com/vertice1/nueva-reunion-1" target="_blank" rel="noopener">Llamada de diagnóstico · 15 min</a>
+  </div>
+
+  <div class="foot">Héctor García · Vértice</div>
+</div>
+
+<script>
+var M=[
+ {t:"La llegada",v:"Early check-in, parking, transfer, upgrade de habitación.",
+  c:"Antes de entrar por la puerta: en la confirmación de la reserva y el día anterior.",
+  e:"Esperar a ofrecerlo <b>en el mostrador</b>, con cola detrás y el huésped con la maleta en la mano.",
+  k:["El early check-in tiene precio y se puede reservar antes de llegar",
+     "El parking se contrata sin preguntar en recepción",
+     "El upgrade se ofrece antes del mostrador, no en él"]},
+ {t:"La habitación",v:"Room service, minibar, desayuno en la habitación.",
+  c:"De 19:00 a 23:30. Ahí se decide casi todo, y es la franja con menos gente en sala.",
+  e:"Que para pedir haya que <b>llamar por teléfono</b>. A esa hora no llama nadie.",
+  k:["Se puede pedir sin llamar por teléfono ni bajar a recepción",
+     "Todos los platos tienen foto y precio cerrado",
+     "Después de cerrar cocina queda algo disponible que no necesita fuego"]},
+ {t:"La terraza y la piscina",v:"Bebida, picoteo, helados, snack de tarde.",
+  c:"En cuanto se sienta. El consumo cae en picado a partir de la primera hora.",
+  e:"Obligarle a <b>levantarse a buscar al camarero</b>. La segunda consumición se pierde por pereza, no por precio.",
+  k:["Se puede pedir desde la hamaca o la mesa, sin levantarse",
+     "Hay carta visible en cada zona, no solo en el bar",
+     "El pedido llega sabiendo la hamaca o mesa exacta"]},
+ {t:"Las experiencias",v:"Catas, tours, spa, actividades, cenas temáticas.",
+  c:"El primer día. Una experiencia se reserva, no se pide, y necesita hueco en la agenda.",
+  e:"Que se entere <b>el día del check-out</b>. Entonces ya no es una venta: es una pena.",
+  k:["El huésped las ve el primer día, no al final",
+     "Tienen precio cerrado, sin «consultar»",
+     "Se reservan sin tener que hablar con nadie"]},
+ {t:"Los servicios",v:"Late check-out, lavandería, plancha, parking, transfer.",
+  c:"La víspera. El late check-out se decide la noche antes, no a las once de la mañana.",
+  e:"No ponerles precio visible. Lo que hay que <b>preguntar cuánto cuesta</b> no se pide.",
+  k:["Todos tienen precio visible sin preguntar",
+     "Se contratan desde el móvil, a cualquier hora",
+     "El late check-out se ofrece la noche antes"]},
+ {t:"La salida",v:"Producto local, pack para llevar, la siguiente reserva.",
+  c:"La última mañana, y la reseña justo después de que algo le haya salido bien.",
+  e:"Pedir la reseña <b>por correo, tres días después</b>, cuando ya se le ha olvidado.",
+  k:["Se ofrece producto local o pack para llevar",
+     "La reseña se pide justo después de entregar algo, no por correo",
+     "Se ofrece la siguiente reserva antes de que se vaya"]}
+];
+
+var host=document.getElementById('moments');
+M.forEach(function(m,i){
+  var d=document.createElement('div'); d.className='m';
+  d.innerHTML='<button><span class="num">'+(i+1)+'</span><span class="t">'+m.t+'</span>'
+    +'<span class="cnt" data-c="'+i+'">0/'+m.k.length+'</span><span class="ar">▶</span></button>'
+    +'<div class="body"><dl>'
+    +'<dt>Vender</dt><dd>'+m.v+'</dd>'
+    +'<dt>Cuándo</dt><dd>'+m.c+'</dd>'
+    +'<dt>Error</dt><dd>'+m.e+'</dd></dl>'
+    +'<div class="chk"><div class="lbl">¿Lo tienes?</div>'
+    + m.k.map(function(x){return '<label><input type="checkbox" data-m="'+i+'"><span>'+x+'</span></label>'}).join('')
+    +'</div></div>';
+  d.querySelector('button').onclick=function(){d.classList.toggle('open')};
+  host.appendChild(d);
+});
+
+var boxes=[].slice.call(document.querySelectorAll('.chk input'));
+function score(){
+  var n=boxes.filter(function(b){return b.checked}).length;
+  document.getElementById('sc').textContent=n;
+  document.getElementById('barfill').style.width=(n/18*100)+'%';
+  M.forEach(function(m,i){
+    var c=boxes.filter(function(b){return b.dataset.m==i&&b.checked}).length;
+    document.querySelector('[data-c="'+i+'"]').textContent=c+'/'+m.k.length;
+  });
+  var v=document.getElementById('verdict');
+  if(n===0) v.innerHTML='Marca las casillas de los seis momentos para ver por dónde empezar.';
+  else if(n<=6) v.innerHTML='<b>Tienes '+n+' de 18.</b> No es un problema de oferta: casi todo lo que vendes depende de que el huésped pregunte. Empieza por el momento con menos casillas marcadas, que es donde más se cae.';
+  else if(n<=12) v.innerHTML='<b>Tienes '+n+' de 18.</b> Hay zonas resueltas y otras en las que sigues esperando a que el huésped dé el paso. Arregla una al mes, la más cara primero.';
+  else v.innerHTML='<b>Tienes '+n+' de 18.</b> Estás por encima de lo normal. A partir de aquí lo que falta no se arregla ofreciendo más, sino midiendo lo que se intenta comprar y no se puede.';
+}
+boxes.forEach(function(b){b.addEventListener('change',score)});
+
+function eur(x){return new Intl.NumberFormat('es-ES',{maximumFractionDigits:0}).format(Math.round(x))+'\u202f€'}
+function calc(){
+  var hab=+document.getElementById('hab').value||0,
+      ocu=(+document.getElementById('ocu').value||0)/100,
+      pen=(+document.getElementById('pen').value||0)/100,
+      tic=+document.getElementById('tic').value||0;
+  var noches=hab*ocu*30.4;
+  var hoy=noches*pen*tic;
+  var obj=noches*Math.min(pen+0.03,1)*tic;
+  document.getElementById('r1').textContent=eur(hoy);
+  document.getElementById('r2').textContent=eur(obj);
+  document.getElementById('r3').textContent=eur((obj-hoy)/30.4);
+}
+[].slice.call(document.querySelectorAll('.in input')).forEach(function(x){x.addEventListener('input',calc)});
+calc(); score();
+</script>
+</body>
+</html>

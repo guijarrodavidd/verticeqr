@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Las 7 preguntas para tu F&B · Vértice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1d1d28; --ink-2:#43434f; --mute:#84848f; --faint:#a9a9b2;
+  --line:#e5e5ea; --line-2:#d2d2d9; --paper:#ffffff; --paper-2:#f7f7f9;
+  --violet:#a78bfa; --violet-soft:#f1ecfe;
+  --s:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --m:'IBM Plex Mono',ui-monospace,monospace;
+  --e:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--s);background:var(--paper-2);color:var(--ink);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.sheet{max-width:760px;margin:0 auto;background:var(--paper);min-height:100vh;
+  padding:46px 46px 64px;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.kicker{font-family:var(--m);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mute)}
+.kicker b{color:var(--violet);font-weight:500}
+h1{font-size:clamp(28px,4.6vw,38px);line-height:1.14;letter-spacing:-.025em;
+  font-weight:600;margin-top:14px}
+.lead{margin-top:16px;font-size:17px;line-height:1.65;color:var(--ink-2);max-width:44em}
+.rule{height:1px;background:var(--line);margin:34px 0}
+h2{font-size:19px;font-weight:600;letter-spacing:-.015em;margin-bottom:12px}
+h3{font-size:12px;font-family:var(--m);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mute);font-weight:400;margin-bottom:10px}
+p{margin-bottom:12px;color:var(--ink-2)}
+p:last-child{margin-bottom:0}
+b,strong{font-weight:600;color:var(--ink)}
+.tnum{font-variant-numeric:tabular-nums}
+.nota{background:var(--paper-2);border-left:2px solid var(--violet);padding:14px 18px;
+  font-size:14px;color:var(--ink-2);line-height:1.6;margin-top:24px}
+.nota b{color:var(--ink)}
+.foot{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap;
+  font-family:var(--m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.foot a{color:var(--violet);text-decoration:none}
+/* campos */
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.f{padding:14px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;
+  justify-content:space-between;gap:14px}
+.f label{font-size:14.5px;color:var(--ink-2);line-height:1.35}
+.f .in{display:flex;align-items:baseline;gap:5px;flex:0 0 auto}
+.f input,.f select{font-family:var(--s);font-size:17px;font-weight:500;color:var(--ink);
+  background:none;border:none;border-bottom:1px solid var(--line-2);text-align:right;
+  padding:3px 2px;width:88px;outline:none;transition:border-color .2s}
+.f select{width:auto;text-align:left;font-size:14.5px}
+.f input:focus,.f select:focus{border-color:var(--ink)}
+.f .u{font-family:var(--m);font-size:11.5px;color:var(--mute);width:14px}
+/* resultados */
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:34px;
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+.res>div{padding:28px 20px;text-align:center}
+.res>div+div{border-left:1px solid var(--line)}
+.res .n{font-size:clamp(28px,5vw,40px);line-height:1;letter-spacing:-.04em;font-weight:600}
+.res .k{font-family:var(--m);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--mute);margin-top:12px;line-height:1.5}
+.res .d{font-size:13.5px;color:var(--ink-2);margin-top:9px;line-height:1.45}
+.extra{margin-top:20px;padding:16px 18px;background:var(--violet-soft);border-radius:4px;
+  font-size:14.5px;color:var(--ink-2)}
+.extra b{color:var(--ink)}
+/* tablas */
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:6px}
+th{text-align:left;font-family:var(--m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mute);font-weight:400;padding:0 10px 9px 0;border-bottom:1px solid var(--line-2)}
+td{padding:11px 10px 11px 0;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
+td:first-child{color:var(--ink);font-weight:500}
+td.fill{border-bottom:1px solid var(--line-2);height:42px}
+/* casillas */
+.chk{display:flex;gap:13px;padding:15px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.chk:last-of-type{border-bottom:none}
+.box{flex:0 0 auto;width:19px;height:19px;border:1.5px solid var(--line-2);border-radius:3px;
+  margin-top:2px;cursor:pointer;transition:all .18s;position:relative;background:#fff}
+.box.on{background:var(--ink);border-color:var(--ink)}
+.box.on:after{content:"";position:absolute;left:5.5px;top:2px;width:5px;height:10px;
+  border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.chk .t{font-size:15.5px;line-height:1.5;color:var(--ink-2)}
+.chk .t b{color:var(--ink)}
+/* impresión */
+@media print{
+  @page{margin:14mm}
+  body{background:#fff;font-size:11.5pt}
+  .sheet{max-width:none;padding:0;border:none;min-height:0}
+  .noprint{display:none!important}
+  .res>div{padding:16px 10px}
+  h1{font-size:22pt}
+  .nota{background:none;border-left:2px solid #000}
+  .extra{background:none;border:1px solid #000}
+  tr,.chk,.res{break-inside:avoid}
+}
+@media(max-width:680px){
+  .sheet{padding:30px 22px 48px}
+  .fields{grid-template-columns:1fr}
+  .res{grid-template-columns:1fr}
+  .res>div+div{border-left:none;border-top:1px solid var(--line)}
+}
+
+.q{padding:22px 0;border-bottom:1px solid var(--line)}
+.q:last-of-type{border-bottom:none}
+.q-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.q-n{font-family:var(--m);font-size:11px;color:var(--violet);flex:0 0 18px}
+.q-t{font-size:16.5px;font-weight:500;line-height:1.45;flex:1;min-width:260px}
+.q-sel{display:flex;gap:6px;flex:0 0 auto}
+.q-sel button{font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--line-2);background:#fff;color:var(--mute);padding:6px 11px;border-radius:3px;
+  cursor:pointer;transition:all .18s}
+.q-sel button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.q-w{font-size:14px;color:var(--mute);line-height:1.55;margin:9px 0 0 30px}
+.q-line{margin:14px 0 0 30px;min-height:34px;border-bottom:1px solid var(--line-2);outline:none;
+  font-size:15px;color:var(--ink);padding-bottom:4px}
+.q-line:empty:before{content:attr(data-ph);color:var(--faint)}
+.q-line:focus{border-color:var(--ink)}
+.onlyprint{display:none}
+.pbox{display:inline-block;width:11px;height:11px;border:1px solid #000;vertical-align:-1px}
+.marcador{margin-top:28px;padding:18px 20px;border:1px solid var(--line-2);border-radius:4px;
+  font-size:15px;display:none}
+.marcador.on{display:block}
+@media print{.onlyprint{display:inline}.q-line{min-height:26px}}
+</style>
+<style>/*VF-NAV*/
+.vfnav{max-width:780px;margin:46px auto 30px;padding:18px 22px 20px;border:1px solid var(--line,#e5e5ea);
+  border-radius:14px;background:var(--paper-2,#f7f7f9);font-family:var(--s,'Inter',sans-serif)}
+.vfnav .t{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute,#84848f);margin-bottom:12px}
+.vfnav ol{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;counter-reset:v}
+.vfnav li{counter-increment:v}
+.vfnav a{display:inline-flex;align-items:center;gap:7px;text-decoration:none;
+  font-size:12.5px;color:var(--ink-2,#43434f);background:#fff;border:1px solid var(--line,#e5e5ea);
+  border-radius:8px;padding:7px 11px;transition:border-color .15s,color .15s}
+.vfnav a:hover{border-color:var(--ink,#1d1d28);color:var(--ink,#1d1d28)}
+.vfnav a .n{font-family:var(--m,monospace);font-size:11px;color:var(--faint,#a9a9b2)}
+.vfnav a.on{background:var(--ink,#1d1d28);border-color:var(--ink,#1d1d28);color:#fff;pointer-events:none}
+.vfnav a.on .n{color:rgba(255,255,255,.55)}
+.vfnav .idx{margin-top:13px;font-size:12.5px}
+.vfnav .idx a{border:none;background:none;padding:0;color:var(--mute,#84848f)}
+.vfnav .idx a:hover{color:var(--ink,#1d1d28)}
+@media(max-width:640px){.vfnav a{font-size:11.5px;padding:6px 9px}}
+</style>
+</head><body>
+<div class="sheet">
+  <div class="kicker">Auditoría de room service para dirección &nbsp;·&nbsp; <b>Pieza 4 de 9</b></div>
+  <h1>Siete preguntas para tu responsable de F&amp;B.</h1>
+  <p class="lead">Hazlas en la próxima reunión. No hace falta preparar nada: o hay respuesta, o hay un agujero de información. Las dos cosas son útiles de saber.</p>
+  <div class="rule"></div>
+
+  <div class="nota"><b>Esto no es para pillar a nadie.</b> Ninguna de las siete se puede responder de
+  memoria, ni siquiera llevando el hotel muy bien. Son preguntas que solo tienen respuesta si el pedido
+  deja rastro en algún sitio.</div>
+  
+  <div class="q">
+    <div class="q-h">
+      <span class="q-n">1</span>
+      <span class="q-t">De los que anoche abrieron la carta, ¿cuántos no pidieron nada?</span>
+      <span class="q-sel noprint"><button class="sel" data-v="si">Lo sé</button><button class="sel" data-v="no">No lo sé</button></span>
+      <span class="q-sel onlyprint"><span class="pbox"></span> Lo sé &nbsp;&nbsp; <span class="pbox"></span> No lo sé</span>
+    </div>
+    <div class="q-w">Es la tasa de abandono. Sin ella no sabes si el problema es que no entran o que entran y se van.</div>
+    <div class="q-line" contenteditable="true" data-ph="Anota aquí la respuesta"></div>
+  </div>
+  <div class="q">
+    <div class="q-h">
+      <span class="q-n">2</span>
+      <span class="q-t">El que empieza un pedido y no lo termina, ¿dónde se cae?</span>
+      <span class="q-sel noprint"><button class="sel" data-v="si">Lo sé</button><button class="sel" data-v="no">No lo sé</button></span>
+      <span class="q-sel onlyprint"><span class="pbox"></span> Lo sé &nbsp;&nbsp; <span class="pbox"></span> No lo sé</span>
+    </div>
+    <div class="q-w">En la foto que falta, en el precio, en el tiempo de entrega o en el paso de pago. Cada uno se arregla distinto.</div>
+    <div class="q-line" contenteditable="true" data-ph="Anota aquí la respuesta"></div>
+  </div>
+  <div class="q">
+    <div class="q-h">
+      <span class="q-n">3</span>
+      <span class="q-t">¿Cuántos intentaron pedir con la cocina cerrada?</span>
+      <span class="q-sel noprint"><button class="sel" data-v="si">Lo sé</button><button class="sel" data-v="no">No lo sé</button></span>
+      <span class="q-sel onlyprint"><span class="pbox"></span> Lo sé &nbsp;&nbsp; <span class="pbox"></span> No lo sé</span>
+    </div>
+    <div class="q-w">Es demanda real que hoy no deja rastro en ningún sitio.</div>
+    <div class="q-line" contenteditable="true" data-ph="Anota aquí la respuesta"></div>
+  </div>
+  <div class="q">
+    <div class="q-h">
+      <span class="q-n">4</span>
+      <span class="q-t">¿Cuánto tardó el pedido más lento de anoche?</span>
+      <span class="q-sel noprint"><button class="sel" data-v="si">Lo sé</button><button class="sel" data-v="no">No lo sé</button></span>
+      <span class="q-sel onlyprint"><span class="pbox"></span> Lo sé &nbsp;&nbsp; <span class="pbox"></span> No lo sé</span>
+    </div>
+    <div class="q-w">La media tranquiliza. El peor caso es el que acaba en la reseña.</div>
+    <div class="q-line" contenteditable="true" data-ph="Anota aquí la respuesta"></div>
+  </div>
+  <div class="q">
+    <div class="q-h">
+      <span class="q-n">5</span>
+      <span class="q-t">¿Qué platos se pidieron estando agotados?</span>
+      <span class="q-sel noprint"><button class="sel" data-v="si">Lo sé</button><button class="sel" data-v="no">No lo sé</button></span>
+      <span class="q-sel onlyprint"><span class="pbox"></span> Lo sé &nbsp;&nbsp; <span class="pbox"></span> No lo sé</span>
+    </div>
+    <div class="q-w">Cada uno es una llamada de disculpa y un huésped que ya no repite.</div>
+    <div class="q-line" contenteditable="true" data-ph="Anota aquí la respuesta"></div>
+  </div>
+  <div class="q">
+    <div class="q-h">
+      <span class="q-n">6</span>
+      <span class="q-t">De los que pidieron una vez, ¿cuántos repitieron?</span>
+      <span class="q-sel noprint"><button class="sel" data-v="si">Lo sé</button><button class="sel" data-v="no">No lo sé</button></span>
+      <span class="q-sel onlyprint"><span class="pbox"></span> Lo sé &nbsp;&nbsp; <span class="pbox"></span> No lo sé</span>
+    </div>
+    <div class="q-w">La repetición dentro de la misma estancia es la métrica más honesta que hay.</div>
+    <div class="q-line" contenteditable="true" data-ph="Anota aquí la respuesta"></div>
+  </div>
+  <div class="q">
+    <div class="q-h">
+      <span class="q-n">7</span>
+      <span class="q-t">El último cambio en la carta, ¿cómo supimos si sirvió?</span>
+      <span class="q-sel noprint"><button class="sel" data-v="si">Lo sé</button><button class="sel" data-v="no">No lo sé</button></span>
+      <span class="q-sel onlyprint"><span class="pbox"></span> Lo sé &nbsp;&nbsp; <span class="pbox"></span> No lo sé</span>
+    </div>
+    <div class="q-w">Si la respuesta es «nos pareció que sí», no fue un cambio: fue una opinión.</div>
+    <div class="q-line" contenteditable="true" data-ph="Anota aquí la respuesta"></div>
+  </div>
+  <div class="marcador" id="marcador"></div>
+  <div class="nota" style="margin-top:32px">Si cuatro o más son «no lo sé», <b>no es el equipo: es que
+  nadie lo mide</b>. Y lo que no se mide se decide por sensación, que en F&amp;B sale caro sin que se note.</div>
+
+  <div class="foot">
+    <span>Vértice · Room service para hoteles</span>
+    <span class="noprint"><a href="index.html">Volver al índice</a></span>
+  </div>
+</div>
+<script>
+document.querySelectorAll('.q-sel button').forEach(function(b){
+  b.onclick=function(){
+    b.parentNode.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+    b.classList.add('on'); marcar();
+  };
+});
+function marcar(){
+  var no=document.querySelectorAll('.q-sel button.on[data-v="no"]').length;
+  var m=document.getElementById('marcador');
+  if(no>=4){m.classList.add('on');
+    m.innerHTML='Has marcado <b>'+no+' preguntas</b> como «no lo sé». Eso no es un problema de equipo: '+
+    'es que hoy nadie tiene dónde mirarlo. Ninguna de las siete se responde con intuición, y todas se '+
+    'responden solas cuando el pedido deja rastro.';
+  } else m.classList.remove('on');
+}
+</script>
+<div class="vfnav"><div class="t">Las nueve piezas</div><ol><li><a href="1-calculadora-ingresos-perdidos.html"><span class="n">1</span>Calculadora de ingresos perdidos</a></li><li><a href="2-test-25-minutos.html"><span class="n">2</span>Test de los 25 minutos</a></li><li><a href="3-horas-de-recepcion.html"><span class="n">3</span>Horas de recepción</a></li><li><a href="4-siete-preguntas.html" class="on"><span class="n">4</span>Las 7 preguntas para tu F&amp;B</a></li><li><a href="5-plantilla-para-la-propiedad.html"><span class="n">5</span>Plantilla para la propiedad</a></li><li><a href="6-checklist-carta-digital.html"><span class="n">6</span>Checklist de carta digital</a></li><li><a href="7-carta-nocturna.html"><span class="n">7</span>Guion de carta nocturna</a></li><li><a href="8-benchmark-room-service.html"><span class="n">8</span>Benchmark de room service</a></li><li><a href="9-nuestro-stack.html"><span class="n">9</span>Nuestro stack</a></li></ol><div class="idx">← <a href="index.html">Volver al índice</a></div></div>
+</body></html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plantilla para la propiedad · Vértice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1d1d28; --ink-2:#43434f; --mute:#84848f; --faint:#a9a9b2;
+  --line:#e5e5ea; --line-2:#d2d2d9; --paper:#ffffff; --paper-2:#f7f7f9;
+  --violet:#a78bfa; --violet-soft:#f1ecfe;
+  --s:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --m:'IBM Plex Mono',ui-monospace,monospace;
+  --e:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--s);background:var(--paper-2);color:var(--ink);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.sheet{max-width:760px;margin:0 auto;background:var(--paper);min-height:100vh;
+  padding:46px 46px 64px;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.kicker{font-family:var(--m);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mute)}
+.kicker b{color:var(--violet);font-weight:500}
+h1{font-size:clamp(28px,4.6vw,38px);line-height:1.14;letter-spacing:-.025em;
+  font-weight:600;margin-top:14px}
+.lead{margin-top:16px;font-size:17px;line-height:1.65;color:var(--ink-2);max-width:44em}
+.rule{height:1px;background:var(--line);margin:34px 0}
+h2{font-size:19px;font-weight:600;letter-spacing:-.015em;margin-bottom:12px}
+h3{font-size:12px;font-family:var(--m);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mute);font-weight:400;margin-bottom:10px}
+p{margin-bottom:12px;color:var(--ink-2)}
+p:last-child{margin-bottom:0}
+b,strong{font-weight:600;color:var(--ink)}
+.tnum{font-variant-numeric:tabular-nums}
+.nota{background:var(--paper-2);border-left:2px solid var(--violet);padding:14px 18px;
+  font-size:14px;color:var(--ink-2);line-height:1.6;margin-top:24px}
+.nota b{color:var(--ink)}
+.foot{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap;
+  font-family:var(--m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.foot a{color:var(--violet);text-decoration:none}
+/* campos */
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.f{padding:14px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;
+  justify-content:space-between;gap:14px}
+.f label{font-size:14.5px;color:var(--ink-2);line-height:1.35}
+.f .in{display:flex;align-items:baseline;gap:5px;flex:0 0 auto}
+.f input,.f select{font-family:var(--s);font-size:17px;font-weight:500;color:var(--ink);
+  background:none;border:none;border-bottom:1px solid var(--line-2);text-align:right;
+  padding:3px 2px;width:88px;outline:none;transition:border-color .2s}
+.f select{width:auto;text-align:left;font-size:14.5px}
+.f input:focus,.f select:focus{border-color:var(--ink)}
+.f .u{font-family:var(--m);font-size:11.5px;color:var(--mute);width:14px}
+/* resultados */
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:34px;
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+.res>div{padding:28px 20px;text-align:center}
+.res>div+div{border-left:1px solid var(--line)}
+.res .n{font-size:clamp(28px,5vw,40px);line-height:1;letter-spacing:-.04em;font-weight:600}
+.res .k{font-family:var(--m);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--mute);margin-top:12px;line-height:1.5}
+.res .d{font-size:13.5px;color:var(--ink-2);margin-top:9px;line-height:1.45}
+.extra{margin-top:20px;padding:16px 18px;background:var(--violet-soft);border-radius:4px;
+  font-size:14.5px;color:var(--ink-2)}
+.extra b{color:var(--ink)}
+/* tablas */
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:6px}
+th{text-align:left;font-family:var(--m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mute);font-weight:400;padding:0 10px 9px 0;border-bottom:1px solid var(--line-2)}
+td{padding:11px 10px 11px 0;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
+td:first-child{color:var(--ink);font-weight:500}
+td.fill{border-bottom:1px solid var(--line-2);height:42px}
+/* casillas */
+.chk{display:flex;gap:13px;padding:15px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.chk:last-of-type{border-bottom:none}
+.box{flex:0 0 auto;width:19px;height:19px;border:1.5px solid var(--line-2);border-radius:3px;
+  margin-top:2px;cursor:pointer;transition:all .18s;position:relative;background:#fff}
+.box.on{background:var(--ink);border-color:var(--ink)}
+.box.on:after{content:"";position:absolute;left:5.5px;top:2px;width:5px;height:10px;
+  border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.chk .t{font-size:15.5px;line-height:1.5;color:var(--ink-2)}
+.chk .t b{color:var(--ink)}
+/* impresión */
+@media print{
+  @page{margin:14mm}
+  body{background:#fff;font-size:11.5pt}
+  .sheet{max-width:none;padding:0;border:none;min-height:0}
+  .noprint{display:none!important}
+  .res>div{padding:16px 10px}
+  h1{font-size:22pt}
+  .nota{background:none;border-left:2px solid #000}
+  .extra{background:none;border:1px solid #000}
+  tr,.chk,.res{break-inside:avoid}
+}
+@media(max-width:680px){
+  .sheet{padding:30px 22px 48px}
+  .fields{grid-template-columns:1fr}
+  .res{grid-template-columns:1fr}
+  .res>div+div{border-left:none;border-top:1px solid var(--line)}
+}
+
+.memo{border:1px solid var(--line-2);padding:28px 30px;border-radius:4px}
+.memo-h{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  padding-bottom:16px;border-bottom:1px solid var(--ink);margin-bottom:6px}
+.memo-h .t{font-size:17px;font-weight:600}
+.memo-h .m{font-family:var(--m);font-size:11px;color:var(--mute)}
+.memo-h .m span{border-bottom:1px solid var(--line-2);display:inline-block;min-width:110px;
+  outline:none;color:var(--ink)}
+.bq{padding:18px 0;border-bottom:1px solid var(--line)}
+.bq:last-child{border-bottom:none}
+.bq-h{display:flex;align-items:baseline;gap:11px}
+.bq-n{font-family:var(--m);font-size:11px;color:var(--violet)}
+.bq-t{font-size:16px;font-weight:600}
+.bq-w{font-size:13.5px;color:var(--mute);margin:6px 0 0 24px;line-height:1.5}
+.bq-f{margin:12px 0 0 24px;min-height:62px;border:1px solid var(--line);border-radius:3px;
+  padding:11px 13px;outline:none;font-size:15px;line-height:1.6;background:var(--paper-2)}
+.bq-f:focus{border-color:var(--ink);background:#fff}
+@media print{.memo{border:none;padding:0}.bq-f{background:none;border-color:#000;min-height:52px}}
+</style>
+<style>/*VF-NAV*/
+.vfnav{max-width:780px;margin:46px auto 30px;padding:18px 22px 20px;border:1px solid var(--line,#e5e5ea);
+  border-radius:14px;background:var(--paper-2,#f7f7f9);font-family:var(--s,'Inter',sans-serif)}
+.vfnav .t{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute,#84848f);margin-bottom:12px}
+.vfnav ol{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;counter-reset:v}
+.vfnav li{counter-increment:v}
+.vfnav a{display:inline-flex;align-items:center;gap:7px;text-decoration:none;
+  font-size:12.5px;color:var(--ink-2,#43434f);background:#fff;border:1px solid var(--line,#e5e5ea);
+  border-radius:8px;padding:7px 11px;transition:border-color .15s,color .15s}
+.vfnav a:hover{border-color:var(--ink,#1d1d28);color:var(--ink,#1d1d28)}
+.vfnav a .n{font-family:var(--m,monospace);font-size:11px;color:var(--faint,#a9a9b2)}
+.vfnav a.on{background:var(--ink,#1d1d28);border-color:var(--ink,#1d1d28);color:#fff;pointer-events:none}
+.vfnav a.on .n{color:rgba(255,255,255,.55)}
+.vfnav .idx{margin-top:13px;font-size:12.5px}
+.vfnav .idx a{border:none;background:none;padding:0;color:var(--mute,#84848f)}
+.vfnav .idx a:hover{color:var(--ink,#1d1d28)}
+@media(max-width:640px){.vfnav a{font-size:11.5px;padding:6px 9px}}
+</style>
+</head><body>
+<div class="sheet">
+  <div class="kicker">Auditoría de room service para dirección &nbsp;·&nbsp; <b>Pieza 5 de 9</b></div>
+  <h1>Lo que llevas al comité.</h1>
+  <p class="lead">Un folio, cinco bloques y ninguna floritura. Rellénalo en pantalla y imprímelo: está pensado para que se lea entero en dos minutos.</p>
+  <div class="rule"></div>
+
+  <div class="memo">
+    <div class="memo-h">
+      <div class="t">Room service · propuesta para el comité</div>
+      <div class="m">Hotel <span contenteditable="true"></span> &nbsp; Fecha <span contenteditable="true"></span></div>
+    </div>
+    
+  <div class="bq">
+    <div class="bq-h"><span class="bq-n">1</span><span class="bq-t">La situación</span></div>
+    <div class="bq-w noprint">Qué pasa hoy con el room service, en tres o cuatro líneas y sin adjetivos.</div>
+    <div class="bq-f" contenteditable="true"></div>
+  </div>
+  <div class="bq">
+    <div class="bq-h"><span class="bq-n">2</span><span class="bq-t">La cifra</span></div>
+    <div class="bq-w noprint">El dinero que hay encima de la mesa. Di de dónde sale y di que es una estimación.</div>
+    <div class="bq-f" contenteditable="true"></div>
+  </div>
+  <div class="bq">
+    <div class="bq-h"><span class="bq-n">3</span><span class="bq-t">El otro coste</span></div>
+    <div class="bq-w noprint">Lo que no se ve en la cuenta: horas de recepción, reseñas, pedidos tarde.</div>
+    <div class="bq-f" contenteditable="true"></div>
+  </div>
+  <div class="bq">
+    <div class="bq-h"><span class="bq-n">4</span><span class="bq-t">Qué propongo</span></div>
+    <div class="bq-w noprint">Qué quieres hacer, en una frase. Sin nombres de proveedor todavía.</div>
+    <div class="bq-f" contenteditable="true"></div>
+  </div>
+  <div class="bq">
+    <div class="bq-h"><span class="bq-n">5</span><span class="bq-t">Qué pido</span></div>
+    <div class="bq-w noprint">La decisión concreta que necesitas de ellos. Un presupuesto, un piloto, una reunión.</div>
+    <div class="bq-f" contenteditable="true"></div>
+  </div>
+  </div>
+  <div class="nota">No estás pidiendo comprar un sistema. <b>Estás pidiendo dejar de estimar.</b>
+  Esa es la frase que hace que una propiedad diga que sí a medir antes de decir que sí a gastar.</div>
+  <p class="noprint" style="margin-top:22px;font-size:14px;color:var(--mute)">Escribe directamente en los
+  recuadros y dale a imprimir: sale con lo que hayas escrito y cabe en un folio.</p>
+
+  <div class="foot">
+    <span>Vértice · Room service para hoteles</span>
+    <span class="noprint"><a href="index.html">Volver al índice</a></span>
+  </div>
+</div>
+<script></script>
+<div class="vfnav"><div class="t">Las nueve piezas</div><ol><li><a href="1-calculadora-ingresos-perdidos.html"><span class="n">1</span>Calculadora de ingresos perdidos</a></li><li><a href="2-test-25-minutos.html"><span class="n">2</span>Test de los 25 minutos</a></li><li><a href="3-horas-de-recepcion.html"><span class="n">3</span>Horas de recepción</a></li><li><a href="4-siete-preguntas.html"><span class="n">4</span>Las 7 preguntas para tu F&amp;B</a></li><li><a href="5-plantilla-para-la-propiedad.html" class="on"><span class="n">5</span>Plantilla para la propiedad</a></li><li><a href="6-checklist-carta-digital.html"><span class="n">6</span>Checklist de carta digital</a></li><li><a href="7-carta-nocturna.html"><span class="n">7</span>Guion de carta nocturna</a></li><li><a href="8-benchmark-room-service.html"><span class="n">8</span>Benchmark de room service</a></li><li><a href="9-nuestro-stack.html"><span class="n">9</span>Nuestro stack</a></li></ol><div class="idx">← <a href="index.html">Volver al índice</a></div></div>
+</body></html>
