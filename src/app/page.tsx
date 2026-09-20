@@ -6,6 +6,7 @@ import Reveal from "./_components/Reveal";
 import Counter from "./_components/Counter";
 import HeroPhone from "./_components/HeroPhone";
 import Chapter from "./_components/Chapter";
+import RevealOnView from "./_components/RevealOnView";
 import Calculadora from "./_components/Calculadora";
 import SmoothScroll from "./_components/SmoothScroll";
 import ScrollProgress from "./_components/ScrollProgress";
@@ -178,6 +179,7 @@ export default async function Home({
 
   return (
     <div className={styles.page}>
+      <RevealOnView />
       <ScrollProgress />
       <SmoothScroll />
       <Nav />
@@ -245,7 +247,7 @@ export default async function Home({
         <div className={styles.scenesTrack}>
           {LINEAS.map((l, n) => (
             <article key={l.id} id={l.id} className={styles.scene}>
-              <div className={styles.sceneBg} style={{ backgroundImage: `url(${l.img})` }} aria-hidden />
+              <div className={`${styles.sceneBg} ${styles.shotReveal}`} style={{ backgroundImage: `url(${l.img})` }} aria-hidden data-reveal />
               <div className={styles.sceneScrim} aria-hidden />
               <div className={styles.sceneInner}>
                 <div className={styles.sceneIndex}>{String(n + 1).padStart(2, "0")} / 05</div>
@@ -283,8 +285,10 @@ export default async function Home({
           {STEPS.map((s, i) => (
             <Reveal key={s.num} delay={i * 120}>
               <div className={styles.stepCard}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className={styles.stepImg} src={s.img} alt="" loading="lazy" />
+                <div className={`${styles.stepShot} ${styles.shotReveal}`} data-reveal data-reveal-delay={i * 90}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img className={styles.stepImg} src={s.img} alt="" loading="lazy" />
+                </div>
                 <div className={styles.stepBody}>
                   <div className={styles.stepNum}>{s.num}</div>
                   <h3 className={styles.stepTitle}>{s.title}</h3>
@@ -317,7 +321,7 @@ export default async function Home({
                 className={styles.railCard}
                 style={{ ["--feature-color" as string]: f.color }}
               >
-                <div className={styles.railShot}>
+                <div className={`${styles.railShot} ${styles.shotReveal}`} data-reveal>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={f.img}
