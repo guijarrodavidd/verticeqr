@@ -7,7 +7,12 @@
    como un instrumento de medida, no como un folleto de hotel.
    ============================================================ */
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* Al pulsar un enlace del menú, la sección se paraba justo debajo de la
+     barra fija y el titular quedaba tapado. Esto le deja el hueco. */
+  scroll-padding-top: 90px;
+}
 
 .page {
   /* Sistema de marca Vértice — el mismo del panel de dirección y las
@@ -58,8 +63,11 @@ html { scroll-behavior: smooth; }
    se intuyen sin verse. Una atmósfera radial gris lee a sucio. */
 .page::before {
   content: "";
-  position: fixed;
-  inset: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 62vh;
   pointer-events: none;
   z-index: 0;
   background-image:
@@ -75,12 +83,11 @@ html { scroll-behavior: smooth; }
   position: sticky;
   top: 0;
   z-index: 50;
-  transition: background 220ms ease, backdrop-filter 220ms ease, border-color 220ms ease;
+  transition: background 220ms ease, border-color 220ms ease;
   border-bottom: 1px solid transparent;
 }
 .navScrolled {
-  background: rgba(241, 241, 239, 0.85);
-  backdrop-filter: saturate(160%) blur(12px);
+  background: rgba(241, 241, 239, 0.94);
   border-bottom-color: var(--line);
 }
 /* Arriba del todo (sobre el hero con foto): texto en claro */
@@ -204,7 +211,6 @@ html { scroll-behavior: smooth; }
   right: 0;
   height: 124%;
   z-index: 0;
-  will-change: transform;
   backface-visibility: hidden;
   background-image:
     linear-gradient(
@@ -214,11 +220,25 @@ html { scroll-behavior: smooth; }
       rgba(17, 17, 17, 0.4) 66%,
       rgba(17, 17, 17, 0.62) 100%
     ),
-    url("/hotel/hero-view.jpg");
+    url("/hotel/hero-view.webp");
   background-size: cover, cover;
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
 }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .heroBg {
+      animation: vqHeroParallax linear both;
+      animation-timeline: view();
+      animation-range: contain 0% cover 100%;
+    }
+  }
+}
+@keyframes vqHeroParallax {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, 9%, 0); }
+}
+
 .heroBg::after {
   content: "";
   position: absolute;
@@ -453,6 +473,26 @@ html { scroll-behavior: smooth; }
   background: #111111;
   transform: scale(0.6974);
   transform-origin: top left;
+}
+/* Póster de la carta: se pinta al instante y cede el sitio al iframe real
+   cuando éste ha cargado. Ocupa exactamente el mismo hueco. */
+.phonePoster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  z-index: 1;
+  transition: opacity 400ms ease;
+}
+.phonePosterOff {
+  opacity: 0;
+  pointer-events: none;
+}
+.phoneIframe {
+  z-index: 2;
 }
 .phoneTop {
   display: flex;
@@ -1609,29 +1649,11 @@ html { scroll-behavior: smooth; }
     opacity 800ms cubic-bezier(0.22, 1, 0.36, 1),
     transform 800ms cubic-bezier(0.22, 1, 0.36, 1),
     filter 800ms cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform, filter;
 }
 .revealVisible {
   opacity: 1;
   transform: translateY(0) scale(1);
   filter: blur(0);
-}
-
-/* ---------- Barra de progreso de scroll ---------- */
-.scrollProgress {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  z-index: 60;
-  background: transparent;
-  pointer-events: none;
-}
-.scrollProgressBar {
-  height: 100%;
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: linear-gradient(90deg, var(--accent), var(--gold));
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1747,12 +1769,32 @@ html { scroll-behavior: smooth; }
   inset: -8% 0 -8%;
   background-size: cover;
   background-position: center;
-  transform: scale(1.14) translateY(var(--shift, 0%));
-  transition: transform 1600ms cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform;
+  background-repeat: no-repeat;
+  /* scale y translate por separado (no dentro de transform) para que el zoom
+     de entrada y el parallax no se pisen: uno lo lleva una transición, el otro
+     una animación de scroll. */
+  scale: 1.14;
+  transition: scale 1600ms cubic-bezier(0.16, 1, 0.3, 1);
   z-index: -2;
 }
-.chapterOn .chapterBg { transform: scale(1.02) translateY(var(--shift, 0%)); }
+.chapterOn .chapterBg { scale: 1.02; }
+
+/* Parallax del capítulo sin una línea de JavaScript: la animación va atada al
+   recorrido del scroll y la mueve el compositor. Antes esto era un listener de
+   scroll por capítulo midiendo la página en cada fotograma. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .chapterBg {
+      animation: vqChapterShift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+  }
+}
+@keyframes vqChapterShift {
+  from { translate: 0 -6%; }
+  to   { translate: 0 6%; }
+}
 .chapterScrim {
   position: absolute;
   inset: 0;
@@ -2176,11 +2218,7 @@ html { scroll-behavior: smooth; }
 .chapterLight .chapterBg { filter: brightness(0.96) saturate(0.9); }
 
 /* ---------- El móvil del hero respira ---------- */
-.heroMockup { animation: vqFadeUp 900ms 200ms ease both, vqFloat 7s 1.4s ease-in-out infinite; }
-@keyframes vqFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50%      { transform: translateY(-14px) rotate(-0.35deg); }
-}
+.heroMockup { animation: vqFadeUp 900ms 200ms ease both; }
 .phoneFrame {
   transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 700ms ease;
 }
@@ -2197,8 +2235,10 @@ html { scroll-behavior: smooth; }
   pointer-events: none;
   background: linear-gradient(115deg, transparent 38%, rgba(255,255,255,0.16) 47%, rgba(255,255,255,0.05) 53%, transparent 62%);
   transform: translateX(-120%);
-  animation: vqSheen 9s 2.5s ease-in-out infinite;
   z-index: 3;
+}
+.heroMockup:hover .phoneFrame::after {
+  animation: vqSheen 1.6s ease-in-out;
 }
 @keyframes vqSheen {
   0%, 72%, 100% { transform: translateX(-120%); }
@@ -2281,7 +2321,6 @@ html { scroll-behavior: smooth; }
   transform: scale(1.06);
   transition: clip-path 1150ms cubic-bezier(0.16, 1, 0.3, 1),
     transform 1500ms cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: clip-path, transform;
 }
 .wipeVisible { clip-path: inset(0 0 0 0); transform: scale(1); }
 @media (prefers-reduced-motion: reduce) {
@@ -2393,40 +2432,13 @@ html { scroll-behavior: smooth; }
    Aquí va la versión táctil: movimiento continuo y suave.
    ============================================================ */
 @media (hover: none) {
-  /* las fotos de las escenas respiran solas */
-  .sceneBg {
-    animation: vqKenBurns 22s ease-in-out infinite alternate;
-  }
-  .scene:nth-child(even) .sceneBg { animation-duration: 26s; animation-direction: alternate-reverse; }
-
-  /* las fotos del carril de producto también */
-  .railShot img {
-    animation: vqKenBurnsSoft 20s ease-in-out infinite alternate;
-  }
-  .railCard:nth-child(even) .railShot img { animation-duration: 24s; animation-direction: alternate-reverse; }
-
   /* la tarjeta que está centrada en el carril se levanta */
   .railCard { transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 420ms ease; }
 
-  /* el móvil del hero mantiene el flotado y gana una inclinación lenta */
-  .phoneFrame { animation: vqTilt 12s ease-in-out infinite; }
-}
-
-@keyframes vqKenBurns {
-  from { transform: scale(1.04) translate(0, 0); }
-  to   { transform: scale(1.14) translate(-1.5%, -1%); }
-}
-@keyframes vqKenBurnsSoft {
-  from { transform: scale(1.02); }
-  to   { transform: scale(1.10); }
-}
-@keyframes vqTilt {
-  0%, 100% { transform: perspective(1200px) rotateY(0deg); }
-  50%      { transform: perspective(1200px) rotateY(-4deg); }
-}
-
-@media (hover: none) and (prefers-reduced-motion: reduce) {
-  .sceneBg, .railShot img, .phoneFrame { animation: none; }
+  /* Un zoom permanente sobre las fotos a sangre se veía bien parado, pero
+     mantiene ocupada la GPU todo el rato y es justo lo que hacía que el scroll
+     fuera a tirones en el móvil. El recorrido ya lo cuenta el revelado. */
+  .sceneBg, .railShot img { animation: none; }
 }
 
 /* ============================================================
@@ -2438,7 +2450,6 @@ html { scroll-behavior: smooth; }
   transition:
     clip-path 1250ms cubic-bezier(0.16, 1, 0.3, 1),
     transform 1700ms cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: clip-path, transform;
 }
 .shotReveal[data-in="1"] {
   clip-path: inset(0 0 0 0);
@@ -2450,6 +2461,11 @@ html { scroll-behavior: smooth; }
   overflow: hidden;
   background: var(--paper-3);
   border-bottom: 1px solid var(--line);
+  /* El hueco se reserva SIEMPRE. Sin esto el contenedor medía 0, y como la
+     foto es loading="lazy" el navegador decidía que no hacía falta cargarla:
+     0 de alto -> no se carga -> sigue midiendo 0. Las tres fotos de "Cómo
+     funciona" llevaban así, en blanco, también en producción. */
+  height: 190px;
 }
 .stepShot .stepImg { display: block; width: 100%; height: 100%; object-fit: cover; }
 

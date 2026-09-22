@@ -43,10 +43,27 @@ export default function Reveal({
     return () => obs.disconnect();
   }, []);
 
-  const cls = `${variant === "wipe" ? styles.wipe : styles.reveal} ${visible ? (variant === "wipe" ? styles.wipeVisible : styles.revealVisible) : ""} ${extraClass}`
+  const style = delay ? { transitionDelay: `${delay}ms` } : undefined;
+
+  // El "wipe" arranca con clip-path: inset(0 0 100% 0) — recortado a cero. Un
+  // elemento recortado a cero no intersecta NUNCA con la pantalla, así que si
+  // el observador mirase a ese mismo div el aviso no llegaría jamás y la foto
+  // se quedaría invisible para siempre. Por eso el observador va en una caja
+  // de fuera, sin recorte, y el recorte en la de dentro.
+  if (variant === "wipe") {
+    const wipeCls = `${styles.wipe} ${visible ? styles.wipeVisible : ""}`.trim();
+    return (
+      <div ref={ref} className={extraClass || undefined}>
+        <div className={wipeCls} style={style}>
+          {children}
+        </div>
+      </div>
+    );
+  }
+
+  const cls = `${styles.reveal} ${visible ? styles.revealVisible : ""} ${extraClass}`
     .replace(/\s+/g, " ")
     .trim();
-  const style = delay ? { transitionDelay: `${delay}ms` } : undefined;
 
   return (
     <div ref={ref} className={cls} style={style}>

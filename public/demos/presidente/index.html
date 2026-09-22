@@ -789,7 +789,7 @@ const PROPINA_PCTS=String(_CFG.propinaPcts||"10,15,20").split(",").map(x=>parseI
 
 <!-- ===== WELCOME ===== -->
 <div class="welcome" id="welcome">
-  <video class="w-vid" id="wVid" src="vid/ex2.mp4" poster="img/welcome.jpg" muted playsinline autoplay loop preload="auto" aria-hidden="true"></video>
+  <video class="w-vid" id="wVid" data-src="vid/ex2.mp4" poster="img/welcome.jpg" muted playsinline loop preload="none" aria-hidden="true"></video>
   <span class="w-scrim" aria-hidden="true"></span>
   <div class="w-lang"><div class="w-seg" id="wSeg"></div></div>
   <img class="w-logo" src="img/logo-white.png" alt="Presidente InterContinental Cancún">
@@ -1452,7 +1452,7 @@ function expFeaturedHTML(){
   const cards=FEATURED_EXP.map((id,i)=>{
     const it=findItem(id); if(!it) return "";
     const v=EXP_DETAILS[id]&&EXP_DETAILS[id].vid;
-    const media=v?`<video class="feat-vid" autoplay muted loop playsinline preload="auto" poster="${it.img||''}"><source src="${v}" type="video/mp4"></video>`:(it.img?`<img src="${it.img}" alt="" loading="lazy">`:"");
+    const media=v?`<video class="feat-vid" autoplay muted loop playsinline preload="none" poster="${it.img||''}"><source src="${v}" type="video/mp4"></video>`:(it.img?`<img src="${it.img}" alt="" loading="lazy">`:"");
     return `<button type="button" class="ess-card" style="--i:${i}" onclick="openExp('${id}')" aria-label="${tt('seeDetails')}: ${it.name}">
       ${media}
       <span class="ess-tag">✦ ${tt('expSugg')}</span>
@@ -1950,8 +1950,17 @@ document.getElementById("callSend").onclick=()=>{
 // ====== Flujo pantallas ======
 // Bienvenida -> revela el selector (Carta / Experiencias / Habitación)
 (function(){var wv=document.getElementById("wVid"); if(!wv) return;
+  // Incrustada (el móvil del hero de la web) se queda en la foto: ahí lo que
+  // importa es que la página cargue, no el vídeo.
+  if (window.top !== window.self) return;
   wv.addEventListener("playing",function(){wv.classList.add("ready")});
-  var pr=wv.play(); if(pr&&pr.catch) pr.catch(function(){});
+  var arranca=function(){
+    if (wv.src) return;
+    wv.src = wv.dataset.src;
+    var pr=wv.play(); if(pr&&pr.catch) pr.catch(function(){});
+  };
+  if (window.requestIdleCallback) requestIdleCallback(arranca,{timeout:1800});
+  else setTimeout(arranca,900);
 })();
 document.getElementById("welcomeBtn").onclick=()=>{ buzz(8); document.getElementById("welcome").classList.add("gone"); document.getElementById("chooser").classList.add("show");
   setTimeout(function(){var wv=document.getElementById("wVid"); if(wv){try{wv.pause();wv.removeAttribute("src");wv.load();}catch(e){}}},900); };
@@ -2002,9 +2011,12 @@ applyLang();
     })(t0);
   }
 
-  // en bucle, para que siempre haya algo en movimiento
-  setInterval(function(){
-    if (!idle) return;
+  // Un par de vueltas y para: un bucle eterno repinta la pantalla para siempre
+  // aunque nadie esté mirando, y eso se paga en batería y en fluidez.
+  var vueltas = 0;
+  var bucle = setInterval(function(){
+    if (!idle || document.hidden) return;
+    if (++vueltas > 2) return clearInterval(bucle);
     suave(620, 2600);
     setTimeout(function(){ if (idle) suave(0, 2400); }, 5200);
   }, 16000);

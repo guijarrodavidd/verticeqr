@@ -889,7 +889,7 @@ function expFeaturedHTML(){
   const cards=FEATURED_EXP.map((id,i)=>{
     const it=findItem(id); if(!it) return "";
     const v=EXP_DETAILS[id]&&EXP_DETAILS[id].vid;
-    const media=v?`<video class="feat-vid" autoplay muted loop playsinline preload="auto" poster="${it.img||''}"><source src="${v}" type="video/mp4"></video>`:(it.img?`<img src="${it.img}" alt="" loading="lazy">`:"");
+    const media=v?`<video class="feat-vid" autoplay muted loop playsinline preload="none" poster="${it.img||''}"><source src="${v}" type="video/mp4"></video>`:(it.img?`<img src="${it.img}" alt="" loading="lazy">`:"");
     return `<button type="button" class="ess-card" style="--i:${i}" onclick="openExp('${id}')" aria-label="${tt('seeDetails')}: ${it.name}">
       ${media}
       <span class="ess-tag">✦ ${tt('expSugg')}</span>

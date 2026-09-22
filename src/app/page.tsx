@@ -8,14 +8,10 @@ import HeroPhone from "./_components/HeroPhone";
 import Chapter from "./_components/Chapter";
 import RevealOnView from "./_components/RevealOnView";
 import Calculadora from "./_components/Calculadora";
-import SmoothScroll from "./_components/SmoothScroll";
-import ScrollProgress from "./_components/ScrollProgress";
 import Logo from "./_components/Logo";
+import FormularioContacto from "./_components/FormularioContacto";
 import styles from "./landing.module.css";
 
-export const dynamic = "force-dynamic";
-
-type LandingSP = { origen?: string; ok?: string; error?: string };
 
 async function enviarLead(formData: FormData) {
   "use server";
@@ -53,35 +49,35 @@ const SENALES = [
 const LINEAS = [
   {
     id: "comida",
-    img: "/demos/presidente/img/nv_ceviche.jpg",
+    img: "/demos/presidente/img/nv_ceviche.webp",
     eyebrow: "Línea 01 · Comida y bebida",
     t: "Lo que ya cocinas, pedido sin llamar a nadie",
     d: "De 19:00 a 23:30 se juega casi todo. Y es la franja con menos gente en sala.",
   },
   {
     id: "experiencias",
-    img: "/demos/presidente/img/ex4.jpg",
+    img: "/demos/presidente/img/ex4.webp",
     eyebrow: "Línea 02 · Experiencias",
     t: "Lo que se vive en el hotel también se vende",
     d: "Se reservan el primer día. Quien las descubre en el check-out ya no compra.",
   },
   {
     id: "servicios",
-    img: "/demos/presidente/img/sv4.jpg",
+    img: "/demos/presidente/img/sv4.webp",
     eyebrow: "Línea 03 · Servicios",
     t: "Margen casi puro, y casi siempre invisible",
     d: "Coste marginal cero: llega casi entero al GOP. Lo que hay que preguntar, no se pide.",
   },
   {
     id: "colaboraciones",
-    img: "/demos/presidente/img/ex6.jpg",
+    img: "/demos/presidente/img/ex6.webp",
     eyebrow: "Línea 05 · Colaboraciones",
     t: "Lo que hay fuera del hotel también es tuyo",
     d: "Lo va a contratar igual. O desde tu carta y con comisión, o en Google y sin que te enteres.",
   },
   {
     id: "producto",
-    img: "/demos/presidente/img/nv_cafe.jpg",
+    img: "/demos/presidente/img/nv_cafe.webp",
     eyebrow: "Línea 04 · Producto",
     t: "Minibar, amenities y producto local",
     d: "Se ofrece a quien ya ha demostrado que compra.",
@@ -102,7 +98,7 @@ const FEATURES: {
 }[] = [
   {
     size: "big",
-    img: "/features/ticket.jpg",
+    img: "/features/ticket.webp",
     imgPos: "center center",
     color: "#111111",
     titulo: "Sube el GOP, no la plantilla",
@@ -114,7 +110,7 @@ const FEATURES: {
   },
   {
     size: "small",
-    img: "/features/rapido.jpg",
+    img: "/features/rapido.webp",
     imgPos: "center 32%",
     color: "#111111",
     titulo: "Tu equipo deja de subir a las habitaciones",
@@ -122,7 +118,7 @@ const FEATURES: {
   },
   {
     size: "small",
-    img: "/features/apps.jpg",
+    img: "/features/apps.webp",
     imgPos: "center center",
     color: "#4f4f4c",
     titulo: "Cero apps para el huésped",
@@ -130,7 +126,7 @@ const FEATURES: {
   },
   {
     size: "big",
-    img: "/features/datos.jpg",
+    img: "/features/datos.webp",
     imgPos: "center center",
     color: "#3a3a37",
     titulo: "Tu F&B convertido en datos",
@@ -143,9 +139,9 @@ const FEATURES: {
 
 // Cómo funciona: 3 pasos con foto real + texto corto.
 const STEPS: { num: string; img: string; title: string; desc: string }[] = [
-  { num: "01 · Escanea", img: "/steps/escanea.jpg", title: "Escanea el QR de la habitación", desc: "Su propio móvil. Sin app y sin llamar a nadie." },
-  { num: "02 · Elige", img: "/steps/pide.jpg", title: "Ve la carta y pide", desc: "Con foto, precio y tiempo de entrega. Dos toques." },
-  { num: "03 · Recibe", img: "/steps/paga.jpg", title: "Lo recibe y lo carga a la habitación", desc: "El pedido entra en cocina ya desglosado." },
+  { num: "01 · Escanea", img: "/steps/escanea.webp", title: "Escanea el QR de la habitación", desc: "Su propio móvil. Sin app y sin llamar a nadie." },
+  { num: "02 · Elige", img: "/steps/pide.webp", title: "Ve la carta y pide", desc: "Con foto, precio y tiempo de entrega. Dos toques." },
+  { num: "03 · Recibe", img: "/steps/paga.webp", title: "Lo recibe y lo carga a la habitación", desc: "El pedido entra en cocina ya desglosado." },
 ];
 
 // Diferenciador: tabla comparativa criterio a criterio.
@@ -170,18 +166,10 @@ const FAQS: { q: string; a: string }[] = [
   { q: "¿Cuánto cuesta?", a: "Depende de tu hotel. Antes de hablar de precio te enseñamos lo que podrías estar ganando; el presupuesto va después y sin compromiso." },
 ];
 
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: Promise<LandingSP>;
-}) {
-  const sp = await searchParams;
-
+export default function Home() {
   return (
     <div className={styles.page}>
       <RevealOnView />
-      <ScrollProgress />
-      <SmoothScroll />
       <Nav />
 
       {/* ============ HERO ============ */}
@@ -221,7 +209,7 @@ export default async function Home({
       {/* ============ CAPÍTULO · EL MOMENTO ============ */}
       <Chapter
         id="momento"
-        img="/demos/presidente/img/sv3.jpg"
+        img="/demos/presidente/img/sv3.webp"
         eyebrow="El momento"
         title={<>Son las 23:40 y tu huésped quiere algo. No lo pide.</>}
       >
@@ -234,7 +222,7 @@ export default async function Home({
       {/* ============ CAPÍTULO · LAS CUATRO LÍNEAS ============ */}
       <Chapter
         id="formas"
-        img="/demos/presidente/img/banner.jpg"
+        img="/demos/presidente/img/banner.webp"
         eyebrow="Qué se vende"
         title={<>Cinco formas de que tu huésped te compre más.</>}
         align="center"
@@ -247,7 +235,7 @@ export default async function Home({
         <div className={styles.scenesTrack}>
           {LINEAS.map((l, n) => (
             <article key={l.id} id={l.id} className={styles.scene}>
-              <div className={`${styles.sceneBg} ${styles.shotReveal}`} style={{ backgroundImage: `url(${l.img})` }} aria-hidden data-reveal />
+              <div className={`${styles.sceneBg} ${styles.shotReveal}`} data-bg={l.img} aria-hidden data-reveal />
               <div className={styles.sceneScrim} aria-hidden />
               <div className={styles.sceneInner}>
                 <div className={styles.sceneIndex}>{String(n + 1).padStart(2, "0")} / 05</div>
@@ -370,10 +358,10 @@ export default async function Home({
           <div className={styles.ipad}>
             <div className={styles.ipadScreen}>
               <picture>
-                <source media="(max-width: 720px)" srcSet="/panel/oportunidades-movil.png" />
+                <source media="(max-width: 720px)" srcSet="/panel/oportunidades-movil.webp" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/panel/oportunidades.png"
+                  src="/panel/oportunidades.webp"
                   alt="Panel de dirección de Vértice: oportunidades detectadas con su importe al mes"
                   loading="lazy"
                 />
@@ -479,7 +467,7 @@ Vista de oportunidades · el dinero detrás de cada señal
       {/* ============ CAPÍTULO · POR DÓNDE EMPIEZAS ============ */}
       <Chapter
         id="empezar"
-        img="/demos/presidente/img/ex1.jpg"
+        img="/demos/presidente/img/ex1.webp"
         eyebrow="Por dónde empiezas"
         title={<>Un punto de partida para cada hotel.</>}
         align="center"
@@ -572,7 +560,7 @@ Vista de oportunidades · el dinero detrás de cada señal
               loop
               playsInline
               preload="metadata"
-              poster="/demos/cala-blava/img/banner.jpg"
+              poster="/demos/cala-blava/img/banner.webp"
             >
               <source src="/demos/cala-blava/vid/ex4.mp4" type="video/mp4" />
             </video>
@@ -611,81 +599,7 @@ Vista de oportunidades · el dinero detrás de cada señal
             </div>
           </Reveal>
 
-          {sp.ok === "1" ? (
-            <div className={styles.formSuccess}>
-              <div style={{ fontSize: "1.8rem", color: "#1a7f4f", marginBottom: "0.5rem" }}>✓</div>
-              <div style={{ fontWeight: 700, fontSize: "1.15rem" }}>¡Solicitud recibida!</div>
-              <div style={{ color: "#4f4f4c", marginTop: "0.5rem", fontSize: "0.94rem" }}>
-                Nos pondremos en contacto contigo en menos de 24h. Mientras,{" "}
-                <a href="#producto" style={{ color: "#111111", textDecoration: "underline" }}>
-                  mira cómo funciona
-                </a>
-                .
-              </div>
-            </div>
-          ) : (
-            <form action={enviarLead} className={styles.form}>
-              <input type="hidden" name="origen" value={sp.origen ?? "landing"} />
-              <input type="text" name="hp" tabIndex={-1} autoComplete="off" className={styles.honeypot} aria-hidden />
-
-              {sp.error && (
-                <div className={styles.formError}>
-                  {sp.error === "email" ? "El email no parece válido." : "Faltan campos obligatorios."}
-                </div>
-              )}
-
-              <div>
-                <label htmlFor="lead-nombre" className={styles.formLabel}>Tu nombre *</label>
-                <input id="lead-nombre" name="nombre" type="text" required placeholder="Cómo te llamas" className={styles.formInput} />
-              </div>
-              <div>
-                <label htmlFor="lead-email" className={styles.formLabel}>Email *</label>
-                <input id="lead-email" name="email" type="email" required placeholder="tu@email.com" className={styles.formInput} />
-              </div>
-
-              <div>
-                <label htmlFor="lead-telefono" className={styles.formLabel}>Teléfono</label>
-                <input id="lead-telefono" name="telefono" type="tel" placeholder="+34 600 000 000" className={styles.formInput} />
-              </div>
-              <div>
-                <label htmlFor="lead-empresa" className={styles.formLabel}>Nombre del hotel</label>
-                <input id="lead-empresa" name="empresa" type="text" placeholder="Tu hotel" className={styles.formInput} />
-              </div>
-
-              <div>
-                <label htmlFor="lead-sector" className={styles.formLabel}>Tipo de hotel</label>
-                <select id="lead-sector" name="sector" defaultValue="" className={styles.formSelect}>
-                  <option value="">— Elige uno —</option>
-                  <option value="hotel-boutique">Hotel boutique</option>
-                  <option value="hotel-independiente">Hotel independiente</option>
-                  <option value="hotel-lujo">Hotel de lujo / 5★</option>
-                  <option value="resort">Resort</option>
-                  <option value="hostal-bb">Hostal / B&amp;B</option>
-                  <option value="apartamentos">Apartamentos turísticos</option>
-                  <option value="otro">Otro</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="lead-mesas" className={styles.formLabel}>Habitaciones aprox.</label>
-                <input id="lead-mesas" name="mesas" type="number" min="1" max="999" placeholder="ej. 40" className={styles.formInput} />
-              </div>
-
-              <div className={styles.formFull}>
-                <label htmlFor="lead-mensaje" className={styles.formLabel}>Cuéntanos lo que necesitas</label>
-                <textarea id="lead-mensaje" name="mensaje" rows={4} placeholder="Lo que quieras: nº de habitaciones, si ya tienes room service, tu PMS, dudas…" className={styles.formTextarea} />
-              </div>
-
-              <div className={styles.formFull} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.75rem" }}>
-                <div style={{ fontSize: "0.78rem", color: "#9a9a96" }}>
-                  * campos obligatorios
-                </div>
-                <button type="submit" className={styles.ctaPrimary}>
-                  Enviar <span>→</span>
-                </button>
-              </div>
-            </form>
-          )}
-        </div>
+          <FormularioContacto enviarLead={enviarLead} />        </div>
       </section>
 
       {/* ============ FOOTER ============ */}

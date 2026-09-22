@@ -1,24 +1,34 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "../landing.module.css";
 import Logo from "./Logo";
 import { CALENDLY_URL } from "@/lib/site";
 
-// Nav que añade fondo opaco con blur al hacer scroll.
+// Nav que se vuelve opaco al hacer scroll.
+//
+// El aviso NO viene de escuchar el scroll: un listener de scroll dispara
+// decenas de veces por segundo y obliga a React a repasar el componente en
+// cada una. En su lugar hay un testigo de 1px pegado arriba del todo; cuando
+// se sale de pantalla, el navegador nos avisa UNA vez. Coste en scroll: cero.
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const testigo = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function onScroll() {
-      setScrolled(window.scrollY > 12);
-    }
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const nodo = testigo.current;
+    if (!nodo || typeof IntersectionObserver === "undefined") return;
+    const obs = new IntersectionObserver(
+      ([e]) => setScrolled(!e.isIntersecting),
+      { threshold: 0 },
+    );
+    obs.observe(nodo);
+    return () => obs.disconnect();
   }, []);
 
   return (
+    <>
+    <div ref={testigo} aria-hidden style={{ position: "absolute", top: 12, height: 1, width: 1 }} />
     <header className={`${styles.nav} ${scrolled ? styles.navScrolled : ""}`}>
       <div className={styles.navInner}>
         <a href="/" className={styles.brand} aria-label="Vértice — inicio">
@@ -34,5 +44,6 @@ export default function Nav() {
         </nav>
       </div>
     </header>
+    </>
   );
 }

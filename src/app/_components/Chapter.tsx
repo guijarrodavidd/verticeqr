@@ -7,6 +7,11 @@ import styles from "../landing.module.css";
  * Capítulo a sangre: la imagen entra con un zoom largo y el texto se escalona
  * encima. Mientras la sección está en pantalla la imagen se desplaza despacio
  * (parallax), que es lo que da la sensación de recorrido en vez de scroll.
+ *
+ * El parallax lo lleva el CSS (animation-timeline: view()), no JavaScript.
+ * Antes cada capítulo dejaba puesto un listener de scroll que medía la página
+ * entera en cada fotograma, y eso es justo lo que hace que el scroll vaya a
+ * tirones. Donde el navegador no lo soporte, la foto se queda quieta.
  */
 export default function Chapter({
   id,
@@ -44,36 +49,6 @@ export default function Chapter({
     return () => obs.disconnect();
   }, []);
 
-  // Parallax suave, sólo si el usuario no pide menos movimiento
-  useEffect(() => {
-    const node = ref.current;
-    const bg = bgRef.current;
-    if (!node || !bg) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    let raf = 0;
-    const onScroll = () => {
-      if (raf) return;
-      raf = requestAnimationFrame(() => {
-        raf = 0;
-        const r = node.getBoundingClientRect();
-        const vh = window.innerHeight;
-        if (r.bottom < -200 || r.top > vh + 200) return;
-        // -1 arriba del todo, 1 abajo del todo
-        const p = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
-        bg.style.setProperty("--shift", `${(p * 6).toFixed(2)}%`);
-      });
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (raf) cancelAnimationFrame(raf);
-    };
-  }, []);
-
   return (
     <section
       id={id}
@@ -85,12 +60,7 @@ export default function Chapter({
         on ? styles.chapterOn : "",
       ].join(" ")}
     >
-      <div
-        ref={bgRef}
-        className={styles.chapterBg}
-        style={{ backgroundImage: `url(${img})` }}
-        aria-hidden
-      />
+      <div ref={bgRef} className={styles.chapterBg} data-bg={img} aria-hidden />
       <div className={styles.chapterScrim} aria-hidden />
       <div
         className={[
