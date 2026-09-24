@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
       { source: "/auditoria-rs", destination: "/auditoria-room-service/index.html", permanent: false },
       { source: "/auditoria-room-service", destination: "/auditoria-room-service/index.html", permanent: false },
       { source: "/mapa", destination: "/mapa/index.html", permanent: false },
+      { source: "/biblioteca", destination: "/biblioteca/index.html", permanent: false },
     ];
   },
 };
