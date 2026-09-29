@@ -23,10 +23,16 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const recurso = getRecurso((await params).slug);
+  const title = recurso ? `${recurso.titulo} — Vértice` : "Recurso — Vértice";
   return {
-    title: recurso ? `${recurso.titulo} — Vértice` : "Recurso — Vértice",
+    metadataBase: new URL("https://verticeqr.com"),
+    title,
     description: recurso?.subtitulo,
     robots: { index: false, follow: false },
+    // La imagen la genera opengraph-image.tsx: es la portada que sale al
+    // pegar el enlace en LinkedIn, WhatsApp o un email.
+    openGraph: { title, description: recurso?.subtitulo, type: "website", siteName: "Vértice" },
+    twitter: { card: "summary_large_image", title, description: recurso?.subtitulo },
   };
 }
 

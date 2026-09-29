@@ -20,6 +20,64 @@ export type Recurso = {
 };
 
 export const RECURSOS: Recurso[] = [
+  {
+    slug: "kits",
+    etiqueta: "Recurso gratuito",
+    titulo: "Los 3 Kits del Director",
+    subtitulo:
+      "12 prompts para Claude o ChatGPT: el cierre de mes para la propiedad, las fugas del F&B y lo que el huésped quiso comprar y no pudo.",
+    incluye: [
+      "kit-propiedad: el GOP explicado en una página y el PMS en 3 números",
+      "kit-fnb: ingeniería de carta, fugas y ventas cruzadas",
+      "kit-huesped: ventas perdidas en reseñas y email pre-llegada",
+      "Cada prompt le prohíbe a la IA inventarse cifras",
+    ],
+    destino: "https://claude.ai/artifact/4ifrVwrAfvS7qzXUkjZ2N1",
+    cta: "Abrir los 3 kits",
+  },
+  {
+    slug: "prompts",
+    etiqueta: "Recurso gratuito",
+    titulo: "30 Prompts para Directores de Hotel",
+    subtitulo:
+      "Copias, pegas en Claude o ChatGPT y cambias lo que va entre corchetes. Del cierre de mes a la carta, las reseñas y el equipo.",
+    incluye: [
+      "30 prompts en 7 áreas del hotel",
+      "Cada uno te dice qué datos pegar",
+      "Ninguno te pide contratar a nadie",
+    ],
+    destino: "https://claude.ai/artifact/Ve6aw1pgqVms9LqD3uKHFC",
+    cta: "Abrir los 30 prompts",
+  },
+  {
+    slug: "fugas",
+    etiqueta: "Plantilla gratuita",
+    titulo: "Las 66 Fugas del F&B",
+    subtitulo:
+      "66 momentos en los que el huésped quiere gastar y no puede, en 6 zonas del hotel, y cómo se tapa cada uno sin sumar personal.",
+    incluye: [
+      "66 fugas en 6 zonas, urbano y vacacional",
+      "Cómo se tapa cada una, paso a paso",
+      "El primer paso de esta semana y cómo medirlo",
+    ],
+    // Cuando esté en Drive como Hoja de Google compartida, cambia esto por su enlace.
+    destino: "/descargables/las-66-fugas-del-fb.xlsx",
+    cta: "Descargar la hoja",
+  },
+  {
+    slug: "biblioteca",
+    etiqueta: "Recurso gratuito",
+    titulo: "La Biblioteca de Ingresos Hoteleros",
+    subtitulo:
+      "19 carpetas para subir el margen del hotel sin sumar una persona: propiedad, margen, datos, room service, experiencias y plantillas.",
+    incluye: [
+      "19 carpetas, 30 documentos",
+      "El informe de una página para la propiedad",
+      "Checklists de turno listos para imprimir",
+    ],
+    destino: "/biblioteca",
+    cta: "Abrir la biblioteca",
+  },
   // Plantilla: copia este bloque, cambia el slug, el título y el enlace, y ya
   // está publicada en /recurso/<slug>.
   {
