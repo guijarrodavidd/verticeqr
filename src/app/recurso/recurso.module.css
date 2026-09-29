@@ -144,8 +144,12 @@
   scroll-margin-top: 24px;
 }
 @media (min-width: 901px) {
-  .card { margin-top: 82px; }
+  .cardCol { margin-top: 82px; }
 }
+.noSpam { text-align: center; color: var(--on-dark-3); font-size: 0.85rem; margin: 16px 0 0; }
+.inputIcon { position: relative; display: block; }
+.inputIcon svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.inputIcon input { padding-left: 42px !important; }
 .cardTitle { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.01em; margin: 0; }
 .cardSub { color: var(--sec); margin: 6px 0 24px; font-size: 0.95rem; }
 

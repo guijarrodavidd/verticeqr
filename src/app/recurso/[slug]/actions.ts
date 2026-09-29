@@ -22,17 +22,16 @@ export async function pedirRecurso(formData: FormData) {
   const telefono = String(formData.get("telefono") ?? "").trim();
   const acepta = formData.get("acepta") === "on";
 
-  if (!nombre || !email || !telefono) volver("campos");
+  if (!email || !telefono) volver("campos");
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) volver("email");
   if (telefono.replace(/\D/g, "").length < 9) volver("telefono");
-  if (!acepta) volver("acepta");
 
   try {
     await crearLead({
-      nombre,
+      nombre: nombre || "(sin nombre)",
       email,
       telefono,
-      mensaje: `Pidió el recurso: ${recurso.titulo}`,
+      mensaje: `Pidió el recurso: ${recurso.titulo}. Acepta recibir información: ${acepta ? "sí" : "no"}.`,
       origen: `recurso:${slug}`,
     });
   } catch (err) {
@@ -53,6 +52,7 @@ export async function pedirRecurso(formData: FormData) {
           nombre,
           email,
           telefono,
+          acepta: acepta ? "sí" : "no",
           recurso: recurso.titulo,
           slug,
         }),

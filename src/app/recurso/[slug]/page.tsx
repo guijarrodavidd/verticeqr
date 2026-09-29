@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CALENDLY_URL } from "@/lib/site";
 import { getRecurso, RECURSOS } from "@/lib/recursos";
@@ -13,10 +12,9 @@ type Props = {
 };
 
 const ERRORES: Record<string, string> = {
-  campos: "Rellena nombre, email y teléfono.",
+  campos: "Rellena el email y el teléfono.",
   email: "El email no parece válido.",
   telefono: "El teléfono no parece válido.",
-  acepta: "Tienes que aceptar la política de privacidad para recibirlo.",
 };
 
 export function generateStaticParams() {
@@ -68,45 +66,47 @@ export default async function RecursoPage({ params, searchParams }: Props) {
             )}
           </div>
 
-          <div className={styles.card} id="formulario">
-            <h2 className={styles.cardTitle}>Recibe el recurso ahora</h2>
-            <p className={styles.cardSub}>Lo tienes en la página siguiente. Sin esperas.</p>
+          <div className={styles.cardCol}>
+            <div className={styles.card} id="formulario">
+              <h2 className={styles.cardTitle}>Recibe el recurso ahora</h2>
+              <p className={styles.cardSub}>Lo tienes en la página siguiente. Sin esperas.</p>
 
-            <form action={pedirRecurso} className={styles.form}>
-              <input type="hidden" name="slug" value={recurso.slug} />
-              <input type="text" name="hp" tabIndex={-1} autoComplete="off" className={styles.honeypot} aria-hidden="true" />
+              <form action={pedirRecurso} className={styles.form}>
+                <input type="hidden" name="slug" value={recurso.slug} />
+                <input type="text" name="hp" tabIndex={-1} autoComplete="off" className={styles.honeypot} aria-hidden="true" />
 
-              {error && ERRORES[error] && (
-                <div className={styles.error} role="alert">{ERRORES[error]}</div>
-              )}
+                {error && ERRORES[error] && (
+                  <div className={styles.error} role="alert">{ERRORES[error]}</div>
+                )}
 
-              <label className={styles.field}>
-                <span>Nombre y apellido *</span>
-                <input name="nombre" type="text" required autoComplete="name" placeholder="Nombre completo" />
-              </label>
-              <label className={styles.field}>
-                <span>Email *</span>
-                <input name="email" type="email" required autoComplete="email" placeholder="tu@hotel.com" />
-              </label>
-              <label className={styles.field}>
-                <span>Teléfono *</span>
-                <input name="telefono" type="tel" required autoComplete="tel" placeholder="+34 600 000 000" pattern="[+0-9 ()-]{9,}" />
-              </label>
+                <label className={styles.field}>
+                  <span>Nombre y Apellido</span>
+                  <input name="nombre" type="text" autoComplete="name" placeholder="Nombre completo" />
+                </label>
+                <label className={styles.field}>
+                  <span>Email *</span>
+                  <span className={styles.inputIcon}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" strokeWidth="1.7" />
+                      <path d="m4 7 8 6 8-6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <input name="email" type="email" required autoComplete="email" placeholder="ejemplo@email.com" />
+                  </span>
+                </label>
+                <label className={styles.field}>
+                  <span>Teléfono *</span>
+                  <input name="telefono" type="tel" required autoComplete="tel" placeholder="+1 (555) 000-0000" pattern="[+0-9 ()-]{9,}" />
+                </label>
 
-              <label className={styles.check}>
-                <input name="acepta" type="checkbox" required />
-                <span>
-                  He leído la <Link href="/privacidad" target="_blank">política de privacidad</Link> y acepto recibir
-                  este recurso e información relacionada con él.
-                </span>
-              </label>
+                <label className={styles.check}>
+                  <input name="acepta" type="checkbox" />
+                  <span>Acepto recibir información relativa al recurso que solicito</span>
+                </label>
 
-              <button type="submit" className={styles.submit}>Obtener recurso</button>
-              <p className={styles.legal}>
-                Responsable: Vértice. Finalidad: enviarte el recurso y contactarte en relación con él.
-                Puedes ejercer tus derechos escribiendo a vertice605@gmail.com.
-              </p>
-            </form>
+                <button type="submit" className={styles.submit}>Obtener recurso</button>
+              </form>
+            </div>
+            <p className={styles.noSpam}>Nada de spam. Puedes darte de baja en cualquier momento.</p>
           </div>
         </div>
       </section>
