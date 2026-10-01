@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
       { source: "/calculadora", destination: "/calculadora/index.html" },
       { source: "/diagnostico", destination: "/diagnostico/index.html" },
       { source: "/lienzo", destination: "/lienzo/index.html" },
+      { source: "/agentes", destination: "/agentes/index.html" },
+      { source: "/kits", destination: "/kits/index.html" },
+      { source: "/prompts", destination: "/prompts/index.html" },
     ];
   },
   async redirects() {

@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{box-sizing:border-box}body{margin:0;padding:0}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head><body>
+<title>Los 9 Agentes del Director</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Schibsted+Grotesk:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F3EEE4; --card:#FFFDF8; --tint:#F5EFE3; --line:#E4DCCB;
+  --ink:#1E2A44; --text:#2A2723; --muted:#6F695E; --faint:#9A9385;
+  --clay:#D4714B; --clay-d:#B95A36; --code:#1F1D1A; --code-t:#EDE9DF; --mark:#5A3626; --mark-t:#FFB894;
+  --serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:"Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono:"JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:clamp(32px,6vw,60px) 64px;display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)}
+
+/* cabecera */
+.head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.star{width:64px;height:64px}
+h1{margin:0;font-family:var(--serif);font-weight:900;line-height:.95;letter-spacing:-.01em;text-wrap:balance}
+h1 .a{display:block;color:var(--ink);font-size:clamp(46px,9vw,92px)}
+h1 .b{display:block;color:var(--clay);font-size:clamp(40px,8vw,80px)}
+.sub{margin:4px 0 0;font-style:italic;font-weight:700;color:var(--ink);font-size:clamp(16px,2.2vw,19px);max-width:52ch;text-wrap:balance}
+.rule{width:220px;height:2px;background:var(--clay);opacity:.7}
+
+/* cómo se monta */
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:760px){.how{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start}
+.step .n{flex:0 0 34px;height:34px;border-radius:50%;background:var(--clay);color:#fff;display:grid;place-items:center;font-weight:800}
+.step b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
+.step span{color:var(--muted);font-size:14.5px}
+
+/* pilares y tarjetas */
+#pilares{display:flex;flex-direction:column;gap:clamp(30px,4vw,44px)}
+.pilar{display:flex;flex-direction:column;gap:14px}
+.pilar h2{margin:0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;font-family:var(--serif);font-weight:700;color:var(--ink);font-size:clamp(22px,3vw,28px)}
+.pilar h2 small{font-family:var(--sans);font-weight:500;font-size:14.5px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+.card{all:unset;box-sizing:border-box;cursor:pointer;background:var(--card);border:1.5px solid var(--clay);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 14px 30px -18px rgba(30,42,68,.45)}
+.card:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.band{background:var(--clay);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:4px 14px 2px}
+.band .num{font-weight:800;font-size:40px;line-height:1;letter-spacing:-.02em;color:#FBE6DA}
+.band .lab{font-size:12.5px;font-weight:700;letter-spacing:.1em}
+.pix{margin:12px 12px 0;background:var(--tint);border-radius:6px;height:110px;display:grid;place-items:center}
+.pix svg{width:96px;height:72px;shape-rendering:crispEdges}
+.body{padding:12px 16px 14px;text-align:center;display:flex;flex-direction:column;gap:6px;flex:1}
+.body .k{font-size:11.5px;letter-spacing:.12em;color:var(--muted);font-weight:500}
+.body .nm{font-family:var(--serif);font-weight:700;font-size:23px;color:var(--text);line-height:1.15}
+.body hr{width:60%;border:0;border-top:1px solid var(--line);margin:4px auto}
+.body .ds{font-size:14.5px;color:var(--text)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px 14px;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--ink)}
+.foot .go{background:var(--clay);color:#fff;border-radius:999px;padding:4px 12px;letter-spacing:.04em;white-space:nowrap}
+
+/* cierre */
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.pills span{border:1.5px solid var(--clay);background:#F0DCCD;color:var(--ink);font-weight:800;font-size:14px;letter-spacing:.04em;border-radius:999px;padding:9px 22px}
+.cta{background:var(--ink);color:#F3EEE4;border-radius:16px;padding:clamp(20px,4vw,30px);display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center}
+.cta .t{flex:1 1 360px;min-width:0}
+.cta h2{margin:0 0 6px;font-family:var(--serif);font-weight:700;font-size:clamp(21px,2.8vw,26px);text-wrap:balance}
+.cta p{margin:0;color:#C9C4B8;max-width:60ch}
+.cta a{flex:0 0 auto;background:var(--clay);color:#fff;text-decoration:none;font-weight:800;border-radius:10px;padding:12px 18px}
+.cta a:hover{background:var(--clay-d)}
+.cta a:focus-visible{outline:3px solid #F3EEE4;outline-offset:3px}
+.by{text-align:center;color:var(--faint);font-size:13.5px;margin:0}
+
+/* panel */
+.panel{background:var(--card);border:2px solid var(--clay);border-radius:14px;padding:16px clamp(16px,4vw,36px) 28px;scroll-margin-top:16px}
+.pbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.btn-g{font:inherit;font-size:14px;color:var(--muted);background:transparent;border:1px solid transparent;border-radius:8px;padding:6px 10px;cursor:pointer}
+.btn-g:hover{background:var(--tint)}
+.btn-g:disabled{opacity:.35;cursor:default}
+.btn-g:focus-visible,.copy:focus-visible{outline:2px solid var(--clay);outline-offset:2px}
+.ptag{display:inline-block;background:var(--clay);color:#fff;font-weight:700;font-size:12.5px;letter-spacing:.08em;border-radius:999px;padding:4px 12px}
+.panel h3{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:clamp(28px,4.6vw,36px);line-height:1.1;margin:12px 0 6px}
+.panel .ds{color:var(--muted);margin:0 0 6px;max-width:60ch}
+.panel .in{margin:0 0 22px;font-size:14.5px}
+.panel .in b{color:var(--ink)}
+.blk{margin-top:22px}
+.blk .hd{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.blk h4{margin:0;font-size:16px;color:var(--ink)}
+.blk h4 small{display:block;font-weight:400;color:var(--muted);font-size:13.5px}
+.copy{font:inherit;font-weight:700;font-size:14px;color:#fff;background:var(--clay);border:0;border-radius:10px;padding:9px 16px;cursor:pointer}
+.copy:hover{background:var(--clay-d)}
+.pw{background:var(--code);border-radius:12px;padding:16px 18px;overflow-x:auto}
+.pw pre{margin:0;font-family:var(--mono);font-size:13.2px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--code-t)}
+.pw mark{background:var(--mark);color:var(--mark-t);border-radius:4px;padding:0 3px}
+.hint{color:var(--faint);font-size:13.5px;margin:10px 0 0}
+.copy.ok{background:var(--ink)}
+.card[aria-expanded="true"]{box-shadow:0 0 0 3px var(--ink)}
+@media (prefers-reduced-motion:no-preference){
+  .panel{animation:sl .2s ease-out}
+  @keyframes sl{from{transform:translateY(-8px);opacity:.4}to{transform:none;opacity:1}}
+}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+
+<main class="wrap">
+  <header class="head">
+    <div class="eyebrow">Hechos con Claude · para tu hotel</div>
+    <svg class="star" viewBox="0 0 24 24" aria-hidden="true"><g stroke="#D4714B" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="12" x2="12" y2="1.5"/><line x1="12" y1="12" x2="18.5" y2="3"/><line x1="12" y1="12" x2="22" y2="8"/><line x1="12" y1="12" x2="22.5" y2="14"/><line x1="12" y1="12" x2="19" y2="20.5"/><line x1="12" y1="12" x2="13" y2="22.5"/><line x1="12" y1="12" x2="6" y2="21"/><line x1="12" y1="12" x2="1.5" y2="16"/><line x1="12" y1="12" x2="2" y2="9.5"/><line x1="12" y1="12" x2="5" y2="3"/></g></svg>
+    <h1><span class="a">LOS 9 AGENTES</span><span class="b">DEL DIRECTOR</span></h1>
+    <p class="sub">El equipo que no cuenta en plantilla. Tú le pasas los datos, ellos hacen el trabajo y tú decides.</p>
+    <div class="rule" aria-hidden="true"></div>
+  </header>
+
+  <section class="how" aria-label="Cómo se monta un agente">
+    <div class="step"><div class="n">1</div><div><b>Abre un agente</b><span>Pulsa cualquier tarjeta y copia sus instrucciones.</span></div></div>
+    <div class="step"><div class="n">2</div><div><b>Créalo una vez</b><span>Claude: Proyectos → Nuevo proyecto → Instrucciones. ChatGPT: Proyectos o GPTs → Instrucciones. Pega y guarda.</span></div></div>
+    <div class="step"><div class="n">3</div><div><b>Úsalo cada mes</b><span>Abre un chat dentro del proyecto, pega el primer mensaje y sube tus datos.</span></div></div>
+  </section>
+
+  <div id="pilares"></div>
+
+  <div class="pills" aria-label="Principios">
+    <span>SIN CONTRATAR</span><span>SIN INSTALAR</span><span>TÚ DECIDES</span>
+  </div>
+
+  <section class="cta" aria-labelledby="ctah">
+    <div class="t">
+      <h2 id="ctah">¿Quieres el número real de tu hotel?</h2>
+      <p>Llamada de diagnóstico de 20 minutos. Miramos tus datos, te digo cuánto ingreso por huésped se te escapa y qué parte se recupera sin sumar personal.</p>
+    </div>
+    <a href="https://calendly.com/vertice1/nueva-reunion-1" target="_blank" rel="noopener">Reservar mi diagnóstico →</a>
+  </section>
+
+  <p class="by">Creado por Héctor · Vértice · funciona en Claude y en ChatGPT</p>
+</main>
+
+<section class="panel" id="panel" hidden aria-labelledby="pt">
+  <div class="pbar">
+    <button class="btn-g" id="close" type="button">✕ Cerrar</button>
+    <div>
+      <button class="btn-g" id="prev" type="button" aria-label="Agente anterior">←</button>
+      <button class="btn-g" id="next" type="button" aria-label="Agente siguiente">→</button>
+    </div>
+  </div>
+  <span class="ptag" id="ptag"></span>
+  <h3 id="pt"></h3>
+  <p class="ds" id="pds"></p>
+  <p class="in" id="pin"></p>
+
+  <div class="blk">
+    <div class="hd"><h4>1 · Instrucciones del agente<small>Se pegan una sola vez, al crear el proyecto.</small></h4><button class="copy" type="button" data-w="sys">Copiar instrucciones</button></div>
+    <div class="pw"><pre id="psys"></pre></div>
+  </div>
+  <div class="blk">
+    <div class="hd"><h4>2 · Primer mensaje<small>Cada vez que lo uses. Cambia lo que va entre [corchetes].</small></h4><button class="copy" type="button" data-w="msg">Copiar mensaje</button></div>
+    <div class="pw"><pre id="pmsg"></pre></div>
+  </div>
+  <p class="hint">El agente no inventa cifras: si le falta un dato, te lo pregunta antes de empezar.</p>
+</section>
+
+<script>
+const REGLAS = "\n\nREGLAS\n- No inventes cifras ni datos del hotel. Si te falta un dato, pregúntamelo antes de empezar.\n- Enseña todas las operaciones para que pueda comprobarlas.\n- Tú propones; la decisión es del director. Nunca des algo por aprobado.\n- Descarta cualquier propuesta que exija contratar personal.\n- Escribe en castellano, directo y sin relleno.";
+
+const PILARES = [
+ {n:"Métricas Claras", s:"Ver lo que se escapa", ag:[
+  {num:"01", lab:"MÉTRICAS", nm:"El Analista", c:"#D4714B", ds:"Te dice cuánto ingreso por huésped se te escapa este mes.", in:"el informe mensual del PMS y lo vendido por servicio",
+   sys:"Eres El Analista: un analista de ingresos hoteleros que trabaja para el director de un hotel.\n\nTU TRABAJO\nCalcular cuánto ingreso por huésped se está escapando este mes, fuera del precio de la habitación.\n\nLO QUE TE VAN A PASAR\n- Habitaciones ocupadas y huéspedes del mes (informe del PMS).\n- Por cada servicio (room service, restaurante, bar, experiencias, spa, late check-out, parking…): número de ventas y ticket medio.\n- El porcentaje objetivo de cada servicio. Si no lo tienen, pídeselo; no lo supongas tú.\n\nLO QUE HACES\n1. Calcula el ingreso fuera de habitación por habitación ocupada.\n2. Para cada servicio: qué % de habitaciones lo compró (ventas ÷ habitaciones ocupadas).\n3. Para cada servicio: ventas que faltan para llegar al objetivo × ticket medio = lo que se escapa.\n4. Suma el total y ordénalo de mayor a menor.\n5. Di qué parte del total viene del servicio que más pierde.\n\nFORMATO\n- Primera línea: \"Este mes has dejado de ingresar: X €\".\n- Una tabla: servicio · hoy · objetivo · ticket · se escapa.\n- Tres líneas con las 3 causas más probables, en orden de impacto." + REGLAS,
+   msg:"Te paso el informe de [mes] del [nombre del hotel], [nº] habitaciones.\n\nHabitaciones ocupadas: [nº]\n\nVentas por servicio (nº de ventas · ticket medio · % objetivo):\n- Room service: [..]\n- Restaurante: [..]\n- Experiencias: [..]\n- Late check-out: [..]\n- [otro]: [..]\n\nDime cuánto ingreso por huésped estoy dejando escapar este mes."},
+  {num:"02", lab:"PROPIEDAD", nm:"El del Cierre", c:"#6F8B67", ds:"Tu informe de ingresos de una página para la propiedad.", in:"los números del mes frente al presupuesto",
+   sys:"Eres El del Cierre: el responsable de preparar el informe mensual que el director de un hotel manda a la propiedad o a corporativo.\n\nTU TRABAJO\nConvertir los números del mes en un informe de una página que el director pueda defender en la reunión.\n\nLO QUE TE VAN A PASAR\n- GOP, RevPAR, ocupación, ADR, coste de personal e ingreso fuera de habitación: real y presupuesto.\n- Lo que ha pasado en el mes (obras, clima, eventos, bajas…).\n\nLO QUE HACES\n1. El mes en una frase.\n2. Los 3 números clave con su desviación en € y en %.\n3. Por qué ha pasado, separando lo que depende de la dirección de lo que no.\n4. Tres acciones para el mes siguiente que no exijan contratar, con el efecto esperado de cada una.\n5. Una frase de compromiso medible.\n\nFORMATO\nUna página, sin adjetivos ni excusas. Como lo escribiría alguien que controla su hotel." + REGLAS,
+   msg:"Prepárame el informe de [mes] para la propiedad.\n\nReal vs presupuesto:\n- GOP: [..] vs [..]\n- RevPAR: [..] vs [..]\n- Ocupación: [..] vs [..]\n- Coste de personal: [..] vs [..]\n- Ingreso fuera de habitación: [..] vs [..]\n\nLo que ha pasado este mes: [..]"},
+  {num:"03", lab:"DATOS", nm:"El Medidor", c:"#5B7FA6", ds:"Qué % de huéspedes te compra algo, y cómo evoluciona mes a mes.", in:"las ventas del TPV y las habitaciones ocupadas",
+   sys:"Eres El Medidor: el encargado de que el director sepa, cada mes, qué parte de sus huéspedes le compra algo además de la habitación.\n\nTU TRABAJO\nMedir la tasa de compra del hotel y vigilar cómo cambia.\n\nLO QUE TE VAN A PASAR\n- Las ventas del mes por servicio (exportadas del TPV o del PMS).\n- Habitaciones ocupadas del mes.\n- Si las tienen, las cifras de los meses anteriores.\n\nLO QUE HACES\n1. Tasa de compra global: habitaciones con al menos una compra ÷ habitaciones ocupadas. Si no hay dato por habitación, usa ventas ÷ habitaciones ocupadas y avisa de que es una aproximación.\n2. Tasa de compra por servicio.\n3. Comparación con meses anteriores, si los hay.\n4. Los 5 indicadores que el director debería mirar cada mes, con la fórmula de cada uno.\n5. Una plantilla de tabla para que la rellene él el mes que viene en 10 minutos.\n\nFORMATO\nPrimero la cifra global, después la tabla por servicio y al final la plantilla." + REGLAS,
+   msg:"Mide la tasa de compra del [nombre del hotel] en [mes].\n\nHabitaciones ocupadas: [nº]\n\nVentas por servicio:\n[pega aquí la exportación del TPV o una lista: servicio — nº de ventas]\n\nMeses anteriores (si los tienes): [..]"}
+ ]},
+ {n:"Motor de Venta", s:"Qué ofrecer, cuándo y con quién", ag:[
+  {num:"04", lab:"PRE-LLEGADA", nm:"El Anfitrión", c:"#C9A13B", ds:"El mensaje que vende antes del check-in.", in:"lo que ofrece tu hotel y el perfil de huésped",
+   sys:"Eres El Anfitrión: el responsable de escribir los mensajes que el hotel manda al huésped antes de que llegue.\n\nTU TRABAJO\nQue el huésped reserve algo (upgrade, cena, traslado, experiencia) antes del check-in, sin sonar a publicidad.\n\nLO QUE TE VAN A PASAR\n- Tipo de hotel, ubicación y perfil de huésped.\n- Lo que se puede vender antes de llegar, con precio.\n- Canal: email, WhatsApp o los dos.\n\nLO QUE HACES\nEscribe una secuencia de 3 mensajes:\n1. En la confirmación de la reserva.\n2. Siete días antes.\n3. Veinticuatro horas antes.\n\nCada mensaje:\n- Ofrece UNA sola cosa.\n- Tiene menos de 60 palabras (WhatsApp) o 120 (email).\n- Termina con una respuesta de una palabra (\"Responde MESA y te la guardo\").\n- Tono de anfitrión, no de oferta.\n\nDa 2 versiones del asunto para cada email." + REGLAS,
+   msg:"Escríbeme la secuencia de pre-llegada para el [nombre del hotel].\n\n- Tipo y ubicación: [urbano / vacacional, ciudad]\n- Huésped principal: [parejas, familias, negocios…]\n- Lo que quiero vender antes de la llegada, con precio: [..]\n- Canal: [email / WhatsApp]"},
+  {num:"05", lab:"VENTA", nm:"El Vendedor", c:"#B65A3C", ds:"Qué ofrecer a cada huésped y en qué momento de la estancia.", in:"tus servicios con precio y tus perfiles de huésped",
+   sys:"Eres El Vendedor: el responsable de decidir qué se le ofrece a cada huésped y en qué momento de su estancia.\n\nTU TRABAJO\nConstruir la matriz de venta del hotel: perfil de huésped × momento de la estancia → qué ofrecer.\n\nLO QUE TE VAN A PASAR\n- Los servicios que se pueden vender, con precio y horario.\n- Los perfiles de huésped principales.\n- Estancia media.\n\nLO QUE HACES\n1. Una tabla con los perfiles en filas y 5 momentos en columnas: antes de llegar · check-in · durante la estancia · en la habitación · salida.\n2. En cada casilla, UNA oferta concreta con su precio.\n3. Marca las 5 casillas con más potencial y explica por qué en una línea.\n4. Para esas 5, la frase exacta con la que se ofrece, en menos de 20 palabras.\n\nNo propongas nada que dependa de que el equipo se acuerde de ofrecerlo: tiene que poder llegar al huésped sin que nadie lo empuje." + REGLAS,
+   msg:"Hazme la matriz de venta del [nombre del hotel].\n\nServicios con precio y horario:\n[..]\n\nPerfiles de huésped principales: [..]\nEstancia media: [nº] noches"},
+  {num:"06", lab:"ALIANZAS", nm:"El Conector", c:"#7E6AA6", ds:"Experiencias locales que vendes sin montar nada.", in:"dónde está tu hotel y qué buscan tus huéspedes",
+   sys:"Eres El Conector: el responsable de encontrar colaboraciones locales que el hotel pueda vender a sus huéspedes sin montar nada propio.\n\nTU TRABAJO\nDiseñar el catálogo de experiencias locales del hotel y cómo se cierra cada acuerdo.\n\nLO QUE TE VAN A PASAR\n- Ubicación del hotel y lo que hay cerca.\n- Perfil de huésped y temporada.\n- Lo que el hotel ya ofrece.\n\nLO QUE HACES\n1. 10 tipos de colaborador que encajen (bodegas, guías, restaurantes, alquiler, actividades…), ordenados por encaje con el huésped.\n2. Para cada uno: qué experiencia se vende, a qué precio orientativo según lo que te digan, y qué modelo de acuerdo tiene sentido (comisión, precio cerrado, intercambio).\n3. El mensaje para proponer la colaboración al proveedor, en menos de 100 palabras.\n4. Cómo se presenta cada experiencia al huésped en una línea.\n\nNo inventes nombres de empresas reales: describe el tipo de colaborador y el director pondrá el nombre." + REGLAS,
+   msg:"Diseña el catálogo de experiencias locales del [nombre del hotel].\n\n- Ubicación: [ciudad / zona]\n- Lo que hay cerca: [..]\n- Huésped principal y temporada: [..]\n- Lo que ya ofrecemos: [..]"}
+ ]},
+ {n:"Escala sin Fricción", s:"Por qué no te piden y cómo se arregla", ag:[
+  {num:"07", lab:"FRICCIÓN", nm:"El Auditor", c:"#4F8E8A", ds:"Cuántos pasos da el huésped para pedirte algo, y cuáles sobran.", in:"cómo pide hoy el huésped, paso a paso",
+   sys:"Eres El Auditor: un consultor de procesos que mide la fricción que tiene un huésped para comprar algo en el hotel.\n\nTU TRABAJO\nContar cuántos pasos da el huésped para pedir cada servicio y detectar dónde se pierde la venta.\n\nLO QUE TE VAN A PASAR\nPara cada servicio (room service, restaurante, experiencias, spa, late check-out…): cómo se entera el huésped, cómo lo pide, quién lo recibe, cómo se cobra.\n\nLO QUE HACES\n1. Para cada servicio, el recorrido en pasos numerados, desde que el huésped tiene la necesidad hasta que lo recibe.\n2. El número total de pasos.\n3. En cada paso, qué puede hacer que el huésped abandone (esperar, llamar, no entender, no saber el precio, idioma…).\n4. Los 3 pasos que más ventas cuestan, en todo el hotel.\n5. Cómo quitar esos 3 pasos sin sumar personal.\n\nFORMATO\nUna tabla de servicios con su número de pasos, ordenada de más a menos, y después el detalle de los 3 peores." + REGLAS,
+   msg:"Audita la fricción del [nombre del hotel].\n\nAsí pide hoy el huésped cada servicio:\n- Room service: [..]\n- Restaurante: [..]\n- Experiencias: [..]\n- Late check-out: [..]\n- [otro]: [..]"},
+  {num:"08", lab:"RECEPCIÓN", nm:"El Recepcionista", c:"#4C6E4C", ds:"Lo que te preguntan 20 veces al día, resuelto.", in:"las preguntas que más se repiten en recepción",
+   sys:"Eres El Recepcionista: el responsable de quitarle a recepción las preguntas que se repiten todos los días.\n\nTU TRABAJO\nConvertir las preguntas repetidas en respuestas que el huésped encuentre solo, y detectar cuáles son ventas que se están perdiendo.\n\nLO QUE TE VAN A PASAR\n- Las preguntas que más se repiten en recepción (o mensajes de huéspedes).\n- Datos del hotel: horarios, servicios, precios, cómo llegar a los sitios.\n\nLO QUE HACES\n1. Agrupa las preguntas por tema y ordénalas por frecuencia.\n2. Escribe la respuesta exacta a cada una, en menos de 40 palabras, lista para que el huésped la lea sin preguntar.\n3. Marca las preguntas que en realidad son una intención de compra (\"¿a qué hora cierra la cocina?\" = quiere pedir algo).\n4. Para esas, la oferta que debería aparecer justo al lado de la respuesta.\n5. Estima cuántas horas al mes libera en recepción. Pide al director cuántas veces al día se repite cada pregunta y el tiempo medio por respuesta; no lo supongas." + REGLAS,
+   msg:"Estas son las preguntas que más nos hacen en recepción del [nombre del hotel]:\n[lista de preguntas, con las veces al día si lo sabes]\n\nDatos del hotel (horarios, servicios, precios):\n[..]"},
+  {num:"09", lab:"EQUIPO", nm:"El Planificador", c:"#2F3F6B", ds:"Cómo vender más sin sumar personal.", in:"las tareas del equipo y las horas que consumen",
+   sys:"Eres El Planificador: el responsable de que el hotel venda más con el mismo equipo.\n\nTU TRABAJO\nEncontrar las horas del equipo que se van en tareas que no venden ni atienden, y convertirlas en un plan de 30 días.\n\nLO QUE TE VAN A PASAR\n- Las tareas recurrentes de recepción, sala y cocina, con las horas aproximadas al mes de cada una.\n- Plantilla por turno.\n- Los objetivos del director para el próximo mes.\n\nLO QUE HACES\n1. Clasifica cada tarea: vende · atiende al huésped · administrativa · repetitiva que se puede quitar.\n2. Suma las horas de cada grupo.\n3. Las 5 tareas que más horas liberan si se quitan o se simplifican, con cómo hacerlo sin contratar ni comprar nada grande.\n4. Un plan de 30 días en 4 semanas: qué se cambia cada semana, quién lo lleva y cómo se mide.\n5. A qué se dedican las horas liberadas para que se conviertan en venta o en atención.\n\nFORMATO\nPrimero las horas liberadas en total, después la tabla y al final el plan semanal." + REGLAS,
+   msg:"Ayúdame a vender más en el [nombre del hotel] sin sumar personal.\n\nTareas recurrentes y horas al mes:\n- Recepción: [..]\n- Sala: [..]\n- Cocina: [..]\n\nPlantilla por turno: [..]\nObjetivo del mes que viene: [..]"}
+ ]}
+];
+
+const FLAT = PILARES.flatMap(p => p.ag);
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const pixel = c => `<svg viewBox="0 0 12 9" aria-hidden="true"><g fill="${c}"><rect x="2" y="1" width="8" height="5"/><rect x="1" y="3" width="1" height="2"/><rect x="10" y="3" width="1" height="2"/><rect x="3" y="6" width="1" height="2"/><rect x="5" y="6" width="1" height="2"/><rect x="6" y="6" width="1" height="2"/><rect x="8" y="6" width="1" height="2"/></g><g fill="#111"><rect x="4" y="2" width="1" height="2"/><rect x="7" y="2" width="1" height="2"/></g></svg>`;
+
+$("pilares").innerHTML = PILARES.map(p => `
+  <section class="pilar">
+    <h2>${esc(p.n)} <small>${esc(p.s)}</small></h2>
+    <div class="grid">${p.ag.map(a => `
+      <button class="card" type="button" data-n="${a.num}">
+        <div class="band"><span class="num">${a.num}</span><span class="lab">${a.lab}</span></div>
+        <div class="pix">${pixel(a.c)}</div>
+        <div class="body"><span class="k">AGENTE</span><span class="nm">${esc(a.nm)}</span><hr><span class="ds">${esc(a.ds)}</span></div>
+        <div class="foot"><span>LE PASAS TUS DATOS</span><span class="go">ABRIR →</span></div>
+      </button>`).join("")}</div>
+  </section>`).join("");
+
+let cur = -1;
+const hl = s => esc(s).replace(/\[([^\]]+)\]/g, '<mark>[$1]</mark>');
+const cardOf = i => document.querySelector(`.card[data-n="${FLAT[i].num}"]`);
+function open(i, scroll = true){
+  if(i < 0 || i >= FLAT.length) return;
+  if(cur >= 0) cardOf(cur).setAttribute("aria-expanded", "false");
+  cur = i; const a = FLAT[i], card = cardOf(i);
+  $("ptag").textContent = a.num + " · " + a.lab;
+  $("pt").textContent = a.nm;
+  $("pds").textContent = a.ds;
+  $("pin").innerHTML = "<b>Le pasas:</b> " + esc(a.in) + ".";
+  $("psys").innerHTML = hl(a.sys);
+  $("pmsg").innerHTML = hl(a.msg);
+  $("prev").disabled = i === 0; $("next").disabled = i === FLAT.length - 1;
+  document.querySelectorAll(".copy").forEach(b => { b.classList.remove("ok"); b.textContent = b.dataset.w === "sys" ? "Copiar instrucciones" : "Copiar mensaje"; });
+  // El detalle se abre debajo del pilar del agente, dentro de la página.
+  card.closest(".pilar").appendChild($("panel"));
+  card.setAttribute("aria-expanded", "true");
+  $("panel").hidden = false;
+  try{ history.replaceState(null, "", "#agente-" + a.num); }catch(e){}
+  if(scroll) $("panel").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"});
+}
+function close(){
+  $("panel").hidden = true;
+  try{ history.replaceState(null, "", location.pathname + location.search); }catch(e){}
+  if(cur >= 0){ const c = cardOf(cur); c.setAttribute("aria-expanded", "false"); c.scrollIntoView({block: "center"}); c.focus({preventScroll: true}); }
+}
+function sel(el){ const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+
+document.querySelectorAll(".card").forEach(c => c.setAttribute("aria-expanded", "false"));
+$("pilares").addEventListener("click", e => {
+  const b = e.target.closest(".card"); if(!b) return;
+  const i = FLAT.findIndex(a => a.num === b.dataset.n);
+  if(i === cur && !$("panel").hidden) close(); else open(i);
+});
+$("close").onclick = close;
+$("prev").onclick = () => open(cur - 1); $("next").onclick = () => open(cur + 1);
+document.querySelectorAll(".copy").forEach(btn => btn.addEventListener("click", () => {
+  const w = btn.dataset.w, a = FLAT[cur], txt = w === "sys" ? a.sys : a.msg, el = $(w === "sys" ? "psys" : "pmsg");
+  const done = () => { btn.classList.add("ok"); btn.textContent = "✓ Copiado"; };
+  const fallback = () => { sel(el); btn.textContent = "Seleccionado: cópialo"; };
+  try{ navigator.clipboard.writeText(txt).then(done, fallback); }catch(e){ fallback(); }
+}));
+document.addEventListener("keydown", e => { if(e.key === "Escape" && !$("panel").hidden) close(); });
+const h = location.hash.match(/^#agente-(\d\d)$/); if(h){ const i = FLAT.findIndex(a => a.num === h[1]); if(i >= 0) open(i); }
+</script>
+
+</body></html>
