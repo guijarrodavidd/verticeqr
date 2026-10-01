@@ -32,7 +32,7 @@ export const RECURSOS: Recurso[] = [
       "kit-huesped: ventas perdidas en reseñas y email pre-llegada",
       "Cada prompt le prohíbe a la IA inventarse cifras",
     ],
-    destino: "https://claude.ai/artifact/4ifrVwrAfvS7qzXUkjZ2N1",
+    destino: "/kits",
     cta: "Abrir los 3 kits",
   },
   {
@@ -47,7 +47,7 @@ export const RECURSOS: Recurso[] = [
       "Fricción: por qué no te piden y cómo vender más sin sumar personal",
       "Ninguno inventa cifras ni te pide contratar a nadie",
     ],
-    destino: "https://claude.ai/artifact/VzjAofCALgaVLfcq8ReWKG",
+    destino: "/agentes",
     cta: "Abrir los 9 agentes",
   },
   {
@@ -61,7 +61,7 @@ export const RECURSOS: Recurso[] = [
       "Cada uno te dice qué datos pegar",
       "Ninguno te pide contratar a nadie",
     ],
-    destino: "https://claude.ai/artifact/Ve6aw1pgqVms9LqD3uKHFC",
+    destino: "/prompts",
     cta: "Abrir los 30 prompts",
   },
   {

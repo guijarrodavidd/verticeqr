@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{box-sizing:border-box}body{margin:0;padding:0}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head><body>
+<title>30 Prompts para Directores de Hotel</title>
+<style>
+:root{
+  --bg:#ffffff; --text:#37352f; --muted:#787774; --faint:#9b9a97; --line:#e9e9e7; --hover:#f7f7f5;
+  --cover:#f4552f; --cover-top:#ff3d00; --accent:#d9730d; --callout:#fbecdd; --blue:#2383e2; --blue-h:#0077d4;
+  --code:#f7f6f3; --mark:#fbe4cc; --mark-t:#9a4a07; --panel:#ffffff; --shade:rgba(15,15,15,.45);
+  --t-orange:#fadec9; --t-green:#dbeddb; --t-yellow:#fdecc8; --t-blue:#d3e5ef; --t-purple:#e8deee; --t-pink:#f5e0e9; --t-gray:#e3e2e0;
+  --tt:#32302c;
+  --font: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji";
+  --mono: "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#191919; --text:#d4d4d4; --muted:#9b9b9b; --faint:#7f7f7f; --line:#2f2f2f; --hover:#252525;
+    --cover:#d9492a; --cover-top:#e63a0a; --accent:#ffa344; --callout:#3b2a1d; --blue:#2383e2; --blue-h:#3a93ea;
+    --code:#202020; --mark:#4a3120; --mark-t:#ffc58a; --panel:#202020; --shade:rgba(0,0,0,.6);
+    --t-orange:#5c3b23; --t-green:#2b593f; --t-yellow:#564328; --t-blue:#28456c; --t-purple:#492f64; --t-pink:#69314c; --t-gray:#373737;
+    --tt:#e6e6e6;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#191919; --text:#d4d4d4; --muted:#9b9b9b; --faint:#7f7f7f; --line:#2f2f2f; --hover:#252525;
+  --cover:#d9492a; --cover-top:#e63a0a; --accent:#ffa344; --callout:#3b2a1d; --blue:#2383e2; --blue-h:#3a93ea;
+  --code:#202020; --mark:#4a3120; --mark-t:#ffc58a; --panel:#202020; --shade:rgba(0,0,0,.6);
+  --t-orange:#5c3b23; --t-green:#2b593f; --t-yellow:#564328; --t-blue:#28456c; --t-purple:#492f64; --t-pink:#69314c; --t-gray:#373737;
+  --tt:#e6e6e6;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.cover{position:relative;height:clamp(150px,26vw,250px);background:var(--cover);border-top:clamp(10px,2vw,22px) solid var(--cover-top);display:grid;place-items:center}
+.cover .icon{font-size:clamp(64px,10vw,96px);line-height:1;user-select:none}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,6vw,96px);padding-block:clamp(40px,8vw,80px) 72px}
+h1{font-size:clamp(30px,5.4vw,40px);font-weight:700;line-height:1.15;letter-spacing:-.01em;margin:0 0 14px;text-wrap:balance}
+.byline{color:var(--muted);font-style:italic;margin:0 0 18px;font-size:17px}
+.byline span{text-decoration:underline;text-decoration-color:var(--faint);text-underline-offset:3px}
+hr{border:0;border-top:1px solid var(--line);margin:0 0 22px}
+.callout{display:flex;gap:10px;align-items:flex-start;background:var(--callout);border-radius:4px;padding:14px 16px;margin:0 0 30px}
+.callout .ce{font-size:20px;line-height:1.3}
+.callout p{margin:0}
+.callout b{color:var(--accent)}
+.dbhead{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-bottom:6px}
+.dbhead h2{display:flex;align-items:center;gap:8px;font-size:22px;font-weight:700;margin:0;flex:1 1 auto}
+.search{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:6px;padding:4px 8px;color:var(--muted);background:var(--bg)}
+.search input{border:0;outline:0;background:transparent;color:var(--text);font:inherit;font-size:14px;width:150px}
+.search:focus-within{border-color:var(--blue)}
+.views{display:flex;gap:4px;overflow-x:auto;padding-block:6px 8px;border-bottom:1px solid var(--line);scrollbar-width:none}
+.views::-webkit-scrollbar{display:none}
+.views button{flex:0 0 auto;font:inherit;font-size:14px;color:var(--muted);background:transparent;border:0;border-radius:4px;padding:3px 8px;cursor:pointer;white-space:nowrap}
+.views button:hover{background:var(--hover)}
+.views button[aria-pressed="true"]{color:var(--text);background:var(--hover);font-weight:600}
+.table{width:100%}
+.th,.row{display:grid;grid-template-columns:minmax(0,1fr) 190px;align-items:center}
+.th{color:var(--muted);font-size:14px;border-bottom:1px solid var(--line)}
+.th div{padding:8px 8px;display:flex;gap:6px;align-items:center}
+.th div+div,.row .cat{border-left:1px solid var(--line)}
+.row{border-bottom:1px solid var(--line);cursor:pointer;background:transparent;width:100%;text-align:left;font:inherit;color:inherit;border-top:0;border-right:0;border-left:0;padding:0}
+.row:hover{background:var(--hover)}
+.row:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.row .name{padding:9px 8px;display:flex;gap:10px;align-items:baseline;min-width:0}
+.row .name .em{flex:0 0 auto}
+.row .name .tx{overflow-wrap:anywhere}
+.row .cat{padding:9px 8px;align-self:stretch;display:flex;align-items:center}
+.tag{display:inline-block;font-size:13px;line-height:1.4;padding:1px 7px;border-radius:3px;color:var(--tt);white-space:nowrap}
+.count{color:var(--faint);font-size:13px;padding:10px 8px}
+.empty{padding:20px 8px;color:var(--muted)}
+.cta{display:flex;gap:12px;align-items:flex-start;margin-top:40px;border:1px solid var(--line);border-radius:6px;padding:18px 20px}
+.cta .ce{font-size:22px;line-height:1.3}
+.cta h2{font-size:20px;font-weight:700;margin:0 0 6px;text-wrap:balance}
+.cta p{margin:0 0 14px;color:var(--muted);max-width:60ch}
+.cbtn{display:inline-block;background:var(--blue);color:#fff;font-weight:600;font-size:14.5px;text-decoration:none;border-radius:6px;padding:8px 14px}
+.cbtn:hover{background:var(--blue-h)}
+.cbtn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+@media (max-width:620px){
+  .th{display:none}
+  .row{grid-template-columns:1fr}
+  .row .cat{border-left:0;padding:0 8px 10px 38px}
+  .row .name{padding-bottom:4px}
+  .search input{width:120px}
+}
+/* panel */
+.panel{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:6px;margin:8px 0 14px;padding:14px clamp(16px,4vw,40px) 28px;scroll-margin-top:16px}
+.pbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;gap:8px}
+.icon-btn{font:inherit;font-size:14px;color:var(--muted);background:transparent;border:0;border-radius:4px;padding:4px 8px;cursor:pointer}
+.icon-btn:hover{background:var(--hover)}
+.pnav{display:flex;gap:2px}
+.panel .pe{font-size:52px;line-height:1;margin-bottom:10px}
+.panel h3{font-size:clamp(24px,4.5vw,30px);line-height:1.2;margin:0 0 16px;text-wrap:balance}
+.props{display:grid;grid-template-columns:130px 1fr;gap:8px 12px;font-size:14px;margin-bottom:22px}
+.props dt{color:var(--muted)}
+.props dd{margin:0}
+.copy{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:14px;font-weight:600;color:#fff;background:var(--blue);border:0;border-radius:6px;padding:7px 14px;cursor:pointer}
+.copy:hover{background:var(--blue-h)}
+.copy:focus-visible,.icon-btn:focus-visible,.views button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.pwrap{margin-top:14px;background:var(--code);border-radius:4px;padding:16px 18px;overflow-x:auto}
+.pwrap pre{margin:0;font-family:var(--mono);font-size:13.5px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--text)}
+.pwrap mark{background:var(--mark);color:var(--mark-t);border-radius:3px;padding:0 2px}
+.hint{color:var(--muted);font-size:14px;margin:12px 0 0}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 24px);transform:translateX(-50%);background:#2f2f2f;color:#fff;font-size:14px;padding:8px 14px;border-radius:6px;z-index:20}
+@media (prefers-reduced-motion:no-preference){
+  .panel{animation:slide .18s ease-out}
+  @keyframes slide{from{transform:translateY(-8px);opacity:.6}to{transform:none;opacity:1}}
+}
+</style>
+
+<main class="page">
+  <h1>30 Prompts para Directores de Hotel</h1>
+  <p class="byline">Creado por <span>Héctor</span></p>
+  <hr>
+
+  <div class="callout">
+    <div class="ce" aria-hidden="true">💬</div>
+    <p>Abre un prompt, pulsa <b>Copiar</b> y pégalo en ChatGPT o Claude. Cambia lo que va entre <b>[corchetes]</b> por los datos de tu hotel. Ninguno te pide contratar a nadie.</p>
+  </div>
+
+  <div class="dbhead">
+    <h2><span aria-hidden="true">🛎️</span> Prompts para Directores</h2>
+    <label class="search" for="q">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input id="q" type="search" placeholder="Buscar…" autocomplete="off">
+    </label>
+  </div>
+  <div class="views" id="views" role="toolbar" aria-label="Filtrar por categoría"></div>
+
+  <div class="table" role="table" aria-label="Prompts">
+    <div class="th" role="row"><div role="columnheader"><span aria-hidden="true">Aa</span> Nombre del prompt</div><div role="columnheader">Categoría</div></div>
+    <div id="rows"></div>
+  </div>
+  <div class="count" id="count"></div>
+
+  <section class="cta" aria-labelledby="ctah">
+    <div class="ce" aria-hidden="true">📞</div>
+    <div>
+      <h2 id="ctah">¿Cuánto se le escapa al F&amp;B de tu hotel?</h2>
+      <p>Llamada de diagnóstico de 15 minutos. Me cuentas cómo funciona hoy tu F&amp;B y te digo dónde están las fugas y cuáles se tapan sin sumar personal.</p>
+      <a class="cbtn" href="https://calendly.com/vertice1/nueva-reunion-1" target="_blank" rel="noopener">Reservar mi diagnóstico →</a>
+    </div>
+  </section>
+</main>
+
+<section class="panel" id="panel" hidden aria-labelledby="ptitle">
+  <div class="pbar">
+    <button class="icon-btn" id="close" type="button">✕ Cerrar</button>
+    <div class="pnav">
+      <button class="icon-btn" id="prev" type="button" aria-label="Prompt anterior">↑</button>
+      <button class="icon-btn" id="next" type="button" aria-label="Prompt siguiente">↓</button>
+    </div>
+  </div>
+  <div class="pe" id="pe" aria-hidden="true"></div>
+  <h3 id="ptitle"></h3>
+  <dl class="props">
+    <dt>Categoría</dt><dd id="pcat"></dd>
+    <dt>Para qué sirve</dt><dd id="ps"></dd>
+  </dl>
+  <button class="copy" id="copy" type="button">Copiar prompt</button>
+  <div class="pwrap"><pre id="pp"></pre></div>
+  <p class="hint">Lo que va resaltado entre [corchetes] lo rellenas tú.</p>
+</section>
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script>
+const DATA = [{"n": 1, "e": "📉", "t": "Explica a la propiedad por qué el GOP no llega", "c": "Propiedad y cierre", "s": "Llegar a la reunión con la propiedad con una explicación clara y un plan, no con excusas.", "p": "Actúa como director de operaciones de un grupo hotelero que revisa el cierre de mes de uno de sus hoteles.\n\nEstos son mis datos del mes:\n- GOP real: [€ y %]\n- GOP presupuestado: [€ y %]\n- RevPAR real y presupuestado: [..]\n- Coste de personal real y presupuestado: [..]\n- Ingreso de F&B real y presupuestado: [..]\n- Lo que ha pasado este mes (obras, clima, un evento, bajas…): [..]\n\nEscríbeme un informe de una página para la propiedad que:\n1. Explique en 3 puntos por qué el GOP está por debajo del presupuesto, ordenados por impacto en euros.\n2. Separe lo que depende de la dirección del hotel de lo que no.\n3. Proponga 3 acciones para el mes que viene que no requieran contratar a nadie, con el efecto esperado de cada una.\n4. Termine con una frase de compromiso concreta y medible.\n\nTono: directo, sin excusas ni adjetivos. Como lo escribiría alguien que controla su hotel.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 2, "e": "💶", "t": "Encuentra ingreso de F&B sin tocar la plantilla", "c": "F&B e ingresos", "s": "Detectar dónde está el dinero de F&B que se escapa y que se puede recuperar con el mismo equipo.", "p": "Actúa como consultor de F&B especializado en hoteles con poco personal.\n\nMi hotel:\n- Tipo: [urbano / vacacional], [nº] habitaciones, ocupación media [%]\n- Puntos de venta y horarios: [restaurante, bar, room service, piscina…]\n- Cómo pide hoy el huésped: [teléfono, recepción, carta en papel, QR con PDF…]\n- Plantilla de F&B por turno: [..]\n- Ticket medio aproximado por punto de venta: [..]\n\nEncuentra 10 momentos de la estancia en los que el huésped querría gastar y hoy no puede o no se entera. Para cada uno dime:\n1. El momento y la zona (ej. \"habitación, 23:30\").\n2. Por qué no compra: ¿falta de oferta, de horario o de visibilidad, o es la fricción de pedir?\n3. Cómo se resuelve sin sumar personal.\n4. Qué habría que medir para saber si funciona.\n\nOrdénalos de más fácil a más difícil de poner en marcha. Descarta todo lo que exija contratar.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 3, "e": "🍽️", "t": "Reescribe tu carta para vender lo de más margen", "c": "Carta", "s": "Que la carta empuje los platos que más dejan, no los que más se piden por inercia.", "p": "Actúa como experto en ingeniería de menús para hoteles.\n\nTe paso mi carta con precio de venta y coste de cada plato:\n[pega la carta: plato — precio — coste]\n\nY lo que más se vende hoy: [top 5 platos más vendidos]\n\nHaz lo siguiente:\n1. Clasifica cada plato en la matriz de ingeniería de menús (estrella, vaca, puzzle, perro) con su margen en euros.\n2. Dime qué 3 platos habría que empujar y por qué.\n3. Reescribe el nombre y la descripción de esos 3 platos para que apetezcan más, en un máximo de 12 palabras cada uno.\n4. Propón el orden en el que deberían aparecer en la carta.\n5. Dime qué plato quitarías y por qué.\n\nNo cambies precios sin justificarlo con el margen.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 4, "e": "⭐", "t": "Detecta en tus reseñas lo que no pudieron comprar", "c": "Huésped y reseñas", "s": "Sacar de las reseñas las ventas que se perdieron, no solo las quejas.", "p": "Actúa como analista de experiencia del huésped.\n\nTe pego mis últimas [nº] reseñas de Booking, Google y TripAdvisor:\n[pega las reseñas]\n\nBusca en ellas todo lo que indique que el huésped quiso comprar algo y no pudo, o no sabía que existía. Frases como \"echamos de menos…\", \"no había dónde cenar tarde\", \"nos enteramos al irnos de…\", \"no había nadie para…\".\n\nDevuélveme una tabla con:\n1. Lo que quería (literal de la reseña, entre comillas).\n2. El momento y la zona del hotel.\n3. Cuántas reseñas lo mencionan.\n4. Qué oferta o cambio lo resolvería sin sumar personal.\n\nTermina con las 3 ventas perdidas que más se repiten.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 5, "e": "📊", "t": "Convierte el informe del PMS en 3 números clave", "c": "Propiedad y cierre", "s": "Pasar de un informe de 20 páginas a los 3 números que importan este mes.", "p": "Actúa como controller de un grupo hotelero.\n\nTe pego el informe mensual que me saca el PMS:\n[pega el informe o los datos principales]\n\nMi objetivo del año es: [ej. subir GOP 2 puntos, bajar coste de personal, subir F&B]\n\nDime:\n1. Los 3 números de este informe que más importan para mi objetivo, con su valor y su variación frente al mes anterior y al presupuesto.\n2. En una frase cada uno, qué significa y qué haría con él.\n3. Una señal que se esté escondiendo en el informe y que yo debería mirar aunque no la busque.\n\nFormato: tres bloques cortos que pueda leer en 2 minutos antes de una reunión.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 6, "e": "🧾", "t": "Calcula cuánto deja cada servicio tras el personal", "c": "Propiedad y cierre", "s": "Saber qué servicio da dinero de verdad cuando descuentas lo que cuesta atenderlo.", "p": "Actúa como analista financiero hotelero.\n\nEstos son mis servicios con su ingreso mensual, coste directo y horas de personal que consumen:\n[servicio — ingreso/mes — coste de producto — horas de personal/mes]\nCoste por hora de personal (con cargas): [€]\n\nCalcula para cada servicio:\n1. Margen después de producto.\n2. Margen después de personal.\n3. Flow-through: qué parte de cada euro de ingreso llega al GOP.\n\nEnséñame todas las operaciones para que pueda comprobarlas.\nLuego dime qué servicio pierde dinero cuando se cuenta el personal y qué tendría que cambiar para que dejara de perderlo sin cerrarlo.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 7, "e": "🧑‍🍳", "t": "Prepara la reunión con tu F&B para que diga que sí", "c": "Equipo", "s": "Presentar un cambio al director de F&B o al jefe de cocina sin que lo vea como más trabajo.", "p": "Actúa como director general con experiencia en gestionar el cambio en equipos de cocina y sala.\n\nQuiero proponer a mi director de F&B este cambio:\n[describe el cambio]\n\nLo que sé de él o ella: [años en el hotel, qué le preocupa, cómo reacciona a las novedades]\nSu mayor miedo probable: [más trabajo, perder control, que le midan…]\n\nPrepárame la reunión:\n1. Cómo abrirla en 2 frases, empezando por lo que gana él o ella, no el hotel.\n2. Las 3 objeciones que va a poner y la respuesta a cada una.\n3. Qué trabajo deja de tener con el cambio (tiene que haber algo).\n4. Una propuesta de prueba pequeña, con fecha de fin, para que decir que sí no le cueste.\n5. La pregunta con la que cerrar.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 8, "e": "🌍", "t": "Traduce la carta a 4 idiomas sin que suene a traductor", "c": "Carta", "s": "Tener la carta en inglés, francés, alemán y portugués con nombres que apetecen.", "p": "Actúa como redactor gastronómico nativo en inglés, francés, alemán y portugués.\n\nEsta es mi carta en castellano:\n[pega la carta]\n\nMis huéspedes vienen sobre todo de: [países]\n\nTradúcela a los 4 idiomas con estas reglas:\n1. No traduzcas literal: usa el nombre con el que un nativo pediría ese plato.\n2. Los platos locales conservan su nombre original y llevan una descripción breve de qué son.\n3. Mantén los alérgenos marcados igual que en el original.\n4. Máximo 12 palabras por descripción.\n\nDevuélvemelo en una tabla con una columna por idioma. Marca con un asterisco los platos en los que hayas tenido que adaptar el nombre.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 9, "e": "🗓️", "t": "Plan de temporada baja: pilotos que firmas tú", "c": "Planificación", "s": "Aprovechar la temporada baja para probar cosas pequeñas que no necesitan aprobación de arriba.", "p": "Actúa como director de operaciones que ayuda a un GM a planificar la temporada baja.\n\nMi hotel: [tipo, habitaciones, ocupación en temporada baja]\nLo que puedo aprobar sin pedir permiso: [importe o tipo de gasto]\nMi prioridad del año: [ej. F&B, reseñas, costes]\n\nPropón 5 pilotos de 30 días que:\n1. Quepan en lo que puedo aprobar yo.\n2. No requieran contratar ni integrar sistemas nuevos.\n3. Tengan un número claro para saber si han funcionado.\n\nPara cada piloto: qué es, qué cuesta, quién lo lleva, el número a medir y qué resultado haría que valiera la pena ampliarlo.\nOrdénalos por relación entre esfuerzo y resultado esperado.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 10, "e": "🧮", "t": "Prepara el presupuesto de F&B con 3 escenarios", "c": "Planificación", "s": "Llegar al presupuesto anual con un escenario prudente, uno base y uno ambicioso, defendibles.", "p": "Actúa como controller hotelero preparando el presupuesto anual.\n\nDatos del año pasado de F&B por mes: [ingreso, coste de producto, coste de personal]\nPrevisión de ocupación para el año que viene: [por mes o media]\nCambios previstos: [precios, horarios, nuevos servicios, obras]\n\nConstruye 3 escenarios (prudente, base y ambicioso) con:\n1. Ingreso de F&B por habitación ocupada.\n2. Ingreso total de F&B.\n3. Margen después de personal.\n4. Las hipótesis de cada escenario, escritas de forma que la propiedad las entienda.\n\nEnséñame las operaciones. Dime cuál defenderías tú y por qué.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 11, "e": "📈", "t": "Defiende una inversión ante corporativo en una página", "c": "Propiedad y cierre", "s": "Que una propuesta no muera en corporativo por falta de un documento claro.", "p": "Actúa como director de operaciones que revisa propuestas de inversión de sus hoteles.\n\nQuiero pedir aprobación para: [qué es]\nCoste: [implantación y mensual]\nLo que espero conseguir: [ingreso, ahorro, reseñas…]\nRiesgos que veo: [..]\n\nEscríbeme un documento de una página con:\n1. El problema, en 2 frases y con un número.\n2. La propuesta, en 3 líneas.\n3. El retorno con un escenario prudente, calculado paso a paso.\n4. Qué pasa si no funciona: cuánto se pierde como máximo y cómo se sale.\n5. Qué necesito que aprueben y para cuándo.\n\nSin adjetivos. Que se pueda decir que sí en 5 minutos.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 12, "e": "🔍", "t": "Audita tu room service de la habitación al pedido", "c": "F&B e ingresos", "s": "Ver en qué paso se pierden los huéspedes que querían pedir.", "p": "Actúa como consultor de procesos hoteleros.\n\nAsí funciona hoy mi room service, paso a paso, desde que el huésped tiene hambre hasta que recibe el pedido:\n[describe: dónde ve la carta, cómo llama, quién coge el pedido, cómo llega a cocina, cómo se cobra]\nHorario: [..]\nPedidos al día aproximados: [..]\n\nHaz lo siguiente:\n1. Dibuja el recorrido como una lista de pasos.\n2. En cada paso, dime qué puede hacer que el huésped abandone.\n3. Marca los 3 pasos donde más pedidos se pierden y explica por qué.\n4. Propón cómo quitar esos 3 pasos sin sumar personal.\n\nNo propongas contratar ni ampliar horario de cocina.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 13, "e": "🥐", "t": "Diseña un desayuno para llevar para el que madruga", "c": "F&B e ingresos", "s": "Venderle algo al huésped que se va antes de que abra el desayuno.", "p": "Actúa como jefe de F&B de un hotel urbano.\n\nMi desayuno abre a las [hora]. Mis huéspedes que salen antes son sobre todo: [negocios, vuelos, trenes…]\nLo que tengo en cocina la noche anterior: [..]\nPersonal disponible de noche: [..]\n\nDiseña una oferta de desayuno para llevar que:\n1. Se prepare la noche anterior o con lo que ya hay, sin personal extra de madrugada.\n2. Tenga 2 o 3 opciones cerradas y un precio cada una.\n3. Se pueda pedir antes de irse a dormir.\n\nDame también el texto para ofrecerlo al huésped en el check-in y en la habitación, en menos de 20 palabras.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 14, "e": "🌙", "t": "Diseña una oferta para cuando cierra cocina", "c": "F&B e ingresos", "s": "Seguir vendiendo después de que cierre la cocina, sin cocinero de guardia.", "p": "Actúa como consultor de F&B para hoteles.\n\nMi cocina cierra a las [hora]. Después de esa hora: [qué hay: bar, recepción, nada]\nQuién está en el hotel de noche: [..]\nEquipamiento disponible: [nevera, microondas, horno de regeneración…]\n\nDiseña una carta de noche de 6 a 8 productos que:\n1. Se sirvan sin cocinero: frío, regenerado o de producto envasado de calidad.\n2. Los pueda entregar el personal que ya está de noche en menos de 10 minutos.\n3. Tengan un margen claro (indícame qué datos necesitas para calcularlo).\n\nAñade el nombre de la carta, el texto para la habitación y cómo se cobra sin complicar la recepción.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 15, "e": "🍷", "t": "Crea ventas cruzadas que sala no tenga que memorizar", "c": "F&B e ingresos", "s": "Que cada pedido lleve algo más sin depender de que el camarero se acuerde.", "p": "Actúa como experto en ventas de F&B.\n\nMi carta: [pega la carta o los platos principales]\nBebidas y postres: [..]\n\nCrea 10 parejas de \"si pide X, ofrece Y\" que:\n1. Tengan sentido gastronómico.\n2. Suban el ticket medio al menos un [%].\n3. Puedan ir escritas en la propia carta o en el sistema de pedido, para que nadie tenga que memorizarlas.\n\nPara cada pareja, escribe la frase tal cual aparecería junto al plato, en menos de 8 palabras.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 16, "e": "🏊", "t": "Convierte la piscina en punto de venta", "c": "F&B e ingresos", "s": "Vender en piscina o playa sin poner a un camarero dando vueltas.", "p": "Actúa como consultor de F&B para hoteles vacacionales.\n\nMi zona de piscina o playa: [tamaño, número de tumbonas, horario]\nLo que se vende hoy allí: [..]\nDesde dónde se sirve: [bar de piscina, cocina principal…]\nPersonal en esa zona: [..]\n\nPropón cómo vender más en esa zona:\n1. Qué ofrecer por franja horaria (mañana, mediodía, tarde).\n2. Cómo pide el huésped sin levantarse y sin que un camarero tenga que ir a preguntarle.\n3. Cómo se entrega y se cobra con el personal que ya hay.\n4. Qué 3 productos empujar y a qué precio.\n\nNo propongas contratar.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 17, "e": "🎟️", "t": "Empaqueta experiencias que el huésped no sabe que existen", "c": "F&B e ingresos", "s": "Vender tours, catas y actividades que hoy se descubren el día del check-out.", "p": "Actúa como responsable de experiencias de un hotel.\n\nLo que ofrecemos o podríamos ofrecer: [spa, catas, tours, traslados, actividades con proveedores locales]\nProveedores con los que ya trabajamos: [..]\nPerfil de huésped: [..]\n\nHaz lo siguiente:\n1. Empaqueta 6 experiencias con nombre, precio orientativo, duración y para quién es cada una.\n2. Dime en qué momento de la estancia ofrecer cada una (día 1, víspera, lluvia…).\n3. Escribe el texto de cada experiencia para mostrarlo al huésped, en menos de 25 palabras.\n4. Dime qué comisión o margen es razonable pedir al proveedor y cómo plantearlo.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 18, "e": "✉️", "t": "Escribe el email pre-llegada que vende antes del check-in", "c": "Huésped y reseñas", "s": "Que el huésped reserve cena, traslado o experiencias antes de llegar.", "p": "Actúa como experto en email marketing hotelero.\n\nMi hotel: [tipo, ubicación, perfil de huésped]\nLo que quiero vender antes de la llegada: [cena, traslado, spa, upgrade…]\nCuándo se envía: [días antes de la llegada]\n\nEscribe el email:\n1. Un asunto de menos de 45 caracteres que se abra.\n2. Un cuerpo de menos de 120 palabras, en tono de anfitrión y no de oferta.\n3. Un máximo de 3 cosas que reservar, cada una con su precio.\n4. Un único botón.\n\nDame 2 versiones del asunto para probar.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 19, "e": "💬", "t": "Responde a una reseña negativa de servicio en 2 minutos", "c": "Huésped y reseñas", "s": "Contestar bien una reseña mala sin pasar media hora redactando.", "p": "Actúa como director de un hotel que responde a sus reseñas en persona.\n\nLa reseña:\n[pégala]\n\nLo que pasó de verdad según el equipo: [..]\nLo que ya hemos cambiado, si hay algo: [..]\n\nEscribe una respuesta que:\n1. Tenga menos de 90 palabras.\n2. Dé las gracias sin sonar a plantilla.\n3. Reconozca lo que falló sin culpar al huésped ni al equipo.\n4. Diga una cosa concreta que ha cambiado o va a cambiar.\n5. Vaya firmada por mí con nombre y cargo.\n\nSin frases hechas como \"lamentamos las molestias ocasionadas\".\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 20, "e": "🗣️", "t": "Convierte las quejas repetidas en acciones de la semana", "c": "Huésped y reseñas", "s": "Dejar de leer las mismas quejas cada mes y cerrar las que más se repiten.", "p": "Actúa como director de calidad hotelera.\n\nEstas son las quejas de este mes (reseñas, encuestas, recepción):\n[pégalas]\n\nHaz lo siguiente:\n1. Agrúpalas por tema y cuenta cuántas hay de cada uno.\n2. Ordena los temas por frecuencia y por impacto en la nota media.\n3. Para los 3 primeros, propón una acción que se pueda hacer esta semana, quién la lleva y cómo sabremos que ha funcionado.\n\nDescarta las acciones que requieran obra o contratar.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 21, "e": "👥", "t": "Reparte turnos cuando falta gente sin romper el servicio", "c": "Equipo", "s": "Cubrir la semana con menos personal sin que el huésped lo note.", "p": "Actúa como director de operaciones con experiencia en hoteles cortos de plantilla.\n\nMi plantilla disponible esta semana, por departamento y persona: [..]\nOcupación prevista por día: [..]\nServicios que no se pueden tocar: [..]\nNormativa de descansos y horas que debo respetar: [..]\n\nPropón:\n1. Un cuadrante de turnos para la semana.\n2. Qué tareas se pueden mover a horas valle o simplificar.\n3. Qué servicio reducirías primero y cómo se lo comunicarías al huésped.\n4. Dónde hay riesgo de que algo falle y cómo cubrirlo.\n\nRespeta siempre descansos y horas máximas.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 22, "e": "📋", "t": "Crea la hoja de un proceso para cada puesto", "c": "Equipo", "s": "Que cualquiera del turno sepa hacer una tarea sin preguntarte.", "p": "Actúa como formador de operaciones hoteleras.\n\nEl proceso: [ej. recibir un pedido de room service, check-in tardío, cierre de caja]\nCómo se hace hoy: [..]\nErrores que se repiten: [..]\n\nEscribe una hoja de un solo folio para plastificar y dejar en el puesto:\n1. El objetivo del proceso en una frase.\n2. Máximo 7 pasos, cada uno empezando por un verbo.\n3. Los 2 errores más comunes y cómo evitarlos.\n4. A quién llamar si algo se sale del guion.\n\nLetra grande y frases de menos de 12 palabras.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 23, "e": "🎓", "t": "Forma a alguien nuevo en recepción en 20 minutos", "c": "Equipo", "s": "Que un recepcionista nuevo esté operativo en su primer turno.", "p": "Actúa como jefe de recepción que forma a personal nuevo en temporada alta.\n\nMi hotel: [tipo, habitaciones, PMS que usamos]\nLo que el nuevo ya sabe: [..]\nLo que más se pregunta en recepción: [..]\n\nDiseña una formación de 20 minutos con:\n1. Las 5 cosas que tiene que saber hacer el primer día, en orden.\n2. Las 10 preguntas más frecuentes de los huéspedes con la respuesta.\n3. Qué puede resolver solo y qué tiene que escalar.\n4. Un minitest de 5 preguntas para comprobar que lo ha entendido.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 24, "e": "🧯", "t": "Plan de crisis para temporada alta", "c": "Equipo", "s": "Tener escrito qué hacer cuando pasa lo que siempre pasa en agosto.", "p": "Actúa como director de operaciones con experiencia en crisis hoteleras.\n\nMi hotel: [tipo, habitaciones]\nLas crisis que más me preocupan: [overbooking, avería de aire, baja de un jefe de departamento, caída del PMS…]\n\nPara cada crisis escribe:\n1. Cómo detectarla pronto.\n2. Qué hace cada persona en los primeros 30 minutos.\n3. Qué se le dice al huésped, literal.\n4. Qué compensación ofrecer y hasta dónde puede decidir cada puesto.\n5. Qué revisar después para que no se repita.\n\nFormato: una ficha por crisis que quepa en una pantalla del móvil.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 25, "e": "🧠", "t": "Compara 3 proveedores sin atascarte", "c": "Decisiones", "s": "Decidir entre proveedores con criterio y en una tarde, no en tres meses.", "p": "Actúa como director de compras de un grupo hotelero.\n\nNecesito elegir proveedor para: [..]\nLas 3 opciones y lo que sé de cada una: [precio, condiciones, permanencia, qué incluye]\nLo que más me importa: [ej. que no dé trabajo al equipo, precio, soporte]\n\nHaz lo siguiente:\n1. Una tabla comparativa con los criterios que de verdad importan para mi caso.\n2. El coste total a 12 meses de cada una, incluidos implantación, formación y horas del equipo.\n3. Las preguntas que haría a cada proveedor antes de decidir.\n4. Tu recomendación y qué la haría cambiar.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 26, "e": "📑", "t": "Resume un contrato de proveedor y detecta las trampas", "c": "Decisiones", "s": "Saber qué firmas antes de firmarlo.", "p": "Actúa como abogado especializado en contratos de servicios para hoteles.\n\nTe pego el contrato:\n[pégalo]\n\nDevuélveme:\n1. Un resumen de una página: qué se compra, cuánto cuesta, cuánto dura y cómo se sale.\n2. Las cláusulas que me pueden perjudicar: permanencia, penalizaciones, renovación automática, cambios unilaterales de precio o condiciones, propiedad de los datos.\n3. Para cada una, qué pediría cambiar y cómo decirlo.\n4. Lo que falta en el contrato y debería estar.\n\nAdvierte cuando algo necesite la revisión de un abogado de verdad.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 27, "e": "⚖️", "t": "Decide qué servicio cerrar y cuál potenciar", "c": "Decisiones", "s": "Dejar de mantener servicios por costumbre.", "p": "Actúa como consultor de rentabilidad hotelera.\n\nMis servicios con su ingreso, coste, horas de personal y uso:\n[servicio — ingreso/mes — coste — horas de personal — cuántos huéspedes lo usan]\n\nHaz lo siguiente:\n1. Clasifica cada servicio: potenciar, mantener, rediseñar o cerrar.\n2. Justifica cada decisión con los números.\n3. Para los de rediseñar, dime qué cambiarías para que dejen de perder dinero.\n4. Para los de cerrar, dime qué impacto puede tener en las reseñas y cómo minimizarlo.\n\nDistingue entre un servicio que nadie quiere y uno que nadie ve: antes de cerrar, dime cómo comprobar cuál es.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 28, "e": "📆", "t": "Prepara el informe trimestral para el comité del grupo", "c": "Propiedad y cierre", "s": "Presentar el trimestre con una historia clara y no con una lista de cifras.", "p": "Actúa como director de operaciones que prepara la presentación trimestral de un hotel ante el comité del grupo.\n\nDatos del trimestre frente al presupuesto y al año pasado: [GOP, RevPAR, ADR, ocupación, F&B, personal, nota de reseñas]\nLo que ha salido bien: [..]\nLo que ha salido mal: [..]\nLo que se ha probado: [pilotos, cambios]\n\nEscríbeme la estructura de la presentación en 6 diapositivas:\n1. El trimestre en una frase.\n2. Los 3 números clave.\n3. Lo que ha funcionado y por qué.\n4. Lo que no y qué se ha hecho.\n5. Lo que propongo para el siguiente trimestre.\n6. Lo que necesito del grupo.\n\nCon el texto exacto de cada diapositiva, máximo 25 palabras por diapositiva.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 29, "e": "🚀", "t": "Presenta un piloto que funcionó para llevarlo al grupo", "c": "Propiedad y cierre", "s": "Convertir un buen resultado en tu hotel en un proyecto para todo el grupo.", "p": "Actúa como director de desarrollo de un grupo hotelero que evalúa ideas de sus GMs.\n\nEl piloto: [qué se hizo, en qué zona y cuánto duró]\nResultados medidos: [antes y después, con números]\nCoste y esfuerzo: [..]\nHoteles del grupo donde podría aplicarse: [..]\n\nEscríbeme una propuesta de una página para escalarlo:\n1. Qué problema resuelve y en cuántos hoteles existe.\n2. Qué resultado dio, con los números del piloto.\n3. Qué haría falta para llevarlo a los demás hoteles y en qué orden.\n4. Riesgos y cómo se controlan.\n5. Qué pido: aprobación, presupuesto y un responsable.\n\nQue quede claro quién lo propuso y lo probó.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}, {"n": 30, "e": "🗂️", "t": "Planifica tu semana de GM en 15 minutos", "c": "Planificación", "s": "Empezar el lunes sabiendo qué tres cosas importan de verdad esta semana.", "p": "Actúa como coach de directores de hotel.\n\nMis reuniones y compromisos de esta semana: [..]\nLo que tengo pendiente: [..]\nMi objetivo del mes: [..]\nLo que me está quitando más tiempo: [..]\n\nAyúdame a planificar la semana:\n1. Las 3 cosas que más mueven mi objetivo del mes.\n2. Qué delego, a quién, y cómo se lo pido en una frase.\n3. Qué dejo de hacer esta semana.\n4. Un bloque de 2 horas protegido y para qué lo uso.\n\nQue quepa en un mensaje que pueda releer cada mañana.\n\nReglas: no inventes cifras ni datos del hotel. Si te falta un dato para hacerlo bien, pregúntamelo antes de empezar. Escribe en castellano, directo y sin relleno."}];
+const TAG = {"Propiedad y cierre":"orange","F&B e ingresos":"green","Carta":"yellow","Huésped y reseñas":"blue","Equipo":"purple","Planificación":"pink","Decisiones":"gray"};
+const cats = ["Todos", ...Object.keys(TAG).filter(c => DATA.some(d => d.c === c))];
+let cat = "Todos", q = "", list = DATA, cur = -1;
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const tag = c => `<span class="tag" style="background:var(--t-${TAG[c]||"gray"})">${esc(c)}</span>`;
+
+function renderViews(){
+  $("views").innerHTML = cats.map(c => `<button type="button" aria-pressed="${c===cat}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+}
+function renderRows(){
+  const pn=$("panel"); pn.hidden=true; document.querySelector(".table").after(pn);
+  const nq = q.trim().toLowerCase();
+  list = DATA.filter(d => (cat==="Todos"||d.c===cat) && (!nq || (d.t+" "+d.s+" "+d.c).toLowerCase().includes(nq)));
+  $("rows").innerHTML = list.length ? list.map((d,i) =>
+    `<button class="row" type="button" role="row" data-i="${i}"><div class="name" role="cell"><span class="em" aria-hidden="true">${d.e}</span><span class="tx">${esc(d.t)}</span></div><div class="cat" role="cell">${tag(d.c)}</div></button>`).join("")
+    : `<div class="empty">Ningún prompt coincide con “${esc(q)}”.</div>`;
+  $("count").textContent = `${list.length} de ${DATA.length}`;
+}
+function open(i){
+  if(i<0||i>=list.length) return;
+  cur=i; const d=list[i];
+  $("pe").textContent=d.e; $("ptitle").textContent=d.t; $("pcat").innerHTML=tag(d.c); $("ps").textContent=d.s;
+  $("pp").innerHTML = esc(d.p).replace(/\[([^\]]+)\]/g,'<mark>[$1]</mark>');
+  $("prev").disabled = i===0; $("next").disabled = i===list.length-1;
+  document.querySelector(`.row[data-i="${i}"]`).after($("panel")); $("panel").hidden=false; $("panel").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
+  try{ history.replaceState(null,"","#p"+d.n); }catch(e){}
+  $("copy").focus({preventScroll:true});
+}
+function close(){
+  $("panel").hidden=true;
+  try{ history.replaceState(null,"",location.pathname+location.search); }catch(e){}
+  const r=document.querySelector(`.row[data-i="${cur}"]`); if(r) r.focus();
+}
+let tt;
+function toast(m){ const b=$("copy"); b.textContent=m; clearTimeout(tt); tt=setTimeout(()=>b.textContent="Copiar prompt",2200); }
+function selectPrompt(){ const r=document.createRange(); r.selectNodeContents($("pp")); const s=getSelection(); s.removeAllRanges(); s.addRange(r); }
+
+$("views").addEventListener("click", e => { const b=e.target.closest("button"); if(!b) return; cat=b.dataset.c; renderViews(); renderRows(); });
+$("q").addEventListener("input", e => { q=e.target.value; renderRows(); });
+$("rows").addEventListener("click", e => { const r=e.target.closest(".row"); if(r) open(+r.dataset.i); });
+$("close").onclick=close;
+$("prev").onclick=()=>open(cur-1); $("next").onclick=()=>open(cur+1);
+$("copy").addEventListener("click", () => {
+  const txt=list[cur].p;
+  try{
+    navigator.clipboard.writeText(txt).then(()=>toast("Prompt copiado"), ()=>{ selectPrompt(); toast("Texto seleccionado: pulsa Copiar en tu teclado"); });
+  }catch(e){ selectPrompt(); toast("Texto seleccionado: pulsa Copiar en tu teclado"); }
+});
+document.addEventListener("keydown", e => {
+  if($("panel").hidden) return;
+  if(e.key==="Escape") close();
+});
+renderViews(); renderRows();
+const m=/^#p(\d+)$/.exec(location.hash); if(m){ const i=list.findIndex(d=>d.n===+m[1]); if(i>=0) open(i); }
+</script>
+
+</body></html>
