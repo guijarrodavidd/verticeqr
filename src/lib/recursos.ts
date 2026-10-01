@@ -36,6 +36,21 @@ export const RECURSOS: Recurso[] = [
     cta: "Abrir los 3 kits",
   },
   {
+    slug: "agentes",
+    etiqueta: "Recurso gratuito",
+    titulo: "Los 9 Agentes del Director",
+    subtitulo:
+      "El equipo que no cuenta en plantilla: 9 agentes para Claude o ChatGPT que miden, venden y quitan fricción. Tú les pasas los datos y tú decides.",
+    incluye: [
+      "Métricas: cuánto ingreso por huésped se te escapa y el informe para la propiedad",
+      "Venta: qué ofrecer a cada huésped, cuándo y con quién",
+      "Fricción: por qué no te piden y cómo vender más sin sumar personal",
+      "Ninguno inventa cifras ni te pide contratar a nadie",
+    ],
+    destino: "https://claude.ai/artifact/VzjAofCALgaVLfcq8ReWKG",
+    cta: "Abrir los 9 agentes",
+  },
+  {
     slug: "prompts",
     etiqueta: "Recurso gratuito",
     titulo: "30 Prompts para Directores de Hotel",
