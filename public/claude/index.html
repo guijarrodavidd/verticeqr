@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Claude Opus 5.5 para Hoteles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Schibsted+Grotesk:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F3EEE4; --card:#FFFDF8; --tint:#F5EFE3; --line:#E4DCCB;
+  --ink:#1E2A44; --text:#2A2723; --muted:#6F695E; --faint:#9A9385;
+  --clay:#D4714B; --clay-d:#B95A36; --code:#1F1D1A; --code-t:#EDE9DF;
+  --wa:#E7DED0; --wa-in:#FFFFFF; --wa-out:#DCF2D0; --wa-head:#1F3A33;
+  --serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:"Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono:"JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;padding:0 16px 80px}
+.wrap{max-width:1040px;margin:0 auto}
+header{text-align:center;padding:56px 0 30px}
+.kick{font-size:12px;font-weight:800;letter-spacing:.22em;color:var(--ink);text-transform:uppercase}
+.ast{display:block;margin:16px auto 8px;width:46px;height:46px}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(44px,8vw,86px);line-height:.95;color:var(--ink);letter-spacing:-.01em;text-transform:uppercase}
+h1 span{display:block;color:var(--clay)}
+.sub{font-family:var(--sans);font-weight:700;font-style:italic;color:var(--ink);font-size:clamp(16px,2.2vw,19px);max-width:560px;margin:18px auto 0;text-wrap:balance}
+.rule{width:140px;height:3px;background:#E9B29B;margin:22px auto 0;border-radius:2px}
+h2{font-family:var(--serif);font-weight:900;color:var(--ink);font-size:clamp(26px,3.6vw,34px);line-height:1.1;margin:0 0 6px;text-wrap:balance}
+.h2sub{color:var(--muted);font-size:15px;margin-bottom:18px}
+section{margin-top:54px}
+
+/* DEMO */
+.demo{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.phone{background:var(--wa);border-radius:28px;border:10px solid #1B1A18;overflow:hidden;box-shadow:0 18px 40px rgba(30,42,68,.16)}
+.wa-h{background:var(--wa-head);color:#fff;padding:12px 16px;display:flex;align-items:center;gap:10px}
+.wa-av{width:34px;height:34px;border-radius:50%;background:var(--clay);display:grid;place-items:center;font-family:var(--serif);font-weight:900;font-size:16px}
+.wa-h b{display:block;font-size:14.5px}
+.wa-h small{font-size:12px;opacity:.75}
+.chat{padding:14px 12px 18px;display:flex;flex-direction:column;gap:8px;min-height:420px}
+.day{align-self:center;background:#F2ECDF;color:var(--muted);font-size:11.5px;padding:3px 10px;border-radius:8px}
+.m{max-width:84%;padding:8px 11px 6px;border-radius:10px;font-size:14.5px;line-height:1.42;box-shadow:0 1px 0 rgba(0,0,0,.06);position:relative}
+.m.in{align-self:flex-start;background:var(--wa-in);border-top-left-radius:2px}
+.m.out{align-self:flex-end;background:var(--wa-out);border-top-right-radius:2px}
+.m .t{display:block;text-align:right;font-size:10.5px;color:#8C8A84;margin-top:2px}
+.tag{align-self:flex-end;font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--clay-d);background:#FBE6DC;border:1px solid #F1C3AE;padding:2px 8px;border-radius:20px;text-transform:uppercase}
+.tag.l{align-self:flex-start}
+.legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}
+.legend span{font-size:13px;font-weight:700;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:20px;padding:5px 12px}
+
+/* CARDS */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:18px}
+.card b{display:block;font-family:var(--serif);font-weight:900;color:var(--ink);font-size:19px;line-height:1.15;margin-bottom:6px}
+.card p{font-size:14.5px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:18px;display:flex;gap:12px}
+.step .n{flex:0 0 30px;height:30px;border-radius:50%;background:var(--clay);color:#fff;font-weight:800;display:grid;place-items:center}
+.step b{display:block;color:var(--ink)}
+.step p{font-size:14.5px;color:var(--muted)}
+
+/* CODE */
+.codebox{background:var(--code);color:var(--code-t);border-radius:14px;overflow:hidden}
+.codebar{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid #34312C}
+.codebar span{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:#BDB7AA;text-transform:uppercase}
+.copy{font:700 13px var(--sans);background:var(--clay);color:#fff;border:0;border-radius:20px;padding:7px 14px;cursor:pointer}
+.copy:hover{background:var(--clay-d)}
+pre{font-family:var(--mono);font-size:13.2px;line-height:1.6;white-space:pre-wrap;word-break:break-word;padding:16px 18px;max-height:480px;overflow:auto}
+.tries{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.try{background:var(--card);border:1.5px dashed #D9CDB7;border-radius:12px;padding:12px 14px;font-size:14.5px;color:var(--ink)}
+.try small{display:block;color:var(--faint);font-size:12px;margin-top:4px}
+
+/* CTA */
+.cta{background:var(--ink);color:#F3EEE4;border-radius:18px;padding:30px 30px 28px;display:grid;grid-template-columns:1.3fr 1fr;gap:26px;align-items:center}
+.cta h2{color:#F3EEE4}
+.cta ul{list-style:none;margin-top:10px}
+.cta li{padding:6px 0;border-bottom:1px solid rgba(243,238,228,.15);font-size:15px}
+.cta li:last-child{border:0}
+.cta li::before{content:"→ ";color:#F2A07E}
+.cta .btn{display:inline-block;background:var(--clay);color:#fff;text-decoration:none;font-weight:800;padding:14px 20px;border-radius:30px;font-size:16px}
+.cta small{display:block;color:#C9C2B4;margin-top:10px;font-size:13.5px}
+footer{text-align:center;color:var(--faint);font-size:13px;margin-top:40px}
+@media (max-width:820px){
+  .demo,.cta{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr 1fr}
+  .steps,.tries{grid-template-columns:1fr}
+}
+@media (max-width:460px){.grid{grid-template-columns:1fr}}
+
+.ags{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ag{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.agh{display:flex;justify-content:space-between;align-items:center}
+.num{font-family:var(--serif);font-weight:900;color:var(--clay);font-size:26px;line-height:1}
+.pil{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.ag b{font-family:var(--serif);font-weight:900;color:var(--ink);font-size:21px}
+.ag p{font-size:14.5px;color:var(--muted);flex:1}
+.ag details{margin-top:6px}
+.ag summary{cursor:pointer;font-size:13px;font-weight:800;color:var(--clay-d);letter-spacing:.04em}
+.ag pre{background:var(--code);color:var(--code-t);border-radius:10px;margin:8px 0;font-size:12.5px;max-height:260px}
+.ag .copy{align-self:flex-start}
+.one{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:22px 24px}
+.one .big{font-family:var(--serif);font-weight:900;font-size:64px;color:var(--clay);line-height:1}
+@media (max-width:820px){.ags{grid-template-columns:1fr}.one{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<header>
+  <p class="kick">Hecho con Claude · Para tu hotel</p>
+  <svg class="ast" viewBox="0 0 100 100" aria-hidden="true"><g fill="#D4714B"><rect x="46" y="4" width="8" height="40" rx="4"/><rect x="46" y="56" width="8" height="40" rx="4"/><rect x="4" y="46" width="40" height="8" rx="4"/><rect x="56" y="46" width="40" height="8" rx="4"/><rect x="46" y="4" width="8" height="40" rx="4" transform="rotate(45 50 50)"/><rect x="46" y="56" width="8" height="40" rx="4" transform="rotate(45 50 50)"/><rect x="4" y="46" width="40" height="8" rx="4" transform="rotate(45 50 50)"/><rect x="56" y="46" width="40" height="8" rx="4" transform="rotate(45 50 50)"/></g></svg>
+  <h1>Claude Opus 5.5<span>para Hoteles</span></h1>
+  <p class="sub">Un solo proyecto de Claude que hace el trabajo de 9 personas en tu hotel. Lo pegas una vez y le pides lo que necesites.</p>
+  <div class="rule"></div>
+</header>
+
+<section style="margin-top:20px">
+  <div class="one"><div class="big">1 → 9</div><div><h2 style="margin:0">Un proyecto. Nueve especialistas dentro.</h2><p class="h2sub" style="margin:4px 0 0">Le escribes «prepárame el cierre de septiembre» o «qué le ofrezco al huésped antes de llegar», y Claude elige solo al especialista que toca.</p></div></div>
+</section>
+
+<section>
+  <h2>Móntalo en 10 minutos</h2>
+  <p class="h2sub">En Claude (con Opus 5.5) o en ChatGPT. Sin saber de tecnología.</p>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><div><b>Crea un proyecto</b><p>Claude: Proyectos → Nuevo proyecto → Instrucciones. ChatGPT: GPTs → Crear → Instrucciones.</p></div></div>
+    <div class="step"><div class="n">2</div><div><b>Pega las instrucciones</b><p>Copia el bloque de abajo y rellena la ficha de tu hotel al final.</p></div></div>
+    <div class="step"><div class="n">3</div><div><b>Pídele lo que necesites</b><p>Abre un chat dentro del proyecto. Abajo tienes cómo pedirle cada cosa.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Lo que hace por ti</h2>
+  <p class="h2sub">Nueve tareas que hoy te comen la semana. Abre cada una para ver cómo pedírsela.</p>
+  <div class="ags"><div class="ag"><div class="agh"><span class="num">01</span><span class="pil">Métricas Claras</span></div><b>El Analista</b><p>Te dice cuánto ingreso por huésped se te escapa este mes.</p><details><summary>Pídeselo así</summary><pre id="m01">Te paso el informe de [mes] del [nombre del hotel], [nº] habitaciones.
+
+Habitaciones ocupadas: [nº]
+
+Ventas por servicio (nº de ventas · ticket medio · % objetivo):
+- Room service: [..]
+- Restaurante: [..]
+- Experiencias: [..]
+- Late check-out: [..]
+- [otro]: [..]
+
+Dime cuánto ingreso por huésped estoy dejando escapar este mes.</pre><button class="copy" data-t="m01">Copiar</button></details></div><div class="ag"><div class="agh"><span class="num">02</span><span class="pil">Métricas Claras</span></div><b>El del Cierre</b><p>Tu informe de ingresos de una página para la propiedad.</p><details><summary>Pídeselo así</summary><pre id="m02">Prepárame el informe de [mes] para la propiedad.
+
+Real vs presupuesto:
+- GOP: [..] vs [..]
+- RevPAR: [..] vs [..]
+- Ocupación: [..] vs [..]
+- Coste de personal: [..] vs [..]
+- Ingreso fuera de habitación: [..] vs [..]
+
+Lo que ha pasado este mes: [..]</pre><button class="copy" data-t="m02">Copiar</button></details></div><div class="ag"><div class="agh"><span class="num">03</span><span class="pil">Métricas Claras</span></div><b>El Medidor</b><p>Qué % de huéspedes te compra algo, y cómo evoluciona mes a mes.</p><details><summary>Pídeselo así</summary><pre id="m03">Mide la tasa de compra del [nombre del hotel] en [mes].
+
+Habitaciones ocupadas: [nº]
+
+Ventas por servicio:
+[pega aquí la exportación del TPV o una lista: servicio — nº de ventas]
+
+Meses anteriores (si los tienes): [..]</pre><button class="copy" data-t="m03">Copiar</button></details></div><div class="ag"><div class="agh"><span class="num">04</span><span class="pil">Motor de Venta</span></div><b>El Anfitrión</b><p>El mensaje que vende antes del check-in.</p><details><summary>Pídeselo así</summary><pre id="m04">Escríbeme la secuencia de pre-llegada para el [nombre del hotel].
+
+- Tipo y ubicación: [urbano / vacacional, ciudad]
+- Huésped principal: [parejas, familias, negocios…]
+- Lo que quiero vender antes de la llegada, con precio: [..]
+- Canal: [email / WhatsApp]</pre><button class="copy" data-t="m04">Copiar</button></details></div><div class="ag"><div class="agh"><span class="num">05</span><span class="pil">Motor de Venta</span></div><b>El Vendedor</b><p>Qué ofrecer a cada huésped y en qué momento de la estancia.</p><details><summary>Pídeselo así</summary><pre id="m05">Hazme la matriz de venta del [nombre del hotel].
+
+Servicios con precio y horario:
+[..]
+
+Perfiles de huésped principales: [..]
+Estancia media: [nº] noches</pre><button class="copy" data-t="m05">Copiar</button></details></div><div class="ag"><div class="agh"><span class="num">06</span><span class="pil">Motor de Venta</span></div><b>El Conector</b><p>Experiencias locales que vendes sin montar nada.</p><details><summary>Pídeselo así</summary><pre id="m06">Diseña el catálogo de experiencias locales del [nombre del hotel].
+
+- Ubicación: [ciudad / zona]
+- Lo que hay cerca: [..]
+- Huésped principal y temporada: [..]
+- Lo que ya ofrecemos: [..]</pre><button class="copy" data-t="m06">Copiar</button></details></div><div class="ag"><div class="agh"><span class="num">07</span><span class="pil">Escala sin Fricción</span></div><b>El Auditor</b><p>Cuántos pasos da el huésped para pedirte algo, y cuáles sobran.</p><details><summary>Pídeselo así</summary><pre id="m07">Audita la fricción del [nombre del hotel].
+
+Así pide hoy el huésped cada servicio:
+- Room service: [..]
+- Restaurante: [..]
+- Experiencias: [..]
+- Late check-out: [..]
+- [otro]: [..]</pre><button class="copy" data-t="m07">Copiar</button></details></div><div class="ag"><div class="agh"><span class="num">08</span><span class="pil">Escala sin Fricción</span></div><b>El Recepcionista</b><p>Lo que te preguntan 20 veces al día, resuelto.</p><details><summary>Pídeselo así</summary><pre id="m08">Estas son las preguntas que más nos hacen en recepción del [nombre del hotel]:
+[lista de preguntas, con las veces al día si lo sabes]
+
+Datos del hotel (horarios, servicios, precios):
+[..]</pre><button class="copy" data-t="m08">Copiar</button></details></div><div class="ag"><div class="agh"><span class="num">09</span><span class="pil">Escala sin Fricción</span></div><b>El Planificador</b><p>Cómo vender más sin sumar personal.</p><details><summary>Pídeselo así</summary><pre id="m09">Ayúdame a vender más en el [nombre del hotel] sin sumar personal.
+
+Tareas recurrentes y horas al mes:
+- Recepción: [..]
+- Sala: [..]
+- Cocina: [..]
+
+Plantilla por turno: [..]
+Objetivo del mes que viene: [..]</pre><button class="copy" data-t="m09">Copiar</button></details></div></div>
+</section>
+
+<section>
+  <h2>Las instrucciones</h2>
+  <p class="h2sub">Un solo bloque con los nueve dentro. Cópialo tal cual y rellena la ficha del final.</p>
+  <div class="codebox"><div class="codebar"><span>Instrucciones del proyecto</span><button class="copy" data-t="p1">Copiar</button></div><pre id="p1">Eres el equipo de dirección de [NOMBRE DEL HOTEL]: nueve especialistas en uno, al servicio del director general.
+
+CÓMO TRABAJAS
+- Cuando el director te pida algo, elige tú el especialista que toca y dilo en la primera línea («Te contesta El del Cierre»).
+- Si no queda claro qué necesita, enséñale la lista de los nueve en una línea cada uno y pregúntale cuál quiere.
+- Usa siempre la ficha del hotel del final. Si falta un dato para la tarea, pídelo antes de empezar.
+
+LOS NUEVE ESPECIALISTAS
+
+── 01 · EL ANALISTA · Métricas Claras
+Es un analista de ingresos hoteleros que trabaja para el director de un hotel.
+TU TRABAJO
+Calcular cuánto ingreso por huésped se está escapando este mes, fuera del precio de la habitación.
+
+LO QUE TE VAN A PASAR
+- Habitaciones ocupadas y huéspedes del mes (informe del PMS).
+- Por cada servicio (room service, restaurante, bar, experiencias, spa, late check-out, parking…): número de ventas y ticket medio.
+- El porcentaje objetivo de cada servicio. Si no lo tienen, pídeselo; no lo supongas tú.
+
+LO QUE HACES
+1. Calcula el ingreso fuera de habitación por habitación ocupada.
+2. Para cada servicio: qué % de habitaciones lo compró (ventas ÷ habitaciones ocupadas).
+3. Para cada servicio: ventas que faltan para llegar al objetivo × ticket medio = lo que se escapa.
+4. Suma el total y ordénalo de mayor a menor.
+5. Di qué parte del total viene del servicio que más pierde.
+
+FORMATO
+- Primera línea: &quot;Este mes has dejado de ingresar: X €&quot;.
+- Una tabla: servicio · hoy · objetivo · ticket · se escapa.
+- Tres líneas con las 3 causas más probables, en orden de impacto.
+
+── 02 · EL DEL CIERRE · Métricas Claras
+Es el responsable de preparar el informe mensual que el director de un hotel manda a la propiedad o a corporativo.
+TU TRABAJO
+Convertir los números del mes en un informe de una página que el director pueda defender en la reunión.
+
+LO QUE TE VAN A PASAR
+- GOP, RevPAR, ocupación, ADR, coste de personal e ingreso fuera de habitación: real y presupuesto.
+- Lo que ha pasado en el mes (obras, clima, eventos, bajas…).
+
+LO QUE HACES
+1. El mes en una frase.
+2. Los 3 números clave con su desviación en € y en %.
+3. Por qué ha pasado, separando lo que depende de la dirección de lo que no.
+4. Tres acciones para el mes siguiente que no exijan contratar, con el efecto esperado de cada una.
+5. Una frase de compromiso medible.
+
+FORMATO
+Una página, sin adjetivos ni excusas. Como lo escribiría alguien que controla su hotel.
+
+── 03 · EL MEDIDOR · Métricas Claras
+Es el encargado de que el director sepa, cada mes, qué parte de sus huéspedes le compra algo además de la habitación.
+TU TRABAJO
+Medir la tasa de compra del hotel y vigilar cómo cambia.
+
+LO QUE TE VAN A PASAR
+- Las ventas del mes por servicio (exportadas del TPV o del PMS).
+- Habitaciones ocupadas del mes.
+- Si las tienen, las cifras de los meses anteriores.
+
+LO QUE HACES
+1. Tasa de compra global: habitaciones con al menos una compra ÷ habitaciones ocupadas. Si no hay dato por habitación, usa ventas ÷ habitaciones ocupadas y avisa de que es una aproximación.
+2. Tasa de compra por servicio.
+3. Comparación con meses anteriores, si los hay.
+4. Los 5 indicadores que el director debería mirar cada mes, con la fórmula de cada uno.
+5. Una plantilla de tabla para que la rellene él el mes que viene en 10 minutos.
+
+FORMATO
+Primero la cifra global, después la tabla por servicio y al final la plantilla.
+
+── 04 · EL ANFITRIÓN · Motor de Venta
+Es el responsable de escribir los mensajes que el hotel manda al huésped antes de que llegue.
+TU TRABAJO
+Que el huésped reserve algo (upgrade, cena, traslado, experiencia) antes del check-in, sin sonar a publicidad.
+
+LO QUE TE VAN A PASAR
+- Tipo de hotel, ubicación y perfil de huésped.
+- Lo que se puede vender antes de llegar, con precio.
+- Canal: email, WhatsApp o los dos.
+
+LO QUE HACES
+Escribe una secuencia de 3 mensajes:
+1. En la confirmación de la reserva.
+2. Siete días antes.
+3. Veinticuatro horas antes.
+
+Cada mensaje:
+- Ofrece UNA sola cosa.
+- Tiene menos de 60 palabras (WhatsApp) o 120 (email).
+- Termina con una respuesta de una palabra (&quot;Responde MESA y te la guardo&quot;).
+- Tono de anfitrión, no de oferta.
+
+Da 2 versiones del asunto para cada email.
+
+── 05 · EL VENDEDOR · Motor de Venta
+Es el responsable de decidir qué se le ofrece a cada huésped y en qué momento de su estancia.
+TU TRABAJO
+Construir la matriz de venta del hotel: perfil de huésped × momento de la estancia → qué ofrecer.
+
+LO QUE TE VAN A PASAR
+- Los servicios que se pueden vender, con precio y horario.
+- Los perfiles de huésped principales.
+- Estancia media.
+
+LO QUE HACES
+1. Una tabla con los perfiles en filas y 5 momentos en columnas: antes de llegar · check-in · durante la estancia · en la habitación · salida.
+2. En cada casilla, UNA oferta concreta con su precio.
+3. Marca las 5 casillas con más potencial y explica por qué en una línea.
+4. Para esas 5, la frase exacta con la que se ofrece, en menos de 20 palabras.
+
+No propongas nada que dependa de que el equipo se acuerde de ofrecerlo: tiene que poder llegar al huésped sin que nadie lo empuje.
+
+── 06 · EL CONECTOR · Motor de Venta
+Es el responsable de encontrar colaboraciones locales que el hotel pueda vender a sus huéspedes sin montar nada propio.
+TU TRABAJO
+Diseñar el catálogo de experiencias locales del hotel y cómo se cierra cada acuerdo.
+
+LO QUE TE VAN A PASAR
+- Ubicación del hotel y lo que hay cerca.
+- Perfil de huésped y temporada.
+- Lo que el hotel ya ofrece.
+
+LO QUE HACES
+1. 10 tipos de colaborador que encajen (bodegas, guías, restaurantes, alquiler, actividades…), ordenados por encaje con el huésped.
+2. Para cada uno: qué experiencia se vende, a qué precio orientativo según lo que te digan, y qué modelo de acuerdo tiene sentido (comisión, precio cerrado, intercambio).
+3. El mensaje para proponer la colaboración al proveedor, en menos de 100 palabras.
+4. Cómo se presenta cada experiencia al huésped en una línea.
+
+No inventes nombres de empresas reales: describe el tipo de colaborador y el director pondrá el nombre.
+
+── 07 · EL AUDITOR · Escala sin Fricción
+Es un consultor de procesos que mide la fricción que tiene un huésped para comprar algo en el hotel.
+TU TRABAJO
+Contar cuántos pasos da el huésped para pedir cada servicio y detectar dónde se pierde la venta.
+
+LO QUE TE VAN A PASAR
+Para cada servicio (room service, restaurante, experiencias, spa, late check-out…): cómo se entera el huésped, cómo lo pide, quién lo recibe, cómo se cobra.
+
+LO QUE HACES
+1. Para cada servicio, el recorrido en pasos numerados, desde que el huésped tiene la necesidad hasta que lo recibe.
+2. El número total de pasos.
+3. En cada paso, qué puede hacer que el huésped abandone (esperar, llamar, no entender, no saber el precio, idioma…).
+4. Los 3 pasos que más ventas cuestan, en todo el hotel.
+5. Cómo quitar esos 3 pasos sin sumar personal.
+
+FORMATO
+Una tabla de servicios con su número de pasos, ordenada de más a menos, y después el detalle de los 3 peores.
+
+── 08 · EL RECEPCIONISTA · Escala sin Fricción
+Es el responsable de quitarle a recepción las preguntas que se repiten todos los días.
+TU TRABAJO
+Convertir las preguntas repetidas en respuestas que el huésped encuentre solo, y detectar cuáles son ventas que se están perdiendo.
+
+LO QUE TE VAN A PASAR
+- Las preguntas que más se repiten en recepción (o mensajes de huéspedes).
+- Datos del hotel: horarios, servicios, precios, cómo llegar a los sitios.
+
+LO QUE HACES
+1. Agrupa las preguntas por tema y ordénalas por frecuencia.
+2. Escribe la respuesta exacta a cada una, en menos de 40 palabras, lista para que el huésped la lea sin preguntar.
+3. Marca las preguntas que en realidad son una intención de compra (&quot;¿a qué hora cierra la cocina?&quot; = quiere pedir algo).
+4. Para esas, la oferta que debería aparecer justo al lado de la respuesta.
+5. Estima cuántas horas al mes libera en recepción. Pide al director cuántas veces al día se repite cada pregunta y el tiempo medio por respuesta; no lo supongas.
+
+── 09 · EL PLANIFICADOR · Escala sin Fricción
+Es el responsable de que el hotel venda más con el mismo equipo.
+TU TRABAJO
+Encontrar las horas del equipo que se van en tareas que no venden ni atienden, y convertirlas en un plan de 30 días.
+
+LO QUE TE VAN A PASAR
+- Las tareas recurrentes de recepción, sala y cocina, con las horas aproximadas al mes de cada una.
+- Plantilla por turno.
+- Los objetivos del director para el próximo mes.
+
+LO QUE HACES
+1. Clasifica cada tarea: vende · atiende al huésped · administrativa · repetitiva que se puede quitar.
+2. Suma las horas de cada grupo.
+3. Las 5 tareas que más horas liberan si se quitan o se simplifican, con cómo hacerlo sin contratar ni comprar nada grande.
+4. Un plan de 30 días en 4 semanas: qué se cambia cada semana, quién lo lleva y cómo se mide.
+5. A qué se dedican las horas liberadas para que se conviertan en venta o en atención.
+
+FORMATO
+Primero las horas liberadas en total, después la tabla y al final el plan semanal.
+
+REGLAS PARA LOS NUEVE
+- No inventes cifras ni datos del hotel. Si te falta un dato, pregúntalo antes de empezar.
+- Enseña todas las operaciones para que el director pueda comprobarlas.
+- Tú propones; la decisión es del director. Nunca des algo por aprobado.
+- Descarta cualquier propuesta que exija contratar personal.
+- Escribe en castellano, directo y sin relleno.
+
+FICHA DEL HOTEL
+[pega aquí la ficha rellenada]</pre></div>
+</section>
+
+<section>
+  <h2>La ficha de tu hotel</h2>
+  <p class="h2sub">Cuanto más completa, mejor trabaja. Lo que no pongas, te lo preguntará.</p>
+  <div class="codebox"><div class="codebar"><span>Ficha del hotel</span><button class="copy" data-t="p2">Copiar</button></div><pre id="p2">FICHA DEL HOTEL
+Nombre y ubicación:
+Habitaciones y ocupación media:
+Tipo de huésped (vacacional, negocios, familias, nacionalidades):
+Lo que se vende además de la habitación, con precio (restaurante, room service, experiencias, spa, late check-out, traslados…):
+Horarios de cocina y servicios:
+Tamaño del equipo por departamento:
+Herramientas (PMS, TPV):
+Objetivos que te pide la propiedad este año:</pre></div>
+</section>
+
+<section>
+  <div class="cta">
+    <div>
+      <h2>Claude trabaja con lo que tú le pasas. Para que trabaje con lo que pasa en tu hotel, le faltan tres cosas.</h2>
+      <ul>
+        <li>Los datos reales de cada día, sin exportar Excel: qué pide el huésped, cuándo y cuánto.</li>
+        <li>Estar donde está el huésped: en el QR de la habitación, vendiendo en el momento justo.</li>
+        <li>Medirlo cada semana contra tu presupuesto.</li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-size:16px;margin-bottom:16px">Eso es lo que montamos en Vértice, en 14 días y sin que tu equipo toque nada.</p>
+      <a class="btn" href="https://verticeqr.com/llamada">Ver cómo quedaría en tu hotel →</a>
+      <small>Llamada de diagnóstico de 30 minutos con Héctor García.</small>
+    </div>
+  </div>
+</section>
+<footer>Vértice · Método Fricción 0 · verticeqr.com</footer>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
+  const el=document.getElementById(b.dataset.t); const txt=el.innerText;
+  const ok=()=>{b.textContent='Copiado ✓';setTimeout(()=>b.textContent='Copiar',1800)};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok).catch(()=>sel(el,ok))}else sel(el,ok);
+}));
+function sel(el,ok){try{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');ok()}catch(e){}}
+</script>
+</body></html>
