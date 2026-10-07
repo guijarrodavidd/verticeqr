@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
       { source: "/agentes", destination: "/agentes/index.html" },
       { source: "/kits", destination: "/kits/index.html" },
       { source: "/prompts", destination: "/prompts/index.html" },
+      { source: "/recepcionista", destination: "/recepcionista/index.html" },
     ];
   },
   async redirects() {

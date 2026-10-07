@@ -93,6 +93,21 @@ export const RECURSOS: Recurso[] = [
     destino: "/biblioteca",
     cta: "Abrir la biblioteca",
   },
+  {
+    slug: "recepcionista",
+    etiqueta: "Recurso gratuito",
+    titulo: "El Recepcionista IA",
+    subtitulo:
+      "Contesta a tus huéspedes a cualquier hora, en su idioma y con el tono de tu hotel. Y cuando la pregunta esconde una venta, la hace.",
+    incluye: [
+      "Las instrucciones completas para Claude o ChatGPT, listas para copiar",
+      "La ficha de tu hotel para rellenar en 5 minutos",
+      "Dos conversaciones reales de ejemplo, en inglés y en español",
+      "Seis mensajes de prueba para ver si detecta la venta",
+    ],
+    destino: "/recepcionista",
+    cta: "Abrir el Recepcionista IA",
+  },
   // Plantilla: copia este bloque, cambia el slug, el título y el enlace, y ya
   // está publicada en /recurso/<slug>.
   {
