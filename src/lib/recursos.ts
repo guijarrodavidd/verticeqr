@@ -108,6 +108,21 @@ export const RECURSOS: Recurso[] = [
     destino: "/recepcionista",
     cta: "Abrir el Recepcionista IA",
   },
+  {
+    slug: "claude",
+    etiqueta: "Recurso gratuito",
+    titulo: "Claude Opus 5.5 para Hoteles",
+    subtitulo:
+      "Un solo proyecto de Claude que hace el trabajo de 9 personas en tu hotel: el cierre de mes, los márgenes, la venta antes del check-in y lo que recepción repite cada día.",
+    incluye: [
+      "Las instrucciones completas, en un solo bloque para copiar",
+      "Los 9 especialistas dentro: del cierre de mes a la venta antes del check-in",
+      "Cómo pedirle cada tarea, lista para copiar",
+      "La ficha de tu hotel para rellenar en 5 minutos",
+    ],
+    destino: "/claude",
+    cta: "Abrir Claude para Hoteles",
+  },
   // Plantilla: copia este bloque, cambia el slug, el título y el enlace, y ya
   // está publicada en /recurso/<slug>.
   {
