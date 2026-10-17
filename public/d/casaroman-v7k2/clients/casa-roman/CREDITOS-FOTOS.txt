@@ -64,12 +64,13 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
 
 4) VÍDEOS — Pexels (Licencia Pexels: uso libre, también comercial, sin
    atribución obligatoria; se acredita igualmente). Recortados y recodificados
-   a H.264 sin audio con avconvert (macOS).
-     vid/welcome.mp4  «Ocean Waves Crash Against Rocks at Sunset» · Saulo Nulo · Licencia Pexels ·
-                      https://www.pexels.com/video/ocean-waves-crash-against-rocks-at-sunset-39039642/
-                      (olas rompiendo en rocas al atardecer; la ficha no dice el lugar). Vertical
-                      1080×1920, 10 s (tramo 6–16 s del original), H.264 sin audio, con fundido
-                      final de 1,5 s para que el bucle no salte.
+   a H.264 sin audio con avconvert / AVFoundation (macOS).
+     vid/welcome.mp4  «Winterabend am Strand» · Antje Urban · Licencia Pexels ·
+                      https://www.pexels.com/video/19683564/
+                      (atardecer de invierno en una playa de arena, orilla mojada con espuma y
+                      olas suaves; plano fijo). Vertical 1080×1920, 59,94 fps (sin ralentizar),
+                      12 s (tramo 37,5–49,5 s del original), H.264 High sin audio, 3,5 Mbps,
+                      fast start, con fundido final de 1,5 s para que el bucle no salte.
      img/welcome.jpg  Primer fotograma de ese mismo vídeo (póster), 1080×1920.
      vid/ex1.mp4      «Vigo» · Borys Trusevych · pexels.com/video/20690479
                       (costa de Vigo con las Cíes en el horizonte). 640×360, 10 s.
