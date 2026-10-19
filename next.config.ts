@@ -14,6 +14,14 @@ const nextConfig: NextConfig = {
       { source: "/prompts", destination: "/prompts/index.html" },
       { source: "/recepcionista", destination: "/recepcionista/index.html" },
       { source: "/claude", destination: "/claude/index.html" },
+      // Los 7 recursos de los posts del 17 de octubre.
+      { source: "/cerebro", destination: "/cerebro/index.html" },
+      { source: "/50-prompts", destination: "/50-prompts/index.html" },
+      { source: "/equipo", destination: "/equipo/index.html" },
+      { source: "/15-prompts", destination: "/15-prompts/index.html" },
+      { source: "/ventas", destination: "/ventas/index.html" },
+      { source: "/asistentes", destination: "/asistentes/index.html" },
+      { source: "/nivel", destination: "/nivel/index.html" },
       // Demo privada de la carta de Casa Román (app Angular): cualquier ruta
       // dentro de la demo la resuelve su index.html. Sin enlazar desde la web.
       { source: "/d/casaroman-v7k2/:path*", destination: "/d/casaroman-v7k2/index.html" },
