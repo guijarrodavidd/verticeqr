@@ -12,6 +12,9 @@ const SUBTITULO = "Contesta 10 preguntas y te monto tu sistema de venta, con tu 
 
 const ERRORES: Record<string, string> = {
   hotel: "Escribe el nombre del hotel o de la cadena.",
+  ciudad: "Dime en qué ciudad está el hotel.",
+  nombre: "Escribe tu nombre.",
+  telefono: "Pon un teléfono válido (con prefijo si no es de España).",
   campos: "Te falta alguna pregunta por contestar.",
 };
 
@@ -53,6 +56,7 @@ export default async function HotelPage({ searchParams }: Props) {
               </div>
             </legend>
             <input id="hotel" name="hotel" type="text" required className={q.text} placeholder="Ej.: Hotel Mirador del Puerto" autoComplete="organization" />
+            <input id="ciudad" name="ciudad" type="text" required className={q.text} placeholder="Ciudad del hotel (ej.: Valencia)" aria-label="Ciudad del hotel" autoComplete="address-level2" style={{ marginTop: 10 }} />
           </fieldset>
 
           {PREGUNTAS.map((p, i) => (
@@ -80,14 +84,16 @@ export default async function HotelPage({ searchParams }: Props) {
           <fieldset className={q.q}>
             <legend>
               <div className={q.qHead}>
-                <span className={q.qNum}>+</span>
-                <label htmlFor="contacto" className={q.qText}>
-                  ¿Te lo mando también por otro sitio?
-                  <span className={q.qHelp}>Opcional. Si lo dejas vacío, te escribo por LinkedIn.</span>
+                <span className={q.qNum}>{PREGUNTAS.length + 2}</span>
+                <label htmlFor="nombre" className={q.qText}>
+                  ¿A quién se lo mando?
+                  <span className={q.qHelp}>Para avisarte cuando tu hotel esté montado.</span>
                 </label>
               </div>
             </legend>
-            <input id="contacto" name="contacto" type="text" className={q.text} placeholder="Email o WhatsApp" />
+            <input id="nombre" name="nombre" type="text" required className={q.text} placeholder="Tu nombre" autoComplete="name" />
+            <input id="telefono" name="telefono" type="tel" required minLength={9} pattern="[+0-9 ()\-]{9,}" className={q.text} placeholder="Teléfono o WhatsApp" aria-label="Teléfono o WhatsApp" autoComplete="tel" inputMode="tel" style={{ marginTop: 10 }} />
+            <input id="email" name="email" type="email" className={q.text} placeholder="Email (opcional)" aria-label="Email (opcional)" autoComplete="email" style={{ marginTop: 10 }} />
           </fieldset>
 
           <button type="submit" className={q.submit}>Quiero ver mi hotel →</button>

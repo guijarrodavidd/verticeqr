@@ -5,8 +5,8 @@ import { crearLead } from "@/lib/leads";
 import { PREGUNTAS } from "./preguntas";
 
 // Guarda las respuestas del cuestionario como lead (origen "recurso:hotel").
-// No se pide email ni teléfono: el hotel identifica a quien lo pidió por
-// LinkedIn. El contacto extra es opcional.
+// Nombre, teléfono y ciudad del hotel son obligatorios para que cada lead
+// llegue identificado; el email es opcional.
 export async function pedirHotel(formData: FormData) {
   const volver = (error: string) => redirect(`/recurso/hotel?error=${error}#cuestionario`);
 
@@ -15,6 +15,12 @@ export async function pedirHotel(formData: FormData) {
 
   const hotel = String(formData.get("hotel") ?? "").trim();
   if (!hotel) volver("hotel");
+  const ciudad = String(formData.get("ciudad") ?? "").trim();
+  if (!ciudad) volver("ciudad");
+  const nombre = String(formData.get("nombre") ?? "").trim();
+  if (!nombre) volver("nombre");
+  const telefono = String(formData.get("telefono") ?? "").trim();
+  if (telefono.replace(/\D/g, "").length < 9) volver("telefono");
 
   const respuestas: Record<string, string> = {};
   for (const p of PREGUNTAS) {
@@ -23,22 +29,21 @@ export async function pedirHotel(formData: FormData) {
     respuestas[p.id] = valores.join(", ") || "(sin marcar)";
   }
 
-  const contacto = String(formData.get("contacto") ?? "").trim();
-  const esEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contacto);
-  const esTelefono = !esEmail && contacto.replace(/\D/g, "").length >= 9;
+  const emailBruto = String(formData.get("email") ?? "").trim();
+  const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailBruto) ? emailBruto : "";
 
   const mensaje = [
-    `Pidió que le monten su hotel: ${hotel}.`,
+    `Pidió que le monten su hotel: ${hotel} (${ciudad}).`,
     ...PREGUNTAS.map((p) => `${p.texto} ${respuestas[p.id]}`),
-    contacto ? `Contacto extra: ${contacto}` : "Contacto: por LinkedIn",
+    `Contacto: ${nombre} · ${telefono}${email ? ` · ${email}` : ""}`,
   ].join("\n");
 
   try {
     await crearLead({
-      nombre: hotel,
-      email: esEmail ? contacto : "",
-      telefono: esTelefono ? contacto : null,
-      empresa: hotel,
+      nombre,
+      email,
+      telefono,
+      empresa: `${hotel} (${ciudad})`,
       sector: respuestas.tipo,
       mensaje,
       origen: "recurso:hotel",
@@ -56,9 +61,11 @@ export async function pedirHotel(formData: FormData) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           fecha: new Date().toISOString(),
-          nombre: hotel,
-          email: esEmail ? contacto : "",
-          telefono: esTelefono ? contacto : "",
+          nombre,
+          email,
+          telefono,
+          hotel,
+          ciudad,
           acepta: "",
           recurso: "Así quedaría tu hotel vendiendo",
           slug: "hotel",
