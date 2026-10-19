@@ -1,0 +1,662 @@
+{
+  "delfines-1": {
+    "pregunta": {
+      "ES": "¿De qué madera se hacían los dhonis tradicionales?",
+      "EN": "What wood were traditional dhonis made from?",
+      "DE": "Aus welchem Holz wurden traditionelle Dhonis gebaut?"
+    },
+    "opciones": [
+      {
+        "ES": "De roble traído de Europa",
+        "EN": "Oak brought from Europe",
+        "DE": "Aus Eiche aus Europa"
+      },
+      {
+        "ES": "De bambú",
+        "EN": "Bamboo",
+        "DE": "Aus Bambus"
+      },
+      {
+        "ES": "De tronco de cocotero",
+        "EN": "Coconut palm trunk",
+        "DE": "Aus Kokospalmenstamm"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Se hacían con tablas de cocotero, unidas antes con cuerda de fibra de coco. Hoy se usa sobre todo madera importada.",
+      "EN": "They were built from coconut palm planks, once tied with coconut-fibre rope. Today mostly imported timber is used.",
+      "DE": "Sie wurden aus Kokospalmenplanken gebaut, früher mit Kokosfaserseil verbunden. Heute nutzt man meist importiertes Holz."
+    }
+  },
+  "delfines-2": {
+    "pregunta": {
+      "ES": "¿Qué hacen los delfines acróbatas de día?",
+      "EN": "What do spinner dolphins do by day?",
+      "DE": "Was machen Spinnerdelfine tagsüber?"
+    },
+    "opciones": [
+      {
+        "ES": "Descansan en aguas tranquilas y poco profundas",
+        "EN": "Rest in calm, shallow water",
+        "DE": "Sie ruhen in ruhigem, flachem Wasser"
+      },
+      {
+        "ES": "Cazan en el fondo del arrecife",
+        "EN": "Hunt on the reef floor",
+        "DE": "Sie jagen am Riffgrund"
+      },
+      {
+        "ES": "Migran a otro océano",
+        "EN": "Migrate to another ocean",
+        "DE": "Sie ziehen in einen anderen Ozean"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Descansan de día cerca de la costa y salen a cazar de noche a mar abierto: peces pequeños, gambas y calamares.",
+      "EN": "They rest near the coast by day and hunt offshore at night: small fish, shrimp and squid.",
+      "DE": "Tagsüber ruhen sie in Küstennähe, nachts jagen sie auf offener See: kleine Fische, Garnelen und Tintenfische."
+    }
+  },
+  "delfines-3": {
+    "pregunta": {
+      "ES": "¿Cuántas veces puede girar en el aire un delfín acróbata?",
+      "EN": "How many times can a spinner dolphin spin in the air?",
+      "DE": "Wie oft kann sich ein Spinnerdelfin in der Luft drehen?"
+    },
+    "opciones": [
+      {
+        "ES": "Una vez",
+        "EN": "Once",
+        "DE": "Einmal"
+      },
+      {
+        "ES": "Hasta siete",
+        "EN": "Up to seven",
+        "DE": "Bis zu siebenmal"
+      },
+      {
+        "ES": "Ninguna, solo salta",
+        "EN": "None, it just jumps",
+        "DE": "Gar nicht, er springt nur"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Por eso se llaman «spinner»: saltan y giran sobre sí mismos, hasta siete veces según NOAA.",
+      "EN": "That's why they're called spinners: they leap and twirl, up to seven times according to NOAA.",
+      "DE": "Daher der Name „Spinner“: Sie springen und drehen sich, laut NOAA bis zu siebenmal."
+    }
+  },
+  "delfines-4": {
+    "pregunta": {
+      "ES": "¿Qué es «Vaavu», el nombre del atolón?",
+      "EN": "What is 'Vaavu', the atoll's name?",
+      "DE": "Was ist „Vaavu“, der Name des Atolls?"
+    },
+    "opciones": [
+      {
+        "ES": "Una palabra que significa «delfín»",
+        "EN": "A word meaning 'dolphin'",
+        "DE": "Ein Wort für „Delfin“"
+      },
+      {
+        "ES": "El nombre de un antiguo rey",
+        "EN": "The name of an ancient king",
+        "DE": "Der Name eines alten Königs"
+      },
+      {
+        "ES": "Una letra del alfabeto maldivo",
+        "EN": "A letter of the Maldivian alphabet",
+        "DE": "Ein Buchstabe des maledivischen Alphabets"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Los atolones administrativos se identifican con letras del alfabeto thaana. Su nombre oficial es Felidhu Atholhu.",
+      "EN": "Administrative atolls are identified by Thaana letters. Its official name is Felidhu Atholhu.",
+      "DE": "Verwaltungsatolle werden mit Thaana-Buchstaben bezeichnet. Der offizielle Name ist Felidhu Atholhu."
+    }
+  },
+  "banco-arena-1": {
+    "pregunta": {
+      "ES": "¿De qué idioma viene la palabra «atolón»?",
+      "EN": "Which language does the word 'atoll' come from?",
+      "DE": "Aus welcher Sprache stammt das Wort „Atoll“?"
+    },
+    "opciones": [
+      {
+        "ES": "Del dhivehi, el idioma de Maldivas",
+        "EN": "Dhivehi, the language of the Maldives",
+        "DE": "Aus dem Dhivehi, der Sprache der Malediven"
+      },
+      {
+        "ES": "Del latín",
+        "EN": "Latin",
+        "DE": "Aus dem Lateinischen"
+      },
+      {
+        "ES": "Del inglés",
+        "EN": "English",
+        "DE": "Aus dem Englischen"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Viene de «atholhu». Un viajero francés la llevó a Europa en 1625 y Darwin la hizo famosa.",
+      "EN": "It comes from 'atholhu'. A French traveller took it to Europe in 1625 and Darwin made it famous.",
+      "DE": "Es stammt von „atholhu“. Ein französischer Reisender brachte es 1625 nach Europa, Darwin machte es berühmt."
+    }
+  },
+  "banco-arena-2": {
+    "pregunta": {
+      "ES": "El coral que cubre el pecio es…",
+      "EN": "The coral covering the wreck is…",
+      "DE": "Die Koralle auf dem Wrack ist…"
+    },
+    "opciones": [
+      {
+        "ES": "Una planta",
+        "EN": "A plant",
+        "DE": "Eine Pflanze"
+      },
+      {
+        "ES": "Un animal",
+        "EN": "An animal",
+        "DE": "Ein Tier"
+      },
+      {
+        "ES": "Una roca",
+        "EN": "A rock",
+        "DE": "Ein Stein"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Son colonias de animales diminutos, los pólipos. No fabrican su comida como las plantas, aunque viven con algas.",
+      "EN": "They're colonies of tiny animals called polyps. They don't make their own food like plants, though they live with algae.",
+      "DE": "Es sind Kolonien winziger Tiere, der Polypen. Sie stellen ihre Nahrung nicht selbst her wie Pflanzen, leben aber mit Algen."
+    }
+  },
+  "banco-arena-3": {
+    "pregunta": {
+      "ES": "¿Quién fabrica buena parte de la arena blanca de Maldivas?",
+      "EN": "Who makes much of the Maldives' white sand?",
+      "DE": "Wer produziert einen Großteil des weißen Sands der Malediven?"
+    },
+    "opciones": [
+      {
+        "ES": "Las olas al romper rocas",
+        "EN": "Waves breaking rocks",
+        "DE": "Wellen, die Felsen zerschlagen"
+      },
+      {
+        "ES": "Los cangrejos",
+        "EN": "Crabs",
+        "DE": "Krebse"
+      },
+      {
+        "ES": "Los peces loro",
+        "EN": "Parrotfish",
+        "DE": "Papageifische"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Muerden el coral y lo expulsan hecho arena. Un estudio en Maldivas vio que hacen más del 85 % de la arena nueva del arrecife.",
+      "EN": "They bite coral and expel it as sand. A Maldives study found they make over 85% of the reef's new sand.",
+      "DE": "Sie beißen Korallen ab und scheiden sie als Sand aus. Eine Studie auf den Malediven ergab: über 85 % des neuen Riffsands stammt von ihnen."
+    }
+  },
+  "banco-arena-4": {
+    "pregunta": {
+      "ES": "¿Cuántas islas tiene Maldivas?",
+      "EN": "How many islands do the Maldives have?",
+      "DE": "Wie viele Inseln haben die Malediven?"
+    },
+    "opciones": [
+      {
+        "ES": "Unas 100",
+        "EN": "About 100",
+        "DE": "Etwa 100"
+      },
+      {
+        "ES": "Unas 1.200",
+        "EN": "About 1,200",
+        "DE": "Etwa 1.200"
+      },
+      {
+        "ES": "Más de 10.000",
+        "EN": "Over 10,000",
+        "DE": "Über 10.000"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Son 1.192 islas de coral agrupadas en 26 atolones.",
+      "EN": "There are 1,192 coral islands grouped into 26 atolls.",
+      "DE": "Es sind 1.192 Koralleninseln in 26 Atollen."
+    }
+  },
+  "fulidhoo-1": {
+    "pregunta": {
+      "ES": "¿Cómo se llama la moneda de Maldivas?",
+      "EN": "What is the Maldives' currency called?",
+      "DE": "Wie heißt die Währung der Malediven?"
+    },
+    "opciones": [
+      {
+        "ES": "Rufiyaa",
+        "EN": "Rufiyaa",
+        "DE": "Rufiyaa"
+      },
+      {
+        "ES": "Rupia",
+        "EN": "Rupee",
+        "DE": "Rupie"
+      },
+      {
+        "ES": "Dinar",
+        "EN": "Dinar",
+        "DE": "Dinar"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es la rufiyaa (MVR), que se divide en 100 laari.",
+      "EN": "It's the rufiyaa (MVR), divided into 100 laari.",
+      "DE": "Es ist die Rufiyaa (MVR), unterteilt in 100 Laari."
+    }
+  },
+  "fulidhoo-2": {
+    "pregunta": {
+      "ES": "¿Cómo comen los tiburones nodriza?",
+      "EN": "How do nurse sharks eat?",
+      "DE": "Wie fressen Ammenhaie?"
+    },
+    "opciones": [
+      {
+        "ES": "Persiguen peces a toda velocidad",
+        "EN": "They chase fish at full speed",
+        "DE": "Sie jagen Fische mit Höchsttempo"
+      },
+      {
+        "ES": "Filtran plancton",
+        "EN": "They filter plankton",
+        "DE": "Sie filtern Plankton"
+      },
+      {
+        "ES": "Aspiran a sus presas",
+        "EN": "They suck in their prey",
+        "DE": "Sie saugen ihre Beute ein"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Abren la garganta de golpe y la presa entra por succión. De día descansan en grupo y cazan de noche.",
+      "EN": "They expand their throat suddenly and suck the prey in. They rest in groups by day and hunt at night.",
+      "DE": "Sie weiten blitzschnell den Rachen und saugen die Beute ein. Tagsüber ruhen sie in Gruppen, nachts jagen sie."
+    }
+  },
+  "fulidhoo-3": {
+    "pregunta": {
+      "ES": "¿Con qué se construían las mezquitas antiguas de Maldivas?",
+      "EN": "What were the old mosques of the Maldives built with?",
+      "DE": "Woraus wurden die alten Moscheen der Malediven gebaut?"
+    },
+    "opciones": [
+      {
+        "ES": "Con ladrillo de barro",
+        "EN": "Mud brick",
+        "DE": "Aus Lehmziegeln"
+      },
+      {
+        "ES": "Con piedra de coral",
+        "EN": "Coral stone",
+        "DE": "Aus Korallenstein"
+      },
+      {
+        "ES": "Con hojas de palmera",
+        "EN": "Palm leaves",
+        "DE": "Aus Palmblättern"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Con bloques de coral tallados. La mezquita del Viernes de Malé, de 1658, está en la lista indicativa de la UNESCO.",
+      "EN": "With carved coral blocks. Malé's Friday Mosque, from 1658, is on UNESCO's tentative list.",
+      "DE": "Aus behauenen Korallenblöcken. Die Freitagsmoschee in Malé von 1658 steht auf der UNESCO-Vorschlagsliste."
+    }
+  },
+  "fulidhoo-4": {
+    "pregunta": {
+      "ES": "¿Qué significa «bodu beru»?",
+      "EN": "What does 'bodu beru' mean?",
+      "DE": "Was bedeutet „Bodu Beru“?"
+    },
+    "opciones": [
+      {
+        "ES": "Tambor grande",
+        "EN": "Big drum",
+        "DE": "Große Trommel"
+      },
+      {
+        "ES": "Baile del mar",
+        "EN": "Dance of the sea",
+        "DE": "Tanz des Meeres"
+      },
+      {
+        "ES": "Fiesta de pescadores",
+        "EN": "Fishermen's party",
+        "DE": "Fischerfest"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "«Bodu» es grande y «beru», tambor. Se hacen con madera de cocotero; antes, la piel era de manta raya, hoy de cabra.",
+      "EN": "'Bodu' means big and 'beru' drum. They're made of coconut wood; the skin was once manta ray, now goat.",
+      "DE": "„Bodu“ heißt groß, „Beru“ Trommel. Sie sind aus Kokosholz; früher war das Fell aus Mantarochenhaut, heute aus Ziegenleder."
+    }
+  },
+  "fulidhoo-5": {
+    "pregunta": {
+      "ES": "Los letreros en dhivehi se leen…",
+      "EN": "Signs in Dhivehi are read…",
+      "DE": "Schilder auf Dhivehi liest man…"
+    },
+    "opciones": [
+      {
+        "ES": "De arriba abajo",
+        "EN": "Top to bottom",
+        "DE": "Von oben nach unten"
+      },
+      {
+        "ES": "De izquierda a derecha",
+        "EN": "Left to right",
+        "DE": "Von links nach rechts"
+      },
+      {
+        "ES": "De derecha a izquierda",
+        "EN": "Right to left",
+        "DE": "Von rechts nach links"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El alfabeto thaana se escribe de derecha a izquierda. Curioso: sus nueve primeras letras salen de los números árabes.",
+      "EN": "The Thaana alphabet is written right to left. Fun fact: its first nine letters come from Arabic numerals.",
+      "DE": "Das Thaana-Alphabet schreibt man von rechts nach links. Kurios: Die ersten neun Buchstaben stammen von arabischen Ziffern."
+    }
+  },
+  "arrecife-1": {
+    "pregunta": {
+      "ES": "¿Qué come sobre todo la tortuga carey?",
+      "EN": "What does the hawksbill turtle mainly eat?",
+      "DE": "Was frisst die Echte Karettschildkröte vor allem?"
+    },
+    "opciones": [
+      {
+        "ES": "Medusas",
+        "EN": "Jellyfish",
+        "DE": "Quallen"
+      },
+      {
+        "ES": "Esponjas del arrecife",
+        "EN": "Reef sponges",
+        "DE": "Riffschwämme"
+      },
+      {
+        "ES": "Peces pequeños",
+        "EN": "Small fish",
+        "DE": "Kleine Fische"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Sobre todo esponjas. Su boca en forma de pico, como la de un halcón, le sirve para sacarlas de las grietas.",
+      "EN": "Mostly sponges. Its hawk-like beak helps it pull them out of cracks in the reef.",
+      "DE": "Vor allem Schwämme. Mit ihrem falkenartigen Schnabel holt sie sie aus Riffspalten."
+    }
+  },
+  "arrecife-2": {
+    "pregunta": {
+      "ES": "¿Qué récord tiene Maldivas con las mantas de arrecife?",
+      "EN": "What record do the Maldives hold for reef manta rays?",
+      "DE": "Welchen Rekord halten die Malediven bei Riffmantas?"
+    },
+    "opciones": [
+      {
+        "ES": "La mayor población conocida del mundo",
+        "EN": "The world's largest known population",
+        "DE": "Die größte bekannte Population der Welt"
+      },
+      {
+        "ES": "La manta más grande jamás vista",
+        "EN": "The biggest manta ever seen",
+        "DE": "Den größten Manta, der je gesehen wurde"
+      },
+      {
+        "ES": "Ninguno: aquí no hay mantas",
+        "EN": "None: there are no mantas here",
+        "DE": "Keinen: hier gibt es keine Mantas"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Según Manta Trust, aquí vive la mayor población conocida: ya han identificado más de 5.000 por las manchas de la tripa.",
+      "EN": "According to the Manta Trust, the largest known population lives here: over 5,000 identified by their belly spots.",
+      "DE": "Laut Manta Trust lebt hier die größte bekannte Population: über 5.000 Tiere wurden an ihren Bauchflecken erkannt."
+    }
+  },
+  "arrecife-3": {
+    "pregunta": {
+      "ES": "¿Cómo se reconoce a cada tortuga sin tocarla?",
+      "EN": "How is each turtle identified without touching it?",
+      "DE": "Wie erkennt man jede Schildkröte, ohne sie zu berühren?"
+    },
+    "opciones": [
+      {
+        "ES": "Por el color del caparazón",
+        "EN": "By shell colour",
+        "DE": "An der Panzerfarbe"
+      },
+      {
+        "ES": "Por su tamaño",
+        "EN": "By its size",
+        "DE": "An ihrer Größe"
+      },
+      {
+        "ES": "Por las escamas de la cara",
+        "EN": "By the scales on its face",
+        "DE": "An den Schuppen im Gesicht"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Las escamas de la cara son únicas, como una huella dactilar, y no cambian. Con una foto de perfil basta.",
+      "EN": "Facial scales are unique, like a fingerprint, and don't change. A side photo is enough.",
+      "DE": "Die Gesichtsschuppen sind einzigartig wie ein Fingerabdruck und ändern sich nicht. Ein Profilfoto reicht."
+    }
+  },
+  "arrecife-4": {
+    "pregunta": {
+      "ES": "¿Por qué se llama «verde» la tortuga verde?",
+      "EN": "Why is the green turtle called 'green'?",
+      "DE": "Warum heißt die Grüne Meeresschildkröte „grün“?"
+    },
+    "opciones": [
+      {
+        "ES": "Por su caparazón verde",
+        "EN": "Its green shell",
+        "DE": "Wegen ihres grünen Panzers"
+      },
+      {
+        "ES": "Por el color de su grasa",
+        "EN": "The colour of its fat",
+        "DE": "Wegen der Farbe ihres Fetts"
+      },
+      {
+        "ES": "Porque vive entre algas",
+        "EN": "It lives among seaweed",
+        "DE": "Weil sie zwischen Algen lebt"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Por su grasa, de tono verdoso. Su caparazón es más bien marrón u oliva.",
+      "EN": "Because of its greenish fat. Its shell is actually brown or olive.",
+      "DE": "Wegen ihres grünlichen Fetts. Ihr Panzer ist eher braun oder oliv."
+    }
+  },
+  "bienestar-1": {
+    "pregunta": {
+      "ES": "¿Las Maldivas cruzan el ecuador?",
+      "EN": "Do the Maldives cross the equator?",
+      "DE": "Reichen die Malediven über den Äquator?"
+    },
+    "opciones": [
+      {
+        "ES": "Sí, los atolones del sur están al otro lado",
+        "EN": "Yes, the southern atolls are on the other side",
+        "DE": "Ja, die südlichen Atolle liegen auf der anderen Seite"
+      },
+      {
+        "ES": "No, están muy al norte",
+        "EN": "No, they're far to the north",
+        "DE": "Nein, sie liegen weit im Norden"
+      },
+      {
+        "ES": "No, están todas al sur",
+        "EN": "No, they're all in the south",
+        "DE": "Nein, sie liegen alle im Süden"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La cadena de atolones va del norte hasta Addu, al sur del ecuador. Por eso aquí el día dura casi lo mismo todo el año.",
+      "EN": "The atoll chain runs from the north down to Addu, south of the equator. That's why days are nearly the same length all year.",
+      "DE": "Die Atollkette reicht vom Norden bis Addu, südlich des Äquators. Deshalb sind die Tage hier fast das ganze Jahr gleich lang."
+    }
+  },
+  "bienestar-2": {
+    "pregunta": {
+      "ES": "¿Qué lleva el mas huni, el desayuno maldivo?",
+      "EN": "What's in mas huni, the Maldivian breakfast?",
+      "DE": "Was ist in Mas Huni, dem maledivischen Frühstück?"
+    },
+    "opciones": [
+      {
+        "ES": "Huevo y beicon",
+        "EN": "Egg and bacon",
+        "DE": "Ei und Speck"
+      },
+      {
+        "ES": "Arroz con leche",
+        "EN": "Rice pudding",
+        "DE": "Milchreis"
+      },
+      {
+        "ES": "Atún, coco rallado, cebolla y guindilla",
+        "EN": "Tuna, grated coconut, onion and chilli",
+        "DE": "Thunfisch, Kokosraspel, Zwiebel und Chili"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Todo picado fino con lima. Se come con roshi, un pan plano, y té dulce.",
+      "EN": "All finely chopped with lime. It's eaten with roshi flatbread and sweet tea.",
+      "DE": "Alles fein gehackt mit Limette. Dazu gibt es Roshi-Fladenbrot und süßen Tee."
+    }
+  },
+  "bienestar-3": {
+    "pregunta": {
+      "ES": "¿Cuál es el árbol nacional de Maldivas?",
+      "EN": "What is the national tree of the Maldives?",
+      "DE": "Was ist der Nationalbaum der Malediven?"
+    },
+    "opciones": [
+      {
+        "ES": "El mango",
+        "EN": "The mango tree",
+        "DE": "Der Mangobaum"
+      },
+      {
+        "ES": "El cocotero",
+        "EN": "The coconut palm",
+        "DE": "Die Kokospalme"
+      },
+      {
+        "ES": "El baobab",
+        "EN": "The baobab",
+        "DE": "Der Affenbrotbaum"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El cocotero, símbolo nacional desde 1985. Da comida, madera para barcos y fibra para cuerdas.",
+      "EN": "The coconut palm, a national symbol since 1985. It gives food, boat timber and rope fibre.",
+      "DE": "Die Kokospalme, Nationalsymbol seit 1985. Sie liefert Nahrung, Bootsholz und Fasern für Seile."
+    }
+  },
+  "bienestar-4": {
+    "pregunta": {
+      "ES": "¿Cuál es la flor nacional de Maldivas?",
+      "EN": "What is the national flower of the Maldives?",
+      "DE": "Was ist die Nationalblume der Malediven?"
+    },
+    "opciones": [
+      {
+        "ES": "La rosa rosada",
+        "EN": "The pink rose",
+        "DE": "Die rosa Rose"
+      },
+      {
+        "ES": "La orquídea",
+        "EN": "The orchid",
+        "DE": "Die Orchidee"
+      },
+      {
+        "ES": "El hibisco",
+        "EN": "The hibiscus",
+        "DE": "Der Hibiskus"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La rosa rosada (rosa de Damasco). Y el ave nacional es la polla de agua pechiblanca, la «kanbili».",
+      "EN": "The pink rose (damask rose). And the national bird is the white-breasted waterhen, the 'kanbili'.",
+      "DE": "Die rosa Rose (Damaszener Rose). Nationalvogel ist die Weißbrust-Kielralle, die „Kanbili“."
+    }
+  },
+  "bienestar-5": {
+    "pregunta": {
+      "ES": "¿A qué altura media sobre el mar está Maldivas?",
+      "EN": "What is the average height of the Maldives above sea level?",
+      "DE": "Wie hoch liegen die Malediven im Schnitt über dem Meer?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 50 metros",
+        "EN": "About 50 metres",
+        "DE": "Etwa 50 Meter"
+      },
+      {
+        "ES": "Unos 10 metros",
+        "EN": "About 10 metres",
+        "DE": "Etwa 10 Meter"
+      },
+      {
+        "ES": "Alrededor de 1,5 metros",
+        "EN": "Around 1.5 metres",
+        "DE": "Rund 1,5 Meter"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Con 1,5 m de media es uno de los países más bajos del mundo: casi todo está a ras de agua.",
+      "EN": "At 1.5 m on average it's one of the lowest countries in the world: almost everything sits at water level.",
+      "DE": "Mit durchschnittlich 1,5 m gehört es zu den flachsten Ländern der Welt: fast alles liegt auf Wasserhöhe."
+    }
+  }
+}
