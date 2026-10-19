@@ -104,6 +104,22 @@ pre{font-family:var(--mono);font-size:12.8px;line-height:1.6;white-space:pre-wra
 .copy{align-self:flex-start;font:800 14px var(--sans);background:var(--clay-d);color:#fff;border:0;border-radius:999px;min-height:44px;padding:0 20px;cursor:pointer}
 .copy:hover{background:#9A4526}
 
+/* EJEMPLOS Y REVISIÓN */
+.eg{background:#FFF8E4;border:1.5px dashed #B98A12;border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.eg .lbl{color:#6B4E00;margin:0}
+.eg p,.eg li{font-size:14.5px;color:var(--ink)}
+.eg ol{padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.eg .mono{font-family:var(--mono);font-size:12.5px;white-space:pre-wrap;word-break:break-word;line-height:1.55}
+.eg ul.rows{list-style:none;display:flex;flex-direction:column}
+.eg ul.rows li{padding:6px 0;border-bottom:1px solid #E6D9B0;font-size:14px}
+.eg ul.rows li:last-child{border:0}
+.check{font-size:14.5px;color:var(--ink);background:var(--white);border-left:4px solid var(--clay-d);border-radius:0 8px 8px 0;padding:8px 12px}
+.start{max-width:620px;margin:22px auto 0;text-align:left;background:var(--label);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.start .lbl{color:#FFD9C9;margin:0}
+.start p{font-size:15.5px;line-height:1.5}
+.start a{align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--clay-d);color:#fff;font-weight:800;text-decoration:none;font-size:14.5px}
+.piece{scroll-margin-top:16px}
+
 /* CADENA */
 .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-weight:700;font-size:14px}
 .chain span{background:var(--white);border:1.5px solid var(--win-line);border-radius:8px;padding:6px 10px}
@@ -169,6 +185,11 @@ footer{text-align:center;color:rgba(255,255,255,.78);font-size:13px;margin-top:4
   <p class="pre-h1">Los 7 niveles de un</p>
   <h1>director con Claude</h1>
   <p class="sub">Y el sistema completo para subir de uno a otro. Ninguno pide saber de tecnología. El director decide, Claude prepara.</p>
+  <div class="start">
+    <span class="lbl">Empieza por aquí</span>
+    <p><b>Si solo tienes 10 minutos hoy, haz esto:</b> abre claude.ai, copia el prompt «La semana en cinco líneas» y rellénalo con los números de la semana que ya te da tu PMS. En cinco líneas sabrás cómo ha ido, qué ha bajado y qué mirar esta semana.</p>
+    <a href="#k-semana">Ir al prompt →</a>
+  </div>
 </header>
 
 <nav aria-label="Niveles">
@@ -226,12 +247,12 @@ footer{text-align:center;color:rgba(255,255,255,.78);font-size:13px;margin-top:4
       <span class="tag">Para pasar al nivel 2</span>
       <h3>Deja de improvisar la pregunta. Guarda 5 prompts para lo que haces cada semana.</h3>
       <ol class="steps">
-        <li><span>Crea una nota en el móvil o en el ordenador que se llame «Prompts del hotel». Esa es tu carpeta.</span></li>
-        <li><span>Copia dentro los 5 prompts de abajo.</span></li>
+        <li><span>Crea una nota en el móvil (Notas, Keep) o un documento en el ordenador que se llame «Prompts del hotel». Esa es tu carpeta.</span></li>
+        <li><span>Copia dentro los 5 prompts de abajo con el botón Copiar. Son 5 minutos.</span></li>
         <li><span>Cuando te toque esa tarea, copias el prompt, rellenas lo que va entre [corchetes] y lo pegas en Claude.</span></li>
-        <li><span>Cada vez que un prompt te dé una respuesta que te guste, apunta qué cambiaste. Así se va afinando.</span></li>
+        <li><span>Si cambias algo y la respuesta sale mejor, cámbialo también en tu nota. Así el prompt mejora cada semana.</span></li>
       </ol>
-      <p class="note">Truco: en Claude puedes crear un proyecto llamado «Mis prompts» y subir la nota en Conocimiento del proyecto. Así la tienes siempre a mano.</p>
+      <p class="note">¿Aún no usas Claude? Entra en claude.ai y crea tu cuenta con tu correo. Para este nivel basta con el plan gratuito.</p>
       <div class="kit">
         <span class="kit-h">Kit del nivel 2 · Carpeta de 5 prompts base</span>
 
@@ -254,17 +275,23 @@ LO QUE SÉ DE ESTE CASO
 
 LO QUE TIENES QUE HACER
 1. Resúmeme la reseña en dos líneas: lo que le gustó y lo que le molestó.
-2. Escribe la respuesta pública:
-   - Empieza dando las gracias por algo concreto que diga la reseña, no con una frase genérica.
-   - Si hay una queja, reconócela sin excusas. Cuenta lo que se ha hecho solo si te lo he dicho arriba; si no, no prometas nada concreto.
+2. Escribe la respuesta pública en cuatro tiempos:
+   - Gracias por algo concreto que diga la reseña (su nombre si lo firma, el plato, la persona del equipo), nunca «gracias por sus comentarios».
+   - Si hay queja, reconócela sin excusas y sin discutir, aunque no estés de acuerdo.
+   - Lo que se ha hecho: solo si te lo he dicho arriba. Si no, no prometas nada concreto.
    - Invita a volver con un motivo concreto del hotel.
-   - Máximo 90 palabras, en el idioma de la reseña, con mi firma.
-3. Si la queja es seria, escribe además un mensaje privado corto para contactar con el huésped.
+   Máximo 90 palabras, en el idioma de la reseña, con mi firma. Escribe para los que la leerán antes de reservar, no solo para quien la dejó.
+3. Si la queja es seria (salud, seguridad, cobro indebido, trato) o la reseña acusa al hotel de algo falso, no lo discutas en público: escribe además un mensaje privado corto para hablar con el huésped.
 
 FORMATO
 Las dos líneas de resumen, la respuesta pública lista para pegar y, si hace falta, el mensaje privado.
 
 Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button class="copy" data-t="p2a">Copiar</button></div>
+          <div class="eg">
+            <span class="lbl">Así queda · Ejemplo con datos inventados</span>
+            <p><b>Reseña (Google, 3 estrellas):</b> «Habitación bonita y el desayuno, de diez. Pero la ducha tardaba muchísimo en salir caliente y nadie en recepción nos dijo nada.» <b>Lo que sé:</b> el día 12 se cambió el termo de la tercera planta.</p>
+            <p><b>Respuesta:</b> «Gracias, Marta, por lo que cuenta del desayuno: se lo hemos pasado a cocina tal cual. Tiene razón con el agua caliente, y aún más en que debimos avisarle desde recepción. Ya hemos cambiado el termo de esa planta y hemos hablado con el equipo para avisar siempre en el momento. Nos encantaría que volviera a probar ese desayuno con la ducha a la altura. Un saludo, Javier Ruiz, director.»</p>
+          </div>
         </div>
 
         <div class="piece">
@@ -290,8 +317,11 @@ LO QUE TIENES QUE HACER
 2. Escribe el correo: asunto, saludo, lo que ha pasado en dos frases, nuestra posición, la propuesta concreta y el siguiente paso con fecha.
 3. Tono firme y amable. Frases cortas. Máximo 180 palabras.
 4. Dame una segunda versión de 80 palabras como máximo, por si prefiero ir al grano.
+5. No ofrezcas nada que no esté dentro de lo que puedo ofrecer. Si crees que haría falta, dímelo aparte.
+6. Al final, dime qué tengo que comprobar antes de enviarlo: importes, fechas, nombres y cualquier frase que pueda leerse como que admitimos la culpa.
 
 Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button class="copy" data-t="p2b">Copiar</button></div>
+          <p class="check"><b>Revísalo tú antes de enviarlo:</b> importes, fechas y que no prometa nada que no puedas cumplir.</p>
         </div>
 
         <div class="piece">
@@ -342,37 +372,51 @@ LO QUE TIENES QUE HACER
 3. Si tienen que hacer algo, ponlo en pasos numerados con fecha.
 4. Cierra diciendo a quién preguntar las dudas.
 5. WhatsApp: máximo 70 palabras. Correo o tablón: máximo 150.
-6. Si es una felicitación, nombra lo concreto que hicieron bien.
-7. Revisa que no suene a reproche ni a circular de empresa.
+6. Si es una felicitación, nombra lo concreto que hicieron bien y a quién.
+7. No añadas horarios, fechas ni condiciones que no te haya dicho.
+8. Revisa que no suene a reproche ni a circular de empresa.
 
 Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button class="copy" data-t="p2d">Copiar</button></div>
         </div>
 
-        <div class="piece">
+        <div class="piece" id="k-semana">
           <h4>Prompt 5 · La semana en cinco líneas</h4>
-          <p>Para saber cómo ha ido la semana sin perderte en el informe.</p>
-          <p><b>Pegas:</b> los números de la semana que ya miras en tu sistema y, si los tienes, los de la semana pasada.</p>
+          <p>Para saber cómo ha ido la semana sin perderte en el informe. Unos 10 minutos si tienes el informe semanal del PMS a mano.</p>
+          <p><b>Pegas:</b> los números de la semana del informe del PMS y de la caja del restaurante y bar y, si los tienes, los de la semana pasada.</p>
           <div class="acts"><details><summary>Ver el prompt</summary><pre id="p2e">Actúa como el analista de confianza del director de un hotel. Cuéntame cómo ha ido la semana en cinco líneas.
 
-DATOS DE LA SEMANA (copiados de mi sistema)
-- Habitaciones ocupadas: [nº] de [nº disponibles]
+DATOS DE LA SEMANA (copiados del informe del PMS y de la caja)
+- Habitaciones ocupadas: [nº] de [nº disponibles] (disponibles = habitaciones del hotel × 7 noches, menos las que estuvieron fuera de servicio)
 - Precio medio por habitación: [€]
 - Ingresos de habitaciones: [€]
 - Ingresos de restaurante y bar: [€]
 - Otros ingresos (experiencias, spa, parking…): [€]
 - Reseñas nuevas y nota media: [..]
-- Lo que ha pasado (eventos, incidencias, clima): [..]
+- Lo que ha pasado (grupos, cancelaciones, eventos, incidencias, clima): [..]
 
 PARA COMPARAR
 - La semana pasada: [los mismos datos, si los tengo]
 - La misma semana del año pasado: [si los tengo]
 
 LO QUE TIENES QUE HACER
-1. Calcula la ocupación en % y lo que gasta cada huésped fuera de la habitación: ingresos de restaurante, bar y otros ÷ habitaciones ocupadas. Enseña las cuentas.
-2. Compara solo con lo que te haya dado para comparar. Si no te he dado nada, no compares.
-3. Escribe cinco líneas: cómo ha ido en una frase, lo que ha subido, lo que ha bajado, a qué lo atribuyes (solo con lo que te he contado) y lo que yo miraría esta semana.
+1. Comprueba que cuadra: habitaciones ocupadas × precio medio debería dar más o menos los ingresos de habitaciones. Si se aleja más de un 2 %, avísame antes de seguir.
+2. Calcula la ocupación en % y lo que gasta cada habitación ocupada fuera de la habitación: (restaurante y bar + otros) ÷ habitaciones ocupadas. Enseña las cuentas.
+3. Compara solo con lo que te haya dado para comparar. Si no te he dado nada, no compares.
+4. Si la ocupación baja 5 puntos o más frente a la semana pasada, explícalo en la primera línea.
+5. Escribe cinco líneas, una frase cada una: cómo ha ido, lo que ha subido, lo que ha bajado, a qué lo atribuyes (solo con lo que te he contado) y lo que yo miraría esta semana.
 
 Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button class="copy" data-t="p2e">Copiar</button></div>
+          <div class="eg">
+            <span class="lbl">Así queda · Ejemplo con datos inventados</span>
+            <p>Hotel de 80 habitaciones. Esta semana: 434 ocupadas de 560, precio medio 96 €, restaurante y bar 9.548 €, otros 1.302 €. La semana pasada: 462 ocupadas, precio medio 93 €, restaurante y bar 10.626 €, otros 1.386 €. El jueves se canceló un grupo de 28 habitaciones.</p>
+            <ol>
+              <li>Ocupación del 77,5 % (434 ÷ 560), 5 puntos menos que la semana pasada (82,5 %): la cancelación del grupo del jueves explica las 28 habitaciones de diferencia.</li>
+              <li>Sube el precio medio: 96 € frente a 93 €.</li>
+              <li>Baja el restaurante y bar un 10 % (de 10.626 € a 9.548 €), más que las habitaciones ocupadas (−6 %).</li>
+              <li>Cada habitación ocupada gastó 25,00 € fuera de la habitación (10.850 € ÷ 434), frente a 26,00 € (12.012 € ÷ 462).</li>
+              <li>Yo miraría las cenas: ¿el grupo tenía cena reservada y nadie la recolocó?</li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>
@@ -392,12 +436,14 @@ Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button c
       <span class="tag">Para pasar al nivel 3</span>
       <h3>Cuéntale tu hotel una vez. Crea un proyecto en Claude y pon dentro la ficha del hotel.</h3>
       <ol class="steps">
+        <li><span>Copia la ficha de abajo y rellénala en tu ordenador. Es una sola vez: cuenta con media hora. Lo que no sepas de memoria, déjalo en blanco y complétalo otro día.</span></li>
         <li><span>Entra en claude.ai → Proyectos → Crear proyecto. Ponle el nombre de tu hotel.</span></li>
-        <li><span>Copia la ficha de abajo y rellénala. Es una sola vez: con 20 o 30 minutos sale.</span></li>
-        <li><span>Pégala en Instrucciones del proyecto.</span></li>
-        <li><span>En Conocimiento del proyecto sube lo que ya tengas: la carta con precios, el organigrama, el presupuesto del año, el manual de marca si existe.</span></li>
+        <li><span>Pega la ficha rellena en Instrucciones del proyecto.</span></li>
+        <li><span>En Conocimiento del proyecto sube lo que ya tengas en el ordenador: la carta con precios, el organigrama, el presupuesto del año. No hace falta preparar nada nuevo.</span></li>
         <li><span>A partir de hoy, trabaja siempre dentro de ese proyecto. Tus 5 prompts siguen valiendo, y ya no tienes que rellenar la parte del hotel.</span></li>
       </ol>
+      <p class="note">Los proyectos están en claude.ai, pero lo que deja usar cada plan cambia. Si no ves Proyectos o te pide pasar a un plan de pago, es por eso: desde el nivel 3 te conviene el plan Pro.</p>
+      <p class="note">No subas datos personales de huéspedes ni del equipo (DNI, teléfonos, nóminas con nombre). Para todo lo de esta página no hacen falta.</p>
       <p class="note">Esta ficha es lo que en Claude se llama archivo de contexto (CLAUDE.md): lo que Claude tiene que saber de tu hotel antes de contestar nada. En claude.ai se pega en las instrucciones del proyecto o se sube como conocimiento.</p>
       <div class="kit">
         <span class="kit-h">Kit del nivel 3 · La ficha del hotel</span>
@@ -407,6 +453,8 @@ Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button c
           <p><b>Rellenas:</b> todo lo que va entre [corchetes]. Lo que no sepas, déjalo en blanco: te lo preguntará cuando lo necesite.</p>
           <div class="acts"><details><summary>Ver la ficha</summary><pre id="p3"># CÓMO ES MI HOTEL
 Lee esta ficha antes de cada respuesta.
+
+Última actualización: [fecha]
 
 ## Quién soy
 - Nombre y cargo: [..]
@@ -435,6 +483,7 @@ Uno por línea: servicio · precio · horario · quién lo atiende
 - Personas por departamento: recepción [nº], pisos [nº], cocina [nº], sala y bar [nº], mantenimiento [nº]
 - Jefes de departamento y en quién confío para qué: [..]
 - Lo que más le cuesta al equipo ahora mismo: [..]
+- Convenio que aplicamos y descansos que hay que respetar: [..]
 
 ## Herramientas
 - Sistema de reservas y gestión del hotel (PMS): [nombre]
@@ -456,6 +505,7 @@ Uno por línea: servicio · precio · horario · quién lo atiende
 - Yo decido; tú preparas. Nunca des nada por aprobado.
 - Si te falta un dato, pregúntamelo; no inventes cifras.
 - Enseña las cuentas cuando calcules algo.
+- Los precios, los turnos y lo que se promete al huésped lo decido yo: tú propones.
 - Si algo de esta ficha parece desactualizado, avísame.</pre></details><button class="copy" data-t="p3">Copiar</button></div>
         </div>
       </div>
@@ -476,12 +526,13 @@ Uno por línea: servicio · precio · horario · quién lo atiende
       <span class="tag">Para pasar al nivel 4</span>
       <h3>Un asistente por área. Cuatro proyectos, cada uno con su trabajo y sus reglas.</h3>
       <ol class="steps">
+        <li><span>Guarda la ficha del hotel como documento (Word, PDF o texto) en tu ordenador.</span></li>
         <li><span>Crea cuatro proyectos en Claude: Carta, Equipo, Reseñas y Dueños.</span></li>
-        <li><span>En cada uno, sube la ficha del hotel en Conocimiento del proyecto.</span></li>
-        <li><span>Pega en Instrucciones del proyecto las instrucciones de su área, que tienes abajo.</span></li>
+        <li><span>En cada uno, sube la ficha en Conocimiento del proyecto y pega en Instrucciones del proyecto las de su área, que tienes abajo. Unos 5 minutos por proyecto.</span></li>
         <li><span>Cuando tengas una tarea, abre el proyecto de esa área. No mezcles.</span></li>
+        <li><span>Si cambia algo del hotel, corrige la ficha y vuelve a subirla en los cuatro.</span></li>
       </ol>
-      <p class="note">Otra forma: convertir cada asistente en una Skill de Claude. Es una carpeta con un archivo SKILL.md (nombre, descripción e instrucciones) que se sube en Ajustes → Capacidades → Skills. Claude la usa sola cuando la tarea encaja.</p>
+      <p class="note">Opcional, si te manejas con carpetas y archivos: cada asistente puede ser una Skill de Claude. Es una carpeta con un archivo SKILL.md (nombre, descripción e instrucciones) que se sube en Configuración → Capacidades → Skills, y Claude la usa sola cuando la tarea encaja. Si no ves esa opción, depende de tu plan. Con los proyectos tienes de sobra.</p>
       <div class="kit">
         <span class="kit-h">Kit del nivel 4 · Instrucciones de 4 asistentes</span>
 
@@ -500,16 +551,21 @@ LO QUE TE VAN A PASAR
 - Los cambios que quiero hacer o los problemas que veo.
 
 LO QUE SABES HACER
-1. Revisar una carta: qué platos sobran, cuáles se piden poco aunque dejan buen dinero, dónde falta algo para compartir o para añadir (bebida, postre, extra) y qué precios cuesta encontrar.
-2. Calcular cuánto deja cada plato (precio sin IVA menos coste) cuando te paso los costes, y ordenarlos de más a menos.
+1. Revisar una carta en este orden:
+   - Los platos ancla: los que todo el mundo reconoce y pide. Sirven para que el resto de precios parezcan razonables.
+   - Los que más dinero dejan (precio sin IVA menos coste): tienen que estar a la vista, junto a los ancla y en las primeras líneas de cada sección.
+   - Los que se piden poco y dejan poco: candidatos a salir.
+   - Dónde falta algo que añadir al pedido: bebida, postre, para compartir, un extra.
+2. Calcular cuánto deja cada plato cuando te paso precios y costes, y ordenarlos de más a menos.
 3. Reescribir descripciones de platos: cortas, que abran el apetito, sin adjetivos vacíos. Máximo 15 palabras.
 4. Proponer menús cerrados, maridajes y combinaciones para room service y bar.
 5. Traducir la carta a los idiomas de los huéspedes del hotel.
 
 FORMATO
-Empieza por lo que cambiarías primero y por qué, en tres líneas. Después el detalle en tabla. Explica el efecto esperado de cada propuesta con palabras, sin cifras que no te haya dado.
+Empieza por las 3 cosas que cambiarías primero y por qué, una línea cada una. Después una tabla: plato · precio · se vende (mucho / normal / poco) · deja (mucho / normal / poco) · qué haría. Si no tengo ventas o costes, deja esa columna vacía y dime qué informe de la caja te serviría. Explica el efecto esperado con palabras, sin cifras que no te haya dado.
 
 REGLAS
+- Los precios los decido yo. Si propones cambiar uno, di el motivo y deja la decisión para mí.
 - No propongas nada que pida más personal ni equipamiento nuevo.
 - Si un cambio complica la cocina en hora punta, dilo.
 - Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button class="copy" data-t="p4a">Copiar</button></div>
@@ -530,9 +586,10 @@ LO QUE TE VAN A PASAR
 - Conflictos, quejas o situaciones que el director tiene que gestionar.
 
 LO QUE SABES HACER
-1. Revisar un cuadrante frente a la ocupación prevista y señalar los días con gente de más o de menos. Enseña la cuenta día por día.
+1. Revisar un cuadrante frente a la previsión de ocupación del PMS (habitaciones ocupadas, llegadas y salidas de cada día). Antes de empezar, pregúntame cuántas habitaciones limpia cada camarera de pisos y cuánta gente necesito en recepción, cocina y sala según la ocupación: usa mis cifras, nunca las supongas.
+   Tabla: día · ocupadas · llegadas · salidas · personas que harían falta · personas en el cuadrante · diferencia. Marca los días con gente de más o de menos.
 2. Escribir procedimientos de una página (check-in, cambio de turno, cierre de bar, reclamación) en pasos numerados que se lean en un minuto.
-3. Preparar conversaciones difíciles: qué decir, en qué orden, qué no decir y cómo cerrar con un compromiso.
+3. Preparar conversaciones difíciles: qué decir, en qué orden, qué no decir y cómo cerrar con un compromiso con fecha.
 4. Preparar una formación de 10 minutos para la reunión de inicio de turno de un departamento.
 5. Escribir mensajes al equipo claros y cercanos.
 
@@ -540,8 +597,10 @@ FORMATO
 Lo urgente arriba. Tablas para cuadrantes. Pasos numerados para procedimientos. Guion en viñetas para conversaciones.
 
 REGLAS
+- Todo cuadrante respeta el convenio, los descansos y las horas que te indique el director. Si no te los ha dado, pregúntalos antes de proponer nada.
 - No das consejos legales ni laborales cerrados. Si algo toca contrato, convenio o despido, dilo y recomienda consultarlo con la asesoría.
 - Antes de pensar en sumar gente, busca cómo reorganizar la que hay.
+- Termina cada cuadrante con «Revísalo tú antes de publicarlo»: descansos, vacaciones aprobadas y bajas.
 - Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button class="copy" data-t="p4b">Copiar</button></div>
         </div>
 
@@ -559,13 +618,13 @@ LO QUE TE VAN A PASAR
 - Lo que el director sepa de cada caso.
 
 LO QUE SABES HACER
-1. Responder una reseña: gracias por algo concreto, reconocer la queja sin excusas, contar lo que se ha hecho solo si el director te lo ha dicho e invitar a volver con un motivo concreto. Máximo 90 palabras, en el idioma de la reseña, con la firma del director.
-2. Analizar un lote: agrupar los comentarios por tema (limpieza, ruido, desayuno, trato, precio, habitación, restaurante…), contar cuántas veces sale cada uno, separar lo bueno de lo malo y ordenarlo por número de menciones.
-3. Sacar las 3 cosas que más se repiten y a qué departamento le toca cada una.
+1. Responder una reseña en cuatro tiempos: gracias por algo concreto, reconocer la queja sin excusas, contar lo que se ha hecho solo si el director te lo ha dicho e invitar a volver con un motivo concreto. Máximo 90 palabras, en el idioma de la reseña, con la firma del director. Si la queja es seria o acusa de algo falso, propón además un mensaje privado en vez de discutir en público.
+2. Analizar un lote (las reseñas del mes copiadas de Google, Booking o TripAdvisor): agrupar los comentarios por tema (limpieza, ruido, desayuno, trato, precio, habitación, restaurante…), contar cuántas veces sale cada uno, separar lo bueno de lo malo y ordenarlo por número de menciones.
+3. Sacar las 3 cosas que más se repiten, a qué departamento le toca cada una y quién debería encargarse, con una fecha propuesta para revisarlo.
 4. Señalar las veces que un huésped quería comprar algo y no pudo (una cena, un traslado, salir más tarde…).
 
 FORMATO
-Para respuestas: el texto listo para pegar. Para lotes: tabla de temas con su número de menciones y, debajo, las 3 prioridades con su departamento.
+Para respuestas: el texto listo para pegar. Para lotes: tabla tema · menciones buenas · menciones malas · una frase literal de ejemplo · departamento. Debajo, las 3 prioridades con su departamento y fecha.
 
 REGLAS
 - Se responde a todas las reseñas, buenas y malas, con el mismo cuidado.
@@ -588,16 +647,18 @@ LO QUE TE VAN A PASAR
 - Correos o preguntas de los dueños que hay que contestar.
 
 LO QUE SABES HACER
-1. Preparar el informe de una página: el periodo en una frase, los 3 números que más importan con su diferencia en € y en %, por qué ha pasado (separando lo que depende de dirección de lo que no) y 3 acciones para el periodo siguiente.
-2. Preparar una propuesta para aprobar: qué es, cuánto cuesta, qué se espera ganar y cómo se va a medir. Si no tienes el dato de lo que se espera ganar, deja el hueco y pregúntalo.
-3. Adelantar las 5 preguntas que harán los dueños y preparar una respuesta corta para cada una.
-4. Contestar sus correos con tono profesional y seguro.
+1. Preparar el informe de una página: el periodo en una frase, los 3 números que más importan con su diferencia en € y en %, por qué ha pasado (separando lo que depende de dirección de lo que no) y 3 acciones para el periodo siguiente, cada una con responsable y fecha.
+2. Si la ocupación baja 5 puntos o más frente al presupuesto o al año pasado, explicarlo lo primero, antes de que lo pregunten.
+3. Preparar una propuesta para aprobar: qué es, cuánto cuesta, qué se espera ganar y cómo se va a medir. Si no tienes el dato de lo que se espera ganar, deja el hueco y pregúntalo.
+4. Adelantar las 5 preguntas que harán los dueños y preparar una respuesta corta para cada una.
+5. Contestar sus correos con tono profesional y seguro.
 
 FORMATO
 Sin adjetivos ni excusas. Cada cifra con su cuenta. Una página como máximo.
 
 REGLAS
 - Nada de jerga: escribe para que lo entienda cualquiera.
+- Termina siempre con «Revísalo tú antes de enviarlo» y las 3 cifras que conviene comprobar contra el informe original.
 - Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button class="copy" data-t="p4d">Copiar</button></div>
         </div>
       </div>
@@ -612,22 +673,23 @@ REGLAS
     <h2>Carta, equipo, reseñas, dueños. Cada área con el suyo.</h2>
     <div class="duo">
       <div class="cell"><span class="lbl">Cómo se ve</span><p>Abres el de reseñas y ya sabe cómo respondes. Abres el de dueños y ya sabe qué les importa. Respuestas a medida, sin explicar nada.</p></div>
-      <div class="cell"><span class="lbl">Qué ganas</span><p>Trabajo de nivel de jefe de departamento en minutos. Lo que sigue siendo tuyo es pasar los datos: copias números del sistema a mano cada vez.</p></div>
+      <div class="cell"><span class="lbl">Qué ganas</span><p>Borradores de nivel de jefe de departamento en minutos, que tú revisas y firmas. Lo que sigue siendo tuyo es pasar los datos: copias números del sistema a mano cada vez.</p></div>
     </div>
     <div class="next">
       <span class="tag">Para pasar al nivel 5</span>
       <h3>Deja de copiar números. Sube el informe tal cual sale del sistema y que te devuelva el resumen.</h3>
       <ol class="steps">
-        <li><span>Saca del PMS el informe del mes en PDF o Excel: el mismo que ya usas para cerrar. Si puedes, también el de la caja del restaurante y bar.</span></li>
-        <li><span>Saca el mismo mes del año pasado y el presupuesto, si lo tienes en un archivo.</span></li>
-        <li><span>Abre el proyecto Dueños, adjunta los archivos y pega el prompt de abajo.</span></li>
-        <li><span>El primer mes, repasa las cuentas con calma. Si cuadran, el mes siguiente es cuestión de minutos.</span></li>
+        <li><span>Exporta del PMS el informe del mes en Excel o PDF: el mismo que ya usas para cerrar. Si no sabes dónde está el botón de exportar, pídeselo a recepción o a quien lleve el PMS: es una vez y luego ya lo sabes.</span></li>
+        <li><span>Si puedes, exporta también las ventas del mes de la caja del restaurante y bar, el mismo mes del año pasado y el presupuesto.</span></li>
+        <li><span>Abre el proyecto Dueños, adjunta los archivos (el clip del chat) y pega el prompt de abajo.</span></li>
+        <li><span>El primer mes, compara tres cifras con el informe original: ocupación, precio medio e ingreso total. Si cuadran, los meses siguientes son unos 15 minutos desde que tienes los informes exportados.</span></li>
       </ol>
+      <p class="note">Claude no se conecta a tu PMS ni a tu caja: trabaja con los archivos que tú le subes. Lo que te ahorras es copiar números a mano y escribir el resumen.</p>
       <div class="kit">
         <span class="kit-h">Kit del nivel 5 · Del informe del PMS al resumen del mes</span>
         <div class="piece">
           <h4>Prompt · Resumen del mes desde el informe del sistema</h4>
-          <p>Para cerrar el mes en minutos: lee el informe, comprueba que cuadra, saca los números y te escribe el resumen y el correo a los dueños.</p>
+          <p>Para cerrar el mes sin copiar números: lee el informe, comprueba que cuadra, saca los números y te escribe el resumen y el correo a los dueños.</p>
           <p><b>Adjuntas:</b> el informe del PMS del mes y, si los tienes, el de la caja, el del año pasado y el presupuesto.</p>
           <div class="acts"><details><summary>Ver el prompt</summary><pre id="p5">Te adjunto los informes de [mes y año] de [nombre del hotel], tal cual salen del sistema:
 - Informe del PMS del mes: [adjunto]
@@ -638,6 +700,7 @@ Lo que ha pasado este mes y no sale en los informes: [obras, clima, eventos, baj
 
 PASO 1 · LEE Y COMPRUEBA
 - Dime qué informes has encontrado, qué periodo cubre cada uno y qué columnas vas a usar.
+- Comprueba que habitaciones ocupadas × precio medio da los ingresos de habitaciones (por redondeos puede variar hasta un 2 %) y que la suma de departamentos da el total.
 - Si algo no cuadra (fechas distintas, totales que no suman, habitaciones disponibles que cambian), avísame antes de seguir.
 
 PASO 2 · SACA LOS NÚMEROS DEL MES
@@ -648,10 +711,11 @@ En una tabla con este mes, el mismo mes del año pasado, el presupuesto y la dif
 - Ingresos de restaurante y bar (€)
 - Otros ingresos (€)
 - Ingreso total (€)
-- Lo que gasta cada huésped fuera de la habitación: ingresos que no son de habitación ÷ habitaciones ocupadas (€)
+- Lo que gasta cada habitación ocupada fuera de la habitación: ingresos que no son de habitación ÷ habitaciones ocupadas (€)
 Enseña cada cuenta. Si un dato no está en los informes, deja la casilla vacía y dímelo.
 
 PASO 3 · ESCRIBE EL RESUMEN DEL MES
+- Si la ocupación baja 5 puntos o más frente al año pasado o al presupuesto, empieza por explicarlo.
 - Una frase con cómo ha ido el mes.
 - Las 3 cosas que mejor han ido y las 3 que peor, cada una con su cifra.
 - Por qué ha pasado, solo con lo que salga de los informes o de lo que te he contado. Separa lo que depende de dirección de lo que no.
@@ -660,7 +724,24 @@ PASO 3 · ESCRIBE EL RESUMEN DEL MES
 PASO 4 · VERSIÓN PARA LOS DUEÑOS
 El mismo resumen en un correo de 150 palabras como máximo, con tono seguro, sin jerga y sin excusas.
 
+PASO 5 · LO QUE TENGO QUE REVISAR
+Termina con «Revísalo tú antes de enviarlo» y las 3 cifras del correo que debo comprobar contra el informe original, diciendo en qué informe y columna está cada una.
+
 Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button class="copy" data-t="p5">Copiar</button></div>
+          <div class="eg">
+            <span class="lbl">Así queda · Ejemplo con datos inventados</span>
+            <p>Hotel de 80 habitaciones, octubre (2.480 habitaciones disponibles). Parte de la tabla, este año frente al año pasado:</p>
+            <ul class="rows">
+              <li><b>Ocupación:</b> 75,0 % frente a 70,0 % · +5,0 puntos</li>
+              <li><b>Habitaciones ocupadas:</b> 1.860 frente a 1.736 · +124</li>
+              <li><b>Precio medio:</b> 104 € frente a 101 € · +3 €</li>
+              <li><b>Ingresos de habitaciones:</b> 193.440 € frente a 175.336 € · +18.104 € (+10,3 %)</li>
+              <li><b>Restaurante, bar y otros:</b> 37.200 € frente a 36.456 € · +744 € (+2,0 %)</li>
+              <li><b>Fuera de la habitación, por habitación ocupada:</b> 20,00 € frente a 21,00 € · −1,00 €</li>
+              <li><b>Ingreso total:</b> 230.640 € frente a 211.792 € · +18.848 € (+8,9 %)</li>
+            </ul>
+            <p><b>En una frase:</b> mejor mes que el año pasado gracias a las habitaciones, pero cada habitación ocupada gastó 1 € menos fuera de ella: con 1.860 habitaciones ocupadas, son 1.860 € que se han quedado por el camino.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -679,7 +760,7 @@ Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button c
     <div class="next" style="--c:#8B74FF">
       <span class="tag">Para pasar al nivel 6</span>
       <h3>Encadena dos asistentes. Uno analiza, otro escribe. Tú solo revisas.</h3>
-      <p>El Analista solo saca hechos, siempre con el mismo formato. El Redactor solo escribe, a partir de ese formato. Como el formato no cambia, lo que entrega el primero es justo lo que necesita el segundo. Y separarlos tiene una ventaja: el que escribe no puede inventarse números, porque solo usa los que le llegan.</p>
+      <p>El Analista solo saca hechos, siempre con el mismo formato. El Redactor solo escribe, a partir de ese formato. Como el formato no cambia, lo que entrega el primero es justo lo que necesita el segundo. Y separarlos tiene una ventaja: el que escribe solo trabaja con los números que le llegan y te dice de qué línea sale cada uno, así que es mucho más fácil pillar un error.</p>
       <div class="chain" aria-label="Cadena de trabajo"><span>Informes</span><i>→</i><span class="on" style="--c:var(--l5);--ct:#fff">1 · Analista</span><i>→</i><span>Bloque HALLAZGOS</span><i>→</i><span class="on" style="--c:var(--l6);--ct:#fff">2 · Redactor</span><i>→</i><span>Tú revisas</span></div>
       <ol class="steps">
         <li><span>Crea dos proyectos: «1 · Analista» y «2 · Redactor». Los dos con la ficha del hotel en Conocimiento del proyecto.</span></li>
@@ -688,6 +769,7 @@ Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button c
         <li><span>Copia ese bloque entero y pégalo en el Redactor con el mensaje de relevo, diciendo para quién es.</span></li>
         <li><span>Revisas solo el resultado final. Si algo falla, sabes en qué paso ha fallado.</span></li>
       </ol>
+      <p class="note">«A la vez» quiere decir que cada uno hace su parte y tú solo haces de puente: copiar y pegar un bloque. No se hablan solos entre ellos.</p>
       <p class="note">Si prefieres un solo chat: pega las dos instrucciones en el mismo proyecto y dile «primero haz de Analista, espera mi OK y luego haz de Redactor».</p>
       <div class="kit">
         <span class="kit-h">Kit del nivel 6 · Dos asistentes encadenados</span>
@@ -722,7 +804,22 @@ FIN HALLAZGOS
 
 REGLAS
 - No opinas ni recomiendas: solo hechos con su cifra.
+- Si la ocupación baja 5 puntos o más frente al periodo anterior o al presupuesto, ese es el hecho número 1.
 - Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button class="copy" data-t="p6a">Copiar</button></div>
+          <div class="eg">
+            <span class="lbl">Así queda · Ejemplo con datos inventados</span>
+            <p class="mono">HALLAZGOS · Hotel Ejemplo · octubre
+CIFRAS
+- Ocupación: 75,0 % · antes 70,0 % · presupuesto 74,0 % · diferencia +5,0 puntos frente a antes
+- Ingresos de habitaciones: 193.440 € · antes 175.336 € · diferencia +18.104 € (+10,3 %)
+- Fuera de la habitación, por habitación ocupada: 20,00 € · antes 21,00 € · diferencia −1,00 € (−4,8 %)
+HECHOS
+1. Las habitaciones tiran del mes · dato: +18.104 € · sale de: informe del PMS, ingresos de alojamiento
+2. Cada habitación ocupada gasta menos fuera · dato: 37.200 € ÷ 1.860 = 20,00 € · sale de: caja y PMS
+DUDAS
+- No tengo el presupuesto de restaurante y bar.
+FIN HALLAZGOS</p>
+          </div>
         </div>
 
         <div class="piece">
@@ -745,7 +842,7 @@ LO QUE HACES
    - Dueños: correo de 150 palabras como máximo, con 3 cifras y 3 propuestas.
    - Jefes de departamento: un párrafo por departamento, con una tarea y una fecha.
    - Equipo: mensaje cercano de 80 palabras como máximo.
-4. Al final, lista las cifras que has usado y de qué línea del bloque sale cada una.
+4. Al final, lista las cifras que has usado y de qué línea del bloque sale cada una, y añade «Revísalo tú antes de enviarlo».
 
 REGLAS
 - Solo usas cifras que estén en el bloque HALLAZGOS. Ni una más.
@@ -791,8 +888,12 @@ Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button c
       <div class="truth">
         <h3>Con Claude solo no se llega al nivel 7</h3>
         <p>Claude es muy bueno con lo que le das. Pero no está conectado a tu hotel: no ve las ventas de esta noche, no está en la habitación cuando el huésped tiene hambre y no te avisa si tú no le preguntas. Para eso hay que conectar los sistemas del hotel, y eso ya no se arregla con un prompt.</p>
-        <p>Lo que sí puedes hacer hoy es saber qué datos tienes y cuáles se te pierden. Para eso es el prompt de abajo.</p>
+        <p>Lo que sí puedes hacer hoy, tú solo, son dos cosas:</p>
       </div>
+      <ol class="steps">
+        <li><span><b>Ponte tú el aviso.</b> Crea en el calendario del móvil una cita fija, por ejemplo cada lunes a las 9:00, de 20 minutos: exportas la semana del PMS y de la caja, se la pasas al Analista y luego al Redactor. No es automático, pero ya no depende de que te acuerdes.</span></li>
+        <li><span><b>Mira qué datos tienes y cuáles se pierden.</b> Para eso es el prompt de abajo. Te dice qué haría falta conectar para que los avisos llegaran solos.</span></li>
+      </ol>
       <div class="kit">
         <span class="kit-h">Para preparar el nivel 7</span>
         <div class="piece">
@@ -811,8 +912,9 @@ MIS SISTEMAS
 LO QUE HACES
 1. Haz una tabla: dato · de dónde sale · quién lo saca hoy · cada cuánto · qué se pierde por el camino.
 2. Marca los datos que hoy NO existen porque el pedido no queda registrado en ningún sitio (por ejemplo, lo que se pide por teléfono y se apunta en un papel).
-3. Dime los 5 avisos diarios que más me servirían como director y qué dato necesita cada uno.
-4. Explícame, sin tecnicismos, qué tendría que estar conectado para que esos avisos llegaran solos.
+3. Dime los 5 avisos diarios que más me servirían como director y qué dato necesita cada uno. Por ejemplo: «ayer el room service vendió la mitad que un día normal de esta época».
+4. Para cada aviso, dime si hoy podría sacarlo yo una vez por semana con un informe exportado, o si solo es posible con los sistemas conectados.
+5. Explícame, sin tecnicismos, qué tendría que estar conectado para que esos avisos llegaran solos.
 
 Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button class="copy" data-t="p7">Copiar</button></div>
         </div>
@@ -859,24 +961,25 @@ Si te falta un dato, pregúntamelo; no inventes cifras.</pre></details><button c
 
 <script>
 document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
-  const el=document.getElementById(b.dataset.t); const txt=el.innerText;
+  /* textContent y no innerText: con el desplegable cerrado, innerText devuelve vacío */
+  const el=document.getElementById(b.dataset.t); const txt=el.textContent;
   const ok=()=>{b.textContent='Copiado ✓';setTimeout(()=>b.textContent='Copiar',1800)};
-  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok).catch(()=>sel(el,ok))}else sel(el,ok);
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok).catch(()=>sel(txt,ok))}else sel(txt,ok);
 }));
-function sel(el,ok){try{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');ok()}catch(e){}}
+function sel(txt,ok){try{const t=document.createElement('textarea');t.value=txt;t.setAttribute('readonly','');t.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(t);t.select();t.setSelectionRange(0,txt.length);const r=document.execCommand('copy');t.remove();if(r)ok()}catch(e){}}
 </script>
 <script>
 (function(){
   var names=['','Chat suelto','Prompts guardados','Conoce tu hotel','Un asistente por área','Informes solos','Equipo de agentes','Piloto automático'];
   var cols=['#FFFFFF','#7DD3F8','#14D59B','#2E95FF','#8BCB10','#8B74FF','#E04BD4','#F2A07E'];
   var next=[
-    'Empieza por el nivel 1: abre Claude y pídele ayuda con una reseña de esta semana. Después guarda los 5 prompts base.',
+    'Entra en claude.ai, crea tu cuenta y prueba el prompt para responder una reseña de esta semana. Después guarda los 5 prompts base.',
     'Guarda los 5 prompts base y deja de improvisar la pregunta.',
     'Cuéntale tu hotel una vez: crea un proyecto y pega dentro la ficha del hotel.',
     'Monta un asistente por área: carta, equipo, reseñas y dueños.',
     'Deja de copiar números: sube el informe del sistema y que te devuelva el resumen del mes.',
     'Encadena dos asistentes: uno analiza y otro escribe. Tú solo revisas.',
-    'Haz que los datos lleguen solos cada día. Con Claude solo no se llega; aquí tienes lo que hace falta.',
+    'Ponte una cita fija cada lunes para pasar la semana por el Analista y el Redactor, y mira qué datos podrían llegar solos. Con Claude solo no se llega al 7; aquí tienes lo que hace falta.',
     'Ya estás arriba. Lo que toca es medir cada semana que de verdad funciona.'
   ];
   var ans=[null,null,null,null,null,null,null];

@@ -427,10 +427,13 @@ Objetivos que te pide la propiedad este año:</pre></div>
 </div>
 <script>
 document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
-  const el=document.getElementById(b.dataset.t); const txt=el.innerText;
+  const el=document.getElementById(b.dataset.t); const txt=textoDe(el);
   const ok=()=>{b.textContent='Copiado ✓';setTimeout(()=>b.textContent='Copiar',1800)};
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok).catch(()=>sel(el,ok))}else sel(el,ok);
 }));
 function sel(el,ok){try{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');ok()}catch(e){}}
+
+/* Con el bloque plegado, innerText sale vacío: se abre un instante, se lee y se vuelve a cerrar. */
+function textoDe(el){const c=[];let d=el.closest('details');while(d){if(!d.open){d.open=true;c.push(d)}d=d.parentElement?d.parentElement.closest('details'):null}let t=el.innerText;c.forEach(x=>x.open=false);if(!t||!t.trim())t=el.textContent;return t.replace(/\n{3,}/g,'\n\n').trim()}
 </script>
 </body></html>

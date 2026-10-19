@@ -132,6 +132,28 @@ pre{font-family:var(--mono);font-size:13px;line-height:1.6;white-space:pre-wrap;
 .cta .btn:hover{background:var(--btn-h)}
 .cta small{display:block;opacity:.75;margin-top:10px;font-size:13.5px}
 footer{text-align:center;color:var(--muted);font-size:13px;margin-top:40px}
+/* empieza por aquí */
+.start{background:var(--card);border:2px solid var(--btn);border-radius:16px;padding:20px 20px 18px;margin-top:36px}
+.start h2{font-size:clamp(26px,5.4vw,34px)}
+.start ol{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:12px;counter-reset:st}
+.start li{counter-increment:st;display:flex;gap:12px;font-size:15.5px;line-height:1.5}
+.start li::before{content:counter(st);flex:0 0 30px;height:30px;border-radius:50%;background:var(--btn);color:#fff;font-weight:800;display:grid;place-items:center;font-size:15px}
+.start li b{color:var(--ink)}
+.start li a{display:inline-flex;align-items:center;min-height:44px;color:var(--clay-t);font-weight:700}
+.start .note{font-size:14px;color:var(--muted);margin-top:10px}
+/* así queda + revísalo */
+.asi{margin-top:14px;border:1.5px dashed var(--clay-t);border-radius:12px;padding:12px 14px;background:var(--bg)}
+.asi-h{font-weight:800;color:var(--ink);font-size:15px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+.asi-h span{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--clay-t)}
+.asi p{font-size:14px;margin-top:6px}
+.asi .asi-ctx{color:var(--muted);font-size:13px}
+.tw{overflow-x:auto;margin-top:8px;-webkit-overflow-scrolling:touch}
+.tw table{border-collapse:collapse;font-size:13px;min-width:100%;font-variant-numeric:tabular-nums}
+.tw th,.tw td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.tw th{color:var(--ink);font-weight:700;background:var(--tile)}
+.rv{margin-top:12px;font-size:14px;border-left:3px solid var(--btn);padding:4px 0 4px 12px;color:var(--text)}
+.rv b{color:var(--ink)}
+.badge{display:inline-block;font-style:normal;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--clay-t);border:1px solid var(--clay-t);border-radius:20px;padding:0 8px;margin-top:6px}
 @media (max-width:720px){
   .tiles{grid-template-columns:repeat(3,1fr)}
   .steps,.calc,.cta{grid-template-columns:1fr}
@@ -150,17 +172,27 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:40px}
   <p class="lead">Todo para ganar más con cada huésped <strong>sin sumar a nadie</strong>. Ninguno dice «contrata». Todos parten de lo mismo: el huésped ya está dentro, solo hay que ponerle fácil comprar.</p>
 </header>
 
-<nav class="toc" aria-label="Índice"><h2>Índice</h2><ol><li><a href="#montar">Móntalo en 4 pasos</a></li><li><a href="#calculadora">La calculadora: cuánto se te escapa</a></li><li><a href="#claude-md">CLAUDE.md: el contexto de tu hotel</a></li><li><a href="#carta">Skill Carta · 12 prompts</a></li><li><a href="#habitacion">Skill Room service · 9 prompts</a></li><li><a href="#experiencias">Skill Experiencias · 14 prompts</a></li><li><a href="#alianzas">Skill Alianzas · 8 prompts</a></li><li><a href="#huesped">Skill Huésped · 10 prompts</a></li><li><a href="#direccion">Skill Dirección · 7 prompts</a></li><li><a href="#vertice">Llevarlo a lo que pasa en tu hotel</a></li></ol></nav>
+<section id="empieza" class="start">
+  <p class="eyebrow">Empieza por aquí</p>
+  <h2>Si solo tienes 10 minutos hoy, haz esto</h2>
+  <ol>
+    <li><div><b>Pon tus números en la calculadora</b> (2 minutos): habitaciones, ocupación y cuántos pedidos tienes hoy. Verás cuánto se te escapa al mes, con las cuentas. <br><a href="#calculadora">Ir a la calculadora →</a></div></li>
+    <li><div><b>Prepara el resumen del mes para los dueños.</b> Exporta del PMS el informe de ocupación del mes pasado y del TPV las ventas por punto de venta. Abre un chat en claude.ai, pega el prompt y sube los dos archivos. Unos 10 minutos desde que tienes los informes exportados, revisión incluida. <br><a href="#p-direccion-01">Abrir el prompt del resumen →</a></div></li>
+  </ol>
+  <p class="note">Para esto no hace falta montar nada: funciona en un chat normal. Claude no entra solo en tu PMS ni en tu TPV; trabaja con lo que exportas y le pasas. Lo que ganas es no empezar nunca de cero.</p>
+</section>
+
+<nav class="toc" aria-label="Índice"><h2>Índice</h2><ol><li><a href="#empieza">Empieza por aquí: 10 minutos</a></li><li><a href="#montar">Móntalo en 4 pasos</a></li><li><a href="#calculadora">La calculadora: cuánto se te escapa</a></li><li><a href="#claude-md">CLAUDE.md: el contexto de tu hotel</a></li><li><a href="#carta">Skill Carta · 12 prompts</a></li><li><a href="#habitacion">Skill Room service · 9 prompts</a></li><li><a href="#experiencias">Skill Experiencias · 14 prompts</a></li><li><a href="#alianzas">Skill Alianzas · 8 prompts</a></li><li><a href="#huesped">Skill Huésped · 10 prompts</a></li><li><a href="#direccion">Skill Dirección · 7 prompts</a></li><li><a href="#vertice">Llevarlo a lo que pasa en tu hotel</a></li></ol></nav>
 
 <section id="montar">
-  <p class="eyebrow">10 minutos</p>
+  <p class="eyebrow">Unos 30 minutos, una sola vez</p>
   <h2>Móntalo en 4 pasos</h2>
-  <p class="h2sub">Necesitas una cuenta de Claude (claude.ai). Con ChatGPT funciona igual: pega el CLAUDE.md en las instrucciones de un GPT y usa los prompts.</p>
+  <p class="h2sub">Necesitas una cuenta de Claude (claude.ai). Lo que más tiempo lleva es rellenar el CLAUDE.md. Con ChatGPT también funciona: pega el CLAUDE.md en las instrucciones de un GPT y usa los prompts.</p>
   <div class="steps">
-    <div class="step"><div class="n">1</div><div><b>Crea un proyecto</b><p>En claude.ai → Proyectos → Nuevo proyecto. Llámalo con el nombre de tu hotel.</p></div></div>
+    <div class="step"><div class="n">1</div><div><b>Crea un proyecto</b><p>En claude.ai → Proyectos → Crear proyecto. Ponle el nombre de tu hotel.</p></div></div>
     <div class="step"><div class="n">2</div><div><b>Pega el CLAUDE.md</b><p>Copia la plantilla de abajo, rellena los [corchetes] con tu hotel y pégala en <em>Instrucciones del proyecto</em>. También puedes guardarla como <code>CLAUDE.md</code> y subirla en <em>Conocimiento del proyecto</em>.</p></div></div>
-    <div class="step"><div class="n">3</div><div><b>Sube las 6 Skills</b><p>Para cada una: crea una carpeta con su nombre, dentro un archivo <code>SKILL.md</code> con el texto que copias aquí, comprímela en .zip y súbela en Ajustes → Capacidades → Skills.</p></div></div>
-    <div class="step"><div class="n">4</div><div><b>Empieza</b><p>Abre un chat dentro del proyecto y pega el primer prompt. Te recomiendo empezar por la calculadora: así sabes cuánto se escapa antes de tocar nada.</p></div></div>
+    <div class="step"><div class="n">3</div><div><b>Sube las 6 Skills</b><p>Para cada una: crea una carpeta con su nombre, dentro un archivo <code>SKILL.md</code> con el texto que copias aquí, comprímela en .zip y súbela en Configuración → Capacidades → Skills. Si no ves «Skills», depende de tu plan de Claude: los prompts funcionan igual pegándolos en el chat del proyecto.</p></div></div>
+    <div class="step"><div class="n">4</div><div><b>Empieza</b><p>Abre un chat dentro del proyecto y pide lo que necesites («prepárame el resumen de noviembre para los dueños») o pega un prompt. Cuando haya datos, exporta el informe del PMS o del TPV y súbelo al chat.</p></div></div>
   </div>
 </section>
 
@@ -172,18 +204,18 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:40px}
 <div class="calc">
   <div>
     <span class="ex">Valores de ejemplo · cambia los tuyos</span>
-    <div class="modes" role="radiogroup" aria-label="Cómo sé mis huéspedes">
+    <div class="modes" role="radiogroup" aria-label="Cómo sé mis habitaciones ocupadas">
       <label><input type="radio" name="modo" id="modo-hab" value="hab" checked> Habitaciones × ocupación</label>
-      <label><input type="radio" name="modo" id="modo-dir" value="dir"> Ya sé mis huéspedes al mes</label>
+      <label><input type="radio" name="modo" id="modo-dir" value="dir"> Ya sé mis habitaciones ocupadas al mes</label>
     </div>
     <div id="g-hab" class="row2">
       <div class="f"><label for="c-hab">Habitaciones</label><div class="inp"><input id="c-hab" type="number" inputmode="numeric" min="0" value="80"></div></div>
       <div class="f"><label for="c-ocu">Ocupación media</label><div class="inp"><input id="c-ocu" type="number" inputmode="decimal" min="0" max="100" value="70"><span>%</span></div></div>
     </div>
-    <div id="g-dir" class="f" hidden><label for="c-dir">Huéspedes al mes</label><div class="inp"><input id="c-dir" type="number" inputmode="numeric" min="0" value="1680"></div><small>Cuenta cada habitación ocupada cada noche como un huésped que puede pedir.</small></div>
-    <div class="f"><label for="c-hoy">% que hoy pide algo</label><div class="inp"><input id="c-hoy" type="number" inputmode="decimal" min="0" max="100" value="8"><span>%</span></div><small>Pedidos al mes ÷ huéspedes al mes. Si no lo sabes, pon tu mejor estimación.</small></div>
+    <div id="g-dir" class="f" hidden><label for="c-dir">Habitaciones ocupadas al mes</label><div class="inp"><input id="c-dir" type="number" inputmode="numeric" min="0" value="1680"></div><small>Del informe del PMS: cada habitación ocupada cada noche cuenta una vez.</small></div>
+    <div class="f"><label for="c-hoy">% que hoy pide algo</label><div class="inp"><input id="c-hoy" type="number" inputmode="decimal" min="0" max="100" value="8"><span>%</span></div><small>Pedidos al mes (del TPV) ÷ habitaciones ocupadas al mes.</small></div>
     <div class="f"><label for="c-gas">Gasto medio por pedido</label><div class="inp"><input id="c-gas" type="number" inputmode="decimal" min="0" value="22"><span>€</span></div></div>
-    <div class="f"><label for="c-fac">% que pediría si fuera fácil</label><div class="inp"><input id="c-fac" type="number" inputmode="decimal" min="0" max="100" value="20"><span>%</span></div><small>Si pudiera pedir desde la habitación, en su idioma y en un minuto.</small></div>
+    <div class="f"><label for="c-fac">% que pediría si fuera fácil</label><div class="inp"><input id="c-fac" type="number" inputmode="decimal" min="0" max="100" value="20"><span>%</span></div><small>Si pudiera pedir desde la habitación, en su idioma y en un minuto. Es tu estimación, no un dato del sector: sé prudente.</small></div>
   </div>
   <div class="res" aria-live="polite">
     <span class="lbl">Se te escapa cada mes</span>
@@ -202,23 +234,25 @@ Mis datos:
 - Ocupación media del mes: [%]
 - O, si lo sé directamente, habitaciones ocupadas al mes: [nº]
 - Servicios que vendo además de la habitación (restaurante, bar, a la habitación, experiencias, salida tarde…): [lista]
-- Por cada servicio: pedidos al mes y gasto medio por pedido: [..]
+- Por cada servicio: pedidos al mes y gasto medio por pedido (del informe del TPV): [..]
 - Por cada servicio: qué % de habitaciones crees que pediría si fuera tan fácil como escanear un QR y pedir: [..]
+  (Es mi estimación. Si no te la doy, pregúntamela; no uses datos del sector.)
 
 Haz esto:
 1. Habitaciones ocupadas al mes = habitaciones × ocupación × 30 (si no te las he dado).
 2. Por servicio: % que pide hoy = pedidos ÷ habitaciones ocupadas.
 3. Por servicio: lo que se escapa = habitaciones ocupadas × (% si fuera fácil − % hoy) × gasto medio.
 4. Suma el total al mes y multiplícalo por 12.
-5. Ordena los servicios de más a menos dinero perdido y di en qué servicio está la mitad del total.
+5. Ordena los servicios de más a menos dinero perdido y di qué servicios suman más de la mitad del total.
 6. Las 3 causas más probables por las que hoy no se pide más, según lo que sabes de mi hotel.
 
 Formato:
 - Primera línea: «Cada mes se te escapan X € (Y € al año)».
 - Tabla: servicio · % hoy · % si fuera fácil · gasto medio · se escapa al mes.
 - Enseña todas las cuentas para que pueda comprobarlas.
+- Al final, «Revísalo tú antes de enviarlo:» con las 3 cifras que debo comprobar.
 
-Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></details>
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><div class="asi"><p class="asi-h">Así queda <span>Ejemplo con datos inventados</span></p><p class="asi-ctx">Hotel de 80 habitaciones al 70 %: 80 × 70 % × 30 = 1.680 habitaciones ocupadas al mes</p><p class="">Cada mes se te escapan 4.452 € (53.424 € al año).</p><div class="tw"><table><thead><tr><th>Servicio</th><th>% hoy</th><th>% si fuera fácil</th><th>Gasto medio</th><th>Se escapa al mes</th></tr></thead><tbody><tr><td>Room service</td><td>84 ÷ 1.680 = 5 %</td><td>10 %</td><td>25 €</td><td>1.680 × 5 % × 25 € = 2.100 €</td></tr><tr><td>Experiencias</td><td>42 ÷ 1.680 = 2,5 %</td><td>5 %</td><td>40 €</td><td>1.680 × 2,5 % × 40 € = 1.680 €</td></tr><tr><td>Salida tarde</td><td>0 % (no se ofrece)</td><td>2 %</td><td>20 €</td><td>1.680 × 2 % × 20 € = 672 €</td></tr></tbody></table></div><p class="">Room service y experiencias suman 3.780 € al mes: el 85 % del total. Empieza por ahí.</p></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba los pedidos contra el informe del TPV y que el % «si fuera fácil» sea prudente: es tu estimación, no un dato.</p></details>
 </section>
 
 <section id="claude-md">
@@ -303,7 +337,7 @@ Este archivo es todo lo que necesitas saber de mi hotel. Léelo antes de cada re
 - Palabras que usamos: [..] · Palabras que nunca usamos: [..]
 
 ## Reglas para ti, Claude
-1. No inventes cifras ni datos del hotel. Si te falta un dato, pregúntamelo antes de empezar.
+1. Si te falta un dato, pregúntamelo; no inventes cifras. Tampoco datos del hotel.
 2. Enseña siempre las cuentas, paso a paso, para que pueda comprobarlas.
 3. Nada de propuestas que exijan sumar personal. Todo se hace con el equipo que hay.
 4. Tú preparas; yo decido. No des nada por aprobado.
@@ -339,19 +373,20 @@ Eres jefe de sala y responsable de carta con 20 años en hoteles. Sabes qué hac
 ## Reglas
 - Si te falta un dato, pregúntamelo; no inventes cifras.
 - Enseña las cuentas para que el director pueda comprobarlas.
-- Nada que exija sumar personal. Tú preparas; el director decide.
+- Nada que exija sumar personal. Tú preparas; el director decide, también los precios.
+- No te conectas al PMS, al TPV ni a las webs de reseñas: trabajas con lo que el director exporta, copia o sube.
 - Respeta lo que la cocina puede sacar con el equipo y el horario que tiene.
 - Las traducciones suenan a camarero nativo, no a traductor automático.
 
 ## Formato de respuesta
 Primero la conclusión en 2 líneas. Después la carta o la tabla propuesta. Al final, 3 cambios para hacer esta semana.</pre></div></details>
   <div class="prs"><details class="pr" id="p-carta-01"><summary><span class="pn">01</span><span class="pt"><b>Ordena la carta para que se pida más</b><small>Reordena secciones y platos para que el huésped vea primero lo que más te conviene vender.</small></span></summary>
-<div class="pb"><p class="pd"><b>Qué pegas:</b> Tu carta actual y, si lo sabes, qué platos se venden más y cuáles te dejan más dinero.</p><div class="codebox"><div class="codebar"><span>Prompt 01 · Carta</span><button class="copy" data-t="carta-01">Copiar</button></div><pre id="carta-01">Eres el responsable de carta de mi hotel. Quiero que la carta lleve al huésped hacia los platos que más me convienen, sin engañarle.
+<div class="pb"><p class="pd"><b>Qué pegas:</b> Tu carta actual y, si lo tienes, el informe de ventas por plato del TPV del último mes.</p><div class="codebox"><div class="codebar"><span>Prompt 01 · Carta</span><button class="copy" data-t="carta-01">Copiar</button></div><pre id="carta-01">Eres el responsable de carta de mi hotel. Quiero que la carta lleve al huésped hacia los platos que más me convienen, sin engañarle.
 
 Mi carta actual:
 [pega la carta]
 
-Los que más se venden: [..]
+Ventas por plato del último mes (informe del TPV, si lo tengo): [..]
 Los que más dinero me dejan: [..]
 
 Haz esto:
@@ -359,6 +394,7 @@ Haz esto:
 2. Propón el orden nuevo de secciones y de platos dentro de cada sección.
 3. Marca 3 platos para destacar (recuadro, «de la casa») y di por qué.
 4. Di dónde colocar bebidas y postres para que se pidan sin preguntar.
+5. Si no te doy ventas ni lo que deja cada plato, ordena solo por claridad y avísame de que falta ese dato.
 
 Formato: la carta reordenada completa y, debajo, una lista con cada cambio y su motivo en una línea.
 
@@ -392,21 +428,27 @@ Haz esto:
 
 Formato: una carta completa por idioma, con el mismo orden que la original.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-carta-04"><summary><span class="pn">04</span><span class="pt"><b>Qué platos ganan y cuáles pierden</b><small>Separa los platos en cuatro grupos para saber cuáles destacar, cuáles arreglar y cuáles quitar.</small></span></summary>
-<div class="pb"><p class="pd"><b>Qué pegas:</b> Cada plato con su precio, lo que cuesta hacerlo y cuántas veces se vende al mes.</p><div class="codebox"><div class="codebar"><span>Prompt 04 · Carta</span><button class="copy" data-t="carta-04">Copiar</button></div><pre id="carta-04">Eres asesor de restaurantes de hotel. Quiero saber qué platos me ayudan y cuáles me cuestan dinero.
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-carta-04"><summary><span class="pn">04</span><span class="pt"><b>Qué platos ganan y cuáles pierden</b><small>Separa los platos en cuatro grupos para saber cuáles destacar, cuáles arreglar y cuáles quitar.</small><em class="badge">Con ejemplo</em></span></summary>
+<div class="pb"><p class="pd"><b>Qué pegas:</b> El informe de ventas por plato del último mes (TPV, en Excel o copiado) y lo que cuesta hacer cada plato (el escandallo, aunque sea aproximado).</p><div class="codebox"><div class="codebar"><span>Prompt 04 · Carta</span><button class="copy" data-t="carta-04">Copiar</button></div><pre id="carta-04">Eres asesor de restaurantes de hotel. Quiero saber qué platos me ayudan y cuáles me cuestan dinero.
 
-Por cada plato: nombre · precio de venta · coste de hacerlo · ventas al mes
-[pega la lista]
+Ventas por plato del último mes, con su precio (informe del TPV):
+[sube el Excel o pega la lista]
+Lo que cuesta hacer cada plato (escandallo):
+[pega]
 
 Haz esto:
-1. Calcula lo que me queda por plato (precio − coste) y lo que me deja al mes (eso × ventas).
-2. Pon cada plato en uno de cuatro grupos: se vende mucho y deja mucho · se vende mucho y deja poco · se vende poco y deja mucho · se vende poco y deja poco.
-3. Para cada grupo, una acción: destacar, subir precio o abaratar receta, mover de sitio en la carta, quitar.
-4. Enseña todas las cuentas.
+1. Por plato: lo que me queda (precio sin IVA − coste) y lo que me deja al mes (eso × ventas).
+2. Compara solo platos del mismo tipo: entrantes con entrantes, principales con principales.
+3. Corte para separar: ventas por encima de la media del grupo = «se vende mucho»; lo que queda por plato por encima de la media = «deja mucho». Dime las dos medias.
+4. Pon cada plato en uno de cuatro grupos: se vende mucho y deja mucho · se vende mucho y deja poco · se vende poco y deja mucho · se vende poco y deja poco.
+5. Una acción por grupo: destacar · subir un poco el precio o ajustar la receta · ponerlo más visible y que sala lo recomiende · quitarlo o rehacerlo.
+6. Si un plato no tiene coste, déjalo fuera y dímelo; no lo estimes.
 
-Formato: una tabla ordenada por lo que deja al mes y, debajo, las acciones por grupo en una línea cada una.
+Formato: tabla plato · ventas · lo que queda por plato · lo que deja al mes · grupo, ordenada por lo que deja al mes. Debajo, las 3 decisiones para esta semana, con la cuenta de lo que supondría cada una.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-carta-05"><summary><span class="pn">05</span><span class="pt"><b>Revisa los precios de la carta</b><small>Ajusta precios para que tengan sentido entre sí y no asusten, sin perder ventas.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><div class="asi"><p class="asi-h">Así queda <span>Ejemplo con datos inventados</span></p><p class="asi-ctx">Cuatro principales de un mes · medias: 157,5 ventas y 10,50 € de lo que queda por plato</p><div class="tw"><table><thead><tr><th>Plato</th><th>Ventas</th><th>Queda por plato</th><th>Deja al mes</th><th>Grupo</th></tr></thead><tbody><tr><td>Arroz de la casa</td><td>220</td><td>19 − 5,50 = 13,50 €</td><td>2.970 €</td><td>Mucho y mucho: destacar</td></tr><tr><td>Hamburguesa</td><td>310</td><td>15 − 6 = 9,00 €</td><td>2.790 €</td><td>Mucho y poco: ajustar</td></tr><tr><td>Lubina a la sal</td><td>60</td><td>24 − 11 = 13,00 €</td><td>780 €</td><td>Poco y mucho: recomendar</td></tr><tr><td>Ensalada</td><td>40</td><td>11 − 4,50 = 6,50 €</td><td>260 €</td><td>Poco y poco: rehacer o quitar</td></tr></tbody></table></div><p class="">Esta semana: 1) Arroz arriba, con recuadro. 2) Hamburguesa a 1 € más: si se vende igual, 310 × 1 € = +310 € al mes. 3) Que sala recomiende la lubina en las mesas de dos.</p></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba que el coste de cada plato esté al día con los precios de proveedor de este mes y que las ventas sean del mismo mes.</p></div></details><details class="pr" id="p-carta-05"><summary><span class="pn">05</span><span class="pt"><b>Revisa los precios de la carta</b><small>Ajusta precios para que tengan sentido entre sí y no asusten, sin perder ventas.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> La carta con precios y, si lo tienes, el coste de cada plato.</p><div class="codebox"><div class="codebar"><span>Prompt 05 · Carta</span><button class="copy" data-t="carta-05">Copiar</button></div><pre id="carta-05">Eres responsable de precios de restaurante de hotel. Revisa los precios de mi carta.
 
 Carta con precios:
@@ -419,10 +461,13 @@ Haz esto:
 2. Propón un precio «ancla»: un plato caro que haga ver razonables a los demás.
 3. Propón redondeos (14,90 → 15 o al revés) según el tono del hotel.
 4. Di qué platos aguantan una subida pequeña y cuáles no, y por qué.
+5. Si no te doy precios de la zona, no los supongas: trabaja solo con la coherencia de mi carta.
 
-Formato: tabla con plato · precio hoy · precio propuesto · motivo. No propongas ninguna subida sin explicar en qué te basas.
+Formato: tabla con plato · precio hoy · precio propuesto · motivo. No propongas ninguna subida sin explicar en qué te basas. Tú propones; el precio final lo decido yo.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-carta-06"><summary><span class="pn">06</span><span class="pt"><b>Combos y menús que suben el pedido</b><small>Monta combinaciones (plato + bebida, menú de mediodía, menú de niños) que suben lo que gasta cada mesa.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba que ninguna subida descuadre la carta de bar o de habitación. El precio final lo decides tú.</p></div></details><details class="pr" id="p-carta-06"><summary><span class="pn">06</span><span class="pt"><b>Combos y menús que suben el pedido</b><small>Monta combinaciones (plato + bebida, menú de mediodía, menú de niños) que suben lo que gasta cada mesa.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Tu carta con precios y el tipo de huésped que tienes.</p><div class="codebox"><div class="codebar"><span>Prompt 06 · Carta</span><button class="copy" data-t="carta-06">Copiar</button></div><pre id="carta-06">Eres jefe de sala de un hotel. Diseña combinaciones con lo que ya tengo en carta para que cada mesa gaste más y pida más rápido.
 
 Carta con precios:
@@ -455,7 +500,7 @@ Haz esto:
 Formato: tabla con plato · sugerencia en carta · frase del camarero.
 
 Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-carta-08"><summary><span class="pn">08</span><span class="pt"><b>Alérgenos y dietas, claros de un vistazo</b><small>Ordena alérgenos y opciones vegetarianas, veganas y sin gluten para que nadie tenga que preguntar.</small></span></summary>
-<div class="pb"><p class="pd"><b>Qué pegas:</b> La carta y los ingredientes o alérgenos de cada plato.</p><div class="codebox"><div class="codebar"><span>Prompt 08 · Carta</span><button class="copy" data-t="carta-08">Copiar</button></div><pre id="carta-08">Eres responsable de sala y conoces la normativa de alérgenos. Ayúdame a que la carta deje claro qué puede comer cada huésped.
+<div class="pb"><p class="pd"><b>Qué pegas:</b> La carta y las fichas de alérgenos o ingredientes de cada plato que te da cocina.</p><div class="codebox"><div class="codebar"><span>Prompt 08 · Carta</span><button class="copy" data-t="carta-08">Copiar</button></div><pre id="carta-08">Eres responsable de sala y conoces la normativa de alérgenos. Ayúdame a que la carta deje claro qué puede comer cada huésped.
 
 Carta con ingredientes o alérgenos de cada plato:
 [pega]
@@ -468,7 +513,9 @@ Haz esto:
 
 Formato: tabla plato · alérgenos · apto para. Si falta un ingrediente, pregunta; no lo supongas: aquí un error es grave.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-carta-09"><summary><span class="pn">09</span><span class="pt"><b>Carta corta para fuera de horario</b><small>Una carta de 8-10 cosas que se pueda servir cuando la cocina está cerrada o con una sola persona.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba cada plato con cocina antes de imprimir. Con los alérgenos, un error es grave.</p></div></details><details class="pr" id="p-carta-09"><summary><span class="pn">09</span><span class="pt"><b>Carta corta para fuera de horario</b><small>Una carta de 8-10 cosas que se pueda servir cuando la cocina está cerrada o con una sola persona.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Horarios de cocina, quién queda de noche y qué equipo hay (horno, plancha, microondas).</p><div class="codebox"><div class="codebar"><span>Prompt 09 · Carta</span><button class="copy" data-t="carta-09">Copiar</button></div><pre id="carta-09">Eres jefe de cocina de hotel. Diseña una carta corta para las horas en que la cocina está cerrada o va con lo mínimo.
 
 Horario de cocina: [..]
@@ -537,11 +584,11 @@ Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un 
   <div class="sh"><div class="sico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17a7 7 0 0 1 14 0"/><path d="M3 17h18M12 7v3M10 7h4"/><path d="M3 20h18"/></svg></div><div class="shx"><p class="eyebrow">Skill 2 de 6 · 9 prompts</p><h2>Room service</h2><p class="h2sub">Recupera el servicio a la habitación que quitaste, sin sumar a nadie. 9 prompts para que el huésped pueda pedir a la habitación otra vez, con el equipo que ya tienes.</p></div></div>
   <details class="skmd"><summary>Su SKILL.md completo <small>(cópialo en un archivo SKILL.md)</small></summary>
   <div class="codebox"><div class="codebar"><span>habitacion/SKILL.md</span><button class="copy" data-t="md-habitacion">Copiar</button></div><pre id="md-habitacion">---
-name: a-la-habitacion
+name: room-service
 description: Diseña y ajusta el servicio a la habitación (room service) del hotel para que funcione sin sumar personal: carta corta, cómo se pide, quién lo lleva, horarios, precios y packs. Úsala cuando el director hable de room service, pedidos a la habitación, desayuno en la habitación o servicio de noche.
 ---
 
-# A la habitación
+# Room service
 
 ## Quién eres
 Eres jefe de operaciones de hotel especialista en servicio a la habitación. Has montado este servicio en hoteles que lo habían quitado por falta de gente, con el mismo equipo.
@@ -560,8 +607,10 @@ Eres jefe de operaciones de hotel especialista en servicio a la habitación. Has
 ## Reglas
 - Si te falta un dato, pregúntamelo; no inventes cifras.
 - Enseña las cuentas para que el director pueda comprobarlas.
-- Nada que exija sumar personal. Tú preparas; el director decide.
+- Nada que exija sumar personal. Tú preparas; el director decide, también los precios.
+- No te conectas al PMS, al TPV ni a las webs de reseñas: trabajas con lo que el director exporta, copia o sube.
 - Si una idea necesita una persona más, descártala y dilo.
+- Respeta el convenio, los turnos y los descansos que te indique el director; no los supongas.
 
 ## Formato de respuesta
 Primero el resumen en 3 líneas. Después el plan o la tabla. Al final, lo que se puede probar esta misma semana.</pre></div></details>
@@ -569,7 +618,8 @@ Primero el resumen en 3 líneas. Después el plan o la tabla. Al final, lo que s
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Equipo por turno, horario de cocina, plantas y distancias, cómo se pedía antes.</p><div class="codebox"><div class="codebar"><span>Prompt 01 · Room service</span><button class="copy" data-t="habitacion-01">Copiar</button></div><pre id="habitacion-01">Eres jefe de operaciones de hotel. Quitamos el servicio a la habitación por [motivo] y quiero recuperarlo sin sumar a nadie.
 
 Habitaciones y plantas: [..]
-Equipo por turno (recepción, sala, cocina, pisos): [..]
+Equipo por turno (recepción, sala, cocina, pisos), según el cuadrante: [..]
+Convenio, descansos y horarios que hay que respetar: [..]
 Horario de cocina: [..]
 Cómo funcionaba antes y por qué se quitó: [..]
 
@@ -578,6 +628,7 @@ Haz esto:
 2. Para la que recomiendes: quién toma el pedido, quién lo prepara, quién lo lleva y en cuántos minutos.
 3. Las franjas horarias en las que sí y en las que no.
 4. Lo que hay que comprar o preparar (bandejas, bolsas, carro), solo si es imprescindible.
+5. No cambies turnos ni descansos ni propongas horas extra: si una franja no llega con el equipo que hay, ciérrala.
 
 Formato: tabla comparando las 3 formas y, debajo, el paso a paso de la elegida.
 
@@ -639,27 +690,34 @@ Quién podría prepararlos: [..]
 Haz esto:
 1. Propón 6 packs (por ejemplo: celebración con cava, noche de peli, kit niños, tarde de lluvia, llegada tardía, despedida).
 2. Para cada uno: qué lleva, coste aproximado según mis datos, precio de venta y lo que me queda.
-3. Cuándo ofrecer cada uno (antes de llegar, al hacer el check-in, por la noche).
+3. Cuándo ofrecer cada uno (antes de llegar, en recepción al llegar, por la noche).
 4. Cómo se guardan listos y cuánto duran.
 
 Formato: una ficha por pack con las cuentas visibles.
 
 Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-habitacion-06"><summary><span class="pn">06</span><span class="pt"><b>Quién lleva el pedido cuando no hay camarero</b><small>Reparte la entrega entre los turnos que ya existen sin que nadie se desborde.</small></span></summary>
-<div class="pb"><p class="pd"><b>Qué pegas:</b> Turnos, personas por turno y picos de trabajo de cada departamento.</p><div class="codebox"><div class="codebar"><span>Prompt 06 · Room service</span><button class="copy" data-t="habitacion-06">Copiar</button></div><pre id="habitacion-06">Eres jefe de operaciones. Necesito que el servicio a la habitación funcione sin camarero de pisos.
+<div class="pb"><p class="pd"><b>Qué pegas:</b> El cuadrante de la semana, la previsión de ocupación del PMS y las horas de más trabajo de cada departamento.</p><div class="codebox"><div class="codebar"><span>Prompt 06 · Room service</span><button class="copy" data-t="habitacion-06">Copiar</button></div><pre id="habitacion-06">Eres jefe de operaciones. Necesito que el servicio a la habitación funcione sin camarero de pisos.
 
-Turnos y personas en cada uno: [..]
+Cuadrante de la semana (turnos y personas en cada uno):
+[pega]
+Previsión de ocupación por día (del PMS): [..]
+Convenio, descansos y horarios que hay que respetar: [..]
 Horas de más trabajo en recepción, sala y cocina: [..]
 Pedidos que espero al día (si lo sé): [..]
 
 Haz esto:
 1. Una tabla por franja horaria: quién toma el pedido, quién lo lleva y cuánto tiempo le cuesta.
 2. Marca las franjas en las que no se puede servir y qué se ofrece en su lugar (recoger en barra, pack listo).
-3. Una regla simple para cuando coinciden dos pedidos.
-4. Lo que tiene que saber cada persona en una hoja.
+3. Los días con ocupación por encima del [80 %], marca las franjas en riesgo y qué se ofrece en su lugar.
+4. Una regla simple para cuando coinciden dos pedidos.
+5. Lo que tiene que saber cada persona en una hoja.
+6. No muevas turnos ni descansos: trabaja con el cuadrante tal como está.
 
 Formato: la tabla de franjas y una hoja de instrucciones por puesto, en lenguaje de equipo.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-habitacion-07"><summary><span class="pn">07</span><span class="pt"><b>Precio y recargo de la habitación</b><small>Decide cuánto cobrar por subir el pedido y cómo decirlo sin que moleste.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba los turnos y descansos contra tu convenio y el cuadrante real antes de enseñárselo al equipo.</p></div></details><details class="pr" id="p-habitacion-07"><summary><span class="pn">07</span><span class="pt"><b>Precio y recargo de la habitación</b><small>Decide cuánto cobrar por subir el pedido y cómo decirlo sin que moleste.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Precios de carta, coste de llevarlo (tiempo) y lo que cobran hoteles parecidos.</p><div class="codebox"><div class="codebar"><span>Prompt 07 · Room service</span><button class="copy" data-t="habitacion-07">Copiar</button></div><pre id="habitacion-07">Eres responsable de precios de hotel. Ayúdame a decidir cómo cobrar el servicio a la habitación.
 
 Precios de la carta de habitación: [..]
@@ -669,12 +727,14 @@ Lo que cobran 2-3 hoteles de la zona (si lo sé): [..]
 Haz esto:
 1. Compara 3 opciones: recargo fijo por pedido, precios de habitación más altos sin recargo, recargo solo de noche.
 2. Para cada una, lo que ingresas en un ejemplo de 100 pedidos y cómo lo percibe el huésped. Marca el ejemplo como ejemplo.
-3. Recomienda una y di por qué.
-4. Escribe cómo se comunica en la carta en una línea.
+3. Recomienda una y di por qué. El precio final lo decido yo.
+4. Escribe cómo se comunica en la carta en una línea: el recargo tiene que verse antes de pedir.
 
 Formato: tabla con las 3 opciones y la recomendación al final.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-habitacion-08"><summary><span class="pn">08</span><span class="pt"><b>Mensajes según la hora del día</b><small>Los mensajes al huésped que le recuerdan que puede pedir a la habitación en el momento justo.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba que el recargo se vea en la carta antes de pedir. El precio lo decides tú.</p></div></details><details class="pr" id="p-habitacion-08"><summary><span class="pn">08</span><span class="pt"><b>Mensajes según la hora del día</b><small>Los mensajes al huésped que le recuerdan que puede pedir a la habitación en el momento justo.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Canal para hablar con el huésped, horarios y carta de habitación.</p><div class="codebox"><div class="codebar"><span>Prompt 08 · Room service</span><button class="copy" data-t="habitacion-08">Copiar</button></div><pre id="habitacion-08">Eres responsable de comunicación con huéspedes. Escribe los mensajes que recuerdan al huésped que puede pedir a la habitación.
 
 Canal: [WhatsApp, email, app, tarjeta]
@@ -691,11 +751,11 @@ Haz esto:
 Formato: los 4 mensajes en cada idioma, con la hora de envío encima.
 
 Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-habitacion-09"><summary><span class="pn">09</span><span class="pt"><b>Revisa el mes del servicio a la habitación</b><small>Mira los pedidos del mes y decide qué quitar, qué subir y qué empujar.</small></span></summary>
-<div class="pb"><p class="pd"><b>Qué pegas:</b> Pedidos del mes: qué se pidió, a qué hora, cuánto y desde qué habitación.</p><div class="codebox"><div class="codebar"><span>Prompt 09 · Room service</span><button class="copy" data-t="habitacion-09">Copiar</button></div><pre id="habitacion-09">Eres analista de un hotel. Revisa el servicio a la habitación de [mes].
+<div class="pb"><p class="pd"><b>Qué pegas:</b> El informe de ventas de room service del mes (TPV: fecha, hora, productos, importe) y las habitaciones ocupadas del PMS.</p><div class="codebox"><div class="codebar"><span>Prompt 09 · Room service</span><button class="copy" data-t="habitacion-09">Copiar</button></div><pre id="habitacion-09">Eres analista de un hotel. Revisa el servicio a la habitación de [mes].
 
-Pedidos del mes (fecha, hora, productos, importe):
-[pega o resume]
-Habitaciones ocupadas en el mes: [..]
+Pedidos del mes, exportados del TPV (fecha, hora, productos, importe):
+[sube el Excel o pega]
+Habitaciones ocupadas en el mes (informe del PMS): [..]
 
 Haz esto:
 1. Cuántos pedidos, gasto medio por pedido y % de habitaciones que pidieron algo (pedidos ÷ habitaciones ocupadas). Enseña la cuenta.
@@ -733,7 +793,8 @@ Eres responsable de experiencias de un hotel y conoces cómo trabajan los provee
 ## Reglas
 - Si te falta un dato, pregúntamelo; no inventes cifras.
 - Enseña las cuentas para que el director pueda comprobarlas.
-- Nada que exija sumar personal. Tú preparas; el director decide.
+- Nada que exija sumar personal. Tú preparas; el director decide, también los precios.
+- No te conectas al PMS, al TPV ni a las webs de reseñas: trabajas con lo que el director exporta, copia o sube.
 - No des precios de proveedores como seguros; pide que el director los confirme.
 
 ## Formato de respuesta
@@ -764,7 +825,7 @@ Estancia media: [..]
 Haz esto:
 1. Una tabla con los tipos de huésped en filas y las experiencias en columnas; marca las que encajan.
 2. Para cada tipo, la experiencia principal y la segunda opción.
-3. En qué momento ofrecer cada una (antes de llegar, check-in, primera noche).
+3. En qué momento ofrecer cada una (antes de llegar, al llegar, primera noche).
 4. Una frase de oferta para cada tipo, de menos de 20 palabras.
 
 Formato: la tabla y, debajo, una ficha corta por tipo de huésped.
@@ -780,10 +841,13 @@ Haz esto:
 2. Compara con lo que cobra la competencia y di qué opción aguanta.
 3. Propón un precio redondo para cada una.
 4. Señala las experiencias que no merecen la pena por lo poco que dejan.
+5. No uses precios de la competencia que no te haya dado: si faltan, compara solo entre mis experiencias.
 
-Formato: tabla experiencia · coste · precio propuesto · gana el hotel · comentario.
+Formato: tabla experiencia · coste · precio propuesto · gana el hotel · comentario. Tú propones; el precio lo decido yo.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-experiencias-04"><summary><span class="pn">04</span><span class="pt"><b>La ficha de cada experiencia</b><small>Una ficha clara para el huésped: qué es, cuánto dura, qué incluye, cuánto cuesta y cómo se reserva.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba los precios de cada proveedor, por escrito y de esta temporada.</p></div></details><details class="pr" id="p-experiencias-04"><summary><span class="pn">04</span><span class="pt"><b>La ficha de cada experiencia</b><small>Una ficha clara para el huésped: qué es, cuánto dura, qué incluye, cuánto cuesta y cómo se reserva.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Datos de la experiencia: horario, punto de encuentro, qué incluye, precio, cancelación.</p><div class="codebox"><div class="codebar"><span>Prompt 04 · Experiencias</span><button class="copy" data-t="experiencias-04">Copiar</button></div><pre id="experiencias-04">Eres redactor de experiencias de hotel. Escribe la ficha de esta experiencia para el huésped.
 
 Experiencia: [nombre]
@@ -813,7 +877,7 @@ Horas con menos trabajo: [..]
 Haz esto:
 1. Propón 6 experiencias (por ejemplo: clase de cocina, cata, cóctel al atardecer, ruta guiada a pie).
 2. Para cada una: quién la hace, en qué hora floja, cuántos huéspedes caben, coste de materiales y precio propuesto.
-3. Comprueba que ninguna quita tiempo de servicio en horas de trabajo fuerte.
+3. Comprueba que ninguna quita tiempo de servicio en horas de trabajo fuerte ni toca turnos o descansos.
 4. La que probarías primero y cómo.
 
 Formato: una ficha por experiencia con las cuentas visibles.
@@ -909,7 +973,7 @@ Haz esto:
 Formato: tabla de opciones con precio y, debajo, la pregunta y el mensaje.
 
 Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-experiencias-12"><summary><span class="pn">12</span><span class="pt"><b>Cómo ofrecerla en recepción en 20 segundos</b><small>El guion corto para que recepción venda la experiencia sin sonar a vendedor.</small></span></summary>
-<div class="pb"><p class="pd"><b>Qué pegas:</b> Las 3 experiencias que más te interesa vender y tu tipo de huésped.</p><div class="codebox"><div class="codebar"><span>Prompt 12 · Experiencias</span><button class="copy" data-t="experiencias-12">Copiar</button></div><pre id="experiencias-12">Eres formador de equipos de recepción. Escribe cómo ofrecer estas experiencias en el check-in.
+<div class="pb"><p class="pd"><b>Qué pegas:</b> Las 3 experiencias que más te interesa vender y tu tipo de huésped.</p><div class="codebox"><div class="codebar"><span>Prompt 12 · Experiencias</span><button class="copy" data-t="experiencias-12">Copiar</button></div><pre id="experiencias-12">Eres formador de equipos de recepción. Escribe cómo ofrecer estas experiencias en recepción, al llegar el huésped.
 
 Experiencias con precio: [..]
 Huéspedes principales: [..]
@@ -937,7 +1001,9 @@ Haz esto:
 
 Formato: tabla de problemas, las reglas en lista y el texto para el huésped. Que lo revise tu asesor antes de firmarlo.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-experiencias-14"><summary><span class="pn">14</span><span class="pt"><b>Qué experiencias quitar y cuáles empujar</b><small>Mira las ventas por experiencia y decide en qué poner el esfuerzo.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba las reglas con tu asesor antes de firmarlas con nadie.</p></div></details><details class="pr" id="p-experiencias-14"><summary><span class="pn">14</span><span class="pt"><b>Qué experiencias quitar y cuáles empujar</b><small>Mira las ventas por experiencia y decide en qué poner el esfuerzo.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Ventas por experiencia en los últimos meses: cuántas, a qué precio y lo que dejó al hotel.</p><div class="codebox"><div class="codebar"><span>Prompt 14 · Experiencias</span><button class="copy" data-t="experiencias-14">Copiar</button></div><pre id="experiencias-14">Eres analista de experiencias. Revisa lo que he vendido.
 
 Por experiencia: ventas por mes · precio · lo que deja al hotel · quejas o comentarios
@@ -979,7 +1045,8 @@ Eres responsable de acuerdos comerciales de un hotel. Sabes que los negocios de 
 ## Reglas
 - Si te falta un dato, pregúntamelo; no inventes cifras.
 - Enseña las cuentas para que el director pueda comprobarlas.
-- Nada que exija sumar personal. Tú preparas; el director decide.
+- Nada que exija sumar personal. Tú preparas; el director decide, también los precios.
+- No te conectas al PMS, al TPV ni a las webs de reseñas: trabajas con lo que el director exporta, copia o sube.
 - Los textos de acuerdo son borradores: recuerda que los revise su asesor antes de firmar.
 
 ## Formato de respuesta
@@ -1062,7 +1129,9 @@ Haz esto:
 
 Formato: el borrador listo para revisar.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-alianzas-06"><summary><span class="pn">06</span><span class="pt"><b>Cómo contar cada cliente que mandas</b><small>Un sistema simple para saber cuántos clientes manda el hotel a cada negocio.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba el borrador con tu asesor antes de firmar, y que la comisión y el plazo de pago sean los que hablasteis.</p></div></details><details class="pr" id="p-alianzas-06"><summary><span class="pn">06</span><span class="pt"><b>Cómo contar cada cliente que mandas</b><small>Un sistema simple para saber cuántos clientes manda el hotel a cada negocio.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Cuántos acuerdos tienes y cómo llega el huésped al negocio.</p><div class="codebox"><div class="codebar"><span>Prompt 06 · Alianzas</span><button class="copy" data-t="alianzas-06">Copiar</button></div><pre id="alianzas-06">Eres responsable de operaciones. Diseña cómo contar los clientes que mando a cada negocio.
 
 Negocios con acuerdo: [..]
@@ -1077,21 +1146,25 @@ Haz esto:
 
 Formato: tabla comparativa, la recomendación y la plantilla.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-alianzas-07"><summary><span class="pn">07</span><span class="pt"><b>La cuenta del mes con cada negocio</b><small>Calcula cuánto te debe cada negocio y prepara el mensaje para cobrarlo.</small></span></summary>
-<div class="pb"><p class="pd"><b>Qué pegas:</b> Clientes enviados por negocio y lo que se acordó con cada uno.</p><div class="codebox"><div class="codebar"><span>Prompt 07 · Alianzas</span><button class="copy" data-t="alianzas-07">Copiar</button></div><pre id="alianzas-07">Eres responsable de administración del hotel. Prepara la liquidación de [mes] con mis negocios de acuerdo.
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-alianzas-07"><summary><span class="pn">07</span><span class="pt"><b>La cuenta del mes con cada negocio</b><small>Calcula cuánto te debe cada negocio y prepara el mensaje para cobrarlo.</small><em class="badge">Con ejemplo</em></span></summary>
+<div class="pb"><p class="pd"><b>Qué pegas:</b> Tu hoja de clientes enviados a cada negocio, lo acordado con cada uno y, si te la pasan, su propia cuenta.</p><div class="codebox"><div class="codebar"><span>Prompt 07 · Alianzas</span><button class="copy" data-t="alianzas-07">Copiar</button></div><pre id="alianzas-07">Eres responsable de administración del hotel. Prepara la liquidación de [mes] con mis negocios de acuerdo.
 
-Por negocio: clientes mandados · gasto de esos clientes (si lo sé) · lo acordado
+Por negocio: lo acordado · clientes mandados según mi hoja · gasto de esos clientes (si el acuerdo es un %)
+[pega]
+Lo que dice cada negocio (si me lo ha pasado):
 [pega]
 
 Haz esto:
 1. Lo que me debe cada negocio, con la cuenta.
-2. Diferencias entre lo que apunté yo y lo que dice el negocio, si me lo pasa.
-3. El mensaje para mandar a cada uno con su cifra.
-4. El total del mes.
+2. Diferencias entre mi hoja y la del negocio: cuántos clientes, cuánto dinero y qué pedirle para aclararlo (tickets, fechas, códigos).
+3. Un mensaje para cada negocio con su cifra y la cuenta, de menos de 50 palabras, en tono cordial.
+4. El total del mes y el de lo que va de año, si te lo doy.
 
-Formato: tabla por negocio, total arriba y los mensajes debajo.
+Formato: total arriba, tabla negocio · acordado · clientes · te debe, las diferencias y los mensajes debajo.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-alianzas-08"><summary><span class="pn">08</span><span class="pt"><b>Revisa qué acuerdos funcionan</b><small>Cada tres meses, decide qué acuerdo mantener, mejorar o cerrar.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><div class="asi"><p class="asi-h">Así queda <span>Ejemplo con datos inventados</span></p><p class="asi-ctx">Octubre · tres acuerdos</p><p class="">Total del mes: 478 €</p><div class="tw"><table><thead><tr><th>Negocio</th><th>Acordado</th><th>Clientes</th><th>Te debe</th></tr></thead><tbody><tr><td>Restaurante del puerto</td><td>10 % de lo que gastan</td><td>46 (gastaron 1.840 €)</td><td>184 €</td></tr><tr><td>Barco a las calas</td><td>6 € por persona</td><td>38</td><td>228 €</td></tr><tr><td>Bodega</td><td>3 € por persona</td><td>22</td><td>66 €</td></tr></tbody></table></div><p class="">Diferencia: la bodega cuenta 18 clientes y tú 22. Son 4 × 3 € = 12 €. Pídele los tickets de esos días antes de cobrar.</p><p class="">Mensaje al barco: «Hola, Marta. En octubre os mandamos 38 personas: 38 × 6 € = 228 €. ¿Te cuadra? Si es así, te paso la factura. Gracias.»</p></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba cada cifra contra tu hoja de clientes enviados antes de mandar ningún mensaje.</p></div></details><details class="pr" id="p-alianzas-08"><summary><span class="pn">08</span><span class="pt"><b>Revisa qué acuerdos funcionan</b><small>Cada tres meses, decide qué acuerdo mantener, mejorar o cerrar.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Datos de los últimos 3 meses por acuerdo y lo que dicen los huéspedes.</p><div class="codebox"><div class="codebar"><span>Prompt 08 · Alianzas</span><button class="copy" data-t="alianzas-08">Copiar</button></div><pre id="alianzas-08">Eres asesor de acuerdos comerciales. Revisa mis acuerdos de los últimos 3 meses.
 
 Por acuerdo: clientes al mes · lo que ha pagado · quejas o comentarios de huéspedes · trabajo que me da
@@ -1133,7 +1206,8 @@ Eres responsable de experiencia de huésped. Escribes como un buen anfitrión: c
 ## Reglas
 - Si te falta un dato, pregúntamelo; no inventes cifras.
 - Enseña las cuentas para que el director pueda comprobarlas.
-- Nada que exija sumar personal. Tú preparas; el director decide.
+- Nada que exija sumar personal. Tú preparas; el director decide, también los precios.
+- No te conectas al PMS, al TPV ni a las webs de reseñas: trabajas con lo que el director exporta, copia o sube.
 - Cuenta las palabras: respeta los límites que te pidan.
 
 ## Formato de respuesta
@@ -1154,7 +1228,7 @@ Haz esto:
 
 Formato: el correo completo en [idiomas], con menos de 150 palabras.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-huesped-02"><summary><span class="pn">02</span><span class="pt"><b>Los mensajes antes de llegar</b><small>Una secuencia corta (7 días y 24 horas antes) que hace que reserve cena, traslado o experiencia.</small></span></summary>
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-huesped-02"><summary><span class="pn">02</span><span class="pt"><b>Los mensajes antes de llegar</b><small>Dos mensajes (3 días antes y la mañana de la llegada) para que reserve cena, traslado o experiencia antes de llegar.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Canal, lo que puedes vender antes y el perfil del huésped.</p><div class="codebox"><div class="codebar"><span>Prompt 02 · Huésped</span><button class="copy" data-t="huesped-02">Copiar</button></div><pre id="huesped-02">Eres responsable de experiencia de huésped. Escribe la secuencia antes de la llegada.
 
 Canal: [email / WhatsApp]
@@ -1162,7 +1236,7 @@ Huéspedes principales: [..]
 Lo que se puede reservar antes, con precio: [..]
 
 Haz esto:
-1. Mensaje 7 días antes y mensaje 24 horas antes.
+1. Mensaje 3 días antes (ya está pensando en el viaje: traslado, mesa para la primera cena, experiencia que hay que reservar) y mensaje la mañana de la llegada (hora de entrada, parking y una propuesta para esa noche).
 2. Cada uno con UNA sola oferta y una respuesta de una palabra («Responde MESA y te la guardo»).
 3. Menos de 60 palabras en WhatsApp o 120 en email.
 4. Una versión para parejas, otra para familias y otra para trabajo.
@@ -1198,21 +1272,22 @@ Haz esto:
 
 Formato: tabla tipo de reserva · cómo reconocerla · oferta · momento.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-huesped-05"><summary><span class="pn">05</span><span class="pt"><b>Lo que dicen tus reseñas (y lo que quieren comprar)</b><small>Lee tus reseñas y saca lo que repiten, lo que molesta y lo que querían y no encontraron.</small></span></summary>
-<div class="pb"><p class="pd"><b>Qué pegas:</b> Tus últimas 30-100 reseñas copiadas de Google, Booking o TripAdvisor.</p><div class="codebox"><div class="codebar"><span>Prompt 05 · Huésped</span><button class="copy" data-t="huesped-05">Copiar</button></div><pre id="huesped-05">Eres analista de experiencia de huésped. Analiza mis reseñas.
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-huesped-05"><summary><span class="pn">05</span><span class="pt"><b>Lo que dicen tus reseñas (y lo que quieren comprar)</b><small>Lee tus reseñas y saca lo que repiten, lo que molesta y lo que querían y no encontraron.</small><em class="badge">Con ejemplo</em></span></summary>
+<div class="pb"><p class="pd"><b>Qué pegas:</b> Tus últimas 30-100 reseñas, copiadas a mano de Google, Booking y TripAdvisor (texto, nota y fecha). Claude no entra en esas webs: las copias tú.</p><div class="codebox"><div class="codebar"><span>Prompt 05 · Huésped</span><button class="copy" data-t="huesped-05">Copiar</button></div><pre id="huesped-05">Eres analista de experiencia de huésped. Analiza mis reseñas.
 
-Reseñas (con nota y fecha si las tengo):
+Reseñas copiadas de [Google / Booking / TripAdvisor], con nota y fecha:
 [pega]
 
 Haz esto:
-1. Los 5 temas que más se repiten en positivo y en negativo, con cuántas reseñas mencionan cada uno.
-2. Frases literales de las reseñas para cada tema.
-3. Lo que el huésped quería comprar o hacer y no pudo («no había nada para cenar tarde», «nadie nos dijo de la excursión»).
-4. Las 3 cosas que cambiaría primero y qué reseña las justifica.
+1. Los 5 temas que más se repiten en positivo y los 5 en negativo, con cuántas reseñas mencionan cada uno.
+2. Una frase literal de las reseñas para cada tema.
+3. Lo que el huésped quería comprar o hacer y no pudo («no había nada para cenar tarde», «nadie nos dijo lo de la excursión»), con cuántas veces sale.
+4. Las 3 cosas que cambiaría primero, cada una con el departamento responsable, un plazo (esta semana / este mes) y la reseña que lo justifica.
+5. Si hay menos de 20 reseñas, avísame de que las conclusiones son débiles.
 
-Formato: tabla de temas con número de menciones y citas, y las 3 acciones al final. No inventes citas: si no hay suficientes reseñas para un tema, dilo.
+Formato: tabla tema · bien o mal · menciones · cita, y las 3 acciones al final. No inventes citas: si no hay suficientes reseñas para un tema, dilo.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-huesped-06"><summary><span class="pn">06</span><span class="pt"><b>Responde reseñas buenas y malas</b><small>Respuestas cortas, personales y sin plantilla, para que el próximo huésped vea un hotel que escucha.</small></span></summary>
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><div class="asi"><p class="asi-h">Así queda <span>Ejemplo con datos inventados</span></p><p class="asi-ctx">60 reseñas de septiembre (Google y Booking) · citas inventadas para el ejemplo</p><div class="tw"><table><thead><tr><th>Tema</th><th>Tono</th><th>Menciones</th><th>Cita</th></tr></thead><tbody><tr><td>Desayuno</td><td>Bien</td><td>18</td><td>«El mejor desayuno que hemos tenido en la costa»</td></tr><tr><td>Ruido de la calle</td><td>Mal</td><td>9</td><td>«Habitación preciosa, pero imposible dormir con la ventana abierta»</td></tr><tr><td>Cenar tarde</td><td>Mal</td><td>6</td><td>«Llegamos a las 22:30 y no había nada para cenar»</td></tr></tbody></table></div><p class="">Querían comprar y no pudieron: cenar después de las 22:00 (6 reseñas) y la excursión en barco (3: «nadie nos habló de la excursión hasta el último día»).</p><p class="">Acción 1: carta corta de noche en el bar · sala · antes del día 15 · lo justifican las 6 reseñas de «cenar tarde».</p></div></div></details><details class="pr" id="p-huesped-06"><summary><span class="pn">06</span><span class="pt"><b>Responde reseñas buenas y malas</b><small>Respuestas cortas, personales y sin plantilla, para que el próximo huésped vea un hotel que escucha.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Las reseñas a las que quieres responder y lo que ha pasado en cada caso.</p><div class="codebox"><div class="codebar"><span>Prompt 06 · Huésped</span><button class="copy" data-t="huesped-06">Copiar</button></div><pre id="huesped-06">Eres el director de [hotel] respondiendo reseñas. Escribe las respuestas.
 
 Reseñas (nota, texto):
@@ -1221,14 +1296,16 @@ Lo que sé de cada caso: [..]
 Tono: [..]
 
 Haz esto:
-1. Para las buenas: agradece algo concreto que nombre el huésped y menciona algo que puede disfrutar la próxima vez.
-2. Para las malas: reconoce lo que pasó sin excusas, di qué se ha cambiado (solo si es verdad) y ofrece un contacto.
+1. Para las buenas, en 2 tiempos: agradece algo concreto que nombre el huésped y menciona algo que puede disfrutar la próxima vez.
+2. Para las malas, en 4 tiempos: (1) gracias, nombrando lo que cuenta; (2) reconoce lo que pasó, sin excusas ni «lamentamos las molestias»; (3) qué se ha cambiado o se va a cambiar, solo si es verdad (si no lo sé, pregúntamelo); (4) invita a escribirme, con mi nombre y un contacto.
 3. Menos de 80 palabras cada una, en el idioma de la reseña.
-4. Nunca copies la misma frase en dos respuestas.
+4. Nunca copies la misma frase en dos respuestas ni des datos personales del huésped.
 
 Formato: cada reseña seguida de su respuesta.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-huesped-07"><summary><span class="pn">07</span><span class="pt"><b>Las preguntas de recepción, contestadas y vendiendo</b><small>Convierte las preguntas que te hacen 20 veces al día en respuestas que el huésped lee solo, con oferta.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba que lo que dices que has cambiado sea verdad hoy.</p></div></details><details class="pr" id="p-huesped-07"><summary><span class="pn">07</span><span class="pt"><b>Las preguntas de recepción, contestadas y vendiendo</b><small>Convierte las preguntas que te hacen 20 veces al día en respuestas que el huésped lee solo, con oferta.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Lista de preguntas repetidas y datos del hotel.</p><div class="codebox"><div class="codebar"><span>Prompt 07 · Huésped</span><button class="copy" data-t="huesped-07">Copiar</button></div><pre id="huesped-07">Eres responsable de recepción. Quiero quitarle a recepción las preguntas que se repiten.
 
 Preguntas que más nos hacen (y cuántas veces al día, si lo sé):
@@ -1276,10 +1353,10 @@ Regla: se pide a todos por igual. No separes a los contentos de los descontentos
 Formato: el mensaje en [idiomas], el protocolo en 5 líneas y la plantilla.
 
 Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-huesped-10"><summary><span class="pn">10</span><span class="pt"><b>Quiénes son tus huéspedes de verdad</b><small>Saca perfiles claros de tus reservas para saber a quién le hablas.</small></span></summary>
-<div class="pb"><p class="pd"><b>Qué pegas:</b> Una exportación o resumen de reservas: país, canal, noches, personas, fechas.</p><div class="codebox"><div class="codebar"><span>Prompt 10 · Huésped</span><button class="copy" data-t="huesped-10">Copiar</button></div><pre id="huesped-10">Eres analista de un hotel. Saca los perfiles de mis huéspedes.
+<div class="pb"><p class="pd"><b>Qué pegas:</b> El listado de reservas de los últimos meses exportado del PMS en Excel (país, canal, noches, personas, fechas), sin nombres ni datos personales.</p><div class="codebox"><div class="codebar"><span>Prompt 10 · Huésped</span><button class="copy" data-t="huesped-10">Copiar</button></div><pre id="huesped-10">Eres analista de un hotel. Saca los perfiles de mis huéspedes.
 
-Datos de reservas de [periodo] (país, canal, noches, adultos, niños, fecha de llegada, gasto extra si lo tengo):
-[pega o resume]
+Listado de reservas de [periodo] exportado del PMS, sin nombres (país, canal, noches, adultos, niños, fecha de llegada, gasto extra si lo tengo):
+[sube el Excel o pega]
 
 Haz esto:
 1. Entre 4 y 6 perfiles con nombre fácil (por ejemplo «Familia británica de una semana»), con % del total.
@@ -1317,33 +1394,37 @@ Eres el adjunto de un director general de hotel. Preparas lo que él presenta a 
 ## Reglas
 - Si te falta un dato, pregúntamelo; no inventes cifras.
 - Enseña las cuentas para que el director pueda comprobarlas.
-- Nada que exija sumar personal. Tú preparas; el director decide.
+- Nada que exija sumar personal. Tú preparas; el director decide, también los precios.
+- No te conectas al PMS, al TPV ni a las webs de reseñas: trabajas con lo que el director exporta, copia o sube.
 - Nunca maquilles un mal dato; explícalo.
+- Las decisiones de personal respetan el convenio y los descansos que indique el director; no los supongas.
 
 ## Formato de respuesta
 Una página. Primero la frase que resume, después los números, después las acciones.</pre></div></details>
-  <div class="prs"><details class="pr" id="p-direccion-01"><summary><span class="pn">01</span><span class="pt"><b>El resumen de una página para los dueños</b><small>Tu informe del mes en una página que puedes defender en la reunión.</small></span></summary>
-<div class="pb"><p class="pd"><b>Qué pegas:</b> Números del mes (real y previsto) y lo que ha pasado.</p><div class="codebox"><div class="codebar"><span>Prompt 01 · Dirección</span><button class="copy" data-t="direccion-01">Copiar</button></div><pre id="direccion-01">Eres el adjunto del director de [hotel]. Prepara el resumen de [mes] para los dueños.
+  <div class="prs"><details class="pr" id="p-direccion-01"><summary><span class="pn">01</span><span class="pt"><b>El resumen de una página para los dueños</b><small>Tu informe del mes en una página que puedes defender en la reunión.</small><em class="badge">Con ejemplo</em></span></summary>
+<div class="pb"><p class="pd"><b>Qué pegas:</b> El informe del mes del PMS (ocupación, habitaciones vendidas, precio medio), las ventas del TPV por punto de venta, el gasto en personal que te da administración, lo previsto y lo que ha pasado.</p><div class="codebox"><div class="codebar"><span>Prompt 01 · Dirección</span><button class="copy" data-t="direccion-01">Copiar</button></div><pre id="direccion-01">Eres el adjunto del director de [hotel]. Prepara el resumen de [mes] para los dueños.
 
-Real y previsto:
-- Ingresos totales: [..] vs [..]
-- Ocupación: [..] vs [..]
-- Precio medio por noche: [..] vs [..]
-- Gasto en personal: [..] vs [..]
-- Ingresos fuera de la habitación (restaurante, bar, experiencias…): [..] vs [..]
-Lo que ha pasado este mes: [..]
+Te subo o pego:
+- Informe del mes del PMS (ocupación, habitaciones vendidas, precio medio por noche): [sube el Excel/PDF o pega las cifras]
+- Ventas del mes del TPV por punto de venta (restaurante, bar, room service, experiencias…): [..]
+- Gasto en personal del mes (de administración o la gestoría): [..]
+- Lo previsto para el mes (presupuesto): [..]
+- Lo que ha pasado este mes (obras, clima, eventos, bajas, grupos cancelados): [..]
 
 Haz esto:
-1. El mes en una frase.
-2. Los 3 números clave con la diferencia en € y en %. Enseña la cuenta.
-3. Por qué, separando lo que depende de la dirección de lo que no.
-4. Tres acciones para el mes siguiente que no exijan sumar personal, con el efecto esperado.
-5. Un compromiso que se pueda medir.
+1. El mes en una frase: cuánto por encima o por debajo de lo previsto y de dónde viene, en menos de 30 palabras.
+2. Tabla real · previsto · diferencia (en € y %) para: ingresos de habitaciones, ingresos fuera de la habitación, ingresos totales, gasto en personal, ocupación (diferencia en puntos) y precio medio por noche. Enseña las cuentas.
+3. Si la ocupación queda más de 5 puntos por debajo de lo previsto, explica eso lo primero.
+4. Por qué, en dos bloques: lo que depende de la dirección y lo que no. Máximo 3 puntos en cada uno.
+5. Tres acciones para el mes que viene que no exijan sumar personal, cada una con responsable, fecha y cifra esperada (di de dónde sale la cifra).
+6. Un compromiso que se pueda medir en la próxima reunión.
 
-Formato: una página, sin adjetivos ni excusas.
+Formato: una página, máximo 300 palabras sin contar la tabla. Sin adjetivos ni excusas. Si las cifras del PMS y del TPV no cuadran entre sí, dímelo antes de escribir.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-direccion-02"><summary><span class="pn">02</span><span class="pt"><b>El gasto por huésped del mes</b><small>Un solo número para seguir cada mes: lo que gasta cada huésped fuera de la habitación.</small></span></summary>
-<div class="pb"><p class="pd"><b>Qué pegas:</b> Ingresos fuera de habitación por servicio y huéspedes o habitaciones ocupadas.</p><div class="codebox"><div class="codebar"><span>Prompt 02 · Dirección</span><button class="copy" data-t="direccion-02">Copiar</button></div><pre id="direccion-02">Eres analista del hotel. Calcula lo que gasta cada huésped fuera de la habitación en [mes].
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><div class="asi"><p class="asi-h">Así queda <span>Ejemplo con datos inventados</span></p><p class="asi-ctx">Hotel de 80 habitaciones · noviembre (30 días)</p><p class="">Noviembre en una frase: ingresamos 14.424 € menos de lo previsto (−4,9 %). 6 de cada 10 € del hueco están fuera de la habitación.</p><div class="tw"><table><thead><tr><th></th><th>Real</th><th>Previsto</th><th>Diferencia</th></tr></thead><tbody><tr><td>Habitaciones</td><td>220.896 €</td><td>226.320 €</td><td>−5.424 € (−2,4 %)</td></tr><tr><td>Fuera de la habitación</td><td>61.000 €</td><td>70.000 €</td><td>−9.000 € (−12,9 %)</td></tr><tr><td>Total</td><td>281.896 €</td><td>296.320 €</td><td>−14.424 € (−4,9 %)</td></tr><tr><td>Personal</td><td>98.000 €</td><td>96.000 €</td><td>+2.000 € (+2,1 %)</td></tr><tr><td>Ocupación</td><td>78 %</td><td>82 %</td><td>−4 puntos</td></tr><tr><td>Precio medio</td><td>118 €</td><td>115 €</td><td>+3 € (+2,6 %)</td></tr></tbody></table></div><p class="">Cuentas: 80 × 30 × 78 % = 1.872 noches × 118 € = 220.896 €. Previsto: 80 × 30 × 82 % = 1.968 × 115 € = 226.320 €.</p><p class="">No depende de nosotros: se canceló un congreso (96 noches: 1.968 − 1.872).</p><p class="">Depende de nosotros: la terraza cerró el día 10 y no ofrecimos nada para cenar tarde.</p><p class="">Acción 1: carta corta de noche en el bar desde el día 5 · jefe de sala · si pide 1 de cada 10 habitaciones ocupadas a 12 €: 1.872 × 10 % × 12 € ≈ 2.246 €.</p></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba cada cifra contra el informe del PMS y el cierre de administración, y que habitaciones + fuera de la habitación sume el total.</p></div></details><details class="pr" id="p-direccion-02"><summary><span class="pn">02</span><span class="pt"><b>El gasto por huésped del mes</b><small>Un solo número para seguir cada mes: lo que gasta cada huésped fuera de la habitación.</small></span></summary>
+<div class="pb"><p class="pd"><b>Qué pegas:</b> Las ventas del mes del TPV por servicio y las habitaciones ocupadas (o huéspedes) del informe del PMS.</p><div class="codebox"><div class="codebar"><span>Prompt 02 · Dirección</span><button class="copy" data-t="direccion-02">Copiar</button></div><pre id="direccion-02">Eres analista del hotel. Calcula lo que gasta cada huésped fuera de la habitación en [mes].
 
 Habitaciones ocupadas o huéspedes del mes: [..]
 Ingresos por servicio (restaurante, bar, a la habitación, experiencias, spa, salida tarde, parking, acuerdos con negocios): [..]
@@ -1357,23 +1438,28 @@ Haz esto:
 
 Formato: el número grande arriba, tabla por servicio y 3 líneas de conclusión.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-direccion-03"><summary><span class="pn">03</span><span class="pt"><b>Plan de 30 días sin sumar personal</b><small>Un plan semana a semana para que el hotel gane más con el mismo equipo.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba que uses la misma base (huéspedes o habitaciones ocupadas) que el mes anterior; si no, la comparación no vale.</p></div></details><details class="pr" id="p-direccion-03"><summary><span class="pn">03</span><span class="pt"><b>Plan de 30 días sin sumar personal</b><small>Un plan semana a semana para que el hotel gane más con el mismo equipo.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Objetivo del mes, equipo, y lo que ya sabes que falla.</p><div class="codebox"><div class="codebar"><span>Prompt 03 · Dirección</span><button class="copy" data-t="direccion-03">Copiar</button></div><pre id="direccion-03">Eres el adjunto del director. Prepara un plan de 30 días para que el hotel gane más sin sumar personal.
 
 Objetivo que me piden: [..]
-Equipo por departamento: [..]
+Equipo por departamento (del cuadrante): [..]
+Convenio y descansos que hay que respetar: [..]
 Lo que sé que falla o se escapa: [..]
 Tareas que más tiempo quitan al equipo: [..]
 
 Haz esto:
-1. Las 5 acciones con más efecto y menos esfuerzo, ordenadas.
+1. Las 5 acciones con más efecto y menos esfuerzo, ordenadas, sin tocar turnos ni descansos.
 2. Un plan de 4 semanas: qué se cambia cada semana, quién lo lleva y cómo se mide.
 3. Lo que se deja de hacer para tener tiempo.
 4. Cómo sabré el día 30 si ha funcionado.
 
 Formato: tabla de 4 semanas y, debajo, los indicadores.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-direccion-04"><summary><span class="pn">04</span><span class="pt"><b>Prepara la reunión con los dueños</b><small>Anticipa las preguntas difíciles y llega con las respuestas.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba que cada acción tenga un responsable con tiempo real para hacerla y que no toque turnos ni descansos.</p></div></details><details class="pr" id="p-direccion-04"><summary><span class="pn">04</span><span class="pt"><b>Prepara la reunión con los dueños</b><small>Anticipa las preguntas difíciles y llega con las respuestas.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> El resumen del mes y lo que suele preguntar cada dueño.</p><div class="codebox"><div class="codebar"><span>Prompt 04 · Dirección</span><button class="copy" data-t="direccion-04">Copiar</button></div><pre id="direccion-04">Eres el adjunto del director. Prepárame la reunión con los dueños del [fecha].
 
 Resumen del mes:
@@ -1389,22 +1475,27 @@ Haz esto:
 
 Formato: guion de la reunión en el orden en que la llevaría.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-direccion-05"><summary><span class="pn">05</span><span class="pt"><b>Dónde se va el tiempo del equipo</b><small>Encuentra las horas del equipo que se van en tareas que no venden ni atienden.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba que cada respuesta se apoye en un dato que puedas enseñar en la reunión.</p></div></details><details class="pr" id="p-direccion-05"><summary><span class="pn">05</span><span class="pt"><b>Dónde se va el tiempo del equipo</b><small>Encuentra las horas del equipo que se van en tareas que no venden ni atienden.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Tareas recurrentes por departamento y horas aproximadas al mes.</p><div class="codebox"><div class="codebar"><span>Prompt 05 · Dirección</span><button class="copy" data-t="direccion-05">Copiar</button></div><pre id="direccion-05">Eres asesor de operaciones. Encuentra las horas del equipo que se van en tareas que no venden nada.
 
 Tareas recurrentes de recepción, sala, cocina y pisos, con horas aproximadas al mes:
 [pega]
-Plantilla por turno: [..]
+Personas por turno (del cuadrante): [..]
 
 Haz esto:
 1. Clasifica cada tarea: vende · atiende al huésped · papeleo · repetitiva que se puede quitar o simplificar.
 2. Suma horas por grupo.
 3. Las 5 tareas que más horas liberan y cómo quitarlas o simplificarlas sin comprar nada grande.
 4. A qué dedicar esas horas para que se conviertan en venta o atención.
+5. No propongas quitar personas ni cambiar turnos o descansos: se trata de mover horas, no de recortar.
 
 Formato: horas liberadas en total arriba, tabla de tareas y las 5 propuestas.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-direccion-06"><summary><span class="pn">06</span><span class="pt"><b>Objetivos del mes por departamento</b><small>Un objetivo claro por departamento que se pueda medir sin hojas de cálculo eternas.</small></span></summary>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba las horas con el responsable de cada departamento antes de quitar ninguna tarea.</p></div></details><details class="pr" id="p-direccion-06"><summary><span class="pn">06</span><span class="pt"><b>Objetivos del mes por departamento</b><small>Un objetivo claro por departamento que se pueda medir sin hojas de cálculo eternas.</small></span></summary>
 <div class="pb"><p class="pd"><b>Qué pegas:</b> Objetivos del hotel y datos del mes pasado por departamento.</p><div class="codebox"><div class="codebar"><span>Prompt 06 · Dirección</span><button class="copy" data-t="direccion-06">Copiar</button></div><pre id="direccion-06">Eres el adjunto del director. Pon objetivos de [mes] a cada departamento.
 
 Objetivo general del hotel: [..]
@@ -1420,7 +1511,7 @@ Haz esto:
 Formato: tabla departamento · objetivo · cómo se mide · responsable, y los mensajes.
 
 Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details><details class="pr" id="p-direccion-07"><summary><span class="pn">07</span><span class="pt"><b>Compara con el mes y el año pasado</b><small>Explica qué ha cambiado respecto al mes anterior y al mismo mes del año pasado.</small></span></summary>
-<div class="pb"><p class="pd"><b>Qué pegas:</b> Números de este mes, del anterior y del mismo mes del año pasado.</p><div class="codebox"><div class="codebar"><span>Prompt 07 · Dirección</span><button class="copy" data-t="direccion-07">Copiar</button></div><pre id="direccion-07">Eres analista del hotel. Compara [mes] con el mes anterior y con el mismo mes del año pasado.
+<div class="pb"><p class="pd"><b>Qué pegas:</b> Los informes del PMS y del TPV de este mes, del anterior y del mismo mes del año pasado.</p><div class="codebox"><div class="codebar"><span>Prompt 07 · Dirección</span><button class="copy" data-t="direccion-07">Copiar</button></div><pre id="direccion-07">Eres analista del hotel. Compara [mes] con el mes anterior y con el mismo mes del año pasado.
 
 Números (ingresos, ocupación, precio medio por noche, gasto en personal, ingresos fuera de la habitación, gasto por huésped):
 - Este mes: [..]
@@ -1435,7 +1526,9 @@ Haz esto:
 
 Formato: tabla, 3 explicaciones y 2 decisiones.
 
-Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div></div></details></div>
+Al final, añade «Revísalo tú antes de enviarlo:» con las 3 cifras o datos que debo comprobar.
+
+Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div><p class="rv"><b>Revísalo tú antes de usarlo.</b> Comprueba que los tres meses salgan del mismo tipo de informe del PMS.</p></div></details></div>
 </section>
 
 <section id="vertice">
@@ -1459,10 +1552,12 @@ Para todo lo que no te pase aquí, usa el CLAUDE.md de mi hotel. Si te falta un 
 </div>
 <script>
 document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
-  const el=document.getElementById(b.dataset.t); const txt=el.innerText;
+  const el=document.getElementById(b.dataset.t); const txt=textoDe(el);
   const ok=()=>{b.textContent='Copiado ✓';setTimeout(()=>b.textContent='Copiar',1800)};
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok).catch(()=>sel(el,ok))}else sel(el,ok);
 }));
+function openHash(){const h=decodeURIComponent(location.hash.slice(1));if(!h)return;const el=document.getElementById(h);if(el&&el.tagName==='DETAILS'){el.open=true;el.scrollIntoView()}}
+addEventListener('hashchange',openHash);openHash();
 function sel(el,ok){try{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');ok()}catch(e){}}
 
 (function(){
@@ -1473,8 +1568,8 @@ function sel(el,ok){try{const r=document.createRange();r.selectNodeContents(el);
     const dir=$('modo-dir').checked;
     $('g-hab').hidden=dir; $('g-dir').hidden=!dir;
     let H, l1;
-    if(dir){H=val('c-dir');l1=`Huéspedes al mes: ${n(H)}`}
-    else{const h=val('c-hab'),o=val('c-ocu');H=h*o/100*30;l1=`Huéspedes al mes: ${n(h)} hab. × ${n(o,o%1?1:0)} % × 30 días = ${n(Math.round(H))}`}
+    if(dir){H=val('c-dir');l1=`Habitaciones ocupadas al mes: ${n(H)}`}
+    else{const h=val('c-hab'),o=val('c-ocu');H=h*o/100*30;l1=`Habitaciones ocupadas al mes: ${n(h)} hab. × ${n(o,o%1?1:0)} % × 30 días = ${n(Math.round(H))}`}
     const hoy=val('c-hoy'),fac=val('c-fac'),g=val('c-gas');
     const pHoy=H*hoy/100,pFac=H*fac/100;
     const mes=Math.max(0,(pFac-pHoy)*g), ano=mes*12;
@@ -1494,5 +1589,8 @@ function sel(el,ok){try{const r=document.createRange();r.selectNodeContents(el);
   calc();
 })();
 
+
+/* Con el bloque plegado, innerText sale vacío: se abre un instante, se lee y se vuelve a cerrar. */
+function textoDe(el){const c=[];let d=el.closest('details');while(d){if(!d.open){d.open=true;c.push(d)}d=d.parentElement?d.parentElement.closest('details'):null}let t=el.innerText;c.forEach(x=>x.open=false);if(!t||!t.trim())t=el.textContent;return t.replace(/\n{3,}/g,'\n\n').trim()}
 </script>
 </body></html>

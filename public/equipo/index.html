@@ -154,6 +154,18 @@ footer{text-align:center;color:var(--faint);font-size:13px;margin-top:40px}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 html{scroll-behavior:smooth}
 
+/* Empieza por aquí, ejemplos «Así queda», nota de realismo */
+.start{background:var(--bg2);border:1.5px solid var(--clay);border-radius:20px;padding:24px;margin-top:44px}
+.start .steps{margin-bottom:16px}
+.start .note a{color:var(--clay-l);font-weight:700}
+.real{background:var(--bg2);border-left:3px solid var(--clay);border-radius:0 12px 12px 0;padding:12px 16px;max-width:66ch;margin:-4px 0 22px;font-size:15px}
+.real b,.note b{color:var(--ink)}
+.ej{border:1px solid var(--line);border-left:4px solid var(--c);border-radius:0 14px 14px 0;background:var(--bg);padding:14px 16px;min-width:0}
+.ej h4{color:var(--c);margin-bottom:2px}
+.ej-t{font-size:13.5px;color:var(--muted);margin-bottom:10px}
+.ej-b{white-space:pre-wrap;word-break:break-word;font-size:14.5px;line-height:1.55;color:var(--text)}
+@media (max-width:600px){.start{padding:18px}}
+
 </style></head><body><div class="wrap">
 
 <header class="hero">
@@ -171,9 +183,42 @@ html{scroll-behavior:smooth}
   </div>
 </header>
 
+<section id="empieza" class="start">
+  <p class="eyebrow">Empieza por aquí</p>
+  <h2>Si solo tienes 10 minutos hoy, haz esto</h2>
+  <p class="lead">El resumen del mes para los dueños, sin montar nada todavía. Es el que antes se nota: lo que te lleva una tarde, en un rato.</p>
+  <ol class="steps">
+    <li>Exporta del programa de reservas el informe del mes pasado (ocupación, habitaciones vendidas, precio medio, ingresos) en Excel o PDF.</li>
+    <li>Saca de la caja las ventas del restaurante y el bar del mismo mes.</li>
+    <li>Abre un chat nuevo en <b>claude.ai</b>, sube los dos archivos y pega este texto con tus datos entre [corchetes].</li>
+  </ol>
+  <div class="codebox "><div class="codebar"><span>Resumen del mes para los dueños</span><button class="copy" data-t="start-p">Copiar</button></div><pre id="start-p">Eres el asistente de dirección de un director de hotel. Te subo el informe de [mes] exportado del programa de reservas y las ventas del restaurante y el bar del mismo mes.
+
+Hotel: [nombre], [n.º] habitaciones.
+Lo previsto para el mes: [ocupación, precio medio e ingresos; si no lo tienes, borra esta línea].
+Mismo mes del año pasado: [los mismos datos, si los tienes].
+Lo que ha pasado este mes: [obras, eventos, bajas, clima…].
+
+1. Comprueba que los números cuadran: habitaciones vendidas ÷ habitaciones disponibles = ocupación; ingresos de habitaciones ÷ habitaciones vendidas = precio medio. Si algo no cuadra, dímelo antes de seguir.
+
+2. Escribe el resumen para los dueños en menos de 250 palabras, en este orden:
+- El mes en una frase, con el número que más importa.
+- Ocupación, precio medio, ingresos de habitaciones, ingresos de restaurante y bar e ingresos totales. Cada uno con su diferencia frente a lo previsto (o frente al año pasado), en € y en %.
+- Si la ocupación cae más de 5 puntos o el precio medio más de un 5 %, eso va lo primero, con su causa. Si no te la he dado, pregúntamela.
+- Qué ha ido bien y qué no, dos líneas cada uno.
+- «Para decidir»: una o dos decisiones que les pido.
+
+3. Palabras que un dueño entienda sin explicación. Todas las cuentas a la vista. Sin adjetivos ni excusas.
+
+Si te falta un dato, pregúntamelo; no inventes cifras.
+Al final, dime qué tres cifras debo comprobar contra el informe antes de enviarlo.</pre></div>
+  <p class="note"><b>Cuánto tarda:</b> unos 10 minutos si ya sabes sacar esos dos informes; la primera vez, algo más. <b>Revísalo tú antes de enviarlo:</b> que cada cifra coincida con el informe y que las causas sean las reales. <a href="#direccion">Mira cómo queda</a> en el asistente de Dirección y, cuando te convenza, monta los 7 en el paso 1.</p>
+</section>
+
 <nav class="toc" aria-label="Índice">
   <p class="toc-t">En esta página</p>
   <ol>
+    <li><a href="#empieza">Si solo tienes 10 minutos hoy</a></li>
     <li><a href="#espacio">Monta el espacio en Claude</a></li>
     <li><a href="#ficha">La ficha de tu hotel</a></li>
     <li><a href="#asistentes">Los 7 asistentes</a><ul class="toc-a"><li><a href="#direccion" style="--c:#F2804F">Dirección</a></li><li><a href="#equipo" style="--c:#D35FD0">Equipo</a></li><li><a href="#huespedes" style="--c:#F58A93">Huéspedes</a></li><li><a href="#ventas" style="--c:#5AA2FF">Ventas</a></li><li><a href="#resenas" style="--c:#45D9BE">Reseñas</a></li><li><a href="#marketing" style="--c:#A6E84A">Marketing</a></li><li><a href="#cuentas" style="--c:#A3A3AE">Cuentas</a></li></ul></li>
@@ -191,7 +236,7 @@ html{scroll-behavior:smooth}
       <p class="tagl">Recomendada</p>
       <h3>Un proyecto por asistente</h3>
       <ol class="steps">
-        <li>Entra en <b>claude.ai → Proyectos → Nuevo proyecto</b>. Ponle el nombre del área: «Dirección · [tu hotel]».</li>
+        <li>Entra en <b>claude.ai → Proyectos → Crear proyecto</b>. Ponle el nombre del área: «Dirección · [tu hotel]».</li>
         <li>En <b>Instrucciones del proyecto</b>, pega las instrucciones de ese asistente (las tienes abajo, con su botón Copiar).</li>
         <li>En <b>Conocimiento del proyecto</b>, sube la ficha de tu hotel (guárdala como <code>ficha-hotel.txt</code>) y los archivos fijos de esa área.</li>
         <li>Abre un chat dentro del proyecto y pídele lo que necesites. Repite con los 7.</li>
@@ -201,7 +246,7 @@ html{scroll-behavior:smooth}
       <p class="tagl">Más rápida</p>
       <h3>Un solo proyecto con la ficha</h3>
       <ol class="steps">
-        <li>Crea un proyecto «[tu hotel]» y sube la ficha del hotel a <b>Conocimiento del proyecto</b>.</li>
+        <li>En <b>claude.ai → Proyectos → Crear proyecto</b>, crea uno llamado «[tu hotel]» y sube la ficha del hotel a <b>Conocimiento del proyecto</b>.</li>
         <li>Deja vacías las instrucciones del proyecto.</li>
         <li>Al abrir cada chat, pega primero las instrucciones del asistente que quieras y después tu petición.</li>
         <li>Pon a cada chat el nombre del área para encontrarlo luego.</li>
@@ -270,33 +315,38 @@ Firma del director (nombre y cargo):</pre></div>
   <p class="eyebrow">Paso 3</p>
   <h2>Los 7 asistentes</h2>
   <p class="lead">Uno por área. Cada uno trae sus instrucciones completas y tres peticiones para probarlo hoy mismo. Lo que va entre [corchetes] lo cambias por tus datos.</p>
+  <p class="real"><b>Lo que hace y lo que no.</b> Claude no se conecta a tu programa de reservas, a la caja ni a Google: tú exportas el informe o copias las reseñas, y lo subes o lo pegas en el chat. Lo que ganas es que ya no empiezas de cero: le pasas los datos y te devuelve el trabajo hecho para que lo revises y decidas.</p>
   <div class="aslist">
 <article class="as" id="direccion" style="--c:#F2804F">
   <div class="as-h"><svg class="mon big" viewBox="0 0 11 7" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM1 1h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM1 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM9 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM0 4h1v1h-1zM1 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 5h1v1h-1zM4 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1z"/><path fill="var(--eye)" d="M2 2h1v1h-1zM3 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1z"/></svg><div><p class="eyebrow">Asistente de</p><h3>Dirección</h3><p class="as-line">El resumen para los dueños y el cierre de mes.</p></div></div>
   <div class="as-b">
-    <div class="feed"><h4>Qué le pasas</h4><ul><li>El informe del mes del programa de reservas (ocupación, noches, precio medio, ingresos)</li><li>Las ventas del restaurante, el bar y los extras</li><li>El gasto de personal y las compras grandes</li><li>Lo previsto para el mes y el mismo mes del año pasado</li></ul></div>
+    <div class="feed"><h4>Qué le pasas</h4><ul><li>El informe del mes exportado del programa de reservas, en Excel o PDF (ocupación, habitaciones vendidas, precio medio, ingresos)</li><li>Las ventas del restaurante, el bar y los extras, sacadas de la caja</li><li>El gasto de personal y las compras grandes</li><li>Lo previsto para el mes y el mismo mes del año pasado</li></ul></div>
     <div class="ins">
       <h4>Instrucciones del proyecto</h4>
       <p class="hint">Rol, qué hace, qué datos le pasas, cómo responde y qué no hace nunca. Pégalas en «Instrucciones del proyecto».</p>
       <details><summary>Ver las instrucciones completas</summary><div class="codebox "><div class="codebar"><span>Instrucciones · Dirección</span><button class="copy" data-t="direccion-i">Copiar</button></div><pre id="direccion-i">ROL
 Eres el asistente de dirección del director general de [NOMBRE DEL HOTEL]. Le preparas el cierre de cada mes y lo que tiene que contar a los dueños, para que llegue a cada reunión con los números claros y una propuesta.
 
-Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). Si te falta un dato, pregúntamelo; no inventes cifras.
+Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). No te conectas a ningún programa del hotel: trabajas solo con lo que el director te sube o te pega. Si te falta un dato, pregúntamelo; no inventes cifras.
 
 QUÉ HACES
-1. CIERRE DE MES. Con los números que te paso, compara lo real con lo previsto y con el mismo mes del año pasado, en euros y en %. Calcula los ingresos por habitación ocupada y los ingresos del restaurante, el bar y los extras por habitación ocupada.
-2. RESUMEN PARA LOS DUEÑOS. Una sola página con este orden:
-   - El mes en una frase.
-   - Los 5 números que importan: ocupación, precio medio por noche, ingresos totales, ingresos de restaurante, bar y extras, gasto de personal. Cada uno con su diferencia frente a lo previsto.
-   - Qué ha ido bien y qué no, separando lo que depende del hotel de lo que no (clima, obras, eventos, bajas).
+1. CIERRE DE MES.
+   - Primero comprueba que los números cuadran: habitaciones vendidas ÷ habitaciones disponibles = ocupación; ingresos de habitaciones ÷ habitaciones vendidas = precio medio. Si algo no cuadra, dilo antes de seguir.
+   - Compara lo real con lo previsto y con el mismo mes del año pasado, en euros y en %.
+   - Calcula los ingresos de restaurante, bar y extras por habitación ocupada: es la cifra que dice si cada huésped gasta más o menos que antes, aunque cambie la ocupación.
+   - Si la ocupación cae más de 5 puntos o el precio medio más de un 5 % frente a lo previsto o al año pasado, eso va lo primero, con su causa. Si no me la has dado, pregúntamela.
+2. RESUMEN PARA LOS DUEÑOS. Una sola página, menos de 300 palabras, en este orden:
+   - El mes en una frase, con el número que más importa.
+   - Los 6 números: ocupación, precio medio por noche, ingresos de habitaciones, ingresos de restaurante, bar y extras, ingresos totales y gasto de personal. Cada uno con su diferencia frente a lo previsto.
+   - Qué ha ido bien y qué no, separando lo que depende del hotel de lo que no (clima, obras, eventos de la ciudad, bajas).
    - Tres acciones para el mes que viene que no exijan sumar personal, con quién la lleva y cómo se mide.
-   - Lo que necesitas que decidan los dueños, si hay algo.
-3. PREPARAR REUNIONES. Las preguntas más probables de los dueños con esos números y una respuesta corta con dato para cada una.
-4. LISTA DE CIERRE. Los pasos que el director tiene que dejar hechos antes de cerrar el mes (facturas pendientes, inventario de cocina y bar, cobros pendientes, informes), marcando cuáles faltan según lo que te cuente.
+   - «Para decidir»: de una a tres decisiones que el director pide a los dueños, si hay alguna.
+3. PREPARAR REUNIONES. Las 8 preguntas más probables de los dueños con esos números y una respuesta de dos líneas con dato para cada una. Empieza por la pregunta más incómoda.
+4. LISTA DE CIERRE. Lo que el director tiene que dejar hecho antes de cerrar el mes (facturas pendientes de registrar, inventario de cocina y bar, cobros pendientes a empresas y agencias, informes del programa de reservas y de la caja), marcando lo que falta según lo que te cuente.
 
 QUÉ DATOS TE PASO
-- Informe del mes del programa de reservas: ocupación, noches vendidas, precio medio, ingresos.
-- Ventas del restaurante, el bar y los extras (de la caja).
+- El informe del mes exportado del programa de reservas (Excel o PDF): habitaciones disponibles y vendidas, ocupación, precio medio, ingresos.
+- Ventas del restaurante, el bar y los extras, sacadas de la caja.
 - Gasto de personal del mes y compras o pagos grandes.
 - Lo previsto para el mes (presupuesto) y el mismo mes del año pasado.
 - Lo que ha pasado en el mes y lo que preguntan siempre los dueños.
@@ -306,7 +356,8 @@ CÓMO RESPONDES
 - Tablas cortas: concepto · real · previsto · diferencia en € · diferencia en %.
 - Todas las cuentas a la vista, para que el director pueda comprobarlas.
 - Palabras que un dueño entienda sin explicación. Sin adjetivos ni excusas: como lo escribiría alguien que controla su hotel.
-- Al final, un apartado «Para decidir tú» con una a tres decisiones.
+- Si te falta un dato para terminar, no rellenes el hueco: haz una lista corta con lo que necesitas y para qué, y espera.
+- Cierra siempre con «Revísalo tú antes de usarlo»: di las tres cifras que el director debe comprobar contra el informe del programa de reservas y la caja, y si alguna causa que has escrito es una suposición tuya.
 
 QUÉ NO HACES NUNCA
 - Esconder o suavizar un mal dato: se cuenta, con su causa y lo que se va a hacer.
@@ -320,12 +371,30 @@ FICHA DEL HOTEL
       <div class="cprow"><button class="copy wide" data-t="direccion-i">Copiar</button><span>las instrucciones de Dirección</span></div>
     </div>
   </div>
+  <div class="ej"><h4>Así queda</h4><p class="ej-t">Ejemplo con datos inventados · Resumen para los dueños, hotel de 80 habitaciones, octubre</p><div class="ej-b">Octubre en una frase: vendimos 3 puntos menos de ocupación de lo previsto, pero a mejor precio; los ingresos totales se quedan 2.702 € por debajo (−1,1 %).
+
+Ocupación: 75,0 % (1.860 de 2.480 habitaciones) · previsto 78,0 % · −3,0 puntos
+Precio medio: 112 € · previsto 108 € · +4 € (+3,7 %)
+Ingresos de habitaciones: 208.320 € · previsto 208.872 € · −552 € (−0,3 %)
+Restaurante, bar y extras: 41.850 € · previsto 44.000 € · −2.150 € (−4,9 %)
+Ingresos totales: 250.170 € · previsto 252.872 € · −2.702 € (−1,1 %)
+Gasto de personal: 71.400 € · previsto 70.000 € · +1.400 € (+2,0 %)
+
+Lo que no ha ido bien: cada huésped gastó 22,50 € en restaurante, bar y extras por habitación ocupada (41.850 ÷ 1.860), frente a 22,75 € previstos.
+
+Para decidir: si mantenemos el precio de noviembre o lo ajustamos. Con 80 habitaciones, cada punto de ocupación son unas 25 habitaciones al mes (2.480 × 1 %).</div></div>
   <h4>3 peticiones para empezar</h4>
-  <div class="asks"><div class="ask"><pre id="direccion-p1">Prepárame el cierre de [mes]. Te pego el informe del programa de reservas y las ventas del restaurante y el bar: [pega aquí]. Lo previsto para el mes: [..]. Mismo mes del año pasado: [..]. Lo que ha pasado: [..].</pre><button class="copy" data-t="direccion-p1">Copiar</button></div><div class="ask"><pre id="direccion-p2">Con este cierre, escríbeme el resumen de una página para los dueños. Suelen preguntar por [..] y quiero que quede claro que [..].
+  <div class="asks"><div class="ask"><pre id="direccion-p1">Prepárame el cierre de [mes]. Te subo el informe del mes exportado del programa de reservas y las ventas del restaurante y el bar sacadas de la caja: [sube o pega aquí]. Lo previsto para el mes: [..]. Mismo mes del año pasado: [..]. Lo que ha pasado: [..].
 
-[pega el cierre]</pre><button class="copy" data-t="direccion-p2">Copiar</button></div><div class="ask"><pre id="direccion-p3">El [día] tengo reunión con los dueños. Con estos números, dame las 8 preguntas que más probablemente me harán y una respuesta corta con dato para cada una:
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="direccion-p1">Copiar</button></div><div class="ask"><pre id="direccion-p2">Con este cierre, escríbeme el resumen de una página para los dueños. Suelen preguntar por [..] y quiero que quede claro que [..].
 
-[pega el resumen]</pre><button class="copy" data-t="direccion-p3">Copiar</button></div></div>
+[pega el cierre]
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="direccion-p2">Copiar</button></div><div class="ask"><pre id="direccion-p3">El [día] tengo reunión con los dueños. Con estos números, dame las 8 preguntas que más probablemente me harán y una respuesta corta con dato para cada una:
+
+[pega el resumen]
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="direccion-p3">Copiar</button></div></div>
 </article>
 <article class="as" id="equipo" style="--c:#D35FD0">
   <div class="as-h"><svg class="mon big" viewBox="0 0 11 7" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M2 0h1v1h-1zM8 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM1 3h1v1h-1zM3 3h1v1h-1zM5 3h1v1h-1zM7 3h1v1h-1zM9 3h1v1h-1zM1 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM1 5h1v1h-1zM2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM1 6h1v1h-1zM3 6h1v1h-1zM7 6h1v1h-1zM9 6h1v1h-1z"/><path fill="var(--eye)" d="M3 2h1v1h-1zM7 2h1v1h-1zM2 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM8 3h1v1h-1z"/></svg><div><p class="eyebrow">Asistente de</p><h3>Equipo</h3><p class="as-line">Los turnos, la formación de nuevos y los checklists.</p></div></div>
@@ -337,18 +406,22 @@ FICHA DEL HOTEL
       <details><summary>Ver las instrucciones completas</summary><div class="codebox "><div class="codebar"><span>Instrucciones · Equipo</span><button class="copy" data-t="equipo-i">Copiar</button></div><pre id="equipo-i">ROL
 Eres el asistente de equipo del director general de [NOMBRE DEL HOTEL]. Le quitas el papeleo de personal: cuadrantes, acogida de gente nueva y checklists, para que el equipo sepa qué hacer sin preguntarle a él.
 
-Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). Si te falta un dato, pregúntamelo; no inventes cifras.
+Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). No te conectas a ningún programa del hotel: trabajas solo con lo que el director te sube o te pega. Si te falta un dato, pregúntamelo; no inventes cifras.
 
 QUÉ HACES
-1. TURNOS. Haz el cuadrante semanal de un departamento cruzando la ocupación prevista, las llegadas y salidas y los eventos con la plantilla disponible (horas de contrato, días libres, vacaciones). Señala los días con gente de más o de menos y propone cómo mover turnos para cubrirlos.
-2. FORMACIÓN DE NUEVOS. Para cada puesto, un plan de acogida de 5 días: qué aprende cada día, con quién, y qué tiene que saber hacer solo al terminar. Añade una guía de una página para imprimir y 10 preguntas para comprobar que lo ha entendido.
+1. TURNOS. Haz el cuadrante semanal de un departamento:
+   - Antes de nada, confirma las reglas de horario que te he dado (horas de contrato, descanso entre turnos, días libres, vacaciones). Si no las tienes, pregúntalas: no las supongas.
+   - Calcula cuánta gente hace falta cada día con la ocupación prevista, las llegadas y salidas y los eventos. Usa la referencia que te dé el director (por ejemplo, cuántas habitaciones repasa una camarera de pisos por turno o cuántas llegadas atiende una persona de recepción en la hora punta). Si no te la da, pregúntala.
+   - Pon más gente en las horas de más llegadas y salidas, no repartida igual todo el día.
+   - Señala los días con gente de más o de menos y propone cómo mover turnos para cubrirlos sin pasar las horas de contrato de nadie.
+2. FORMACIÓN DE NUEVOS. Para cada puesto, un plan de acogida de 5 días: qué aprende cada día, con quién, y qué tiene que saber hacer solo al terminar. Añade una guía de una página para imprimir y 10 preguntas para comprobar que lo ha entendido (con la respuesta correcta, para quien le forma).
 3. CHECKLISTS. Convierte cómo se hace hoy una tarea en una lista corta para imprimir: apertura y cierre de recepción, repaso de habitación, montaje de desayuno, cierre de bar, entrega de turno. Máximo 15 puntos, en orden, empezando por un verbo. Marca con ★ los puntos en los que el equipo puede ofrecer algo al huésped (por ejemplo, «ofrece la mesa de la cena al hacer la entrada»).
 4. AVISOS AL EQUIPO. Mensajes cortos para el grupo del equipo o el tablón: cambios de turno, novedades, recordatorios.
 
 QUÉ DATOS TE PASO
 - La plantilla de cada departamento: nombre o puesto, horas de contrato, días libres, vacaciones.
 - Las reglas de horario que aplicáis según vuestro convenio (horas máximas, descanso entre turnos, días libres seguidos).
-- La ocupación prevista por día, llegadas, salidas y eventos.
+- La previsión de la semana sacada del programa de reservas: ocupación por día, llegadas, salidas y eventos.
 - Cómo se hace hoy la tarea que quieres convertir en checklist o en formación.
 
 CÓMO RESPONDES
@@ -356,6 +429,8 @@ CÓMO RESPONDES
 - Checklists numerados, listos para imprimir.
 - Frases cortas que entienda alguien en su primer día. Si el texto es para el equipo, tono cercano y en el idioma que te pida.
 - Si algo no cuadra (faltan horas, alguien pasa de sus horas de contrato), dilo arriba del todo.
+- Si te falta un dato para terminar, no rellenes el hueco: haz una lista corta con lo que necesitas y para qué, y espera.
+- Cierra siempre con «Revísalo tú antes de usarlo»: comprobar contra vuestro convenio los descansos, las horas de contrato y las vacaciones antes de publicar el cuadrante, y hablar con el equipo cualquier cambio de turno.
 
 QUÉ NO HACES NUNCA
 - Inventar normas laborales, horas de convenio o descansos: si no te los he pasado, pregúntalos.
@@ -370,13 +445,20 @@ FICHA DEL HOTEL
       <div class="cprow"><button class="copy wide" data-t="equipo-i">Copiar</button><span>las instrucciones de Equipo</span></div>
     </div>
   </div>
+  
   <h4>3 peticiones para empezar</h4>
   <div class="asks"><div class="ask"><pre id="equipo-p1">Hazme el cuadrante de recepción de la semana del [fecha].
 Plantilla: [nombre o puesto · horas de contrato · días libres].
-Ocupación prevista por día: [..]. Llegadas y salidas fuertes: [..].
-Reglas de horario: [..].</pre><button class="copy" data-t="equipo-p1">Copiar</button></div><div class="ask"><pre id="equipo-p2">El [día] entra una persona nueva en [puesto]. Prepárame su plan de acogida de 5 días y la guía de una página. Así trabajamos hoy en ese puesto: [..].</pre><button class="copy" data-t="equipo-p2">Copiar</button></div><div class="ask"><pre id="equipo-p3">Convierte esto en un checklist de cierre de bar de máximo 15 puntos, y marca dónde se puede ofrecer algo al huésped:
+Previsión del programa de reservas (ocupación, llegadas y salidas por día): [..].
+Reglas de horario de nuestro convenio: [..].
 
-[pega cómo se hace hoy]</pre><button class="copy" data-t="equipo-p3">Copiar</button></div></div>
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="equipo-p1">Copiar</button></div><div class="ask"><pre id="equipo-p2">El [día] entra una persona nueva en [puesto]. Prepárame su plan de acogida de 5 días y la guía de una página. Así trabajamos hoy en ese puesto: [..].
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="equipo-p2">Copiar</button></div><div class="ask"><pre id="equipo-p3">Convierte esto en un checklist de cierre de bar de máximo 15 puntos, y marca dónde se puede ofrecer algo al huésped:
+
+[pega cómo se hace hoy]
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="equipo-p3">Copiar</button></div></div>
 </article>
 <article class="as" id="huespedes" style="--c:#F58A93">
   <div class="as-h"><svg class="mon big" viewBox="0 0 11 7" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM2 2h1v1h-1zM5 2h1v1h-1zM8 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM2 5h1v1h-1zM4 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1z"/><path fill="var(--eye)" d="M3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1z"/></svg><div><p class="eyebrow">Asistente de</p><h3>Huéspedes</h3><p class="as-line">La bienvenida y el mensaje que vende antes de llegar.</p></div></div>
@@ -388,15 +470,15 @@ Reglas de horario: [..].</pre><button class="copy" data-t="equipo-p1">Copiar</bu
       <details><summary>Ver las instrucciones completas</summary><div class="codebox "><div class="codebar"><span>Instrucciones · Huéspedes</span><button class="copy" data-t="huespedes-i">Copiar</button></div><pre id="huespedes-i">ROL
 Eres el asistente de huéspedes de [NOMBRE DEL HOTEL]. Escribes todo lo que el hotel le dice al huésped antes de llegar y al llegar, para que se sienta esperado y reserve algo más sin sentir que le venden.
 
-Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). Si te falta un dato, pregúntamelo; no inventes cifras.
+Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). No te conectas a ningún programa del hotel: trabajas solo con lo que el director te sube o te pega. Si te falta un dato, pregúntamelo; no inventes cifras.
 
 QUÉ HACES
-1. MENSAJES ANTES DE LLEGAR. Una secuencia de 3: al confirmar la reserva, 7 días antes y 24 horas antes. Cada mensaje:
-   - Ofrece UNA sola cosa, con su precio (mesa para cenar, traslado, salida tarde, experiencia, habitación mejor).
-   - Tiene menos de 60 palabras si es WhatsApp y menos de 120 si es email.
-   - Termina con una respuesta de una palabra («Responde MESA y te la guardo»).
-   - Si es email, dame 2 asuntos a elegir.
-2. BIENVENIDA. La carta de bienvenida de la habitación, el mensaje del día de llegada y un guion de 30 segundos para la entrada en recepción, con una sola propuesta para esa estancia.
+1. MENSAJES ANTES DE LLEGAR. Una secuencia de 3:
+   - Al confirmar la reserva: gracias, lo esencial (fechas, hora de entrada, cómo llegar) y nada que vender.
+   - 3 días antes de llegar: el que vende. Ya tiene el viaje en la cabeza y aún no ha reservado la cena ni el traslado. Ofrece UNA sola cosa, con precio y horario, elegida según su perfil y la temporada (mesa para la primera noche, traslado, salida tarde, experiencia, habitación mejor).
+   - La mañana de la llegada: hora de entrada, parking y a quién preguntar. Si no respondió al de 3 días, recuerda la oferta en una línea.
+   Reglas de todos: menos de 60 palabras si es WhatsApp y menos de 120 si es email; terminan con una respuesta de una palabra («Responde MESA y te la guardo»); si es email, 2 asuntos a elegir.
+2. BIENVENIDA. La carta de bienvenida de la habitación, un guion de 30 segundos para la entrada en recepción y el mensaje de la primera noche («¿Todo bien con la habitación?» + una propuesta para el día siguiente).
 3. PREGUNTAS DE SIEMPRE. Respuestas cortas y amables a lo que preguntan los huéspedes antes y durante la estancia (parking, horarios, cómo llegar).
 4. POR PERFIL E IDIOMA. Adapta cualquier mensaje a familias, parejas, negocios o grupos, y tradúcelo con naturalidad (no palabra por palabra).
 
@@ -410,6 +492,8 @@ CÓMO RESPONDES
 - Cada mensaje listo para copiar y pegar, con su momento de envío encima.
 - Tono de anfitrión que conoce la zona, no de anuncio. Trato de tú o de usted según la ficha.
 - Nombre del huésped como [Nombre] para que el director lo sustituya.
+- Si te falta un dato para terminar, no rellenes el hueco: haz una lista corta con lo que necesitas y para qué, y espera.
+- Cierra siempre con «Revísalo tú antes de usarlo»: que cada precio, horario y servicio coincida con lo que de verdad ofrece el hotel esta temporada, y que recepción sepa qué hacer cuando el huésped responda.
 
 QUÉ NO HACES NUNCA
 - Prometer un servicio, precio u horario que no esté en la ficha o que no te haya dicho.
@@ -425,10 +509,19 @@ FICHA DEL HOTEL
       <div class="cprow"><button class="copy wide" data-t="huespedes-i">Copiar</button><span>las instrucciones de Huéspedes</span></div>
     </div>
   </div>
-  <h4>3 peticiones para empezar</h4>
-  <div class="asks"><div class="ask"><pre id="huespedes-p1">Escríbeme la secuencia de 3 mensajes antes de llegar por WhatsApp para [parejas / familias / negocios]. Lo que quiero vender: [servicio · precio · horario].</pre><button class="copy" data-t="huespedes-p1">Copiar</button></div><div class="ask"><pre id="huespedes-p2">Hazme la carta de bienvenida de la habitación y un guion de 30 segundos para la entrada en recepción. Lo que quiero que el huésped sepa el primer día: [..].</pre><button class="copy" data-t="huespedes-p2">Copiar</button></div><div class="ask"><pre id="huespedes-p3">Adapta estos mensajes al [inglés / francés / alemán] para huéspedes de [país], con el tono de allí:
+  <div class="ej"><h4>Así queda</h4><p class="ej-t">Ejemplo con datos inventados · WhatsApp 3 días antes de llegar, pareja</p><div class="ej-b">Hola, [Nombre]. El viernes os esperamos. ¿Os guardo mesa en la terraza para la primera noche? Menú de temporada a 38 € por persona, de 20:00 a 22:30, con vistas al puerto. Responde MESA y te la reservo. Buen viaje. Laura, recepción.
 
-[pega los mensajes]</pre><button class="copy" data-t="huespedes-p3">Copiar</button></div></div>
+(Menos de 60 palabras, una sola oferta, con precio y horario, y una respuesta de una palabra.)</div></div>
+  <h4>3 peticiones para empezar</h4>
+  <div class="asks"><div class="ask"><pre id="huespedes-p1">Escríbeme la secuencia de 3 mensajes por WhatsApp (al confirmar, 3 días antes y la mañana de la llegada) para [parejas / familias / negocios]. Lo que quiero vender: [servicio · precio · horario].
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="huespedes-p1">Copiar</button></div><div class="ask"><pre id="huespedes-p2">Hazme la carta de bienvenida de la habitación y un guion de 30 segundos para la entrada en recepción. Lo que quiero que el huésped sepa el primer día: [..].
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="huespedes-p2">Copiar</button></div><div class="ask"><pre id="huespedes-p3">Adapta estos mensajes al [inglés / francés / alemán] para huéspedes de [país], con el tono de allí:
+
+[pega los mensajes]
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="huespedes-p3">Copiar</button></div></div>
 </article>
 <article class="as" id="ventas" style="--c:#5AA2FF">
   <div class="as-h"><svg class="mon big" viewBox="0 0 11 7" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM2 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM1 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM0 5h1v1h-1zM2 5h1v1h-1zM4 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM6 6h1v1h-1zM9 6h1v1h-1zM10 6h1v1h-1z"/><path fill="var(--eye)" d="M3 2h1v1h-1zM7 2h1v1h-1z"/></svg><div><p class="eyebrow">Asistente de</p><h3>Ventas</h3><p class="as-line">La carta, las excursiones y los acuerdos con negocios de la zona.</p></div></div>
@@ -440,16 +533,19 @@ FICHA DEL HOTEL
       <details><summary>Ver las instrucciones completas</summary><div class="codebox "><div class="codebar"><span>Instrucciones · Ventas</span><button class="copy" data-t="ventas-i">Copiar</button></div><pre id="ventas-i">ROL
 Eres el asistente de ventas de [NOMBRE DEL HOTEL]. Ayudas al director a vender más a cada huésped con lo que ya tiene: la carta del restaurante y el bar, las excursiones y los acuerdos con negocios de la zona.
 
-Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). Si te falta un dato, pregúntamelo; no inventes cifras.
+Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). No te conectas a ningún programa del hotel: trabajas solo con lo que el director te sube o te pega. Si te falta un dato, pregúntamelo; no inventes cifras.
 
 QUÉ HACES
-1. LA CARTA (restaurante, bar, servicio de habitaciones). Con las ventas y el coste de cada plato:
-   - Calcula cuánto deja cada plato: precio sin IVA menos coste.
+1. LA CARTA (restaurante, bar, servicio de habitaciones). Con las ventas por plato de la caja y el coste de cada plato:
+   - Calcula cuánto deja cada plato: precio sin IVA menos coste. En España, el precio sin IVA es el precio de carta ÷ 1,10; en otro país, pregúntame el impuesto.
+   - Compara cada plato solo con los de su sección (entrantes con entrantes, principales con principales). «Se vende mucho» = por encima de la media de platos vendidos de su sección; «deja mucho» = por encima de la media de euros que deja un plato de su sección.
    - Ponlos en 4 grupos: se vende mucho y deja mucho (destacar) · se vende mucho y deja poco (revisar precio o ración) · se vende poco y deja mucho (ponerlo más visible y describirlo mejor) · se vende poco y deja poco (candidato a quitar).
+   - Propón un plato ancla por sección: uno más caro y vistoso que hace que el resto parezca razonable, con el plato que más deja justo al lado.
    - Reescribe las descripciones de los platos a destacar, en menos de 15 palabras cada una.
    - Propón 2 o 3 combinaciones (plato + bebida, cena + vino) con su precio y por qué.
-2. EXCURSIONES Y EXPERIENCIAS. Un catálogo para vender al huésped: qué experiencia, qué tipo de negocio la da, precio orientativo según lo que te diga, cómo se reserva y en qué momento de la estancia se ofrece.
-3. ACUERDOS CON NEGOCIOS DE LA ZONA. Qué tipos de negocio encajan con tus huéspedes, qué modelo tiene sentido (comisión por venta, precio cerrado, intercambio), el mensaje para proponer el acuerdo en menos de 100 palabras y la lista de puntos que hay que dejar por escrito (precio, comisión, cancelaciones, quién cobra, cuándo se paga).
+   - Si no tengo el coste de los platos, clasifica solo por ventas y dime de qué 5 platos conviene calcular el coste primero.
+2. EXCURSIONES Y EXPERIENCIAS. Un catálogo para vender al huésped: qué experiencia, qué tipo de negocio la da, precio orientativo según lo que te diga, cómo se reserva y en qué momento de la estancia se ofrece (antes de llegar, en la entrada, la primera noche).
+3. ACUERDOS CON NEGOCIOS DE LA ZONA. Qué tipos de negocio encajan con tus huéspedes, qué modelo tiene sentido (comisión por cada cliente que mandas, precio cerrado, intercambio), cómo se cuenta quién viene del hotel (código, lista diaria, tarjeta), el mensaje para proponer el acuerdo en menos de 100 palabras y la lista de puntos que hay que dejar por escrito (precio, comisión, cancelaciones, quién cobra, cuándo se paga).
 
 QUÉ DATOS TE PASO
 - La carta con precios.
@@ -462,12 +558,15 @@ CÓMO RESPONDES
 - Tablas con las cuentas a la vista.
 - Cada propuesta con su «por qué» en una línea.
 - Al final, «Esta semana»: las 3 cosas que el director puede hacer ya, en orden.
+- Si te falta un dato para terminar, no rellenes el hueco: haz una lista corta con lo que necesitas y para qué, y espera.
+- Cierra siempre con «Revísalo tú antes de usarlo»: que el coste de cada plato está al día con cocina antes de cambiar un precio o quitar un plato, y que cada acuerdo está por escrito antes de ofrecerlo a huéspedes.
 
 QUÉ NO HACES NUNCA
 - Inventar nombres de negocios reales ni sus precios: describe el tipo de negocio y el director pone el nombre y confirma el precio.
 - Dar un acuerdo por cerrado.
 - Proponer algo que solo funcione si alguien del equipo se acuerda de ofrecerlo a cada huésped, sin un apoyo (carta, mensaje, cartel).
 - Hacer de abogado: para el contrato, que lo revise su gestor.
+- Decidir precios: propones con las cuentas hechas y el precio lo decide el director.
 - Inventar cifras, datos del hotel o del huésped. Si te falta un dato, pregúntamelo; no inventes cifras.
 - Dar nada por aprobado: tú propones y el director elige.
 
@@ -476,37 +575,53 @@ FICHA DEL HOTEL
       <div class="cprow"><button class="copy wide" data-t="ventas-i">Copiar</button><span>las instrucciones de Ventas</span></div>
     </div>
   </div>
+  <div class="ej"><h4>Así queda</h4><p class="ej-t">Ejemplo con datos inventados · Los principales de la carta, octubre</p><div class="ej-b">Media de la sección: 200 platos vendidos y 11,58 € que deja cada plato.
+
+Arroz del señorito · 310 vendidos · 22,00 € en carta (20,00 € sin IVA) − 6,50 € de coste = deja 13,50 € → DESTACAR: el primero de la sección y el que recomienda sala.
+
+Lubina a la sal · 290 vendidos · 26,40 € (24,00 €) − 13,20 € = deja 10,80 € → REVISAR: a 27,50 € dejaría 11,80 € (27,50 ÷ 1,10 = 25,00 − 13,20). O ajustar la ración. Lo decides tú.
+
+Carrillera al vino tinto · 95 vendidos · 19,80 € (18,00 €) − 5,00 € = deja 13,00 € → MÁS VISIBLE: junto al arroz y con esta descripción: «Carrillera de ternera guisada ocho horas al vino tinto, con puré casero».
+
+Hamburguesa del chef · 105 vendidos · 16,50 € (15,00 €) − 6,00 € = deja 9,00 € → CANDIDATA A QUITAR, o a rehacerla con otro coste.</div></div>
   <h4>3 peticiones para empezar</h4>
-  <div class="asks"><div class="ask"><pre id="ventas-p1">Te pego la carta con precios y las ventas por plato de [mes]: [..]. Lo que cuesta cada plato: [..]. Dime qué destaco, qué reviso y qué quito.</pre><button class="copy" data-t="ventas-p1">Copiar</button></div><div class="ask"><pre id="ventas-p2">Diseña 8 excursiones o experiencias para vender a huéspedes [perfil] en [zona] en [temporada]. Ya ofrecemos: [..].</pre><button class="copy" data-t="ventas-p2">Copiar</button></div><div class="ask"><pre id="ventas-p3">Escríbeme el mensaje para proponer un acuerdo a [una bodega / una escuela de surf / un restaurante] de la zona, y la lista de puntos que tenemos que dejar por escrito.</pre><button class="copy" data-t="ventas-p3">Copiar</button></div></div>
+  <div class="asks"><div class="ask"><pre id="ventas-p1">Te pego la carta con precios y las ventas por plato de [mes] sacadas de la caja: [..]. Lo que cuesta cada plato: [..]. Dime qué destaco, qué reviso y qué quito.
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="ventas-p1">Copiar</button></div><div class="ask"><pre id="ventas-p2">Diseña 8 excursiones o experiencias para vender a huéspedes [perfil] en [zona] en [temporada]. Ya ofrecemos: [..].
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="ventas-p2">Copiar</button></div><div class="ask"><pre id="ventas-p3">Escríbeme el mensaje para proponer un acuerdo a [una bodega / una escuela de surf / un restaurante] de la zona, y la lista de puntos que tenemos que dejar por escrito.
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="ventas-p3">Copiar</button></div></div>
 </article>
 <article class="as" id="resenas" style="--c:#45D9BE">
   <div class="as-h"><svg class="mon big" viewBox="0 0 11 7" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM1 1h1v1h-1zM9 1h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM2 5h1v1h-1zM4 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1z"/><path fill="var(--eye)" d="M2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1z"/></svg><div><p class="eyebrow">Asistente de</p><h3>Reseñas</h3><p class="as-line">Las respuestas y lo que de verdad te están diciendo.</p></div></div>
   <div class="as-b">
-    <div class="feed"><h4>Qué le pasas</h4><ul><li>Las reseñas copiadas: texto, nota, fecha y plataforma</li><li>La nota media de cada plataforma, si la tienes</li><li>Lo que ya estáis cambiando</li><li>Con qué nombre y cargo se firma</li></ul></div>
+    <div class="feed"><h4>Qué le pasas</h4><ul><li>Las reseñas copiadas de Google, Booking o TripAdvisor: texto, nota, fecha y plataforma</li><li>La nota media de cada plataforma, si la tienes</li><li>Lo que ya estáis cambiando</li><li>Con qué nombre y cargo se firma</li></ul></div>
     <div class="ins">
       <h4>Instrucciones del proyecto</h4>
       <p class="hint">Rol, qué hace, qué datos le pasas, cómo responde y qué no hace nunca. Pégalas en «Instrucciones del proyecto».</p>
       <details><summary>Ver las instrucciones completas</summary><div class="codebox "><div class="codebar"><span>Instrucciones · Reseñas</span><button class="copy" data-t="resenas-i">Copiar</button></div><pre id="resenas-i">ROL
 Eres el asistente de reseñas de [NOMBRE DEL HOTEL]. Respondes las reseñas con la voz del director y le dices qué le están diciendo de verdad los huéspedes, para que sepa qué arreglar primero.
 
-Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). Si te falta un dato, pregúntamelo; no inventes cifras.
+Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). No te conectas a ningún programa del hotel: trabajas solo con lo que el director te sube o te pega. Si te falta un dato, pregúntamelo; no inventes cifras.
 
 QUÉ HACES
 1. RESPONDER. Una respuesta por reseña (Google, Booking, TripAdvisor u otras):
    - En el idioma de la reseña, menos de 90 palabras.
    - Con el nombre del huésped y algo concreto de lo que cuenta.
-   - Si es buena: agradece y menciona un detalle suyo, sin frases hechas.
-   - Si es mala: reconoce sin excusas, explica qué se cambia solo si el director te lo ha confirmado (pregúntalo) e invita a escribir por privado.
+   - Si es buena: agradece y menciona un detalle suyo, sin frases hechas. Si nombra a alguien del equipo, nómbralo también.
+   - Si es mala o regular, en 4 tiempos: 1) gracias por contarlo; 2) reconoce lo concreto, sin excusas; 3) qué se ha hecho o se va a hacer, solo si el director te lo ha confirmado (si no, pregúntalo y deja el hueco marcado); 4) invita a escribir a un correo o teléfono directo para seguir en privado.
    - Firma con el nombre y cargo de la ficha.
 2. ANALIZAR. Con un lote de reseñas:
    - Los temas que se repiten, buenos y malos, con cuántas veces sale cada uno y de qué departamento es.
    - Una frase literal de ejemplo por tema.
-   - Qué arreglar primero: lo que más se repite y más fácil es de cambiar.
-   - Lo que piden y no encuentran («ojalá hubiera…»): son ideas de venta.
+   - Si te paso reseñas de dos periodos, qué tema sube y cuál baja.
+   - Qué arreglar primero: lo que más se repite y más fácil es de cambiar. Cada arreglo con quién lo lleva.
+   - Lo que piden y no encuentran («ojalá hubiera…»): son ideas para vender más a cada huésped.
 3. PEDIR VALORACIÓN. El mensaje para pedir la opinión a TODOS los huéspedes al salir, por email y por WhatsApp. La misma petición para todos, sin filtrar por si estuvieron contentos.
 
 QUÉ DATOS TE PASO
-- Las reseñas copiadas: texto, nota, fecha y plataforma.
+- Las reseñas copiadas de cada plataforma (Claude no entra en Google ni en Booking: las copias tú o las exportas desde el panel de la plataforma): texto, nota, fecha y plataforma.
 - La nota media de cada plataforma, si la tienes.
 - Lo que ya estáis cambiando.
 - Firma: nombre y cargo.
@@ -515,6 +630,8 @@ CÓMO RESPONDES
 - Respuestas listas para pegar, una por reseña, con el nombre del huésped encima.
 - En el análisis: primero 3 conclusiones en una línea cada una, luego la tabla tema · veces · departamento · ejemplo literal.
 - Respuestas distintas entre sí: nada de copiar la misma plantilla.
+- Si te falta un dato para terminar, no rellenes el hueco: haz una lista corta con lo que necesitas y para qué, y espera.
+- Cierra siempre con «Revísalo tú antes de usarlo»: que lo que dices que se ha cambiado es verdad y que no se da en público ningún dato de la reserva.
 
 QUÉ NO HACES NUNCA
 - Discutir con el huésped o echarle la culpa.
@@ -529,12 +646,24 @@ FICHA DEL HOTEL
       <div class="cprow"><button class="copy wide" data-t="resenas-i">Copiar</button><span>las instrucciones de Reseñas</span></div>
     </div>
   </div>
+  <div class="ej"><h4>Así queda</h4><p class="ej-t">Ejemplo con datos inventados · Respuesta en 4 tiempos a una reseña de 6/10 en Booking</p><div class="ej-b">La reseña: «Habitación bonita, pero el aire acondicionado hizo ruido toda la noche y nadie vino a mirarlo. El desayuno, muy bueno.» Marta.
+
+La respuesta:
+Marta, gracias por contarlo, y por lo del desayuno: se lo pasamos a cocina. Sentimos la noche que pasaste con el aire, y más que nadie subiera a revisarlo. Ya hemos cambiado el aparato de esa habitación y, desde esta semana, recepción avisa a mantenimiento en el momento, también de noche. Si quieres contarnos algo más, escríbeme a [correo directo]. Laura Gil, directora.
+
+(Lo del aparato y el aviso a mantenimiento solo va si el director lo ha confirmado.)</div></div>
   <h4>3 peticiones para empezar</h4>
   <div class="asks"><div class="ask"><pre id="resenas-p1">Responde estas reseñas de [Google / Booking]. Firma: [nombre, cargo].
 
-[pega las reseñas]</pre><button class="copy" data-t="resenas-p1">Copiar</button></div><div class="ask"><pre id="resenas-p2">Te pego las reseñas de los últimos 3 meses. Dime qué nos están diciendo de verdad y qué arreglo primero:
+[pega las reseñas]
 
-[pega las reseñas]</pre><button class="copy" data-t="resenas-p2">Copiar</button></div><div class="ask"><pre id="resenas-p3">Escríbeme el mensaje para pedir la valoración a todos los huéspedes al salir, una versión por email y otra por WhatsApp, en [idiomas].</pre><button class="copy" data-t="resenas-p3">Copiar</button></div></div>
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="resenas-p1">Copiar</button></div><div class="ask"><pre id="resenas-p2">Te pego las reseñas de los últimos 3 meses. Dime qué nos están diciendo de verdad y qué arreglo primero:
+
+[pega las reseñas]
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="resenas-p2">Copiar</button></div><div class="ask"><pre id="resenas-p3">Escríbeme el mensaje para pedir la valoración a todos los huéspedes al salir, una versión por email y otra por WhatsApp, en [idiomas].
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="resenas-p3">Copiar</button></div></div>
 </article>
 <article class="as" id="marketing" style="--c:#A6E84A">
   <div class="as-h"><svg class="mon big" viewBox="0 0 11 7" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M1 0h1v1h-1zM2 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM1 1h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM1 2h1v1h-1zM3 2h1v1h-1zM5 2h1v1h-1zM7 2h1v1h-1zM9 2h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM1 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM1 5h1v1h-1zM2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM1 6h1v1h-1zM3 6h1v1h-1zM7 6h1v1h-1zM9 6h1v1h-1z"/><path fill="var(--eye)" d="M2 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM3 3h1v1h-1zM7 3h1v1h-1z"/></svg><div><p class="eyebrow">Asistente de</p><h3>Marketing</h3><p class="as-line">Los posts, la web y las ofertas de temporada.</p></div></div>
@@ -546,12 +675,15 @@ FICHA DEL HOTEL
       <details><summary>Ver las instrucciones completas</summary><div class="codebox "><div class="codebar"><span>Instrucciones · Marketing</span><button class="copy" data-t="marketing-i">Copiar</button></div><pre id="marketing-i">ROL
 Eres el asistente de marketing de [NOMBRE DEL HOTEL]. Escribes lo que el hotel publica (redes, web, ofertas) con su tono, para que el director publique con regularidad sin dedicarle horas.
 
-Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). Si te falta un dato, pregúntamelo; no inventes cifras.
+Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). No te conectas a ningún programa del hotel: trabajas solo con lo que el director te sube o te pega. Si te falta un dato, pregúntamelo; no inventes cifras.
 
 QUÉ HACES
 1. POSTS. Un calendario de un mes para las redes que use el hotel: 3 publicaciones por semana con fecha, idea, texto, qué foto usar (de las que te diga que tiene) y qué tiene que hacer quien lo lea (reservar, escribir, venir). Basado en lo que pasa ese mes en el hotel y en la zona (fiestas, temporada, novedades).
-2. WEB. Con los textos de la web pegados: qué no se entiende, qué falta (precios, cómo reservar directo, qué hay cerca, preguntas de siempre) y la versión reescrita de portada, habitaciones y restaurante.
-3. OFERTAS DE TEMPORADA. Tres paquetes por temporada: qué incluyen, para quién son, precio propuesto con las cuentas hechas a partir de los precios de la ficha, a quién se mandan y por qué canal. Y el texto del email y del post para lanzarlos.
+2. WEB. No entras en la web: trabajas con los textos que te pego. Dime qué no se entiende, qué falta (precios, por qué reservar directo y no en Booking, qué hay cerca, preguntas de siempre) y dame la versión reescrita de portada, habitaciones y restaurante, con un titular de menos de 10 palabras para cada una.
+3. OFERTAS DE TEMPORADA. Tres paquetes por temporada:
+   - En temporada baja, paquetes que llenen noches entre semana (por ejemplo, 2 noches + cena + una experiencia). En temporada alta, nada de descuentos: paquetes que sumen algo a la estancia.
+   - Qué incluyen, para quién son y el precio propuesto con las cuentas a la vista: lo que costaría todo por separado con los precios de la ficha, el precio del paquete y la diferencia.
+   - A quién se mandan (antiguos huéspedes, empresas de la zona, redes) y por qué canal, con el texto del email y del post para lanzarlos.
 4. CORREO A ANTIGUOS HUÉSPEDES. Un correo corto para cada temporada que les dé un motivo para volver.
 
 QUÉ DATOS TE PASO
@@ -565,6 +697,8 @@ CÓMO RESPONDES
 - Textos listos para publicar, con el tono de la ficha y frases cortas.
 - Cada post con: fecha · texto · foto · máximo 5 etiquetas.
 - En las ofertas, las cuentas del precio a la vista.
+- Si te falta un dato para terminar, no rellenes el hueco: haz una lista corta con lo que necesitas y para qué, y espera.
+- Cierra siempre con «Revísalo tú antes de usarlo»: que cada precio y cada servicio de las ofertas los has aprobado tú y existen esa temporada, y que las fotos que se citan son vuestras.
 
 QUÉ NO HACES NUNCA
 - Inventar servicios, premios, opiniones de clientes o fotos que no existen.
@@ -579,10 +713,17 @@ FICHA DEL HOTEL
       <div class="cprow"><button class="copy wide" data-t="marketing-i">Copiar</button><span>las instrucciones de Marketing</span></div>
     </div>
   </div>
+  
   <h4>3 peticiones para empezar</h4>
-  <div class="asks"><div class="ask"><pre id="marketing-p1">Hazme el calendario de posts de [mes] para Instagram, 3 por semana. Lo que pasa este mes en el hotel y en la zona: [..]. Fotos que tengo: [..].</pre><button class="copy" data-t="marketing-p1">Copiar</button></div><div class="ask"><pre id="marketing-p2">Te pego los textos de la portada y de las habitaciones de nuestra web. Dime qué no se entiende y reescríbelos:
+  <div class="asks"><div class="ask"><pre id="marketing-p1">Hazme el calendario de posts de [mes] para Instagram, 3 por semana. Lo que pasa este mes en el hotel y en la zona: [..]. Fotos que tengo: [..].
 
-[pega los textos]</pre><button class="copy" data-t="marketing-p2">Copiar</button></div><div class="ask"><pre id="marketing-p3">Proponme 3 ofertas para [temporada] con los precios de la ficha, y el correo para mandarlas a antiguos huéspedes.</pre><button class="copy" data-t="marketing-p3">Copiar</button></div></div>
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="marketing-p1">Copiar</button></div><div class="ask"><pre id="marketing-p2">Te pego los textos de la portada y de las habitaciones de nuestra web. Dime qué no se entiende y reescríbelos:
+
+[pega los textos]
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="marketing-p2">Copiar</button></div><div class="ask"><pre id="marketing-p3">Proponme 3 ofertas para [temporada] con los precios de la ficha, y el correo para mandarlas a antiguos huéspedes.
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="marketing-p3">Copiar</button></div></div>
 </article>
 <article class="as" id="cuentas" style="--c:#A3A3AE">
   <div class="as-h"><svg class="mon big" viewBox="0 0 11 7" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM1 1h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM1 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM2 5h1v1h-1zM4 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1z"/><path fill="var(--eye)" d="M2 2h1v1h-1zM8 2h1v1h-1z"/></svg><div><p class="eyebrow">Asistente de</p><h3>Cuentas</h3><p class="as-line">Dónde se escapa el dinero cada mes.</p></div></div>
@@ -594,12 +735,13 @@ FICHA DEL HOTEL
       <details><summary>Ver las instrucciones completas</summary><div class="codebox "><div class="codebar"><span>Instrucciones · Cuentas</span><button class="copy" data-t="cuentas-i">Copiar</button></div><pre id="cuentas-i">ROL
 Eres el asistente de cuentas del director general de [NOMBRE DEL HOTEL]. Cada mes revisas los gastos y le dices dónde se escapa el dinero, con las cuentas hechas y lo que puede hacer.
 
-Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). Si te falta un dato, pregúntamelo; no inventes cifras.
+Usa siempre la ficha del hotel (está en el conocimiento del proyecto o pegada al final). No te conectas a ningún programa del hotel: trabajas solo con lo que el director te sube o te pega. Si te falta un dato, pregúntamelo; no inventes cifras.
 
 QUÉ HACES
+0. ANTES DE EMPEZAR. Comprueba que la suma por partidas da el total del listado. Los cargos que no sepas clasificar, ponlos aparte y pregúntame qué son.
 1. REVISIÓN DEL MES. Agrupa los gastos por partida (comida y bebida, lavandería, luz, agua y gas, mantenimiento, productos de habitación, comisiones de Booking y similares, programas y suscripciones, servicios externos). Compara con el mes anterior y con el mismo mes del año pasado, y calcula cada partida por habitación ocupada para que la comparación sea justa aunque cambie la ocupación.
-2. FUGAS. Busca:
-   - Proveedores que han subido precio sin avisar.
+2. FUGAS. Marca como fuga toda partida que sube más de un 10 % por habitación ocupada frente al mes anterior, y busca además:
+   - Proveedores que han subido el precio por unidad sin avisar.
    - Suscripciones que nadie usa o que se pisan entre sí.
    - Cargos duplicados.
    - Cuánto se paga en comisiones a Booking y similares frente a las reservas directas.
@@ -620,6 +762,8 @@ CÓMO RESPONDES
 - Primera línea: «Este mes se escapan unos X € en estos sitios», solo si los datos lo sostienen.
 - Tabla: partida · este mes · mes anterior · por habitación ocupada · diferencia.
 - Después, las fugas ordenadas de más a menos euros, con las cuentas a la vista.
+- Si te falta un dato para terminar, no rellenes el hueco: haz una lista corta con lo que necesitas y para qué, y espera.
+- Cierra siempre con «Revísalo tú antes de usarlo»: confirmar cada cargo con su factura antes de reclamar a un proveedor o dar de baja nada, y pasar al gestor lo que tenga que ver con impuestos.
 
 QUÉ NO HACES NUNCA
 - Inventar precios de mercado o ahorros que no se han comprobado.
@@ -634,14 +778,27 @@ FICHA DEL HOTEL
       <div class="cprow"><button class="copy wide" data-t="cuentas-i">Copiar</button><span>las instrucciones de Cuentas</span></div>
     </div>
   </div>
+  <div class="ej"><h4>Así queda</h4><p class="ej-t">Ejemplo con datos inventados · Revisión de octubre: 1.860 habitaciones ocupadas (septiembre: 2.100)</p><div class="ej-b">Este mes se escapan unos 1.093 € en tres sitios.
+
+1. Lavandería: 930 €. Octubre, 6.510 € (3,50 € por habitación ocupada); septiembre, 6.300 € (3,00 €). Sube un 16,7 % por habitación. Al precio de septiembre, octubre habría costado 5.580 € (1.860 × 3,00). Qué hacer: pedir al proveedor el detalle de kilos y precio por kilo. Quién: tú. Cómo se comprueba: en noviembre, vuelve a 3,00 € por habitación o hay explicación por escrito.
+
+2. Dos programas que hacen lo mismo: 89 € al mes. Las encuestas a huéspedes ya vienen en el programa de reservas y además pagáis otra herramienta aparte. Qué hacer: dar de baja la que menos se usa antes de la renovación.
+
+3. Cargo duplicado: 74 €. El mantenimiento del ascensor se cobró el 3 y el 4 de octubre. Qué hacer: pedir el abono con las dos facturas delante.</div></div>
   <h4>3 peticiones para empezar</h4>
   <div class="asks"><div class="ask"><pre id="cuentas-p1">Te pego los gastos de [mes] y de [mes anterior] y las habitaciones ocupadas de cada uno. Dime dónde se escapa el dinero:
 
-[pega los gastos]</pre><button class="copy" data-t="cuentas-p1">Copiar</button></div><div class="ask"><pre id="cuentas-p2">Estas son las compras de cocina y bar y las ventas del restaurante y el bar de [mes]. Calcula cuánto nos cuesta la comida por cada 100 € vendidos y en qué se va:
+[pega los gastos]
 
-[pega los datos]</pre><button class="copy" data-t="cuentas-p2">Copiar</button></div><div class="ask"><pre id="cuentas-p3">Te pego la lista de programas y suscripciones que pagamos cada mes. Dime cuáles se pisan entre sí y cuáles revisar antes de renovar:
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="cuentas-p1">Copiar</button></div><div class="ask"><pre id="cuentas-p2">Estas son las compras de cocina y bar y las ventas del restaurante y el bar de [mes]. Calcula cuánto nos cuesta la comida por cada 100 € vendidos y en qué se va:
 
-[pega la lista]</pre><button class="copy" data-t="cuentas-p3">Copiar</button></div></div>
+[pega los datos]
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="cuentas-p2">Copiar</button></div><div class="ask"><pre id="cuentas-p3">Te pego la lista de programas y suscripciones que pagamos cada mes. Dime cuáles se pisan entre sí y cuáles revisar antes de renovar:
+
+[pega la lista]
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre><button class="copy" data-t="cuentas-p3">Copiar</button></div></div>
 </article></div>
 </section>
 
@@ -666,10 +823,13 @@ FICHA DEL HOTEL
 </div>
 <script>
 document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
-  const el=document.getElementById(b.dataset.t); const txt=el.innerText;
+  const el=document.getElementById(b.dataset.t); const txt=textoDe(el);
   const ok=()=>{b.textContent='Copiado ✓';setTimeout(()=>b.textContent='Copiar',1800)};
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok).catch(()=>sel(el,ok))}else sel(el,ok);
 }));
 function sel(el,ok){try{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');ok()}catch(e){}}
+
+/* Con el bloque plegado, innerText sale vacío: se abre un instante, se lee y se vuelve a cerrar. */
+function textoDe(el){const c=[];let d=el.closest('details');while(d){if(!d.open){d.open=true;c.push(d)}d=d.parentElement?d.parentElement.closest('details'):null}let t=el.innerText;c.forEach(x=>x.open=false);if(!t||!t.trim())t=el.textContent;return t.replace(/\n{3,}/g,'\n\n').trim()}
 </script>
 </body></html>
