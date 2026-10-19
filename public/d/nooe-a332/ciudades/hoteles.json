@@ -80,5 +80,23 @@
       "banco-arena": 10,
       "fulidhoo": 20
     }
+  },
+  {
+    "hotel": "indigo-barcelona",
+    "ciudad": "barcelona",
+    "ubicacion": {
+      "lat": 41.37336,
+      "lng": 2.14734
+    },
+    "minutos": {
+      "espanya": 7,
+      "font-magica": 7,
+      "mnac": 11,
+      "caixaforum": 4,
+      "poble-espanyol": 9,
+      "joan-miro": 9,
+      "sant-antoni": 20,
+      "blai": 18
+    }
   }
 ]

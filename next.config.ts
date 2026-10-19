@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
       // Demo privada de la carta de Casa Román (app Angular): cualquier ruta
       // dentro de la demo la resuelve su index.html. Sin enlazar desde la web.
       { source: "/d/casaroman-v7k2/:path*", destination: "/d/casaroman-v7k2/index.html" },
+      { source: "/d/indigo-7c41/:path*", destination: "/d/indigo-7c41/index.html" },
       { source: "/d/nooe-a332/:path*", destination: "/d/nooe-a332/index.html" },
       { source: "/d/sheraton-5e38/:path*", destination: "/d/sheraton-5e38/index.html" },
     ];
