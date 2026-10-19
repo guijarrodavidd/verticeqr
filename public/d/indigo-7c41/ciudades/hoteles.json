@@ -1,0 +1,102 @@
+[
+  {
+    "hotel": "mendez-nunez",
+    "ciudad": "alicante",
+    "ubicacion": {
+      "lat": 38.34438,
+      "lng": -0.48326
+    },
+    "minutos": {
+      "santa-barbara": 25,
+      "explanada": 2,
+      "santa-cruz": 9,
+      "postiguet": 7,
+      "mercado": 9,
+      "marq": 20,
+      "santa-maria": 6
+    }
+  },
+  {
+    "hotel": "casa-alberola",
+    "ciudad": "alicante",
+    "ubicacion": {
+      "lat": 38.3422,
+      "lng": -0.48659
+    },
+    "minutos": {
+      "santa-barbara": 35,
+      "explanada": 1,
+      "santa-cruz": 17,
+      "postiguet": 13,
+      "mercado": 14,
+      "marq": 22,
+      "santa-maria": 12
+    }
+  },
+  {
+    "hotel": "travelodge-alicante",
+    "ciudad": "alicante",
+    "ubicacion": {
+      "lat": 38.33702,
+      "lng": -0.50178
+    },
+    "minutos": {
+      "santa-barbara": 40,
+      "explanada": 22,
+      "santa-cruz": 35,
+      "postiguet": 32,
+      "mercado": 25,
+      "marq": 45,
+      "santa-maria": 30
+    }
+  },
+  {
+    "hotel": "casa-roman",
+    "ciudad": "sanxenxo",
+    "ubicacion": {
+      "lat": 42.4004,
+      "lng": -8.8076
+    },
+    "minutos": {
+      "silgar": 2,
+      "paseo": 2,
+      "porto": 6
+    }
+  },
+  {
+    "hotel": "nooe-maldives",
+    "ciudad": "kunavaashi",
+    "ubicacion": {
+      "lat": 3.6367,
+      "lng": 73.3648
+    },
+    "minutos": {
+      "playa-arrecife": 3,
+      "piscina-veli": 3,
+      "flame": 5,
+      "thari-spa": 4,
+      "clubhouse": 4,
+      "muelle": 5,
+      "banco-arena": 10,
+      "fulidhoo": 20
+    }
+  },
+  {
+    "hotel": "indigo-barcelona",
+    "ciudad": "barcelona",
+    "ubicacion": {
+      "lat": 41.37336,
+      "lng": 2.14734
+    },
+    "minutos": {
+      "espanya": 7,
+      "font-magica": 7,
+      "mnac": 11,
+      "caixaforum": 4,
+      "poble-espanyol": 9,
+      "joan-miro": 9,
+      "sant-antoni": 20,
+      "blai": 18
+    }
+  }
+]

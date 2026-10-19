@@ -1,0 +1,602 @@
+{
+  "montjuic-1": {
+    "pregunta": {
+      "ES": "¿En qué se inspiraron las Torres Venecianas?",
+      "EN": "What inspired the Venetian Towers?",
+      "DE": "Was war das Vorbild der Venezianischen Türme?"
+    },
+    "opciones": [
+      {
+        "ES": "En el campanario de San Marcos de Venecia",
+        "EN": "St Mark's bell tower in Venice",
+        "DE": "Der Campanile von San Marco in Venedig"
+      },
+      {
+        "ES": "En dos faros del puerto",
+        "EN": "Two lighthouses in the port",
+        "DE": "Zwei Leuchttürme im Hafen"
+      },
+      {
+        "ES": "En las torres de la Sagrada Família",
+        "EN": "The towers of the Sagrada Família",
+        "DE": "Die Türme der Sagrada Família"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Se levantaron para la Exposición Internacional de 1929 copiando el campanile de San Marcos. Miden unos 47 metros.",
+      "EN": "They were built for the 1929 International Exhibition, modelled on St Mark's campanile. They stand about 47 metres tall.",
+      "DE": "Sie entstanden für die Weltausstellung 1929 nach dem Vorbild des Campanile von San Marco und sind rund 47 Meter hoch."
+    }
+  },
+  "montjuic-2": {
+    "pregunta": {
+      "ES": "¿Para qué se construyó la Font Màgica?",
+      "EN": "What was the Magic Fountain built for?",
+      "DE": "Wofür wurde der Magische Brunnen gebaut?"
+    },
+    "opciones": [
+      {
+        "ES": "Para los Juegos Olímpicos de 1992",
+        "EN": "The 1992 Olympic Games",
+        "DE": "Die Olympischen Spiele 1992"
+      },
+      {
+        "ES": "Para la Exposición Internacional de 1929",
+        "EN": "The 1929 International Exhibition",
+        "DE": "Die Weltausstellung 1929"
+      },
+      {
+        "ES": "Para regar los jardines de Montjuïc",
+        "EN": "To water the Montjuïc gardens",
+        "DE": "Zur Bewässerung der Gärten am Montjuïc"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La diseñó Carles Buïgas para la Exposición de 1929, la misma que dejó el Palau Nacional, las torres y el Poble Espanyol.",
+      "EN": "Carles Buïgas designed it for the 1929 Exhibition, the same event that left the Palau Nacional, the towers and the Poble Espanyol.",
+      "DE": "Carles Buïgas entwarf ihn für die Ausstellung 1929, der auch Palau Nacional, Türme und Poble Espanyol entstammen."
+    }
+  },
+  "montjuic-3": {
+    "pregunta": {
+      "ES": "¿Por qué colección es famoso el MNAC?",
+      "EN": "What collection is the MNAC famous for?",
+      "DE": "Wofür ist die Sammlung des MNAC berühmt?"
+    },
+    "opciones": [
+      {
+        "ES": "Por sus pinturas murales románicas",
+        "EN": "Its Romanesque wall paintings",
+        "DE": "Seine romanischen Wandmalereien"
+      },
+      {
+        "ES": "Por sus coches antiguos",
+        "EN": "Its vintage cars",
+        "DE": "Seine Oldtimer"
+      },
+      {
+        "ES": "Por sus dinosaurios",
+        "EN": "Its dinosaurs",
+        "DE": "Seine Dinosaurier"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Guarda pinturas románicas arrancadas de iglesias del Pirineo para salvarlas, una de las mejores colecciones del mundo.",
+      "EN": "It holds Romanesque paintings removed from Pyrenean churches to save them, one of the finest collections in the world.",
+      "DE": "Es bewahrt romanische Malereien, die zur Rettung aus Pyrenäenkirchen abgelöst wurden, eine der besten Sammlungen der Welt."
+    }
+  },
+  "montjuic-4": {
+    "pregunta": {
+      "ES": "Al rehacer el Estadi Olímpic para 1992, ¿qué se conservó?",
+      "EN": "When the Olympic Stadium was rebuilt for 1992, what was kept?",
+      "DE": "Was blieb beim Umbau des Olympiastadions für 1992 erhalten?"
+    },
+    "opciones": [
+      {
+        "ES": "Nada: se hizo nuevo",
+        "EN": "Nothing: it was built from scratch",
+        "DE": "Nichts: Es wurde neu gebaut"
+      },
+      {
+        "ES": "Solo el césped",
+        "EN": "Only the pitch",
+        "DE": "Nur der Rasen"
+      },
+      {
+        "ES": "La fachada original de 1929",
+        "EN": "The original 1929 façade",
+        "DE": "Die Originalfassade von 1929"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El estadio se abrió en 1929. Para los Juegos se vació por dentro y se levantaron gradas nuevas, pero se mantuvieron sus muros exteriores.",
+      "EN": "The stadium opened in 1929. For the Games it was gutted and given new stands, but its outer walls were kept.",
+      "DE": "Das Stadion wurde 1929 eröffnet. Für die Spiele wurde es innen entkernt und neu bestuhlt, die Außenmauern blieben aber stehen."
+    }
+  },
+  "montjuic-5": {
+    "pregunta": {
+      "ES": "¿Cuánto mide el recorrido del teleférico?",
+      "EN": "How long is the cable car ride?",
+      "DE": "Wie lang ist die Strecke der Seilbahn?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 150 metros",
+        "EN": "About 150 metres",
+        "DE": "Etwa 150 Meter"
+      },
+      {
+        "ES": "Unos 750 metros",
+        "EN": "About 750 metres",
+        "DE": "Etwa 750 Meter"
+      },
+      {
+        "ES": "Unos 3 kilómetros",
+        "EN": "About 3 kilometres",
+        "DE": "Etwa 3 Kilometer"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Son unos 750 metros entre la estación Parc de Montjuïc y el castillo. A la vuelta puede parar en el Mirador de l'Alcalde.",
+      "EN": "It covers about 750 metres between Parc de Montjuïc station and the castle. On the way down it can stop at the Mirador de l'Alcalde.",
+      "DE": "Sie verläuft rund 750 Meter zwischen der Station Parc de Montjuïc und der Burg. Bergab kann sie am Mirador de l'Alcalde halten."
+    }
+  },
+  "montjuic-6": {
+    "pregunta": {
+      "ES": "A finales del siglo XVIII, un astrónomo francés usó la torre del castillo para…",
+      "EN": "In the late 18th century, a French astronomer used the castle tower to…",
+      "DE": "Ende des 18. Jahrhunderts nutzte ein französischer Astronom den Burgturm, um…"
+    },
+    "opciones": [
+      {
+        "ES": "Medir el meridiano con el que se definió el metro",
+        "EN": "Measure the meridian used to define the metre",
+        "DE": "Den Meridian zu vermessen, mit dem der Meter definiert wurde"
+      },
+      {
+        "ES": "Descubrir un cometa",
+        "EN": "Discover a comet",
+        "DE": "Einen Kometen zu entdecken"
+      },
+      {
+        "ES": "Instalar el primer faro de la ciudad",
+        "EN": "Install the city's first lighthouse",
+        "DE": "Den ersten Leuchtturm der Stadt einzurichten"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Pierre Méchain midió desde aquí el arco Dunkerque–Barcelona para fijar el metro. Una placa en la torre lo recuerda.",
+      "EN": "Pierre Méchain measured the Dunkirk–Barcelona arc from here to fix the metre. A plaque on the tower recalls it.",
+      "DE": "Pierre Méchain vermaß von hier den Bogen Dünkirchen–Barcelona, um den Meter festzulegen. Eine Tafel am Turm erinnert daran."
+    }
+  },
+  "poble-sec-1": {
+    "pregunta": {
+      "ES": "¿Con qué nombre abrió El Molino en 1898?",
+      "EN": "What was El Molino called when it opened in 1898?",
+      "DE": "Unter welchem Namen eröffnete El Molino 1898?"
+    },
+    "opciones": [
+      {
+        "ES": "Moulin Rouge",
+        "EN": "Moulin Rouge",
+        "DE": "Moulin Rouge"
+      },
+      {
+        "ES": "La Pajarera Catalana",
+        "EN": "La Pajarera Catalana",
+        "DE": "La Pajarera Catalana"
+      },
+      {
+        "ES": "Teatre del Paral·lel",
+        "EN": "Teatre del Paral·lel",
+        "DE": "Teatre del Paral·lel"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Empezó como La Pajarera Catalana; luego fue el Petit Moulin Rouge y, tras la Guerra Civil, tuvo que quitarse el «Rouge» y quedó en El Molino.",
+      "EN": "It began as La Pajarera Catalana, later became the Petit Moulin Rouge and, after the Civil War, had to drop 'Rouge', ending up as El Molino.",
+      "DE": "Es begann als La Pajarera Catalana, wurde dann zum Petit Moulin Rouge und musste nach dem Bürgerkrieg das „Rouge“ streichen: El Molino."
+    }
+  },
+  "poble-sec-2": {
+    "pregunta": {
+      "ES": "Una huelga en esta central en 1919 consiguió algo histórico. ¿Qué?",
+      "EN": "A 1919 strike at this power station achieved something historic. What?",
+      "DE": "Ein Streik in diesem Kraftwerk 1919 erreichte etwas Historisches. Was?"
+    },
+    "opciones": [
+      {
+        "ES": "Las vacaciones pagadas",
+        "EN": "Paid holidays",
+        "DE": "Bezahlten Urlaub"
+      },
+      {
+        "ES": "La jornada de ocho horas",
+        "EN": "The eight-hour working day",
+        "DE": "Den Achtstundentag"
+      },
+      {
+        "ES": "El voto de las mujeres",
+        "EN": "Votes for women",
+        "DE": "Das Frauenwahlrecht"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La huelga de La Canadenca paralizó Barcelona 44 días y llevó a España a fijar por ley la jornada de ocho horas.",
+      "EN": "The La Canadenca strike paralysed Barcelona for 44 days and led Spain to set the eight-hour day by law.",
+      "DE": "Der Streik bei La Canadenca legte Barcelona 44 Tage lahm und führte dazu, dass Spanien den Achtstundentag gesetzlich festschrieb."
+    }
+  },
+  "poble-sec-3": {
+    "pregunta": {
+      "ES": "La plaza debe su nombre a una fuente dedicada a una diosa. ¿A cuál?",
+      "EN": "The square is named after a fountain devoted to a goddess. Which one?",
+      "DE": "Der Platz ist nach einem Brunnen benannt, der einer Göttin geweiht war. Welcher?"
+    },
+    "opciones": [
+      {
+        "ES": "Ceres",
+        "EN": "Ceres",
+        "DE": "Ceres"
+      },
+      {
+        "ES": "Venus",
+        "EN": "Venus",
+        "DE": "Venus"
+      },
+      {
+        "ES": "Minerva",
+        "EN": "Minerva",
+        "DE": "Minerva"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "«Sortidor» es el caño de una fuente. La de Ceres llegó desde el Passeig de Gràcia y en 1929 se la llevaron a Montjuïc.",
+      "EN": "A 'sortidor' is a fountain spout. The Ceres fountain came from Passeig de Gràcia and was moved to Montjuïc in 1929.",
+      "DE": "„Sortidor“ heißt Brunnenstrahl. Der Ceres-Brunnen kam vom Passeig de Gràcia und wurde 1929 auf den Montjuïc gebracht."
+    }
+  },
+  "poble-sec-4": {
+    "pregunta": {
+      "ES": "¿Qué hizo famosa a la calle Blai?",
+      "EN": "What made Carrer de Blai famous?",
+      "DE": "Wodurch wurde die Carrer de Blai berühmt?"
+    },
+    "opciones": [
+      {
+        "ES": "Sus pinchos a un euro",
+        "EN": "Its one-euro pintxos",
+        "DE": "Ihre Pintxos für einen Euro"
+      },
+      {
+        "ES": "Un mercado de pulgas",
+        "EN": "A flea market",
+        "DE": "Ein Flohmarkt"
+      },
+      {
+        "ES": "Sus tiendas de antigüedades",
+        "EN": "Its antique shops",
+        "DE": "Ihre Antiquitätenläden"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Durante años el pincho costaba un euro. Con la subida de precios ya no siempre es así, pero sigue siendo de las cenas más baratas del centro.",
+      "EN": "For years a pintxo cost one euro. With rising prices that's no longer always true, but it is still one of the cheapest dinners in the centre.",
+      "DE": "Jahrelang kostete ein Pintxo einen Euro. Mit den Preissteigerungen stimmt das nicht mehr immer, aber es bleibt eines der günstigsten Abendessen im Zentrum."
+    }
+  },
+  "gotic-born-1": {
+    "pregunta": {
+      "ES": "¿Qué se monta alrededor del mercado los domingos por la mañana?",
+      "EN": "What sets up around the market on Sunday mornings?",
+      "DE": "Was findet sonntagvormittags rund um die Markthalle statt?"
+    },
+    "opciones": [
+      {
+        "ES": "Un mercado de flores",
+        "EN": "A flower market",
+        "DE": "Ein Blumenmarkt"
+      },
+      {
+        "ES": "Un mercado de libros, cómics y coleccionismo",
+        "EN": "A market for books, comics and collectables",
+        "DE": "Ein Markt für Bücher, Comics und Sammlerstücke"
+      },
+      {
+        "ES": "Una feria de ganado",
+        "EN": "A livestock fair",
+        "DE": "Ein Viehmarkt"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Es el Dominical de Sant Antoni: libros, revistas, cromos y sellos. El mercado se inauguró en 1882, el primero fuera de las murallas.",
+      "EN": "It's the Dominical de Sant Antoni: books, magazines, trading cards and stamps. The market opened in 1882, the first outside the city walls.",
+      "DE": "Das ist der Dominical de Sant Antoni: Bücher, Zeitschriften, Sammelbilder und Briefmarken. Die Halle wurde 1882 eröffnet, als erste außerhalb der Stadtmauern."
+    }
+  },
+  "gotic-born-2": {
+    "pregunta": {
+      "ES": "¿Quién diseñó el edificio del MACBA?",
+      "EN": "Who designed the MACBA building?",
+      "DE": "Wer entwarf das Gebäude des MACBA?"
+    },
+    "opciones": [
+      {
+        "ES": "Antoni Gaudí",
+        "EN": "Antoni Gaudí",
+        "DE": "Antoni Gaudí"
+      },
+      {
+        "ES": "Santiago Calatrava",
+        "EN": "Santiago Calatrava",
+        "DE": "Santiago Calatrava"
+      },
+      {
+        "ES": "Richard Meier",
+        "EN": "Richard Meier",
+        "DE": "Richard Meier"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Lo firmó el estadounidense Richard Meier, famoso por sus edificios blancos. Abrió en 1995.",
+      "EN": "It was designed by the American Richard Meier, known for his white buildings. It opened in 1995.",
+      "DE": "Entworfen hat es der Amerikaner Richard Meier, bekannt für seine weißen Bauten. Eröffnet wurde es 1995."
+    }
+  },
+  "gotic-born-3": {
+    "pregunta": {
+      "ES": "¿Cuál es el nombre oficial de La Boqueria?",
+      "EN": "What is La Boqueria's official name?",
+      "DE": "Wie heißt La Boqueria offiziell?"
+    },
+    "opciones": [
+      {
+        "ES": "Mercat de Sant Josep",
+        "EN": "Mercat de Sant Josep",
+        "DE": "Mercat de Sant Josep"
+      },
+      {
+        "ES": "Mercat de la Rambla",
+        "EN": "Mercat de la Rambla",
+        "DE": "Mercat de la Rambla"
+      },
+      {
+        "ES": "Mercat Central",
+        "EN": "Mercat Central",
+        "DE": "Mercat Central"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Oficialmente es el Mercat de Sant Josep, pero todo el mundo lo llama La Boqueria.",
+      "EN": "Officially it's the Mercat de Sant Josep, but everyone calls it La Boqueria.",
+      "DE": "Offiziell heißt er Mercat de Sant Josep, aber alle nennen ihn La Boqueria."
+    }
+  },
+  "gotic-born-4": {
+    "pregunta": {
+      "ES": "¿Cuántas ocas viven en el claustro de la catedral?",
+      "EN": "How many geese live in the cathedral cloister?",
+      "DE": "Wie viele Gänse leben im Kreuzgang der Kathedrale?"
+    },
+    "opciones": [
+      {
+        "ES": "3",
+        "EN": "3",
+        "DE": "3"
+      },
+      {
+        "ES": "13",
+        "EN": "13",
+        "DE": "13"
+      },
+      {
+        "ES": "30",
+        "EN": "30",
+        "DE": "30"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Trece, una por cada año de Santa Eulàlia, la patrona de la ciudad, según la tradición.",
+      "EN": "Thirteen, one for each year of Saint Eulàlia's life, the city's patron saint, according to tradition.",
+      "DE": "Dreizehn, eine für jedes Lebensjahr der heiligen Eulàlia, der Stadtpatronin, so will es die Tradition."
+    }
+  },
+  "gotic-born-5": {
+    "pregunta": {
+      "ES": "¿Quiénes cargaron a la espalda las piedras de Santa Maria del Mar?",
+      "EN": "Who carried the stones of Santa Maria del Mar on their backs?",
+      "DE": "Wer trug die Steine von Santa Maria del Mar auf dem Rücken?"
+    },
+    "opciones": [
+      {
+        "ES": "Los soldados del rey",
+        "EN": "The king's soldiers",
+        "DE": "Die Soldaten des Königs"
+      },
+      {
+        "ES": "Los monjes del convento",
+        "EN": "The monks of the convent",
+        "DE": "Die Mönche des Klosters"
+      },
+      {
+        "ES": "Los bastaixos, los estibadores del puerto",
+        "EN": "The bastaixos, the port porters",
+        "DE": "Die Bastaixos, die Hafenträger"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Los bastaixos traían la piedra desde la cantera de Montjuïc. La iglesia se levantó entre 1329 y 1383, en poco más de medio siglo.",
+      "EN": "The bastaixos brought the stone from the Montjuïc quarry. The church went up between 1329 and 1383, in just over half a century.",
+      "DE": "Die Bastaixos brachten den Stein aus dem Steinbruch am Montjuïc. Die Kirche entstand zwischen 1329 und 1383, in gut einem halben Jahrhundert."
+    }
+  },
+  "gotic-born-6": {
+    "pregunta": {
+      "ES": "¿Qué apareció bajo el antiguo mercado del Born?",
+      "EN": "What was found beneath the old Born market?",
+      "DE": "Was kam unter der alten Born-Markthalle zum Vorschein?"
+    },
+    "opciones": [
+      {
+        "ES": "Un barco romano",
+        "EN": "A Roman ship",
+        "DE": "Ein römisches Schiff"
+      },
+      {
+        "ES": "Las calles de la ciudad de 1714",
+        "EN": "The streets of the 1714 city",
+        "DE": "Die Straßen der Stadt von 1714"
+      },
+      {
+        "ES": "Un refugio de la Guerra Civil",
+        "EN": "A Civil War air-raid shelter",
+        "DE": "Ein Luftschutzbunker aus dem Bürgerkrieg"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Al excavar para una biblioteca salieron casas, calles y pozos del barrio derribado tras el sitio de 1714. Hoy se ven desde arriba.",
+      "EN": "Digging for a library uncovered houses, streets and wells of the district demolished after the 1714 siege. Today you see them from above.",
+      "DE": "Beim Graben für eine Bibliothek kamen Häuser, Straßen und Brunnen des nach der Belagerung von 1714 abgerissenen Viertels zutage. Heute sieht man sie von oben."
+    }
+  },
+  "gaudi-1": {
+    "pregunta": {
+      "ES": "Según la lectura más popular, el tejado de la Casa Batlló es el lomo de…",
+      "EN": "According to the most popular reading, the roof of Casa Batlló is the back of…",
+      "DE": "Nach der beliebtesten Deutung ist das Dach der Casa Batlló der Rücken…"
+    },
+    "opciones": [
+      {
+        "ES": "Una ballena",
+        "EN": "A whale",
+        "DE": "Eines Wals"
+      },
+      {
+        "ES": "El dragón de Sant Jordi",
+        "EN": "Saint George's dragon",
+        "DE": "Des Drachen des heiligen Georg"
+      },
+      {
+        "ES": "Una serpiente marina",
+        "EN": "A sea serpent",
+        "DE": "Einer Seeschlange"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Las escamas serían el dragón y la torre con la cruz, la lanza de Sant Jordi, el patrón de Cataluña.",
+      "EN": "The scales would be the dragon and the tower with the cross, the lance of Saint George, Catalonia's patron saint.",
+      "DE": "Die Schuppen wären der Drache und der Turm mit dem Kreuz die Lanze des heiligen Georg, des Schutzpatrons Kataloniens."
+    }
+  },
+  "gaudi-2": {
+    "pregunta": {
+      "ES": "«La Pedrera» es un apodo. ¿Qué significa?",
+      "EN": "'La Pedrera' is a nickname. What does it mean?",
+      "DE": "„La Pedrera“ ist ein Spitzname. Was bedeutet er?"
+    },
+    "opciones": [
+      {
+        "ES": "La cantera",
+        "EN": "The quarry",
+        "DE": "Der Steinbruch"
+      },
+      {
+        "ES": "La pradera",
+        "EN": "The meadow",
+        "DE": "Die Wiese"
+      },
+      {
+        "ES": "La perla",
+        "EN": "The pearl",
+        "DE": "Die Perle"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Su nombre oficial es Casa Milà. Los barceloneses la llamaron «la cantera» por su fachada de piedra ondulada, y se le quedó.",
+      "EN": "Its official name is Casa Milà. Locals called it 'the quarry' because of its rippling stone façade, and the name stuck.",
+      "DE": "Offiziell heißt sie Casa Milà. Die Einheimischen nannten sie wegen der gewellten Steinfassade „den Steinbruch“, und der Name blieb."
+    }
+  },
+  "gaudi-3": {
+    "pregunta": {
+      "ES": "¿Dónde está enterrado Gaudí?",
+      "EN": "Where is Gaudí buried?",
+      "DE": "Wo ist Gaudí begraben?"
+    },
+    "opciones": [
+      {
+        "ES": "En el cementerio de Montjuïc",
+        "EN": "In Montjuïc cemetery",
+        "DE": "Auf dem Friedhof Montjuïc"
+      },
+      {
+        "ES": "En Reus, su ciudad natal",
+        "EN": "In Reus, his home town",
+        "DE": "In Reus, seiner Heimatstadt"
+      },
+      {
+        "ES": "En la cripta de la Sagrada Família",
+        "EN": "In the crypt of the Sagrada Família",
+        "DE": "In der Krypta der Sagrada Família"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Murió en 1926 y descansa en la cripta del templo al que dedicó sus últimos años.",
+      "EN": "He died in 1926 and rests in the crypt of the church to which he devoted his final years.",
+      "DE": "Er starb 1926 und ruht in der Krypta der Kirche, der er seine letzten Jahre widmete."
+    }
+  },
+  "gaudi-4": {
+    "pregunta": {
+      "ES": "¿Quién diseñó el Hospital de Sant Pau?",
+      "EN": "Who designed the Hospital de Sant Pau?",
+      "DE": "Wer entwarf das Hospital de Sant Pau?"
+    },
+    "opciones": [
+      {
+        "ES": "Antoni Gaudí",
+        "EN": "Antoni Gaudí",
+        "DE": "Antoni Gaudí"
+      },
+      {
+        "ES": "Lluís Domènech i Montaner",
+        "EN": "Lluís Domènech i Montaner",
+        "DE": "Lluís Domènech i Montaner"
+      },
+      {
+        "ES": "Josep Puig i Cadafalch",
+        "EN": "Josep Puig i Cadafalch",
+        "DE": "Josep Puig i Cadafalch"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Es obra de Domènech i Montaner, el otro gran maestro del modernismo. Funcionó como hospital hasta 2009 y es Patrimonio Mundial.",
+      "EN": "It is by Domènech i Montaner, the other great master of Modernisme. It worked as a hospital until 2009 and is a World Heritage Site.",
+      "DE": "Es stammt von Domènech i Montaner, dem anderen großen Meister des Modernisme. Bis 2009 war es Krankenhaus, heute ist es Weltkulturerbe."
+    }
+  }
+}
