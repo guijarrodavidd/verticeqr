@@ -1,0 +1,1450 @@
+{
+  "slug": "kunavaashi",
+  "nombre": "Kunaavashi",
+  "intro": {
+    "ES": "Una isla de arena blanca en Vaavu, el atolón «Wow» de Maldivas. Delfines al atardecer, tortugas en el arrecife de casa y tiburones nodriza a un paseo en barco.",
+    "EN": "A white-sand island in Vaavu, the Maldives' 'Wow' atoll. Dolphins at sunset, turtles on the house reef and nurse sharks a short boat ride away.",
+    "DE": "Eine Insel aus weißem Sand in Vaavu, dem „Wow“-Atoll der Malediven. Delfine im Sonnenuntergang, Schildkröten am Hausriff und Ammenhaie eine kurze Bootsfahrt entfernt."
+  },
+  "lugares": [
+    {
+      "id": "playa-arrecife",
+      "img": "/ciudades/kunavaashi/img/arrecife-1.jpg",
+      "nombre": "House reef beach",
+      "zona": {
+        "ES": "Lado oeste",
+        "EN": "West side",
+        "DE": "Westseite"
+      },
+      "d": {
+        "ES": "Arena blanca, agua clara y el arrecife a pocos metros: gafas y tubo y ya estás entre peces.",
+        "EN": "White sand, clear water and the reef a few metres out: mask and snorkel and you're among the fish.",
+        "DE": "Weißer Sand, klares Wasser und das Riff wenige Meter entfernt: Maske auf und schon bist du bei den Fischen."
+      },
+      "cuando": {
+        "ES": "Por la mañana, con el agua en calma",
+        "EN": "In the morning, when the water is calm",
+        "DE": "Morgens, bei ruhigem Wasser"
+      },
+      "min": 3,
+      "modo": "pie",
+      "lat": 3.637,
+      "lng": 73.3638
+    },
+    {
+      "id": "piscina-veli",
+      "img": "/ciudades/kunavaashi/img/bienestar-5.jpg",
+      "nombre": "Infinity pool & Vēlì",
+      "zona": {
+        "ES": "Centro de la isla",
+        "EN": "Island centre",
+        "DE": "Inselmitte"
+      },
+      "d": {
+        "ES": "La piscina que se funde con el mar y su bar, Vēlì. Pide el NOOE Colada.",
+        "EN": "The pool that melts into the sea and its bar, Vēlì. Order the NOOE Colada.",
+        "DE": "Der Pool, der ins Meer übergeht, und seine Bar Vēlì. Bestell den NOOE Colada."
+      },
+      "cuando": {
+        "ES": "De 11:00 a medianoche; mejor a media tarde",
+        "EN": "11 am to midnight; best mid-afternoon",
+        "DE": "11 bis 24 Uhr; am schönsten am Nachmittag"
+      },
+      "min": 3,
+      "modo": "pie",
+      "lat": 3.6367,
+      "lng": 73.3652
+    },
+    {
+      "id": "flame",
+      "img": "/ciudades/kunavaashi/img/flame.jpg",
+      "nombre": "fl·äm·ē",
+      "zona": {
+        "ES": "Sobre el agua",
+        "EN": "Over the water",
+        "DE": "Über dem Wasser"
+      },
+      "d": {
+        "ES": "La parrilla sobre el agua: brasas, pescado del día y el mar bajo tus pies.",
+        "EN": "The over-water grill: embers, catch of the day and the sea beneath your feet.",
+        "DE": "Der Grill über dem Wasser: Glut, Fang des Tages und das Meer unter dir."
+      },
+      "cuando": {
+        "ES": "Cena, de 19:00 a 22:00",
+        "EN": "Dinner, 7 to 10 pm",
+        "DE": "Abendessen, 19 bis 22 Uhr"
+      },
+      "min": 5,
+      "modo": "pie",
+      "lat": 3.636,
+      "lng": 73.3662
+    },
+    {
+      "id": "thari-spa",
+      "img": "/ciudades/kunavaashi/img/bienestar-4.jpg",
+      "nombre": "Th·ari Spa & Serenity Garden",
+      "zona": {
+        "ES": "Jardín",
+        "EN": "Garden",
+        "DE": "Garten"
+      },
+      "d": {
+        "ES": "Masajes de terapeutas balineses entre plantas tropicales, y un jardín en silencio para seguir relajado.",
+        "EN": "Massages by Balinese therapists among tropical plants, and a quiet garden to stay relaxed.",
+        "DE": "Massagen balinesischer Therapeuten zwischen tropischen Pflanzen und ein stiller Garten zum Weiterentspannen."
+      },
+      "cuando": {
+        "ES": "De 10:00 a 20:00",
+        "EN": "10 am to 8 pm",
+        "DE": "10 bis 20 Uhr"
+      },
+      "min": 4,
+      "modo": "pie",
+      "lat": 3.6373,
+      "lng": 73.3643
+    },
+    {
+      "id": "clubhouse",
+      "img": "/ciudades/kunavaashi/img/clubhouse.jpg",
+      "nombre": "Clubhouse",
+      "zona": {
+        "ES": "Frente al mar",
+        "EN": "Seafront",
+        "DE": "Am Meer"
+      },
+      "d": {
+        "ES": "Terraza de madera con sillones para ver el atardecer con una copa.",
+        "EN": "Wooden deck with armchairs to watch the sunset, drink in hand.",
+        "DE": "Holzterrasse mit Sesseln, um mit einem Drink den Sonnenuntergang zu sehen."
+      },
+      "cuando": {
+        "ES": "Al atardecer, hacia las 18:00",
+        "EN": "At sunset, around 6 pm",
+        "DE": "Zum Sonnenuntergang, gegen 18 Uhr"
+      },
+      "min": 4,
+      "modo": "pie",
+      "lat": 3.63735,
+      "lng": 73.3654
+    },
+    {
+      "id": "muelle",
+      "img": "/ciudades/kunavaashi/img/delfines-1.jpg",
+      "nombre": "Jetty & island tip",
+      "zona": {
+        "ES": "Llegada",
+        "EN": "Arrival",
+        "DE": "Ankunft"
+      },
+      "d": {
+        "ES": "El muelle de madera por el que llegaste. Al final, agua turquesa a los dos lados y peces bajo las tablas.",
+        "EN": "The wooden jetty you arrived on. At the end, turquoise water on both sides and fish under the planks.",
+        "DE": "Der Holzsteg, über den du angekommen bist. Am Ende türkises Wasser auf beiden Seiten und Fische unter den Planken."
+      },
+      "cuando": {
+        "ES": "Al amanecer o con las primeras estrellas",
+        "EN": "At sunrise or under the first stars",
+        "DE": "Bei Sonnenaufgang oder unter den ersten Sternen"
+      },
+      "min": 5,
+      "modo": "pie",
+      "lat": 3.6358,
+      "lng": 73.3659
+    },
+    {
+      "id": "banco-arena",
+      "img": "/ciudades/kunavaashi/img/banco-arena.jpg",
+      "nombre": "Sandbank",
+      "zona": {
+        "ES": "En el atolón",
+        "EN": "In the atoll",
+        "DE": "Im Atoll"
+      },
+      "d": {
+        "ES": "Una isla de arena en mitad del mar, para bañarte y hacer la foto del viaje.",
+        "EN": "An island of sand in the middle of the sea, for a swim and the photo of the trip.",
+        "DE": "Eine Sandinsel mitten im Meer, zum Baden und für das Foto der Reise."
+      },
+      "cuando": {
+        "ES": "Por la mañana, antes del sol fuerte",
+        "EN": "In the morning, before the strong sun",
+        "DE": "Morgens, vor der starken Sonne"
+      },
+      "min": 10,
+      "modo": "barco",
+      "lat": 3.6312,
+      "lng": 73.379
+    },
+    {
+      "id": "fulidhoo",
+      "img": "/ciudades/kunavaashi/img/fulidhoo-6.jpg",
+      "nombre": "Fulidhoo",
+      "zona": {
+        "ES": "Isla local vecina",
+        "EN": "Neighbouring local island",
+        "DE": "Einheimische Nachbarinsel"
+      },
+      "d": {
+        "ES": "Pueblo de pescadores con calles de arena y tiburones nodriza en la orilla.",
+        "EN": "Fishing village with sandy streets and nurse sharks by the shore.",
+        "DE": "Fischerdorf mit Sandstraßen und Ammenhaien am Ufer."
+      },
+      "cuando": {
+        "ES": "A media tarde",
+        "EN": "Mid-afternoon",
+        "DE": "Am Nachmittag"
+      },
+      "min": 20,
+      "modo": "barco",
+      "lat": 3.6803,
+      "lng": 73.4158
+    }
+  ],
+  "rutas": [
+    {
+      "id": "delfines",
+      "expId": "ex1",
+      "img": "/ciudades/kunavaashi/img/delfines.jpg",
+      "titulo": {
+        "ES": "Delfines al atardecer",
+        "EN": "Sunset dolphins",
+        "DE": "Delfine im Sonnenuntergang"
+      },
+      "tipo": {
+        "ES": "Mar",
+        "EN": "Sea",
+        "DE": "Meer"
+      },
+      "dur": "2 h",
+      "d": {
+        "ES": "Sales en dhoni, el barco de madera de Maldivas, a buscar delfines acróbatas. Luego, el sol se hunde en el mar.",
+        "EN": "Head out on a dhoni, the Maldives' wooden boat, to find spinner dolphins. Then the sun sinks into the sea.",
+        "DE": "Mit dem Dhoni, dem Holzboot der Malediven, auf Delfinsuche. Danach versinkt die Sonne im Meer."
+      },
+      "salida": {
+        "ES": "Muelle del resort, cada tarde a las 17:00 (mínimo 4 personas)",
+        "EN": "Resort jetty, every afternoon at 5 pm (minimum 4 people)",
+        "DE": "Steg des Resorts, jeden Nachmittag um 17 Uhr (mindestens 4 Personen)"
+      },
+      "incluye": {
+        "ES": [
+          "Paseo de 2 h en dhoni",
+          "Tripulación local",
+          "Agua y refrescos a bordo"
+        ],
+        "EN": [
+          "2-hour dhoni cruise",
+          "Local crew",
+          "Water and soft drinks on board"
+        ],
+        "DE": [
+          "2 Std. Dhoni-Fahrt",
+          "Einheimische Crew",
+          "Wasser und Softdrinks an Bord"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Gafas de sol y gorra",
+          "Una chaqueta fina para la vuelta",
+          "El móvil cargado: los saltos son rápidos"
+        ],
+        "EN": [
+          "Sunglasses and a cap",
+          "A light jacket for the way back",
+          "A charged phone: the jumps are quick"
+        ],
+        "DE": [
+          "Sonnenbrille und Kappe",
+          "Eine leichte Jacke für die Rückfahrt",
+          "Ein geladenes Handy: die Sprünge sind schnell"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Muelle del resort",
+            "EN": "Resort jetty",
+            "DE": "Steg des Resorts"
+          },
+          "s": {
+            "ES": "Subes al dhoni",
+            "EN": "You board the dhoni",
+            "DE": "Du gehst an Bord"
+          },
+          "d": {
+            "ES": "La tripulación te espera en el muelle de madera. Te sientas en cubierta y salís hacia el canal.",
+            "EN": "The crew waits on the wooden jetty. Take a seat on deck and off you go towards the channel.",
+            "DE": "Die Crew wartet am Holzsteg. Setz dich aufs Deck, und los geht's zum Kanal."
+          },
+          "tip": {
+            "ES": "Coge sitio en la proa: es donde mejor se ven los delfines.",
+            "EN": "Grab a spot at the bow: it's the best place to see the dolphins.",
+            "DE": "Setz dich an den Bug: Von dort siehst du die Delfine am besten."
+          },
+          "hora": "17:00",
+          "dur": "10 min",
+          "img": "/ciudades/kunavaashi/img/delfines-1.jpg",
+          "lat": 3.6358,
+          "lng": 73.3659,
+          "tramo": "pie",
+          "duracionMin": 10
+        },
+        {
+          "n": {
+            "ES": "Kunaavashi Kandu",
+            "EN": "Kunaavashi Kandu",
+            "DE": "Kunaavashi Kandu"
+          },
+          "s": {
+            "ES": "El canal donde juegan los delfines",
+            "EN": "The channel where dolphins play",
+            "DE": "Der Kanal, in dem die Delfine spielen"
+          },
+          "d": {
+            "ES": "Un kandu es un paso entre arrecifes por donde entra el mar abierto. Aquí suelen aparecer grupos de delfines acróbatas.",
+            "EN": "A kandu is a gap in the reef where the open sea flows in. Groups of spinner dolphins often show up here.",
+            "DE": "Ein Kandu ist eine Lücke im Riff, durch die das offene Meer strömt. Hier tauchen oft Gruppen von Spinnerdelfinen auf."
+          },
+          "tip": {
+            "ES": "Mira las salpicaduras a lo lejos: suelen ser ellos saltando.",
+            "EN": "Watch for splashes in the distance: that's usually them jumping.",
+            "DE": "Achte auf Spritzer in der Ferne: Meist sind sie es, die springen."
+          },
+          "hora": "17:20",
+          "dur": "35 min",
+          "img": "/ciudades/kunavaashi/img/delfines.jpg",
+          "lat": 3.666,
+          "lng": 73.3824,
+          "tramo": "barco",
+          "duracionMin": 35,
+          "tramoDuracionMin": 10
+        },
+        {
+          "n": {
+            "ES": "Mar abierto al atardecer",
+            "EN": "Open sea at sunset",
+            "DE": "Offenes Meer bei Sonnenuntergang"
+          },
+          "s": {
+            "ES": "El sol se pone sobre el océano",
+            "EN": "The sun sets over the ocean",
+            "DE": "Die Sonne geht über dem Ozean unter"
+          },
+          "d": {
+            "ES": "El barco para el motor y solo se oye el agua. Cerca del ecuador el sol baja deprisa: en minutos el cielo se vuelve naranja y rosa.",
+            "EN": "The engine stops and all you hear is the water. Near the equator the sun drops fast: within minutes the sky turns orange and pink.",
+            "DE": "Der Motor geht aus, nur das Wasser ist zu hören. Nahe dem Äquator sinkt die Sonne schnell: in Minuten wird der Himmel orange und rosa."
+          },
+          "tip": {
+            "ES": "Graba un vídeo corto en vez de mil fotos: aquí el atardecer dura muy poco.",
+            "EN": "Shoot a short video instead of a hundred photos: sunset is brief here.",
+            "DE": "Dreh lieber ein kurzes Video statt hundert Fotos: der Sonnenuntergang ist hier kurz."
+          },
+          "hora": "18:00",
+          "dur": "35 min",
+          "img": "/ciudades/kunavaashi/img/delfines-3.jpg",
+          "lat": 3.652,
+          "lng": 73.354,
+          "tramo": "barco",
+          "duracionMin": 35,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Vuelta al muelle",
+            "EN": "Back to the jetty",
+            "DE": "Zurück zum Steg"
+          },
+          "s": {
+            "ES": "Las villas se encienden sobre el agua",
+            "EN": "The villas light up over the water",
+            "DE": "Die Villen leuchten über dem Wasser"
+          },
+          "d": {
+            "ES": "Vuelves con las primeras estrellas y la isla iluminada. Tienes tiempo de sobra para ducharte y cenar.",
+            "EN": "You return under the first stars with the island lit up. Plenty of time to shower and head to dinner.",
+            "DE": "Du kehrst unter den ersten Sternen zurück, die Insel ist beleuchtet. Genug Zeit zum Duschen und Abendessen."
+          },
+          "tip": {
+            "ES": "Reserva mesa en fl·äm·ē antes de salir: la parrilla sobre el agua se llena.",
+            "EN": "Book a table at fl·äm·ē before you leave: the over-water grill fills up.",
+            "DE": "Reservier vorher einen Tisch im fl·äm·ē: der Grill über dem Wasser ist schnell voll."
+          },
+          "hora": "18:45",
+          "dur": "15 min",
+          "img": "/ciudades/kunavaashi/img/delfines-4.jpg",
+          "lat": 3.6358,
+          "lng": 73.3659,
+          "tramo": "barco",
+          "duracionMin": 15,
+          "tramoDuracionMin": 10
+        }
+      ],
+      "fotos": [
+        "/ciudades/kunavaashi/img/delfines.jpg",
+        "/ciudades/kunavaashi/img/delfines-1.jpg",
+        "/ciudades/kunavaashi/img/delfines-2.jpg",
+        "/ciudades/kunavaashi/img/delfines-3.jpg",
+        "/ciudades/kunavaashi/img/delfines-4.jpg",
+        "/ciudades/kunavaashi/img/delfines-5.jpg"
+      ],
+      "duracionMin": 120,
+      "distanciaKm": 10.0,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Se sube al dhoni por una pasarela desde el muelle; la tripulación te ayuda. Con silla de ruedas, pregúntalo antes en recepción.",
+        "EN": "You board the dhoni via a gangway from the jetty; the crew will help. If you use a wheelchair, ask reception first.",
+        "DE": "Man steigt über eine Planke vom Steg ins Dhoni; die Crew hilft. Mit Rollstuhl bitte vorher an der Rezeption fragen."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 3.6358,
+        "lng": 73.3659,
+        "foto": "/ciudades/kunavaashi/img/delfines-1.jpg",
+        "texto": {
+          "ES": "Muelle del resort, junto al embarcadero de los dhonis. Llega 10 minutos antes.",
+          "EN": "Resort jetty, by the dhoni landing. Arrive 10 minutes early.",
+          "DE": "Steg des Resorts, am Dhoni-Anleger. Komm 10 Minuten früher."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Bebidas alcohólicas",
+          "Fotos profesionales"
+        ],
+        "EN": [
+          "Alcoholic drinks",
+          "Professional photos"
+        ],
+        "DE": [
+          "Alkoholische Getränke",
+          "Professionelle Fotos"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Si hace mal tiempo, se cambia de día (a confirmar con el resort).",
+        "EN": "Free up to 24 h before. In bad weather it moves to another day (to be confirmed with the resort).",
+        "DE": "Kostenlos bis 24 Std. vorher. Bei schlechtem Wetter wird sie verschoben (mit dem Resort zu bestätigen)."
+      },
+      "salidasFijas": [
+        "17:00"
+      ],
+      "precioDesde": 95
+    },
+    {
+      "id": "banco-arena",
+      "expId": "ex2",
+      "img": "/ciudades/kunavaashi/img/banco-arena.jpg",
+      "titulo": {
+        "ES": "Pecio y banco de arena",
+        "EN": "Shipwreck and sandbank",
+        "DE": "Wrack und Sandbank"
+      },
+      "tipo": {
+        "ES": "Snorkel",
+        "EN": "Snorkelling",
+        "DE": "Schnorcheln"
+      },
+      "dur": "3 h",
+      "d": {
+        "ES": "Snorkel sobre un barco hundido lleno de peces y, después, una lengua de arena blanca solo para vosotros.",
+        "EN": "Snorkel over a sunken ship full of fish, then a strip of white sand just for you.",
+        "DE": "Schnorcheln über einem versunkenen Schiff voller Fische, danach ein weißer Sandstreifen nur für euch."
+      },
+      "salida": {
+        "ES": "Muelle del resort, por la mañana a las 9:00",
+        "EN": "Resort jetty, in the morning at 9 am",
+        "DE": "Steg des Resorts, morgens um 9 Uhr"
+      },
+      "incluye": {
+        "ES": [
+          "Lancha ida y vuelta",
+          "Equipo de snorkel y chaleco",
+          "Guía de snorkel",
+          "Agua, fruta y toallas"
+        ],
+        "EN": [
+          "Return speedboat",
+          "Snorkel gear and vest",
+          "Snorkel guide",
+          "Water, fruit and towels"
+        ],
+        "DE": [
+          "Speedboot hin und zurück",
+          "Schnorchelausrüstung und Weste",
+          "Schnorchelguide",
+          "Wasser, Obst und Handtücher"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Bañador puesto",
+          "Crema solar que no dañe el coral",
+          "Camiseta de manga larga para el sol",
+          "Gorra: en el banco no hay sombra"
+        ],
+        "EN": [
+          "Swimwear on",
+          "Reef-safe sunscreen",
+          "Long-sleeved top for the sun",
+          "A cap: there's no shade on the sandbank"
+        ],
+        "DE": [
+          "Badesachen schon an",
+          "Korallenfreundliche Sonnencreme",
+          "Langarmshirt gegen die Sonne",
+          "Kappe: auf der Sandbank gibt es keinen Schatten"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Muelle del resort",
+            "EN": "Resort jetty",
+            "DE": "Steg des Resorts"
+          },
+          "s": {
+            "ES": "Equipo, chaleco y a la lancha",
+            "EN": "Gear, vest and into the boat",
+            "DE": "Ausrüstung, Weste und ab ins Boot"
+          },
+          "d": {
+            "ES": "El guía te da gafas, tubo y aletas de tu talla y te explica cómo será el día.",
+            "EN": "The guide hands you a mask, snorkel and fins in your size and explains the day.",
+            "DE": "Der Guide gibt dir Maske, Schnorchel und Flossen in deiner Größe und erklärt den Tag."
+          },
+          "tip": {
+            "ES": "Prueba las gafas en el muelle: que no entre agua te cambia el día.",
+            "EN": "Try the mask on at the jetty: a mask that doesn't leak makes your day.",
+            "DE": "Probier die Maske am Steg: eine dichte Maske macht den Tag."
+          },
+          "hora": "09:00",
+          "dur": "5 min",
+          "img": "/ciudades/kunavaashi/img/dhoni.jpg",
+          "lat": 3.6358,
+          "lng": 73.3659,
+          "tramo": "pie",
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "El pecio",
+            "EN": "The shipwreck",
+            "DE": "Das Wrack"
+          },
+          "s": {
+            "ES": "Un barco hundido convertido en arrecife",
+            "EN": "A sunken ship turned into a reef",
+            "DE": "Ein versunkenes Schiff, jetzt ein Riff"
+          },
+          "d": {
+            "ES": "Desde arriba ves el casco cubierto de coral y bancos de peces entrando y saliendo. El de Keyodhoo es el más famoso de Vaavu.",
+            "EN": "From above you see the hull covered in coral, with schools of fish swimming in and out. The Keyodhoo wreck is Vaavu's most famous.",
+            "DE": "Von oben siehst du den mit Korallen bewachsenen Rumpf und Fischschwärme, die ein- und ausschwimmen. Das Keyodhoo-Wrack ist das bekannteste in Vaavu."
+          },
+          "tip": {
+            "ES": "No toques ni te apoyes en el pecio: el coral es frágil y algunas chapas cortan.",
+            "EN": "Don't touch or stand on the wreck: the coral is fragile and some metal is sharp.",
+            "DE": "Wrack nicht berühren oder darauf stehen: Korallen sind empfindlich und manches Metall ist scharf."
+          },
+          "hora": "09:40",
+          "dur": "45 min",
+          "img": "/ciudades/kunavaashi/img/banco-arena-1.jpg",
+          "lat": 3.4621,
+          "lng": 73.55,
+          "tramo": "barco",
+          "duracionMin": 45,
+          "tramoDuracionMin": 35
+        },
+        {
+          "n": {
+            "ES": "Banco de arena",
+            "EN": "Sandbank",
+            "DE": "Sandbank"
+          },
+          "s": {
+            "ES": "Una isla de arena en medio del mar",
+            "EN": "An island of sand in the middle of the sea",
+            "DE": "Eine Sandinsel mitten im Meer"
+          },
+          "d": {
+            "ES": "Solo arena blanca y agua turquesa alrededor. Te bañas, flotas y, si lo pediste, hay picnic.",
+            "EN": "Just white sand and turquoise water all around. Swim, float and, if you ordered one, enjoy a picnic.",
+            "DE": "Nur weißer Sand und türkises Wasser ringsum. Schwimmen, treiben lassen und, wenn bestellt, Picknick."
+          },
+          "tip": {
+            "ES": "Camina hasta la punta del banco: el agua cambia de color en cada paso.",
+            "EN": "Walk to the tip of the sandbank: the water changes colour with every step.",
+            "DE": "Geh bis zur Spitze der Sandbank: das Wasser wechselt bei jedem Schritt die Farbe."
+          },
+          "hora": "11:00",
+          "dur": "55 min",
+          "img": "/ciudades/kunavaashi/img/banco-arena.jpg",
+          "lat": 3.6312,
+          "lng": 73.379,
+          "tramo": "barco",
+          "duracionMin": 55,
+          "tramoDuracionMin": 35
+        },
+        {
+          "n": {
+            "ES": "Vuelta al resort",
+            "EN": "Back to the resort",
+            "DE": "Zurück ins Resort"
+          },
+          "s": {
+            "ES": "Directo a la ducha y a comer",
+            "EN": "Straight to the shower and lunch",
+            "DE": "Direkt unter die Dusche und zum Mittagessen"
+          },
+          "d": {
+            "ES": "Diez minutos de lancha y estás en el muelle, con la tarde libre por delante.",
+            "EN": "Ten minutes by speedboat and you're at the jetty, with the afternoon free.",
+            "DE": "Zehn Minuten mit dem Speedboot, und du bist am Steg, der Nachmittag ist frei."
+          },
+          "tip": {
+            "ES": "Bebe agua aunque no tengas sed: el sol del mar engaña.",
+            "EN": "Drink water even if you're not thirsty: the sun at sea is deceptive.",
+            "DE": "Trink Wasser, auch ohne Durst: die Sonne auf dem Meer täuscht."
+          },
+          "hora": "11:55",
+          "dur": "5 min",
+          "img": "/ciudades/kunavaashi/img/banco-arena-4.jpg",
+          "lat": 3.6358,
+          "lng": 73.3659,
+          "tramo": "barco",
+          "duracionMin": 5,
+          "tramoDuracionMin": 5
+        }
+      ],
+      "fotos": [
+        "/ciudades/kunavaashi/img/banco-arena.jpg",
+        "/ciudades/kunavaashi/img/banco-arena-1.jpg",
+        "/ciudades/kunavaashi/img/banco-arena-2.jpg",
+        "/ciudades/kunavaashi/img/banco-arena-3.jpg",
+        "/ciudades/kunavaashi/img/banco-arena-4.jpg",
+        "/ciudades/kunavaashi/img/banco-arena-5.jpg"
+      ],
+      "duracionMin": 180,
+      "distanciaKm": 60.0,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Hay que saber nadar y bajar de la lancha al agua por una escalerilla. No es apta para silla de ruedas.",
+        "EN": "You need to be able to swim and climb down a ladder from the boat into the water. Not suitable for wheelchairs.",
+        "DE": "Du musst schwimmen können und über eine Leiter vom Boot ins Wasser steigen. Nicht rollstuhlgerecht."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 3.6358,
+        "lng": 73.3659,
+        "foto": "/ciudades/kunavaashi/img/delfines-1.jpg",
+        "texto": {
+          "ES": "Muelle del resort. El centro de buceo te da el equipo allí mismo. Llega 10 minutos antes.",
+          "EN": "Resort jetty. The dive centre hands out the gear right there. Arrive 10 minutes early.",
+          "DE": "Steg des Resorts. Das Tauchcenter gibt die Ausrüstung direkt dort aus. Komm 10 Minuten früher."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Picnic en el banco de arena (opcional)",
+          "Fotos bajo el agua"
+        ],
+        "EN": [
+          "Picnic on the sandbank (optional)",
+          "Underwater photos"
+        ],
+        "DE": [
+          "Picknick auf der Sandbank (optional)",
+          "Unterwasserfotos"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Si hace mal tiempo, se cambia de día (a confirmar con el resort).",
+        "EN": "Free up to 24 h before. In bad weather it moves to another day (to be confirmed with the resort).",
+        "DE": "Kostenlos bis 24 Std. vorher. Bei schlechtem Wetter wird sie verschoben (mit dem Resort zu bestätigen)."
+      },
+      "salidasFijas": [
+        "09:00"
+      ],
+      "precioDesde": 145
+    },
+    {
+      "id": "fulidhoo",
+      "expId": "ex5",
+      "img": "/ciudades/kunavaashi/img/fulidhoo.jpg",
+      "titulo": {
+        "ES": "Isla local de Fulidhoo",
+        "EN": "Fulidhoo local island",
+        "DE": "Einheimische Insel Fulidhoo"
+      },
+      "tipo": {
+        "ES": "Cultura",
+        "EN": "Culture",
+        "DE": "Kultur"
+      },
+      "dur": "2 h",
+      "d": {
+        "ES": "Un pueblo de pescadores de verdad: calles de arena, tiburones nodriza en la orilla y el tambor bodu beru.",
+        "EN": "A real fishing village: sandy streets, nurse sharks by the shore and the bodu beru drum.",
+        "DE": "Ein echtes Fischerdorf: Sandstraßen, Ammenhaie am Ufer und die Bodu-Beru-Trommel."
+      },
+      "salida": {
+        "ES": "Muelle del resort, por la tarde a las 15:30",
+        "EN": "Resort jetty, in the afternoon at 3:30 pm",
+        "DE": "Steg des Resorts, nachmittags um 15:30 Uhr"
+      },
+      "incluye": {
+        "ES": [
+          "Barco ida y vuelta (unos 20 min)",
+          "Guía local",
+          "Té y dulce maldivo"
+        ],
+        "EN": [
+          "Return boat (about 20 min)",
+          "Local guide",
+          "Tea and a Maldivian snack"
+        ],
+        "DE": [
+          "Boot hin und zurück (ca. 20 Min.)",
+          "Einheimischer Guide",
+          "Tee und maledivischer Snack"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Ropa que cubra hombros y rodillas para pasear por el pueblo",
+          "Bañador para la playa de turistas",
+          "Algo de dinero para la tienda o un recuerdo",
+          "Sandalias: las calles son de arena"
+        ],
+        "EN": [
+          "Clothes covering shoulders and knees for the village",
+          "Swimwear for the tourist beach",
+          "Some cash for the shop or a souvenir",
+          "Sandals: the streets are sand"
+        ],
+        "DE": [
+          "Kleidung, die Schultern und Knie bedeckt, für das Dorf",
+          "Badesachen für den Touristenstrand",
+          "Etwas Bargeld für den Laden oder ein Souvenir",
+          "Sandalen: die Straßen sind aus Sand"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Muelle del resort",
+            "EN": "Resort jetty",
+            "DE": "Steg des Resorts"
+          },
+          "s": {
+            "ES": "Rumbo a la isla vecina",
+            "EN": "Off to the neighbouring island",
+            "DE": "Auf zur Nachbarinsel"
+          },
+          "d": {
+            "ES": "Unos 7 km de mar separan el resort de Fulidhoo, un pueblo de pescadores de Vaavu.",
+            "EN": "About 7 km of sea separate the resort from Fulidhoo, a fishing village in Vaavu.",
+            "DE": "Rund 7 km Meer trennen das Resort von Fulidhoo, einem Fischerdorf in Vaavu."
+          },
+          "tip": {
+            "ES": "Ponte la ropa del pueblo ya en el resort: el bañador, debajo.",
+            "EN": "Wear your village clothes from the resort, swimwear underneath.",
+            "DE": "Zieh die Dorfkleidung schon im Resort an, die Badesachen drunter."
+          },
+          "hora": "15:30",
+          "dur": "5 min",
+          "img": "/ciudades/kunavaashi/img/dhoni.jpg",
+          "lat": 3.6358,
+          "lng": 73.3659,
+          "tramo": "pie",
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Puerto de Fulidhoo",
+            "EN": "Fulidhoo harbour",
+            "DE": "Hafen von Fulidhoo"
+          },
+          "s": {
+            "ES": "Tiburones nodriza a tus pies",
+            "EN": "Nurse sharks at your feet",
+            "DE": "Ammenhaie zu deinen Füßen"
+          },
+          "d": {
+            "ES": "En el agua poco profunda del puerto nadan tiburones nodriza y rayas, atraídos por los restos de pescado. Son tranquilos y se ven desde la orilla.",
+            "EN": "Nurse sharks and rays swim in the harbour's shallow water, drawn by fish scraps. They're calm and easy to see from the shore.",
+            "DE": "Im flachen Hafenwasser schwimmen Ammenhaie und Rochen, angelockt von Fischresten. Sie sind ruhig und vom Ufer aus gut zu sehen."
+          },
+          "tip": {
+            "ES": "Míralos desde fuera del agua y no les des comida.",
+            "EN": "Watch them from outside the water and don't feed them.",
+            "DE": "Beobachte sie vom Ufer aus und füttere sie nicht."
+          },
+          "hora": "15:55",
+          "dur": "20 min",
+          "img": "/ciudades/kunavaashi/img/fulidhoo-4.jpg",
+          "lat": 3.6797,
+          "lng": 73.4148,
+          "tramo": "barco",
+          "duracionMin": 20,
+          "tramoDuracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Calles de arena y mezquita",
+            "EN": "Sandy streets and mosque",
+            "DE": "Sandstraßen und Moschee"
+          },
+          "s": {
+            "ES": "El pueblo, a paso lento",
+            "EN": "The village, at a slow pace",
+            "DE": "Das Dorf, ganz gemächlich"
+          },
+          "d": {
+            "ES": "Calles de arena blanca, casas bajas de colores y la mezquita en el centro. Aquí no hay coches.",
+            "EN": "White sand streets, low colourful houses and the mosque at the centre. There are no cars here.",
+            "DE": "Weiße Sandstraßen, niedrige bunte Häuser und die Moschee in der Mitte. Autos gibt es hier nicht."
+          },
+          "tip": {
+            "ES": "Saluda con un «assalaamu alaikum»: abre sonrisas.",
+            "EN": "Greet people with 'assalaamu alaikum': it brings out smiles.",
+            "DE": "Grüß mit „Assalaamu alaikum“: das bringt ein Lächeln."
+          },
+          "hora": "16:15",
+          "dur": "20 min",
+          "img": "/ciudades/kunavaashi/img/fulidhoo-1.jpg",
+          "lat": 3.6803,
+          "lng": 73.4158,
+          "tramo": "pie",
+          "duracionMin": 20,
+          "tramoDuracionMin": 3
+        },
+        {
+          "n": {
+            "ES": "Té y bodu beru",
+            "EN": "Tea and bodu beru",
+            "DE": "Tee und Bodu Beru"
+          },
+          "s": {
+            "ES": "El ritmo de Maldivas",
+            "EN": "The rhythm of the Maldives",
+            "DE": "Der Rhythmus der Malediven"
+          },
+          "d": {
+            "ES": "Tomas té con dulces locales y escuchas el bodu beru: tambores que empiezan lentos y acaban en un ritmo frenético.",
+            "EN": "Have tea with local sweets and listen to bodu beru: drums that start slow and end in a frenzy.",
+            "DE": "Tee mit einheimischen Süßigkeiten, dazu Bodu Beru: Trommeln, die langsam beginnen und wild enden."
+          },
+          "tip": {
+            "ES": "Si te invitan a bailar, di que sí: es parte de la fiesta.",
+            "EN": "If they ask you to dance, say yes: it's part of the fun.",
+            "DE": "Wenn sie dich zum Tanzen einladen, sag ja: das gehört dazu."
+          },
+          "hora": "16:35",
+          "dur": "20 min",
+          "img": "/ciudades/kunavaashi/img/fulidhoo-3.jpg",
+          "lat": 3.6807,
+          "lng": 73.4163,
+          "tramo": "pie",
+          "duracionMin": 20,
+          "tramoDuracionMin": 3
+        },
+        {
+          "n": {
+            "ES": "Playa de Fulidhoo",
+            "EN": "Fulidhoo beach",
+            "DE": "Strand von Fulidhoo"
+          },
+          "s": {
+            "ES": "Un baño antes de volver",
+            "EN": "A swim before heading back",
+            "DE": "Ein Bad vor der Rückfahrt"
+          },
+          "d": {
+            "ES": "La playa para turistas, la «bikini beach», es la única zona del pueblo donde puedes estar en bañador.",
+            "EN": "The tourist beach, the 'bikini beach', is the only spot in the village where swimwear is fine.",
+            "DE": "Der Touristenstrand, der „Bikini Beach“, ist der einzige Ort im Dorf, an dem Badekleidung okay ist."
+          },
+          "tip": {
+            "ES": "Fuera de esta playa, vuelve a taparte para cruzar el pueblo.",
+            "EN": "Outside this beach, cover up again to walk through the village.",
+            "DE": "Außerhalb dieses Strandes zieh dich für den Weg durchs Dorf wieder an."
+          },
+          "hora": "16:55",
+          "dur": "15 min",
+          "img": "/ciudades/kunavaashi/img/fulidhoo-5.jpg",
+          "lat": 3.6794,
+          "lng": 73.414,
+          "tramo": "pie",
+          "duracionMin": 15,
+          "tramoDuracionMin": 4
+        }
+      ],
+      "fotos": [
+        "/ciudades/kunavaashi/img/fulidhoo.jpg",
+        "/ciudades/kunavaashi/img/fulidhoo-1.jpg",
+        "/ciudades/kunavaashi/img/fulidhoo-2.jpg",
+        "/ciudades/kunavaashi/img/fulidhoo-3.jpg",
+        "/ciudades/kunavaashi/img/fulidhoo-4.jpg",
+        "/ciudades/kunavaashi/img/fulidhoo-5.jpg",
+        "/ciudades/kunavaashi/img/fulidhoo-6.jpg"
+      ],
+      "duracionMin": 120,
+      "distanciaKm": 15.0,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Las calles son de arena suelta: difícil con silla de ruedas o carrito. Se sube al barco por una pasarela.",
+        "EN": "The streets are loose sand: hard going with a wheelchair or pushchair. You board via a gangway.",
+        "DE": "Die Straßen sind aus losem Sand: schwierig mit Rollstuhl oder Kinderwagen. Einstieg über eine Planke."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 3.6358,
+        "lng": 73.3659,
+        "foto": "/ciudades/kunavaashi/img/delfines-1.jpg",
+        "texto": {
+          "ES": "Muelle del resort. Ven con hombros y rodillas cubiertos; el bañador, debajo.",
+          "EN": "Resort jetty. Come with shoulders and knees covered; swimwear underneath.",
+          "DE": "Steg des Resorts. Komm mit bedeckten Schultern und Knien, Badesachen drunter."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Compras y recuerdos",
+          "Bebidas alcohólicas (en las islas locales no se sirve alcohol)"
+        ],
+        "EN": [
+          "Shopping and souvenirs",
+          "Alcoholic drinks (no alcohol is served on local islands)"
+        ],
+        "DE": [
+          "Einkäufe und Souvenirs",
+          "Alkohol (auf einheimischen Inseln wird kein Alkohol ausgeschenkt)"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Si hace mal tiempo, se cambia de día (a confirmar con el resort).",
+        "EN": "Free up to 24 h before. In bad weather it moves to another day (to be confirmed with the resort).",
+        "DE": "Kostenlos bis 24 Std. vorher. Bei schlechtem Wetter wird sie verschoben (mit dem Resort zu bestätigen)."
+      },
+      "salidasFijas": [
+        "15:30"
+      ],
+      "precioDesde": 70
+    },
+    {
+      "id": "arrecife",
+      "expId": "ex4",
+      "img": "/ciudades/kunavaashi/img/arrecife.jpg",
+      "titulo": {
+        "ES": "Tortugas en el arrecife de casa",
+        "EN": "Turtles on the house reef",
+        "DE": "Schildkröten am Hausriff"
+      },
+      "tipo": {
+        "ES": "Snorkel",
+        "EN": "Snorkelling",
+        "DE": "Schnorcheln"
+      },
+      "dur": "1 h 30 min",
+      "d": {
+        "ES": "Entras al agua desde la playa y, con un guía, buscas tortugas entre corales y peces de colores.",
+        "EN": "Walk into the water from the beach and, with a guide, look for turtles among corals and colourful fish.",
+        "DE": "Vom Strand ins Wasser und mit Guide auf Schildkrötensuche zwischen Korallen und bunten Fischen."
+      },
+      "salida": {
+        "ES": "Playa del arrecife de casa, a las 10:30",
+        "EN": "House reef beach, at 10:30 am",
+        "DE": "Hausriff-Strand, um 10:30 Uhr"
+      },
+      "incluye": {
+        "ES": [
+          "Guía de snorkel",
+          "Gafas, tubo, aletas y chaleco",
+          "Toallas y agua"
+        ],
+        "EN": [
+          "Snorkel guide",
+          "Mask, snorkel, fins and vest",
+          "Towels and water"
+        ],
+        "DE": [
+          "Schnorchelguide",
+          "Maske, Schnorchel, Flossen und Weste",
+          "Handtücher und Wasser"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Bañador puesto",
+          "Crema solar que no dañe el coral",
+          "Camiseta de licra si tienes"
+        ],
+        "EN": [
+          "Swimwear on",
+          "Reef-safe sunscreen",
+          "A rash vest if you have one"
+        ],
+        "DE": [
+          "Badesachen schon an",
+          "Korallenfreundliche Sonnencreme",
+          "Ein Lycra-Shirt, falls vorhanden"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Playa del arrecife",
+            "EN": "House reef beach",
+            "DE": "Hausriff-Strand"
+          },
+          "s": {
+            "ES": "Equipo y unas indicaciones",
+            "EN": "Gear and a quick briefing",
+            "DE": "Ausrüstung und kurze Einweisung"
+          },
+          "d": {
+            "ES": "En la arena el guía te ajusta el equipo y te explica las señales. El arrecife empieza a pocos metros de la orilla.",
+            "EN": "On the sand the guide fits your gear and explains the hand signals. The reef starts just a few metres from shore.",
+            "DE": "Am Strand passt der Guide die Ausrüstung an und erklärt die Handzeichen. Das Riff beginnt wenige Meter vom Ufer."
+          },
+          "tip": {
+            "ES": "Escupe un poco en las gafas y acláralas: así no se empañan.",
+            "EN": "Spit in your mask and rinse it: it stops it fogging up.",
+            "DE": "Spuck in die Maske und spül sie aus: so beschlägt sie nicht."
+          },
+          "hora": "10:30",
+          "dur": "15 min",
+          "img": "/ciudades/kunavaashi/img/arrecife-1.jpg",
+          "lat": 3.637,
+          "lng": 73.3638,
+          "tramo": "pie",
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "El borde del arrecife",
+            "EN": "The reef edge",
+            "DE": "Die Riffkante"
+          },
+          "s": {
+            "ES": "Donde el agua pasa de turquesa a azul",
+            "EN": "Where turquoise turns to deep blue",
+            "DE": "Wo Türkis in Tiefblau übergeht"
+          },
+          "d": {
+            "ES": "El fondo cae de golpe y aparecen peces loro, peces cirujano y, con suerte, alguna raya o una manta a lo lejos.",
+            "EN": "The bottom drops away and parrotfish, surgeonfish and, with luck, a ray or a distant manta appear.",
+            "DE": "Der Grund fällt steil ab, Papageifische, Doktorfische und mit Glück ein Rochen oder ein Manta in der Ferne tauchen auf."
+          },
+          "tip": {
+            "ES": "Flota quieto y deja que los peces se acerquen.",
+            "EN": "Float still and let the fish come to you.",
+            "DE": "Bleib ruhig treiben und lass die Fische zu dir kommen."
+          },
+          "hora": "10:45",
+          "dur": "25 min",
+          "img": "/ciudades/kunavaashi/img/arrecife-2.jpg",
+          "lat": 3.6375,
+          "lng": 73.3631,
+          "tramo": "pie",
+          "duracionMin": 25,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Zona de tortugas",
+            "EN": "Turtle zone",
+            "DE": "Schildkrötenzone"
+          },
+          "s": {
+            "ES": "Tortugas carey y verdes",
+            "EN": "Hawksbill and green turtles",
+            "DE": "Echte Karett- und Suppenschildkröten"
+          },
+          "d": {
+            "ES": "Las tortugas vienen a comer al arrecife y suben a respirar cada pocos minutos. El guía sabe dónde suelen estar.",
+            "EN": "Turtles come to feed on the reef and rise to breathe every few minutes. The guide knows where they usually are.",
+            "DE": "Die Schildkröten fressen am Riff und kommen alle paar Minuten zum Atmen hoch. Der Guide weiß, wo sie meist sind."
+          },
+          "tip": {
+            "ES": "Déjale espacio, unos 3 metros, y nunca te pongas encima cuando sube a respirar.",
+            "EN": "Give it space, about 3 metres, and never block it when it rises to breathe.",
+            "DE": "Halte etwa 3 Meter Abstand und versperr ihr nie den Weg nach oben zum Atmen."
+          },
+          "hora": "11:10",
+          "dur": "30 min",
+          "img": "/ciudades/kunavaashi/img/arrecife.jpg",
+          "lat": 3.6363,
+          "lng": 73.3632,
+          "tramo": "pie",
+          "duracionMin": 30,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Jardín de coral",
+            "EN": "Coral garden",
+            "DE": "Korallengarten"
+          },
+          "s": {
+            "ES": "Último paseo y vuelta a la playa",
+            "EN": "A last swim and back to the beach",
+            "DE": "Letzte Runde und zurück zum Strand"
+          },
+          "d": {
+            "ES": "Corales en forma de mesa y de cuerno, con nubes de peces pequeños. Desde aquí nadas tranquilo a la orilla.",
+            "EN": "Table and staghorn corals with clouds of tiny fish. From here it's an easy swim back to shore.",
+            "DE": "Tisch- und Geweihkorallen mit Wolken kleiner Fische. Von hier schwimmst du entspannt zurück ans Ufer."
+          },
+          "tip": {
+            "ES": "Vuelve por la noche al snorkel nocturno: el arrecife es otro.",
+            "EN": "Come back for the night snorkel: the reef is a different world.",
+            "DE": "Komm zum Nachtschnorcheln wieder: das Riff ist dann eine andere Welt."
+          },
+          "hora": "11:40",
+          "dur": "20 min",
+          "img": "/ciudades/kunavaashi/img/arrecife-6.jpg",
+          "lat": 3.6358,
+          "lng": 73.364,
+          "tramo": "pie",
+          "duracionMin": 20,
+          "tramoDuracionMin": 5
+        }
+      ],
+      "fotos": [
+        "/ciudades/kunavaashi/img/arrecife.jpg",
+        "/ciudades/kunavaashi/img/arrecife-1.jpg",
+        "/ciudades/kunavaashi/img/arrecife-2.jpg",
+        "/ciudades/kunavaashi/img/arrecife-4.jpg",
+        "/ciudades/kunavaashi/img/arrecife-5.jpg",
+        "/ciudades/kunavaashi/img/arrecife-6.jpg",
+        "/ciudades/kunavaashi/img/arrecife-7.jpg"
+      ],
+      "duracionMin": 90,
+      "distanciaKm": 1.0,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Se entra caminando desde la playa. Hay que saber nadar; el chaleco ayuda a flotar. No apta para silla de ruedas.",
+        "EN": "You walk in from the beach. You need to be able to swim; the vest helps you float. Not suitable for wheelchairs.",
+        "DE": "Man geht vom Strand aus ins Wasser. Schwimmen ist nötig, die Weste hilft beim Treiben. Nicht rollstuhlgerecht."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 3.637,
+        "lng": 73.3638,
+        "foto": "/ciudades/kunavaashi/img/arrecife-1.jpg",
+        "texto": {
+          "ES": "Playa del arrecife de casa, junto al punto de snorkel. El guía te espera con el equipo.",
+          "EN": "House reef beach, by the snorkel entry point. The guide waits there with the gear.",
+          "DE": "Hausriff-Strand, am Schnorchel-Einstieg. Der Guide wartet dort mit der Ausrüstung."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Fotos bajo el agua",
+          "Snorkel nocturno (se reserva aparte)"
+        ],
+        "EN": [
+          "Underwater photos",
+          "Night snorkel (booked separately)"
+        ],
+        "DE": [
+          "Unterwasserfotos",
+          "Nachtschnorcheln (separat buchbar)"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Si hace mal tiempo, se cambia de día (a confirmar con el resort).",
+        "EN": "Free up to 24 h before. In bad weather it moves to another day (to be confirmed with the resort).",
+        "DE": "Kostenlos bis 24 Std. vorher. Bei schlechtem Wetter wird sie verschoben (mit dem Resort zu bestätigen)."
+      },
+      "salidasFijas": [
+        "10:30"
+      ],
+      "precioDesde": 85
+    },
+    {
+      "id": "bienestar",
+      "expId": "sv1",
+      "img": "/ciudades/kunavaashi/img/bienestar.jpg",
+      "titulo": {
+        "ES": "Mañana de bienestar",
+        "EN": "Wellness morning",
+        "DE": "Wellness-Vormittag"
+      },
+      "tipo": {
+        "ES": "Bienestar",
+        "EN": "Wellness",
+        "DE": "Wellness"
+      },
+      "dur": "6 h 30 min",
+      "d": {
+        "ES": "Yoga al amanecer, desayuno sin prisa, jardín, spa y un cóctel junto a la piscina. Todo a pocos pasos.",
+        "EN": "Sunrise yoga, an unhurried breakfast, the garden, the spa and a cocktail by the pool. All a few steps apart.",
+        "DE": "Yoga bei Sonnenaufgang, Frühstück ohne Eile, Garten, Spa und ein Cocktail am Pool. Alles nur ein paar Schritte entfernt."
+      },
+      "salida": {
+        "ES": "Piscina principal, a las 6:30",
+        "EN": "Main pool, at 6:30 am",
+        "DE": "Hauptpool, um 6:30 Uhr"
+      },
+      "incluye": {
+        "ES": [
+          "Clase de yoga al amanecer",
+          "Tratamiento Th·ari Indulgence en el Th·ari Spa",
+          "Un NOOE Colada en Vēlì"
+        ],
+        "EN": [
+          "Sunrise yoga class",
+          "Th·ari Indulgence treatment at Th·ari Spa",
+          "A NOOE Colada at Vēlì"
+        ],
+        "DE": [
+          "Yogastunde bei Sonnenaufgang",
+          "Th·ari-Indulgence-Behandlung im Th·ari Spa",
+          "Ein NOOE Colada in der Vēlì"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Ropa cómoda para el yoga",
+          "Una botella de agua",
+          "Bañador para la piscina"
+        ],
+        "EN": [
+          "Comfortable clothes for yoga",
+          "A water bottle",
+          "Swimwear for the pool"
+        ],
+        "DE": [
+          "Bequeme Kleidung für Yoga",
+          "Eine Wasserflasche",
+          "Badesachen für den Pool"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Yoga junto a la piscina",
+            "EN": "Poolside yoga",
+            "DE": "Yoga am Pool"
+          },
+          "s": {
+            "ES": "Saludo al sol, de verdad",
+            "EN": "A real sun salutation",
+            "DE": "Ein echter Sonnengruß"
+          },
+          "d": {
+            "ES": "Esterilla junto a la piscina infinita y el cielo aclarando sobre el mar. Una hora suave, para todos los niveles.",
+            "EN": "A mat by the infinity pool as the sky brightens over the sea. A gentle hour for all levels.",
+            "DE": "Matte am Infinity-Pool, während der Himmel über dem Meer hell wird. Eine sanfte Stunde für alle Level."
+          },
+          "tip": {
+            "ES": "Llega 5 minutos antes para coger sitio mirando al este.",
+            "EN": "Arrive 5 minutes early to get a spot facing east.",
+            "DE": "Komm 5 Minuten früher für einen Platz Richtung Osten."
+          },
+          "hora": "06:30",
+          "dur": "1 h",
+          "img": "/ciudades/kunavaashi/img/bienestar-1.jpg",
+          "lat": 3.6368,
+          "lng": 73.365,
+          "tramo": "pie",
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Desayuno en Ìrǔ",
+            "EN": "Breakfast at Ìrǔ",
+            "DE": "Frühstück im Ìrǔ"
+          },
+          "s": {
+            "ES": "Buffet con vistas al mar",
+            "EN": "Buffet with sea views",
+            "DE": "Buffet mit Meerblick"
+          },
+          "d": {
+            "ES": "Fruta tropical, zumos y cocina al momento. Prueba el mas huni, el desayuno típico de Maldivas.",
+            "EN": "Tropical fruit, juices and cooked-to-order dishes. Try mas huni, the classic Maldivian breakfast.",
+            "DE": "Tropische Früchte, Säfte und frisch zubereitete Gerichte. Probier Mas Huni, das typische maledivische Frühstück."
+          },
+          "tip": {
+            "ES": "Pide mesa en la terraza: a esa hora corre la brisa.",
+            "EN": "Ask for a terrace table: there's a breeze at that hour.",
+            "DE": "Frag nach einem Terrassentisch: um diese Zeit weht eine Brise."
+          },
+          "hora": "07:40",
+          "dur": "50 min",
+          "img": "/ciudades/kunavaashi/img/bienestar-2.jpg",
+          "lat": 3.6365,
+          "lng": 73.3647,
+          "tramo": "pie",
+          "duracionMin": 50,
+          "tramoDuracionMin": 3
+        },
+        {
+          "n": {
+            "ES": "Serenity Garden",
+            "EN": "Serenity Garden",
+            "DE": "Serenity Garden"
+          },
+          "s": {
+            "ES": "Un rincón verde y en silencio",
+            "EN": "A quiet, green corner",
+            "DE": "Eine stille, grüne Ecke"
+          },
+          "d": {
+            "ES": "Plantas tropicales, sombra y sofás para leer o no hacer nada antes del spa.",
+            "EN": "Tropical plants, shade and sofas to read or do nothing before the spa.",
+            "DE": "Tropische Pflanzen, Schatten und Sofas zum Lesen oder Nichtstun vor dem Spa."
+          },
+          "tip": {
+            "ES": "Deja el móvil en la villa: aquí se viene a desconectar.",
+            "EN": "Leave your phone in the villa: this is the place to switch off.",
+            "DE": "Lass das Handy in der Villa: hier schaltet man ab."
+          },
+          "hora": "08:45",
+          "dur": "30 min",
+          "img": "/ciudades/kunavaashi/img/bienestar-3.jpg",
+          "lat": 3.6372,
+          "lng": 73.3645,
+          "tramo": "pie",
+          "duracionMin": 30,
+          "tramoDuracionMin": 3
+        },
+        {
+          "n": {
+            "ES": "Th·ari Spa by Mandara",
+            "EN": "Th·ari Spa by Mandara",
+            "DE": "Th·ari Spa by Mandara"
+          },
+          "s": {
+            "ES": "Th·ari Indulgence con terapeutas balineses",
+            "EN": "Th·ari Indulgence with Balinese therapists",
+            "DE": "Th·ari Indulgence mit balinesischen Therapeuten"
+          },
+          "d": {
+            "ES": "Cabinas entre la vegetación y manos expertas de Bali. Sales sin prisa y con la piel oliendo a coco.",
+            "EN": "Treatment rooms tucked into greenery and expert Balinese hands. You leave unhurried, skin scented with coconut.",
+            "DE": "Behandlungsräume im Grünen und erfahrene balinesische Hände. Du gehst entspannt, die Haut duftet nach Kokos."
+          },
+          "tip": {
+            "ES": "Llega 15 minutos antes para la ducha y el té de bienvenida.",
+            "EN": "Arrive 15 minutes early for the shower and welcome tea.",
+            "DE": "Komm 15 Minuten früher für Dusche und Begrüßungstee."
+          },
+          "hora": "10:00",
+          "dur": "2 h",
+          "img": "/ciudades/kunavaashi/img/bienestar-4.jpg",
+          "lat": 3.6373,
+          "lng": 73.3643,
+          "tramo": "pie",
+          "duracionMin": 120,
+          "tramoDuracionMin": 1
+        },
+        {
+          "n": {
+            "ES": "Vēlì, el bar de la piscina",
+            "EN": "Vēlì pool bar",
+            "DE": "Vēlì Poolbar"
+          },
+          "s": {
+            "ES": "Un NOOE Colada con los pies en el agua",
+            "EN": "A NOOE Colada with your feet in the water",
+            "DE": "Ein NOOE Colada mit den Füßen im Wasser"
+          },
+          "d": {
+            "ES": "Cierras la mañana en una tumbona con el cóctel de la casa y el mar delante.",
+            "EN": "End the morning on a lounger with the house cocktail and the sea in front of you.",
+            "DE": "Beende den Vormittag auf einer Liege mit dem Hauscocktail und dem Meer vor dir."
+          },
+          "tip": {
+            "ES": "Vuelve al atardecer al Clubhouse: es el mejor sitio para ver caer el sol.",
+            "EN": "Come back at sunset to the Clubhouse: it's the best spot to watch the sun go down.",
+            "DE": "Komm zum Sonnenuntergang ins Clubhouse: der beste Platz, um die Sonne sinken zu sehen."
+          },
+          "hora": "12:15",
+          "dur": "45 min",
+          "img": "/ciudades/kunavaashi/img/bienestar-5.jpg",
+          "lat": 3.6367,
+          "lng": 73.3652,
+          "tramo": "pie",
+          "duracionMin": 45,
+          "tramoDuracionMin": 3
+        }
+      ],
+      "fotos": [
+        "/ciudades/kunavaashi/img/bienestar.jpg",
+        "/ciudades/kunavaashi/img/bienestar-1.jpg",
+        "/ciudades/kunavaashi/img/bienestar-2.jpg",
+        "/ciudades/kunavaashi/img/bienestar-3.jpg",
+        "/ciudades/kunavaashi/img/bienestar-4.jpg",
+        "/ciudades/kunavaashi/img/bienestar-5.jpg",
+        "/ciudades/kunavaashi/img/bienestar-6.jpg"
+      ],
+      "duracionMin": 390,
+      "distanciaKm": 0.5,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Todo es llano y a pocos pasos, por caminos de arena compacta y madera. Avisa al reservar si necesitas ayuda.",
+        "EN": "Everything is flat and a few steps apart, on compact sand and wooden paths. Let us know when booking if you need help.",
+        "DE": "Alles ist eben und nah beieinander, auf festem Sand und Holzwegen. Sag bei der Buchung Bescheid, wenn du Hilfe brauchst."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 3.6368,
+        "lng": 73.365,
+        "foto": "/ciudades/kunavaashi/img/bienestar.jpg",
+        "texto": {
+          "ES": "Piscina principal, en la zona de yoga. Las esterillas y el agua te esperan allí.",
+          "EN": "Main pool, at the yoga area. Mats and water are waiting for you there.",
+          "DE": "Hauptpool, im Yogabereich. Matten und Wasser warten dort auf dich."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Otros tratamientos del spa",
+          "Bebidas extra"
+        ],
+        "EN": [
+          "Other spa treatments",
+          "Extra drinks"
+        ],
+        "DE": [
+          "Weitere Spa-Behandlungen",
+          "Zusätzliche Getränke"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Spa: gratis hasta 24 h antes (a confirmar con el resort).",
+        "EN": "Spa: free up to 24 h before (to be confirmed with the resort).",
+        "DE": "Spa: kostenlos bis 24 Std. vorher (mit dem Resort zu bestätigen)."
+      },
+      "salidasFijas": [
+        "06:30"
+      ],
+      "precioDesde": 290
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un NOOE Colada al atardecer en Vēlì, invita la casa",
+      "EN": "A NOOE Colada at sunset at Vēlì, on the house",
+      "DE": "Ein NOOE Colada bei Sonnenuntergang in der Vēlì, aufs Haus"
+    }
+  },
+  "creditos": [
+    "Muelle, piscina, playa, villas, spa, jardín, yoga, Clubhouse, fl·äm·ē, atardeceres y pecio desde el aire: material del resort, nooe.com, solo para la demo",
+    "Delfines acróbatas: John Hepburn y Darren Obbard (CC BY 4.0, vía iNaturalist), Alexia Pihier para MDC SeaMarc Maldives (CC BY-SA 4.0), Wikimedia Commons",
+    "Dhoni al atardecer y dhoni en el muelle: Nevit Dilmen (CC BY-SA 3.0) y Bapak Alex (CC BY-SA 4.0); dhoni en el agua: Remi Jouan (CC BY-SA 3.0), Wikimedia Commons",
+    "Bancos de arena: Maciej Kraus (CC BY 2.0), Ahmed Saffu (CC0), MBraun Germany (CC BY-SA 3.0), Wikimedia Commons",
+    "Arrecife: Dr. Ondřej Havelka (CC BY-SA 4.0); corales de Vaavu: goldpicasa (CC BY 3.0), Wikimedia Commons",
+    "Tortugas: wardyboy400 (CC BY 2.0), Jan Ebr e Ivana Ebrová (CC BY 4.0), Ahmed Abdul Rahman para MDC SeaMarc Maldives (CC BY-SA 4.0), Wikimedia Commons",
+    "Tiburones nodriza: Jean-Paul Boerekamps (CC0) y Aneta p (CC BY 4.0), Wikimedia Commons",
+    "Calles, mezquita y playa de una isla local de Vaavu (Felidhoo): Z thomas (CC0); tambor bodu beru: Suvalex (CC BY-SA 4.0), Wikimedia Commons"
+  ]
+}
