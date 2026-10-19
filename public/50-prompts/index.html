@@ -1,0 +1,1745 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>50 prompts para directores de hotel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#2A2522; --card:#332D29; --card2:#3A332E; --line:#4A413B; --field:#211D1B;
+  --white:#F7F3EC; --text:#E4DDD2; --muted:#B9AFA3; --faint:#9C9186;
+  --clay:#D97757; --clay-t:#E58A68; --clay-d:#C4643F; --on-clay:#1E1A17;
+  --code:#1C1917; --code-t:#ECE5D9;
+  --serif:"Newsreader", Georgia, "Times New Roman", serif;
+  --sans:"Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono:"JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{background:var(--bg);scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;padding:0 max(16px,env(safe-area-inset-left)) 80px max(16px,env(safe-area-inset-right));-webkit-text-size-adjust:100%}
+.wrap{max-width:860px;margin:0 auto}
+a{color:var(--clay-t)}
+:focus-visible{outline:2px solid var(--clay-t);outline-offset:3px;border-radius:6px}
+
+/* CABECERA */
+header{text-align:center;padding:40px 0 26px}
+.by{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--white)}
+.by svg{width:15px;height:15px}
+.ast{display:block;margin:36px auto 18px;width:72px;height:72px}
+.sub{font-family:var(--serif);font-weight:400;color:#D9D1C5;font-size:clamp(20px,4.6vw,30px);line-height:1.25;max-width:560px;margin:0 auto;text-wrap:balance}
+.rule{display:flex;align-items:center;max-width:300px;margin:24px auto 26px;color:var(--clay)}
+.rule i{flex:1;height:1.5px;background:var(--clay)}
+.rule b{width:7px;height:7px;border:1.5px solid var(--clay);transform:rotate(45deg)}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(42px,10.5vw,80px);line-height:1.02;color:var(--white);letter-spacing:-.02em;text-wrap:balance}
+h1 span{color:var(--clay)}
+.lead{color:var(--muted);font-size:16.5px;max-width:520px;margin:20px auto 0;text-wrap:balance}
+
+h2{font-family:var(--serif);font-weight:600;color:var(--white);font-size:clamp(30px,6vw,40px);line-height:1.1;margin:0 0 6px;text-wrap:balance}
+.h2sub{color:var(--muted);font-size:15.5px;margin-bottom:18px;max-width:600px}
+section{margin-top:56px;scroll-margin-top:16px}
+
+/* INDICE */
+.toc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 18px 8px;margin-top:8px}
+.toc h2{font-size:22px;margin-bottom:8px}
+.toc ol{list-style:none}
+.toc li a{display:flex;justify-content:space-between;align-items:center;min-height:48px;padding:8px 2px;border-top:1px solid var(--line);color:var(--text);text-decoration:none}
+.toc li:first-child a{border-top:0}
+.toc li a b{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--white)}
+.toc li a span{font-family:var(--mono);font-size:13px;color:var(--clay-t)}
+.toc li a:hover b{color:var(--clay-t)}
+.toc .extra a b{font-family:var(--sans);font-size:15px;font-weight:600;color:var(--muted)}
+
+/* PASOS */
+.steps{display:grid;gap:12px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;gap:14px}
+.step .n{flex:0 0 32px;height:32px;border-radius:50%;background:var(--clay);color:var(--on-clay);font-weight:700;display:grid;place-items:center}
+.step b{display:block;color:var(--white);font-weight:600}
+.step p{font-size:15px;color:var(--muted)}
+.tip{margin-top:14px;border:1px dashed var(--line);border-radius:16px;padding:16px 18px}
+.tip b{color:var(--white)}
+.tip p{font-size:15px;color:var(--muted);margin-bottom:12px}
+
+/* BUSCADOR estilo caja de Claude */
+.composer{background:var(--field);border:1px solid var(--line);border-radius:20px;padding:14px 14px 12px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.composer label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.composer input{width:100%;background:transparent;border:0;color:var(--white);font:400 19px/1.4 var(--serif);padding:6px 4px 10px;outline:none;min-height:44px}
+.composer input::placeholder{color:var(--faint)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{font:600 14px var(--sans);color:var(--text);background:transparent;border:1px solid var(--line);border-radius:12px;min-height:44px;padding:0 14px;cursor:pointer}
+.chip:hover{border-color:var(--faint)}
+.chip.on{background:var(--clay);border-color:var(--clay);color:var(--on-clay)}
+.crow{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;padding-top:10px;border-top:1px solid #332D29}
+.count{font-size:14px;color:var(--muted)}
+.model{font-family:var(--serif);font-size:15px;color:var(--muted);display:flex;align-items:center;gap:10px}
+.send{width:36px;height:36px;border-radius:10px;background:var(--clay);display:grid;place-items:center}
+.send svg{width:18px;height:18px}
+.empty{text-align:center;color:var(--muted);padding:30px 0}
+
+/* AREAS Y PROMPTS */
+.ahead{border-top:1.5px solid var(--clay);padding-top:16px;margin-bottom:6px}
+.acount{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--clay-t)}
+.list{display:grid;gap:12px}
+.pr{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;scroll-margin-top:16px}
+.prh{display:flex;justify-content:space-between;align-items:baseline}
+.num{font-family:var(--serif);font-weight:600;color:var(--clay);font-size:26px;line-height:1}
+.pil{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.pr h3{font-family:var(--serif);font-weight:600;color:var(--white);font-size:22px;line-height:1.2;margin:8px 0 6px;text-wrap:balance}
+.para{font-size:15.5px;color:var(--text)}
+.pega{font-size:14.5px;color:var(--muted);margin-top:6px}
+.pega b{color:var(--clay-t);font-weight:600}
+details{margin-top:10px}
+summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;font-size:15px;color:var(--white);border:1px solid var(--line);border-radius:12px;padding:0 14px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:8px;height:8px;border-right:2px solid var(--clay-t);border-bottom:2px solid var(--clay-t);transform:rotate(45deg) translate(-2px,-2px);transition:transform .15s}
+details[open] summary::after{transform:rotate(-135deg) translate(-2px,-2px)}
+summary:hover{border-color:var(--faint)}
+details[open] summary{margin-bottom:10px}
+
+/* CODIGO */
+.codebox{background:var(--code);color:var(--code-t);border-radius:14px;overflow:hidden;border:1px solid #2E2925}
+.codebar{display:flex;justify-content:space-between;align-items:center;padding:8px 10px 8px 14px;border-bottom:1px solid #34302B}
+.codebar span{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:#BDB4A7;text-transform:uppercase}
+.copy{font:700 14px var(--sans);background:var(--clay);color:var(--on-clay);border:0;border-radius:12px;min-height:44px;padding:0 18px;cursor:pointer}
+.copy:hover{background:var(--clay-t)}
+pre{font-family:var(--mono);font-size:13px;line-height:1.6;white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;padding:16px;max-height:460px;overflow:auto}
+
+/* CTA */
+.cta{background:#1F1B19;border:1px solid var(--line);border-radius:20px;padding:26px 22px;display:grid;gap:22px}
+.cta h2{font-size:clamp(24px,5vw,32px)}
+.cta ul{list-style:none;margin-top:12px}
+.cta li{padding:8px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.cta li:last-child{border:0}
+.cta li::before{content:"→ ";color:var(--clay-t)}
+.cta .btn{display:inline-flex;align-items:center;min-height:48px;background:var(--clay);color:var(--on-clay);text-decoration:none;font-weight:700;padding:12px 22px;border-radius:14px;font-size:16px}
+.cta .btn:hover{background:var(--clay-t)}
+.cta small{display:block;color:var(--muted);margin-top:10px;font-size:14px}
+footer{text-align:center;color:var(--faint);font-size:13px;margin-top:40px}
+@media (min-width:760px){
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .list{grid-template-columns:1fr 1fr}
+  .pr details[open]{grid-column:1/-1}
+  .cta{grid-template-columns:1.3fr 1fr;align-items:center;padding:32px}
+}
+</style></head><body><div class="wrap">
+
+<header>
+  <div class="by">Héctor García · Vértice</div>
+  <svg class="ast" viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="#D97757" stroke-width="7" stroke-linecap="round">
+    <path d="M50 50 L50 6"/><path d="M50 50 L72 12"/><path d="M50 50 L88 26"/><path d="M50 50 L94 48"/><path d="M50 50 L86 70"/><path d="M50 50 L68 90"/><path d="M50 50 L48 96"/><path d="M50 50 L28 88"/><path d="M50 50 L10 72"/><path d="M50 50 L6 50"/><path d="M50 50 L14 28"/><path d="M50 50 L30 10"/>
+  </svg>
+  <p class="sub">Lo que te lleva una semana de despacho, Claude lo hace en una tarde.</p>
+  <div class="rule" aria-hidden="true"><b></b><i></i><b></b></div>
+  <h1>50 prompts para directores de <span>hotel</span></h1>
+  <p class="lead">10 por área: dueños, equipo, huésped, ventas y marketing. Copias, pegas tus datos y cambias lo que va entre corchetes. Ninguno decide por ti.</p>
+</header>
+
+<nav class="toc" aria-label="Índice">
+  <h2>Índice</h2>
+  <ol>
+<li class="extra"><a href="#como"><b>Cómo usarlos en 2 minutos</b><span>↓</span></a></li>
+<li><a href="#duenos"><b>Dueños</b><span>01–10</span></a></li>
+<li><a href="#equipo"><b>Equipo</b><span>11–20</span></a></li>
+<li><a href="#huesped"><b>Huésped</b><span>21–30</span></a></li>
+<li><a href="#ventas"><b>Ventas</b><span>31–40</span></a></li>
+<li><a href="#marketing"><b>Marketing</b><span>41–50</span></a></li>
+<li class="extra"><a href="#vertice"><b>Y después, qué</b><span>↓</span></a></li>
+  </ol>
+</nav>
+
+<section id="como">
+  <h2>Cómo usarlos</h2>
+  <p class="h2sub">No hace falta saber nada de inteligencia artificial. Si sabes copiar y pegar, sabes usar esto.</p>
+  <div class="steps">
+    <div class="step"><span class="n">1</span><div><b>Abre Claude</b><p>Entra en claude.ai (vale también ChatGPT) y abre una conversación nueva.</p></div></div>
+    <div class="step"><span class="n">2</span><div><b>Copia y rellena</b><p>Elige un prompt, pulsa «Copiar», pégalo y cambia lo que va entre [corchetes] por tus datos.</p></div></div>
+    <div class="step"><span class="n">3</span><div><b>Revisa y decide</b><p>Claude prepara el borrador. Si le falta algo, te lo pregunta. La decisión es tuya.</p></div></div>
+  </div>
+  <div class="tip">
+    <p><b>Para no repetir los datos de tu hotel cada vez:</b> en claude.ai ve a Proyectos, crea uno llamado «Mi hotel» y pega esta ficha rellenada en «Instrucciones del proyecto». Los Excel e informes que uses a menudo, súbelos a «Conocimiento del proyecto». Todo lo que abras dentro del proyecto ya sabrá cómo es tu hotel.</p>
+    <div class="codebox"><div class="codebar"><span>Ficha del hotel</span><button class="copy" data-t="ficha">Copiar</button></div><pre id="ficha">FICHA DE MI HOTEL
+Nombre, ciudad y categoría: [ ]
+Habitaciones y ocupación media por temporada: [ ]
+Tipo de huésped (parejas, familias, negocios, nacionalidades): [ ]
+Lo que vendemos además de la habitación, con precio y horario (restaurante, bar, room service, experiencias, spa, salida tarde, parking…): [ ]
+Equipo por departamento: [ ]
+Programas que usamos (reservas, caja, comandas): [ ]
+Lo que nos piden los dueños este año: [ ]
+Cómo quiero que me respondas: en castellano, directo, con frases cortas y las operaciones a la vista.
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div>
+  </div>
+</section>
+
+<section id="buscar" aria-label="Buscar prompts">
+  <div class="composer">
+    <label for="q">Buscar un prompt</label>
+    <input id="q" type="search" placeholder="Busca: turnos, reseñas, carta…" autocomplete="off">
+    <div class="chips" role="group" aria-label="Filtrar por área"><button class="chip on" data-f="all" aria-pressed="true">Todos</button><button class="chip" data-f="duenos" aria-pressed="false">Dueños</button><button class="chip" data-f="equipo" aria-pressed="false">Equipo</button><button class="chip" data-f="huesped" aria-pressed="false">Huésped</button><button class="chip" data-f="ventas" aria-pressed="false">Ventas</button><button class="chip" data-f="marketing" aria-pressed="false">Marketing</button></div>
+    <div class="crow">
+      <span class="count" id="count" aria-live="polite">Mostrando los 50 prompts</span>
+      <span class="model" aria-hidden="true">Claude <span class="send"><svg viewBox="0 0 24 24" fill="none" stroke="#1E1A17" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></span></span>
+    </div>
+  </div>
+  <p class="empty" id="empty" hidden>No hay ningún prompt con esa palabra. Prueba con otra o quita el filtro.</p>
+</section>
+
+<section class="area" id="duenos" data-area="duenos">
+  <div class="ahead"><span class="acount">10 prompts</span><h2>Dueños</h2><p class="h2sub">El resumen de una página, el cierre de mes y el presupuesto. Lo que te piden arriba, preparado en una tarde.</p></div>
+  <div class="list">
+<article class="pr" data-area="duenos" data-s="duenos resumen de una pagina para los duenos contar el mes (o la semana) en una hoja que los duenos leen en dos minutos. ventas y ocupacion del periodo, las mismas cifras del ano pasado y del presupuesto, y lo que paso (bueno y malo)." id="prompt-01">
+  <div class="prh"><span class="num">01</span><span class="pil">Dueños</span></div>
+  <h3>Resumen de una página para los dueños</h3>
+  <p class="para">Contar el mes (o la semana) en una hoja que los dueños leen en dos minutos.</p>
+  <p class="pega"><b>Pega:</b> Ventas y ocupación del periodo, las mismas cifras del año pasado y del presupuesto, y lo que pasó (bueno y malo).</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 01</span><button class="copy" data-t="p01">Copiar</button></div><pre id="p01">Eres el director financiero de confianza de un director de hotel. Me ayudas a contarle a los dueños cómo ha ido [el mes / la semana] en una sola página.
+
+CONTEXTO
+Hotel: [nombre, ciudad, número de habitaciones].
+Los dueños valoran: [que vaya al grano / ver números / saber qué vamos a hacer].
+
+TE PASO
+- Cifras del periodo: [ocupación, precio medio por habitación, ventas de habitaciones, restaurante y bar, otros servicios].
+- Las mismas cifras del año pasado: [pega].
+- Lo que decía el presupuesto: [pega].
+- Lo que pasó: [eventos, obras, bajas, quejas, grupos, clima…].
+
+HAZ
+1. Calcula la diferencia de cada cifra contra el año pasado y contra el presupuesto, en euros y en %. Enseña la operación.
+2. Elige las 3 cosas que más explican el resultado. Nada de listas de diez.
+3. Para cada una, una frase: qué pasó y por qué.
+4. Propón 2 o 3 acciones para el próximo periodo, con quién las lleva y cuándo se verá el efecto.
+5. Escribe una línea con lo que necesito que los dueños decidan, si hay algo.
+
+FORMATO
+Una página. Arriba, una frase de titular. Después una tabla corta (cifra · este periodo · año pasado · presupuesto). Luego «Qué lo explica», «Qué vamos a hacer» y «Lo que os pido». Frases cortas, sin palabras técnicas.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="duenos" data-s="duenos cierre de mes sin pelearte con el excel ordenar el cierre del mes y explicar cada desviacion antes de que te pregunten. el informe de cierre o la exportacion del programa de gestion, el presupuesto del mes y las notas que tengas." id="prompt-02">
+  <div class="prh"><span class="num">02</span><span class="pil">Dueños</span></div>
+  <h3>Cierre de mes sin pelearte con el Excel</h3>
+  <p class="para">Ordenar el cierre del mes y explicar cada desviación antes de que te pregunten.</p>
+  <p class="pega"><b>Pega:</b> El informe de cierre o la exportación del programa de gestión, el presupuesto del mes y las notas que tengas.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 02</span><button class="copy" data-t="p02">Copiar</button></div><pre id="p02">Eres un controller de hotel con experiencia en cierres mensuales. Me ayudas a cerrar [mes y año] de [nombre del hotel].
+
+TE PASO
+- Ventas del mes por departamento: [habitaciones, restaurante, bar, eventos, extras].
+- Gastos del mes por partida: [personal, comida y bebida, suministros, lavandería, mantenimiento, comisiones de agencias, otros].
+- Presupuesto del mes con las mismas partidas: [pega].
+- Notas: [facturas que faltan, gastos que no son de este mes, cosas raras].
+
+HAZ
+1. Ordena todo en una tabla: partida · real · presupuesto · diferencia en € · diferencia en %.
+2. Marca las partidas con una diferencia mayor de [10 %] o de [1.000 €].
+3. Para cada partida marcada, dime qué preguntas tengo que hacer y a quién (contabilidad, jefe de cocina, gobernanta…) para saber el motivo.
+4. Separa lo que es puntual (no se repetirá) de lo que es tendencia (se repetirá si no hago nada).
+5. Lista de lo que falta para cerrar: facturas pendientes, gastos que hay que pasar al mes siguiente, dudas.
+
+FORMATO
+Tabla primero. Después «Para revisar» con las partidas marcadas y sus preguntas. Al final «Pendiente para cerrar» como lista de comprobación.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="duenos" data-s="duenos borrador del presupuesto anual, mes a mes tener una primera version del presupuesto del ano que viene para discutirla, no para firmarla. lo real de este ano por meses, las reservas que ya tienes para el ano que viene y lo que te piden los duenos." id="prompt-03">
+  <div class="prh"><span class="num">03</span><span class="pil">Dueños</span></div>
+  <h3>Borrador del presupuesto anual, mes a mes</h3>
+  <p class="para">Tener una primera versión del presupuesto del año que viene para discutirla, no para firmarla.</p>
+  <p class="pega"><b>Pega:</b> Lo real de este año por meses, las reservas que ya tienes para el año que viene y lo que te piden los dueños.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 03</span><button class="copy" data-t="p03">Copiar</button></div><pre id="p03">Eres un director financiero hotelero que prepara presupuestos anuales. Me ayudas con el borrador de [año] de [nombre del hotel, habitaciones].
+
+TE PASO
+- Real de este año por meses: [ocupación, precio medio, ventas por departamento, gastos principales].
+- Reservas ya confirmadas para el año que viene: [pega por meses].
+- Cambios conocidos: [reformas, habitaciones fuera de servicio, nuevo servicio, subida de convenio, eventos en la ciudad].
+- Objetivo que me piden los dueños: [ej.: ganar un X % más].
+
+HAZ
+1. Prepara una tabla mes a mes con ocupación, precio medio, ventas por departamento y gastos principales.
+2. Explica cada supuesto en una línea (por qué subo o bajo cada cifra). Si un supuesto no se apoya en datos que te he pasado, márcalo como «a confirmar».
+3. Calcula si llego al objetivo de los dueños. Si no llego, dime cuánto falta y en qué meses.
+4. Propón de dónde podría salir lo que falta: vender más a cada huésped, meses flojos, gastos que revisar. Sin recortar servicio al huésped.
+5. Señala los 3 supuestos más arriesgados.
+
+FORMATO
+Tabla mensual, luego «Supuestos», «¿Llegamos al objetivo?» y «Riesgos». Todas las operaciones a la vista.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="duenos" data-s="duenos prevision de los proximos 90 dias saber hoy como vienen los tres meses que vienen y donde hay que moverse ya. reservas en cartera por semana, las del ano pasado a esta misma fecha y los eventos de la zona." id="prompt-04">
+  <div class="prh"><span class="num">04</span><span class="pil">Dueños</span></div>
+  <h3>Previsión de los próximos 90 días</h3>
+  <p class="para">Saber hoy cómo vienen los tres meses que vienen y dónde hay que moverse ya.</p>
+  <p class="pega"><b>Pega:</b> Reservas en cartera por semana, las del año pasado a esta misma fecha y los eventos de la zona.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 04</span><button class="copy" data-t="p04">Copiar</button></div><pre id="p04">Eres el responsable de previsión de un hotel. Me ayudas a ver cómo vienen las próximas 13 semanas de [nombre del hotel, habitaciones].
+
+TE PASO
+- Habitaciones reservadas por semana a día de hoy: [pega].
+- Las del año pasado a esta misma fecha y cómo acabaron esas semanas: [pega].
+- Precio medio reservado por semana: [pega].
+- Eventos, festivos y ferias de la zona: [pega].
+- Grupos pendientes de confirmar: [pega].
+
+HAZ
+1. Compara semana a semana lo que tengo con lo que tenía el año pasado a esta fecha. Enseña la diferencia.
+2. Clasifica cada semana: va bien · igual · floja.
+3. Para las semanas flojas, propón qué se puede hacer con tiempo: oferta, paquete, grupos, empresas de la zona, clientes que repiten.
+4. Para las semanas que van bien, dime si tiene sentido revisar precios o mínimos de estancia, y qué datos me faltan para decidirlo.
+5. Calcula cuánto personal de más o de menos voy a necesitar por semana según lo previsto, si te paso la plantilla habitual: [pega].
+
+FORMATO
+Tabla de 13 semanas con un semáforo en texto (bien / igual / floja). Debajo, acciones solo para las semanas que lo necesitan.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="duenos" data-s="duenos explica un mes malo sin excusas contar un mal resultado con datos, asumir lo que toca y llegar con plan. las cifras del mes, lo que se esperaba y lo que crees que paso." id="prompt-05">
+  <div class="prh"><span class="num">05</span><span class="pil">Dueños</span></div>
+  <h3>Explica un mes malo sin excusas</h3>
+  <p class="para">Contar un mal resultado con datos, asumir lo que toca y llegar con plan.</p>
+  <p class="pega"><b>Pega:</b> Las cifras del mes, lo que se esperaba y lo que crees que pasó.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 05</span><button class="copy" data-t="p05">Copiar</button></div><pre id="p05">Eres un director de hotel con muchos años de experiencia y buena relación con sus dueños. Me ayudas a explicar por qué [mes] ha salido peor de lo previsto.
+
+TE PASO
+- Lo que esperábamos: [cifras de presupuesto].
+- Lo que salió: [cifras reales].
+- Lo que creo que pasó: [mis notas, aunque estén desordenadas].
+- Lo que ya he hecho para corregirlo: [si hay algo].
+
+HAZ
+1. Separa las causas en tres grupos: lo que no dependía de nosotros, lo que dependía y no hicimos bien, y lo que todavía no sé.
+2. Calcula cuánto pesa cada causa en la diferencia, si los datos lo permiten. Si no, dime qué dato necesito.
+3. Escribe el mensaje a los dueños: reconoce lo que toca reconocer, sin culpar al equipo ni a nadie de fuera.
+4. Cierra con un plan concreto de 30 días: 3 acciones, quién y cómo sabremos si funciona.
+5. Prepara las 5 preguntas más incómodas que me pueden hacer y una respuesta honesta para cada una.
+
+FORMATO
+Correo de menos de 250 palabras, después las preguntas y respuestas para la reunión. Tono sereno y directo.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="duenos" data-s="duenos encuentra donde se escapa el dinero en gastos y proveedores repasar facturas y contratos para ver que gasto ha subido sin que nadie lo decidiera. gastos por proveedor de los ultimos 12 meses y los contratos o tarifas que tengas." id="prompt-06">
+  <div class="prh"><span class="num">06</span><span class="pil">Dueños</span></div>
+  <h3>Encuentra dónde se escapa el dinero en gastos y proveedores</h3>
+  <p class="para">Repasar facturas y contratos para ver qué gasto ha subido sin que nadie lo decidiera.</p>
+  <p class="pega"><b>Pega:</b> Gastos por proveedor de los últimos 12 meses y los contratos o tarifas que tengas.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 06</span><button class="copy" data-t="p06">Copiar</button></div><pre id="p06">Eres un responsable de compras de hotel, ordenado y desconfiado. Me ayudas a revisar los gastos de [nombre del hotel].
+
+TE PASO
+- Gasto por proveedor y por mes, últimos 12 meses: [pega la tabla o la exportación].
+- Contratos o tarifas pactadas: [pega lo que tengas].
+- Ocupación por mes: [pega].
+
+HAZ
+1. Calcula el gasto de cada proveedor por habitación ocupada y mes, para comparar meses llenos y vacíos de forma justa.
+2. Marca los proveedores cuyo gasto por habitación ocupada ha subido más de [10 %].
+3. Detecta gastos duplicados, servicios que pagamos y no usamos, y contratos que se renuevan solos.
+4. Para cada punto, qué haría: renegociar, pedir otra oferta, juntar pedidos, cancelar. Ordénalos por lo que se puede ahorrar al año.
+5. Prepara un correo corto y firme para el proveedor más caro, pidiendo revisar condiciones.
+
+FORMATO
+Tabla de proveedores marcados, después la lista de acciones ordenada y al final el correo.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="duenos" data-s="duenos ventas y coste de personal de cada departamento ver que departamento te deja mas por cada euro que pagas en personal, con datos y sin senalar a nadie. ventas de cada departamento y coste de personal de cada uno (o las horas trabajadas y el coste por hora)." id="prompt-07">
+  <div class="prh"><span class="num">07</span><span class="pil">Dueños</span></div>
+  <h3>Ventas y coste de personal de cada departamento</h3>
+  <p class="para">Ver qué departamento te deja más por cada euro que pagas en personal, con datos y sin señalar a nadie.</p>
+  <p class="pega"><b>Pega:</b> Ventas de cada departamento y coste de personal de cada uno (o las horas trabajadas y el coste por hora).</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 07</span><button class="copy" data-t="p07">Copiar</button></div><pre id="p07">Eres un analista de operaciones hoteleras. Me ayudas a entender cuánto deja cada departamento de [nombre del hotel] después de pagar a su equipo.
+
+TE PASO
+- Ventas por departamento y mes: [recepción/habitaciones, restaurante, bar, room service, eventos, spa…].
+- Coste de personal por departamento y mes, u horas trabajadas y coste medio por hora: [pega].
+- Horarios de apertura de cada servicio: [pega].
+
+HAZ
+1. Calcula para cada departamento: ventas, coste de personal y lo que queda. Enseña las operaciones.
+2. Calcula las ventas por hora trabajada en cada departamento.
+3. Busca las franjas o servicios con mucho personal y pocas ventas (por ejemplo, bar a primera hora).
+4. Propón cambios de horario, de turnos o de forma de vender para mejorar esas franjas, sin empeorar la atención al huésped y sin sumar gente.
+5. Dime qué datos me faltan para afinar el análisis.
+
+FORMATO
+Tabla por departamento, después las 3 franjas peor aprovechadas y las propuestas. Lenguaje claro, para enseñarlo a los dueños si quiero.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="duenos" data-s="duenos propuesta de mejora para que los duenos digan si pedir dinero para una mejora con lo que cuesta, lo que devuelve y en cuanto tiempo. que quieres hacer, presupuestos que tengas y lo que esperas conseguir." id="prompt-08">
+  <div class="prh"><span class="num">08</span><span class="pil">Dueños</span></div>
+  <h3>Propuesta de mejora para que los dueños digan sí</h3>
+  <p class="para">Pedir dinero para una mejora con lo que cuesta, lo que devuelve y en cuánto tiempo.</p>
+  <p class="pega"><b>Pega:</b> Qué quieres hacer, presupuestos que tengas y lo que esperas conseguir.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 08</span><button class="copy" data-t="p08">Copiar</button></div><pre id="p08">Eres un director de hotel que sabe presentar propuestas a sus dueños. Me ayudas a pedir [la mejora: reforma, equipo, servicio nuevo…].
+
+TE PASO
+- Qué quiero hacer y por qué: [pega].
+- Presupuestos recibidos: [pega cifras].
+- Lo que espero que mejore: [más ventas, menos gasto, mejores reseñas…] con los datos que tenga: [pega].
+- Lo que preocupa a los dueños ahora mismo: [pega].
+
+HAZ
+1. Escribe el problema en dos frases, con un dato real.
+2. Calcula cuánto se recupera al mes y en cuántos meses se paga la inversión. Si un dato es una estimación mía, márcalo como tal y haz tres versiones: prudente, media y buena.
+3. Compara con no hacer nada: qué pasa si seguimos igual 12 meses.
+4. Propón empezar en pequeño si es posible (una planta, un servicio, un mes de prueba) y cómo mediríamos el resultado.
+5. Lista los riesgos y cómo los cubrimos.
+
+FORMATO
+Una página: problema, propuesta, números (tabla con las tres versiones), prueba piloto, riesgos y lo que pido decidir. Sin adjetivos de venta.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="duenos" data-s="duenos prepara la reunion con los duenos llegar a la reunion sabiendo que te van a preguntar y con la respuesta lista. el orden del dia, los numeros del periodo y lo que te preguntaron la ultima vez." id="prompt-09">
+  <div class="prh"><span class="num">09</span><span class="pil">Dueños</span></div>
+  <h3>Prepara la reunión con los dueños</h3>
+  <p class="para">Llegar a la reunión sabiendo qué te van a preguntar y con la respuesta lista.</p>
+  <p class="pega"><b>Pega:</b> El orden del día, los números del periodo y lo que te preguntaron la última vez.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 09</span><button class="copy" data-t="p09">Copiar</button></div><pre id="p09">Eres un asesor que prepara a directores de hotel para reuniones con sus dueños. Me ayudas con la reunión del [fecha].
+
+TE PASO
+- Orden del día: [pega].
+- Cifras del periodo: [pega].
+- Lo que preguntaron o pidieron en la última reunión: [pega].
+- Temas que me preocupan: [pega].
+
+HAZ
+1. Escribe las 10 preguntas más probables, empezando por las más incómodas.
+2. Para cada una, una respuesta corta con el dato que la apoya. Si no tengo ese dato, dime cuál necesito y de dónde sacarlo.
+3. Propón qué temas debo sacar yo antes de que me pregunten.
+4. Prepara 3 decisiones que quiero llevarme aprobadas, cada una en una frase.
+5. Escribe un guion de apertura de 1 minuto.
+
+FORMATO
+Guion de apertura, después preguntas con respuestas, después decisiones a pedir. Fácil de leer en el móvil antes de entrar.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="duenos" data-s="duenos acta y tareas despues de la reunion salir de la reunion con lo acordado por escrito, con responsables y fechas. tus notas de la reunion, aunque esten en sucio, o la transcripcion." id="prompt-10">
+  <div class="prh"><span class="num">10</span><span class="pil">Dueños</span></div>
+  <h3>Acta y tareas después de la reunión</h3>
+  <p class="para">Salir de la reunión con lo acordado por escrito, con responsables y fechas.</p>
+  <p class="pega"><b>Pega:</b> Tus notas de la reunión, aunque estén en sucio, o la transcripción.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 10</span><button class="copy" data-t="p10">Copiar</button></div><pre id="p10">Eres el secretario de dirección de un hotel. Conviertes notas desordenadas en un acta clara.
+
+TE PASO
+- Notas o transcripción de la reunión del [fecha] con [quién asistió]: [pega].
+
+HAZ
+1. Resume los temas tratados en una línea cada uno.
+2. Separa lo decidido de lo que quedó pendiente. No conviertas en decisión nada que no lo fuera.
+3. Para cada tarea: qué hay que hacer, quién, para cuándo y cómo sabremos que está hecha. Si en las notas falta el responsable o la fecha, déjalo como «sin asignar» y avísame.
+4. Lista los datos que alguien se comprometió a enviar.
+5. Escribe el correo de envío del acta a los asistentes, de menos de 120 palabras.
+
+FORMATO
+Acta (temas, decisiones, pendientes), tabla de tareas y correo de envío.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+  </div>
+</section>
+
+<section class="area" id="equipo" data-area="equipo">
+  <div class="ahead"><span class="acount">10 prompts</span><h2>Equipo</h2><p class="h2sub">Los turnos, la formación de nuevos y los checklists de cada puesto. Para que el hotel funcione sin que todo pase por ti.</p></div>
+  <div class="list">
+<article class="pr" data-area="equipo" data-s="equipo cuadrante de turnos segun la ocupacion prevista hacer el cuadrante de la semana ajustado a cuantos huespedes vienen de verdad. ocupacion prevista por dia, entradas y salidas, el equipo disponible y las reglas del convenio que aplicas." id="prompt-11">
+  <div class="prh"><span class="num">11</span><span class="pil">Equipo</span></div>
+  <h3>Cuadrante de turnos según la ocupación prevista</h3>
+  <p class="para">Hacer el cuadrante de la semana ajustado a cuántos huéspedes vienen de verdad.</p>
+  <p class="pega"><b>Pega:</b> Ocupación prevista por día, entradas y salidas, el equipo disponible y las reglas del convenio que aplicas.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 11</span><button class="copy" data-t="p11">Copiar</button></div><pre id="p11">Eres un jefe de operaciones hotelero que hace cuadrantes justos y que cuadran. Me ayudas con la semana del [fechas] en [departamento].
+
+TE PASO
+- Ocupación prevista, entradas y salidas por día: [pega].
+- Eventos, grupos o servicios especiales: [pega].
+- Equipo disponible, con jornada, días libres pedidos y lo que sabe hacer cada uno: [pega].
+- Reglas que debo cumplir: [descansos, horas máximas, fines de semana libres, lo que diga el convenio].
+- Cuánta gente necesito por turno con ocupación baja, media y alta: [pega mi regla].
+
+HAZ
+1. Calcula cuántas personas necesito por turno y día, según mi regla.
+2. Monta el cuadrante respetando descansos, peticiones y reglas. Si algo no cuadra, dímelo en vez de saltarte una regla.
+3. Marca los turnos que quedan justos y los que tienen gente de más.
+4. Propón cómo cubrir los justos con el equipo actual: cambios de horario, apoyo entre departamentos o turnos partidos, solo si la persona puede.
+5. Cuenta las horas de cada persona en la semana.
+
+FORMATO
+Tabla persona × día con el horario, después la cobertura por turno y al final los avisos.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="equipo" data-s="equipo vacaciones del equipo sin dejar huecos repartir las vacaciones del ano de forma justa y sin dejar semanas cojas. dias de vacaciones de cada persona, sus peticiones y la prevision de ocupacion por semanas." id="prompt-12">
+  <div class="prh"><span class="num">12</span><span class="pil">Equipo</span></div>
+  <h3>Vacaciones del equipo sin dejar huecos</h3>
+  <p class="para">Repartir las vacaciones del año de forma justa y sin dejar semanas cojas.</p>
+  <p class="pega"><b>Pega:</b> Días de vacaciones de cada persona, sus peticiones y la previsión de ocupación por semanas.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 12</span><button class="copy" data-t="p12">Copiar</button></div><pre id="p12">Eres un responsable de personas en hotelería. Me ayudas a planificar las vacaciones de [departamento] para [año].
+
+TE PASO
+- Equipo, puesto y días de vacaciones de cada uno: [pega].
+- Peticiones de fechas, por orden de preferencia: [pega].
+- Ocupación prevista por semana o las semanas fuertes del año: [pega].
+- Mínimo de personas por puesto que necesito cada semana: [pega].
+- Criterio de prioridad que usamos: [antigüedad, rotación de años anteriores, hijos en edad escolar…].
+
+HAZ
+1. Asigna las vacaciones respetando el mínimo de cada semana.
+2. Aplica el criterio de prioridad y explica cada caso en el que una petición no entra.
+3. Propón una alternativa para cada petición rechazada.
+4. Marca las semanas que quedan en el mínimo para no dar más permisos ahí.
+5. Escribe un mensaje al equipo explicando el reparto y el criterio, sin nombres de quien ha salido peor parado.
+
+FORMATO
+Calendario por semanas con quién está fuera, lista de peticiones no atendidas con alternativa y el mensaje al equipo.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="equipo" data-s="equipo plan de la primera semana para alguien nuevo que una persona nueva sepa que aprende cada dia y quien se lo ensena. el puesto, sus tareas, su horario y quien puede acompanarle." id="prompt-13">
+  <div class="prh"><span class="num">13</span><span class="pil">Equipo</span></div>
+  <h3>Plan de la primera semana para alguien nuevo</h3>
+  <p class="para">Que una persona nueva sepa qué aprende cada día y quién se lo enseña.</p>
+  <p class="pega"><b>Pega:</b> El puesto, sus tareas, su horario y quién puede acompañarle.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 13</span><button class="copy" data-t="p13">Copiar</button></div><pre id="p13">Eres un formador de hotel que ha incorporado a cientos de personas. Me ayudas con la primera semana de [nombre], que entra como [puesto] el [fecha].
+
+TE PASO
+- Tareas del puesto: [pega lo que tengas, aunque sea una lista suelta].
+- Horario y turnos de su primera semana: [pega].
+- Compañeros que pueden acompañarle: [pega].
+- Programas que usará: [programa de reservas, caja, comandas…].
+- Lo que suele fallar con la gente nueva en este puesto: [pega].
+
+HAZ
+1. Reparte las tareas en 5 días, de lo más básico a lo más delicado. Que el primer día sea sobre todo observar y conocer el hotel.
+2. Para cada día: qué aprende, con quién, y qué tiene que saber hacer solo al terminar el día.
+3. Añade una comprobación de 5 minutos al final de cada día: 3 preguntas o una tarea que haga delante del responsable.
+4. Incluye lo que nunca debe hacer sin preguntar (descuentos, cambios de habitación, cobros…).
+5. Prepara un mensaje de bienvenida para enviarle antes de su primer día: hora, dónde ir, qué traer, a quién preguntar.
+
+FORMATO
+Plan día a día en tabla, comprobaciones, lista de «nunca sin preguntar» y mensaje de bienvenida.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="equipo" data-s="equipo checklists de apertura y cierre de cada puesto que cada puesto tenga su lista y no dependa de que alguien se acuerde. los puestos del hotel y lo que hace cada uno al abrir y al cerrar (o lo que falla a menudo)." id="prompt-14">
+  <div class="prh"><span class="num">14</span><span class="pil">Equipo</span></div>
+  <h3>Checklists de apertura y cierre de cada puesto</h3>
+  <p class="para">Que cada puesto tenga su lista y no dependa de que alguien se acuerde.</p>
+  <p class="pega"><b>Pega:</b> Los puestos del hotel y lo que hace cada uno al abrir y al cerrar (o lo que falla a menudo).</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 14</span><button class="copy" data-t="p14">Copiar</button></div><pre id="p14">Eres un consultor de operaciones hoteleras. Me ayudas a escribir checklists claros para [puestos: recepción mañana, recepción noche, sala, bar, cocina, pisos, mantenimiento…].
+
+TE PASO
+- Lo que hace cada puesto al empezar y al terminar su turno: [pega lo que sepas, aunque esté incompleto].
+- Lo que se olvida a menudo o ha dado problemas: [pega].
+- Normas del hotel que tienen que estar sí o sí: [caja, llaves, seguridad, alérgenos…].
+
+HAZ
+1. Para cada puesto, una lista de apertura y otra de cierre. Máximo 12 puntos cada una.
+2. Cada punto empieza con un verbo y se puede comprobar (sí/no). Nada de «revisar que todo esté bien».
+3. Marca con [!] los puntos que, si fallan, afectan al huésped o a la seguridad.
+4. Añade al final de cada lista: firma, hora y «incidencias para el siguiente turno».
+5. Dime qué puntos te he dejado sin concretar y necesito definir yo.
+
+FORMATO
+Una lista por puesto, lista para imprimir en media hoja o pasar a una app. Lenguaje del día a día, en tú.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="equipo" data-s="equipo hoja de relevo entre turnos que nada se pierda en el cambio de turno: huespedes, incidencias y tareas a medias. como se pasan hoy la informacion los turnos y que se ha perdido alguna vez." id="prompt-15">
+  <div class="prh"><span class="num">15</span><span class="pil">Equipo</span></div>
+  <h3>Hoja de relevo entre turnos</h3>
+  <p class="para">Que nada se pierda en el cambio de turno: huéspedes, incidencias y tareas a medias.</p>
+  <p class="pega"><b>Pega:</b> Cómo se pasan hoy la información los turnos y qué se ha perdido alguna vez.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 15</span><button class="copy" data-t="p15">Copiar</button></div><pre id="p15">Eres un jefe de recepción ordenado. Me ayudas a crear la hoja de relevo de [recepción / pisos / sala] de [nombre del hotel].
+
+TE PASO
+- Cómo se hace hoy el relevo: [libro, WhatsApp, de palabra…].
+- Cosas que se han perdido alguna vez entre turnos: [pega ejemplos].
+- Turnos y horarios: [pega].
+
+HAZ
+1. Diseña una hoja de relevo con secciones fijas: huéspedes a vigilar (VIP, quejas, peticiones especiales), incidencias abiertas, tareas pendientes, caja, llegadas y salidas a tener en cuenta, avisos de mantenimiento.
+2. Para cada sección, qué se escribe exactamente y en cuántas palabras como máximo.
+3. Añade una regla para cerrar cada incidencia: quién la cierra y cómo queda anotado.
+4. Escribe un ejemplo rellenado con datos inventados y marcados como EJEMPLO, para que el equipo vea cómo se usa.
+5. Propón cómo comprobar durante un mes que se usa bien.
+
+FORMATO
+Plantilla en blanco, ejemplo rellenado y 3 reglas de uso.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="equipo" data-s="equipo reunion de 10 minutos antes del turno arrancar cada turno con lo que importa hoy, en diez minutos y no en treinta. ocupacion del dia, llegadas importantes, incidencias y el objetivo de la semana." id="prompt-16">
+  <div class="prh"><span class="num">16</span><span class="pil">Equipo</span></div>
+  <h3>Reunión de 10 minutos antes del turno</h3>
+  <p class="para">Arrancar cada turno con lo que importa hoy, en diez minutos y no en treinta.</p>
+  <p class="pega"><b>Pega:</b> Ocupación del día, llegadas importantes, incidencias y el objetivo de la semana.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 16</span><button class="copy" data-t="p16">Copiar</button></div><pre id="p16">Eres un director de operaciones que da reuniones cortas y útiles. Me preparas la reunión de [turno] del [día] con [departamento].
+
+TE PASO
+- Ocupación, entradas y salidas de hoy: [pega].
+- Huéspedes a tener en cuenta (celebraciones, quejas previas, repetidores, necesidades especiales): [pega].
+- Incidencias abiertas: [pega].
+- Lo que queremos vender u ofrecer hoy: [pega].
+- Algo que se ha hecho bien y quiero reconocer: [pega].
+
+HAZ
+1. Guion de 10 minutos con tiempos: 2 de datos del día, 3 de huéspedes, 2 de lo que ofrecemos hoy, 2 de incidencias, 1 de reconocimiento.
+2. Una frase lista para decir a cada huésped del punto de «ofrecer hoy», natural y sin sonar a anuncio.
+3. Una pregunta para el equipo al final, para que hablen ellos.
+4. Lista de lo que hay que comprobar al terminar el turno para saber si salió bien.
+
+FORMATO
+Guion en viñetas cortas que se puedan leer de pie.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="equipo" data-s="equipo formacion para ofrecer sin sonar a vendedor ensenar al equipo a ofrecer cena, experiencias o extras con naturalidad. lo que quieres que ofrezcan, sus precios y las situaciones en las que el huesped suele estar." id="prompt-17">
+  <div class="prh"><span class="num">17</span><span class="pil">Equipo</span></div>
+  <h3>Formación para ofrecer sin sonar a vendedor</h3>
+  <p class="para">Enseñar al equipo a ofrecer cena, experiencias o extras con naturalidad.</p>
+  <p class="pega"><b>Pega:</b> Lo que quieres que ofrezcan, sus precios y las situaciones en las que el huésped suele estar.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 17</span><button class="copy" data-t="p17">Copiar</button></div><pre id="p17">Eres un formador de atención al cliente en hoteles. Preparas una sesión de 30 minutos para [recepción / sala / bar] de [nombre del hotel].
+
+TE PASO
+- Lo que queremos ofrecer, con precio y horario: [pega].
+- Momentos en los que el equipo habla con el huésped: [check-in, desayuno, mostrador, salida…].
+- Lo que dice hoy el equipo cuando ofrece algo, si lo sabes: [pega].
+- Lo que más vergüenza o reparo les da: [pega].
+
+HAZ
+1. Explica en 3 frases por qué ofrecer algo útil es atender mejor, no presionar.
+2. Para cada momento, una frase de ejemplo que empiece por algo que interesa al huésped (su plan, su cansancio, su celebración) y termine con una sola opción concreta.
+3. Escribe 5 situaciones para practicar por parejas (uno hace de huésped), incluidas un huésped que dice que no y uno con prisa.
+4. Lista de lo que no se dice nunca (insistir, «¿algo más?», presionar con el precio).
+5. Una tarjeta de bolsillo con las 5 frases más útiles.
+
+FORMATO
+Guion de la sesión con tiempos, situaciones de práctica y la tarjeta de bolsillo.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="equipo" data-s="equipo conversacion de seguimiento con alguien del equipo preparar una charla honesta con una persona: lo que hace bien, lo que tiene que cambiar y como le ayudas. hechos concretos (no opiniones), lo que ya se hablo antes y lo que quieres conseguir." id="prompt-18">
+  <div class="prh"><span class="num">18</span><span class="pil">Equipo</span></div>
+  <h3>Conversación de seguimiento con alguien del equipo</h3>
+  <p class="para">Preparar una charla honesta con una persona: lo que hace bien, lo que tiene que cambiar y cómo le ayudas.</p>
+  <p class="pega"><b>Pega:</b> Hechos concretos (no opiniones), lo que ya se habló antes y lo que quieres conseguir.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 18</span><button class="copy" data-t="p18">Copiar</button></div><pre id="p18">Eres un responsable de personas con experiencia en hotelería. Me ayudas a preparar una conversación con [nombre, puesto].
+
+TE PASO
+- Lo que hace bien, con ejemplos concretos: [pega].
+- Lo que tiene que cambiar, con hechos y fechas: [pega].
+- Lo que ya se habló antes, si hay algo: [pega].
+- Lo que quiero conseguir con esta charla: [pega].
+
+HAZ
+1. Ordena la conversación: abrir, reconocer, hablar del punto a mejorar, escuchar, acordar.
+2. Escribe las frases para hablar del punto a mejorar basándote en hechos, sin juicios sobre la persona.
+3. Prepara 4 preguntas abiertas para entender su versión.
+4. Propón 2 o 3 compromisos medibles para las próximas 4 semanas, y qué apoyo le doy yo.
+5. Escribe el resumen que le enviaré después por escrito.
+
+FORMATO
+Guion de la conversación, preguntas, compromisos y resumen posterior. Tono respetuoso y claro.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="equipo" data-s="equipo explica un cambio al equipo para que se cumpla contar un procedimiento nuevo de forma que se entienda y se aplique desde el primer dia. que cambia, desde cuando, por que y a quien afecta." id="prompt-19">
+  <div class="prh"><span class="num">19</span><span class="pil">Equipo</span></div>
+  <h3>Explica un cambio al equipo para que se cumpla</h3>
+  <p class="para">Contar un procedimiento nuevo de forma que se entienda y se aplique desde el primer día.</p>
+  <p class="pega"><b>Pega:</b> Qué cambia, desde cuándo, por qué y a quién afecta.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 19</span><button class="copy" data-t="p19">Copiar</button></div><pre id="p19">Eres un director de hotel que comunica bien los cambios. Me ayudas a explicar [el cambio] al equipo de [departamentos].
+
+TE PASO
+- Qué cambia y desde cuándo: [pega].
+- Por qué lo cambiamos: [pega].
+- A quién afecta y qué tiene que hacer cada uno: [pega].
+- Dudas o resistencias que espero: [pega].
+- Idiomas del equipo: [pega].
+
+HAZ
+1. Escribe el mensaje en menos de 150 palabras: qué cambia, por qué, qué tiene que hacer cada uno y desde cuándo.
+2. Haz una versión de 3 líneas para el grupo de WhatsApp o el tablón.
+3. Prepara las 5 preguntas que más va a hacer el equipo y sus respuestas.
+4. Propón cómo comprobar en las dos primeras semanas que se está aplicando.
+5. Traduce el mensaje corto a los idiomas del equipo.
+
+FORMATO
+Mensaje completo, versión corta, preguntas y respuestas, plan de comprobación y traducciones.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="equipo" data-s="equipo respuestas oficiales a lo que siempre pregunta el huesped que todo el equipo responda lo mismo y bien a las preguntas de cada dia. las preguntas que mas se repiten y la informacion del hotel (horarios, precios, servicios, como llegar)." id="prompt-20">
+  <div class="prh"><span class="num">20</span><span class="pil">Equipo</span></div>
+  <h3>Respuestas oficiales a lo que siempre pregunta el huésped</h3>
+  <p class="para">Que todo el equipo responda lo mismo y bien a las preguntas de cada día.</p>
+  <p class="pega"><b>Pega:</b> Las preguntas que más se repiten y la información del hotel (horarios, precios, servicios, cómo llegar).</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 20</span><button class="copy" data-t="p20">Copiar</button></div><pre id="p20">Eres el responsable de calidad de un hotel. Me ayudas a crear el documento de respuestas oficiales de [nombre del hotel].
+
+TE PASO
+- Preguntas que más se repiten en recepción, sala y teléfono: [pega].
+- Información del hotel: [horarios, servicios, precios, normas, parking, transporte, zona].
+
+HAZ
+1. Agrupa las preguntas por tema: llegada y salida, habitación, comer y beber, servicios, zona, pagos.
+2. Escribe la respuesta oficial de cada una, en menos de 40 palabras, como se la diría a un huésped.
+3. Marca las preguntas que esconden una oportunidad («¿a qué hora cierra la cocina?» = quiere comer algo) y añade qué ofrecer en ese momento.
+4. Señala las respuestas para las que me falta información.
+5. Propón dónde ponerlo para que el equipo lo consulte en 10 segundos.
+
+FORMATO
+Documento por temas, con pregunta y respuesta. Las oportunidades marcadas con →.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+  </div>
+</section>
+
+<section class="area" id="huesped" data-area="huesped">
+  <div class="ahead"><span class="acount">10 prompts</span><h2>Huésped</h2><p class="h2sub">La bienvenida, las reseñas y las quejas convertidas en tareas. Lo que el huésped nota, sin perder tus mañanas.</p></div>
+  <div class="list">
+<article class="pr" data-area="huesped" data-s="huesped mensaje de bienvenida antes y el dia de llegada que el huesped llegue sabiendo lo que necesita y con ganas de lo que ofreces. datos practicos de llegada, servicios del hotel y los tipos de huesped que recibes." id="prompt-21">
+  <div class="prh"><span class="num">21</span><span class="pil">Huésped</span></div>
+  <h3>Mensaje de bienvenida antes y el día de llegada</h3>
+  <p class="para">Que el huésped llegue sabiendo lo que necesita y con ganas de lo que ofreces.</p>
+  <p class="pega"><b>Pega:</b> Datos prácticos de llegada, servicios del hotel y los tipos de huésped que recibes.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 21</span><button class="copy" data-t="p21">Copiar</button></div><pre id="p21">Eres un responsable de experiencia del huésped. Me ayudas a escribir los mensajes de bienvenida de [nombre del hotel].
+
+TE PASO
+- Datos de llegada: [hora de entrada, parking, cómo llegar, documentación].
+- Servicios y horarios: [restaurante, bar, desayuno, piscina, spa, experiencias].
+- Tipos de huésped: [parejas, familias, negocios, grupos] e idiomas principales: [pega].
+- Canal: [correo, WhatsApp, mensaje del programa de reservas].
+
+HAZ
+1. Un mensaje para 3 días antes de la llegada: lo práctico primero y una sola sugerencia útil para su tipo de viaje (reservar mesa, experiencia, traslado).
+2. Un mensaje para el día de llegada, de menos de 60 palabras.
+3. Una versión por cada tipo de huésped, cambiando la sugerencia.
+4. Traduce las versiones a los idiomas principales.
+5. Asunto del correo o primera línea del WhatsApp para cada versión.
+
+FORMATO
+Mensajes listos para copiar, con [nombre del huésped] y otros campos entre corchetes. Cercanos, sin frases de folleto.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="huesped" data-s="huesped guia de la estancia que el huesped si lee sustituir la carpeta de la habitacion por una guia corta y clara, en papel o en el movil. todo lo que hoy pone la carpeta o la web: servicios, horarios, normas, telefonos, zona." id="prompt-22">
+  <div class="prh"><span class="num">22</span><span class="pil">Huésped</span></div>
+  <h3>Guía de la estancia que el huésped sí lee</h3>
+  <p class="para">Sustituir la carpeta de la habitación por una guía corta y clara, en papel o en el móvil.</p>
+  <p class="pega"><b>Pega:</b> Todo lo que hoy pone la carpeta o la web: servicios, horarios, normas, teléfonos, zona.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 22</span><button class="copy" data-t="p22">Copiar</button></div><pre id="p22">Eres un editor que escribe para huéspedes con prisa. Me ayudas a rehacer la guía de la habitación de [nombre del hotel].
+
+TE PASO
+- El texto actual de la carpeta o la web: [pega].
+- Lo que más preguntan en recepción: [pega].
+- Lo que queremos que descubran (restaurante, experiencias, servicios): [pega].
+
+HAZ
+1. Reordena la información por lo que el huésped necesita primero: wifi, desayuno, salida, cómo pedir algo.
+2. Reescribe cada apartado en frases cortas. Quita todo lo que no sirve.
+3. Para cada servicio, una línea que diga qué es, cuándo y cómo pedirlo.
+4. Una sección «Esta noche», «Mañana» y «Si te quedas más días» con lo que se puede hacer.
+5. Lista de información que falta o está desactualizada.
+
+FORMATO
+Guía de una o dos pantallas de móvil, con títulos cortos. Después la lista de lo que falta.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="huesped" data-s="huesped contesta las resenas de la semana de una vez responder todas las resenas, buenas y malas, en un rato y sin que suenen a copia y pega. las resenas de la semana con su nota y la plataforma." id="prompt-23">
+  <div class="prh"><span class="num">23</span><span class="pil">Huésped</span></div>
+  <h3>Contesta las reseñas de la semana de una vez</h3>
+  <p class="para">Responder todas las reseñas, buenas y malas, en un rato y sin que suenen a copia y pega.</p>
+  <p class="pega"><b>Pega:</b> Las reseñas de la semana con su nota y la plataforma.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 23</span><button class="copy" data-t="p23">Copiar</button></div><pre id="p23">Eres el responsable de reputación de un hotel. Me ayudas a contestar las reseñas de [nombre del hotel] de esta semana.
+
+TE PASO
+- Reseñas, con nota, plataforma y fecha: [pega].
+- Lo que ya sé de los casos negativos (qué pasó, qué hicimos): [pega].
+- Firma: [nombre y cargo].
+
+HAZ
+1. Para cada reseña, una respuesta que cite algo concreto que dijo el huésped. Prohibido «lamentamos las molestias ocasionadas».
+2. Buenas: agradece lo concreto, da el mérito al equipo si lo nombran y deja una razón para volver.
+3. Malas: reconoce, explica sin excusas lo que ya hemos cambiado (solo si es verdad y lo he indicado) y ofrece seguir la conversación por privado.
+4. Marca las reseñas en las que me falta información para responder bien.
+5. Respeta el idioma de cada reseña.
+
+FORMATO
+Lista de reseñas con su respuesta debajo, cada respuesta de menos de 90 palabras.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="huesped" data-s="huesped lo que repiten tus resenas del ultimo trimestre saber que se repite, para arreglar lo de raiz y no responder lo mismo cada semana. las resenas de los ultimos tres meses (texto y nota)." id="prompt-24">
+  <div class="prh"><span class="num">24</span><span class="pil">Huésped</span></div>
+  <h3>Lo que repiten tus reseñas del último trimestre</h3>
+  <p class="para">Saber qué se repite, para arreglar lo de raíz y no responder lo mismo cada semana.</p>
+  <p class="pega"><b>Pega:</b> Las reseñas de los últimos tres meses (texto y nota).</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 24</span><button class="copy" data-t="p24">Copiar</button></div><pre id="p24">Eres un analista de experiencia del huésped. Me ayudas a leer las reseñas de [nombre del hotel] de [periodo].
+
+TE PASO
+- Reseñas con texto, nota y fecha: [pega].
+
+HAZ
+1. Agrupa lo que mencionan en temas: limpieza, habitación, desayuno, restaurante, atención, ruido, precio, ubicación, cosas que faltaron.
+2. Para cada tema, cuántas veces sale en positivo y en negativo. Cuenta, no estimes.
+3. Copia 2 frases textuales de huéspedes por tema como ejemplo.
+4. Las 3 quejas que más se repiten y una propuesta para cada una: qué cambiar, quién y en cuánto tiempo.
+5. Lo que más se elogia y cómo usarlo en la web y en los mensajes al huésped.
+
+FORMATO
+Tabla de temas con cuentas, ejemplos, las 3 quejas con propuesta y los elogios para aprovechar.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="huesped" data-s="huesped quejas del libro de recepcion convertidas en tareas que cada queja termine en una tarea con responsable y fecha, y en una respuesta al huesped. las quejas del libro de incidencias, correos o whatsapp de la semana." id="prompt-25">
+  <div class="prh"><span class="num">25</span><span class="pil">Huésped</span></div>
+  <h3>Quejas del libro de recepción convertidas en tareas</h3>
+  <p class="para">Que cada queja termine en una tarea con responsable y fecha, y en una respuesta al huésped.</p>
+  <p class="pega"><b>Pega:</b> Las quejas del libro de incidencias, correos o WhatsApp de la semana.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 25</span><button class="copy" data-t="p25">Copiar</button></div><pre id="p25">Eres un jefe de calidad que no deja una queja sin cerrar. Me ayudas con las quejas de [periodo] de [nombre del hotel].
+
+TE PASO
+- Quejas, con fecha, habitación y lo que dijo el huésped: [pega].
+- Departamentos y responsables: [pega].
+
+HAZ
+1. Para cada queja: departamento, si es puntual o se repite y si afecta a más habitaciones.
+2. Convierte cada una en una tarea: qué hay que hacer, quién, para cuándo y cómo se comprueba.
+3. Junta en una sola tarea las quejas que tienen la misma causa.
+4. Para cada huésped afectado que siga en el hotel, un mensaje corto de respuesta.
+5. Lista de las tareas que necesitan dinero o mi decisión.
+
+FORMATO
+Tabla de tareas (tarea · responsable · fecha · comprobación), mensajes a huéspedes y decisiones para mí.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="huesped" data-s="huesped guion para calmar a un huesped enfadado en el mostrador que recepcion sepa que decir cuando un huesped llega enfadado, y que puede ofrecer sin llamarte. las quejas mas habituales y lo que el equipo puede ofrecer sin pedir permiso." id="prompt-26">
+  <div class="prh"><span class="num">26</span><span class="pil">Huésped</span></div>
+  <h3>Guion para calmar a un huésped enfadado en el mostrador</h3>
+  <p class="para">Que recepción sepa qué decir cuando un huésped llega enfadado, y qué puede ofrecer sin llamarte.</p>
+  <p class="pega"><b>Pega:</b> Las quejas más habituales y lo que el equipo puede ofrecer sin pedir permiso.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 26</span><button class="copy" data-t="p26">Copiar</button></div><pre id="p26">Eres un formador de recepción con mucha experiencia en situaciones tensas. Me ayudas a preparar al equipo de [nombre del hotel].
+
+TE PASO
+- Las 5 quejas más habituales en el mostrador: [pega].
+- Lo que recepción puede ofrecer sin pedir permiso, con límite: [cambio de habitación, una consumición, salida tarde…].
+- Cuándo hay que avisar al jefe de turno o a mí: [pega].
+
+HAZ
+1. Pasos para cualquier queja: escuchar sin interrumpir, repetir lo que ha dicho, disculparse por cómo se siente, ofrecer, confirmar y anotar.
+2. Para cada queja habitual, frases concretas para cada paso.
+3. Qué ofrecer en cada caso según lo que el equipo puede dar.
+4. Frases que nunca se dicen («eso no es cosa mía», «es la política del hotel»).
+5. Cómo anotarlo en la hoja de relevo para que el siguiente turno lo sepa.
+
+FORMATO
+Guion por queja, en tarjetas cortas que se puedan tener en el mostrador.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="huesped" data-s="huesped pregunta a mitad de estancia, antes de que se vaya enterarte de lo que falla mientras el huesped aun esta, y poder arreglarlo. el canal que usas, la duracion media de la estancia y lo que quieres saber." id="prompt-27">
+  <div class="prh"><span class="num">27</span><span class="pil">Huésped</span></div>
+  <h3>Pregunta a mitad de estancia, antes de que se vaya</h3>
+  <p class="para">Enterarte de lo que falla mientras el huésped aún está, y poder arreglarlo.</p>
+  <p class="pega"><b>Pega:</b> El canal que usas, la duración media de la estancia y lo que quieres saber.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 27</span><button class="copy" data-t="p27">Copiar</button></div><pre id="p27">Eres un responsable de experiencia del huésped. Me ayudas a montar un mensaje a mitad de estancia en [nombre del hotel].
+
+TE PASO
+- Canal: [WhatsApp, correo, QR en la habitación].
+- Estancia media: [noches].
+- Lo que quiero saber: [pega].
+- Idiomas principales: [pega].
+
+HAZ
+1. Escribe un mensaje de máximo 3 preguntas, que se responda en 20 segundos: cómo va todo del 1 al 5, qué podemos mejorar ahora mismo y si necesita algo para esta noche.
+2. Se envía a todos los huéspedes por igual, sin filtrar a quién.
+3. Para cada tipo de respuesta (5, 3-4, 1-2), qué hace el equipo y en cuánto tiempo.
+4. Para quien pide algo para esta noche, una sugerencia útil del hotel según la hora.
+5. Traduce el mensaje a los idiomas principales.
+
+FORMATO
+Mensaje, tabla de qué hacer según la respuesta y traducciones.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="huesped" data-s="huesped despedida y valoracion, igual para todos despedir bien a cada huesped y pedir su opinion a todos, sin elegir a quien. el momento de salida, el canal y las plataformas donde quieres resenas." id="prompt-28">
+  <div class="prh"><span class="num">28</span><span class="pil">Huésped</span></div>
+  <h3>Despedida y valoración, igual para todos</h3>
+  <p class="para">Despedir bien a cada huésped y pedir su opinión a todos, sin elegir a quién.</p>
+  <p class="pega"><b>Pega:</b> El momento de salida, el canal y las plataformas donde quieres reseñas.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 28</span><button class="copy" data-t="p28">Copiar</button></div><pre id="p28">Eres un responsable de reputación de hotel. Me ayudas a escribir la despedida de [nombre del hotel].
+
+TE PASO
+- Hora de salida y cómo se hace el check-out: [pega].
+- Canal de envío: [correo, WhatsApp].
+- Plataformas de reseñas: [Google, Booking, TripAdvisor…] y enlace: [pega].
+- Lo que ofrecemos a quien vuelve, si hay algo: [pega].
+
+HAZ
+1. Mensaje del día anterior a la salida: hora, cómo pagar, opción de salida tarde con su precio y cómo pedirla.
+2. Mensaje de despedida después de la salida: gracias concreto, petición de valoración con el enlace y una razón para volver.
+3. La misma petición de valoración para todos los huéspedes. No separes a los contentos de los descontentos.
+4. Una versión para quien tuvo una incidencia durante la estancia, que reconozca lo ocurrido.
+5. Traducciones a [idiomas].
+
+FORMATO
+Dos mensajes principales, la versión con incidencia y las traducciones.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="huesped" data-s="huesped avisa a los huespedes de un imprevisto contar una obra, un corte o un cambio de servicio antes de que se convierta en queja. que pasa, cuando, a quien afecta y que alternativas das." id="prompt-29">
+  <div class="prh"><span class="num">29</span><span class="pil">Huésped</span></div>
+  <h3>Avisa a los huéspedes de un imprevisto</h3>
+  <p class="para">Contar una obra, un corte o un cambio de servicio antes de que se convierta en queja.</p>
+  <p class="pega"><b>Pega:</b> Qué pasa, cuándo, a quién afecta y qué alternativas das.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 29</span><button class="copy" data-t="p29">Copiar</button></div><pre id="p29">Eres un director de hotel que comunica bien las malas noticias. Me ayudas a avisar a los huéspedes de [imprevisto: obras, corte de agua, piscina cerrada, cambio de horario…].
+
+TE PASO
+- Qué pasa y cuándo: [pega].
+- Habitaciones o huéspedes afectados: [pega].
+- Alternativas que damos: [pega].
+- Compensación, si la hay y la he decidido: [pega].
+
+HAZ
+1. Mensaje para huéspedes alojados: qué pasa, cuánto dura, qué hemos preparado y a quién llamar.
+2. Mensaje para huéspedes con reserva que llegan esos días, enviado antes de que lleguen.
+3. Cartel corto para recepción, ascensor o zona afectada.
+4. Respuestas de recepción a las 4 preguntas que más van a hacer.
+5. Traducciones a [idiomas].
+
+FORMATO
+Tres textos listos para usar y las respuestas para el equipo. Sin quitarle importancia ni exagerar.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="huesped" data-s="huesped respuestas de whatsapp en varios idiomas tener contestaciones rapidas para los mensajes que llegan cada dia, en los idiomas de tus huespedes. los mensajes que mas recibes y la informacion del hotel." id="prompt-30">
+  <div class="prh"><span class="num">30</span><span class="pil">Huésped</span></div>
+  <h3>Respuestas de WhatsApp en varios idiomas</h3>
+  <p class="para">Tener contestaciones rápidas para los mensajes que llegan cada día, en los idiomas de tus huéspedes.</p>
+  <p class="pega"><b>Pega:</b> Los mensajes que más recibes y la información del hotel.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 30</span><button class="copy" data-t="p30">Copiar</button></div><pre id="p30">Eres el responsable de atención por mensajería de un hotel. Me ayudas a preparar respuestas rápidas para [nombre del hotel].
+
+TE PASO
+- Mensajes que más recibimos: [pega ejemplos reales].
+- Información del hotel: [horarios, servicios, precios, normas].
+- Idiomas: [pega].
+
+HAZ
+1. Agrupa los mensajes en 10 a 15 tipos.
+2. Para cada tipo, una respuesta de menos de 50 palabras, cálida y concreta.
+3. En las respuestas en las que tenga sentido, añade una sugerencia útil (reservar mesa, una experiencia, el desayuno en la habitación) en una sola línea.
+4. Traduce todas a los idiomas indicados, adaptadas y no palabra por palabra.
+5. Un título corto para guardar cada respuesta como atajo.
+
+FORMATO
+Tabla por tipo de mensaje con atajo, respuesta en español y traducciones.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+  </div>
+</section>
+
+<section class="area" id="ventas" data-area="ventas">
+  <div class="ahead"><span class="acount">10 prompts</span><h2>Ventas</h2><p class="h2sub">La carta, las excursiones y los acuerdos con negocios de la zona. Vender más a cada huésped, con el equipo que ya tienes.</p></div>
+  <div class="list">
+<article class="pr" data-area="ventas" data-s="ventas revisa la carta plato a plato ver que platos te dejan dinero, cuales se venden poco y que cambiar en la carta. platos con precio de venta, coste de los ingredientes y unidades vendidas." id="prompt-31">
+  <div class="prh"><span class="num">31</span><span class="pil">Ventas</span></div>
+  <h3>Revisa la carta plato a plato</h3>
+  <p class="para">Ver qué platos te dejan dinero, cuáles se venden poco y qué cambiar en la carta.</p>
+  <p class="pega"><b>Pega:</b> Platos con precio de venta, coste de los ingredientes y unidades vendidas.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 31</span><button class="copy" data-t="p31">Copiar</button></div><pre id="p31">Eres un consultor de restauración hotelera. Me ayudas a revisar la carta de [restaurante / bar / room service] de [nombre del hotel].
+
+TE PASO
+- Platos con precio de venta, coste de ingredientes por ración y unidades vendidas en [periodo]: [pega].
+- Lo que dice cocina de cada plato (difícil, lento, se estropea…): [pega].
+
+HAZ
+1. Calcula para cada plato lo que queda después de ingredientes (precio sin IVA menos coste) y el total que ha dejado en el periodo.
+2. Clasifica cada plato: se vende mucho y deja mucho · se vende mucho y deja poco · se vende poco y deja mucho · se vende poco y deja poco.
+3. Para cada grupo, qué hacer: destacar, revisar precio o ración, mover de sitio en la carta, quitar.
+4. Propón un orden de la carta que ponga a la vista los platos que más interesa vender.
+5. Dime qué datos faltan o parecen raros.
+
+FORMATO
+Tabla de platos con cálculos, clasificación y acciones. Operaciones a la vista.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="ventas" data-s="ventas descripciones de carta que abren el apetito reescribir los platos para que se entiendan y apetezcan, tambien en otros idiomas. la carta actual con sus descripciones y los platos que quieres empujar." id="prompt-32">
+  <div class="prh"><span class="num">32</span><span class="pil">Ventas</span></div>
+  <h3>Descripciones de carta que abren el apetito</h3>
+  <p class="para">Reescribir los platos para que se entiendan y apetezcan, también en otros idiomas.</p>
+  <p class="pega"><b>Pega:</b> La carta actual con sus descripciones y los platos que quieres empujar.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 32</span><button class="copy" data-t="p32">Copiar</button></div><pre id="p32">Eres un redactor gastronómico que escribe cartas de hotel. Me ayudas con la carta de [restaurante] de [nombre del hotel].
+
+TE PASO
+- Carta actual: [pega].
+- Platos que quiero vender más: [pega].
+- Producto local o historias reales detrás de algún plato: [pega].
+- Idiomas: [pega].
+
+HAZ
+1. Reescribe cada descripción en una línea de menos de 15 palabras: ingrediente principal, cómo está hecho y un detalle que apetezca.
+2. Solo cosas verdaderas: si no sé el origen de un producto, no lo pongas.
+3. Para los platos a empujar, una línea algo más rica y una sugerencia de acompañamiento (vino, guarnición, postre).
+4. Señala los alérgenos según los ingredientes que te paso y marca las dudas.
+5. Traduce a los idiomas indicados, adaptando y no traduciendo palabra por palabra.
+
+FORMATO
+Carta por secciones con nombre, descripción y precio, después las traducciones.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="ventas" data-s="ventas menus cerrados para grupos y celebraciones tener 3 menus listos para grupos, comidas de empresa y celebraciones, con precio por persona. platos que cocina puede hacer para grupos, costes y lo que te piden los grupos." id="prompt-33">
+  <div class="prh"><span class="num">33</span><span class="pil">Ventas</span></div>
+  <h3>Menús cerrados para grupos y celebraciones</h3>
+  <p class="para">Tener 3 menús listos para grupos, comidas de empresa y celebraciones, con precio por persona.</p>
+  <p class="pega"><b>Pega:</b> Platos que cocina puede hacer para grupos, costes y lo que te piden los grupos.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 33</span><button class="copy" data-t="p33">Copiar</button></div><pre id="p33">Eres un jefe de banquetes de hotel. Me ayudas a montar menús de grupo para [nombre del hotel].
+
+TE PASO
+- Platos que cocina puede servir para grupos, con coste por ración: [pega].
+- Bebidas y su coste: [pega].
+- Tipos de grupo que nos piden: [empresas, bodas pequeñas, cumpleaños, grupos de viaje].
+- Número mínimo y máximo de comensales: [pega].
+
+HAZ
+1. Diseña 3 menús (básico, medio, completo) con entrante, principal, postre y bebida.
+2. Calcula el coste por persona de cada menú y propón un precio. Enseña la operación.
+3. Propón extras que se puedan sumar (aperitivo de bienvenida, barra libre de una hora, tarta) con su precio.
+4. Escribe la ficha que se envía al cliente: menús, condiciones, plazos de confirmación y alérgenos.
+5. Un correo de respuesta para quien pide presupuesto.
+
+FORMATO
+Tabla de costes y precios, ficha para el cliente y correo.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="ventas" data-s="ventas catalogo de excursiones y experiencias de la zona ordenar lo que el huesped puede hacer cerca, con precio y como reservarlo desde el hotel. excursiones y actividades de la zona, proveedores, precios y lo que te llevas por cada una." id="prompt-34">
+  <div class="prh"><span class="num">34</span><span class="pil">Ventas</span></div>
+  <h3>Catálogo de excursiones y experiencias de la zona</h3>
+  <p class="para">Ordenar lo que el huésped puede hacer cerca, con precio y cómo reservarlo desde el hotel.</p>
+  <p class="pega"><b>Pega:</b> Excursiones y actividades de la zona, proveedores, precios y lo que te llevas por cada una.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 34</span><button class="copy" data-t="p34">Copiar</button></div><pre id="p34">Eres un responsable de experiencias de hotel. Me ayudas a ordenar lo que [nombre del hotel] puede ofrecer en [zona].
+
+TE PASO
+- Excursiones y actividades, con proveedor, duración, precio y horario: [pega].
+- Lo que gana el hotel por cada una, si hay acuerdo: [pega].
+- Tipos de huésped: [parejas, familias, negocios…].
+
+HAZ
+1. Agrupa por tipo: naturaleza, cultura, comer y beber, familias, relax.
+2. Para cada experiencia, una ficha: qué es en una frase, para quién, duración, precio, qué incluye, cómo se reserva y con cuánta antelación.
+3. Marca las que mejor encajan con cada tipo de huésped.
+4. Detecta huecos: tipos de huésped que no tienen nada que hacer.
+5. Propón en qué momento de la estancia ofrecer cada una (antes de llegar, check-in, desayuno).
+
+FORMATO
+Catálogo por grupos con fichas cortas, después huecos y momentos.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="ventas" data-s="ventas propuesta de acuerdo con un negocio de la zona proponer una colaboracion a un restaurante, bodega, tienda o empresa de actividades. que negocio, que ofrece, que podria ganar cada parte y cuantos huespedes tienes." id="prompt-35">
+  <div class="prh"><span class="num">35</span><span class="pil">Ventas</span></div>
+  <h3>Propuesta de acuerdo con un negocio de la zona</h3>
+  <p class="para">Proponer una colaboración a un restaurante, bodega, tienda o empresa de actividades.</p>
+  <p class="pega"><b>Pega:</b> Qué negocio, qué ofrece, qué podría ganar cada parte y cuántos huéspedes tienes.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 35</span><button class="copy" data-t="p35">Copiar</button></div><pre id="p35">Eres un responsable de alianzas comerciales de hotel. Me ayudas a proponer un acuerdo a [nombre del negocio, tipo].
+
+TE PASO
+- Qué ofrece ese negocio y a qué precio: [pega].
+- Por qué encaja con mis huéspedes: [pega].
+- Huéspedes al mes y tipo: [pega].
+- Lo que quiero a cambio: [comisión, precio especial para huéspedes, experiencia exclusiva].
+
+HAZ
+1. Propón 2 o 3 formas de acuerdo (comisión por reserva, paquete conjunto, descuento para huéspedes) con pros y contras para cada parte.
+2. Escribe un primer correo o mensaje de menos de 120 palabras para proponer una reunión.
+3. Prepara una hoja de una página con lo que ofrece el hotel y lo que pide.
+4. Lista los puntos que deben quedar por escrito: precios, comisión, cómo se reserva, cómo se paga, cuánto dura, cómo se mide.
+5. Las 5 objeciones más probables del negocio y cómo responderlas.
+
+FORMATO
+Opciones de acuerdo, mensaje, hoja de propuesta, puntos a firmar y objeciones.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="ventas" data-s="ventas lista de negocios de la zona para colaborar elegir con criterio con que negocios de la zona merece la pena colaborar primero. negocios que conoces cerca, que ofrecen y lo que tus huespedes preguntan." id="prompt-36">
+  <div class="prh"><span class="num">36</span><span class="pil">Ventas</span></div>
+  <h3>Lista de negocios de la zona para colaborar</h3>
+  <p class="para">Elegir con criterio con qué negocios de la zona merece la pena colaborar primero.</p>
+  <p class="pega"><b>Pega:</b> Negocios que conoces cerca, qué ofrecen y lo que tus huéspedes preguntan.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 36</span><button class="copy" data-t="p36">Copiar</button></div><pre id="p36">Eres un consultor de ventas para hoteles. Me ayudas a priorizar colaboraciones para [nombre del hotel] en [zona].
+
+TE PASO
+- Negocios que conozco cerca, con lo que ofrecen: [pega].
+- Lo que más preguntan los huéspedes en recepción: [pega].
+- Lo que el hotel no tiene y el huésped busca: [pega].
+
+HAZ
+1. Puntúa cada negocio del 1 al 5 en: encaje con mis huéspedes, facilidad para reservar desde el hotel, calidad conocida y posibilidad de que el hotel gane algo.
+2. Ordénalos y elige los 5 primeros.
+3. Para cada uno, la colaboración más sencilla para empezar.
+4. Detecta tipos de negocio que faltan en la lista y que mis huéspedes buscan (no inventes nombres de negocios: dime el tipo).
+5. Plan de 4 semanas para cerrar los 2 primeros.
+
+FORMATO
+Tabla con puntuaciones, top 5 con propuesta y plan semanal.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="ventas" data-s="ventas que ofrecer en el check-in, segun el huesped darle a recepcion una frase concreta para cada tipo de huesped en el momento de llegada. lo que vendes ademas de la habitacion, con precio, y los tipos de huesped." id="prompt-37">
+  <div class="prh"><span class="num">37</span><span class="pil">Ventas</span></div>
+  <h3>Qué ofrecer en el check-in, según el huésped</h3>
+  <p class="para">Darle a recepción una frase concreta para cada tipo de huésped en el momento de llegada.</p>
+  <p class="pega"><b>Pega:</b> Lo que vendes además de la habitación, con precio, y los tipos de huésped.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 37</span><button class="copy" data-t="p37">Copiar</button></div><pre id="p37">Eres un jefe de recepción que vende sin que se note. Me ayudas a preparar el check-in de [nombre del hotel].
+
+TE PASO
+- Lo que podemos ofrecer, con precio y horario: [mejora de habitación, cena, desayuno, experiencias, spa, salida tarde, parking].
+- Tipos de huésped y lo que suele buscar cada uno: [pega].
+- Hora habitual de llegada: [pega].
+
+HAZ
+1. Para cada tipo de huésped, la oferta que más sentido tiene según la hora a la que llega.
+2. Una frase para decirla, de menos de 25 palabras, que empiece por su viaje y no por el precio.
+3. Qué hacer si dice que no: una frase amable y seguir con el check-in.
+4. Un cartel o tarjeta para el mostrador con 3 ofertas.
+5. Cómo apuntar lo que se ofrece y lo que se vende, para medirlo cada semana.
+
+FORMATO
+Tabla tipo de huésped × oferta × frase, después el cartel y la forma de medirlo.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="ventas" data-s="ventas paquetes para escapadas y ocasiones especiales crear paquetes con habitacion y algo mas para aniversarios, escapadas y fechas senaladas. lo que puedes incluir, sus costes y las fechas en las que quieres venderlos." id="prompt-38">
+  <div class="prh"><span class="num">38</span><span class="pil">Ventas</span></div>
+  <h3>Paquetes para escapadas y ocasiones especiales</h3>
+  <p class="para">Crear paquetes con habitación y algo más para aniversarios, escapadas y fechas señaladas.</p>
+  <p class="pega"><b>Pega:</b> Lo que puedes incluir, sus costes y las fechas en las que quieres venderlos.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 38</span><button class="copy" data-t="p38">Copiar</button></div><pre id="p38">Eres un responsable comercial de hotel. Me ayudas a crear paquetes para [nombre del hotel].
+
+TE PASO
+- Lo que se puede incluir y su coste para el hotel: [cena, desayuno en la habitación, cava, spa, salida tarde, experiencia local].
+- Precio normal de la habitación en esas fechas: [pega].
+- Fechas u ocasiones: [San Valentín, aniversarios, puentes, temporada baja…].
+- Tipo de huésped: [pega].
+
+HAZ
+1. Diseña 3 paquetes con nombre sencillo, qué incluye y para quién es.
+2. Calcula el coste de cada paquete y propón un precio. Enseña la operación y lo que queda para el hotel.
+3. Escribe el texto de venta de cada paquete en 50 palabras.
+4. Condiciones claras: fechas, antelación, cancelación.
+5. Dónde ofrecerlo: web, correo a antiguos huéspedes, mensaje antes de llegar, recepción.
+
+FORMATO
+Fichas de paquete con números, textos y condiciones.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="ventas" data-s="ventas revisa los precios de los extras poner precio con sentido a salida tarde, entrada pronto, parking, cunas, mascotas y demas. lista de extras con su precio actual, cuantos se venden y lo que te cuesta cada uno." id="prompt-39">
+  <div class="prh"><span class="num">39</span><span class="pil">Ventas</span></div>
+  <h3>Revisa los precios de los extras</h3>
+  <p class="para">Poner precio con sentido a salida tarde, entrada pronto, parking, cunas, mascotas y demás.</p>
+  <p class="pega"><b>Pega:</b> Lista de extras con su precio actual, cuántos se venden y lo que te cuesta cada uno.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 39</span><button class="copy" data-t="p39">Copiar</button></div><pre id="p39">Eres un consultor de ingresos para hoteles. Me ayudas a revisar los extras de [nombre del hotel].
+
+TE PASO
+- Extras con precio actual, unidades vendidas al mes y coste para el hotel: [pega].
+- Extras que no cobramos o regalamos: [pega].
+- Precios de [2-3 hoteles cercanos] si los tengo: [pega].
+
+HAZ
+1. Tabla con cada extra: precio, ventas, coste y lo que deja al mes.
+2. Detecta extras que regalamos sin querer y extras con precio poco claro.
+3. Propón precio y condiciones para cada uno, justificando el cambio con los datos que te paso.
+4. Ideas de extras nuevos que el hotel ya puede dar sin inversión.
+5. Cómo y cuándo ofrecerlos para que el huésped los conozca.
+
+FORMATO
+Tabla actual vs propuesta, ideas nuevas y momento de oferta.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="ventas" data-s="ventas seguimiento semanal de lo que se vende a cada huesped saber cada semana cuanto vendes ademas de la habitacion y que esta funcionando. ventas de la semana por servicio y el numero de huespedes alojados." id="prompt-40">
+  <div class="prh"><span class="num">40</span><span class="pil">Ventas</span></div>
+  <h3>Seguimiento semanal de lo que se vende a cada huésped</h3>
+  <p class="para">Saber cada semana cuánto vendes además de la habitación y qué está funcionando.</p>
+  <p class="pega"><b>Pega:</b> Ventas de la semana por servicio y el número de huéspedes alojados.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 40</span><button class="copy" data-t="p40">Copiar</button></div><pre id="p40">Eres el responsable de ventas de un hotel. Me ayudas a montar y leer el seguimiento semanal de [nombre del hotel].
+
+TE PASO
+- Huéspedes alojados por semana: [pega].
+- Ventas de la semana por servicio (restaurante, bar, room service, experiencias, extras): [pega].
+- Las mismas cifras de las semanas anteriores: [pega].
+- Acciones que hemos probado: [pega].
+
+HAZ
+1. Calcula lo que se vende de media a cada huésped en cada servicio y en total.
+2. Compara con las semanas anteriores y señala lo que sube y lo que baja.
+3. Relaciona los cambios con las acciones que hemos probado, sin dar por hecho una relación que los datos no muestren.
+4. Propón una sola acción para la semana que viene y cómo medirla.
+5. Prepara el mensaje de resumen para los jefes de departamento.
+
+FORMATO
+Tabla semanal, 3 conclusiones, acción de la semana y mensaje al equipo.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+  </div>
+</section>
+
+<section class="area" id="marketing" data-area="marketing">
+  <div class="ahead"><span class="acount">10 prompts</span><h2>Marketing</h2><p class="h2sub">Los posts, la web y las ofertas de temporada. Que te encuentren y te elijan, sin agencia para cada cosa.</p></div>
+  <div class="list">
+<article class="pr" data-area="marketing" data-s="marketing calendario de posts del mes tener el mes de redes planificado en una tarde, con textos listos. que pasa este mes en el hotel y en la zona, y las redes que usas." id="prompt-41">
+  <div class="prh"><span class="num">41</span><span class="pil">Marketing</span></div>
+  <h3>Calendario de posts del mes</h3>
+  <p class="para">Tener el mes de redes planificado en una tarde, con textos listos.</p>
+  <p class="pega"><b>Pega:</b> Qué pasa este mes en el hotel y en la zona, y las redes que usas.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 41</span><button class="copy" data-t="p41">Copiar</button></div><pre id="p41">Eres un responsable de redes sociales de hoteles. Me ayudas con el calendario de [mes] de [nombre del hotel].
+
+TE PASO
+- Redes que usamos y cada cuánto publicamos: [pega].
+- Lo que pasa este mes: [eventos, festivos, platos nuevos, ofertas, temporada].
+- Lo que queremos vender: [pega].
+- Fotos o vídeos disponibles: [describe].
+- Tono del hotel: [cercano, elegante, familiar…].
+
+HAZ
+1. Un calendario con fecha, red, tema y objetivo de cada post (que conozcan el hotel, que reserven, que vuelvan).
+2. Mezcla: un post de cada cuatro vende algo concreto; el resto enseña el hotel, el equipo y la zona.
+3. Texto de cada post, de menos de 80 palabras, con una llamada a la acción clara.
+4. Qué foto o vídeo usar en cada uno, entre los que tengo.
+5. Ideas de historias cortas para los días sin post.
+
+FORMATO
+Tabla de calendario, textos debajo y lista de historias.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="marketing" data-s="marketing un post a partir de un momento real del hotel convertir una foto o algo que ha pasado hoy en un post que la gente lea. que ha pasado, quien sale y lo que quieres conseguir." id="prompt-42">
+  <div class="prh"><span class="num">42</span><span class="pil">Marketing</span></div>
+  <h3>Un post a partir de un momento real del hotel</h3>
+  <p class="para">Convertir una foto o algo que ha pasado hoy en un post que la gente lea.</p>
+  <p class="pega"><b>Pega:</b> Qué ha pasado, quién sale y lo que quieres conseguir.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 42</span><button class="copy" data-t="p42">Copiar</button></div><pre id="p42">Eres un redactor de redes para hoteles. Me ayudas a convertir un momento real en un post para [Instagram / Facebook / LinkedIn].
+
+TE PASO
+- Qué ha pasado: [pega].
+- Quién sale y si tengo su permiso: [pega].
+- Foto o vídeo: [describe].
+- Lo que quiero conseguir: [que reserven, que conozcan el restaurante, orgullo de equipo…].
+
+HAZ
+1. Tres versiones del texto: corta (2 líneas), media (5 líneas) y contada como historia.
+2. La primera línea tiene que hacer que sigan leyendo.
+3. Termina con una sola llamada a la acción.
+4. Si sale alguien del equipo o un huésped, recuérdame pedir permiso antes de publicar.
+5. Propón el texto alternativo de la imagen.
+
+FORMATO
+Las tres versiones y el texto alternativo.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="marketing" data-s="marketing textos de la pagina de inicio de tu web que quien entra en tu web entienda en cinco segundos por que tu hotel y reserve. el texto actual de la web, lo que te diferencia y a quien quieres atraer." id="prompt-43">
+  <div class="prh"><span class="num">43</span><span class="pil">Marketing</span></div>
+  <h3>Textos de la página de inicio de tu web</h3>
+  <p class="para">Que quien entra en tu web entienda en cinco segundos por qué tu hotel y reserve.</p>
+  <p class="pega"><b>Pega:</b> El texto actual de la web, lo que te diferencia y a quién quieres atraer.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 43</span><button class="copy" data-t="p43">Copiar</button></div><pre id="p43">Eres un redactor web especializado en hoteles independientes. Me ayudas a reescribir la página de inicio de [nombre del hotel].
+
+TE PASO
+- Texto actual: [pega].
+- Lo que nos diferencia, con hechos: [pega].
+- Huésped que queremos atraer: [pega].
+- Lo que dicen las reseñas más repetidas: [pega].
+
+HAZ
+1. Titular de menos de 10 palabras y subtítulo de una línea.
+2. Tres bloques con lo que nos hace distintos, cada uno con título y dos frases.
+3. Un bloque de comer y beber y otro de experiencias, que den ganas de reservarlos también.
+4. Frases reales de reseñas que se puedan poner como testimonio (citadas tal cual, sin retocar).
+5. Botones con texto claro: reservar, ver habitaciones, reservar mesa.
+
+FORMATO
+La página en orden, de arriba abajo, con títulos y textos. Sin frases de folleto como «un oasis de paz».
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="marketing" data-s="marketing pagina del restaurante o de las experiencias que el restaurante y las experiencias tengan su propia pagina que venda, tambien a quien no se aloja. lo que ofreces, horarios, precios y lo que lo hace especial." id="prompt-44">
+  <div class="prh"><span class="num">44</span><span class="pil">Marketing</span></div>
+  <h3>Página del restaurante o de las experiencias</h3>
+  <p class="para">Que el restaurante y las experiencias tengan su propia página que venda, también a quien no se aloja.</p>
+  <p class="pega"><b>Pega:</b> Lo que ofreces, horarios, precios y lo que lo hace especial.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 44</span><button class="copy" data-t="p44">Copiar</button></div><pre id="p44">Eres un redactor web para restauración y turismo. Me ayudas con la página de [restaurante / experiencias] de [nombre del hotel].
+
+TE PASO
+- Qué ofrecemos, horarios y precios: [pega].
+- Lo que lo hace especial (producto, cocinero, vistas, historia real): [pega].
+- Si está abierto a gente de fuera: [sí/no].
+- Reseñas destacadas: [pega].
+
+HAZ
+1. Titular y subtítulo.
+2. Texto principal de menos de 150 palabras.
+3. Bloque práctico: horario, cómo reservar, precio orientativo, para quién es.
+4. 5 preguntas frecuentes con respuesta.
+5. Título y descripción para Google (60 y 155 caracteres).
+
+FORMATO
+Página en orden, preguntas frecuentes y textos para Google.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="marketing" data-s="marketing ofertas de temporada con fecha y condiciones lanzar ofertas para cada temporada con texto, condiciones y donde publicarlas. las semanas que quieres llenar, lo que puedes incluir y a quien va." id="prompt-45">
+  <div class="prh"><span class="num">45</span><span class="pil">Marketing</span></div>
+  <h3>Ofertas de temporada con fecha y condiciones</h3>
+  <p class="para">Lanzar ofertas para cada temporada con texto, condiciones y dónde publicarlas.</p>
+  <p class="pega"><b>Pega:</b> Las semanas que quieres llenar, lo que puedes incluir y a quién va.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 45</span><button class="copy" data-t="p45">Copiar</button></div><pre id="p45">Eres un responsable de marketing hotelero. Me ayudas con las ofertas de [temporada] de [nombre del hotel].
+
+TE PASO
+- Semanas o fechas a llenar: [pega].
+- Lo que puedo incluir y su coste: [pega].
+- Precio habitual en esas fechas: [pega].
+- Huésped al que va: [pega].
+
+HAZ
+1. Propón 3 ofertas distintas, cada una con nombre, qué incluye, precio y para quién es.
+2. Calcula lo que queda para el hotel en cada una. Enseña la operación.
+3. Condiciones: fechas, estancia mínima, antelación, cancelación.
+4. Textos para web, correo y redes, adaptados a cada canal.
+5. Calendario: cuándo publicar cada pieza para llegar a tiempo.
+
+FORMATO
+Fichas de oferta, textos por canal y calendario.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="marketing" data-s="marketing correo para que vuelvan los antiguos huespedes escribir a quien ya estuvo con algo que le de una razon real para volver. tipo de huespedes de tu lista, fechas que quieres llenar y lo que les puedes ofrecer." id="prompt-46">
+  <div class="prh"><span class="num">46</span><span class="pil">Marketing</span></div>
+  <h3>Correo para que vuelvan los antiguos huéspedes</h3>
+  <p class="para">Escribir a quien ya estuvo con algo que le dé una razón real para volver.</p>
+  <p class="pega"><b>Pega:</b> Tipo de huéspedes de tu lista, fechas que quieres llenar y lo que les puedes ofrecer.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 46</span><button class="copy" data-t="p46">Copiar</button></div><pre id="p46">Eres un responsable de fidelización de hoteles. Me ayudas con un correo a antiguos huéspedes de [nombre del hotel].
+
+TE PASO
+- Quiénes son (parejas, familias, negocios) y cuándo vinieron: [pega].
+- Fechas que quiero llenar: [pega].
+- Lo que podemos ofrecer: [pega].
+- Novedades reales del hotel: [pega].
+
+HAZ
+1. Tres asuntos de menos de 45 caracteres.
+2. Un correo de menos de 120 palabras: recuerdo de su estancia, novedad, oferta y un botón.
+3. Una versión para cada tipo de huésped.
+4. Un segundo correo para quien no abrió el primero, una semana después.
+5. Cómo medir el resultado: aperturas, clics y reservas con un código.
+
+FORMATO
+Asuntos, correos y forma de medir.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="marketing" data-s="marketing ficha de google de tu hotel al dia que tu ficha de google tenga buena descripcion, preguntas resueltas y publicaciones. la descripcion actual, servicios y las preguntas que te hacen." id="prompt-47">
+  <div class="prh"><span class="num">47</span><span class="pil">Marketing</span></div>
+  <h3>Ficha de Google de tu hotel al día</h3>
+  <p class="para">Que tu ficha de Google tenga buena descripción, preguntas resueltas y publicaciones.</p>
+  <p class="pega"><b>Pega:</b> La descripción actual, servicios y las preguntas que te hacen.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 47</span><button class="copy" data-t="p47">Copiar</button></div><pre id="p47">Eres un especialista en presencia local de hoteles. Me ayudas con la ficha de Google de [nombre del hotel].
+
+TE PASO
+- Descripción actual: [pega].
+- Servicios: [pega].
+- Preguntas que nos hacen a menudo: [pega].
+- Novedades y ofertas del mes: [pega].
+
+HAZ
+1. Nueva descripción de menos de 750 caracteres, con lo que nos diferencia y la zona.
+2. 10 preguntas y respuestas para la sección de preguntas.
+3. 4 publicaciones para el mes, una por semana, con texto y botón.
+4. Lista de comprobación de lo que tiene que estar en la ficha: horarios, fotos por tipo, servicios, enlaces.
+5. Una respuesta modelo a reseñas sin texto (solo estrellas).
+
+FORMATO
+Descripción, preguntas, publicaciones, lista y respuesta modelo.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="marketing" data-s="marketing compara tus textos con tres hoteles cercanos ver como se venden tus vecinos y que contar tu que ellos no cuentan. los textos de tu web y de tres hoteles cercanos (web o booking)." id="prompt-48">
+  <div class="prh"><span class="num">48</span><span class="pil">Marketing</span></div>
+  <h3>Compara tus textos con tres hoteles cercanos</h3>
+  <p class="para">Ver cómo se venden tus vecinos y qué contar tú que ellos no cuentan.</p>
+  <p class="pega"><b>Pega:</b> Los textos de tu web y de tres hoteles cercanos (web o Booking).</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 48</span><button class="copy" data-t="p48">Copiar</button></div><pre id="p48">Eres un consultor de marketing hotelero. Me ayudas a comparar cómo se presenta [nombre del hotel] frente a [3 hoteles].
+
+TE PASO
+- Textos de mi web: [pega].
+- Textos de los otros hoteles: [pega].
+- Precios que veo en las mismas fechas: [pega].
+
+HAZ
+1. Tabla: qué promete cada hotel, a quién habla y qué destaca.
+2. Lo que todos dicen igual (y por eso no diferencia).
+3. Lo que yo tengo y no cuento, según mis textos y lo que te he pasado.
+4. 3 cambios en mis textos para diferenciarme.
+5. Basa todo solo en los textos que te paso; no supongas nada de los otros hoteles.
+
+FORMATO
+Tabla, conclusiones y cambios propuestos.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="marketing" data-s="marketing agenda del mes en la zona para huespedes y redes convertir lo que pasa en tu ciudad en contenido util y en motivos para reservar. eventos, fiestas, mercados y actividades del mes en la zona." id="prompt-49">
+  <div class="prh"><span class="num">49</span><span class="pil">Marketing</span></div>
+  <h3>Agenda del mes en la zona para huéspedes y redes</h3>
+  <p class="para">Convertir lo que pasa en tu ciudad en contenido útil y en motivos para reservar.</p>
+  <p class="pega"><b>Pega:</b> Eventos, fiestas, mercados y actividades del mes en la zona.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 49</span><button class="copy" data-t="p49">Copiar</button></div><pre id="p49">Eres un redactor de guías locales para hoteles. Me ayudas con la agenda de [mes] en [zona] para [nombre del hotel].
+
+TE PASO
+- Eventos y planes del mes, con fecha y lugar: [pega].
+- Lo que ofrece el hotel que encaja con cada plan: [pega].
+
+HAZ
+1. Agenda ordenada por fecha, una línea por plan: qué, cuándo, dónde y para quién.
+2. Para cada plan, cómo lo conecta el hotel (cena antes del concierto, picnic para la excursión, traslado).
+3. Versión para enviar a huéspedes alojados o con reserva.
+4. 3 posts para redes basados en la agenda.
+5. Usa solo los eventos que te paso; si falta una fecha o lugar, márcalo.
+
+FORMATO
+Agenda, conexiones con el hotel, mensaje a huéspedes y posts.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+<article class="pr" data-area="marketing" data-s="marketing guiones de videos cortos con tu equipo grabar videos de 30 segundos con el movil y la gente del hotel, sin productora. lo que quieres ensenar, quien del equipo se anima y lo que tienes para grabar." id="prompt-50">
+  <div class="prh"><span class="num">50</span><span class="pil">Marketing</span></div>
+  <h3>Guiones de vídeos cortos con tu equipo</h3>
+  <p class="para">Grabar vídeos de 30 segundos con el móvil y la gente del hotel, sin productora.</p>
+  <p class="pega"><b>Pega:</b> Lo que quieres enseñar, quién del equipo se anima y lo que tienes para grabar.</p>
+  <details><summary>Ver el prompt</summary>
+  <div class="codebox"><div class="codebar"><span>Prompt 50</span><button class="copy" data-t="p50">Copiar</button></div><pre id="p50">Eres un guionista de vídeos cortos para hoteles. Me ayudas con vídeos para [nombre del hotel].
+
+TE PASO
+- Lo que queremos enseñar: [desayuno, plato estrella, habitación, experiencias, zona].
+- Personas del equipo que se animan: [pega].
+- Lugares y momentos que podemos grabar: [pega].
+
+HAZ
+1. 6 ideas de vídeo de 20 a 40 segundos, cada una con un objetivo.
+2. Para cada una, guion plano a plano: qué se ve, qué se dice y cuánto dura.
+3. La frase de los primeros 2 segundos para que no pasen de largo.
+4. Texto para acompañar cada vídeo.
+5. Consejos para grabar con el móvil: luz, sonido, vertical.
+
+FORMATO
+Ideas numeradas con guion, frase inicial y texto. Lenguaje sencillo para que lo grabe cualquiera.
+
+REGLAS
+- Si te falta un dato, pregúntamelo; no inventes cifras.
+- Tú preparas; la decisión es mía. No des nada por aprobado.
+- Castellano claro, frases cortas, sin palabras técnicas.</pre></div>
+  </details>
+</article>
+  </div>
+</section>
+
+<section id="vertice">
+  <div class="cta">
+    <div>
+      <h2>Claude trabaja con lo que tú le pasas. Para que trabaje con lo que pasa en tu hotel, le faltan tres cosas.</h2>
+      <ul>
+        <li>Los datos reales de cada día, sin exportar Excel: qué pide cada huésped, cuándo y cuánto.</li>
+        <li>Estar donde está el huésped: en el QR de la habitación, vendiendo en el momento justo.</li>
+        <li>Medirlo cada semana, para que el resumen a los dueños se haga solo.</li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-size:16px;margin-bottom:16px;color:var(--white)">Eso es lo que montamos en Vértice, en 14 días y sin que tu equipo toque nada.</p>
+      <a class="btn" href="https://verticeqr.com/llamada">Ver cómo quedaría en tu hotel →</a>
+      <small>Llamada de diagnóstico de 30 minutos con Héctor García.</small>
+    </div>
+  </div>
+</section>
+<footer>Vértice · Método Fricción 0 · verticeqr.com</footer>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
+  const el=document.getElementById(b.dataset.t); const txt=el.innerText;
+  const ok=()=>{b.textContent='Copiado ✓';setTimeout(()=>b.textContent='Copiar',1800)};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok).catch(()=>sel(el,ok))}else sel(el,ok);
+}));
+function sel(el,ok){try{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');ok()}catch(e){}}
+
+(function(){
+  const q=document.getElementById('q'), chips=[...document.querySelectorAll('.chip')];
+  const cards=[...document.querySelectorAll('.pr')], areas=[...document.querySelectorAll('.area')];
+  const count=document.getElementById('count'), empty=document.getElementById('empty');
+  let f='all';
+  const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  function apply(){
+    const words=norm(q.value.trim()).split(/\s+/).filter(Boolean); let n=0;
+    cards.forEach(c=>{const show=(f==='all'||c.dataset.area===f)&&words.every(w=>c.dataset.s.includes(w));c.hidden=!show;if(show)n++});
+    areas.forEach(a=>{a.hidden=!a.querySelector('.pr:not([hidden])')});
+    count.textContent=n===50?'Mostrando los 50 prompts':'Mostrando '+n+' de 50 prompts';
+    empty.hidden=n>0;
+  }
+  q.addEventListener('input',apply);
+  chips.forEach(c=>c.addEventListener('click',()=>{f=c.dataset.f;chips.forEach(x=>{const on=x===c;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on)});apply()}));
+  document.querySelectorAll('.toc a').forEach(a=>a.addEventListener('click',()=>{if(f!=='all'||q.value){q.value='';f='all';chips.forEach(x=>{const on=x.dataset.f==='all';x.classList.toggle('on',on);x.setAttribute('aria-pressed',on)});apply()}}));
+})();
+</script>
+</body></html>

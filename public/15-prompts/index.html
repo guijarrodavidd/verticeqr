@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>15 prompts para que tu hotel gane más sin contratar a nadie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,700;0,6..72,800;1,6..72,600;1,6..72,800&family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F6F3EC; --card:#FFFFFF; --sheet:#FBF9F4; --line:#E7E1D4; --line2:#EFEAE0;
+  --ink:#141312; --text:#2B2925; --muted:#625D54; --faint:#8E877B;
+  --clay:#D4714B; --clay-d:#A9502D; --clay-bg:#FBEDE5;
+  --code:#1F1D1A; --code-t:#EDE9DF;
+  --serif:"Newsreader", Georgia, "Times New Roman", serif;
+  --sans:"Figtree", "Helvetica Neue", Arial, sans-serif;
+  --mono:"JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;padding:0 16px calc(64px + env(safe-area-inset-bottom))}
+.wrap{max-width:1100px;margin:0 auto}
+a{color:var(--clay-d)}
+
+/* HEADER */
+header{text-align:center;padding:44px 0 8px;position:relative}
+.ast{display:block;margin:0 auto 18px;width:52px;height:52px}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(34px,7.4vw,74px);line-height:1;color:var(--ink);letter-spacing:-.025em;text-wrap:balance}
+h1 .l2{display:block;font-style:italic;letter-spacing:-.02em;margin-top:.06em}
+h1 em{color:var(--clay);font-style:italic}
+.sub{font-size:clamp(17px,2.4vw,22px);color:var(--muted);margin:16px auto 0;max-width:620px;text-wrap:balance}
+.bug{display:block;width:44px;height:40px;margin:26px 8px 0 auto}
+
+/* HOW */
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.how>div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+.how .n{flex:0 0 30px;height:30px;border-radius:50%;background:var(--clay);color:#fff;font-weight:800;font-size:14px;display:grid;place-items:center}
+.how b{display:block;color:var(--ink);font-size:15.5px;line-height:1.3}
+.how p{font-size:14.5px;color:var(--muted);line-height:1.45;margin-top:2px}
+.tip{margin-top:12px;background:var(--clay-bg);border:1px solid #F0CDBC;border-radius:12px;padding:12px 16px;font-size:14.5px;color:var(--text)}
+.tip b{color:var(--clay-d)}
+
+/* INDEX */
+.idx{margin-top:30px}
+.idx p{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.idx ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.idx a{display:grid;place-items:center;min-width:44px;height:44px;padding:0 6px;border-radius:10px;background:var(--card);border:1px solid var(--line);font-family:var(--serif);font-style:italic;font-weight:800;font-size:18px;color:var(--clay-d);text-decoration:none}
+.idx a:hover,.idx a:focus-visible{border-color:var(--clay);outline:none}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+@media (min-width:640px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1000px){.grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 2px rgba(20,19,18,.04),0 8px 20px rgba(20,19,18,.05);scroll-margin-top:12px}
+.card summary{list-style:none;cursor:pointer;padding:14px 12px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;min-height:44px;border-radius:14px}
+.card summary::-webkit-details-marker{display:none}
+.card summary:focus-visible{outline:2px solid var(--clay);outline-offset:2px}
+.num{font-family:var(--serif);font-style:italic;font-weight:800;color:var(--clay);font-size:34px;line-height:1}
+.tt{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:17px;line-height:1.15;margin-top:6px;min-height:2.3em;display:flex;align-items:center;text-wrap:balance}
+.sheet{width:100%;margin-top:10px;background:var(--sheet);border:1px solid var(--line2);border-radius:8px;padding:10px 10px 12px;display:flex;flex-direction:column;gap:5px}
+.sheet i{display:block;height:4px;border-radius:2px;background:#E2DCCF}
+.sheet i:nth-child(1){width:86%}
+.sheet i:nth-child(2){width:52%;background:#F0C2AC}
+.sheet i:nth-child(3){width:94%}
+.sheet i:nth-child(4){width:70%}
+.sheet i:nth-child(5){width:80%;background:#F0C2AC}
+.sheet i:nth-child(6){width:60%}
+.open{margin-top:10px;font-size:13px;font-weight:700;color:var(--clay-d);display:inline-flex;align-items:center;gap:4px}
+.open::after{content:"+";font-size:17px;line-height:1}
+.card[open]{grid-column:1/-1;border-color:#EBC2AE}
+.card[open] .sheet{display:none}
+.card[open] .open::after{content:"−"}
+.card[open] .open span{display:none}
+.card[open] .open::before{content:"Cerrar"}
+.card[open] summary{flex-direction:row;justify-content:center;gap:12px;text-align:left;padding-bottom:6px}
+.card[open] .tt{margin-top:0;min-height:0;font-size:22px}
+.card[open] .open{margin:0 0 0 auto}
+.body{padding:4px 18px 20px}
+.what{font-size:16px;color:var(--text);max-width:720px}
+.data{margin-top:10px;background:var(--sheet);border:1px solid var(--line2);border-radius:10px;padding:12px 14px;font-size:14.5px;color:var(--muted);max-width:720px}
+.data b{display:block;color:var(--ink);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px}
+.codebox{background:var(--code);color:var(--code-t);border-radius:12px;overflow:hidden;margin-top:14px}
+.codebar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 10px 8px 14px;border-bottom:1px solid #34312C}
+.codebar span{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:#BDB7AA;text-transform:uppercase}
+.copy{font:700 14px var(--sans);background:var(--clay);color:#1A0E08;border:0;border-radius:22px;padding:0 18px;min-height:44px;cursor:pointer}
+.copy:hover{background:#E08463}
+pre{font-family:var(--mono);font-size:13px;line-height:1.6;white-space:pre-wrap;word-break:break-word;padding:16px;max-height:520px;overflow:auto}
+.copy2{display:flex;justify-content:flex-end;margin-top:10px}
+
+/* CTA */
+section{margin-top:56px}
+h2{font-family:var(--serif);font-weight:800;color:var(--ink);font-size:clamp(25px,3.6vw,34px);line-height:1.12;letter-spacing:-.01em;text-wrap:balance}
+.cta{background:#1D1B18;color:#F6F3EC;border-radius:18px;padding:26px 22px;display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:center}
+.cta h2{color:#F6F3EC}
+.cta ul{list-style:none;margin-top:12px}
+.cta li{padding:8px 0;border-bottom:1px solid rgba(246,243,236,.15);font-size:15px}
+.cta li:last-child{border:0}
+.cta li::before{content:"→ ";color:#F2A07E}
+.cta .btn{display:inline-flex;align-items:center;min-height:48px;background:var(--clay);color:#1A0E08;text-decoration:none;font-weight:800;padding:12px 20px;border-radius:30px;font-size:16px}
+.cta small{display:block;color:#C9C2B4;margin-top:10px;font-size:13.5px}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:40px}
+@media (max-width:820px){.how,.cta{grid-template-columns:1fr}}
+@media (max-width:420px){
+  .tt{font-size:15.5px}
+  .num{font-size:30px}
+  .card[open] .tt{font-size:19px}
+  .body{padding:2px 14px 16px}
+  pre{padding:14px 12px;font-size:12.5px}
+}
+</style></head><body><div class="wrap">
+
+<header>
+  <svg class="ast" viewBox="0 0 100 100" aria-hidden="true"><g fill="#D4714B"><rect x="46" y="4" width="8" height="40" rx="4"/><rect x="46" y="56" width="8" height="40" rx="4"/><rect x="4" y="46" width="40" height="8" rx="4"/><rect x="56" y="46" width="40" height="8" rx="4"/><rect x="46" y="4" width="8" height="40" rx="4" transform="rotate(45 50 50)"/><rect x="46" y="56" width="8" height="40" rx="4" transform="rotate(45 50 50)"/><rect x="4" y="46" width="40" height="8" rx="4" transform="rotate(45 50 50)"/><rect x="56" y="46" width="40" height="8" rx="4" transform="rotate(45 50 50)"/></g></svg>
+  <h1>15 prompts para que tu hotel <span class="l2"><em>gane más</em> sin contratar a nadie</span></h1>
+  <p class="sub">Hechos con Claude. Copias, pegas tus datos y listo.</p>
+  <svg class="bug" viewBox="0 0 11 10" shape-rendering="crispEdges" aria-hidden="true"><g fill="#D4714B"><rect x="1" y="0" width="2" height="2"/><rect x="8" y="0" width="2" height="2"/><rect x="0" y="2" width="11" height="5"/><rect x="1" y="7" width="1" height="3"/><rect x="3" y="7" width="1" height="3"/><rect x="7" y="7" width="1" height="3"/><rect x="9" y="7" width="1" height="3"/></g><g fill="#141312"><rect x="3" y="4" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="7" y="4" width="1" height="1"/></g></svg>
+</header>
+
+<div class="how">
+  <div><span class="n">1</span><div><b>Toca una tarjeta</b><p>Se abre con el prompt completo y los datos que necesita.</p></div></div>
+  <div><span class="n">2</span><div><b>Copia y pégalo en Claude</b><p>En claude.ai (vale también ChatGPT). Cambia lo que va entre [corchetes] por lo tuyo.</p></div></div>
+  <div><span class="n">3</span><div><b>Pega tus datos tal cual</b><p>Un Excel, un PDF, una foto de la carta. Si le falta algo, te lo pregunta.</p></div></div>
+</div>
+<p class="tip"><b>Truco para no repetir datos:</b> en Claude, crea un proyecto llamado «Mi hotel» (claude.ai → Proyectos → Nuevo proyecto). En «Instrucciones del proyecto» pega lo básico de tu hotel: nombre, habitaciones, tipo de huésped, servicios con precio y horarios. Usa los 15 prompts dentro de ese proyecto y Claude ya sabrá con quién habla.</p>
+
+<nav class="idx" aria-label="Índice"><p>Índice</p><ol>
+<li><a href="#p01" aria-label="01 Calculadora del dinero perdido">01</a></li><li><a href="#p02" aria-label="02 Informe para los dueños">02</a></li><li><a href="#p03" aria-label="03 Cierre de mes">03</a></li><li><a href="#p04" aria-label="04 Carta que vende">04</a></li><li><a href="#p05" aria-label="05 Traductor de carta">05</a></li><li><a href="#p06" aria-label="06 Excursiones de tu zona">06</a></li><li><a href="#p07" aria-label="07 Acuerdos con negocios">07</a></li><li><a href="#p08" aria-label="08 Mensaje antes de llegar">08</a></li><li><a href="#p09" aria-label="09 Precios por temporada">09</a></li><li><a href="#p10" aria-label="10 Respuesta a reseñas">10</a></li><li><a href="#p11" aria-label="11 Quejas en tareas">11</a></li><li><a href="#p12" aria-label="12 Turnos del equipo">12</a></li><li><a href="#p13" aria-label="13 Formación de nuevos">13</a></li><li><a href="#p14" aria-label="14 Posts del hotel">14</a></li><li><a href="#p15" aria-label="15 Plan de temporada">15</a></li>
+</ol></nav>
+
+<div class="grid">
+
+<!-- 01 -->
+<details class="card" id="p01"><summary><span class="num">01</span><span class="tt">Calculadora del dinero perdido</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">Te dice cuánto dinero se te escapó el mes pasado por cosas que el huésped podía comprar y no compró, servicio a servicio.</p>
+<div class="data"><b>Qué datos pegar</b>Habitaciones ocupadas del mes (del PMS) y, por cada servicio, cuántas ventas hubo y a qué precio medio (del TPV o de caja).</div>
+<div class="codebox"><div class="codebar"><span>Prompt 01</span><button class="copy" data-t="t01">Copiar</button></div><pre id="t01">Actúa como analista de ingresos de hotel. Trabajas para mí, director/a de [NOMBRE DEL HOTEL], [nº] habitaciones, en [ciudad / zona].
+
+QUÉ QUIERO
+Saber cuánto dinero se me escapó en [mes] por cosas que el huésped podía comprar y no compró. No hablo del precio de la habitación: hablo de todo lo demás.
+
+MIS DATOS DEL MES
+- Habitaciones ocupadas (noches vendidas): [nº]
+- Estancia media: [nº] noches
+- Por cada servicio, número de ventas y precio medio:
+  - Restaurante (fuera de lo incluido en la tarifa): [nº ventas] · [€]
+  - Bar: [nº] · [€]
+  - Servicio de habitaciones: [nº] · [€]
+  - Desayuno no incluido: [nº] · [€]
+  - Salida tardía (late check-out): [nº] · [€]
+  - Excursiones y experiencias: [nº] · [€]
+  - Spa / masajes: [nº] · [€]
+  - Parking / traslados: [nº] · [€]
+  - [Otro]: [nº] · [€]
+- Cuántas de cada 100 habitaciones creo que deberían comprar cada servicio (mi objetivo): [..]
+  Si no lo sé, no lo supongas: hazme 2 o 3 preguntas sencillas por servicio para fijarlo juntos (por ejemplo, qué días se llena el restaurante o qué pasaba en un mes bueno).
+
+LO QUE HACES
+1. Para cada servicio: cuántas de cada 100 habitaciones lo compraron (ventas ÷ habitaciones ocupadas × 100).
+2. Ventas que faltaron para llegar a mi objetivo: (objetivo − real) × habitaciones ocupadas ÷ 100.
+3. Dinero que se escapó = ventas que faltaron × precio medio.
+4. Suma el total del mes. Si te lo pido, multiplícalo por 12 avisando de que cada temporada es distinta.
+5. Ordena los servicios de más a menos dinero perdido y dime en cuál o cuáles está la mitad del problema.
+6. Para los 3 primeros, elige la causa más probable de esta lista: el huésped no sabía que existía · no sabía cómo pedirlo · no se lo ofrecimos en el momento justo · el precio no estaba claro · el horario no le cuadraba · el idioma. Pregúntame lo que necesites para elegir bien.
+
+FORMATO
+- Primera línea, sola: «En [mes] se te escaparon X €.»
+- Una tabla: servicio · de cada 100 hab. hoy · objetivo · precio medio · € que se escaparon.
+- Tres líneas con las causas, en orden de dinero.
+- Enseña todas las cuentas para que pueda comprobarlas.
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div>
+</div></details>
+
+<!-- 02 -->
+<details class="card" id="p02"><summary><span class="num">02</span><span class="tt">Informe para los dueños</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">El informe de una página que mandas a los dueños cada mes: qué ha pasado, por qué y qué vas a hacer, sin excusas.</p>
+<div class="data"><b>Qué datos pegar</b>Los números del mes frente al presupuesto y al mismo mes del año pasado, y lo que ha pasado (obras, clima, eventos, bajas).</div>
+<div class="codebox"><div class="codebar"><span>Prompt 02</span><button class="copy" data-t="t02">Copiar</button></div><pre id="t02">Actúa como el director financiero de un hotel que prepara el informe mensual para los dueños. Trabajas para mí, director/a de [NOMBRE DEL HOTEL], y el informe lo firmo yo.
+
+MIS DATOS DE [MES]
+(real · presupuesto · mismo mes del año pasado)
+- Ocupación: [..] · [..] · [..]
+- Precio medio por habitación vendida: [..] · [..] · [..]
+- Ingresos de habitaciones: [..] · [..] · [..]
+- Ingresos de restaurante y bar: [..] · [..] · [..]
+- Otros ingresos (experiencias, spa, parking…): [..] · [..] · [..]
+- Gasto de personal: [..] · [..] · [..]
+- Otros gastos grandes que se hayan movido: [..]
+- Lo que ha pasado este mes: [obras, clima, eventos en la zona, bajas, cambios de equipo…]
+- Lo que me han pedido los dueños la última vez: [..]
+
+LO QUE HACES
+1. El mes en una sola frase.
+2. Los 4 números que más importan, con la diferencia frente al presupuesto en € y en %.
+3. Por qué ha pasado, en dos bloques: lo que depende de nosotros y lo que no.
+4. Tres acciones para el mes que viene que no exijan sumar personal. Para cada una: qué se hace, quién lo lleva y qué esperamos que mueva. Solo pon cifra si sale de mis datos; si no, di «a medir».
+5. Si necesito algo de los dueños (una decisión, un gasto pequeño), dilo en una línea con el motivo.
+6. Aparte, fuera del informe: las 3 preguntas más difíciles que me pueden hacer en la reunión y una respuesta corta para cada una.
+
+FORMATO
+- Una página, máximo 350 palabras.
+- Lenguaje claro, sin adjetivos ni excusas, como lo escribiría alguien que controla su hotel.
+- Tabla pequeña con los números y el resto en frases cortas.
+- Enseña los cálculos de las diferencias en un anexo al final.
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div>
+</div></details>
+
+<!-- 03 -->
+<details class="card" id="p03"><summary><span class="num">03</span><span class="tt">Cierre de mes</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">Cuadra los números del mes, te señala lo que no encaja y te deja la lista de pendientes para cerrar en una mañana en vez de en tres días.</p>
+<div class="data"><b>Qué datos pegar</b>Ventas por departamento del PMS y del TPV, gastos del mes por partida, presupuesto y horas trabajadas del equipo. Vale pegar los Excel tal cual.</div>
+<div class="codebox"><div class="codebar"><span>Prompt 03</span><button class="copy" data-t="t03">Copiar</button></div><pre id="t03">Actúa como jefe de administración de un hotel. Me ayudas a mí, director/a de [NOMBRE DEL HOTEL], a cerrar [mes] rápido y sin errores.
+
+TE PASO
+- Ventas por departamento según el PMS: [pega o adjunta]
+- Ventas por departamento según el TPV / caja: [pega o adjunta]
+- Gastos del mes por partida (comida y bebida, lavandería, suministros, mantenimiento, comisiones de agencias, otros): [..]
+- Presupuesto del mes por partida: [..]
+- Gasto de personal y horas trabajadas por departamento: [..]
+- Habitaciones ocupadas del mes: [nº]
+- Facturas o cobros que sé que están pendientes: [..]
+
+LO QUE HACES
+1. Cuadra PMS contra TPV por departamento. Señala cada diferencia de más de [X] € y dime dónde suele estar el error (cargos a habitación no pasados, invitaciones, anulaciones, días cambiados).
+2. Una tabla por departamento: ingresos · gastos · resultado · presupuesto · diferencia.
+3. Las 5 partidas que más se desvían del presupuesto. Para cada una, una pregunta concreta que yo tenga que hacer al responsable.
+4. Gasto de personal por habitación ocupada (gasto de personal ÷ habitaciones ocupadas) y comparado con el mes anterior si te lo doy.
+5. Lista de pendientes para cerrar: facturas sin recibir, cobros sin hacer, cargos sin facturar. Con responsable y fecha límite.
+6. Un calendario de cierre para el mes que viene: qué se hace cada día, del día 1 al 5, y quién lo hace, para que no dependa de mí.
+
+FORMATO
+- Arriba, en tres líneas: lo que cuadra, lo que no cuadra y cuánto dinero hay en duda.
+- Después las tablas, en formato que pueda pegar en Excel o Google Sheets.
+- Enseña todas las operaciones.
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div>
+</div></details>
+
+<!-- 04 -->
+<details class="card" id="p04"><summary><span class="num">04</span><span class="tt">Carta que vende</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">Reordena y reescribe la carta del restaurante, el bar o el servicio de habitaciones para que el huésped pida más de lo que más te deja.</p>
+<div class="data"><b>Qué datos pegar</b>La carta actual (texto, PDF o foto), el precio y lo que te cuesta cada plato si lo sabes, y lo que más se vende.</div>
+<div class="codebox"><div class="codebar"><span>Prompt 04</span><button class="copy" data-t="t04">Copiar</button></div><pre id="t04">Actúa como consultor de restaurantes de hotel con experiencia en diseño de cartas. Trabajas para mí, director/a de [NOMBRE DEL HOTEL].
+
+TE PASO
+- La carta actual de [restaurante / bar / servicio de habitaciones]: [pega el texto o adjunta la foto o el PDF]
+- Lo que me cuesta cada plato, si lo sé: [..]
+- Los platos que más se venden y los que casi no salen: [..]
+- Horario y quién la usa (huésped del hotel, cliente de fuera, familias, negocios): [..]
+- Lo que me gustaría vender más: [..]
+
+LO QUE HACES
+1. Para cada plato calcula lo que me deja (precio sin IVA − coste). Si no tengo el coste, pregúntame antes de seguir.
+2. Clasifica los platos en cuatro grupos: se venden mucho y dejan mucho · se venden mucho y dejan poco · se venden poco y dejan mucho · se venden poco y dejan poco. Di qué hacer con cada grupo.
+3. Reordena la carta: en cada sección, primero los platos que más dejan. Máximo 7 platos por sección.
+4. Reescribe las descripciones de los 10 platos clave: máximo 15 palabras, con ingrediente principal, origen o forma de hacerlo. Nada de «delicioso» ni «exquisito».
+5. Propón 3 combinaciones con precio cerrado (plato + bebida, menú para dos, algo para compartir en el bar) y explica cuánto me dejan.
+6. Dime qué platos quitar y por qué.
+7. Si es para el servicio de habitaciones: marca los platos que aguantan bien el viaje hasta la habitación y los que no.
+
+FORMATO
+- Primero la carta nueva, lista para maquetar.
+- Después una tabla de cambios: plato · qué cambia · por qué.
+- Enseña los cálculos de lo que deja cada plato.
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div>
+</div></details>
+
+<!-- 05 -->
+<details class="card" id="p05"><summary><span class="num">05</span><span class="tt">Traductor de carta</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">Traduce tu carta a 5 idiomas sin traducciones ridículas, con los alérgenos claros, para que el huésped extranjero pida sin tener que preguntar.</p>
+<div class="data"><b>Qué datos pegar</b>La carta en castellano (mejor ya reescrita con el prompt 04), los alérgenos de cada plato y los idiomas de tus huéspedes.</div>
+<div class="codebox"><div class="codebar"><span>Prompt 05</span><button class="copy" data-t="t05">Copiar</button></div><pre id="t05">Actúa como traductor gastronómico especializado en cartas de restaurante de hotel. Trabajas para mí, director/a de [NOMBRE DEL HOTEL], en [ciudad / zona].
+
+TE PASO
+- La carta en castellano: [pega el texto]
+- Los alérgenos de cada plato: [..]
+- Idiomas: inglés, francés, alemán, italiano y portugués. [Cámbialos si tus huéspedes son otros.]
+
+REGLAS
+1. Los platos típicos de la zona no se traducen palabra por palabra: deja el nombre original y añade debajo una explicación corta de qué es (máximo 12 palabras). Ejemplo de formato: «Fideuà — fine noodles cooked in fish stock, like a paella».
+2. Mantén precios, orden y secciones exactamente igual que en el original.
+3. Los alérgenos van en cada plato con el mismo nombre en todos los idiomas. Si un plato no tiene los alérgenos indicados, no los deduzcas tú: márcalo «[FALTA ALÉRGENO]» y avísame.
+4. Tono natural de restaurante en cada idioma, como lo escribiría un nativo, no como una traducción.
+5. Si una palabra tiene dos traducciones posibles, elige la que use un restaurante de ese país y anota la duda al final.
+
+LO QUE HACES
+1. Una versión completa de la carta por idioma, con la misma estructura que la original.
+2. Al final, una lista de los platos que dejaste en su nombre original y por qué.
+3. Una lista de dudas para que la revise alguien nativo antes de imprimir.
+4. Un mini glosario para el equipo de sala: las 10 preguntas que más hará el huésped extranjero sobre la carta («¿lleva gluten?», «¿pica?») con la respuesta en los 5 idiomas.
+
+FORMATO
+Un bloque por idioma con su título, listo para copiar en el diseño de la carta.
+
+Si te falta un dato, pregúntamelo; no inventes cifras ni ingredientes.</pre></div>
+</div></details>
+
+<!-- 06 -->
+<details class="card" id="p06"><summary><span class="num">06</span><span class="tt">Excursiones de tu zona</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">Monta el catálogo de excursiones y experiencias de tu zona que puedes ofrecer al huésped, con el texto para enseñárselas y el momento de ofrecerlas.</p>
+<div class="data"><b>Qué datos pegar</b>Dónde está el hotel, qué tipo de huésped tienes y en qué temporada, lo que ya ofreces y las empresas de la zona que conoces.</div>
+<div class="codebox"><div class="codebar"><span>Prompt 06</span><button class="copy" data-t="t06">Copiar</button></div><pre id="t06">Actúa como jefe de conserjería con 15 años en hoteles y que conoce bien [ciudad / zona]. Trabajas para mí, director/a de [NOMBRE DEL HOTEL].
+
+TE PASO
+- Ubicación exacta del hotel: [..]
+- Huésped principal: [parejas, familias, grupos, negocios, nacionalidades]
+- Temporada que quiero preparar: [..]
+- Estancia media: [nº] noches
+- Lo que ya ofrecemos hoy: [..]
+- Empresas o guías de la zona que ya conozco: [..]
+
+LO QUE HACES
+1. Propón 12 experiencias en tres grupos: dentro del hotel o a menos de 15 minutos · media jornada · día completo.
+2. Solo sitios y actividades que existan de verdad. Si no estás seguro de que algo existe o sigue abierto, márcalo «VERIFICAR».
+3. Para cada experiencia: para qué huésped encaja · cuánto dura · qué día de la estancia es mejor ofrecerla · qué tipo de empresa la puede dar · precio: déjalo como [precio a confirmar con el proveedor].
+4. Elige las 5 con las que empezaría yo y explica por qué en una línea cada una.
+5. Para esas 5, el texto para enseñársela al huésped: máximo 40 palabras, en castellano y en inglés, que diga qué va a vivir y cómo reservarla.
+6. Cuándo y cómo ofrecer cada una: en el mensaje antes de llegar, en el check-in, en la habitación o el día anterior.
+
+FORMATO
+- Una tabla con las 12 experiencias.
+- Después los textos de las 5 elegidas, listos para copiar.
+
+Si te falta un dato, pregúntamelo; no inventes cifras ni sitios.</pre></div>
+</div></details>
+
+<!-- 07 -->
+<details class="card" id="p07"><summary><span class="num">07</span><span class="tt">Acuerdos con negocios</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">Prepara los acuerdos con restaurantes, bodegas, guías o tiendas de tu zona para que te paguen por cada cliente que les mandas, con el mensaje para proponérselo.</p>
+<div class="data"><b>Qué datos pegar</b>Cuántos huéspedes recibes al mes, qué tipo de huésped es y la lista de negocios cercanos con los que te gustaría trabajar.</div>
+<div class="codebox"><div class="codebar"><span>Prompt 07</span><button class="copy" data-t="t07">Copiar</button></div><pre id="t07">Actúa como responsable de acuerdos comerciales de un hotel. Trabajas para mí, director/a de [NOMBRE DEL HOTEL], en [ciudad / zona].
+
+QUÉ QUIERO
+Acuerdos con negocios de la zona (restaurantes, bodegas, alquiler de bicis o barcos, guías, spa, tiendas) para que el huésped tenga una ventaja y el hotel cobre por cada cliente que les mandamos.
+
+TE PASO
+- Huéspedes al mes, de media: [nº]
+- Huésped principal: [..]
+- Negocios con los que me gustaría trabajar: [nombre · qué hacen · distancia al hotel]
+- Lo que quiero cobrar por cliente o en %: [..] (si no lo tengo claro, pregúntame; no pongas tú la cifra)
+
+LO QUE HACES
+1. Ordena los negocios por encaje con mi huésped y por facilidad para cerrar el acuerdo. Explica el orden en una línea por negocio.
+2. Para cada uno, una propuesta en 5 puntos:
+   - Qué ventaja recibe el huésped (descuento, detalle, sitio guardado).
+   - Qué recibe el hotel: [cantidad por cliente o %].
+   - Cómo se sabe que el cliente viene del hotel (código, bono, QR con su nombre).
+   - Cómo y cuándo se paga: resumen mensual con el número de clientes.
+   - Qué hace el hotel a cambio: dónde y cuándo se lo ofrece al huésped.
+3. El primer mensaje para proponérselo, por email o WhatsApp: máximo 100 palabras, de tú a tú, que hable de lo que gana el negocio.
+4. Cinco preguntas para la reunión con el dueño del negocio.
+5. Un acuerdo de una página en lenguaje sencillo, para firmar los dos. Avisa de que no sustituye a revisarlo con un asesor.
+6. Una tabla mensual de seguimiento: negocio · clientes enviados · clientes que llegaron · cobrado · pendiente.
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div>
+</div></details>
+
+<!-- 08 -->
+<details class="card" id="p08"><summary><span class="num">08</span><span class="tt">Mensaje antes de llegar</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">Los mensajes que el huésped recibe antes de llegar y que le hacen reservar la cena, el traslado o la habitación mejor, sin sonar a publicidad.</p>
+<div class="data"><b>Qué datos pegar</b>Lo que puedes vender antes de la llegada con su precio, tu tipo de huésped y por dónde le escribes (email, WhatsApp o los dos).</div>
+<div class="codebox"><div class="codebar"><span>Prompt 08</span><button class="copy" data-t="t08">Copiar</button></div><pre id="t08">Actúa como el responsable de la experiencia del huésped de un hotel, experto en escribir mensajes que se leen y se contestan. Trabajas para mí, director/a de [NOMBRE DEL HOTEL].
+
+TE PASO
+- Tipo de hotel y ubicación: [urbano / vacacional · ciudad]
+- Perfiles de huésped: [parejas, familias, negocios…]
+- Lo que se puede reservar antes de llegar, con precio: [habitación mejor, cena, traslado, salida tardía, experiencia, detalle en la habitación…]
+- Canal: [email / WhatsApp / los dos]
+- Idiomas: [castellano, inglés…]
+- Tono del hotel: [cercano, elegante, familiar…]
+
+LO QUE HACES
+Escribe una secuencia de 3 mensajes:
+1. Con la confirmación de la reserva.
+2. Siete días antes de la llegada.
+3. Veinticuatro horas antes.
+
+Reglas de cada mensaje:
+- Ofrece UNA sola cosa, la que mejor encaja con ese momento.
+- Menos de 60 palabras por WhatsApp o 120 por email.
+- Habla del momento que va a vivir el huésped, no del producto.
+- Termina con una respuesta de una palabra: «Responde MESA y te la guardo».
+- Tono de anfitrión, nunca de oferta. Nada de «no te lo pierdas» ni mayúsculas.
+
+ADEMÁS
+- Una versión de los 3 mensajes por cada perfil de huésped que te he dado.
+- Dos asuntos posibles para cada email.
+- Lo que tiene que contestar recepción cuando el huésped responde la palabra, para cerrar la reserva en un mensaje.
+- Los mensajes en todos los idiomas que te he indicado.
+
+Si te falta un dato, pregúntamelo; no inventes cifras ni servicios.</pre></div>
+</div></details>
+
+<!-- 09 -->
+<details class="card" id="p09"><summary><span class="num">09</span><span class="tt">Precios por temporada</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">Te ordena el año en temporadas y te propone precios de habitación y de extras para cada una, con reglas sencillas para subir o bajar a tiempo.</p>
+<div class="data"><b>Qué datos pegar</b>Ocupación y precio medio de cada mes del último año, eventos de la zona, precios de 3 a 5 hoteles parecidos y el precio por debajo del cual no quieres bajar.</div>
+<div class="codebox"><div class="codebar"><span>Prompt 09</span><button class="copy" data-t="t09">Copiar</button></div><pre id="t09">Actúa como experto en precios de hotel. Trabajas para mí, director/a de [NOMBRE DEL HOTEL], [nº] habitaciones, en [ciudad / zona].
+
+TE PASO
+- Ocupación y precio medio por habitación de cada mes del último año (y del anterior si lo tengo): [..]
+- Tipos de habitación y precio actual de cada uno: [..]
+- Fechas fuertes de la zona (fiestas, congresos, puentes, eventos): [..]
+- Precios de 3 a 5 hoteles parecidos en las mismas fechas (los he mirado yo): [..]
+- Precio mínimo por debajo del cual no quiero bajar: [..]
+- Extras que cobro y su precio actual: [desayuno, salida tardía, parking, cuna, mascota…]
+
+LO QUE HACES
+1. Divide el año en temporadas (alta, media, baja y fechas especiales) usando mis datos, no la costumbre. Explica de qué dato sale cada corte.
+2. Para cada temporada y tipo de habitación: precio de partida, estancia mínima y la diferencia entre tarifa flexible y no reembolsable.
+3. Los extras por temporada: cuáles subir en alta y cuáles regalar o rebajar en baja para llenar, con el motivo.
+4. Reglas sencillas para revisar cada semana, con los números que yo decida. Ejemplo de forma: «Si a 30 días de la fecha la ocupación está por debajo de [X] %, baja [Y] €; si está por encima de [Z] %, sube [W] €». Explícame cómo elegir X, Y, Z y W con mis datos.
+5. Un calendario mes a mes con la temporada y el precio de partida de cada tipo de habitación.
+
+FORMATO
+- Tablas que pueda pegar en Excel o Google Sheets.
+- Debajo de cada tabla, dos líneas con el porqué.
+- Tú propones; yo decido. No des nada por aprobado.
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div>
+</div></details>
+
+<!-- 10 -->
+<details class="card" id="p10"><summary><span class="num">10</span><span class="tt">Respuesta a reseñas</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">Responde todas las reseñas de la semana, buenas y malas, en el idioma de cada huésped y sin sonar a plantilla.</p>
+<div class="data"><b>Qué datos pegar</b>Las reseñas de la semana (texto, nota y plataforma), quién firma las respuestas y qué se ha hecho ya con cada problema.</div>
+<div class="codebox"><div class="codebar"><span>Prompt 10</span><button class="copy" data-t="t10">Copiar</button></div><pre id="t10">Actúa como responsable de reputación de un hotel. Trabajas para mí, director/a de [NOMBRE DEL HOTEL].
+
+TE PASO
+- Las reseñas de esta semana (texto, nota y plataforma): [pega aquí]
+- Quién firma las respuestas: [nombre y cargo]
+- Lo que ya hemos hecho con cada problema que se menciona: [..]
+- Tono del hotel: [cercano, elegante, familiar…]
+
+REGLAS
+1. Respondes a TODAS las reseñas, buenas y malas, en el idioma en que está escrita cada una.
+2. Máximo 80 palabras por respuesta.
+3. Cada respuesta nombra algo concreto que dijo el huésped. Ninguna frase se repite entre dos respuestas.
+4. Reseñas malas: agradece, reconoce el fallo sin excusas y sin discutir, y di qué hemos cambiado SOLO si te lo he dicho yo. Si no me has visto decirlo, escribe [QUÉ HEMOS HECHO] para que lo rellene. Invita a hablar en privado con un email o teléfono. Nunca ofrezcas compensaciones en público.
+5. Reseñas buenas: agradece algo concreto y dale un motivo para volver (algo que no le dio tiempo a probar o una época distinta del año).
+6. Nada de «estimado cliente», «lamentamos las molestias» ni «esperamos verle pronto».
+
+LO QUE HACES
+1. Una respuesta por reseña, lista para copiar, con la nota y la plataforma encima.
+2. Al final, un resumen de la semana: temas que se repiten (buenos y malos), cuántas veces, y cuál arreglaría yo primero.
+3. Si en alguna reseña el huésped dice que quería algo y no supo cómo pedirlo (cenar tarde, una excursión, un traslado), sepáralo en una lista aparte: es dinero que se escapó.
+
+Si te falta un dato, pregúntamelo; no inventes cifras ni arreglos.</pre></div>
+</div></details>
+
+<!-- 11 -->
+<details class="card" id="p11"><summary><span class="num">11</span><span class="tt">Quejas en tareas</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">Convierte las quejas del mes en una lista de tareas con responsable, plazo y forma de comprobar que está resuelto, ordenadas por lo que más se repite.</p>
+<div class="data"><b>Qué datos pegar</b>Todas las quejas del mes: reseñas, hojas de reclamación, emails, notas de recepción y lo que te cuentan los jefes de departamento.</div>
+<div class="codebox"><div class="codebar"><span>Prompt 11</span><button class="copy" data-t="t11">Copiar</button></div><pre id="t11">Actúa como director de operaciones de un hotel. Trabajas para mí, director/a de [NOMBRE DEL HOTEL].
+
+TE PASO
+- Las quejas de [mes], de todas partes (reseñas, hojas de reclamación, emails, notas de recepción, lo que cuentan los jefes): [pega aquí]
+- Departamentos y su responsable: [recepción: nombre · pisos: nombre · cocina: nombre · mantenimiento: nombre…]
+
+LO QUE HACES
+1. Agrupa las quejas por tema (ruido, limpieza, espera en recepción, wifi, desayuno…) y por departamento. Cuenta cuántas veces sale cada tema.
+2. Ponle gravedad a cada tema: alta (el huésped no vuelve o lo pone en una reseña), media o baja. Explica por qué en una línea.
+3. Convierte cada tema en una tarea con estas columnas:
+   tarea · departamento · responsable · plazo · coste (bajo / medio / alto, pregúntame si no lo sabes) · cómo comprobamos que está resuelto.
+4. Separa lo que se arregla en un día de lo que es un proyecto.
+5. Ordena las tareas por veces que se repite × gravedad.
+6. Marca aparte las quejas que en realidad eran ganas de comprar algo («no sabía que había servicio de habitaciones», «la cocina ya estaba cerrada»): ahí hay venta perdida.
+7. Un mensaje corto para leer en la reunión semanal del equipo: qué se arregla esta semana y quién lo lleva, sin buscar culpables.
+
+FORMATO
+- Primero los 3 temas que más se repiten, en una línea cada uno.
+- Después la tabla de tareas, lista para pegar en Excel o Google Sheets.
+- Al final, el mensaje para el equipo.
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div>
+</div></details>
+
+<!-- 12 -->
+<details class="card" id="p12"><summary><span class="num">12</span><span class="tt">Turnos del equipo</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">Hace el cuadrante de turnos según la ocupación prevista, para tener gente donde hay trabajo y no al revés, con las mismas horas totales.</p>
+<div class="data"><b>Qué datos pegar</b>Tu equipo por departamento (horas de cada uno, libranzas, vacaciones), la ocupación prevista por día con llegadas y salidas, y las reglas de tu convenio.</div>
+<div class="codebox"><div class="codebar"><span>Prompt 12</span><button class="copy" data-t="t12">Copiar</button></div><pre id="t12">Actúa como jefe de personal de un hotel con experiencia en cuadrantes. Trabajas para mí, director/a de [NOMBRE DEL HOTEL].
+
+QUÉ QUIERO
+El cuadrante de turnos de [departamento o departamentos] para las semanas del [fecha] al [fecha], poniendo a la gente donde hay trabajo, sin sumar horas totales.
+
+TE PASO
+- Equipo: [nombre o puesto · horas semanales · días libres fijos · vacaciones o bajas · lo que sabe hacer]
+- Ocupación prevista por día, con llegadas y salidas: [..]
+- Horarios de recepción, restaurante, bar y desayunos: [..]
+- Grupos, eventos o comidas especiales previstas: [..]
+- Reglas que tengo que cumplir (convenio y empresa): descanso mínimo entre turnos, horas máximas por día, días libres seguidos… [..]
+  Usa SOLO las reglas que te paso; no supongas las del convenio.
+
+LO QUE HACES
+1. Calcula para cada día cuánto trabajo hay por departamento usando llegadas, salidas y ocupación. Explica cómo lo calculas para que pueda ajustarlo.
+2. Haz el cuadrante: persona · día · turno (hora de entrada y salida).
+3. Señala los huecos (días u horas con menos gente de la necesaria) y los días con gente de más.
+4. Propón cómo mover horas de los días flojos a los fuertes sin pasar de las horas pactadas de nadie.
+5. Comprueba que se cumplen todas las reglas que te he dado y lista cualquier incumplimiento.
+6. Una tabla final: persona · horas del cuadrante · horas pactadas · diferencia.
+
+FORMATO
+- El cuadrante en tabla, lista para pegar en Excel o Google Sheets.
+- Debajo, los huecos y las propuestas, en frases cortas.
+- Tú propones; yo decido.
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div>
+</div></details>
+
+<!-- 13 -->
+<details class="card" id="p13"><summary><span class="num">13</span><span class="tt">Formación de nuevos</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">El plan de formación de las dos primeras semanas para cada puesto, con la guía de una página y las situaciones reales que se va a encontrar.</p>
+<div class="data"><b>Qué datos pegar</b>El puesto, lo que tiene que saber hacer, los manuales o procedimientos que ya tengas, servicios y precios, y los errores típicos de los nuevos.</div>
+<div class="codebox"><div class="codebar"><span>Prompt 13</span><button class="copy" data-t="t13">Copiar</button></div><pre id="t13">Actúa como responsable de formación de un hotel. Trabajas para mí, director/a de [NOMBRE DEL HOTEL].
+
+QUÉ QUIERO
+Que una persona nueva en [puesto: recepción, sala, pisos, bar…] trabaje bien y sola en dos semanas, sin quitarle horas al resto del equipo.
+
+TE PASO
+- El puesto y su horario: [..]
+- Lo que tiene que saber hacer el primer día, la primera semana y el primer mes: [..]
+- Manuales, procedimientos o notas que ya existen: [pega o adjunta]
+- Servicios del hotel con precio y horario: [..]
+- Las preguntas que más hace el huésped en ese puesto: [..]
+- Los errores que más cometen los nuevos: [..]
+- Programas que usará (PMS, TPV…): [..]
+- Idioma en que necesita la formación: [castellano / otro]
+
+LO QUE HACES
+1. Un plan de 14 días: cada día, qué aprende, con quién, durante cuánto rato y cómo se comprueba que lo sabe.
+2. Una guía de una página del puesto: lo imprescindible, en frases cortas, para tenerla a mano.
+3. Diez situaciones reales con la respuesta modelo, incluidas 3 en las que el huésped quiere algo y hay que ofrecérselo sin ser pesado (por ejemplo, pregunta a qué hora cierra la cocina).
+4. Un test de 10 preguntas con sus respuestas para el día 7 y otro para el día 14.
+5. Una lista para el responsable: qué revisar cada día y señales de que la persona necesita más ayuda.
+
+FORMATO
+- Lenguaje sencillo: que lo entienda alguien que nunca ha trabajado en un hotel.
+- Cada parte con su título, lista para imprimir.
+- Usa solo los datos que te paso para precios, horarios y procedimientos.
+
+Si te falta un dato, pregúntamelo; no inventes cifras ni procedimientos.</pre></div>
+</div></details>
+
+<!-- 14 -->
+<details class="card" id="p14"><summary><span class="num">14</span><span class="tt">Posts del hotel</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">Un mes de publicaciones para Instagram, Facebook y Google, pensadas para que reserven algo concreto, no solo para dar «me gusta».</p>
+<div class="data"><b>Qué datos pegar</b>Lo que quieres vender este mes, las fotos que tienes (descríbelas en una línea), fechas importantes y el tono del hotel.</div>
+<div class="codebox"><div class="codebar"><span>Prompt 14</span><button class="copy" data-t="t14">Copiar</button></div><pre id="t14">Actúa como responsable de redes sociales de un hotel. Trabajas para mí, director/a de [NOMBRE DEL HOTEL], en [ciudad / zona].
+
+TE PASO
+- Lo que quiero vender este mes: [cenas, escapadas, experiencias, brunch, eventos, noches entre semana…]
+- A quién: [huésped del hotel, gente de la ciudad, empresas…]
+- Fotos y vídeos que tengo (una línea cada una): [..]
+- Fechas importantes del mes: [..]
+- Tono del hotel: [cercano, elegante, familiar…]
+- Redes: [Instagram, Facebook, perfil de Google]
+- Cuenta de Instagram y web para reservar: [..]
+
+LO QUE HACES
+1. Un calendario de 4 semanas con 3 publicaciones por semana. Para cada una:
+   - Qué queremos que haga quien la vea (reservar mesa, pedir la escapada, escribir por WhatsApp).
+   - Qué foto o vídeo de mi lista usar.
+   - El texto: máximo 80 palabras, que empiece con algo que haga parar el dedo.
+   - Una llamada a la acción concreta con el enlace o el teléfono.
+   - Máximo 5 etiquetas (hashtags), de la zona y del plan, no genéricas.
+2. Cuatro publicaciones para el perfil de Google del hotel, más cortas y con el botón que toca (reservar, llamar, más información).
+3. Dos ideas de vídeo corto con guion de 15 segundos que se pueda grabar con el móvil en una mañana.
+4. Si echas en falta una foto para algo importante, dime cuál hacer y cómo.
+
+REGLAS
+- No inventes premios, opiniones de clientes, precios ni servicios: usa solo lo que te paso.
+- Nada de «¡no te lo pierdas!» ni exceso de emojis (como mucho uno por publicación).
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div>
+</div></details>
+
+<!-- 15 -->
+<details class="card" id="p15"><summary><span class="num">15</span><span class="tt">Plan de temporada</span><span class="sheet" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="open"><span>Ver prompt</span></span></summary>
+<div class="body">
+<p class="what">Junta todo en un plan de temporada semana a semana: qué preparar antes, qué mirar durante y cómo cerrarla, con cinco números para seguirla.</p>
+<div class="data"><b>Qué datos pegar</b>Fechas de la temporada, ocupación prevista, resultados de la temporada pasada, lo que te piden los dueños, tu equipo y lo que hayas sacado de los otros 14 prompts.</div>
+<div class="codebox"><div class="codebar"><span>Prompt 15</span><button class="copy" data-t="t15">Copiar</button></div><pre id="t15">Actúa como director de operaciones con experiencia en abrir y cerrar temporadas de hotel. Trabajas para mí, director/a de [NOMBRE DEL HOTEL].
+
+QUÉ QUIERO
+Un plan para la temporada [nombre o fechas] que me ayude a que el hotel gane más con el mismo equipo.
+
+TE PASO
+- Fechas de la temporada y ocupación prevista por mes: [..]
+- Resultados de la temporada pasada: ingresos de habitaciones, de restaurante y bar y de otros servicios, gasto de personal: [..]
+- Lo que me piden los dueños para esta temporada: [..]
+- Equipo previsto por departamento: [..]
+- Cambios respecto al año pasado (obras, servicios nuevos, carta nueva, precios): [..]
+- Eventos de la zona: [..]
+- Lo que ya tengo preparado con otros prompts (carta, mensajes antes de llegar, excursiones, acuerdos, precios): [pega lo que tengas]
+
+LO QUE HACES
+1. El objetivo de la temporada en una frase y en un número que salga de mis datos.
+2. Las 3 prioridades, ni una más, y por qué esas.
+3. Antes de abrir (las [nº] semanas previas): qué hay que tener listo — equipo formado, carta, traducciones, precios, mensajes, acuerdos con negocios, fotos y publicaciones — con responsable y fecha.
+4. Durante la temporada: 5 números para mirar cada lunes, con su fórmula y la cifra a partir de la cual hay que actuar. Por ejemplo, ingresos fuera de la habitación por habitación ocupada = ingresos de restaurante, bar y otros servicios ÷ habitaciones ocupadas.
+5. Qué hacer si algo se tuerce: los 4 riesgos más probables con mis datos y la respuesta preparada para cada uno.
+6. Al cerrar: qué medir, qué preguntar al equipo y qué guardar para la próxima temporada.
+7. Un calendario semana a semana: semana · qué se hace · quién · cómo sabemos que está hecho.
+
+FORMATO
+- Primero un resumen de media página que pueda enseñar a los dueños.
+- Después el calendario en tabla, lista para pegar en Excel o Google Sheets.
+- Tú propones; yo decido.
+
+Si te falta un dato, pregúntamelo; no inventes cifras.</pre></div>
+</div></details>
+
+</div>
+
+<section>
+  <div class="cta">
+    <div>
+      <h2>Claude trabaja con lo que tú le pasas. Para que trabaje con lo que pasa en tu hotel, le faltan tres cosas.</h2>
+      <ul>
+        <li>Los datos reales de cada día, sin exportar Excel: qué pide cada huésped, cuándo y cuánto gasta.</li>
+        <li>Estar donde está el huésped: en el QR de la habitación, con la carta que vende y en su idioma, en el momento justo.</li>
+        <li>Medirlo cada semana: cuánto se vendió de más y de dónde salió.</li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-size:16px;margin-bottom:16px">Eso es lo que montamos en Vértice, en 14 días y sin que tu equipo toque nada.</p>
+      <a class="btn" href="https://verticeqr.com/llamada">Ver cómo quedaría en tu hotel →</a>
+      <small>Llamada de diagnóstico de 30 minutos con Héctor García.</small>
+    </div>
+  </div>
+</section>
+<footer>Vértice · Método Fricción 0 · verticeqr.com</footer>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
+  const el=document.getElementById(b.dataset.t); const txt=el.innerText;
+  const ok=()=>{b.textContent='Copiado ✓';setTimeout(()=>b.textContent='Copiar',1800)};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok).catch(()=>sel(el,ok))}else sel(el,ok);
+}));
+function sel(el,ok){try{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');ok()}catch(e){}}
+
+const cards=[...document.querySelectorAll('details.card')];
+cards.forEach(d=>d.addEventListener('toggle',()=>{
+  if(!d.open)return;
+  cards.forEach(o=>{if(o!==d&&o.open)o.open=false});
+  requestAnimationFrame(()=>d.scrollIntoView({behavior:'smooth',block:'start'}));
+}));
+function openHash(){const d=document.getElementById(location.hash.slice(1));if(d&&d.tagName==='DETAILS'){d.open=true}}
+window.addEventListener('hashchange',openHash);openHash();
+document.querySelectorAll('.idx a').forEach(a=>a.addEventListener('click',()=>{const d=document.getElementById(a.getAttribute('href').slice(1));if(d)d.open=true}));
+</script>
+</body></html>
