@@ -1,0 +1,1286 @@
+{
+  "slug": "pucon",
+  "nombre": "Pucón",
+  "intro": {
+    "ES": "Un lago inmenso a tus pies, un volcán nevado que humea en el horizonte y, alrededor, termas entre helechos y bosques de araucarias milenarias. Pucón se vive al aire libre: playa por la mañana, volcán o sendero de día y agua caliente al anochecer.",
+    "EN": "A vast lake at your feet, a snowy volcano smoking on the horizon and, all around, hot springs among ferns and forests of ancient monkey-puzzle trees. Pucón is lived outdoors: beach in the morning, volcano or trail by day and hot water at nightfall.",
+    "PT": "Um lago imenso aos seus pés, um vulcão nevado soltando fumaça no horizonte e, em volta, termas entre samambaias e florestas de araucárias milenares. Pucón se vive ao ar livre: praia de manhã, vulcão ou trilha de dia e água quente ao anoitecer."
+  },
+  "lugares": [
+    {
+      "id": "calfurray",
+      "img": "/ciudades/pucon/img/calfurray.jpg",
+      "nombre": "Playa Calfurray",
+      "zona": {
+        "ES": "Molco, al lado del hotel",
+        "EN": "Molco, next to the hotel",
+        "PT": "Molco, ao lado do hotel"
+      },
+      "d": {
+        "ES": "La playa de casa: arena volcánica oscura, agua limpia y fría del lago Villarrica y el volcán nevado justo enfrente. A un paso de la habitación.",
+        "EN": "Your own beach: dark volcanic sand, clean, cool water from Lake Villarrica and the snowy volcano right across. Just steps from your room.",
+        "PT": "A praia de casa: areia vulcânica escura, água limpa e fria do lago Villarrica e o vulcão nevado bem em frente. A poucos passos do quarto."
+      },
+      "cuando": {
+        "ES": "Temprano, con el lago como un espejo",
+        "EN": "Early, when the lake is like a mirror",
+        "PT": "Cedo, com o lago como um espelho"
+      },
+      "min": 3,
+      "modo": "pie",
+      "lat": -39.30121,
+      "lng": -72.09233
+    },
+    {
+      "id": "playa-grande",
+      "img": "/ciudades/pucon/img/playa-grande.jpg",
+      "nombre": "Playa Grande y La Poza",
+      "zona": {
+        "ES": "Pucón, junto al centro",
+        "EN": "Pucón, by the town centre",
+        "PT": "Pucón, junto ao centro"
+      },
+      "d": {
+        "ES": "Las dos caras del lago en Pucón: Playa Grande, de arena negra, con kayaks y ambiente de verano, y La Poza, la bahía tranquila con botes, muelle y el volcán de fondo.",
+        "EN": "Two sides of the lake in Pucón: Playa Grande, a black-sand beach with kayaks and summer buzz, and La Poza, the calm bay with boats, a pier and the volcano behind.",
+        "PT": "Os dois lados do lago em Pucón: a Playa Grande, de areia preta, com caiaques e clima de verão, e La Poza, a baía tranquila com barcos, píer e o vulcão ao fundo."
+      },
+      "cuando": {
+        "ES": "Al atardecer, desde el muelle de La Poza",
+        "EN": "At sunset, from the La Poza pier",
+        "PT": "No pôr do sol, do píer de La Poza"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": -39.26728,
+      "lng": -71.97537
+    },
+    {
+      "id": "centro",
+      "img": "/ciudades/pucon/img/centro.jpg",
+      "nombre": "Centro de Pucón y feria artesanal",
+      "zona": {
+        "ES": "Avenida O'Higgins",
+        "EN": "O'Higgins Avenue",
+        "PT": "Avenida O'Higgins"
+      },
+      "d": {
+        "ES": "Casas de madera, cafés, chocolaterías y agencias de aventura a lo largo de la avenida O'Higgins, con el volcán asomando al final de cada calle. En la feria artesanal: lana, madera tallada y platería mapuche.",
+        "EN": "Wooden houses, cafés, chocolate shops and adventure agencies along O'Higgins Avenue, with the volcano peeking out at the end of every street. At the craft market: wool, carved wood and Mapuche silverwork.",
+        "PT": "Casas de madeira, cafés, chocolaterias e agências de aventura ao longo da avenida O'Higgins, com o vulcão aparecendo no fim de cada rua. Na feira de artesanato: lã, madeira entalhada e prataria mapuche."
+      },
+      "cuando": {
+        "ES": "A media tarde, para pasear y merendar",
+        "EN": "Mid-afternoon, for a stroll and a snack",
+        "PT": "No meio da tarde, para passear e lanchar"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": -39.27619,
+      "lng": -71.97468
+    },
+    {
+      "id": "villarrica",
+      "img": "/ciudades/pucon/img/villarrica.jpg",
+      "nombre": "Costanera de Villarrica",
+      "zona": {
+        "ES": "Villarrica, al otro lado del lago",
+        "EN": "Villarrica, across the lake",
+        "PT": "Villarrica, do outro lado do lago"
+      },
+      "d": {
+        "ES": "El paseo junto al lago de la ciudad vecina, fundada en 1552. Desde aquí el volcán se ve de lado, al fondo del lago, y las puestas de sol son de las mejores de la zona.",
+        "EN": "The lakeside promenade of the neighbouring town, founded in 1552. From here you see the volcano side-on at the far end of the lake, and the sunsets are among the best around.",
+        "PT": "O calçadão à beira do lago da cidade vizinha, fundada em 1552. Daqui o vulcão aparece de lado, no fundo do lago, e o pôr do sol é dos mais bonitos da região."
+      },
+      "cuando": {
+        "ES": "Al atardecer, con el sol cayendo sobre el agua",
+        "EN": "At sunset, as the sun drops over the water",
+        "PT": "No fim da tarde, com o sol caindo sobre a água"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": -39.28915,
+      "lng": -72.2196
+    },
+    {
+      "id": "ojos",
+      "img": "/ciudades/pucon/img/ojos.jpg",
+      "nombre": "Ojos del Caburgua",
+      "zona": {
+        "ES": "Camino a Caburgua",
+        "EN": "On the road to Caburgua",
+        "PT": "Na estrada para Caburgua"
+      },
+      "d": {
+        "ES": "Cascadas que caen a pozas de un azul turquesa imposible, en medio del bosque. Un sendero corto con pasarelas de madera lleva a los miradores.",
+        "EN": "Waterfalls tumbling into pools of an impossible turquoise, deep in the forest. A short trail with wooden walkways leads to the viewpoints.",
+        "PT": "Cachoeiras que caem em poços de um azul-turquesa inacreditável, no meio da mata. Uma trilha curta com passarelas de madeira leva aos mirantes."
+      },
+      "cuando": {
+        "ES": "Con sol de mediodía, cuando el agua brilla más",
+        "EN": "In the midday sun, when the water shines brightest",
+        "PT": "Com sol do meio-dia, quando a água brilha mais"
+      },
+      "min": 40,
+      "modo": "coche",
+      "lat": -39.24682,
+      "lng": -71.84288
+    },
+    {
+      "id": "playa-blanca",
+      "img": "/ciudades/pucon/img/playa-blanca.jpg",
+      "nombre": "Lago Caburgua y Playa Blanca",
+      "zona": {
+        "ES": "Caburgua, al norte de Pucón",
+        "EN": "Caburgua, north of Pucón",
+        "PT": "Caburgua, ao norte de Pucón"
+      },
+      "d": {
+        "ES": "Un lago entre cerros de bosque con una rareza en la zona: arena clara en vez de negra. El agua es transparente y más templada que la de los lagos vecinos.",
+        "EN": "A lake between forested hills with a local rarity: pale sand instead of black. The water is crystal clear and warmer than in the neighbouring lakes.",
+        "PT": "Um lago entre morros de mata com uma raridade na região: areia clara em vez de preta. A água é transparente e mais morna que a dos lagos vizinhos."
+      },
+      "cuando": {
+        "ES": "Entre semana en verano, para tener sitio en la arena",
+        "EN": "On summer weekdays, to find a spot on the sand",
+        "PT": "Em dias de semana no verão, para achar lugar na areia"
+      },
+      "min": 45,
+      "modo": "coche",
+      "lat": -39.18652,
+      "lng": -71.81044
+    },
+    {
+      "id": "ski",
+      "img": "/ciudades/pucon/img/ski.jpg",
+      "nombre": "Centro de Ski Pucón, en el volcán",
+      "zona": {
+        "ES": "Ladera norte del volcán Villarrica",
+        "EN": "North slope of Villarrica volcano",
+        "PT": "Encosta norte do vulcão Villarrica"
+      },
+      "d": {
+        "ES": "La carretera sube entre bosques hasta la base del volcán: en invierno, pistas de esquí con vista al lago; el resto del año, roca volcánica, nieve arriba y el punto de partida para subir al cráter.",
+        "EN": "The road climbs through forest to the foot of the volcano: in winter, ski runs with lake views; the rest of the year, volcanic rock, snow above and the starting point for the climb to the crater.",
+        "PT": "A estrada sobe pela mata até a base do vulcão: no inverno, pistas de esqui com vista para o lago; no resto do ano, rocha vulcânica, neve lá em cima e o ponto de partida para subir à cratera."
+      },
+      "cuando": {
+        "ES": "En un día despejado: con nubes no se ve nada",
+        "EN": "On a clear day: with clouds you see nothing",
+        "PT": "Num dia limpo: com nuvens não se vê nada"
+      },
+      "min": 40,
+      "modo": "coche",
+      "lat": -39.38211,
+      "lng": -71.96987
+    },
+    {
+      "id": "huerquehue",
+      "img": "/ciudades/pucon/img/huerquehue.jpg",
+      "nombre": "Parque Nacional Huerquehue",
+      "zona": {
+        "ES": "Lago Tinquilco, al noreste de Pucón",
+        "EN": "Lake Tinquilco, north-east of Pucón",
+        "PT": "Lago Tinquilco, a nordeste de Pucón"
+      },
+      "d": {
+        "ES": "Bosque nativo, cascadas y lagunas de montaña rodeadas de araucarias centenarias. El sendero Los Lagos es el gran paseo del parque, con el volcán Villarrica asomando entre los árboles.",
+        "EN": "Native forest, waterfalls and mountain lakes ringed by centuries-old monkey-puzzle trees. The Los Lagos trail is the park’s great walk, with Villarrica volcano peeking through the trees.",
+        "PT": "Mata nativa, cachoeiras e lagoas de montanha cercadas de araucárias centenárias. A trilha Los Lagos é o grande passeio do parque, com o vulcão Villarrica aparecendo entre as árvores."
+      },
+      "cuando": {
+        "ES": "Temprano: la entrada cierra a primera hora de la tarde",
+        "EN": "Early: entry closes in the early afternoon",
+        "PT": "Cedo: a entrada fecha no começo da tarde"
+      },
+      "min": 60,
+      "modo": "coche",
+      "lat": -39.16784,
+      "lng": -71.72385
+    },
+    {
+      "id": "geometricas",
+      "img": "/ciudades/pucon/img/geometricas.jpg",
+      "nombre": "Termas Geométricas",
+      "zona": {
+        "ES": "Cerca de Coñaripe, en el Parque Nacional Villarrica",
+        "EN": "Near Coñaripe, in Villarrica National Park",
+        "PT": "Perto de Coñaripe, no Parque Nacional Villarrica"
+      },
+      "d": {
+        "ES": "Una pasarela de madera roja que sube por una quebrada de helechos, con pozones de agua termal a cada lado y vapor entre los árboles. Una de las imágenes más famosas del sur de Chile.",
+        "EN": "A red wooden walkway climbing a fern-filled ravine, with hot-spring pools on either side and steam rising through the trees. One of the most famous images of southern Chile.",
+        "PT": "Uma passarela de madeira vermelha que sobe por um cânion de samambaias, com piscinas de água termal dos dois lados e vapor entre as árvores. Uma das imagens mais famosas do sul do Chile."
+      },
+      "cuando": {
+        "ES": "En otoño o invierno, con frío y vapor",
+        "EN": "In autumn or winter, with cold air and steam",
+        "PT": "No outono ou inverno, com frio e vapor"
+      },
+      "min": 90,
+      "modo": "coche",
+      "lat": -39.50115,
+      "lng": -71.87436
+    }
+  ],
+  "rutas": [
+    {
+      "id": "volcan",
+      "expId": "ex4",
+      "img": "/ciudades/pucon/img/volcan.jpg",
+      "titulo": {
+        "ES": "Ascenso al volcán Villarrica",
+        "EN": "Villarrica volcano climb",
+        "PT": "Subida ao vulcão Villarrica"
+      },
+      "tipo": {
+        "ES": "Montaña",
+        "EN": "Mountain",
+        "PT": "Montanha"
+      },
+      "dur": "10 h",
+      "d": {
+        "ES": "Crampones, piolet y un guía de montaña hasta el borde de un cráter activo, a 2.847 metros. Arriba, el lago a tus pies y, con suerte, el rugido de la lava.",
+        "EN": "Crampons, ice axe and a mountain guide to the rim of an active crater, 2,847 metres up. At the top, the lake at your feet and, with luck, the rumble of lava.",
+        "PT": "Grampons, piolet e um guia de montanha até a borda de uma cratera ativa, a 2.847 metros. Lá em cima, o lago aos seus pés e, com sorte, o ronco da lava."
+      },
+      "salida": {
+        "ES": "Recogida en el hotel de madrugada. Se sube solo con buen tiempo y con la alerta del volcán en verde: el guía lo decide esa misma mañana",
+        "EN": "Pick-up at the hotel before dawn. The climb only goes ahead in good weather and with the volcano alert on green: the guide decides that same morning",
+        "PT": "Saída do hotel de madrugada. Só se sobe com tempo bom e com o alerta do vulcão no verde: o guia decide na mesma manhã"
+      },
+      "incluye": {
+        "ES": [
+          "Guía de montaña durante todo el ascenso",
+          "Traslado desde el hotel, ida y vuelta",
+          "Equipo técnico: casco, piolet y crampones"
+        ],
+        "EN": [
+          "Mountain guide for the whole climb",
+          "Return transfer from the hotel",
+          "Technical gear: helmet, ice axe and crampons"
+        ],
+        "PT": [
+          "Guia de montanha durante toda a subida",
+          "Traslado ida e volta do hotel",
+          "Equipamento técnico: capacete, piolet e grampons"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Botas de trekking que ya hayas usado",
+          "Ropa por capas, guantes y gorro: arriba hace frío y viento",
+          "Gafas de sol y crema solar alta: la nieve refleja mucho",
+          "Dos litros de agua y comida que dé energía",
+          "Ganas: son muchas horas subiendo"
+        ],
+        "EN": [
+          "Hiking boots you have already broken in",
+          "Layers, gloves and a hat: it is cold and windy at the top",
+          "Sunglasses and high-factor sunscreen: the snow reflects a lot",
+          "Two litres of water and energy food",
+          "Stamina: it is many hours of climbing"
+        ],
+        "PT": [
+          "Botas de trekking já amaciadas",
+          "Roupa em camadas, luvas e gorro: lá em cima faz frio e venta",
+          "Óculos de sol e protetor solar alto: a neve reflete muito",
+          "Dois litros de água e comida que dê energia",
+          "Disposição: são muitas horas de subida"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Base del volcán",
+            "EN": "Foot of the volcano",
+            "PT": "Base do vulcão"
+          },
+          "s": {
+            "ES": "Centro de Ski Pucón: equipo, casco y primeras instrucciones",
+            "EN": "Pucón ski centre: gear, helmet and first briefing",
+            "PT": "Centro de Ski Pucón: equipamento, capacete e primeiras instruções"
+          },
+          "d": {
+            "ES": "El camino deja atrás el bosque y termina en la ladera de roca volcánica, con el cono nevado justo encima. Aquí el guía revisa el equipo, explica cómo usar crampones y piolet y empieza la caminata.",
+            "EN": "The road leaves the forest behind and ends on the slope of volcanic rock, with the snowy cone right above. Here the guide checks the gear, explains how to use crampons and ice axe, and the walk begins.",
+            "PT": "A estrada deixa a mata para trás e termina na encosta de rocha vulcânica, com o cone nevado logo acima. Aqui o guia confere o equipamento, explica como usar grampons e piolet e a caminhada começa."
+          },
+          "tip": {
+            "ES": "Cuando funciona, el andarivel ahorra la primera subida a cambio de un pago extra. Si el guía dice que hoy no se sube por viento o nubes, hazle caso: el volcán seguirá ahí mañana.",
+            "EN": "When it is running, the chairlift saves you the first climb for an extra fee. If the guide says there is no climb today because of wind or cloud, trust them: the volcano will still be there tomorrow.",
+            "PT": "Quando está funcionando, o teleférico poupa a primeira subida por um valor extra. Se o guia disser que hoje não dá por causa do vento ou das nuvens, confie: o vulcão continua lá amanhã."
+          },
+          "hora": "07:30",
+          "dur": "30 min",
+          "img": "/ciudades/pucon/img/volcan-1.jpg",
+          "lat": -39.38211,
+          "lng": -71.96987,
+          "tramo": "coche",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Subida por la nieve",
+            "EN": "Climbing the snow",
+            "PT": "Subida pela neve"
+          },
+          "s": {
+            "ES": "En fila, paso a paso, por el glaciar de la cumbre",
+            "EN": "In single file, step by step, up the summit glacier",
+            "PT": "Em fila, passo a passo, pelo glaciar do cume"
+          },
+          "d": {
+            "ES": "La parte larga: horas de zigzag por la nieve, en fila detrás del guía y con descansos cortos. A cada parada el lago Villarrica se ve más pequeño y aparecen otros volcanes en el horizonte.",
+            "EN": "The long part: hours of zigzagging up the snow, single file behind the guide, with short rests. At every stop Lake Villarrica looks smaller and other volcanoes appear on the horizon.",
+            "PT": "A parte longa: horas de zigue-zague pela neve, em fila atrás do guia e com pausas curtas. A cada parada o lago Villarrica parece menor e outros vulcões surgem no horizonte."
+          },
+          "tip": {
+            "ES": "Bebe un poco en cada descanso aunque no tengas sed, y no te abrigues de más al principio: subiendo se pasa calor.",
+            "EN": "Drink a little at every rest even if you are not thirsty, and don’t overdress at the start: you warm up quickly on the way up.",
+            "PT": "Beba um pouco em cada pausa mesmo sem sede, e não se agasalhe demais no começo: subindo, o calor vem rápido."
+          },
+          "hora": "08:00",
+          "dur": "5 h",
+          "img": "/ciudades/pucon/img/volcan-2.jpg",
+          "lat": -39.405,
+          "lng": -71.952,
+          "tramo": "pie",
+          "duracionMin": 300
+        },
+        {
+          "n": {
+            "ES": "Borde del cráter",
+            "EN": "Crater rim",
+            "PT": "Borda da cratera"
+          },
+          "s": {
+            "ES": "2.847 metros sobre el mar, junto a un volcán activo",
+            "EN": "2,847 metres above sea level, on an active volcano",
+            "PT": "2.847 metros acima do mar, num vulcão ativo"
+          },
+          "d": {
+            "ES": "Un agujero de unos 200 metros de ancho que echa humo y olor a azufre. Al fondo hay un lago de lava que sube y baja; algunos días se oye retumbar. Alrededor, los Andes y una fila de volcanes nevados.",
+            "EN": "A hole about 200 metres wide giving off smoke and a smell of sulphur. At the bottom lies a lava lake that rises and falls; some days you can hear it rumble. All around, the Andes and a line of snowy volcanoes.",
+            "PT": "Um buraco de uns 200 metros de largura que solta fumaça e cheiro de enxofre. No fundo há um lago de lava que sobe e desce; em alguns dias dá para ouvir o ronco. Em volta, os Andes e uma fileira de vulcões nevados."
+          },
+          "tip": {
+            "ES": "Quédate donde te diga el guía y ponte la máscara si te la da: los gases del cráter pican en la garganta. La foto, de espaldas al viento.",
+            "EN": "Stay where the guide tells you and wear the mask if you are given one: the crater gases sting your throat. Take your photo with your back to the wind.",
+            "PT": "Fique onde o guia mandar e use a máscara se ele der uma: os gases da cratera ardem na garganta. A foto, de costas para o vento."
+          },
+          "hora": "13:00",
+          "dur": "30 min",
+          "img": "/ciudades/pucon/img/volcan-3.jpg",
+          "lat": -39.42,
+          "lng": -71.94,
+          "tramo": "pie",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Bajada deslizándote",
+            "EN": "Sliding back down",
+            "PT": "Descida deslizando"
+          },
+          "s": {
+            "ES": "Por canaletas de nieve, sentado, cuando hay nieve",
+            "EN": "Down snow chutes, sitting down, when there is snow",
+            "PT": "Por canaletas de neve, sentado, quando há neve"
+          },
+          "d": {
+            "ES": "Lo que se subió en cinco horas se baja en mucho menos: sentado sobre un pequeño trineo de plástico, por canaletas en la nieve. Abajo, la roca volcánica y la vista a los lagos y cerros del norte.",
+            "EN": "What took five hours to climb takes far less to descend: sitting on a small plastic sled, down chutes in the snow. Below, the volcanic rock and views of the lakes and hills to the north.",
+            "PT": "O que levou cinco horas para subir se desce em muito menos: sentado num pequeno trenó de plástico, por canaletas na neve. Embaixo, a rocha vulcânica e a vista dos lagos e morros ao norte."
+          },
+          "tip": {
+            "ES": "Frena con el piolet como te enseñe el guía y no adelantes a nadie en la canaleta. Al volver, un baño en la playa del hotel sienta de maravilla.",
+            "EN": "Brake with the ice axe the way the guide shows you and never overtake in the chute. Back at the hotel, a dip at the beach feels wonderful.",
+            "PT": "Freie com o piolet como o guia ensinar e não ultrapasse ninguém na canaleta. De volta, um mergulho na praia do hotel cai muito bem."
+          },
+          "hora": "13:30",
+          "dur": "2 h 30 min",
+          "img": "/ciudades/pucon/img/volcan-4.jpg",
+          "lat": -39.395,
+          "lng": -71.96,
+          "tramo": "pie",
+          "duracionMin": 150
+        }
+      ],
+      "fotos": [
+        "/ciudades/pucon/img/volcan.jpg",
+        "/ciudades/pucon/img/volcan-1.jpg",
+        "/ciudades/pucon/img/volcan-2.jpg",
+        "/ciudades/pucon/img/volcan-3.jpg",
+        "/ciudades/pucon/img/volcan-4.jpg"
+      ],
+      "duracionMin": 600,
+      "distanciaKm": 33,
+      "dificultad": "exigente",
+      "accesibilidad": {
+        "ES": "Subida de montaña de muchas horas por nieve y roca suelta, con más de mil metros de desnivel. Hace falta buena forma física; no es apta para personas con movilidad reducida ni problemas de corazón o respiratorios.",
+        "EN": "A mountain climb of many hours over snow and loose rock, with more than a thousand metres of ascent. You need to be fit; not suitable for people with reduced mobility or heart or breathing problems.",
+        "PT": "Subida de montanha de muitas horas por neve e pedra solta, com mais de mil metros de desnível. Exige bom preparo físico; não é indicada para pessoas com mobilidade reduzida nem com problemas cardíacos ou respiratórios."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": -39.30228,
+        "lng": -72.0915,
+        "foto": "/ciudades/pucon/img/calfurray.jpg",
+        "texto": {
+          "ES": "Puerta del hotel BordeLuz, en Molco. La hora exacta de recogida te la confirmamos en recepción.",
+          "EN": "At the door of BordeLuz hotel, in Molco. Reception will confirm the exact pick-up time.",
+          "PT": "Na porta do hotel BordeLuz, em Molco. A recepção confirma o horário exato de saída."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Entrada al Parque Nacional Villarrica (CONAF)",
+          "Andarivel, si quieres usarlo",
+          "Comida y agua",
+          "Propinas"
+        ],
+        "EN": [
+          "Villarrica National Park entrance (CONAF)",
+          "Chairlift, if you want to use it",
+          "Food and water",
+          "Tips"
+        ],
+        "PT": [
+          "Entrada do Parque Nacional Villarrica (CONAF)",
+          "Teleférico, se quiser usar",
+          "Comida e água",
+          "Gorjetas"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "PT": "Depende da operadora. A recepção confirma quando você reservar."
+      },
+      "salidasFijas": [],
+      "precioDesde": 180000
+    },
+    {
+      "id": "termas",
+      "expId": "ex1",
+      "img": "/ciudades/pucon/img/termas.jpg",
+      "titulo": {
+        "ES": "Termas Geométricas",
+        "EN": "Termas Geométricas hot springs",
+        "PT": "Termas Geométricas"
+      },
+      "tipo": {
+        "ES": "Termas",
+        "EN": "Hot springs",
+        "PT": "Termas"
+      },
+      "dur": "7 h 30 min",
+      "d": {
+        "ES": "Una pasarela roja entre helechos gigantes y pozones de agua volcánica a más de 35 grados. De camino, la playa negra de Coñaripe con el volcán delante.",
+        "EN": "A red walkway among giant ferns and pools of volcanic water at over 35 degrees. On the way, the black beach of Coñaripe with the volcano in front.",
+        "PT": "Uma passarela vermelha entre samambaias gigantes e piscinas de água vulcânica a mais de 35 graus. No caminho, a praia preta de Coñaripe com o vulcão em frente."
+      },
+      "salida": {
+        "ES": "Recogida en el hotel. Las termas están a unos 90 minutos, pasando por Villarrica, Licán Ray y Coñaripe",
+        "EN": "Pick-up at the hotel. The hot springs are about 90 minutes away, via Villarrica, Licán Ray and Coñaripe",
+        "PT": "Saída do hotel. As termas ficam a uns 90 minutos, passando por Villarrica, Licán Ray e Coñaripe"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado desde el hotel, ida y vuelta",
+          "Guía durante el viaje",
+          "Entrada a las Termas Geométricas"
+        ],
+        "EN": [
+          "Return transfer from the hotel",
+          "Guide during the trip",
+          "Entrance to Termas Geométricas"
+        ],
+        "PT": [
+          "Traslado ida e volta do hotel",
+          "Guia durante a viagem",
+          "Entrada nas Termas Geométricas"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Traje de baño y toalla",
+          "Chalas o sandalias: la pasarela de madera está mojada",
+          "Ropa de abrigo para salir del agua",
+          "Una bolsa para la ropa mojada",
+          "Agua para beber: el calor deshidrata"
+        ],
+        "EN": [
+          "Swimwear and a towel",
+          "Flip-flops or sandals: the wooden walkway is wet",
+          "Warm clothes for getting out of the water",
+          "A bag for wet clothes",
+          "Drinking water: the heat dehydrates you"
+        ],
+        "PT": [
+          "Roupa de banho e toalha",
+          "Chinelos ou sandálias: a passarela de madeira fica molhada",
+          "Agasalho para sair da água",
+          "Uma sacola para a roupa molhada",
+          "Água para beber: o calor desidrata"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Playa de Coñaripe",
+            "EN": "Coñaripe beach",
+            "PT": "Praia de Coñaripe"
+          },
+          "s": {
+            "ES": "Arena negra en el lago Calafquén, con el volcán enfrente",
+            "EN": "Black sand on Lake Calafquén, with the volcano opposite",
+            "PT": "Areia preta no lago Calafquén, com o vulcão em frente"
+          },
+          "d": {
+            "ES": "Un pueblo pequeño a orillas del lago Calafquén, con una playa de arena volcánica casi negra y troncos que el agua ha dejado en la orilla. Desde aquí se ve la cara sur del volcán Villarrica.",
+            "EN": "A small village on the shore of Lake Calafquén, with an almost black volcanic-sand beach and driftwood left by the water. From here you see the south face of Villarrica volcano.",
+            "PT": "Um vilarejo à beira do lago Calafquén, com uma praia de areia vulcânica quase preta e troncos deixados pela água. Daqui se vê a face sul do vulcão Villarrica."
+          },
+          "tip": {
+            "ES": "Es la parada para estirar las piernas y mojarse los pies: lo que queda hasta las termas es camino de ripio.",
+            "EN": "This is the stop to stretch your legs and dip your feet: the rest of the way to the hot springs is gravel road.",
+            "PT": "É a parada para esticar as pernas e molhar os pés: o resto do caminho até as termas é estrada de terra."
+          },
+          "hora": "10:00",
+          "dur": "30 min",
+          "img": "/ciudades/pucon/img/termas-1.jpg",
+          "lat": -39.565,
+          "lng": -72.005,
+          "tramo": "coche",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "La entrada",
+            "EN": "The entrance",
+            "PT": "A entrada"
+          },
+          "s": {
+            "ES": "Un pórtico rojo al final de un camino de ripio, en pleno bosque",
+            "EN": "A red gateway at the end of a gravel road, deep in the forest",
+            "PT": "Um pórtico vermelho no fim de uma estrada de terra, no meio da mata"
+          },
+          "d": {
+            "ES": "Tras unos kilómetros de ripio entre bosque nativo aparece el pórtico rojo de la entrada. Todo el conjunto es obra del arquitecto chileno Germán del Sol.",
+            "EN": "After a few kilometres of gravel through native forest, the red entrance gateway appears. The whole complex is the work of Chilean architect Germán del Sol.",
+            "PT": "Depois de alguns quilômetros de estrada de terra pela mata nativa surge o pórtico vermelho da entrada. Todo o conjunto é obra do arquiteto chileno Germán del Sol."
+          },
+          "tip": {
+            "ES": "Lleva lo justo: la pasarela es larga y la mochila estorba entre pozón y pozón.",
+            "EN": "Pack light: the walkway is long and a bag gets in the way between pools.",
+            "PT": "Leve só o necessário: a passarela é longa e a mochila atrapalha entre uma piscina e outra."
+          },
+          "hora": "11:00",
+          "dur": "15 min",
+          "img": "/ciudades/pucon/img/termas-2.jpg",
+          "lat": -39.503,
+          "lng": -71.8755,
+          "tramo": "coche",
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Pasarela y pozones",
+            "EN": "Walkway and pools",
+            "PT": "Passarela e piscinas"
+          },
+          "s": {
+            "ES": "Unos 500 metros de madera roja y 18 pozones para bañarse",
+            "EN": "About 500 metres of red wood and 18 bathing pools",
+            "PT": "Uns 500 metros de madeira vermelha e 18 piscinas para banho"
+          },
+          "d": {
+            "ES": "La pasarela sube por la quebrada y, a los lados, se abren pozones de piedra con agua termal que brota a unos 80 grados y se enfría hasta una temperatura de baño. Por debajo corre un arroyo frío entre helechos y nalcas.",
+            "EN": "The walkway climbs the ravine and, along its sides, stone pools fill with spring water that rises at about 80 degrees and is cooled to bathing temperature. Below, a cold stream runs among ferns and giant nalca leaves.",
+            "PT": "A passarela sobe pelo cânion e, dos lados, se abrem piscinas de pedra com água termal que brota a uns 80 graus e esfria até a temperatura de banho. Embaixo corre um riacho frio entre samambaias e nalcas."
+          },
+          "tip": {
+            "ES": "Empieza por los pozones de abajo y ve subiendo: cada uno tiene una temperatura distinta. Alterna con un remojón en el agua fría del arroyo, como hacen los habituales.",
+            "EN": "Start with the lower pools and work your way up: each has a different temperature. Alternate with a dip in the cold stream, as the regulars do.",
+            "PT": "Comece pelas piscinas de baixo e vá subindo: cada uma tem uma temperatura diferente. Alterne com um mergulho na água fria do riacho, como fazem os frequentadores."
+          },
+          "hora": "11:15",
+          "dur": "3 h",
+          "img": "/ciudades/pucon/img/termas-3.jpg",
+          "lat": -39.50115,
+          "lng": -71.87436,
+          "tramo": "pie",
+          "duracionMin": 180
+        },
+        {
+          "n": {
+            "ES": "La cascada",
+            "EN": "The waterfall",
+            "PT": "A cachoeira"
+          },
+          "s": {
+            "ES": "El final de la pasarela, donde se cierra la quebrada",
+            "EN": "The end of the walkway, where the ravine closes in",
+            "PT": "O fim da passarela, onde o cânion se fecha"
+          },
+          "d": {
+            "ES": "Al fondo de la quebrada, una cascada fina cae entre musgo y helechos sobre una poza fría. Es uno de los rincones más fotografiados de las termas y el lugar perfecto para terminar.",
+            "EN": "At the head of the ravine, a slender waterfall drops through moss and ferns into a cold pool. It is one of the most photographed spots in the hot springs and the perfect place to finish.",
+            "PT": "No fundo do cânion, uma cachoeira fina cai entre musgo e samambaias numa poça fria. É um dos cantos mais fotografados das termas e o lugar perfeito para terminar."
+          },
+          "tip": {
+            "ES": "Camina despacio: la madera mojada resbala. Si vienes en invierno, el vapor sobre la cascada es lo más bonito del día.",
+            "EN": "Walk slowly: the wet wood is slippery. If you come in winter, the steam over the waterfall is the best sight of the day.",
+            "PT": "Ande devagar: a madeira molhada escorrega. Se vier no inverno, o vapor sobre a cachoeira é o mais bonito do dia."
+          },
+          "hora": "14:15",
+          "dur": "30 min",
+          "img": "/ciudades/pucon/img/termas-4.jpg",
+          "lat": -39.4995,
+          "lng": -71.8735,
+          "tramo": "pie",
+          "duracionMin": 30
+        }
+      ],
+      "fotos": [
+        "/ciudades/pucon/img/termas.jpg",
+        "/ciudades/pucon/img/termas-1.jpg",
+        "/ciudades/pucon/img/termas-2.jpg",
+        "/ciudades/pucon/img/termas-3.jpg",
+        "/ciudades/pucon/img/termas-4.jpg",
+        "/ciudades/pucon/img/geometricas.jpg"
+      ],
+      "duracionMin": 450,
+      "distanciaKm": 74,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "La pasarela es de madera, con escalones y tramos mojados que resbalan: no es apta para silla de ruedas. El último tramo del camino es de ripio.",
+        "EN": "The walkway is wooden, with steps and wet, slippery stretches: not suitable for wheelchairs. The last part of the road is gravel.",
+        "PT": "A passarela é de madeira, com degraus e trechos molhados que escorregam: não é adequada para cadeira de rodas. O último trecho da estrada é de terra."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": -39.30228,
+        "lng": -72.0915,
+        "foto": "/ciudades/pucon/img/calfurray.jpg",
+        "texto": {
+          "ES": "Puerta del hotel BordeLuz, en Molco. La hora exacta de recogida te la confirmamos en recepción.",
+          "EN": "At the door of BordeLuz hotel, in Molco. Reception will confirm the exact pick-up time.",
+          "PT": "Na porta do hotel BordeLuz, em Molco. A recepção confirma o horário exato de saída."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Toalla y bata",
+          "Propinas"
+        ],
+        "EN": [
+          "Food and drinks",
+          "Towel and robe",
+          "Tips"
+        ],
+        "PT": [
+          "Comida e bebidas",
+          "Toalha e roupão",
+          "Gorjetas"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "PT": "Depende da operadora. A recepção confirma quando você reservar."
+      },
+      "salidasFijas": [],
+      "precioDesde": 85000
+    },
+    {
+      "id": "caburgua",
+      "expId": "ex5",
+      "img": "/ciudades/pucon/img/caburgua.jpg",
+      "titulo": {
+        "ES": "Huerquehue, Caburgua y sus Ojos",
+        "EN": "Huerquehue, Caburgua and its Ojos",
+        "PT": "Huerquehue, Caburgua e seus Ojos"
+      },
+      "tipo": {
+        "ES": "Naturaleza",
+        "EN": "Nature",
+        "PT": "Natureza"
+      },
+      "dur": "10 h",
+      "d": {
+        "ES": "El sendero Los Lagos entre araucarias milenarias, una playa de arena clara en el lago Caburgua y, para terminar, cascadas turquesa en el bosque.",
+        "EN": "The Los Lagos trail among ancient monkey-puzzle trees, a pale-sand beach on Lake Caburgua and, to finish, turquoise waterfalls in the forest.",
+        "PT": "A trilha Los Lagos entre araucárias milenares, uma praia de areia clara no lago Caburgua e, para fechar, cachoeiras turquesa na mata."
+      },
+      "salida": {
+        "ES": "Recogida en el hotel temprano. Huerquehue está a una hora; el último tramo es de ripio",
+        "EN": "Early pick-up at the hotel. Huerquehue is an hour away; the last stretch is gravel",
+        "PT": "Saída cedo do hotel. Huerquehue fica a uma hora; o último trecho é de terra"
+      },
+      "incluye": {
+        "ES": [
+          "Guía durante todo el día",
+          "Traslado desde el hotel, ida y vuelta",
+          "Plan del día y mapa del sendero"
+        ],
+        "EN": [
+          "Guide for the whole day",
+          "Return transfer from the hotel",
+          "Day plan and trail map"
+        ],
+        "PT": [
+          "Guia o dia todo",
+          "Traslado ida e volta do hotel",
+          "Roteiro do dia e mapa da trilha"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Zapatillas o botas de trekking",
+          "Comida y al menos 1,5 litros de agua",
+          "Chaqueta impermeable: en el bosque llueve a menudo",
+          "Traje de baño y toalla para el lago",
+          "Efectivo para la entrada de Ojos del Caburgua"
+        ],
+        "EN": [
+          "Trail shoes or hiking boots",
+          "Food and at least 1.5 litres of water",
+          "A rain jacket: it often rains in the forest",
+          "Swimwear and a towel for the lake",
+          "Cash for the Ojos del Caburgua entrance"
+        ],
+        "PT": [
+          "Tênis ou botas de trilha",
+          "Comida e pelo menos 1,5 litro de água",
+          "Jaqueta impermeável: na mata chove com frequência",
+          "Roupa de banho e toalha para o lago",
+          "Dinheiro em espécie para a entrada dos Ojos del Caburgua"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Lago Tinquilco",
+            "EN": "Lake Tinquilco",
+            "PT": "Lago Tinquilco"
+          },
+          "s": {
+            "ES": "La entrada del parque, junto a la guardería de CONAF",
+            "EN": "The park entrance, by the CONAF ranger station",
+            "PT": "A entrada do parque, junto à guarita da CONAF"
+          },
+          "d": {
+            "ES": "Un lago alargado entre cerros cubiertos de bosque, con un muelle de madera y el silencio de la montaña. Aquí se registra la entrada y empieza el sendero Los Lagos.",
+            "EN": "A long lake between forested hills, with a wooden jetty and mountain silence. This is where you check in and the Los Lagos trail begins.",
+            "PT": "Um lago comprido entre morros cobertos de mata, com um píer de madeira e o silêncio da montanha. Aqui se registra a entrada e começa a trilha Los Lagos."
+          },
+          "tip": {
+            "ES": "La entrada al parque se compra online en pasesparques.cl: tenla en el móvil. Llegar temprano es clave, porque el ingreso cierra a primera hora de la tarde.",
+            "EN": "Park entry is bought online at pasesparques.cl: keep it on your phone. Arriving early is key, as entry closes in the early afternoon.",
+            "PT": "A entrada do parque se compra on-line em pasesparques.cl: deixe no celular. Chegar cedo é essencial, porque a entrada fecha no começo da tarde."
+          },
+          "hora": "08:45",
+          "dur": "15 min",
+          "img": "/ciudades/pucon/img/caburgua-1.jpg",
+          "lat": -39.16784,
+          "lng": -71.72385,
+          "tramo": "coche",
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Cascada Nido de Águila",
+            "EN": "Nido de Águila waterfall",
+            "PT": "Cachoeira Nido de Águila"
+          },
+          "s": {
+            "ES": "Un salto de agua entre rocas, a mitad de la subida",
+            "EN": "A waterfall among rocks, halfway up",
+            "PT": "Uma queda d’água entre rochas, no meio da subida"
+          },
+          "d": {
+            "ES": "Tras la primera cuesta entre coigües, el sendero se asoma a una cascada que cae sobre grandes rocas lisas. Es el primer premio del día y un buen sitio para recuperar el aliento.",
+            "EN": "After the first climb through southern beech, the trail looks out over a waterfall pouring onto big smooth rocks. It is the first reward of the day and a good place to catch your breath.",
+            "PT": "Depois da primeira subida entre coigües, a trilha chega a uma cachoeira que cai sobre grandes rochas lisas. É o primeiro prêmio do dia e um bom lugar para recuperar o fôlego."
+          },
+          "tip": {
+            "ES": "No te acerques al borde de las rocas mojadas: resbalan mucho. Guarda energía, que la subida sigue.",
+            "EN": "Keep away from the edge of the wet rocks: they are very slippery. Save energy, the climb goes on.",
+            "PT": "Não chegue perto da borda das pedras molhadas: escorregam muito. Poupe energia, a subida continua."
+          },
+          "hora": "09:45",
+          "dur": "20 min",
+          "img": "/ciudades/pucon/img/caburgua-2.jpg",
+          "lat": -39.14814,
+          "lng": -71.7105,
+          "tramo": "pie",
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Mirador del Tinquilco",
+            "EN": "Tinquilco viewpoint",
+            "PT": "Mirante do Tinquilco"
+          },
+          "s": {
+            "ES": "El lago allá abajo y el volcán Villarrica al fondo",
+            "EN": "The lake far below and Villarrica volcano beyond",
+            "PT": "O lago lá embaixo e o vulcão Villarrica ao fundo"
+          },
+          "d": {
+            "ES": "El bosque se abre y aparece la postal del parque: el lago Tinquilco en el fondo del valle y, detrás, el cono nevado del Villarrica. A partir de aquí empiezan las araucarias.",
+            "EN": "The forest opens up and the park’s postcard appears: Lake Tinquilco at the bottom of the valley and, behind it, Villarrica’s snowy cone. From here on, the monkey-puzzle trees begin.",
+            "PT": "A mata se abre e aparece o cartão-postal do parque: o lago Tinquilco no fundo do vale e, atrás, o cone nevado do Villarrica. A partir daqui começam as araucárias."
+          },
+          "tip": {
+            "ES": "Haz aquí la foto del volcán: más arriba el bosque lo tapa.",
+            "EN": "Take your volcano photo here: higher up the forest hides it.",
+            "PT": "Tire aqui a foto do vulcão: mais acima a mata esconde."
+          },
+          "hora": "10:15",
+          "dur": "15 min",
+          "img": "/ciudades/pucon/img/caburgua-3.jpg",
+          "lat": -39.14607,
+          "lng": -71.71437,
+          "tramo": "pie",
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Lagos Chico, Toro y Verde",
+            "EN": "Chico, Toro and Verde lakes",
+            "PT": "Lagos Chico, Toro e Verde"
+          },
+          "s": {
+            "ES": "Lagunas de montaña rodeadas de araucarias",
+            "EN": "Mountain lakes ringed by monkey-puzzle trees",
+            "PT": "Lagoas de montanha cercadas de araucárias"
+          },
+          "d": {
+            "ES": "Arriba el terreno se suaviza y el sendero enlaza tres lagunas de agua quieta, con juncos en la orilla y paredes de roca alrededor. Las araucarias, con sus ramas como paraguas, dominan el paisaje.",
+            "EN": "Up top the ground levels out and the trail links three still lakes, with reeds at the edge and rock walls all around. The monkey-puzzle trees, with umbrella-like branches, rule the landscape.",
+            "PT": "Lá em cima o terreno fica mais suave e a trilha liga três lagoas de água parada, com juncos na margem e paredões de pedra em volta. As araucárias, com galhos de guarda-chuva, dominam a paisagem."
+          },
+          "tip": {
+            "ES": "Come a orillas del lago Toro, el más grande, y deja tiempo para bajar: la vuelta es por el mismo camino y en bajada cansa las rodillas.",
+            "EN": "Have lunch by Lake Toro, the largest, and leave time for the descent: you return the same way and the downhill is hard on the knees.",
+            "PT": "Almoce na beira do lago Toro, o maior, e deixe tempo para descer: a volta é pelo mesmo caminho e a descida cansa os joelhos."
+          },
+          "hora": "11:00",
+          "dur": "3 h 30 min",
+          "img": "/ciudades/pucon/img/caburgua-4.jpg",
+          "lat": -39.1364,
+          "lng": -71.7022,
+          "tramo": "pie",
+          "duracionMin": 210
+        },
+        {
+          "n": {
+            "ES": "Playa Blanca",
+            "EN": "Playa Blanca",
+            "PT": "Playa Blanca"
+          },
+          "s": {
+            "ES": "Arena clara y agua transparente en el lago Caburgua",
+            "EN": "Pale sand and clear water on Lake Caburgua",
+            "PT": "Areia clara e água transparente no lago Caburgua"
+          },
+          "d": {
+            "ES": "Después de tanto caminar, un lago entre cerros de bosque con una playa de arena clara, rara en una zona de arenas volcánicas negras. El agua es transparente y algo más templada que la de otros lagos.",
+            "EN": "After all that walking, a lake between forested hills with a pale-sand beach, a rarity in an area of black volcanic sand. The water is clear and a little warmer than in other lakes.",
+            "PT": "Depois de tanta caminhada, um lago entre morros de mata com uma praia de areia clara, raridade numa região de areias vulcânicas pretas. A água é transparente e um pouco mais morna que a de outros lagos."
+          },
+          "tip": {
+            "ES": "Métete aunque sea hasta las rodillas: después del sendero, el agua fría es el mejor masaje para las piernas.",
+            "EN": "Go in, even just up to your knees: after the trail, the cool water is the best massage for your legs.",
+            "PT": "Entre nem que seja até os joelhos: depois da trilha, a água fria é a melhor massagem para as pernas."
+          },
+          "hora": "15:45",
+          "dur": "1 h",
+          "img": "/ciudades/pucon/img/playa-blanca.jpg",
+          "lat": -39.18652,
+          "lng": -71.81044,
+          "tramo": "coche",
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Ojos del Caburgua",
+            "EN": "Ojos del Caburgua",
+            "PT": "Ojos del Caburgua"
+          },
+          "s": {
+            "ES": "Cascadas sobre pozas de color turquesa",
+            "EN": "Waterfalls over turquoise pools",
+            "PT": "Cachoeiras sobre poços cor de turquesa"
+          },
+          "d": {
+            "ES": "Un sendero corto con pasarelas lleva a varios miradores sobre pozas de un azul turquesa intenso, alimentadas por cascadas que salen del bosque. Un final de día de los que se recuerdan.",
+            "EN": "A short trail with walkways leads to several viewpoints over intensely turquoise pools, fed by waterfalls pouring out of the forest. A memorable end to the day.",
+            "PT": "Uma trilha curta com passarelas leva a vários mirantes sobre poços de um azul-turquesa intenso, alimentados por cachoeiras que saem da mata. Um fim de dia para lembrar."
+          },
+          "tip": {
+            "ES": "La entrada se paga en el acceso, mejor en efectivo. Las pozas son para mirar: el baño, en el lago.",
+            "EN": "Entry is paid at the gate, preferably in cash. The pools are for looking at: swim in the lake instead.",
+            "PT": "A entrada se paga no acesso, de preferência em dinheiro. Os poços são para olhar: o banho fica para o lago."
+          },
+          "hora": "17:00",
+          "dur": "45 min",
+          "img": "/ciudades/pucon/img/ojos.jpg",
+          "lat": -39.24682,
+          "lng": -71.84288,
+          "tramo": "coche",
+          "duracionMin": 45
+        }
+      ],
+      "fotos": [
+        "/ciudades/pucon/img/caburgua.jpg",
+        "/ciudades/pucon/img/caburgua-1.jpg",
+        "/ciudades/pucon/img/caburgua-2.jpg",
+        "/ciudades/pucon/img/caburgua-3.jpg",
+        "/ciudades/pucon/img/caburgua-4.jpg",
+        "/ciudades/pucon/img/playa-blanca.jpg",
+        "/ciudades/pucon/img/ojos.jpg",
+        "/ciudades/pucon/img/huerquehue.jpg"
+      ],
+      "duracionMin": 600,
+      "distanciaKm": 85,
+      "dificultad": "exigente",
+      "accesibilidad": {
+        "ES": "El sendero Los Lagos son unos 12 km de ida y vuelta, con una subida fuerte al principio, raíces y barro: hace falta buena forma física y no es apto para silla de ruedas. Playa Blanca y los miradores de Ojos del Caburgua son de acceso fácil.",
+        "EN": "The Los Lagos trail is about 12 km return, with a steep climb at the start, roots and mud: you need to be fit and it is not wheelchair accessible. Playa Blanca and the Ojos del Caburgua viewpoints are easy to reach.",
+        "PT": "A trilha Los Lagos tem uns 12 km ida e volta, com uma subida forte no começo, raízes e barro: exige bom preparo físico e não é adequada para cadeira de rodas. A Playa Blanca e os mirantes dos Ojos del Caburgua são de acesso fácil."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": -39.30228,
+        "lng": -72.0915,
+        "foto": "/ciudades/pucon/img/calfurray.jpg",
+        "texto": {
+          "ES": "Puerta del hotel BordeLuz, en Molco. La hora exacta de recogida te la confirmamos en recepción.",
+          "EN": "At the door of BordeLuz hotel, in Molco. Reception will confirm the exact pick-up time.",
+          "PT": "Na porta do hotel BordeLuz, em Molco. A recepção confirma o horário exato de saída."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Entrada al Parque Nacional Huerquehue (pase CONAF)",
+          "Entrada a Ojos del Caburgua",
+          "Comida y bebidas",
+          "Propinas"
+        ],
+        "EN": [
+          "Huerquehue National Park entrance (CONAF pass)",
+          "Ojos del Caburgua entrance",
+          "Food and drinks",
+          "Tips"
+        ],
+        "PT": [
+          "Entrada do Parque Nacional Huerquehue (passe CONAF)",
+          "Entrada dos Ojos del Caburgua",
+          "Comida e bebidas",
+          "Gorjetas"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "PT": "Depende da operadora. A recepção confirma quando você reservar."
+      },
+      "salidasFijas": [],
+      "precioDesde": 55000
+    },
+    {
+      "id": "pucon",
+      "img": "/ciudades/pucon/img/pucon.jpg",
+      "titulo": {
+        "ES": "Pucón a pie",
+        "EN": "Pucón on foot",
+        "PT": "Pucón a pé"
+      },
+      "tipo": {
+        "ES": "Pueblo",
+        "EN": "Town",
+        "PT": "Cidade"
+      },
+      "dur": "4 h",
+      "d": {
+        "ES": "Arena negra en Playa Grande, la bahía de La Poza al atardecer y, para cerrar, feria artesanal y cena en el centro, con el volcán siempre al fondo.",
+        "EN": "Black sand at Playa Grande, La Poza bay at sunset and, to round off, the craft market and dinner in the centre, with the volcano always in the background.",
+        "PT": "Areia preta na Playa Grande, a baía de La Poza no pôr do sol e, para fechar, feira de artesanato e jantar no centro, com o vulcão sempre ao fundo."
+      },
+      "salida": {
+        "ES": "En coche o taxi hasta Pucón, unos 15 minutos por el camino junto al lago. Aparca cerca de Playa Grande y sigue a pie",
+        "EN": "By car or taxi to Pucón, about 15 minutes along the lakeside road. Park near Playa Grande and carry on on foot",
+        "PT": "De carro ou táxi até Pucón, uns 15 minutos pela estrada à beira do lago. Estacione perto da Playa Grande e siga a pé"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre: sin reserva",
+          "Plan de la tarde y mapa"
+        ],
+        "EN": [
+          "Self-guided: no booking needed",
+          "Afternoon plan and map"
+        ],
+        "PT": [
+          "Roteiro livre: sem reserva",
+          "Plano da tarde e mapa"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo",
+          "Una chaqueta: al caer el sol refresca junto al lago",
+          "Bañador, por si apetece un baño en Playa Grande",
+          "Efectivo para la feria artesanal",
+          "Batería en el móvil para el atardecer"
+        ],
+        "EN": [
+          "Comfortable shoes",
+          "A jacket: it gets cool by the lake once the sun goes down",
+          "Swimwear, in case you fancy a dip at Playa Grande",
+          "Cash for the craft market",
+          "A charged phone for the sunset"
+        ],
+        "PT": [
+          "Calçado confortável",
+          "Um casaco: quando o sol se põe esfria perto do lago",
+          "Roupa de banho, se der vontade de nadar na Playa Grande",
+          "Dinheiro em espécie para a feira de artesanato",
+          "Bateria no celular para o pôr do sol"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Playa Grande",
+            "EN": "Playa Grande",
+            "PT": "Playa Grande"
+          },
+          "s": {
+            "ES": "La playa de arena negra del pueblo, junto al Gran Hotel Pucón",
+            "EN": "The town’s black-sand beach, by the Gran Hotel Pucón",
+            "PT": "A praia de areia preta da cidade, junto ao Gran Hotel Pucón"
+          },
+          "d": {
+            "ES": "La playa principal de Pucón: arena volcánica negra, kayaks, veleros y, detrás, el Gran Hotel Pucón, que el ferrocarril chileno levantó en los años treinta y que se convirtió en la imagen del pueblo.",
+            "EN": "Pucón’s main beach: black volcanic sand, kayaks, sailing boats and, behind it, the Gran Hotel Pucón, built by the Chilean railways in the 1930s and now the town’s signature image.",
+            "PT": "A praia principal de Pucón: areia vulcânica preta, caiaques, veleiros e, atrás, o Gran Hotel Pucón, construído pela ferrovia chilena nos anos 1930 e que virou a imagem da cidade."
+          },
+          "tip": {
+            "ES": "Camina hasta el extremo de la playa: desde la orilla se ve el volcán por encima de los árboles. En verano se puede alquilar un kayak.",
+            "EN": "Walk to the far end of the beach: from the shore you can see the volcano above the trees. In summer you can rent a kayak.",
+            "PT": "Caminhe até o fim da praia: da beira se vê o vulcão acima das árvores. No verão dá para alugar caiaque."
+          },
+          "hora": "16:00",
+          "dur": "45 min",
+          "img": "/ciudades/pucon/img/playa-grande.jpg",
+          "lat": -39.26728,
+          "lng": -71.97537,
+          "tramo": "coche",
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Costanera y península",
+            "EN": "Lakefront and peninsula",
+            "PT": "Orla e península"
+          },
+          "s": {
+            "ES": "El paseo junto al lago, mirando a la península arbolada",
+            "EN": "The lakeside walk, looking out to the wooded peninsula",
+            "PT": "O passeio à beira do lago, olhando para a península arborizada"
+          },
+          "d": {
+            "ES": "Por las calles del centro bajas a la costanera, que bordea la bahía con la península de Pucón enfrente: un cerro cubierto de bosque que cierra el lago por el oeste y protege la bahía del viento.",
+            "EN": "Through the town streets you head down to the lakefront, which skirts the bay with the Pucón peninsula opposite: a forest-covered hill closing off the lake to the west and sheltering the bay from the wind.",
+            "PT": "Pelas ruas do centro você desce até a orla, que contorna a baía com a península de Pucón em frente: um morro coberto de mata que fecha o lago a oeste e protege a baía do vento."
+          },
+          "tip": {
+            "ES": "La península es en gran parte zona residencial privada: se disfruta mejor desde aquí, desde el paseo.",
+            "EN": "The peninsula is largely a private residential area: it is best enjoyed from here, from the promenade.",
+            "PT": "A península é em grande parte área residencial privada: é melhor apreciá-la daqui, do calçadão."
+          },
+          "hora": "16:55",
+          "dur": "30 min",
+          "img": "/ciudades/pucon/img/pucon-2.jpg",
+          "lat": -39.2745,
+          "lng": -71.9818,
+          "tramo": "pie",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "La Poza",
+            "EN": "La Poza",
+            "PT": "La Poza"
+          },
+          "s": {
+            "ES": "Bahía, muelle y humedal, con el volcán de fondo",
+            "EN": "Bay, pier and wetland, with the volcano behind",
+            "PT": "Baía, píer e área úmida, com o vulcão ao fundo"
+          },
+          "d": {
+            "ES": "La bahía tranquila de Pucón: botes amarrados, el muelle de donde salen los paseos en barco y un humedal protegido donde se refugian aves acuáticas. Al atardecer, el volcán se tiñe de rosa sobre el agua quieta.",
+            "EN": "Pucón’s calm bay: moored boats, the pier where the lake cruises leave, and a protected wetland that shelters water birds. At sunset the volcano turns pink above the still water.",
+            "PT": "A baía tranquila de Pucón: barcos ancorados, o píer de onde saem os passeios de barco e uma área úmida protegida onde se abrigam aves aquáticas. No pôr do sol, o vulcão fica rosado sobre a água parada."
+          },
+          "tip": {
+            "ES": "Ponte al final del muelle mirando al sureste para la foto del volcán. Si llegas antes, hay paseos en barco por el lago.",
+            "EN": "Stand at the end of the pier facing south-east for the volcano photo. If you arrive earlier, there are boat trips on the lake.",
+            "PT": "Fique no fim do píer olhando para o sudeste para a foto do vulcão. Se chegar antes, há passeios de barco pelo lago."
+          },
+          "hora": "17:30",
+          "dur": "45 min",
+          "img": "/ciudades/pucon/img/la-poza.jpg",
+          "lat": -39.27638,
+          "lng": -71.98158,
+          "tramo": "pie",
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Feria artesanal",
+            "EN": "Craft market",
+            "PT": "Feira de artesanato"
+          },
+          "s": {
+            "ES": "Lana, madera y platería mapuche bajo techo",
+            "EN": "Wool, wood and Mapuche silverwork under one roof",
+            "PT": "Lã, madeira e prataria mapuche num lugar coberto"
+          },
+          "d": {
+            "ES": "Un pasillo cubierto de puestos con chalecos y gorros de lana, tallas de madera nativa, cerámica y joyas de plata con diseños mapuche. Ideal para un recuerdo que no sea un imán de nevera.",
+            "EN": "A covered aisle of stalls with wool jumpers and hats, native-wood carvings, ceramics and silver jewellery with Mapuche designs. Ideal for a souvenir that isn’t a fridge magnet.",
+            "PT": "Um corredor coberto de barracas com coletes e gorros de lã, entalhes de madeira nativa, cerâmica e joias de prata com desenhos mapuche. Ideal para uma lembrança que não seja um ímã de geladeira."
+          },
+          "tip": {
+            "ES": "Pregunta quién ha hecho la pieza: muchas veces te atiende el propio artesano. Lleva efectivo, no todos los puestos aceptan tarjeta.",
+            "EN": "Ask who made the piece: often the craftsperson serves you. Bring cash, as not every stall takes cards.",
+            "PT": "Pergunte quem fez a peça: muitas vezes quem atende é o próprio artesão. Leve dinheiro, nem todas as barracas aceitam cartão."
+          },
+          "hora": "18:30",
+          "dur": "45 min",
+          "img": "/ciudades/pucon/img/pucon-4.jpg",
+          "lat": -39.27693,
+          "lng": -71.97423,
+          "tramo": "pie",
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Avenida O'Higgins",
+            "EN": "O'Higgins Avenue",
+            "PT": "Avenida O'Higgins"
+          },
+          "s": {
+            "ES": "Cafés, chocolaterías y cena en la calle principal",
+            "EN": "Cafés, chocolate shops and dinner on the main street",
+            "PT": "Cafés, chocolaterias e jantar na rua principal"
+          },
+          "d": {
+            "ES": "La calle principal de Pucón, con casas de madera, agencias de aventura, cafés y restaurantes. Al fondo de la avenida, si el cielo está limpio, el volcán sigue ahí mirándote.",
+            "EN": "Pucón’s main street, with wooden houses, adventure agencies, cafés and restaurants. At the end of the avenue, if the sky is clear, the volcano is still there watching you.",
+            "PT": "A rua principal de Pucón, com casas de madeira, agências de aventura, cafés e restaurantes. No fim da avenida, se o céu estiver limpo, o vulcão continua lá olhando para você."
+          },
+          "tip": {
+            "ES": "Prueba algo con murta o con maqui, frutos del bosque del sur de Chile. Y si mañana subes al volcán, cena pronto.",
+            "EN": "Try something made with murta or maqui, wild berries from southern Chile. And if you are climbing the volcano tomorrow, have an early dinner.",
+            "PT": "Prove algo com murta ou maqui, frutinhas da mata do sul do Chile. E se amanhã for subir o vulcão, jante cedo."
+          },
+          "hora": "19:15",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/pucon/img/centro.jpg",
+          "lat": -39.2756,
+          "lng": -71.977,
+          "tramo": "pie",
+          "duracionMin": 90
+        }
+      ],
+      "fotos": [
+        "/ciudades/pucon/img/pucon.jpg",
+        "/ciudades/pucon/img/playa-grande.jpg",
+        "/ciudades/pucon/img/pucon-2.jpg",
+        "/ciudades/pucon/img/la-poza.jpg",
+        "/ciudades/pucon/img/pucon-4.jpg",
+        "/ciudades/pucon/img/centro.jpg"
+      ],
+      "duracionMin": 255,
+      "distanciaKm": 16,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Recorrido llano por aceras y paseo junto al lago; la arena de la playa y algunos tramos de tierra de la costanera son incómodos en silla de ruedas.",
+        "EN": "A flat route on pavements and the lakeside walk; the beach sand and some dirt stretches of the lakefront are awkward in a wheelchair.",
+        "PT": "Percurso plano por calçadas e pelo passeio à beira do lago; a areia da praia e alguns trechos de terra da orla são difíceis para cadeira de rodas."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": -39.26728,
+        "lng": -71.97537,
+        "foto": "/ciudades/pucon/img/playa-grande.jpg",
+        "texto": {
+          "ES": "Sales del hotel en coche o taxi hacia Pucón, unos 15 minutos por el camino del lago. Primera parada: Playa Grande.",
+          "EN": "Drive or take a taxi from the hotel to Pucón, about 15 minutes along the lake road. First stop: Playa Grande.",
+          "PT": "Saia do hotel de carro ou táxi rumo a Pucón, uns 15 minutos pela estrada do lago. Primeira parada: Playa Grande."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Transporte hasta Pucón",
+          "Cena y compras",
+          "Guía"
+        ],
+        "EN": [
+          "Transport to Pucón",
+          "Dinner and shopping",
+          "Guide"
+        ],
+        "PT": [
+          "Transporte até Pucón",
+          "Jantar e compras",
+          "Guia"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "PT": "Depende da operadora. A recepção confirma quando você reservar."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un pisco sour en la terraza del hotel a la vuelta",
+      "EN": "A pisco sour on the hotel terrace when you get back",
+      "PT": "Um pisco sour no terraço do hotel na volta"
+    }
+  },
+  "creditos": [
+    "Playa de Molco (Calfurray): Esteriesco, dominio público, Wikimedia Commons",
+    "Playa Grande de Pucón, Playa de Coñaripe y volcán Villarrica, Entrada de las Termas Geométricas, Pozones de las Termas Geométricas, Cascada de las Termas Geométricas, Lago Tinquilco, Cascada Nido de Águila, Lago Tinquilco y volcán Villarrica desde el sendero, Lago Toro y cerro Araucano, Pucón y el volcán Villarrica y Península de Pucón: Falk2, CC BY-SA 4.0, Wikimedia Commons",
+    "La Poza y el volcán Villarrica: Draceane, CC BY-SA 4.0, Wikimedia Commons",
+    "Centro de Pucón: Marco Antonio Correa Flores, CC BY-SA 3.0, Wikimedia Commons",
+    "Costanera de Villarrica: Ralf Christian Gamper, CC BY-SA 2.0, Wikimedia Commons",
+    "Ojos del Caburgua: Draceane, CC BY-SA 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Ojos_del_Caburgua,_2019_(02).jpg)",
+    "Playa Blanca, lago Caburgua: Felipe González Durán, CC BY-SA 3.0, Wikimedia Commons",
+    "Centro de Ski Pucón: ogwen, CC BY-SA 3.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Volcan_Villarica_-_panoramio_(1).jpg)",
+    "Lago Tinquilco y volcán, Huerquehue y Ascenso al volcán Villarrica: Elemaki, CC BY 3.0, Wikimedia Commons",
+    "Pasarela de las Termas Geométricas: Cristofer, CC BY 2.0, Wikimedia Commons",
+    "Subida por la nieve del Villarrica: Pfannaflicka, CC BY-SA 4.0, Wikimedia Commons",
+    "Cordada en el volcán Villarrica: Lisa Weichel, CC BY 2.0, Wikimedia Commons",
+    "Cráter del volcán Villarrica: Thomas Fuhrmann, CC BY-SA 4.0, Wikimedia Commons",
+    "Vista desde la ladera del Villarrica: Marcela Pezoa, CC BY-SA 3.0, Wikimedia Commons",
+    "Pasarela roja de las Termas Geométricas: Omar Burgos Dättwyler, CC BY-SA 3.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Termas_Geometricas_1_(99340241).jpeg)",
+    "Ojos del Caburgua (tres cascadas): Dario Alpern, CC BY-SA 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Ojos_del_Caburgua_(3_cascadas).jpg)",
+    "Feria artesanal de Pucón: Warko, CC BY-SA 3.0, Wikimedia Commons"
+  ]
+}
