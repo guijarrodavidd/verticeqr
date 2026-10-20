@@ -1,0 +1,1612 @@
+{
+  "slug": "cartagena",
+  "nombre": "Cartagena de Indias",
+  "intro": {
+    "ES": "Murallas de piedra coralina, balcones llenos de buganvillas y un mar que se pone naranja cada tarde. Sales del hotel y ya estás dentro de la ciudad amurallada: madruga, que el calor aprieta, y guarda el atardecer para la muralla.",
+    "EN": "Coral-stone walls, balconies spilling bougainvillea and a sea that turns orange every evening. Step out of the hotel and you're already inside the walled city: start early, as the heat builds, and save the sunset for the ramparts.",
+    "DE": "Mauern aus Korallenstein, Balkone voller Bougainvillea und ein Meer, das sich jeden Abend orange färbt. Du trittst aus dem Hotel und bist schon mitten in der Altstadt: Starte früh, denn die Hitze nimmt zu, und heb dir den Sonnenuntergang für die Stadtmauer auf."
+  },
+  "lugares": [
+    {
+      "id": "torre-reloj",
+      "img": "/ciudades/cartagena/img/reloj.jpg",
+      "nombre": "Torre del Reloj",
+      "zona": {
+        "ES": "Centro amurallado",
+        "EN": "Walled city",
+        "DE": "Altstadt"
+      },
+      "d": {
+        "ES": "La puerta principal de la ciudad amurallada, con su torre amarilla y el reloj. Al cruzarla pasas de la avenida a las calles coloniales, con la Plaza de los Coches justo detrás.",
+        "EN": "The main gate of the walled city, with its yellow clock tower. Walk through and you go from the avenue to the colonial streets, with Plaza de los Coches right behind.",
+        "DE": "Das Haupttor der Altstadt mit seinem gelben Uhrturm. Gehst du hindurch, wechselst du von der Allee in die kolonialen Gassen, direkt dahinter liegt die Plaza de los Coches."
+      },
+      "cuando": {
+        "ES": "Al caer la tarde, cuando se enciende la iluminación",
+        "EN": "At dusk, when the lights come on",
+        "DE": "In der Abenddämmerung, wenn die Beleuchtung angeht"
+      },
+      "min": 6,
+      "modo": "pie",
+      "lat": 10.42272,
+      "lng": -75.5492
+    },
+    {
+      "id": "santo-domingo",
+      "img": "/ciudades/cartagena/img/centro-5.jpg",
+      "nombre": "Plaza de Santo Domingo",
+      "zona": {
+        "ES": "Centro amurallado",
+        "EN": "Walled city",
+        "DE": "Altstadt"
+      },
+      "d": {
+        "ES": "La plaza más viva del centro: mesas en la calle, la iglesia más antigua de la ciudad y la Gertrudis de Botero, recostada y sonriente.",
+        "EN": "The liveliest square in the old town: tables in the street, the city's oldest church and Botero's Gertrudis, reclining and smiling.",
+        "DE": "Der lebendigste Platz der Altstadt: Tische auf der Straße, die älteste Kirche der Stadt und Boteros Gertrudis, liegend und lächelnd."
+      },
+      "cuando": {
+        "ES": "Temprano por la mañana para la foto; de noche para cenar",
+        "EN": "Early morning for photos; at night for dinner",
+        "DE": "Früh morgens für Fotos, abends zum Essen"
+      },
+      "min": 3,
+      "modo": "pie",
+      "lat": 10.42432,
+      "lng": -75.552
+    },
+    {
+      "id": "murallas",
+      "img": "/ciudades/cartagena/img/baluarte.jpg",
+      "nombre": "Murallas y Baluarte de Santo Domingo",
+      "zona": {
+        "ES": "Frente al mar",
+        "EN": "Seafront",
+        "DE": "Am Meer"
+      },
+      "d": {
+        "ES": "Kilómetros de muralla para caminar por encima, con cañones, garitas y el Caribe al lado. El Baluarte de Santo Domingo es el mirador clásico para ver caer el sol.",
+        "EN": "Kilometres of wall to walk along the top of, with cannons, sentry boxes and the Caribbean alongside. The Santo Domingo bastion is the classic spot to watch the sun go down.",
+        "DE": "Kilometerlange Mauern zum Begehen, mit Kanonen, Wachtürmchen und der Karibik nebenan. Die Bastion Santo Domingo ist der klassische Ort für den Sonnenuntergang."
+      },
+      "cuando": {
+        "ES": "Al atardecer; llega 30 minutos antes de que se ponga el sol",
+        "EN": "At sunset; arrive 30 minutes before the sun goes down",
+        "DE": "Zum Sonnenuntergang; komm 30 Minuten vorher"
+      },
+      "min": 4,
+      "modo": "pie",
+      "lat": 10.42568,
+      "lng": -75.55375
+    },
+    {
+      "id": "getsemani",
+      "img": "/ciudades/cartagena/img/getsemani-3.jpg",
+      "nombre": "Getsemaní y Plaza de la Trinidad",
+      "zona": {
+        "ES": "Getsemaní",
+        "EN": "Getsemaní",
+        "DE": "Getsemaní"
+      },
+      "d": {
+        "ES": "El barrio de fuera de las murallas: casas bajas de colores, murales en cada esquina y la Plaza de la Trinidad, que de noche se llena de vecinos, música y comida callejera.",
+        "EN": "The neighbourhood outside the walls: low colourful houses, murals on every corner and Plaza de la Trinidad, which fills up at night with locals, music and street food.",
+        "DE": "Das Viertel außerhalb der Mauern: niedrige bunte Häuser, Wandbilder an jeder Ecke und die Plaza de la Trinidad, die sich abends mit Nachbarn, Musik und Streetfood füllt."
+      },
+      "cuando": {
+        "ES": "A última hora de la tarde y de noche",
+        "EN": "Late afternoon and evening",
+        "DE": "Am späten Nachmittag und abends"
+      },
+      "min": 12,
+      "modo": "pie",
+      "lat": 10.4211,
+      "lng": -75.5477
+    },
+    {
+      "id": "san-felipe",
+      "img": "/ciudades/cartagena/img/san-felipe.jpg",
+      "nombre": "Castillo de San Felipe de Barajas",
+      "zona": {
+        "ES": "Cerro de San Lázaro",
+        "EN": "San Lázaro hill",
+        "DE": "Hügel San Lázaro"
+      },
+      "d": {
+        "ES": "La gran fortaleza de la ciudad: rampas de piedra, baterías de cañones y túneles por donde todavía se puede bajar. Desde arriba ves la ciudad vieja y Bocagrande.",
+        "EN": "The city's great fortress: stone ramps, gun batteries and tunnels you can still walk down into. From the top you see the old town and Bocagrande.",
+        "DE": "Die große Festung der Stadt: Steinrampen, Kanonenbatterien und Tunnel, in die man noch hinabsteigen kann. Von oben siehst du die Altstadt und Bocagrande."
+      },
+      "cuando": {
+        "ES": "A primera hora, en cuanto abre: a mediodía no hay sombra",
+        "EN": "First thing, as soon as it opens: at midday there is no shade",
+        "DE": "Gleich zur Öffnung: mittags gibt es keinen Schatten"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 10.4228,
+      "lng": -75.5395
+    },
+    {
+      "id": "la-popa",
+      "img": "/ciudades/cartagena/img/san-felipe-5.jpg",
+      "nombre": "Convento de La Popa",
+      "zona": {
+        "ES": "Cerro de La Popa",
+        "EN": "La Popa hill",
+        "DE": "Hügel La Popa"
+      },
+      "d": {
+        "ES": "Un convento blanco en lo más alto de la ciudad, con un claustro lleno de flores. Desde el mirador ves la bahía, Bocagrande, el castillo y el centro de una sola mirada.",
+        "EN": "A white convent at the city's highest point, with a cloister full of flowers. From the viewpoint you take in the bay, Bocagrande, the castle and the old town in one glance.",
+        "DE": "Ein weißes Kloster am höchsten Punkt der Stadt, mit einem Kreuzgang voller Blumen. Vom Aussichtspunkt siehst du Bucht, Bocagrande, Festung und Altstadt auf einen Blick."
+      },
+      "cuando": {
+        "ES": "Por la mañana, con el aire más limpio; sube siempre en taxi",
+        "EN": "In the morning, when the air is clearest; always go up by taxi",
+        "DE": "Vormittags bei klarer Luft; fahr immer mit dem Taxi hinauf"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 10.4195,
+      "lng": -75.5256
+    },
+    {
+      "id": "bovedas",
+      "img": "/ciudades/cartagena/img/murallas-1.jpg",
+      "nombre": "Las Bóvedas",
+      "zona": {
+        "ES": "San Diego",
+        "EN": "San Diego",
+        "DE": "San Diego"
+      },
+      "d": {
+        "ES": "Una larga galería amarilla de arcos metida en la muralla. Fueron almacenes y calabozos; hoy son tiendas de artesanía, mochilas wayuu y sombreros vueltiaos.",
+        "EN": "A long yellow arcade built into the city wall. They were storerooms and cells; today they are craft shops selling Wayuu bags and vueltiao hats.",
+        "DE": "Ein langer gelber Arkadengang in der Stadtmauer. Früher Lagerräume und Zellen, heute Kunsthandwerksläden mit Wayuu-Taschen und Vueltiao-Hüten."
+      },
+      "cuando": {
+        "ES": "A media mañana o antes de subir a la muralla al atardecer",
+        "EN": "Mid-morning, or before climbing the wall at sunset",
+        "DE": "Am Vormittag oder bevor du zum Sonnenuntergang auf die Mauer steigst"
+      },
+      "min": 8,
+      "modo": "pie",
+      "lat": 10.43002,
+      "lng": -75.54654
+    },
+    {
+      "id": "bolivar",
+      "img": "/ciudades/cartagena/img/centro-2.jpg",
+      "nombre": "Plaza de Bolívar y Palacio de la Inquisición",
+      "zona": {
+        "ES": "Centro amurallado",
+        "EN": "Walled city",
+        "DE": "Altstadt"
+      },
+      "d": {
+        "ES": "Un parque con sombra de árboles grandes y la estatua ecuestre de Bolívar. En un costado, la portada barroca del Palacio de la Inquisición, hoy Museo Histórico de Cartagena.",
+        "EN": "A park shaded by big trees, with Bolívar's equestrian statue. On one side, the baroque doorway of the Palace of the Inquisition, now the Cartagena History Museum.",
+        "DE": "Ein Park im Schatten großer Bäume mit dem Reiterstandbild Bolívars. An einer Seite das barocke Portal des Inquisitionspalasts, heute das Historische Museum von Cartagena."
+      },
+      "cuando": {
+        "ES": "Por la mañana, cuando abre el museo y el parque está fresco",
+        "EN": "In the morning, when the museum opens and the park is cool",
+        "DE": "Morgens, wenn das Museum öffnet und der Park noch kühl ist"
+      },
+      "min": 4,
+      "modo": "pie",
+      "lat": 10.42348,
+      "lng": -75.55126
+    },
+    {
+      "id": "san-pedro-claver",
+      "img": "/ciudades/cartagena/img/centro-4.jpg",
+      "nombre": "Iglesia de San Pedro Claver",
+      "zona": {
+        "ES": "Centro amurallado",
+        "EN": "Walled city",
+        "DE": "Altstadt"
+      },
+      "d": {
+        "ES": "Una iglesia de piedra con cúpula junto a la muralla, y el claustro donde vivió el jesuita que dedicó su vida a los africanos esclavizados que llegaban al puerto.",
+        "EN": "A stone church with a dome beside the wall, and the cloister where the Jesuit lived who devoted his life to the enslaved Africans arriving at the port.",
+        "DE": "Eine Steinkirche mit Kuppel an der Mauer und der Kreuzgang, in dem der Jesuit lebte, der sein Leben den versklavten Afrikanern widmete, die im Hafen ankamen."
+      },
+      "cuando": {
+        "ES": "Por la mañana; al mediodía el claustro es el mejor refugio del calor",
+        "EN": "In the morning; at midday the cloister is the best escape from the heat",
+        "DE": "Vormittags; mittags ist der Kreuzgang die beste Zuflucht vor der Hitze"
+      },
+      "min": 6,
+      "modo": "pie",
+      "lat": 10.42177,
+      "lng": -75.55121
+    },
+    {
+      "id": "bocagrande",
+      "img": "/ciudades/cartagena/img/bocagrande.jpg",
+      "nombre": "Bocagrande",
+      "zona": {
+        "ES": "Bocagrande",
+        "EN": "Bocagrande",
+        "DE": "Bocagrande"
+      },
+      "d": {
+        "ES": "La Cartagena moderna: torres frente al mar, playa larga de arena oscura y paseo para caminar al final del día. Para bañarse, mejor las islas; para ver el atardecer, perfecta.",
+        "EN": "Modern Cartagena: towers facing the sea, a long dark-sand beach and a promenade for an end-of-day stroll. For swimming, the islands are better; for the sunset, it's perfect.",
+        "DE": "Das moderne Cartagena: Hochhäuser am Meer, ein langer Strand mit dunklem Sand und eine Promenade für den Abendspaziergang. Zum Baden sind die Inseln besser, für den Sonnenuntergang ist es perfekt."
+      },
+      "cuando": {
+        "ES": "A última hora de la tarde",
+        "EN": "Late in the afternoon",
+        "DE": "Am späten Nachmittag"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 10.4005,
+      "lng": -75.5555
+    }
+  ],
+  "rutas": [
+    {
+      "id": "murallas",
+      "expId": "ex1",
+      "img": "/ciudades/cartagena/img/murallas.jpg",
+      "titulo": {
+        "ES": "Atardecer en las murallas",
+        "EN": "Sunset on the city walls",
+        "DE": "Sonnenuntergang auf der Stadtmauer"
+      },
+      "tipo": {
+        "ES": "Paseo guiado",
+        "EN": "Guided walk",
+        "DE": "Geführter Spaziergang"
+      },
+      "dur": "2 h",
+      "d": {
+        "ES": "Caminas por encima de la muralla con un guía, de baluarte en baluarte, mientras el Caribe se pone dorado. Acabas con el sol ya puesto, bajo la Torre del Reloj.",
+        "EN": "You walk along the top of the wall with a guide, bastion by bastion, as the Caribbean turns gold. You finish after sunset, beneath the Clock Tower.",
+        "DE": "Du gehst mit einem Guide oben auf der Mauer von Bastion zu Bastion, während die Karibik golden wird. Du endest nach Sonnenuntergang unter dem Uhrturm."
+      },
+      "salida": {
+        "ES": "Puerta del hotel, en la Calle del Cuartel, cada tarde a las 17:00",
+        "EN": "Hotel entrance, Calle del Cuartel, every afternoon at 5 pm",
+        "DE": "Hoteleingang in der Calle del Cuartel, jeden Nachmittag um 17 Uhr"
+      },
+      "incluye": {
+        "ES": [
+          "Guía local en español o inglés",
+          "Paseo de 2 h por la muralla y sus baluartes",
+          "Agua fría para el camino"
+        ],
+        "EN": [
+          "Local guide in Spanish or English",
+          "2-hour walk along the wall and its bastions",
+          "Cold water for the way"
+        ],
+        "DE": [
+          "Lokaler Guide auf Spanisch oder Englisch",
+          "2 Std. Spaziergang über die Mauer und ihre Bastionen",
+          "Kaltes Wasser für unterwegs"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Ropa ligera y zapatos cómodos: la piedra es irregular",
+          "Gafas de sol y bloqueador, que hasta las 17:30 el sol pega",
+          "Repelente para cuando cae la tarde",
+          "Algo de efectivo si te apetece una bebida en el baluarte"
+        ],
+        "EN": [
+          "Light clothes and comfortable shoes: the stone is uneven",
+          "Sunglasses and sunscreen, as the sun is strong until 5:30 pm",
+          "Insect repellent for dusk",
+          "Some cash if you fancy a drink on the bastion"
+        ],
+        "DE": [
+          "Leichte Kleidung und bequeme Schuhe: der Stein ist uneben",
+          "Sonnenbrille und Sonnencreme, bis 17:30 Uhr brennt die Sonne",
+          "Mückenschutz für die Dämmerung",
+          "Etwas Bargeld, falls du auf der Bastion etwas trinken möchtest"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Las Bóvedas",
+            "EN": "Las Bóvedas",
+            "DE": "Las Bóvedas"
+          },
+          "s": {
+            "ES": "Los arcos amarillos metidos en la muralla",
+            "EN": "The yellow arches built into the wall",
+            "DE": "Die gelben Bögen in der Mauer"
+          },
+          "d": {
+            "ES": "Una galería de arcos que se construyó como lo último de la muralla, a finales del siglo XVIII. Fueron almacenes y, más tarde, calabozos. Hoy hay artesanía en cada puerta y empieza aquí el paseo.",
+            "EN": "An arcade built as the very last part of the walls, at the end of the 18th century. They were storerooms and, later, prison cells. Today there are crafts in every doorway, and the walk starts here.",
+            "DE": "Ein Arkadengang, der Ende des 18. Jahrhunderts als letzter Teil der Mauer entstand. Erst Lagerräume, später Zellen. Heute gibt es in jeder Tür Kunsthandwerk, und hier beginnt der Spaziergang."
+          },
+          "tip": {
+            "ES": "Si quieres comprar una mochila wayuu o un sombrero vueltiao, mira aquí precios con calma y compara entre tiendas.",
+            "EN": "If you want a Wayuu bag or a vueltiao hat, take your time with prices here and compare shops.",
+            "DE": "Wenn du eine Wayuu-Tasche oder einen Vueltiao-Hut willst, vergleiche hier in Ruhe die Preise der Läden."
+          },
+          "hora": "17:05",
+          "dur": "15 min",
+          "img": "/ciudades/cartagena/img/murallas-1.jpg",
+          "lat": 10.4291,
+          "lng": -75.547,
+          "tramo": "pie",
+          "duracionMin": 15,
+          "tramoDuracionMin": 8
+        },
+        {
+          "n": {
+            "ES": "Baluarte de Santa Catalina",
+            "EN": "Santa Catalina bastion",
+            "DE": "Bastion Santa Catalina"
+          },
+          "s": {
+            "ES": "La esquina norte, mirando hacia tierra",
+            "EN": "The northern corner, facing inland",
+            "DE": "Die Nordecke, landeinwärts gewandt"
+          },
+          "d": {
+            "ES": "Subes a la muralla junto a las garitas de Santa Catalina y San Lucas. Desde aquí se vigilaba el camino de tierra que llegaba a la ciudad; al fondo asoma el cerro de La Popa.",
+            "EN": "You climb onto the wall beside the sentry boxes of Santa Catalina and San Lucas. From here they watched the land route into the city; La Popa hill rises in the background.",
+            "DE": "Du steigst neben den Wachtürmchen von Santa Catalina und San Lucas auf die Mauer. Von hier wurde der Landweg in die Stadt bewacht; im Hintergrund erhebt sich der Hügel La Popa."
+          },
+          "tip": {
+            "ES": "Asómate a una garita: son el mejor marco para una foto con la ciudad detrás.",
+            "EN": "Peek into a sentry box: they're the best frame for a photo with the city behind.",
+            "DE": "Schau in ein Wachtürmchen: Es ist der beste Rahmen für ein Foto mit der Stadt dahinter."
+          },
+          "hora": "17:20",
+          "dur": "10 min",
+          "img": "/ciudades/cartagena/img/murallas-2.jpg",
+          "lat": 10.42965,
+          "lng": -75.5483,
+          "tramo": "pie",
+          "duracionMin": 10,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "La muralla frente al mar",
+            "EN": "The sea wall",
+            "DE": "Die Mauer am Meer"
+          },
+          "s": {
+            "ES": "Caminando por encima, con el Caribe a la derecha",
+            "EN": "Walking along the top, the Caribbean on your right",
+            "DE": "Oben entlang, die Karibik zur Rechten"
+          },
+          "d": {
+            "ES": "El tramo más bonito: la muralla corre paralela a la playa y el viento del mar refresca. Pasas cañones y garitas mientras el cielo empieza a cambiar de color.",
+            "EN": "The finest stretch: the wall runs parallel to the beach and the sea breeze cools you down. You pass cannons and sentry boxes as the sky starts to change colour.",
+            "DE": "Der schönste Abschnitt: Die Mauer verläuft parallel zum Strand, und die Meeresbrise kühlt. Du kommst an Kanonen und Wachtürmchen vorbei, während der Himmel die Farbe wechselt."
+          },
+          "tip": {
+            "ES": "Camina por el centro del adarve y ojo con los bordes: en muchos tramos no hay barandilla.",
+            "EN": "Walk in the middle of the rampart walkway and mind the edges: many stretches have no railing.",
+            "DE": "Geh in der Mitte des Wehrgangs und achte auf die Kanten: an vielen Stellen gibt es kein Geländer."
+          },
+          "hora": "17:30",
+          "dur": "15 min",
+          "img": "/ciudades/cartagena/img/murallas-3.jpg",
+          "lat": 10.428,
+          "lng": -75.5512,
+          "tramo": "pie",
+          "duracionMin": 15,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Baluarte de Santo Domingo",
+            "EN": "Santo Domingo bastion",
+            "DE": "Bastion Santo Domingo"
+          },
+          "s": {
+            "ES": "El mirador clásico para ver caer el sol",
+            "EN": "The classic spot to watch the sun go down",
+            "DE": "Der klassische Ort für den Sonnenuntergang"
+          },
+          "d": {
+            "ES": "Un baluarte ancho con cañones apuntando al mar. Aquí se sienta media ciudad cada tarde a ver cómo el sol se hunde en el Caribe y el cielo se pone naranja y rosa.",
+            "EN": "A broad bastion with cannons pointing out to sea. Half the city sits here every evening to watch the sun sink into the Caribbean as the sky turns orange and pink.",
+            "DE": "Eine breite Bastion mit Kanonen, die aufs Meer zielen. Jeden Abend sitzt hier die halbe Stadt und sieht zu, wie die Sonne in der Karibik versinkt und der Himmel orange und rosa wird."
+          },
+          "tip": {
+            "ES": "El sol se pone entre las 17:30 (noviembre) y las 18:30 (junio y julio): el guía ajusta el paso para que llegues a tiempo.",
+            "EN": "The sun sets between 5:30 pm (November) and 6:30 pm (June and July): the guide sets the pace so you arrive in time.",
+            "DE": "Die Sonne geht zwischen 17:30 Uhr (November) und 18:30 Uhr (Juni, Juli) unter: Der Guide passt das Tempo an, damit du rechtzeitig da bist."
+          },
+          "hora": "17:50",
+          "dur": "35 min",
+          "img": "/ciudades/cartagena/img/murallas-4.jpg",
+          "lat": 10.42568,
+          "lng": -75.55375,
+          "tramo": "pie",
+          "duracionMin": 35,
+          "tramoDuracionMin": 10
+        },
+        {
+          "n": {
+            "ES": "Torre del Reloj",
+            "EN": "Clock Tower",
+            "DE": "Uhrturm"
+          },
+          "s": {
+            "ES": "La puerta principal, ya con las luces encendidas",
+            "EN": "The main gate, with the lights now on",
+            "DE": "Das Haupttor, schon beleuchtet"
+          },
+          "d": {
+            "ES": "Bajas de la muralla y cruzas la Plaza de los Coches, con sus coches de caballos esperando, hasta la Torre del Reloj iluminada. Fue la entrada principal a la ciudad amurallada.",
+            "EN": "You come down from the wall and cross Plaza de los Coches, with its horse carriages waiting, to the illuminated Clock Tower. It was the main entrance to the walled city.",
+            "DE": "Du steigst von der Mauer und überquerst die Plaza de los Coches mit ihren wartenden Kutschen bis zum beleuchteten Uhrturm. Er war der Haupteingang der Altstadt."
+          },
+          "tip": {
+            "ES": "Bajo los soportales de la plaza está el Portal de los Dulces: prueba una cocada o unas alegrías antes de volver al hotel, a 6 minutos andando.",
+            "EN": "Under the square's arcades is the Portal de los Dulces: try a cocada or some alegrías before heading back to the hotel, 6 minutes on foot.",
+            "DE": "Unter den Arkaden des Platzes liegt das Portal de los Dulces: Probier eine Cocada oder Alegrías, bevor du zurück zum Hotel gehst, 6 Minuten zu Fuß."
+          },
+          "hora": "18:40",
+          "dur": "20 min",
+          "img": "/ciudades/cartagena/img/murallas-5.jpg",
+          "lat": 10.42272,
+          "lng": -75.5492,
+          "tramo": "pie",
+          "duracionMin": 20,
+          "tramoDuracionMin": 12
+        }
+      ],
+      "fotos": [
+        "/ciudades/cartagena/img/murallas.jpg",
+        "/ciudades/cartagena/img/murallas-1.jpg",
+        "/ciudades/cartagena/img/murallas-2.jpg",
+        "/ciudades/cartagena/img/murallas-3.jpg",
+        "/ciudades/cartagena/img/murallas-4.jpg",
+        "/ciudades/cartagena/img/murallas-5.jpg"
+      ],
+      "duracionMin": 120,
+      "distanciaKm": 2.6,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Se sube a la muralla por rampas y escaleras de piedra, con suelo irregular y sin barandilla en muchos tramos: no es apta para silla de ruedas. Hay partes llanas al pie de la muralla; pregúntalo en recepción.",
+        "EN": "You climb onto the wall via stone ramps and steps; the surface is uneven and many stretches have no railing: not suitable for wheelchairs. There are flat sections at the foot of the wall; ask reception.",
+        "DE": "Auf die Mauer gelangt man über Steinrampen und -stufen, der Boden ist uneben und oft ohne Geländer: nicht rollstuhlgerecht. Am Fuß der Mauer gibt es ebene Abschnitte; frag an der Rezeption."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 10.42565,
+        "lng": -75.55063,
+        "foto": "/ciudades/cartagena/img/centro.jpg",
+        "texto": {
+          "ES": "En la puerta del hotel, en la Calle del Cuartel. Baja a las 16:55: el guía te recoge aquí.",
+          "EN": "At the hotel entrance on Calle del Cuartel. Come down at 4:55 pm: the guide picks you up here.",
+          "DE": "Am Hoteleingang in der Calle del Cuartel. Komm um 16:55 Uhr herunter: Der Guide holt dich hier ab."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Bebidas en los bares del baluarte",
+          "Compras en Las Bóvedas",
+          "Propinas"
+        ],
+        "EN": [
+          "Drinks at the bastion bars",
+          "Shopping at Las Bóvedas",
+          "Tips"
+        ],
+        "DE": [
+          "Getränke in den Bars auf der Bastion",
+          "Einkäufe in Las Bóvedas",
+          "Trinkgeld"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "DE": "Je nach Anbieter. Die Rezeption bestätigt es dir bei der Buchung."
+      },
+      "salidasFijas": [
+        "17:00"
+      ],
+      "precioDesde": 120000
+    },
+    {
+      "id": "getsemani",
+      "expId": "ex3",
+      "img": "/ciudades/cartagena/img/getsemani.jpg",
+      "titulo": {
+        "ES": "Getsemaní, arte urbano y plazas",
+        "EN": "Getsemaní, street art and squares",
+        "DE": "Getsemaní, Street-Art und Plätze"
+      },
+      "tipo": {
+        "ES": "Paseo guiado",
+        "EN": "Guided walk",
+        "DE": "Geführter Spaziergang"
+      },
+      "dur": "2 h 30 min",
+      "d": {
+        "ES": "El barrio que hizo la independencia y hoy pinta sus paredes. Murales, banderines de colores, plazas de barrio y la Trinidad cuando empieza a llenarse de vida.",
+        "EN": "The neighbourhood that sparked independence and now paints its walls. Murals, colourful bunting, local squares and the Trinidad just as it starts to come alive.",
+        "DE": "Das Viertel, das die Unabhängigkeit anstieß und heute seine Wände bemalt. Wandbilder, bunte Wimpel, Nachbarschaftsplätze und die Trinidad, wenn sie gerade zum Leben erwacht."
+      },
+      "salida": {
+        "ES": "Puerta del hotel, en la Calle del Cuartel, cada tarde a las 16:00",
+        "EN": "Hotel entrance, Calle del Cuartel, every afternoon at 4 pm",
+        "DE": "Hoteleingang in der Calle del Cuartel, jeden Nachmittag um 16 Uhr"
+      },
+      "incluye": {
+        "ES": [
+          "Guía local del barrio",
+          "Paseo de 2 h 30 min a pie",
+          "Una bebida fría en la Plaza de la Trinidad"
+        ],
+        "EN": [
+          "Local neighbourhood guide",
+          "2 h 30 min walk",
+          "A cold drink in Plaza de la Trinidad"
+        ],
+        "DE": [
+          "Lokaler Guide aus dem Viertel",
+          "2 Std. 30 Min. Spaziergang",
+          "Ein kaltes Getränk auf der Plaza de la Trinidad"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Ropa ligera y gorra",
+          "Agua: a las 16:00 todavía hace calor",
+          "Zapatos cómodos para las aceras estrechas",
+          "El celular cargado para los murales"
+        ],
+        "EN": [
+          "Light clothes and a cap",
+          "Water: at 4 pm it's still hot",
+          "Comfortable shoes for the narrow pavements",
+          "A charged phone for the murals"
+        ],
+        "DE": [
+          "Leichte Kleidung und Kappe",
+          "Wasser: um 16 Uhr ist es noch heiß",
+          "Bequeme Schuhe für die schmalen Gehwege",
+          "Ein geladenes Handy für die Wandbilder"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Camellón de los Mártires",
+            "EN": "Camellón de los Mártires",
+            "DE": "Camellón de los Mártires"
+          },
+          "s": {
+            "ES": "El paseo de los bustos, entre la Torre del Reloj y el Puente Román",
+            "EN": "The promenade of busts, between the Clock Tower and Puente Román",
+            "DE": "Die Promenade der Büsten zwischen Uhrturm und Puente Román"
+          },
+          "d": {
+            "ES": "Un paseo con los bustos de los nueve patriotas fusilados por los españoles en 1816. Es la puerta de Getsemaní: a un lado, la Torre del Reloj; al otro, el Puente Román, que cruza hacia Manga.",
+            "EN": "A promenade with the busts of the nine patriots executed by the Spanish in 1816. It's the gateway to Getsemaní: on one side, the Clock Tower; on the other, Puente Román, crossing to Manga.",
+            "DE": "Eine Promenade mit den Büsten der neun Patrioten, die 1816 von den Spaniern hingerichtet wurden. Sie ist das Tor nach Getsemaní: auf der einen Seite der Uhrturm, auf der anderen die Puente Román nach Manga."
+          },
+          "tip": {
+            "ES": "Busca la sombra de los árboles del paseo mientras el guía cuenta la historia: es el sitio más fresco del recorrido.",
+            "EN": "Stay in the shade of the trees while the guide tells the story: it's the coolest spot on the walk.",
+            "DE": "Bleib im Schatten der Bäume, während der Guide erzählt: Es ist der kühlste Ort der Tour."
+          },
+          "hora": "16:10",
+          "dur": "20 min",
+          "img": "/ciudades/cartagena/img/getsemani-1.jpg",
+          "lat": 10.4214,
+          "lng": -75.5486,
+          "tramo": "pie",
+          "duracionMin": 20,
+          "tramoDuracionMin": 10
+        },
+        {
+          "n": {
+            "ES": "Calle de la Media Luna",
+            "EN": "Calle de la Media Luna",
+            "DE": "Calle de la Media Luna"
+          },
+          "s": {
+            "ES": "La calle mayor del barrio",
+            "EN": "The neighbourhood's main street",
+            "DE": "Die Hauptstraße des Viertels"
+          },
+          "d": {
+            "ES": "Debe su nombre a la antigua puerta de la Media Luna, la entrada por tierra a Getsemaní. Hoy es la calle de los hostales, las terrazas y los bares de salsa.",
+            "EN": "It is named after the old Media Luna gate, the land entrance to Getsemaní. Today it's the street of hostels, terraces and salsa bars.",
+            "DE": "Benannt nach dem alten Media-Luna-Tor, dem Landeingang nach Getsemaní. Heute die Straße der Hostels, Terrassen und Salsabars."
+          },
+          "tip": {
+            "ES": "Fíjate en los nombres de calle en azulejo de las esquinas: casi todos cuentan qué oficio o qué edificio hubo allí.",
+            "EN": "Look out for the tiled street names on the corners: almost all of them tell you what trade or building was once there.",
+            "DE": "Achte auf die Straßennamen aus Fliesen an den Ecken: Fast alle verraten, welches Handwerk oder Gebäude dort einmal war."
+          },
+          "hora": "16:35",
+          "dur": "20 min",
+          "img": "/ciudades/cartagena/img/getsemani-2.jpg",
+          "lat": 10.4222,
+          "lng": -75.5462,
+          "tramo": "pie",
+          "duracionMin": 20,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Plaza de la Trinidad",
+            "EN": "Plaza de la Trinidad",
+            "DE": "Plaza de la Trinidad"
+          },
+          "s": {
+            "ES": "El corazón del barrio, frente a su iglesia amarilla",
+            "EN": "The heart of the neighbourhood, facing its yellow church",
+            "DE": "Das Herz des Viertels vor der gelben Kirche"
+          },
+          "d": {
+            "ES": "La iglesia de la Santísima Trinidad preside la plaza donde se juntan los vecinos. De este barrio salieron los lanceros de Getsemaní que, con Pedro Romero al frente, empujaron la independencia del 11 de noviembre de 1811.",
+            "EN": "The Church of the Holy Trinity presides over the square where neighbours gather. From this barrio came the Getsemaní lancers who, led by Pedro Romero, pushed for independence on 11 November 1811.",
+            "DE": "Die Kirche der Heiligen Dreifaltigkeit überragt den Platz, auf dem sich die Nachbarn treffen. Aus diesem Viertel kamen die Lanzenreiter von Getsemaní, die unter Pedro Romero am 11. November 1811 die Unabhängigkeit vorantrieben."
+          },
+          "tip": {
+            "ES": "Al caer la tarde llegan los puestos de arepas y perros calientes: vuelve de noche, que es cuando la plaza está más viva.",
+            "EN": "Late in the afternoon the arepa and hot-dog stalls arrive: come back at night, when the square is liveliest.",
+            "DE": "Am späten Nachmittag kommen die Arepa- und Hotdogstände: Komm abends wieder, dann ist der Platz am lebendigsten."
+          },
+          "hora": "17:00",
+          "dur": "30 min",
+          "img": "/ciudades/cartagena/img/getsemani-3.jpg",
+          "lat": 10.4211,
+          "lng": -75.5477,
+          "tramo": "pie",
+          "duracionMin": 30,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Callejón Angosto y Calle San Juan",
+            "EN": "Callejón Angosto and Calle San Juan",
+            "DE": "Callejón Angosto und Calle San Juan"
+          },
+          "s": {
+            "ES": "Banderines de colores y paredes pintadas",
+            "EN": "Colourful bunting and painted walls",
+            "DE": "Bunte Wimpel und bemalte Wände"
+          },
+          "d": {
+            "ES": "Callejones estrechos con banderines y paraguas colgados entre las casas, y murales que cuentan la vida del barrio: vecinos, músicos, pájaros del Caribe.",
+            "EN": "Narrow alleys with bunting and umbrellas strung between the houses, and murals telling the life of the neighbourhood: locals, musicians, Caribbean birds.",
+            "DE": "Enge Gassen mit Wimpeln und Schirmen zwischen den Häusern und Wandbilder über das Leben im Viertel: Nachbarn, Musiker, karibische Vögel."
+          },
+          "tip": {
+            "ES": "Son casas donde vive gente: pide permiso antes de fotografiar a alguien en su puerta.",
+            "EN": "People live in these houses: ask before photographing someone at their door.",
+            "DE": "In diesen Häusern wohnen Menschen: Frag, bevor du jemanden vor seiner Tür fotografierst."
+          },
+          "hora": "17:35",
+          "dur": "30 min",
+          "img": "/ciudades/cartagena/img/getsemani-4.jpg",
+          "lat": 10.4207,
+          "lng": -75.5472,
+          "tramo": "pie",
+          "duracionMin": 30,
+          "tramoDuracionMin": 3
+        },
+        {
+          "n": {
+            "ES": "Plaza del Pozo",
+            "EN": "Plaza del Pozo",
+            "DE": "Plaza del Pozo"
+          },
+          "s": {
+            "ES": "Una plaza pequeña de barrio, rodeada de murales",
+            "EN": "A small local square surrounded by murals",
+            "DE": "Ein kleiner Nachbarschaftsplatz voller Wandbilder"
+          },
+          "d": {
+            "ES": "Una placita con el pozo que le da nombre y paredes llenas de color. El final perfecto: los vecinos sacan las sillas a la puerta y el barrio se prepara para la noche.",
+            "EN": "A little square with the well that gives it its name and walls full of colour. The perfect finish: neighbours bring their chairs out to the door and the barrio gets ready for the night.",
+            "DE": "Ein kleiner Platz mit dem Brunnen, der ihm den Namen gibt, und farbenfrohen Wänden. Der perfekte Abschluss: Die Nachbarn stellen ihre Stühle vor die Tür, und das Viertel macht sich bereit für die Nacht."
+          },
+          "tip": {
+            "ES": "Si te quedas a cenar en Getsemaní, vuelve al hotel en taxi o por la Torre del Reloj, por calles iluminadas.",
+            "EN": "If you stay for dinner in Getsemaní, head back to the hotel by taxi or via the Clock Tower, along well-lit streets.",
+            "DE": "Wenn du in Getsemaní zu Abend isst, fahr mit dem Taxi zurück oder geh über den Uhrturm durch beleuchtete Straßen."
+          },
+          "hora": "18:10",
+          "dur": "20 min",
+          "img": "/ciudades/cartagena/img/getsemani-5.jpg",
+          "lat": 10.4205,
+          "lng": -75.5483,
+          "tramo": "pie",
+          "duracionMin": 20,
+          "tramoDuracionMin": 5
+        }
+      ],
+      "fotos": [
+        "/ciudades/cartagena/img/getsemani.jpg",
+        "/ciudades/cartagena/img/getsemani-1.jpg",
+        "/ciudades/cartagena/img/getsemani-2.jpg",
+        "/ciudades/cartagena/img/getsemani-3.jpg",
+        "/ciudades/cartagena/img/getsemani-4.jpg",
+        "/ciudades/cartagena/img/getsemani-5.jpg"
+      ],
+      "duracionMin": 150,
+      "distanciaKm": 2.8,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Todo el recorrido es llano, pero las aceras son estrechas y altas y a veces hay que bajar a la calzada. Con silla de ruedas es posible con ayuda; avísalo al reservar.",
+        "EN": "The whole route is flat, but the pavements are narrow and high, and sometimes you have to step into the road. Possible with a wheelchair if assisted; let us know when you book.",
+        "DE": "Die ganze Strecke ist flach, aber die Gehwege sind schmal und hoch, manchmal muss man auf die Straße. Mit Rollstuhl mit Hilfe möglich; sag es bei der Buchung."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 10.42565,
+        "lng": -75.55063,
+        "foto": "/ciudades/cartagena/img/centro.jpg",
+        "texto": {
+          "ES": "En la puerta del hotel, en la Calle del Cuartel. Baja a las 15:55: el guía te recoge aquí.",
+          "EN": "At the hotel entrance on Calle del Cuartel. Come down at 3:55 pm: the guide picks you up here.",
+          "DE": "Am Hoteleingang in der Calle del Cuartel. Komm um 15:55 Uhr herunter: Der Guide holt dich hier ab."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Cena y bebidas extra",
+          "Propinas"
+        ],
+        "EN": [
+          "Dinner and extra drinks",
+          "Tips"
+        ],
+        "DE": [
+          "Abendessen und weitere Getränke",
+          "Trinkgeld"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "DE": "Je nach Anbieter. Die Rezeption bestätigt es dir bei der Buchung."
+      },
+      "salidasFijas": [
+        "16:00"
+      ],
+      "precioDesde": 95000
+    },
+    {
+      "id": "san-felipe",
+      "expId": "ex4",
+      "img": "/ciudades/cartagena/img/san-felipe.jpg",
+      "titulo": {
+        "ES": "Castillo de San Felipe y La Popa",
+        "EN": "San Felipe Castle and La Popa",
+        "DE": "Festung San Felipe und La Popa"
+      },
+      "tipo": {
+        "ES": "Historia",
+        "EN": "History",
+        "DE": "Geschichte"
+      },
+      "dur": "4 h",
+      "d": {
+        "ES": "La fortaleza que nadie logró tomar, sus túneles y, después, el convento en lo más alto de la ciudad con toda la bahía a tus pies. En carro y con guía, antes de que apriete el calor.",
+        "EN": "The fortress no one managed to take, its tunnels and then the convent at the city's highest point with the whole bay at your feet. By car with a guide, before the heat sets in.",
+        "DE": "Die Festung, die niemand einnehmen konnte, ihre Tunnel und danach das Kloster am höchsten Punkt der Stadt mit der ganzen Bucht zu deinen Füßen. Mit Auto und Guide, bevor die Hitze kommt."
+      },
+      "salida": {
+        "ES": "Puerta del hotel, en la Calle del Cuartel, cada mañana a las 08:30",
+        "EN": "Hotel entrance, Calle del Cuartel, every morning at 8:30 am",
+        "DE": "Hoteleingang in der Calle del Cuartel, jeden Morgen um 8:30 Uhr"
+      },
+      "incluye": {
+        "ES": [
+          "Carro con conductor ida y vuelta",
+          "Guía local",
+          "Entradas al castillo y al convento",
+          "Agua fría"
+        ],
+        "EN": [
+          "Car with driver there and back",
+          "Local guide",
+          "Tickets to the castle and the convent",
+          "Cold water"
+        ],
+        "DE": [
+          "Auto mit Fahrer hin und zurück",
+          "Lokaler Guide",
+          "Eintritt in Festung und Kloster",
+          "Kaltes Wasser"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Zapatos cerrados con buena suela: las rampas resbalan",
+          "Gorra, gafas de sol y bloqueador",
+          "Agua: en el castillo casi no hay sombra",
+          "Ropa que cubra hombros para entrar al convento"
+        ],
+        "EN": [
+          "Closed shoes with good grip: the ramps are slippery",
+          "Cap, sunglasses and sunscreen",
+          "Water: there's hardly any shade at the castle",
+          "Clothing that covers your shoulders to enter the convent"
+        ],
+        "DE": [
+          "Geschlossene Schuhe mit gutem Profil: die Rampen sind rutschig",
+          "Kappe, Sonnenbrille und Sonnencreme",
+          "Wasser: in der Festung gibt es kaum Schatten",
+          "Kleidung, die die Schultern bedeckt, für das Kloster"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Castillo de San Felipe de Barajas",
+            "EN": "San Felipe de Barajas Castle",
+            "DE": "Festung San Felipe de Barajas"
+          },
+          "s": {
+            "ES": "Rampas de piedra sobre el cerro de San Lázaro",
+            "EN": "Stone ramps on San Lázaro hill",
+            "DE": "Steinrampen auf dem Hügel San Lázaro"
+          },
+          "d": {
+            "ES": "La mayor fortaleza que levantó España en América. Subes por sus rampas en zigzag, entre baterías de cañones, hasta lo más alto, con la ciudad vieja a un lado y las torres de Bocagrande al otro.",
+            "EN": "The largest fortress Spain built in the Americas. You climb its zigzag ramps, past gun batteries, to the very top, with the old town on one side and the towers of Bocagrande on the other.",
+            "DE": "Die größte Festung, die Spanien in Amerika errichtete. Du steigst über die Zickzackrampen zwischen Kanonenbatterien nach ganz oben, die Altstadt auf der einen Seite, die Türme von Bocagrande auf der anderen."
+          },
+          "tip": {
+            "ES": "Abre a las 8:00: a esta hora todavía corre brisa. Lleva la gorra puesta desde el principio, que arriba no hay dónde esconderse del sol.",
+            "EN": "It opens at 8 am: at this hour there's still a breeze. Keep your cap on from the start, as there's nowhere to hide from the sun up top.",
+            "DE": "Öffnet um 8 Uhr: Um diese Zeit weht noch eine Brise. Setz die Kappe gleich auf, oben gibt es keinen Schutz vor der Sonne."
+          },
+          "hora": "08:45",
+          "dur": "1 h",
+          "img": "/ciudades/cartagena/img/san-felipe-1.jpg",
+          "lat": 10.4228,
+          "lng": -75.5395,
+          "tramo": "coche",
+          "duracionMin": 60,
+          "tramoDuracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Los túneles",
+            "EN": "The tunnels",
+            "DE": "Die Tunnel"
+          },
+          "s": {
+            "ES": "Galerías bajo la fortaleza",
+            "EN": "Galleries beneath the fortress",
+            "DE": "Gänge unter der Festung"
+          },
+          "d": {
+            "ES": "Pasadizos estrechos y abovedados que recorren el interior del castillo. Se diseñaron para que el sonido viajara: los soldados oían los pasos del enemigo desde lejos.",
+            "EN": "Narrow vaulted passages running through the castle. They were designed so that sound would carry: soldiers could hear the enemy's footsteps from far away.",
+            "DE": "Enge, gewölbte Gänge im Inneren der Festung. Sie waren so angelegt, dass der Schall weit trug: Die Soldaten hörten die Schritte des Feindes schon von Weitem."
+          },
+          "tip": {
+            "ES": "Algunos tramos son bajos y oscuros: agacha la cabeza y lleva el celular con linterna. Si te agobian los sitios cerrados, espera fuera; el guía te recoge.",
+            "EN": "Some sections are low and dark: duck your head and use your phone torch. If enclosed spaces bother you, wait outside; the guide will meet you.",
+            "DE": "Manche Abschnitte sind niedrig und dunkel: Kopf einziehen und Handylampe nutzen. Wenn dir enge Räume unangenehm sind, warte draußen; der Guide holt dich ab."
+          },
+          "hora": "09:50",
+          "dur": "30 min",
+          "img": "/ciudades/cartagena/img/san-felipe-2.jpg",
+          "lat": 10.42255,
+          "lng": -75.53925,
+          "tramo": "pie",
+          "duracionMin": 30,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Los Zapatos Viejos",
+            "EN": "The Old Shoes",
+            "DE": "Die alten Schuhe"
+          },
+          "s": {
+            "ES": "Un par de botas gigantes al pie del castillo",
+            "EN": "A pair of giant boots at the foot of the castle",
+            "DE": "Ein Paar riesige Stiefel am Fuß der Festung"
+          },
+          "d": {
+            "ES": "Un monumento a un poema: Luis Carlos López, el «Tuerto» López, escribió que a su ciudad nativa se la quiere como a un par de zapatos viejos. Y aquí están, en bronce, con el castillo detrás.",
+            "EN": "A monument to a poem: Luis Carlos López, known as «El Tuerto», wrote that you love your hometown the way you love an old pair of shoes. And here they are, in bronze, with the castle behind.",
+            "DE": "Ein Denkmal für ein Gedicht: Luis Carlos López, genannt «El Tuerto», schrieb, man liebe seine Heimatstadt wie ein Paar alte Schuhe. Und hier stehen sie, in Bronze, mit der Festung dahinter."
+          },
+          "tip": {
+            "ES": "La foto buena es desde detrás de las botas, con el castillo encuadrado al fondo.",
+            "EN": "The best photo is from behind the boots, with the castle framed in the background.",
+            "DE": "Das beste Foto gelingt hinter den Stiefeln, mit der Festung im Hintergrund."
+          },
+          "hora": "10:25",
+          "dur": "15 min",
+          "img": "/ciudades/cartagena/img/san-felipe-3.jpg",
+          "lat": 10.4247,
+          "lng": -75.5389,
+          "tramo": "pie",
+          "duracionMin": 15,
+          "tramoDuracionMin": 8
+        },
+        {
+          "n": {
+            "ES": "Convento de La Popa",
+            "EN": "La Popa Convent",
+            "DE": "Kloster La Popa"
+          },
+          "s": {
+            "ES": "El claustro blanco en la cima de la ciudad",
+            "EN": "The white cloister at the top of the city",
+            "DE": "Der weiße Kreuzgang über der Stadt"
+          },
+          "d": {
+            "ES": "El carro sube la carretera de curvas hasta el convento de Santa Cruz de La Popa, fundado por los agustinos a comienzos del siglo XVII. Dentro, un claustro de arcos con un pozo en medio y flores por todas partes.",
+            "EN": "The car climbs the winding road up to the Convent of Santa Cruz de La Popa, founded by the Augustinians in the early 17th century. Inside, an arcaded cloister with a well in the middle and flowers everywhere.",
+            "DE": "Das Auto fährt die kurvige Straße hinauf zum Kloster Santa Cruz de La Popa, das die Augustiner Anfang des 17. Jahrhunderts gründeten. Drinnen ein Arkaden-Kreuzgang mit Brunnen in der Mitte und Blumen überall."
+          },
+          "tip": {
+            "ES": "Entra en la capilla a ver a la Virgen de la Candelaria, la patrona de Cartagena, con su altar de madera dorada.",
+            "EN": "Step into the chapel to see the Virgen de la Candelaria, Cartagena's patron saint, with her gilded wooden altar.",
+            "DE": "Wirf einen Blick in die Kapelle mit der Virgen de la Candelaria, der Schutzpatronin Cartagenas, und ihrem vergoldeten Holzaltar."
+          },
+          "hora": "10:55",
+          "dur": "40 min",
+          "img": "/ciudades/cartagena/img/san-felipe-4.jpg",
+          "lat": 10.4195,
+          "lng": -75.5256,
+          "tramo": "coche",
+          "duracionMin": 40,
+          "tramoDuracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Mirador de La Popa",
+            "EN": "La Popa viewpoint",
+            "DE": "Aussichtspunkt La Popa"
+          },
+          "s": {
+            "ES": "Toda la bahía de un vistazo",
+            "EN": "The whole bay at a glance",
+            "DE": "Die ganze Bucht auf einen Blick"
+          },
+          "d": {
+            "ES": "Desde el punto más alto de Cartagena ves la ciudad amurallada, el castillo que acabas de recorrer, la bahía con sus barcos y las torres de Bocagrande contra el mar.",
+            "EN": "From Cartagena's highest point you see the walled city, the castle you've just explored, the bay with its ships and the towers of Bocagrande against the sea.",
+            "DE": "Vom höchsten Punkt Cartagenas siehst du die Altstadt, die Festung, die du gerade erkundet hast, die Bucht mit ihren Schiffen und die Türme von Bocagrande vor dem Meer."
+          },
+          "tip": {
+            "ES": "Sube y baja siempre en el carro del tour o en taxi: no hagas el camino del cerro a pie.",
+            "EN": "Always go up and down in the tour car or by taxi: don't walk the hill road.",
+            "DE": "Fahr immer mit dem Tourauto oder Taxi hinauf und hinunter: Geh die Straße am Hügel nicht zu Fuß."
+          },
+          "hora": "11:35",
+          "dur": "25 min",
+          "img": "/ciudades/cartagena/img/san-felipe-5.jpg",
+          "lat": 10.4192,
+          "lng": -75.5262,
+          "tramo": "pie",
+          "duracionMin": 25,
+          "tramoDuracionMin": 2
+        }
+      ],
+      "fotos": [
+        "/ciudades/cartagena/img/san-felipe.jpg",
+        "/ciudades/cartagena/img/san-felipe-1.jpg",
+        "/ciudades/cartagena/img/san-felipe-2.jpg",
+        "/ciudades/cartagena/img/san-felipe-3.jpg",
+        "/ciudades/cartagena/img/san-felipe-4.jpg",
+        "/ciudades/cartagena/img/san-felipe-5.jpg"
+      ],
+      "duracionMin": 240,
+      "distanciaKm": 14.0,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "El castillo son rampas empinadas y túneles con escalones y techo bajo: no es apto para silla de ruedas ni para quien camina con dificultad. El convento de La Popa tiene acceso en carro hasta la puerta y el claustro es casi llano.",
+        "EN": "The castle is steep ramps and tunnels with steps and low ceilings: not suitable for wheelchairs or anyone with walking difficulties. La Popa convent can be reached by car to the door, and the cloister is almost level.",
+        "DE": "Die Festung besteht aus steilen Rampen und Tunneln mit Stufen und niedrigen Decken: nicht rollstuhlgerecht und nichts für Gehbehinderte. Das Kloster La Popa ist mit dem Auto bis vor die Tür erreichbar, der Kreuzgang ist fast eben."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 10.42565,
+        "lng": -75.55063,
+        "foto": "/ciudades/cartagena/img/centro.jpg",
+        "texto": {
+          "ES": "En la puerta del hotel, en la Calle del Cuartel. El carro te espera a las 08:30; vuelves hacia las 12:30.",
+          "EN": "At the hotel entrance on Calle del Cuartel. The car waits for you at 8:30 am; you're back around 12:30.",
+          "DE": "Am Hoteleingang in der Calle del Cuartel. Das Auto wartet um 8:30 Uhr; zurück bist du gegen 12:30 Uhr."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida",
+          "Propinas",
+          "Recuerdos y fotos profesionales"
+        ],
+        "EN": [
+          "Lunch",
+          "Tips",
+          "Souvenirs and professional photos"
+        ],
+        "DE": [
+          "Mittagessen",
+          "Trinkgeld",
+          "Souvenirs und Profifotos"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "DE": "Je nach Anbieter. Die Rezeption bestätigt es dir bei der Buchung."
+      },
+      "salidasFijas": [
+        "08:30"
+      ],
+      "precioDesde": 140000
+    },
+    {
+      "id": "rosario",
+      "expId": "ex2",
+      "img": "/ciudades/cartagena/img/rosario.jpg",
+      "titulo": {
+        "ES": "Islas del Rosario en lancha",
+        "EN": "Rosario Islands by speedboat",
+        "DE": "Rosario-Inseln mit dem Schnellboot"
+      },
+      "tipo": {
+        "ES": "Mar",
+        "EN": "Sea",
+        "DE": "Meer"
+      },
+      "dur": "8 h 30 min",
+      "d": {
+        "ES": "Sales de la bahía por Bocachica, entre fuertes coloniales, y en una hora estás en un parque nacional de agua turquesa y corales. Playa, snorkel y vuelta con la piel salada.",
+        "EN": "You leave the bay through Bocachica, between colonial forts, and within an hour you're in a national park of turquoise water and coral. Beach, snorkelling and back with salt on your skin.",
+        "DE": "Du verlässt die Bucht durch Bocachica zwischen Kolonialfestungen und bist in einer Stunde in einem Nationalpark mit türkisfarbenem Wasser und Korallen. Strand, Schnorcheln und zurück mit Salz auf der Haut."
+      },
+      "salida": {
+        "ES": "Muelle turístico La Bodeguita, frente a la Torre del Reloj. Salida a diario hacia las 08:30; vuelta entre las 15:30 y las 16:30",
+        "EN": "La Bodeguita tourist pier, opposite the Clock Tower. Departs daily around 8:30 am; back between 3:30 and 4:30 pm",
+        "DE": "Touristenanleger La Bodeguita gegenüber dem Uhrturm. Täglich gegen 8:30 Uhr; zurück zwischen 15:30 und 16:30 Uhr"
+      },
+      "incluye": {
+        "ES": [
+          "Lancha ida y vuelta a las Islas del Rosario",
+          "Almuerzo típico: pescado frito, arroz con coco y patacón",
+          "Equipo de snorkel",
+          "Tiempo de playa en una de las islas"
+        ],
+        "EN": [
+          "Return speedboat to the Rosario Islands",
+          "Typical lunch: fried fish, coconut rice and patacón",
+          "Snorkelling gear",
+          "Beach time on one of the islands"
+        ],
+        "DE": [
+          "Schnellboot hin und zurück zu den Rosario-Inseln",
+          "Typisches Mittagessen: gebratener Fisch, Kokosreis und Patacón",
+          "Schnorchelausrüstung",
+          "Strandzeit auf einer der Inseln"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Efectivo en pesos para la tasa portuaria del muelle y la entrada al parque nacional: se pagan aparte y casi nunca con tarjeta",
+          "Bloqueador biodegradable: en el parque se pide para no dañar el coral",
+          "Bañador puesto, toalla y una muda seca",
+          "Gafas de sol, gorra y una camiseta para el sol en la lancha",
+          "Bolsa estanca para el celular: en la lancha salpica",
+          "Pastilla para el mareo si lo pasas mal en el mar"
+        ],
+        "EN": [
+          "Cash in pesos for the port tax at the pier and the national park fee: they're paid separately and rarely by card",
+          "Biodegradable sunscreen: requested in the park to protect the coral",
+          "Swimwear on, a towel and dry clothes",
+          "Sunglasses, a cap and a T-shirt for the sun on the boat",
+          "A dry bag for your phone: the boat gets splashy",
+          "Seasickness tablets if the sea gets to you"
+        ],
+        "DE": [
+          "Bargeld in Pesos für die Hafengebühr am Anleger und den Nationalpark-Eintritt: werden extra und selten mit Karte bezahlt",
+          "Biologisch abbaubare Sonnencreme: im Park erwünscht, um die Korallen zu schützen",
+          "Badesachen schon an, Handtuch und trockene Wechselkleidung",
+          "Sonnenbrille, Kappe und ein T-Shirt gegen die Sonne im Boot",
+          "Wasserdichte Hülle fürs Handy: im Boot spritzt es",
+          "Tabletten gegen Seekrankheit, falls nötig"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Muelle La Bodeguita",
+            "EN": "La Bodeguita pier",
+            "DE": "Anleger La Bodeguita"
+          },
+          "s": {
+            "ES": "Embarque frente a la ciudad amurallada",
+            "EN": "Boarding opposite the walled city",
+            "DE": "Einschiffung gegenüber der Altstadt"
+          },
+          "d": {
+            "ES": "El muelle turístico de Cartagena, a pocos pasos de la Torre del Reloj. Aquí se registra tu nombre, se paga la tasa portuaria y subes a la lancha con chaleco salvavidas.",
+            "EN": "Cartagena's tourist pier, a few steps from the Clock Tower. Here your name is checked, the port tax is paid and you board the speedboat with a life jacket.",
+            "DE": "Der Touristenanleger von Cartagena, wenige Schritte vom Uhrturm. Hier wird dein Name registriert, die Hafengebühr bezahlt und du gehst mit Schwimmweste an Bord."
+          },
+          "tip": {
+            "ES": "Llega a las 08:00 con el efectivo de la tasa a mano: el muelle se llena y la fila avanza despacio. Siéntate atrás si te mareas, que se nota menos el golpe de las olas.",
+            "EN": "Arrive at 8 am with the tax money in cash to hand: the pier gets busy and the queue moves slowly. Sit at the back if you get seasick, as you feel the waves less.",
+            "DE": "Komm um 8 Uhr mit dem Bargeld für die Gebühr griffbereit: Der Anleger füllt sich und die Schlange ist langsam. Setz dich nach hinten, wenn du seekrank wirst, dort spürst du die Wellen weniger."
+          },
+          "hora": "08:10",
+          "dur": "30 min",
+          "img": "/ciudades/cartagena/img/rosario-1.jpg",
+          "lat": 10.4216,
+          "lng": -75.5502,
+          "tramo": "pie",
+          "duracionMin": 30,
+          "tramoDuracionMin": 8
+        },
+        {
+          "n": {
+            "ES": "Bocachica y el Fuerte de San Fernando",
+            "EN": "Bocachica and Fort San Fernando",
+            "DE": "Bocachica und Fort San Fernando"
+          },
+          "s": {
+            "ES": "La puerta de la bahía, entre dos fuertes",
+            "EN": "The gateway to the bay, between two forts",
+            "DE": "Das Tor zur Bucht zwischen zwei Festungen"
+          },
+          "d": {
+            "ES": "La lancha cruza la bahía y sale al mar abierto por el estrecho de Bocachica. A un lado, el Fuerte de San Fernando; al otro, la batería de San José. Entre los dos cerraban el paso a los barcos enemigos.",
+            "EN": "The boat crosses the bay and heads out to open sea through the Bocachica strait. On one side, Fort San Fernando; on the other, the San José battery. Together they closed the passage to enemy ships.",
+            "DE": "Das Boot durchquert die Bucht und fährt durch die Meerenge von Bocachica aufs offene Meer. Auf der einen Seite das Fort San Fernando, auf der anderen die Batterie San José. Gemeinsam sperrten sie feindlichen Schiffen den Weg."
+          },
+          "tip": {
+            "ES": "Ten el celular listo: la lancha no para, y el fuerte pasa rápido por el lado derecho.",
+            "EN": "Have your phone ready: the boat doesn't stop, and the fort passes quickly on the right.",
+            "DE": "Halte das Handy bereit: Das Boot hält nicht an, und das Fort zieht rechts schnell vorbei."
+          },
+          "hora": "09:00",
+          "dur": "10 min",
+          "img": "/ciudades/cartagena/img/rosario-2.jpg",
+          "lat": 10.3227,
+          "lng": -75.5852,
+          "tramo": "barco",
+          "duracionMin": 10,
+          "tramoDuracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Parque Nacional Corales del Rosario",
+            "EN": "Corales del Rosario National Park",
+            "DE": "Nationalpark Corales del Rosario"
+          },
+          "s": {
+            "ES": "Agua turquesa sobre arrecifes de coral",
+            "EN": "Turquoise water over coral reefs",
+            "DE": "Türkisfarbenes Wasser über Korallenriffen"
+          },
+          "d": {
+            "ES": "Un archipiélago de islas pequeñas, muchas con una sola casa y un muelle, rodeadas de agua tan clara que ves el fondo desde la lancha. Todo es parque nacional para proteger el coral.",
+            "EN": "An archipelago of small islands, many with just one house and a jetty, surrounded by water so clear you can see the bottom from the boat. It's all national park, to protect the coral.",
+            "DE": "Ein Archipel kleiner Inseln, viele nur mit einem Haus und einem Steg, umgeben von so klarem Wasser, dass du vom Boot aus den Grund siehst. Alles ist Nationalpark, um die Korallen zu schützen."
+          },
+          "tip": {
+            "ES": "Mira sin tocar: no pises ni toques el coral, y no le des de comer a los peces.",
+            "EN": "Look but don't touch: don't stand on or touch the coral, and don't feed the fish.",
+            "DE": "Nur schauen, nicht anfassen: Tritt nicht auf die Korallen, berühre sie nicht und füttere keine Fische."
+          },
+          "hora": "09:50",
+          "dur": "1 h",
+          "img": "/ciudades/cartagena/img/rosario-3.jpg",
+          "lat": 10.18,
+          "lng": -75.76,
+          "tramo": "barco",
+          "duracionMin": 60,
+          "tramoDuracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Playa y snorkel en las islas",
+            "EN": "Beach and snorkelling on the islands",
+            "DE": "Strand und Schnorcheln auf den Inseln"
+          },
+          "s": {
+            "ES": "Arena blanca, almuerzo y horas en el agua",
+            "EN": "White sand, lunch and hours in the water",
+            "DE": "Weißer Sand, Mittagessen und Stunden im Wasser"
+          },
+          "d": {
+            "ES": "Desembarcas en una playa de arena blanca con palmeras. Te pones las gafas de snorkel y en unos metros estás entre peces de colores. A mediodía, pescado frito con arroz con coco a la sombra.",
+            "EN": "You land on a white-sand beach with palm trees. Put on your snorkel mask and within a few metres you're among colourful fish. At midday, fried fish with coconut rice in the shade.",
+            "DE": "Du gehst an einem weißen Sandstrand mit Palmen an Land. Schnorchelmaske auf, und nach wenigen Metern bist du zwischen bunten Fischen. Mittags gebratener Fisch mit Kokosreis im Schatten."
+          },
+          "tip": {
+            "ES": "Ponte bloqueador cada dos horas aunque esté nublado, y busca sombra entre las 12:00 y las 14:00. Pregunta el precio antes de aceptar masajes o fotos en la playa.",
+            "EN": "Reapply sunscreen every two hours even if it's cloudy, and find shade between 12 and 2 pm. Ask the price before accepting massages or photos on the beach.",
+            "DE": "Creme dich alle zwei Stunden ein, auch bei Wolken, und such zwischen 12 und 14 Uhr Schatten. Frag nach dem Preis, bevor du am Strand Massagen oder Fotos annimmst."
+          },
+          "hora": "11:00",
+          "dur": "4 h",
+          "img": "/ciudades/cartagena/img/rosario-4.jpg",
+          "lat": 10.1765,
+          "lng": -75.758,
+          "tramo": "barco",
+          "duracionMin": 240,
+          "tramoDuracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Vuelta por la bahía",
+            "EN": "Back across the bay",
+            "DE": "Zurück durch die Bucht"
+          },
+          "s": {
+            "ES": "Con las torres de Bocagrande al frente",
+            "EN": "With the towers of Bocagrande ahead",
+            "DE": "Mit den Türmen von Bocagrande vor dir"
+          },
+          "d": {
+            "ES": "De regreso, la lancha vuelve a entrar por Bocachica y cruza la bahía con Bocagrande y la ciudad amurallada creciendo al frente. Llegas al muelle a media tarde, a un paseo del hotel.",
+            "EN": "On the way back, the boat re-enters through Bocachica and crosses the bay with Bocagrande and the walled city growing ahead. You reach the pier mid-afternoon, a short walk from the hotel.",
+            "DE": "Auf dem Rückweg fährt das Boot wieder durch Bocachica und durchquert die Bucht, während Bocagrande und die Altstadt vor dir wachsen. Am Nachmittag bist du am Anleger, ein kurzer Spaziergang vom Hotel."
+          },
+          "tip": {
+            "ES": "La vuelta suele ir contra el viento y salpica más: guarda el celular en la bolsa estanca y ponte la camiseta.",
+            "EN": "The return trip is usually into the wind and splashier: put your phone in the dry bag and your T-shirt on.",
+            "DE": "Die Rückfahrt geht meist gegen den Wind und spritzt mehr: Handy in die wasserdichte Hülle und T-Shirt an."
+          },
+          "hora": "15:45",
+          "dur": "30 min",
+          "img": "/ciudades/cartagena/img/rosario-5.jpg",
+          "lat": 10.395,
+          "lng": -75.565,
+          "tramo": "barco",
+          "duracionMin": 30,
+          "tramoDuracionMin": 45
+        }
+      ],
+      "fotos": [
+        "/ciudades/cartagena/img/rosario.jpg",
+        "/ciudades/cartagena/img/rosario-1.jpg",
+        "/ciudades/cartagena/img/rosario-2.jpg",
+        "/ciudades/cartagena/img/rosario-3.jpg",
+        "/ciudades/cartagena/img/rosario-4.jpg",
+        "/ciudades/cartagena/img/rosario-5.jpg"
+      ],
+      "duracionMin": 510,
+      "distanciaKm": 95.0,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Se sube a la lancha desde el muelle con un escalón y ayuda de la tripulación, y en las islas se desembarca por pasarelas o directamente en la arena. El trayecto da golpes con las olas: no se recomienda con problemas de espalda ni en embarazo. Con silla de ruedas, consúltalo antes en recepción.",
+        "EN": "You board the speedboat from the pier with a step and help from the crew, and on the islands you land via jetties or straight onto the sand. The ride is bumpy: not recommended with back problems or during pregnancy. If you use a wheelchair, check with reception first.",
+        "DE": "Man steigt vom Anleger über eine Stufe mit Hilfe der Crew ins Boot und geht auf den Inseln über Stege oder direkt in den Sand an Land. Die Fahrt ist holprig: nicht empfohlen bei Rückenproblemen oder in der Schwangerschaft. Mit Rollstuhl bitte vorher an der Rezeption fragen."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 10.4216,
+        "lng": -75.5502,
+        "foto": "/ciudades/cartagena/img/rosario-1.jpg",
+        "texto": {
+          "ES": "Muelle turístico La Bodeguita, frente a la Torre del Reloj, a 8 minutos andando del hotel. Llega a las 08:00 con el documento de identidad y el efectivo de la tasa.",
+          "EN": "La Bodeguita tourist pier, opposite the Clock Tower, an 8-minute walk from the hotel. Arrive at 8 am with your ID and cash for the port tax.",
+          "DE": "Touristenanleger La Bodeguita gegenüber dem Uhrturm, 8 Minuten zu Fuß vom Hotel. Komm um 8 Uhr mit Ausweis und Bargeld für die Hafengebühr."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Tasa portuaria del muelle (en efectivo, se paga allí)",
+          "Entrada al Parque Nacional Corales del Rosario, si el operador la cobra aparte",
+          "Oceanario y otras visitas opcionales",
+          "Bebidas y propinas"
+        ],
+        "EN": [
+          "Pier port tax (cash, paid on site)",
+          "Corales del Rosario National Park fee, if the operator charges it separately",
+          "Aquarium and other optional visits",
+          "Drinks and tips"
+        ],
+        "DE": [
+          "Hafengebühr am Anleger (bar, vor Ort)",
+          "Eintritt in den Nationalpark Corales del Rosario, falls der Anbieter ihn separat berechnet",
+          "Ozeanarium und andere optionale Besuche",
+          "Getränke und Trinkgeld"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "DE": "Je nach Anbieter. Die Rezeption bestätigt es dir bei der Buchung."
+      },
+      "salidasFijas": [
+        "08:30"
+      ],
+      "precioDesde": 380000
+    },
+    {
+      "id": "centro",
+      "img": "/ciudades/cartagena/img/centro.jpg",
+      "titulo": {
+        "ES": "El corazón de la ciudad amurallada",
+        "EN": "The heart of the walled city",
+        "DE": "Das Herz der Altstadt"
+      },
+      "tipo": {
+        "ES": "A tu aire",
+        "EN": "At your own pace",
+        "DE": "Auf eigene Faust"
+      },
+      "dur": "3 h 15 min",
+      "d": {
+        "ES": "Sales por la puerta del hotel y en tres horas recorres las plazas, iglesias y palacios que hicieron de Cartagena la joya del Caribe. Sin guía, a tu ritmo y gratis.",
+        "EN": "Step out of the hotel door and in three hours you'll cover the squares, churches and palaces that made Cartagena the jewel of the Caribbean. No guide, at your own pace and free.",
+        "DE": "Du trittst aus der Hoteltür und erkundest in drei Stunden die Plätze, Kirchen und Paläste, die Cartagena zum Juwel der Karibik machten. Ohne Guide, in deinem Tempo und kostenlos."
+      },
+      "salida": {
+        "ES": "Desde la puerta del hotel, en la Calle del Cuartel. Mejor a las 09:00, cuando abren museos e iglesias y aún no aprieta el calor",
+        "EN": "From the hotel door on Calle del Cuartel. Best at 9 am, when museums and churches open and the heat hasn't set in",
+        "DE": "Ab der Hoteltür in der Calle del Cuartel. Am besten um 9 Uhr, wenn Museen und Kirchen öffnen und es noch nicht so heiß ist"
+      },
+      "incluye": {
+        "ES": [
+          "El recorrido con mapa en la carta",
+          "Curiosidades en cada parada para sellar tu pasaporte"
+        ],
+        "EN": [
+          "The route with a map in the guide",
+          "Fun facts at each stop to stamp your passport"
+        ],
+        "DE": [
+          "Die Route mit Karte im Guide",
+          "Wissenswertes an jedem Halt für deinen Reisepass-Stempel"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Agua y gorra",
+          "Ropa que cubra hombros y rodillas para entrar a las iglesias",
+          "Efectivo para las entradas del museo y las iglesias",
+          "Bloqueador"
+        ],
+        "EN": [
+          "Water and a cap",
+          "Clothing covering shoulders and knees for the churches",
+          "Cash for the museum and church tickets",
+          "Sunscreen"
+        ],
+        "DE": [
+          "Wasser und Kappe",
+          "Kleidung, die Schultern und Knie bedeckt, für die Kirchen",
+          "Bargeld für Museums- und Kircheneintritte",
+          "Sonnencreme"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Plaza de Bolívar",
+            "EN": "Plaza de Bolívar",
+            "DE": "Plaza de Bolívar"
+          },
+          "s": {
+            "ES": "Sombra, palomas y la estatua del Libertador",
+            "EN": "Shade, pigeons and the Liberator's statue",
+            "DE": "Schatten, Tauben und die Statue des Befreiers"
+          },
+          "d": {
+            "ES": "Un parque cuadrado con árboles enormes y Bolívar a caballo en el centro. Antes se llamó Plaza de la Inquisición. Bajo los árboles, vendedores de frutas y grupos de danza que se arrancan sin avisar.",
+            "EN": "A square park with huge trees and Bolívar on horseback in the middle. It used to be called Plaza de la Inquisición. Under the trees, fruit sellers and dance groups that start up without warning.",
+            "DE": "Ein quadratischer Park mit riesigen Bäumen und Bolívar zu Pferd in der Mitte. Früher hieß er Plaza de la Inquisición. Unter den Bäumen Obstverkäufer und Tanzgruppen, die ohne Vorwarnung loslegen."
+          },
+          "tip": {
+            "ES": "Si te ofrecen fotos con las palenqueras de vestido de colores, es normal que te pidan una propina: acuerda el precio antes.",
+            "EN": "If you're offered photos with the palenqueras in their colourful dresses, they'll usually expect a tip: agree the price first.",
+            "DE": "Wenn dir Fotos mit den Palenqueras in bunten Kleidern angeboten werden, wird meist ein Trinkgeld erwartet: Vereinbare den Preis vorher."
+          },
+          "hora": "09:05",
+          "dur": "15 min",
+          "img": "/ciudades/cartagena/img/centro-1.jpg",
+          "lat": 10.423,
+          "lng": -75.5511,
+          "tramo": "pie",
+          "duracionMin": 15,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Palacio de la Inquisición",
+            "EN": "Palace of the Inquisition",
+            "DE": "Inquisitionspalast"
+          },
+          "s": {
+            "ES": "La portada barroca más famosa de la ciudad",
+            "EN": "The city's most famous baroque doorway",
+            "DE": "Das berühmteste Barockportal der Stadt"
+          },
+          "d": {
+            "ES": "Desde 1610 Cartagena tuvo tribunal del Santo Oficio, uno de los tres de la América española. Su palacio, terminado en 1770, es hoy el Museo Histórico de Cartagena: patios, balcones de madera y la historia de la ciudad.",
+            "EN": "From 1610 Cartagena had a tribunal of the Holy Office, one of three in Spanish America. Its palace, completed in 1770, is now the Cartagena History Museum: courtyards, wooden balconies and the city's story.",
+            "DE": "Ab 1610 hatte Cartagena ein Tribunal des Heiligen Offiziums, eines von dreien in Spanisch-Amerika. Sein 1770 vollendeter Palast ist heute das Historische Museum von Cartagena: Innenhöfe, Holzbalkone und die Geschichte der Stadt."
+          },
+          "tip": {
+            "ES": "Lleva efectivo para la entrada. En el patio de atrás hay sombra y bancos para descansar.",
+            "EN": "Bring cash for the ticket. The back courtyard has shade and benches for a rest.",
+            "DE": "Nimm Bargeld für den Eintritt mit. Im hinteren Hof gibt es Schatten und Bänke zum Ausruhen."
+          },
+          "hora": "09:20",
+          "dur": "1 h",
+          "img": "/ciudades/cartagena/img/centro-2.jpg",
+          "lat": 10.42285,
+          "lng": -75.5515,
+          "tramo": "pie",
+          "duracionMin": 60,
+          "tramoDuracionMin": 1
+        },
+        {
+          "n": {
+            "ES": "Catedral de Santa Catalina de Alejandría",
+            "EN": "Cathedral of Saint Catherine of Alexandria",
+            "DE": "Kathedrale der heiligen Katharina von Alexandria"
+          },
+          "s": {
+            "ES": "La torre de colores que se ve desde toda la ciudad",
+            "EN": "The colourful tower visible across the city",
+            "DE": "Der bunte Turm, den man in der ganzen Stadt sieht"
+          },
+          "d": {
+            "ES": "Empezó a construirse en 1577 y en 1586 los cañones de Francis Drake derribaron parte de sus muros. Por fuera, piedra y una torre con cúpula de colores; por dentro, arcos altos y frescor.",
+            "EN": "Construction began in 1577, and in 1586 Francis Drake's cannons brought down part of its walls. Outside, stone and a tower with a colourful dome; inside, high arches and cool air.",
+            "DE": "Der Bau begann 1577, und 1586 rissen die Kanonen von Francis Drake einen Teil der Mauern ein. Außen Stein und ein Turm mit bunter Kuppel, innen hohe Bögen und angenehme Kühle."
+          },
+          "tip": {
+            "ES": "La catedral cobra entrada a los visitantes y tiene horario de misa en el que no se visita: si está cerrada, mírala desde la Plaza de la Proclamación.",
+            "EN": "The cathedral charges visitors an entry fee and can't be visited during Mass: if it's closed, admire it from Plaza de la Proclamación.",
+            "DE": "Die Kathedrale verlangt von Besuchern Eintritt und ist während der Messe nicht zu besichtigen: Wenn sie geschlossen ist, bewundere sie von der Plaza de la Proclamación aus."
+          },
+          "hora": "10:25",
+          "dur": "25 min",
+          "img": "/ciudades/cartagena/img/centro-3.jpg",
+          "lat": 10.4237,
+          "lng": -75.55095,
+          "tramo": "pie",
+          "duracionMin": 25,
+          "tramoDuracionMin": 3
+        },
+        {
+          "n": {
+            "ES": "Iglesia de San Pedro Claver",
+            "EN": "Church of San Pedro Claver",
+            "DE": "Kirche San Pedro Claver"
+          },
+          "s": {
+            "ES": "El santo de los esclavizados, junto a la muralla",
+            "EN": "The saint of the enslaved, beside the wall",
+            "DE": "Der Heilige der Versklavten, an der Mauer"
+          },
+          "d": {
+            "ES": "Pedro Claver, jesuita catalán, pasó cerca de cuarenta años atendiendo a los africanos esclavizados que llegaban en barco al puerto. Firmaba como «esclavo de los esclavos para siempre». Sus restos están bajo el altar mayor.",
+            "EN": "Pedro Claver, a Catalan Jesuit, spent nearly forty years caring for the enslaved Africans who arrived by ship at the port. He signed himself «slave of the slaves forever». His remains lie beneath the high altar.",
+            "DE": "Pedro Claver, ein katalanischer Jesuit, kümmerte sich fast vierzig Jahre lang um die versklavten Afrikaner, die mit Schiffen im Hafen ankamen. Er unterschrieb mit «Sklave der Sklaven für immer». Seine Gebeine ruhen unter dem Hochaltar."
+          },
+          "tip": {
+            "ES": "No te quedes solo en la iglesia: el claustro de al lado, con su pozo y sus palmeras, es de lo más fresco del centro a esta hora.",
+            "EN": "Don't stop at the church: the cloister next door, with its well and palm trees, is one of the coolest spots in the old town at this time.",
+            "DE": "Bleib nicht nur in der Kirche: Der Kreuzgang nebenan mit Brunnen und Palmen ist um diese Zeit einer der kühlsten Orte der Altstadt."
+          },
+          "hora": "10:55",
+          "dur": "40 min",
+          "img": "/ciudades/cartagena/img/centro-4.jpg",
+          "lat": 10.4221,
+          "lng": -75.552,
+          "tramo": "pie",
+          "duracionMin": 40,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Plaza de Santo Domingo",
+            "EN": "Plaza de Santo Domingo",
+            "DE": "Plaza de Santo Domingo"
+          },
+          "s": {
+            "ES": "La Gertrudis de Botero y la iglesia más antigua",
+            "EN": "Botero's Gertrudis and the oldest church",
+            "DE": "Boteros Gertrudis und die älteste Kirche"
+          },
+          "d": {
+            "ES": "Terminas en la plaza más animada del centro, frente a la iglesia de Santo Domingo, la más antigua de Cartagena. En medio, recostada sobre su pedestal, la Gertrudis, una escultura en bronce de Fernando Botero.",
+            "EN": "You finish in the liveliest square in the old town, facing the Church of Santo Domingo, the oldest in Cartagena. In the middle, reclining on her plinth, is Gertrudis, a bronze sculpture by Fernando Botero.",
+            "DE": "Du endest auf dem lebendigsten Platz der Altstadt vor der Kirche Santo Domingo, der ältesten Cartagenas. In der Mitte liegt auf ihrem Sockel die Gertrudis, eine Bronzeskulptur von Fernando Botero."
+          },
+          "tip": {
+            "ES": "Siéntate en una terraza con un jugo de corozo o de lulo, y vuelve al hotel: está a 3 minutos andando.",
+            "EN": "Sit down at a terrace with a corozo or lulo juice, then head back to the hotel: it's a 3-minute walk.",
+            "DE": "Setz dich auf eine Terrasse mit einem Corozo- oder Lulo-Saft und geh dann zurück ins Hotel: Es sind 3 Minuten zu Fuß."
+          },
+          "hora": "11:45",
+          "dur": "30 min",
+          "img": "/ciudades/cartagena/img/centro-5.jpg",
+          "lat": 10.42487,
+          "lng": -75.55211,
+          "tramo": "pie",
+          "duracionMin": 30,
+          "tramoDuracionMin": 8
+        }
+      ],
+      "fotos": [
+        "/ciudades/cartagena/img/centro.jpg",
+        "/ciudades/cartagena/img/centro-1.jpg",
+        "/ciudades/cartagena/img/centro-2.jpg",
+        "/ciudades/cartagena/img/centro-3.jpg",
+        "/ciudades/cartagena/img/centro-4.jpg",
+        "/ciudades/cartagena/img/centro-5.jpg"
+      ],
+      "duracionMin": 195,
+      "distanciaKm": 1.8,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Todo llano y por calles empedradas o adoquinadas. Las aceras son estrechas y algunas entradas tienen escalón; el Palacio de la Inquisición y San Pedro Claver tienen planta baja accesible.",
+        "EN": "All flat, on cobbled or paved streets. Pavements are narrow and some entrances have a step; the Palace of the Inquisition and San Pedro Claver have accessible ground floors.",
+        "DE": "Alles flach, auf Kopfstein- oder Pflasterstraßen. Die Gehwege sind schmal, manche Eingänge haben eine Stufe; Inquisitionspalast und San Pedro Claver haben ein zugängliches Erdgeschoss."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 10.42565,
+        "lng": -75.55063,
+        "foto": "/ciudades/cartagena/img/centro.jpg",
+        "texto": {
+          "ES": "La puerta del hotel, en la Calle del Cuartel. La Plaza de Bolívar está a 5 minutos andando.",
+          "EN": "The hotel door on Calle del Cuartel. Plaza de Bolívar is a 5-minute walk away.",
+          "DE": "Die Hoteltür in der Calle del Cuartel. Die Plaza de Bolívar ist 5 Minuten zu Fuß entfernt."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Entradas al Palacio de la Inquisición, la Catedral y San Pedro Claver",
+          "Guía"
+        ],
+        "EN": [
+          "Tickets to the Palace of the Inquisition, the Cathedral and San Pedro Claver",
+          "Guide"
+        ],
+        "DE": [
+          "Eintritt in Inquisitionspalast, Kathedrale und San Pedro Claver",
+          "Reiseleitung"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "DE": "Je nach Anbieter. Die Rezeption bestätigt es dir bei der Buchung."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un Corozo Fire, el cóctel de la casa, en Vedana a la vuelta",
+      "EN": "A Corozo Fire, our house cocktail, at Vedana when you get back",
+      "DE": "Ein Corozo Fire, der Cocktail des Hauses, im Vedana, wenn du zurück bist"
+    }
+  },
+  "creditos": [
+    "Baluartes de Santo Domingo y Santa Catalina, murallas frente al mar, Puerta del Reloj, Bocagrande, Castillo de San Felipe y vista desde La Popa: Bernard Gagnon, CC BY-SA 4.0, Wikimedia Commons",
+    "Las Bóvedas, calles y arte urbano de Getsemaní, Plaza de la Trinidad, túneles de San Felipe y lancha y aguas de las Islas del Rosario: Joe Ross, CC BY-SA 2.0, Wikimedia Commons",
+    "Atardecer en la muralla, patio del convento de La Popa, Catedral, San Pedro Claver y la Gertrudis de Botero: Mariordo (Mario Roberto Durán Ortiz), CC BY-SA 4.0, Wikimedia Commons",
+    "Plaza de los Coches y playa en las Islas del Rosario: Jorge Láscar, CC BY 2.0 · Islas del Rosario: Ben Bowes, CC BY 2.0 · Bocagrande desde el mar: poirpom, CC BY 2.0 · Calle del centro: Pedro Szekely, CC BY 2.0, Wikimedia Commons",
+    "Garita al atardecer: Igvir Ramirez, CC BY-SA 2.0 · Camellón de los Mártires: Martinduquea, CC BY-SA 3.0 · Zapatos viejos: JuanGris (Lucía Estévez), CC BY-SA 3.0, Wikimedia Commons",
+    "Fuerte de San Fernando de Bocachica: Samael Alejandro Zapata Ibarra, CC BY-SA 3.0 · Estatua de Bolívar: Rjcastillo, CC BY-SA 3.0 · Palacio de la Inquisición: Dr. Thomas Liptak, CC BY-SA 4.0, Wikimedia Commons"
+  ]
+}

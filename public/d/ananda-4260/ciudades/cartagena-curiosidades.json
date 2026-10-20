@@ -1,0 +1,752 @@
+{
+  "murallas-1": {
+    "pregunta": {
+      "ES": "¿Para qué se usaron Las Bóvedas antes de ser tiendas?",
+      "EN": "What were Las Bóvedas used for before they became shops?",
+      "DE": "Wofür wurden Las Bóvedas genutzt, bevor sie Läden wurden?"
+    },
+    "opciones": [
+      {
+        "ES": "Establos para los caballos",
+        "EN": "Stables for horses",
+        "DE": "Pferdeställe"
+      },
+      {
+        "ES": "Una iglesia",
+        "EN": "A church",
+        "DE": "Eine Kirche"
+      },
+      {
+        "ES": "Almacenes y, después, calabozos",
+        "EN": "Storerooms and, later, prison cells",
+        "DE": "Lagerräume und später Gefängniszellen"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Se construyeron a finales del siglo XVIII, lo último de la muralla, como almacenes militares. En el siglo XIX sirvieron de cárcel.",
+      "EN": "Built at the end of the 18th century, the last part of the walls, as military storerooms. In the 19th century they served as a jail.",
+      "DE": "Ende des 18. Jahrhunderts als letzter Teil der Mauer und als Militärlager gebaut. Im 19. Jahrhundert dienten sie als Gefängnis."
+    }
+  },
+  "murallas-2": {
+    "pregunta": {
+      "ES": "¿Por qué Cartagena se rodeó de murallas?",
+      "EN": "Why was Cartagena surrounded by walls?",
+      "DE": "Warum wurde Cartagena mit Mauern umgeben?"
+    },
+    "opciones": [
+      {
+        "ES": "Por los ataques de piratas y corsarios",
+        "EN": "Because of attacks by pirates and privateers",
+        "DE": "Wegen der Angriffe von Piraten und Freibeutern"
+      },
+      {
+        "ES": "Para frenar las inundaciones",
+        "EN": "To hold back floods",
+        "DE": "Um Überschwemmungen abzuhalten"
+      },
+      {
+        "ES": "Para cobrar peaje a los viajeros",
+        "EN": "To charge travellers a toll",
+        "DE": "Um von Reisenden Zoll zu kassieren"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Era el gran puerto del oro y la plata del Imperio español, y la atacaron muchas veces. Tras el saqueo de Francis Drake en 1586 se empezó a amurallar en serio.",
+      "EN": "It was the Spanish Empire's great port for gold and silver, and was attacked many times. After Francis Drake sacked it in 1586, building the walls began in earnest.",
+      "DE": "Sie war der große Gold- und Silberhafen des Spanischen Reiches und wurde oft angegriffen. Nach der Plünderung durch Francis Drake 1586 begann man ernsthaft mit dem Mauerbau."
+    }
+  },
+  "murallas-3": {
+    "pregunta": {
+      "ES": "¿De qué piedra está hecha buena parte de la muralla?",
+      "EN": "What stone is much of the wall made of?",
+      "DE": "Aus welchem Stein besteht ein Großteil der Mauer?"
+    },
+    "opciones": [
+      {
+        "ES": "Mármol traído de España",
+        "EN": "Marble brought from Spain",
+        "DE": "Aus Spanien gebrachter Marmor"
+      },
+      {
+        "ES": "Piedra coralina",
+        "EN": "Coral stone",
+        "DE": "Korallenstein"
+      },
+      {
+        "ES": "Granito de los Andes",
+        "EN": "Granite from the Andes",
+        "DE": "Granit aus den Anden"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Se usó piedra coralina, sacada de los arrecifes y canteras de la costa. Fíjate de cerca: verás las huellas de corales y conchas en los bloques.",
+      "EN": "Coral stone was used, taken from reefs and quarries along the coast. Look closely: you'll see traces of coral and shells in the blocks.",
+      "DE": "Verwendet wurde Korallenstein aus Riffen und Steinbrüchen an der Küste. Schau genau hin: In den Blöcken siehst du Spuren von Korallen und Muscheln."
+    }
+  },
+  "murallas-4": {
+    "pregunta": {
+      "ES": "¿Desde qué año el puerto, las fortalezas y el centro de Cartagena son Patrimonio de la Humanidad?",
+      "EN": "Since what year have Cartagena's port, fortresses and old town been a World Heritage Site?",
+      "DE": "Seit welchem Jahr sind Hafen, Festungen und Altstadt von Cartagena Weltkulturerbe?"
+    },
+    "opciones": [
+      {
+        "ES": "1959",
+        "EN": "1959",
+        "DE": "1959"
+      },
+      {
+        "ES": "2004",
+        "EN": "2004",
+        "DE": "2004"
+      },
+      {
+        "ES": "1984",
+        "EN": "1984",
+        "DE": "1984"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "La UNESCO los declaró Patrimonio de la Humanidad en 1984, con el nombre de «Puerto, fortalezas y conjunto monumental de Cartagena».",
+      "EN": "UNESCO listed them in 1984 as «Port, Fortresses and Group of Monuments, Cartagena».",
+      "DE": "Die UNESCO nahm sie 1984 als «Hafen, Festungen und Baudenkmäler von Cartagena» in die Welterbeliste auf."
+    }
+  },
+  "murallas-5": {
+    "pregunta": {
+      "ES": "¿Cómo se llamaba antes la Puerta del Reloj?",
+      "EN": "What was the Clock Gate called before?",
+      "DE": "Wie hieß das Uhrtor früher?"
+    },
+    "opciones": [
+      {
+        "ES": "Boca del Puente",
+        "EN": "Boca del Puente (Bridge Mouth)",
+        "DE": "Boca del Puente (Brückenmündung)"
+      },
+      {
+        "ES": "Puerta del Mar",
+        "EN": "Sea Gate",
+        "DE": "Meerestor"
+      },
+      {
+        "ES": "Puerta de Tierra",
+        "EN": "Land Gate",
+        "DE": "Landtor"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Se llamaba Boca del Puente porque un puente la unía con Getsemaní. La torre con el reloj se le añadió en el siglo XIX.",
+      "EN": "It was called Boca del Puente because a bridge linked it to Getsemaní. The clock tower was added in the 19th century.",
+      "DE": "Es hieß Boca del Puente, weil eine Brücke es mit Getsemaní verband. Der Uhrturm kam im 19. Jahrhundert hinzu."
+    }
+  },
+  "getsemani-1": {
+    "pregunta": {
+      "ES": "¿Cuántos patriotas recuerda el Camellón de los Mártires?",
+      "EN": "How many patriots does the Camellón de los Mártires remember?",
+      "DE": "An wie viele Patrioten erinnert der Camellón de los Mártires?"
+    },
+    "opciones": [
+      {
+        "ES": "Tres",
+        "EN": "Three",
+        "DE": "Drei"
+      },
+      {
+        "ES": "Nueve",
+        "EN": "Nine",
+        "DE": "Neun"
+      },
+      {
+        "ES": "Veinte",
+        "EN": "Twenty",
+        "DE": "Zwanzig"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Son nueve: fueron fusilados en 1816, cuando las tropas españolas de Pablo Morillo recuperaron la ciudad tras un largo asedio.",
+      "EN": "There are nine: they were executed in 1816, when Pablo Morillo's Spanish troops retook the city after a long siege.",
+      "DE": "Es sind neun: Sie wurden 1816 erschossen, als die spanischen Truppen Pablo Morillos die Stadt nach langer Belagerung zurückeroberten."
+    }
+  },
+  "getsemani-2": {
+    "pregunta": {
+      "ES": "¿De dónde viene el nombre de la Calle de la Media Luna?",
+      "EN": "Where does the name Calle de la Media Luna come from?",
+      "DE": "Woher stammt der Name Calle de la Media Luna?"
+    },
+    "opciones": [
+      {
+        "ES": "De su forma curva",
+        "EN": "From its curved shape",
+        "DE": "Von ihrer gebogenen Form"
+      },
+      {
+        "ES": "De una fiesta a la luna",
+        "EN": "From a moon festival",
+        "DE": "Von einem Mondfest"
+      },
+      {
+        "ES": "De una antigua puerta de la muralla",
+        "EN": "From an old gate in the walls",
+        "DE": "Von einem alten Tor in der Stadtmauer"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Por la Puerta de la Media Luna, la entrada por tierra a Getsemaní, protegida por un revellín en forma de media luna. Se derribó a comienzos del siglo XX.",
+      "EN": "After the Media Luna Gate, the land entrance to Getsemaní, guarded by a half-moon-shaped ravelin. It was demolished in the early 20th century.",
+      "DE": "Nach dem Media-Luna-Tor, dem Landeingang nach Getsemaní, geschützt durch ein halbmondförmiges Ravelin. Es wurde Anfang des 20. Jahrhunderts abgerissen."
+    }
+  },
+  "getsemani-3": {
+    "pregunta": {
+      "ES": "¿Qué día celebra Cartagena su independencia?",
+      "EN": "What day does Cartagena celebrate its independence?",
+      "DE": "An welchem Tag feiert Cartagena seine Unabhängigkeit?"
+    },
+    "opciones": [
+      {
+        "ES": "El 11 de noviembre de 1811",
+        "EN": "11 November 1811",
+        "DE": "11. November 1811"
+      },
+      {
+        "ES": "El 20 de julio de 1810",
+        "EN": "20 July 1810",
+        "DE": "20. Juli 1810"
+      },
+      {
+        "ES": "El 7 de agosto de 1819",
+        "EN": "7 August 1819",
+        "DE": "7. August 1819"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El 11 de noviembre de 1811 Cartagena declaró su independencia absoluta de España, empujada por los lanceros de Getsemaní. Por eso las fiestas de noviembre son las grandes de la ciudad.",
+      "EN": "On 11 November 1811 Cartagena declared full independence from Spain, pushed by the Getsemaní lancers. That's why November's festivities are the city's biggest.",
+      "DE": "Am 11. November 1811 erklärte Cartagena, angetrieben von den Lanzenreitern aus Getsemaní, die vollständige Unabhängigkeit von Spanien. Deshalb sind die Novemberfeste die größten der Stadt."
+    }
+  },
+  "getsemani-4": {
+    "pregunta": {
+      "ES": "¿Qué era Getsemaní en tiempos de la colonia?",
+      "EN": "What was Getsemaní in colonial times?",
+      "DE": "Was war Getsemaní in der Kolonialzeit?"
+    },
+    "opciones": [
+      {
+        "ES": "La residencia del virrey",
+        "EN": "The viceroy's residence",
+        "DE": "Die Residenz des Vizekönigs"
+      },
+      {
+        "ES": "El barrio de artesanos y trabajadores",
+        "EN": "The neighbourhood of craftsmen and workers",
+        "DE": "Das Viertel der Handwerker und Arbeiter"
+      },
+      {
+        "ES": "Un puerto pesquero aislado",
+        "EN": "An isolated fishing port",
+        "DE": "Ein abgelegener Fischerhafen"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Era el arrabal, el barrio de fuera del recinto principal, donde vivían artesanos, carpinteros, marineros y gente libre de origen africano. Por eso sus casas son bajas y sencillas.",
+      "EN": "It was the arrabal, the suburb outside the main walled area, home to craftsmen, carpenters, sailors and free people of African descent. That's why its houses are low and simple.",
+      "DE": "Es war der Arrabal, die Vorstadt außerhalb des Hauptmauerrings, wo Handwerker, Zimmerleute, Seeleute und freie Menschen afrikanischer Herkunft lebten. Daher sind die Häuser niedrig und schlicht."
+    }
+  },
+  "getsemani-5": {
+    "pregunta": {
+      "ES": "En una ciudad sin río, ¿de dónde sacaban el agua los cartageneros?",
+      "EN": "In a city without a river, where did people get their water?",
+      "DE": "Woher bekamen die Menschen in einer Stadt ohne Fluss ihr Wasser?"
+    },
+    "opciones": [
+      {
+        "ES": "De pozos y aljibes que recogían la lluvia",
+        "EN": "From wells and cisterns that collected rain",
+        "DE": "Aus Brunnen und Zisternen, die Regen sammelten"
+      },
+      {
+        "ES": "De un acueducto desde los Andes",
+        "EN": "From an aqueduct from the Andes",
+        "DE": "Aus einem Aquädukt von den Anden"
+      },
+      {
+        "ES": "Desalando agua de mar",
+        "EN": "By desalinating seawater",
+        "DE": "Durch Entsalzung von Meerwasser"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Casas, conventos y fuertes tenían aljibes que guardaban el agua de lluvia, y en las plazas había pozos como el que da nombre a esta.",
+      "EN": "Houses, convents and forts had cisterns storing rainwater, and squares had wells like the one this plaza is named after.",
+      "DE": "Häuser, Klöster und Festungen hatten Zisternen für Regenwasser, und auf den Plätzen gab es Brunnen wie den, nach dem dieser Platz benannt ist."
+    }
+  },
+  "san-felipe-1": {
+    "pregunta": {
+      "ES": "¿Quién defendió Cartagena del gran ataque inglés de 1741?",
+      "EN": "Who defended Cartagena from the great British attack of 1741?",
+      "DE": "Wer verteidigte Cartagena 1741 gegen den großen britischen Angriff?"
+    },
+    "opciones": [
+      {
+        "ES": "Francis Drake",
+        "EN": "Francis Drake",
+        "DE": "Francis Drake"
+      },
+      {
+        "ES": "Simón Bolívar",
+        "EN": "Simón Bolívar",
+        "DE": "Simón Bolívar"
+      },
+      {
+        "ES": "Blas de Lezo",
+        "EN": "Blas de Lezo",
+        "DE": "Blas de Lezo"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El almirante Blas de Lezo resistió con muchos menos hombres a la enorme flota de Edward Vernon, que no logró tomar el castillo. Su estatua está frente a la fortaleza.",
+      "EN": "Admiral Blas de Lezo held out with far fewer men against Edward Vernon's huge fleet, which failed to take the castle. His statue stands in front of the fortress.",
+      "DE": "Admiral Blas de Lezo hielt mit viel weniger Männern der riesigen Flotte von Edward Vernon stand, die die Festung nicht einnehmen konnte. Seine Statue steht vor der Festung."
+    }
+  },
+  "san-felipe-2": {
+    "pregunta": {
+      "ES": "¿Qué ingeniero militar amplió el castillo en el siglo XVIII?",
+      "EN": "Which military engineer enlarged the castle in the 18th century?",
+      "DE": "Welcher Militäringenieur erweiterte die Festung im 18. Jahrhundert?"
+    },
+    "opciones": [
+      {
+        "ES": "Antonio de Arévalo",
+        "EN": "Antonio de Arévalo",
+        "DE": "Antonio de Arévalo"
+      },
+      {
+        "ES": "Juan de Herrera",
+        "EN": "Juan de Herrera",
+        "DE": "Juan de Herrera"
+      },
+      {
+        "ES": "Antoni Gaudí",
+        "EN": "Antoni Gaudí",
+        "DE": "Antoni Gaudí"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Antonio de Arévalo le dio su forma actual tras el ataque de 1741, con nuevas baterías y galerías. También firmó Las Bóvedas y buena parte de las defensas de la ciudad.",
+      "EN": "Antonio de Arévalo gave it its current shape after the 1741 attack, with new batteries and galleries. He also designed Las Bóvedas and much of the city's defences.",
+      "DE": "Antonio de Arévalo gab ihr nach dem Angriff von 1741 ihre heutige Form, mit neuen Batterien und Gängen. Er entwarf auch Las Bóvedas und große Teile der Stadtverteidigung."
+    }
+  },
+  "san-felipe-3": {
+    "pregunta": {
+      "ES": "¿A qué rinde homenaje el monumento a los Zapatos Viejos?",
+      "EN": "What does the Old Shoes monument pay tribute to?",
+      "DE": "Wem ist das Denkmal der alten Schuhe gewidmet?"
+    },
+    "opciones": [
+      {
+        "ES": "A un zapatero famoso del barrio",
+        "EN": "A famous local shoemaker",
+        "DE": "Einem berühmten Schuster des Viertels"
+      },
+      {
+        "ES": "A un poema de Luis Carlos López",
+        "EN": "A poem by Luis Carlos López",
+        "DE": "Einem Gedicht von Luis Carlos López"
+      },
+      {
+        "ES": "A los soldados del castillo",
+        "EN": "The castle's soldiers",
+        "DE": "Den Soldaten der Festung"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Al soneto «A mi ciudad nativa», del poeta cartagenero Luis Carlos López, que termina diciendo que a la ciudad se le tiene el cariño que inspira un par de zapatos viejos.",
+      "EN": "The sonnet «A mi ciudad nativa» by Cartagena poet Luis Carlos López, which ends by saying you love the city with the affection you feel for a pair of old shoes.",
+      "DE": "Dem Sonett «A mi ciudad nativa» des Dichters Luis Carlos López aus Cartagena, das damit endet, dass man die Stadt so gernhat wie ein Paar alte Schuhe."
+    }
+  },
+  "san-felipe-4": {
+    "pregunta": {
+      "ES": "¿Quién es la patrona de Cartagena, venerada en La Popa?",
+      "EN": "Who is Cartagena's patron saint, venerated at La Popa?",
+      "DE": "Wer ist die Schutzpatronin Cartagenas, die in La Popa verehrt wird?"
+    },
+    "opciones": [
+      {
+        "ES": "La Virgen del Carmen",
+        "EN": "Our Lady of Mount Carmel",
+        "DE": "Die Jungfrau vom Berge Karmel"
+      },
+      {
+        "ES": "La Virgen de la Candelaria",
+        "EN": "Our Lady of Candelaria",
+        "DE": "Die Jungfrau von Candelaria"
+      },
+      {
+        "ES": "Santa Catalina",
+        "EN": "Saint Catherine",
+        "DE": "Die heilige Katharina"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La Virgen de la Candelaria. Su fiesta es el 2 de febrero y los días anteriores muchos cartageneros suben al cerro en procesión.",
+      "EN": "Our Lady of Candelaria. Her feast is on 2 February, and in the days before many locals climb the hill in procession.",
+      "DE": "Die Jungfrau von Candelaria. Ihr Fest ist am 2. Februar, und in den Tagen davor ziehen viele Einheimische in Prozession auf den Hügel."
+    }
+  },
+  "san-felipe-5": {
+    "pregunta": {
+      "ES": "¿Por qué el cerro se llama La Popa?",
+      "EN": "Why is the hill called La Popa?",
+      "DE": "Warum heißt der Hügel La Popa?"
+    },
+    "opciones": [
+      {
+        "ES": "Por un capitán llamado Popa",
+        "EN": "After a captain named Popa",
+        "DE": "Nach einem Kapitän namens Popa"
+      },
+      {
+        "ES": "Por las popas de barcos hundidos en la bahía",
+        "EN": "After sunken ships' sterns in the bay",
+        "DE": "Nach den Hecks gesunkener Schiffe in der Bucht"
+      },
+      {
+        "ES": "Porque su silueta parece la popa de un barco",
+        "EN": "Because its outline looks like a ship's stern",
+        "DE": "Weil seine Silhouette wie ein Schiffsheck aussieht"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Visto desde el mar, el cerro recuerda la popa de un barco. Con unos 150 metros, es el punto más alto de la ciudad.",
+      "EN": "Seen from the sea, the hill resembles a ship's stern. At about 150 metres, it's the highest point in the city.",
+      "DE": "Vom Meer aus erinnert der Hügel an ein Schiffsheck. Mit rund 150 Metern ist er der höchste Punkt der Stadt."
+    }
+  },
+  "rosario-1": {
+    "pregunta": {
+      "ES": "¿Quién fundó Cartagena de Indias y cuándo?",
+      "EN": "Who founded Cartagena de Indias, and when?",
+      "DE": "Wer gründete Cartagena de Indias und wann?"
+    },
+    "opciones": [
+      {
+        "ES": "Cristóbal Colón, en 1492",
+        "EN": "Christopher Columbus, in 1492",
+        "DE": "Christoph Kolumbus, 1492"
+      },
+      {
+        "ES": "Pedro de Heredia, en 1533",
+        "EN": "Pedro de Heredia, in 1533",
+        "DE": "Pedro de Heredia, 1533"
+      },
+      {
+        "ES": "Gonzalo Jiménez de Quesada, en 1538",
+        "EN": "Gonzalo Jiménez de Quesada, in 1538",
+        "DE": "Gonzalo Jiménez de Quesada, 1538"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Pedro de Heredia la fundó el 1 de junio de 1533. Su estatua está en la Plaza de los Coches, al otro lado de la avenida. Jiménez de Quesada fundó Bogotá en 1538.",
+      "EN": "Pedro de Heredia founded it on 1 June 1533. His statue stands in Plaza de los Coches, across the avenue. Jiménez de Quesada founded Bogotá in 1538.",
+      "DE": "Pedro de Heredia gründete sie am 1. Juni 1533. Seine Statue steht auf der Plaza de los Coches auf der anderen Seite der Allee. Jiménez de Quesada gründete 1538 Bogotá."
+    }
+  },
+  "rosario-2": {
+    "pregunta": {
+      "ES": "¿Por qué los barcos entran a la bahía por Bocachica y no por Bocagrande?",
+      "EN": "Why do ships enter the bay through Bocachica and not Bocagrande?",
+      "DE": "Warum fahren Schiffe durch Bocachica und nicht durch Bocagrande in die Bucht?"
+    },
+    "opciones": [
+      {
+        "ES": "Porque los españoles cerraron Bocagrande con un muro submarino",
+        "EN": "Because the Spanish closed Bocagrande with an underwater wall",
+        "DE": "Weil die Spanier Bocagrande mit einer Unterwassermauer verschlossen"
+      },
+      {
+        "ES": "Porque Bocagrande está llena de corales",
+        "EN": "Because Bocagrande is full of coral",
+        "DE": "Weil Bocagrande voller Korallen ist"
+      },
+      {
+        "ES": "Porque en Bocagrande hay más olas",
+        "EN": "Because Bocagrande has bigger waves",
+        "DE": "Weil es in Bocagrande höhere Wellen gibt"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "En el siglo XVIII se levantó la escollera de Bocagrande, una muralla bajo el agua. Así todos los barcos tenían que pasar por Bocachica, entre los cañones de los fuertes.",
+      "EN": "In the 18th century the Bocagrande breakwater was built, an underwater wall. So every ship had to pass through Bocachica, between the forts' cannons.",
+      "DE": "Im 18. Jahrhundert entstand die Escollera de Bocagrande, eine Mauer unter Wasser. So musste jedes Schiff durch Bocachica, zwischen den Kanonen der Festungen."
+    }
+  },
+  "rosario-3": {
+    "pregunta": {
+      "ES": "¿Desde cuándo los corales del Rosario son parque nacional?",
+      "EN": "Since when has the Rosario reef been a national park?",
+      "DE": "Seit wann ist das Rosario-Riff Nationalpark?"
+    },
+    "opciones": [
+      {
+        "ES": "Desde 1950",
+        "EN": "Since 1950",
+        "DE": "Seit 1950"
+      },
+      {
+        "ES": "Desde 2010",
+        "EN": "Since 2010",
+        "DE": "Seit 2010"
+      },
+      {
+        "ES": "Desde 1977",
+        "EN": "Since 1977",
+        "DE": "Seit 1977"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El Parque Nacional Natural Corales del Rosario se creó en 1977; en 1996 se amplió a las islas de San Bernardo. Protege arrecifes, manglares y praderas marinas.",
+      "EN": "Corales del Rosario National Natural Park was created in 1977 and extended to the San Bernardo islands in 1996. It protects reefs, mangroves and seagrass beds.",
+      "DE": "Der Nationalpark Corales del Rosario wurde 1977 gegründet und 1996 um die San-Bernardo-Inseln erweitert. Er schützt Riffe, Mangroven und Seegraswiesen."
+    }
+  },
+  "rosario-4": {
+    "pregunta": {
+      "ES": "¿Por qué se pide bloqueador biodegradable en las islas?",
+      "EN": "Why is biodegradable sunscreen requested on the islands?",
+      "DE": "Warum wird auf den Inseln biologisch abbaubare Sonnencreme verlangt?"
+    },
+    "opciones": [
+      {
+        "ES": "Porque protege más del sol",
+        "EN": "Because it protects better from the sun",
+        "DE": "Weil sie besser vor der Sonne schützt"
+      },
+      {
+        "ES": "Porque algunos filtros químicos dañan el coral",
+        "EN": "Because some chemical filters harm coral",
+        "DE": "Weil manche chemischen Filter Korallen schädigen"
+      },
+      {
+        "ES": "Porque es más barato",
+        "EN": "Because it's cheaper",
+        "DE": "Weil sie billiger ist"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Filtros como la oxibenzona se han relacionado con el blanqueamiento del coral. Con miles de bañistas al día, lo que te pones acaba en el arrecife.",
+      "EN": "Filters such as oxybenzone have been linked to coral bleaching. With thousands of swimmers a day, what you put on ends up on the reef.",
+      "DE": "Filter wie Oxybenzon werden mit der Korallenbleiche in Verbindung gebracht. Bei Tausenden Badegästen täglich landet, was du aufträgst, im Riff."
+    }
+  },
+  "rosario-5": {
+    "pregunta": {
+      "ES": "¿Quién logró tomar y saquear Cartagena en 1697?",
+      "EN": "Who managed to take and sack Cartagena in 1697?",
+      "DE": "Wer eroberte und plünderte Cartagena 1697?"
+    },
+    "opciones": [
+      {
+        "ES": "El barón de Pointis, francés",
+        "EN": "The French Baron de Pointis",
+        "DE": "Der französische Baron de Pointis"
+      },
+      {
+        "ES": "El almirante Vernon, inglés",
+        "EN": "The English Admiral Vernon",
+        "DE": "Der englische Admiral Vernon"
+      },
+      {
+        "ES": "El pirata Barbanegra",
+        "EN": "The pirate Blackbeard",
+        "DE": "Der Pirat Blackbeard"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Una expedición francesa al mando del barón de Pointis, con bucaneros, entró por Bocachica y saqueó la ciudad en 1697. Vernon, en cambio, fracasó en 1741.",
+      "EN": "A French expedition led by Baron de Pointis, with buccaneers, came in through Bocachica and sacked the city in 1697. Vernon, by contrast, failed in 1741.",
+      "DE": "Eine französische Expedition unter Baron de Pointis drang mit Bukanieren durch Bocachica ein und plünderte 1697 die Stadt. Vernon dagegen scheiterte 1741."
+    }
+  },
+  "centro-1": {
+    "pregunta": {
+      "ES": "¿Cómo se llamaba antes la Plaza de Bolívar?",
+      "EN": "What was Plaza de Bolívar called before?",
+      "DE": "Wie hieß die Plaza de Bolívar früher?"
+    },
+    "opciones": [
+      {
+        "ES": "Plaza de la Inquisición",
+        "EN": "Plaza de la Inquisición",
+        "DE": "Plaza de la Inquisición"
+      },
+      {
+        "ES": "Plaza Mayor del Virrey",
+        "EN": "Plaza Mayor del Virrey",
+        "DE": "Plaza Mayor del Virrey"
+      },
+      {
+        "ES": "Plaza de los Esclavos",
+        "EN": "Plaza de los Esclavos",
+        "DE": "Plaza de los Esclavos"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Era la Plaza de la Inquisición, por el palacio que tienes al lado. Tomó el nombre de Bolívar ya en la república, y en el centro está su estatua a caballo.",
+      "EN": "It was Plaza de la Inquisición, after the palace beside you. It took Bolívar's name in republican times, and his equestrian statue stands in the middle.",
+      "DE": "Sie hieß Plaza de la Inquisición, nach dem Palast nebenan. Den Namen Bolívars erhielt sie erst in der Republik, in der Mitte steht seine Reiterstatue."
+    }
+  },
+  "centro-2": {
+    "pregunta": {
+      "ES": "¿Cuántos tribunales de la Inquisición hubo en la América española?",
+      "EN": "How many tribunals of the Inquisition were there in Spanish America?",
+      "DE": "Wie viele Inquisitionstribunale gab es in Spanisch-Amerika?"
+    },
+    "opciones": [
+      {
+        "ES": "Uno, el de Cartagena",
+        "EN": "One, in Cartagena",
+        "DE": "Eines, in Cartagena"
+      },
+      {
+        "ES": "Tres",
+        "EN": "Three",
+        "DE": "Drei"
+      },
+      {
+        "ES": "Doce",
+        "EN": "Twelve",
+        "DE": "Zwölf"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Tres: Lima, México y Cartagena, que tuvo el suyo desde 1610. Desde aquí se juzgaba a todo el Caribe neogranadino y Venezuela.",
+      "EN": "Three: Lima, Mexico and Cartagena, which had its own from 1610. From here it judged the whole New Granada Caribbean and Venezuela.",
+      "DE": "Drei: Lima, Mexiko und Cartagena, das seines ab 1610 hatte. Von hier aus wurde über die gesamte Karibik Neugranadas und Venezuela geurteilt."
+    }
+  },
+  "centro-3": {
+    "pregunta": {
+      "ES": "¿Quién dañó la catedral con sus cañones cuando aún se estaba construyendo?",
+      "EN": "Who damaged the cathedral with cannon fire while it was still being built?",
+      "DE": "Wer beschädigte die Kathedrale mit Kanonen, als sie noch im Bau war?"
+    },
+    "opciones": [
+      {
+        "ES": "El barón de Pointis",
+        "EN": "Baron de Pointis",
+        "DE": "Baron de Pointis"
+      },
+      {
+        "ES": "Edward Vernon",
+        "EN": "Edward Vernon",
+        "DE": "Edward Vernon"
+      },
+      {
+        "ES": "Francis Drake",
+        "EN": "Francis Drake",
+        "DE": "Francis Drake"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "En 1586 Francis Drake tomó la ciudad y sus cañones derribaron parte de la catedral en obras. Se terminó en 1612.",
+      "EN": "In 1586 Francis Drake took the city and his cannons brought down part of the unfinished cathedral. It was completed in 1612.",
+      "DE": "1586 eroberte Francis Drake die Stadt, und seine Kanonen rissen einen Teil der unfertigen Kathedrale ein. Fertiggestellt wurde sie 1612."
+    }
+  },
+  "centro-4": {
+    "pregunta": {
+      "ES": "¿En qué año fue proclamado santo Pedro Claver?",
+      "EN": "In what year was Pedro Claver declared a saint?",
+      "DE": "In welchem Jahr wurde Pedro Claver heiliggesprochen?"
+    },
+    "opciones": [
+      {
+        "ES": "En 1654",
+        "EN": "In 1654",
+        "DE": "1654"
+      },
+      {
+        "ES": "En 1888",
+        "EN": "In 1888",
+        "DE": "1888"
+      },
+      {
+        "ES": "En 1960",
+        "EN": "In 1960",
+        "DE": "1960"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El papa León XIII lo canonizó en 1888. Había muerto en Cartagena en 1654, y Colombia lo considera patrono de los derechos humanos.",
+      "EN": "Pope Leo XIII canonised him in 1888. He had died in Cartagena in 1654, and Colombia regards him as the patron of human rights.",
+      "DE": "Papst Leo XIII. sprach ihn 1888 heilig. Er war 1654 in Cartagena gestorben, und Kolumbien sieht in ihm den Schutzpatron der Menschenrechte."
+    }
+  },
+  "centro-5": {
+    "pregunta": {
+      "ES": "¿En qué ciudad nació Fernando Botero, autor de la Gertrudis?",
+      "EN": "In which city was Fernando Botero, creator of Gertrudis, born?",
+      "DE": "In welcher Stadt wurde Fernando Botero, der Schöpfer der Gertrudis, geboren?"
+    },
+    "opciones": [
+      {
+        "ES": "Cartagena",
+        "EN": "Cartagena",
+        "DE": "Cartagena"
+      },
+      {
+        "ES": "Bogotá",
+        "EN": "Bogotá",
+        "DE": "Bogotá"
+      },
+      {
+        "ES": "Medellín",
+        "EN": "Medellín",
+        "DE": "Medellín"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Nació en Medellín en 1932. Sus figuras de volúmenes generosos están en plazas de medio mundo; la Gertrudis es la de Cartagena.",
+      "EN": "He was born in Medellín in 1932. His figures with generous volumes stand in squares around the world; Gertrudis is Cartagena's.",
+      "DE": "Er wurde 1932 in Medellín geboren. Seine Figuren mit üppigen Formen stehen auf Plätzen in aller Welt; die Gertrudis ist die von Cartagena."
+    }
+  }
+}
