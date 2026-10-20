@@ -28,6 +28,8 @@ const nextConfig: NextConfig = {
       { source: "/d/indigo-7c41/:path*", destination: "/d/indigo-7c41/index.html" },
       { source: "/d/nooe-a332/:path*", destination: "/d/nooe-a332/index.html" },
       { source: "/d/sheraton-5e38/:path*", destination: "/d/sheraton-5e38/index.html" },
+      { source: "/d/ananda-4260/:path*", destination: "/d/ananda-4260/index.html" },
+      { source: "/d/stella-5f22/:path*", destination: "/d/stella-5f22/index.html" },
       { source: "/d/bordeluz-89c9/:path*", destination: "/d/bordeluz-89c9/index.html" },
     ];
   },

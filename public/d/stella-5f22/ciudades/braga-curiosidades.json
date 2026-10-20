@@ -1,0 +1,542 @@
+{
+  "bom-jesus-1": {
+    "pregunta": {
+      "ES": "¿Qué hace subir el funicular del Bom Jesus?",
+      "EN": "What makes the Bom Jesus funicular climb?",
+      "PT": "O que faz subir o elevador do Bom Jesus?"
+    },
+    "opciones": [
+      {
+        "ES": "Un motor eléctrico",
+        "EN": "An electric motor",
+        "PT": "Um motor elétrico"
+      },
+      {
+        "ES": "El peso del agua",
+        "EN": "The weight of water",
+        "PT": "O peso da água"
+      },
+      {
+        "ES": "Una máquina de vapor",
+        "EN": "A steam engine",
+        "PT": "Uma máquina a vapor"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Desde 1882, la cabina de arriba llena un depósito de agua, pesa más y tira de la de abajo. Es el más antiguo del mundo de su tipo que sigue funcionando.",
+      "EN": "Since 1882, the top car fills a water tank, grows heavier and pulls the bottom one up. The oldest of its kind still running anywhere.",
+      "PT": "Desde 1882, a cabine de cima enche um depósito de água, fica mais pesada e puxa a de baixo. É o mais antigo do mundo deste tipo ainda a funcionar."
+    }
+  },
+  "bom-jesus-2": {
+    "pregunta": {
+      "ES": "¿Qué representan las fuentes de la escalinata?",
+      "EN": "What do the stairway fountains represent?",
+      "PT": "O que representam as fontes do escadório?"
+    },
+    "opciones": [
+      {
+        "ES": "Los cinco continentes",
+        "EN": "The five continents",
+        "PT": "Os cinco continentes"
+      },
+      {
+        "ES": "Los cinco sentidos",
+        "EN": "The five senses",
+        "PT": "Os cinco sentidos"
+      },
+      {
+        "ES": "Cinco reyes",
+        "EN": "Five kings",
+        "PT": "Cinco reis"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Cada rellano tiene una fuente para un sentido; más arriba vienen las tres virtudes. Subir era un camino de penitencia hasta la iglesia.",
+      "EN": "Each landing has a fountain for one sense; higher up come the three virtues. The climb was a path of penance to the church.",
+      "PT": "Cada patamar tem uma fonte para um sentido; mais acima vêm as três virtudes. Subir era um caminho de penitência até à igreja."
+    }
+  },
+  "bom-jesus-3": {
+    "pregunta": {
+      "ES": "¿Desde cuándo es el Bom Jesus Patrimonio Mundial?",
+      "EN": "Since when has Bom Jesus been World Heritage?",
+      "PT": "Desde quando é o Bom Jesus Património Mundial?"
+    },
+    "opciones": [
+      {
+        "ES": "1983",
+        "EN": "1983",
+        "PT": "1983"
+      },
+      {
+        "ES": "2001",
+        "EN": "2001",
+        "PT": "2001"
+      },
+      {
+        "ES": "2019",
+        "EN": "2019",
+        "PT": "2019"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "La UNESCO lo inscribió en 2019 como ejemplo único de «Sacro Monte» barroco.",
+      "EN": "UNESCO listed it in 2019 as a unique example of a baroque \"Sacred Mount\".",
+      "PT": "A UNESCO classificou o santuário em 2019, como exemplo único de «Sacro Monte» barroco."
+    }
+  },
+  "bom-jesus-4": {
+    "pregunta": {
+      "ES": "¿A quién está dedicado el Santuario del Sameiro?",
+      "EN": "Who is the Sameiro sanctuary dedicated to?",
+      "PT": "A quem é dedicado o Santuário do Sameiro?"
+    },
+    "opciones": [
+      {
+        "ES": "A la Virgen",
+        "EN": "Our Lady",
+        "PT": "A Nossa Senhora"
+      },
+      {
+        "ES": "A San Benito",
+        "EN": "Saint Benedict",
+        "PT": "A São Bento"
+      },
+      {
+        "ES": "A Santiago",
+        "EN": "Saint James",
+        "PT": "A Santiago"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es un santuario mariano, empezado en 1863, y uno de los más visitados de Portugal después de Fátima.",
+      "EN": "A Marian sanctuary begun in 1863, and one of the most visited in Portugal after Fátima.",
+      "PT": "É um santuário mariano, começado em 1863, e um dos mais visitados de Portugal depois de Fátima."
+    }
+  },
+  "centro-1": {
+    "pregunta": {
+      "ES": "¿Qué es hoy el Palacio de los Biscainhos?",
+      "EN": "What is the Biscainhos Palace today?",
+      "PT": "O que é hoje o Palácio dos Biscainhos?"
+    },
+    "opciones": [
+      {
+        "ES": "Un museo",
+        "EN": "A museum",
+        "PT": "Um museu"
+      },
+      {
+        "ES": "El ayuntamiento",
+        "EN": "The town hall",
+        "PT": "A câmara municipal"
+      },
+      {
+        "ES": "Un hotel",
+        "EN": "A hotel",
+        "PT": "Um hotel"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es el museo de cómo vivía la nobleza en los siglos XVII y XVIII, con el jardín barroco como era.",
+      "EN": "It is the museum of how the nobility lived in the 17th and 18th centuries, with the baroque garden as it was.",
+      "PT": "É o museu de como vivia a nobreza nos séculos XVII e XVIII, com o jardim barroco como era."
+    }
+  },
+  "centro-2": {
+    "pregunta": {
+      "ES": "¿Por qué en Portugal se dice «¿eres de Braga?» a quien deja la puerta abierta?",
+      "EN": "Why do Portuguese say \"are you from Braga?\" to someone who leaves the door open?",
+      "PT": "Porque se diz «és de Braga?» a quem deixa a porta aberta?"
+    },
+    "opciones": [
+      {
+        "ES": "Por el viento",
+        "EN": "Because of the wind",
+        "PT": "Por causa do vento"
+      },
+      {
+        "ES": "Porque el Arco da Porta Nova nunca tuvo puertas",
+        "EN": "Because the Arco da Porta Nova never had doors",
+        "PT": "Porque o Arco da Porta Nova nunca teve portas"
+      },
+      {
+        "ES": "Por un rey despistado",
+        "EN": "Because of an absent-minded king",
+        "PT": "Por um rei distraído"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El arco se quedó siempre abierto, de día y de noche. La broma se quedó para siempre.",
+      "EN": "The arch stayed open day and night, and the joke stuck forever.",
+      "PT": "O arco ficou sempre aberto, de dia e de noite. A piada ficou para sempre."
+    }
+  },
+  "centro-3": {
+    "pregunta": {
+      "ES": "¿Qué se dice en Portugal de algo muy antiguo?",
+      "EN": "What do the Portuguese say about something very old?",
+      "PT": "Como se diz em Portugal de algo muito antigo?"
+    },
+    "opciones": [
+      {
+        "ES": "Más viejo que la catedral de Braga",
+        "EN": "Older than Braga Cathedral",
+        "PT": "Mais velho que a Sé de Braga"
+      },
+      {
+        "ES": "Más viejo que Lisboa",
+        "EN": "Older than Lisbon",
+        "PT": "Mais velho que Lisboa"
+      },
+      {
+        "ES": "Más viejo que el Duero",
+        "EN": "Older than the Douro",
+        "PT": "Mais velho que o Douro"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La catedral empezó en el siglo XI, antes de que existiera Portugal. De ahí el dicho.",
+      "EN": "The cathedral was begun in the 11th century, before Portugal existed. Hence the saying.",
+      "PT": "A Sé começou no século XI, antes de existir Portugal. Daí o ditado."
+    }
+  },
+  "centro-4": {
+    "pregunta": {
+      "ES": "¿En qué año abrió A Brasileira?",
+      "EN": "When did A Brasileira open?",
+      "PT": "Em que ano abriu A Brasileira?"
+    },
+    "opciones": [
+      {
+        "ES": "1907",
+        "EN": "1907",
+        "PT": "1907"
+      },
+      {
+        "ES": "1955",
+        "EN": "1955",
+        "PT": "1955"
+      },
+      {
+        "ES": "1820",
+        "EN": "1820",
+        "PT": "1820"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Abrió en 1907 para vender el café que llegaba de Brasil y es uno de los cafés más antiguos de la ciudad.",
+      "EN": "It opened in 1907 to sell coffee arriving from Brazil and is one of the city’s oldest cafés.",
+      "PT": "Abriu em 1907 para vender o café que chegava do Brasil e é um dos cafés mais antigos da cidade."
+    }
+  },
+  "centro-5": {
+    "pregunta": {
+      "ES": "¿A qué edificio está pegado el jardín de Santa Bárbara?",
+      "EN": "Which building does the Santa Bárbara garden back onto?",
+      "PT": "A que edifício está encostado o jardim de Santa Bárbara?"
+    },
+    "opciones": [
+      {
+        "ES": "A la estación de tren",
+        "EN": "The railway station",
+        "PT": "À estação de comboios"
+      },
+      {
+        "ES": "Al Palacio de los Arzobispos",
+        "EN": "The Archbishops’ Palace",
+        "PT": "Ao Paço dos Arcebispos"
+      },
+      {
+        "ES": "Al estadio",
+        "EN": "The stadium",
+        "PT": "Ao estádio"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Braga fue durante siglos la ciudad de los arzobispos. El ala medieval de su palacio es el fondo del jardín.",
+      "EN": "For centuries Braga was the archbishops’ city. The medieval wing of their palace is the garden’s backdrop.",
+      "PT": "Braga foi durante séculos a cidade dos arcebispos. A ala medieval do seu paço é o fundo do jardim."
+    }
+  },
+  "geres-1": {
+    "pregunta": {
+      "ES": "¿Cuántos parques nacionales tiene Portugal?",
+      "EN": "How many national parks does Portugal have?",
+      "PT": "Quantos parques nacionais tem Portugal?"
+    },
+    "opciones": [
+      {
+        "ES": "Uno: el Gerês",
+        "EN": "One: Gerês",
+        "PT": "Um: o Gerês"
+      },
+      {
+        "ES": "Cinco",
+        "EN": "Five",
+        "PT": "Cinco"
+      },
+      {
+        "ES": "Doce",
+        "EN": "Twelve",
+        "PT": "Doze"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Peneda-Gerês, creado en 1971, es el único parque nacional del país.",
+      "EN": "Peneda-Gerês, created in 1971, is the country’s only national park.",
+      "PT": "A Peneda-Gerês, criada em 1971, é o único parque nacional do país."
+    }
+  },
+  "geres-2": {
+    "pregunta": {
+      "ES": "¿Qué caballo salvaje vive en el Gerês?",
+      "EN": "Which wild horse lives in Gerês?",
+      "PT": "Que cavalo selvagem vive no Gerês?"
+    },
+    "opciones": [
+      {
+        "ES": "El garrano",
+        "EN": "The garrano",
+        "PT": "O garrano"
+      },
+      {
+        "ES": "El lusitano",
+        "EN": "The Lusitano",
+        "PT": "O lusitano"
+      },
+      {
+        "ES": "El mustang",
+        "EN": "The mustang",
+        "PT": "O mustang"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Pequeño, oscuro y resistente, el garrano vaga libre por las sierras del norte desde hace siglos.",
+      "EN": "Small, dark and hardy, the garrano has roamed the northern hills for centuries.",
+      "PT": "Pequeno, escuro e resistente, o garrano anda à solta pelas serras do Norte há séculos."
+    }
+  },
+  "geres-3": {
+    "pregunta": {
+      "ES": "¿En qué año quedó Vilarinho da Furna bajo el agua?",
+      "EN": "When did Vilarinho da Furna go under water?",
+      "PT": "Em que ano ficou Vilarinho da Furna debaixo de água?"
+    },
+    "opciones": [
+      {
+        "ES": "1910",
+        "EN": "1910",
+        "PT": "1910"
+      },
+      {
+        "ES": "1972",
+        "EN": "1972",
+        "PT": "1972"
+      },
+      {
+        "ES": "1999",
+        "EN": "1999",
+        "PT": "1999"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "En 1972 se llenó la presa. Los antiguos vecinos montaron un museo con sus casas y aperos.",
+      "EN": "The dam was filled in 1972. Former residents set up a museum with their houses and tools.",
+      "PT": "Em 1972 encheu-se a barragem. Os antigos moradores criaram um museu com as suas casas e alfaias."
+    }
+  },
+  "geres-4": {
+    "pregunta": {
+      "ES": "La calzada romana unía Braga con…",
+      "EN": "The Roman road linked Braga to…",
+      "PT": "A Geira romana ligava Braga a…"
+    },
+    "opciones": [
+      {
+        "ES": "Astorga",
+        "EN": "Astorga",
+        "PT": "Astorga"
+      },
+      {
+        "ES": "Lisboa",
+        "EN": "Lisbon",
+        "PT": "Lisboa"
+      },
+      {
+        "ES": "Roma, sin paradas",
+        "EN": "Rome, non-stop",
+        "PT": "Roma, sem paragens"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Bracara Augusta y Asturica Augusta, dos capitales romanas, unidas por 300 km de calzada con un miliario cada milla.",
+      "EN": "Bracara Augusta and Asturica Augusta, two Roman capitals, linked by 300 km of road with a milestone every mile.",
+      "PT": "Bracara Augusta e Asturica Augusta, duas capitais romanas, unidas por 300 km de estrada com marcos de milha em milha."
+    }
+  },
+  "geres-5": {
+    "pregunta": {
+      "ES": "¿Qué hay justo después de la Portela do Homem?",
+      "EN": "What lies just beyond Portela do Homem?",
+      "PT": "O que fica logo a seguir à Portela do Homem?"
+    },
+    "opciones": [
+      {
+        "ES": "El mar",
+        "EN": "The sea",
+        "PT": "O mar"
+      },
+      {
+        "ES": "España, Galicia",
+        "EN": "Spain, Galicia",
+        "PT": "Espanha, a Galiza"
+      },
+      {
+        "ES": "El río Duero",
+        "EN": "The Douro river",
+        "PT": "O rio Douro"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Es un paso fronterizo: al otro lado empieza el parque gallego Baixa Limia-Serra do Xurés.",
+      "EN": "It is a border crossing: on the other side starts Galicia’s Baixa Limia-Serra do Xurés park.",
+      "PT": "É uma passagem de fronteira: do outro lado começa o parque galego da Baixa Limia-Serra do Xurés."
+    }
+  },
+  "guimaraes-1": {
+    "pregunta": {
+      "ES": "¿Quién habría nacido en Guimarães?",
+      "EN": "Who is said to have been born in Guimarães?",
+      "PT": "Quem terá nascido em Guimarães?"
+    },
+    "opciones": [
+      {
+        "ES": "Afonso Henriques",
+        "EN": "Afonso Henriques",
+        "PT": "D. Afonso Henriques"
+      },
+      {
+        "ES": "Luís de Camões",
+        "EN": "Luís de Camões",
+        "PT": "Luís de Camões"
+      },
+      {
+        "ES": "Vasco da Gama",
+        "EN": "Vasco da Gama",
+        "PT": "Vasco da Gama"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El primer rey de Portugal. Por eso Guimarães se llama «cuna de la nación».",
+      "EN": "Portugal’s first king. That is why Guimarães is called \"the cradle of the nation\".",
+      "PT": "O primeiro rei de Portugal. Por isso Guimarães se chama «berço da nação»."
+    }
+  },
+  "guimaraes-2": {
+    "pregunta": {
+      "ES": "¿Quién mandó construir el palacio?",
+      "EN": "Who built the palace?",
+      "PT": "Quem mandou construir o Paço dos Duques?"
+    },
+    "opciones": [
+      {
+        "ES": "El primer duque de Braganza",
+        "EN": "The first Duke of Braganza",
+        "PT": "O primeiro duque de Bragança"
+      },
+      {
+        "ES": "Los romanos",
+        "EN": "The Romans",
+        "PT": "Os romanos"
+      },
+      {
+        "ES": "Un obispo de Braga",
+        "EN": "A bishop of Braga",
+        "PT": "Um bispo de Braga"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Afonso, primer duque de Braganza, en el siglo XV. Quedó en ruinas y se reconstruyó en el siglo XX.",
+      "EN": "Afonso, first Duke of Braganza, in the 15th century. It fell into ruin and was rebuilt in the 20th.",
+      "PT": "D. Afonso, primeiro duque de Bragança, no século XV. Ficou em ruínas e foi reconstruído no século XX."
+    }
+  },
+  "guimaraes-3": {
+    "pregunta": {
+      "ES": "¿Por qué se llama Largo da Oliveira?",
+      "EN": "Why is it called Largo da Oliveira?",
+      "PT": "Porque se chama Largo da Oliveira?"
+    },
+    "opciones": [
+      {
+        "ES": "Por un olivo legendario",
+        "EN": "After a legendary olive tree",
+        "PT": "Por uma oliveira lendária"
+      },
+      {
+        "ES": "Por el aceite que se vendía allí",
+        "EN": "After the olive oil sold there",
+        "PT": "Pelo azeite que ali se vendia"
+      },
+      {
+        "ES": "Por una familia Oliveira",
+        "EN": "After a family called Oliveira",
+        "PT": "Por uma família Oliveira"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Se cuenta que un olivo seco volvió a echar hojas en 1342, cuando se puso allí una cruz.",
+      "EN": "The story goes that a dead olive tree sprouted leaves again in 1342, when a cross was placed there.",
+      "PT": "Conta-se que uma oliveira seca voltou a ganhar folhas em 1342, quando ali se pôs uma cruz."
+    }
+  },
+  "guimaraes-4": {
+    "pregunta": {
+      "ES": "¿Desde cuándo es el centro de Guimarães Patrimonio Mundial?",
+      "EN": "Since when has Guimarães old town been World Heritage?",
+      "PT": "Desde quando é o centro de Guimarães Património Mundial?"
+    },
+    "opciones": [
+      {
+        "ES": "2001",
+        "EN": "2001",
+        "PT": "2001"
+      },
+      {
+        "ES": "1985",
+        "EN": "1985",
+        "PT": "1985"
+      },
+      {
+        "ES": "2015",
+        "EN": "2015",
+        "PT": "2015"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La UNESCO lo inscribió en 2001 por cómo conservó las casas medievales y su forma de construir.",
+      "EN": "UNESCO listed it in 2001 for how it kept its medieval houses and building techniques.",
+      "PT": "A UNESCO classificou-o em 2001 pela forma como manteve as casas medievais e a sua técnica de construção."
+    }
+  }
+}

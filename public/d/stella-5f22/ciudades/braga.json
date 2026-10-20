@@ -1,0 +1,1200 @@
+{
+  "slug": "braga",
+  "nombre": "Braga",
+  "intro": {
+    "ES": "Dos mil años de historia a diez minutos del hotel: la catedral más antigua del país, la escalinata del Bom Jesus y cafés con terraza. Y, a una hora, las sierras del Gerês y Guimarães, donde nació Portugal.",
+    "EN": "Two thousand years of history ten minutes from the hotel: the country’s oldest cathedral, the Bom Jesus stairway and cafés with terraces. And within an hour, the Gerês mountains and Guimarães, where Portugal was born.",
+    "PT": "Dois mil anos de história a dez minutos do hotel: a sé mais antiga do país, o escadório do Bom Jesus e cafés com esplanada. E, a uma hora, as serras do Gerês e Guimarães, onde nasceu Portugal."
+  },
+  "lugares": [
+    {
+      "id": "se",
+      "img": "/ciudades/braga/img/se.jpg",
+      "nombre": "Sé de Braga",
+      "zona": {
+        "ES": "Casco histórico",
+        "EN": "Old town",
+        "PT": "Centro histórico"
+      },
+      "d": {
+        "ES": "La catedral más antigua de Portugal, empezada en el siglo XI. Dentro, capillas góticas, dos órganos barrocos dorados y el claustro.",
+        "EN": "Portugal's oldest cathedral, begun in the 11th century. Inside: Gothic chapels, two gilded baroque organs and the cloister.",
+        "PT": "A catedral mais antiga de Portugal, começada no século XI. Lá dentro, capelas góticas, dois órgãos barrocos dourados e o claustro."
+      },
+      "cuando": {
+        "ES": "Por la mañana, antes de los grupos",
+        "EN": "In the morning, before the groups",
+        "PT": "De manhã, antes dos grupos"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 41.5498,
+      "lng": -8.4271
+    },
+    {
+      "id": "bom-jesus",
+      "img": "/ciudades/braga/img/bom-jesus.jpg",
+      "nombre": "Bom Jesus do Monte",
+      "zona": {
+        "ES": "Monte Espinho",
+        "EN": "Monte Espinho",
+        "PT": "Monte Espinho"
+      },
+      "d": {
+        "ES": "La escalinata barroca en zigzag, Patrimonio Mundial desde 2019, con el funicular de agua de 1882 y un parque con lago arriba.",
+        "EN": "The zigzag baroque stairway, World Heritage since 2019, with the 1882 water-powered funicular and a park with a lake at the top.",
+        "PT": "O escadório barroco em ziguezague, Património Mundial desde 2019, com o elevador de água de 1882 e um parque com lago no topo."
+      },
+      "cuando": {
+        "ES": "A última hora de la tarde, con el sol en la fachada",
+        "EN": "Late afternoon, with sun on the façade",
+        "PT": "Ao fim da tarde, com o sol na fachada"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 41.5544,
+      "lng": -8.3772
+    },
+    {
+      "id": "sameiro",
+      "img": "/ciudades/braga/img/sameiro.jpg",
+      "nombre": "Santuário do Sameiro",
+      "zona": {
+        "ES": "Monte do Sameiro",
+        "EN": "Monte do Sameiro",
+        "PT": "Monte do Sameiro"
+      },
+      "d": {
+        "ES": "La cúpula blanca que se ve desde toda la ciudad. Desde el atrio, la vista sobre Braga y todo el Miño.",
+        "EN": "The white dome you can see from all over town. From the forecourt, the view over Braga and the whole Minho.",
+        "PT": "A cúpula branca que se vê de toda a cidade. Do adro, a vista sobre Braga e o Minho inteiro."
+      },
+      "cuando": {
+        "ES": "Al atardecer",
+        "EN": "At sunset",
+        "PT": "Ao pôr do sol"
+      },
+      "min": 12,
+      "modo": "coche",
+      "lat": 41.5422,
+      "lng": -8.3698
+    },
+    {
+      "id": "santa-barbara",
+      "img": "/ciudades/braga/img/santa-barbara.jpg",
+      "nombre": "Jardim de Santa Bárbara",
+      "zona": {
+        "ES": "Casco histórico",
+        "EN": "Old town",
+        "PT": "Centro histórico"
+      },
+      "d": {
+        "ES": "Parterres de flores pegados al ala medieval del Palacio de los Arzobispos. El jardín más fotografiado de Braga.",
+        "EN": "Flower beds against the medieval wing of the Archbishops' Palace. Braga's most photographed garden.",
+        "PT": "Canteiros de flores encostados à ala medieval do Paço dos Arcebispos. O jardim mais fotografado de Braga."
+      },
+      "cuando": {
+        "ES": "En primavera, con los tulipanes",
+        "EN": "In spring, with the tulips",
+        "PT": "Na primavera, com as tulipas"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 41.5517,
+      "lng": -8.425
+    },
+    {
+      "id": "porta-nova",
+      "img": "/ciudades/braga/img/porta-nova.jpg",
+      "nombre": "Arco da Porta Nova",
+      "zona": {
+        "ES": "Casco histórico",
+        "EN": "Old town",
+        "PT": "Centro histórico"
+      },
+      "d": {
+        "ES": "La entrada barroca a la ciudad antigua, del siglo XVIII. Nunca tuvo puertas: de ahí el «eres de Braga» a quien las deja abiertas.",
+        "EN": "The 18th-century baroque gateway to the old town. It never had doors, hence the Portuguese jibe \"are you from Braga?\" when you leave one open.",
+        "PT": "A entrada barroca da cidade antiga, do século XVIII. Nunca teve portas: daí o «és de Braga» a quem as deixa abertas."
+      },
+      "cuando": {
+        "ES": "A cualquier hora; de noche está iluminado",
+        "EN": "Any time; it is lit up at night",
+        "PT": "A qualquer hora; à noite está iluminado"
+      },
+      "min": 12,
+      "modo": "coche",
+      "lat": 41.5507,
+      "lng": -8.4302
+    },
+    {
+      "id": "biscainhos",
+      "img": "/ciudades/braga/img/biscainhos.jpg",
+      "nombre": "Palácio dos Biscainhos",
+      "zona": {
+        "ES": "Casco histórico",
+        "EN": "Old town",
+        "PT": "Centro histórico"
+      },
+      "d": {
+        "ES": "Casa noble barroca, hoy museo, con azulejos, carruajes y un jardín de boj con estatuas y un tulipero centenario.",
+        "EN": "A baroque noble house, now a museum, with tiles, carriages and a box-hedge garden with statues and a century-old tulip tree.",
+        "PT": "Casa nobre barroca, hoje museu, com azulejos, carruagens e um jardim de buxo com estátuas e um tulipeiro centenário."
+      },
+      "cuando": {
+        "ES": "De martes a domingo",
+        "EN": "Tuesday to Sunday",
+        "PT": "De terça a domingo"
+      },
+      "min": 12,
+      "modo": "coche",
+      "lat": 41.5525,
+      "lng": -8.43
+    },
+    {
+      "id": "brasileira",
+      "img": "/ciudades/braga/img/brasileira.jpg",
+      "nombre": "Café A Brasileira",
+      "zona": {
+        "ES": "Largo do Barão de São Martinho",
+        "EN": "Largo do Barão de São Martinho",
+        "PT": "Largo do Barão de São Martinho"
+      },
+      "d": {
+        "ES": "Abierto en 1907, con azulejos y terraza. Pide un café y un pastel y mira pasar Braga.",
+        "EN": "Open since 1907, with tiles and a terrace. Order a coffee and a pastry and watch Braga go by.",
+        "PT": "Aberto em 1907, com azulejos e esplanada. Peça um café e um pastel e veja Braga passar."
+      },
+      "cuando": {
+        "ES": "A media mañana",
+        "EN": "Mid-morning",
+        "PT": "A meio da manhã"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 41.5513,
+      "lng": -8.4232
+    },
+    {
+      "id": "theatro-circo",
+      "img": "/ciudades/braga/img/theatro-circo.jpg",
+      "nombre": "Theatro Circo",
+      "zona": {
+        "ES": "Avenida da Liberdade",
+        "EN": "Avenida da Liberdade",
+        "PT": "Avenida da Liberdade"
+      },
+      "d": {
+        "ES": "Teatro de 1915, todo dorado y terciopelo rojo. Mira qué hay en cartel: conciertos, danza y el festival Para Gente Sentada.",
+        "EN": "A 1915 theatre, all gilt and red velvet. See what is on: concerts, dance and the Para Gente Sentada festival.",
+        "PT": "Teatro de 1915, todo em dourado e veludo vermelho. Veja o que está em cena: concertos, dança e o festival Para Gente Sentada."
+      },
+      "cuando": {
+        "ES": "De noche, con función",
+        "EN": "In the evening, for a show",
+        "PT": "À noite, com espetáculo"
+      },
+      "min": 9,
+      "modo": "coche",
+      "lat": 41.5497,
+      "lng": -8.4219
+    }
+  ],
+  "rutas": [
+    {
+      "id": "bom-jesus",
+      "expId": "ex1",
+      "img": "/ciudades/braga/img/bom-jesus.jpg",
+      "titulo": {
+        "ES": "Bom Jesus y Sameiro",
+        "EN": "Bom Jesus and Sameiro",
+        "PT": "Bom Jesus e Sameiro"
+      },
+      "tipo": {
+        "ES": "Al caer la tarde",
+        "EN": "Late afternoon",
+        "PT": "Ao fim da tarde"
+      },
+      "dur": "3 h 30 min",
+      "d": {
+        "ES": "Sube en el funicular de agua, baja la escalinata barroca y acaba en el Sameiro viendo ponerse el sol sobre Braga.",
+        "EN": "Ride the water funicular, walk down the baroque stairway and end at Sameiro watching the sun set over Braga.",
+        "PT": "Sobe no elevador a água, desce o escadório barroco e acaba no Sameiro a ver o sol pôr-se sobre Braga."
+      },
+      "salida": {
+        "ES": "Recepción del hotel, a las 16:00",
+        "EN": "Hotel reception, at 4 pm",
+        "PT": "Receção do hotel, às 16:00"
+      },
+      "incluye": {
+        "PT": [
+          "Transporte de ida e volta",
+          "Bilhete do elevador",
+          "Guia local"
+        ],
+        "ES": [
+          "Traslado de ida y vuelta",
+          "Billete del funicular",
+          "Guía local"
+        ],
+        "EN": [
+          "Return transfer",
+          "Funicular ticket",
+          "Local guide"
+        ]
+      },
+      "llevar": {
+        "PT": [
+          "Calçado confortável: são 577 degraus",
+          "Um casaco para o Sameiro, onde corre vento"
+        ],
+        "ES": [
+          "Calzado cómodo: son 577 escalones",
+          "Una chaqueta para el Sameiro, donde corre el viento"
+        ],
+        "EN": [
+          "Comfortable shoes: there are 577 steps",
+          "A jacket for Sameiro, which is windy"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Funicular del Bom Jesus",
+            "EN": "Bom Jesus funicular",
+            "PT": "Elevador do Bom Jesus"
+          },
+          "s": {
+            "ES": "Sube con agua desde 1882",
+            "EN": "Water-powered since 1882",
+            "PT": "Sobe a água desde 1882"
+          },
+          "d": {
+            "ES": "Dos cabinas unidas por un cable: la de arriba se llena de agua, pesa más, baja y tira de la otra. Tres minutos entre árboles hasta arriba.",
+            "EN": "Two cars joined by a cable: the top one fills with water, gets heavier, goes down and pulls the other up. Three minutes through the trees to the top.",
+            "PT": "Duas cabines ligadas por um cabo: a de cima enche-se de água, pesa mais, desce e puxa a outra. Três minutos entre árvores até ao topo."
+          },
+          "tip": {
+            "ES": "Siéntate del lado de la ciudad: la vista se abre a mitad de subida.",
+            "EN": "Sit on the town side: the view opens up halfway.",
+            "PT": "Sente-se do lado da cidade: a vista abre-se a meio da subida."
+          },
+          "hora": "16:15",
+          "dur": "15 min",
+          "img": "/ciudades/braga/img/bj-1.jpg",
+          "lat": 41.5556,
+          "lng": -8.3829,
+          "tramo": "coche",
+          "duracionMin": 15,
+          "tramoDuracionMin": 12
+        },
+        {
+          "n": {
+            "ES": "Escalinata de los Cinco Sentidos",
+            "EN": "Stairway of the Five Senses",
+            "PT": "Escadório dos Cinco Sentidos"
+          },
+          "s": {
+            "ES": "Bajando, de rellano en rellano",
+            "EN": "Walking down, landing by landing",
+            "PT": "A descer, de patamar em patamar"
+          },
+          "d": {
+            "ES": "En cada rellano una fuente para un sentido —vista, oído, olfato, gusto y tacto— y, más arriba, las virtudes. Es el zigzag blanco y granito de las fotos.",
+            "EN": "Each landing has a fountain for one sense — sight, hearing, smell, taste and touch — and higher up, the virtues. The white-and-granite zigzag from the photos.",
+            "PT": "Em cada patamar uma fonte para um sentido — vista, ouvido, olfato, gosto e tato — e, mais acima, as virtudes. É o ziguezague branco e granito das fotografias."
+          },
+          "tip": {
+            "ES": "La mejor foto es de abajo arriba, desde el primer rellano.",
+            "EN": "The best photo is from the first landing, looking up.",
+            "PT": "A melhor foto é de baixo para cima, no primeiro patamar."
+          },
+          "hora": "16:35",
+          "dur": "40 min",
+          "img": "/ciudades/braga/img/bj-2.jpg",
+          "lat": 41.5548,
+          "lng": -8.379,
+          "tramo": "pie",
+          "duracionMin": 40,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Basílica y parque del lago",
+            "EN": "Basilica and lakeside park",
+            "PT": "Basílica e parque do lago"
+          },
+          "s": {
+            "ES": "Arriba, a la sombra",
+            "EN": "Up top, in the shade",
+            "PT": "Lá em cima, à sombra"
+          },
+          "d": {
+            "ES": "La basílica neoclásica cierra la escalinata. Detrás, un parque con grutas, un lago con barcas de remo y terrazas.",
+            "EN": "The neoclassical basilica crowns the stairway. Behind it, a park with grottoes, a lake with rowing boats and terraces.",
+            "PT": "A basílica neoclássica fecha o escadório. Atrás, um parque com grutas, um lago com barquinhos a remos e esplanadas."
+          },
+          "tip": {
+            "ES": "Las barcas se alquilan junto al lago: con diez minutos basta.",
+            "EN": "Boats are hired by the lake: ten minutes is plenty.",
+            "PT": "Os barcos alugam-se ao lado do lago: dez minutos chegam."
+          },
+          "hora": "17:20",
+          "dur": "35 min",
+          "img": "/ciudades/braga/img/bj-3.jpg",
+          "lat": 41.5537,
+          "lng": -8.3762,
+          "tramo": "pie",
+          "duracionMin": 35,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Santuario del Sameiro",
+            "EN": "Sameiro sanctuary",
+            "PT": "Santuário do Sameiro"
+          },
+          "s": {
+            "ES": "La puesta de sol sobre Braga",
+            "EN": "Sunset over Braga",
+            "PT": "O pôr do sol sobre Braga"
+          },
+          "d": {
+            "ES": "Cinco minutos en coche y llegas al mirador más alto: toda la ciudad abajo y, al fondo, las sierras del Gerês.",
+            "EN": "Five minutes by car to the highest lookout: the whole city below and the Gerês mountains beyond.",
+            "PT": "Cinco minutos de carro e chega ao miradouro mais alto: a cidade inteira lá em baixo e, ao fundo, as serras do Gerês."
+          },
+          "tip": {
+            "ES": "Reserva mesa en el Seara a las 20:30: llegas con tiempo.",
+            "EN": "Book a table at Seara for 8:30 pm: you will be back in time.",
+            "PT": "Reserve mesa no Seara para as 20:30: chega com tempo."
+          },
+          "hora": "18:10",
+          "dur": "40 min",
+          "img": "/ciudades/braga/img/bj-4.jpg",
+          "lat": 41.5422,
+          "lng": -8.3698,
+          "tramo": "coche",
+          "duracionMin": 40,
+          "tramoDuracionMin": 6
+        }
+      ],
+      "fotos": [
+        "/ciudades/braga/img/bom-jesus.jpg",
+        "/ciudades/braga/img/bj-1.jpg",
+        "/ciudades/braga/img/bj-2.jpg",
+        "/ciudades/braga/img/bj-3.jpg",
+        "/ciudades/braga/img/bj-4.jpg"
+      ],
+      "duracionMin": 210,
+      "distanciaKm": 11.5,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "El funicular tiene escalones a la entrada y la escalinata no es accesible en silla de ruedas; en coche se llega arriba y al Sameiro.",
+        "EN": "The funicular has steps at the entrance and the stairway is not wheelchair-accessible; you can drive to the top and to Sameiro.",
+        "PT": "O elevador tem degraus à entrada e o escadório não é acessível em cadeira de rodas; de carro chega-se ao topo e ao Sameiro."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 41.5369,
+        "lng": -8.4055,
+        "foto": "/ciudades/braga/img/bj-1.jpg",
+        "texto": {
+          "ES": "Recepción del hotel, 5 minutos antes.",
+          "EN": "Hotel reception, 5 minutes early.",
+          "PT": "Receção do hotel, 5 minutos antes."
+        }
+      },
+      "noIncluye": {
+        "PT": [
+          "Jantar",
+          "Barcos do lago"
+        ],
+        "ES": [
+          "Cena",
+          "Barcas del lago"
+        ],
+        "EN": [
+          "Dinner",
+          "Lake boats"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Con lluvia fuerte se cambia de día.",
+        "EN": "Free up to 24 h before. In heavy rain it moves to another day.",
+        "PT": "Grátis até 24 h antes. Com chuva forte muda-se de dia."
+      },
+      "salidasFijas": [
+        "16:00"
+      ],
+      "precioDesde": 25
+    },
+    {
+      "id": "centro",
+      "img": "/ciudades/braga/img/braga.jpg",
+      "titulo": {
+        "ES": "Braga a pie",
+        "EN": "Braga on foot",
+        "PT": "Braga a pé"
+      },
+      "tipo": {
+        "ES": "Ruta libre",
+        "EN": "Self-guided",
+        "PT": "Rota livre"
+      },
+      "dur": "2 h 30 min",
+      "d": {
+        "ES": "Dos mil años en cinco paradas: de la ciudad romana a la barroca, con un café en A Brasileira por medio.",
+        "EN": "Two thousand years in five stops: from the Roman city to the baroque one, with a coffee at A Brasileira on the way.",
+        "PT": "Dois mil anos em cinco paragens: da cidade romana à barroca, com café n’A Brasileira pelo meio."
+      },
+      "salida": {
+        "ES": "Taxi o autobús hasta los Biscainhos (10 minutos)",
+        "EN": "Taxi or bus to Biscainhos (10 minutes)",
+        "PT": "Táxi ou autocarro até aos Biscainhos (10 minutos)"
+      },
+      "incluye": {
+        "PT": [
+          "Rota com mapa e paragens",
+          "Dicas da casa"
+        ],
+        "ES": [
+          "Ruta con mapa y paradas",
+          "Consejos de la casa"
+        ],
+        "EN": [
+          "Route with map and stops",
+          "House tips"
+        ]
+      },
+      "llevar": {
+        "PT": [
+          "Calçado confortável: há calçada",
+          "Algum dinheiro para o café"
+        ],
+        "ES": [
+          "Calzado cómodo: hay adoquín",
+          "Algo de dinero para el café"
+        ],
+        "EN": [
+          "Comfortable shoes: cobbles",
+          "Some cash for coffee"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Palacio de los Biscainhos",
+            "EN": "Biscainhos Palace",
+            "PT": "Palácio dos Biscainhos"
+          },
+          "s": {
+            "ES": "Cómo vivía la nobleza",
+            "EN": "How the nobility lived",
+            "PT": "Como vivia a nobreza"
+          },
+          "d": {
+            "ES": "Casa barroca con salones de azulejo, cocheras y un jardín de boj con estatuas. Empieza por el jardín.",
+            "EN": "A baroque house with tiled rooms, coach houses and a box-hedge garden with statues. Start with the garden.",
+            "PT": "Casa barroca com salões de azulejo, cocheiras e um jardim de buxo com estátuas. Comece pelo jardim."
+          },
+          "tip": {
+            "ES": "Cierra los lunes.",
+            "EN": "Closed on Mondays.",
+            "PT": "Fecha à segunda-feira."
+          },
+          "hora": "10:00",
+          "dur": "40 min",
+          "img": "/ciudades/braga/img/biscainhos.jpg",
+          "lat": 41.5525,
+          "lng": -8.43,
+          "tramo": "coche",
+          "duracionMin": 40,
+          "tramoDuracionMin": 10
+        },
+        {
+          "n": {
+            "ES": "Arco da Porta Nova",
+            "EN": "Arco da Porta Nova",
+            "PT": "Arco da Porta Nova"
+          },
+          "s": {
+            "ES": "La puerta sin puertas",
+            "EN": "The gate with no doors",
+            "PT": "A porta sem portas"
+          },
+          "d": {
+            "ES": "Del siglo XVIII, se abre donde había una puerta de la muralla. Crúzalo y entra en la Rua do Souto, la principal de la ciudad antigua.",
+            "EN": "18th century, built where a gate in the walls once stood. Walk through into Rua do Souto, the old town’s main street.",
+            "PT": "Do século XVIII, abre-se onde estava uma porta da muralha. Atravesse-o e entre na Rua do Souto, a principal da cidade antiga."
+          },
+          "tip": {
+            "ES": "Mira atrás al cruzarlo: el arco tiene dos caras distintas.",
+            "EN": "Look back once through: the arch has two different faces.",
+            "PT": "Olhe para trás depois de passar: o arco tem duas faces diferentes."
+          },
+          "hora": "10:45",
+          "dur": "10 min",
+          "img": "/ciudades/braga/img/porta-nova.jpg",
+          "lat": 41.5507,
+          "lng": -8.4302,
+          "tramo": "pie",
+          "duracionMin": 10,
+          "tramoDuracionMin": 3
+        },
+        {
+          "n": {
+            "ES": "Catedral de Braga",
+            "EN": "Braga Cathedral",
+            "PT": "Sé de Braga"
+          },
+          "s": {
+            "ES": "Más vieja que Portugal",
+            "EN": "Older than Portugal",
+            "PT": "Mais velha que Portugal"
+          },
+          "d": {
+            "ES": "Empezó en el siglo XI, antes de existir el reino. Mira el claustro y, si puedes, los órganos dorados del coro alto.",
+            "EN": "Begun in the 11th century, before the kingdom existed. See the cloister and, if you can, the gilded organs in the upper choir.",
+            "PT": "Começou no século XI, antes de existir o reino. Veja o claustro e, se puder, os órgãos dourados do coro alto."
+          },
+          "tip": {
+            "ES": "La entrada del tesoro incluye el coro alto: merece la pena.",
+            "EN": "The treasury ticket includes the upper choir: worth it.",
+            "PT": "O bilhete do tesouro inclui o coro alto: vale a pena."
+          },
+          "hora": "11:00",
+          "dur": "45 min",
+          "img": "/ciudades/braga/img/braga-2.jpg",
+          "lat": 41.5498,
+          "lng": -8.4271,
+          "tramo": "pie",
+          "duracionMin": 45,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Rua do Souto y A Brasileira",
+            "EN": "Rua do Souto and A Brasileira",
+            "PT": "Rua do Souto e A Brasileira"
+          },
+          "s": {
+            "ES": "Café con historia",
+            "EN": "Coffee with history",
+            "PT": "Café com história"
+          },
+          "d": {
+            "ES": "Tiendas antiguas, balcones de hierro y, al final, A Brasileira, abierta desde 1907. Siéntate en la terraza.",
+            "EN": "Old shops, iron balconies and, at the end, A Brasileira, open since 1907. Take a seat on the terrace.",
+            "PT": "Lojas antigas, varandas de ferro e, ao fundo, A Brasileira, aberta desde 1907. Sente-se na esplanada."
+          },
+          "tip": {
+            "ES": "Pide un «cimbalino»: así llaman en el norte al café solo.",
+            "EN": "Ask for a \"cimbalino\": that is what the north calls an espresso.",
+            "PT": "Peça um «cimbalino»: é como no Norte se chama ao café curto."
+          },
+          "hora": "11:50",
+          "dur": "30 min",
+          "img": "/ciudades/braga/img/brasileira.jpg",
+          "lat": 41.5513,
+          "lng": -8.4232,
+          "tramo": "pie",
+          "duracionMin": 30,
+          "tramoDuracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Jardín de Santa Bárbara",
+            "EN": "Santa Bárbara garden",
+            "PT": "Jardim de Santa Bárbara"
+          },
+          "s": {
+            "ES": "Flores y muralla",
+            "EN": "Flowers and walls",
+            "PT": "Flores e muralha"
+          },
+          "d": {
+            "ES": "El jardín pegado al ala medieval del Palacio de los Arzobispos, con la fuente de Santa Bárbara en el centro. Un buen final.",
+            "EN": "The garden against the medieval wing of the Archbishops’ Palace, with the Santa Bárbara fountain in the middle. A lovely finish.",
+            "PT": "O jardim encostado à ala medieval do Paço dos Arcebispos, com a fonte de Santa Bárbara ao centro. Um fecho bonito."
+          },
+          "tip": {
+            "ES": "Al otro lado de la calle hay taxis para volver al hotel.",
+            "EN": "There are taxis across the street to get back to the hotel.",
+            "PT": "Do outro lado da rua há táxis para voltar ao hotel."
+          },
+          "hora": "12:25",
+          "dur": "20 min",
+          "img": "/ciudades/braga/img/santa-barbara.jpg",
+          "lat": 41.5517,
+          "lng": -8.425,
+          "tramo": "pie",
+          "duracionMin": 20,
+          "tramoDuracionMin": 3
+        }
+      ],
+      "fotos": [
+        "/ciudades/braga/img/braga.jpg",
+        "/ciudades/braga/img/biscainhos.jpg",
+        "/ciudades/braga/img/porta-nova.jpg",
+        "/ciudades/braga/img/braga-2.jpg",
+        "/ciudades/braga/img/brasileira.jpg",
+        "/ciudades/braga/img/santa-barbara.jpg"
+      ],
+      "duracionMin": 150,
+      "distanciaKm": 1.6,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Recorrido llano con algo de adoquín; la catedral tiene rampa en la entrada lateral.",
+        "EN": "Flat route with some cobbles; the cathedral has a ramp at the side entrance.",
+        "PT": "Percurso plano com alguma calçada; a Sé tem acesso por rampa na entrada lateral."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 41.5525,
+        "lng": -8.43,
+        "foto": "/ciudades/braga/img/biscainhos.jpg",
+        "texto": {
+          "ES": "Puerta del Palacio de los Biscainhos.",
+          "EN": "Gate of the Biscainhos Palace.",
+          "PT": "Portão do Palácio dos Biscainhos."
+        }
+      },
+      "noIncluye": {
+        "PT": [
+          "Entradas nos museus",
+          "Transporte"
+        ],
+        "ES": [
+          "Entradas a los museos",
+          "Transporte"
+        ],
+        "EN": [
+          "Museum tickets",
+          "Transport"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre: se hace cuando quieras.",
+        "EN": "Self-guided: do it whenever you like.",
+        "PT": "Rota livre: faz-se quando quiser."
+      },
+      "precioDesde": null
+    },
+    {
+      "id": "geres",
+      "expId": "ex3",
+      "img": "/ciudades/braga/img/geres.jpg",
+      "titulo": {
+        "ES": "Un día en el Gerês",
+        "EN": "A day in Gerês",
+        "PT": "Um dia no Gerês"
+      },
+      "tipo": {
+        "ES": "Naturaleza",
+        "EN": "Nature",
+        "PT": "Natureza"
+      },
+      "dur": "9 h 30 min",
+      "d": {
+        "ES": "El único parque nacional de Portugal: sierras de granito, cascadas, una aldea sumergida y una calzada romana.",
+        "EN": "Portugal's only national park: granite mountains, waterfalls, a drowned village and a Roman road.",
+        "PT": "O único parque nacional de Portugal: serras de granito, cascatas, uma aldeia submersa e uma estrada romana."
+      },
+      "salida": {
+        "ES": "Recepción del hotel, a las 09:00",
+        "EN": "Hotel reception, at 9 am",
+        "PT": "Receção do hotel, às 09:00"
+      },
+      "incluye": {
+        "PT": [
+          "Carrinha com motorista-guia",
+          "Água e fruta",
+          "Seguro"
+        ],
+        "ES": [
+          "Furgoneta con conductor-guía",
+          "Agua y fruta",
+          "Seguro"
+        ],
+        "EN": [
+          "Minivan with driver-guide",
+          "Water and fruit",
+          "Insurance"
+        ]
+      },
+      "llevar": {
+        "PT": [
+          "Ténis ou botas",
+          "Fato de banho no verão",
+          "Casaco: na serra está mais fresco"
+        ],
+        "ES": [
+          "Zapatillas o botas",
+          "Bañador en verano",
+          "Chaqueta: en la sierra hace más fresco"
+        ],
+        "EN": [
+          "Trainers or boots",
+          "Swimsuit in summer",
+          "A jacket: it is cooler up there"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Mirador de la Pedra Bela",
+            "EN": "Pedra Bela lookout",
+            "PT": "Miradouro da Pedra Bela"
+          },
+          "s": {
+            "ES": "Todo el valle a tus pies",
+            "EN": "The whole valley below you",
+            "PT": "O vale inteiro aos seus pés"
+          },
+          "d": {
+            "ES": "Una roca sobre el valle del Caldo y el embalse de Caniçada. Es la primera vista del día y la más amplia.",
+            "EN": "A rock above the Caldo valley and the Caniçada reservoir. The first and widest view of the day.",
+            "PT": "Um penedo sobre o vale do Caldo e a albufeira da Caniçada. É a primeira vista e a mais larga do dia."
+          },
+          "tip": {
+            "ES": "Llega pronto: a las 10:30 ya hay cola de coches.",
+            "EN": "Get there early: by 10:30 there is a queue of cars.",
+            "PT": "Chegue cedo: às 10:30 já há fila de carros."
+          },
+          "hora": "10:00",
+          "dur": "30 min",
+          "img": "/ciudades/braga/img/geres.jpg",
+          "lat": 41.727,
+          "lng": -8.144,
+          "tramo": "coche",
+          "duracionMin": 30,
+          "tramoDuracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Cascada del Arado",
+            "EN": "Arado waterfall",
+            "PT": "Cascata do Arado"
+          },
+          "s": {
+            "ES": "Agua cayendo sobre granito",
+            "EN": "Water over granite",
+            "PT": "Água a cair sobre granito"
+          },
+          "d": {
+            "ES": "Un paseo corto lleva al mirador de la cascada, que baja en varios saltos por la roca. Con suerte, verás garranos pastando.",
+            "EN": "A short walk to the waterfall lookout, as it drops in several leaps down the rock. With luck you will see wild garrano ponies grazing.",
+            "PT": "Um curto passeio leva ao miradouro da cascata, que desce em vários saltos pela rocha. Com sorte, vê garranos a pastar."
+          },
+          "tip": {
+            "ES": "Las piedras mojadas resbalan: quédate en el mirador.",
+            "EN": "Wet rocks are slippery: stay at the lookout.",
+            "PT": "As pedras molhadas escorregam: fique no miradouro."
+          },
+          "hora": "10:45",
+          "dur": "45 min",
+          "img": "/ciudades/braga/img/geres-2.jpg",
+          "lat": 41.7375,
+          "lng": -8.1324,
+          "tramo": "coche",
+          "duracionMin": 45,
+          "tramoDuracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Vilarinho da Furna",
+            "EN": "Vilarinho da Furna",
+            "PT": "Vilarinho da Furna"
+          },
+          "s": {
+            "ES": "La aldea bajo el agua",
+            "EN": "The village under water",
+            "PT": "A aldeia debaixo de água"
+          },
+          "d": {
+            "ES": "Una aldea comunitaria que quedó sumergida por una presa en 1972. Cuando baja el agua, las casas de piedra vuelven a asomar.",
+            "EN": "A communal village drowned by a dam in 1972. When the water drops, the stone houses reappear.",
+            "PT": "Uma aldeia comunitária que ficou submersa por uma barragem em 1972. Quando a água baixa, as casas de pedra voltam a aparecer."
+          },
+          "tip": {
+            "ES": "A finales de verano es cuando más se ve de la aldea.",
+            "EN": "Late summer is when you see most of the village.",
+            "PT": "No fim do verão é quando mais se vê da aldeia."
+          },
+          "hora": "12:00",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/braga/img/geres-3.jpg",
+          "lat": 41.759,
+          "lng": -8.194,
+          "tramo": "coche",
+          "duracionMin": 90,
+          "tramoDuracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Calzada romana",
+            "EN": "Roman road",
+            "PT": "Geira romana"
+          },
+          "s": {
+            "ES": "Hitos de 1.900 años",
+            "EN": "1,900-year-old milestones",
+            "PT": "Marcos com 1.900 anos"
+          },
+          "d": {
+            "ES": "En la mata de Albergaria, la vía que unía Braga con Astorga aún tiene decenas de miliarios en pie, entre robles.",
+            "EN": "In the Albergaria woods, the road from Braga to Astorga still has dozens of milestones standing among the oaks.",
+            "PT": "Na mata da Albergaria, a via que ligava Braga a Astorga ainda tem dezenas de marcos miliários de pé, entre carvalhos."
+          },
+          "tip": {
+            "ES": "Busca las letras grabadas: muchos llevan el nombre del emperador.",
+            "EN": "Look for the carved letters: many bear the emperor’s name.",
+            "PT": "Procure as letras gravadas: muitos têm o nome do imperador."
+          },
+          "hora": "14:00",
+          "dur": "45 min",
+          "img": "/ciudades/braga/img/geres-4.jpg",
+          "lat": 41.798,
+          "lng": -8.136,
+          "tramo": "coche",
+          "duracionMin": 45,
+          "tramoDuracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Portela do Homem",
+            "EN": "Portela do Homem",
+            "PT": "Portela do Homem"
+          },
+          "s": {
+            "ES": "Una poza verde en la frontera",
+            "EN": "A green pool on the border",
+            "PT": "Uma lagoa verde na fronteira"
+          },
+          "d": {
+            "ES": "La cascada cae en una poza de agua transparente, justo antes de la frontera con Galicia. En verano, es el baño del día.",
+            "EN": "The waterfall drops into a clear pool right before the Galician border. In summer, it is the swim of the day.",
+            "PT": "A cascata cai numa lagoa de água transparente, mesmo antes da fronteira com a Galiza. No verão, é o banho do dia."
+          },
+          "tip": {
+            "ES": "El agua está fría incluso en agosto: entra despacio.",
+            "EN": "The water is cold even in August: ease in.",
+            "PT": "A água é fria mesmo em agosto: entre devagar."
+          },
+          "hora": "15:00",
+          "dur": "1 h",
+          "img": "/ciudades/braga/img/geres-5.jpg",
+          "lat": 41.8076,
+          "lng": -8.1294,
+          "tramo": "coche",
+          "duracionMin": 60,
+          "tramoDuracionMin": 10
+        }
+      ],
+      "fotos": [
+        "/ciudades/braga/img/geres.jpg",
+        "/ciudades/braga/img/geres-2.jpg",
+        "/ciudades/braga/img/geres-3.jpg",
+        "/ciudades/braga/img/geres-4.jpg",
+        "/ciudades/braga/img/geres-5.jpg"
+      ],
+      "duracionMin": 570,
+      "distanciaKm": 150,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Casi todo se ve junto a la furgoneta; los accesos a las cascadas tienen escalones y piedras.",
+        "EN": "Most of it is seen close to the van; the paths to the waterfalls have steps and rocks.",
+        "PT": "Quase tudo se vê junto à carrinha; os acessos às cascatas têm degraus e pedras."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 41.5369,
+        "lng": -8.4055,
+        "foto": "/ciudades/braga/img/geres.jpg",
+        "texto": {
+          "ES": "Recepción del hotel, 10 minutos antes.",
+          "EN": "Hotel reception, 10 minutes early.",
+          "PT": "Receção do hotel, 10 minutos antes."
+        }
+      },
+      "noIncluye": {
+        "PT": [
+          "Almoço",
+          "Bebidas"
+        ],
+        "ES": [
+          "Comida",
+          "Bebidas"
+        ],
+        "EN": [
+          "Lunch",
+          "Drinks"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 48 h antes. Con mal tiempo se cambia de día.",
+        "EN": "Free up to 48 h before. In bad weather it moves to another day.",
+        "PT": "Grátis até 48 h antes. Com mau tempo muda-se de dia."
+      },
+      "salidasFijas": [
+        "09:00"
+      ],
+      "precioDesde": 65
+    },
+    {
+      "id": "guimaraes",
+      "expId": "ex4",
+      "img": "/ciudades/braga/img/guimaraes.jpg",
+      "titulo": {
+        "ES": "Guimarães, cuna de Portugal",
+        "EN": "Guimarães, cradle of Portugal",
+        "PT": "Guimarães, berço de Portugal"
+      },
+      "tipo": {
+        "ES": "Medio día",
+        "EN": "Half day",
+        "PT": "Meio dia"
+      },
+      "dur": "4 h",
+      "d": {
+        "ES": "A 25 minutos: el castillo donde empezó todo, el palacio de los duques y un casco histórico Patrimonio Mundial.",
+        "EN": "25 minutes away: the castle where it all began, the dukes’ palace and a World Heritage old town.",
+        "PT": "A 25 minutos: o castelo onde tudo começou, o paço dos duques e um centro histórico Património Mundial."
+      },
+      "salida": {
+        "ES": "Recepción del hotel, a las 09:30",
+        "EN": "Hotel reception, at 9:30 am",
+        "PT": "Receção do hotel, às 09:30"
+      },
+      "incluye": {
+        "PT": [
+          "Transporte de ida e volta",
+          "Guia local",
+          "Entradas no castelo e no paço"
+        ],
+        "ES": [
+          "Traslado de ida y vuelta",
+          "Guía local",
+          "Entradas al castillo y al palacio"
+        ],
+        "EN": [
+          "Return transfer",
+          "Local guide",
+          "Castle and palace tickets"
+        ]
+      },
+      "llevar": {
+        "PT": [
+          "Calçado confortável",
+          "Apetite para um doce conventual"
+        ],
+        "ES": [
+          "Calzado cómodo",
+          "Hambre para un dulce conventual"
+        ],
+        "EN": [
+          "Comfortable shoes",
+          "Room for a convent sweet"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Castillo de Guimarães",
+            "EN": "Guimarães Castle",
+            "PT": "Castelo de Guimarães"
+          },
+          "s": {
+            "ES": "Donde nació el primer rey",
+            "EN": "Where the first king was born",
+            "PT": "Onde nasceu o primeiro rei"
+          },
+          "d": {
+            "ES": "Torres de granito del siglo X en lo alto de la colina. La tradición dice que aquí nació Afonso Henriques.",
+            "EN": "10th-century granite towers atop the hill. Tradition says Afonso Henriques, the first king, was born here.",
+            "PT": "Torres de granito do século X no alto da colina. A tradição diz que aqui nasceu D. Afonso Henriques."
+          },
+          "tip": {
+            "ES": "Sube a la torre del homenaje: se ve toda la ciudad.",
+            "EN": "Climb the keep: you can see the whole town.",
+            "PT": "Suba à torre de menagem: vê-se a cidade toda."
+          },
+          "hora": "10:00",
+          "dur": "45 min",
+          "img": "/ciudades/braga/img/guimaraes.jpg",
+          "lat": 41.4483,
+          "lng": -8.2905,
+          "tramo": "coche",
+          "duracionMin": 45,
+          "tramoDuracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Palacio de los Duques de Braganza",
+            "EN": "Palace of the Dukes of Braganza",
+            "PT": "Paço dos Duques de Bragança"
+          },
+          "s": {
+            "ES": "Las chimeneas de ladrillo",
+            "EN": "The brick chimneys",
+            "PT": "As chaminés de tijolo"
+          },
+          "d": {
+            "ES": "Palacio del siglo XV con decenas de chimeneas altas, tapices y techos de madera con forma de barco del revés.",
+            "EN": "A 15th-century palace with dozens of tall chimneys, tapestries and wooden ceilings shaped like upturned boats.",
+            "PT": "Palácio do século XV com dezenas de chaminés altas, tapeçarias e tetos de madeira em forma de barco virado."
+          },
+          "tip": {
+            "ES": "La estatua de Afonso Henriques está en la puerta: es la foto clásica.",
+            "EN": "The statue of Afonso Henriques stands at the door: the classic photo.",
+            "PT": "A estátua de D. Afonso Henriques está mesmo à porta: é a foto clássica."
+          },
+          "hora": "10:50",
+          "dur": "50 min",
+          "img": "/ciudades/braga/img/guimaraes-2.jpg",
+          "lat": 41.4467,
+          "lng": -8.2906,
+          "tramo": "pie",
+          "duracionMin": 50,
+          "tramoDuracionMin": 3
+        },
+        {
+          "n": {
+            "ES": "Largo da Oliveira",
+            "EN": "Largo da Oliveira",
+            "PT": "Largo da Oliveira"
+          },
+          "s": {
+            "ES": "El corazón de la ciudad antigua",
+            "EN": "The heart of the old town",
+            "PT": "O coração da cidade antiga"
+          },
+          "d": {
+            "ES": "Casas con balcones de madera, soportales y el padrón gótico. Cuenta la leyenda que un olivo seco reverdeció aquí en 1342.",
+            "EN": "Houses with wooden balconies, arcades and the Gothic shrine. Legend says a dead olive tree came back to life here in 1342.",
+            "PT": "Casas com varandas de madeira, arcadas e o padrão gótico. Diz a lenda que uma oliveira seca voltou a dar folhas aqui em 1342."
+          },
+          "tip": {
+            "ES": "Prueba las tortas de Guimarães en una pastelería de la plaza.",
+            "EN": "Try the Guimarães tortas at one of the square’s pastry shops.",
+            "PT": "Prove as tortas de Guimarães numa das pastelarias do largo."
+          },
+          "hora": "11:50",
+          "dur": "45 min",
+          "img": "/ciudades/braga/img/guimaraes-3.jpg",
+          "lat": 41.4428,
+          "lng": -8.2955,
+          "tramo": "pie",
+          "duracionMin": 45,
+          "tramoDuracionMin": 8
+        },
+        {
+          "n": {
+            "ES": "Aquí nació Portugal",
+            "EN": "Here Portugal was born",
+            "PT": "Aqui nasceu Portugal"
+          },
+          "s": {
+            "ES": "La frase en la muralla",
+            "EN": "The words on the wall",
+            "PT": "A frase na muralha"
+          },
+          "d": {
+            "ES": "En un tramo de la muralla medieval, en letras grandes: «Aqui nasceu Portugal». Es la despedida de Guimarães antes de volver.",
+            "EN": "On a stretch of the medieval wall, in big letters: \"Aqui nasceu Portugal\". Your farewell to Guimarães before heading back.",
+            "PT": "Num troço da muralha medieval, em letras grandes: «Aqui nasceu Portugal». É o adeus a Guimarães antes de voltar."
+          },
+          "tip": {
+            "ES": "De noche las letras se iluminan.",
+            "EN": "At night the letters light up.",
+            "PT": "À noite as letras acendem-se."
+          },
+          "hora": "12:40",
+          "dur": "15 min",
+          "img": "/ciudades/braga/img/guimaraes-4.jpg",
+          "lat": 41.4404,
+          "lng": -8.2937,
+          "tramo": "pie",
+          "duracionMin": 15,
+          "tramoDuracionMin": 5
+        }
+      ],
+      "fotos": [
+        "/ciudades/braga/img/guimaraes.jpg",
+        "/ciudades/braga/img/guimaraes-2.jpg",
+        "/ciudades/braga/img/guimaraes-3.jpg",
+        "/ciudades/braga/img/guimaraes-4.jpg"
+      ],
+      "duracionMin": 240,
+      "distanciaKm": 52,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El centro tiene adoquín y cuestas suaves; el palacio tiene ascensor, la torre del castillo no.",
+        "EN": "The centre has cobbles and gentle slopes; the palace has a lift, the castle keep does not.",
+        "PT": "O centro tem calçada e subidas suaves; o paço tem elevador, a torre do castelo não."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 41.5369,
+        "lng": -8.4055,
+        "foto": "/ciudades/braga/img/guimaraes-2.jpg",
+        "texto": {
+          "ES": "Recepción del hotel, 5 minutos antes.",
+          "EN": "Hotel reception, 5 minutes early.",
+          "PT": "Receção do hotel, 5 minutos antes."
+        }
+      },
+      "noIncluye": {
+        "PT": [
+          "Almoço"
+        ],
+        "ES": [
+          "Comida"
+        ],
+        "EN": [
+          "Lunch"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes.",
+        "EN": "Free up to 24 h before.",
+        "PT": "Grátis até 24 h antes."
+      },
+      "salidasFijas": [
+        "09:30"
+      ],
+      "precioDesde": 35
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Una copa de vinho verde en el bar del Stella, invita la casa",
+      "EN": "A glass of vinho verde at the Stella bar, on the house",
+      "PT": "Um copo de vinho verde no bar do Stella, oferta da casa"
+    }
+  },
+  "creditos": [
+    "Braga Cathedral (1): Krzysztof Golik, CC BY-SA 4.0, Wikimedia Commons",
+    "Igreja e escadaria do Bom Jesus (3), A Brasileira (Braga): Béria Lima de Rodríguez, CC BY-SA 3.0, Wikimedia Commons",
+    "Our Lady of Sameiro sanctuary in Braga (1): Tournasol7, CC BY-SA 4.0, Wikimedia Commons",
+    "Braga, Jardim de Santa Barbara (3): Palickap, CC BY-SA 4.0, Wikimedia Commons",
+    "Arco da porta nova Braga: Joseolgon, CC BY-SA 3.0, Wikimedia Commons",
+    "Palácio dos Biscainhos (29845063793): Pedro from Maia (Porto), Portugal, CC BY 2.0, Wikimedia Commons",
+    "Theatro Circo 2025 16, Elevador do Bom Jesus 1: Joseolgon, CC BY 4.0, Wikimedia Commons",
+    "Braga bom jesus monte jardim (15): Carlos Luis M C da Cruz, CC BY-SA 3.0, Wikimedia Commons",
+    "Santuário do Sameiro 2021 (20), Claustro da Sé de Braga (2): Joseolgon, CC BY-SA 4.0, Wikimedia Commons",
+    "2026-09-27 Braga, Rua do Souto at sunset 1: Alexkom000, CC BY 4.0, Wikimedia Commons",
+    "Miradouro da Pedra Bela 2- Parque Nacional Peneda-Gerês: Pepolino83, CC BY-SA 4.0, Wikimedia Commons",
+    "Cascata do Arado 2023-03-13-2: The Cosmonaut, CC BY-SA 4.0, Wikimedia Commons",
+    "Vilarinhodasfurnas1: Benkeboy, CC BY-SA 3.0, Wikimedia Commons",
+    "Geira Romana - Gerês (11): Sqjaques, CC BY-SA 4.0, Wikimedia Commons",
+    "Olhar sobre a Cascata da Portela da Homem: Clarisse Cunha, CC BY-SA 3.0, Wikimedia Commons",
+    "Exterior view of Castelo de Guimarães 08: John Samuel, CC BY-SA 4.0, Wikimedia Commons",
+    "Guimaraes Portugal Paço-dos-Duques-de-Bragança-02: CEphoto, Uwe Aranas, CC BY-SA 3.0, Wikimedia Commons",
+    "Guimarães @ 36 MP - Largo da Oliveira (35262143891): Feliciano Guimarães from Guimarães, Portugal, CC BY 2.0, Wikimedia Commons",
+    "Guimaraes - Aqui nasceu Portugal: Joaomartinho63, CC BY-SA 3.0, Wikimedia Commons",
+    "Treppenaufgang Bom Jesus do Monte: Botafogo, public domain, Wikimedia Commons"
+  ]
+}
