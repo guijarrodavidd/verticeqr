@@ -1,0 +1,1203 @@
+{
+  "slug": "sanxenxo",
+  "nombre": "Sanxenxo",
+  "intro": {
+    "ES": "Arena blanca, agua fría y transparente y el mejor marisco de las Rías Baixas, a la vuelta de la esquina. Y cuando en agosto el pueblo se llene, coge un barco a las Cíes o la carretera hacia los viñedos de albariño.",
+    "EN": "White sand, cold crystal-clear water and the best seafood in the Rías Baixas, just around the corner. And when the town fills up in August, take a boat to the Cíes Islands or the road to the Albariño vineyards.",
+    "DE": "Weißer Sand, kaltes, glasklares Wasser und die besten Meeresfrüchte der Rías Baixas gleich um die Ecke. Und wenn sich der Ort im August füllt: mit dem Boot zu den Cíes-Inseln oder über die Landstraße zu den Albariño-Weinbergen."
+  },
+  "lugares": [
+    {
+      "id": "silgar",
+      "img": "/ciudades/sanxenxo/img/silgar.jpg",
+      "nombre": "Playa de Silgar",
+      "zona": {
+        "ES": "Centro",
+        "EN": "Town centre",
+        "DE": "Ortszentrum"
+      },
+      "d": {
+        "ES": "La playa del pueblo: arena fina, agua quieta y verde turquesa en la bajamar, y las rocas de la punta para mirar la ría con los pies en remojo.",
+        "EN": "The town beach: fine sand, calm water that turns turquoise at low tide, and rocks at the point to gaze at the ría with your feet in the sea.",
+        "DE": "Der Strand des Ortes: feiner Sand, ruhiges Wasser, das bei Ebbe türkis leuchtet, und Felsen an der Spitze, um mit den Füßen im Wasser auf die Ría zu schauen."
+      },
+      "cuando": {
+        "ES": "Antes de las 11, o a última hora de la tarde",
+        "EN": "Before 11 am, or late in the afternoon",
+        "DE": "Vor 11 Uhr oder am späten Nachmittag"
+      },
+      "min": 5,
+      "modo": "pie",
+      "lat": 42.40054,
+      "lng": -8.81253
+    },
+    {
+      "id": "paseo",
+      "img": "/ciudades/sanxenxo/img/paseo.jpg",
+      "nombre": "Paseo de Silgar y A Madama",
+      "zona": {
+        "ES": "Paseo marítimo",
+        "EN": "Seafront promenade",
+        "DE": "Uferpromenade"
+      },
+      "d": {
+        "ES": "Sobre una roca, frente a la playa, una mujer de bronce se inclina hacia el mar con una caracola en las manos: es A Madama de Silgar, del escultor Alfonso Vilar, el símbolo de Sanxenxo desde 1995.",
+        "EN": "On a rock off the beach, a bronze woman leans towards the sea holding a conch shell: A Madama de Silgar, by sculptor Alfonso Vilar, the symbol of Sanxenxo since 1995.",
+        "DE": "Auf einem Felsen vor dem Strand neigt sich eine Bronzefrau mit einer Muschel in den Händen zum Meer: A Madama de Silgar des Bildhauers Alfonso Vilar, seit 1995 das Wahrzeichen von Sanxenxo."
+      },
+      "cuando": {
+        "ES": "Con marea alta, cuando parece salir del agua",
+        "EN": "At high tide, when she seems to rise from the water",
+        "DE": "Bei Flut, wenn sie aus dem Wasser aufzusteigen scheint"
+      },
+      "min": 3,
+      "modo": "pie",
+      "lat": 42.39918,
+      "lng": -8.80852
+    },
+    {
+      "id": "porto",
+      "img": "/ciudades/sanxenxo/img/porto.jpg",
+      "nombre": "Puerto deportivo",
+      "zona": {
+        "ES": "Frente al centro",
+        "EN": "Opposite the centre",
+        "DE": "Gegenüber dem Zentrum"
+      },
+      "d": {
+        "ES": "Pantalanes llenos de veleros, terrazas mirando a la ría y, en verano, los barcos que salen hacia las islas Cíes y Ons. Aquí empieza y acaba el día en Sanxenxo.",
+        "EN": "Pontoons full of sailing boats, terraces facing the ría and, in summer, the boats leaving for the Cíes and Ons islands. This is where days in Sanxenxo begin and end.",
+        "DE": "Stege voller Segelboote, Terrassen mit Blick auf die Ría und im Sommer die Boote zu den Inseln Cíes und Ons. Hier beginnt und endet jeder Tag in Sanxenxo."
+      },
+      "cuando": {
+        "ES": "Al atardecer, con un albariño frío",
+        "EN": "At sunset, with a cold Albariño",
+        "DE": "Bei Sonnenuntergang, mit einem kühlen Albariño"
+      },
+      "min": 7,
+      "modo": "pie",
+      "lat": 42.39792,
+      "lng": -8.80335
+    },
+    {
+      "id": "lanzada",
+      "img": "/ciudades/sanxenxo/img/lanzada.jpg",
+      "nombre": "Playa de A Lanzada y su ermita",
+      "zona": {
+        "ES": "Noalla, camino de O Grove",
+        "EN": "Noalla, on the way to O Grove",
+        "DE": "Noalla, Richtung O Grove"
+      },
+      "d": {
+        "ES": "Más de dos kilómetros de arena y dunas abiertas al Atlántico, con olas de verdad. En la punta, una ermita románica junto a los restos de una torre medieval, pegada a las rocas.",
+        "EN": "Over two kilometres of sand and dunes open to the Atlantic, with proper waves. At the tip, a Romanesque chapel beside the remains of a medieval tower, right on the rocks.",
+        "DE": "Über zwei Kilometer Sand und Dünen, offen zum Atlantik, mit echten Wellen. An der Spitze eine romanische Kapelle neben den Resten eines mittelalterlichen Turms, direkt auf den Felsen."
+      },
+      "cuando": {
+        "ES": "Al atardecer, desde la ermita",
+        "EN": "At sunset, from the chapel",
+        "DE": "Bei Sonnenuntergang, von der Kapelle aus"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 42.42982,
+      "lng": -8.87771
+    },
+    {
+      "id": "mirador-cruz",
+      "img": "/ciudades/sanxenxo/img/mirador.jpg",
+      "nombre": "Mirador de A Granxa",
+      "zona": {
+        "ES": "Carretera de Pontevedra",
+        "EN": "Pontevedra road",
+        "DE": "Straße nach Pontevedra"
+      },
+      "d": {
+        "ES": "Un balcón de piedra con una fuente en forma de vieira y toda la ría de Pontevedra delante: la isla de Tambo, Marín, las bateas de Raxó y los veleros entrando y saliendo.",
+        "EN": "A stone balcony with a scallop-shaped fountain and the whole Pontevedra ría before you: Tambo Island, Marín, the mussel rafts of Raxó and sailing boats coming and going.",
+        "DE": "Ein Steinbalkon mit einem Brunnen in Form einer Jakobsmuschel und die ganze Ría de Pontevedra vor Ihnen: die Insel Tambo, Marín, die Muschelflöße von Raxó und ein- und auslaufende Segelboote."
+      },
+      "cuando": {
+        "ES": "A media mañana, con el sol a la espalda",
+        "EN": "Mid-morning, with the sun behind you",
+        "DE": "Am Vormittag, mit der Sonne im Rücken"
+      },
+      "min": 8,
+      "modo": "coche",
+      "lat": 42.39958,
+      "lng": -8.76184
+    },
+    {
+      "id": "portonovo",
+      "img": "/ciudades/sanxenxo/img/portonovo.jpg",
+      "nombre": "Portonovo",
+      "zona": {
+        "ES": "Puerto pesquero y lonja",
+        "EN": "Fishing port and fish market",
+        "DE": "Fischerhafen und Fischhalle"
+      },
+      "d": {
+        "ES": "El vecino marinero de Sanxenxo: barcos de colores, redes secándose en el muelle y una lonja de verdad, donde se subasta el pescado que vas a cenar. Se llega andando por la costa.",
+        "EN": "Sanxenxo's seafaring neighbour: colourful boats, nets drying on the quay and a real fish market, where tonight's dinner is auctioned. You can walk there along the coast.",
+        "DE": "Der Fischer-Nachbar von Sanxenxo: bunte Boote, Netze, die am Kai trocknen, und eine echte Fischhalle, in der Ihr Abendessen versteigert wird. Zu Fuß an der Küste entlang erreichbar."
+      },
+      "cuando": {
+        "ES": "A la hora del vermú, en las tabernas del puerto",
+        "EN": "At aperitif time, in the harbour taverns",
+        "DE": "Zur Aperitif-Zeit, in den Hafentavernen"
+      },
+      "min": 25,
+      "modo": "pie",
+      "lat": 42.3944,
+      "lng": -8.82264
+    },
+    {
+      "id": "combarro",
+      "img": "/ciudades/sanxenxo/img/combarro.jpg",
+      "nombre": "Combarro",
+      "zona": {
+        "ES": "Poio, ría de Pontevedra",
+        "EN": "Poio, Pontevedra ría",
+        "DE": "Poio, Ría de Pontevedra"
+      },
+      "d": {
+        "ES": "Hórreos de granito con los pies en el agua, cruceiros en cada plaza y callejones de roca viva. Un pueblo marinero declarado conjunto histórico en 1972 que parece no haberse enterado del siglo XXI.",
+        "EN": "Granite granaries with their feet in the water, stone crosses on every square and lanes carved into the bedrock. A fishing village declared a historic site in 1972 that seems not to have noticed the 21st century.",
+        "DE": "Granitspeicher mit den Füßen im Wasser, Steinkreuze auf jedem Platz und Gassen im nackten Fels. Ein Fischerdorf, 1972 unter Denkmalschutz gestellt, das vom 21. Jahrhundert nichts mitbekommen zu haben scheint."
+      },
+      "cuando": {
+        "ES": "Con marea alta y temprano, antes de los autobuses",
+        "EN": "At high tide and early, before the coaches",
+        "DE": "Bei Flut und früh, vor den Reisebussen"
+      },
+      "min": 25,
+      "modo": "coche",
+      "lat": 42.43165,
+      "lng": -8.70445
+    }
+  ],
+  "rutas": [
+    {
+      "id": "cies",
+      "expId": "ex1",
+      "img": "/ciudades/sanxenxo/img/cies.jpg",
+      "titulo": {
+        "ES": "Islas Cíes",
+        "EN": "Cíes Islands",
+        "DE": "Cíes-Inseln"
+      },
+      "tipo": {
+        "ES": "Mar",
+        "EN": "Sea",
+        "DE": "Meer"
+      },
+      "dur": "9 h",
+      "d": {
+        "ES": "Arena blanquísima, agua turquesa y acantilados de granito en un parque nacional sin coches. El Caribe, pero atlántico y a 15 grados.",
+        "EN": "Dazzling white sand, turquoise water and granite cliffs in a car-free national park. The Caribbean, only Atlantic and at 15 degrees.",
+        "DE": "Strahlend weißer Sand, türkisfarbenes Wasser und Granitklippen in einem autofreien Nationalpark. Die Karibik, nur atlantisch und bei 15 Grad."
+      },
+      "salida": {
+        "ES": "Puerto de Sanxenxo o de Portonovo. Barcos en Semana Santa, fines de semana de junio y a diario de julio a mediados de septiembre",
+        "EN": "Sanxenxo or Portonovo harbour. Boats run at Easter, on June weekends and daily from July to mid-September",
+        "DE": "Hafen von Sanxenxo oder Portonovo. Boote zu Ostern, an den Juni-Wochenenden und täglich von Juli bis Mitte September"
+      },
+      "incluye": {
+        "ES": [
+          "Barco de ida y vuelta a las Cíes",
+          "Día libre en el Parque Nacional de las Islas Atlánticas",
+          "Plan de rutas y mapa"
+        ],
+        "EN": [
+          "Return boat to the Cíes Islands",
+          "Free day in the Atlantic Islands National Park",
+          "Trail plan and map"
+        ],
+        "DE": [
+          "Boot zu den Cíes-Inseln hin und zurück",
+          "Freier Tag im Nationalpark der Atlantischen Inseln",
+          "Wanderplan und Karte"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "La autorización de la Xunta para visitar las islas: es gratuita, se pide online con antelación y sin ella no te dejan embarcar en temporada",
+          "Bañador, toalla y una chaqueta para el barco",
+          "Comida y mucha agua para todo el día",
+          "Calzado cómodo para subir al faro",
+          "Crema solar y gorra: arriba no hay sombra",
+          "Una bolsa para tu basura: en las islas no hay papeleras"
+        ],
+        "EN": [
+          "The Xunta permit to visit the islands: free, requested online in advance, and without it you cannot board in high season",
+          "Swimwear, a towel and a jacket for the boat",
+          "Food and plenty of water for the whole day",
+          "Comfortable shoes for the climb to the lighthouse",
+          "Sunscreen and a hat: there is no shade up top",
+          "A bag for your rubbish: there are no bins on the islands"
+        ],
+        "DE": [
+          "Die Genehmigung der Xunta für den Inselbesuch: kostenlos, vorab online zu beantragen, ohne sie dürfen Sie in der Saison nicht an Bord",
+          "Badesachen, Handtuch und eine Jacke für das Boot",
+          "Essen und viel Wasser für den ganzen Tag",
+          "Bequeme Schuhe für den Aufstieg zum Leuchtturm",
+          "Sonnencreme und Kappe: oben gibt es keinen Schatten",
+          "Eine Tüte für Ihren Müll: auf den Inseln gibt es keine Mülleimer"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Barco a las islas",
+            "EN": "Boat to the islands",
+            "DE": "Boot zu den Inseln"
+          },
+          "s": {
+            "ES": "Desde el puerto de Sanxenxo, cruzando la boca de dos rías",
+            "EN": "From Sanxenxo harbour, across the mouths of two rías",
+            "DE": "Ab dem Hafen von Sanxenxo, über die Mündungen zweier Rías"
+          },
+          "d": {
+            "ES": "Sales de la ría de Pontevedra con Ons a la derecha y, al rato, el barco gira hacia el sur y aparecen las Cíes: tres islas de granito que cierran la ría de Vigo como una muralla, con la arena blanca brillando desde lejos.",
+            "EN": "You leave the Pontevedra ría with Ons on your right and, after a while, the boat turns south and the Cíes appear: three granite islands closing off the Vigo ría like a wall, their white sand gleaming from afar.",
+            "DE": "Sie verlassen die Ría de Pontevedra mit Ons zur Rechten, bald dreht das Boot nach Süden und die Cíes tauchen auf: drei Graniteilande, die die Ría de Vigo wie eine Mauer abschließen, ihr weißer Sand leuchtet schon von Weitem."
+          },
+          "tip": {
+            "ES": "Coge el primer barco de la mañana: llegas antes que los barcos de Vigo y tienes la playa casi para ti. Lleva la autorización en el móvil, que te la piden al embarcar.",
+            "EN": "Take the first boat of the morning: you arrive before the Vigo boats and have the beach almost to yourself. Keep the permit on your phone, as they ask for it at boarding.",
+            "DE": "Nehmen Sie das erste Boot am Morgen: Sie sind vor den Booten aus Vigo da und haben den Strand fast für sich. Halten Sie die Genehmigung auf dem Handy bereit, sie wird beim Einsteigen kontrolliert."
+          },
+          "hora": "10:00",
+          "dur": "1 h",
+          "img": "/ciudades/sanxenxo/img/cies-1.jpg",
+          "lat": 42.39792,
+          "lng": -8.80335,
+          "tramo": "pie",
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Playa de Rodas",
+            "EN": "Rodas beach",
+            "DE": "Strand von Rodas"
+          },
+          "s": {
+            "ES": "Un arco de arena blanca de más de un kilómetro, junto al muelle",
+            "EN": "A white sand crescent over a kilometre long, by the pier",
+            "DE": "Ein über einen Kilometer langer weißer Sandbogen am Anleger"
+          },
+          "d": {
+            "ES": "Desembarcas y la tienes delante: arena fina y blanca, agua de un turquesa imposible y, detrás, una laguna tranquila. Une dos de las islas y en 2007 The Guardian la eligió la mejor playa del mundo.",
+            "EN": "You step off the boat and there it is: fine white sand, impossibly turquoise water and, behind it, a calm lagoon. It joins two of the islands, and in 2007 The Guardian named it the best beach in the world.",
+            "DE": "Sie gehen von Bord, und da liegt er: feiner weißer Sand, unglaublich türkisfarbenes Wasser und dahinter eine ruhige Lagune. Er verbindet zwei der Inseln, und 2007 kürte ihn The Guardian zum schönsten Strand der Welt."
+          },
+          "tip": {
+            "ES": "No te quedes aún: deja el baño para la tarde y sube primero a los miradores, que con el calor de mediodía se hace duro. Pasa por la caseta de información junto al camping a por el mapa de rutas.",
+            "EN": "Don't settle in yet: save the swim for the afternoon and climb to the viewpoints first, as the midday heat makes it hard work. Stop at the information hut by the campsite for the trail map.",
+            "DE": "Bleiben Sie noch nicht liegen: Heben Sie das Baden für den Nachmittag auf und steigen Sie zuerst zu den Aussichtspunkten, in der Mittagshitze wird es anstrengend. Holen Sie sich an der Infohütte beim Campingplatz die Wanderkarte."
+          },
+          "hora": "11:00",
+          "dur": "20 min",
+          "img": "/ciudades/sanxenxo/img/cies-2.jpg",
+          "lat": 42.22199,
+          "lng": -8.90368,
+          "tramo": "barco",
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Alto do Príncipe",
+            "EN": "Alto do Príncipe",
+            "DE": "Alto do Príncipe"
+          },
+          "s": {
+            "ES": "El mirador de la Silla de la Reina, sobre el acantilado",
+            "EN": "The Queen's Chair viewpoint, above the cliffs",
+            "DE": "Der Aussichtspunkt „Stuhl der Königin“ über den Klippen"
+          },
+          "d": {
+            "ES": "Un camino entre pinos y eucaliptos que acaba en una roca de granito con forma de trono, la Silla de la Reina. A un lado, Rodas y su laguna; al otro, el acantilado cae a pico sobre el Atlántico abierto. Es la postal de las Cíes.",
+            "EN": "A path through pines and eucalyptus that ends at a throne-shaped granite rock, the Queen's Chair. On one side, Rodas and its lagoon; on the other, the cliff drops sheer into the open Atlantic. This is the Cíes postcard.",
+            "DE": "Ein Weg durch Pinien und Eukalyptus, der an einem thronförmigen Granitfelsen endet, dem „Stuhl der Königin“. Auf der einen Seite Rodas und seine Lagune, auf der anderen fällt die Klippe senkrecht in den offenen Atlantik. Das ist die Postkarte der Cíes."
+          },
+          "tip": {
+            "ES": "Siéntate en la Silla y mira hacia el oeste: con suerte verás gaviotas y cormoranes anidando en la pared. Ojo con el borde, que no hay barandilla en todos los tramos.",
+            "EN": "Sit in the Chair and look west: with luck you'll see gulls and shags nesting on the cliff face. Mind the edge, as there is no railing on every stretch.",
+            "DE": "Setzen Sie sich auf den Stuhl und schauen Sie nach Westen: Mit etwas Glück sehen Sie Möwen und Krähenscharben, die in der Wand nisten. Vorsicht an der Kante, nicht überall gibt es ein Geländer."
+          },
+          "hora": "11:30",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/sanxenxo/img/cies-3.jpg",
+          "lat": 42.22785,
+          "lng": -8.9026,
+          "tramo": "pie",
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Faro de Cíes",
+            "EN": "Cíes lighthouse",
+            "DE": "Leuchtturm der Cíes"
+          },
+          "s": {
+            "ES": "La subida clásica: unos 7 km ida y vuelta y 175 m de desnivel",
+            "EN": "The classic climb: about 7 km return and 175 m of ascent",
+            "DE": "Der klassische Aufstieg: rund 7 km hin und zurück, 175 Höhenmeter"
+          },
+          "d": {
+            "ES": "Una pista que zigzaguea por la ladera hasta el faro, encaramado en lo más alto de la isla do Faro, la del medio. Desde arriba ves las tres islas, la ría de Vigo entera y, hacia el oeste, nada más que océano.",
+            "EN": "A track that zigzags up the hillside to the lighthouse, perched at the highest point of Illa do Faro, the middle island. From the top you see all three islands, the whole Vigo ría and, to the west, nothing but ocean.",
+            "DE": "Ein Weg, der sich im Zickzack den Hang hinauf zum Leuchtturm windet, hoch oben auf der mittleren Insel, der Illa do Faro. Von dort sehen Sie alle drei Inseln, die ganze Ría de Vigo und im Westen nur noch Ozean."
+          },
+          "tip": {
+            "ES": "Come algo en la Pedra da Campá, una roca horadada por el viento a mitad de camino, y guarda fuerzas: el último tramo es el más empinado. Calcula 2 h 30 min ida y vuelta desde la caseta.",
+            "EN": "Have a bite at Pedra da Campá, a wind-carved rock halfway up, and save your strength: the last stretch is the steepest. Allow 2 h 30 min there and back from the information hut.",
+            "DE": "Machen Sie Rast an der Pedra da Campá, einem vom Wind durchlöcherten Felsen auf halber Strecke, und sparen Sie Kraft: Das letzte Stück ist das steilste. Rechnen Sie ab der Infohütte mit 2 Std. 30 Min. hin und zurück."
+          },
+          "hora": "13:15",
+          "dur": "3 h",
+          "img": "/ciudades/sanxenxo/img/cies-4.jpg",
+          "lat": 42.2128,
+          "lng": -8.915,
+          "tramo": "pie",
+          "duracionMin": 180
+        },
+        {
+          "n": {
+            "ES": "Último baño en Rodas",
+            "EN": "Last swim at Rodas",
+            "DE": "Letztes Bad in Rodas"
+          },
+          "s": {
+            "ES": "Agua fría y cristalina antes del barco de vuelta",
+            "EN": "Cold, crystal-clear water before the boat back",
+            "DE": "Kaltes, kristallklares Wasser vor dem Boot zurück"
+          },
+          "d": {
+            "ES": "Con la caminata en las piernas, el agua helada de Rodas sienta como nunca. A última hora la luz se vuelve dorada sobre el granito y la playa se vacía a medida que salen los barcos.",
+            "EN": "With the hike in your legs, the icy water at Rodas feels better than ever. Late in the day the light turns golden on the granite and the beach empties as the boats leave.",
+            "DE": "Nach der Wanderung tut das eiskalte Wasser von Rodas so gut wie nie. Am späten Nachmittag wird das Licht auf dem Granit golden, und der Strand leert sich mit jedem abfahrenden Boot."
+          },
+          "tip": {
+            "ES": "Entra por el tramo sur, cerca del muelle, que hay menos corriente. Y mira la hora de tu barco de vuelta antes de tumbarte: el último no espera a nadie.",
+            "EN": "Go in at the south end, near the pier, where the current is gentler. And check the time of your return boat before lying down: the last one waits for no one.",
+            "DE": "Gehen Sie am Südende nahe dem Anleger ins Wasser, dort ist weniger Strömung. Und prüfen Sie die Abfahrt Ihres Rückboots, bevor Sie sich hinlegen: Das letzte wartet auf niemanden."
+          },
+          "hora": "16:30",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/sanxenxo/img/cies-5.jpg",
+          "lat": 42.2195,
+          "lng": -8.9035,
+          "tramo": "pie",
+          "duracionMin": 90
+        }
+      ],
+      "fotos": [
+        "/ciudades/sanxenxo/img/cies.jpg",
+        "/ciudades/sanxenxo/img/cies-1.jpg",
+        "/ciudades/sanxenxo/img/cies-2.jpg",
+        "/ciudades/sanxenxo/img/cies-3.jpg",
+        "/ciudades/sanxenxo/img/cies-4.jpg",
+        "/ciudades/sanxenxo/img/cies-5.jpg"
+      ],
+      "duracionMin": 540,
+      "distanciaKm": 25.1,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Se embarca en el puerto y la zona del muelle y Rodas es llana, pero la subida al faro y al Alto do Príncipe son pistas de tierra con pendiente: no aptas para silla de ruedas. Pregunta a la naviera por el embarque con movilidad reducida.",
+        "EN": "You board at the port and the pier and Rodas area is flat, but the climbs to the lighthouse and Alto do Príncipe are sloping dirt tracks: not suitable for wheelchairs. Ask the boat company about boarding with reduced mobility.",
+        "DE": "Man geht im Hafen an Bord, und Anleger und Rodas sind flach, aber die Wege zum Leuchtturm und zum Alto do Príncipe sind steile Erdpisten: nicht rollstuhlgerecht. Frag die Reederei nach dem Einstieg bei eingeschränkter Mobilität."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 42.39792,
+        "lng": -8.80335,
+        "foto": "/ciudades/sanxenxo/img/porto.jpg",
+        "texto": {
+          "ES": "Puerto deportivo de Sanxenxo, en el embarque de los barcos a las Cíes. Lleva la autorización de la Xunta y llega con tiempo para recoger el billete.",
+          "EN": "Sanxenxo marina, at the boarding point for the boats to the Cíes. Bring the Xunta authorisation and arrive early to collect your ticket.",
+          "DE": "Sportboothafen von Sanxenxo, am Anleger der Boote zu den Cíes. Bring die Genehmigung der Xunta mit und komm rechtzeitig, um dein Ticket abzuholen."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebida",
+          "La autorización de la Xunta para visitar las islas (gratuita)",
+          "Guía",
+          "Traslado del hotel al puerto"
+        ],
+        "EN": [
+          "Food and drink",
+          "The Xunta authorisation to visit the islands (free)",
+          "Guide",
+          "Transfer from the hotel to the port"
+        ],
+        "DE": [
+          "Essen und Getränke",
+          "Die Genehmigung der Xunta für den Inselbesuch (kostenlos)",
+          "Reiseleitung",
+          "Transfer vom Hotel zum Hafen"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "DE": "Je nach Anbieter. Die Rezeption bestätigt es dir bei der Buchung."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    },
+    {
+      "id": "cambados",
+      "expId": "ex2",
+      "img": "/ciudades/sanxenxo/img/cambados.jpg",
+      "titulo": {
+        "ES": "Ruta del Albariño en Cambados",
+        "EN": "Albariño Route in Cambados",
+        "DE": "Albariño-Route in Cambados"
+      },
+      "tipo": {
+        "ES": "Vino",
+        "EN": "Wine",
+        "DE": "Wein"
+      },
+      "dur": "6 h",
+      "d": {
+        "ES": "Viñas en parra junto al mar, un pazo de piedra con su bodega y unas ruinas góticas abiertas al cielo. La capital del albariño, copa en mano.",
+        "EN": "Pergola vines by the sea, a stone manor with its own winery and Gothic ruins open to the sky. The capital of Albariño, glass in hand.",
+        "DE": "Pergola-Reben am Meer, ein steinerner Herrensitz mit eigenem Weingut und gotische Ruinen unter offenem Himmel. Die Hauptstadt des Albariño, mit dem Glas in der Hand."
+      },
+      "salida": {
+        "ES": "Recogida en la puerta del hotel. Cambados está a unos 25 minutos en coche",
+        "EN": "Pick-up at the hotel door. Cambados is about 25 minutes away by car",
+        "DE": "Abholung direkt am Hotel. Cambados liegt etwa 25 Autominuten entfernt"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado desde el hotel, ida y vuelta",
+          "Visita a una bodega de la D.O. Rías Baixas",
+          "Cata de albariños"
+        ],
+        "EN": [
+          "Return transfer from the hotel",
+          "Visit to a D.O. Rías Baixas winery",
+          "Albariño tasting"
+        ],
+        "DE": [
+          "Transfer ab Hotel hin und zurück",
+          "Besuch eines Weinguts der D.O. Rías Baixas",
+          "Albariño-Verkostung"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo para la viña y el empedrado",
+          "Una chaqueta fina: la bodega es fresca",
+          "Gafas de sol y agua",
+          "Apetito para el marisco de la comida",
+          "Sitio en la maleta para un par de botellas"
+        ],
+        "EN": [
+          "Comfortable shoes for the vineyard and the cobbles",
+          "A light jacket: the cellar is cool",
+          "Sunglasses and water",
+          "An appetite for the seafood lunch",
+          "Room in your suitcase for a couple of bottles"
+        ],
+        "DE": [
+          "Bequeme Schuhe für Weinberg und Kopfsteinpflaster",
+          "Eine leichte Jacke: im Keller ist es kühl",
+          "Sonnenbrille und Wasser",
+          "Appetit auf das Meeresfrüchte-Mittagessen",
+          "Platz im Koffer für ein paar Flaschen"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Bodega y cata de albariño",
+            "EN": "Winery and Albariño tasting",
+            "DE": "Weingut und Albariño-Verkostung"
+          },
+          "s": {
+            "ES": "Entre viñas en parra del valle del Salnés",
+            "EN": "Among the pergola vines of the Salnés valley",
+            "DE": "Zwischen den Pergola-Reben des Salnés-Tals"
+          },
+          "d": {
+            "ES": "Aquí la uva crece en alto, en parras sostenidas por postes de granito, para que corra el aire y no le alcance la humedad del Atlántico. Paseas entre las cepas, bajas a la bodega y catas un albariño fresco, salino, con recuerdos de manzana verde y flor blanca.",
+            "EN": "Here the grapes grow high, on pergolas held up by granite posts, so the air can flow and the Atlantic damp cannot reach them. You stroll among the vines, go down to the cellar and taste a fresh, saline Albariño with notes of green apple and white flowers.",
+            "DE": "Hier wachsen die Trauben hoch oben an Pergolen auf Granitpfosten, damit die Luft zirkuliert und die atlantische Feuchtigkeit sie nicht erreicht. Sie spazieren durch die Reben, steigen in den Keller hinab und verkosten einen frischen, salzigen Albariño mit Noten von grünem Apfel und weißen Blüten."
+          },
+          "tip": {
+            "ES": "Pide probar un albariño joven y otro con crianza sobre lías: parecen dos vinos distintos. Y si vienes la primera semana de agosto, coincides con la Fiesta del Albariño, que se celebra desde 1953.",
+            "EN": "Ask to taste a young Albariño and one aged on its lees: they seem like two different wines. And if you come in the first week of August, you'll catch the Albariño Festival, held since 1953.",
+            "DE": "Bitten Sie darum, einen jungen Albariño und einen auf der Hefe gereiften zu probieren: Es wirken wie zwei verschiedene Weine. Und wer in der ersten Augustwoche kommt, erlebt das Albariño-Fest, das seit 1953 gefeiert wird."
+          },
+          "hora": "10:30",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/sanxenxo/img/cambados-1.jpg",
+          "lat": 42.52039,
+          "lng": -8.79283,
+          "tramo": "coche",
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Pazo de Fefiñáns",
+            "EN": "Pazo de Fefiñáns",
+            "DE": "Pazo de Fefiñáns"
+          },
+          "s": {
+            "ES": "Una plaza de granito cerrada por un palacio en forma de L",
+            "EN": "A granite square framed by an L-shaped palace",
+            "DE": "Ein Granitplatz, eingerahmt von einem L-förmigen Palast"
+          },
+          "d": {
+            "ES": "La plaza más señorial de Galicia: un pazo de los siglos XVI y XVII con balcones de hierro y escudos de piedra, la iglesia de San Bieito y un arco que los une. Dentro del pazo sigue funcionando su propia bodega, de las primeras en embotellar albariño.",
+            "EN": "One of the grandest squares in Galicia: a 16th and 17th-century manor with iron balconies and stone coats of arms, the church of San Bieito and an arch joining them. Inside, the manor still runs its own winery, one of the first to bottle Albariño.",
+            "DE": "Einer der vornehmsten Plätze Galiciens: ein Herrenhaus aus dem 16. und 17. Jahrhundert mit Eisenbalkonen und steinernen Wappen, die Kirche San Bieito und ein Bogen, der beide verbindet. Im Inneren betreibt das Haus noch immer sein eigenes Weingut, eines der ersten, das Albariño in Flaschen abfüllte."
+          },
+          "tip": {
+            "ES": "Cruza bajo el arco hacia la Rúa Real: es la entrada más bonita al casco antiguo. La visita a la bodega del pazo se reserva aparte, y en verano se llena.",
+            "EN": "Walk under the arch towards Rúa Real: it is the prettiest way into the old town. Visits to the manor winery are booked separately and fill up in summer.",
+            "DE": "Gehen Sie unter dem Bogen hindurch zur Rúa Real: der schönste Zugang zur Altstadt. Besuche des Weinguts im Palast werden separat gebucht und sind im Sommer schnell voll."
+          },
+          "hora": "12:15",
+          "dur": "45 min",
+          "img": "/ciudades/sanxenxo/img/cambados-2.jpg",
+          "lat": 42.51909,
+          "lng": -8.81319,
+          "tramo": "coche",
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Ruinas de Santa Mariña Dozo",
+            "EN": "Santa Mariña Dozo ruins",
+            "DE": "Ruinen von Santa Mariña Dozo"
+          },
+          "s": {
+            "ES": "Arcos góticos del siglo XV, sin techo, sobre un cementerio",
+            "EN": "15th-century Gothic arches, roofless, above a cemetery",
+            "DE": "Gotische Bögen aus dem 15. Jahrhundert, ohne Dach, über einem Friedhof"
+          },
+          "d": {
+            "ES": "Una iglesia gótica marinera que perdió el tejado y se quedó con los arcos de piedra recortados contra el cielo. Hoy es el cementerio del barrio, y Álvaro Cunqueiro lo llamó «el más melancólico del mundo». Silencio, granito y flores frescas.",
+            "EN": "A Gothic seafarers’ church that lost its roof and kept its stone arches outlined against the sky. Today it is the parish cemetery, and writer Álvaro Cunqueiro called it “the most melancholy in the world”. Silence, granite and fresh flowers.",
+            "DE": "Eine gotische Seefahrerkirche, die ihr Dach verlor und deren Steinbögen sich nun gegen den Himmel abzeichnen. Heute ist sie der Friedhof des Viertels, und der Schriftsteller Álvaro Cunqueiro nannte sie „den melancholischsten der Welt“. Stille, Granit und frische Blumen."
+          },
+          "tip": {
+            "ES": "Busca en los muros los relieves de piedra: hay escenas de la Biblia y de los pecados capitales. Ven con respeto, que sigue siendo un cementerio en uso.",
+            "EN": "Look for the stone reliefs on the walls: there are Bible scenes and the deadly sins. Be respectful, as it is still a working cemetery.",
+            "DE": "Suchen Sie an den Mauern die Steinreliefs: Szenen aus der Bibel und die Todsünden. Bitte respektvoll bleiben, es ist noch immer ein genutzter Friedhof."
+          },
+          "hora": "13:15",
+          "dur": "30 min",
+          "img": "/ciudades/sanxenxo/img/cambados-3.jpg",
+          "lat": 42.5119,
+          "lng": -8.80751,
+          "tramo": "coche",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Zamburiñas y albariño",
+            "EN": "Queen scallops and Albariño",
+            "DE": "Zamburiñas und Albariño"
+          },
+          "s": {
+            "ES": "Comida en el casco antiguo de Cambados",
+            "EN": "Lunch in the old town of Cambados",
+            "DE": "Mittagessen in der Altstadt von Cambados"
+          },
+          "d": {
+            "ES": "Las zamburiñas son las vieiras pequeñas de la ría: a la plancha, con un hilo de aceite y algo de pimentón, se comen de un bocado. Con unos mejillones, unas navajas y una botella del albariño que has catado por la mañana, la tarde queda resuelta.",
+            "EN": "Zamburiñas are the ría’s small scallops: grilled with a drizzle of oil and a pinch of paprika, they go down in one bite. Add mussels, razor clams and a bottle of the Albariño you tasted this morning, and the afternoon is sorted.",
+            "DE": "Zamburiñas sind die kleinen Kammmuscheln der Ría: von der Plancha, mit etwas Öl und Paprika, isst man sie in einem Bissen. Dazu Miesmuscheln, Schwertmuscheln und eine Flasche des Albariño vom Vormittag, und der Nachmittag ist gerettet."
+          },
+          "tip": {
+            "ES": "Pide las zamburiñas a la plancha, no gratinadas: así sabes lo que comes. Después, baja a dar un paseo por el barrio marinero de Santo Tomé.",
+            "EN": "Order the zamburiñas grilled, not gratinated: that way you taste the scallop. Afterwards, stroll down to the fishermen’s quarter of Santo Tomé.",
+            "DE": "Bestellen Sie die Zamburiñas von der Plancha, nicht überbacken: so schmeckt man die Muschel. Danach ein Spaziergang hinunter ins Fischerviertel Santo Tomé."
+          },
+          "hora": "14:00",
+          "dur": "1 h 45 min",
+          "img": "/ciudades/sanxenxo/img/cambados-4.jpg",
+          "lat": 42.5155,
+          "lng": -8.8137,
+          "tramo": "pie",
+          "duracionMin": 105
+        }
+      ],
+      "fotos": [
+        "/ciudades/sanxenxo/img/cambados.jpg",
+        "/ciudades/sanxenxo/img/cambados-1.jpg",
+        "/ciudades/sanxenxo/img/cambados-2.jpg",
+        "/ciudades/sanxenxo/img/cambados-3.jpg",
+        "/ciudades/sanxenxo/img/cambados-4.jpg"
+      ],
+      "duracionMin": 360,
+      "distanciaKm": 16.9,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Recorrido llano, con empedrado de granito en el casco antiguo y tierra entre las viñas. La accesibilidad en silla de ruedas de la bodega depende de cuál se visite: consúltalo al reservar.",
+        "EN": "Flat route, with granite paving in the old town and dirt among the vines. Wheelchair access at the winery depends on which one you visit: ask when booking.",
+        "DE": "Flache Route, mit Granitpflaster in der Altstadt und Erdwegen zwischen den Reben. Die Rollstuhltauglichkeit des Weinguts hängt vom Betrieb ab: bei der Buchung nachfragen."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 42.39792,
+        "lng": -8.80335,
+        "foto": "/ciudades/sanxenxo/img/porto.jpg",
+        "texto": {
+          "ES": "Puerta de tu hotel en Sanxenxo. La hora exacta de recogida te la confirmamos en recepción.",
+          "EN": "At the door of your hotel in Sanxenxo. Reception will confirm the exact pick-up time.",
+          "DE": "Vor deinem Hotel in Sanxenxo. Die genaue Abholzeit bestätigt dir die Rezeption."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida (zamburiñas y albariño)",
+          "Botellas que compres en la bodega",
+          "Propinas"
+        ],
+        "EN": [
+          "Lunch (queen scallops and albariño)",
+          "Bottles you buy at the winery",
+          "Tips"
+        ],
+        "DE": [
+          "Mittagessen (Zamburiñas und Albariño)",
+          "Flaschen, die du im Weingut kaufst",
+          "Trinkgeld"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "DE": "Je nach Anbieter. Die Rezeption bestätigt es dir bei der Buchung."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    },
+    {
+      "id": "ogrove",
+      "expId": "ex3",
+      "img": "/ciudades/sanxenxo/img/ogrove.jpg",
+      "titulo": {
+        "ES": "Bateas en O Grove",
+        "EN": "Mussel rafts in O Grove",
+        "DE": "Muschelflöße in O Grove"
+      },
+      "tipo": {
+        "ES": "Mar",
+        "EN": "Sea",
+        "DE": "Meer"
+      },
+      "dur": "5 h 40 min",
+      "d": {
+        "ES": "En catamarán entre las bateas donde crece el mejillón gallego, con degustación a bordo. Y después, la capilla de las conchas y el marisco de O Grove.",
+        "EN": "By catamaran among the rafts where Galician mussels grow, with a tasting on board. Then the shell-covered chapel and O Grove’s seafood.",
+        "DE": "Mit dem Katamaran zwischen den Flößen, an denen die galicische Miesmuschel wächst, mit Verkostung an Bord. Danach die Muschelkapelle und Meeresfrüchte in O Grove."
+      },
+      "salida": {
+        "ES": "Recogida en la puerta del hotel. O Grove está a unos 20 minutos en coche",
+        "EN": "Pick-up at the hotel door. O Grove is about 20 minutes away by car",
+        "DE": "Abholung direkt am Hotel. O Grove liegt etwa 20 Autominuten entfernt"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado desde el hotel, ida y vuelta",
+          "Catamarán por la ría de Arousa",
+          "Degustación de mejillón al vapor con vino a bordo"
+        ],
+        "EN": [
+          "Return transfer from the hotel",
+          "Catamaran cruise on the Arousa ría",
+          "Steamed mussel tasting with wine on board"
+        ],
+        "DE": [
+          "Transfer ab Hotel hin und zurück",
+          "Katamaranfahrt auf der Ría de Arousa",
+          "Verkostung gedämpfter Miesmuscheln mit Wein an Bord"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Una chaqueta o cortavientos: en la ría corre el aire",
+          "Gafas de sol y crema",
+          "Calzado que no resbale en cubierta",
+          "Pastilla para el mareo si lo necesitas",
+          "Hambre para el marisco"
+        ],
+        "EN": [
+          "A jacket or windbreaker: it gets breezy on the ría",
+          "Sunglasses and sunscreen",
+          "Non-slip shoes for the deck",
+          "Seasickness tablets if you need them",
+          "An appetite for seafood"
+        ],
+        "DE": [
+          "Eine Jacke oder Windjacke: auf der Ría weht es",
+          "Sonnenbrille und Sonnencreme",
+          "Rutschfeste Schuhe für das Deck",
+          "Tabletten gegen Seekrankheit, falls nötig",
+          "Hunger auf Meeresfrüchte"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Puerto de O Grove",
+            "EN": "O Grove harbour",
+            "DE": "Hafen von O Grove"
+          },
+          "s": {
+            "ES": "Embarque en el catamarán, frente al pueblo",
+            "EN": "Board the catamaran, opposite the village",
+            "DE": "Einschiffung in den Katamaran, gegenüber dem Ort"
+          },
+          "d": {
+            "ES": "O Grove vive del mar y se nota: barcos de bajura descargando, nasas apiladas en el muelle y fachadas de colores mirando al puerto. Desde aquí salen los catamaranes que recorren la ría de Arousa, la que más mejillón produce de Galicia.",
+            "EN": "O Grove lives off the sea and it shows: inshore boats unloading, creels stacked on the quay and colourful façades facing the harbour. From here the catamarans set off around the Arousa ría, Galicia’s biggest mussel producer.",
+            "DE": "O Grove lebt vom Meer, und man sieht es: Küstenboote beim Entladen, gestapelte Reusen am Kai und bunte Fassaden mit Blick auf den Hafen. Von hier starten die Katamarane in die Ría de Arousa, das größte Muschelanbaugebiet Galiciens."
+          },
+          "tip": {
+            "ES": "Llega con 15 minutos y busca sitio en la cubierta de arriba, en el lado que da a mar abierto. Si tu barco tiene fondo de cristal, baja cuando paréis junto a las bateas.",
+            "EN": "Arrive 15 minutes early and find a seat on the upper deck, on the open-sea side. If your boat has a glass bottom, go below when you stop by the rafts.",
+            "DE": "Seien Sie 15 Minuten früher da und suchen Sie sich einen Platz auf dem Oberdeck, auf der Seite zum offenen Meer. Hat Ihr Boot einen Glasboden, gehen Sie nach unten, wenn Sie an den Flößen halten."
+          },
+          "hora": "11:00",
+          "dur": "15 min",
+          "img": "/ciudades/sanxenxo/img/ogrove-1.jpg",
+          "lat": 42.4965,
+          "lng": -8.866,
+          "tramo": "coche",
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Entre las bateas",
+            "EN": "Among the mussel rafts",
+            "DE": "Zwischen den Muschelflößen"
+          },
+          "s": {
+            "ES": "Catamarán con degustación de mejillón, alrededor de 1 h 15 min",
+            "EN": "Catamaran with mussel tasting, around 1 h 15 min",
+            "DE": "Katamaran mit Muschelverkostung, etwa 1 Std. 15 Min."
+          },
+          "d": {
+            "ES": "Cientos de plataformas de madera flotando en la ría, de las que cuelgan cuerdas cargadas de mejillones. Te explican cómo se crían, ves cómo los sacan del agua y, a bordo, te sirven mejillón recién hecho al vapor con un vino fresco.",
+            "EN": "Hundreds of wooden platforms floating on the ría, with ropes loaded with mussels hanging beneath. They explain how they are farmed, you watch them come out of the water and, on board, you are served freshly steamed mussels with a chilled wine.",
+            "DE": "Hunderte Holzplattformen treiben auf der Ría, an denen mit Muscheln beladene Seile hängen. Man erklärt Ihnen die Zucht, Sie sehen, wie sie aus dem Wasser geholt werden, und an Bord gibt es frisch gedämpfte Muscheln mit einem kühlen Wein."
+          },
+          "tip": {
+            "ES": "Exprímeles limón y cómelos usando una concha vacía como pinza, como se hace aquí. Mira a las bateas de cerca: suelen tener gaviotas y cormoranes de vigilancia.",
+            "EN": "Squeeze lemon over them and eat them using an empty shell as tweezers, the local way. Look closely at the rafts: there are usually gulls and cormorants keeping watch.",
+            "DE": "Mit Zitrone beträufeln und eine leere Schale als Zange benutzen, wie man es hier macht. Schauen Sie sich die Flöße genau an: Meist halten dort Möwen und Kormorane Wache."
+          },
+          "hora": "11:15",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/sanxenxo/img/ogrove.jpg",
+          "lat": 42.515,
+          "lng": -8.875,
+          "tramo": "barco",
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "A Toxa y la capilla de las conchas",
+            "EN": "A Toxa and the shell chapel",
+            "DE": "A Toxa und die Muschelkapelle"
+          },
+          "s": {
+            "ES": "Una isla de pinos unida a O Grove por un puente",
+            "EN": "A pine-covered island joined to O Grove by a bridge",
+            "DE": "Eine Pinieninsel, per Brücke mit O Grove verbunden"
+          },
+          "d": {
+            "ES": "Cuenta la leyenda que un burro enfermo abandonado aquí se curó bañándose en sus aguas, y así nació el balneario. Entre jardines y pinos se esconde la ermita de San Caralampio, con los muros forrados de conchas de vieira que brillan al sol.",
+            "EN": "Legend has it that a sick donkey left here was cured by bathing in its waters, and that is how the spa was born. Among gardens and pines hides the chapel of San Caralampio, its walls covered in scallop shells that shine in the sun.",
+            "DE": "Der Legende nach wurde ein hier ausgesetzter kranker Esel durch das Baden in den Quellen geheilt, und so entstand das Heilbad. Zwischen Gärten und Pinien versteckt sich die Kapelle San Caralampio, deren Mauern mit in der Sonne glänzenden Jakobsmuscheln bedeckt sind."
+          },
+          "tip": {
+            "ES": "Cruza el puente andando, despacio: las vistas de la ría desde arriba son lo mejor. Al lado de la capilla venden jabón y sales de La Toja, el recuerdo de toda la vida.",
+            "EN": "Walk across the bridge slowly: the views over the ría are the best part. Next to the chapel they sell La Toja soap and salts, the classic souvenir.",
+            "DE": "Gehen Sie langsam zu Fuß über die Brücke: Der Blick über die Ría ist das Beste. Neben der Kapelle gibt es Seife und Salze von La Toja, das klassische Andenken."
+          },
+          "hora": "12:45",
+          "dur": "45 min",
+          "img": "/ciudades/sanxenxo/img/ogrove-3.jpg",
+          "lat": 42.484,
+          "lng": -8.84652,
+          "tramo": "coche",
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Marisco en O Grove",
+            "EN": "Seafood in O Grove",
+            "DE": "Meeresfrüchte in O Grove"
+          },
+          "s": {
+            "ES": "Comida en el pueblo del marisco",
+            "EN": "Lunch in the seafood town",
+            "DE": "Mittagessen im Ort der Meeresfrüchte"
+          },
+          "d": {
+            "ES": "O Grove se llama a sí mismo el paraíso del marisco, y no exagera: nécoras, centollos, almejas, berberechos y percebes que llegan directos de la ría. Se come con las manos, sin prisa y con un albariño muy frío.",
+            "EN": "O Grove calls itself seafood paradise, and it is no exaggeration: velvet crabs, spider crabs, clams, cockles and goose barnacles straight from the ría. Eat with your hands, unhurried, with an ice-cold Albariño.",
+            "DE": "O Grove nennt sich selbst das Paradies der Meeresfrüchte, und das ist nicht übertrieben: Samtkrabben, Seespinnen, Venusmuscheln, Herzmuscheln und Entenmuscheln direkt aus der Ría. Gegessen wird mit den Händen, ohne Eile und mit einem eiskalten Albariño."
+          },
+          "tip": {
+            "ES": "El marisco se paga al peso: pregunta el precio antes de pedir. Si no quieres mariscada entera, unas almejas a la marinera y una nécora por cabeza ya son un banquete.",
+            "EN": "Seafood is priced by weight, so ask before ordering. If you don’t want a full platter, clams in marinera sauce and one velvet crab each is already a feast.",
+            "DE": "Meeresfrüchte werden nach Gewicht berechnet: vor dem Bestellen nach dem Preis fragen. Wer keine ganze Platte möchte: Venusmuscheln in Marinera-Soße und eine Samtkrabbe pro Person sind schon ein Festessen."
+          },
+          "hora": "14:00",
+          "dur": "2 h",
+          "img": "/ciudades/sanxenxo/img/ogrove-4.jpg",
+          "lat": 42.4955,
+          "lng": -8.865,
+          "tramo": "coche",
+          "duracionMin": 120
+        }
+      ],
+      "fotos": [
+        "/ciudades/sanxenxo/img/ogrove.jpg",
+        "/ciudades/sanxenxo/img/ogrove-1.jpg",
+        "/ciudades/sanxenxo/img/ogrove-3.jpg",
+        "/ciudades/sanxenxo/img/ogrove-4.jpg",
+        "/ciudades/sanxenxo/img/ogrove-2.jpg"
+      ],
+      "duracionMin": 340,
+      "distanciaKm": 20.4,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Puerto y A Toxa son llanos. Algunos catamaranes admiten silla de ruedas avisando al reservar; confírmalo con el operador. En cubierta puede moverse el barco.",
+        "EN": "The port and A Toxa are flat. Some catamarans take wheelchairs if you say so when booking; confirm with the operator. The deck can move.",
+        "DE": "Hafen und A Toxa sind flach. Manche Katamarane nehmen Rollstühle mit, wenn man es bei der Buchung angibt; beim Anbieter nachfragen. An Deck kann es schaukeln."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 42.39792,
+        "lng": -8.80335,
+        "foto": "/ciudades/sanxenxo/img/porto.jpg",
+        "texto": {
+          "ES": "Puerta de tu hotel en Sanxenxo. La hora exacta de recogida te la confirmamos en recepción.",
+          "EN": "At the door of your hotel in Sanxenxo. Reception will confirm the exact pick-up time.",
+          "DE": "Vor deinem Hotel in Sanxenxo. Die genaue Abholzeit bestätigt dir die Rezeption."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida de marisco en O Grove",
+          "Bebidas extra a bordo",
+          "Propinas"
+        ],
+        "EN": [
+          "Seafood lunch in O Grove",
+          "Extra drinks on board",
+          "Tips"
+        ],
+        "DE": [
+          "Meeresfrüchte-Mittagessen in O Grove",
+          "Zusätzliche Getränke an Bord",
+          "Trinkgeld"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "DE": "Je nach Anbieter. Die Rezeption bestätigt es dir bei der Buchung."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    },
+    {
+      "id": "combarro-pontevedra",
+      "img": "/ciudades/sanxenxo/img/combarro.jpg",
+      "titulo": {
+        "ES": "Combarro y Pontevedra",
+        "EN": "Combarro and Pontevedra",
+        "DE": "Combarro und Pontevedra"
+      },
+      "tipo": {
+        "ES": "Pueblos",
+        "EN": "Towns",
+        "DE": "Orte"
+      },
+      "dur": "Día libre",
+      "d": {
+        "ES": "Hórreos sobre el agua por la mañana y, a mediodía, un casco antiguo de granito sin coches, de tapa en tapa.",
+        "EN": "Granaries over the water in the morning and, at midday, a car-free granite old town, from tapa to tapa.",
+        "DE": "Am Morgen Speicher über dem Wasser, mittags eine autofreie Granit-Altstadt, von Tapa zu Tapa."
+      },
+      "salida": {
+        "ES": "En coche por la PO-308 junto a la ría: unos 25 minutos hasta Combarro y 10 más hasta Pontevedra",
+        "EN": "By car along the PO-308 beside the ría: about 25 minutes to Combarro and 10 more to Pontevedra",
+        "DE": "Mit dem Auto über die PO-308 an der Ría entlang: etwa 25 Minuten bis Combarro und 10 weitere bis Pontevedra"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre: sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided: no booking needed",
+          "Day plan and map"
+        ],
+        "DE": [
+          "Auf eigene Faust: ohne Reservierung",
+          "Tagesplan und Karte"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo: el granito resbala si ha llovido",
+          "Un paraguas pequeño, por si acaso",
+          "Efectivo para las tapas",
+          "Gafas de sol",
+          "Batería en el móvil: Combarro pide fotos"
+        ],
+        "EN": [
+          "Comfortable shoes: granite gets slippery after rain",
+          "A small umbrella, just in case",
+          "Cash for tapas",
+          "Sunglasses",
+          "A charged phone: Combarro demands photos"
+        ],
+        "DE": [
+          "Bequeme Schuhe: Granit wird bei Regen rutschig",
+          "Einen kleinen Schirm, für alle Fälle",
+          "Bargeld für die Tapas",
+          "Sonnenbrille",
+          "Einen geladenen Akku: Combarro will fotografiert werden"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Hórreos de Combarro",
+            "EN": "The granaries of Combarro",
+            "DE": "Die Speicher von Combarro"
+          },
+          "s": {
+            "ES": "La Rúa do Mar, con los hórreos asomados a la ría",
+            "EN": "Rúa do Mar, with the granaries leaning over the ría",
+            "DE": "Die Rúa do Mar, mit den Speichern über der Ría"
+          },
+          "d": {
+            "ES": "Más de sesenta hórreos de granito y madera en fila al borde del agua, donde las familias guardaban el maíz lejos de la humedad y los ratones. Con la marea alta, el mar llega a los pies de los pilares y los barcos se amarran casi en la puerta de casa.",
+            "EN": "More than sixty granite and timber granaries lined up at the water’s edge, where families kept their maize away from damp and mice. At high tide the sea laps the foot of the pillars and boats moor almost at the front door.",
+            "DE": "Mehr als sechzig Speicher aus Granit und Holz in einer Reihe am Wasser, in denen die Familien ihren Mais vor Feuchtigkeit und Mäusen schützten. Bei Flut reicht das Meer bis an die Stelzen, und die Boote liegen fast vor der Haustür."
+          },
+          "tip": {
+            "ES": "Llega antes de las 10:30, cuando aún no han abierto las tiendas de recuerdos, y mira la tabla de mareas: con pleamar la foto es otra. Aparca a la entrada del pueblo y baja andando.",
+            "EN": "Arrive before 10:30, before the souvenir shops open, and check the tide table: at high tide the photo is something else. Park at the entrance to the village and walk down.",
+            "DE": "Kommen Sie vor 10:30 Uhr, bevor die Souvenirläden öffnen, und schauen Sie in den Gezeitenkalender: Bei Flut wird das Foto ein anderes. Am Ortseingang parken und hinunterlaufen."
+          },
+          "hora": "10:00",
+          "dur": "1 h",
+          "img": "/ciudades/sanxenxo/img/combarro.jpg",
+          "lat": 42.43165,
+          "lng": -8.70445,
+          "tramo": "coche",
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Cruceiros y Praza da Chousa",
+            "EN": "Stone crosses and Praza da Chousa",
+            "DE": "Steinkreuze und Praza da Chousa"
+          },
+          "s": {
+            "ES": "Callejones tallados en la roca, de cruceiro en cruceiro",
+            "EN": "Lanes cut into the rock, from cross to cross",
+            "DE": "In den Fels gehauene Gassen, von Kreuz zu Kreuz"
+          },
+          "d": {
+            "ES": "Las calles de Combarro se apoyan directamente sobre la roca, y en cada cruce se levanta un cruceiro de granito. Dicen aquí que, en los que miran al mar, la Virgen da la cara a la ría y Cristo al pueblo.",
+            "EN": "Combarro’s lanes sit directly on the bedrock, and at every crossing stands a granite cross. Locals say that on the ones by the sea, the Virgin faces the ría and Christ faces the village.",
+            "DE": "Die Gassen von Combarro liegen direkt auf dem Fels, und an jeder Kreuzung steht ein Granitkreuz. Hier sagt man, dass bei denen am Meer die Jungfrau zur Ría und Christus zum Dorf blickt."
+          },
+          "tip": {
+            "ES": "Sube por los callejones hasta la iglesia de San Roque y vuelve por la Praza da Chousa. Antes de irte, prueba el licor café o la crema de orujo que dan a catar en las tiendas.",
+            "EN": "Climb the lanes to the church of San Roque and come back through Praza da Chousa. Before leaving, try the coffee liqueur or orujo cream the shops offer to taste.",
+            "DE": "Steigen Sie durch die Gassen zur Kirche San Roque hinauf und kehren Sie über die Praza da Chousa zurück. Probieren Sie vor der Abfahrt den Kaffeelikör oder die Orujo-Creme, die die Läden zum Kosten anbieten."
+          },
+          "hora": "11:00",
+          "dur": "30 min",
+          "img": "/ciudades/sanxenxo/img/pontevedra-1.jpg",
+          "lat": 42.43101,
+          "lng": -8.7054,
+          "tramo": "pie",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "La Peregrina",
+            "EN": "La Peregrina",
+            "DE": "La Peregrina"
+          },
+          "s": {
+            "ES": "Pontevedra: una iglesia con planta de concha de vieira",
+            "EN": "Pontevedra: a church built on a scallop-shell plan",
+            "DE": "Pontevedra: eine Kirche mit dem Grundriss einer Jakobsmuschel"
+          },
+          "d": {
+            "ES": "El símbolo de Pontevedra, levantado en el siglo XVIII para la Virgen Peregrina, patrona de la provincia: fachada curva, dos torres barrocas y una planta que dibuja una vieira, la concha del Camino de Santiago, que pasa justo por delante.",
+            "EN": "The symbol of Pontevedra, built in the 18th century for the Pilgrim Virgin, patron of the province: a curved façade, two Baroque towers and a floor plan shaped like a scallop, the shell of the Way of St James, which passes right in front.",
+            "DE": "Das Wahrzeichen Pontevedras, im 18. Jahrhundert für die Pilgerjungfrau, Schutzpatronin der Provinz, errichtet: geschwungene Fassade, zwei Barocktürme und ein Grundriss in Form einer Jakobsmuschel, dem Zeichen des Jakobswegs, der direkt davor vorbeiführt."
+          },
+          "tip": {
+            "ES": "Deja el coche en un aparcamiento a las afueras del casco: el centro de Pontevedra es peatonal. Y salúdale al loro Ravachol, la estatua de bronce de la plaza, el loro más famoso de la ciudad.",
+            "EN": "Leave the car in a car park on the edge of the old town: central Pontevedra is pedestrianised. And say hello to Ravachol, the bronze parrot on the square, the city’s most famous bird.",
+            "DE": "Lassen Sie das Auto auf einem Parkplatz am Rand der Altstadt: Pontevedras Zentrum ist Fußgängerzone. Und grüßen Sie Ravachol, den Bronzepapagei auf dem Platz, den berühmtesten Vogel der Stadt."
+          },
+          "hora": "12:00",
+          "dur": "30 min",
+          "img": "/ciudades/sanxenxo/img/pontevedra-2.jpg",
+          "lat": 42.43077,
+          "lng": -8.6436,
+          "tramo": "coche",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Praza da Ferrería",
+            "EN": "Praza da Ferrería",
+            "DE": "Praza da Ferrería"
+          },
+          "s": {
+            "ES": "Soportales, terrazas y el convento gótico de San Francisco",
+            "EN": "Arcades, terraces and the Gothic convent of San Francisco",
+            "DE": "Arkaden, Terrassen und das gotische Kloster San Francisco"
+          },
+          "d": {
+            "ES": "La gran plaza de Pontevedra: casas con soportales y galerías acristaladas, una fuente renacentista en el centro y, en lo alto, la iglesia gótica de San Francisco. Aquí se toma el café, se cita la gente y se mira pasar la ciudad.",
+            "EN": "Pontevedra’s main square: arcaded houses with glazed galleries, a Renaissance fountain in the middle and, above, the Gothic church of San Francisco. This is where people have coffee, meet up and watch the city go by.",
+            "DE": "Pontevedras großer Platz: Häuser mit Arkaden und verglasten Galerien, ein Renaissancebrunnen in der Mitte und darüber die gotische Kirche San Francisco. Hier trinkt man Kaffee, trifft sich und schaut der Stadt beim Vorbeiziehen zu."
+          },
+          "tip": {
+            "ES": "Siéntate en una terraza bajo los soportales y pide un café: es el mejor sitio para entender el ritmo de la ciudad. Desde aquí, sigue por la Rúa Real hacia las plazas pequeñas.",
+            "EN": "Sit at a terrace under the arcades and order a coffee: it is the best place to catch the city’s rhythm. From here, carry on along Rúa Real towards the smaller squares.",
+            "DE": "Setzen Sie sich auf eine Terrasse unter den Arkaden und bestellen Sie einen Kaffee: der beste Ort, um den Rhythmus der Stadt zu spüren. Von hier geht es über die Rúa Real zu den kleineren Plätzen."
+          },
+          "hora": "12:30",
+          "dur": "30 min",
+          "img": "/ciudades/sanxenxo/img/pontevedra-3.jpg",
+          "lat": 42.43137,
+          "lng": -8.64422,
+          "tramo": "pie",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Praza da Leña y tapas",
+            "EN": "Praza da Leña and tapas",
+            "DE": "Praza da Leña und Tapas"
+          },
+          "s": {
+            "ES": "La plaza más pequeña y bonita del casco antiguo",
+            "EN": "The smallest and prettiest square in the old town",
+            "DE": "Der kleinste und schönste Platz der Altstadt"
+          },
+          "d": {
+            "ES": "Una plaza diminuta de casas con balcones y galerías, con un cruceiro en el centro y el Museo de Pontevedra a un lado. Alrededor, en las plazas de Verdura y Teucro, las tabernas sacan pulpo á feira, croquetas y tortilla, siempre con un vino de la tierra.",
+            "EN": "A tiny square of balconied, galleried houses, with a stone cross in the middle and the Pontevedra Museum on one side. All around, on Verdura and Teucro squares, the taverns serve pulpo á feira, croquettes and tortilla, always with a local wine.",
+            "DE": "Ein winziger Platz mit Balkonen und Glasgalerien, einem Steinkreuz in der Mitte und dem Museum von Pontevedra an der Seite. Ringsum, auf den Plätzen Verdura und Teucro, servieren die Tavernen Pulpo á feira, Croquetas und Tortilla, immer mit einem Wein aus der Gegend."
+          },
+          "tip": {
+            "ES": "En Pontevedra se tapea de pie y de barra en barra: pide un vino y pregunta qué tapa sale hoy. Si te sobra tiempo, el Museo de Pontevedra es gratuito.",
+            "EN": "In Pontevedra you eat tapas standing up, bar after bar: order a wine and ask what tapa is on today. If you have time left, the Pontevedra Museum is free.",
+            "DE": "In Pontevedra isst man Tapas im Stehen, von Bar zu Bar: einen Wein bestellen und fragen, welche Tapa es heute gibt. Wenn noch Zeit bleibt: Das Museum von Pontevedra ist kostenlos."
+          },
+          "hora": "13:15",
+          "dur": "2 h",
+          "img": "/ciudades/sanxenxo/img/pontevedra-4.jpg",
+          "lat": 42.43263,
+          "lng": -8.64323,
+          "tramo": "pie",
+          "duracionMin": 120
+        }
+      ],
+      "fotos": [
+        "/ciudades/sanxenxo/img/combarro.jpg",
+        "/ciudades/sanxenxo/img/pontevedra-1.jpg",
+        "/ciudades/sanxenxo/img/pontevedra-2.jpg",
+        "/ciudades/sanxenxo/img/pontevedra-3.jpg",
+        "/ciudades/sanxenxo/img/pontevedra-4.jpg"
+      ],
+      "duracionMin": 370,
+      "distanciaKm": 14.4,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Combarro tiene callejones sobre la roca con escalones: difícil con silla o carrito. El casco antiguo de Pontevedra es peatonal y bastante llano, con suelo de granito que resbala si llueve.",
+        "EN": "Combarro has alleys over bare rock with steps: hard with a wheelchair or pushchair. Pontevedra's old town is pedestrian and fairly flat, with granite paving that gets slippery in the rain.",
+        "DE": "Combarro hat Gassen auf blankem Fels mit Stufen: schwierig mit Rollstuhl oder Kinderwagen. Die Altstadt von Pontevedra ist Fußgängerzone und recht flach, mit Granitpflaster, das bei Regen rutschig wird."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 42.39792,
+        "lng": -8.80335,
+        "foto": "/ciudades/sanxenxo/img/porto.jpg",
+        "texto": {
+          "ES": "Sales en coche desde tu hotel en Sanxenxo por la PO-308, junto a la ría. Primera parada: Combarro, a unos 25 minutos.",
+          "EN": "Drive from your hotel in Sanxenxo along the PO-308 by the estuary. First stop: Combarro, about 25 minutes away.",
+          "DE": "Fahr von deinem Hotel in Sanxenxo über die PO-308 an der Ría entlang. Erster Halt: Combarro, etwa 25 Minuten entfernt."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Gasolina y aparcamiento",
+          "Comida y tapas",
+          "Guía"
+        ],
+        "EN": [
+          "Fuel and parking",
+          "Lunch and tapas",
+          "Guide"
+        ],
+        "DE": [
+          "Benzin und Parken",
+          "Mittagessen und Tapas",
+          "Reiseleitung"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "DE": "Je nach Anbieter. Die Rezeption bestätigt es dir bei der Buchung."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Una copa de albariño en el hotel a la vuelta",
+      "EN": "A glass of Albariño at the hotel when you get back",
+      "DE": "Ein Glas Albariño im Hotel, wenn Sie zurück sind"
+    }
+  },
+  "creditos": [
+    "Playa de Silgar, puerto de Sanxenxo, Portonovo desde Sanxenxo, ermita de A Lanzada, Combarro, Pazo de Fefiñáns y puerto de O Grove: Luis Miguel Bugallo Sánchez (Lmbuga), CC BY-SA 3.0 / 4.0, Wikimedia Commons",
+    "Vista de la ría desde Raxó y capilla de A Toxa: Lameiro, CC BY-SA 4.0, Wikimedia Commons",
+    "Playa de Rodas (cartel): Viferico, CC BY-SA 4.0, Wikimedia Commons",
+    "Islas Cíes y playa de Rodas desde el aire: Sethfromsomewhere, CC BY-SA 4.0, Wikimedia Commons",
+    "Vista desde el Alto do Príncipe: Dapatxi, CC BY-SA 4.0, Wikimedia Commons",
+    "Faro de Cíes y Rodas desde el monte: Mario Sánchez, CC BY-SA 2.0, Wikimedia Commons",
+    "Viñedos de albariño en Castrelo (Cambados): Re Fresh Vigo, CC BY-SA 3.0, Wikimedia Commons",
+    "Ruinas de Santa Mariña Dozo: Diego Delso, CC BY-SA 4.0, Wikimedia Commons",
+    "Zamburiñas: Juan Emilio Prades Bel, CC BY 4.0, Wikimedia Commons",
+    "Bateas en la ría de Arousa: Chichole, CC BY-SA 4.0, Wikimedia Commons",
+    "Hórreo y cruceiro de Combarro: Jl FilpoC, CC BY-SA 4.0, Wikimedia Commons",
+    "Iglesia de la Peregrina (Pontevedra): JnCrlsMG, CC BY-SA 4.0, Wikimedia Commons",
+    "Praza da Leña (Pontevedra): Jorge Franganillo, CC BY 4.0, Wikimedia Commons",
+    "A Madama de Silgar: P. Lameiro (dominio público) · Mariscada: Pedroserafin (CC0) · Praza da Ferrería: Zarateman (CC0)",
+    "Puente de A Toxa (O Grove): Lameiro, CC BY-SA 4.0, Wikimedia Commons"
+  ]
+}

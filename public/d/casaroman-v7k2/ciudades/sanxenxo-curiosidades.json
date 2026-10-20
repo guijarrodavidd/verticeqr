@@ -1,0 +1,542 @@
+{
+  "cies-1": {
+    "pregunta": {
+      "ES": "Las Cíes forman un parque nacional junto a otras islas. ¿Cuáles?",
+      "EN": "The Cíes form a national park with other islands. Which?",
+      "DE": "Die Cíes bilden mit anderen Inseln einen Nationalpark. Mit welchen?"
+    },
+    "opciones": [
+      {
+        "ES": "Las islas Canarias",
+        "EN": "The Canary Islands",
+        "DE": "Die Kanaren"
+      },
+      {
+        "ES": "Ons, Sálvora y Cortegada",
+        "EN": "Ons, Sálvora and Cortegada",
+        "DE": "Ons, Sálvora und Cortegada"
+      },
+      {
+        "ES": "Las islas Medas",
+        "EN": "The Medes Islands",
+        "DE": "Die Medes-Inseln"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Juntas forman el Parque Nacional de las Islas Atlánticas de Galicia, creado en 2002. Por eso hay cupo diario y piden autorización.",
+      "EN": "Together they make up the Atlantic Islands of Galicia National Park, created in 2002. Hence the daily cap and permit.",
+      "DE": "Zusammen bilden sie den 2002 gegründeten Nationalpark der Atlantischen Inseln Galiciens – daher Tageslimit und Genehmigung."
+    }
+  },
+  "cies-2": {
+    "pregunta": {
+      "ES": "¿Cómo se llama la laguna que hay detrás de Rodas?",
+      "EN": "What's the name of the lagoon behind Rodas beach?",
+      "DE": "Wie heißt die Lagune hinter dem Strand von Rodas?"
+    },
+    "opciones": [
+      {
+        "ES": "Lagoa de Rodas",
+        "EN": "Lagoa de Rodas",
+        "DE": "Lagoa de Rodas"
+      },
+      {
+        "ES": "Lago do Faro",
+        "EN": "Lago do Faro",
+        "DE": "Lago do Faro"
+      },
+      {
+        "ES": "Lago dos Nenos",
+        "EN": "Lago dos Nenos",
+        "DE": "Lago dos Nenos"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Es una laguna de agua salada que se llena con la marea. Se formó con la arena que fue uniendo las islas de Monteagudo y do Faro.",
+      "EN": "It's a saltwater lagoon fed by the tide, formed by the sand that gradually joined the islands of Monteagudo and do Faro.",
+      "DE": "Eine Salzwasserlagune, die die Flut füllt. Sie entstand aus dem Sand, der die Inseln Monteagudo und do Faro verband."
+    }
+  },
+  "cies-3": {
+    "pregunta": {
+      "ES": "¿Qué ave anida en masa en los acantilados de las Cíes?",
+      "EN": "Which bird nests in huge numbers on the Cíes cliffs?",
+      "DE": "Welcher Vogel brütet massenhaft an den Klippen der Cíes?"
+    },
+    "opciones": [
+      {
+        "ES": "La gaviota patiamarilla",
+        "EN": "The yellow-legged gull",
+        "DE": "Die Mittelmeermöwe"
+      },
+      {
+        "ES": "El frailecillo",
+        "EN": "The puffin",
+        "DE": "Der Papageitaucher"
+      },
+      {
+        "ES": "El flamenco",
+        "EN": "The flamingo",
+        "DE": "Der Flamingo"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Las Cíes acogen una de las grandes colonias de gaviota patiamarilla de Europa, y en las paredes también cría el cormorán moñudo.",
+      "EN": "The Cíes host one of Europe's large yellow-legged gull colonies, and European shags breed on the cliffs too.",
+      "DE": "Auf den Cíes brütet eine der großen Mittelmeermöwen-Kolonien Europas, an den Felswänden auch die Krähenscharbe."
+    }
+  },
+  "cies-4": {
+    "pregunta": {
+      "ES": "¿Cómo se llaman las tres islas Cíes?",
+      "EN": "What are the names of the three Cíes islands?",
+      "DE": "Wie heißen die drei Cíes-Inseln?"
+    },
+    "opciones": [
+      {
+        "ES": "Ons, Onza y Sálvora",
+        "EN": "Ons, Onza and Sálvora",
+        "DE": "Ons, Onza und Sálvora"
+      },
+      {
+        "ES": "Monteagudo, do Faro y San Martiño",
+        "EN": "Monteagudo, do Faro, San Martiño",
+        "DE": "Monteagudo, do Faro, San Martiño"
+      },
+      {
+        "ES": "Norte, Medio y Sur",
+        "EN": "North, Middle and South",
+        "DE": "Nord, Mitte und Süd"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El faro corona el Monte Faro, en la isla do Faro, sobre acantilados de unos 175 metros. San Martiño, al sur, solo se ve desde el agua.",
+      "EN": "The lighthouse tops Monte Faro on the island of do Faro, above cliffs of about 175 m. San Martiño, to the south, is only seen from the water.",
+      "DE": "Der Leuchtturm krönt den Monte Faro auf der Insel do Faro über rund 175 m hohen Klippen. San Martiño im Süden sieht man nur vom Wasser."
+    }
+  },
+  "cies-5": {
+    "pregunta": {
+      "ES": "¿Qué apodo clásico tienen las Cíes?",
+      "EN": "What classical nickname do the Cíes have?",
+      "DE": "Welchen klassischen Beinamen tragen die Cíes?"
+    },
+    "opciones": [
+      {
+        "ES": "Las Islas Afortunadas",
+        "EN": "The Fortunate Isles",
+        "DE": "Die Glücklichen Inseln"
+      },
+      {
+        "ES": "Las Islas del Fin del Mundo",
+        "EN": "The Islands at World's End",
+        "DE": "Die Inseln am Ende der Welt"
+      },
+      {
+        "ES": "Las Islas de los Dioses",
+        "EN": "The Islands of the Gods",
+        "DE": "Die Inseln der Götter"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Las fuentes antiguas, atribuidas a Ptolomeo, las llaman «Islas de los Dioses». Viéndolas con esta luz, cuesta llevarles la contraria.",
+      "EN": "Ancient sources, attributed to Ptolemy, call them 'the Islands of the Gods'. In this light, it's hard to disagree.",
+      "DE": "Antike Quellen, Ptolemäus zugeschrieben, nennen sie „Inseln der Götter“. In diesem Licht mag man nicht widersprechen."
+    }
+  },
+  "cambados-1": {
+    "pregunta": {
+      "ES": "¿Desde qué año existe la DO Rías Baixas?",
+      "EN": "Since what year has the Rías Baixas appellation existed?",
+      "DE": "Seit welchem Jahr gibt es die DO Rías Baixas?"
+    },
+    "opciones": [
+      {
+        "ES": "1988",
+        "EN": "1988",
+        "DE": "1988"
+      },
+      {
+        "ES": "1953",
+        "EN": "1953",
+        "DE": "1953"
+      },
+      {
+        "ES": "2001",
+        "EN": "2001",
+        "DE": "2001"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Se reconoció en 1988, aunque desde 1980 ya existía la Denominación Específica Albariño. Hoy el albariño es casi todo lo que se cosecha.",
+      "EN": "It was recognised in 1988, though a 'Specific Albariño Denomination' already existed from 1980. Today albariño is nearly the whole harvest.",
+      "DE": "Anerkannt 1988, doch schon ab 1980 gab es die „Denominación Específica Albariño“. Heute ist fast die ganze Ernte Albariño."
+    }
+  },
+  "cambados-2": {
+    "pregunta": {
+      "ES": "Cambados nació de unir tres villas: Fefiñáns, Cambados y…",
+      "EN": "Cambados was born from three villages: Fefiñáns, Cambados and…",
+      "DE": "Cambados entstand aus drei Orten: Fefiñáns, Cambados und…"
+    },
+    "opciones": [
+      {
+        "ES": "O Grove",
+        "EN": "O Grove",
+        "DE": "O Grove"
+      },
+      {
+        "ES": "Santo Tomé",
+        "EN": "Santo Tomé",
+        "DE": "Santo Tomé"
+      },
+      {
+        "ES": "Vilanova",
+        "EN": "Vilanova",
+        "DE": "Vilanova"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Fefiñáns era la villa señorial, Cambados la del centro y Santo Tomé la marinera. Por eso el pueblo cambia tanto de calle en calle.",
+      "EN": "Fefiñáns was the noble quarter, Cambados the centre and Santo Tomé the fishermen's. That's why the town changes so much street to street.",
+      "DE": "Fefiñáns war das Adelsviertel, Cambados das Zentrum, Santo Tomé das Fischerdorf. Darum wirkt jede Straße anders."
+    }
+  },
+  "cambados-3": {
+    "pregunta": {
+      "ES": "¿En qué siglo se levantó la iglesia de Santa Mariña Dozo?",
+      "EN": "In which century was the church of Santa Mariña Dozo built?",
+      "DE": "In welchem Jahrhundert entstand die Kirche Santa Mariña Dozo?"
+    },
+    "opciones": [
+      {
+        "ES": "En el XI",
+        "EN": "11th century",
+        "DE": "Im 11. Jahrhundert"
+      },
+      {
+        "ES": "En el XVIII",
+        "EN": "18th century",
+        "DE": "Im 18. Jahrhundert"
+      },
+      {
+        "ES": "En el XV",
+        "EN": "15th century",
+        "DE": "Im 15. Jahrhundert"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Es gótica del siglo XV, sobre una capilla románica. La dejaron sin tejado en el XIX y en 1943 fue declarada Monumento Nacional.",
+      "EN": "It's 15th-century Gothic, built over a Romanesque chapel. It lost its roof in the 19th century and became a National Monument in 1943.",
+      "DE": "Gotisch aus dem 15. Jh., über einer romanischen Kapelle. Im 19. Jh. verlor sie ihr Dach, 1943 wurde sie Nationaldenkmal."
+    }
+  },
+  "cambados-4": {
+    "pregunta": {
+      "ES": "La zamburiña, ¿es una vieira pequeña?",
+      "EN": "Is the zamburiña just a small scallop?",
+      "DE": "Ist die Zamburiña einfach eine kleine Jakobsmuschel?"
+    },
+    "opciones": [
+      {
+        "ES": "No, es otra especie",
+        "EN": "No, it's another species",
+        "DE": "Nein, eine andere Art"
+      },
+      {
+        "ES": "Sí, una cría de vieira",
+        "EN": "Yes, a young scallop",
+        "DE": "Ja, eine junge Jakobsmuschel"
+      },
+      {
+        "ES": "Sí, una vieira de río",
+        "EN": "Yes, a river scallop",
+        "DE": "Ja, eine Flussmuschel"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Parece una vieira en miniatura, pero es otra especie (Mimachlamys varia) que nunca crece mucho más. Por eso se come entera de un bocado.",
+      "EN": "It looks like a mini scallop but is a different species (Mimachlamys varia) that never grows much bigger, so it's eaten in one bite.",
+      "DE": "Sie sieht aus wie eine Mini-Jakobsmuschel, ist aber eine eigene Art (Mimachlamys varia), die klein bleibt – ein Bissen."
+    }
+  },
+  "ogrove-1": {
+    "pregunta": {
+      "ES": "¿Cómo se une O Grove a tierra firme?",
+      "EN": "How is O Grove joined to the mainland?",
+      "DE": "Wie ist O Grove mit dem Festland verbunden?"
+    },
+    "opciones": [
+      {
+        "ES": "Por un puente romano",
+        "EN": "By a Roman bridge",
+        "DE": "Über eine Römerbrücke"
+      },
+      {
+        "ES": "Por un istmo de arena",
+        "EN": "By a sandy isthmus",
+        "DE": "Über eine Sandlandenge"
+      },
+      {
+        "ES": "Solo en barco",
+        "EN": "Only by boat",
+        "DE": "Nur per Boot"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "O Grove es casi una isla: lo une a tierra el istmo de A Lanzada, una lengua de arena con una de las playas más largas de Galicia.",
+      "EN": "O Grove is almost an island, linked to land by the A Lanzada isthmus, a strip of sand with one of Galicia's longest beaches.",
+      "DE": "O Grove ist fast eine Insel, verbunden über die Landenge von A Lanzada mit einem der längsten Strände Galiciens."
+    }
+  },
+  "ogrove-2": {
+    "pregunta": {
+      "ES": "¿Qué récord tiene la DOP Mexillón de Galicia?",
+      "EN": "What record does the Mexillón de Galicia PDO hold?",
+      "DE": "Welchen Rekord hält die g. U. Mexillón de Galicia?"
+    },
+    "opciones": [
+      {
+        "ES": "La más antigua de España",
+        "EN": "Spain's oldest PDO",
+        "DE": "Älteste g. U. Spaniens"
+      },
+      {
+        "ES": "La única para exportar",
+        "EN": "The only one for export",
+        "DE": "Die einzige für den Export"
+      },
+      {
+        "ES": "Primera DOP marina de Europa",
+        "EN": "Europe's first seafood PDO",
+        "DE": "Erste Meeres-g. U. Europas"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Fue la primera Denominación de Origen Protegida de Europa para un producto del mar. Casi todo sale de bateas como estas.",
+      "EN": "It was Europe's first Protected Designation of Origin for a seafood product. Almost all of it comes from rafts like these.",
+      "DE": "Sie war Europas erste geschützte Ursprungsbezeichnung für ein Meeresprodukt. Fast alles stammt von Flößen wie diesen."
+    }
+  },
+  "ogrove-3": {
+    "pregunta": {
+      "ES": "Antes de que se abriera el puente, ¿cómo se llegaba a A Toxa?",
+      "EN": "Before the bridge opened, how did people reach A Toxa?",
+      "DE": "Wie kam man vor der Brücke nach A Toxa?"
+    },
+    "opciones": [
+      {
+        "ES": "En barco",
+        "EN": "By boat",
+        "DE": "Mit dem Boot"
+      },
+      {
+        "ES": "Por un camino a pie",
+        "EN": "On a footpath",
+        "DE": "Über einen Fußweg"
+      },
+      {
+        "ES": "En tren",
+        "EN": "By train",
+        "DE": "Mit dem Zug"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Hasta que se abrió el puente, a principios del siglo XX, a la isla, al balneario y a la ermita solo se llegaba en barco.",
+      "EN": "Until the bridge opened in the early 20th century, the island, spa and chapel could only be reached by boat.",
+      "DE": "Bis zum Bau der Brücke Anfang des 20. Jahrhunderts erreichte man Insel, Kurbad und Kapelle nur per Boot."
+    }
+  },
+  "ogrove-4": {
+    "pregunta": {
+      "ES": "¿Desde qué año celebra O Grove su Festa do Marisco?",
+      "EN": "Since what year has O Grove held its Seafood Festival?",
+      "DE": "Seit wann feiert O Grove sein Meeresfrüchtefest?"
+    },
+    "opciones": [
+      {
+        "ES": "Desde 1985",
+        "EN": "Since 1985",
+        "DE": "Seit 1985"
+      },
+      {
+        "ES": "Desde 1963",
+        "EN": "Since 1963",
+        "DE": "Seit 1963"
+      },
+      {
+        "ES": "Desde 1931",
+        "EN": "Since 1931",
+        "DE": "Seit 1931"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Nació en 1963 para ensalzar el marisco de la ría y hoy es Fiesta de Interés Turístico Nacional. Se celebra cada octubre.",
+      "EN": "It started in 1963 to celebrate the estuary's seafood and is now a festival of National Tourist Interest, held every October.",
+      "DE": "Es begann 1963 als Ehrung der Meeresfrüchte und ist heute ein Fest von nationalem touristischem Interesse, jeden Oktober."
+    }
+  },
+  "combarro-pontevedra-1": {
+    "pregunta": {
+      "ES": "¿Desde qué año está protegido Combarro como Conjunto Histórico?",
+      "EN": "Since when has Combarro been a protected Historic Site?",
+      "DE": "Seit wann steht Combarro als historisches Ensemble unter Schutz?"
+    },
+    "opciones": [
+      {
+        "ES": "Desde 1999",
+        "EN": "Since 1999",
+        "DE": "Seit 1999"
+      },
+      {
+        "ES": "Desde 1931",
+        "EN": "Since 1931",
+        "DE": "Seit 1931"
+      },
+      {
+        "ES": "Desde 1972",
+        "EN": "Since 1972",
+        "DE": "Seit 1972"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Fue declarado Conjunto Histórico-Artístico en 1972 por sus hórreos, cruceiros y casas marineras. Las piedras planas de los pies frenan a los ratones.",
+      "EN": "It became a Historic-Artistic Site in 1972 for its granaries, stone crosses and fishermen's houses. The flat stones on the legs stop rats.",
+      "DE": "1972 wurde es wegen Hórreos, Steinkreuzen und Fischerhäusern unter Schutz gestellt. Die flachen Steinplatten halten Ratten fern."
+    }
+  },
+  "combarro-pontevedra-2": {
+    "pregunta": {
+      "ES": "¿A qué municipio pertenece Combarro?",
+      "EN": "Which municipality does Combarro belong to?",
+      "DE": "Zu welcher Gemeinde gehört Combarro?"
+    },
+    "opciones": [
+      {
+        "ES": "Poio",
+        "EN": "Poio",
+        "DE": "Poio"
+      },
+      {
+        "ES": "Sanxenxo",
+        "EN": "Sanxenxo",
+        "DE": "Sanxenxo"
+      },
+      {
+        "ES": "Marín",
+        "EN": "Marín",
+        "DE": "Marín"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es una parroquia de Poio, el municipio del gran monasterio benedictino, a unos seis kilómetros de Pontevedra. Uno de sus cruceiros es de 1771.",
+      "EN": "It's a parish of Poio, home to a great Benedictine monastery, about six kilometres from Pontevedra. One of its crosses dates from 1771.",
+      "DE": "Es gehört zu Poio mit seinem großen Benediktinerkloster, rund sechs Kilometer von Pontevedra. Ein Steinkreuz stammt von 1771."
+    }
+  },
+  "combarro-pontevedra-3": {
+    "pregunta": {
+      "ES": "¿Qué Camino de Santiago pasa por delante de La Peregrina?",
+      "EN": "Which Camino de Santiago passes in front of La Peregrina?",
+      "DE": "Welcher Jakobsweg führt an La Peregrina vorbei?"
+    },
+    "opciones": [
+      {
+        "ES": "El Camino Francés",
+        "EN": "The French Way",
+        "DE": "Der Französische Weg"
+      },
+      {
+        "ES": "El Camino Portugués",
+        "EN": "The Portuguese Way",
+        "DE": "Der Portugiesische Weg"
+      },
+      {
+        "ES": "El Camino del Norte",
+        "EN": "The Northern Way",
+        "DE": "Der Küstenweg"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Los peregrinos del Camino Portugués cruzan Pontevedra justo aquí. Por eso la iglesia tiene planta de vieira y está dedicada a la Virgen Peregrina.",
+      "EN": "Pilgrims on the Portuguese Way pass right here, which is why the church is scallop-shaped and dedicated to the Pilgrim Virgin.",
+      "DE": "Pilger des Portugiesischen Wegs kommen genau hier vorbei – daher der Grundriss als Jakobsmuschel und die Pilgerjungfrau."
+    }
+  },
+  "combarro-pontevedra-4": {
+    "pregunta": {
+      "ES": "¿De dónde viene el nombre de la Praza da Ferrería?",
+      "EN": "Where does the name Praza da Ferrería come from?",
+      "DE": "Woher hat die Praza da Ferrería ihren Namen?"
+    },
+    "opciones": [
+      {
+        "ES": "De una feria de ganado",
+        "EN": "A cattle fair",
+        "DE": "Von einem Viehmarkt"
+      },
+      {
+        "ES": "De una familia noble",
+        "EN": "A noble family",
+        "DE": "Von einer Adelsfamilie"
+      },
+      {
+        "ES": "Del hierro: había fraguas",
+        "EN": "Iron: there were forges",
+        "DE": "Vom Eisen: hier gab es Schmieden"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "En la Edad Media aquí trabajaban los herreros. Antes se llamó Plaza de Trabancas y tomó su nombre actual hacia 1820.",
+      "EN": "Blacksmiths worked here in the Middle Ages. It was once called Plaza de Trabancas and took its current name around 1820.",
+      "DE": "Im Mittelalter arbeiteten hier Schmiede. Früher hieß der Platz Plaza de Trabancas, den heutigen Namen bekam er um 1820."
+    }
+  },
+  "combarro-pontevedra-5": {
+    "pregunta": {
+      "ES": "¿Sobre qué se sirve tradicionalmente el pulpo á feira?",
+      "EN": "What is pulpo á feira traditionally served on?",
+      "DE": "Worauf wird Pulpo á feira traditionell serviert?"
+    },
+    "opciones": [
+      {
+        "ES": "Un plato de madera",
+        "EN": "A wooden plate",
+        "DE": "Einem Holzteller"
+      },
+      {
+        "ES": "Una teja de barro",
+        "EN": "A clay roof tile",
+        "DE": "Einem Tonziegel"
+      },
+      {
+        "ES": "Una hoja de berza",
+        "EN": "A cabbage leaf",
+        "DE": "Einem Kohlblatt"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Se corta con tijera sobre un plato de madera, con sal gruesa, pimentón y aceite. La madera absorbe el agua y el pulpo no se enfría tan rápido.",
+      "EN": "It's snipped with scissors onto a wooden plate with coarse salt, paprika and olive oil. The wood soaks up water and keeps it warm.",
+      "DE": "Er wird mit der Schere auf einen Holzteller geschnitten, mit grobem Salz, Paprika und Öl. Das Holz nimmt Wasser auf und hält warm."
+    }
+  }
+}
