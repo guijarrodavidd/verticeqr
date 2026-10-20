@@ -1,0 +1,572 @@
+{
+  "volcan-1": {
+    "pregunta": {
+      "ES": "¿Qué altura tiene el volcán Villarrica?",
+      "EN": "How high is Villarrica volcano?",
+      "PT": "Qual é a altura do vulcão Villarrica?"
+    },
+    "opciones": [
+      {
+        "ES": "1.847 metros",
+        "EN": "1,847 metres",
+        "PT": "1.847 metros"
+      },
+      {
+        "ES": "2.847 metros",
+        "EN": "2,847 metres",
+        "PT": "2.847 metros"
+      },
+      {
+        "ES": "3.847 metros",
+        "EN": "3,847 metres",
+        "PT": "3.847 metros"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Su cumbre está a 2.847 metros y se eleva unos 2.450 metros sobre su base. Unas 15.000 personas suben cada año hasta el cráter.",
+      "EN": "Its summit stands at 2,847 m, rising about 2,450 m above its base. Some 15,000 people climb to the crater every year.",
+      "PT": "O cume fica a 2.847 metros e se eleva uns 2.450 metros acima da base. Cerca de 15 mil pessoas sobem até a cratera por ano."
+    }
+  },
+  "volcan-2": {
+    "pregunta": {
+      "ES": "¿Qué color de alerta debe tener el volcán para que se pueda subir?",
+      "EN": "Which alert colour must the volcano be on for climbs to go ahead?",
+      "PT": "Em que cor de alerta o vulcão precisa estar para a subida acontecer?"
+    },
+    "opciones": [
+      {
+        "ES": "Verde",
+        "EN": "Green",
+        "PT": "Verde"
+      },
+      {
+        "ES": "Amarilla",
+        "EN": "Yellow",
+        "PT": "Amarelo"
+      },
+      {
+        "ES": "Naranja",
+        "EN": "Orange",
+        "PT": "Laranja"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El Sernageomin vigila el volcán y lo clasifica de verde a rojo. El ascenso al cráter solo se permite con la alerta técnica en verde y sin perímetro de seguridad.",
+      "EN": "Chile’s geological service (Sernageomin) monitors the volcano and rates it from green to red. Climbs to the crater are only allowed on green, with no safety perimeter in place.",
+      "PT": "O serviço geológico do Chile (Sernageomin) monitora o vulcão e o classifica de verde a vermelho. A subida à cratera só é permitida com alerta verde e sem perímetro de segurança."
+    }
+  },
+  "volcan-3": {
+    "pregunta": {
+      "ES": "¿Qué hay en el fondo del cráter?",
+      "EN": "What lies at the bottom of the crater?",
+      "PT": "O que há no fundo da cratera?"
+    },
+    "opciones": [
+      {
+        "ES": "Un lago de agua helada",
+        "EN": "A lake of icy water",
+        "PT": "Um lago de água gelada"
+      },
+      {
+        "ES": "Un lago de lava",
+        "EN": "A lava lake",
+        "PT": "Um lago de lava"
+      },
+      {
+        "ES": "Nada: está apagado",
+        "EN": "Nothing: it is extinct",
+        "PT": "Nada: está extinto"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El Villarrica es uno de los volcanes más activos de Sudamérica. En su cráter, de unos 200 metros de ancho, hay un lago de lava cuyo nivel sube y baja.",
+      "EN": "Villarrica is one of the most active volcanoes in South America. Its crater, some 200 m wide, holds a lava lake whose level rises and falls.",
+      "PT": "O Villarrica é um dos vulcões mais ativos da América do Sul. Na cratera, com uns 200 metros de largura, há um lago de lava cujo nível sobe e desce."
+    }
+  },
+  "volcan-4": {
+    "pregunta": {
+      "ES": "¿En qué año tuvo el Villarrica su última gran erupción?",
+      "EN": "When was Villarrica’s last major eruption?",
+      "PT": "Em que ano foi a última grande erupção do Villarrica?"
+    },
+    "opciones": [
+      {
+        "ES": "1971",
+        "EN": "1971",
+        "PT": "1971"
+      },
+      {
+        "ES": "1984",
+        "EN": "1984",
+        "PT": "1984"
+      },
+      {
+        "ES": "2015",
+        "EN": "2015",
+        "PT": "2015"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "La madrugada del 3 de marzo de 2015 lanzó una fuente de lava sobre la cumbre y la alerta pasó a roja. Los vecinos evacuaron de forma rápida y ordenada.",
+      "EN": "In the early hours of 3 March 2015 it sent a fountain of lava above the summit and the alert went to red. Residents evacuated quickly and calmly.",
+      "PT": "Na madrugada de 3 de março de 2015 lançou uma fonte de lava acima do cume e o alerta passou a vermelho. Os moradores evacuaram de forma rápida e organizada."
+    }
+  },
+  "termas-1": {
+    "pregunta": {
+      "ES": "¿Cómo llaman los mapuche al volcán Villarrica?",
+      "EN": "What do the Mapuche call Villarrica volcano?",
+      "PT": "Como os mapuche chamam o vulcão Villarrica?"
+    },
+    "opciones": [
+      {
+        "ES": "Rukapillán",
+        "EN": "Rukapillán",
+        "PT": "Rukapillán"
+      },
+      {
+        "ES": "Lanín",
+        "EN": "Lanín",
+        "PT": "Lanín"
+      },
+      {
+        "ES": "Llaima",
+        "EN": "Llaima",
+        "PT": "Llaima"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Rukapillán significa «casa del pillán», un espíritu poderoso de la tradición mapuche. Lanín y Llaima son otros dos volcanes de la zona.",
+      "EN": "Rukapillán means “house of the pillán”, a powerful spirit in Mapuche tradition. Lanín and Llaima are two other volcanoes in the area.",
+      "PT": "Rukapillán significa “casa do pillán”, um espírito poderoso da tradição mapuche. Lanín e Llaima são outros dois vulcões da região."
+    }
+  },
+  "termas-2": {
+    "pregunta": {
+      "ES": "¿Quién diseñó las Termas Geométricas?",
+      "EN": "Who designed Termas Geométricas?",
+      "PT": "Quem projetou as Termas Geométricas?"
+    },
+    "opciones": [
+      {
+        "ES": "Alejandro Aravena",
+        "EN": "Alejandro Aravena",
+        "PT": "Alejandro Aravena"
+      },
+      {
+        "ES": "Germán del Sol",
+        "EN": "Germán del Sol",
+        "PT": "Germán del Sol"
+      },
+      {
+        "ES": "Oscar Niemeyer",
+        "EN": "Oscar Niemeyer",
+        "PT": "Oscar Niemeyer"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El arquitecto chileno Germán del Sol, que también hizo las Termas de Puritama en el desierto de Atacama. Las obras terminaron en 2004.",
+      "EN": "Chilean architect Germán del Sol, who also built the Puritama hot springs in the Atacama Desert. Work was finished in 2004.",
+      "PT": "O arquiteto chileno Germán del Sol, que também fez as Termas de Puritama no deserto do Atacama. A obra ficou pronta em 2004."
+    }
+  },
+  "termas-3": {
+    "pregunta": {
+      "ES": "¿A qué temperatura brota el agua de las termas?",
+      "EN": "At what temperature does the spring water emerge?",
+      "PT": "A que temperatura a água das termas brota?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 40 °C",
+        "EN": "About 40 °C",
+        "PT": "Uns 40 °C"
+      },
+      {
+        "ES": "Unos 60 °C",
+        "EN": "About 60 °C",
+        "PT": "Uns 60 °C"
+      },
+      {
+        "ES": "Unos 80 °C",
+        "EN": "About 80 °C",
+        "PT": "Uns 80 °C"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Sale de la tierra a unos 80 °C y se deja enfriar hasta temperatura de baño: los pozones están entre unos 35 y 45 °C. Cada uno es distinto.",
+      "EN": "It comes out of the ground at about 80 °C and is left to cool to bathing temperature: the pools range from about 35 to 45 °C. Each one is different.",
+      "PT": "Sai da terra a uns 80 °C e esfria até a temperatura de banho: as piscinas ficam entre uns 35 e 45 °C. Cada uma é diferente."
+    }
+  },
+  "termas-4": {
+    "pregunta": {
+      "ES": "¿Cómo se llama la planta de hojas gigantes de la quebrada?",
+      "EN": "What is the giant-leaved plant in the ravine called?",
+      "PT": "Como se chama a planta de folhas gigantes do cânion?"
+    },
+    "opciones": [
+      {
+        "ES": "Nalca",
+        "EN": "Nalca",
+        "PT": "Nalca"
+      },
+      {
+        "ES": "Plátano",
+        "EN": "Banana plant",
+        "PT": "Bananeira"
+      },
+      {
+        "ES": "Helecho arbóreo",
+        "EN": "Tree fern",
+        "PT": "Samambaiaçu"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es la nalca o pangue, típica de los bosques húmedos del sur de Chile. Sus tallos tiernos se comen crudos, con un poco de sal.",
+      "EN": "It is the nalca, or pangue, typical of southern Chile’s damp forests. Its tender stalks are eaten raw with a little salt.",
+      "PT": "É a nalca, ou pangue, típica das matas úmidas do sul do Chile. Os talos novos são comidos crus, com um pouco de sal."
+    }
+  },
+  "caburgua-1": {
+    "pregunta": {
+      "ES": "¿Qué significa Huerquehue en mapudungun?",
+      "EN": "What does Huerquehue mean in Mapudungun?",
+      "PT": "O que significa Huerquehue em mapudungun?"
+    },
+    "opciones": [
+      {
+        "ES": "Lago azul",
+        "EN": "Blue lake",
+        "PT": "Lago azul"
+      },
+      {
+        "ES": "Lugar de mensajeros",
+        "EN": "Place of messengers",
+        "PT": "Lugar de mensageiros"
+      },
+      {
+        "ES": "Tierra de volcanes",
+        "EN": "Land of volcanoes",
+        "PT": "Terra de vulcões"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Viene de huerquen, mensajero. El parque se creó en 1967 y protege unas 12.500 hectáreas de bosque, lagos y cerros.",
+      "EN": "It comes from huerquen, messenger. The park was created in 1967 and protects some 12,500 hectares of forest, lakes and peaks.",
+      "PT": "Vem de huerquen, mensageiro. O parque foi criado em 1967 e protege cerca de 12.500 hectares de mata, lagos e montanhas."
+    }
+  },
+  "caburgua-2": {
+    "pregunta": {
+      "ES": "¿Qué protección tiene la araucaria en Chile?",
+      "EN": "What protection does the monkey-puzzle tree have in Chile?",
+      "PT": "Que proteção a araucária tem no Chile?"
+    },
+    "opciones": [
+      {
+        "ES": "Es Monumento Natural",
+        "EN": "It is a Natural Monument",
+        "PT": "É Monumento Natural"
+      },
+      {
+        "ES": "Ninguna",
+        "EN": "None",
+        "PT": "Nenhuma"
+      },
+      {
+        "ES": "Solo dentro de los parques",
+        "EN": "Only inside parks",
+        "PT": "Só dentro dos parques"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Fue declarada Monumento Natural en 1976, así que no se puede talar. Crece tan despacio que no da semillas hasta los 25 años, más o menos.",
+      "EN": "It was declared a Natural Monument in 1976, so it cannot be felled. It grows so slowly that it doesn’t produce seeds until it is about 25.",
+      "PT": "Foi declarada Monumento Natural em 1976, por isso não pode ser cortada. Cresce tão devagar que só dá sementes por volta dos 25 anos."
+    }
+  },
+  "caburgua-3": {
+    "pregunta": {
+      "ES": "¿Cómo se llama la araucaria en mapudungun?",
+      "EN": "What is the monkey-puzzle tree called in Mapudungun?",
+      "PT": "Como se chama a araucária em mapudungun?"
+    },
+    "opciones": [
+      {
+        "ES": "Coigüe",
+        "EN": "Coigüe",
+        "PT": "Coigüe"
+      },
+      {
+        "ES": "Pewen",
+        "EN": "Pewen",
+        "PT": "Pewen"
+      },
+      {
+        "ES": "Canelo",
+        "EN": "Canelo",
+        "PT": "Canelo"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Pewen o pehuén. Sus semillas, los piñones (ngülliw), alimentaron durante siglos a los pehuenches, «la gente del pewen».",
+      "EN": "Pewen, or pehuén. Its seeds, piñones (ngülliw), fed the Pehuenche, “the people of the pewen”, for centuries.",
+      "PT": "Pewen, ou pehuén. Suas sementes, os pinhões (ngülliw), alimentaram por séculos os pehuenches, “o povo do pewen”."
+    }
+  },
+  "caburgua-4": {
+    "pregunta": {
+      "ES": "¿Cuántos años puede vivir una araucaria?",
+      "EN": "How long can a monkey-puzzle tree live?",
+      "PT": "Quantos anos uma araucária pode viver?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 100",
+        "EN": "About 100",
+        "PT": "Uns 100"
+      },
+      {
+        "ES": "Unos 300",
+        "EN": "About 300",
+        "PT": "Uns 300"
+      },
+      {
+        "ES": "Más de 1.000",
+        "EN": "Over 1,000",
+        "PT": "Mais de 1.000"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Puede superar los mil años y llegar a 50 metros de altura. La famosa Araucaria Madre, en el Parque Nacional Conguillío, tiene unos 1.000 años.",
+      "EN": "It can live over a thousand years and reach 50 m in height. The famous Araucaria Madre, in Conguillío National Park, is around 1,000 years old.",
+      "PT": "Pode passar dos mil anos e chegar a 50 metros de altura. A famosa Araucaria Madre, no Parque Nacional Conguillío, tem cerca de mil anos."
+    }
+  },
+  "caburgua-5": {
+    "pregunta": {
+      "ES": "¿Por qué el agua del Caburgua es más templada que la de otros lagos?",
+      "EN": "Why is Lake Caburgua warmer than other lakes?",
+      "PT": "Por que a água do Caburgua é mais morna que a de outros lagos?"
+    },
+    "opciones": [
+      {
+        "ES": "Por fuentes termales en el fondo",
+        "EN": "Hot springs on the bottom",
+        "PT": "Por fontes termais no fundo"
+      },
+      {
+        "ES": "Porque es muy poco profundo",
+        "EN": "Because it is very shallow",
+        "PT": "Porque é muito raso"
+      },
+      {
+        "ES": "Por los barcos",
+        "EN": "Because of the boats",
+        "PT": "Por causa dos barcos"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Su agua está unos 6 °C más templada que la de los lagos vecinos, y se cree que es por fuentes termales en las profundidades.",
+      "EN": "Its water is about 6 °C warmer than in neighbouring lakes, thought to be due to hot springs deep below.",
+      "PT": "A água é uns 6 °C mais morna que a dos lagos vizinhos, e acredita-se que seja por fontes termais nas profundezas."
+    }
+  },
+  "caburgua-6": {
+    "pregunta": {
+      "ES": "¿De dónde se cree que sale el agua de los Ojos del Caburgua?",
+      "EN": "Where is the water of Ojos del Caburgua thought to come from?",
+      "PT": "De onde se acredita que vem a água dos Ojos del Caburgua?"
+    },
+    "opciones": [
+      {
+        "ES": "De un glaciar del volcán",
+        "EN": "From a glacier on the volcano",
+        "PT": "De um glaciar do vulcão"
+      },
+      {
+        "ES": "Del lago Caburgua, bajo tierra",
+        "EN": "From Lake Caburgua, underground",
+        "PT": "Do lago Caburgua, por baixo da terra"
+      },
+      {
+        "ES": "Solo de la lluvia",
+        "EN": "Only from rain",
+        "PT": "Só da chuva"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El lago Caburgua, unos 4 km al norte, desagua en parte por debajo de la tierra, y esa agua filtrada aflora aquí. Por eso es tan clara.",
+      "EN": "Lake Caburgua, some 4 km to the north, partly drains underground, and that filtered water surfaces here. That is why it is so clear.",
+      "PT": "O lago Caburgua, uns 4 km ao norte, escoa em parte por baixo da terra, e essa água filtrada aflora aqui. Por isso é tão transparente."
+    }
+  },
+  "pucon-1": {
+    "pregunta": {
+      "ES": "¿Por qué la arena de Playa Grande es negra?",
+      "EN": "Why is the sand at Playa Grande black?",
+      "PT": "Por que a areia da Playa Grande é preta?"
+    },
+    "opciones": [
+      {
+        "ES": "Por el carbón de antiguos barcos",
+        "EN": "Coal from old boats",
+        "PT": "Pelo carvão de barcos antigos"
+      },
+      {
+        "ES": "Es arena volcánica",
+        "EN": "It is volcanic sand",
+        "PT": "É areia vulcânica"
+      },
+      {
+        "ES": "Por las algas",
+        "EN": "Because of algae",
+        "PT": "Por causa das algas"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Es roca volcánica molida por el agua: el lago está rodeado de volcanes. Por eso la arena clara de Playa Blanca, en Caburgua, llama tanto la atención.",
+      "EN": "It is volcanic rock ground down by the water: the lake is ringed by volcanoes. That is why the pale sand of Playa Blanca, at Caburgua, stands out so much.",
+      "PT": "É rocha vulcânica moída pela água: o lago é cercado de vulcões. Por isso a areia clara da Playa Blanca, em Caburgua, chama tanto a atenção."
+    }
+  },
+  "pucon-2": {
+    "pregunta": {
+      "ES": "¿Qué superficie tiene el lago Villarrica?",
+      "EN": "How big is Lake Villarrica?",
+      "PT": "Qual é a área do lago Villarrica?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 17 km²",
+        "EN": "About 17 km²",
+        "PT": "Uns 17 km²"
+      },
+      {
+        "ES": "Unos 176 km²",
+        "EN": "About 176 km²",
+        "PT": "Uns 176 km²"
+      },
+      {
+        "ES": "Unos 1.760 km²",
+        "EN": "About 1,760 km²",
+        "PT": "Uns 1.760 km²"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Unos 176 km², con unos 23 km de largo y hasta 165 metros de profundidad. Villarrica queda en un extremo y Pucón en el otro.",
+      "EN": "About 176 km², some 23 km long and up to 165 m deep. Villarrica sits at one end and Pucón at the other.",
+      "PT": "Uns 176 km², com cerca de 23 km de comprimento e até 165 metros de profundidade. Villarrica fica numa ponta e Pucón na outra."
+    }
+  },
+  "pucon-3": {
+    "pregunta": {
+      "ES": "¿Qué río nace del lago Villarrica?",
+      "EN": "Which river flows out of Lake Villarrica?",
+      "PT": "Que rio nasce do lago Villarrica?"
+    },
+    "opciones": [
+      {
+        "ES": "El Toltén",
+        "EN": "The Toltén",
+        "PT": "O Toltén"
+      },
+      {
+        "ES": "El Biobío",
+        "EN": "The Biobío",
+        "PT": "O Biobío"
+      },
+      {
+        "ES": "El Maipo",
+        "EN": "The Maipo",
+        "PT": "O Maipo"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El Toltén sale del lago por Villarrica y va hasta el Pacífico. Al lago lo alimenta sobre todo el río Pucón, que desemboca junto a La Poza.",
+      "EN": "The Toltén leaves the lake at Villarrica and runs to the Pacific. The lake is fed mainly by the Pucón river, which flows in near La Poza.",
+      "PT": "O Toltén sai do lago em Villarrica e vai até o Pacífico. O lago é alimentado sobretudo pelo rio Pucón, que deságua perto de La Poza."
+    }
+  },
+  "pucon-4": {
+    "pregunta": {
+      "ES": "¿Qué significa «Pucón» en mapudungun?",
+      "EN": "What does “Pucón” mean in Mapudungun?",
+      "PT": "O que significa “Pucón” em mapudungun?"
+    },
+    "opciones": [
+      {
+        "ES": "Entrada a la cordillera",
+        "EN": "Gateway to the mountains",
+        "PT": "Entrada da cordilheira"
+      },
+      {
+        "ES": "Agua que hierve",
+        "EN": "Boiling water",
+        "PT": "Água que ferve"
+      },
+      {
+        "ES": "Lugar de pumas",
+        "EN": "Place of pumas",
+        "PT": "Lugar de pumas"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La traducción más aceptada es «entrada a la cordillera»: desde aquí los caminos se meten en los Andes. Otra teoría lo relaciona con la torcaza.",
+      "EN": "The most accepted translation is “gateway to the mountains”: from here the roads head into the Andes. Another theory links it to a wild pigeon.",
+      "PT": "A tradução mais aceita é “entrada da cordilheira”: daqui as estradas entram nos Andes. Outra teoria liga o nome a uma pomba-do-mato."
+    }
+  },
+  "pucon-5": {
+    "pregunta": {
+      "ES": "¿Cómo nació Pucón?",
+      "EN": "How did Pucón begin?",
+      "PT": "Como Pucón nasceu?"
+    },
+    "opciones": [
+      {
+        "ES": "Como puerto ballenero",
+        "EN": "As a whaling port",
+        "PT": "Como porto baleeiro"
+      },
+      {
+        "ES": "Como fuerte del Ejército en 1883",
+        "EN": "As an army fort in 1883",
+        "PT": "Como forte do Exército em 1883"
+      },
+      {
+        "ES": "Como estación de tren",
+        "EN": "As a railway station",
+        "PT": "Como estação de trem"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El 27 de febrero de 1883 el Ejército de Chile levantó aquí un fuerte en territorio mapuche. El turismo llegó después, con el Gran Hotel en los años treinta.",
+      "EN": "On 27 February 1883 the Chilean Army built a fort here, in Mapuche territory. Tourism came later, with the Gran Hotel in the 1930s.",
+      "PT": "Em 27 de fevereiro de 1883 o Exército do Chile ergueu aqui um forte em território mapuche. O turismo chegou depois, com o Gran Hotel nos anos 1930."
+    }
+  }
+}
