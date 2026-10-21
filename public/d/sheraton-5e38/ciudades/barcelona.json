@@ -1,0 +1,1278 @@
+{
+  "slug": "barcelona",
+  "nombre": "Barcelona",
+  "intro": {
+    "ES": "Montjuïc empieza en la puerta. A un paseo, tapas en Poble-sec, el Gòtic y Gaudí. Elige ruta, sal andando y colecciona sellos.",
+    "EN": "Montjuïc starts at the door. A short walk away: tapas in Poble-sec, the Gothic Quarter and Gaudí. Pick a route, head out on foot and collect stamps.",
+    "DE": "Der Montjuïc beginnt vor der Tür. Nur ein Spaziergang entfernt: Tapas in Poble-sec, das Gotische Viertel und Gaudí. Route wählen, losgehen, Stempel sammeln."
+  },
+  "lugares": [
+    {
+      "id": "espanya",
+      "img": "/ciudades/barcelona/img/espanya.jpg",
+      "nombre": "Plaça d'Espanya y Las Arenas",
+      "zona": {
+        "ES": "Plaça d'Espanya",
+        "EN": "Plaça d'Espanya",
+        "DE": "Plaça d'Espanya"
+      },
+      "d": {
+        "ES": "La antigua plaza de toros, hoy centro comercial. Sube a la cubierta: Montjuïc y las Torres Venecianas, a tus pies.",
+        "EN": "The old bullring, now a shopping centre. Go up to the roof: Montjuïc and the Venetian Towers at your feet.",
+        "DE": "Die alte Stierkampfarena, heute ein Einkaufszentrum. Gehen Sie aufs Dach: Montjuïc und die Venezianischen Türme liegen Ihnen zu Füßen."
+      },
+      "cuando": {
+        "ES": "Al atardecer",
+        "EN": "At sunset",
+        "DE": "Bei Sonnenuntergang"
+      },
+      "min": 7,
+      "modo": "pie",
+      "lat": 41.3763,
+      "lng": 2.1493
+    },
+    {
+      "id": "font-magica",
+      "img": "/ciudades/barcelona/img/font-magica.jpg",
+      "nombre": "Font Màgica de Montjuïc",
+      "zona": {
+        "ES": "Montjuïc",
+        "EN": "Montjuïc",
+        "DE": "Montjuïc"
+      },
+      "d": {
+        "ES": "Agua, luz y música al pie del MNAC. Los espectáculos son de noche y solo algunos días.",
+        "EN": "Water, light and music at the foot of the MNAC. Shows are at night and only on some days.",
+        "DE": "Wasser, Licht und Musik am Fuß des MNAC. Die Shows finden abends und nur an einigen Tagen statt."
+      },
+      "cuando": {
+        "ES": "De noche, los días de espectáculo (mira el calendario)",
+        "EN": "At night on show days (check the calendar)",
+        "DE": "Abends an Showtagen (Kalender prüfen)"
+      },
+      "min": 7,
+      "modo": "pie",
+      "lat": 41.37114,
+      "lng": 2.15173
+    },
+    {
+      "id": "mnac",
+      "img": "/ciudades/barcelona/img/mnac.jpg",
+      "nombre": "MNAC y su mirador",
+      "zona": {
+        "ES": "Montjuïc",
+        "EN": "Montjuïc",
+        "DE": "Montjuïc"
+      },
+      "d": {
+        "ES": "El palacio de 1929 en lo alto de las escaleras. Desde el mirador de delante, la mejor postal de Barcelona, gratis.",
+        "EN": "The 1929 palace at the top of the steps. From the viewpoint in front, the best postcard of Barcelona, for free.",
+        "DE": "Der Palast von 1929 oben auf der Treppe. Vom Aussichtspunkt davor die schönste Postkarte Barcelonas, gratis."
+      },
+      "cuando": {
+        "ES": "A última hora de la tarde",
+        "EN": "Late in the afternoon",
+        "DE": "Am späten Nachmittag"
+      },
+      "min": 11,
+      "modo": "pie",
+      "lat": 41.36902,
+      "lng": 2.15319
+    },
+    {
+      "id": "caixaforum",
+      "img": "/ciudades/barcelona/img/caixaforum.jpg",
+      "nombre": "CaixaForum",
+      "zona": {
+        "ES": "Montjuïc",
+        "EN": "Montjuïc",
+        "DE": "Montjuïc"
+      },
+      "d": {
+        "ES": "Una fábrica textil modernista de ladrillo rojo, de Puig i Cadafalch, convertida en centro de exposiciones.",
+        "EN": "A red-brick Modernista textile factory by Puig i Cadafalch, now an exhibition centre.",
+        "DE": "Eine modernistische Textilfabrik aus rotem Backstein von Puig i Cadafalch, heute ein Ausstellungszentrum."
+      },
+      "cuando": {
+        "ES": "Una mañana de lluvia o en las horas de calor",
+        "EN": "On a rainy morning or in the hottest hours",
+        "DE": "An einem Regenmorgen oder in den heißesten Stunden"
+      },
+      "min": 4,
+      "modo": "pie",
+      "lat": 41.37148,
+      "lng": 2.14972
+    },
+    {
+      "id": "poble-espanyol",
+      "img": "/ciudades/barcelona/img/poble-espanyol.jpg",
+      "nombre": "Poble Espanyol",
+      "zona": {
+        "ES": "Montjuïc",
+        "EN": "Montjuïc",
+        "DE": "Montjuïc"
+      },
+      "d": {
+        "ES": "Un pueblo entero levantado para la Exposición de 1929, con plazas y casas copiadas de toda España.",
+        "EN": "A whole village built for the 1929 Exhibition, with squares and houses copied from all over Spain.",
+        "DE": "Ein ganzes Dorf, gebaut für die Weltausstellung 1929, mit Plätzen und Häusern aus ganz Spanien nachgebaut."
+      },
+      "cuando": {
+        "ES": "Por la mañana, con calma",
+        "EN": "In the morning, at a relaxed pace",
+        "DE": "Am Vormittag, in aller Ruhe"
+      },
+      "min": 9,
+      "modo": "pie",
+      "lat": 41.36914,
+      "lng": 2.14669
+    },
+    {
+      "id": "joan-miro",
+      "img": "/ciudades/barcelona/img/joan-miro.jpg",
+      "nombre": "Parc de Joan Miró",
+      "zona": {
+        "ES": "Eixample",
+        "EN": "Eixample",
+        "DE": "Eixample"
+      },
+      "d": {
+        "ES": "Pinos, palmeras y, sobre un estanque, la gran escultura Dona i Ocell de Miró. El parque del barrio.",
+        "EN": "Pines, palms and, rising from a pond, Miró's huge Dona i Ocell sculpture. The neighbourhood park.",
+        "DE": "Pinien, Palmen und über einem Teich Mirós große Skulptur Dona i Ocell. Der Park des Viertels."
+      },
+      "cuando": {
+        "ES": "Temprano, para pasear o correr",
+        "EN": "Early, for a walk or a run",
+        "DE": "Früh am Morgen, zum Spazieren oder Joggen"
+      },
+      "min": 9,
+      "modo": "pie",
+      "lat": 41.37793,
+      "lng": 2.14835
+    },
+    {
+      "id": "sant-antoni",
+      "img": "/ciudades/barcelona/img/sant-antoni.jpg",
+      "nombre": "Mercat de Sant Antoni",
+      "zona": {
+        "ES": "Sant Antoni",
+        "EN": "Sant Antoni",
+        "DE": "Sant Antoni"
+      },
+      "d": {
+        "ES": "Un mercado de hierro de 1882, recién renovado. El domingo por la mañana, libros y cómics alrededor.",
+        "EN": "An 1882 iron market, freshly renovated. On Sunday mornings, books and comics all around it.",
+        "DE": "Eine Eisenmarkthalle von 1882, frisch renoviert. Sonntagvormittags rundherum Bücher und Comics."
+      },
+      "cuando": {
+        "ES": "Por la mañana, de lunes a sábado",
+        "EN": "In the morning, Monday to Saturday",
+        "DE": "Vormittags, Montag bis Samstag"
+      },
+      "min": 20,
+      "modo": "pie",
+      "lat": 41.37863,
+      "lng": 2.16205
+    },
+    {
+      "id": "blai",
+      "img": "/ciudades/barcelona/img/blai.jpg",
+      "nombre": "Carrer de Blai",
+      "zona": {
+        "ES": "Poble-sec",
+        "EN": "Poble-sec",
+        "DE": "Poble-sec"
+      },
+      "d": {
+        "ES": "Una calle peatonal llena de barras de pinchos. Aquí se cena de bar en bar.",
+        "EN": "A pedestrian street lined with pintxo bars. Dinner here means hopping from bar to bar.",
+        "DE": "Eine Fußgängerstraße voller Pintxo-Bars. Hier isst man zu Abend, von Bar zu Bar."
+      },
+      "cuando": {
+        "ES": "Al anochecer",
+        "EN": "At nightfall",
+        "DE": "Bei Einbruch der Dunkelheit"
+      },
+      "min": 18,
+      "modo": "pie",
+      "lat": 41.37442,
+      "lng": 2.16257
+    }
+  ],
+  "rutas": [
+    {
+      "id": "montjuic",
+      "expId": "ex1",
+      "img": "/ciudades/barcelona/img/montjuic-mirador.jpg",
+      "titulo": {
+        "ES": "Montjuïc al atardecer",
+        "EN": "Montjuïc at sunset",
+        "DE": "Montjuïc bei Sonnenuntergang"
+      },
+      "tipo": {
+        "ES": "Miradores",
+        "EN": "Viewpoints",
+        "DE": "Aussichtspunkte"
+      },
+      "dur": "4 h 45 min",
+      "d": {
+        "ES": "De la Plaça d'Espanya al castillo: fuentes, escaleras, el anillo olímpico y el teleférico. Arriba, el sol cayendo sobre el puerto.",
+        "EN": "From Plaça d'Espanya to the castle: fountains, grand steps, the Olympic ring and the cable car. At the top, the sun setting over the port.",
+        "DE": "Von der Plaça d'Espanya zur Burg: Brunnen, Freitreppen, der Olympiaring und die Seilbahn. Oben geht die Sonne über dem Hafen unter."
+      },
+      "salida": {
+        "ES": "Desde la puerta del hotel: 5 minutos a pie hasta la Plaça d'Espanya. De noviembre a febrero el teleférico cierra a las 18:00: sal hacia las 13:30",
+        "EN": "From the hotel door: a 5-minute walk to Plaça d'Espanya. From November to February the cable car closes at 6 pm: set off around 1:30 pm",
+        "DE": "Ab der Hoteltür: 5 Minuten zu Fuß bis zur Plaça d'Espanya. Von November bis Februar schließt die Seilbahn um 18 Uhr: brechen Sie gegen 13:30 Uhr auf"
+      },
+      "incluye": {
+        "ES": [
+          "Billete del Teleférico de Montjuïc",
+          "Ruta a pie desde la puerta del hotel",
+          "Plan del día con horarios y mapa",
+          "Pasaporte con sellos y curiosidades"
+        ],
+        "EN": [
+          "Montjuïc Cable Car ticket",
+          "Walking route from the hotel door",
+          "Day plan with times and map",
+          "Passport with stamps and fun facts"
+        ],
+        "DE": [
+          "Ticket für die Seilbahn Montjuïc",
+          "Rundgang ab der Hoteltür",
+          "Tagesplan mit Uhrzeiten und Karte",
+          "Pass mit Stempeln und Wissenswertem"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Entrada al Castell de Montjuïc",
+          "Entrada al MNAC",
+          "Guía",
+          "Comida y bebida"
+        ],
+        "EN": [
+          "Montjuïc Castle admission",
+          "MNAC admission",
+          "Guide",
+          "Food and drink"
+        ],
+        "DE": [
+          "Eintritt in die Burg Montjuïc",
+          "Eintritt ins MNAC",
+          "Reiseleitung",
+          "Essen und Getränke"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo: hay cuestas y escaleras",
+          "Agua",
+          "Una chaqueta fina: arriba sopla al caer el sol",
+          "La entrada del castillo, comprada online"
+        ],
+        "EN": [
+          "Comfortable shoes: there are slopes and steps",
+          "Water",
+          "A light jacket: it gets breezy up top at sunset",
+          "Your castle ticket, bought online"
+        ],
+        "DE": [
+          "Bequeme Schuhe: es gibt Steigungen und Treppen",
+          "Wasser",
+          "Eine leichte Jacke: oben wird es bei Sonnenuntergang windig",
+          "Das online gekaufte Burgticket"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según las condiciones del Teleférico de Montjuïc. Te lo confirmamos en recepción al reservar.",
+        "EN": "Subject to the Montjuïc Cable Car's terms. Reception will confirm them when you book.",
+        "DE": "Gemäß den Bedingungen der Seilbahn Montjuïc. Die Rezeption bestätigt sie Ihnen bei der Buchung."
+      },
+      "accesibilidad": {
+        "ES": "Las escaleras del MNAC tienen escaleras mecánicas, pero hay cuestas largas y suelos irregulares en el castillo. Mejor con buena movilidad; con silla de ruedas, pregunta antes al teleférico.",
+        "EN": "The MNAC steps have escalators, but there are long slopes and uneven ground at the castle. Best with good mobility; wheelchair users should check with the cable car first.",
+        "DE": "An der MNAC-Treppe gibt es Rolltreppen, aber an der Burg lange Steigungen und unebenen Boden. Am besten mit guter Mobilität; mit Rollstuhl vorher bei der Seilbahn nachfragen."
+      },
+      "puntoEncuentro": {
+        "lat": 41.37336,
+        "lng": 2.14734,
+        "texto": {
+          "ES": "Puerta del hotel, en la Gran Via. Sal hacia la izquierda, hacia la Plaça d'Espanya.",
+          "EN": "Hotel door, on Gran Via. Turn left towards Plaça d'Espanya.",
+          "DE": "Hoteltür an der Gran Via. Gehen Sie nach links Richtung Plaça d'Espanya."
+        }
+      },
+      "fotos": [
+        "/ciudades/barcelona/img/montjuic-mirador.jpg",
+        "/ciudades/barcelona/img/montjuic.jpg",
+        "/ciudades/barcelona/img/montjuic-torres.jpg",
+        "/ciudades/barcelona/img/font-magica.jpg",
+        "/ciudades/barcelona/img/montjuic-anella.jpg",
+        "/ciudades/barcelona/img/montjuic-teleferic.jpg",
+        "/ciudades/barcelona/img/montjuic-castell.jpg"
+      ],
+      "duracionMin": 280,
+      "distanciaKm": 6.4,
+      "dificultad": "media",
+      "tipoEntorno": "exterior",
+      "salidasFijas": [],
+      "precioDesde": null,
+      "paradas": [
+        {
+          "n": {
+            "ES": "Torres Venecianas",
+            "EN": "Venetian Towers",
+            "DE": "Venezianische Türme"
+          },
+          "s": {
+            "ES": "La puerta de Montjuïc, en la Plaça d'Espanya",
+            "EN": "The gateway to Montjuïc, on Plaça d'Espanya",
+            "DE": "Das Tor zum Montjuïc an der Plaça d'Espanya"
+          },
+          "d": {
+            "ES": "Dos torres de ladrillo de 47 metros abren la avenida que sube a la montaña. Detrás, el palacio del MNAC; a tu espalda, la antigua plaza de toros de Las Arenas.",
+            "EN": "Two 47-metre brick towers open the avenue up the hill. Ahead, the MNAC palace; behind you, the old Las Arenas bullring.",
+            "DE": "Zwei 47 Meter hohe Backsteintürme eröffnen die Allee den Berg hinauf. Vor Ihnen der MNAC-Palast, hinter Ihnen die alte Stierkampfarena Las Arenas."
+          },
+          "tip": {
+            "ES": "Haz la foto desde el centro de la avenida, con las dos torres enmarcando el palacio.",
+            "EN": "Take the photo from the middle of the avenue, with both towers framing the palace.",
+            "DE": "Machen Sie das Foto von der Mitte der Allee aus, mit beiden Türmen als Rahmen für den Palast."
+          },
+          "hora": "15:30",
+          "dur": "15 min",
+          "img": "/ciudades/barcelona/img/montjuic-torres.jpg",
+          "lat": 41.3741,
+          "lng": 2.14997,
+          "tramo": "pie",
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Font Màgica",
+            "EN": "Magic Fountain",
+            "DE": "Magischer Brunnen"
+          },
+          "s": {
+            "ES": "La fuente de agua, luz y música",
+            "EN": "The fountain of water, light and music",
+            "DE": "Der Brunnen aus Wasser, Licht und Musik"
+          },
+          "d": {
+            "ES": "De día descansa; de noche, algunos días, baila con luces y música. Aun quieta impresiona: es la fuente más grande de la avenida de las cascadas.",
+            "EN": "By day it rests; on some nights it dances with light and music. Even still, it is impressive: the largest fountain on the avenue of cascades.",
+            "DE": "Tagsüber ruht er, an manchen Abenden tanzt er zu Licht und Musik. Auch still beeindruckt er: der größte Brunnen an der Allee der Kaskaden."
+          },
+          "tip": {
+            "ES": "Los espectáculos cambian según la temporada: mira el calendario del Ayuntamiento y vuelve otra noche.",
+            "EN": "Show times change with the season: check the City Council calendar and come back another night.",
+            "DE": "Die Showzeiten ändern sich je nach Saison: Schauen Sie in den Kalender der Stadt und kommen Sie an einem anderen Abend wieder."
+          },
+          "hora": "15:55",
+          "dur": "15 min",
+          "img": "/ciudades/barcelona/img/font-magica.jpg",
+          "lat": 41.37114,
+          "lng": 2.15173,
+          "tramo": "pie",
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Mirador del MNAC",
+            "EN": "MNAC viewpoint",
+            "DE": "Aussichtspunkt am MNAC"
+          },
+          "s": {
+            "ES": "La mejor vista de Barcelona, gratis",
+            "EN": "The best view of Barcelona, for free",
+            "DE": "Der schönste Blick auf Barcelona, gratis"
+          },
+          "d": {
+            "ES": "Sube las escaleras (hay mecánicas) hasta la terraza frente al Palau Nacional. Tienes la ciudad entera delante, con el Tibidabo al fondo.",
+            "EN": "Climb the steps (there are escalators) to the terrace in front of the Palau Nacional. The whole city lies before you, with Tibidabo behind.",
+            "DE": "Steigen Sie die Treppen hinauf (es gibt Rolltreppen) bis zur Terrasse vor dem Palau Nacional. Die ganze Stadt liegt vor Ihnen, dahinter der Tibidabo."
+          },
+          "tip": {
+            "ES": "Siéntate en los escalones: aquí se para todo el mundo, y con razón.",
+            "EN": "Sit on the steps: everyone stops here, and for good reason.",
+            "DE": "Setzen Sie sich auf die Stufen: Hier hält jeder an, und das zu Recht."
+          },
+          "hora": "16:20",
+          "dur": "30 min",
+          "img": "/ciudades/barcelona/img/montjuic-mirador.jpg",
+          "lat": 41.36902,
+          "lng": 2.15319,
+          "tramo": "pie",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Anella Olímpica",
+            "EN": "Olympic Ring",
+            "DE": "Olympiaring"
+          },
+          "s": {
+            "ES": "El estadio y la torre de los Juegos del 92",
+            "EN": "The stadium and tower of the 1992 Games",
+            "DE": "Stadion und Turm der Spiele von 1992"
+          },
+          "d": {
+            "ES": "Una gran explanada con el Estadi Olímpic a un lado y, al otro, la torre blanca de Calatrava. En ese estadio se encendió la llama de los Juegos de 1992.",
+            "EN": "A vast esplanade with the Olympic Stadium on one side and Calatrava's white tower on the other. The flame of the 1992 Games was lit in that stadium.",
+            "DE": "Eine weite Esplanade mit dem Olympiastadion auf der einen und Calatravas weißem Turm auf der anderen Seite. In diesem Stadion wurde 1992 das olympische Feuer entzündet."
+          },
+          "tip": {
+            "ES": "Haz la foto con la torre de Calatrava y la fila de columnas de luz: al caer la tarde queda preciosa.",
+            "EN": "Take the photo with Calatrava's tower and the row of light columns: it looks lovely late in the day.",
+            "DE": "Fotografieren Sie Calatravas Turm mit der Reihe der Lichtsäulen: Am späten Nachmittag wirkt das wunderschön."
+          },
+          "hora": "17:00",
+          "dur": "20 min",
+          "img": "/ciudades/barcelona/img/montjuic-anella.jpg",
+          "lat": 41.36472,
+          "lng": 2.15565,
+          "tramo": "pie",
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Teleférico de Montjuïc",
+            "EN": "Montjuïc Cable Car",
+            "DE": "Seilbahn Montjuïc"
+          },
+          "s": {
+            "ES": "De la estación Parc de Montjuïc al castillo",
+            "EN": "From Parc de Montjuïc station to the castle",
+            "DE": "Von der Station Parc de Montjuïc zur Burg"
+          },
+          "d": {
+            "ES": "Cabinas que suben sin paradas hasta el castillo, por encima de los pinos, con el puerto y la ciudad bajo los pies.",
+            "EN": "Cabins that climb non-stop to the castle, over the pines, with the port and the city below you.",
+            "DE": "Kabinen fahren ohne Halt zur Burg hinauf, über die Pinien, mit Hafen und Stadt unter Ihnen."
+          },
+          "tip": {
+            "ES": "Si tu billete es de ida y vuelta, ten en cuenta el cierre: en octubre, a las 19:00. Si te quedas al atardecer, baja a pie o en el bus 150.",
+            "EN": "If you have a return ticket, mind the closing time: 7 pm in October. If you stay for the sunset, walk down or take bus 150.",
+            "DE": "Wenn Sie ein Hin- und Rückfahrticket haben, beachten Sie die Schließzeit: im Oktober 19 Uhr. Wenn Sie den Sonnenuntergang abwarten, gehen Sie zu Fuß hinunter oder nehmen den Bus 150."
+          },
+          "hora": "17:35",
+          "dur": "20 min",
+          "img": "/ciudades/barcelona/img/montjuic-teleferic.jpg",
+          "lat": 41.36871,
+          "lng": 2.16335,
+          "tramo": "pie",
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Castell de Montjuïc",
+            "EN": "Montjuïc Castle",
+            "DE": "Burg Montjuïc"
+          },
+          "s": {
+            "ES": "La fortaleza sobre el mar, para ver caer el sol",
+            "EN": "The fortress above the sea, to watch the sun go down",
+            "DE": "Die Festung über dem Meer, um die Sonne untergehen zu sehen"
+          },
+          "d": {
+            "ES": "Bajas del teleférico y subes a pie la rampa hasta la puerta. Murallas, fosos y, desde las almenas, el puerto, la ciudad y el mar a la vez.",
+            "EN": "Step off the cable car and walk up the ramp to the gate. Walls, moats and, from the battlements, the port, the city and the sea all at once.",
+            "DE": "Sie steigen aus der Seilbahn und gehen die Rampe hinauf zum Tor. Mauern, Gräben und von den Zinnen Hafen, Stadt und Meer auf einmal."
+          },
+          "tip": {
+            "ES": "Busca sitio en la terraza del lado del mar antes de que se ponga el sol. Para volver, 40 minutos cuesta abajo o el bus 150 hasta la Plaça d'Espanya.",
+            "EN": "Grab a spot on the sea-side terrace before sunset. To get back, 40 minutes downhill on foot or bus 150 to Plaça d'Espanya.",
+            "DE": "Sichern Sie sich vor Sonnenuntergang einen Platz auf der Terrasse zur Meerseite. Zurück geht es 40 Minuten bergab zu Fuß oder mit dem Bus 150 zur Plaça d'Espanya."
+          },
+          "hora": "18:00",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/barcelona/img/montjuic-castell.jpg",
+          "lat": 41.36338,
+          "lng": 2.16614,
+          "tramo": "pie",
+          "duracionMin": 90
+        }
+      ]
+    },
+    {
+      "id": "poble-sec",
+      "expId": "ex3",
+      "img": "/ciudades/barcelona/img/poble-sec.jpg",
+      "titulo": {
+        "ES": "Tapas por Poble-sec",
+        "EN": "Tapas in Poble-sec",
+        "DE": "Tapas in Poble-sec"
+      },
+      "tipo": {
+        "ES": "Tapas",
+        "EN": "Tapas",
+        "DE": "Tapas"
+      },
+      "dur": "3 h 50 min",
+      "d": {
+        "ES": "El barrio de al lado, a pie: cabaret, chimeneas obreras, plazas de barrio y una calle entera de pinchos para cenar.",
+        "EN": "The neighbourhood next door, on foot: cabaret, workers' chimneys, local squares and a whole street of pintxos for dinner.",
+        "DE": "Das Nachbarviertel zu Fuß: Kabarett, Arbeiterschornsteine, Nachbarschaftsplätze und eine ganze Straße voller Pintxos zum Abendessen."
+      },
+      "salida": {
+        "ES": "Desde la puerta del hotel: 25 minutos a pie por la avenida del Paral·lel hasta El Molino",
+        "EN": "From the hotel door: a 25-minute walk along Avinguda del Paral·lel to El Molino",
+        "DE": "Ab der Hoteltür: 25 Minuten zu Fuß über die Avinguda del Paral·lel bis zum El Molino"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta a pie desde la puerta del hotel",
+          "Plan del día con horarios y mapa",
+          "Pasaporte con sellos y curiosidades"
+        ],
+        "EN": [
+          "Walking route from the hotel door",
+          "Day plan with times and map",
+          "Passport with stamps and fun facts"
+        ],
+        "DE": [
+          "Rundgang ab der Hoteltür",
+          "Tagesplan mit Uhrzeiten und Karte",
+          "Pass mit Stempeln und Wissenswertem"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebida",
+          "Guía",
+          "Espectáculos"
+        ],
+        "EN": [
+          "Food and drink",
+          "Guide",
+          "Shows"
+        ],
+        "DE": [
+          "Essen und Getränke",
+          "Reiseleitung",
+          "Shows"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo",
+          "Algo de efectivo: algunas barras cobran mejor así",
+          "Hambre"
+        ],
+        "EN": [
+          "Comfortable shoes",
+          "Some cash: a few bars prefer it",
+          "An appetite"
+        ],
+        "DE": [
+          "Bequeme Schuhe",
+          "Etwas Bargeld: manche Bars mögen es lieber",
+          "Hunger"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre: no hay nada que cancelar. Las entradas que compres siguen las condiciones de cada sitio.",
+        "EN": "Self-guided route: nothing to cancel. Any tickets you buy follow each venue's own terms.",
+        "DE": "Freie Route: Es gibt nichts zu stornieren. Gekaufte Eintrittskarten unterliegen den Bedingungen des jeweiligen Ortes."
+      },
+      "accesibilidad": {
+        "ES": "Calles llanas y la de Blai es peatonal. Muchas barras tienen escalón en la entrada y las aceras se llenan por la noche.",
+        "EN": "Flat streets, and Blai is pedestrian. Many bars have a step at the entrance and pavements get crowded at night.",
+        "DE": "Flache Straßen, und die Blai ist eine Fußgängerzone. Viele Bars haben eine Stufe am Eingang und abends sind die Gehwege voll."
+      },
+      "puntoEncuentro": {
+        "lat": 41.37336,
+        "lng": 2.14734,
+        "texto": {
+          "ES": "Puerta del hotel, en la Gran Via. Cruza hacia la Plaça d'Espanya y sigue por la avenida del Paral·lel.",
+          "EN": "Hotel door, on Gran Via. Cross towards Plaça d'Espanya and follow Avinguda del Paral·lel.",
+          "DE": "Hoteltür an der Gran Via. Überqueren Sie die Straße Richtung Plaça d'Espanya und folgen Sie der Avinguda del Paral·lel."
+        }
+      },
+      "fotos": [
+        "/ciudades/barcelona/img/poble-sec.jpg",
+        "/ciudades/barcelona/img/poble-sec-molino.jpg",
+        "/ciudades/barcelona/img/poble-sec-xemeneies.jpg",
+        "/ciudades/barcelona/img/poble-sec-sortidor.jpg",
+        "/ciudades/barcelona/img/blai.jpg"
+      ],
+      "duracionMin": 205,
+      "distanciaKm": 5.2,
+      "dificultad": "facil",
+      "tipoEntorno": "exterior",
+      "salidasFijas": [],
+      "precioDesde": null,
+      "paradas": [
+        {
+          "n": {
+            "ES": "El Molino",
+            "EN": "El Molino",
+            "DE": "El Molino"
+          },
+          "s": {
+            "ES": "El cabaret del molino rojo, en el Paral·lel",
+            "EN": "The red-windmill cabaret on the Paral·lel",
+            "DE": "Das Kabarett mit der roten Windmühle am Paral·lel"
+          },
+          "d": {
+            "ES": "El Paral·lel fue el Broadway de Barcelona, lleno de teatros y cabarets. El Molino es el que mejor lo recuerda, con sus aspas encendidas.",
+            "EN": "The Paral·lel was Barcelona's Broadway, full of theatres and cabarets. El Molino is its best reminder, with its glowing sails.",
+            "DE": "Der Paral·lel war Barcelonas Broadway, voller Theater und Kabaretts. El Molino erinnert am besten daran, mit seinen leuchtenden Flügeln."
+          },
+          "tip": {
+            "ES": "Las aspas se encienden al caer la tarde: mejor foto desde la acera de enfrente.",
+            "EN": "The sails light up at dusk: the best photo is from the opposite pavement.",
+            "DE": "Die Flügel leuchten ab der Dämmerung: Das beste Foto gelingt vom gegenüberliegenden Gehweg."
+          },
+          "hora": "17:55",
+          "dur": "15 min",
+          "img": "/ciudades/barcelona/img/poble-sec-molino.jpg",
+          "lat": 41.37455,
+          "lng": 2.16724,
+          "tramo": "pie",
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Les Tres Xemeneies",
+            "EN": "The Three Chimneys",
+            "DE": "Die drei Schornsteine"
+          },
+          "s": {
+            "ES": "Lo que queda de una central eléctrica",
+            "EN": "What remains of a power station",
+            "DE": "Was von einem Kraftwerk übrig ist"
+          },
+          "d": {
+            "ES": "Tres chimeneas de 72 metros de la antigua central de La Canadenca, entre oficinas modernas. Hoy el jardín es de skaters y familias del barrio.",
+            "EN": "Three 72-metre chimneys from the old La Canadenca power station, among modern offices. Today the garden belongs to skaters and local families.",
+            "DE": "Drei 72 Meter hohe Schornsteine des alten Kraftwerks La Canadenca zwischen modernen Büros. Heute gehört der Garten Skatern und Familien aus dem Viertel."
+          },
+          "tip": {
+            "ES": "Mira hacia arriba desde la base de la chimenea más alta: el vértigo es gratis.",
+            "EN": "Look up from the base of the tallest chimney: the vertigo is free.",
+            "DE": "Schauen Sie vom Fuß des höchsten Schornsteins nach oben: Der Schwindel ist gratis."
+          },
+          "hora": "18:20",
+          "dur": "20 min",
+          "img": "/ciudades/barcelona/img/poble-sec-xemeneies.jpg",
+          "lat": 41.37418,
+          "lng": 2.17222,
+          "tramo": "pie",
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Plaça del Sortidor",
+            "EN": "Plaça del Sortidor",
+            "DE": "Plaça del Sortidor"
+          },
+          "s": {
+            "ES": "El corazón del Poble-sec",
+            "EN": "The heart of Poble-sec",
+            "DE": "Das Herz von Poble-sec"
+          },
+          "d": {
+            "ES": "Una plaza de barrio de verdad: terrazas, niños jugando y vecinos que bajan a tomar algo. Así se vive en el Poble-sec.",
+            "EN": "A real neighbourhood square: terraces, children playing and locals out for a drink. This is everyday Poble-sec.",
+            "DE": "Ein echter Nachbarschaftsplatz: Terrassen, spielende Kinder und Nachbarn auf ein Getränk. So lebt man in Poble-sec."
+          },
+          "tip": {
+            "ES": "Pide un vermut en una terraza y abre el apetito antes de los pinchos.",
+            "EN": "Order a vermouth on a terrace to work up an appetite before the pintxos.",
+            "DE": "Bestellen Sie auf einer Terrasse einen Wermut, als Appetitanreger vor den Pintxos."
+          },
+          "hora": "19:00",
+          "dur": "15 min",
+          "img": "/ciudades/barcelona/img/poble-sec-sortidor.jpg",
+          "lat": 41.37234,
+          "lng": 2.16238,
+          "tramo": "pie",
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Carrer de Blai",
+            "EN": "Carrer de Blai",
+            "DE": "Carrer de Blai"
+          },
+          "s": {
+            "ES": "Una calle entera de pinchos",
+            "EN": "A whole street of pintxos",
+            "DE": "Eine ganze Straße voller Pintxos"
+          },
+          "d": {
+            "ES": "Barra tras barra de pinchos sobre pan, cada uno con su palillo. Se come de pie, se prueban dos o tres y se cambia de bar.",
+            "EN": "Bar after bar of pintxos on bread, each with its own toothpick. You eat standing, try two or three, and move on to the next bar.",
+            "DE": "Bar an Bar mit Pintxos auf Brot, jeder mit seinem Zahnstocher. Man isst im Stehen, probiert zwei oder drei und zieht weiter zur nächsten Bar."
+          },
+          "tip": {
+            "ES": "Empieza por la parte baja y sube: así eliges con la vista antes de pedir.",
+            "EN": "Start at the lower end and work your way up: that way you choose with your eyes before ordering.",
+            "DE": "Beginnen Sie am unteren Ende und gehen Sie hinauf: So wählen Sie mit den Augen, bevor Sie bestellen."
+          },
+          "hora": "19:20",
+          "dur": "1 h 40 min",
+          "img": "/ciudades/barcelona/img/blai.jpg",
+          "lat": 41.37442,
+          "lng": 2.16257,
+          "tramo": "pie",
+          "duracionMin": 100
+        }
+      ]
+    },
+    {
+      "id": "gotic-born",
+      "expId": "ex4",
+      "img": "/ciudades/barcelona/img/gotic-born.jpg",
+      "titulo": {
+        "ES": "Sant Antoni, Gòtic y Born con vermut",
+        "EN": "Sant Antoni, Gothic Quarter and Born, with vermouth",
+        "DE": "Sant Antoni, Gotisches Viertel und Born mit Wermut"
+      },
+      "tipo": {
+        "ES": "Paseo",
+        "EN": "Stroll",
+        "DE": "Spaziergang"
+      },
+      "dur": "5 h 20 min",
+      "d": {
+        "ES": "Dos mercados, la catedral, la iglesia del mar y, al final, vermut en el Born. La Barcelona antigua, de punta a punta.",
+        "EN": "Two markets, the cathedral, the church of the sea and, to finish, vermouth in the Born. Old Barcelona from end to end.",
+        "DE": "Zwei Markthallen, die Kathedrale, die Kirche des Meeres und zum Schluss Wermut im Born. Das alte Barcelona von einem Ende zum anderen."
+      },
+      "salida": {
+        "ES": "Desde la puerta del hotel: 20 minutos a pie hasta el Mercat de Sant Antoni. Los domingos los mercados cierran: mejor de lunes a sábado. Para volver, 50 minutos a pie o metro desde Jaume I",
+        "EN": "From the hotel door: a 20-minute walk to Mercat de Sant Antoni. The markets close on Sundays: best Monday to Saturday. To get back, 50 minutes on foot or the metro from Jaume I",
+        "DE": "Ab der Hoteltür: 20 Minuten zu Fuß bis zum Mercat de Sant Antoni. Sonntags sind die Markthallen zu: am besten Montag bis Samstag. Zurück 50 Minuten zu Fuß oder mit der Metro ab Jaume I"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta a pie desde la puerta del hotel",
+          "Plan del día con horarios y mapa",
+          "Pasaporte con sellos y curiosidades"
+        ],
+        "EN": [
+          "Walking route from the hotel door",
+          "Day plan with times and map",
+          "Passport with stamps and fun facts"
+        ],
+        "DE": [
+          "Rundgang ab der Hoteltür",
+          "Tagesplan mit Uhrzeiten und Karte",
+          "Pass mit Stempeln und Wissenswertem"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebida",
+          "Entradas a la catedral y a Santa Maria del Mar",
+          "Guía"
+        ],
+        "EN": [
+          "Food and drink",
+          "Admission to the cathedral and Santa Maria del Mar",
+          "Guide"
+        ],
+        "DE": [
+          "Essen und Getränke",
+          "Eintritt in die Kathedrale und Santa Maria del Mar",
+          "Reiseleitung"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo",
+          "Hombros y rodillas cubiertos para entrar en las iglesias",
+          "Bolso cerrado: en la Boqueria hay mucha gente"
+        ],
+        "EN": [
+          "Comfortable shoes",
+          "Shoulders and knees covered to enter the churches",
+          "A bag that closes: La Boqueria gets very busy"
+        ],
+        "DE": [
+          "Bequeme Schuhe",
+          "Bedeckte Schultern und Knie für die Kirchen",
+          "Eine verschließbare Tasche: In der Boqueria ist viel los"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre: no hay nada que cancelar. Las entradas que compres siguen las condiciones de cada sitio.",
+        "EN": "Self-guided route: nothing to cancel. Any tickets you buy follow each venue's own terms.",
+        "DE": "Freie Route: Es gibt nichts zu stornieren. Gekaufte Eintrittskarten unterliegen den Bedingungen des jeweiligen Ortes."
+      },
+      "accesibilidad": {
+        "ES": "Todo llano. Las calles del Gòtic son estrechas y algunas tienen adoquines; en templos y mercados pregunta en la entrada por el acceso sin escalones.",
+        "EN": "All flat. Gothic Quarter streets are narrow and some are cobbled; at churches and markets, ask at the entrance for step-free access.",
+        "DE": "Alles flach. Die Gassen im Gotischen Viertel sind eng, teils mit Kopfsteinpflaster; fragen Sie in Kirchen und Markthallen am Eingang nach dem stufenlosen Zugang."
+      },
+      "puntoEncuentro": {
+        "lat": 41.37336,
+        "lng": 2.14734,
+        "texto": {
+          "ES": "Puerta del hotel, en la Gran Via. Sigue la Gran Via hacia el centro y gira a la derecha por Comte d'Urgell.",
+          "EN": "Hotel door, on Gran Via. Follow Gran Via towards the centre and turn right into Comte d'Urgell.",
+          "DE": "Hoteltür an der Gran Via. Folgen Sie der Gran Via Richtung Zentrum und biegen Sie rechts in die Comte d'Urgell ab."
+        }
+      },
+      "fotos": [
+        "/ciudades/barcelona/img/gotic-born.jpg",
+        "/ciudades/barcelona/img/gotic-born-sant-antoni.jpg",
+        "/ciudades/barcelona/img/gotic-born-macba.jpg",
+        "/ciudades/barcelona/img/gotic-born-boqueria.jpg",
+        "/ciudades/barcelona/img/gotic-born-catedral.jpg",
+        "/ciudades/barcelona/img/gotic-born-santa-maria.jpg",
+        "/ciudades/barcelona/img/gotic-born-born.jpg"
+      ],
+      "duracionMin": 300,
+      "distanciaKm": 8.0,
+      "dificultad": "media",
+      "tipoEntorno": "mixta",
+      "salidasFijas": [],
+      "precioDesde": null,
+      "paradas": [
+        {
+          "n": {
+            "ES": "Mercat de Sant Antoni",
+            "EN": "Mercat de Sant Antoni",
+            "DE": "Mercat de Sant Antoni"
+          },
+          "s": {
+            "ES": "El mercado de los vecinos",
+            "EN": "The locals' market",
+            "DE": "Der Markt der Nachbarn"
+          },
+          "d": {
+            "ES": "Una estructura de hierro en forma de cruz, renovada hace poco. Fruta, embutido y pescado para el barrio, sin turistas apretando.",
+            "EN": "A cross-shaped iron structure, recently restored. Fruit, cold cuts and fish for the neighbourhood, without the tourist crush.",
+            "DE": "Eine kreuzförmige Eisenkonstruktion, vor Kurzem renoviert. Obst, Wurst und Fisch für das Viertel, ohne Touristengedränge."
+          },
+          "tip": {
+            "ES": "Mira hacia arriba en el centro: la cúpula de madera y hierro es lo más bonito.",
+            "EN": "Look up in the middle: the wood-and-iron dome is the best part.",
+            "DE": "Schauen Sie in der Mitte nach oben: Die Kuppel aus Holz und Eisen ist das Schönste."
+          },
+          "hora": "10:20",
+          "dur": "30 min",
+          "img": "/ciudades/barcelona/img/gotic-born-sant-antoni.jpg",
+          "lat": 41.37863,
+          "lng": 2.16205,
+          "tramo": "pie",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "MACBA",
+            "EN": "MACBA",
+            "DE": "MACBA"
+          },
+          "s": {
+            "ES": "El museo blanco del Raval",
+            "EN": "The white museum in the Raval",
+            "DE": "Das weiße Museum im Raval"
+          },
+          "d": {
+            "ES": "Un edificio blanco y luminoso en mitad del Raval. La plaza de delante es territorio de skaters de todo el mundo.",
+            "EN": "A bright white building in the middle of the Raval. The square in front is a magnet for skaters from all over the world.",
+            "DE": "Ein strahlend weißes Gebäude mitten im Raval. Der Platz davor ist ein Treffpunkt für Skater aus aller Welt."
+          },
+          "tip": {
+            "ES": "No hace falta entrar: siéntate un rato en la plaza a ver los trucos.",
+            "EN": "No need to go in: sit in the square for a while and watch the tricks.",
+            "DE": "Sie müssen nicht hinein: Setzen Sie sich eine Weile auf den Platz und schauen Sie den Tricks zu."
+          },
+          "hora": "11:05",
+          "dur": "15 min",
+          "img": "/ciudades/barcelona/img/gotic-born-macba.jpg",
+          "lat": 41.3831,
+          "lng": 2.16677,
+          "tramo": "pie",
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "La Boqueria",
+            "EN": "La Boqueria",
+            "DE": "La Boqueria"
+          },
+          "s": {
+            "ES": "El mercado más famoso, en la Rambla",
+            "EN": "The most famous market, on La Rambla",
+            "DE": "Der berühmteste Markt, an der Rambla"
+          },
+          "d": {
+            "ES": "Pasillos de colores: fruta, jamón, setas, pescado y dulces. Los puestos del fondo son los de toda la vida.",
+            "EN": "Aisles of colour: fruit, ham, mushrooms, fish and sweets. The stalls at the back are the long-standing ones.",
+            "DE": "Gänge voller Farben: Obst, Schinken, Pilze, Fisch und Süßes. Die Stände hinten sind die alteingesessenen."
+          },
+          "tip": {
+            "ES": "Entra por la Rambla y piérdete hacia el fondo: menos gente y mejores precios.",
+            "EN": "Enter from La Rambla and wander towards the back: fewer people and better prices.",
+            "DE": "Gehen Sie von der Rambla hinein und schlendern Sie nach hinten: weniger Menschen, bessere Preise."
+          },
+          "hora": "11:30",
+          "dur": "40 min",
+          "img": "/ciudades/barcelona/img/gotic-born-boqueria.jpg",
+          "lat": 41.38174,
+          "lng": 2.17155,
+          "tramo": "pie",
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Catedral de Barcelona",
+            "EN": "Barcelona Cathedral",
+            "DE": "Kathedrale von Barcelona"
+          },
+          "s": {
+            "ES": "La catedral gótica y su claustro",
+            "EN": "The Gothic cathedral and its cloister",
+            "DE": "Die gotische Kathedrale und ihr Kreuzgang"
+          },
+          "d": {
+            "ES": "Una fachada de agujas que mira a la plaza. Dentro, un claustro con palmeras, una fuente y unos vecinos muy especiales.",
+            "EN": "A spired façade facing the square. Inside, a cloister with palms, a fountain and some very special residents.",
+            "DE": "Eine Fassade voller Spitztürme zum Platz hin. Drinnen ein Kreuzgang mit Palmen, einem Brunnen und ganz besonderen Bewohnern."
+          },
+          "tip": {
+            "ES": "Al salir, baja por el carrer del Bisbe y mira el puente de piedra que cruza la calle.",
+            "EN": "On the way out, walk down Carrer del Bisbe and look for the stone bridge over the street.",
+            "DE": "Gehen Sie danach die Carrer del Bisbe hinunter und achten Sie auf die Steinbrücke über der Gasse."
+          },
+          "hora": "12:20",
+          "dur": "30 min",
+          "img": "/ciudades/barcelona/img/gotic-born-catedral.jpg",
+          "lat": 41.38393,
+          "lng": 2.17655,
+          "tramo": "pie",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Santa Maria del Mar",
+            "EN": "Santa Maria del Mar",
+            "DE": "Santa Maria del Mar"
+          },
+          "s": {
+            "ES": "La catedral del mar",
+            "EN": "The cathedral of the sea",
+            "DE": "Die Kathedrale des Meeres"
+          },
+          "d": {
+            "ES": "Gótico catalán en estado puro: columnas finas, una nave enorme y mucha luz. La levantó el barrio de marineros y comerciantes.",
+            "EN": "Pure Catalan Gothic: slender columns, a huge nave and plenty of light. It was raised by the neighbourhood's sailors and merchants.",
+            "DE": "Katalanische Gotik in Reinform: schlanke Säulen, ein riesiges Schiff und viel Licht. Errichtet vom Viertel der Seeleute und Händler."
+          },
+          "tip": {
+            "ES": "Fíjate en las puertas: hay dos figuras de bronce cargando piedras a la espalda.",
+            "EN": "Look closely at the doors: two bronze figures carry stones on their backs.",
+            "DE": "Achten Sie auf die Türen: Zwei Bronzefiguren tragen Steine auf dem Rücken."
+          },
+          "hora": "13:00",
+          "dur": "25 min",
+          "img": "/ciudades/barcelona/img/gotic-born-santa-maria.jpg",
+          "lat": 41.38378,
+          "lng": 2.18201,
+          "tramo": "pie",
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "El Born y vermut",
+            "EN": "El Born and vermouth",
+            "DE": "El Born und Wermut"
+          },
+          "s": {
+            "ES": "El antiguo mercado y la hora del vermut",
+            "EN": "The old market and vermouth time",
+            "DE": "Die alte Markthalle und die Wermut-Stunde"
+          },
+          "d": {
+            "ES": "El viejo mercado de hierro guarda dentro las calles de la Barcelona de 1714. Fuera, el paseo del Born se llena a mediodía.",
+            "EN": "The old iron market hides the streets of 1714 Barcelona inside. Outside, Passeig del Born fills up at midday.",
+            "DE": "Die alte Eisenmarkthalle birgt im Inneren die Straßen des Barcelona von 1714. Draußen füllt sich der Passeig del Born zur Mittagszeit."
+          },
+          "tip": {
+            "ES": "Pide un vermut de grifo con aceitunas y unas patatas: es el ritual del mediodía en Barcelona.",
+            "EN": "Order a draught vermouth with olives and crisps: it's Barcelona's midday ritual.",
+            "DE": "Bestellen Sie einen Wermut vom Fass mit Oliven und Chips: das Mittagsritual in Barcelona."
+          },
+          "hora": "13:30",
+          "dur": "1 h",
+          "img": "/ciudades/barcelona/img/gotic-born-born.jpg",
+          "lat": 41.38561,
+          "lng": 2.18352,
+          "tramo": "pie",
+          "duracionMin": 60
+        }
+      ]
+    },
+    {
+      "id": "gaudi",
+      "expId": "ex2",
+      "img": "/ciudades/barcelona/img/gaudi.jpg",
+      "titulo": {
+        "ES": "Gaudí por el Eixample",
+        "EN": "Gaudí through the Eixample",
+        "DE": "Gaudí im Eixample"
+      },
+      "tipo": {
+        "ES": "Arquitectura",
+        "EN": "Architecture",
+        "DE": "Architektur"
+      },
+      "dur": "7 h",
+      "d": {
+        "ES": "Casa Batlló, La Pedrera y la Sagrada Família a pie, y de remate el modernismo de Sant Pau. El Gaudí imprescindible en un día.",
+        "EN": "Casa Batlló, La Pedrera and the Sagrada Família on foot, rounded off with Modernisme at Sant Pau. Essential Gaudí in one day.",
+        "DE": "Casa Batlló, La Pedrera und die Sagrada Família zu Fuß, zum Abschluss der Modernisme von Sant Pau. Der unverzichtbare Gaudí an einem Tag."
+      },
+      "salida": {
+        "ES": "Desde la puerta del hotel: 40 minutos a pie por el Eixample hasta la Casa Batlló (o metro L3 de Espanya a Passeig de Gràcia). Para volver, 1 h 15 a pie o metro L5 desde Sant Pau | Dos de Maig con cambio a la L3 en Diagonal",
+        "EN": "From the hotel door: a 40-minute walk through the Eixample to Casa Batlló (or metro L3 from Espanya to Passeig de Gràcia). To get back, 1 h 15 on foot or metro L5 from Sant Pau | Dos de Maig, changing to L3 at Diagonal",
+        "DE": "Ab der Hoteltür: 40 Minuten zu Fuß durch das Eixample bis zur Casa Batlló (oder Metro L3 von Espanya bis Passeig de Gràcia). Zurück 1 Std. 15 zu Fuß oder Metro L5 ab Sant Pau | Dos de Maig, in Diagonal in die L3 umsteigen"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta a pie desde la puerta del hotel",
+          "Plan del día con horarios y mapa",
+          "Pasaporte con sellos y curiosidades"
+        ],
+        "EN": [
+          "Walking route from the hotel door",
+          "Day plan with times and map",
+          "Passport with stamps and fun facts"
+        ],
+        "DE": [
+          "Rundgang ab der Hoteltür",
+          "Tagesplan mit Uhrzeiten und Karte",
+          "Pass mit Stempeln und Wissenswertem"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Entradas a Casa Batlló, La Pedrera, Sagrada Família y Sant Pau",
+          "Comida y bebida",
+          "Guía"
+        ],
+        "EN": [
+          "Admission to Casa Batlló, La Pedrera, Sagrada Família and Sant Pau",
+          "Food and drink",
+          "Guide"
+        ],
+        "DE": [
+          "Eintritt für Casa Batlló, La Pedrera, Sagrada Família und Sant Pau",
+          "Essen und Getränke",
+          "Reiseleitung"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Las entradas compradas online y con hora: en taquilla suelen agotarse",
+          "Calzado cómodo",
+          "Agua y algo de comer",
+          "Hombros y rodillas cubiertos para la Sagrada Família"
+        ],
+        "EN": [
+          "Timed tickets bought online: they often sell out at the door",
+          "Comfortable shoes",
+          "Water and a snack",
+          "Shoulders and knees covered for the Sagrada Família"
+        ],
+        "DE": [
+          "Online gekaufte Tickets mit Uhrzeit: an der Kasse sind sie oft ausverkauft",
+          "Bequeme Schuhe",
+          "Wasser und etwas zu essen",
+          "Bedeckte Schultern und Knie für die Sagrada Família"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre: no hay nada que cancelar. Las entradas que compres siguen las condiciones de cada sitio.",
+        "EN": "Self-guided route: nothing to cancel. Any tickets you buy follow each venue's own terms.",
+        "DE": "Freie Route: Es gibt nichts zu stornieren. Gekaufte Eintrittskarten unterliegen den Bedingungen des jeweiligen Ortes."
+      },
+      "accesibilidad": {
+        "ES": "Todo el camino es llano y con aceras anchas. Dentro de los edificios hay zonas con escaleras (azoteas, torres): consulta la accesibilidad al comprar cada entrada.",
+        "EN": "The whole way is flat with wide pavements. Inside the buildings some areas have stairs (roofs, towers): check accessibility when buying each ticket.",
+        "DE": "Der ganze Weg ist flach mit breiten Gehwegen. In den Gebäuden haben manche Bereiche Treppen (Dächer, Türme): fragen Sie beim Ticketkauf nach der Barrierefreiheit."
+      },
+      "puntoEncuentro": {
+        "lat": 41.37336,
+        "lng": 2.14734,
+        "texto": {
+          "ES": "Puerta del hotel, en la Gran Via. Sigue la Gran Via hacia el centro hasta el Passeig de Gràcia y gira a la izquierda.",
+          "EN": "Hotel door, on Gran Via. Follow Gran Via towards the centre to Passeig de Gràcia and turn left.",
+          "DE": "Hoteltür an der Gran Via. Folgen Sie der Gran Via Richtung Zentrum bis zum Passeig de Gràcia und biegen Sie links ab."
+        }
+      },
+      "fotos": [
+        "/ciudades/barcelona/img/gaudi.jpg",
+        "/ciudades/barcelona/img/gaudi-batllo.jpg",
+        "/ciudades/barcelona/img/gaudi-pedrera.jpg",
+        "/ciudades/barcelona/img/gaudi-sagrada.jpg",
+        "/ciudades/barcelona/img/gaudi-nave.jpg",
+        "/ciudades/barcelona/img/gaudi-sant-pau.jpg"
+      ],
+      "duracionMin": 385,
+      "distanciaKm": 11.9,
+      "dificultad": "media",
+      "tipoEntorno": "mixta",
+      "salidasFijas": [],
+      "precioDesde": null,
+      "paradas": [
+        {
+          "n": {
+            "ES": "Casa Batlló",
+            "EN": "Casa Batlló",
+            "DE": "Casa Batlló"
+          },
+          "s": {
+            "ES": "La casa del dragón, en el Passeig de Gràcia",
+            "EN": "The dragon house on Passeig de Gràcia",
+            "DE": "Das Drachenhaus am Passeig de Gràcia"
+          },
+          "d": {
+            "ES": "Balcones como máscaras, una fachada de cristales de colores y un tejado de escamas. Gaudí reformó por completo una casa que ya existía.",
+            "EN": "Balconies like masks, a façade of coloured glass and a scaly roof. Gaudí completely remodelled an existing house.",
+            "DE": "Balkone wie Masken, eine Fassade aus buntem Glas und ein schuppiges Dach. Gaudí baute ein bestehendes Haus komplett um."
+          },
+          "tip": {
+            "ES": "Mira también las casas vecinas de la misma manzana, de otros maestros del modernismo: es la «manzana de la discordia».",
+            "EN": "Also look at the neighbouring houses on the same block, by other Modernista masters: it's the 'block of discord'.",
+            "DE": "Schauen Sie sich auch die Nachbarhäuser im selben Block von anderen Meistern des Modernisme an: die „Manzana de la Discordia“."
+          },
+          "hora": "10:00",
+          "dur": "1 h",
+          "img": "/ciudades/barcelona/img/gaudi-batllo.jpg",
+          "lat": 41.39154,
+          "lng": 2.1647,
+          "tramo": "pie",
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "La Pedrera",
+            "EN": "La Pedrera",
+            "DE": "La Pedrera"
+          },
+          "s": {
+            "ES": "La Casa Milà y su azotea de guerreros",
+            "EN": "Casa Milà and its rooftop of warriors",
+            "DE": "Die Casa Milà und ihr Dach der Krieger"
+          },
+          "d": {
+            "ES": "Una fachada de piedra que parece moverse como el mar, sin una sola línea recta. En la azotea, chimeneas con forma de guerreros.",
+            "EN": "A stone façade that seems to ripple like the sea, without a single straight line. On the roof, chimneys shaped like warriors.",
+            "DE": "Eine Steinfassade, die sich wie das Meer zu bewegen scheint, ohne eine einzige gerade Linie. Auf dem Dach Schornsteine in Gestalt von Kriegern."
+          },
+          "tip": {
+            "ES": "Si entras, deja la azotea para el final: es lo mejor.",
+            "EN": "If you go in, save the roof for last: it's the highlight.",
+            "DE": "Wenn Sie hineingehen, heben Sie sich das Dach für den Schluss auf: Es ist das Beste."
+          },
+          "hora": "11:10",
+          "dur": "1 h",
+          "img": "/ciudades/barcelona/img/gaudi-pedrera.jpg",
+          "lat": 41.3954,
+          "lng": 2.16176,
+          "tramo": "pie",
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Sagrada Família",
+            "EN": "Sagrada Família",
+            "DE": "Sagrada Família"
+          },
+          "s": {
+            "ES": "La obra de su vida",
+            "EN": "His life's work",
+            "DE": "Sein Lebenswerk"
+          },
+          "d": {
+            "ES": "Por fuera, torres que parecen de arena; por dentro, un bosque de columnas y vidrieras que tiñen la luz de colores.",
+            "EN": "Outside, towers that look like sandcastles; inside, a forest of columns and stained glass that turns the light into colour.",
+            "DE": "Außen Türme wie aus Sand; innen ein Wald aus Säulen und Glasfenstern, die das Licht farbig färben."
+          },
+          "tip": {
+            "ES": "La mejor foto de la fachada, desde el estanque de la Plaça de Gaudí. Luego come algo por la zona antes de seguir.",
+            "EN": "The best photo of the façade is from the pond in Plaça de Gaudí. Then grab a bite nearby before moving on.",
+            "DE": "Das beste Foto der Fassade gelingt vom Teich an der Plaça de Gaudí. Danach in der Nähe etwas essen und weiter."
+          },
+          "hora": "12:35",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/barcelona/img/gaudi-sagrada.jpg",
+          "lat": 41.4035,
+          "lng": 2.17443,
+          "tramo": "pie",
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Recinte Modernista de Sant Pau",
+            "EN": "Sant Pau Art Nouveau Site",
+            "DE": "Jugendstilanlage Sant Pau"
+          },
+          "s": {
+            "ES": "Al final de la avenida Gaudí",
+            "EN": "At the end of Avinguda de Gaudí",
+            "DE": "Am Ende der Avinguda de Gaudí"
+          },
+          "d": {
+            "ES": "Pabellones de ladrillo, cerámica y cúpulas de colores entre jardines. Un hospital pensado para curar también con la belleza.",
+            "EN": "Pavilions of brick, ceramics and colourful domes set among gardens. A hospital designed to heal with beauty, too.",
+            "DE": "Pavillons aus Backstein, Keramik und bunten Kuppeln inmitten von Gärten. Ein Krankenhaus, das auch mit Schönheit heilen sollte."
+          },
+          "tip": {
+            "ES": "Ve por la avenida Gaudí, peatonal y con terrazas: al girarte, tienes la Sagrada Família al fondo.",
+            "EN": "Walk up Avinguda de Gaudí, pedestrian and lined with terraces: turn around and the Sagrada Família is behind you.",
+            "DE": "Gehen Sie die Avinguda de Gaudí entlang, eine Fußgängerzone mit Terrassen: Drehen Sie sich um, und die Sagrada Família steht hinter Ihnen."
+          },
+          "hora": "14:20",
+          "dur": "45 min",
+          "img": "/ciudades/barcelona/img/gaudi-sant-pau.jpg",
+          "lat": 41.41164,
+          "lng": 2.17436,
+          "tramo": "pie",
+          "duracionMin": 45
+        }
+      ]
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un cóctel de autor en Reversible, el bar del hotel, a la vuelta",
+      "EN": "A signature cocktail at Reversible, the hotel bar, when you get back",
+      "DE": "Ein Signature-Cocktail im Reversible, der Hotelbar, wenn Sie zurück sind"
+    }
+  },
+  "creditos": [
+    "Plaça Major del Poble Espanyol, Fosos del Castell de Montjuïc, Les Tres Xemeneies desde el Paral·lel y Plaça del Sortidor: Enric, CC BY-SA 4.0, Wikimedia Commons",
+    "La Boqueria, Casa Batlló y Sagrada Família: Bernard Gagnon, CC BY-SA 3.0, Wikimedia Commons",
+    "Las Arenas (Plaça d'Espanya), Torres Venecianas y Vista desde el mirador del Palau Nacional: Felix König, CC BY 3.0, Wikimedia Commons",
+    "Mercat de Sant Antoni, Nave de la Sagrada Família y Pabellón de Operaciones de Sant Pau: Julian Lupyan, dominio público (CC0), Wikimedia Commons",
+    "CaixaForum (fábrica Casaramona): 0000ff, CC BY-SA 4.0, Wikimedia Commons",
+    "Anella Olímpica al atardecer: Alexander Kachkaev, CC BY 3.0, Wikimedia Commons",
+    "Atardecer en el Castell de Montjuïc: Alexey Komarov, CC BY-SA 4.0, Wikimedia Commons",
+    "Azotea de La Pedrera: Arian Zwegers, CC BY 2.0, Wikimedia Commons",
+    "Parc de Joan Miró: Balou46, CC BY-SA 3.0, Wikimedia Commons",
+    "El Born Centre de Cultura i Memòria: Bene Riobó, CC BY-SA 4.0, Wikimedia Commons",
+    "Les Tres Xemeneies: Dani Plana Trenchs, CC BY-SA 4.0, Wikimedia Commons",
+    "Palau Nacional (MNAC): Didier Descouens, CC BY-SA 4.0, Wikimedia Commons",
+    "El Molino de noche: Enfo, CC BY-SA 3.0, Wikimedia Commons",
+    "Teleférico de Montjuïc: Enric, CC BY 4.0, Wikimedia Commons",
+    "Catedral de Barcelona: Jose María Ligero Loarte, CC BY-SA 4.0, Wikimedia Commons",
+    "Interior de Santa Maria del Mar: Kent Wang, CC BY-SA 4.0, Wikimedia Commons",
+    "Cúpula del Mercat de Sant Antoni: L736E, CC BY-SA 4.0, Wikimedia Commons",
+    "Font Màgica de Montjuïc: PierreSelim, CC BY 3.0, Wikimedia Commons",
+    "Puente del carrer del Bisbe: trolvag, CC BY-SA 3.0, Wikimedia Commons",
+    "MACBA: Victoriano Javier Tornel García, CC BY-SA 2.0, Wikimedia Commons",
+    "Carrer de Blai: Xavier Badia Castellà, CC BY-SA 3.0, Wikimedia Commons",
+    "La Pedrera (Casa Milà): Yair Haklai, CC BY-SA 4.0, Wikimedia Commons"
+  ]
+}
