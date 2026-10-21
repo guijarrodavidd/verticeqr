@@ -1,0 +1,482 @@
+{
+  "rio-1": {
+    "pregunta": {
+      "ES": "¿Qué significa «Futaleufú» en mapudungun?",
+      "EN": "What does “Futaleufú” mean in Mapudungun?",
+      "PT": "O que significa “Futaleufú” em mapudungun?"
+    },
+    "opciones": [
+      {
+        "ES": "Río grande",
+        "EN": "Big river",
+        "PT": "Rio grande"
+      },
+      {
+        "ES": "Río azul",
+        "EN": "Blue river",
+        "PT": "Rio azul"
+      },
+      {
+        "ES": "Río frío",
+        "EN": "Cold river",
+        "PT": "Rio frio"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Viene de «futa», grande, y «leufu», río. El pueblo tomó el nombre del río que lo atraviesa.",
+      "EN": "It comes from “futa”, big, and “leufu”, river. The town took its name from the river running through it.",
+      "PT": "Vem de “futa”, grande, e “leufu”, rio. A cidade herdou o nome do rio que a atravessa."
+    }
+  },
+  "rio-2": {
+    "pregunta": {
+      "ES": "¿Cuántos rápidos seguidos tiene el cañón del Infierno?",
+      "EN": "How many rapids in a row are there in Infierno Canyon?",
+      "PT": "Quantas corredeiras seguidas tem o cânion do Infierno?"
+    },
+    "opciones": [
+      {
+        "ES": "Tres",
+        "EN": "Three",
+        "PT": "Três"
+      },
+      {
+        "ES": "Cinco",
+        "EN": "Five",
+        "PT": "Cinco"
+      },
+      {
+        "ES": "Nueve",
+        "EN": "Nine",
+        "PT": "Nove"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Son cinco rápidos encadenados de clase IV y V, uno detrás de otro y entre paredes de roca.",
+      "EN": "Five linked class IV and V rapids, one after another between rock walls.",
+      "PT": "São cinco corredeiras encadeadas de classe IV e V, uma atrás da outra entre paredões de rocha."
+    }
+  },
+  "rio-3": {
+    "pregunta": {
+      "ES": "¿De dónde viene el nombre del rápido Terminator?",
+      "EN": "Where does the name of Terminator rapid come from?",
+      "PT": "De onde vem o nome da corredeira Terminator?"
+    },
+    "opciones": [
+      {
+        "ES": "De la película, por lo duro que es",
+        "EN": "From the film, because it is so tough",
+        "PT": "Do filme, por ser tão difícil"
+      },
+      {
+        "ES": "Del primer descenso en balsa, que terminó ahí",
+        "EN": "From the first raft descent, which ended there",
+        "PT": "Da primeira descida de bote, que terminou ali"
+      },
+      {
+        "ES": "Del apodo de un guía del pueblo",
+        "EN": "From a local guide’s nickname",
+        "PT": "Do apelido de um guia da cidade"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "En el primer intento de bajar el río en balsa, el grupo tuvo que dar el viaje por terminado en este rápido. El nombre se quedó.",
+      "EN": "On the first attempt to raft the river, the group had to call off the trip at this rapid. The name stuck.",
+      "PT": "Na primeira tentativa de descer o rio de bote, o grupo teve de encerrar a viagem nesta corredeira. O nome pegou."
+    }
+  },
+  "rio-4": {
+    "pregunta": {
+      "ES": "¿Dónde termina el río Futaleufú?",
+      "EN": "Where does the Futaleufú River end?",
+      "PT": "Onde termina o rio Futaleufú?"
+    },
+    "opciones": [
+      {
+        "ES": "En el océano Pacífico",
+        "EN": "In the Pacific Ocean",
+        "PT": "No oceano Pacífico"
+      },
+      {
+        "ES": "En el lago Yelcho",
+        "EN": "In Lake Yelcho",
+        "PT": "No lago Yelcho"
+      },
+      {
+        "ES": "En el lago Espolón",
+        "EN": "In Lake Espolón",
+        "PT": "No lago Espolón"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Desemboca en el lago Yelcho. De ese lago sale el río Yelcho, que es el que llega al mar.",
+      "EN": "It flows into Lake Yelcho. From that lake the Yelcho River carries on to the sea.",
+      "PT": "Deságua no lago Yelcho. Desse lago sai o rio Yelcho, que é o que chega ao mar."
+    }
+  },
+  "lagos-1": {
+    "pregunta": {
+      "ES": "¿Qué río sale del lago Espolón?",
+      "EN": "Which river flows out of Lake Espolón?",
+      "PT": "Que rio sai do lago Espolón?"
+    },
+    "opciones": [
+      {
+        "ES": "El río Espolón",
+        "EN": "The Espolón",
+        "PT": "O rio Espolón"
+      },
+      {
+        "ES": "El río Azul",
+        "EN": "The Azul",
+        "PT": "O rio Azul"
+      },
+      {
+        "ES": "El río Palena",
+        "EN": "The Palena",
+        "PT": "O rio Palena"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El río Espolón baja del lago hacia el este, pasa junto al pueblo y se une al Futaleufú cerca del lodge.",
+      "EN": "The Espolón flows east from the lake, passes the town and joins the Futaleufú near the lodge.",
+      "PT": "O rio Espolón desce do lago para o leste, passa pela cidade e se junta ao Futaleufú perto do lodge."
+    }
+  },
+  "lagos-2": {
+    "pregunta": {
+      "ES": "¿Qué insecto molesta más en los lagos en pleno verano?",
+      "EN": "Which insect is the biggest nuisance by the lakes in high summer?",
+      "PT": "Que inseto mais incomoda nos lagos no auge do verão?"
+    },
+    "opciones": [
+      {
+        "ES": "El mosquito",
+        "EN": "The mosquito",
+        "PT": "O mosquito"
+      },
+      {
+        "ES": "El tábano",
+        "EN": "The horsefly",
+        "PT": "A mutuca"
+      },
+      {
+        "ES": "La avispa",
+        "EN": "The wasp",
+        "PT": "A vespa"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "En el sur de Chile lo llaman colihuacho. Es un tábano grande que aparece en lo más caluroso del verano y busca los colores oscuros.",
+      "EN": "In southern Chile it is called the colihuacho, a big horsefly that appears in the hottest part of summer and is drawn to dark colours.",
+      "PT": "No sul do Chile chamam de colihuacho. É uma mutuca grande que aparece no auge do calor e é atraída por cores escuras."
+    }
+  },
+  "lagos-3": {
+    "pregunta": {
+      "ES": "¿Cómo se llama la montaña de cumbre en punta que asoma detrás del Lonconao?",
+      "EN": "What is the pointed mountain behind Lake Lonconao called?",
+      "PT": "Como se chama a montanha de cume pontudo atrás do Lonconao?"
+    },
+    "opciones": [
+      {
+        "ES": "Sierra Teta",
+        "EN": "Sierra Teta",
+        "PT": "Serra Teta"
+      },
+      {
+        "ES": "Cerro Tronador",
+        "EN": "Cerro Tronador",
+        "PT": "Cerro Tronador"
+      },
+      {
+        "ES": "Volcán Corcovado",
+        "EN": "Corcovado volcano",
+        "PT": "Vulcão Corcovado"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es la sierra Teta, que debe el nombre a la forma de su cumbre. Con el lago delante es una de las fotos más repetidas de Futaleufú.",
+      "EN": "It is the Sierra Teta, named after the shape of its summit. With the lake in front, it is one of Futaleufú’s most photographed views.",
+      "PT": "É a serra Teta, que deve o nome ao formato do cume. Com o lago na frente, é uma das fotos mais repetidas de Futaleufú."
+    }
+  },
+  "lagos-4": {
+    "pregunta": {
+      "ES": "¿Qué hace falta para pescar en los ríos de Chile?",
+      "EN": "What do you need to fish in Chile’s rivers?",
+      "PT": "O que é preciso para pescar nos rios do Chile?"
+    },
+    "opciones": [
+      {
+        "ES": "Nada, es libre",
+        "EN": "Nothing, it is free",
+        "PT": "Nada, é livre"
+      },
+      {
+        "ES": "Una licencia de pesca recreativa",
+        "EN": "A recreational fishing licence",
+        "PT": "Uma licença de pesca recreativa"
+      },
+      {
+        "ES": "Ir siempre con un guía",
+        "EN": "Always going with a guide",
+        "PT": "Ir sempre com um guia"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La licencia se tramita en Sernapesca. En muchos ríos de la zona se pesca con captura y suelta, devolviendo el pez al agua.",
+      "EN": "The licence is issued by Sernapesca. On many rivers here people fish catch-and-release, putting the fish back.",
+      "PT": "A licença é emitida pelo Sernapesca. Em muitos rios da região se pesca no pesque e solte, devolvendo o peixe à água."
+    }
+  },
+  "pueblo-1": {
+    "pregunta": {
+      "ES": "¿A cuántos kilómetros del pueblo está la frontera con Argentina?",
+      "EN": "How far is the Argentine border from town?",
+      "PT": "A quantos quilômetros da cidade fica a fronteira com a Argentina?"
+    },
+    "opciones": [
+      {
+        "ES": "10 km",
+        "EN": "10 km",
+        "PT": "10 km"
+      },
+      {
+        "ES": "40 km",
+        "EN": "40 km",
+        "PT": "40 km"
+      },
+      {
+        "ES": "100 km",
+        "EN": "100 km",
+        "PT": "100 km"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El paso fronterizo está a unos 10 km. Al otro lado, Trevelin queda a menos de una hora en coche.",
+      "EN": "The border crossing is about 10 km away. On the other side, Trevelin is less than an hour’s drive.",
+      "PT": "A passagem de fronteira fica a uns 10 km. Do outro lado, Trevelin está a menos de uma hora de carro."
+    }
+  },
+  "pueblo-2": {
+    "pregunta": {
+      "ES": "¿A qué altura sobre el mar está Futaleufú?",
+      "EN": "How high above sea level is Futaleufú?",
+      "PT": "A que altitude fica Futaleufú?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 50 metros",
+        "EN": "About 50 metres",
+        "PT": "Uns 50 metros"
+      },
+      {
+        "ES": "Unos 350 metros",
+        "EN": "About 350 metres",
+        "PT": "Uns 350 metros"
+      },
+      {
+        "ES": "Unos 1.200 metros",
+        "EN": "About 1,200 metres",
+        "PT": "Uns 1.200 metros"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El pueblo está a unos 350 metros, en el fondo del valle. Las montañas que lo rodean le sacan más de mil metros.",
+      "EN": "The town sits at about 350 metres on the valley floor. The mountains around it rise more than a thousand metres higher.",
+      "PT": "A cidade fica a uns 350 metros, no fundo do vale. As montanhas em volta passam de mil metros acima dela."
+    }
+  },
+  "pueblo-3": {
+    "pregunta": {
+      "ES": "¿En qué país nace el río Futaleufú?",
+      "EN": "In which country does the Futaleufú River rise?",
+      "PT": "Em que país nasce o rio Futaleufú?"
+    },
+    "opciones": [
+      {
+        "ES": "Chile",
+        "EN": "Chile",
+        "PT": "Chile"
+      },
+      {
+        "ES": "Argentina",
+        "EN": "Argentina",
+        "PT": "Argentina"
+      },
+      {
+        "ES": "En la frontera, entre los dos",
+        "EN": "On the border, between both",
+        "PT": "Na fronteira, entre os dois"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Nace en los lagos del Parque Nacional Los Alerces, en Argentina, y entra en Chile a pocos kilómetros del pueblo.",
+      "EN": "It rises in the lakes of Los Alerces National Park in Argentina and enters Chile a few kilometres from town.",
+      "PT": "Nasce nos lagos do Parque Nacional Los Alerces, na Argentina, e entra no Chile a poucos quilômetros da cidade."
+    }
+  },
+  "pueblo-4": {
+    "pregunta": {
+      "ES": "¿Cómo se asa el cordero en una fiesta de campo patagónica?",
+      "EN": "How is lamb roasted at a Patagonian country feast?",
+      "PT": "Como se assa o cordeiro numa festa de campo patagônica?"
+    },
+    "opciones": [
+      {
+        "ES": "Entero, abierto en una cruz junto al fuego",
+        "EN": "Whole, spread on a cross by the fire",
+        "PT": "Inteiro, aberto numa cruz ao lado do fogo"
+      },
+      {
+        "ES": "En horno de leña, troceado",
+        "EN": "Cut up, in a wood oven",
+        "PT": "Em pedaços, no forno a lenha"
+      },
+      {
+        "ES": "A la plancha, en filetes",
+        "EN": "Grilled, in fillets",
+        "PT": "Na chapa, em filés"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El cordero al palo se abre entero en una cruz de hierro y se asa junto a las brasas durante horas, sin prisa.",
+      "EN": "Lamb “al palo” is opened whole on an iron cross and roasted beside the embers for hours, unhurried.",
+      "PT": "O cordeiro “al palo” é aberto inteiro numa cruz de ferro e assado ao lado das brasas por horas, sem pressa."
+    }
+  },
+  "reserva-1": {
+    "pregunta": {
+      "ES": "¿Qué pueblo argentino queda más cerca al cruzar la frontera?",
+      "EN": "Which Argentine town is closest once you cross the border?",
+      "PT": "Que cidade argentina fica mais perto depois da fronteira?"
+    },
+    "opciones": [
+      {
+        "ES": "Bariloche",
+        "EN": "Bariloche",
+        "PT": "Bariloche"
+      },
+      {
+        "ES": "Trevelin",
+        "EN": "Trevelin",
+        "PT": "Trevelin"
+      },
+      {
+        "ES": "Ushuaia",
+        "EN": "Ushuaia",
+        "PT": "Ushuaia"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Trevelin está a menos de una hora. Lo fundaron colonos galeses y su nombre quiere decir «pueblo del molino» en galés.",
+      "EN": "Trevelin is less than an hour away. Welsh settlers founded it, and its name means “mill town” in Welsh.",
+      "PT": "Trevelin fica a menos de uma hora. Foi fundada por colonos galeses e o nome quer dizer “cidade do moinho” em galês."
+    }
+  },
+  "reserva-2": {
+    "pregunta": {
+      "ES": "¿Qué río se ve abajo desde el mirador?",
+      "EN": "Which river do you see below the lookout?",
+      "PT": "Que rio se vê lá embaixo do mirante?"
+    },
+    "opciones": [
+      {
+        "ES": "El Futaleufú",
+        "EN": "The Futaleufú",
+        "PT": "O Futaleufú"
+      },
+      {
+        "ES": "El Espolón",
+        "EN": "The Espolón",
+        "PT": "O Espolón"
+      },
+      {
+        "ES": "El Palena",
+        "EN": "The Palena",
+        "PT": "O Palena"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es el Futaleufú, que acaba de entrar en Chile por la frontera y cruza la reserva camino del pueblo.",
+      "EN": "It is the Futaleufú, just in from Argentina, crossing the reserve on its way to town.",
+      "PT": "É o Futaleufú, que acabou de entrar no Chile pela fronteira e cruza a reserva a caminho da cidade."
+    }
+  },
+  "reserva-3": {
+    "pregunta": {
+      "ES": "¿Cuánto mide un cóndor andino adulto con las alas abiertas?",
+      "EN": "What is the wingspan of an adult Andean condor?",
+      "PT": "Quanto mede um condor-andino adulto de asas abertas?"
+    },
+    "opciones": [
+      {
+        "ES": "Metro y medio",
+        "EN": "One and a half metres",
+        "PT": "Um metro e meio"
+      },
+      {
+        "ES": "Unos tres metros",
+        "EN": "About three metres",
+        "PT": "Uns três metros"
+      },
+      {
+        "ES": "Cinco metros",
+        "EN": "Five metres",
+        "PT": "Cinco metros"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Puede pasar de tres metros de punta a punta. Casi no aletea y aprovecha las corrientes de aire caliente para ganar altura.",
+      "EN": "It can top three metres tip to tip. It barely flaps, riding warm air currents to gain height.",
+      "PT": "Pode passar de três metros de ponta a ponta. Quase não bate as asas e usa as correntes de ar quente para subir."
+    }
+  },
+  "reserva-4": {
+    "pregunta": {
+      "ES": "¿Cómo se distingue un cóndor macho de una hembra?",
+      "EN": "How do you tell a male condor from a female?",
+      "PT": "Como distinguir um condor macho de uma fêmea?"
+    },
+    "opciones": [
+      {
+        "ES": "El macho tiene cresta sobre el pico",
+        "EN": "The male has a crest above the beak",
+        "PT": "O macho tem crista sobre o bico"
+      },
+      {
+        "ES": "La hembra es el doble de grande",
+        "EN": "The female is twice the size",
+        "PT": "A fêmea é duas vezes maior"
+      },
+      {
+        "ES": "El macho tiene plumas rojas",
+        "EN": "The male has red feathers",
+        "PT": "O macho tem penas vermelhas"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El macho lleva una cresta carnosa sobre el pico y tiene los ojos marrones. La hembra no tiene cresta y sus ojos son rojos.",
+      "EN": "The male has a fleshy crest above the beak and brown eyes. The female has no crest and red eyes.",
+      "PT": "O macho tem uma crista carnuda sobre o bico e olhos castanhos. A fêmea não tem crista e seus olhos são vermelhos."
+    }
+  }
+}

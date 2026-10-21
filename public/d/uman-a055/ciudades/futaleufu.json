@@ -1,0 +1,1131 @@
+{
+  "slug": "futaleufu",
+  "nombre": "Futaleufú",
+  "intro": {
+    "ES": "Un río turquesa que baja con fuerza entre montañas y, a pocos kilómetros, lagos tranquilos donde bañarse en verano. Futaleufú es un pueblo pequeño de casas de madera a 10 km de Argentina, y casi todo lo que merece la pena queda a menos de una hora del lodge.",
+    "EN": "A turquoise river rushing between mountains and, a few kilometres away, calm lakes for a summer swim. Futaleufú is a small town of wooden houses 10 km from Argentina, and almost everything worth seeing is less than an hour from the lodge.",
+    "PT": "Um rio turquesa descendo com força entre montanhas e, a poucos quilômetros, lagos tranquilos para nadar no verão. Futaleufú é uma cidade pequena de casas de madeira a 10 km da Argentina, e quase tudo o que vale a pena fica a menos de uma hora do lodge."
+  },
+  "lugares": [
+    {
+      "id": "rio",
+      "img": "/ciudades/futaleufu/img/rio.jpg",
+      "nombre": "Río Futaleufú",
+      "zona": {
+        "ES": "Junto al lodge",
+        "EN": "Next to the lodge",
+        "PT": "Ao lado do lodge"
+      },
+      "d": {
+        "ES": "El río que da nombre al pueblo baja desde Argentina con un color turquesa que parece de piscina. Es uno de los ríos de rafting más famosos del mundo, con tramos para quien empieza y rápidos que solo bajan expertos.",
+        "EN": "The river that gives the town its name flows in from Argentina, so turquoise it looks like a swimming pool. It is one of the world’s best-known rafting rivers, with stretches for beginners and rapids only experts run.",
+        "PT": "O rio que dá nome à cidade desce da Argentina com uma cor turquesa que parece de piscina. É um dos rios de rafting mais famosos do mundo, com trechos para iniciantes e corredeiras que só especialistas descem."
+      },
+      "cuando": {
+        "ES": "En verano, de diciembre a marzo, en temporada de rafting",
+        "EN": "In summer, December to March, during rafting season",
+        "PT": "No verão, de dezembro a março, na temporada de rafting"
+      },
+      "min": 5,
+      "modo": "coche",
+      "lat": -43.21397,
+      "lng": -71.85479
+    },
+    {
+      "id": "pueblo",
+      "img": "/ciudades/futaleufu/img/pueblo.jpg",
+      "nombre": "Futaleufú y su plaza",
+      "zona": {
+        "ES": "Centro del pueblo",
+        "EN": "Town centre",
+        "PT": "Centro da cidade"
+      },
+      "d": {
+        "ES": "Un pueblo pequeño de calles anchas y casas de madera, con la plaza en el centro y la laguna Espejo a dos pasos. Aquí están los operadores de rafting y las tiendas donde comprar lo que te falte.",
+        "EN": "A small town of wide streets and wooden houses, with the square in the middle and Laguna Espejo a short walk away. This is where you’ll find the rafting operators and the shops for anything you forgot.",
+        "PT": "Uma cidade pequena de ruas largas e casas de madeira, com a praça no centro e a laguna Espejo logo ao lado. Aqui ficam as operadoras de rafting e as lojas para comprar o que faltar."
+      },
+      "cuando": {
+        "ES": "Al caer la tarde, antes de cenar",
+        "EN": "Late afternoon, before dinner",
+        "PT": "No fim da tarde, antes do jantar"
+      },
+      "min": 5,
+      "modo": "coche",
+      "lat": -43.18577,
+      "lng": -71.8667
+    },
+    {
+      "id": "piedra-aguila",
+      "img": "/ciudades/futaleufu/img/cerro.jpg",
+      "nombre": "Piedra del Águila",
+      "zona": {
+        "ES": "Al noroeste del pueblo",
+        "EN": "North-west of town",
+        "PT": "A noroeste da cidade"
+      },
+      "d": {
+        "ES": "Una gran roca sobre el valle a la que se sube por un sendero. Desde arriba se ven los cerros que rodean Futaleufú, y al atardecer la luz baja despacio por las laderas.",
+        "EN": "A huge rock above the valley, reached by a footpath. From the top you see the hills around Futaleufú, and at sunset the light slides slowly down the slopes.",
+        "PT": "Uma grande rocha sobre o vale, onde se chega por uma trilha. Lá de cima se veem os morros em volta de Futaleufú, e no fim da tarde a luz desce devagar pelas encostas."
+      },
+      "cuando": {
+        "ES": "Al atardecer, con buen tiempo",
+        "EN": "At sunset, in good weather",
+        "PT": "No fim da tarde, com tempo bom"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": -43.15823,
+      "lng": -71.89175
+    },
+    {
+      "id": "espolon",
+      "img": "/ciudades/futaleufu/img/espolon.jpg",
+      "nombre": "Lago Espolón",
+      "zona": {
+        "ES": "A 10 km del pueblo, hacia el oeste",
+        "EN": "10 km west of town",
+        "PT": "A 10 km da cidade, para o oeste"
+      },
+      "d": {
+        "ES": "Un lago largo encajado entre montañas, con playas pequeñas de piedra en la orilla sur. En verano el agua está más templada que la del río y apetece bañarse. Más al norte, por un camino más lento, queda el lago Las Rosas.",
+        "EN": "A long lake tucked between mountains, with small pebble beaches on its southern shore. In summer the water is warmer than the river’s and a swim is tempting. Further north, along a slower road, lies Lago Las Rosas.",
+        "PT": "Um lago comprido entre montanhas, com pequenas praias de pedra na margem sul. No verão a água fica mais morna que a do rio e dá vontade de nadar. Mais ao norte, por uma estrada mais lenta, fica o lago Las Rosas."
+      },
+      "cuando": {
+        "ES": "Una tarde de calor, para el baño",
+        "EN": "A hot afternoon, for a swim",
+        "PT": "Numa tarde de calor, para um mergulho"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": -43.2055,
+      "lng": -71.9555
+    },
+    {
+      "id": "lonconao",
+      "img": "/ciudades/futaleufu/img/lonconao.jpg",
+      "nombre": "Lago Lonconao",
+      "zona": {
+        "ES": "Camino a Puerto Ramírez",
+        "EN": "On the road to Puerto Ramírez",
+        "PT": "Na estrada para Puerto Ramírez"
+      },
+      "d": {
+        "ES": "Un lago pequeño y quieto, con el bosque llegando hasta el agua y la sierra Teta detrás, una montaña de cumbre en punta. Tiene camping en la orilla y suele haber poca gente.",
+        "EN": "A small, still lake with the forest running down to the water and the Sierra Teta behind it, a mountain with a pointed summit. There is a campsite on the shore and it is rarely busy.",
+        "PT": "Um lago pequeno e calmo, com a mata chegando até a água e a serra Teta atrás, uma montanha de cume pontudo. Tem camping na margem e costuma ter pouca gente."
+      },
+      "cuando": {
+        "ES": "A mediodía, para comer en la orilla",
+        "EN": "At midday, for a picnic on the shore",
+        "PT": "Ao meio-dia, para comer na margem"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": -43.2479,
+      "lng": -71.9438
+    },
+    {
+      "id": "reserva",
+      "img": "/ciudades/futaleufu/img/reserva.jpg",
+      "nombre": "Reserva Nacional Futaleufú",
+      "zona": {
+        "ES": "Camino a la frontera",
+        "EN": "On the road to the border",
+        "PT": "Na estrada para a fronteira"
+      },
+      "d": {
+        "ES": "Senderos entre bosque nativo que suben a miradores sobre el valle del Futaleufú. Con suerte, verás cóndores planeando sobre los cerros.",
+        "EN": "Trails through native forest climbing to lookouts over the Futaleufú valley. With luck, you’ll see condors gliding over the hills.",
+        "PT": "Trilhas entre mata nativa que sobem até mirantes sobre o vale do Futaleufú. Com sorte, dá para ver condores planando sobre os morros."
+      },
+      "cuando": {
+        "ES": "Por la mañana, con el día despejado",
+        "EN": "In the morning, on a clear day",
+        "PT": "De manhã, com o dia limpo"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": -43.19619,
+      "lng": -71.8062
+    },
+    {
+      "id": "yelcho",
+      "img": "/ciudades/futaleufu/img/yelcho.jpg",
+      "nombre": "Lago Yelcho y la Carretera Austral",
+      "zona": {
+        "ES": "Pasado Puerto Ramírez",
+        "EN": "Beyond Puerto Ramírez",
+        "PT": "Depois de Puerto Ramírez"
+      },
+      "d": {
+        "ES": "El Futaleufú termina en este lago grande de agua verde azulada, rodeado de montañas con glaciares. El camino pasa por Puerto Ramírez, el cruce hacia Palena, y sigue hasta la Carretera Austral en Villa Santa Lucía.",
+        "EN": "The Futaleufú ends in this big blue-green lake, ringed by mountains with glaciers. The road goes through Puerto Ramírez, the turn-off to Palena, and carries on to the Carretera Austral at Villa Santa Lucía.",
+        "PT": "O Futaleufú termina neste lago grande de água verde-azulada, cercado de montanhas com geleiras. A estrada passa por Puerto Ramírez, o cruzamento para Palena, e segue até a Carretera Austral em Villa Santa Lucía."
+      },
+      "cuando": {
+        "ES": "Un día entero, con el depósito lleno",
+        "EN": "A full day, with a full tank",
+        "PT": "Um dia inteiro, com o tanque cheio"
+      },
+      "min": 75,
+      "modo": "coche",
+      "lat": -43.3022,
+      "lng": -72.2944
+    },
+    {
+      "id": "trevelin",
+      "img": "/ciudades/futaleufu/img/trevelin.jpg",
+      "nombre": "Trevelin, en Argentina",
+      "zona": {
+        "ES": "Al otro lado de la frontera",
+        "EN": "Across the border",
+        "PT": "Do outro lado da fronteira"
+      },
+      "d": {
+        "ES": "Cruzando el paso fronterizo se llega a Trevelin, un pueblo fundado por colonos galeses, con casas de té y viejos molinos. Esquel queda a media hora más.",
+        "EN": "Across the border crossing lies Trevelin, a town founded by Welsh settlers, with tea houses and old mills. Esquel is half an hour further on.",
+        "PT": "Depois da fronteira fica Trevelin, uma cidade fundada por colonos galeses, com casas de chá e moinhos antigos. Esquel fica meia hora adiante."
+      },
+      "cuando": {
+        "ES": "Con el pasaporte y los papeles del coche",
+        "EN": "With your passport and the car papers",
+        "PT": "Com o passaporte e os documentos do carro"
+      },
+      "min": 70,
+      "modo": "coche",
+      "lat": -43.07916,
+      "lng": -71.46408
+    }
+  ],
+  "rutas": [
+    {
+      "id": "rio",
+      "expId": "ex3",
+      "img": "/ciudades/futaleufu/img/rio.jpg",
+      "titulo": {
+        "ES": "Rafting en el Futaleufú",
+        "EN": "Rafting the Futaleufú",
+        "PT": "Rafting no Futaleufú"
+      },
+      "tipo": {
+        "ES": "Aventura",
+        "EN": "Adventure",
+        "PT": "Aventura"
+      },
+      "dur": "6 h",
+      "d": {
+        "ES": "El Futaleufú baja turquesa y con mucha fuerza entre paredes de roca. En balsa y con guía se pasan rápidos con nombres como Infierno o Terminator; el tramo exacto lo elige el operador según el caudal y la experiencia del grupo.",
+        "EN": "The Futaleufú runs turquoise and powerful between rock walls. By raft, with a guide, you run rapids with names like Infierno and Terminator; the operator picks the exact stretch depending on the flow and the group’s experience.",
+        "PT": "O Futaleufú desce turquesa e com muita força entre paredões de rocha. De bote e com guia, você passa por corredeiras com nomes como Infierno ou Terminator; a operadora escolhe o trecho conforme a vazão e a experiência do grupo."
+      },
+      "salida": {
+        "ES": "Recogida en el lodge por la mañana. El operador decide esa misma mañana qué tramo se baja",
+        "EN": "Pick-up at the lodge in the morning. The operator decides that same morning which stretch to run",
+        "PT": "Saída do lodge de manhã. A operadora decide na mesma manhã qual trecho descer"
+      },
+      "incluye": {
+        "ES": [
+          "Guía de rafting durante todo el descenso",
+          "Equipo completo, con casco y traje de neopreno",
+          "Traslado desde el lodge, ida y vuelta",
+          "Charla de seguridad antes de empezar"
+        ],
+        "EN": [
+          "Rafting guide for the whole run",
+          "Full gear, including helmet and wetsuit",
+          "Return transfer from the lodge",
+          "Safety briefing before you start"
+        ],
+        "PT": [
+          "Guia de rafting durante toda a descida",
+          "Equipamento completo, com capacete e roupa de neoprene",
+          "Traslado ida e volta do lodge",
+          "Instruções de segurança antes de começar"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Bañador y ropa seca para la vuelta",
+          "Crema solar resistente al agua",
+          "Calzado que pueda mojarse y vaya sujeto al pie",
+          "Gafas con cinta, si las necesitas"
+        ],
+        "EN": [
+          "Swimwear and dry clothes for afterwards",
+          "Water-resistant sunscreen",
+          "Shoes that can get wet and stay on your feet",
+          "Glasses with a strap, if you need them"
+        ],
+        "PT": [
+          "Roupa de banho e roupa seca para a volta",
+          "Protetor solar resistente à água",
+          "Calçado que possa molhar e fique firme no pé",
+          "Óculos com cordão, se precisar"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Charla de seguridad",
+            "EN": "Safety briefing",
+            "PT": "Instruções de segurança"
+          },
+          "s": {
+            "ES": "En la orilla, con todo el equipo puesto",
+            "EN": "On the bank, with all your gear on",
+            "PT": "Na margem, com todo o equipamento"
+          },
+          "d": {
+            "ES": "Antes de subir a la balsa, el guía explica cómo remar y qué hacer si alguien cae al agua. Se practica en un tramo tranquilo hasta que todo el grupo rema a la vez.",
+            "EN": "Before getting in the raft, the guide explains how to paddle and what to do if someone falls in. You practise on a calm stretch until the whole group paddles together.",
+            "PT": "Antes de subir no bote, o guia explica como remar e o que fazer se alguém cair na água. Treina-se num trecho calmo até o grupo todo remar junto."
+          },
+          "tip": {
+            "ES": "Ajusta bien el chaleco y el casco aunque aprieten un poco. Pregunta aquí todo lo que quieras, porque en los rápidos no se oye nada.",
+            "EN": "Tighten your life jacket and helmet even if they feel a bit snug. Ask everything you want here, because you can’t hear a thing in the rapids.",
+            "PT": "Ajuste bem o colete e o capacete, mesmo que apertem um pouco. Pergunte tudo aqui, porque nas corredeiras não se ouve nada."
+          },
+          "hora": "09:00",
+          "dur": "45 min",
+          "img": "/ciudades/futaleufu/img/rio-1.jpg",
+          "lat": -43.205,
+          "lng": -71.8575,
+          "tramo": "coche",
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Cañón del Infierno",
+            "EN": "Infierno Canyon",
+            "PT": "Cânion do Infierno"
+          },
+          "s": {
+            "ES": "Paredes de roca y cinco rápidos seguidos",
+            "EN": "Rock walls and five rapids in a row",
+            "PT": "Paredões de rocha e cinco corredeiras seguidas"
+          },
+          "d": {
+            "ES": "El río se estrecha entre paredes de roca y el agua turquesa se vuelve blanca. Son cinco rápidos encadenados, de los más técnicos del Futaleufú, y el guía decide si se bajan o se rodean según el caudal.",
+            "EN": "The river narrows between rock walls and the turquoise water turns white. Five linked rapids, among the most technical on the Futaleufú; the guide decides whether to run them or go round, depending on the flow.",
+            "PT": "O rio se estreita entre paredões de rocha e a água turquesa fica branca. São cinco corredeiras encadeadas, das mais técnicas do Futaleufú, e o guia decide se desce ou contorna conforme a vazão."
+          },
+          "tip": {
+            "ES": "Si tu grupo no lo baja, merece la pena asomarse a la entrada del cañón desde la orilla.",
+            "EN": "If your group doesn’t run it, it is worth peering into the canyon entrance from the bank.",
+            "PT": "Se o seu grupo não descer, vale a pena espiar a entrada do cânion da margem."
+          },
+          "hora": "09:45",
+          "dur": "1 h",
+          "img": "/ciudades/futaleufu/img/rio-2.jpg",
+          "lat": -43.21397,
+          "lng": -71.85479,
+          "tramo": "barco",
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Terminator",
+            "EN": "Terminator",
+            "PT": "Terminator"
+          },
+          "s": {
+            "ES": "El rápido largo de clase V del tramo medio",
+            "EN": "The long class V rapid of the middle section",
+            "PT": "A longa corredeira classe V do trecho médio"
+          },
+          "d": {
+            "ES": "Pasada la unión con el río Azul llega el rápido más conocido del Futaleufú, largo y con olas enormes. Detrás vienen otros rápidos grandes casi sin descanso.",
+            "EN": "After the Río Azul joins comes the Futaleufú’s best-known rapid, long and full of huge waves. Behind it come more big rapids with hardly a break.",
+            "PT": "Depois do encontro com o rio Azul vem a corredeira mais conhecida do Futaleufú, longa e com ondas enormes. Em seguida vêm outras grandes, quase sem pausa."
+          },
+          "tip": {
+            "ES": "Rema con todas tus fuerzas cuando el guía lo pida y agárrate a la cuerda cuando entre la ola.",
+            "EN": "Paddle as hard as you can when the guide calls it and grab the rope when the wave hits.",
+            "PT": "Reme com toda a força quando o guia pedir e segure a corda quando a onda entrar."
+          },
+          "hora": "11:00",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/futaleufu/img/rio-3.jpg",
+          "lat": -43.3,
+          "lng": -71.96,
+          "tramo": "barco",
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Casa de Piedra",
+            "EN": "Casa de Piedra",
+            "PT": "Casa de Piedra"
+          },
+          "s": {
+            "ES": "Uno de los últimos rápidos grandes del día",
+            "EN": "One of the last big rapids of the day",
+            "PT": "Uma das últimas corredeiras grandes do dia"
+          },
+          "d": {
+            "ES": "Con el cuerpo ya hecho al río llega uno de los últimos rápidos grandes, de clase IV a V. Después el agua se calma y toca remar tranquilo hasta la salida.",
+            "EN": "With your body used to the river by now, one of the last big rapids arrives, class IV to V. Then the water calms and it is an easy paddle to the take-out.",
+            "PT": "Com o corpo já acostumado ao rio chega uma das últimas corredeiras grandes, de classe IV a V. Depois a água acalma e é remar tranquilo até a saída."
+          },
+          "tip": {
+            "ES": "Al salir, quítate el neopreno mojado cuanto antes y ponte la ropa seca que traigas.",
+            "EN": "Once out, get the wet wetsuit off as soon as you can and put on your dry clothes.",
+            "PT": "Ao sair, tire o neoprene molhado o quanto antes e vista a roupa seca que trouxe."
+          },
+          "hora": "13:30",
+          "dur": "1 h",
+          "img": "/ciudades/futaleufu/img/rio-5.jpg",
+          "lat": -43.345,
+          "lng": -72.03,
+          "tramo": "barco",
+          "duracionMin": 60
+        }
+      ],
+      "fotos": [
+        "/ciudades/futaleufu/img/rio.jpg",
+        "/ciudades/futaleufu/img/rio-1.jpg",
+        "/ciudades/futaleufu/img/rio-2.jpg",
+        "/ciudades/futaleufu/img/rio-3.jpg",
+        "/ciudades/futaleufu/img/rio-4.jpg",
+        "/ciudades/futaleufu/img/rio-5.jpg"
+      ],
+      "duracionMin": 360,
+      "distanciaKm": 30,
+      "dificultad": "exigente",
+      "accesibilidad": {
+        "ES": "Actividad de río con rápidos fuertes y agua fría. Hace falta saber nadar y estar en buena forma; no es apta para personas con movilidad reducida ni con problemas de corazón.",
+        "EN": "A river activity with powerful rapids and cold water. You need to be able to swim and be fit; not suitable for people with reduced mobility or heart problems.",
+        "PT": "Atividade de rio com corredeiras fortes e água fria. É preciso saber nadar e ter bom preparo físico; não é indicada para pessoas com mobilidade reduzida nem com problemas cardíacos."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": -43.2015,
+        "lng": -71.864,
+        "foto": "/ciudades/futaleufu/img/rio.jpg",
+        "texto": {
+          "ES": "Puerta de Uman Lodge. La hora exacta de recogida te la confirmamos en recepción.",
+          "EN": "At the door of Uman Lodge. Reception will confirm the exact pick-up time.",
+          "PT": "Na porta do Uman Lodge. A recepção confirma o horário exato de saída."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebida, según el operador",
+          "Fotos y vídeo del descenso"
+        ],
+        "EN": [
+          "Food and drinks, depending on the operator",
+          "Photos and video of the run"
+        ],
+        "PT": [
+          "Comida e bebida, conforme a operadora",
+          "Fotos e vídeo da descida"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "PT": "Depende da operadora. A recepção confirma quando você reservar."
+      },
+      "salidasFijas": [],
+      "precioDesde": 175
+    },
+    {
+      "id": "lagos",
+      "expId": "ex5",
+      "img": "/ciudades/futaleufu/img/lonconao.jpg",
+      "titulo": {
+        "ES": "Lagos Espolón y Lonconao",
+        "EN": "Lakes Espolón and Lonconao",
+        "PT": "Lagos Espolón e Lonconao"
+      },
+      "tipo": {
+        "ES": "Naturaleza",
+        "EN": "Nature",
+        "PT": "Natureza"
+      },
+      "dur": "4 h",
+      "d": {
+        "ES": "Media jornada en coche por dos lagos a un cuarto de hora del pueblo, con baño en el Espolón y comida en la orilla del Lonconao. La vuelta va junto al Futaleufú, donde se ven pescadores con el agua por la cintura.",
+        "EN": "Half a day by car around two lakes a quarter of an hour from town, with a swim in the Espolón and lunch on the shore of the Lonconao. The way back follows the Futaleufú, where anglers stand waist-deep in the water.",
+        "PT": "Meio dia de carro por dois lagos a quinze minutos da cidade, com banho no Espolón e almoço na margem do Lonconao. A volta acompanha o Futaleufú, onde se veem pescadores com água pela cintura."
+      },
+      "salida": {
+        "ES": "En coche o taxi desde el lodge. El lago Espolón queda a unos 15 minutos hacia el oeste",
+        "EN": "By car or taxi from the lodge. Lago Espolón is about 15 minutes to the west",
+        "PT": "De carro ou táxi a partir do lodge. O lago Espolón fica a uns 15 minutos para o oeste"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "PT": [
+          "Roteiro livre, sem reserva",
+          "Plano do dia e mapa"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Bañador y toalla",
+          "Una chaqueta para el viento del lago",
+          "Agua y algo de comer",
+          "Repelente, que en pleno verano salen los tábanos"
+        ],
+        "EN": [
+          "Swimwear and a towel",
+          "A jacket for the wind off the lake",
+          "Water and something to eat",
+          "Insect repellent, as horseflies come out in high summer"
+        ],
+        "PT": [
+          "Roupa de banho e toalha",
+          "Um casaco para o vento do lago",
+          "Água e algo para comer",
+          "Repelente, porque no auge do verão aparecem as mutucas"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Lago Espolón",
+            "EN": "Lago Espolón",
+            "PT": "Lago Espolón"
+          },
+          "s": {
+            "ES": "Playas de piedra y agua para bañarse en verano",
+            "EN": "Pebble beaches and water for a summer swim",
+            "PT": "Praias de pedra e água para nadar no verão"
+          },
+          "d": {
+            "ES": "El camino sale del pueblo hacia el oeste y en un cuarto de hora aparece el lago, largo y encajado entre montañas. En la orilla sur hay playas pequeñas de piedra y, en verano, algún kayak en el agua.",
+            "EN": "The road heads west out of town and within a quarter of an hour the lake appears, long and tucked between mountains. The southern shore has small pebble beaches and, in summer, the odd kayak on the water.",
+            "PT": "A estrada sai da cidade para o oeste e em quinze minutos aparece o lago, comprido e encaixado entre montanhas. Na margem sul há pequenas praias de pedra e, no verão, algum caiaque na água."
+          },
+          "tip": {
+            "ES": "Si hace calor, este es el sitio para el primer baño del día. El agua del lago está bastante más templada que la del río.",
+            "EN": "If it is hot, this is the place for the first swim of the day. The lake water is much warmer than the river’s.",
+            "PT": "Se estiver calor, este é o lugar para o primeiro mergulho do dia. A água do lago é bem mais morna que a do rio."
+          },
+          "hora": "10:00",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/futaleufu/img/espolon.jpg",
+          "lat": -43.2055,
+          "lng": -71.9555,
+          "tramo": "coche",
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Pasarela del Espolón",
+            "EN": "Espolón footbridge",
+            "PT": "Passarela do Espolón"
+          },
+          "s": {
+            "ES": "Un puente peatonal cerca de la orilla sur",
+            "EN": "A footbridge near the southern shore",
+            "PT": "Uma passarela perto da margem sul"
+          },
+          "d": {
+            "ES": "Una pasarela de madera cruza el agua cerca de la orilla sur del lago. Desde el centro se ve el agua clara corriendo por debajo, y cuando sopla el viento las olas rompen contra las piedras.",
+            "EN": "A wooden footbridge crosses the water near the lake’s southern shore. From the middle you see clear water running underneath, and when the wind blows the waves break on the stones.",
+            "PT": "Uma passarela de madeira cruza a água perto da margem sul do lago. Do meio dela se vê a água clara correndo por baixo, e quando venta as ondas quebram nas pedras."
+          },
+          "tip": {
+            "ES": "Buen sitio para la foto del día. Si hay viento, agárrate a la baranda y no te pares en mitad del paso.",
+            "EN": "A good spot for the photo of the day. If it is windy, hold the railing and don’t stop halfway across.",
+            "PT": "Bom lugar para a foto do dia. Se ventar, segure no corrimão e não pare no meio da passagem."
+          },
+          "hora": "11:45",
+          "dur": "30 min",
+          "img": "/ciudades/futaleufu/img/espolon-1.jpg",
+          "lat": -43.21361,
+          "lng": -71.94363,
+          "tramo": "coche",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Lago Lonconao",
+            "EN": "Lago Lonconao",
+            "PT": "Lago Lonconao"
+          },
+          "s": {
+            "ES": "Un lago pequeño al pie de la sierra Teta",
+            "EN": "A small lake at the foot of the Sierra Teta",
+            "PT": "Um lago pequeno ao pé da serra Teta"
+          },
+          "d": {
+            "ES": "Más pequeño y más quieto que el Espolón, con el bosque bajando hasta el agua. Detrás asoma la sierra Teta, una montaña de cumbre en punta que se reconoce enseguida.",
+            "EN": "Smaller and stiller than the Espolón, with the forest coming down to the water. Behind it rises the Sierra Teta, a mountain with a pointed summit you spot straight away.",
+            "PT": "Menor e mais calmo que o Espolón, com a mata descendo até a água. Atrás aparece a serra Teta, uma montanha de cume pontudo que se reconhece na hora."
+          },
+          "tip": {
+            "ES": "Lleva la comida y para en la orilla, que suele haber muy poca gente.",
+            "EN": "Bring lunch and stop on the shore; it is usually very quiet.",
+            "PT": "Leve o almoço e pare na margem, que costuma ter pouquíssima gente."
+          },
+          "hora": "12:30",
+          "dur": "1 h",
+          "img": "/ciudades/futaleufu/img/lonconao.jpg",
+          "lat": -43.2479,
+          "lng": -71.9438,
+          "tramo": "coche",
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "El Futaleufú desde la orilla",
+            "EN": "The Futaleufú from the bank",
+            "PT": "O Futaleufú da margem"
+          },
+          "s": {
+            "ES": "Pescadores de mosca de vuelta al pueblo",
+            "EN": "Fly anglers on the way back to town",
+            "PT": "Pescadores de mosca na volta à cidade"
+          },
+          "d": {
+            "ES": "El camino de vuelta va junto al río. En los tramos tranquilos se ven pescadores metidos en el agua hasta la cintura, lanzando la mosca una y otra vez.",
+            "EN": "The road back follows the river. On the calm stretches you’ll see anglers waist-deep in the water, casting their fly again and again.",
+            "PT": "A estrada de volta acompanha o rio. Nos trechos calmos se veem pescadores com água pela cintura, lançando a mosca sem parar."
+          },
+          "tip": {
+            "ES": "Para pescar hace falta licencia de pesca recreativa. En el pueblo te dicen dónde sacarla y quién alquila equipo.",
+            "EN": "You need a recreational fishing licence to fish. In town they’ll tell you where to get one and who rents gear.",
+            "PT": "Para pescar é preciso licença de pesca recreativa. Na cidade dizem onde tirar e quem aluga equipamento."
+          },
+          "hora": "14:00",
+          "dur": "45 min",
+          "img": "/ciudades/futaleufu/img/pesca.jpg",
+          "lat": -43.235,
+          "lng": -71.897,
+          "tramo": "coche",
+          "duracionMin": 45
+        }
+      ],
+      "fotos": [
+        "/ciudades/futaleufu/img/lonconao.jpg",
+        "/ciudades/futaleufu/img/espolon.jpg",
+        "/ciudades/futaleufu/img/espolon-1.jpg",
+        "/ciudades/futaleufu/img/pesca.jpg"
+      ],
+      "duracionMin": 240,
+      "distanciaKm": 30,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Ruta en coche con paradas cortas en la orilla. Las playas son de piedra y los caminos de tierra, incómodos en silla de ruedas.",
+        "EN": "A driving route with short stops on the shore. The beaches are pebbly and the paths are dirt, awkward in a wheelchair.",
+        "PT": "Roteiro de carro com paradas curtas na margem. As praias são de pedra e os caminhos de terra, difíceis para cadeira de rodas."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": -43.2055,
+        "lng": -71.9555,
+        "foto": "/ciudades/futaleufu/img/espolon.jpg",
+        "texto": {
+          "ES": "Sales del lodge en coche hacia el oeste, unos 15 minutos hasta el lago Espolón. Primera parada, su orilla sur.",
+          "EN": "Drive west from the lodge, about 15 minutes to Lago Espolón. First stop, its southern shore.",
+          "PT": "Saia do lodge de carro para o oeste, uns 15 minutos até o lago Espolón. Primeira parada, a margem sul."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Coche o taxi",
+          "Comida"
+        ],
+        "EN": [
+          "Car or taxi",
+          "Food"
+        ],
+        "PT": [
+          "Carro ou táxi",
+          "Comida"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "PT": "Depende da operadora. A recepção confirma quando você reservar."
+      },
+      "salidasFijas": [],
+      "precioDesde": 95
+    },
+    {
+      "id": "pueblo",
+      "img": "/ciudades/futaleufu/img/cerro.jpg",
+      "titulo": {
+        "ES": "El pueblo y la Piedra del Águila",
+        "EN": "The town and Piedra del Águila",
+        "PT": "A cidade e a Piedra del Águila"
+      },
+      "tipo": {
+        "ES": "Pueblo",
+        "EN": "Town",
+        "PT": "Cidade"
+      },
+      "dur": "4 h",
+      "d": {
+        "ES": "Una tarde para conocer el pueblo con calma, paseando por la plaza y la laguna Espejo antes de subir a la Piedra del Águila a ver el valle desde arriba. Al bajar, cena en el centro mientras cae el sol.",
+        "EN": "An unhurried afternoon in town, strolling round the square and Laguna Espejo before heading up Piedra del Águila to see the valley from above. Afterwards, dinner in the centre as the sun goes down.",
+        "PT": "Uma tarde para conhecer a cidade com calma, passeando pela praça e pela laguna Espejo antes de subir à Piedra del Águila para ver o vale do alto. Na volta, jantar no centro enquanto o sol se põe."
+      },
+      "salida": {
+        "ES": "En coche o taxi hasta el centro del pueblo, unos 5 minutos. Aparca cerca de la plaza y sigue a pie",
+        "EN": "By car or taxi to the town centre, about 5 minutes. Park near the square and carry on on foot",
+        "PT": "De carro ou táxi até o centro, uns 5 minutos. Estacione perto da praça e siga a pé"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "PT": [
+          "Roteiro livre, sem reserva",
+          "Plano do dia e mapa"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado con buena suela para la roca",
+          "Una chaqueta, que al caer el sol refresca",
+          "Efectivo, por si piden entrada en la Piedra del Águila",
+          "Batería en el móvil para el atardecer"
+        ],
+        "EN": [
+          "Shoes with good grip for the rock",
+          "A jacket, as it gets cool once the sun goes",
+          "Cash, in case there is an entry fee at Piedra del Águila",
+          "A charged phone for the sunset"
+        ],
+        "PT": [
+          "Calçado com boa sola para a rocha",
+          "Um casaco, porque esfria quando o sol se põe",
+          "Dinheiro em espécie, caso cobrem entrada na Piedra del Águila",
+          "Bateria no celular para o pôr do sol"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Plaza de Futaleufú",
+            "EN": "Futaleufú square",
+            "PT": "Praça de Futaleufú"
+          },
+          "s": {
+            "ES": "El centro del pueblo, entre casas de madera",
+            "EN": "The heart of town, among wooden houses",
+            "PT": "O centro da cidade, entre casas de madeira"
+          },
+          "d": {
+            "ES": "La plaza es el punto de encuentro del pueblo, con bancos y montañas asomando al final de cada calle. Alrededor están los operadores de rafting y las tiendas.",
+            "EN": "The square is where the town meets, with benches and mountains peeking out at the end of every street. Around it are the rafting operators and the shops.",
+            "PT": "A praça é o ponto de encontro da cidade, com bancos e montanhas aparecendo no fim de cada rua. Em volta ficam as operadoras de rafting e as lojas."
+          },
+          "tip": {
+            "ES": "Si vas a hacer rafting otro día, aprovecha para preguntar en los operadores por los tramos y el caudal.",
+            "EN": "If you plan to go rafting another day, use the chance to ask the operators about the stretches and the flow.",
+            "PT": "Se for fazer rafting outro dia, aproveite para perguntar às operadoras sobre os trechos e a vazão."
+          },
+          "hora": "16:00",
+          "dur": "30 min",
+          "img": "/ciudades/futaleufu/img/plaza.jpg",
+          "lat": -43.18577,
+          "lng": -71.8667,
+          "tramo": "coche",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Laguna Espejo",
+            "EN": "Laguna Espejo",
+            "PT": "Laguna Espejo"
+          },
+          "s": {
+            "ES": "La laguna del pueblo, que copia los cerros",
+            "EN": "The town lagoon, mirroring the hills",
+            "PT": "A lagoa da cidade, que reflete os morros"
+          },
+          "d": {
+            "ES": "A pocas cuadras de la plaza hay una laguna pequeña rodeada de juncos. Los días sin viento el agua se queda quieta y refleja las montañas del otro lado.",
+            "EN": "A few blocks from the square is a small lagoon ringed with reeds. On still days the water goes flat and reflects the mountains opposite.",
+            "PT": "A poucas quadras da praça há uma lagoa pequena cercada de juncos. Nos dias sem vento a água fica parada e reflete as montanhas do outro lado."
+          },
+          "tip": {
+            "ES": "Vuelve a última hora si puedes, cuando el agua está más quieta y la luz es más suave.",
+            "EN": "Come back late in the day if you can, when the water is stillest and the light softer.",
+            "PT": "Volte no fim do dia se puder, quando a água está mais parada e a luz mais suave."
+          },
+          "hora": "16:45",
+          "dur": "30 min",
+          "img": "/ciudades/futaleufu/img/espejo.jpg",
+          "lat": -43.18573,
+          "lng": -71.85911,
+          "tramo": "pie",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Piedra del Águila",
+            "EN": "Piedra del Águila",
+            "PT": "Piedra del Águila"
+          },
+          "s": {
+            "ES": "Una gran roca con vista al valle",
+            "EN": "A great rock with a view of the valley",
+            "PT": "Uma grande rocha com vista para o vale"
+          },
+          "d": {
+            "ES": "A un cuarto de hora en coche del centro sale el sendero que sube a una gran roca sobre el valle. Desde arriba se ven los cerros que rodean Futaleufú y los campos del fondo del valle.",
+            "EN": "A quarter of an hour’s drive from the centre, a path climbs to a great rock above the valley. From the top you see the hills around Futaleufú and the fields on the valley floor.",
+            "PT": "A quinze minutos de carro do centro sai a trilha que sobe até uma grande rocha sobre o vale. Lá de cima se veem os morros em volta de Futaleufú e os campos no fundo do vale."
+          },
+          "tip": {
+            "ES": "La roca resbala si está húmeda, así que pisa con calma y ve con calzado que agarre.",
+            "EN": "The rock is slippery when damp, so tread carefully and wear shoes with grip.",
+            "PT": "A rocha escorrega quando está úmida, então pise com calma e use calçado que firme bem."
+          },
+          "hora": "17:30",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/futaleufu/img/cerro.jpg",
+          "lat": -43.15823,
+          "lng": -71.89175,
+          "tramo": "coche",
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Cena en el pueblo",
+            "EN": "Dinner in town",
+            "PT": "Jantar na cidade"
+          },
+          "s": {
+            "ES": "De vuelta al centro cuando cae el sol",
+            "EN": "Back in the centre as the sun sets",
+            "PT": "De volta ao centro quando o sol se põe"
+          },
+          "d": {
+            "ES": "Para cerrar, vuelta a las calles del centro. En verano anochece tarde y da tiempo a cenar con luz, viendo cómo se apagan las montañas detrás de los tejados.",
+            "EN": "To finish, back to the streets of the centre. In summer it gets dark late, so there is time to eat in daylight and watch the mountains fade behind the rooftops.",
+            "PT": "Para fechar, volta às ruas do centro. No verão escurece tarde e dá tempo de jantar com luz, vendo as montanhas sumirem atrás dos telhados."
+          },
+          "tip": {
+            "ES": "Pregunta si tienen cordero asado, lo más típico de la Patagonia.",
+            "EN": "Ask if they have roast lamb, the Patagonian classic.",
+            "PT": "Pergunte se tem cordeiro assado, o mais típico da Patagônia."
+          },
+          "hora": "19:30",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/futaleufu/img/pueblo.jpg",
+          "lat": -43.1857,
+          "lng": -71.868,
+          "tramo": "coche",
+          "duracionMin": 90
+        }
+      ],
+      "fotos": [
+        "/ciudades/futaleufu/img/cerro.jpg",
+        "/ciudades/futaleufu/img/plaza.jpg",
+        "/ciudades/futaleufu/img/espejo.jpg",
+        "/ciudades/futaleufu/img/pueblo.jpg"
+      ],
+      "duracionMin": 255,
+      "distanciaKm": 18,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "El paseo por el pueblo es llano. La subida a la Piedra del Águila va por sendero de tierra y roca, con tramos empinados; no es apta para sillas de ruedas.",
+        "EN": "The walk around town is flat. The climb to Piedra del Águila is on a dirt and rock path with steep parts; not suitable for wheelchairs.",
+        "PT": "O passeio pela cidade é plano. A subida à Piedra del Águila é por trilha de terra e rocha, com trechos íngremes; não é indicada para cadeiras de rodas."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": -43.18577,
+        "lng": -71.8667,
+        "foto": "/ciudades/futaleufu/img/plaza.jpg",
+        "texto": {
+          "ES": "Sales del lodge en coche o taxi hacia el centro, unos 5 minutos. Primera parada, la plaza.",
+          "EN": "Drive or take a taxi from the lodge to the centre, about 5 minutes. First stop, the square.",
+          "PT": "Saia do lodge de carro ou táxi até o centro, uns 5 minutos. Primeira parada, a praça."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Transporte hasta el pueblo",
+          "Cena y compras"
+        ],
+        "EN": [
+          "Transport into town",
+          "Dinner and shopping"
+        ],
+        "PT": [
+          "Transporte até a cidade",
+          "Jantar e compras"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "PT": "Depende da operadora. A recepção confirma quando você reservar."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    },
+    {
+      "id": "reserva",
+      "expId": "ex8",
+      "img": "/ciudades/futaleufu/img/reserva.jpg",
+      "titulo": {
+        "ES": "Reserva Nacional Futaleufú",
+        "EN": "Futaleufú National Reserve",
+        "PT": "Reserva Nacional Futaleufú"
+      },
+      "tipo": {
+        "ES": "Senderismo",
+        "EN": "Hiking",
+        "PT": "Trilha"
+      },
+      "dur": "4 h",
+      "d": {
+        "ES": "Una mañana de sendero en el sector Las Escalas, camino de la frontera. Se sube entre bosque nativo hasta dos miradores con el río abajo y, si hay suerte, algún cóndor encima.",
+        "EN": "A morning on the trails of the Las Escalas sector, on the way to the border. You climb through native forest to two lookouts with the river below and, with luck, a condor overhead.",
+        "PT": "Uma manhã de trilha no setor Las Escalas, a caminho da fronteira. Sobe-se entre mata nativa até dois mirantes com o rio lá embaixo e, com sorte, algum condor no alto."
+      },
+      "salida": {
+        "ES": "En coche desde el lodge por el camino a la frontera, unos 15 minutos hasta el sector Las Escalas",
+        "EN": "By car from the lodge along the border road, about 15 minutes to the Las Escalas sector",
+        "PT": "De carro a partir do lodge pela estrada da fronteira, uns 15 minutos até o setor Las Escalas"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "PT": [
+          "Roteiro livre, sem reserva",
+          "Plano do dia e mapa"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado de montaña",
+          "Cortavientos y una capa de abrigo",
+          "Agua y algo de comer",
+          "Prismáticos para buscar cóndores"
+        ],
+        "EN": [
+          "Hiking boots",
+          "A windproof and a warm layer",
+          "Water and something to eat",
+          "Binoculars to spot condors"
+        ],
+        "PT": [
+          "Bota de trilha",
+          "Corta-vento e uma camada de agasalho",
+          "Água e algo para comer",
+          "Binóculo para procurar condores"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Camino a la reserva",
+            "EN": "Road to the reserve",
+            "PT": "Caminho para a reserva"
+          },
+          "s": {
+            "ES": "El valle del Futaleufú hacia la frontera",
+            "EN": "The Futaleufú valley towards the border",
+            "PT": "O vale do Futaleufú rumo à fronteira"
+          },
+          "d": {
+            "ES": "La carretera sigue el valle hacia Argentina entre praderas y cercas de madera, con cerros nevados delante. A los pocos kilómetros aparecen los carteles de la reserva.",
+            "EN": "The road follows the valley towards Argentina between meadows and wooden fences, with snowy peaks ahead. A few kilometres on, the reserve signs appear.",
+            "PT": "A estrada segue o vale rumo à Argentina entre pastos e cercas de madeira, com morros nevados à frente. Poucos quilômetros depois aparecem as placas da reserva."
+          },
+          "tip": {
+            "ES": "Ve sin prisa y para donde haya sitio para sacar el coche del camino si quieres hacer fotos.",
+            "EN": "Take it slowly and only stop where you can pull fully off the road for photos.",
+            "PT": "Vá sem pressa e só pare onde dê para tirar o carro da estrada se quiser fotografar."
+          },
+          "hora": "09:30",
+          "dur": "20 min",
+          "img": "/ciudades/futaleufu/img/reserva-1.jpg",
+          "lat": -43.19,
+          "lng": -71.82,
+          "tramo": "coche",
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Mirador Piedra Ventosa",
+            "EN": "Piedra Ventosa lookout",
+            "PT": "Mirante Piedra Ventosa"
+          },
+          "s": {
+            "ES": "Primer mirador sobre el río",
+            "EN": "First lookout over the river",
+            "PT": "Primeiro mirante sobre o rio"
+          },
+          "d": {
+            "ES": "Un mirador de madera con el Futaleufú abajo, serpenteando entre bosque y bancos de arena, y los Andes nevados al fondo.",
+            "EN": "A wooden lookout with the Futaleufú below, winding between forest and sandbanks, and the snowy Andes behind.",
+            "PT": "Um mirante de madeira com o Futaleufú lá embaixo, serpenteando entre a mata e bancos de areia, e os Andes nevados ao fundo."
+          },
+          "tip": {
+            "ES": "Lleva el cortavientos a mano. El nombre del mirador ya avisa de lo que sopla aquí arriba.",
+            "EN": "Keep your windproof handy. The lookout’s name, Windy Rock, says it all.",
+            "PT": "Deixe o corta-vento à mão. O nome do mirante, Pedra Ventosa, já avisa."
+          },
+          "hora": "10:00",
+          "dur": "30 min",
+          "img": "/ciudades/futaleufu/img/reserva.jpg",
+          "lat": -43.19686,
+          "lng": -71.79391,
+          "tramo": "coche",
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Sendero al Mirador El Cóndor",
+            "EN": "Trail to El Cóndor lookout",
+            "PT": "Trilha para o Mirante El Cóndor"
+          },
+          "s": {
+            "ES": "Escalones de madera entre el bosque",
+            "EN": "Wooden steps through the forest",
+            "PT": "Degraus de madeira pela mata"
+          },
+          "d": {
+            "ES": "El sendero sube entre árboles nativos, con escalones de madera y barandas en los tramos más empinados. Casi todo el camino va a la sombra.",
+            "EN": "The trail climbs through native trees, with wooden steps and handrails on the steepest parts. Most of the way is in the shade.",
+            "PT": "A trilha sobe entre árvores nativas, com degraus de madeira e corrimãos nos trechos mais íngremes. Quase todo o caminho é na sombra."
+          },
+          "tip": {
+            "ES": "Sube a tu ritmo y para a beber cuando lo necesites. Arriba hace más fresco.",
+            "EN": "Go at your own pace and stop to drink when you need to. It is cooler at the top.",
+            "PT": "Suba no seu ritmo e pare para beber quando precisar. Lá em cima é mais fresco."
+          },
+          "hora": "10:45",
+          "dur": "1 h",
+          "img": "/ciudades/futaleufu/img/reserva-2.jpg",
+          "lat": -43.196,
+          "lng": -71.7925,
+          "tramo": "pie",
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Mirador El Cóndor",
+            "EN": "El Cóndor lookout",
+            "PT": "Mirante El Cóndor"
+          },
+          "s": {
+            "ES": "El valle a vista de cóndor",
+            "EN": "The valley from a condor’s eye view",
+            "PT": "O vale visto como um condor"
+          },
+          "d": {
+            "ES": "Desde arriba el río parece una cinta clara entre el bosque y los campos del valle. Es buen sitio para quedarse un rato mirando al cielo, porque a veces pasan cóndores planeando sobre los cerros.",
+            "EN": "From up here the river looks like a pale ribbon between forest and valley fields. It is a good place to linger and watch the sky, as condors sometimes glide over the hills.",
+            "PT": "Lá de cima o rio parece uma fita clara entre a mata e os campos do vale. É um bom lugar para ficar um tempo olhando o céu, porque às vezes passam condores planando sobre os morros."
+          },
+          "tip": {
+            "ES": "Si llevas prismáticos, busca el collar blanco en el cuello. Así se reconoce al cóndor aunque vuele alto.",
+            "EN": "If you brought binoculars, look for the white collar round the neck. That is how you tell a condor even when it flies high.",
+            "PT": "Se trouxe binóculo, procure o colar branco no pescoço. É assim que se reconhece o condor mesmo voando alto."
+          },
+          "hora": "11:45",
+          "dur": "45 min",
+          "img": "/ciudades/futaleufu/img/reserva-3.jpg",
+          "lat": -43.19594,
+          "lng": -71.79108,
+          "tramo": "pie",
+          "duracionMin": 45
+        }
+      ],
+      "fotos": [
+        "/ciudades/futaleufu/img/reserva.jpg",
+        "/ciudades/futaleufu/img/reserva-1.jpg",
+        "/ciudades/futaleufu/img/reserva-2.jpg",
+        "/ciudades/futaleufu/img/reserva-3.jpg",
+        "/ciudades/futaleufu/img/condor.jpg"
+      ],
+      "duracionMin": 240,
+      "distanciaKm": 20,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Senderos de tierra con escalones y cuestas. Hace falta caminar con soltura; no es apta para sillas de ruedas.",
+        "EN": "Dirt trails with steps and slopes. You need to be comfortable walking; not suitable for wheelchairs.",
+        "PT": "Trilhas de terra com degraus e subidas. É preciso caminhar com desenvoltura; não é indicada para cadeiras de rodas."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": -43.19,
+        "lng": -71.82,
+        "foto": "/ciudades/futaleufu/img/reserva-1.jpg",
+        "texto": {
+          "ES": "Sales del lodge en coche por el camino a la frontera, unos 15 minutos. Primera parada, la entrada a la reserva.",
+          "EN": "Drive from the lodge along the border road, about 15 minutes. First stop, the reserve entrance.",
+          "PT": "Saia do lodge de carro pela estrada da fronteira, uns 15 minutos. Primeira parada, a entrada da reserva."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Coche o taxi",
+          "Comida"
+        ],
+        "EN": [
+          "Car or taxi",
+          "Food"
+        ],
+        "PT": [
+          "Carro ou táxi",
+          "Comida"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+        "EN": "Depends on the operator. Reception will confirm it when you book.",
+        "PT": "Depende da operadora. A recepção confirma quando você reservar."
+      },
+      "salidasFijas": [],
+      "precioDesde": 55
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un pisco sour en el lodge a la vuelta",
+      "EN": "A pisco sour at the lodge when you get back",
+      "PT": "Um pisco sour no lodge na volta"
+    }
+  },
+  "creditos": [
+    "Río Futaleufú: Nttmnz2781cco, CC BY-SA 4.0, Wikimedia Commons",
+    "Rápidos del Futaleufú, Río Futaleufú bajo un cable, Lago Yelcho desde el camino de Futaleufú: Daniel P. Gauer, CC BY 2.0, Wikimedia Commons",
+    "Entrada al cañón del Infierno y Futaleufú con la laguna Espejo: An American in Chile, CC BY-SA 4.0, Wikimedia Commons",
+    "Unión del río Azul y el Futaleufú: Dick Culbert, CC BY 2.0, Wikimedia Commons",
+    "Garganta del río Futaleufú y Lago Lonconao con la sierra Teta: Kaaty.7, CC BY-SA 3.0, Wikimedia Commons",
+    "Laguna Espejo: Lmsolar, CC BY-SA 3.0, Wikimedia Commons",
+    "Futaleufú desde el cerro El Pozón: Javieramillaray, CC BY-SA 3.0, Wikimedia Commons",
+    "Amanecer en Futaleufú y Lago Espolón: OutCrow, CC BY-SA 3.0, Wikimedia Commons",
+    "Olas en el lago Espolón: Elena del humedal, CC BY-SA 4.0, Wikimedia Commons",
+    "Pesca en el río Futaleufú: Valentina Requesens, CC BY 2.0, Wikimedia Commons",
+    "Reserva Nacional Futaleufú, camino a la reserva, sendero y vista del Mirador El Cóndor, cóndor: Natalia Reyes Escobar, CC BY-SA 4.0, Wikimedia Commons",
+    "Viejo molino galés de Trevelin: CarlosA.Barrio, CC BY-SA 4.0, Wikimedia Commons"
+  ]
+}
