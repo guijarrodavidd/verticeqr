@@ -1,0 +1,512 @@
+{
+ "cetaceos-1": {
+  "pregunta": {
+   "ES": "¿De dónde viene el nombre de Puerto Colón?",
+   "EN": "Where does Puerto Colón get its name?",
+   "DE": "Woher hat Puerto Colón seinen Namen?"
+  },
+  "opciones": [
+   {
+    "ES": "De Cristóbal Colón, que paró en Canarias camino de América",
+    "EN": "From Christopher Columbus, who stopped in the Canaries on his way to America",
+    "DE": "Von Christoph Kolumbus, der auf dem Weg nach Amerika auf den Kanaren Halt machte"
+   },
+   {
+    "ES": "De un pescador de Adeje",
+    "EN": "From a fisherman from Adeje",
+    "DE": "Von einem Fischer aus Adeje"
+   },
+   {
+    "ES": "De una palabra guanche",
+    "EN": "From a Guanche word",
+    "DE": "Von einem Guanchen-Wort"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Colón hizo escala en La Gomera, la isla que ves enfrente, en su primer viaje de 1492. Por eso en esta costa hay calles y playas con nombres de sus barcos, como La Pinta.",
+   "EN": "Columbus stopped at La Gomera, the island opposite, on his first voyage in 1492. That’s why this coast has streets and beaches named after his ships, like La Pinta.",
+   "DE": "Kolumbus machte 1492 auf seiner ersten Reise auf La Gomera Halt, der Insel gegenüber. Deshalb tragen Straßen und Strände hier die Namen seiner Schiffe, wie La Pinta."
+  }
+ },
+ "cetaceos-2": {
+  "pregunta": {
+   "ES": "¿Cuánto mide un calderón adulto?",
+   "EN": "How long is an adult pilot whale?",
+   "DE": "Wie lang ist ein ausgewachsener Grindwal?"
+  },
+  "opciones": [
+   {
+    "ES": "Alrededor de 1 metro",
+    "EN": "About 1 metre",
+    "DE": "Etwa 1 Meter"
+   },
+   {
+    "ES": "Entre 4 y 6 metros",
+    "EN": "Between 4 and 6 metres",
+    "DE": "Zwischen 4 und 6 Metern"
+   },
+   {
+    "ES": "Más de 15 metros",
+    "EN": "Over 15 metres",
+    "DE": "Über 15 Meter"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Los machos llegan a 6 metros y las hembras a unos 4. Aunque los llamen ballenas piloto, en realidad son delfines grandes.",
+   "EN": "Males reach 6 metres and females about 4. Although they are called pilot whales, they are actually large dolphins.",
+   "DE": "Männchen werden bis zu 6 Meter lang, Weibchen etwa 4. Obwohl man sie Wale nennt, sind sie eigentlich große Delfine."
+  }
+ },
+ "cetaceos-3": {
+  "pregunta": {
+   "ES": "¿Cuántas especies de cetáceos se han visto en aguas de Canarias?",
+   "EN": "How many species of cetaceans have been seen in Canary waters?",
+   "DE": "Wie viele Walarten wurden in kanarischen Gewässern gesichtet?"
+  },
+  "opciones": [
+   {
+    "ES": "Unas 5",
+    "EN": "About 5",
+    "DE": "Etwa 5"
+   },
+   {
+    "ES": "Unas 12",
+    "EN": "About 12",
+    "DE": "Etwa 12"
+   },
+   {
+    "ES": "Más de 25",
+    "EN": "Over 25",
+    "DE": "Über 25"
+   }
+  ],
+  "correcta": 2,
+  "explicacion": {
+   "ES": "Se han citado más de 25, casi un tercio de las del mundo. Las aguas profundas y templadas junto a la costa las atraen todo el año.",
+   "EN": "Over 25 have been recorded, almost a third of the world’s species. Deep, mild waters close to the coast attract them all year round.",
+   "DE": "Über 25 wurden nachgewiesen, fast ein Drittel aller Arten. Tiefes, mildes Wasser nahe der Küste lockt sie das ganze Jahr."
+  }
+ },
+ "cetaceos-4": {
+  "pregunta": {
+   "ES": "¿Qué protege la franja de mar entre Teno y Rasca?",
+   "EN": "What does the strip of sea between Teno and Rasca protect?",
+   "DE": "Was schützt der Meeresstreifen zwischen Teno und Rasca?"
+  },
+  "opciones": [
+   {
+    "ES": "Un banco de atunes",
+    "EN": "A tuna shoal",
+    "DE": "Einen Thunfischschwarm"
+   },
+   {
+    "ES": "A los cetáceos y su hábitat",
+    "EN": "Cetaceans and their habitat",
+    "DE": "Wale und ihren Lebensraum"
+   },
+   {
+    "ES": "Un barco hundido",
+    "EN": "A sunken ship",
+    "DE": "Ein gesunkenes Schiff"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Es una Zona Especial de Conservación de la Red Natura 2000. Por eso los barcos de avistamiento necesitan permiso y no pueden perseguir a los animales.",
+   "EN": "It is a Natura 2000 Special Area of Conservation. That’s why whale-watching boats need a licence and may not chase the animals.",
+   "DE": "Es ist ein Natura-2000-Schutzgebiet. Deshalb brauchen Beobachtungsboote eine Lizenz und dürfen die Tiere nicht verfolgen."
+  }
+ },
+ "teide-1": {
+  "pregunta": {
+   "ES": "¿Qué tiene de especial Vilaflor?",
+   "EN": "What is special about Vilaflor?",
+   "DE": "Was ist besonders an Vilaflor?"
+  },
+  "opciones": [
+   {
+    "ES": "Es el pueblo más alto de Canarias",
+    "EN": "It is the highest village in the Canaries",
+    "DE": "Es ist das höchste Dorf der Kanaren"
+   },
+   {
+    "ES": "Es el más antiguo de Tenerife",
+    "EN": "It is the oldest in Tenerife",
+    "DE": "Es ist das älteste Teneriffas"
+   },
+   {
+    "ES": "No tiene carreteras",
+    "EN": "It has no roads",
+    "DE": "Es hat keine Straßen"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Está a unos 1.400 metros de altitud. Su agua mineral y sus pinos canarios son famosos en toda la isla.",
+   "EN": "It sits at around 1,400 metres. Its mineral water and Canary pines are famous across the island.",
+   "DE": "Es liegt auf etwa 1.400 Metern. Sein Mineralwasser und seine Kanarenkiefern sind auf der ganzen Insel bekannt."
+  }
+ },
+ "teide-2": {
+  "pregunta": {
+   "ES": "¿En qué billete salía el Roque Cinchado?",
+   "EN": "Which banknote featured Roque Cinchado?",
+   "DE": "Auf welchem Geldschein war der Roque Cinchado?"
+  },
+  "opciones": [
+   {
+    "ES": "En el de 100 pesetas",
+    "EN": "The 100-peseta note",
+    "DE": "Auf dem 100-Peseten-Schein"
+   },
+   {
+    "ES": "En el de 1.000 pesetas",
+    "EN": "The 1,000-peseta note",
+    "DE": "Auf dem 1.000-Peseten-Schein"
+   },
+   {
+    "ES": "En el de 50 euros",
+    "EN": "The 50-euro note",
+    "DE": "Auf dem 50-Euro-Schein"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Aparecía en el reverso del billete de 1.000 pesetas, junto al Teide. Por eso muchos lo llaman «el árbol de piedra».",
+   "EN": "It appeared on the back of the 1,000-peseta note, next to Teide. That’s why many call it “the stone tree”.",
+   "DE": "Er war auf der Rückseite des 1.000-Peseten-Scheins, neben dem Teide. Deshalb nennen ihn viele „den Steinbaum“."
+  }
+ },
+ "teide-3": {
+  "pregunta": {
+   "ES": "¿Cuánto mide el Teide?",
+   "EN": "How high is Teide?",
+   "DE": "Wie hoch ist der Teide?"
+  },
+  "opciones": [
+   {
+    "ES": "2.718 metros",
+    "EN": "2,718 metres",
+    "DE": "2.718 Meter"
+   },
+   {
+    "ES": "3.715 metros",
+    "EN": "3,715 metres",
+    "DE": "3.715 Meter"
+   },
+   {
+    "ES": "4.807 metros",
+    "EN": "4,807 metres",
+    "DE": "4.807 Meter"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "3.715 metros: el pico más alto de España. Contado desde el fondo del océano supera los 7.500 metros.",
+   "EN": "3,715 metres: Spain’s highest peak. Measured from the ocean floor it tops 7,500 metres.",
+   "DE": "3.715 Meter: der höchste Berg Spaniens. Vom Meeresboden aus gemessen über 7.500 Meter."
+  }
+ },
+ "teide-4": {
+  "pregunta": {
+   "ES": "¿Qué forma el mar de nubes?",
+   "EN": "What creates the sea of clouds?",
+   "DE": "Was bildet das Wolkenmeer?"
+  },
+  "opciones": [
+   {
+    "ES": "El humo del volcán",
+    "EN": "Smoke from the volcano",
+    "DE": "Rauch des Vulkans"
+   },
+   {
+    "ES": "Los vientos alisios",
+    "EN": "The trade winds",
+    "DE": "Die Passatwinde"
+   },
+   {
+    "ES": "La niebla del Sáhara",
+    "EN": "Saharan fog",
+    "DE": "Nebel aus der Sahara"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Los alisios llegan cargados de humedad, chocan con la isla y una capa de aire más caliente por encima los frena: las nubes se quedan quietas a unos 1.500 metros.",
+   "EN": "The trade winds arrive full of moisture, hit the island, and a warmer layer of air above stops them rising: the clouds stay put at around 1,500 metres.",
+   "DE": "Die Passatwinde bringen Feuchtigkeit, treffen auf die Insel, und eine wärmere Luftschicht darüber bremst sie: Die Wolken bleiben auf etwa 1.500 Metern liegen."
+  }
+ },
+ "teide-5": {
+  "pregunta": {
+   "ES": "¿Por qué el cielo del Teide es tan bueno para ver estrellas?",
+   "EN": "Why is the sky over Teide so good for stargazing?",
+   "DE": "Warum ist der Himmel über dem Teide so gut für Sterne?"
+  },
+  "opciones": [
+   {
+    "ES": "Por la altura, el aire limpio y una ley que limita la luz",
+    "EN": "Altitude, clean air and a law that limits light",
+    "DE": "Höhe, saubere Luft und ein Gesetz gegen Lichtverschmutzung"
+   },
+   {
+    "ES": "Porque está más cerca de la Luna",
+    "EN": "Because it is closer to the Moon",
+    "DE": "Weil er näher am Mond ist"
+   },
+   {
+    "ES": "Porque nunca hay nubes en Canarias",
+    "EN": "Because there are never clouds in the Canaries",
+    "DE": "Weil es auf den Kanaren nie Wolken gibt"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Está por encima del mar de nubes, el aire es seco y estable, y desde 1988 una ley protege el cielo de Canarias de la contaminación lumínica. Aquí hay un observatorio internacional.",
+   "EN": "It is above the sea of clouds, the air is dry and stable, and since 1988 a law has protected the Canarian sky from light pollution. There is an international observatory here.",
+   "DE": "Er liegt über dem Wolkenmeer, die Luft ist trocken und ruhig, und seit 1988 schützt ein Gesetz den kanarischen Himmel vor Lichtverschmutzung. Hier steht ein internationales Observatorium."
+  }
+ },
+ "masca-1": {
+  "pregunta": {
+   "ES": "¿Cómo se llega hoy a la playa de Masca?",
+   "EN": "How do you reach Masca beach today?",
+   "DE": "Wie erreicht man heute den Strand von Masca?"
+  },
+  "opciones": [
+   {
+    "ES": "En coche",
+    "EN": "By car",
+    "DE": "Mit dem Auto"
+   },
+   {
+    "ES": "En barco o bajando el barranco a pie",
+    "EN": "By boat or walking down the ravine",
+    "DE": "Mit dem Boot oder zu Fuß durch die Schlucht"
+   },
+   {
+    "ES": "En teleférico",
+    "EN": "By cable car",
+    "DE": "Mit der Seilbahn"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "No hay carretera: o se baja por el sendero del barranco, con cupo y reserva, o se llega en barco desde Los Gigantes.",
+   "EN": "There is no road: you either hike down the ravine trail, with a daily cap and booking, or arrive by boat from Los Gigantes.",
+   "DE": "Es gibt keine Straße: entweder zu Fuß durch die Schlucht, mit Tageslimit und Buchung, oder mit dem Boot ab Los Gigantes."
+  }
+ },
+ "masca-2": {
+  "pregunta": {
+   "ES": "¿Hasta cuándo se llegaba a Masca solo andando?",
+   "EN": "Until when could Masca only be reached on foot?",
+   "DE": "Bis wann war Masca nur zu Fuß erreichbar?"
+  },
+  "opciones": [
+   {
+    "ES": "Hasta los años 70",
+    "EN": "Until the 1970s",
+    "DE": "Bis in die 1970er"
+   },
+   {
+    "ES": "Hasta 1900",
+    "EN": "Until 1900",
+    "DE": "Bis 1900"
+   },
+   {
+    "ES": "Hasta 2010",
+    "EN": "Until 2010",
+    "DE": "Bis 2010"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "La carretera llegó en los años 70. Antes, todo subía y bajaba por caminos de herradura, a lomo de burro.",
+   "EN": "The road arrived in the 1970s. Before that, everything went up and down mule tracks on donkeys.",
+   "DE": "Die Straße kam in den 1970ern. Vorher ging alles auf Maultierpfaden mit dem Esel hinauf und hinunter."
+  }
+ },
+ "masca-3": {
+  "pregunta": {
+   "ES": "¿Cómo llamaban los guanches a estos acantilados?",
+   "EN": "What did the Guanches call these cliffs?",
+   "DE": "Wie nannten die Guanchen diese Klippen?"
+  },
+  "opciones": [
+   {
+    "ES": "La muralla del infierno",
+    "EN": "The wall of hell",
+    "DE": "Die Mauer der Hölle"
+   },
+   {
+    "ES": "La casa del sol",
+    "EN": "The house of the sun",
+    "DE": "Das Haus der Sonne"
+   },
+   {
+    "ES": "El final del mundo",
+    "EN": "The end of the world",
+    "DE": "Das Ende der Welt"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Para los guanches, los primeros habitantes de Tenerife, eran «la muralla del infierno». Hoy son Los Gigantes.",
+   "EN": "To the Guanches, Tenerife’s first inhabitants, they were “the wall of hell”. Today they are Los Gigantes.",
+   "DE": "Für die Guanchen, die Ureinwohner Teneriffas, waren sie „die Mauer der Hölle“. Heute heißen sie Los Gigantes."
+  }
+ },
+ "masca-4": {
+  "pregunta": {
+   "ES": "¿Por qué la arena de Los Guíos es negra?",
+   "EN": "Why is the sand at Los Guíos black?",
+   "DE": "Warum ist der Sand von Los Guíos schwarz?"
+  },
+  "opciones": [
+   {
+    "ES": "Por la contaminación",
+    "EN": "Because of pollution",
+    "DE": "Wegen Verschmutzung"
+   },
+   {
+    "ES": "Porque es roca volcánica molida por el mar",
+    "EN": "Because it is volcanic rock ground down by the sea",
+    "DE": "Weil es vom Meer zerriebenes Vulkangestein ist"
+   },
+   {
+    "ES": "Porque la tiñen las algas",
+    "EN": "Because seaweed stains it",
+    "DE": "Weil Algen ihn färben"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Es basalto, la lava de la isla, triturado por las olas durante miles de años. En el sol se calienta mucho: lleva chanclas.",
+   "EN": "It is basalt, the island’s lava, ground down by the waves over thousands of years. It gets very hot in the sun: wear flip-flops.",
+   "DE": "Es ist Basalt, die Lava der Insel, über Jahrtausende von den Wellen zerrieben. In der Sonne wird er sehr heiß: Badelatschen mitnehmen."
+  }
+ },
+ "paseo-1": {
+  "pregunta": {
+   "ES": "¿Qué era La Pinta?",
+   "EN": "What was La Pinta?",
+   "DE": "Was war La Pinta?"
+  },
+  "opciones": [
+   {
+    "ES": "Una de las tres carabelas de Colón",
+    "EN": "One of Columbus’s three caravels",
+    "DE": "Eine der drei Karavellen des Kolumbus"
+   },
+   {
+    "ES": "Un volcán de Tenerife",
+    "EN": "A Tenerife volcano",
+    "DE": "Ein Vulkan Teneriffas"
+   },
+   {
+    "ES": "Un pez de la zona",
+    "EN": "A local fish",
+    "DE": "Ein Fisch der Gegend"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "La Pinta, la Niña y la Santa María. La Pinta, la más rápida, fue la primera en ver tierra americana en 1492.",
+   "EN": "La Pinta, the Niña and the Santa María. La Pinta, the fastest, was the first to sight America in 1492.",
+   "DE": "La Pinta, die Niña und die Santa María. Die Pinta, die schnellste, sichtete 1492 als erste Amerika."
+  }
+ },
+ "paseo-2": {
+  "pregunta": {
+   "ES": "¿Qué isla ves enfrente desde Fañabé?",
+   "EN": "Which island do you see opposite Fañabé?",
+   "DE": "Welche Insel sieht man gegenüber von Fañabé?"
+  },
+  "opciones": [
+   {
+    "ES": "Gran Canaria",
+    "EN": "Gran Canaria",
+    "DE": "Gran Canaria"
+   },
+   {
+    "ES": "La Gomera",
+    "EN": "La Gomera",
+    "DE": "La Gomera"
+   },
+   {
+    "ES": "Lanzarote",
+    "EN": "Lanzarote",
+    "DE": "Lanzarote"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "La Gomera, a unos 30 km. Se llega en ferry desde Los Cristianos en menos de una hora.",
+   "EN": "La Gomera, about 30 km away. The ferry from Los Cristianos takes under an hour.",
+   "DE": "La Gomera, etwa 30 km entfernt. Die Fähre ab Los Cristianos braucht weniger als eine Stunde."
+  }
+ },
+ "paseo-3": {
+  "pregunta": {
+   "ES": "¿Qué árbol típico de Canarias puede vivir cientos de años?",
+   "EN": "Which typical Canary tree can live for hundreds of years?",
+   "DE": "Welcher typisch kanarische Baum kann Jahrhunderte alt werden?"
+  },
+  "opciones": [
+   {
+    "ES": "El drago",
+    "EN": "The dragon tree",
+    "DE": "Der Drachenbaum"
+   },
+   {
+    "ES": "El olivo",
+    "EN": "The olive tree",
+    "DE": "Der Olivenbaum"
+   },
+   {
+    "ES": "El eucalipto",
+    "EN": "The eucalyptus",
+    "DE": "Der Eukalyptus"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "El drago. Su savia se vuelve roja al secarse, la «sangre de drago», y los guanches la usaban como medicina.",
+   "EN": "The dragon tree. Its sap turns red as it dries, “dragon’s blood”, and the Guanches used it as medicine.",
+   "DE": "Der Drachenbaum. Sein Saft wird beim Trocknen rot, das „Drachenblut“, und die Guanchen nutzten ihn als Medizin."
+  }
+ },
+ "paseo-4": {
+  "pregunta": {
+   "ES": "¿Con qué se acompañan siempre las papas arrugadas?",
+   "EN": "What always goes with papas arrugadas?",
+   "DE": "Was gehört immer zu Papas arrugadas?"
+  },
+  "opciones": [
+   {
+    "ES": "Con mayonesa",
+    "EN": "Mayonnaise",
+    "DE": "Mayonnaise"
+   },
+   {
+    "ES": "Con mojo",
+    "EN": "Mojo",
+    "DE": "Mojo"
+   },
+   {
+    "ES": "Con kétchup",
+    "EN": "Ketchup",
+    "DE": "Ketchup"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Con mojo rojo, de pimienta y pimentón, o verde, de cilantro. Las papas se cuecen con tanta sal que la piel se arruga y queda blanca.",
+   "EN": "With red mojo, made with peppers and paprika, or green mojo, with coriander. The potatoes are boiled with so much salt that the skin wrinkles and turns white.",
+   "DE": "Mit roter Mojo aus Paprika oder grüner Mojo mit Koriander. Die Kartoffeln werden mit so viel Salz gekocht, dass die Schale schrumpelt und weiß wird."
+  }
+ }
+}
