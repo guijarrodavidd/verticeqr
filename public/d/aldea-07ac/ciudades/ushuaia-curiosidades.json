@@ -1,0 +1,422 @@
+{
+ "beagle-1": {
+  "pregunta": {
+   "ES": "¿De dónde le viene el nombre al Canal Beagle?",
+   "EN": "Where does the Beagle Channel get its name?",
+   "PT": "De onde vem o nome do Canal Beagle?"
+  },
+  "opciones": [
+   {
+    "ES": "De un barco británico",
+    "EN": "From a British ship",
+    "PT": "De um navio britânico"
+   },
+   {
+    "ES": "De una raza de perros",
+    "EN": "From a dog breed",
+    "PT": "De uma raça de cachorro"
+   },
+   {
+    "ES": "De un cacique yámana",
+    "EN": "From a Yámana chief",
+    "PT": "De um cacique yámana"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Del HMS Beagle, el barco del capitán FitzRoy que lo recorrió en 1830. En su segundo viaje llevaba a bordo a un joven Charles Darwin.",
+   "EN": "From HMS Beagle, Captain FitzRoy’s ship, which sailed it in 1830. On its second voyage a young Charles Darwin was on board.",
+   "PT": "Do HMS Beagle, o navio do capitão FitzRoy que o percorreu em 1830. Na segunda viagem levava a bordo um jovem Charles Darwin."
+  }
+ },
+ "beagle-2": {
+  "pregunta": {
+   "ES": "¿Qué aves cubren la Isla de los Pájaros?",
+   "EN": "Which birds cover Bird Island?",
+   "PT": "Que aves cobrem a Ilha dos Pássaros?"
+  },
+  "opciones": [
+   {
+    "ES": "Pingüinos emperador",
+    "EN": "Emperor penguins",
+    "PT": "Pinguins-imperadores"
+   },
+   {
+    "ES": "Cormoranes",
+    "EN": "Cormorants",
+    "PT": "Cormorões"
+   },
+   {
+    "ES": "Flamencos",
+    "EN": "Flamingos",
+    "PT": "Flamingos"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Son cormoranes imperiales y roqueros. De lejos, blancos y negros, mucha gente los confunde con pingüinos.",
+   "EN": "They are imperial and rock shags. From afar, black and white, many people mistake them for penguins.",
+   "PT": "São cormorões-imperiais e de rocha. De longe, pretos e brancos, muita gente confunde com pinguins."
+  }
+ },
+ "beagle-3": {
+  "pregunta": {
+   "ES": "¿Cómo reconoces a un macho de lobo marino de un pelo?",
+   "EN": "How do you spot a male South American sea lion?",
+   "PT": "Como reconhecer um macho de leão-marinho-de-um-pelo?"
+  },
+  "opciones": [
+   {
+    "ES": "Tiene melena, como un león",
+    "EN": "It has a mane, like a lion",
+    "PT": "Tem juba, como um leão"
+   },
+   {
+    "ES": "Es más chico que la hembra",
+    "EN": "It is smaller than the female",
+    "PT": "É menor que a fêmea"
+   },
+   {
+    "ES": "Tiene manchas blancas",
+    "EN": "It has white spots",
+    "PT": "Tem manchas brancas"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Los machos son mucho más grandes que las hembras y tienen una melena gruesa en el cuello. De ahí el nombre de «lobo» o «león» marino.",
+   "EN": "Males are much bigger than females and have a thick mane on the neck. Hence the name «sea lion».",
+   "PT": "Os machos são bem maiores que as fêmeas e têm uma juba grossa no pescoço. Daí o nome «leão-marinho»."
+  }
+ },
+ "beagle-4": {
+  "pregunta": {
+   "ES": "¿Es este el «faro del fin del mundo» de la novela de Julio Verne?",
+   "EN": "Is this the «lighthouse at the end of the world» from Jules Verne’s novel?",
+   "PT": "Este é o «farol do fim do mundo» do romance de Júlio Verne?"
+  },
+  "opciones": [
+   {
+    "ES": "Sí, es ese",
+    "EN": "Yes, that’s the one",
+    "PT": "Sim, é esse"
+   },
+   {
+    "ES": "No, ese está en la Isla de los Estados",
+    "EN": "No, that one is on Isla de los Estados",
+    "PT": "Não, esse fica na Ilha dos Estados"
+   },
+   {
+    "ES": "No, ese está en Chile",
+    "EN": "No, that one is in Chile",
+    "PT": "Não, esse fica no Chile"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Verne se inspiró en el faro de San Juan de Salvamento, en la Isla de los Estados. Les Eclaireurs es de 1920 y todavía funciona, sin farero.",
+   "EN": "Verne was inspired by the San Juan de Salvamento lighthouse on Isla de los Estados. Les Eclaireurs dates from 1920 and still works, unmanned.",
+   "PT": "Verne se inspirou no farol de San Juan de Salvamento, na Ilha dos Estados. O Les Eclaireurs é de 1920 e ainda funciona, sem faroleiro."
+  }
+ },
+ "beagle-5": {
+  "pregunta": {
+   "ES": "¿En qué año se fundó Ushuaia?",
+   "EN": "In which year was Ushuaia founded?",
+   "PT": "Em que ano Ushuaia foi fundada?"
+  },
+  "opciones": [
+   {
+    "ES": "1884",
+    "EN": "1884",
+    "PT": "1884"
+   },
+   {
+    "ES": "1920",
+    "EN": "1920",
+    "PT": "1920"
+   },
+   {
+    "ES": "1950",
+    "EN": "1950",
+    "PT": "1950"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "El 12 de octubre de 1884, cuando se izó la bandera argentina junto a una misión anglicana que ya vivía en la bahía.",
+   "EN": "On 12 October 1884, when the Argentine flag was raised beside an Anglican mission already living on the bay.",
+   "PT": "Em 12 de outubro de 1884, quando a bandeira argentina foi hasteada ao lado de uma missão anglicana que já vivia na baía."
+  }
+ },
+ "parque-1": {
+  "pregunta": {
+   "ES": "¿Quiénes viajaban en el tren original?",
+   "EN": "Who rode the original train?",
+   "PT": "Quem viajava no trem original?"
+  },
+  "opciones": [
+   {
+    "ES": "Turistas",
+    "EN": "Tourists",
+    "PT": "Turistas"
+   },
+   {
+    "ES": "Los presos del penal",
+    "EN": "The prison convicts",
+    "PT": "Os presos da penitenciária"
+   },
+   {
+    "ES": "Los mineros de oro",
+    "EN": "Gold miners",
+    "PT": "Os garimpeiros de ouro"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Lo usaban los presos del penal de Ushuaia para ir a cortar leña al bosque. Los tocones que ves desde la ventanilla son de aquella tala.",
+   "EN": "The Ushuaia convicts used it to go and cut firewood in the forest. The stumps you see from the window come from that logging.",
+   "PT": "Os presos de Ushuaia o usavam para cortar lenha na floresta. Os tocos que você vê pela janela são daquela época."
+  }
+ },
+ "parque-3": {
+  "pregunta": {
+   "ES": "¿Qué te pueden sellar en el correo de la bahía Ensenada?",
+   "EN": "What can they stamp for you at the Ensenada Bay post office?",
+   "PT": "O que podem carimbar no correio da baía Ensenada?"
+  },
+  "opciones": [
+   {
+    "ES": "El pasaporte",
+    "EN": "Your passport",
+    "PT": "O passaporte"
+   },
+   {
+    "ES": "La entrada al parque",
+    "EN": "Your park ticket",
+    "PT": "A entrada do parque"
+   },
+   {
+    "ES": "Nada: está cerrado",
+    "EN": "Nothing: it is closed",
+    "PT": "Nada: está fechado"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Es el correo más austral del país: mandas una postal y te sellan el pasaporte con el sello del fin del mundo.",
+   "EN": "It is the southernmost post office in the country: send a postcard and get your passport stamped with the end-of-the-world stamp.",
+   "PT": "É o correio mais austral do país: você manda um cartão-postal e carimbam o passaporte com o selo do fim do mundo."
+  }
+ },
+ "parque-4": {
+  "pregunta": {
+   "ES": "¿Con qué país comparte sus aguas el lago Roca?",
+   "EN": "Which country does Lake Roca share its waters with?",
+   "PT": "Com que país o lago Roca divide suas águas?"
+  },
+  "opciones": [
+   {
+    "ES": "Chile",
+    "EN": "Chile",
+    "PT": "Chile"
+   },
+   {
+    "ES": "Uruguay",
+    "EN": "Uruguay",
+    "PT": "Uruguai"
+   },
+   {
+    "ES": "Con ninguno",
+    "EN": "None",
+    "PT": "Nenhum"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Su extremo oeste cruza la frontera con Chile. Los yámanas lo llamaban Acigami.",
+   "EN": "Its western end crosses the border into Chile. The Yámana called it Acigami.",
+   "PT": "A ponta oeste cruza a fronteira com o Chile. Os yámanas o chamavam de Acigami."
+  }
+ },
+ "parque-5": {
+  "pregunta": {
+   "ES": "Además de Buenos Aires, ¿qué lugar lejano nombra el cartel del final de la Ruta 3?",
+   "EN": "Besides Buenos Aires, which faraway place does the sign at the end of Route 3 name?",
+   "PT": "Além de Buenos Aires, que lugar distante a placa do fim da Rota 3 menciona?"
+  },
+  "opciones": [
+   {
+    "ES": "Alaska",
+    "EN": "Alaska",
+    "PT": "Alasca"
+   },
+   {
+    "ES": "Madrid",
+    "EN": "Madrid",
+    "PT": "Madri"
+   },
+   {
+    "ES": "La Antártida",
+    "EN": "Antarctica",
+    "PT": "A Antártida"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Marca los kilómetros a Buenos Aires y a Alaska: aquí termina la Panamericana que recorre el continente.",
+   "EN": "It gives the distance to Buenos Aires and to Alaska: this is where the Pan-American Highway across the continent ends.",
+   "PT": "Mostra os quilômetros até Buenos Aires e até o Alasca: aqui termina a Pan-Americana que cruza o continente."
+  }
+ },
+ "lagos-1": {
+  "pregunta": {
+   "ES": "¿Quién construye los diques de ramas en los arroyos del valle?",
+   "EN": "Who builds the stick dams in the valley streams?",
+   "PT": "Quem constrói as represas de galhos nos riachos do vale?"
+  },
+  "opciones": [
+   {
+    "ES": "Los castores",
+    "EN": "Beavers",
+    "PT": "Os castores"
+   },
+   {
+    "ES": "Los guardaparques",
+    "EN": "Park rangers",
+    "PT": "Os guarda-parques"
+   },
+   {
+    "ES": "Las nutrias",
+    "EN": "Otters",
+    "PT": "As lontras"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Los castores llegaron de Canadá en 1946 para la industria de pieles. Sin predadores, se multiplicaron y hoy inundan bosques enteros.",
+   "EN": "Beavers were brought from Canada in 1946 for the fur trade. With no predators they multiplied and now flood whole forests.",
+   "PT": "Os castores vieram do Canadá em 1946 para a indústria de peles. Sem predadores, se multiplicaram e hoje alagam florestas inteiras."
+  }
+ },
+ "lagos-4": {
+  "pregunta": {
+   "ES": "¿Cómo llamaban los selk’nam al lago Fagnano?",
+   "EN": "What did the Selk’nam call Lake Fagnano?",
+   "PT": "Como os selk’nam chamavam o lago Fagnano?"
+  },
+  "opciones": [
+   {
+    "ES": "Khami",
+    "EN": "Khami",
+    "PT": "Khami"
+   },
+   {
+    "ES": "Acigami",
+    "EN": "Acigami",
+    "PT": "Acigami"
+   },
+   {
+    "ES": "Lapataia",
+    "EN": "Lapataia",
+    "PT": "Lapataia"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Khami, en lengua selk’nam. Acigami es el nombre yámana del lago Roca, y Lapataia, el de la bahía.",
+   "EN": "Khami, in the Selk’nam language. Acigami is the Yámana name for Lake Roca, and Lapataia the name of the bay.",
+   "PT": "Khami, na língua selk’nam. Acigami é o nome yámana do lago Roca, e Lapataia, o da baía."
+  }
+ },
+ "martial-1": {
+  "pregunta": {
+   "ES": "¿Cómo se llama el árbol de este bosque?",
+   "EN": "What is the tree of this forest called?",
+   "PT": "Como se chama a árvore desta floresta?"
+  },
+  "opciones": [
+   {
+    "ES": "Lenga",
+    "EN": "Lenga",
+    "PT": "Lenga"
+   },
+   {
+    "ES": "Pino",
+    "EN": "Pine",
+    "PT": "Pinheiro"
+   },
+   {
+    "ES": "Eucalipto",
+    "EN": "Eucalyptus",
+    "PT": "Eucalipto"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "La lenga es la reina del bosque fueguino. En otoño se pone roja y naranja, y es la madera de las cabañas.",
+   "EN": "The lenga is the queen of the Fuegian forest. In autumn it turns red and orange, and it is the wood of the cabins.",
+   "PT": "A lenga é a rainha da floresta fueguina. No outono fica vermelha e laranja, e é a madeira das cabanas."
+  }
+ },
+ "martial-2": {
+  "pregunta": {
+   "ES": "¿Quién le dio nombre al Glaciar Martial?",
+   "EN": "Who gave Martial Glacier its name?",
+   "PT": "Quem deu nome ao Glaciar Martial?"
+  },
+  "opciones": [
+   {
+    "ES": "Un comandante francés",
+    "EN": "A French commander",
+    "PT": "Um comandante francês"
+   },
+   {
+    "ES": "Un santo",
+    "EN": "A saint",
+    "PT": "Um santo"
+   },
+   {
+    "ES": "Un esquiador",
+    "EN": "A skier",
+    "PT": "Um esquiador"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Louis Ferdinand Martial, que dirigió la expedición científica francesa de 1882 y 1883 en Tierra del Fuego.",
+   "EN": "Louis Ferdinand Martial, who led the French scientific expedition to Tierra del Fuego in 1882-1883.",
+   "PT": "Louis Ferdinand Martial, que comandou a expedição científica francesa de 1882 e 1883 na Terra do Fogo."
+  }
+ },
+ "martial-4": {
+  "pregunta": {
+   "ES": "¿Qué le da el glaciar a la ciudad?",
+   "EN": "What does the glacier give the town?",
+   "PT": "O que o glaciar dá à cidade?"
+  },
+  "opciones": [
+   {
+    "ES": "Parte de su agua potable",
+    "EN": "Part of its drinking water",
+    "PT": "Parte da água potável"
+   },
+   {
+    "ES": "Electricidad",
+    "EN": "Electricity",
+    "PT": "Eletricidade"
+   },
+   {
+    "ES": "Nada",
+    "EN": "Nothing",
+    "PT": "Nada"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Del Martial nace el arroyo Buena Esperanza, una de las fuentes de agua potable de Ushuaia.",
+   "EN": "The Buena Esperanza stream rises at the Martial and is one of Ushuaia’s drinking water sources.",
+   "PT": "Do Martial nasce o riacho Buena Esperanza, uma das fontes de água potável de Ushuaia."
+  }
+ }
+}

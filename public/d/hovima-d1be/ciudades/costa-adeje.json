@@ -1,0 +1,1114 @@
+{
+ "slug": "costa-adeje",
+ "nombre": "Costa Adeje",
+ "intro": {
+  "ES": "Sol todo el año, playas de arena dorada y el Teide asomando detrás. Calderones a diez minutos en barco, pueblos colgados entre barrancos y uno de los mejores cielos estrellados del mundo.",
+  "EN": "Sunshine all year round, golden-sand beaches and Teide rising behind. Pilot whales ten minutes away by boat, villages hanging between ravines and one of the world’s best starry skies.",
+  "DE": "Sonne das ganze Jahr, goldene Sandstrände und dahinter der Teide. Grindwale zehn Bootsminuten entfernt, Dörfer zwischen Schluchten und einer der besten Sternenhimmel der Welt."
+ },
+ "lugares": [
+  {
+   "id": "playa-la-pinta",
+   "img": "/ciudades/costa-adeje/img/pinta.jpg",
+   "nombre": "Playa de La Pinta",
+   "zona": {
+    "ES": "Delante del hotel",
+    "EN": "In front of the hotel",
+    "DE": "Vor dem Hotel"
+   },
+   "d": {
+    "ES": "Arena dorada y agua tranquila, protegida por el espigón de Puerto Colón. Cruzas el paseo y estás dentro: perfecta para los peques.",
+    "EN": "Golden sand and calm water, sheltered by the Puerto Colón breakwater. Cross the promenade and you are in: perfect for little ones.",
+    "DE": "Goldener Sand und ruhiges Wasser, geschützt von der Mole von Puerto Colón. Promenade überqueren und schon sind Sie da: ideal für Kinder."
+   },
+   "cuando": {
+    "ES": "Por la mañana, con el agua como un plato",
+    "EN": "In the morning, when the water is like glass",
+    "DE": "Morgens, wenn das Wasser spiegelglatt ist"
+   },
+   "min": 1,
+   "modo": "pie",
+   "lat": 28.07989,
+   "lng": -16.73525
+  },
+  {
+   "id": "puerto-colon",
+   "img": "/ciudades/costa-adeje/img/colon.jpg",
+   "nombre": "Puerto Colón",
+   "zona": {
+    "ES": "San Eugenio",
+    "EN": "San Eugenio",
+    "DE": "San Eugenio"
+   },
+   "d": {
+    "ES": "El puerto deportivo de Costa Adeje: veleros, terrazas y los barcos que salen a ver calderones y delfines. Detrás, las montañas de Adeje.",
+    "EN": "Costa Adeje’s marina: sailing boats, terraces and the boats that head out to see pilot whales and dolphins. Behind it, the Adeje mountains.",
+    "DE": "Der Jachthafen von Costa Adeje: Segelboote, Terrassen und die Boote zu Grindwalen und Delfinen. Dahinter die Berge von Adeje."
+   },
+   "cuando": {
+    "ES": "A media mañana, cuando salen los barcos",
+    "EN": "Mid-morning, when the boats leave",
+    "DE": "Am Vormittag, wenn die Boote ablegen"
+   },
+   "min": 4,
+   "modo": "pie",
+   "lat": 28.07825,
+   "lng": -16.73684
+  },
+  {
+   "id": "fanabe",
+   "img": "/ciudades/costa-adeje/img/fanabe.jpg",
+   "nombre": "Playa de Fañabé",
+   "zona": {
+    "ES": "Paseo marítimo de Costa Adeje",
+    "EN": "Costa Adeje seafront",
+    "DE": "Promenade von Costa Adeje"
+   },
+   "d": {
+    "ES": "Casi un kilómetro de arena con hamacas, chiringuitos y el paseo marítimo detrás. La gran playa de Costa Adeje.",
+    "EN": "Almost a kilometre of sand with sunbeds, beach bars and the promenade behind. Costa Adeje’s big beach.",
+    "DE": "Fast ein Kilometer Sand mit Liegen, Strandbars und der Promenade dahinter. Der große Strand von Costa Adeje."
+   },
+   "cuando": {
+    "ES": "Al atardecer, con La Gomera enfrente",
+    "EN": "At sunset, with La Gomera opposite",
+    "DE": "Bei Sonnenuntergang, mit La Gomera gegenüber"
+   },
+   "min": 15,
+   "modo": "pie",
+   "lat": 28.08982,
+   "lng": -16.73302
+  },
+  {
+   "id": "playa-del-duque",
+   "img": "/ciudades/costa-adeje/img/duque.jpg",
+   "nombre": "Playa del Duque",
+   "zona": {
+    "ES": "El Beril",
+    "EN": "El Beril",
+    "DE": "El Beril"
+   },
+   "d": {
+    "ES": "La playa más elegante del sur, con sus casetas de rayas blancas y azules y jardines encima. Arena fina y agua clara.",
+    "EN": "The south’s most elegant beach, with its blue-and-white striped huts and gardens above. Fine sand and clear water.",
+    "DE": "Der eleganteste Strand des Südens, mit blau-weiß gestreiften Häuschen und Gärten darüber. Feiner Sand und klares Wasser."
+   },
+   "cuando": {
+    "ES": "Temprano, antes de que se llene",
+    "EN": "Early, before it fills up",
+    "DE": "Früh, bevor es voll wird"
+   },
+   "min": 25,
+   "modo": "pie",
+   "lat": 28.09084,
+   "lng": -16.74194
+  },
+  {
+   "id": "la-caleta",
+   "img": "/ciudades/costa-adeje/img/caleta.jpg",
+   "nombre": "La Caleta",
+   "zona": {
+    "ES": "Pueblo de pescadores",
+    "EN": "Fishing village",
+    "DE": "Fischerdorf"
+   },
+   "d": {
+    "ES": "Un pueblo de pescadores con casas blancas pegadas al mar y restaurantes de pescado fresco. El final del paseo de Costa Adeje.",
+    "EN": "A fishing village of white houses right on the sea, with fresh-fish restaurants. The end of the Costa Adeje promenade.",
+    "DE": "Ein Fischerdorf mit weißen Häusern direkt am Meer und Restaurants mit frischem Fisch. Das Ende der Promenade von Costa Adeje."
+   },
+   "cuando": {
+    "ES": "A la hora de comer, con pescado del día",
+    "EN": "At lunchtime, for the catch of the day",
+    "DE": "Zum Mittagessen, mit dem Fang des Tages"
+   },
+   "min": 10,
+   "modo": "coche",
+   "lat": 28.10066,
+   "lng": -16.75546
+  },
+  {
+   "id": "siam-park",
+   "img": "/ciudades/costa-adeje/img/siam.jpg",
+   "nombre": "Siam Park",
+   "zona": {
+    "ES": "Costa Adeje",
+    "EN": "Costa Adeje",
+    "DE": "Costa Adeje"
+   },
+   "d": {
+    "ES": "Un parque acuático con aire de templo tailandés: toboganes de vértigo, río lento y una playa con olas de verdad.",
+    "EN": "A water park styled like a Thai temple: dizzying slides, a lazy river and a beach with real waves.",
+    "DE": "Ein Wasserpark im Stil eines Thai-Tempels: rasante Rutschen, ein ruhiger Fluss und ein Strand mit echten Wellen."
+   },
+   "cuando": {
+    "ES": "A la apertura, a las 10:00",
+    "EN": "At opening time, 10:00",
+    "DE": "Zur Öffnung um 10 Uhr"
+   },
+   "min": 10,
+   "modo": "coche",
+   "lat": 28.0722,
+   "lng": -16.72567
+  },
+  {
+   "id": "barranco-infierno",
+   "img": "/ciudades/costa-adeje/img/infierno.jpg",
+   "nombre": "Barranco del Infierno",
+   "zona": {
+    "ES": "Adeje pueblo",
+    "EN": "Adeje town",
+    "DE": "Ort Adeje"
+   },
+   "d": {
+    "ES": "Un sendero de 6,5 km ida y vuelta por un barranco verde que acaba en una cascada. Hay cupo diario: se reserva antes.",
+    "EN": "A 6.5 km return trail through a green ravine that ends at a waterfall. Daily cap: book ahead.",
+    "DE": "Ein 6,5 km langer Weg hin und zurück durch eine grüne Schlucht bis zu einem Wasserfall. Tageslimit: vorher buchen."
+   },
+   "cuando": {
+    "ES": "A primera hora, antes del calor",
+    "EN": "First thing, before the heat",
+    "DE": "Frühmorgens, vor der Hitze"
+   },
+   "min": 15,
+   "modo": "coche",
+   "lat": 28.1265,
+   "lng": -16.7215
+  }
+ ],
+ "rutas": [
+  {
+   "id": "cetaceos",
+   "expId": "ex1",
+   "img": "/ciudades/costa-adeje/img/cetaceos.jpg",
+   "titulo": {
+    "ES": "Calderones y delfines",
+    "EN": "Pilot whales and dolphins",
+    "DE": "Grindwale und Delfine"
+   },
+   "tipo": {
+    "ES": "Mar",
+    "EN": "Sea",
+    "DE": "Meer"
+   },
+   "dur": "2 h",
+   "d": {
+    "ES": "Sales andando del hotel y en diez minutos estás entre calderones. Viven aquí todo el año: la mascota del hotel, Globi, es uno de ellos.",
+    "EN": "Walk out of the hotel and ten minutes later you are among pilot whales. They live here all year: Globi, the hotel mascot, is one of them.",
+    "DE": "Zu Fuß aus dem Hotel, zehn Minuten später sind Sie bei den Grindwalen. Sie leben hier das ganze Jahr: Globi, das Hotelmaskottchen, ist einer von ihnen."
+   },
+   "salida": {
+    "ES": "Puerto Colón, a 4 minutos andando. Salidas a las 10:00 y a las 13:00",
+    "EN": "Puerto Colón, 4 minutes’ walk. Departures at 10:00 and 13:00",
+    "DE": "Puerto Colón, 4 Gehminuten. Abfahrten um 10:00 und 13:00 Uhr"
+   },
+   "incluye": {
+    "ES": [
+     "Barco con guía",
+     "Refresco y fruta a bordo",
+     "Parada para bañarse"
+    ],
+    "EN": [
+     "Boat with guide",
+     "Soft drink and fruit on board",
+     "Swim stop"
+    ],
+    "DE": [
+     "Boot mit Guide",
+     "Softdrink und Obst an Bord",
+     "Badestopp"
+    ]
+   },
+   "llevar": {
+    "ES": [
+     "Crema solar y gorra",
+     "Bañador y toalla para el baño",
+     "Una pastilla para el mareo si lo sueles pasar mal"
+    ],
+    "EN": [
+     "Sunscreen and a hat",
+     "Swimwear and a towel for the swim",
+     "A seasickness tablet if you need one"
+    ],
+    "DE": [
+     "Sonnencreme und Kappe",
+     "Badesachen und Handtuch",
+     "Eine Tablette gegen Seekrankheit, falls nötig"
+    ]
+   },
+   "noIncluye": {
+    "ES": [
+     "Bebidas alcohólicas",
+     "Fotos del avistamiento"
+    ],
+    "EN": [
+     "Alcoholic drinks",
+     "Photos of the sighting"
+    ],
+    "DE": [
+     "Alkoholische Getränke",
+     "Fotos der Sichtung"
+    ]
+   },
+   "cancelacion": {
+    "ES": "Gratis hasta 24 h antes. Si hay mala mar, se cambia de día.",
+    "EN": "Free up to 24 h before. In rough seas it moves to another day.",
+    "DE": "Kostenlos bis 24 Std. vorher. Bei rauer See wird verschoben."
+   },
+   "accesibilidad": {
+    "ES": "Se sube por una pasarela; la tripulación ayuda. Con silla de ruedas, pregúntalo en Guest Service.",
+    "EN": "You board via a gangway; the crew will help. If you use a wheelchair, ask Guest Service.",
+    "DE": "Einstieg über eine Planke, die Crew hilft. Mit Rollstuhl bitte beim Guest Service fragen."
+   },
+   "puntoEncuentro": {
+    "lat": 28.07825,
+    "lng": -16.73684,
+    "foto": "/ciudades/costa-adeje/img/cetaceos-1.jpg",
+    "texto": {
+     "ES": "Puerto Colón, en el pantalán de las excursiones. Llega 15 minutos antes.",
+     "EN": "Puerto Colón, at the excursions pontoon. Arrive 15 minutes early.",
+     "DE": "Puerto Colón, am Ausflugssteg. Bitte 15 Minuten früher da sein."
+    }
+   },
+   "fotos": [
+    "/ciudades/costa-adeje/img/cetaceos.jpg",
+    "/ciudades/costa-adeje/img/cetaceos-1.jpg",
+    "/ciudades/costa-adeje/img/cetaceos-2.jpg",
+    "/ciudades/costa-adeje/img/cetaceos-3.jpg",
+    "/ciudades/costa-adeje/img/cetaceos-4.jpg"
+   ],
+   "duracionMin": 120,
+   "distanciaKm": 14.0,
+   "dificultad": "facil",
+   "tipoEntorno": "exterior",
+   "salidasFijas": [
+    "10:00",
+    "13:00"
+   ],
+   "precioDesde": 35,
+   "paradas": [
+    {
+     "n": {
+      "ES": "Puerto Colón",
+      "EN": "Puerto Colón",
+      "DE": "Puerto Colón"
+     },
+     "s": {
+      "ES": "Embarque a cuatro minutos del hotel",
+      "EN": "Boarding four minutes from the hotel",
+      "DE": "Einstieg vier Minuten vom Hotel"
+     },
+     "d": {
+      "ES": "Sales del puerto deportivo con Costa Adeje a la espalda y las montañas de Adeje detrás. En cuanto pasas el espigón, el agua se vuelve azul oscuro: aquí el fondo cae a pique.",
+      "EN": "You leave the marina with Costa Adeje behind you and the Adeje mountains beyond. As soon as you pass the breakwater the water turns deep blue: the seabed drops away fast here.",
+      "DE": "Sie verlassen den Jachthafen, Costa Adeje und die Berge von Adeje im Rücken. Hinter der Mole wird das Wasser tiefblau: Hier fällt der Meeresboden steil ab."
+     },
+     "tip": {
+      "ES": "Ponte en la popa al salir: es donde mejor se ve la costa y donde menos se mueve el barco.",
+      "EN": "Stand at the stern as you leave: best view of the coast and the least motion.",
+      "DE": "Stellen Sie sich beim Auslaufen ans Heck: beste Sicht auf die Küste und am wenigsten Bewegung."
+     },
+     "hora": "10:00",
+     "dur": "15 min",
+     "img": "/ciudades/costa-adeje/img/cetaceos-1.jpg",
+     "lat": 28.07825,
+     "lng": -16.73684,
+     "tramo": "pie",
+     "duracionMin": 15,
+     "tramoDuracionMin": 4
+    },
+    {
+     "n": {
+      "ES": "Los calderones",
+      "EN": "The pilot whales",
+      "DE": "Die Grindwale"
+     },
+     "s": {
+      "ES": "Una familia que vive aquí todo el año",
+      "EN": "A family that lives here all year round",
+      "DE": "Eine Familie, die das ganze Jahr hier lebt"
+     },
+     "d": {
+      "ES": "Entre Tenerife y La Gomera hay una de las pocas poblaciones residentes de calderón tropical del mundo. Nadan en grupos familiares y suben a respirar despacio, muy cerca de la superficie.",
+      "EN": "Between Tenerife and La Gomera lives one of the world’s few resident populations of short-finned pilot whales. They swim in family groups and surface slowly to breathe.",
+      "DE": "Zwischen Teneriffa und La Gomera lebt eine der wenigen ortstreuen Populationen von Grindwalen weltweit. Sie schwimmen in Familiengruppen und tauchen langsam zum Atmen auf."
+     },
+     "tip": {
+      "ES": "Escucha antes de mirar: el soplido al respirar se oye antes de ver la aleta.",
+      "EN": "Listen before you look: you hear the blow before you see the fin.",
+      "DE": "Erst hören, dann schauen: Das Blasen hört man, bevor man die Flosse sieht."
+     },
+     "hora": "10:25",
+     "dur": "40 min",
+     "img": "/ciudades/costa-adeje/img/cetaceos-2.jpg",
+     "lat": 28.07,
+     "lng": -16.79,
+     "tramo": "barco",
+     "duracionMin": 40,
+     "tramoDuracionMin": 25
+    },
+    {
+     "n": {
+      "ES": "Crías y adultos",
+      "EN": "Calves and adults",
+      "DE": "Kälber und Erwachsene"
+     },
+     "s": {
+      "ES": "Con suerte, también delfines mulares",
+      "EN": "With luck, bottlenose dolphins too",
+      "DE": "Mit Glück auch Große Tümmler"
+     },
+     "d": {
+      "ES": "Las crías nadan pegadas a sus madres, y los machos adultos se reconocen por la aleta dorsal, más ancha. A veces se acercan grupos de delfines mulares a jugar con la proa.",
+      "EN": "Calves swim glued to their mothers, and adult males are told apart by their broader dorsal fin. Sometimes groups of bottlenose dolphins come to play at the bow.",
+      "DE": "Die Kälber schwimmen dicht bei ihren Müttern, erwachsene Männchen erkennt man an der breiteren Rückenflosse. Manchmal spielen Große Tümmler an der Bugwelle."
+     },
+     "tip": {
+      "ES": "Deja el móvil un momento y míralos sin pantalla: son segundos y se van.",
+      "EN": "Put your phone down for a moment and watch without a screen: it lasts seconds.",
+      "DE": "Legen Sie das Handy kurz weg und schauen Sie ohne Bildschirm: Es dauert nur Sekunden."
+     },
+     "hora": "11:05",
+     "dur": "20 min",
+     "img": "/ciudades/costa-adeje/img/cetaceos-3.jpg",
+     "lat": 28.075,
+     "lng": -16.8,
+     "tramo": "barco",
+     "duracionMin": 20
+    },
+    {
+     "n": {
+      "ES": "Baño frente a la costa",
+      "EN": "A swim off the coast",
+      "DE": "Baden vor der Küste"
+     },
+     "s": {
+      "ES": "Parada en aguas tranquilas antes de volver",
+      "EN": "A stop in calm water before heading back",
+      "DE": "Halt in ruhigem Wasser vor der Rückfahrt"
+     },
+     "d": {
+      "ES": "El barco para cerca de la costa de roca volcánica y quien quiera se tira al agua. Después, vuelta a Puerto Colón con el hotel a la vista.",
+      "EN": "The boat stops near the volcanic shoreline and anyone who wants can jump in. Then back to Puerto Colón with the hotel in sight.",
+      "DE": "Das Boot hält nahe der vulkanischen Küste, wer will, springt ins Wasser. Dann zurück nach Puerto Colón, das Hotel schon in Sicht."
+     },
+     "tip": {
+      "ES": "El agua aquí está a 19-24 grados según la época: lleva una camiseta para el viento de la vuelta.",
+      "EN": "The water is 19-24 °C depending on the season: bring a T-shirt for the breeze on the way back.",
+      "DE": "Das Wasser hat je nach Jahreszeit 19-24 Grad: Ein T-Shirt gegen den Fahrtwind zurück hilft."
+     },
+     "hora": "11:30",
+     "dur": "30 min",
+     "img": "/ciudades/costa-adeje/img/cetaceos-4.jpg",
+     "lat": 28.095,
+     "lng": -16.755,
+     "tramo": "barco",
+     "duracionMin": 30
+    }
+   ]
+  },
+  {
+   "id": "teide",
+   "expId": "ex2",
+   "img": "/ciudades/costa-adeje/img/teide.jpg",
+   "titulo": {
+    "ES": "Teide al atardecer y estrellas",
+    "EN": "Teide at sunset and under the stars",
+    "DE": "Teide bei Sonnenuntergang und Sternen"
+   },
+   "tipo": {
+    "ES": "Montaña",
+    "EN": "Mountain",
+    "DE": "Berg"
+   },
+   "dur": "7 h",
+   "d": {
+    "ES": "Subes por encima de las nubes, ves cómo el sol se hunde en ellas y miras por telescopio uno de los cielos más limpios del planeta.",
+    "EN": "Climb above the clouds, watch the sun sink into them and look through a telescope at one of the clearest skies on the planet.",
+    "DE": "Über die Wolken hinauf, die Sonne darin versinken sehen und durchs Teleskop einen der klarsten Himmel der Erde betrachten."
+   },
+   "salida": {
+    "ES": "Recogida en la puerta del hotel a las 15:00. Vuelta hacia las 22:00",
+    "EN": "Pick-up at the hotel door at 15:00. Back around 22:00",
+    "DE": "Abholung an der Hoteltür um 15:00 Uhr. Rückkehr gegen 22:00 Uhr"
+   },
+   "incluye": {
+    "ES": [
+     "Minibús ida y vuelta",
+     "Guía y astrónomo",
+     "Cena ligera",
+     "Telescopio y ropa de abrigo"
+    ],
+    "EN": [
+     "Return minibus",
+     "Guide and astronomer",
+     "Light dinner",
+     "Telescope and warm clothing"
+    ],
+    "DE": [
+     "Minibus hin und zurück",
+     "Guide und Astronom",
+     "Leichtes Abendessen",
+     "Teleskop und warme Kleidung"
+    ]
+   },
+   "llevar": {
+    "ES": [
+     "Pantalón largo y algo de abrigo: arriba hace 10 grados menos",
+     "Calzado cerrado",
+     "Agua"
+    ],
+    "EN": [
+     "Long trousers and something warm: it is 10 degrees colder up there",
+     "Closed shoes",
+     "Water"
+    ],
+    "DE": [
+     "Lange Hose und etwas Warmes: oben ist es 10 Grad kälter",
+     "Geschlossene Schuhe",
+     "Wasser"
+    ]
+   },
+   "noIncluye": {
+    "ES": [
+     "Teleférico al pico"
+    ],
+    "EN": [
+     "Cable car to the summit"
+    ],
+    "DE": [
+     "Seilbahn zum Gipfel"
+    ]
+   },
+   "cancelacion": {
+    "ES": "Gratis hasta 24 h antes. Si hay nubes altas, se cambia de día.",
+    "EN": "Free up to 24 h before. If high cloud is forecast, it moves to another day.",
+    "DE": "Kostenlos bis 24 Std. vorher. Bei hoher Bewölkung wird verschoben."
+   },
+   "accesibilidad": {
+    "ES": "Paradas junto al minibús, sin caminatas largas. A 2.000 metros: consúltalo si estás embarazada o tienes problemas cardíacos.",
+    "EN": "Stops right by the minibus, no long walks. At 2,000 metres: check first if you are pregnant or have heart problems.",
+    "DE": "Halte direkt am Minibus, keine langen Wege. Auf 2.000 Metern: Bei Schwangerschaft oder Herzproblemen bitte vorher fragen."
+   },
+   "puntoEncuentro": {
+    "lat": 28.08062,
+    "lng": -16.73455,
+    "foto": "/ciudades/costa-adeje/img/teide.jpg",
+    "texto": {
+     "ES": "Puerta principal del hotel, en la Avenida de España. 10 minutos antes.",
+     "EN": "Hotel main entrance, on Avenida de España. 10 minutes early.",
+     "DE": "Haupteingang des Hotels, Avenida de España. 10 Minuten früher."
+    }
+   },
+   "fotos": [
+    "/ciudades/costa-adeje/img/teide.jpg",
+    "/ciudades/costa-adeje/img/teide-1.jpg",
+    "/ciudades/costa-adeje/img/teide-2.jpg",
+    "/ciudades/costa-adeje/img/teide-3.jpg",
+    "/ciudades/costa-adeje/img/teide-4.jpg",
+    "/ciudades/costa-adeje/img/teide-5.jpg"
+   ],
+   "duracionMin": 420,
+   "distanciaKm": 120.0,
+   "dificultad": "facil",
+   "tipoEntorno": "exterior",
+   "salidasFijas": [
+    "15:00"
+   ],
+   "precioDesde": 69,
+   "paradas": [
+    {
+     "n": {
+      "ES": "Paisaje Lunar de Vilaflor",
+      "EN": "Vilaflor’s Lunar Landscape",
+      "DE": "Mondlandschaft von Vilaflor"
+     },
+     "s": {
+      "ES": "Piedra pómez tallada por el viento, entre pinos",
+      "EN": "Wind-carved pumice among the pines",
+      "DE": "Vom Wind geformter Bims zwischen Kiefern"
+     },
+     "d": {
+      "ES": "Subiendo por Vilaflor, el pueblo más alto de Canarias, el pinar se abre en columnas blancas de piedra pómez que el agua y el viento han ido esculpiendo durante miles de años.",
+      "EN": "Climbing through Vilaflor, the highest village in the Canaries, the pine forest opens onto white pumice columns sculpted by wind and water over thousands of years.",
+      "DE": "Hinter Vilaflor, dem höchsten Dorf der Kanaren, öffnet sich der Kiefernwald zu weißen Bimssäulen, die Wind und Wasser über Jahrtausende geformt haben."
+     },
+     "tip": {
+      "ES": "Fíjate en las piñas: el pino canario aguanta incendios y vuelve a brotar del tronco quemado.",
+      "EN": "Look at the pine cones: the Canary pine survives fires and sprouts again from its burnt trunk.",
+      "DE": "Achten Sie auf die Kiefern: Die Kanarenkiefer übersteht Brände und treibt aus dem verbrannten Stamm neu aus."
+     },
+     "hora": "15:45",
+     "dur": "20 min",
+     "img": "/ciudades/costa-adeje/img/teide-1.jpg",
+     "lat": 28.1714,
+     "lng": -16.61925,
+     "tramo": "coche",
+     "duracionMin": 20,
+     "tramoDuracionMin": 45
+    },
+    {
+     "n": {
+      "ES": "Roques de García",
+      "EN": "Roques de García",
+      "DE": "Roques de García"
+     },
+     "s": {
+      "ES": "Las rocas más fotografiadas del parque",
+      "EN": "The most photographed rocks in the park",
+      "DE": "Die meistfotografierten Felsen des Parks"
+     },
+     "d": {
+      "ES": "Agujas de lava que la erosión ha dejado en pie, con el Teide detrás. Una de ellas, el Roque Cinchado, sale en los antiguos billetes de mil pesetas.",
+      "EN": "Lava spires left standing by erosion, with Teide behind. One of them, Roque Cinchado, appeared on the old 1,000-peseta note.",
+      "DE": "Lavanadeln, die die Erosion stehen gelassen hat, mit dem Teide dahinter. Einer davon, der Roque Cinchado, war auf dem alten 1.000-Peseten-Schein."
+     },
+     "tip": {
+      "ES": "Haz la foto desde el mirador con el Roque Cinchado delante y el pico detrás: es la postal de Tenerife.",
+      "EN": "Take the photo from the viewpoint with Roque Cinchado in front and the peak behind: the classic Tenerife postcard.",
+      "DE": "Fotografieren Sie vom Aussichtspunkt mit dem Roque Cinchado vorn und dem Gipfel dahinter: die Postkarte Teneriffas."
+     },
+     "hora": "16:45",
+     "dur": "40 min",
+     "img": "/ciudades/costa-adeje/img/teide-2.jpg",
+     "lat": 28.22442,
+     "lng": -16.62697,
+     "tramo": "coche",
+     "duracionMin": 40,
+     "tramoDuracionMin": 30
+    },
+    {
+     "n": {
+      "ES": "Llano de Ucanca",
+      "EN": "Llano de Ucanca",
+      "DE": "Llano de Ucanca"
+     },
+     "s": {
+      "ES": "Una llanura de lava a 2.000 metros",
+      "EN": "A lava plain at 2,000 metres",
+      "DE": "Eine Lavaebene auf 2.000 Metern"
+     },
+     "d": {
+      "ES": "Una explanada inmensa al pie del Teide, rodeada por las paredes de la caldera. El volcán, 3.715 metros, el pico más alto de España, se ve entero de la base a la cumbre.",
+      "EN": "A vast plain at the foot of Teide, ringed by the walls of the caldera. The volcano, 3,715 metres and Spain’s highest peak, is visible from base to summit.",
+      "DE": "Eine riesige Ebene am Fuß des Teide, umgeben von den Wänden der Caldera. Der Vulkan, 3.715 Meter und höchster Berg Spaniens, ist vom Fuß bis zum Gipfel zu sehen."
+     },
+     "tip": {
+      "ES": "Mira las rayas de colores en la ladera: cada una es una erupción distinta.",
+      "EN": "Look at the coloured bands on the slope: each one is a different eruption.",
+      "DE": "Schauen Sie auf die farbigen Streifen am Hang: Jeder ist ein anderer Ausbruch."
+     },
+     "hora": "17:40",
+     "dur": "30 min",
+     "img": "/ciudades/costa-adeje/img/teide-3.jpg",
+     "lat": 28.2142,
+     "lng": -16.6783,
+     "tramo": "coche",
+     "duracionMin": 30,
+     "tramoDuracionMin": 10
+    },
+    {
+     "n": {
+      "ES": "Atardecer sobre el mar de nubes",
+      "EN": "Sunset over the sea of clouds",
+      "DE": "Sonnenuntergang über dem Wolkenmeer"
+     },
+     "s": {
+      "ES": "El sol se esconde debajo de ti",
+      "EN": "The sun sets below you",
+      "DE": "Die Sonne geht unter Ihnen unter"
+     },
+     "d": {
+      "ES": "Los alisios dejan una alfombra de nubes a unos 1.500 metros. Desde el mirador, el sol baja hasta tocarla y la tiñe de naranja; a lo lejos asoma La Gomera.",
+      "EN": "The trade winds leave a carpet of cloud at around 1,500 metres. From the viewpoint the sun drops until it touches it and turns it orange; La Gomera peeks out in the distance.",
+      "DE": "Die Passatwinde legen auf etwa 1.500 Metern einen Wolkenteppich. Vom Aussichtspunkt sinkt die Sonne, bis sie ihn berührt und orange färbt; in der Ferne La Gomera."
+     },
+     "tip": {
+      "ES": "Ponte el abrigo antes de que se vaya el sol: la temperatura baja de golpe.",
+      "EN": "Put your jacket on before the sun goes: the temperature drops at once.",
+      "DE": "Ziehen Sie die Jacke an, bevor die Sonne weg ist: Es wird schlagartig kalt."
+     },
+     "hora": "18:30",
+     "dur": "45 min",
+     "img": "/ciudades/costa-adeje/img/teide-4.jpg",
+     "lat": 28.2385,
+     "lng": -16.69828,
+     "tramo": "coche",
+     "duracionMin": 45,
+     "tramoDuracionMin": 15
+    },
+    {
+     "n": {
+      "ES": "Las estrellas del Teide",
+      "EN": "The stars of Teide",
+      "DE": "Die Sterne des Teide"
+     },
+     "s": {
+      "ES": "Telescopio en uno de los mejores cielos del mundo",
+      "EN": "A telescope under one of the world’s best skies",
+      "DE": "Teleskop unter einem der besten Himmel der Welt"
+     },
+     "d": {
+      "ES": "Sin luces cerca y por encima de las nubes, el cielo del Teide es Reserva Starlight. Con el astrónomo verás la Vía Láctea a simple vista y, por el telescopio, los anillos de Saturno o cráteres de la Luna.",
+      "EN": "With no lights nearby and above the clouds, Teide’s sky is a Starlight Reserve. With the astronomer you will see the Milky Way with the naked eye and, through the telescope, Saturn’s rings or craters on the Moon.",
+      "DE": "Ohne Lichter in der Nähe und über den Wolken ist der Himmel am Teide ein Starlight-Reservat. Mit dem Astronomen sehen Sie die Milchstraße mit bloßem Auge und durchs Teleskop die Saturnringe oder Mondkrater."
+     },
+     "tip": {
+      "ES": "Deja que los ojos se acostumbren diez minutos sin mirar el móvil: aparecen el doble de estrellas.",
+      "EN": "Give your eyes ten minutes without looking at your phone: twice as many stars appear.",
+      "DE": "Geben Sie den Augen zehn Minuten ohne Handy: Es erscheinen doppelt so viele Sterne."
+     },
+     "hora": "19:30",
+     "dur": "1 h 30 min",
+     "img": "/ciudades/costa-adeje/img/teide-5.jpg",
+     "lat": 28.2245,
+     "lng": -16.627,
+     "tramo": "coche",
+     "duracionMin": 90,
+     "tramoDuracionMin": 15
+    }
+   ]
+  },
+  {
+   "id": "masca",
+   "expId": "ex3",
+   "img": "/ciudades/costa-adeje/img/masca.jpg",
+   "titulo": {
+    "ES": "Masca y Los Gigantes",
+    "EN": "Masca and Los Gigantes",
+    "DE": "Masca und Los Gigantes"
+   },
+   "tipo": {
+    "ES": "Naturaleza",
+    "EN": "Nature",
+    "DE": "Natur"
+   },
+   "dur": "8 h",
+   "d": {
+    "ES": "Un pueblo de piedra colgado entre barrancos y unos acantilados de 600 metros que caen al mar. El noroeste salvaje de Tenerife en un día.",
+    "EN": "A stone village hanging between ravines and 600-metre cliffs dropping into the sea. Tenerife’s wild north-west in a day.",
+    "DE": "Ein Steindorf zwischen Schluchten und 600 Meter hohe Klippen über dem Meer. Der wilde Nordwesten Teneriffas an einem Tag."
+   },
+   "salida": {
+    "ES": "Recogida en la puerta del hotel a las 8:30",
+    "EN": "Pick-up at the hotel door at 08:30",
+    "DE": "Abholung an der Hoteltür um 8:30 Uhr"
+   },
+   "incluye": {
+    "ES": [
+     "Minibús con guía",
+     "Paradas en miradores",
+     "Tiempo libre en Masca y Los Gigantes"
+    ],
+    "EN": [
+     "Minibus with guide",
+     "Viewpoint stops",
+     "Free time in Masca and Los Gigantes"
+    ],
+    "DE": [
+     "Minibus mit Guide",
+     "Halt an Aussichtspunkten",
+     "Freie Zeit in Masca und Los Gigantes"
+    ]
+   },
+   "llevar": {
+    "ES": [
+     "Calzado cómodo: Masca es todo cuestas",
+     "Bañador para Los Gigantes",
+     "Algo para el mareo: la carretera es de curvas"
+    ],
+    "EN": [
+     "Comfortable shoes: Masca is all slopes",
+     "Swimwear for Los Gigantes",
+     "Something for car sickness: the road is winding"
+    ],
+    "DE": [
+     "Bequeme Schuhe: Masca ist steil",
+     "Badesachen für Los Gigantes",
+     "Etwas gegen Reiseübelkeit: die Straße ist kurvig"
+    ]
+   },
+   "noIncluye": {
+    "ES": [
+     "Comida",
+     "Barco bajo los acantilados"
+    ],
+    "EN": [
+     "Lunch",
+     "Boat under the cliffs"
+    ],
+    "DE": [
+     "Mittagessen",
+     "Bootsfahrt unter den Klippen"
+    ]
+   },
+   "cancelacion": {
+    "ES": "Gratis hasta 24 h antes.",
+    "EN": "Free up to 24 h before.",
+    "DE": "Kostenlos bis 24 Std. vorher."
+   },
+   "accesibilidad": {
+    "ES": "Masca tiene calles empinadas y escaleras. Los miradores, en cambio, están junto a la carretera.",
+    "EN": "Masca has steep lanes and steps. The viewpoints, however, are right by the road.",
+    "DE": "Masca hat steile Gassen und Treppen. Die Aussichtspunkte liegen dagegen direkt an der Straße."
+   },
+   "puntoEncuentro": {
+    "lat": 28.08062,
+    "lng": -16.73455,
+    "foto": "/ciudades/costa-adeje/img/masca.jpg",
+    "texto": {
+     "ES": "Puerta principal del hotel. 10 minutos antes.",
+     "EN": "Hotel main entrance. 10 minutes early.",
+     "DE": "Haupteingang des Hotels. 10 Minuten früher."
+    }
+   },
+   "fotos": [
+    "/ciudades/costa-adeje/img/masca.jpg",
+    "/ciudades/costa-adeje/img/masca-1.jpg",
+    "/ciudades/costa-adeje/img/masca-2.jpg",
+    "/ciudades/costa-adeje/img/masca-3.jpg",
+    "/ciudades/costa-adeje/img/masca-4.jpg"
+   ],
+   "duracionMin": 480,
+   "distanciaKm": 110.0,
+   "dificultad": "media",
+   "tipoEntorno": "exterior",
+   "salidasFijas": [
+    "08:30"
+   ],
+   "precioDesde": 49,
+   "paradas": [
+    {
+     "n": {
+      "ES": "Mirador de Cruz de Hilda",
+      "EN": "Cruz de Hilda viewpoint",
+      "DE": "Aussichtspunkt Cruz de Hilda"
+     },
+     "s": {
+      "ES": "Masca desde arriba",
+      "EN": "Masca from above",
+      "DE": "Masca von oben"
+     },
+     "d": {
+      "ES": "Desde lo alto del macizo de Teno ves el caserío entero: casas de piedra sobre lomos de montaña, terrazas de cultivo y el barranco bajando hasta el mar.",
+      "EN": "From high in the Teno massif you see the whole hamlet: stone houses on mountain ridges, farming terraces and the ravine running down to the sea.",
+      "DE": "Hoch oben im Teno-Massiv sieht man den ganzen Weiler: Steinhäuser auf Bergrücken, Anbauterrassen und die Schlucht bis zum Meer."
+     },
+     "tip": {
+      "ES": "Llega con la luz de la mañana: por la tarde el barranco se queda en sombra.",
+      "EN": "Come in the morning light: in the afternoon the ravine falls into shadow.",
+      "DE": "Kommen Sie im Morgenlicht: Nachmittags liegt die Schlucht im Schatten."
+     },
+     "hora": "10:00",
+     "dur": "20 min",
+     "img": "/ciudades/costa-adeje/img/masca-1.jpg",
+     "lat": 28.31292,
+     "lng": -16.8456,
+     "tramo": "coche",
+     "duracionMin": 20,
+     "tramoDuracionMin": 90
+    },
+    {
+     "n": {
+      "ES": "Caserío de Masca",
+      "EN": "Masca hamlet",
+      "DE": "Weiler Masca"
+     },
+     "s": {
+      "ES": "Un pueblo al que hasta los años 70 solo se llegaba andando",
+      "EN": "A village reachable only on foot until the 1970s",
+      "DE": "Ein Dorf, das bis in die 70er nur zu Fuß erreichbar war"
+     },
+     "d": {
+      "ES": "Calles de piedra, palmeras, tuneras y el Roque de Catana vigilando. Hasta que se abrió la carretera, el pan y el correo llegaban en burro.",
+      "EN": "Stone lanes, palm trees, prickly pears and the Roque de Catana keeping watch. Until the road opened, bread and post arrived by donkey.",
+      "DE": "Steingassen, Palmen, Feigenkakteen und der Roque de Catana als Wächter. Bis zur Straße kamen Brot und Post mit dem Esel."
+     },
+     "tip": {
+      "ES": "Pide un zumo de cactus o de tunera en la plaza: es lo típico del pueblo.",
+      "EN": "Order a prickly-pear juice in the square: it’s the village speciality.",
+      "DE": "Bestellen Sie auf dem Platz einen Kaktusfeigensaft: die Spezialität des Dorfes."
+     },
+     "hora": "10:30",
+     "dur": "1 h 15 min",
+     "img": "/ciudades/costa-adeje/img/masca-2.jpg",
+     "lat": 28.30525,
+     "lng": -16.8405,
+     "tramo": "coche",
+     "duracionMin": 75,
+     "tramoDuracionMin": 10
+    },
+    {
+     "n": {
+      "ES": "Acantilados de Los Gigantes",
+      "EN": "Los Gigantes cliffs",
+      "DE": "Klippen von Los Gigantes"
+     },
+     "s": {
+      "ES": "Paredes de 600 metros sobre el mar",
+      "EN": "600-metre walls above the sea",
+      "DE": "600 Meter hohe Wände über dem Meer"
+     },
+     "d": {
+      "ES": "Los guanches los llamaban «la muralla del infierno». Son coladas de lava del macizo de Teno cortadas a pico por el mar durante millones de años.",
+      "EN": "The Guanches called them “the wall of hell”. They are lava flows from the Teno massif cut sheer by the sea over millions of years.",
+      "DE": "Die Guanchen nannten sie „Mauer der Hölle“. Lavaströme des Teno-Massivs, vom Meer über Jahrmillionen senkrecht abgeschnitten."
+     },
+     "tip": {
+      "ES": "El mejor sitio para la foto es el mirador de Archipenque, encima del pueblo.",
+      "EN": "The best spot for the photo is the Archipenque viewpoint above the town.",
+      "DE": "Der beste Fotospot ist der Aussichtspunkt Archipenque oberhalb des Ortes."
+     },
+     "hora": "12:30",
+     "dur": "40 min",
+     "img": "/ciudades/costa-adeje/img/masca-3.jpg",
+     "lat": 28.24564,
+     "lng": -16.84014,
+     "tramo": "coche",
+     "duracionMin": 40,
+     "tramoDuracionMin": 40
+    },
+    {
+     "n": {
+      "ES": "Playa de Los Guíos",
+      "EN": "Los Guíos beach",
+      "DE": "Strand Los Guíos"
+     },
+     "s": {
+      "ES": "Arena negra a los pies del acantilado",
+      "EN": "Black sand at the foot of the cliffs",
+      "DE": "Schwarzer Sand am Fuß der Klippen"
+     },
+     "d": {
+      "ES": "Una playa pequeña de arena volcánica, justo debajo de las paredes. Tiempo libre para comer en el puerto y bañarte con los acantilados encima.",
+      "EN": "A small volcanic-sand beach right below the walls. Free time to eat at the harbour and swim with the cliffs above you.",
+      "DE": "Ein kleiner Strand aus Vulkansand direkt unter den Wänden. Freie Zeit zum Essen am Hafen und Baden unter den Klippen."
+     },
+     "tip": {
+      "ES": "Cuidado con el oleaje: si ondea la bandera amarilla, mejor quédate en la orilla.",
+      "EN": "Mind the waves: if the yellow flag is flying, stay at the water’s edge.",
+      "DE": "Vorsicht bei Wellengang: Bei gelber Flagge lieber am Ufer bleiben."
+     },
+     "hora": "13:15",
+     "dur": "2 h",
+     "img": "/ciudades/costa-adeje/img/masca-4.jpg",
+     "lat": 28.24757,
+     "lng": -16.84038,
+     "tramo": "pie",
+     "duracionMin": 120,
+     "tramoDuracionMin": 5
+    }
+   ]
+  },
+  {
+   "id": "paseo",
+   "img": "/ciudades/costa-adeje/img/paseo-2.jpg",
+   "titulo": {
+    "ES": "El paseo de Costa Adeje",
+    "EN": "The Costa Adeje promenade",
+    "DE": "Die Promenade von Costa Adeje"
+   },
+   "tipo": {
+    "ES": "A pie",
+    "EN": "On foot",
+    "DE": "Zu Fuß"
+   },
+   "dur": "3 h",
+   "d": {
+    "ES": "Del hotel a La Caleta por el paseo marítimo: cuatro playas, un pueblo de pescadores y pescado fresco al final. Sin reservar nada.",
+    "EN": "From the hotel to La Caleta along the seafront: four beaches, a fishing village and fresh fish at the end. Nothing to book.",
+    "DE": "Vom Hotel nach La Caleta über die Promenade: vier Strände, ein Fischerdorf und frischer Fisch zum Schluss. Ohne Buchung."
+   },
+   "salida": {
+    "ES": "Desde la puerta del hotel, cuando quieras. Mejor a primera hora o a última de la tarde",
+    "EN": "From the hotel door, whenever you like. Best early morning or late afternoon",
+    "DE": "Ab der Hoteltür, wann Sie wollen. Am besten früh oder am späten Nachmittag"
+   },
+   "incluye": {
+    "ES": [
+     "Ruta paso a paso en el móvil",
+     "Mapa con cada parada"
+    ],
+    "EN": [
+     "Step-by-step route on your phone",
+     "Map with every stop"
+    ],
+    "DE": [
+     "Route Schritt für Schritt auf dem Handy",
+     "Karte mit jedem Halt"
+    ]
+   },
+   "llevar": {
+    "ES": [
+     "Agua y gorra: hay poca sombra",
+     "Bañador por si te apetece un baño",
+     "Calzado cómodo"
+    ],
+    "EN": [
+     "Water and a hat: there is little shade",
+     "Swimwear in case you fancy a dip",
+     "Comfortable shoes"
+    ],
+    "DE": [
+     "Wasser und Kappe: wenig Schatten",
+     "Badesachen für ein Bad zwischendurch",
+     "Bequeme Schuhe"
+    ]
+   },
+   "accesibilidad": {
+    "ES": "Paseo llano y asfaltado hasta Playa del Duque. El tramo a La Caleta tiene alguna cuesta; en taxi son 5 minutos.",
+    "EN": "Flat, paved promenade as far as Playa del Duque. The stretch to La Caleta has some slopes; a taxi takes 5 minutes.",
+    "DE": "Flache, befestigte Promenade bis Playa del Duque. Bis La Caleta geht es etwas bergauf; mit dem Taxi 5 Minuten."
+   },
+   "fotos": [
+    "/ciudades/costa-adeje/img/paseo-2.jpg",
+    "/ciudades/costa-adeje/img/paseo.jpg",
+    "/ciudades/costa-adeje/img/paseo-1.jpg",
+    "/ciudades/costa-adeje/img/paseo-3.jpg",
+    "/ciudades/costa-adeje/img/paseo-4.jpg"
+   ],
+   "duracionMin": 180,
+   "distanciaKm": 4.5,
+   "dificultad": "facil",
+   "tipoEntorno": "exterior",
+   "paradas": [
+    {
+     "n": {
+      "ES": "Playa de La Pinta",
+      "EN": "La Pinta beach",
+      "DE": "Strand La Pinta"
+     },
+     "s": {
+      "ES": "La salida, delante del hotel",
+      "EN": "The start, in front of the hotel",
+      "DE": "Der Start, vor dem Hotel"
+     },
+     "d": {
+      "ES": "Cruzas el paseo y empiezas con los pies en la arena. A la izquierda, Puerto Colón; a la derecha, todo el paseo de Costa Adeje que vas a recorrer.",
+      "EN": "Cross the promenade and start with your feet in the sand. To the left, Puerto Colón; to the right, the whole Costa Adeje promenade ahead of you.",
+      "DE": "Promenade überqueren und mit den Füßen im Sand starten. Links Puerto Colón, rechts die ganze Promenade von Costa Adeje."
+     },
+     "tip": {
+      "ES": "Llena la botella en el hotel antes de salir: hasta Fañabé no hay fuentes.",
+      "EN": "Fill your bottle at the hotel before you go: there are no fountains until Fañabé.",
+      "DE": "Füllen Sie Ihre Flasche im Hotel: Bis Fañabé gibt es keine Brunnen."
+     },
+     "hora": "09:00",
+     "dur": "10 min",
+     "img": "/ciudades/costa-adeje/img/paseo-1.jpg",
+     "lat": 28.07989,
+     "lng": -16.73525,
+     "tramo": "pie",
+     "duracionMin": 10,
+     "tramoDuracionMin": 1
+    },
+    {
+     "n": {
+      "ES": "Playa de Fañabé",
+      "EN": "Fañabé beach",
+      "DE": "Strand Fañabé"
+     },
+     "s": {
+      "ES": "La gran playa del paseo",
+      "EN": "The promenade’s big beach",
+      "DE": "Der große Strand der Promenade"
+     },
+     "d": {
+      "ES": "Casi un kilómetro de arena con el paseo encima, palmeras, hamacas y chiringuitos. Desde aquí se ve La Gomera recortada en el horizonte.",
+      "EN": "Almost a kilometre of sand with the promenade above, palm trees, sunbeds and beach bars. From here you can see La Gomera on the horizon.",
+      "DE": "Fast ein Kilometer Sand mit der Promenade darüber, Palmen, Liegen und Strandbars. Von hier sieht man La Gomera am Horizont."
+     },
+     "tip": {
+      "ES": "Baja a la orilla al final de la playa: hay menos gente y el agua es más clara.",
+      "EN": "Walk down to the water at the far end: fewer people and clearer water.",
+      "DE": "Gehen Sie am Ende des Strandes ans Wasser: weniger Leute, klareres Wasser."
+     },
+     "hora": "09:20",
+     "dur": "30 min",
+     "img": "/ciudades/costa-adeje/img/paseo-2.jpg",
+     "lat": 28.08982,
+     "lng": -16.73302,
+     "tramo": "pie",
+     "duracionMin": 30,
+     "tramoDuracionMin": 20
+    },
+    {
+     "n": {
+      "ES": "Playa del Duque",
+      "EN": "Playa del Duque",
+      "DE": "Playa del Duque"
+     },
+     "s": {
+      "ES": "Las casetas de rayas",
+      "EN": "The striped beach huts",
+      "DE": "Die gestreiften Strandhäuschen"
+     },
+     "d": {
+      "ES": "La playa más cuidada del sur: casetas blancas y azules, arena fina y jardines con dragos y palmeras encima. Un buen sitio para un café con vistas.",
+      "EN": "The south’s best-kept beach: blue-and-white huts, fine sand and gardens with dragon trees and palms above. A good spot for a coffee with a view.",
+      "DE": "Der gepflegteste Strand des Südens: blau-weiße Häuschen, feiner Sand und Gärten mit Drachenbäumen und Palmen. Ideal für einen Kaffee mit Aussicht."
+     },
+     "tip": {
+      "ES": "Pide un barraquito en una de las terrazas de arriba: el café de Tenerife.",
+      "EN": "Order a barraquito on one of the terraces above: Tenerife’s coffee.",
+      "DE": "Bestellen Sie oben auf einer Terrasse einen Barraquito: den Kaffee Teneriffas."
+     },
+     "hora": "10:00",
+     "dur": "40 min",
+     "img": "/ciudades/costa-adeje/img/paseo-3.jpg",
+     "lat": 28.09084,
+     "lng": -16.74194,
+     "tramo": "pie",
+     "duracionMin": 40,
+     "tramoDuracionMin": 15
+    },
+    {
+     "n": {
+      "ES": "La Caleta",
+      "EN": "La Caleta",
+      "DE": "La Caleta"
+     },
+     "s": {
+      "ES": "Pescado fresco junto al mar",
+      "EN": "Fresh fish by the sea",
+      "DE": "Frischer Fisch am Meer"
+     },
+     "d": {
+      "ES": "El paseo acaba en un pueblo de pescadores de casas blancas con barcas en la orilla. Sus restaurantes sirven el pescado que entra ese día, con papas arrugadas y mojo.",
+      "EN": "The promenade ends at a fishing village of white houses with boats on the shore. Its restaurants serve the day’s catch with wrinkly potatoes and mojo.",
+      "DE": "Die Promenade endet in einem Fischerdorf mit weißen Häusern und Booten am Ufer. Die Restaurants servieren den Fang des Tages mit Runzelkartoffeln und Mojo."
+     },
+     "tip": {
+      "ES": "Para volver, coge un taxi: en 5 minutos estás en el hotel y llegas a la piscina antes de comer.",
+      "EN": "To get back, take a taxi: 5 minutes to the hotel and you’re at the pool before lunch.",
+      "DE": "Zurück mit dem Taxi: In 5 Minuten im Hotel und vor dem Mittagessen am Pool."
+     },
+     "hora": "11:00",
+     "dur": "1 h 30 min",
+     "img": "/ciudades/costa-adeje/img/paseo-4.jpg",
+     "lat": 28.10066,
+     "lng": -16.75546,
+     "tramo": "pie",
+     "duracionMin": 90,
+     "tramoDuracionMin": 25
+    }
+   ]
+  }
+ ],
+ "pasaporte": {
+  "sellos": 3,
+  "premio": {
+   "ES": "un barraquito en el Bar Principal, invita la casa",
+   "EN": "a barraquito at the Main Bar, on the house",
+   "DE": "ein Barraquito in der Hauptbar, aufs Haus"
+  }
+ },
+ "creditos": [
+  "Tuxyso, Dreol, Cayambe, Bgabel, Diego Delso, H. Zell, X3m (CC BY-SA 3.0, Wikimedia Commons)",
+  "giggel, Ronny Siegel, Marc Ryckaert, Josemi1711 (CC BY 3.0, Wikimedia Commons)",
+  "Marc Ryckaert, Fry72, Wouter Hagens, Gustavo A. Pérez, Pablosievert, Papm1949, Benedikt Markus, Axel Cotón Gutiérrez, Tuxyso (CC BY-SA 4.0, Wikimedia Commons)",
+  "Ron Knight (CC BY 2.0, Wikimedia Commons)",
+  "Thomas Wolf (CC BY-SA 3.0 de, Wikimedia Commons)",
+  "Playa de La Pinta desde el hotel: HOVIMA Hotels"
+ ]
+}

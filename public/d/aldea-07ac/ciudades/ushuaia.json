@@ -1,0 +1,1198 @@
+{
+ "slug": "ushuaia",
+ "nombre": "Ushuaia",
+ "intro": {
+  "ES": "La ciudad más austral del mundo, entre el Canal Beagle y montañas que no pierden la nieve. Desde la Aldea el glaciar queda calle arriba; el canal, los pingüinos y los lagos, a una salida de distancia.",
+  "EN": "The southernmost city in the world, between the Beagle Channel and mountains that keep their snow. From the Aldea the glacier is just up the road; the channel, the penguins and the lakes, one trip away.",
+  "PT": "A cidade mais austral do mundo, entre o Canal Beagle e montanhas que nunca perdem a neve. Da Aldeia o glaciar fica rua acima; o canal, os pinguins e os lagos, a um passeio de distância."
+ },
+ "lugares": [
+  {
+   "id": "aldea",
+   "img": "/ciudades/ushuaia/img/aldea.jpg",
+   "nombre": "Casa del árbol y Museo del Leñador",
+   "zona": {
+    "ES": "Dentro de la Aldea",
+    "EN": "Inside the Aldea",
+    "PT": "Dentro da Aldeia"
+   },
+   "d": {
+    "ES": "El paseo de casa: un sendero por el bosque de lengas de la Aldea, la casa del árbol para los chicos y el pequeño museo con las herramientas de los leñadores fueguinos.",
+    "EN": "Your own walk: a trail through the Aldea’s lenga forest, the treehouse for the kids and the little museum with the tools of Fuegian woodcutters.",
+    "PT": "O passeio de casa: uma trilha pela floresta de lengas da Aldeia, a casa da árvore para as crianças e o pequeno museu com as ferramentas dos lenhadores fueguinos."
+   },
+   "cuando": {
+    "ES": "Con la primera luz, o con nieve recién caída",
+    "EN": "At first light, or after fresh snow",
+    "PT": "Com a primeira luz, ou com neve recém-caída"
+   },
+   "min": 1,
+   "modo": "pie",
+   "lat": -54.80885,
+   "lng": -68.3464
+  },
+  {
+   "id": "martial",
+   "img": "/ciudades/ushuaia/img/martial-4.jpg",
+   "nombre": "Glaciar Martial",
+   "zona": {
+    "ES": "Al final de tu calle",
+    "EN": "At the end of your road",
+    "PT": "No fim da sua rua"
+   },
+   "d": {
+    "ES": "El glaciar que ves desde toda la ciudad está a 4 km subiendo por la misma calle de la Aldea. Arriba, casa de té, pista de esquí para chicos y el sendero al hielo.",
+    "EN": "The glacier you see from all over town is 4 km up the Aldea’s own road. At the top: a tea house, a beginners’ ski slope and the trail to the ice.",
+    "PT": "O glaciar que se vê da cidade toda fica a 4 km subindo pela mesma rua da Aldeia. Lá em cima: casa de chá, pista de esqui para crianças e a trilha até o gelo."
+   },
+   "cuando": {
+    "ES": "Por la mañana, antes de que suban las nubes",
+    "EN": "In the morning, before the clouds roll in",
+    "PT": "De manhã, antes das nuvens"
+   },
+   "min": 8,
+   "modo": "coche",
+   "lat": -54.7868,
+   "lng": -68.3995
+  },
+  {
+   "id": "puerto",
+   "img": "/ciudades/ushuaia/img/beagle-1.jpg",
+   "nombre": "Puerto y cartel del Fin del Mundo",
+   "zona": {
+    "ES": "Centro",
+    "EN": "Town centre",
+    "PT": "Centro"
+   },
+   "d": {
+    "ES": "La foto obligada: el cartel de «Ushuaia, fin del mundo» con el Beagle detrás. De aquí salen los barcos al faro y a la Antártida.",
+    "EN": "The must-have photo: the «Ushuaia, fin del mundo» sign with the Beagle behind. Boats leave from here for the lighthouse and Antarctica.",
+    "PT": "A foto obrigatória: a placa «Ushuaia, fin del mundo» com o Beagle atrás. Daqui saem os barcos para o farol e a Antártida."
+   },
+   "cuando": {
+    "ES": "Temprano, antes de que llegue la gente de los cruceros",
+    "EN": "Early, before the cruise crowds",
+    "PT": "Cedo, antes da turma dos cruzeiros"
+   },
+   "min": 10,
+   "modo": "coche",
+   "lat": -54.8071,
+   "lng": -68.3036
+  },
+  {
+   "id": "presidio",
+   "img": "/ciudades/ushuaia/img/presidio.jpg",
+   "nombre": "Museo Marítimo y del Presidio",
+   "zona": {
+    "ES": "Centro",
+    "EN": "Town centre",
+    "PT": "Centro"
+   },
+   "d": {
+    "ES": "La antigua cárcel del fin del mundo, con sus pabellones en estrella. Hoy es museo de los presos, de los barcos y de la Antártida.",
+    "EN": "The old end-of-the-world prison, with its star-shaped wings. Now a museum of the prisoners, the ships and Antarctica.",
+    "PT": "A antiga prisão do fim do mundo, com seus pavilhões em estrela. Hoje é museu dos presos, dos navios e da Antártida."
+   },
+   "cuando": {
+    "ES": "Un día de lluvia: es todo bajo techo",
+    "EN": "On a rainy day: it is all indoors",
+    "PT": "Num dia de chuva: é tudo coberto"
+   },
+   "min": 12,
+   "modo": "coche",
+   "lat": -54.8044,
+   "lng": -68.2956
+  },
+  {
+   "id": "sanmartin",
+   "img": "/ciudades/ushuaia/img/sanmartin.jpg",
+   "nombre": "Avenida San Martín",
+   "zona": {
+    "ES": "Centro",
+    "EN": "Town centre",
+    "PT": "Centro"
+   },
+   "d": {
+    "ES": "La calle principal: chocolaterías, cafés, tiendas de montaña y las casas de madera y chapa de colores de los primeros pobladores.",
+    "EN": "The main street: chocolate shops, cafés, outdoor stores and the colourful timber-and-tin houses of the first settlers.",
+    "PT": "A rua principal: chocolaterias, cafés, lojas de montanha e as casas coloridas de madeira e zinco dos primeiros moradores."
+   },
+   "cuando": {
+    "ES": "A la tarde, para el chocolate caliente",
+    "EN": "In the afternoon, for hot chocolate",
+    "PT": "À tarde, para o chocolate quente"
+   },
+   "min": 10,
+   "modo": "coche",
+   "lat": -54.8066,
+   "lng": -68.3085
+  },
+  {
+   "id": "esmeralda",
+   "img": "/ciudades/ushuaia/img/esmeralda.jpg",
+   "nombre": "Laguna Esmeralda",
+   "zona": {
+    "ES": "Ruta 3, a 20 km",
+    "EN": "Route 3, 20 km away",
+    "PT": "Rota 3, a 20 km"
+   },
+   "d": {
+    "ES": "El sendero más querido de Ushuaia: bosque, turba y, al final, una laguna verde turquesa al pie de la montaña.",
+    "EN": "Ushuaia’s favourite trail: forest, peat bog and, at the end, a turquoise lagoon at the foot of the mountain.",
+    "PT": "A trilha preferida de Ushuaia: floresta, turfeira e, no final, uma lagoa verde-turquesa ao pé da montanha."
+   },
+   "cuando": {
+    "ES": "De noviembre a abril, con botas impermeables",
+    "EN": "November to April, in waterproof boots",
+    "PT": "De novembro a abril, com botas impermeáveis"
+   },
+   "min": 30,
+   "modo": "coche",
+   "lat": -54.6716,
+   "lng": -68.1173
+  },
+  {
+   "id": "castor",
+   "img": "/ciudades/ushuaia/img/castor.jpg",
+   "nombre": "Cerro Castor",
+   "zona": {
+    "ES": "Ruta 3, a 26 km",
+    "EN": "Route 3, 26 km away",
+    "PT": "Rota 3, a 26 km"
+   },
+   "d": {
+    "ES": "El centro de esquí más austral del mundo, con nieve seca de junio a octubre y vistas a los valles fueguinos.",
+    "EN": "The world’s southernmost ski resort, with dry snow from June to October and views over the Fuegian valleys.",
+    "PT": "A estação de esqui mais austral do mundo, com neve seca de junho a outubro e vista para os vales fueguinos."
+   },
+   "cuando": {
+    "ES": "En invierno, entre semana",
+    "EN": "In winter, on weekdays",
+    "PT": "No inverno, durante a semana"
+   },
+   "min": 35,
+   "modo": "coche",
+   "lat": -54.7206,
+   "lng": -68.0133
+  },
+  {
+   "id": "pinguinos",
+   "img": "/ciudades/ushuaia/img/pinguinos.jpg",
+   "nombre": "Pingüinera de Isla Martillo",
+   "zona": {
+    "ES": "Estancia Harberton, a 85 km",
+    "EN": "Estancia Harberton, 85 km away",
+    "PT": "Estância Harberton, a 85 km"
+   },
+   "d": {
+    "ES": "Miles de pingüinos de Magallanes y algunos papúa anidan en esta isla del Beagle de octubre a marzo.",
+    "EN": "Thousands of Magellanic penguins and some gentoos nest on this Beagle island from October to March.",
+    "PT": "Milhares de pinguins-de-magalhães e alguns papuas fazem ninho nesta ilha do Beagle de outubro a março."
+   },
+   "cuando": {
+    "ES": "De noviembre a febrero, con los pichones",
+    "EN": "November to February, when the chicks are out",
+    "PT": "De novembro a fevereiro, com os filhotes"
+   },
+   "min": 90,
+   "modo": "coche",
+   "lat": -54.9097,
+   "lng": -67.3814
+  }
+ ],
+ "rutas": [
+  {
+   "id": "beagle",
+   "expId": "ex1",
+   "img": "/ciudades/ushuaia/img/beagle.jpg",
+   "titulo": {
+    "ES": "Canal Beagle y Faro Les Eclaireurs",
+    "EN": "Beagle Channel and Les Eclaireurs Lighthouse",
+    "PT": "Canal Beagle e Farol Les Eclaireurs"
+   },
+   "tipo": {
+    "ES": "Navegación",
+    "EN": "Boat trip",
+    "PT": "Navegação"
+   },
+   "dur": "3 h",
+   "d": {
+    "ES": "Cormoranes, lobos marinos y el faro del fin del mundo, con los Andes nevados de los dos lados del canal.",
+    "EN": "Cormorants, sea lions and the end-of-the-world lighthouse, with snowy Andes on both sides of the channel.",
+    "PT": "Cormorões, leões-marinhos e o farol do fim do mundo, com os Andes nevados dos dois lados do canal."
+   },
+   "salida": {
+    "ES": "Muelle turístico del centro, a 10 minutos de la Aldea. Salidas 10:00 y 15:00",
+    "EN": "Town tourist pier, 10 minutes from the Aldea. Departures 10:00 and 15:00",
+    "PT": "Píer turístico do centro, a 10 minutos da Aldeia. Saídas às 10:00 e 15:00"
+   },
+   "incluye": {
+    "ES": [
+     "Navegación en catamarán",
+     "Guía a bordo",
+     "Paso por las islas y vuelta al faro"
+    ],
+    "EN": [
+     "Catamaran trip",
+     "Guide on board",
+     "Islands and a lap around the lighthouse"
+    ],
+    "PT": [
+     "Navegação de catamarã",
+     "Guia a bordo",
+     "Ilhas e volta ao farol"
+    ]
+   },
+   "llevar": {
+    "ES": [
+     "Campera rompeviento, gorro y guantes",
+     "Lentes de sol: el reflejo del agua engaña",
+     "Pastilla para el mareo si te afecta"
+    ],
+    "EN": [
+     "Windproof jacket, hat and gloves",
+     "Sunglasses: the glare off the water is strong",
+     "Seasickness tablet if you need one"
+    ],
+    "PT": [
+     "Corta-vento, gorro e luvas",
+     "Óculos de sol: o reflexo da água engana",
+     "Remédio para enjoo se precisar"
+    ]
+   },
+   "paradas": [
+    {
+     "n": {
+      "ES": "Muelle turístico",
+      "EN": "Tourist pier",
+      "PT": "Píer turístico"
+     },
+     "s": {
+      "ES": "Embarque frente al cartel del Fin del Mundo",
+      "EN": "Boarding by the End of the World sign",
+      "PT": "Embarque em frente à placa do Fim do Mundo"
+     },
+     "d": {
+      "ES": "Los catamaranes salen del muelle del centro. Mientras esperas, date una vuelta por el cartel y mira hacia atrás: la ciudad entera recostada contra el Martial.",
+      "EN": "The catamarans leave from the town pier. While you wait, stop by the sign and look back: the whole town leaning against the Martial.",
+      "PT": "Os catamarãs saem do píer do centro. Enquanto espera, passe pela placa e olhe para trás: a cidade inteira encostada no Martial."
+     },
+     "tip": {
+      "ES": "Lleva gorro y guantes aunque sea verano: en la cubierta el viento del canal corta.",
+      "EN": "Bring a hat and gloves even in summer: the channel wind bites on deck.",
+      "PT": "Leve gorro e luvas mesmo no verão: no convés o vento do canal corta."
+     },
+     "hora": "15:00",
+     "dur": "15 min",
+     "img": "/ciudades/ushuaia/img/beagle-1.jpg",
+     "lat": -54.8071,
+     "lng": -68.3036,
+     "tramo": "coche",
+     "duracionMin": 15
+    },
+    {
+     "n": {
+      "ES": "Isla de los Pájaros",
+      "EN": "Bird Island",
+      "PT": "Ilha dos Pássaros"
+     },
+     "s": {
+      "ES": "Miles de cormoranes sobre la roca",
+      "EN": "Thousands of cormorants on the rock",
+      "PT": "Milhares de cormorões sobre a rocha"
+     },
+     "d": {
+      "ES": "La isla parece moverse: está cubierta de cormoranes imperiales y roqueros, que anidan pegados unos a otros. El barco se acerca despacio y apaga motores.",
+      "EN": "The island seems to move: it is covered with imperial and rock shags nesting side by side. The boat drifts in slowly with engines off.",
+      "PT": "A ilha parece se mexer: está coberta de cormorões-imperiais e de rocha, fazendo ninho lado a lado. O barco se aproxima devagar, com os motores desligados."
+     },
+     "tip": {
+      "ES": "Ponte del lado del viento: vas a sentir menos el olor de la colonia.",
+      "EN": "Stand upwind: you will smell the colony a lot less.",
+      "PT": "Fique do lado do vento: o cheiro da colônia incomoda bem menos."
+     },
+     "hora": "15:30",
+     "dur": "15 min",
+     "img": "/ciudades/ushuaia/img/beagle-3.jpg",
+     "lat": -54.86,
+     "lng": -68.2,
+     "tramo": "barco",
+     "duracionMin": 30
+    },
+    {
+     "n": {
+      "ES": "Isla de los Lobos",
+      "EN": "Sea Lion Island",
+      "PT": "Ilha dos Lobos"
+     },
+     "s": {
+      "ES": "Lobos marinos al sol, a pocos metros",
+      "EN": "Sea lions basking, a few metres away",
+      "PT": "Leões-marinhos tomando sol, a poucos metros"
+     },
+     "d": {
+      "ES": "Sobre las rocas descansan los lobos marinos de un pelo: los machos, enormes y con melena; las hembras, más chicas y doradas. Se escuchan antes de verlos.",
+      "EN": "South American sea lions rest on the rocks: the males huge and maned, the females smaller and golden. You hear them before you see them.",
+      "PT": "Sobre as rochas descansam os leões-marinhos-de-um-pelo: os machos enormes e com juba, as fêmeas menores e douradas. Dá para ouvir antes de ver."
+     },
+     "tip": {
+      "ES": "Un zoom chico alcanza: el barco se pone muy cerca.",
+      "EN": "A small zoom is enough: the boat gets really close.",
+      "PT": "Um zoom pequeno basta: o barco chega bem perto."
+     },
+     "hora": "15:50",
+     "dur": "15 min",
+     "img": "/ciudades/ushuaia/img/beagle-2.jpg",
+     "lat": -54.87,
+     "lng": -68.15,
+     "tramo": "barco",
+     "duracionMin": 20
+    },
+    {
+     "n": {
+      "ES": "Faro Les Eclaireurs",
+      "EN": "Les Eclaireurs Lighthouse",
+      "PT": "Farol Les Eclaireurs"
+     },
+     "s": {
+      "ES": "El faro rojo y blanco del Beagle",
+      "EN": "The red-and-white lighthouse of the Beagle",
+      "PT": "O farol vermelho e branco do Beagle"
+     },
+     "d": {
+      "ES": "Sobre un islote de roca, con los Andes nevados detrás, el faro de 1920 guía todavía a los barcos que entran a Ushuaia. El catamarán le da la vuelta completa.",
+      "EN": "On a rocky islet, with the snowy Andes behind, the 1920 lighthouse still guides the ships into Ushuaia. The catamaran circles it completely.",
+      "PT": "Sobre uma ilhota de rocha, com os Andes nevados atrás, o farol de 1920 ainda guia os navios que entram em Ushuaia. O catamarã dá a volta completa."
+     },
+     "tip": {
+      "ES": "La mejor foto es a la vuelta, con el sol de la tarde de costado.",
+      "EN": "The best photo is on the way back, with the afternoon sun from the side.",
+      "PT": "A melhor foto é na volta, com o sol da tarde de lado."
+     },
+     "hora": "16:15",
+     "dur": "20 min",
+     "img": "/ciudades/ushuaia/img/beagle-4.jpg",
+     "lat": -54.8717,
+     "lng": -68.0947,
+     "tramo": "barco",
+     "duracionMin": 25
+    },
+    {
+     "n": {
+      "ES": "La ciudad desde el agua",
+      "EN": "The town from the water",
+      "PT": "A cidade vista da água"
+     },
+     "s": {
+      "ES": "Ushuaia entera entre el canal y la montaña",
+      "EN": "All of Ushuaia between channel and mountain",
+      "PT": "Ushuaia inteira entre o canal e a montanha"
+     },
+     "d": {
+      "ES": "De vuelta al puerto se ve por qué Ushuaia es única: casas de colores apretadas en la ladera, el Martial arriba y, enfrente, las islas chilenas.",
+      "EN": "Heading back to port you see why Ushuaia is unique: colourful houses packed on the slope, the Martial above and, opposite, the Chilean islands.",
+      "PT": "Na volta ao porto dá para entender por que Ushuaia é única: casas coloridas apertadas na encosta, o Martial lá em cima e, em frente, as ilhas chilenas."
+     },
+     "tip": {
+      "ES": "Si quedaste con hambre, pide la centolla para la noche antes de bajar del barco.",
+      "EN": "If you are hungry, order the king crab for tonight before you get off the boat.",
+      "PT": "Se ficou com fome, peça o caranguejo-rei para a noite antes de descer do barco."
+     },
+     "hora": "17:30",
+     "dur": "30 min",
+     "img": "/ciudades/ushuaia/img/beagle-5.jpg",
+     "lat": -54.81,
+     "lng": -68.295,
+     "tramo": "barco",
+     "duracionMin": 50
+    }
+   ],
+   "fotos": [
+    "/ciudades/ushuaia/img/beagle.jpg",
+    "/ciudades/ushuaia/img/beagle-1.jpg",
+    "/ciudades/ushuaia/img/beagle-2.jpg",
+    "/ciudades/ushuaia/img/beagle-3.jpg",
+    "/ciudades/ushuaia/img/beagle-4.jpg",
+    "/ciudades/ushuaia/img/beagle-5.jpg"
+   ],
+   "duracionMin": 180,
+   "distanciaKm": 30.3,
+   "dificultad": "facil",
+   "accesibilidad": {
+    "ES": "El catamarán tiene cabina cerrada con calefacción y baño. El embarque es por rampa; avisa en recepción si necesitas ayuda.",
+    "EN": "The catamaran has a heated indoor cabin and toilet. Boarding is by ramp; tell reception if you need help.",
+    "PT": "O catamarã tem cabine fechada com aquecimento e banheiro. O embarque é por rampa; avise a recepção se precisar de ajuda."
+   },
+   "tipoEntorno": "exterior",
+   "puntoEncuentro": {
+    "lat": -54.8071,
+    "lng": -68.3036,
+    "foto": "/ciudades/ushuaia/img/beagle-1.jpg",
+    "texto": {
+     "ES": "Muelle turístico, junto al cartel del Fin del Mundo. Llega 20 minutos antes.",
+     "EN": "Tourist pier, next to the End of the World sign. Arrive 20 minutes early.",
+     "PT": "Píer turístico, ao lado da placa do Fim do Mundo. Chegue 20 minutos antes."
+    }
+   },
+   "noIncluye": {
+    "ES": [
+     "Traslado de la Aldea al puerto",
+     "Tasa de embarque del puerto"
+    ],
+    "EN": [
+     "Transfer from the Aldea to the pier",
+     "Port boarding fee"
+    ],
+    "PT": [
+     "Traslado da Aldeia ao porto",
+     "Taxa de embarque do porto"
+    ]
+   },
+   "cancelacion": {
+    "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+    "EN": "Depends on the operator. Reception will confirm it when you book.",
+    "PT": "Depende do operador. A recepção confirma na hora da reserva."
+   },
+   "salidasFijas": [
+    "10:00",
+    "15:00"
+   ],
+   "precioDesde": 110000
+  },
+  {
+   "id": "parque",
+   "expId": "ex3",
+   "img": "/ciudades/ushuaia/img/parque.jpg",
+   "titulo": {
+    "ES": "Parque Nacional y Tren del Fin del Mundo",
+    "EN": "National Park and End of the World Train",
+    "PT": "Parque Nacional e Trem do Fim do Mundo"
+   },
+   "tipo": {
+    "ES": "Bosque y lagos",
+    "EN": "Forest and lakes",
+    "PT": "Floresta e lagos"
+   },
+   "dur": "5 h",
+   "d": {
+    "ES": "El tren a vapor de los presos, un correo sobre el agua y el cartel donde termina la Ruta 3.",
+    "EN": "The convicts’ steam train, a post office on the water and the sign where Route 3 ends.",
+    "PT": "O trem a vapor dos presos, um correio sobre a água e a placa onde termina a Rota 3."
+   },
+   "salida": {
+    "ES": "Te buscamos por la cabaña a las 9:00. El parque está a 12 km",
+    "EN": "We pick you up at your cabin at 9:00. The park is 12 km away",
+    "PT": "Buscamos você na cabana às 9:00. O parque fica a 12 km"
+   },
+   "incluye": {
+    "ES": [
+     "Traslado ida y vuelta",
+     "Pasaje del tren",
+     "Recorrido con guía"
+    ],
+    "EN": [
+     "Return transfer",
+     "Train ticket",
+     "Guided tour"
+    ],
+    "PT": [
+     "Traslado de ida e volta",
+     "Passagem do trem",
+     "Passeio com guia"
+    ]
+   },
+   "llevar": {
+    "ES": [
+     "Pasaporte para el sello del correo",
+     "Ropa en capas: en el bosque cambia el tiempo",
+     "Algo para picar en el lago Roca"
+    ],
+    "EN": [
+     "Passport for the post office stamp",
+     "Layers: the weather changes in the forest",
+     "A snack for Lake Roca"
+    ],
+    "PT": [
+     "Passaporte para o carimbo do correio",
+     "Roupa em camadas: o tempo muda na floresta",
+     "Um lanche para o lago Roca"
+    ]
+   },
+   "paradas": [
+    {
+     "n": {
+      "ES": "Estación del Fin del Mundo",
+      "EN": "End of the World Station",
+      "PT": "Estação do Fim do Mundo"
+     },
+     "s": {
+      "ES": "El tren a vapor de los presos",
+      "EN": "The prisoners’ steam train",
+      "PT": "O trem a vapor dos presos"
+     },
+     "d": {
+      "ES": "La locomotora silba y arranca despacio por la trocha angosta. Es el recorrido que hacían los presos del penal para buscar leña al bosque.",
+      "EN": "The engine whistles and pulls away slowly on the narrow gauge. It is the route the convicts took to fetch firewood from the forest.",
+      "PT": "A locomotiva apita e sai devagar pela bitola estreita. É o percurso que os presos faziam para buscar lenha na floresta."
+     },
+     "tip": {
+      "ES": "Siéntate del lado izquierdo, mirando hacia adelante: ahí queda el río.",
+      "EN": "Sit on the left, facing forward: that is the river side.",
+      "PT": "Sente do lado esquerdo, olhando para a frente: é o lado do rio."
+     },
+     "hora": "09:30",
+     "dur": "15 min",
+     "img": "/ciudades/ushuaia/img/parque-1.jpg",
+     "lat": -54.8306,
+     "lng": -68.4658,
+     "tramo": "coche",
+     "duracionMin": 25
+    },
+    {
+     "n": {
+      "ES": "Cascada La Macarena",
+      "EN": "La Macarena Waterfall",
+      "PT": "Cachoeira La Macarena"
+     },
+     "s": {
+      "ES": "Primera parada del tren, entre el verde",
+      "EN": "The train’s first stop, in the green",
+      "PT": "Primeira parada do trem, no meio do verde"
+     },
+     "d": {
+      "ES": "El tren frena junto a una cascada que baja entre musgos y lengas. Hay tiempo para subir unos metros al mirador y volver a bordo.",
+      "EN": "The train stops by a waterfall tumbling through moss and lenga trees. There is time to climb a little to the lookout and get back on board.",
+      "PT": "O trem para ao lado de uma cachoeira que desce entre musgos e lengas. Dá tempo de subir um pouco até o mirante e voltar a bordo."
+     },
+     "tip": {
+      "ES": "No te alejes: el tren avisa una sola vez antes de seguir.",
+      "EN": "Do not wander off: the train only calls once before leaving.",
+      "PT": "Não se afaste: o trem avisa uma vez só antes de seguir."
+     },
+     "hora": "09:55",
+     "dur": "15 min",
+     "img": "/ciudades/ushuaia/img/parque-2.jpg",
+     "lat": -54.8299,
+     "lng": -68.478,
+     "tramo": "tram",
+     "duracionMin": 20
+    },
+    {
+     "n": {
+      "ES": "Bahía Ensenada",
+      "EN": "Ensenada Bay",
+      "PT": "Baía Ensenada"
+     },
+     "s": {
+      "ES": "El correo del fin del mundo",
+      "EN": "The end-of-the-world post office",
+      "PT": "O correio do fim do mundo"
+     },
+     "d": {
+      "ES": "Una casilla de madera sobre un muelle es el correo más austral del país. Desde aquí se ve la isla Redonda y la costa chilena.",
+      "EN": "A wooden hut on a jetty is the southernmost post office in the country. From here you can see Redonda Island and the Chilean coast.",
+      "PT": "Uma casinha de madeira sobre um píer é o correio mais austral do país. Daqui se vê a ilha Redonda e a costa chilena."
+     },
+     "tip": {
+      "ES": "Lleva el pasaporte: te lo sellan con el sello del fin del mundo.",
+      "EN": "Bring your passport: they stamp it with the end-of-the-world stamp.",
+      "PT": "Leve o passaporte: eles carimbam com o selo do fim do mundo."
+     },
+     "hora": "11:00",
+     "dur": "30 min",
+     "img": "/ciudades/ushuaia/img/parque-3.jpg",
+     "lat": -54.8486,
+     "lng": -68.488,
+     "tramo": "coche",
+     "duracionMin": 25
+    },
+    {
+     "n": {
+      "ES": "Lago Roca",
+      "EN": "Lake Roca",
+      "PT": "Lago Roca"
+     },
+     "s": {
+      "ES": "Un lago de montaña que cruza a Chile",
+      "EN": "A mountain lake that crosses into Chile",
+      "PT": "Um lago de montanha que entra no Chile"
+     },
+     "d": {
+      "ES": "Agua quieta, montañas a los dos lados y una playa de piedras. Los yámanas lo llamaban Acigami, «canasto alargado».",
+      "EN": "Still water, mountains on both sides and a pebble beach. The Yámana called it Acigami, «elongated basket».",
+      "PT": "Água parada, montanhas dos dois lados e uma praia de pedras. Os yámanas o chamavam de Acigami, «cesto alongado»."
+     },
+     "tip": {
+      "ES": "Es el mejor lugar para el picnic: hay mesas junto a la orilla.",
+      "EN": "It is the best picnic spot: there are tables by the shore.",
+      "PT": "É o melhor lugar para o piquenique: há mesas na margem."
+     },
+     "hora": "12:00",
+     "dur": "40 min",
+     "img": "/ciudades/ushuaia/img/parque-4.jpg",
+     "lat": -54.825,
+     "lng": -68.565,
+     "tramo": "coche",
+     "duracionMin": 20
+    },
+    {
+     "n": {
+      "ES": "Bahía Lapataia",
+      "EN": "Lapataia Bay",
+      "PT": "Baía Lapataia"
+     },
+     "s": {
+      "ES": "Donde termina la Ruta 3",
+      "EN": "Where Route 3 ends",
+      "PT": "Onde termina a Rota 3"
+     },
+     "d": {
+      "ES": "El último tramo de la ruta que empieza en Buenos Aires termina en un cartel de madera frente a una bahía de islotes y turba. Más al sur, solo el mar.",
+      "EN": "The last stretch of the road that starts in Buenos Aires ends at a wooden sign facing a bay of islets and peat. Further south, only sea.",
+      "PT": "O último trecho da estrada que começa em Buenos Aires termina numa placa de madeira diante de uma baía de ilhotas e turfa. Mais ao sul, só o mar."
+     },
+     "tip": {
+      "ES": "Recorre las pasarelas de madera hasta el mirador: son diez minutos y casi nadie los hace.",
+      "EN": "Walk the boardwalks to the lookout: ten minutes, and hardly anyone does it.",
+      "PT": "Percorra as passarelas de madeira até o mirante: são dez minutos e quase ninguém faz."
+     },
+     "hora": "13:00",
+     "dur": "40 min",
+     "img": "/ciudades/ushuaia/img/parque-5.jpg",
+     "lat": -54.8545,
+     "lng": -68.564,
+     "tramo": "coche",
+     "duracionMin": 15
+    }
+   ],
+   "fotos": [
+    "/ciudades/ushuaia/img/parque.jpg",
+    "/ciudades/ushuaia/img/parque-1.jpg",
+    "/ciudades/ushuaia/img/parque-2.jpg",
+    "/ciudades/ushuaia/img/parque-3.jpg",
+    "/ciudades/ushuaia/img/parque-4.jpg",
+    "/ciudades/ushuaia/img/parque-5.jpg"
+   ],
+   "duracionMin": 300,
+   "distanciaKm": 11.8,
+   "dificultad": "facil",
+   "accesibilidad": {
+    "ES": "El tren tiene vagones accesibles si se avisa con tiempo, y las pasarelas de Lapataia son llanas. Los senderos del lago son de tierra.",
+    "EN": "The train has accessible carriages if booked ahead, and the Lapataia boardwalks are flat. Lake trails are dirt paths.",
+    "PT": "O trem tem vagões acessíveis com aviso prévio, e as passarelas de Lapataia são planas. As trilhas do lago são de terra."
+   },
+   "tipoEntorno": "exterior",
+   "puntoEncuentro": {
+    "lat": -54.809,
+    "lng": -68.3459,
+    "foto": "/ciudades/ushuaia/img/martial-1.jpg",
+    "texto": {
+     "ES": "En la puerta de tu cabaña: el traslado te pasa a buscar.",
+     "EN": "At your cabin door: the transfer picks you up there.",
+     "PT": "Na porta da sua cabana: o traslado te busca lá."
+    }
+   },
+   "noIncluye": {
+    "ES": [
+     "Entrada al Parque Nacional",
+     "Comida"
+    ],
+    "EN": [
+     "National Park entry",
+     "Food"
+    ],
+    "PT": [
+     "Entrada do Parque Nacional",
+     "Comida"
+    ]
+   },
+   "cancelacion": {
+    "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+    "EN": "Depends on the operator. Reception will confirm it when you book.",
+    "PT": "Depende do operador. A recepção confirma na hora da reserva."
+   },
+   "salidasFijas": [
+    "09:00"
+   ],
+   "precioDesde": 185000
+  },
+  {
+   "id": "lagos",
+   "expId": "ex4",
+   "img": "/ciudades/ushuaia/img/lagos.jpg",
+   "titulo": {
+    "ES": "Lagos Escondido y Fagnano",
+    "EN": "Lakes Escondido and Fagnano",
+    "PT": "Lagos Escondido e Fagnano"
+   },
+   "tipo": {
+    "ES": "Montaña y lagos",
+    "EN": "Mountains and lakes",
+    "PT": "Montanha e lagos"
+   },
+   "dur": "8 h",
+   "d": {
+    "ES": "Cruzar la cordillera por el Paso Garibaldi y bajar a dos lagos entre bosques, con almuerzo de cordero.",
+    "EN": "Cross the range over Garibaldi Pass and drop down to two forest lakes, with a lamb lunch.",
+    "PT": "Cruzar a cordilheira pelo Passo Garibaldi e descer até dois lagos entre florestas, com almoço de cordeiro."
+   },
+   "salida": {
+    "ES": "En 4x4 desde la cabaña a las 9:00, por la Ruta 3 hacia el norte",
+    "EN": "By 4x4 from your cabin at 9:00, north along Route 3",
+    "PT": "De 4x4 da cabana às 9:00, pela Rota 3 rumo ao norte"
+   },
+   "incluye": {
+    "ES": [
+     "4x4 con chofer y guía",
+     "Almuerzo de cordero",
+     "Paradas en miradores"
+    ],
+    "EN": [
+     "4x4 with driver and guide",
+     "Lamb lunch",
+     "Lookout stops"
+    ],
+    "PT": [
+     "4x4 com motorista e guia",
+     "Almoço de cordeiro",
+     "Paradas nos mirantes"
+    ]
+   },
+   "llevar": {
+    "ES": [
+     "Campera y gorro: en el paso hace frío",
+     "Calzado que se pueda embarrar",
+     "Pesos para la panadería de Tolhuin"
+    ],
+    "EN": [
+     "Jacket and hat: it is cold at the pass",
+     "Shoes you don’t mind getting muddy",
+     "Pesos for the Tolhuin bakery"
+    ],
+    "PT": [
+     "Casaco e gorro: no passo faz frio",
+     "Calçado que possa sujar de barro",
+     "Pesos para a padaria de Tolhuin"
+    ]
+   },
+   "paradas": [
+    {
+     "n": {
+      "ES": "Valle de Tierra Mayor",
+      "EN": "Tierra Mayor Valley",
+      "PT": "Vale de Tierra Mayor"
+     },
+     "s": {
+      "ES": "Turbales, castores y centros de nieve",
+      "EN": "Peat bogs, beavers and snow centres",
+      "PT": "Turfeiras, castores e centros de neve"
+     },
+     "d": {
+      "ES": "La ruta sale de la ciudad y se mete en un valle ancho entre montañas, con turbales y diques de castores a los costados. En invierno, todo blanco.",
+      "EN": "The road leaves town and enters a wide valley between mountains, with peat bogs and beaver dams on both sides. In winter, all white.",
+      "PT": "A estrada sai da cidade e entra num vale largo entre montanhas, com turfeiras e represas de castores dos lados. No inverno, tudo branco."
+     },
+     "tip": {
+      "ES": "Mira los diques de ramas en los arroyos: son obra de los castores, que llegaron de Canadá.",
+      "EN": "Look at the stick dams in the streams: beavers built them, brought over from Canada.",
+      "PT": "Repare nas represas de galhos nos riachos: são dos castores, trazidos do Canadá."
+     },
+     "hora": "09:20",
+     "dur": "15 min",
+     "img": "/ciudades/ushuaia/img/lagos-1.jpg",
+     "lat": -54.737,
+     "lng": -68.09,
+     "tramo": "coche",
+     "duracionMin": 20
+    },
+    {
+     "n": {
+      "ES": "Paso Garibaldi",
+      "EN": "Garibaldi Pass",
+      "PT": "Passo Garibaldi"
+     },
+     "s": {
+      "ES": "El mirador que cruza la cordillera",
+      "EN": "The lookout over the mountain pass",
+      "PT": "O mirante que cruza a cordilheira"
+     },
+     "d": {
+      "ES": "La ruta trepa en curvas hasta el paso y, de golpe, aparece abajo el lago Escondido, encajado entre montañas. Es la foto del día.",
+      "EN": "The road climbs in bends to the pass and, suddenly, Lake Escondido appears below, wedged between mountains. It is the photo of the day.",
+      "PT": "A estrada sobe em curvas até o passo e, de repente, aparece lá embaixo o lago Escondido, encaixado entre montanhas. É a foto do dia."
+     },
+     "tip": {
+      "ES": "Lleva campera: en el paso siempre hay más viento y frío que en la ciudad.",
+      "EN": "Bring a jacket: the pass is always windier and colder than town.",
+      "PT": "Leve casaco: no passo sempre venta e faz mais frio que na cidade."
+     },
+     "hora": "10:00",
+     "dur": "20 min",
+     "img": "/ciudades/ushuaia/img/lagos-2.jpg",
+     "lat": -54.6896,
+     "lng": -67.8558,
+     "tramo": "coche",
+     "duracionMin": 40
+    },
+    {
+     "n": {
+      "ES": "Lago Escondido",
+      "EN": "Lake Escondido",
+      "PT": "Lago Escondido"
+     },
+     "s": {
+      "ES": "A la orilla, entre bosque",
+      "EN": "At the shore, in the forest",
+      "PT": "Na margem, entre a floresta"
+     },
+     "d": {
+      "ES": "Bajas hasta la orilla del lago por caminos de tierra. El agua es oscura y quieta, y el bosque de lengas llega hasta el borde.",
+      "EN": "You drive down dirt tracks to the lakeshore. The water is dark and still, and the lenga forest reaches right to the edge.",
+      "PT": "Você desce por estradas de terra até a margem. A água é escura e parada, e a floresta de lengas chega até a borda."
+     },
+     "tip": {
+      "ES": "Si hace sol, aquí el agua refleja las montañas como un espejo: ten la cámara lista.",
+      "EN": "If it is sunny, the water mirrors the mountains here: have your camera ready.",
+      "PT": "Se fizer sol, a água reflete as montanhas como um espelho: deixe a câmera pronta."
+     },
+     "hora": "10:45",
+     "dur": "30 min",
+     "img": "/ciudades/ushuaia/img/lagos-3.jpg",
+     "lat": -54.656,
+     "lng": -67.779,
+     "tramo": "coche",
+     "duracionMin": 20
+    },
+    {
+     "n": {
+      "ES": "Lago Fagnano y Tolhuin",
+      "EN": "Lake Fagnano and Tolhuin",
+      "PT": "Lago Fagnano e Tolhuin"
+     },
+     "s": {
+      "ES": "Un lago que llega a Chile y la panadería más famosa de la isla",
+      "EN": "A lake that reaches Chile and the island’s most famous bakery",
+      "PT": "Um lago que chega ao Chile e a padaria mais famosa da ilha"
+     },
+     "d": {
+      "ES": "El Fagnano mide casi cien kilómetros y el viento arma olas como de mar. En la orilla está Tolhuin, el pueblo del centro de la isla, con su panadería La Unión.",
+      "EN": "Fagnano is almost a hundred kilometres long and the wind whips up sea-like waves. On its shore is Tolhuin, the town in the middle of the island, with La Unión bakery.",
+      "PT": "O Fagnano tem quase cem quilômetros e o vento forma ondas de mar. Na margem fica Tolhuin, a cidade do meio da ilha, com a padaria La Unión."
+     },
+     "tip": {
+      "ES": "En La Unión prueba las facturas y lleva pan para el desayuno del día siguiente.",
+      "EN": "At La Unión try the pastries and take bread for tomorrow’s breakfast.",
+      "PT": "Na La Unión prove os doces e leve pão para o café da manhã do dia seguinte."
+     },
+     "hora": "13:00",
+     "dur": "2 h",
+     "img": "/ciudades/ushuaia/img/lagos-4.jpg",
+     "lat": -54.514,
+     "lng": -67.196,
+     "tramo": "coche",
+     "duracionMin": 60
+    }
+   ],
+   "fotos": [
+    "/ciudades/ushuaia/img/lagos.jpg",
+    "/ciudades/ushuaia/img/lagos-1.jpg",
+    "/ciudades/ushuaia/img/lagos-2.jpg",
+    "/ciudades/ushuaia/img/lagos-3.jpg",
+    "/ciudades/ushuaia/img/lagos-4.jpg"
+   ],
+   "duracionMin": 480,
+   "distanciaKm": 62.8,
+   "dificultad": "facil",
+   "accesibilidad": {
+    "ES": "Casi todo se ve desde la camioneta y los miradores están junto a la ruta. Los tramos de tierra son con saltos.",
+    "EN": "Most of it is seen from the vehicle and the lookouts are by the road. Dirt stretches are bumpy.",
+    "PT": "Quase tudo se vê do carro e os mirantes ficam junto à estrada. Os trechos de terra sacodem."
+   },
+   "tipoEntorno": "exterior",
+   "puntoEncuentro": {
+    "lat": -54.809,
+    "lng": -68.3459,
+    "foto": "/ciudades/ushuaia/img/martial-1.jpg",
+    "texto": {
+     "ES": "En la puerta de tu cabaña: el traslado te pasa a buscar.",
+     "EN": "At your cabin door: the transfer picks you up there.",
+     "PT": "Na porta da sua cabana: o traslado te busca lá."
+    }
+   },
+   "noIncluye": {
+    "ES": [
+     "Bebidas extra",
+     "Compras en Tolhuin"
+    ],
+    "EN": [
+     "Extra drinks",
+     "Shopping in Tolhuin"
+    ],
+    "PT": [
+     "Bebidas extras",
+     "Compras em Tolhuin"
+    ]
+   },
+   "cancelacion": {
+    "ES": "Según el operador. Te lo confirmamos en recepción al reservar.",
+    "EN": "Depends on the operator. Reception will confirm it when you book.",
+    "PT": "Depende do operador. A recepção confirma na hora da reserva."
+   },
+   "salidasFijas": [
+    "09:00"
+   ],
+   "precioDesde": 230000
+  },
+  {
+   "id": "martial",
+   "img": "/ciudades/ushuaia/img/martial-3.jpg",
+   "titulo": {
+    "ES": "Glaciar Martial a pie",
+    "EN": "Martial Glacier on foot",
+    "PT": "Glaciar Martial a pé"
+   },
+   "tipo": {
+    "ES": "A pie desde la cabaña",
+    "EN": "On foot from your cabin",
+    "PT": "A pé da cabana"
+   },
+   "dur": "3 h",
+   "d": {
+    "ES": "Calle arriba desde la Aldea hasta el hielo, con Ushuaia y el Beagle cada vez más abajo.",
+    "EN": "Up the road from the Aldea to the ice, with Ushuaia and the Beagle falling away below.",
+    "PT": "Rua acima da Aldeia até o gelo, com Ushuaia e o Beagle cada vez mais lá embaixo."
+   },
+   "salida": {
+    "ES": "Desde la puerta de tu cabaña, sin traslado",
+    "EN": "From your cabin door, no transfer needed",
+    "PT": "Da porta da sua cabana, sem traslado"
+   },
+   "incluye": {
+    "ES": [
+     "Ruta libre: sin reserva",
+     "Plan paso a paso y mapa"
+    ],
+    "EN": [
+     "Self-guided: no booking needed",
+     "Step-by-step plan and map"
+    ],
+    "PT": [
+     "Roteiro livre: sem reserva",
+     "Passo a passo e mapa"
+    ]
+   },
+   "llevar": {
+    "ES": [
+     "Calzado de trekking",
+     "Agua y algo dulce",
+     "Campera impermeable",
+     "Bastones si tienes"
+    ],
+    "EN": [
+     "Hiking shoes",
+     "Water and something sweet",
+     "Waterproof jacket",
+     "Poles if you have them"
+    ],
+    "PT": [
+     "Calçado de trilha",
+     "Água e algo doce",
+     "Casaco impermeável",
+     "Bastões se tiver"
+    ]
+   },
+   "paradas": [
+    {
+     "n": {
+      "ES": "Salida desde la Aldea",
+      "EN": "Start at the Aldea",
+      "PT": "Saída da Aldeia"
+     },
+     "s": {
+      "ES": "Desde la puerta de tu cabaña",
+      "EN": "From your cabin door",
+      "PT": "Da porta da sua cabana"
+     },
+     "d": {
+      "ES": "No hace falta auto: el glaciar está calle arriba. Sales del bosque de la Aldea y empiezas a subir por la calle Luis Martial.",
+      "EN": "No car needed: the glacier is just up the road. Leave the Aldea’s forest and start climbing Luis Martial street.",
+      "PT": "Não precisa de carro: o glaciar fica rua acima. Você sai da floresta da Aldeia e começa a subir pela rua Luis Martial."
+     },
+     "tip": {
+      "ES": "Pide en recepción el chocolate caliente para la vuelta: te lo dejan listo en la cabaña.",
+      "EN": "Ask reception for hot chocolate on your return: they leave it ready in your cabin.",
+      "PT": "Peça na recepção o chocolate quente para a volta: deixam pronto na cabana."
+     },
+     "hora": "10:00",
+     "dur": "5 min",
+     "img": "/ciudades/ushuaia/img/martial-1.jpg",
+     "lat": -54.809,
+     "lng": -68.3459,
+     "tramo": "pie",
+     "duracionMin": 5
+    },
+    {
+     "n": {
+      "ES": "Camino con vista a la bahía",
+      "EN": "The road above the bay",
+      "PT": "O caminho com vista para a baía"
+     },
+     "s": {
+      "ES": "La ciudad y el canal a tus pies",
+      "EN": "Town and channel at your feet",
+      "PT": "A cidade e o canal aos seus pés"
+     },
+     "d": {
+      "ES": "En cada curva la vista se abre un poco más: los techos de colores de Ushuaia, la bahía y, al fondo, las islas Navarino y Hoste.",
+      "EN": "Each bend opens the view a little more: Ushuaia’s colourful roofs, the bay and, in the distance, Navarino and Hoste islands.",
+      "PT": "A cada curva a vista se abre um pouco mais: os telhados coloridos de Ushuaia, a baía e, ao fundo, as ilhas Navarino e Hoste."
+     },
+     "tip": {
+      "ES": "Si se te hace largo, sube en remís y baja caminando: la vista es de bajada.",
+      "EN": "If it feels long, take a car up and walk down: the view faces downhill.",
+      "PT": "Se ficar cansativo, suba de táxi e desça a pé: a vista é na descida."
+     },
+     "hora": "10:30",
+     "dur": "10 min",
+     "img": "/ciudades/ushuaia/img/martial-2.jpg",
+     "lat": -54.799,
+     "lng": -68.368,
+     "tramo": "pie",
+     "duracionMin": 50
+    },
+    {
+     "n": {
+      "ES": "Base del Martial",
+      "EN": "Martial base",
+      "PT": "Base do Martial"
+     },
+     "s": {
+      "ES": "Casa de té, refugio y comienzo del sendero",
+      "EN": "Tea house, refuge and trailhead",
+      "PT": "Casa de chá, refúgio e início da trilha"
+     },
+     "d": {
+      "ES": "Al final de la calle hay una casa de té, un refugio y la pista del Club Andino. Desde aquí el sendero sube entre lengas y piedras siguiendo el arroyo.",
+      "EN": "At the end of the road there is a tea house, a refuge and the Club Andino slope. From here the trail climbs through lengas and rocks along the stream.",
+      "PT": "No fim da rua há uma casa de chá, um refúgio e a pista do Club Andino. Daqui a trilha sobe entre lengas e pedras seguindo o riacho."
+     },
+     "tip": {
+      "ES": "Abrígate aquí antes de seguir: arriba el viento baja directo del hielo.",
+      "EN": "Layer up here before going on: higher up the wind comes straight off the ice.",
+      "PT": "Agasalhe-se aqui antes de seguir: lá em cima o vento desce direto do gelo."
+     },
+     "hora": "11:20",
+     "dur": "15 min",
+     "img": "/ciudades/ushuaia/img/martial-3.jpg",
+     "lat": -54.7868,
+     "lng": -68.3995,
+     "tramo": "pie",
+     "duracionMin": 15
+    },
+    {
+     "n": {
+      "ES": "Frente al glaciar",
+      "EN": "Facing the glacier",
+      "PT": "De frente para o glaciar"
+     },
+     "s": {
+      "ES": "El anfiteatro de hielo sobre Ushuaia",
+      "EN": "The ice amphitheatre above Ushuaia",
+      "PT": "O anfiteatro de gelo acima de Ushuaia"
+     },
+     "d": {
+      "ES": "El sendero termina frente al circo del glaciar, a unos mil metros de altura. Detrás tuyo, toda la ciudad y el Beagle como una línea plateada.",
+      "EN": "The trail ends facing the glacier’s cirque, about a thousand metres up. Behind you, the whole town and the Beagle like a silver line.",
+      "PT": "A trilha termina de frente para o circo do glaciar, a uns mil metros de altitude. Atrás de você, a cidade inteira e o Beagle como uma linha prateada."
+     },
+     "tip": {
+      "ES": "No pises el hielo sin guía: caminar sobre el glaciar solo se hace con equipo.",
+      "EN": "Do not step on the ice without a guide: walking on the glacier needs proper gear.",
+      "PT": "Não pise no gelo sem guia: caminhar sobre o glaciar só com equipamento."
+     },
+     "hora": "12:30",
+     "dur": "30 min",
+     "img": "/ciudades/ushuaia/img/martial.jpg",
+     "lat": -54.779,
+     "lng": -68.412,
+     "tramo": "pie",
+     "duracionMin": 70
+    }
+   ],
+   "fotos": [
+    "/ciudades/ushuaia/img/martial-4b.jpg",
+    "/ciudades/ushuaia/img/martial-1.jpg",
+    "/ciudades/ushuaia/img/martial-2.jpg",
+    "/ciudades/ushuaia/img/martial-3.jpg",
+    "/ciudades/ushuaia/img/martial.jpg"
+   ],
+   "duracionMin": 180,
+   "distanciaKm": 5.4,
+   "dificultad": "media",
+   "accesibilidad": {
+    "ES": "La calle hasta la base es asfaltada pero empinada; el sendero al glaciar es de piedra suelta y no apto para silla de ruedas.",
+    "EN": "The road to the base is paved but steep; the glacier trail is loose rock, not suitable for wheelchairs.",
+    "PT": "A rua até a base é asfaltada mas íngreme; a trilha do glaciar é de pedra solta e não é acessível para cadeira de rodas."
+   },
+   "tipoEntorno": "exterior",
+   "puntoEncuentro": {
+    "lat": -54.809,
+    "lng": -68.3459,
+    "foto": "/ciudades/ushuaia/img/martial-1.jpg",
+    "texto": {
+     "ES": "La puerta de tu cabaña.",
+     "EN": "Your cabin door.",
+     "PT": "A porta da sua cabana."
+    }
+   },
+   "noIncluye": {
+    "ES": [
+     "Guía",
+     "Caminata sobre el hielo"
+    ],
+    "EN": [
+     "Guide",
+     "Walking on the ice"
+    ],
+    "PT": [
+     "Guia",
+     "Caminhada sobre o gelo"
+    ]
+   },
+   "cancelacion": {
+    "ES": "Ruta libre: sales cuando quieras.",
+    "EN": "Self-guided: go whenever you like.",
+    "PT": "Roteiro livre: saia quando quiser."
+   },
+   "salidasFijas": [],
+   "precioDesde": null
+  }
+ ],
+ "pasaporte": {
+  "sellos": 3,
+  "premio": {
+   "ES": "Una cerveza fueguina de regalo en tu cabaña",
+   "EN": "A Fuegian craft beer on the house in your cabin",
+   "PT": "Uma cerveja fueguina de presente na sua cabana"
+  }
+ },
+ "creditos": [
+  "Casa del árbol y cabaña nevada: Cabañas Aldea Nevada (aldeanevada.com.ar)",
+  "Faro Les Eclaireurs (portada) e Isla de los Pájaros: Liam Quinn, CC BY-SA 2.0, Wikimedia Commons",
+  "Cartel del Fin del Mundo: Heretiq, CC BY-SA 2.5, Wikimedia Commons",
+  "Lobos marinos y Lago Fagnano: NTNU Vitenskapsmuseet, CC BY 2.0, Wikimedia Commons",
+  "Faro Les Eclaireurs: Ricardo Martins, CC BY 2.0, Wikimedia Commons",
+  "Ushuaia al atardecer: c-greb, CC BY 2.0, Wikimedia Commons",
+  "Bahía Lapataia y Ushuaia desde el Martial: Butterfly voyages (Serge Ouachée), CC BY-SA 3.0, Wikimedia Commons",
+  "Tren del Fin del Mundo: Mark Fischer, CC BY-SA 4.0, Wikimedia Commons",
+  "Cascada La Macarena: Hiroki Ogawa, CC BY 3.0, Wikimedia Commons",
+  "Bahía Ensenada: Zuarin, CC BY 3.0, Wikimedia Commons",
+  "Lago Roca: Ulises Icardi, CC BY-SA 4.0, Wikimedia Commons",
+  "Bahía Lapataia: Sebastian Werner, CC BY 2.0, Wikimedia Commons",
+  "Lago Escondido: Zajenf, CC BY-SA 4.0; Huazihul, CC BY 2.5; Paso Garibaldi: Quéséio, CC BY-SA 3.0, Wikimedia Commons",
+  "Valle de Tierra Mayor: autor sin nombre, CC BY-SA 4.0 (Cerro Castor.jpg), Wikimedia Commons",
+  "Glaciar Martial y Museo del Presidio: Gastón Cuello, CC BY-SA 4.0; sendero al Martial y Laguna Esmeralda: Justraveling.com, CC BY-SA 4.0, Wikimedia Commons",
+  "Avenida San Martín: Voe com Michel, CC BY 4.0, Wikimedia Commons",
+  "Cerro Castor: Butterfly voyages, CC BY-SA 3.0; pingüinos: Liam Quinn, CC BY-SA 2.0, Wikimedia Commons"
+ ]
+}
