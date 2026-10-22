@@ -1,0 +1,1181 @@
+{
+  "slug": "santiago",
+  "nombre": "Santiago de Chile",
+  "intro": {
+    "ES": "Desde la puerta del hotel, el mirador más alto de Sudamérica queda a diez minutos andando y la cordillera asoma al fondo de las avenidas. Con una tarde libre da tiempo a subir al cerro San Cristóbal y bajar al barrio Bellavista. Si te quedas el fin de semana, Valparaíso está a hora y media en bus.",
+    "EN": "From the hotel door, South America's highest viewing deck is a ten-minute walk away and the Andes rise at the end of the avenues. A free afternoon is enough to ride up San Cristóbal hill and come down into the Bellavista neighbourhood. If you stay for the weekend, Valparaíso is an hour and a half away by bus.",
+    "PT": "Da porta do hotel, o mirante mais alto da América do Sul fica a dez minutos a pé e a cordilheira aparece no fim das avenidas. Uma tarde livre dá para subir o morro San Cristóbal e descer até o bairro Bellavista. Se você ficar no fim de semana, Valparaíso está a uma hora e meia de ônibus."
+  },
+  "lugares": [
+    {
+      "id": "sky-costanera",
+      "img": "/ciudades/santiago/img/sky-costanera.jpg",
+      "nombre": "Sky Costanera",
+      "zona": {
+        "ES": "Gran Torre Costanera, Providencia",
+        "EN": "Gran Torre Costanera, Providencia",
+        "PT": "Gran Torre Costanera, Providencia"
+      },
+      "d": {
+        "ES": "El mirador ocupa los pisos 61 y 62 de la Gran Torre Costanera, que con 300 metros es el edificio más alto de Sudamérica. Desde arriba ves la ciudad entera, con la cordillera nevada detrás y el cerro San Cristóbal enfrente. El piso 62 es una terraza abierta.",
+        "EN": "The viewing deck takes up floors 61 and 62 of the Gran Torre Costanera which, at 300 metres, is the tallest building in South America. From the top you see the whole city, with the snowy Andes behind it and San Cristóbal hill opposite. Floor 62 is an open-air terrace.",
+        "PT": "O mirante ocupa os andares 61 e 62 da Gran Torre Costanera, que com 300 metros é o edifício mais alto da América do Sul. Lá de cima se vê a cidade inteira, com a cordilheira nevada atrás e o morro San Cristóbal em frente. O andar 62 é um terraço aberto."
+      },
+      "cuando": {
+        "ES": "Al atardecer, con el cielo despejado",
+        "EN": "At sunset, on a clear day",
+        "PT": "No fim da tarde, com o céu limpo"
+      },
+      "min": 10,
+      "modo": "pie",
+      "lat": -33.41672,
+      "lng": -70.60683
+    },
+    {
+      "id": "san-cristobal",
+      "img": "/ciudades/santiago/img/san-cristobal.jpg",
+      "nombre": "Cerro San Cristóbal",
+      "zona": {
+        "ES": "Teleférico desde Pedro de Valdivia Norte",
+        "EN": "Cable car from Pedro de Valdivia Norte",
+        "PT": "Teleférico a partir de Pedro de Valdivia Norte"
+      },
+      "d": {
+        "ES": "El cerro grande de Santiago forma parte del Parque Metropolitano. Se sube en teleférico desde la estación Oasis y arriba espera la Virgen blanca del santuario, con toda la ciudad a los pies. Para bajar está el funicular de 1925, que te deja en el barrio Bellavista.",
+        "EN": "Santiago's big hill is part of the Parque Metropolitano. You ride up by cable car from Oasis station, and at the top the white Virgin of the sanctuary looks out over the whole city. To come down there is the 1925 funicular, which drops you in the Bellavista neighbourhood.",
+        "PT": "O grande morro de Santiago faz parte do Parque Metropolitano. Sobe-se de teleférico a partir da estação Oasis e lá em cima está a Virgem branca do santuário, com a cidade inteira aos seus pés. Para descer há o funicular de 1925, que deixa você no bairro Bellavista."
+      },
+      "cuando": {
+        "ES": "A media tarde, antes de que cierren el teleférico y el funicular",
+        "EN": "Mid-afternoon, before the cable car and funicular close",
+        "PT": "No meio da tarde, antes de o teleférico e o funicular fecharem"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": -33.4253,
+      "lng": -70.63316
+    },
+    {
+      "id": "lastarria",
+      "img": "/ciudades/santiago/img/santa-lucia.jpg",
+      "nombre": "Barrio Lastarria y cerro Santa Lucía",
+      "zona": {
+        "ES": "Centro, metro Universidad Católica (línea 1)",
+        "EN": "City centre, Universidad Católica metro (line 1)",
+        "PT": "Centro, metrô Universidad Católica (linha 1)"
+      },
+      "d": {
+        "ES": "Calles cortas con casas antiguas, librerías, cafés y bares, pegadas al cerro Santa Lucía. El cerro lo convirtió en paseo Benjamín Vicuña Mackenna entre 1872 y 1874, y hoy se sube por escaleras y terrazas con fuentes hasta un mirador sobre el centro.",
+        "EN": "Short streets of old houses, bookshops, cafés and bars, right next to Santa Lucía hill. Benjamín Vicuña Mackenna turned the hill into a promenade between 1872 and 1874, and today you climb stairs and terraces with fountains up to a lookout over the centre.",
+        "PT": "Ruas curtas com casas antigas, livrarias, cafés e bares, coladas ao morro Santa Lucía. Benjamín Vicuña Mackenna transformou o morro em passeio entre 1872 e 1874, e hoje se sobe por escadas e terraços com fontes até um mirante sobre o centro."
+      },
+      "cuando": {
+        "ES": "Al caer la tarde, para tomar algo o cenar",
+        "EN": "Early evening, for a drink or dinner",
+        "PT": "No fim da tarde, para beber algo ou jantar"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": -33.43797,
+      "lng": -70.64102
+    },
+    {
+      "id": "la-moneda",
+      "img": "/ciudades/santiago/img/moneda.jpg",
+      "nombre": "Palacio de La Moneda",
+      "zona": {
+        "ES": "Centro histórico, metro La Moneda (línea 1)",
+        "EN": "Historic centre, La Moneda metro (line 1)",
+        "PT": "Centro histórico, metrô La Moneda (linha 1)"
+      },
+      "d": {
+        "ES": "La sede del Gobierno de Chile se levantó para fabricar monedas, y de ahí le viene el nombre. La diseñó el arquitecto italiano Joaquín Toesca y se inauguró en 1805. Por el lado de la Alameda, bajo la plaza de la Ciudadanía, está el Centro Cultural La Moneda.",
+        "EN": "The seat of Chile's government was built to mint coins, which is where the name comes from. The Italian architect Joaquín Toesca designed it and it opened in 1805. On the Alameda side, beneath the Plaza de la Ciudadanía, is the Centro Cultural La Moneda.",
+        "PT": "A sede do Governo do Chile foi construída para fabricar moedas, daí o nome. O arquiteto italiano Joaquín Toesca a projetou e ela foi inaugurada em 1805. Do lado da Alameda, sob a praça da Ciudadanía, fica o Centro Cultural La Moneda."
+      },
+      "cuando": {
+        "ES": "Por la mañana, al empezar el día en el centro",
+        "EN": "In the morning, to start your day in the centre",
+        "PT": "De manhã, para começar o dia no centro"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": -33.44282,
+      "lng": -70.65421
+    },
+    {
+      "id": "mercado-central",
+      "img": "/ciudades/santiago/img/mercado.jpg",
+      "nombre": "Mercado Central",
+      "zona": {
+        "ES": "Centro, junto al río Mapocho",
+        "EN": "City centre, by the Mapocho river",
+        "PT": "Centro, junto ao rio Mapocho"
+      },
+      "d": {
+        "ES": "Un mercado de 1872 con la estructura de hierro fundida en Glasgow, lleno de pescaderías y restaurantes de mariscos. Es el sitio para comer una paila marina o un pescado frito a mediodía, entre el ruido de los puestos.",
+        "EN": "An 1872 market with an iron frame cast in Glasgow, full of fishmongers and seafood restaurants. It is the place for a paila marina seafood stew or fried fish at lunchtime, amid the bustle of the stalls.",
+        "PT": "Um mercado de 1872 com estrutura de ferro fundida em Glasgow, cheio de peixarias e restaurantes de frutos do mar. É o lugar para comer uma paila marina ou um peixe frito no almoço, no meio do vaivém das bancas."
+      },
+      "cuando": {
+        "ES": "A mediodía, para comer",
+        "EN": "At midday, for lunch",
+        "PT": "Ao meio-dia, para almoçar"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": -33.43378,
+      "lng": -70.65104
+    },
+    {
+      "id": "barrio-italia",
+      "img": "/ciudades/santiago/img/italia.jpg",
+      "nombre": "Barrio Italia",
+      "zona": {
+        "ES": "Providencia y Ñuñoa, en torno a la avenida Italia",
+        "EN": "Providencia and Ñuñoa, around Avenida Italia",
+        "PT": "Providencia e Ñuñoa, em torno da avenida Italia"
+      },
+      "d": {
+        "ES": "Casas bajas de principios del siglo XX convertidas en tiendas de diseño, talleres de restauradores de muebles, cafés y restaurantes de cocinas de medio mundo. Se recorre andando por la avenida Italia y las galerías que se abren a los lados.",
+        "EN": "Low early-20th-century houses turned into design shops, furniture restorers' workshops, cafés and restaurants serving food from half the world. You explore it on foot along Avenida Italia and the arcades that open off it.",
+        "PT": "Casas baixas do início do século XX transformadas em lojas de design, oficinas de restauradores de móveis, cafés e restaurantes de cozinhas do mundo todo. Percorre-se a pé pela avenida Italia e pelas galerias que se abrem dos lados."
+      },
+      "cuando": {
+        "ES": "Por la tarde, para pasear y quedarte a cenar",
+        "EN": "In the afternoon, for a stroll and dinner",
+        "PT": "À tarde, para passear e ficar para jantar"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": -33.44323,
+      "lng": -70.62599
+    },
+    {
+      "id": "los-dominicos",
+      "img": "/ciudades/santiago/img/dominicos.jpg",
+      "nombre": "Pueblito Los Dominicos",
+      "zona": {
+        "ES": "Las Condes, al final de la línea 1 del metro",
+        "EN": "Las Condes, at the end of metro line 1",
+        "PT": "Las Condes, no fim da linha 1 do metrô"
+      },
+      "d": {
+        "ES": "Un pueblo de artesanos con casas encaladas y tejados de teja, junto a la iglesia de Los Dominicos, que es monumento nacional. En los talleres muchos trabajan a la vista, y es buen sitio para encontrar un regalo hecho en Chile antes de volver a casa.",
+        "EN": "A craft village of whitewashed houses with tiled roofs, next to the Los Dominicos church, a national monument. Many artisans work in full view in their workshops, and it is a good place to find a Chilean-made gift before you fly home.",
+        "PT": "Um vilarejo de artesãos com casas caiadas e telhados de telha, junto à igreja de Los Dominicos, que é monumento nacional. Nas oficinas muitos trabalham à vista, e é um bom lugar para encontrar um presente feito no Chile antes de voltar para casa."
+      },
+      "cuando": {
+        "ES": "La tarde antes de volver, para los regalos",
+        "EN": "The afternoon before you leave, for gifts",
+        "PT": "Na tarde antes de voltar, para os presentes"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": -33.40772,
+      "lng": -70.54119
+    },
+    {
+      "id": "parque-bicentenario",
+      "img": "/ciudades/santiago/img/bicentenario.jpg",
+      "nombre": "Parque Bicentenario",
+      "zona": {
+        "ES": "Vitacura, junto al río Mapocho",
+        "EN": "Vitacura, by the Mapocho river",
+        "PT": "Vitacura, junto ao rio Mapocho"
+      },
+      "d": {
+        "ES": "Treinta hectáreas de césped y árboles a orillas del Mapocho, con dos lagunas donde nadan cisnes de cuello negro y las torres de oficinas al fondo. Un paseo bajo plátanos rodea todo el parque, buen sitio para correr antes de las reuniones.",
+        "EN": "Thirty hectares of lawns and trees on the banks of the Mapocho, with two lagoons where black-necked swans swim and the office towers rise behind. A plane-tree walk circles the whole park, a good place for a run before your meetings.",
+        "PT": "Trinta hectares de gramado e árvores à beira do Mapocho, com duas lagoas onde nadam cisnes-de-pescoço-preto e as torres de escritórios ao fundo. Um passeio sob plátanos contorna todo o parque, bom lugar para correr antes das reuniões."
+      },
+      "cuando": {
+        "ES": "A primera hora, para correr o caminar",
+        "EN": "First thing in the morning, for a run or a walk",
+        "PT": "Logo cedo, para correr ou caminhar"
+      },
+      "min": 25,
+      "modo": "pie",
+      "lat": -33.40058,
+      "lng": -70.60248
+    }
+  ],
+  "rutas": [
+    {
+      "id": "miradores",
+      "expId": "ex1",
+      "img": "/ciudades/santiago/img/miradores.jpg",
+      "titulo": {
+        "ES": "Santiago desde arriba al caer la tarde",
+        "EN": "Santiago from above as the day ends",
+        "PT": "Santiago do alto no fim da tarde"
+      },
+      "tipo": {
+        "ES": "Miradores",
+        "EN": "Viewpoints",
+        "PT": "Mirantes"
+      },
+      "dur": "4 h",
+      "d": {
+        "ES": "Para la tarde que acabas pronto. Subes al San Cristóbal en teleférico, bajas en el funicular de 1925 hasta Bellavista y terminas en Sky Costanera viendo encenderse la ciudad, a diez minutos andando del hotel.",
+        "EN": "For the afternoon you finish early. You ride the cable car up San Cristóbal, come down on the 1925 funicular to Bellavista and finish at Sky Costanera watching the city light up, a ten-minute walk from the hotel.",
+        "PT": "Para a tarde em que você termina cedo. Você sobe o San Cristóbal de teleférico, desce no funicular de 1925 até Bellavista e termina no Sky Costanera vendo a cidade acender, a dez minutos a pé do hotel."
+      },
+      "salida": {
+        "ES": "En taxi desde el hotel hasta la estación Oasis del teleférico, unos 10 minutos. Sal hacia las 16:00, porque el teleférico y el funicular cierran mucho antes que el mirador",
+        "EN": "By taxi from the hotel to the Oasis cable car station, about 10 minutes. Leave around 16:00, as the cable car and funicular close long before the viewing deck",
+        "PT": "De táxi do hotel até a estação Oasis do teleférico, uns 10 minutos. Saia por volta das 16:00, porque o teleférico e o funicular fecham bem antes do mirante"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "PT": [
+          "Roteiro livre, sem reserva",
+          "Plano do dia e mapa"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Una chaqueta, que arriba corre aire y al anochecer refresca",
+          "Calzado cómodo para las cuestas y escaleras de la cumbre",
+          "Gafas de sol para la subida",
+          "Batería en el móvil para las fotos de la noche"
+        ],
+        "EN": [
+          "A jacket, as it is breezy at the top and cools down at dusk",
+          "Comfortable shoes for the slopes and steps at the summit",
+          "Sunglasses for the ride up",
+          "A charged phone for the night photos"
+        ],
+        "PT": [
+          "Um casaco, porque lá em cima venta e à noite esfria",
+          "Calçado confortável para as ladeiras e escadas do topo",
+          "Óculos de sol para a subida",
+          "Bateria no celular para as fotos da noite"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Teleférico del San Cristóbal",
+            "EN": "San Cristóbal cable car",
+            "PT": "Teleférico do San Cristóbal"
+          },
+          "s": {
+            "ES": "De la estación Oasis a la cumbre, sobre el bosque",
+            "EN": "From Oasis station to the summit, over the woods",
+            "PT": "Da estação Oasis ao topo, sobre o bosque"
+          },
+          "d": {
+            "ES": "Las cabinas salen de la estación Oasis, paran en Tupahue y siguen hasta la cumbre. Caben seis personas en cada una, y según subes van apareciendo las torres de Las Condes y la cordillera detrás.",
+            "EN": "The cabins leave Oasis station, stop at Tupahue and carry on to the summit. Each one takes six people, and as you climb the towers of Las Condes and the Andes behind them come into view.",
+            "PT": "As cabines saem da estação Oasis, param em Tupahue e seguem até o topo. Cabem seis pessoas em cada uma, e conforme você sobe aparecem as torres de Las Condes e a cordilheira atrás."
+          },
+          "tip": {
+            "ES": "Siéntate de espaldas a la cumbre, mirando a la cordillera. Los lunes el teleférico suele estar cerrado, así que confírmalo antes en recepción.",
+            "EN": "Sit with your back to the summit, facing the Andes. The cable car is usually closed on Mondays, so check with reception first.",
+            "PT": "Sente-se de costas para o topo, olhando para a cordilheira. Às segundas o teleférico costuma fechar, então confirme antes na recepção."
+          },
+          "hora": "16:10",
+          "dur": "25 min",
+          "img": "/ciudades/santiago/img/teleferico.jpg",
+          "lat": -33.41455,
+          "lng": -70.61553,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Cumbre y Virgen del San Cristóbal",
+            "EN": "San Cristóbal summit and Virgin",
+            "PT": "Topo e Virgem do San Cristóbal"
+          },
+          "s": {
+            "ES": "El santuario de 1908, con Santiago a tus pies",
+            "EN": "The 1908 sanctuary, with Santiago at your feet",
+            "PT": "O santuário de 1908, com Santiago aos seus pés"
+          },
+          "d": {
+            "ES": "Arriba está el santuario de la Inmaculada Concepción, inaugurado en 1908, con la gran Virgen blanca. Desde la explanada se ve el centro, las torres de oficinas de Sanhattan y, detrás, los Andes.",
+            "EN": "At the top is the sanctuary of the Immaculate Conception, opened in 1908, with its great white Virgin. From the esplanade you see the city centre, the Sanhattan office towers and the Andes behind.",
+            "PT": "No alto fica o santuário da Imaculada Conceição, inaugurado em 1908, com a grande Virgem branca. Da esplanada se vê o centro, as torres de escritórios de Sanhattan e, atrás, os Andes."
+          },
+          "tip": {
+            "ES": "Hasta los pies de la Virgen hay escaleras. Sube con calma y lleva agua en verano, que arriba pega el sol.",
+            "EN": "There are steps up to the foot of the Virgin. Take them slowly and carry water in summer, as the sun is strong up there.",
+            "PT": "Até os pés da Virgem há escadas. Suba com calma e leve água no verão, porque lá em cima o sol é forte."
+          },
+          "hora": "16:40",
+          "dur": "45 min",
+          "img": "/ciudades/santiago/img/san-cristobal.jpg",
+          "lat": -33.4253,
+          "lng": -70.63316,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Funicular y barrio Bellavista",
+            "EN": "Funicular and Bellavista",
+            "PT": "Funicular e bairro Bellavista"
+          },
+          "s": {
+            "ES": "Bajada en el funicular de 1925 hasta Pío Nono",
+            "EN": "Down on the 1925 funicular to Pío Nono",
+            "PT": "Descida no funicular de 1925 até Pío Nono"
+          },
+          "d": {
+            "ES": "El funicular baja 485 metros por la ladera y te deja en la estación de Pío Nono, un edificio de piedra con aire de castillo. Abajo empieza Bellavista, con muros pintados y bares. A cinco minutos andando está La Chascona, la casa de Pablo Neruda en Santiago.",
+            "EN": "The funicular runs 485 metres down the slope and leaves you at Pío Nono station, a castle-like stone building. Below it Bellavista begins, with painted walls and bars. Five minutes' walk away is La Chascona, Pablo Neruda's house in Santiago.",
+            "PT": "O funicular desce 485 metros pela encosta e deixa você na estação de Pío Nono, um prédio de pedra com ar de castelo. Embaixo começa Bellavista, com muros pintados e bares. A cinco minutos a pé fica La Chascona, a casa de Pablo Neruda em Santiago."
+          },
+          "tip": {
+            "ES": "Baja con margen, porque el funicular cierra a última hora de la tarde. La Chascona, si quieres verla por dentro, cierra los lunes.",
+            "EN": "Come down with time to spare, as the funicular closes in the late afternoon. If you want to see inside La Chascona, it is closed on Mondays.",
+            "PT": "Desça com folga, porque o funicular fecha no fim da tarde. Se quiser ver La Chascona por dentro, ela fecha às segundas."
+          },
+          "hora": "17:30",
+          "dur": "1 h",
+          "img": "/ciudades/santiago/img/funicular.jpg",
+          "lat": -33.43007,
+          "lng": -70.63587,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Sky Costanera al anochecer",
+            "EN": "Sky Costanera at dusk",
+            "PT": "Sky Costanera ao anoitecer"
+          },
+          "s": {
+            "ES": "Pisos 61 y 62 del edificio más alto de Sudamérica",
+            "EN": "Floors 61 and 62 of South America's tallest building",
+            "PT": "Andares 61 e 62 do edifício mais alto da América do Sul"
+          },
+          "d": {
+            "ES": "De vuelta junto al hotel, el ascensor te sube al mirador de la Gran Torre Costanera. A esta hora se encienden las luces de la ciudad y el San Cristóbal, donde estabas hace un rato, queda justo enfrente.",
+            "EN": "Back near the hotel, the lift takes you up to the Gran Torre Costanera viewing deck. At this hour the city lights come on, and San Cristóbal, where you stood a little earlier, is right opposite.",
+            "PT": "De volta perto do hotel, o elevador leva você ao mirante da Gran Torre Costanera. A essa hora as luzes da cidade se acendem e o San Cristóbal, onde você estava há pouco, fica bem em frente."
+          },
+          "tip": {
+            "ES": "La última subida suele ser hacia las 21:00. Desde aquí vuelves al hotel andando en diez minutos.",
+            "EN": "The last ride up is usually around 21:00. From here it is a ten-minute walk back to the hotel.",
+            "PT": "A última subida costuma ser por volta das 21:00. Daqui você volta ao hotel a pé em dez minutos."
+          },
+          "hora": "18:45",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/santiago/img/sky-costanera-1.jpg",
+          "lat": -33.41672,
+          "lng": -70.60683,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 75
+        }
+      ],
+      "fotos": [
+        "/ciudades/santiago/img/miradores.jpg",
+        "/ciudades/santiago/img/teleferico.jpg",
+        "/ciudades/santiago/img/san-cristobal.jpg",
+        "/ciudades/santiago/img/funicular-1.jpg",
+        "/ciudades/santiago/img/funicular.jpg",
+        "/ciudades/santiago/img/sky-costanera-1.jpg"
+      ],
+      "duracionMin": 240,
+      "distanciaKm": 12,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Las subidas largas se hacen en cabina o en funicular. En la cumbre quedan cuestas y escaleras hasta la Virgen. El funicular se restauró entre 2020 y 2022 con mejoras de accesibilidad; si vas en silla de ruedas, pregunta en recepción antes de salir.",
+        "EN": "The long climbs are done by cable car or funicular. At the summit there are still slopes and steps up to the Virgin. The funicular was restored between 2020 and 2022 with accessibility improvements; if you use a wheelchair, ask at reception before setting off.",
+        "PT": "As subidas longas se fazem de teleférico ou de funicular. No topo ainda há ladeiras e escadas até a Virgem. O funicular foi restaurado entre 2020 e 2022 com melhorias de acessibilidade; se você usa cadeira de rodas, pergunte na recepção antes de sair."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": -33.41455,
+        "lng": -70.61553,
+        "foto": "/ciudades/santiago/img/oasis.jpg",
+        "texto": {
+          "ES": "Estación Oasis del teleférico, en la avenida El Cerro (Pedro de Valdivia Norte). Unos 10 minutos en taxi desde el hotel.",
+          "EN": "Oasis cable car station, on Avenida El Cerro (Pedro de Valdivia Norte). About 10 minutes by taxi from the hotel.",
+          "PT": "Estação Oasis do teleférico, na avenida El Cerro (Pedro de Valdivia Norte). Uns 10 minutos de táxi do hotel."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxis",
+          "Billetes del teleférico y del funicular",
+          "Entrada a Sky Costanera"
+        ],
+        "EN": [
+          "Taxis",
+          "Cable car and funicular tickets",
+          "Sky Costanera admission"
+        ],
+        "PT": [
+          "Táxis",
+          "Bilhetes do teleférico e do funicular",
+          "Entrada do Sky Costanera"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Si sale un día nublado, deja Sky Costanera para otra tarde con el cielo limpio.",
+        "EN": "Self-guided, so there is nothing to book or cancel. If the day turns cloudy, save Sky Costanera for another clear evening.",
+        "PT": "Roteiro livre, sem reserva nem cancelamento. Se o dia ficar nublado, deixe o Sky Costanera para outra tarde de céu limpo."
+      },
+      "salidasFijas": [],
+      "precioDesde": 23000
+    },
+    {
+      "id": "centro",
+      "img": "/ciudades/santiago/img/plaza-armas.jpg",
+      "titulo": {
+        "ES": "El centro histórico en medio día",
+        "EN": "The historic centre in half a day",
+        "PT": "O centro histórico em meio dia"
+      },
+      "tipo": {
+        "ES": "Historia",
+        "EN": "History",
+        "PT": "História"
+      },
+      "dur": "4 h 30 min",
+      "d": {
+        "ES": "Una mañana para el Santiago de siempre. Llegas en metro a La Moneda, ves arte de toda América en el Museo Precolombino, cruzas la Plaza de Armas y comes mariscos en el Mercado Central, todo a pie y en algo más de un kilómetro.",
+        "EN": "A morning for old Santiago. You take the metro to La Moneda, see art from across the Americas at the Pre-Columbian Museum, cross the Plaza de Armas and have seafood for lunch at the Mercado Central, all on foot and in just over a kilometre.",
+        "PT": "Uma manhã para a Santiago de sempre. Você chega de metrô a La Moneda, vê arte de toda a América no Museu Pré-Colombiano, atravessa a Plaza de Armas e almoça frutos do mar no Mercado Central, tudo a pé e em pouco mais de um quilômetro."
+      },
+      "salida": {
+        "ES": "A pie hasta el metro Tobalaba, unos 5 minutos, y línea 1 directa hasta La Moneda, sin cambios. En taxi son 20 o 25 minutos según el tráfico. Sal hacia las 09:30",
+        "EN": "Walk to Tobalaba metro, about 5 minutes, and take line 1 straight to La Moneda, no changes. By taxi it takes 20 to 25 minutes depending on traffic. Leave around 09:30",
+        "PT": "A pé até o metrô Tobalaba, uns 5 minutos, e linha 1 direto até La Moneda, sem baldeação. De táxi são 20 a 25 minutos, conforme o trânsito. Saia por volta das 09:30"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "PT": [
+          "Roteiro livre, sem reserva",
+          "Plano do dia e mapa"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo para caminar por el centro",
+          "Una tarjeta bip! para el metro, que venden en las taquillas de la estación",
+          "Algo de efectivo para el mercado",
+          "El móvil y la cartera bien guardados en las calles con más gente"
+        ],
+        "EN": [
+          "Comfortable shoes for walking around the centre",
+          "A bip! card for the metro, sold at the station ticket offices",
+          "Some cash for the market",
+          "Your phone and wallet kept safe in the busiest streets"
+        ],
+        "PT": [
+          "Calçado confortável para caminhar pelo centro",
+          "Um cartão bip! para o metrô, vendido nas bilheterias da estação",
+          "Um pouco de dinheiro em espécie para o mercado",
+          "Celular e carteira bem guardados nas ruas mais movimentadas"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Palacio de La Moneda",
+            "EN": "La Moneda Palace",
+            "PT": "Palácio de La Moneda"
+          },
+          "s": {
+            "ES": "La casa de la moneda que acabó siendo palacio de gobierno",
+            "EN": "The mint that became the seat of government",
+            "PT": "A casa da moeda que virou palácio do governo"
+          },
+          "d": {
+            "ES": "Joaquín Toesca lo diseñó para acuñar monedas y se inauguró en 1805. A mediados del siglo XIX pasó a ser la sede del Gobierno. Desde la plaza de la Constitución tienes delante la fachada principal, blanca y simétrica.",
+            "EN": "Joaquín Toesca designed it to mint coins and it opened in 1805. In the mid-19th century it became the seat of government. From the Plaza de la Constitución you face the main façade, white and symmetrical.",
+            "PT": "Joaquín Toesca o projetou para cunhar moedas e ele foi inaugurado em 1805. Em meados do século XIX passou a ser a sede do Governo. Da praça da Constitución você tem à frente a fachada principal, branca e simétrica."
+          },
+          "tip": {
+            "ES": "Fíjate en las rejas de las ventanas. Toesca las dibujó una a una y las hizo así de sólidas porque dentro se guardaba el dinero del reino.",
+            "EN": "Look at the window grilles. Toesca drew each one himself and made them that solid because the kingdom's money was kept inside.",
+            "PT": "Repare nas grades das janelas. Toesca as desenhou uma a uma e as fez tão sólidas porque ali dentro se guardava o dinheiro do reino."
+          },
+          "hora": "10:00",
+          "dur": "30 min",
+          "img": "/ciudades/santiago/img/moneda.jpg",
+          "lat": -33.4419,
+          "lng": -70.65405,
+          "tramo": "coche",
+          "tramoDuracionMin": 25,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Museo Chileno de Arte Precolombino",
+            "EN": "Chilean Museum of Pre-Columbian Art",
+            "PT": "Museu Chileno de Arte Pré-Colombiana"
+          },
+          "s": {
+            "ES": "Arte de toda América antes de Colón, en la antigua Real Aduana",
+            "EN": "Art from across the Americas before Columbus, in the old Royal Customs House",
+            "PT": "Arte de toda a América antes de Colombo, na antiga Real Alfândega"
+          },
+          "d": {
+            "ES": "Ocupa el edificio de la antigua Real Aduana, en la esquina de Bandera y Compañía. Hay cerámica, piezas mayas y aztecas, textiles andinos de más de 3.000 años y las grandes figuras mapuche talladas en madera.",
+            "EN": "It fills the old Royal Customs House, on the corner of Bandera and Compañía. There is pottery, Maya and Aztec pieces, Andean textiles more than 3,000 years old and the tall Mapuche figures carved in wood.",
+            "PT": "Ocupa o prédio da antiga Real Alfândega, na esquina da Bandera com a Compañía. Há cerâmica, peças maias e astecas, tecidos andinos com mais de 3.000 anos e as grandes figuras mapuche esculpidas em madeira."
+          },
+          "tip": {
+            "ES": "Abre de martes a domingo. Si vas un lunes, cambia el orden de la ruta y deja el museo para otro día.",
+            "EN": "It opens Tuesday to Sunday. If you go on a Monday, change the order of the route and leave the museum for another day.",
+            "PT": "Abre de terça a domingo. Se for numa segunda, mude a ordem do roteiro e deixe o museu para outro dia."
+          },
+          "hora": "10:40",
+          "dur": "1 h 10 min",
+          "img": "/ciudades/santiago/img/precolombino.jpg",
+          "lat": -33.43903,
+          "lng": -70.6522,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 70
+        },
+        {
+          "n": {
+            "ES": "Plaza de Armas y Catedral",
+            "EN": "Plaza de Armas and Cathedral",
+            "PT": "Plaza de Armas e Catedral"
+          },
+          "s": {
+            "ES": "El centro de la ciudad desde 1541",
+            "EN": "The heart of the city since 1541",
+            "PT": "O centro da cidade desde 1541"
+          },
+          "d": {
+            "ES": "Pedro de Valdivia fundó Santiago en 1541 y las calles se trazaron en damero alrededor de esta plaza. A un lado está la Catedral Metropolitana y en los otros, el Correo Central, el Museo Histórico Nacional y pintores que venden sus cuadros bajo las palmeras.",
+            "EN": "Pedro de Valdivia founded Santiago in 1541 and the streets were laid out in a grid around this square. On one side stands the Metropolitan Cathedral, and on the others the Central Post Office, the National History Museum and painters selling their work under the palms.",
+            "PT": "Pedro de Valdivia fundou Santiago em 1541 e as ruas foram traçadas em xadrez ao redor desta praça. De um lado fica a Catedral Metropolitana e dos outros, o Correio Central, o Museu Histórico Nacional e pintores que vendem seus quadros sob as palmeiras."
+          },
+          "tip": {
+            "ES": "Entra en la Catedral aunque sea un momento. En su obra trabajó Joaquín Toesca, el mismo arquitecto de La Moneda.",
+            "EN": "Step inside the Cathedral, even briefly. Joaquín Toesca, the architect of La Moneda, worked on it too.",
+            "PT": "Entre na Catedral, nem que seja por um instante. Joaquín Toesca, o mesmo arquiteto de La Moneda, trabalhou na obra."
+          },
+          "hora": "11:55",
+          "dur": "35 min",
+          "img": "/ciudades/santiago/img/plaza-armas.jpg",
+          "lat": -33.43776,
+          "lng": -70.65051,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 35
+        },
+        {
+          "n": {
+            "ES": "Mercado Central",
+            "EN": "Mercado Central",
+            "PT": "Mercado Central"
+          },
+          "s": {
+            "ES": "Mariscos bajo una estructura de hierro de 1872",
+            "EN": "Seafood under an 1872 iron roof",
+            "PT": "Frutos do mar sob uma estrutura de ferro de 1872"
+          },
+          "d": {
+            "ES": "La estructura de hierro se fundió en Glasgow y el mercado abrió en 1872. Dentro hay pescaderías y restaurantes de mariscos. Pide una paila marina, el caldo de pescado y mariscos que llega hirviendo en un cuenco de barro.",
+            "EN": "The iron frame was cast in Glasgow and the market opened in 1872. Inside there are fishmongers and seafood restaurants. Order a paila marina, the fish and seafood broth that arrives bubbling in a clay bowl.",
+            "PT": "A estrutura de ferro foi fundida em Glasgow e o mercado abriu em 1872. Lá dentro há peixarias e restaurantes de frutos do mar. Peça uma paila marina, o caldo de peixe e frutos do mar que chega fervendo numa tigela de barro."
+          },
+          "tip": {
+            "ES": "En los pasillos los camareros te invitarán a sentarte. Mira la carta y los precios antes de elegir mesa.",
+            "EN": "In the aisles, waiters will invite you to sit down. Check the menu and prices before choosing a table.",
+            "PT": "Nos corredores os garçons vão convidar você a sentar. Olhe o cardápio e os preços antes de escolher a mesa."
+          },
+          "hora": "12:40",
+          "dur": "1 h 20 min",
+          "img": "/ciudades/santiago/img/mercado-1.jpg",
+          "lat": -33.43378,
+          "lng": -70.65104,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 80
+        }
+      ],
+      "fotos": [
+        "/ciudades/santiago/img/plaza-armas.jpg",
+        "/ciudades/santiago/img/moneda.jpg",
+        "/ciudades/santiago/img/precolombino.jpg",
+        "/ciudades/santiago/img/catedral.jpg",
+        "/ciudades/santiago/img/mercado-1.jpg",
+        "/ciudades/santiago/img/mercado.jpg"
+      ],
+      "duracionMin": 270,
+      "distanciaKm": 15,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Todo el recorrido es llano, por calles y plazas peatonales del centro. El Mercado Central tiene pasillos estrechos y a mediodía suele estar lleno.",
+        "EN": "The whole route is flat, along the centre's pedestrian streets and squares. The Mercado Central has narrow aisles and is usually crowded at midday.",
+        "PT": "Todo o percurso é plano, por ruas e praças de pedestres do centro. O Mercado Central tem corredores estreitos e ao meio-dia costuma estar cheio."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": -33.41829,
+        "lng": -70.60165,
+        "foto": "/ciudades/santiago/img/tobalaba.jpg",
+        "texto": {
+          "ES": "Estación Tobalaba del metro, en la avenida Apoquindo, a unos 5 minutos andando del hotel. Coge la línea 1 (roja) hacia San Pablo y baja en La Moneda.",
+          "EN": "Tobalaba metro station, on Avenida Apoquindo, about a 5-minute walk from the hotel. Take line 1 (red) towards San Pablo and get off at La Moneda.",
+          "PT": "Estação Tobalaba do metrô, na avenida Apoquindo, a uns 5 minutos a pé do hotel. Pegue a linha 1 (vermelha) sentido San Pablo e desça em La Moneda."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Metro o taxi",
+          "Entrada al Museo Precolombino",
+          "Comida en el Mercado Central"
+        ],
+        "EN": [
+          "Metro or taxi",
+          "Pre-Columbian Museum admission",
+          "Lunch at the Mercado Central"
+        ],
+        "PT": [
+          "Metrô ou táxi",
+          "Entrada do Museu Pré-Colombiano",
+          "Almoço no Mercado Central"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación.",
+        "EN": "Self-guided, so there is nothing to book or cancel.",
+        "PT": "Roteiro livre, sem reserva nem cancelamento."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    },
+    {
+      "id": "vino",
+      "expId": "ex3",
+      "img": "/ciudades/santiago/img/vino.jpg",
+      "titulo": {
+        "ES": "Tarde de vino en Pirque",
+        "EN": "Wine afternoon in Pirque",
+        "PT": "Tarde de vinho em Pirque"
+      },
+      "tipo": {
+        "ES": "Vino",
+        "EN": "Wine",
+        "PT": "Vinho"
+      },
+      "dur": "2 h 50 min",
+      "d": {
+        "ES": "A una hora del hotel, en el Alto Maipo, está la viña que Melchor Concha y Toro fundó en 1883. La visita guiada empieza en el parque de su casa, pasa por un viñedo de muestra y baja a la bodega del Casillero del Diablo antes de la cata.",
+        "EN": "An hour from the hotel, in the Alto Maipo, is the winery Melchor Concha y Toro founded in 1883. The guided visit starts in the park around his house, passes a sample vineyard and goes down into the Casillero del Diablo cellar before the tasting.",
+        "PT": "A uma hora do hotel, no Alto Maipo, fica a vinícola que Melchor Concha y Toro fundou em 1883. A visita guiada começa no parque da casa dele, passa por um vinhedo de amostra e desce à adega do Casillero del Diablo antes da degustação."
+      },
+      "salida": {
+        "ES": "En taxi o coche con conductor desde el hotel hasta la viña Concha y Toro, en Pirque, unos 50 minutos según el tráfico. Reserva antes la visita guiada en la web de la viña y sal del hotel una hora antes de la hora que te den",
+        "EN": "By taxi or car with driver from the hotel to the Concha y Toro winery in Pirque, about 50 minutes depending on traffic. Book the guided visit on the winery's website first and leave the hotel an hour before your slot",
+        "PT": "De táxi ou carro com motorista do hotel até a vinícola Concha y Toro, em Pirque, uns 50 minutos conforme o trânsito. Reserve antes a visita guiada no site da vinícola e saia do hotel uma hora antes do horário marcado"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva con el hotel",
+          "Plan de la tarde y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking with the hotel",
+          "Afternoon plan and map"
+        ],
+        "PT": [
+          "Roteiro livre, sem reserva com o hotel",
+          "Plano da tarde e mapa"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "La reserva de la visita en el móvil",
+          "Una chaqueta fina, que en la bodega hace fresco",
+          "Calzado cómodo para el parque y el viñedo",
+          "Gafas de sol y gorra si vas en verano"
+        ],
+        "EN": [
+          "Your visit booking on your phone",
+          "A light jacket, as the cellar is cool",
+          "Comfortable shoes for the park and vineyard",
+          "Sunglasses and a cap if you go in summer"
+        ],
+        "PT": [
+          "A reserva da visita no celular",
+          "Um casaco leve, porque na adega faz frio",
+          "Calçado confortável para o parque e o vinhedo",
+          "Óculos de sol e boné se for no verão"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Parque y Casa Don Melchor",
+            "EN": "Park and Casa Don Melchor",
+            "PT": "Parque e Casa Don Melchor"
+          },
+          "s": {
+            "ES": "La casa de verano del fundador, entre árboles altos",
+            "EN": "The founder's summer house, among tall trees",
+            "PT": "A casa de veraneio do fundador, entre árvores altas"
+          },
+          "d": {
+            "ES": "La visita empieza en el parque que rodea la casa de Melchor Concha y Toro, que fundó la viña en 1883 con su mujer, Emiliana Subercaseaux. La casa se ve por fuera y el parque se recorre a pie con el guía.",
+            "EN": "The visit starts in the park around the house of Melchor Concha y Toro, who founded the winery in 1883 with his wife, Emiliana Subercaseaux. You see the house from outside and walk through the park with the guide.",
+            "PT": "A visita começa no parque que cerca a casa de Melchor Concha y Toro, que fundou a vinícola em 1883 com sua mulher, Emiliana Subercaseaux. A casa é vista por fora e o parque se percorre a pé com o guia."
+          },
+          "tip": {
+            "ES": "Llega diez minutos antes de tu hora para recoger las entradas con calma en el Centro del Vino.",
+            "EN": "Arrive ten minutes before your slot so you can pick up your tickets at the Centro del Vino without rushing.",
+            "PT": "Chegue dez minutos antes do seu horário para retirar os ingressos com calma no Centro del Vino."
+          },
+          "hora": "15:30",
+          "dur": "25 min",
+          "img": "/ciudades/santiago/img/parque.jpg",
+          "lat": -33.6335,
+          "lng": -70.5752,
+          "tramo": "coche",
+          "tramoDuracionMin": 50,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Jardín de variedades",
+            "EN": "Grape variety garden",
+            "PT": "Jardim de variedades"
+          },
+          "s": {
+            "ES": "Las uvas de la casa, fila por fila",
+            "EN": "The estate's grapes, row by row",
+            "PT": "As uvas da casa, fileira por fileira"
+          },
+          "d": {
+            "ES": "Un viñedo pequeño donde cada fila es una variedad, con su cartel: cabernet sauvignon, merlot, carmenere y otras. Aquí ves de cerca cómo cambian las hojas y los racimos de una uva a otra, con la cordillera al fondo.",
+            "EN": "A small vineyard where every row is a different variety, each with its sign: cabernet sauvignon, merlot, carmenere and others. Here you see up close how the leaves and bunches change from one grape to the next, with the Andes behind.",
+            "PT": "Um vinhedo pequeno onde cada fileira é uma variedade, com sua placa: cabernet sauvignon, merlot, carmenere e outras. Aqui você vê de perto como as folhas e os cachos mudam de uma uva para outra, com a cordilheira ao fundo."
+          },
+          "tip": {
+            "ES": "Entre marzo y abril, en plena vendimia, las parras están cargadas de uva.",
+            "EN": "Between March and April, at harvest time, the vines are heavy with grapes.",
+            "PT": "Entre março e abril, em plena vindima, as parreiras estão carregadas de uva."
+          },
+          "hora": "16:00",
+          "dur": "20 min",
+          "img": "/ciudades/santiago/img/variedades.jpg",
+          "lat": -33.63398,
+          "lng": -70.57694,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Casillero del Diablo",
+            "EN": "Casillero del Diablo",
+            "PT": "Casillero del Diablo"
+          },
+          "s": {
+            "ES": "La bodega subterránea de la leyenda",
+            "EN": "The underground cellar of the legend",
+            "PT": "A adega subterrânea da lenda"
+          },
+          "d": {
+            "ES": "Se baja por una escalera a la bodega fresca y en penumbra donde Don Melchor guardaba sus mejores vinos. Cuenta la leyenda que, cuando empezaron a desaparecer botellas, hizo correr el rumor de que ahí vivía el diablo. Ese rumor acabó dando nombre al vino más conocido de la casa.",
+            "EN": "You go down a staircase into the cool, dim cellar where Don Melchor kept his best wines. Legend has it that when bottles began to disappear, he spread the rumour that the devil lived down there. That rumour ended up naming the house's best-known wine.",
+            "PT": "Desce-se por uma escada até a adega fresca e na penumbra onde Don Melchor guardava seus melhores vinhos. Diz a lenda que, quando garrafas começaram a sumir, ele espalhou o boato de que ali morava o diabo. Esse boato acabou dando nome ao vinho mais conhecido da casa."
+          },
+          "tip": {
+            "ES": "Haz las fotos sin flash. La bodega está casi a oscuras y el flash molesta al resto del grupo.",
+            "EN": "Take your photos without flash. The cellar is almost dark and the flash bothers the rest of the group.",
+            "PT": "Tire as fotos sem flash. A adega está quase às escuras e o flash incomoda o resto do grupo."
+          },
+          "hora": "16:25",
+          "dur": "30 min",
+          "img": "/ciudades/santiago/img/casillero.jpg",
+          "lat": -33.63469,
+          "lng": -70.57615,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Cata en el Centro del Vino",
+            "EN": "Tasting at the Centro del Vino",
+            "PT": "Degustação no Centro del Vino"
+          },
+          "s": {
+            "ES": "Cuatro copas para terminar la visita",
+            "EN": "Four glasses to end the visit",
+            "PT": "Quatro taças para fechar a visita"
+          },
+          "d": {
+            "ES": "La visita guiada termina con una cata de cuatro vinos y en la tienda del Centro del Vino, donde puedes comprar botellas para llevarte. Si puedes, prueba un carmenere. Casi todo el carmenere que se planta en el mundo está en Chile.",
+            "EN": "The guided visit ends with a tasting of four wines and at the Centro del Vino shop, where you can buy bottles to take home. If you can, try a carmenere. Almost all the carmenere planted in the world is in Chile.",
+            "PT": "A visita guiada termina com uma degustação de quatro vinhos e na loja do Centro del Vino, onde você pode comprar garrafas para levar. Se puder, prove um carmenere. Quase todo o carmenere plantado no mundo está no Chile."
+          },
+          "tip": {
+            "ES": "Si compras vino para el avión, llévalo en la maleta facturada. En cabina no se permiten líquidos de más de 100 ml.",
+            "EN": "If you buy wine for the flight, pack it in your checked bag. Liquids over 100 ml are not allowed in the cabin.",
+            "PT": "Se comprar vinho para o avião, leve na mala despachada. Na cabine não são permitidos líquidos acima de 100 ml."
+          },
+          "hora": "17:00",
+          "dur": "30 min",
+          "img": "/ciudades/santiago/img/cata.jpg",
+          "lat": -33.63578,
+          "lng": -70.57547,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 30
+        }
+      ],
+      "fotos": [
+        "/ciudades/santiago/img/vino.jpg",
+        "/ciudades/santiago/img/parque.jpg",
+        "/ciudades/santiago/img/variedades.jpg",
+        "/ciudades/santiago/img/casillero-1.jpg",
+        "/ciudades/santiago/img/casillero.jpg",
+        "/ciudades/santiago/img/cata.jpg"
+      ],
+      "duracionMin": 170,
+      "distanciaKm": 63,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Paseo llano por el parque y el viñedo. Para bajar a la bodega del Casillero del Diablo hay escaleras. Las catas son solo para mayores de 18 años.",
+        "EN": "A flat walk through the park and vineyard. There are stairs down to the Casillero del Diablo cellar. Tastings are for over-18s only.",
+        "PT": "Passeio plano pelo parque e pelo vinhedo. Para descer à adega do Casillero del Diablo há escadas. As degustações são só para maiores de 18 anos."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": -33.63578,
+        "lng": -70.57547,
+        "foto": "/ciudades/santiago/img/entrada-vina.jpg",
+        "texto": {
+          "ES": "Centro del Vino de Concha y Toro, en la avenida Virginia Subercaseaux, Pirque. El taxi te deja en la entrada.",
+          "EN": "Concha y Toro's Centro del Vino, on Avenida Virginia Subercaseaux, Pirque. The taxi drops you at the entrance.",
+          "PT": "Centro del Vino da Concha y Toro, na avenida Virginia Subercaseaux, Pirque. O táxi deixa você na entrada."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Visita guiada y cata, que se reservan y pagan en la viña",
+          "Taxi de ida y vuelta, unos 30 km por trayecto",
+          "Compras en la tienda"
+        ],
+        "EN": [
+          "Guided visit and tasting, booked and paid at the winery",
+          "Return taxi, about 30 km each way",
+          "Shop purchases"
+        ],
+        "PT": [
+          "Visita guiada e degustação, reservadas e pagas na vinícola",
+          "Táxi de ida e volta, uns 30 km por trecho",
+          "Compras na loja"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva con el hotel. Las condiciones para cambiar o cancelar la visita las pone la viña.",
+        "EN": "Self-guided, with no booking through the hotel. The winery sets the terms for changing or cancelling your visit.",
+        "PT": "Roteiro livre, sem reserva com o hotel. As condições para mudar ou cancelar a visita são definidas pela vinícola."
+      },
+      "salidasFijas": [],
+      "precioDesde": 85000
+    },
+    {
+      "id": "valparaiso",
+      "expId": "ex4",
+      "img": "/ciudades/santiago/img/valparaiso.jpg",
+      "titulo": {
+        "ES": "Valparaíso y Viña del Mar en un día",
+        "EN": "Valparaíso and Viña del Mar in a day",
+        "PT": "Valparaíso e Viña del Mar em um dia"
+      },
+      "tipo": {
+        "ES": "Costa",
+        "EN": "Coast",
+        "PT": "Litoral"
+      },
+      "dur": "9 h",
+      "d": {
+        "ES": "Para el fin de semana que te quedas. En hora y media de bus llegas al puerto, subes en un ascensor de 1883 a los cerros de casas de colores, entras en la casa de Neruda y terminas frente al mar en Viña del Mar.",
+        "EN": "For the weekend you stay on. An hour and a half by bus takes you to the port, where you ride an 1883 funicular up to hills of coloured houses, step inside Neruda's house and finish by the sea in Viña del Mar.",
+        "PT": "Para o fim de semana em que você fica. Em uma hora e meia de ônibus você chega ao porto, sobe num elevador de 1883 até os morros de casas coloridas, entra na casa de Neruda e termina diante do mar em Viña del Mar."
+      },
+      "salida": {
+        "ES": "A pie hasta el metro Tobalaba, línea 1 hasta Pajaritos y bus a Valparaíso desde el terminal de la misma estación, unos 100 minutos de trayecto. Sal del hotel hacia las 07:45 para estar en el puerto a las 10:30",
+        "EN": "Walk to Tobalaba metro, take line 1 to Pajaritos and catch the bus to Valparaíso from the terminal at that station, a ride of about 100 minutes. Leave the hotel around 07:45 to reach the port by 10:30",
+        "PT": "A pé até o metrô Tobalaba, linha 1 até Pajaritos e ônibus para Valparaíso no terminal da própria estação, uns 100 minutos de trajeto. Saia do hotel por volta das 07:45 para chegar ao porto às 10:30"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "PT": [
+          "Roteiro livre, sem reserva",
+          "Plano do dia e mapa"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado con buena suela, porque hay cuestas y adoquines",
+          "Una chaqueta, que en la costa corre viento",
+          "Crema solar y gafas de sol",
+          "Algo de efectivo en pesos para el ascensor y los taxis"
+        ],
+        "EN": [
+          "Shoes with good grip, as there are steep streets and cobbles",
+          "A jacket, as it gets windy on the coast",
+          "Sunscreen and sunglasses",
+          "Some cash in pesos for the funicular and taxis"
+        ],
+        "PT": [
+          "Calçado com boa sola, porque há ladeiras e paralelepípedos",
+          "Um casaco, porque no litoral venta",
+          "Protetor solar e óculos de sol",
+          "Um pouco de dinheiro em pesos para o elevador e os táxis"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Plaza Sotomayor y muelle Prat",
+            "EN": "Plaza Sotomayor and Muelle Prat",
+            "PT": "Praça Sotomayor e cais Prat"
+          },
+          "s": {
+            "ES": "El corazón del Barrio Puerto, frente a la bahía",
+            "EN": "The heart of the Barrio Puerto, facing the bay",
+            "PT": "O coração do Barrio Puerto, de frente para a baía"
+          },
+          "d": {
+            "ES": "En la plaza está el Monumento a los Héroes de Iquique, donde descansan los restos de Arturo Prat, y detrás, el antiguo edificio de la Intendencia, hoy sede de la Armada. Cruzando la calle, el muelle Prat mira a las grúas del puerto y a los barcos de la bahía.",
+            "EN": "The square holds the Monument to the Heroes of Iquique, where Arturo Prat is buried, and behind it the old Intendencia building, now the Navy's headquarters. Across the street, Muelle Prat looks out over the port cranes and the ships in the bay.",
+            "PT": "Na praça está o Monumento aos Heróis de Iquique, onde repousam os restos de Arturo Prat, e atrás o antigo prédio da Intendencia, hoje sede da Marinha. Atravessando a rua, o cais Prat dá para os guindastes do porto e os barcos da baía."
+          },
+          "tip": {
+            "ES": "Del muelle Prat salen lanchas que dan un paseo por la bahía. Es otra forma de ver los cerros desde el agua si te sobra tiempo.",
+            "EN": "Boats leave Muelle Prat for trips around the bay. If you have time to spare, it is another way to see the hills from the water.",
+            "PT": "Do cais Prat saem lanchas que fazem um passeio pela baía. É outra forma de ver os morros a partir da água, se sobrar tempo."
+          },
+          "hora": "10:30",
+          "dur": "40 min",
+          "img": "/ciudades/santiago/img/sotomayor.jpg",
+          "lat": -33.03874,
+          "lng": -71.62913,
+          "tramo": "bus",
+          "tramoDuracionMin": 165,
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Ascensor Concepción y cerro Alegre",
+            "EN": "Ascensor Concepción and Cerro Alegre",
+            "PT": "Elevador Concepción e morro Alegre"
+          },
+          "s": {
+            "ES": "El ascensor más antiguo de Valparaíso, de 1883",
+            "EN": "Valparaíso's oldest funicular, from 1883",
+            "PT": "O elevador mais antigo de Valparaíso, de 1883"
+          },
+          "d": {
+            "ES": "Frente al Reloj Turri, el ascensor sube por una pendiente de 46 grados hasta el paseo Gervasoni. Arriba se camina entre casas de colores y murales por los cerros Concepción y Alegre, con el puerto siempre a la vista desde el paseo Atkinson. Es parte del casco histórico que la UNESCO declaró Patrimonio de la Humanidad en 2003.",
+            "EN": "Opposite the Reloj Turri clock tower, the funicular climbs a 46-degree slope to Paseo Gervasoni. Up top you wander among coloured houses and murals on Cerro Concepción and Cerro Alegre, with the port always in view from Paseo Atkinson. It is part of the historic quarter UNESCO listed as World Heritage in 2003.",
+            "PT": "Em frente ao Reloj Turri, o elevador sobe uma inclinação de 46 graus até o passeio Gervasoni. Lá em cima se caminha entre casas coloridas e murais pelos morros Concepción e Alegre, com o porto sempre à vista desde o passeio Atkinson. Faz parte do centro histórico que a UNESCO declarou Patrimônio da Humanidade em 2003."
+          },
+          "tip": {
+            "ES": "Come aquí arriba antes de seguir. Si el ascensor está parado por mantenimiento, sube andando por las calles del cerro o en taxi.",
+            "EN": "Have lunch up here before moving on. If the funicular is closed for maintenance, walk up the hill streets or take a taxi.",
+            "PT": "Almoce aqui em cima antes de seguir. Se o elevador estiver parado para manutenção, suba a pé pelas ruas do morro ou de táxi."
+          },
+          "hora": "11:15",
+          "dur": "2 h 15 min",
+          "img": "/ciudades/santiago/img/ascensor.jpg",
+          "lat": -33.04123,
+          "lng": -71.62656,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 135
+        },
+        {
+          "n": {
+            "ES": "La Sebastiana",
+            "EN": "La Sebastiana",
+            "PT": "La Sebastiana"
+          },
+          "s": {
+            "ES": "La casa de Pablo Neruda en el cerro Bellavista",
+            "EN": "Pablo Neruda's house on Cerro Bellavista",
+            "PT": "A casa de Pablo Neruda no morro Bellavista"
+          },
+          "d": {
+            "ES": "Neruda buscaba en Valparaíso una casa que pareciera flotar en el aire. En 1959 compró a medias con unos amigos este edificio a medio construir, se quedó con los pisos de arriba y le añadió un altillo. La estrenó con una fiesta el 18 de septiembre de 1961, y desde sus ventanales se ve toda la bahía.",
+            "EN": "Neruda wanted a house in Valparaíso that seemed to float in the air. In 1959 he bought this half-built house together with some friends, kept the upper floors and added a loft. He opened it with a party on 18 September 1961, and its big windows look over the whole bay.",
+            "PT": "Neruda procurava em Valparaíso uma casa que parecesse flutuar no ar. Em 1959 comprou com uns amigos este prédio pela metade, ficou com os andares de cima e acrescentou um sótão. Inaugurou a casa com uma festa em 18 de setembro de 1961, e de suas janelas se vê toda a baía."
+          },
+          "tip": {
+            "ES": "Comprueba el horario en la web de la Fundación Neruda antes de salir de Santiago. Por dentro las escaleras son estrechas, así que mejor ir con poco bulto.",
+            "EN": "Check opening times on the Fundación Neruda website before leaving Santiago. The stairs inside are narrow, so travel light.",
+            "PT": "Confira o horário no site da Fundación Neruda antes de sair de Santiago. Por dentro as escadas são estreitas, então é melhor ir com pouca bagagem."
+          },
+          "hora": "13:40",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/santiago/img/sebastiana.jpg",
+          "lat": -33.0537,
+          "lng": -71.62293,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "Viña del Mar y el Reloj de Flores",
+            "EN": "Viña del Mar and the Flower Clock",
+            "PT": "Viña del Mar e o Relógio de Flores"
+          },
+          "s": {
+            "ES": "El reloj del Mundial de 1962 y la costa",
+            "EN": "The 1962 World Cup clock and the seafront",
+            "PT": "O relógio da Copa de 1962 e a orla"
+          },
+          "d": {
+            "ES": "A unos 20 minutos en taxi, el Reloj de Flores marca la hora en una ladera del cerro Castillo. Se instaló para el Mundial de 1962, que se jugó en Chile, con una maquinaria suiza. Desde aquí puedes bajar a la costa y pasear hasta el Castillo Wulff, un pequeño castillo de 1906 junto al mar.",
+            "EN": "About 20 minutes away by taxi, the Flower Clock tells the time on a slope of Cerro Castillo. It was installed for the 1962 World Cup, played in Chile, with Swiss clockwork. From here you can head down to the seafront and stroll to Castillo Wulff, a small 1906 castle by the sea.",
+            "PT": "A uns 20 minutos de táxi, o Relógio de Flores marca a hora numa encosta do morro Castillo. Foi instalado para a Copa do Mundo de 1962, disputada no Chile, com um mecanismo suíço. Daqui você pode descer até a orla e caminhar até o Castillo Wulff, um pequeno castelo de 1906 junto ao mar."
+          },
+          "tip": {
+            "ES": "Los buses a Santiago salen del terminal de Viña del Mar, en la avenida Valparaíso, a unos 10 minutos en taxi. En fin de semana compra el billete de vuelta con tiempo.",
+            "EN": "Buses to Santiago leave from the Viña del Mar terminal on Avenida Valparaíso, about 10 minutes away by taxi. At weekends, buy your return ticket early.",
+            "PT": "Os ônibus para Santiago saem do terminal de Viña del Mar, na avenida Valparaíso, a uns 10 minutos de táxi. No fim de semana, compre a passagem de volta com antecedência."
+          },
+          "hora": "15:15",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/santiago/img/reloj.jpg",
+          "lat": -33.02329,
+          "lng": -71.56718,
+          "tramo": "coche",
+          "tramoDuracionMin": 20,
+          "duracionMin": 90
+        }
+      ],
+      "fotos": [
+        "/ciudades/santiago/img/valparaiso.jpg",
+        "/ciudades/santiago/img/sotomayor.jpg",
+        "/ciudades/santiago/img/ascensor.jpg",
+        "/ciudades/santiago/img/sebastiana.jpg",
+        "/ciudades/santiago/img/sebastiana-1.jpg",
+        "/ciudades/santiago/img/reloj.jpg"
+      ],
+      "duracionMin": 540,
+      "distanciaKm": 270,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Valparaíso es una ciudad de cuestas y escaleras. El ascensor ahorra la subida al cerro Concepción, pero arriba hay adoquines y pendientes. En La Sebastiana las escaleras entre plantas son estrechas.",
+        "EN": "Valparaíso is a city of steep streets and stairs. The funicular saves you the climb to Cerro Concepción, but up top there are cobbles and slopes. At La Sebastiana the stairs between floors are narrow.",
+        "PT": "Valparaíso é uma cidade de ladeiras e escadas. O elevador poupa a subida ao morro Concepción, mas lá em cima há paralelepípedos e inclinações. Em La Sebastiana as escadas entre os andares são estreitas."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": -33.41829,
+        "lng": -70.60165,
+        "foto": "/ciudades/santiago/img/tobalaba.jpg",
+        "texto": {
+          "ES": "Estación Tobalaba del metro, en la avenida Apoquindo, a unos 5 minutos andando del hotel. Línea 1 (roja) hacia San Pablo hasta Pajaritos, donde está el terminal de buses.",
+          "EN": "Tobalaba metro station, on Avenida Apoquindo, about a 5-minute walk from the hotel. Line 1 (red) towards San Pablo as far as Pajaritos, where the bus terminal is.",
+          "PT": "Estação Tobalaba do metrô, na avenida Apoquindo, a uns 5 minutos a pé do hotel. Linha 1 (vermelha) sentido San Pablo até Pajaritos, onde fica o terminal de ônibus."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Metro y bus de ida y vuelta",
+          "Taxis y ascensor en Valparaíso",
+          "Entrada a La Sebastiana",
+          "Comida"
+        ],
+        "EN": [
+          "Return metro and bus",
+          "Taxis and funicular in Valparaíso",
+          "La Sebastiana admission",
+          "Meals"
+        ],
+        "PT": [
+          "Metrô e ônibus de ida e volta",
+          "Táxis e elevador em Valparaíso",
+          "Entrada de La Sebastiana",
+          "Refeições"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva con el hotel. Los billetes de bus los vende cada empresa, y los cambios dependen de ella.",
+        "EN": "Self-guided, with no booking through the hotel. Each bus company sells its own tickets and sets its own rules for changes.",
+        "PT": "Roteiro livre, sem reserva com o hotel. As passagens de ônibus são vendidas por cada empresa, e as mudanças dependem dela."
+      },
+      "salidasFijas": [],
+      "precioDesde": 69000
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un pisco sour en el bar del hotel a la vuelta",
+      "EN": "A pisco sour at the hotel bar when you get back",
+      "PT": "Um pisco sour no bar do hotel na volta"
+    }
+  },
+  "creditos": [
+    "Gran Torre Costanera al atardecer: javier, CC BY 2.0, Wikimedia Commons",
+    "Vista desde Sky Costanera: Corsario CL, CC BY-SA 4.0, Wikimedia Commons",
+    "Virgen del cerro San Cristóbal: Deensel, CC BY 2.0, Wikimedia Commons",
+    "Santiago de noche desde el cerro San Cristóbal: Marco Nürnberger, CC BY 2.0, Wikimedia Commons",
+    "Cabina del teleférico de Santiago: FLACCY, CC0, Wikimedia Commons",
+    "Estación Oasis del teleférico: Carlos yo, CC BY-SA 4.0, Wikimedia Commons",
+    "Estación Pío Nono del funicular: Jaime Soto Ceura, CC BY-SA 3.0, Wikimedia Commons",
+    "Funicular del cerro San Cristóbal: David Berkowitz from New York, NY, USA, CC BY 2.0, Wikimedia Commons",
+    "Cerro Santa Lucía: Felipe Restrepo Acosta, CC BY-SA 4.0, Wikimedia Commons",
+    "Palacio de La Moneda: Balou46, CC BY-SA 4.0, Wikimedia Commons",
+    "Plaza de Armas y Catedral: Sfs90, CC BY-SA 4.0, Wikimedia Commons",
+    "Catedral Metropolitana de Santiago: Balou46, CC BY-SA 4.0, Wikimedia Commons",
+    "Tallas mapuche en el Museo Chileno de Arte Precolombino: Koppas, CC BY-SA 3.0, Wikimedia Commons",
+    "Mercado Central de Santiago: Carlos Figueroa Rojas, CC BY-SA 4.0, Wikimedia Commons",
+    "Estructura de hierro del Mercado Central: LBM1948, CC BY-SA 4.0, Wikimedia Commons",
+    "Barrio Italia: Tommy Boy, CC BY-SA 4.0, Wikimedia Commons",
+    "Pueblito Los Dominicos: Carlos yo, CC BY-SA 4.0, Wikimedia Commons",
+    "Parque Bicentenario de Vitacura: Carlos Figueroa Rojas, CC BY-SA 4.0, Wikimedia Commons",
+    "Estación Tobalaba del metro: Sfs90, CC BY-SA 4.0, Wikimedia Commons",
+    "Viñedo de Concha y Toro en Puente Alto: Fsanchezs, CC BY-SA 3.0, Wikimedia Commons",
+    "Entrada de la viña Concha y Toro: Rjcastillo, CC BY-SA 4.0, Wikimedia Commons",
+    "Parque de la viña Concha y Toro: Paulo JC Nogueira, CC BY-SA 3.0, Wikimedia Commons",
+    "Viñedo de muestra de Concha y Toro: MattStabile01 (Wikipedia en inglés), dominio público, Wikimedia Commons",
+    "Bodega del Casillero del Diablo: Banfield, CC BY-SA 2.5 ar, Wikimedia Commons",
+    "Bajada al Casillero del Diablo: Paulo JC Nogueira, CC BY-SA 3.0, Wikimedia Commons",
+    "Copa de vino en Concha y Toro: Fsanchezs, CC BY-SA 4.0, Wikimedia Commons",
+    "Cerro Concepción, Valparaíso: Carlos Figueroa Rojas, CC BY-SA 4.0, Wikimedia Commons",
+    "Plaza Sotomayor, Valparaíso: Leitoxx, CC BY-SA 3.0, Wikimedia Commons",
+    "Ascensor Concepción, Valparaíso: Ccaba77, CC BY-SA 3.0, Wikimedia Commons",
+    "La Sebastiana, Valparaíso: Mikel Santamaria, CC BY-SA 2.0, Wikimedia Commons",
+    "Vista de Valparaíso desde La Sebastiana: Rodrigo Fernández, CC BY-SA 4.0, Wikimedia Commons",
+    "Reloj de Flores, Viña del Mar: Draceane, CC BY-SA 4.0, Wikimedia Commons"
+  ]
+}

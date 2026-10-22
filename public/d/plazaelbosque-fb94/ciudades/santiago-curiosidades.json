@@ -1,0 +1,482 @@
+{
+  "miradores-1": {
+    "pregunta": {
+      "ES": "¿Cuántas personas caben en cada cabina del teleférico?",
+      "EN": "How many people fit in each cable car cabin?",
+      "PT": "Quantas pessoas cabem em cada cabine do teleférico?"
+    },
+    "opciones": [
+      {
+        "ES": "Cuatro",
+        "EN": "Four",
+        "PT": "Quatro"
+      },
+      {
+        "ES": "Seis",
+        "EN": "Six",
+        "PT": "Seis"
+      },
+      {
+        "ES": "Ocho",
+        "EN": "Eight",
+        "PT": "Oito"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Las 47 cabinas que funcionan desde 2016 llevan hasta seis personas. Las originales, de 1980, tenían forma de huevo y eran para cuatro.",
+      "EN": "The 47 cabins running since 2016 carry up to six people. The original 1980 ones were egg-shaped and held four.",
+      "PT": "As 47 cabines que funcionam desde 2016 levam até seis pessoas. As originais, de 1980, tinham forma de ovo e eram para quatro."
+    }
+  },
+  "miradores-2": {
+    "pregunta": {
+      "ES": "¿En qué año se inauguró el santuario de la Virgen del San Cristóbal?",
+      "EN": "In what year was the San Cristóbal Virgin sanctuary opened?",
+      "PT": "Em que ano foi inaugurado o santuário da Virgem do San Cristóbal?"
+    },
+    "opciones": [
+      {
+        "ES": "1908",
+        "EN": "1908",
+        "PT": "1908"
+      },
+      {
+        "ES": "1941",
+        "EN": "1941",
+        "PT": "1941"
+      },
+      {
+        "ES": "1965",
+        "EN": "1965",
+        "PT": "1965"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El santuario de la Inmaculada Concepción se inauguró el 26 de abril de 1908, antes incluso de que existiera el Parque Metropolitano.",
+      "EN": "The Immaculate Conception sanctuary opened on 26 April 1908, even before the Parque Metropolitano existed.",
+      "PT": "O santuário da Imaculada Conceição foi inaugurado em 26 de abril de 1908, antes mesmo de existir o Parque Metropolitano."
+    }
+  },
+  "miradores-3": {
+    "pregunta": {
+      "ES": "¿Qué papa subió al cerro en uno de los carros del funicular?",
+      "EN": "Which pope rode up the hill in one of the funicular cars?",
+      "PT": "Que papa subiu o morro num dos carros do funicular?"
+    },
+    "opciones": [
+      {
+        "ES": "Juan Pablo II",
+        "EN": "John Paul II",
+        "PT": "João Paulo II"
+      },
+      {
+        "ES": "Pablo VI",
+        "EN": "Paul VI",
+        "PT": "Paulo VI"
+      },
+      {
+        "ES": "Francisco",
+        "EN": "Francis",
+        "PT": "Francisco"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Juan Pablo II subió en el funicular en 1987, en su única visita a Chile. Una placa en el carro lo recuerda.",
+      "EN": "John Paul II rode the funicular in 1987, on his only visit to Chile. A plaque in the car marks the occasion.",
+      "PT": "João Paulo II subiu no funicular em 1987, em sua única visita ao Chile. Uma placa no carro lembra a ocasião."
+    }
+  },
+  "miradores-4": {
+    "pregunta": {
+      "ES": "¿Qué altura tiene la Gran Torre Costanera?",
+      "EN": "How tall is the Gran Torre Costanera?",
+      "PT": "Qual é a altura da Gran Torre Costanera?"
+    },
+    "opciones": [
+      {
+        "ES": "200 metros",
+        "EN": "200 metres",
+        "PT": "200 metros"
+      },
+      {
+        "ES": "300 metros",
+        "EN": "300 metres",
+        "PT": "300 metros"
+      },
+      {
+        "ES": "400 metros",
+        "EN": "400 metres",
+        "PT": "400 metros"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Mide 300 metros y tiene 62 pisos. Es el edificio más alto de Sudamérica, y el mirador ocupa los dos últimos pisos.",
+      "EN": "It is 300 metres tall with 62 floors. It is the tallest building in South America, and the viewing deck takes up the top two floors.",
+      "PT": "Tem 300 metros e 62 andares. É o edifício mais alto da América do Sul, e o mirante ocupa os dois últimos andares."
+    }
+  },
+  "centro-1": {
+    "pregunta": {
+      "ES": "¿Para qué se construyó el Palacio de La Moneda?",
+      "EN": "What was La Moneda Palace built for?",
+      "PT": "Para que foi construído o Palácio de La Moneda?"
+    },
+    "opciones": [
+      {
+        "ES": "Para fabricar monedas",
+        "EN": "To mint coins",
+        "PT": "Para fabricar moedas"
+      },
+      {
+        "ES": "Como casa del gobernador español",
+        "EN": "As the Spanish governor's residence",
+        "PT": "Como casa do governador espanhol"
+      },
+      {
+        "ES": "Como cuartel militar",
+        "EN": "As an army barracks",
+        "PT": "Como quartel militar"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Era la Real Casa de Moneda. El Gobierno se trasladó allí a mediados del siglo XIX, y los talleres donde se acuñaban monedas siguieron dentro hasta 1929.",
+      "EN": "It was the Royal Mint. The government moved in during the mid-19th century, and the coin workshops stayed inside until 1929.",
+      "PT": "Era a Real Casa da Moeda. O Governo se mudou para lá em meados do século XIX, e as oficinas onde se cunhavam moedas ficaram lá dentro até 1929."
+    }
+  },
+  "centro-2": {
+    "pregunta": {
+      "ES": "¿Qué tienen de especial las momias chinchorro, del norte de Chile?",
+      "EN": "What is special about the Chinchorro mummies from northern Chile?",
+      "PT": "O que as múmias chinchorro, do norte do Chile, têm de especial?"
+    },
+    "opciones": [
+      {
+        "ES": "Son unos dos mil años más antiguas que las egipcias",
+        "EN": "They are about two thousand years older than Egyptian mummies",
+        "PT": "São uns dois mil anos mais antigas que as egípcias"
+      },
+      {
+        "ES": "Se encontraron dentro de un volcán",
+        "EN": "They were found inside a volcano",
+        "PT": "Foram encontradas dentro de um vulcão"
+      },
+      {
+        "ES": "Están hechas de piedra",
+        "EN": "They are made of stone",
+        "PT": "São feitas de pedra"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La cultura chinchorro ya momificaba a sus muertos hacia el 5000 a. C., unos dos mil años antes que en Egipto. El museo guarda piezas de esta cultura.",
+      "EN": "The Chinchorro people were already mummifying their dead around 5000 BC, some two thousand years before Egypt. The museum holds pieces from this culture.",
+      "PT": "A cultura chinchorro já mumificava seus mortos por volta de 5000 a.C., uns dois mil anos antes do Egito. O museu guarda peças dessa cultura."
+    }
+  },
+  "centro-3": {
+    "pregunta": {
+      "ES": "¿Quién fundó Santiago en 1541?",
+      "EN": "Who founded Santiago in 1541?",
+      "PT": "Quem fundou Santiago em 1541?"
+    },
+    "opciones": [
+      {
+        "ES": "Pedro de Valdivia",
+        "EN": "Pedro de Valdivia",
+        "PT": "Pedro de Valdivia"
+      },
+      {
+        "ES": "Diego de Almagro",
+        "EN": "Diego de Almagro",
+        "PT": "Diego de Almagro"
+      },
+      {
+        "ES": "Bernardo O'Higgins",
+        "EN": "Bernardo O'Higgins",
+        "PT": "Bernardo O'Higgins"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Pedro de Valdivia fundó la ciudad el 12 de febrero de 1541. El alarife Pedro de Gamboa trazó las calles en damero, como un tablero de ajedrez, alrededor de esta plaza.",
+      "EN": "Pedro de Valdivia founded the city on 12 February 1541. The master builder Pedro de Gamboa laid out the streets in a grid, like a chessboard, around this square.",
+      "PT": "Pedro de Valdivia fundou a cidade em 12 de fevereiro de 1541. O mestre de obras Pedro de Gamboa traçou as ruas em xadrez, como um tabuleiro, ao redor desta praça."
+    }
+  },
+  "centro-4": {
+    "pregunta": {
+      "ES": "¿Dónde se fundió la estructura de hierro del Mercado Central?",
+      "EN": "Where was the Mercado Central's iron frame cast?",
+      "PT": "Onde foi fundida a estrutura de ferro do Mercado Central?"
+    },
+    "opciones": [
+      {
+        "ES": "En Glasgow, Escocia",
+        "EN": "In Glasgow, Scotland",
+        "PT": "Em Glasgow, Escócia"
+      },
+      {
+        "ES": "En París, Francia",
+        "EN": "In Paris, France",
+        "PT": "Em Paris, França"
+      },
+      {
+        "ES": "En Santiago, Chile",
+        "EN": "In Santiago, Chile",
+        "PT": "Em Santiago, Chile"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La estructura se fundió en Glasgow y se montó en Santiago. El mercado se inauguró el 23 de agosto de 1872.",
+      "EN": "The frame was cast in Glasgow and assembled in Santiago. The market opened on 23 August 1872.",
+      "PT": "A estrutura foi fundida em Glasgow e montada em Santiago. O mercado foi inaugurado em 23 de agosto de 1872."
+    }
+  },
+  "vino-1": {
+    "pregunta": {
+      "ES": "¿En qué año fundaron la viña Melchor Concha y Toro y Emiliana Subercaseaux?",
+      "EN": "In what year did Melchor Concha y Toro and Emiliana Subercaseaux found the winery?",
+      "PT": "Em que ano Melchor Concha y Toro e Emiliana Subercaseaux fundaram a vinícola?"
+    },
+    "opciones": [
+      {
+        "ES": "1883",
+        "EN": "1883",
+        "PT": "1883"
+      },
+      {
+        "ES": "1910",
+        "EN": "1910",
+        "PT": "1910"
+      },
+      {
+        "ES": "1952",
+        "EN": "1952",
+        "PT": "1952"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La fundaron en 1883 y plantaron uvas traídas de Burdeos, en Francia, como cabernet sauvignon, merlot y carmenere.",
+      "EN": "They founded it in 1883 and planted grapes brought from Bordeaux, in France, such as cabernet sauvignon, merlot and carmenere.",
+      "PT": "Eles a fundaram em 1883 e plantaram uvas trazidas de Bordeaux, na França, como cabernet sauvignon, merlot e carmenere."
+    }
+  },
+  "vino-2": {
+    "pregunta": {
+      "ES": "¿Con qué uva se confundió la carmenere en Chile durante décadas?",
+      "EN": "Which grape was carmenere mistaken for in Chile for decades?",
+      "PT": "Com que uva a carmenere foi confundida no Chile durante décadas?"
+    },
+    "opciones": [
+      {
+        "ES": "Merlot",
+        "EN": "Merlot",
+        "PT": "Merlot"
+      },
+      {
+        "ES": "Cabernet sauvignon",
+        "EN": "Cabernet sauvignon",
+        "PT": "Cabernet sauvignon"
+      },
+      {
+        "ES": "Malbec",
+        "EN": "Malbec",
+        "PT": "Malbec"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Crecía mezclada con la merlot y se vendía como tal. En 1994 un experto francés en vides descubrió que era carmenere. Hoy Chile tiene el 96 % de las plantaciones del mundo.",
+      "EN": "It grew mixed in with merlot and was sold as merlot. In 1994 a French vine expert found that it was carmenere. Today Chile has 96% of the world's plantings.",
+      "PT": "Crescia misturada com a merlot e era vendida como tal. Em 1994 um especialista francês em videiras descobriu que era carmenere. Hoje o Chile tem 96% das plantações do mundo."
+    }
+  },
+  "vino-3": {
+    "pregunta": {
+      "ES": "Según la leyenda, ¿por qué dijo Don Melchor que el diablo vivía en su bodega?",
+      "EN": "According to legend, why did Don Melchor say the devil lived in his cellar?",
+      "PT": "Segundo a lenda, por que Don Melchor disse que o diabo morava na sua adega?"
+    },
+    "opciones": [
+      {
+        "ES": "Para que no le robaran sus mejores vinos",
+        "EN": "So nobody would steal his best wines",
+        "PT": "Para que não roubassem seus melhores vinhos"
+      },
+      {
+        "ES": "Porque oía ruidos por las noches",
+        "EN": "Because he heard noises at night",
+        "PT": "Porque ouvia barulhos à noite"
+      },
+      {
+        "ES": "Para atraer visitantes",
+        "EN": "To attract visitors",
+        "PT": "Para atrair visitantes"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Al ver que le desaparecían botellas, hizo correr el rumor de que el diablo vivía en la bodega. La historia acabó dando nombre a la marca Casillero del Diablo.",
+      "EN": "When he noticed bottles going missing, he spread the rumour that the devil lived in the cellar. The story ended up naming the Casillero del Diablo brand.",
+      "PT": "Ao ver que garrafas sumiam, espalhou o boato de que o diabo morava na adega. A história acabou dando nome à marca Casillero del Diablo."
+    }
+  },
+  "vino-4": {
+    "pregunta": {
+      "ES": "¿Qué consiguió Concha y Toro en 1994?",
+      "EN": "What did Concha y Toro achieve in 1994?",
+      "PT": "O que a Concha y Toro conseguiu em 1994?"
+    },
+    "opciones": [
+      {
+        "ES": "Ser la primera viña del mundo en cotizar en la Bolsa de Nueva York",
+        "EN": "Becoming the first winery in the world listed on the New York Stock Exchange",
+        "PT": "Ser a primeira vinícola do mundo listada na Bolsa de Nova York"
+      },
+      {
+        "ES": "Exportar su primera botella",
+        "EN": "Exporting its first bottle",
+        "PT": "Exportar sua primeira garrafa"
+      },
+      {
+        "ES": "Abrir su primera bodega en Argentina",
+        "EN": "Opening its first winery in Argentina",
+        "PT": "Abrir sua primeira vinícola na Argentina"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "En 1994 fue la primera viña del mundo en cotizar en la Bolsa de Nueva York, donde estuvo hasta 2018. Sus primeras exportaciones habían salido en 1933, rumbo a Róterdam.",
+      "EN": "In 1994 it became the first winery in the world listed on the New York Stock Exchange, where it stayed until 2018. Its first exports had shipped in 1933, bound for Rotterdam.",
+      "PT": "Em 1994 foi a primeira vinícola do mundo listada na Bolsa de Nova York, onde ficou até 2018. Suas primeiras exportações tinham saído em 1933, rumo a Roterdã."
+    }
+  },
+  "valparaiso-1": {
+    "pregunta": {
+      "ES": "¿Qué hay bajo el suelo de la plaza Sotomayor?",
+      "EN": "What lies beneath Plaza Sotomayor?",
+      "PT": "O que há sob o chão da praça Sotomayor?"
+    },
+    "opciones": [
+      {
+        "ES": "Restos del primer muelle del puerto",
+        "EN": "Remains of the port's first pier",
+        "PT": "Restos do primeiro cais do porto"
+      },
+      {
+        "ES": "Un refugio antiaéreo",
+        "EN": "An air-raid shelter",
+        "PT": "Um abrigo antiaéreo"
+      },
+      {
+        "ES": "Una estación de tren antigua",
+        "EN": "An old railway station",
+        "PT": "Uma estação de trem antiga"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "En el subsuelo están los restos del primer muelle fiscal del puerto, construido con restos de la fragata Esmeralda que Thomas Cochrane capturó a la armada española.",
+      "EN": "Underground lie the remains of the port's first public pier, built with parts of the frigate Esmeralda, which Thomas Cochrane captured from the Spanish navy.",
+      "PT": "No subsolo estão os restos do primeiro cais público do porto, construído com restos da fragata Esmeralda, que Thomas Cochrane capturou da armada espanhola."
+    }
+  },
+  "valparaiso-2": {
+    "pregunta": {
+      "ES": "¿En qué año empezó a funcionar el ascensor Concepción?",
+      "EN": "In what year did the Ascensor Concepción start running?",
+      "PT": "Em que ano o elevador Concepción começou a funcionar?"
+    },
+    "opciones": [
+      {
+        "ES": "1883",
+        "EN": "1883",
+        "PT": "1883"
+      },
+      {
+        "ES": "1921",
+        "EN": "1921",
+        "PT": "1921"
+      },
+      {
+        "ES": "1950",
+        "EN": "1950",
+        "PT": "1950"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Se inauguró el 1 de diciembre de 1883 y es el más antiguo de la ciudad. Al principio se movía con un contrapeso de agua y una caldera de vapor.",
+      "EN": "It opened on 1 December 1883 and is the oldest in the city. At first it ran on a water counterweight and a steam boiler.",
+      "PT": "Foi inaugurado em 1º de dezembro de 1883 e é o mais antigo da cidade. No início funcionava com um contrapeso de água e uma caldeira a vapor."
+    }
+  },
+  "valparaiso-3": {
+    "pregunta": {
+      "ES": "¿De dónde viene el nombre de La Sebastiana?",
+      "EN": "Where does the name La Sebastiana come from?",
+      "PT": "De onde vem o nome La Sebastiana?"
+    },
+    "opciones": [
+      {
+        "ES": "De Sebastián Collado, el constructor que empezó la casa",
+        "EN": "From Sebastián Collado, the builder who started the house",
+        "PT": "De Sebastián Collado, o construtor que começou a casa"
+      },
+      {
+        "ES": "De una hermana de Neruda",
+        "EN": "From one of Neruda's sisters",
+        "PT": "De uma irmã de Neruda"
+      },
+      {
+        "ES": "De un barco del puerto",
+        "EN": "From a ship in the port",
+        "PT": "De um navio do porto"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La empezó el constructor español Sebastián Collado para pasar allí sus últimos años, pero murió antes de terminarla. La casa se quedó con su nombre.",
+      "EN": "The Spanish builder Sebastián Collado began it to spend his last years there, but died before finishing it. The house kept his name.",
+      "PT": "O construtor espanhol Sebastián Collado começou a casa para passar ali seus últimos anos, mas morreu antes de terminá-la. A casa ficou com o nome dele."
+    }
+  },
+  "valparaiso-4": {
+    "pregunta": {
+      "ES": "¿Para qué acontecimiento se instaló el Reloj de Flores de Viña del Mar?",
+      "EN": "What event was Viña del Mar's Flower Clock installed for?",
+      "PT": "Para qual evento foi instalado o Relógio de Flores de Viña del Mar?"
+    },
+    "opciones": [
+      {
+        "ES": "El Mundial de fútbol de 1962",
+        "EN": "The 1962 football World Cup",
+        "PT": "A Copa do Mundo de futebol de 1962"
+      },
+      {
+        "ES": "El centenario de Viña del Mar",
+        "EN": "Viña del Mar's centenary",
+        "PT": "O centenário de Viña del Mar"
+      },
+      {
+        "ES": "La inauguración del casino",
+        "EN": "The opening of the casino",
+        "PT": "A inauguração do cassino"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Se hizo para el Mundial de 1962, que se jugó en Chile, con una maquinaria suiza. Las flores de la esfera no pueden crecer más de unos 10 centímetros para no frenar las agujas.",
+      "EN": "It was made for the 1962 World Cup, held in Chile, with Swiss clockwork. The flowers on the dial cannot grow taller than about 10 centimetres or they would stop the hands.",
+      "PT": "Foi feito para a Copa de 1962, disputada no Chile, com um mecanismo suíço. As flores do mostrador não podem passar de uns 10 centímetros para não travar os ponteiros."
+    }
+  }
+}

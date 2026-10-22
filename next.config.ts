@@ -28,6 +28,7 @@ const nextConfig: NextConfig = {
       { source: "/d/indigo-7c41/:path*", destination: "/d/indigo-7c41/index.html" },
       { source: "/d/nooe-a332/:path*", destination: "/d/nooe-a332/index.html" },
       { source: "/d/sheraton-5e38/:path*", destination: "/d/sheraton-5e38/index.html" },
+      { source: "/d/plazaelbosque-fb94/:path*", destination: "/d/plazaelbosque-fb94/index.html" },
       { source: "/d/uman-a055/:path*", destination: "/d/uman-a055/index.html" },
       { source: "/d/aldea-07ac/:path*", destination: "/d/aldea-07ac/index.html" },
       { source: "/d/hovima-d1be/:path*", destination: "/d/hovima-d1be/index.html" },
