@@ -1,0 +1,402 @@
+{
+  "centro-1": {
+    "pregunta": {
+      "ES": "¿Qué condición puso el obispo Palafox al donar sus libros en 1646?",
+      "EN": "What condition did Bishop Palafox set when he donated his books in 1646?"
+    },
+    "opciones": [
+      {
+        "ES": "Que solo los leyeran los sacerdotes",
+        "EN": "That only priests could read them"
+      },
+      {
+        "ES": "Que estuvieran abiertos al público",
+        "EN": "That they be open to the public"
+      },
+      {
+        "ES": "Que se guardaran bajo llave en la catedral",
+        "EN": "That they be locked away in the cathedral"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Donó unos 5,000 libros al Colegio de San Juan para que los consultara cualquier lector, religioso o laico. Por eso se considera la primera biblioteca pública de América.",
+      "EN": "He gave some 5,000 books to the Colegio de San Juan so that any reader, clergy or lay, could consult them. That is why it is considered the first public library in the Americas."
+    }
+  },
+  "centro-2": {
+    "pregunta": {
+      "ES": "¿Con qué se cubrió la yesería de la Capilla del Rosario?",
+      "EN": "What was the plasterwork of the Rosary Chapel covered with?"
+    },
+    "opciones": [
+      {
+        "ES": "Hoja de oro de 24 quilates",
+        "EN": "24-carat gold leaf"
+      },
+      {
+        "ES": "Pintura dorada al óleo",
+        "EN": "Gold-colored oil paint"
+      },
+      {
+        "ES": "Láminas de cobre pulido",
+        "EN": "Polished copper sheets"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La yesería va cubierta de hoja de oro de 24 quilates. Cuando se consagró, en 1690, la llamaron la octava maravilla del mundo, y Juan Pablo II la describió en 1979 como el relicario de América.",
+      "EN": "The plasterwork is covered in 24-carat gold leaf. When it was consecrated in 1690 it was called the eighth wonder of the world, and in 1979 John Paul II described it as the reliquary of the Americas."
+    }
+  },
+  "centro-3": {
+    "pregunta": {
+      "ES": "Según la leyenda, ¿quién subió la campana María a la torre de la catedral?",
+      "EN": "According to legend, who raised the María bell into the cathedral tower?"
+    },
+    "opciones": [
+      {
+        "ES": "Cien hombres con cuerdas",
+        "EN": "A hundred men with ropes"
+      },
+      {
+        "ES": "Una yunta de bueyes",
+        "EN": "A team of oxen"
+      },
+      {
+        "ES": "Los ángeles",
+        "EN": "The angels"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "La campana pesa unas ocho toneladas y media, y la leyenda dice que la subieron los ángeles. Los documentos cuentan que la colocó en 1732 Juan Bautista Santiago, maestro mayor de las obras.",
+      "EN": "The bell weighs about eight and a half tonnes, and legend says the angels lifted it. The records say it was put in place in 1732 by Juan Bautista Santiago, master builder of the works."
+    }
+  },
+  "centro-4": {
+    "pregunta": {
+      "ES": "¿De dónde le viene el nombre al barrio de Los Sapos?",
+      "EN": "Where does the Los Sapos quarter get its name?"
+    },
+    "opciones": [
+      {
+        "ES": "De una cantina famosa",
+        "EN": "From a famous cantina"
+      },
+      {
+        "ES": "De los charcos que dejaba el río al desbordarse",
+        "EN": "From the puddles the river left when it flooded"
+      },
+      {
+        "ES": "De una fuente con forma de sapo",
+        "EN": "From a toad-shaped fountain"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El río San Francisco se desbordaba y dejaba charcos en la calle 6 Sur, donde se juntaban los sapos. Los sapos ya no están, pero el nombre se quedó.",
+      "EN": "The San Francisco River used to flood and leave puddles on 6 Sur street, where toads gathered. The toads are long gone, but the name stuck."
+    }
+  },
+  "cholula-1": {
+    "pregunta": {
+      "ES": "Tras el incendio de 1939, ¿cómo se reconstruyó el interior de Acatepec?",
+      "EN": "After the 1939 fire, how was the interior of Acatepec rebuilt?"
+    },
+    "opciones": [
+      {
+        "ES": "Con los planos originales del siglo XVIII",
+        "EN": "From the original 18th-century plans"
+      },
+      {
+        "ES": "Copiando la iglesia de Tonantzintla",
+        "EN": "By copying the Tonantzintla church"
+      },
+      {
+        "ES": "Con fotos antiguas, algunas de Guillermo Kahlo",
+        "EN": "From old photographs, some by Guillermo Kahlo"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El 31 de diciembre de 1939 un incendio destruyó casi todo el interior. Se rehízo a partir de fotografías de principios del siglo XX de Guillermo Kahlo, el padre de Frida, y de Gerardo Murillo, el Dr. Atl. El trabajo duró 25 años.",
+      "EN": "On 31 December 1939 a fire destroyed almost the entire interior. It was rebuilt from early 20th-century photographs by Guillermo Kahlo, Frida's father, and by Gerardo Murillo, known as Dr. Atl. The work took 25 years."
+    }
+  },
+  "cholula-2": {
+    "pregunta": {
+      "ES": "¿Qué tienen de especial los querubines de Tonantzintla?",
+      "EN": "What is special about the cherubs of Tonantzintla?"
+    },
+    "opciones": [
+      {
+        "ES": "Tienen rasgos indígenas",
+        "EN": "They have indigenous features"
+      },
+      {
+        "ES": "Llevan coronas de plata",
+        "EN": "They wear silver crowns"
+      },
+      {
+        "ES": "Están tallados en madera de cedro",
+        "EN": "They are carved in cedar wood"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Los artesanos del pueblo modelaron en yeso ángeles y querubines con rasgos indígenas, rodeados de flores y frutas como mangos y papayas. Por esa mezcla de lo indígena y lo cristiano se hizo famosa.",
+      "EN": "Local craftsmen modeled angels and cherubs with indigenous features in plaster, surrounded by flowers and fruit such as mangoes and papayas. The church became famous for that blend of indigenous and Christian imagery."
+    }
+  },
+  "cholula-3": {
+    "pregunta": {
+      "ES": "¿Qué significa Tlachihualtepetl, el nombre náhuatl de la Gran Pirámide?",
+      "EN": "What does Tlachihualtepetl, the Nahuatl name of the Great Pyramid, mean?"
+    },
+    "opciones": [
+      {
+        "ES": "Casa del sol",
+        "EN": "House of the sun"
+      },
+      {
+        "ES": "Cerro hecho a mano",
+        "EN": "Hand-made hill"
+      },
+      {
+        "ES": "Lugar de las serpientes",
+        "EN": "Place of the serpents"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Significa cerro hecho a mano. Se construyó en varias etapas, una encima de otra, y su base mide unos 450 metros por lado, la más grande del mundo para una pirámide.",
+      "EN": "It means hand-made hill. It was built in several stages, one on top of another, and its base measures about 450 meters on each side, the largest of any pyramid in the world."
+    }
+  },
+  "cholula-4": {
+    "pregunta": {
+      "ES": "¿Cuántas cúpulas cubren la Capilla Real del convento de San Gabriel?",
+      "EN": "How many domes cover the Capilla Real of the San Gabriel convent?"
+    },
+    "opciones": [
+      {
+        "ES": "Siete",
+        "EN": "Seven"
+      },
+      {
+        "ES": "Doce",
+        "EN": "Twelve"
+      },
+      {
+        "ES": "Cuarenta y nueve",
+        "EN": "Forty-nine"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Son 49 cúpulas sobre siete naves. La capilla se levantó en el siglo XVI para enseñar la doctrina a los indígenas, y por su planta de muchas naves se la suele comparar con una mezquita.",
+      "EN": "There are 49 domes over seven aisles. The chapel was built in the 16th century to teach Christian doctrine to the indigenous people, and its many-aisled plan is often compared to a mosque."
+    }
+  },
+  "cocina-1": {
+    "pregunta": {
+      "ES": "Según la tradición, ¿quién creó el mole poblano en el convento de Santa Rosa?",
+      "EN": "According to tradition, who created mole poblano at the Santa Rosa convent?"
+    },
+    "opciones": [
+      {
+        "ES": "Sor Andrea de la Asunción",
+        "EN": "Sister Andrea de la Asunción"
+      },
+      {
+        "ES": "Sor Juana Inés de la Cruz",
+        "EN": "Sister Juana Inés de la Cruz"
+      },
+      {
+        "ES": "El obispo Juan de Palafox",
+        "EN": "Bishop Juan de Palafox"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La tradición se lo atribuye a sor Andrea de la Asunción, que lo habría preparado para recibir a un virrey de visita en Puebla. No hay documentos que lo prueben, aunque la cocina de talavera donde se sitúa la historia sigue en pie.",
+      "EN": "Tradition credits Sister Andrea de la Asunción, who is said to have made it to welcome a viceroy visiting Puebla. No documents prove it, though the Talavera kitchen where the story is set still stands."
+    }
+  },
+  "cocina-2": {
+    "pregunta": {
+      "ES": "¿Por qué los chiles en nogada se comen sobre todo en agosto y septiembre?",
+      "EN": "Why are chiles en nogada eaten mainly in August and September?"
+    },
+    "opciones": [
+      {
+        "ES": "Porque es un platillo de Semana Santa",
+        "EN": "Because it is an Easter dish"
+      },
+      {
+        "ES": "Porque el chile poblano solo se da en agosto",
+        "EN": "Because poblano chiles only grow in August"
+      },
+      {
+        "ES": "Porque la nuez de Castilla fresca se cosecha en esos meses",
+        "EN": "Because fresh Castile walnuts are harvested in those months"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "La nogada se hace con nuez de Castilla, que se da de finales de julio a septiembre. La versión más contada dice que unas monjas de Puebla crearon el platillo en 1821 para Agustín de Iturbide, con los colores de la bandera, aunque los historiadores lo discuten.",
+      "EN": "The nogada sauce is made with Castile walnuts, which are in season from late July to September. The most popular story says nuns in Puebla created the dish in 1821 for Agustín de Iturbide, in the colors of the flag, though historians dispute it."
+    }
+  },
+  "cocina-3": {
+    "pregunta": {
+      "ES": "¿De qué es la cubierta de las tortitas de Santa Clara?",
+      "EN": "What is the topping of the Santa Clara cookies made of?"
+    },
+    "opciones": [
+      {
+        "ES": "De coco rallado",
+        "EN": "Grated coconut"
+      },
+      {
+        "ES": "De pasta de pepita de calabaza",
+        "EN": "Pumpkin seed paste"
+      },
+      {
+        "ES": "De cajeta",
+        "EN": "Cajeta caramel"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La galleta lleva encima una pasta de pepita de calabaza. Toman el nombre del convento de Santa Clara, en esta misma calle, donde las monjas la preparaban.",
+      "EN": "The cookie is topped with a paste of pumpkin seeds. They take their name from the Santa Clara convent on this same street, where the nuns used to make it."
+    }
+  },
+  "cocina-4": {
+    "pregunta": {
+      "ES": "¿Cómo se sirve el licor de La Pasita?",
+      "EN": "How is the liqueur at La Pasita served?"
+    },
+    "opciones": [
+      {
+        "ES": "En caballito, con queso y una pasa en un palillo",
+        "EN": "In a shot glass, with cheese and a raisin on a toothpick"
+      },
+      {
+        "ES": "En vaso con hielo y canela",
+        "EN": "In a glass with ice and cinnamon"
+      },
+      {
+        "ES": "Caliente, en jarrito de barro",
+        "EN": "Hot, in a small clay mug"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es un licor dulce de uva pasa. Se sirve en caballito, con un cubito de queso fresco y una pasa pinchados en un palillo. La cantina abrió en 1916.",
+      "EN": "It is a sweet raisin liqueur. It comes in a shot glass, with a cube of fresh cheese and a raisin on a toothpick. The cantina opened in 1916."
+    }
+  },
+  "atlixco-1": {
+    "pregunta": {
+      "ES": "¿Con qué otro nombre se conoce a Atlixco?",
+      "EN": "What other name is Atlixco known by?"
+    },
+    "opciones": [
+      {
+        "ES": "Atlixco de los Volcanes",
+        "EN": "Atlixco of the Volcanoes"
+      },
+      {
+        "ES": "Atlixco de las Flores",
+        "EN": "Atlixco of the Flowers"
+      },
+      {
+        "ES": "Atlixco del Agua",
+        "EN": "Atlixco of the Water"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Por sus viveros de plantas y árboles la llaman Atlixco de las Flores. En noviembre y diciembre organiza una feria de la nochebuena con miles de plantas.",
+      "EN": "Its plant and tree nurseries earned it the name Atlixco of the Flowers. In November and December it holds a poinsettia fair with thousands of plants."
+    }
+  },
+  "atlixco-2": {
+    "pregunta": {
+      "ES": "Un día antes de la batalla de Puebla del 5 de mayo de 1862, ¿qué pasó en Atlixco?",
+      "EN": "The day before the Battle of Puebla on 5 May 1862, what happened in Atlixco?"
+    },
+    "opciones": [
+      {
+        "ES": "Se firmó la paz con Francia",
+        "EN": "Peace with France was signed"
+      },
+      {
+        "ES": "Nació Ignacio Zaragoza",
+        "EN": "Ignacio Zaragoza was born"
+      },
+      {
+        "ES": "Hubo otra batalla, la de Atlixco",
+        "EN": "Another battle was fought, the Battle of Atlixco"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El 4 de mayo de 1862 se combatió en Atlixco, la víspera de la batalla de Puebla. Desde 1998 la ciudad lleva además el título de Heroica.",
+      "EN": "On 4 May 1862 a battle was fought at Atlixco, on the eve of the Battle of Puebla. Since 1998 the town has also held the title of Heroica."
+    }
+  },
+  "atlixco-3": {
+    "pregunta": {
+      "ES": "¿Qué significa Popocatépetl en náhuatl?",
+      "EN": "What does Popocatépetl mean in Nahuatl?"
+    },
+    "opciones": [
+      {
+        "ES": "Montaña que humea",
+        "EN": "Smoking mountain"
+      },
+      {
+        "ES": "Mujer dormida",
+        "EN": "Sleeping woman"
+      },
+      {
+        "ES": "Cerro de las águilas",
+        "EN": "Hill of the eagles"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Significa montaña que humea, por la actividad que tiene desde la época prehispánica. Con más de 5,400 metros es el segundo volcán más alto de México, y en la zona lo llaman don Goyo.",
+      "EN": "It means smoking mountain, for the activity it has shown since pre-Hispanic times. At over 5,400 meters it is the second-highest volcano in Mexico, and locally people call it Don Goyo."
+    }
+  },
+  "atlixco-4": {
+    "pregunta": {
+      "ES": "¿Cómo se prepara la cecina de Atlixco?",
+      "EN": "How is Atlixco cecina prepared?"
+    },
+    "opciones": [
+      {
+        "ES": "Ahumada con leña de encino",
+        "EN": "Smoked over oak wood"
+      },
+      {
+        "ES": "Salada y secada al sol",
+        "EN": "Salted and sun-dried"
+      },
+      {
+        "ES": "Marinada en pulque",
+        "EN": "Marinated in pulque"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Es carne de res cortada muy fina, salada y curada al sol. Atlixco le dedica una feria cada verano; en agosto de 2026 se celebró la número 18.",
+      "EN": "It is thinly sliced beef, salted and cured in the sun. Atlixco holds a fair in its honor every summer; the 18th edition took place in August 2026."
+    }
+  }
+}

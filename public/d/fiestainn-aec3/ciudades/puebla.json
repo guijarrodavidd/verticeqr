@@ -1,0 +1,1005 @@
+{
+  "slug": "puebla",
+  "nombre": "Puebla",
+  "intro": {
+    "ES": "Desde el hotel, en Las Ánimas, el centro histórico queda a unos 20 minutos en taxi y la pirámide de Cholula a 25. Una tarde libre da para ver la catedral y cenar en el barrio de Los Sapos. Si te quedas un día más, Atlixco y el Popocatépetl están a 45 minutos por carretera.",
+    "EN": "From the hotel in Las Ánimas, the historic center is about 20 minutes away by taxi and the Cholula pyramid about 25. A free afternoon is enough to see the cathedral and have dinner in the Los Sapos quarter. If you stay an extra day, Atlixco and Popocatépetl volcano are 45 minutes away by road."
+  },
+  "lugares": [
+    {
+      "id": "zocalo",
+      "img": "/ciudades/puebla/img/zocalo.jpg",
+      "nombre": "Zócalo y centro histórico",
+      "zona": {
+        "ES": "Centro histórico, Patrimonio de la Humanidad desde 1987",
+        "EN": "Historic center, UNESCO World Heritage Site since 1987"
+      },
+      "d": {
+        "ES": "Puebla se fundó en 1531 y su centro conserva la traza en cuadrícula de entonces. El decreto que lo protege cuenta 2,619 edificios históricos en 391 manzanas. En el Zócalo, con la fuente de San Miguel en medio, tienes la catedral a un lado y portales con cafés en los otros.",
+        "EN": "Puebla was founded in 1531 and its center keeps the original grid of streets. The decree that protects it lists 2,619 historic buildings across 391 blocks. In the Zócalo, with the San Miguel fountain in the middle, the cathedral stands on one side and arcades lined with cafés on the others."
+      },
+      "cuando": {
+        "ES": "Al caer la tarde, cuando se iluminan la catedral y la fuente",
+        "EN": "At dusk, when the cathedral and the fountain are lit up"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 19.04369,
+      "lng": -98.19811
+    },
+    {
+      "id": "catedral",
+      "img": "/ciudades/puebla/img/catedral.jpg",
+      "nombre": "Catedral de Puebla",
+      "zona": {
+        "ES": "Frente al Zócalo, centro histórico",
+        "EN": "On the Zócalo, historic center"
+      },
+      "d": {
+        "ES": "Las obras empezaron en 1575 y el obispo Juan de Palafox la consagró en 1649, todavía sin terminar. Sus dos torres rondan los 70 metros y en la del norte cuelga la campana María, de unas ocho toneladas y media. El altar mayor, el Ciprés, lo diseñó Manuel Tolsá y se bendijo en 1819.",
+        "EN": "Work began in 1575 and Bishop Juan de Palafox consecrated it in 1649, before it was finished. Its two towers are around 70 meters tall, and the north one holds the María bell, which weighs about eight and a half tonnes. The high altar, known as the Ciprés, was designed by Manuel Tolsá and blessed in 1819."
+      },
+      "cuando": {
+        "ES": "A media tarde, fuera de las horas de misa",
+        "EN": "Mid-afternoon, outside Mass times"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 19.04286,
+      "lng": -98.19838
+    },
+    {
+      "id": "capilla-rosario",
+      "img": "/ciudades/puebla/img/rosario.jpg",
+      "nombre": "Capilla del Rosario",
+      "zona": {
+        "ES": "Templo de Santo Domingo, calle 5 de Mayo",
+        "EN": "Santo Domingo church, 5 de Mayo street"
+      },
+      "d": {
+        "ES": "Se entra por el templo de Santo Domingo, en la calle peatonal 5 de Mayo. La capilla se consagró en 1690 y la yesería de muros, bóveda y cúpula va cubierta de hoja de oro de 24 quilates, con talavera en la parte baja. En su época la llamaron la octava maravilla del mundo.",
+        "EN": "You enter through Santo Domingo church, on the pedestrian 5 de Mayo street. The chapel was consecrated in 1690, and the plasterwork on its walls, vault and dome is covered in 24-carat gold leaf, with Talavera tiles below. In its day it was called the eighth wonder of the world."
+      },
+      "cuando": {
+        "ES": "Por la tarde, fuera de las horas de misa",
+        "EN": "In the afternoon, outside Mass times"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 19.04656,
+      "lng": -98.19831
+    },
+    {
+      "id": "palafoxiana",
+      "img": "/ciudades/puebla/img/palafoxiana.jpg",
+      "nombre": "Biblioteca Palafoxiana",
+      "zona": {
+        "ES": "5 Oriente 5, junto a la catedral",
+        "EN": "5 Oriente 5, next to the cathedral"
+      },
+      "d": {
+        "ES": "En 1646 el obispo Juan de Palafox donó sus 5,000 libros para que los pudiera consultar cualquier lector, religioso o laico. Por eso se considera la primera biblioteca pública de América. Hoy guarda más de 45,000 libros antiguos en estanterías de madera de tres niveles, y la UNESCO la incluyó en su registro Memoria del Mundo en 2005.",
+        "EN": "In 1646 Bishop Juan de Palafox donated his 5,000 books so that any reader, clergy or lay, could consult them. That is why it is considered the first public library in the Americas. Today it holds over 45,000 old books on three-tier wooden shelves, and UNESCO added it to its Memory of the World register in 2005."
+      },
+      "cuando": {
+        "ES": "A primera hora de la tarde; cierra los lunes",
+        "EN": "Early afternoon; closed on Mondays"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 19.04215,
+      "lng": -98.19889
+    },
+    {
+      "id": "museo-amparo",
+      "img": "/ciudades/puebla/img/amparo.jpg",
+      "nombre": "Museo Amparo",
+      "zona": {
+        "ES": "2 Sur 708, centro histórico",
+        "EN": "2 Sur 708, historic center"
+      },
+      "d": {
+        "ES": "Abrió en 1991 en el antiguo hospital de San Juan de Letrán, fundado poco después de 1531. Su colección recorre el arte de México desde antes de la llegada de los españoles hasta hoy. Desde la terraza se ven las torres de la catedral por encima de los tejados.",
+        "EN": "It opened in 1991 in the former San Juan de Letrán hospital, founded shortly after 1531. Its collection covers Mexican art from before the Spanish arrived up to the present day. From the terrace you see the cathedral towers rising above the rooftops."
+      },
+      "cuando": {
+        "ES": "Cualquier día menos el martes, que cierra",
+        "EN": "Any day except Tuesday, when it is closed"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 19.04069,
+      "lng": -98.19851
+    },
+    {
+      "id": "talavera-uriarte",
+      "img": "/ciudades/puebla/img/uriarte.jpg",
+      "nombre": "Talavera Uriarte",
+      "zona": {
+        "ES": "4 Poniente 911, centro histórico",
+        "EN": "4 Poniente 911, historic center"
+      },
+      "d": {
+        "ES": "Es uno de los talleres de talavera más antiguos de Puebla, fundado en 1824. En la visita guiada sigues una pieza desde el barro hasta el horno y ves a los artesanos pintarla a mano, con técnicas que vienen del siglo XVI. La talavera de Puebla y Tlaxcala es Patrimonio Cultural Inmaterial de la Humanidad desde 2019.",
+        "EN": "One of the oldest Talavera workshops in Puebla, founded in 1824. On the guided tour you follow a piece from clay to kiln and watch the artisans paint it by hand, with techniques that go back to the 16th century. The Talavera of Puebla and Tlaxcala has been on UNESCO's Intangible Cultural Heritage list since 2019."
+      },
+      "cuando": {
+        "ES": "Entre semana, con el taller trabajando",
+        "EN": "On a weekday, while the workshop is busy"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 19.04916,
+      "lng": -98.20404
+    },
+    {
+      "id": "estrella",
+      "img": "/ciudades/puebla/img/estrella.jpg",
+      "nombre": "Estrella de Puebla",
+      "zona": {
+        "ES": "Angelópolis, junto al Paseo del Río Atoyac",
+        "EN": "Angelópolis, by the Atoyac River promenade"
+      },
+      "d": {
+        "ES": "Esta rueda de la fortuna de 80 metros se inauguró en 2013 y tiene el récord Guinness de la rueda transportable más grande del mundo. Tiene 54 cabinas para ocho personas, cuatro de ellas con piso de vidrio, y la vuelta dura unos 20 minutos. En días claros, desde arriba se ve la iglesia amarilla sobre la pirámide de Cholula.",
+        "EN": "This 80-meter Ferris wheel opened in 2013 and holds the Guinness World Record for the largest transportable wheel. It has 54 cabins for eight people, four of them with glass floors, and a ride lasts about 20 minutes. On clear days you can see the yellow church on top of the Cholula pyramid."
+      },
+      "cuando": {
+        "ES": "Al final de la tarde, a diez minutos del hotel",
+        "EN": "In the late afternoon, ten minutes from the hotel"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 19.03444,
+      "lng": -98.23231
+    },
+    {
+      "id": "cholula",
+      "img": "/ciudades/puebla/img/cholula.jpg",
+      "nombre": "Gran Pirámide de Cholula",
+      "zona": {
+        "ES": "San Andrés Cholula",
+        "EN": "San Andrés Cholula"
+      },
+      "d": {
+        "ES": "Desde lejos parece un cerro con una iglesia encima. Es el Tlachihualtepetl, el cerro hecho a mano, una pirámide levantada en varias etapas cuya base, de unos 450 metros por lado, es la más grande del mundo. Dentro se excavaron cerca de 8 kilómetros de túneles, y en la cima está el santuario de los Remedios, de 1594.",
+        "EN": "From afar it looks like a hill with a church on top. It is the Tlachihualtepetl, the hand-made hill, a pyramid built in several stages whose base, about 450 meters on each side, is the largest in the world. Nearly 8 kilometers of tunnels were dug inside, and the Remedios sanctuary, from 1594, sits on the summit."
+      },
+      "cuando": {
+        "ES": "Al atardecer, desde el atrio del santuario",
+        "EN": "At sunset, from the sanctuary forecourt"
+      },
+      "min": 25,
+      "modo": "coche",
+      "lat": 19.05796,
+      "lng": -98.30223
+    }
+  ],
+  "rutas": [
+    {
+      "id": "centro",
+      "expId": "ex1",
+      "img": "/ciudades/puebla/img/centro.jpg",
+      "titulo": {
+        "ES": "Una tarde en el centro histórico",
+        "EN": "An afternoon in the historic center"
+      },
+      "tipo": {
+        "ES": "Historia",
+        "EN": "History"
+      },
+      "dur": "4 h 20 min",
+      "d": {
+        "ES": "Para cuando terminas las reuniones a media tarde. Entras en la primera biblioteca pública de América, ves la capilla dorada de Santo Domingo, cruzas el Zócalo frente a la catedral y cenas en el barrio de Los Sapos, todo a pie y en menos de dos kilómetros.",
+        "EN": "For when your meetings end mid-afternoon. You step into the first public library in the Americas, see the golden chapel of Santo Domingo, cross the Zócalo in front of the cathedral and have dinner in the Los Sapos quarter, all on foot and in under two kilometers."
+      },
+      "salida": {
+        "ES": "En taxi desde el hotel hasta la 5 Oriente, unos 25 minutos con el tráfico de la tarde. Sal hacia las 15:30, porque la biblioteca cierra pronto",
+        "EN": "By taxi from the hotel to 5 Oriente street, about 25 minutes in afternoon traffic. Leave around 15:30, as the library closes early"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo para las banquetas de piedra del centro",
+          "Hombros y rodillas cubiertos para entrar en las iglesias",
+          "Algo de efectivo para la cena",
+          "Una chamarra ligera, que en Puebla refresca en cuanto se pone el sol"
+        ],
+        "EN": [
+          "Comfortable shoes for the stone sidewalks downtown",
+          "Covered shoulders and knees to enter the churches",
+          "Some cash for dinner",
+          "A light jacket, as Puebla cools down as soon as the sun sets"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Biblioteca Palafoxiana",
+            "EN": "Palafoxiana Library"
+          },
+          "s": {
+            "ES": "La primera biblioteca pública de América, de 1646",
+            "EN": "The first public library in the Americas, from 1646"
+          },
+          "d": {
+            "ES": "Entras en la Casa de la Cultura, cruzas el patio y subes la escalera hasta dos grandes puertas de madera. Detrás está la sala, larga y abovedada, con estanterías de cedro y ayacahuite en tres niveles y un retablo dorado al fondo. En las vitrinas del centro se exponen algunos de sus libros más valiosos.",
+            "EN": "You enter the Casa de la Cultura, cross the courtyard and climb the stairs to a pair of large wooden doors. Behind them is the hall, long and vaulted, with cedar and ayacahuite shelves in three tiers and a gilded altarpiece at the far end. The display cases down the middle show some of its most valuable books."
+          },
+          "tip": {
+            "ES": "Va primero porque cierra a media tarde, y los lunes no abre. Si llegas en lunes, cámbiala por el Museo Amparo, a dos cuadras.",
+            "EN": "It comes first because it closes mid-afternoon, and it does not open on Mondays. On a Monday, swap it for the Museo Amparo, two blocks away."
+          },
+          "hora": "16:00",
+          "dur": "40 min",
+          "img": "/ciudades/puebla/img/palafoxiana-1.jpg",
+          "lat": 19.04215,
+          "lng": -98.19889,
+          "tramo": "coche",
+          "tramoDuracionMin": 25,
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Capilla del Rosario",
+            "EN": "Rosary Chapel"
+          },
+          "s": {
+            "ES": "Oro de 24 quilates en el templo de Santo Domingo",
+            "EN": "24-carat gold inside Santo Domingo church"
+          },
+          "d": {
+            "ES": "Subes por la calle peatonal 5 de Mayo hasta el templo de Santo Domingo y la capilla se abre a un lado de la nave. Se consagró en 1690 y la yesería que cubre muros, bóveda y cúpula lleva hoja de oro. Hay unos sesenta ángeles repartidos por la cúpula y la bóveda, y en la zona del coro algunos tocan instrumentos.",
+            "EN": "Walk up the pedestrian 5 de Mayo street to Santo Domingo church; the chapel opens off one side of the nave. It was consecrated in 1690 and the plasterwork on its walls, vault and dome is covered in gold leaf. Some sixty angels are spread across the dome and vault, and around the choir a few of them play instruments."
+          },
+          "tip": {
+            "ES": "Por la tarde abre solo un rato y fuera de las misas. Si hay celebración, espera al fondo en silencio.",
+            "EN": "In the afternoon it opens only for a while and outside Mass times. If a service is on, wait quietly at the back."
+          },
+          "hora": "16:50",
+          "dur": "30 min",
+          "img": "/ciudades/puebla/img/rosario-1.jpg",
+          "lat": 19.04656,
+          "lng": -98.19831,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Zócalo y catedral",
+            "EN": "Zócalo and cathedral"
+          },
+          "s": {
+            "ES": "Torres de unos 70 metros sobre la plaza mayor",
+            "EN": "Towers some 70 meters high over the main square"
+          },
+          "d": {
+            "ES": "La catedral se empezó en 1575 y se consagró en 1649. Solo la torre norte tiene campanas, y la mayor, la María, pesa unas ocho toneladas y media. Dentro está el Ciprés, el altar mayor que diseñó Manuel Tolsá. Al salir, el Zócalo te espera con sus portales y la fuente de San Miguel.",
+            "EN": "The cathedral was begun in 1575 and consecrated in 1649. Only the north tower has bells, and the largest, the María, weighs about eight and a half tonnes. Inside is the Ciprés, the high altar designed by Manuel Tolsá. Outside, the Zócalo has its arcades and the San Miguel fountain."
+          },
+          "tip": {
+            "ES": "Entra aunque sea diez minutos. Luego cruza a la fuente de San Miguel y mira la catedral desde ahí cuando empiezan a encenderse las luces.",
+            "EN": "Go in, even for ten minutes. Then cross to the San Miguel fountain and look back at the cathedral as the lights come on."
+          },
+          "hora": "17:30",
+          "dur": "45 min",
+          "img": "/ciudades/puebla/img/catedral.jpg",
+          "lat": 19.04286,
+          "lng": -98.19838,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Barrio de Los Sapos",
+            "EN": "Los Sapos quarter"
+          },
+          "s": {
+            "ES": "Antigüedades y cantinas en la calle 6 Sur",
+            "EN": "Antiques and cantinas on 6 Sur street"
+          },
+          "d": {
+            "ES": "El nombre viene de cuando el río San Francisco se desbordaba y dejaba charcos llenos de sapos en la calle 6 Sur. Hoy, en la calle y su plazuela hay tiendas de antigüedades, bares y restaurantes. Los fines de semana se monta el bazar, y el domingo es cuando más puestos hay.",
+            "EN": "The name comes from the days when the San Francisco River flooded and left puddles full of toads (sapos) on 6 Sur street. Today the street and its little square are lined with antique shops, bars and restaurants. On weekends the antiques market sets up, and Sunday is when it has the most stalls."
+          },
+          "tip": {
+            "ES": "Para cenar, pide chalupas o un mole. Vuelve en taxi, unos 25 minutos hasta el hotel.",
+            "EN": "For dinner, order chalupas or a mole. Head back by taxi, about 25 minutes to the hotel."
+          },
+          "hora": "18:25",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/puebla/img/sapos.jpg",
+          "lat": 19.04079,
+          "lng": -98.19635,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 90
+        }
+      ],
+      "fotos": [
+        "/ciudades/puebla/img/centro.jpg",
+        "/ciudades/puebla/img/palafoxiana-1.jpg",
+        "/ciudades/puebla/img/rosario-1.jpg",
+        "/ciudades/puebla/img/catedral.jpg",
+        "/ciudades/puebla/img/zocalo.jpg",
+        "/ciudades/puebla/img/sapos.jpg"
+      ],
+      "duracionMin": 260,
+      "distanciaKm": 14,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Todo el recorrido es llano, por calles del centro y la peatonal 5 de Mayo, aunque hay banquetas estrechas en algunos tramos. A la biblioteca se sube por una escalera; si vas en silla de ruedas, pregunta en recepción antes de salir.",
+        "EN": "The whole route is flat, along downtown streets and the pedestrian 5 de Mayo, though some sidewalks are narrow. The library is up a flight of stairs; if you use a wheelchair, ask at reception before setting off."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 19.04215,
+        "lng": -98.19889,
+        "foto": "/ciudades/puebla/img/casa-cultura.jpg",
+        "texto": {
+          "ES": "Casa de la Cultura, en la 5 Oriente 5, al lado de la catedral. El taxi te deja en la puerta, unos 25 minutos desde el hotel.",
+          "EN": "Casa de la Cultura, at 5 Oriente 5, beside the cathedral. The taxi drops you at the door, about 25 minutes from the hotel."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxis",
+          "Entrada a la Biblioteca Palafoxiana",
+          "Cena"
+        ],
+        "EN": [
+          "Taxis",
+          "Palafoxiana Library admission",
+          "Dinner"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. En lunes la biblioteca está cerrada; empieza en el Museo Amparo.",
+        "EN": "Self-guided, so there is nothing to book or cancel. The library is closed on Mondays; start at the Museo Amparo instead."
+      },
+      "salidasFijas": [],
+      "precioDesde": 990
+    },
+    {
+      "id": "cholula",
+      "expId": "ex2",
+      "img": "/ciudades/puebla/img/cholula-ruta.jpg",
+      "titulo": {
+        "ES": "Cholula al atardecer",
+        "EN": "Cholula at sunset"
+      },
+      "tipo": {
+        "ES": "Iglesias y pirámide",
+        "EN": "Churches and pyramid"
+      },
+      "dur": "4 h 25 min",
+      "d": {
+        "ES": "Empiezas en dos iglesias de pueblo, una forrada de talavera por fuera y otra pintada por dentro de arriba abajo. Después subes al santuario que corona la Gran Pirámide para ver caer el sol hacia los volcanes, y bajas a cenar al zócalo de Cholula.",
+        "EN": "You start at two village churches, one covered in Talavera tiles on the outside and the other painted from floor to ceiling inside. Then you climb to the sanctuary on top of the Great Pyramid to watch the sun go down towards the volcanoes, and walk down to dinner on the Cholula main square."
+      },
+      "salida": {
+        "ES": "En taxi desde el hotel hasta San Francisco Acatepec, unos 25 minutos. Sal hacia las 15:30 para llegar a la pirámide con luz",
+        "EN": "By taxi from the hotel to San Francisco Acatepec, about 25 minutes. Leave around 15:30 to reach the pyramid in daylight"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo para la subida a la pirámide",
+          "Una chamarra, que arriba corre aire y al anochecer refresca",
+          "Lentes de sol, que se sube de cara al poniente",
+          "Efectivo para la cena"
+        ],
+        "EN": [
+          "Comfortable shoes for the climb up the pyramid",
+          "A jacket, as it is breezy at the top and cools down at dusk",
+          "Sunglasses, as you climb facing west",
+          "Cash for dinner"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "San Francisco Acatepec",
+            "EN": "San Francisco Acatepec"
+          },
+          "s": {
+            "ES": "La iglesia que parece de porcelana",
+            "EN": "The church that looks like porcelain"
+          },
+          "d": {
+            "ES": "La fachada combina ladrillo rojo con azulejos de talavera hechos a mano para este templo entre 1650 y 1750. El historiador Manuel Toussaint la llamó iglesia de porcelana. La cúpula también va forrada de azulejos, colocados como un tablero de ajedrez.",
+            "EN": "The facade combines red brick with Talavera tiles made by hand for this church between 1650 and 1750. The historian Manuel Toussaint called it a porcelain church. The dome is tiled too, laid out like a chessboard."
+          },
+          "tip": {
+            "ES": "Fíjate en la torre, girada 45 grados respecto a la fachada. Dentro casi todo se rehízo tras el incendio de 1939, y el púlpito de madera es lo único que se salvó.",
+            "EN": "Look at the bell tower, turned 45 degrees from the facade. Almost everything inside was rebuilt after the 1939 fire, and the wooden pulpit is the only piece that survived."
+          },
+          "hora": "16:00",
+          "dur": "30 min",
+          "img": "/ciudades/puebla/img/acatepec.jpg",
+          "lat": 19.02223,
+          "lng": -98.30869,
+          "tramo": "coche",
+          "tramoDuracionMin": 25,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Santa María Tonantzintla",
+            "EN": "Santa María Tonantzintla"
+          },
+          "s": {
+            "ES": "Yeso pintado con ángeles de cara indígena",
+            "EN": "Painted plaster with angels of indigenous features"
+          },
+          "d": {
+            "ES": "Por fuera es una iglesia de pueblo de ladrillo y talavera. Por dentro, muros, bóvedas y cúpula están cubiertos de yesería de colores con querubines de rasgos indígenas entre flores y frutas tropicales. Es una de las grandes obras del barroco popular mexicano, del siglo XVIII.",
+            "EN": "From outside it is a village church of brick and Talavera. Inside, the walls, vaults and dome are covered in colored plasterwork, with cherubs of indigenous features among flowers and tropical fruit. It is one of the great works of Mexican folk baroque, from the 18th century."
+          },
+          "tip": {
+            "ES": "No uses flash dentro, que daña el color del yeso. Está a cinco minutos en taxi de Acatepec.",
+            "EN": "Do not use flash inside, as it damages the color of the plaster. It is five minutes by taxi from Acatepec."
+          },
+          "hora": "16:35",
+          "dur": "35 min",
+          "img": "/ciudades/puebla/img/tonantzintla.jpg",
+          "lat": 19.02977,
+          "lng": -98.31961,
+          "tramo": "coche",
+          "tramoDuracionMin": 5,
+          "duracionMin": 35
+        },
+        {
+          "n": {
+            "ES": "Santuario de los Remedios",
+            "EN": "Remedios sanctuary"
+          },
+          "s": {
+            "ES": "La iglesia de 1594 sobre la Gran Pirámide",
+            "EN": "The 1594 church on top of the Great Pyramid"
+          },
+          "d": {
+            "ES": "Subes a pie la pirámide, que por fuera parece un cerro cubierto de árboles, hasta el santuario de Nuestra Señora de los Remedios, construido en 1594. Desde el atrio ves todo el valle de Cholula, y en días claros el Popocatépetl y el Iztaccíhuatl hacia el poniente, por donde se pone el sol.",
+            "EN": "You climb the pyramid on foot, which from outside looks like a wooded hill, up to the sanctuary of Our Lady of Remedios, built in 1594. From the forecourt you see the whole Cholula valley and, on clear days, Popocatépetl and Iztaccíhuatl to the west, where the sun goes down."
+          },
+          "tip": {
+            "ES": "La subida es gratis y lleva unos 15 minutos a paso tranquilo. El santuario suele cerrar hacia las 19:00. De octubre a marzo el sol se pone antes de esa hora; en primavera y verano conviene salir del hotel una hora más tarde.",
+            "EN": "The climb is free and takes about 15 minutes at an easy pace. The sanctuary usually closes around 19:00. From October to March the sun sets before then; in spring and summer, leave the hotel an hour later."
+          },
+          "hora": "17:30",
+          "dur": "1 h",
+          "img": "/ciudades/puebla/img/remedios.jpg",
+          "lat": 19.0581,
+          "lng": -98.30172,
+          "tramo": "coche",
+          "tramoDuracionMin": 20,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Zócalo de San Pedro Cholula",
+            "EN": "San Pedro Cholula main square"
+          },
+          "s": {
+            "ES": "Cena bajo los portales, frente a la Capilla Real",
+            "EN": "Dinner under the arcades, facing the Capilla Real"
+          },
+          "d": {
+            "ES": "Bajas caminando unos 15 minutos hasta el zócalo. A un lado está el convento franciscano de San Gabriel con la Capilla Real, que tiene 49 cúpulas, y al otro, los portales con restaurantes y cafés.",
+            "EN": "Walk down for about 15 minutes to the main square. On one side is the Franciscan convent of San Gabriel with the Capilla Real and its 49 domes, and on the other, the arcades with restaurants and cafés."
+          },
+          "tip": {
+            "ES": "Si quieres algo ligero, pide unas chalupas. Para volver, el taxi tarda unos 25 minutos hasta el hotel.",
+            "EN": "For something light, order a plate of chalupas. A taxi back to the hotel takes about 25 minutes."
+          },
+          "hora": "18:45",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/puebla/img/cholula-zocalo.jpg",
+          "lat": 19.06232,
+          "lng": -98.30607,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 75
+        }
+      ],
+      "fotos": [
+        "/ciudades/puebla/img/cholula-ruta.jpg",
+        "/ciudades/puebla/img/acatepec.jpg",
+        "/ciudades/puebla/img/tonantzintla.jpg",
+        "/ciudades/puebla/img/remedios.jpg",
+        "/ciudades/puebla/img/remedios-vista.jpg",
+        "/ciudades/puebla/img/capilla-real.jpg",
+        "/ciudades/puebla/img/cholula-zocalo.jpg"
+      ],
+      "duracionMin": 265,
+      "distanciaKm": 26,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Las dos iglesias tienen escalones en la entrada. La subida al santuario es a pie, con escalones y tramos en cuesta. Si vas en silla de ruedas, quédate con las iglesias y el zócalo y mira la pirámide desde abajo.",
+        "EN": "Both churches have steps at the entrance. The climb to the sanctuary is on foot, with steps and sloping stretches. If you use a wheelchair, stick to the churches and the main square and see the pyramid from below."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 19.02223,
+        "lng": -98.30869,
+        "foto": "/ciudades/puebla/img/acatepec-atrio.jpg",
+        "texto": {
+          "ES": "Atrio del templo de San Francisco Acatepec, en San Andrés Cholula. Unos 25 minutos en taxi desde el hotel.",
+          "EN": "Forecourt of San Francisco Acatepec church, in San Andrés Cholula. About 25 minutes by taxi from the hotel."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxis",
+          "Cena",
+          "Zona arqueológica y túneles, que tienen su propia entrada y horario"
+        ],
+        "EN": [
+          "Taxis",
+          "Dinner",
+          "Archaeological site and tunnels, which have their own ticket and hours"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Con el cielo cubierto los volcanes se esconden; si puedes elegir, déjala para una tarde despejada.",
+        "EN": "Self-guided, so there is nothing to book or cancel. Under cloud the volcanoes disappear; if you can choose, save it for a clear afternoon."
+      },
+      "salidasFijas": [],
+      "precioDesde": 1190
+    },
+    {
+      "id": "cocina",
+      "expId": "ex3",
+      "img": "/ciudades/puebla/img/cocina.jpg",
+      "titulo": {
+        "ES": "Del mole a la calle de los Dulces",
+        "EN": "From mole to Candy Street"
+      },
+      "tipo": {
+        "ES": "Gastronomía",
+        "EN": "Food"
+      },
+      "dur": "4 h 20 min",
+      "d": {
+        "ES": "Para un día con la comida libre. Empiezas en la cocina de talavera donde, según la tradición, nació el mole, comes en el Mercado de Sabores, compras camotes en la calle de los Dulces y terminas con una copa de licor de pasita en una cantina de 1916.",
+        "EN": "For a day when lunch is free. You start in the Talavera-tiled kitchen where, as tradition has it, mole was born, eat at the Mercado de Sabores, buy camotes on Candy Street and finish with a glass of raisin liqueur in a cantina from 1916."
+      },
+      "salida": {
+        "ES": "En taxi desde el hotel hasta la 3 Norte, unos 25 minutos. Sal hacia las 11:50 para comer a la hora de aquí, pasadas la una",
+        "EN": "By taxi from the hotel to 3 Norte street, about 25 minutes. Leave around 11:50 to have lunch at local lunchtime, after one o'clock"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Efectivo en billetes chicos para el mercado y las dulcerías",
+          "Calzado cómodo, que entre parada y parada se camina",
+          "Una bolsa para los dulces que te lleves",
+          "Agua, que a mediodía el sol del centro pega fuerte"
+        ],
+        "EN": [
+          "Cash in small bills for the market and the candy shops",
+          "Comfortable shoes, as you walk between stops",
+          "A bag for the sweets you take home",
+          "Water, as the midday sun downtown is strong"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Ex convento de Santa Rosa",
+            "EN": "Former convent of Santa Rosa"
+          },
+          "s": {
+            "ES": "La cocina de talavera donde nació el mole, según la tradición",
+            "EN": "The Talavera kitchen where mole was born, as tradition has it"
+          },
+          "d": {
+            "ES": "El convento es hoy el Museo de Arte Popular Poblano. Su cocina, de finales del siglo XVII, está forrada de azulejos de talavera, y la tradición cuenta que aquí sor Andrea de la Asunción preparó el primer mole poblano para la visita de un virrey.",
+            "EN": "The convent now houses the Museum of Popular Art of Puebla. Its kitchen, from the late 17th century, is lined with Talavera tiles, and tradition says that this is where Sister Andrea de la Asunción made the first mole poblano for a visiting viceroy."
+          },
+          "tip": {
+            "ES": "El museo cierra los lunes. Además de la cocina, mira la sala con artesanías de las siete regiones del estado.",
+            "EN": "The museum is closed on Mondays. Besides the kitchen, see the room with crafts from the seven regions of the state."
+          },
+          "hora": "12:15",
+          "dur": "45 min",
+          "img": "/ciudades/puebla/img/santa-rosa.jpg",
+          "lat": 19.05035,
+          "lng": -98.19742,
+          "tramo": "coche",
+          "tramoDuracionMin": 25,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Mercado de Sabores Poblanos",
+            "EN": "Mercado de Sabores Poblanos"
+          },
+          "s": {
+            "ES": "Fondas de comida poblana en dos pisos",
+            "EN": "Two floors of Puebla food stalls"
+          },
+          "d": {
+            "ES": "Es un mercado de comida con fondas en dos pisos. Aquí hay mole poblano, pipián, chalupas y cemitas, el pan con ajonjolí relleno de milanesa, quesillo, aguacate y pápalo. De finales de julio a septiembre es temporada de chiles en nogada.",
+            "EN": "A food market with stalls on two floors. You will find mole poblano, pipián, chalupas and cemitas, the sesame bun filled with breaded meat, quesillo cheese, avocado and pápalo herb. From late July to September it is chiles en nogada season."
+          },
+          "tip": {
+            "ES": "Una cemita da para dos, así que compártela y deja espacio para el mole. Mira los precios antes de sentarte.",
+            "EN": "A cemita is enough for two, so share one and leave room for the mole. Check the prices before you sit down."
+          },
+          "hora": "13:20",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/puebla/img/chalupas.jpg",
+          "lat": 19.05073,
+          "lng": -98.2061,
+          "tramo": "pie",
+          "tramoDuracionMin": 20,
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "Calle de los Dulces",
+            "EN": "Candy Street"
+          },
+          "s": {
+            "ES": "Dulcerías una tras otra en la 6 Oriente",
+            "EN": "Candy shops one after another on 6 Oriente"
+          },
+          "d": {
+            "ES": "En la avenida 6 Oriente, junto al antiguo convento de Santa Clara, se juntan las dulcerías. Venden camotes de sabores envueltos en papel y tortitas de Santa Clara. Una de las más antiguas es La Gran Fama, en el número 208, que empezó vendiendo camotes en el siglo XIX.",
+            "EN": "On 6 Oriente avenue, next to the old Santa Clara convent, the candy shops line up. They sell flavored sweet potato candies (camotes) wrapped in paper and Santa Clara cookies. One of the oldest is La Gran Fama, at number 208, which started out selling camotes in the 19th century."
+          },
+          "tip": {
+            "ES": "Las tortitas llevan el nombre del convento que tienes enfrente, donde las monjas preparaban la pasta de pepita que las cubre.",
+            "EN": "The cookies are named after the convent across the street, where the nuns made the pumpkin seed paste on top."
+          },
+          "hora": "14:55",
+          "dur": "30 min",
+          "img": "/ciudades/puebla/img/camotes.jpg",
+          "lat": 19.0466,
+          "lng": -98.19685,
+          "tramo": "pie",
+          "tramoDuracionMin": 20,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "La Pasita",
+            "EN": "La Pasita"
+          },
+          "s": {
+            "ES": "Licor de pasas en una cantina de 1916",
+            "EN": "Raisin liqueur in a cantina from 1916"
+          },
+          "d": {
+            "ES": "Emilio Contreras abrió esta cantina en 1916, en la Plazuela de los Sapos. Su licor de uva pasa se sirve en caballito, con un cubito de queso fresco y una pasa pinchados en un palillo.",
+            "EN": "Emilio Contreras opened this cantina in 1916, on the Plazuela de los Sapos. Its raisin liqueur comes in a shot glass, with a cube of fresh cheese and a raisin on a toothpick."
+          },
+          "tip": {
+            "ES": "Cierra a media tarde, así que no la dejes para la noche. Es dulce y entra fácil; con una copa basta antes de volver al hotel.",
+            "EN": "It closes mid-afternoon, so do not leave it for the evening. It is sweet and goes down easily; one glass is enough before heading back."
+          },
+          "hora": "15:40",
+          "dur": "30 min",
+          "img": "/ciudades/puebla/img/pasita.jpg",
+          "lat": 19.04107,
+          "lng": -98.1959,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 30
+        }
+      ],
+      "fotos": [
+        "/ciudades/puebla/img/cocina.jpg",
+        "/ciudades/puebla/img/santa-rosa.jpg",
+        "/ciudades/puebla/img/cemita.jpg",
+        "/ciudades/puebla/img/chiles-nogada.jpg",
+        "/ciudades/puebla/img/camotes.jpg",
+        "/ciudades/puebla/img/tortitas.jpg",
+        "/ciudades/puebla/img/pasita.jpg"
+      ],
+      "duracionMin": 260,
+      "distanciaKm": 16,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Recorrido llano por el centro, unos tres kilómetros y medio a pie en total. El mercado tiene escaleras entre sus dos pisos y a mediodía se llena.",
+        "EN": "A flat route through downtown, about three and a half kilometers on foot in total. The market has stairs between its two floors and gets crowded at midday."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 19.05035,
+        "lng": -98.19742,
+        "foto": "/ciudades/puebla/img/santa-rosa-patio.jpg",
+        "texto": {
+          "ES": "Museo de Arte Popular, en el ex convento de Santa Rosa, 3 Norte 1210. Unos 25 minutos en taxi desde el hotel.",
+          "EN": "Museum of Popular Art, in the former Santa Rosa convent, 3 Norte 1210. About 25 minutes by taxi from the hotel."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxis",
+          "Entrada al museo de Santa Rosa",
+          "Comida, dulces y bebidas"
+        ],
+        "EN": [
+          "Taxis",
+          "Santa Rosa museum admission",
+          "Food, sweets and drinks"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. En lunes el museo está cerrado; empieza directamente en el mercado.",
+        "EN": "Self-guided, so there is nothing to book or cancel. The museum is closed on Mondays; start straight at the market."
+      },
+      "salidasFijas": [],
+      "precioDesde": 1450
+    },
+    {
+      "id": "atlixco",
+      "expId": "ex6",
+      "img": "/ciudades/puebla/img/atlixco.jpg",
+      "titulo": {
+        "ES": "Atlixco y el Popocatépetl",
+        "EN": "Atlixco and Popocatépetl"
+      },
+      "tipo": {
+        "ES": "Excursión de un día",
+        "EN": "Day trip"
+      },
+      "dur": "5 h",
+      "d": {
+        "ES": "Para el día antes o después de tus reuniones. Atlixco es un Pueblo Mágico a unos 45 minutos, al pie del Popocatépetl. Paseas por su zócalo y subes al cerro de San Miguel para ver el volcán de frente. A la hora de comer toca cecina, que aquí tiene hasta su propia feria.",
+        "EN": "For the day before or after your meetings. Atlixco is a designated Pueblo Mágico about 45 minutes away, at the foot of Popocatépetl. You stroll around its main square and climb San Miguel hill to face the volcano. Lunch is cecina, which even has its own fair here."
+      },
+      "salida": {
+        "ES": "En taxi o auto con chofer desde el hotel hasta el zócalo de Atlixco, unos 45 minutos. Sal hacia las 09:15, porque por la mañana el volcán suele verse más despejado",
+        "EN": "By taxi or car with driver from the hotel to Atlixco main square, about 45 minutes. Leave around 09:15, as the volcano is usually clearer in the morning"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Bloqueador y gorra, que la subida al cerro va al sol",
+          "Calzado cómodo para las escaleras del cerro de San Miguel",
+          "Agua para la subida",
+          "Efectivo para el mercado"
+        ],
+        "EN": [
+          "Sunscreen and a cap, as the climb up the hill is in full sun",
+          "Comfortable shoes for the San Miguel hill steps",
+          "Water for the climb",
+          "Cash for the market"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Zócalo de Atlixco",
+            "EN": "Atlixco main square"
+          },
+          "s": {
+            "ES": "El quiosco de dos pisos y la parroquia de la Natividad",
+            "EN": "The two-story bandstand and the Natividad church"
+          },
+          "d": {
+            "ES": "En medio del zócalo hay un quiosco de dos pisos que hoy funciona como cafetería. Al lado está la parroquia de la Natividad, levantada entre 1606 y 1650, y en el Palacio Municipal puedes entrar a ver los murales sobre la historia del pueblo.",
+            "EN": "In the middle of the square stands a two-story bandstand that now works as a café. Next to it is the Natividad parish church, built between 1606 and 1650, and you can walk into the Town Hall to see the murals on the town's history."
+          },
+          "tip": {
+            "ES": "Toma un café en el quiosco antes de empezar a subir.",
+            "EN": "Have a coffee at the bandstand before you start climbing."
+          },
+          "hora": "10:00",
+          "dur": "45 min",
+          "img": "/ciudades/puebla/img/atlixco-zocalo.jpg",
+          "lat": 18.90972,
+          "lng": -98.43421,
+          "tramo": "coche",
+          "tramoDuracionMin": 45,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Ex convento de San Francisco",
+            "EN": "Former convent of San Francisco"
+          },
+          "s": {
+            "ES": "Un convento franciscano del siglo XVI en la ladera",
+            "EN": "A 16th-century Franciscan convent on the hillside"
+          },
+          "d": {
+            "ES": "Subes por la avenida Hidalgo, con casas de colores y balcones con flores, hasta el convento franciscano, en la falda del cerro de San Miguel. Es del siglo XVI, con muros de fortaleza y una torre con reloj. Mientras subes, en días claros, lo ves con el Popocatépetl detrás.",
+            "EN": "Walk up Avenida Hidalgo, with its colorful houses and flower-filled balconies, to the Franciscan convent on the slope of San Miguel hill. It dates from the 16th century, with fortress-like walls and a clock tower. On the way up, on clear days, you see it with Popocatépetl behind."
+          },
+          "tip": {
+            "ES": "Ve sin prisa. La cuesta es corta pero se empina al final, y Atlixco está a más de 1,800 metros.",
+            "EN": "Take it slowly. The slope is short but steep at the end, and Atlixco sits at over 1,800 meters."
+          },
+          "hora": "10:55",
+          "dur": "40 min",
+          "img": "/ciudades/puebla/img/san-francisco-atlixco.jpg",
+          "lat": 18.91101,
+          "lng": -98.43742,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Cerro de San Miguel",
+            "EN": "San Miguel hill"
+          },
+          "s": {
+            "ES": "La capilla en la cima y el volcán de frente",
+            "EN": "The hilltop chapel with the volcano in front"
+          },
+          "d": {
+            "ES": "Unas escaleras llevan a la capilla de San Miguel, en lo alto del cerro. Desde arriba ves los tejados y las cúpulas de Atlixco y, en días claros, el Popocatépetl. El último domingo de septiembre, la explanada del cerro acoge el Huey Atlixcáyotl, la gran fiesta de las regiones de Puebla.",
+            "EN": "A flight of steps leads to the San Miguel chapel at the top of the hill. From there you see the rooftops and domes of Atlixco and, on clear days, Popocatépetl. On the last Sunday of September the hilltop esplanade hosts the Huey Atlixcáyotl, the great festival of Puebla's regions."
+          },
+          "tip": {
+            "ES": "Es la parada para la foto del volcán. Si lo ves con una columna de humo, es lo normal; el Popo está activo.",
+            "EN": "This is the stop for the volcano photo. If you see it with a plume of smoke, that is normal; Popo is an active volcano."
+          },
+          "hora": "11:50",
+          "dur": "50 min",
+          "img": "/ciudades/puebla/img/san-miguel.jpg",
+          "lat": 18.91278,
+          "lng": -98.43815,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 50
+        },
+        {
+          "n": {
+            "ES": "Cecina en el mercado Benito Juárez",
+            "EN": "Cecina at the Benito Juárez market"
+          },
+          "s": {
+            "ES": "Comida en el mercado, a unas cuadras del zócalo",
+            "EN": "Lunch at the market, a few blocks from the square"
+          },
+          "d": {
+            "ES": "Bajas del cerro y vuelves al centro a comer. Atlixco es tierra de cecina, carne de res cortada muy fina, salada y curada al sol, que se come con chalupas, aguacate y tortillas. En el mercado también hay barbacoa con su consomé y mixiotes de carnero.",
+            "EN": "Come down the hill and head back to the center for lunch. Atlixco is cecina country, thinly sliced beef that is salted and sun-cured, eaten with chalupas, avocado and tortillas. The market also serves barbacoa with its broth and mutton mixiotes."
+          },
+          "tip": {
+            "ES": "Pide la cecina con chalupas, como se come aquí. De postre, en las heladerías del centro hay sabores como chapulín o pinole.",
+            "EN": "Order the cecina with chalupas, the local way. For dessert, the ice cream shops downtown have flavors such as grasshopper or pinole."
+          },
+          "hora": "13:00",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/puebla/img/cecina.jpg",
+          "lat": 18.907,
+          "lng": -98.4353,
+          "tramo": "pie",
+          "tramoDuracionMin": 20,
+          "duracionMin": 75
+        }
+      ],
+      "fotos": [
+        "/ciudades/puebla/img/atlixco.jpg",
+        "/ciudades/puebla/img/atlixco-zocalo.jpg",
+        "/ciudades/puebla/img/san-francisco-atlixco.jpg",
+        "/ciudades/puebla/img/san-miguel.jpg",
+        "/ciudades/puebla/img/popo.jpg",
+        "/ciudades/puebla/img/cecina.jpg"
+      ],
+      "duracionMin": 300,
+      "distanciaKm": 64,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "La subida al convento y al cerro de San Miguel es por calles empinadas y escaleras. El zócalo y el mercado son llanos, y desde abajo también se ve el volcán en días claros.",
+        "EN": "The way up to the convent and San Miguel hill is along steep streets and steps. The main square and the market are flat, and on clear days the volcano is visible from below too."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 18.90972,
+        "lng": -98.43421,
+        "foto": "/ciudades/puebla/img/atlixco-zocalo.jpg",
+        "texto": {
+          "ES": "Zócalo de Atlixco, junto al quiosco. Unos 45 minutos en taxi o auto con chofer desde el hotel.",
+          "EN": "Atlixco main square, by the bandstand. About 45 minutes by taxi or car with driver from the hotel."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Transporte a Atlixco y vuelta",
+          "Comida"
+        ],
+        "EN": [
+          "Transport to Atlixco and back",
+          "Lunch"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Con nubes bajas el volcán se esconde; si puedes elegir día, mira el cielo antes de salir del hotel.",
+        "EN": "Self-guided, so there is nothing to book or cancel. Low cloud hides the volcano; if you can pick the day, check the sky before leaving the hotel."
+      },
+      "salidasFijas": [],
+      "precioDesde": 1290
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un postre poblano en el restaurante del hotel a la vuelta",
+      "EN": "A Puebla-style dessert at the hotel restaurant when you get back"
+    }
+  },
+  "creditos": [
+    "Zócalo de Puebla y fuente de San Miguel de noche: Sam Trenholme, CC BY 4.0, Wikimedia Commons",
+    "Catedral de Puebla: Diego Delso, CC BY-SA 3.0, Wikimedia Commons",
+    "Capilla del Rosario (recorte horizontal): Suanyvd, CC BY 4.0, Wikimedia Commons",
+    "Biblioteca Palafoxiana: Luis Alvaz, CC BY-SA 4.0, Wikimedia Commons",
+    "La catedral desde la terraza del Museo Amparo: Luis Alvaz, CC BY-SA 4.0, Wikimedia Commons",
+    "Fachada de Talavera Uriarte: AlejandroLinaresGarcia, CC BY-SA 4.0, Wikimedia Commons",
+    "Cabinas de la Estrella de Puebla: Luis Alvaz, CC BY-SA 4.0, Wikimedia Commons",
+    "Popocatépetl y la Gran Pirámide de Cholula: Luis Alvaz, CC BY-SA 4.0, Wikimedia Commons",
+    "Costado de la catedral al anochecer: Diego Delso, CC BY-SA 3.0, Wikimedia Commons",
+    "Sala de la Biblioteca Palafoxiana: Luis Alvaz, CC BY-SA 4.0, Wikimedia Commons",
+    "Cúpula de la Capilla del Rosario (recorte horizontal): MX (usuario de Wikimedia Commons), CC BY-SA 4.0, Wikimedia Commons",
+    "Callejón de los Sapos: Gusvel, CC BY-SA 4.0, Wikimedia Commons",
+    "Casa de la Cultura de Puebla: Octavio Alonso Maya (Panoramio), CC BY-SA 3.0, Wikimedia Commons",
+    "Gran Pirámide y santuario de los Remedios: Diego Delso, CC BY-SA 3.0, Wikimedia Commons",
+    "Fachada de San Francisco Acatepec: Danielllerandi, CC BY-SA 3.0, Wikimedia Commons",
+    "Atrio de San Francisco Acatepec: Luisalvaz, CC BY-SA 4.0, Wikimedia Commons",
+    "Templo de Santa María Tonantzintla: Carmelita Thierry, CC BY-SA 3.0, Wikimedia Commons",
+    "Santuario de Nuestra Señora de los Remedios: Burkhard Mücke, CC BY-SA 4.0, Wikimedia Commons",
+    "Vista desde el atrio de los Remedios: Diego Delso, CC BY-SA 3.0, Wikimedia Commons",
+    "Portales del zócalo de San Pedro Cholula: POSARI, CC BY 4.0, Wikimedia Commons",
+    "Capilla Real de Cholula: Koffermejia, CC BY-SA 4.0, Wikimedia Commons",
+    "Mole poblano: jay galvin, CC BY 2.0, Wikimedia Commons",
+    "Cocina del ex convento de Santa Rosa: P.Fossas, CC BY-SA 3.0, Wikimedia Commons",
+    "Patio del Museo de Arte Popular, ex convento de Santa Rosa: Isaacvp, CC BY-SA 4.0, Wikimedia Commons",
+    "Chalupas poblanas: Padaguan, CC BY-SA 4.0, Wikimedia Commons",
+    "Cemita poblana (recorte horizontal): Wotancito, CC BY-SA 3.0, Wikimedia Commons",
+    "Chile en nogada: Correogsk, CC BY-SA 4.0, Wikimedia Commons",
+    "Camotes en una dulcería de la 6 Oriente: eric, CC BY 2.0, Wikimedia Commons",
+    "Tortitas de Santa Clara: CUTI1, CC BY-SA 4.0, Wikimedia Commons",
+    "Cantina La Pasita: Luis Alvaz, CC BY-SA 4.0, Wikimedia Commons",
+    "Convento de San Francisco de Atlixco con el Popocatépetl: Luis Alvaz, CC BY-SA 4.0, Wikimedia Commons",
+    "Quiosco del zócalo de Atlixco: Danielllerandi, CC BY-SA 3.0, Wikimedia Commons",
+    "Ex convento de San Francisco, Atlixco: Luisalvaz, CC BY-SA 4.0, Wikimedia Commons",
+    "Atlixco desde el cerro de San Miguel: Luisalvaz, CC BY-SA 4.0, Wikimedia Commons",
+    "Popocatépetl desde Atlixco: Adam Jones from Kelowna, BC, Canada, CC BY 2.0, Wikimedia Commons",
+    "Chalupas con cecina en Atlixco: AlejandroLinaresGarcia, CC BY-SA 4.0, Wikimedia Commons"
+  ]
+}
