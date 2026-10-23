@@ -23,14 +23,12 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
 
 2) VÍDEO DE BIENVENIDA
      vid/welcome.mp4 (póster img/welcome.jpg = primer fotograma)
-                  Montaje de Vértice con cinco fotos verticales del propio hotel: la
-                  torre al anochecer (130973768-exterior), el Lounge 360 en rojo y verde
-                  (77989344-lounge-360), La Isla (77989517-la-isla), una habitación
-                  Superior King (77989665-superior-king) y la alberca (77989260-alberca).
-                  Movimiento lento sobre cada foto, fundidos encadenados y fundido final
-                  al primer fotograma para el bucle; recodificado con `enc`. El hotel no
-                  publica vídeo propio en su web. Vertical 720×1280, 30 fps, 11 s, H.264
-                  sin audio, ~1,26 Mbps, fast start.
+                  «Catedral de Puebla (fachada) desde un dron» · Luisalvaz · Wikimedia
+                  Commons · CC0 (dominio público).
+                  https://commons.wikimedia.org/wiki/File:Catedral_de_Puebla_(fachada)_desde_un_dron.webm
+                  Tramo de 0:07 a 0:19 de la versión 1080p, recortado en vertical sobre
+                  la torre y la cúpula. Vertical 720×1280, 30 fps, 12 s, H.264 sin audio,
+                  ~1,16 Mbps, fast start.
 
 3) PEXELS (licencia Pexels: uso libre, sin atribución obligatoria; se cita igual)
    Fotos genéricas de platos, bebidas, desayunos, postres, bienestar, planes, servicios
