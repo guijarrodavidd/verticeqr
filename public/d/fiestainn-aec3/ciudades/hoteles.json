@@ -279,5 +279,23 @@
       "estrella": 10,
       "cholula": 25
     }
+  },
+  {
+    "hotel": "amic-horizonte",
+    "ciudad": "palma",
+    "ubicacion": {
+      "lat": 39.55534,
+      "lng": 2.62211
+    },
+    "minutos": {
+      "bellver": 25,
+      "fundacio-miro": 30,
+      "catedral": 15,
+      "almudaina": 15,
+      "banys-arabs": 15,
+      "es-baluard": 45,
+      "mercat-santa-catalina": 40,
+      "portitxol": 15
+    }
   }
 ]
