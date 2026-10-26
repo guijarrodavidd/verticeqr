@@ -1,0 +1,1 @@
+function o(n,t){let e=String(t??"").trim();switch(n){case"sunbed":return e?`Camastro ${e}`:"Camastro";case"table":return e?`Mesa ${e}`:"Mesa";default:return e?`Hab. ${e}`:"Habitaci\xF3n"}}function i(n){return n===void 0||n==="room"}export{o as a,i as b};
