@@ -1,0 +1,482 @@
+{
+  "casco-antiguo-1": {
+    "pregunta": {
+      "ES": "¿Qué arquitecto reformó el interior de la catedral a principios del siglo XX?",
+      "EN": "Which architect reworked the cathedral's interior in the early 20th century?",
+      "DE": "Welcher Architekt gestaltete Anfang des 20. Jahrhunderts den Innenraum der Kathedrale um?"
+    },
+    "opciones": [
+      {
+        "ES": "Antoni Gaudí",
+        "EN": "Antoni Gaudí",
+        "DE": "Antoni Gaudí"
+      },
+      {
+        "ES": "Lluís Domènech i Montaner",
+        "EN": "Lluís Domènech i Montaner",
+        "DE": "Lluís Domènech i Montaner"
+      },
+      {
+        "ES": "Josep Puig i Cadafalch",
+        "EN": "Josep Puig i Cadafalch",
+        "DE": "Josep Puig i Cadafalch"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Gaudí trabajó en la catedral entre 1904 y 1914. Llevó el coro al presbiterio para despejar la nave y diseñó el baldaquino de hierro que cuelga sobre el altar.",
+      "EN": "Gaudí worked on the cathedral from 1904 to 1914. He moved the choir stalls into the sanctuary to open up the nave and designed the iron canopy that hangs over the altar.",
+      "DE": "Gaudí arbeitete von 1904 bis 1914 an der Kathedrale. Er verlegte das Chorgestühl in den Altarraum, um das Schiff freizumachen, und entwarf den eisernen Baldachin über dem Altar."
+    }
+  },
+  "casco-antiguo-2": {
+    "pregunta": {
+      "ES": "¿Cuántas columnas sostienen la sala de los Baños Árabes?",
+      "EN": "How many columns hold up the room of the Arab Baths?",
+      "DE": "Wie viele Säulen tragen den Raum der Arabischen Bäder?"
+    },
+    "opciones": [
+      {
+        "ES": "Ocho",
+        "EN": "Eight",
+        "DE": "Acht"
+      },
+      {
+        "ES": "Doce",
+        "EN": "Twelve",
+        "DE": "Zwölf"
+      },
+      {
+        "ES": "Dieciséis",
+        "EN": "Sixteen",
+        "DE": "Sechzehn"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Son doce, con arcos de herradura encima y una cúpula de ladrillo con claraboyas. Sus capiteles no hacen juego, seguramente porque vienen de construcciones más antiguas.",
+      "EN": "There are twelve, with horseshoe arches above them and a brick dome with skylights. The capitals do not match, probably because they came from older buildings.",
+      "DE": "Es sind zwölf, darüber Hufeisenbögen und eine Ziegelkuppel mit Lichtöffnungen. Die Kapitelle passen nicht zueinander, vermutlich stammen sie aus älteren Bauten."
+    }
+  },
+  "casco-antiguo-3": {
+    "pregunta": {
+      "ES": "¿De dónde le viene el nombre a Can Vivot?",
+      "EN": "Where does Can Vivot get its name?",
+      "DE": "Woher hat Can Vivot seinen Namen?"
+    },
+    "opciones": [
+      {
+        "ES": "Del título de marqués de Vivot que recibió su dueño en 1717",
+        "EN": "From the title Marquis of Vivot its owner received in 1717",
+        "DE": "Vom Titel Marqués de Vivot, den der Besitzer 1717 erhielt"
+      },
+      {
+        "ES": "De un comerciante italiano llamado Vivot",
+        "EN": "From an Italian merchant called Vivot",
+        "DE": "Von einem italienischen Kaufmann namens Vivot"
+      },
+      {
+        "ES": "De una fuente que había en el patio",
+        "EN": "From a fountain that stood in the courtyard",
+        "DE": "Von einem Brunnen, der im Hof stand"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Joan Sureda rehízo la casa en estilo barroco a partir de 1700. Por apoyar a Felipe V en la Guerra de Sucesión llegó a ser condenado a muerte en Barcelona. Salvó la vida y en 1717 recibió el título de marqués de Vivot.",
+      "EN": "Joan Sureda rebuilt the house in Baroque style from 1700. For backing Philip V in the War of the Spanish Succession he was sentenced to death in Barcelona. He survived, and in 1717 he was made Marquis of Vivot.",
+      "DE": "Joan Sureda baute das Haus ab 1700 im Barockstil um. Weil er im Spanischen Erbfolgekrieg Philipp V. unterstützte, wurde er in Barcelona zum Tode verurteilt. Er überlebte und erhielt 1717 den Titel Marqués de Vivot."
+    }
+  },
+  "casco-antiguo-4": {
+    "pregunta": {
+      "ES": "¿En qué año se inauguró el edificio del Mercat de l'Olivar?",
+      "EN": "In what year did the Mercat de l'Olivar building open?",
+      "DE": "In welchem Jahr wurde die Markthalle Mercat de l'Olivar eröffnet?"
+    },
+    "opciones": [
+      {
+        "ES": "1921",
+        "EN": "1921",
+        "DE": "1921"
+      },
+      {
+        "ES": "1951",
+        "EN": "1951",
+        "DE": "1951"
+      },
+      {
+        "ES": "1975",
+        "EN": "1975",
+        "DE": "1975"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El primer proyecto, de Gaspar Bennàssar, es de 1914, pero el edificio en forma de L no se inauguró hasta 1951. Antes ya había mercado en la misma plaza.",
+      "EN": "Gaspar Bennàssar drew the first design in 1914, but the L-shaped building did not open until 1951. There was already a market on the same square before.",
+      "DE": "Den ersten Entwurf zeichnete Gaspar Bennàssar 1914, doch das L-förmige Gebäude wurde erst 1951 eröffnet. Schon vorher gab es auf demselben Platz einen Markt."
+    }
+  },
+  "soller-1": {
+    "pregunta": {
+      "ES": "¿Qué noticia llenaba los periódicos cuando se inauguró el tren de Sóller, el 16 de abril de 1912?",
+      "EN": "What news filled the papers when the Sóller train opened on 16 April 1912?",
+      "DE": "Welche Nachricht stand in den Zeitungen, als der Sóller-Zug am 16. April 1912 eröffnet wurde?"
+    },
+    "opciones": [
+      {
+        "ES": "El hundimiento del Titanic",
+        "EN": "The sinking of the Titanic",
+        "DE": "Der Untergang der Titanic"
+      },
+      {
+        "ES": "La llegada de Amundsen al Polo Sur",
+        "EN": "Amundsen reaching the South Pole",
+        "DE": "Amundsens Ankunft am Südpol"
+      },
+      {
+        "ES": "El primer vuelo sobre el canal de la Mancha",
+        "EN": "The first flight across the English Channel",
+        "DE": "Der erste Flug über den Ärmelkanal"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El Titanic se había hundido la madrugada del 15 de abril. La propia compañía del tren lo recuerda en su historia. El convoy inaugural salió mientras el mundo leía la noticia.",
+      "EN": "The Titanic had sunk in the early hours of 15 April. The railway company mentions it in its own history. The first train ran while the world was reading the news.",
+      "DE": "Die Titanic war in der Nacht zum 15. April gesunken. Die Bahngesellschaft erwähnt es in ihrer eigenen Chronik. Der erste Zug fuhr, während die Welt die Nachricht las."
+    }
+  },
+  "soller-2": {
+    "pregunta": {
+      "ES": "¿Cuántos túneles cruza el tren entre Palma y Sóller?",
+      "EN": "How many tunnels does the train go through between Palma and Sóller?",
+      "DE": "Durch wie viele Tunnel fährt der Zug zwischen Palma und Sóller?"
+    },
+    "opciones": [
+      {
+        "ES": "Cinco",
+        "EN": "Five",
+        "DE": "Fünf"
+      },
+      {
+        "ES": "Trece",
+        "EN": "Thirteen",
+        "DE": "Dreizehn"
+      },
+      {
+        "ES": "Veintiuno",
+        "EN": "Twenty-one",
+        "DE": "Einundzwanzig"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Son trece. El más largo atraviesa la Serra d'Alfàbia y mide 2.856 metros. Dentro de él el tren llega a su punto más alto, a unos 200 metros sobre el mar.",
+      "EN": "Thirteen. The longest runs under the Serra d'Alfàbia and is 2,856 metres long. Inside it the train reaches its highest point, about 200 metres above sea level.",
+      "DE": "Dreizehn. Der längste führt unter der Serra d'Alfàbia hindurch und ist 2.856 Meter lang. Darin erreicht der Zug seinen höchsten Punkt, etwa 200 Meter über dem Meer."
+    }
+  },
+  "soller-3": {
+    "pregunta": {
+      "ES": "¿A qué país vendía Sóller sus naranjas en el siglo XIX?",
+      "EN": "Which country did Sóller sell its oranges to in the 19th century?",
+      "DE": "In welches Land verkaufte Sóller im 19. Jahrhundert seine Orangen?"
+    },
+    "opciones": [
+      {
+        "ES": "Francia",
+        "EN": "France",
+        "DE": "Frankreich"
+      },
+      {
+        "ES": "Inglaterra",
+        "EN": "England",
+        "DE": "England"
+      },
+      {
+        "ES": "Italia",
+        "EN": "Italy",
+        "DE": "Italien"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Las naranjas del valle salían en barco hacia los puertos franceses, y muchos vecinos de Sóller emigraron a Francia. Esa relación todavía se nota en el pueblo.",
+      "EN": "The valley's oranges went by ship to French ports, and many people from Sóller emigrated to France. You can still feel that link in the town.",
+      "DE": "Die Orangen aus dem Tal gingen per Schiff in französische Häfen, und viele Einwohner wanderten nach Frankreich aus. Diese Verbindung spürt man im Ort bis heute."
+    }
+  },
+  "soller-4": {
+    "pregunta": {
+      "ES": "¿De qué ciudad vienen algunos de los tranvías de Sóller?",
+      "EN": "Which city do some of Sóller's trams come from?",
+      "DE": "Aus welcher Stadt stammen einige der Straßenbahnen von Sóller?"
+    },
+    "opciones": [
+      {
+        "ES": "Lisboa",
+        "EN": "Lisbon",
+        "DE": "Lissabon"
+      },
+      {
+        "ES": "San Francisco",
+        "EN": "San Francisco",
+        "DE": "San Francisco"
+      },
+      {
+        "ES": "Milán",
+        "EN": "Milan",
+        "DE": "Mailand"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Además de los tres coches originales de 1913, el tranvía tiene cinco coches de Lisboa, numerados del 20 al 24 y adaptados a su vía estrecha.",
+      "EN": "Besides the three original 1913 cars, the line has five cars from Lisbon, numbered 20 to 24 and adapted to its narrow gauge.",
+      "DE": "Neben den drei Originalwagen von 1913 hat die Linie fünf Wagen aus Lissabon mit den Nummern 20 bis 24, angepasst an ihre Schmalspur."
+    }
+  },
+  "tramuntana-1": {
+    "pregunta": {
+      "ES": "¿Qué músico pasó el invierno de 1838 a 1839 en la cartuja?",
+      "EN": "Which composer spent the winter of 1838 to 1839 at the charterhouse?",
+      "DE": "Welcher Komponist verbrachte den Winter 1838/39 in der Kartause?"
+    },
+    "opciones": [
+      {
+        "ES": "Frédéric Chopin",
+        "EN": "Frédéric Chopin",
+        "DE": "Frédéric Chopin"
+      },
+      {
+        "ES": "Franz Liszt",
+        "EN": "Franz Liszt",
+        "DE": "Franz Liszt"
+      },
+      {
+        "ES": "Johannes Brahms",
+        "EN": "Johannes Brahms",
+        "DE": "Johannes Brahms"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Chopin llegó con la escritora George Sand y los hijos de ella. Sand contó aquel invierno en el libro Un invierno en Mallorca.",
+      "EN": "Chopin came with the writer George Sand and her children. Sand described that winter in her book A Winter in Majorca.",
+      "DE": "Chopin kam mit der Schriftstellerin George Sand und ihren Kindern. Sand beschrieb den Winter in ihrem Buch „Ein Winter auf Mallorca“."
+    }
+  },
+  "tramuntana-2": {
+    "pregunta": {
+      "ES": "¿Qué santa nació en Valldemossa en 1531?",
+      "EN": "Which saint was born in Valldemossa in 1531?",
+      "DE": "Welche Heilige wurde 1531 in Valldemossa geboren?"
+    },
+    "opciones": [
+      {
+        "ES": "Santa Catalina Thomàs",
+        "EN": "Saint Catalina Thomàs",
+        "DE": "Die heilige Catalina Thomàs"
+      },
+      {
+        "ES": "Santa Eulalia",
+        "EN": "Saint Eulalia",
+        "DE": "Die heilige Eulalia"
+      },
+      {
+        "ES": "Santa Clara",
+        "EN": "Saint Clare",
+        "DE": "Die heilige Klara"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La canonizaron en 1930 y en el pueblo la llaman con cariño la Beateta. Por eso tantas casas tienen un azulejo con su imagen junto a la puerta.",
+      "EN": "She was canonised in 1930, and locals fondly call her la Beateta. That is why so many houses have a tile with her image by the door.",
+      "DE": "Sie wurde 1930 heiliggesprochen, und im Dorf nennt man sie liebevoll la Beateta. Deshalb haben so viele Häuser neben der Tür eine Kachel mit ihrem Bild."
+    }
+  },
+  "tramuntana-3": {
+    "pregunta": {
+      "ES": "¿En qué se inspiró el archiduque para el templete de mármol de Son Marroig?",
+      "EN": "What was the model for the Archduke's marble temple at Son Marroig?",
+      "DE": "Was diente dem Erzherzog als Vorbild für den Marmortempel von Son Marroig?"
+    },
+    "opciones": [
+      {
+        "ES": "En un templete de un jardín junto a Génova",
+        "EN": "A temple in a garden near Genoa",
+        "DE": "Ein Tempelchen in einem Garten bei Genua"
+      },
+      {
+        "ES": "En un templo griego de Atenas",
+        "EN": "A Greek temple in Athens",
+        "DE": "Ein griechischer Tempel in Athen"
+      },
+      {
+        "ES": "En un quiosco de música de Viena",
+        "EN": "A bandstand in Vienna",
+        "DE": "Ein Musikpavillon in Wien"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Lo copió del templete que hay en una isleta del jardín Pallavicini, en Pegli, cerca de Génova. Es de mármol de Carrara y tiene ocho columnas jónicas.",
+      "EN": "He modelled it on the temple on a small island in the Pallavicini garden at Pegli, near Genoa. It is Carrara marble with eight Ionic columns.",
+      "DE": "Vorbild war der Tempel auf einer kleinen Insel im Pallavicini-Garten in Pegli bei Genua. Er ist aus Carrara-Marmor und hat acht ionische Säulen."
+    }
+  },
+  "tramuntana-4": {
+    "pregunta": {
+      "ES": "¿Qué escritor inglés está enterrado en el cementerio de Deià?",
+      "EN": "Which English writer is buried in Deià's cemetery?",
+      "DE": "Welcher englische Schriftsteller liegt auf dem Friedhof von Deià begraben?"
+    },
+    "opciones": [
+      {
+        "ES": "Robert Graves",
+        "EN": "Robert Graves",
+        "DE": "Robert Graves"
+      },
+      {
+        "ES": "George Orwell",
+        "EN": "George Orwell",
+        "DE": "George Orwell"
+      },
+      {
+        "ES": "D. H. Lawrence",
+        "EN": "D. H. Lawrence",
+        "DE": "D. H. Lawrence"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Robert Graves, autor de Yo, Claudio, llegó a Deià en 1929 y murió aquí en 1985. Su tumba está en el cementerio de la iglesia, en lo alto del pueblo.",
+      "EN": "Robert Graves, author of I, Claudius, came to Deià in 1929 and died here in 1985. His grave is in the churchyard at the top of the village.",
+      "DE": "Robert Graves, Autor von „Ich, Claudius, Kaiser und Gott“, kam 1929 nach Deià und starb hier 1985. Sein Grab liegt auf dem Kirchfriedhof oben im Dorf."
+    }
+  },
+  "santa-catalina-1": {
+    "pregunta": {
+      "ES": "¿De dónde viene el nombre de es Jonquet?",
+      "EN": "Where does the name es Jonquet come from?",
+      "DE": "Woher kommt der Name es Jonquet?"
+    },
+    "opciones": [
+      {
+        "ES": "De los juncos que crecían en la zona húmeda",
+        "EN": "From the rushes that grew in the damp ground",
+        "DE": "Von den Binsen, die im feuchten Boden wuchsen"
+      },
+      {
+        "ES": "De un pescador apodado Jonquet",
+        "EN": "From a fisherman nicknamed Jonquet",
+        "DE": "Von einem Fischer mit dem Spitznamen Jonquet"
+      },
+      {
+        "ES": "De un tipo de barca de vela",
+        "EN": "From a kind of sailing boat",
+        "DE": "Von einer Art Segelboot"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Jonc es junco en catalán. El barrio nació sobre una loma junto a la riera, en un terreno húmedo donde crecían juncos, y de él salió después el barrio de Santa Catalina.",
+      "EN": "Jonc is Catalan for rush. The quarter grew on a rise beside the stream, in damp ground where rushes grew, and Santa Catalina later spread out from it.",
+      "DE": "Jonc ist das katalanische Wort für Binse. Das Viertel entstand auf einer Anhöhe am Bach, in feuchtem Gelände mit Binsen, und aus ihm wuchs später Santa Catalina."
+    }
+  },
+  "santa-catalina-2": {
+    "pregunta": {
+      "ES": "¿En qué año abrió el museo Es Baluard?",
+      "EN": "In what year did the Es Baluard museum open?",
+      "DE": "In welchem Jahr wurde das Museum Es Baluard eröffnet?"
+    },
+    "opciones": [
+      {
+        "ES": "1994",
+        "EN": "1994",
+        "DE": "1994"
+      },
+      {
+        "ES": "2004",
+        "EN": "2004",
+        "DE": "2004"
+      },
+      {
+        "ES": "2014",
+        "EN": "2014",
+        "DE": "2014"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Abrió el 30 de enero de 2004 dentro del baluarte de Sant Pere, parte de la muralla renacentista que cerraba la ciudad por el lado del mar.",
+      "EN": "It opened on 30 January 2004 inside the Sant Pere bastion, part of the Renaissance walls that closed the city off on the sea side.",
+      "DE": "Es wurde am 30. Januar 2004 in der Bastion Sant Pere eröffnet, einem Teil der Renaissancemauer, die die Stadt zum Meer hin abschloss."
+    }
+  },
+  "santa-catalina-3": {
+    "pregunta": {
+      "ES": "¿Qué quiere decir Bellver, el nombre del castillo que ves desde la muralla?",
+      "EN": "What does Bellver, the name of the castle you see from the walls, mean?",
+      "DE": "Was bedeutet Bellver, der Name der Burg, die Sie von der Mauer aus sehen?"
+    },
+    "opciones": [
+      {
+        "ES": "Bella vista",
+        "EN": "Beautiful view",
+        "DE": "Schöne Aussicht"
+      },
+      {
+        "ES": "Buen viento",
+        "EN": "Good wind",
+        "DE": "Guter Wind"
+      },
+      {
+        "ES": "Verde hermoso",
+        "EN": "Lovely green",
+        "DE": "Schönes Grün"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Viene del catalán medieval bell veer, bella vista. Desde su monte de 112 metros se ve la ciudad, el puerto y la Serra de Tramuntana. Es uno de los pocos castillos de planta circular que hay en Europa.",
+      "EN": "It comes from the medieval Catalan bell veer, beautiful view. From its 112-metre hill you see the city, the harbour and the Serra de Tramuntana. It is one of Europe's few circular castles.",
+      "DE": "Es kommt vom mittelalterlichen Katalanisch bell veer, schöne Aussicht. Von ihrem 112 Meter hohen Hügel sieht man die Stadt, den Hafen und die Serra de Tramuntana. Sie ist eine der wenigen runden Burgen Europas."
+    }
+  },
+  "santa-catalina-4": {
+    "pregunta": {
+      "ES": "¿Qué lleva un pa amb oli mallorquín?",
+      "EN": "What goes into a Mallorcan pa amb oli?",
+      "DE": "Was gehört zu einem mallorquinischen Pa amb Oli?"
+    },
+    "opciones": [
+      {
+        "ES": "Pan con tomate restregado, aceite y sal",
+        "EN": "Bread rubbed with tomato, olive oil and salt",
+        "DE": "Brot mit eingeriebener Tomate, Olivenöl und Salz"
+      },
+      {
+        "ES": "Pan frito con sobrasada y miel",
+        "EN": "Fried bread with sobrasada and honey",
+        "DE": "Gebratenes Brot mit Sobrasada und Honig"
+      },
+      {
+        "ES": "Pan con alioli y pescado",
+        "EN": "Bread with aioli and fish",
+        "DE": "Brot mit Aioli und Fisch"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Pan moreno, tomate de ramallet restregado, aceite de oliva y sal. Encima se suele poner jamón, queso o embutido, y al lado, aceitunas y pimientos en vinagre.",
+      "EN": "Brown bread rubbed with ramallet tomato, olive oil and salt. It usually comes topped with ham, cheese or cured sausage, with olives and pickled peppers on the side.",
+      "DE": "Dunkles Brot, eingerieben mit Ramallet-Tomate, dazu Olivenöl und Salz. Meist kommt Schinken, Käse oder Wurst darauf, daneben Oliven und eingelegte Paprika."
+    }
+  }
+}

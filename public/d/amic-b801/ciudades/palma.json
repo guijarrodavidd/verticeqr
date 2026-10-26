@@ -1,0 +1,1168 @@
+{
+  "slug": "palma",
+  "nombre": "Palma",
+  "intro": {
+    "ES": "El hotel está en la colina de es Corb Marí, encima del puerto. Subiendo por el bosque, el castillo de Bellver queda a unos 25 minutos andando, y por el paseo marítimo llegas a Santa Catalina en unos 40. La catedral está a 15 minutos en taxi, y el tren de madera de Sóller te sube a la Serra de Tramuntana en una hora.",
+    "EN": "The hotel sits on the es Corb Marí hill, above the harbour. Bellver Castle is about a 25-minute walk up through the woods, and the seafront promenade takes you to Santa Catalina in around 40. The cathedral is 15 minutes away by taxi, and the old wooden Sóller train climbs into the Serra de Tramuntana in an hour.",
+    "DE": "Das Hotel liegt auf dem Hügel es Corb Marí, oberhalb des Hafens. Zum Castell de Bellver gehen Sie etwa 25 Minuten bergauf durch den Wald, und über die Hafenpromenade sind Sie in rund 40 Minuten in Santa Catalina. Die Kathedrale erreichen Sie in 15 Minuten mit dem Taxi, und der hölzerne Zug nach Sóller bringt Sie in einer Stunde in die Serra de Tramuntana."
+  },
+  "lugares": [
+    {
+      "id": "bellver",
+      "img": "/ciudades/palma/img/bellver.jpg",
+      "nombre": "Castillo de Bellver",
+      "zona": {
+        "ES": "En el bosque de Bellver, sobre el hotel",
+        "EN": "In Bellver woods, above the hotel",
+        "DE": "Im Wald von Bellver, oberhalb des Hotels"
+      },
+      "d": {
+        "ES": "Un castillo gótico de principios del siglo XIV, en lo alto de un monte de 112 metros. Es redondo, con un patio de armas circular y una torre aparte unida por un puente. Desde la azotea ves la bahía entera, el puerto y la Serra de Tramuntana. Dentro está el museo de historia de la ciudad.",
+        "EN": "A Gothic castle from the early 14th century, on top of a 112-metre hill. It is round, with a circular courtyard and a separate tower joined by a bridge. From the roof you see the whole bay, the harbour and the Serra de Tramuntana. Inside is the city history museum.",
+        "DE": "Eine gotische Burg aus dem frühen 14. Jahrhundert auf einem 112 Meter hohen Hügel. Sie ist rund, mit einem kreisförmigen Innenhof und einem freistehenden Turm, der über eine Brücke verbunden ist. Vom Dach sehen Sie die ganze Bucht, den Hafen und die Serra de Tramuntana. Drinnen ist das Stadtgeschichtliche Museum."
+      },
+      "cuando": {
+        "ES": "Por la mañana, antes del calor, para subir andando por el pinar",
+        "EN": "In the morning, before the heat, to walk up through the pines",
+        "DE": "Am Vormittag, vor der Hitze, für den Fußweg durch den Pinienwald"
+      },
+      "min": 25,
+      "modo": "pie",
+      "lat": 39.56386,
+      "lng": 2.61922
+    },
+    {
+      "id": "fundacio-miro",
+      "img": "/ciudades/palma/img/miro.jpg",
+      "nombre": "Fundació Miró Mallorca",
+      "zona": {
+        "ES": "Cala Major, a media hora andando",
+        "EN": "Cala Major, half an hour's walk",
+        "DE": "Cala Major, eine halbe Stunde zu Fuß"
+      },
+      "d": {
+        "ES": "Joan Miró vivió en Palma desde 1956 hasta su muerte, en 1983, y aquí se conservan sus dos talleres. Uno lo diseñó su amigo, el arquitecto Josep Lluís Sert. El otro está en Son Boter, una casa mallorquina con dibujos del pintor en las paredes. La fundación guarda cerca de 6.000 obras suyas y las enseña por turnos en el edificio de Rafael Moneo.",
+        "EN": "Joan Miró lived in Palma from 1956 until his death in 1983, and both of his studios are kept here. One was designed by his friend, the architect Josep Lluís Sert. The other is in Son Boter, a Mallorcan house with the painter's drawings on its walls. The foundation holds nearly 6,000 of his works and shows them in rotation in Rafael Moneo's building.",
+        "DE": "Joan Miró lebte von 1956 bis zu seinem Tod 1983 in Palma, und hier sind seine beiden Ateliers erhalten. Eines entwarf sein Freund, der Architekt Josep Lluís Sert. Das andere liegt in Son Boter, einem mallorquinischen Haus mit Zeichnungen des Malers an den Wänden. Die Stiftung besitzt fast 6.000 seiner Werke und zeigt sie im Wechsel im Gebäude von Rafael Moneo."
+      },
+      "cuando": {
+        "ES": "Un día nublado, cuando apetece un plan a cubierto",
+        "EN": "On a cloudy day, when you fancy something indoors",
+        "DE": "An einem bewölkten Tag, wenn Sie lieber drinnen sind"
+      },
+      "min": 30,
+      "modo": "pie",
+      "lat": 39.55531,
+      "lng": 2.60959
+    },
+    {
+      "id": "catedral",
+      "img": "/ciudades/palma/img/catedral.jpg",
+      "nombre": "Catedral de Mallorca (La Seu)",
+      "zona": {
+        "ES": "Centro histórico, frente al mar",
+        "EN": "Old town, facing the sea",
+        "DE": "Altstadt, direkt am Meer"
+      },
+      "d": {
+        "ES": "Se empezó tras la conquista de Jaume I, en 1229, y se terminó en 1601. A principios del siglo XX Gaudí reformó el interior y colgó sobre el altar un baldaquino de hierro. En la capilla del Santísimo, Miquel Barceló cubrió las paredes de cerámica con peces, frutas y panes.",
+        "EN": "Work began after Jaume I's conquest in 1229 and was finished in 1601. In the early 20th century Gaudí reworked the interior and hung an iron canopy over the altar. In the Chapel of the Blessed Sacrament, Miquel Barceló covered the walls in ceramic fish, fruit and loaves.",
+        "DE": "Der Bau begann nach der Eroberung durch Jaume I. im Jahr 1229 und wurde 1601 vollendet. Anfang des 20. Jahrhunderts gestaltete Gaudí den Innenraum um und hängte einen eisernen Baldachin über den Altar. In der Sakramentskapelle hat Miquel Barceló die Wände mit Fischen, Früchten und Broten aus Keramik überzogen."
+      },
+      "cuando": {
+        "ES": "Entre semana por la mañana. Los sábados cierra a las 14:15 y los domingos no hay visita turística",
+        "EN": "Weekday mornings. On Saturdays it closes at 14:15, and there are no tourist visits on Sundays",
+        "DE": "Wochentags am Vormittag. Samstags schließt sie um 14:15 Uhr, sonntags gibt es keine Besichtigung"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 39.56749,
+      "lng": 2.64826
+    },
+    {
+      "id": "almudaina",
+      "img": "/ciudades/palma/img/almudaina.jpg",
+      "nombre": "Palacio de la Almudaina",
+      "zona": {
+        "ES": "Frente a la catedral",
+        "EN": "Opposite the cathedral",
+        "DE": "Gegenüber der Kathedrale"
+      },
+      "d": {
+        "ES": "Fue alcázar en la época musulmana y, tras la conquista, palacio de los reyes de Mallorca. Hoy lo gestiona Patrimonio Nacional y el Rey lo usa en los actos oficiales que celebra en Palma. Por dentro se recorren salones con tapices y la capilla gótica de Santa Ana.",
+        "EN": "It was a fortified palace in Moorish times and, after the conquest, the residence of the kings of Mallorca. Today it is run by Patrimonio Nacional and the King uses it for official events in Palma. Inside you walk through rooms hung with tapestries and the Gothic chapel of Santa Ana.",
+        "DE": "In maurischer Zeit war sie eine Festung, nach der Eroberung Palast der Könige von Mallorca. Heute verwaltet sie Patrimonio Nacional, und der König nutzt sie für offizielle Anlässe in Palma. Drinnen sehen Sie Säle mit Wandteppichen und die gotische Kapelle Santa Ana."
+      },
+      "cuando": {
+        "ES": "A media mañana, al salir de la catedral, que está enfrente",
+        "EN": "Mid-morning, after the cathedral across the way",
+        "DE": "Am späten Vormittag, nach der Kathedrale gegenüber"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 39.56797,
+      "lng": 2.64719
+    },
+    {
+      "id": "banys-arabs",
+      "img": "/ciudades/palma/img/banys.jpg",
+      "nombre": "Baños Árabes y barrio de la Calatrava",
+      "zona": {
+        "ES": "Casco antiguo, detrás de la catedral",
+        "EN": "Old town, behind the cathedral",
+        "DE": "Altstadt, hinter der Kathedrale"
+      },
+      "d": {
+        "ES": "Uno de los pocos restos de la Palma musulmana. Queda la sala caliente, con doce columnas, arcos de herradura y una cúpula con claraboyas, rodeada de un jardín. Al salir estás en el barrio de la Calatrava, de calles estrechas y patios de casas señoriales.",
+        "EN": "One of the few remains of Moorish Palma. The hot room survives, with twelve columns, horseshoe arches and a dome pierced by skylights, set in a small garden. Outside you are in the Calatrava quarter, with narrow lanes and the courtyards of old mansions.",
+        "DE": "Eines der wenigen Überbleibsel des maurischen Palma. Erhalten ist der Warmraum mit zwölf Säulen, Hufeisenbögen und einer Kuppel mit Lichtöffnungen, umgeben von einem Garten. Draußen sind Sie im Viertel La Calatrava, mit engen Gassen und den Innenhöfen alter Stadtpaläste."
+      },
+      "cuando": {
+        "ES": "Por la mañana temprano, antes de que llegue la gente",
+        "EN": "Early in the morning, before the crowds",
+        "DE": "Früh am Morgen, bevor es voll wird"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 39.56681,
+      "lng": 2.65099
+    },
+    {
+      "id": "es-baluard",
+      "img": "/ciudades/palma/img/baluard.jpg",
+      "nombre": "Es Baluard",
+      "zona": {
+        "ES": "En la muralla, junto a Santa Catalina",
+        "EN": "On the city walls, next to Santa Catalina",
+        "DE": "Auf der Stadtmauer, neben Santa Catalina"
+      },
+      "d": {
+        "ES": "Museo de arte moderno y contemporáneo metido en el baluarte de Sant Pere, un tramo de la muralla renacentista. Abrió en 2004 y en su colección hay obra de Miró y de Picasso. Las terrazas, encima de la muralla, miran al puerto y a la catedral.",
+        "EN": "A modern and contemporary art museum built into the Sant Pere bastion, part of the Renaissance city walls. It opened in 2004 and its collection includes work by Miró and Picasso. The terraces on top of the walls look out over the harbour and the cathedral.",
+        "DE": "Ein Museum für moderne und zeitgenössische Kunst in der Bastion Sant Pere, einem Teil der Stadtmauer aus der Renaissance. Es wurde 2004 eröffnet, die Sammlung umfasst Werke von Miró und Picasso. Die Terrassen auf der Mauer blicken auf den Hafen und die Kathedrale."
+      },
+      "cuando": {
+        "ES": "Al atardecer, desde la terraza alta",
+        "EN": "At sunset, from the upper terrace",
+        "DE": "Bei Sonnenuntergang, von der oberen Terrasse"
+      },
+      "min": 45,
+      "modo": "pie",
+      "lat": 39.57026,
+      "lng": 2.64095
+    },
+    {
+      "id": "mercat-santa-catalina",
+      "img": "/ciudades/palma/img/mercat-santa-catalina.jpg",
+      "nombre": "Mercado de Santa Catalina",
+      "zona": {
+        "ES": "Barrio de Santa Catalina",
+        "EN": "Santa Catalina neighbourhood",
+        "DE": "Viertel Santa Catalina"
+      },
+      "d": {
+        "ES": "Abrió en 1920 en el barrio de marineros y pescadores que creció fuera de la muralla. Tiene puestos de pescado, fruta y embutido mallorquín, y barras donde la gente del barrio desayuna o toma algo a mediodía.",
+        "EN": "It opened in 1920 in the sailors' and fishermen's quarter that grew up outside the city walls. There are stalls selling fish, fruit and Mallorcan charcuterie, plus counters where locals have breakfast or a midday drink.",
+        "DE": "Die Markthalle wurde 1920 im Viertel der Seeleute und Fischer eröffnet, das außerhalb der Stadtmauer entstand. Es gibt Stände mit Fisch, Obst und mallorquinischer Wurst und Theken, an denen die Nachbarn frühstücken oder mittags etwas trinken."
+      },
+      "cuando": {
+        "ES": "Por la mañana, de lunes a sábado. Por la tarde muchos puestos ya han cerrado",
+        "EN": "In the morning, Monday to Saturday. Many stalls have closed by the afternoon",
+        "DE": "Vormittags, Montag bis Samstag. Nachmittags haben viele Stände schon zu"
+      },
+      "min": 40,
+      "modo": "pie",
+      "lat": 39.57124,
+      "lng": 2.63827
+    },
+    {
+      "id": "portitxol",
+      "img": "/ciudades/palma/img/portitxol.jpg",
+      "nombre": "Paseo marítimo hasta Portitxol",
+      "zona": {
+        "ES": "Al este de la catedral, junto al mar",
+        "EN": "East of the cathedral, along the sea",
+        "DE": "Östlich der Kathedrale, am Meer"
+      },
+      "d": {
+        "ES": "Desde la catedral, el paseo sigue la bahía hacia el este con el carril bici al lado. En unos dos kilómetros llegas a Portitxol, un antiguo barrio de pescadores donde los llaüts, las barcas de madera mallorquinas, siguen amarrados en un puerto pequeño. Hay una playita y terrazas casi encima del agua.",
+        "EN": "From the cathedral the promenade follows the bay east, with a cycle lane alongside. After about two kilometres you reach Portitxol, an old fishing quarter where llaüts, the wooden Mallorcan boats, are still moored in a tiny harbour. There is a small beach and terraces almost over the water.",
+        "DE": "Ab der Kathedrale führt die Promenade mit Radweg nach Osten an der Bucht entlang. Nach etwa zwei Kilometern erreichen Sie Portitxol, ein altes Fischerviertel, in dessen kleinem Hafen noch Llaüts liegen, die hölzernen mallorquinischen Boote. Es gibt einen kleinen Strand und Terrassen fast über dem Wasser."
+      },
+      "cuando": {
+        "ES": "A media tarde, andando o en bici, con el sol a la espalda",
+        "EN": "Mid-afternoon, on foot or by bike, with the sun behind you",
+        "DE": "Am Nachmittag, zu Fuß oder mit dem Rad, die Sonne im Rücken"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 39.5608,
+      "lng": 2.6688
+    }
+  ],
+  "rutas": [
+    {
+      "id": "casco-antiguo",
+      "img": "/ciudades/palma/img/catedral-interior.jpg",
+      "titulo": {
+        "ES": "El casco antiguo en una mañana",
+        "EN": "The old town in a morning",
+        "DE": "Die Altstadt an einem Vormittag"
+      },
+      "tipo": {
+        "ES": "Historia",
+        "EN": "History",
+        "DE": "Geschichte"
+      },
+      "dur": "3 h 45 min",
+      "d": {
+        "ES": "Una mañana para la Palma de siempre. Entras en la catedral cuando abre, bajas a los baños que dejaron los musulmanes, te asomas al patio de un palacio barroco y acabas comiendo de barra en el Mercat de l'Olivar.",
+        "EN": "A morning in old Palma. You step into the cathedral as it opens, walk down to the baths left by the Moors, peer into the courtyard of a Baroque palace and finish with lunch at a counter in the Mercat de l'Olivar.",
+        "DE": "Ein Vormittag im alten Palma. Sie betreten die Kathedrale, wenn sie öffnet, gehen zu den Bädern aus maurischer Zeit, werfen einen Blick in den Hof eines Barockpalasts und essen zum Schluss an einer Theke im Mercat de l'Olivar."
+      },
+      "salida": {
+        "ES": "En taxi hasta el Parc de la Mar, a los pies de la catedral, unos 15 minutos. Sal hacia las 09:40",
+        "EN": "Taxi to the Parc de la Mar, at the foot of the cathedral, about 15 minutes. Leave around 09:40",
+        "DE": "Mit dem Taxi zum Parc de la Mar unterhalb der Kathedrale, etwa 15 Minuten. Brechen Sie gegen 9:40 Uhr auf"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "DE": [
+          "Freie Route, ohne Buchung",
+          "Tagesplan und Karte"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo para el empedrado",
+          "Algo para cubrir los hombros en la catedral",
+          "Algo de efectivo para el mercado"
+        ],
+        "EN": [
+          "Comfortable shoes for the cobbles",
+          "Something to cover your shoulders in the cathedral",
+          "Some cash for the market"
+        ],
+        "DE": [
+          "Bequeme Schuhe für das Kopfsteinpflaster",
+          "Etwas, um in der Kathedrale die Schultern zu bedecken",
+          "Etwas Bargeld für den Markt"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Catedral de Mallorca",
+            "EN": "Palma Cathedral",
+            "DE": "Kathedrale von Mallorca"
+          },
+          "s": {
+            "ES": "Gótico junto al mar, con la mano de Gaudí dentro",
+            "EN": "Gothic by the sea, with Gaudí's touch inside",
+            "DE": "Gotik am Meer, innen mit Gaudís Handschrift"
+          },
+          "d": {
+            "ES": "Se levantó donde estaba la mezquita mayor, después de la conquista de 1229, y se terminó en 1601. Dentro, la luz de los rosetones tiñe la nave de colores. Gaudí reformó el interior entre 1904 y 1914 y dejó sobre el altar un baldaquino de hierro con forma de corona.",
+            "EN": "It was built on the site of the great mosque after the 1229 conquest and finished in 1601. Inside, light from the rose windows colours the nave. Gaudí reworked the interior between 1904 and 1914 and left a crown-shaped iron canopy over the altar.",
+            "DE": "Sie entstand nach der Eroberung von 1229 an der Stelle der großen Moschee und wurde 1601 fertig. Drinnen färbt das Licht der Rosetten das Kirchenschiff. Gaudí gestaltete den Innenraum zwischen 1904 und 1914 um und hinterließ über dem Altar einen eisernen Baldachin in Form einer Krone."
+          },
+          "tip": {
+            "ES": "Entra a las diez, cuando abre. Los sábados la visita acaba a las 14:15 y los domingos no hay visita turística.",
+            "EN": "Go in at ten, when it opens. On Saturdays visits end at 14:15, and there are no tourist visits on Sundays.",
+            "DE": "Gehen Sie um zehn hinein, wenn geöffnet wird. Samstags endet die Besichtigung um 14:15 Uhr, sonntags gibt es keine."
+          },
+          "hora": "10:00",
+          "dur": "1 h",
+          "img": "/ciudades/palma/img/catedral-interior.jpg",
+          "lat": 39.56749,
+          "lng": 2.64826,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Baños Árabes",
+            "EN": "Arab Baths",
+            "DE": "Arabische Bäder"
+          },
+          "s": {
+            "ES": "Mil años de la Palma musulmana",
+            "EN": "A thousand years of Moorish Palma",
+            "DE": "Tausend Jahre maurisches Palma"
+          },
+          "d": {
+            "ES": "En la calle de Can Serra, detrás de una puerta con arco de herradura, queda la sala caliente de unos baños de cuando la ciudad se llamaba Madina Mayurqa. Doce columnas sostienen arcos de herradura y una cúpula con claraboyas. Fuera hay un jardín pequeño donde sentarte un rato.",
+            "EN": "On Carrer de Can Serra, behind a horseshoe-arched doorway, is the hot room of a bathhouse from the days when the city was called Madina Mayurqa. Twelve columns hold up horseshoe arches and a dome with skylights. Outside there is a small garden where you can sit for a while.",
+            "DE": "In der Carrer de Can Serra, hinter einem Tor mit Hufeisenbogen, liegt der Warmraum eines Badehauses aus der Zeit, als die Stadt Madina Mayurqa hieß. Zwölf Säulen tragen Hufeisenbögen und eine Kuppel mit Lichtöffnungen. Draußen gibt es einen kleinen Garten zum Verweilen."
+          },
+          "tip": {
+            "ES": "Fíjate en los capiteles de las columnas. Son distintos entre sí, seguramente porque se aprovecharon de edificios más antiguos.",
+            "EN": "Look at the column capitals. They do not match, probably because they were taken from older buildings.",
+            "DE": "Achten Sie auf die Kapitelle. Sie sind alle verschieden, vermutlich weil sie aus älteren Gebäuden stammen."
+          },
+          "hora": "11:10",
+          "dur": "25 min",
+          "img": "/ciudades/palma/img/banys.jpg",
+          "lat": 39.56681,
+          "lng": 2.65099,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Patio de Can Vivot",
+            "EN": "Can Vivot courtyard",
+            "DE": "Innenhof von Can Vivot"
+          },
+          "s": {
+            "ES": "Un palacio barroco tras una fachada sobria",
+            "EN": "A Baroque palace behind a plain façade",
+            "DE": "Ein Barockpalast hinter schlichter Fassade"
+          },
+          "d": {
+            "ES": "Palma está llena de casas señoriales con patio, y Can Vivot, en la calle de Can Savellà, es de las más vistosas. La fachada es sobria. Dentro hay dos patios barrocos con columnas de mármol rojo, capiteles corintios y una escalera que se abre en tres tramos.",
+            "EN": "Palma is full of mansions with courtyards, and Can Vivot, on Carrer de Can Savellà, is one of the finest. The street front is plain. Inside are two Baroque courtyards with red marble columns, Corinthian capitals and a grand staircase that opens into three flights.",
+            "DE": "Palma ist voller Stadtpaläste mit Innenhof, und Can Vivot in der Carrer de Can Savellà gehört zu den schönsten. Die Fassade ist schlicht. Drinnen liegen zwei barocke Höfe mit Säulen aus rotem Marmor, korinthischen Kapitellen und einer Prunktreppe, die sich in drei Läufe teilt."
+          },
+          "tip": {
+            "ES": "Es una casa particular. Si el portón está abierto, puedes mirar el patio desde la entrada, sin pasar.",
+            "EN": "It is a private home. If the gate is open, you can look into the courtyard from the entrance without going in.",
+            "DE": "Es ist ein Privathaus. Wenn das Tor offen ist, können Sie vom Eingang aus in den Hof schauen, ohne hineinzugehen."
+          },
+          "hora": "11:45",
+          "dur": "20 min",
+          "img": "/ciudades/palma/img/can-vivot.jpg",
+          "lat": 39.56953,
+          "lng": 2.65199,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Mercat de l'Olivar",
+            "EN": "Mercat de l'Olivar",
+            "DE": "Mercat de l'Olivar"
+          },
+          "s": {
+            "ES": "Comer de barra entre los puestos",
+            "EN": "Lunch at a counter among the stalls",
+            "DE": "Mittagessen an der Theke zwischen den Ständen"
+          },
+          "d": {
+            "ES": "De camino pasas por la plaza de Cort, la del Ayuntamiento, con un olivo de tronco retorcido en el centro. El mercado, inaugurado en 1951, tiene puestos de pescado, fruta, queso y sobrasada, y barras donde comer de pie lo que ves en el mostrador.",
+            "EN": "On the way you pass Plaça de Cort, the town hall square, with a gnarled olive tree in the middle. The market, opened in 1951, has stalls of fish, fruit, cheese and sobrasada, and counters where you eat standing up from what you see on display.",
+            "DE": "Unterwegs kommen Sie über die Plaça de Cort vor dem Rathaus, mit einem knorrigen Olivenbaum in der Mitte. Die Markthalle von 1951 hat Stände mit Fisch, Obst, Käse und Sobrasada und Theken, an denen man im Stehen isst, was in der Auslage liegt."
+          },
+          "tip": {
+            "ES": "Ve antes de las dos. El mercado cierra a primera hora de la tarde y los domingos no abre.",
+            "EN": "Get there before two. The market closes in the early afternoon and is shut on Sundays.",
+            "DE": "Kommen Sie vor 14 Uhr. Die Markthalle schließt am frühen Nachmittag und ist sonntags zu."
+          },
+          "hora": "12:15",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/palma/img/olivar.jpg",
+          "lat": 39.57389,
+          "lng": 2.65343,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 75
+        }
+      ],
+      "fotos": [
+        "/ciudades/palma/img/catedral-interior.jpg",
+        "/ciudades/palma/img/casco.jpg",
+        "/ciudades/palma/img/banys-jardin.jpg",
+        "/ciudades/palma/img/can-vivot.jpg",
+        "/ciudades/palma/img/cort.jpg",
+        "/ciudades/palma/img/olivar.jpg"
+      ],
+      "duracionMin": 225,
+      "distanciaKm": 12,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Calles empedradas y estrechas, con alguna cuesta y escaleras alrededor de la catedral. En los Baños Árabes el suelo es irregular.",
+        "EN": "Narrow cobbled streets, with some slopes and steps around the cathedral. The floor at the Arab Baths is uneven.",
+        "DE": "Enge Gassen mit Kopfsteinpflaster, rund um die Kathedrale mit Steigungen und Treppen. In den Arabischen Bädern ist der Boden uneben."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 39.56616,
+        "lng": 2.6476,
+        "foto": "/ciudades/palma/img/catedral.jpg",
+        "texto": {
+          "ES": "Parc de la Mar, junto al lago, con la catedral encima. Desde aquí subes andando en cinco minutos.",
+          "EN": "Parc de la Mar, by the lake, with the cathedral above. From here it is a five-minute walk up.",
+          "DE": "Parc de la Mar, am See, die Kathedrale direkt darüber. Von hier sind es fünf Minuten zu Fuß hinauf."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxi de ida y vuelta",
+          "Entradas a la catedral y a los Baños Árabes",
+          "Comida en el mercado"
+        ],
+        "EN": [
+          "Taxi there and back",
+          "Cathedral and Arab Baths admission",
+          "Lunch at the market"
+        ],
+        "DE": [
+          "Taxi hin und zurück",
+          "Eintritt in die Kathedrale und die Arabischen Bäder",
+          "Essen auf dem Markt"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Hazla de lunes a sábado, porque los domingos la catedral no abre a las visitas.",
+        "EN": "Self-guided, so there is nothing to book or cancel. Do it Monday to Saturday, as the cathedral is closed to visitors on Sundays.",
+        "DE": "Freie Route, nichts zu buchen oder zu stornieren. Machen Sie sie von Montag bis Samstag, sonntags ist die Kathedrale für Besucher geschlossen."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    },
+    {
+      "id": "soller",
+      "expId": "ex2",
+      "img": "/ciudades/palma/img/soller.jpg",
+      "titulo": {
+        "ES": "El tren de Sóller y el tranvía al puerto",
+        "EN": "The Sóller train and the tram to the port",
+        "DE": "Der Zug nach Sóller und die Tram zum Hafen"
+      },
+      "tipo": {
+        "ES": "Excursión",
+        "EN": "Day trip",
+        "DE": "Ausflug"
+      },
+      "dur": "8 h 15 min",
+      "d": {
+        "ES": "El tren de madera de 1912 sale de Palma, cruza la sierra por trece túneles y baja al valle de los naranjos. En Sóller coges el tranvía de 1913 hasta el puerto, comes junto al mar y vuelves en el tren de la tarde.",
+        "EN": "The 1912 wooden train leaves Palma, crosses the mountains through thirteen tunnels and drops into the orange valley. In Sóller you take the 1913 tram to the port, have lunch by the sea and come back on the afternoon train.",
+        "DE": "Der Holzzug von 1912 fährt in Palma ab, durchquert das Gebirge in dreizehn Tunneln und rollt hinunter ins Orangental. In Sóller steigen Sie in die Tram von 1913 zum Hafen, essen am Meer und fahren mit dem Nachmittagszug zurück."
+      },
+      "salida": {
+        "ES": "En taxi hasta la estación del tren de Sóller, junto a la plaza de España, unos 15 minutos. Sal hacia las 09:40 para coger el tren de las 10:30",
+        "EN": "Taxi to the Sóller train station by Plaça d'Espanya, about 15 minutes. Leave around 09:40 to catch the 10:30 train",
+        "DE": "Mit dem Taxi zum Bahnhof des Sóller-Zugs an der Plaça d'Espanya, etwa 15 Minuten. Brechen Sie gegen 9:40 Uhr auf, um den Zug um 10:30 Uhr zu erreichen"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "DE": [
+          "Freie Route, ohne Buchung",
+          "Tagesplan und Karte"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "El billete combinado de tren y tranvía, que se compra en la estación o en trendesoller.com",
+          "Una chaqueta fina, que en los túneles refresca",
+          "Bañador y toalla en los meses de calor"
+        ],
+        "EN": [
+          "The combined train and tram ticket, sold at the station or on trendesoller.com",
+          "A light jacket, as it gets cool in the tunnels",
+          "Swimwear and a towel in the warm months"
+        ],
+        "DE": [
+          "Das Kombiticket für Zug und Tram, erhältlich am Bahnhof oder auf trendesoller.com",
+          "Eine leichte Jacke, in den Tunneln wird es kühl",
+          "Badesachen und Handtuch in den warmen Monaten"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Estación de Palma",
+            "EN": "Palma station",
+            "DE": "Bahnhof Palma"
+          },
+          "s": {
+            "ES": "Un tren de madera que funciona desde 1912",
+            "EN": "A wooden train running since 1912",
+            "DE": "Ein Holzzug, der seit 1912 fährt"
+          },
+          "d": {
+            "ES": "La línea se inauguró en abril de 1912 y los vagones siguen siendo los de madera barnizada, con apliques dorados y ventanillas de guillotina. Desde el andén ves cómo enganchan el automotor eléctrico al resto del tren, que funciona con electricidad desde 1929.",
+            "EN": "The line opened in April 1912 and the carriages are still the varnished wooden ones, with gilt lamps and sash windows. From the platform you can watch them couple the electric railcar to the rest of the train, which has run on electricity since 1929.",
+            "DE": "Die Strecke wurde im April 1912 eröffnet, und die Wagen sind noch die aus lackiertem Holz, mit vergoldeten Lampen und Schiebefenstern. Vom Bahnsteig aus sehen Sie, wie der elektrische Triebwagen an den Zug gekuppelt wird, der seit 1929 elektrisch fährt."
+          },
+          "tip": {
+            "ES": "Con el horario de invierno el primer tren sale a las 10:30. En temporada alta hay más, el primero a las 10:10. En la taquilla te confirman el horario del día.",
+            "EN": "On the winter timetable the first train leaves at 10:30. In high season there are more, the first at 10:10. The ticket office will confirm the day's times.",
+            "DE": "Im Winterfahrplan fährt der erste Zug um 10:30 Uhr. In der Hochsaison gibt es mehr Züge, den ersten um 10:10 Uhr. Am Schalter erfahren Sie die Zeiten des Tages."
+          },
+          "hora": "10:00",
+          "dur": "30 min",
+          "img": "/ciudades/palma/img/estacion-tren.jpg",
+          "lat": 39.5768,
+          "lng": 2.65387,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Bajada al valle de Sóller",
+            "EN": "Down into the Sóller valley",
+            "DE": "Hinunter ins Tal von Sóller"
+          },
+          "s": {
+            "ES": "Trece túneles y, al salir, los naranjos",
+            "EN": "Thirteen tunnels, then the orange groves",
+            "DE": "Dreizehn Tunnel, danach die Orangenhaine"
+          },
+          "d": {
+            "ES": "Pasado Bunyola el tren se mete en la sierra. El túnel más largo mide casi tres kilómetros y dentro solo se ven las lámparas del vagón. Al salir aparece abajo el valle de Sóller, cubierto de naranjos y limoneros, y el tren baja en curvas por puentes y viaductos.",
+            "EN": "After Bunyola the train heads into the mountains. The longest tunnel is almost three kilometres long, and inside all you see are the carriage lamps. When you come out, the Sóller valley opens below, covered in orange and lemon trees, and the train winds down over bridges and viaducts.",
+            "DE": "Hinter Bunyola fährt der Zug ins Gebirge. Der längste Tunnel ist fast drei Kilometer lang, drinnen sieht man nur die Lampen im Wagen. Danach liegt unten das Tal von Sóller voller Orangen- und Zitronenbäume, und der Zug schlängelt sich über Brücken und Viadukte hinab."
+          },
+          "tip": {
+            "ES": "Siéntate a la derecha mirando hacia delante, que es el lado del valle. Algunos trenes paran unos diez minutos en el mirador des Pujol d'en Banya para hacer fotos; pregunta en la taquilla si el tuyo para.",
+            "EN": "Sit on the right, facing forward, which is the valley side. Some trains stop for about ten minutes at the Pujol d'en Banya viewpoint for photos; ask at the ticket office whether yours does.",
+            "DE": "Setzen Sie sich in Fahrtrichtung rechts, auf die Talseite. Manche Züge halten etwa zehn Minuten am Aussichtspunkt Pujol d'en Banya für Fotos; fragen Sie am Schalter, ob Ihrer dazugehört."
+          },
+          "hora": "11:15",
+          "dur": "10 min",
+          "img": "/ciudades/palma/img/valle-soller.jpg",
+          "lat": 39.76078,
+          "lng": 2.70628,
+          "tramo": "tram",
+          "tramoDuracionMin": 45,
+          "duracionMin": 10
+        },
+        {
+          "n": {
+            "ES": "Sóller",
+            "EN": "Sóller",
+            "DE": "Sóller"
+          },
+          "s": {
+            "ES": "La plaza del pueblo y sus fachadas modernistas",
+            "EN": "The town square and its modernista façades",
+            "DE": "Der Dorfplatz und seine Jugendstilfassaden"
+          },
+          "d": {
+            "ES": "La estación ocupa Can Maiol, una casa del siglo XVII, y en el primer piso hay dos salas con obra original de Miró y de Picasso, de entrada libre. Dos minutos más abajo está la plaza de sa Constitució, con la iglesia de Sant Bartomeu y el Banco de Sóller. Las dos fachadas modernistas son de Joan Rubió, que había trabajado con Gaudí.",
+            "EN": "The station is in Can Maiol, a 17th-century house, and on the first floor two rooms show original works by Miró and Picasso, free of charge. Two minutes further down is Plaça de sa Constitució, with the church of Sant Bartomeu and the Banco de Sóller. Both modernista façades are by Joan Rubió, who had worked with Gaudí.",
+            "DE": "Der Bahnhof liegt in Can Maiol, einem Haus aus dem 17. Jahrhundert. Im ersten Stock zeigen zwei Säle Originalwerke von Miró und Picasso, der Eintritt ist frei. Zwei Minuten weiter unten liegt die Plaça de sa Constitució mit der Kirche Sant Bartomeu und der Banco de Sóller. Beide Jugendstilfassaden stammen von Joan Rubió, der mit Gaudí gearbeitet hatte."
+          },
+          "tip": {
+            "ES": "Pide un zumo de naranja del valle en una terraza de la plaza antes de coger el tranvía.",
+            "EN": "Order a juice made from the valley's oranges at a café on the square before you catch the tram.",
+            "DE": "Bestellen Sie auf einer Terrasse am Platz einen Saft aus den Orangen des Tals, bevor Sie in die Tram steigen."
+          },
+          "hora": "11:30",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/palma/img/soller-plaza.jpg",
+          "lat": 39.76635,
+          "lng": 2.71482,
+          "tramo": "tram",
+          "tramoDuracionMin": 5,
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Port de Sóller en tranvía",
+            "EN": "Port de Sóller by tram",
+            "DE": "Mit der Tram nach Port de Sóller"
+          },
+          "s": {
+            "ES": "Media hora entre huertos hasta el mar",
+            "EN": "Half an hour through orchards to the sea",
+            "DE": "Eine halbe Stunde durch Gärten ans Meer"
+          },
+          "d": {
+            "ES": "El tranvía funciona desde 1913 y sale de delante de la estación. Cruza el centro, pasa entre huertos de naranjos y llega a la bahía por el paseo. Termina en la antigua estación del puerto, junto a los muelles, con restaurantes de pescado y una playa de arena cerca.",
+            "EN": "The tram has been running since 1913 and leaves from outside the station. It crosses the town centre, runs between orange groves and reaches the bay along the promenade. It ends at the old port station by the quays, with fish restaurants and a sandy beach nearby.",
+            "DE": "Die Tram fährt seit 1913 und startet vor dem Bahnhof. Sie durchquert den Ort, fährt zwischen Orangengärten hindurch und erreicht die Bucht über die Promenade. Endstation ist der alte Hafenbahnhof an den Kais, mit Fischrestaurants und einem Sandstrand in der Nähe."
+          },
+          "tip": {
+            "ES": "Al ir, siéntate a la izquierda para ver la bahía. Para volver, el tranvía de las 15:30 te deja en Sóller a tiempo para el tren de las 17:00.",
+            "EN": "On the way there, sit on the left to see the bay. To get back, the 15:30 tram gets you to Sóller in time for the 17:00 train.",
+            "DE": "Auf der Hinfahrt links sitzen, dann sehen Sie die Bucht. Für die Rückfahrt bringt Sie die Tram um 15:30 Uhr rechtzeitig zum Zug um 17:00 Uhr."
+          },
+          "hora": "13:30",
+          "dur": "2 h",
+          "img": "/ciudades/palma/img/tranvia.jpg",
+          "lat": 39.79765,
+          "lng": 2.69554,
+          "tramo": "tram",
+          "tramoDuracionMin": 30,
+          "duracionMin": 120
+        }
+      ],
+      "fotos": [
+        "/ciudades/palma/img/soller.jpg",
+        "/ciudades/palma/img/estacion-tren.jpg",
+        "/ciudades/palma/img/valle-soller.jpg",
+        "/ciudades/palma/img/soller-estacion.jpg",
+        "/ciudades/palma/img/soller-plaza.jpg",
+        "/ciudades/palma/img/tranvia.jpg",
+        "/ciudades/palma/img/port-soller.jpg"
+      ],
+      "duracionMin": 495,
+      "distanciaKm": 48,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Para subir al tren hay dos escalones y los vagones son estrechos. El centro de Sóller y el paseo del puerto son llanos. Con silla de ruedas, pregunta antes en la estación.",
+        "EN": "There are two steps up into the train and the carriages are narrow. Sóller's centre and the port promenade are flat. If you use a wheelchair, ask at the station first.",
+        "DE": "In den Zug geht es zwei Stufen hinauf, die Wagen sind schmal. Der Ortskern von Sóller und die Hafenpromenade sind eben. Mit Rollstuhl fragen Sie bitte vorher am Bahnhof."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 39.5768,
+        "lng": 2.65387,
+        "foto": "/ciudades/palma/img/estacion-tren.jpg",
+        "texto": {
+          "ES": "Estación del tren de Sóller, en la plaza de España, al lado de la estación intermodal. Llega media hora antes para comprar el billete.",
+          "EN": "Sóller train station on Plaça d'Espanya, next to the main Intermodal station. Arrive half an hour early to buy your ticket.",
+          "DE": "Bahnhof des Sóller-Zugs an der Plaça d'Espanya, neben dem Intermodal-Bahnhof. Seien Sie eine halbe Stunde früher da, um das Ticket zu kaufen."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxi hasta la estación y de vuelta",
+          "Billetes de tren y tranvía",
+          "Comida"
+        ],
+        "EN": [
+          "Taxi to the station and back",
+          "Train and tram tickets",
+          "Lunch"
+        ],
+        "DE": [
+          "Taxi zum Bahnhof und zurück",
+          "Zug- und Tramtickets",
+          "Mittagessen"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. El plan sigue el horario de invierno, desde el 2 de noviembre de 2026, con ida a las 10:30 y vuelta desde Sóller a las 17:00. En temporada alta hay más trenes; mira el horario del día en trendesoller.com.",
+        "EN": "Self-guided, so there is nothing to book or cancel. The plan follows the winter timetable, from 2 November 2026, with the 10:30 train out and the 17:00 back from Sóller. There are more trains in high season; check the day's times on trendesoller.com.",
+        "DE": "Freie Route, nichts zu buchen oder zu stornieren. Der Plan folgt dem Winterfahrplan ab 2. November 2026, mit dem Zug um 10:30 Uhr hin und um 17:00 Uhr ab Sóller zurück. In der Hochsaison fahren mehr Züge; die aktuellen Zeiten finden Sie auf trendesoller.com."
+      },
+      "salidasFijas": [],
+      "precioDesde": 69
+    },
+    {
+      "id": "tramuntana",
+      "expId": "ex3",
+      "img": "/ciudades/palma/img/tramuntana.jpg",
+      "titulo": {
+        "ES": "Valldemossa y Deià por la Serra de Tramuntana",
+        "EN": "Valldemossa and Deià in the Serra de Tramuntana",
+        "DE": "Valldemossa und Deià in der Serra de Tramuntana"
+      },
+      "tipo": {
+        "ES": "Montaña",
+        "EN": "Mountains",
+        "DE": "Berge"
+      },
+      "dur": "5 h 40 min",
+      "d": {
+        "ES": "Un día en coche por la sierra que la UNESCO declaró Patrimonio de la Humanidad en 2011. Entras en la cartuja donde Chopin pasó un invierno, tomas coca de patata en Valldemossa, te asomas a Sa Foradada desde la casa del archiduque y comes en Deià, el pueblo de Robert Graves.",
+        "EN": "A day by car through the mountains UNESCO listed as World Heritage in 2011. You visit the charterhouse where Chopin spent a winter, try coca de patata in Valldemossa, look out at Sa Foradada from the Archduke's house and have lunch in Deià, Robert Graves's village.",
+        "DE": "Ein Tag mit dem Auto durch das Gebirge, das die UNESCO 2011 zum Welterbe erklärt hat. Sie besuchen die Kartause, in der Chopin einen Winter verbrachte, probieren in Valldemossa Coca de Patata, blicken vom Haus des Erzherzogs auf Sa Foradada und essen in Deià zu Mittag, dem Dorf von Robert Graves."
+      },
+      "salida": {
+        "ES": "En coche desde el hotel, unos 30 minutos hasta Valldemossa por la Ma-1110. Sal hacia las 09:30",
+        "EN": "By car from the hotel, about 30 minutes to Valldemossa on the Ma-1110. Leave around 09:30",
+        "DE": "Mit dem Auto vom Hotel etwa 30 Minuten über die Ma-1110 nach Valldemossa. Brechen Sie gegen 9:30 Uhr auf"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "DE": [
+          "Freie Route, ohne Buchung",
+          "Tagesplan und Karte"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo, que los dos pueblos son de cuestas",
+          "Una chaqueta, en la sierra hace más fresco que en Palma",
+          "Algo para el mareo si las curvas te sientan mal"
+        ],
+        "EN": [
+          "Comfortable shoes, as both villages are steep",
+          "A jacket, as it is cooler in the mountains than in Palma",
+          "Something for car sickness if bends bother you"
+        ],
+        "DE": [
+          "Bequeme Schuhe, beide Dörfer sind steil",
+          "Eine Jacke, in den Bergen ist es kühler als in Palma",
+          "Etwas gegen Reiseübelkeit, falls Ihnen Kurven zusetzen"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Real Cartuja de Valldemossa",
+            "EN": "Valldemossa Charterhouse",
+            "DE": "Kartause von Valldemossa"
+          },
+          "s": {
+            "ES": "Donde Chopin pasó el invierno de 1838",
+            "EN": "Where Chopin spent the winter of 1838",
+            "DE": "Wo Chopin den Winter 1838 verbrachte"
+          },
+          "d": {
+            "ES": "Los monjes cartujos se instalaron aquí en 1399, en el antiguo palacio del rey Sanç. En el invierno de 1838 a 1839 alquilaron unas celdas Frédéric Chopin y George Sand, que lo contó después en Un invierno en Mallorca. Se recorren las celdas, el claustro y la antigua farmacia de los monjes.",
+            "EN": "Carthusian monks settled here in 1399, in the former palace of King Sanç. In the winter of 1838 to 1839 Frédéric Chopin and George Sand rented cells here, and she later wrote about it in A Winter in Majorca. You visit the cells, the cloister and the monks' old pharmacy.",
+            "DE": "Kartäusermönche zogen 1399 in den früheren Palast von König Sanç. Im Winter 1838/39 mieteten Frédéric Chopin und George Sand hier Zellen, und sie schrieb darüber später „Ein Winter auf Mallorca“. Sie sehen die Zellen, den Kreuzgang und die alte Apotheke der Mönche."
+          },
+          "tip": {
+            "ES": "Llega a primera hora. Hacia el mediodía llegan los autocares de excursiones y el pueblo se llena.",
+            "EN": "Arrive early. Around midday the tour coaches pull in and the village fills up.",
+            "DE": "Kommen Sie früh. Gegen Mittag kommen die Ausflugsbusse, dann wird es voll."
+          },
+          "hora": "10:00",
+          "dur": "1 h",
+          "img": "/ciudades/palma/img/cartuja.jpg",
+          "lat": 39.70876,
+          "lng": 2.62161,
+          "tramo": "coche",
+          "tramoDuracionMin": 30,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Calles de Valldemossa",
+            "EN": "Valldemossa's lanes",
+            "DE": "Gassen von Valldemossa"
+          },
+          "s": {
+            "ES": "Coca de patata y la casa de la santa",
+            "EN": "Coca de patata and the saint's house",
+            "DE": "Coca de Patata und das Haus der Heiligen"
+          },
+          "d": {
+            "ES": "Bajas por calles de piedra con macetas en cada puerta. En muchas casas hay un azulejo con la imagen de Santa Catalina Thomàs, que nació aquí en 1531. Su casa natal está en la calle de la Rectoria.",
+            "EN": "You wander down stone lanes with flowerpots by every door. Many houses have a tile showing Santa Catalina Thomàs, who was born here in 1531. Her birthplace is on Carrer de la Rectoria.",
+            "DE": "Sie gehen durch Steingassen mit Blumentöpfen vor jeder Tür. An vielen Häusern hängt eine Kachel mit dem Bild der heiligen Catalina Thomàs, die 1531 hier geboren wurde. Ihr Geburtshaus steht in der Carrer de la Rectoria."
+          },
+          "tip": {
+            "ES": "Pide una coca de patata, un bollo esponjoso y azucarado típico del pueblo. Aquí la toman con chocolate caliente o con un café.",
+            "EN": "Order a coca de patata, a soft, sugared potato bun typical of the village. Locals have it with hot chocolate or a coffee.",
+            "DE": "Bestellen Sie eine Coca de Patata, ein lockeres, gezuckertes Kartoffelgebäck aus dem Ort. Man isst es hier mit heißer Schokolade oder Kaffee."
+          },
+          "hora": "11:10",
+          "dur": "40 min",
+          "img": "/ciudades/palma/img/valldemossa.jpg",
+          "lat": 39.71049,
+          "lng": 2.6256,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Son Marroig y Sa Foradada",
+            "EN": "Son Marroig and Sa Foradada",
+            "DE": "Son Marroig und Sa Foradada"
+          },
+          "s": {
+            "ES": "La vista que enamoró al archiduque",
+            "EN": "The view the Archduke fell for",
+            "DE": "Der Blick, den der Erzherzog liebte"
+          },
+          "d": {
+            "ES": "La finca fue del archiduque Luis Salvador de Austria, que la compró por sus vistas sobre esta costa. En el jardín levantó un templete de mármol de Carrara con ocho columnas. Desde allí ves Sa Foradada, una península de roca con un agujero enorme que da al mar.",
+            "EN": "The estate belonged to Archduke Ludwig Salvator of Austria, who bought it for its views over this coast. In the garden he built a small Carrara marble temple with eight columns. From there you see Sa Foradada, a rocky peninsula with a huge hole facing the sea.",
+            "DE": "Das Anwesen gehörte Erzherzog Ludwig Salvator von Österreich, der es wegen des Blicks auf diese Küste kaufte. Im Garten ließ er einen kleinen Tempel aus Carrara-Marmor mit acht Säulen bauen. Von dort sehen Sie Sa Foradada, eine Felshalbinsel mit einem riesigen Loch zum Meer hin."
+          },
+          "tip": {
+            "ES": "La casa funciona como museo y el templete está dentro, con entrada. La carretera es estrecha, así que aparca solo donde esté permitido.",
+            "EN": "The house is a museum and the temple is inside the grounds, with an admission fee. The road is narrow, so park only where it is allowed.",
+            "DE": "Das Haus ist ein Museum, der Tempel liegt auf dem Gelände und kostet Eintritt. Die Straße ist schmal, parken Sie nur, wo es erlaubt ist."
+          },
+          "hora": "12:05",
+          "dur": "40 min",
+          "img": "/ciudades/palma/img/foradada.jpg",
+          "lat": 39.75124,
+          "lng": 2.62902,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Deià",
+            "EN": "Deià",
+            "DE": "Deià"
+          },
+          "s": {
+            "ES": "El pueblo de Robert Graves, a los pies del Teix",
+            "EN": "Robert Graves's village, below the Teix",
+            "DE": "Das Dorf von Robert Graves, unterhalb des Teix"
+          },
+          "d": {
+            "ES": "Casas de piedra escalonadas en una ladera, entre olivos y naranjos. Arriba del todo están la iglesia de Sant Joan Baptista y el cementerio donde está enterrado Robert Graves, el autor de Yo, Claudio, que llegó al pueblo en 1929. Su casa, Ca n'Alluny, es museo y está a las afueras, en la carretera de Sóller.",
+            "EN": "Stone houses stepped up a hillside among olive and orange trees. At the very top are the church of Sant Joan Baptista and the cemetery where Robert Graves, author of I, Claudius, is buried. He came to the village in 1929. His house, Ca n'Alluny, is a museum on the outskirts, on the road to Sóller.",
+            "DE": "Steinhäuser, die sich zwischen Oliven- und Orangenbäumen den Hang hinaufziehen. Ganz oben stehen die Kirche Sant Joan Baptista und der Friedhof, auf dem Robert Graves begraben liegt, der Autor von „Ich, Claudius, Kaiser und Gott“. Er kam 1929 ins Dorf. Sein Haus Ca n'Alluny ist heute Museum, am Ortsrand an der Straße nach Sóller."
+          },
+          "tip": {
+            "ES": "Sube a la iglesia por las escaleras del pueblo. Desde el cementerio se ve el mar entre las montañas.",
+            "EN": "Climb up to the church by the village steps. From the cemetery you can see the sea between the mountains.",
+            "DE": "Gehen Sie über die Treppen hinauf zur Kirche. Vom Friedhof aus sieht man das Meer zwischen den Bergen."
+          },
+          "hora": "12:55",
+          "dur": "2 h",
+          "img": "/ciudades/palma/img/deia.jpg",
+          "lat": 39.74889,
+          "lng": 2.64648,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 120
+        }
+      ],
+      "fotos": [
+        "/ciudades/palma/img/tramuntana.jpg",
+        "/ciudades/palma/img/cartuja.jpg",
+        "/ciudades/palma/img/valldemossa.jpg",
+        "/ciudades/palma/img/foradada.jpg",
+        "/ciudades/palma/img/deia.jpg",
+        "/ciudades/palma/img/graves.jpg"
+      ],
+      "duracionMin": 340,
+      "distanciaKm": 68,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Valldemossa y Deià tienen calles empinadas y escaleras. La carretera entre los dos pueblos es estrecha y de curvas.",
+        "EN": "Valldemossa and Deià have steep lanes and steps. The road between them is narrow and winding.",
+        "DE": "Valldemossa und Deià haben steile Gassen und Treppen. Die Straße zwischen beiden Orten ist schmal und kurvig."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 39.70876,
+        "lng": 2.62161,
+        "foto": "/ciudades/palma/img/cartuja.jpg",
+        "texto": {
+          "ES": "Plaza de la Cartuja, en Valldemossa, delante de la entrada a la cartuja. Deja el coche en uno de los aparcamientos de la entrada del pueblo.",
+          "EN": "Plaça de la Cartoixa in Valldemossa, outside the charterhouse entrance. Leave the car in one of the car parks at the edge of the village.",
+          "DE": "Plaça de la Cartoixa in Valldemossa, vor dem Eingang der Kartause. Lassen Sie das Auto auf einem der Parkplätze am Ortseingang."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Coche o taxi",
+          "Entradas a la cartuja y a Son Marroig",
+          "Aparcamiento",
+          "Comida"
+        ],
+        "EN": [
+          "Car or taxi",
+          "Charterhouse and Son Marroig admission",
+          "Parking",
+          "Lunch"
+        ],
+        "DE": [
+          "Auto oder Taxi",
+          "Eintritt in die Kartause und nach Son Marroig",
+          "Parken",
+          "Mittagessen"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Con lluvia fuerte la carretera de la costa resbala, así que deja Son Marroig para otro día.",
+        "EN": "Self-guided, so there is nothing to book or cancel. In heavy rain the coast road gets slippery, so leave Son Marroig for another day.",
+        "DE": "Freie Route, nichts zu buchen oder zu stornieren. Bei starkem Regen ist die Küstenstraße rutschig, heben Sie sich Son Marroig dann für einen anderen Tag auf."
+      },
+      "salidasFijas": [],
+      "precioDesde": 49
+    },
+    {
+      "id": "santa-catalina",
+      "img": "/ciudades/palma/img/santa-catalina.jpg",
+      "titulo": {
+        "ES": "Santa Catalina, del atardecer a las tapas",
+        "EN": "Santa Catalina, from sunset to tapas",
+        "DE": "Santa Catalina, vom Sonnenuntergang zu den Tapas"
+      },
+      "tipo": {
+        "ES": "Atardecer",
+        "EN": "Sunset",
+        "DE": "Sonnenuntergang"
+      },
+      "dur": "4 h 10 min",
+      "d": {
+        "ES": "Sales andando del hotel por el paseo marítimo, subes a los molinos de es Jonquet, ves caer el sol sobre el puerto desde la muralla de Es Baluard y acabas de tapas en Santa Catalina, el barrio de los marineros.",
+        "EN": "Walk out of the hotel along the seafront, climb up to the es Jonquet windmills, watch the sun go down over the harbour from the walls of Es Baluard and finish with tapas in Santa Catalina, the old sailors' quarter.",
+        "DE": "Sie gehen vom Hotel zu Fuß über die Hafenpromenade, steigen zu den Windmühlen von es Jonquet hinauf, sehen von der Mauer von Es Baluard die Sonne über dem Hafen sinken und essen zum Schluss Tapas in Santa Catalina, dem alten Seemannsviertel."
+      },
+      "salida": {
+        "ES": "A pie desde el hotel por el paseo marítimo, unos 35 minutos hasta es Jonquet. Sal hacia las 16:10",
+        "EN": "On foot from the hotel along the seafront, about 35 minutes to es Jonquet. Leave around 16:10",
+        "DE": "Zu Fuß vom Hotel über die Promenade, etwa 35 Minuten bis es Jonquet. Brechen Sie gegen 16:10 Uhr auf"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "DE": [
+          "Freie Route, ohne Buchung",
+          "Tagesplan und Karte"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo para el paseo",
+          "Una chaqueta fina para cuando se pone el sol"
+        ],
+        "EN": [
+          "Comfortable shoes for the walk",
+          "A light jacket for after sunset"
+        ],
+        "DE": [
+          "Bequeme Schuhe für den Spaziergang",
+          "Eine leichte Jacke für nach Sonnenuntergang"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Molinos de es Jonquet",
+            "EN": "es Jonquet windmills",
+            "DE": "Windmühlen von es Jonquet"
+          },
+          "s": {
+            "ES": "El barrio de pescadores del que nació Santa Catalina",
+            "EN": "The fishing quarter Santa Catalina grew from",
+            "DE": "Das Fischerviertel, aus dem Santa Catalina entstand"
+          },
+          "d": {
+            "ES": "Llegas por el paseo marítimo, entre palmeras y veleros, y subes a una loma con casas bajas y una hilera de molinos de viento. Estás en es Jonquet, el barrio que levantaron marineros y familias de pescadores. Los molinos eran de lo primero que veían los veleros al entrar en el puerto.",
+            "EN": "You arrive along the seafront, past palms and yachts, and climb a low hill of small houses with a row of windmills. This is es Jonquet, the quarter built by sailors and fishing families. The windmills were among the first things sailing ships saw as they came into port.",
+            "DE": "Sie kommen über die Promenade, vorbei an Palmen und Segelbooten, und steigen auf einen Hügel mit niedrigen Häusern und einer Reihe Windmühlen. Das ist es Jonquet, das Viertel der Seeleute und Fischerfamilien. Die Mühlen gehörten zum Ersten, was Segelschiffe bei der Einfahrt in den Hafen sahen."
+          },
+          "tip": {
+            "ES": "Métete por los callejones que hay entre los molinos. Desde arriba ves el puerto deportivo y, al fondo, Bellver.",
+            "EN": "Wander into the alleys between the windmills. From up here you see the marina, with Bellver in the distance.",
+            "DE": "Gehen Sie in die Gassen zwischen den Mühlen. Von oben sehen Sie den Jachthafen und in der Ferne Bellver."
+          },
+          "hora": "16:45",
+          "dur": "20 min",
+          "img": "/ciudades/palma/img/jonquet.jpg",
+          "lat": 39.5695,
+          "lng": 2.6375,
+          "tramo": "pie",
+          "tramoDuracionMin": 35,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Es Baluard",
+            "EN": "Es Baluard",
+            "DE": "Es Baluard"
+          },
+          "s": {
+            "ES": "Arte moderno dentro de la muralla",
+            "EN": "Modern art inside the city walls",
+            "DE": "Moderne Kunst in der Stadtmauer"
+          },
+          "d": {
+            "ES": "El museo abrió en 2004 dentro del baluarte de Sant Pere, uno de los que defendían la ciudad por el lado del mar. Las salas mezclan los muros de piedra con hormigón y cristal, y en la colección hay obra de Miró y cerámicas de Picasso.",
+            "EN": "The museum opened in 2004 inside the Sant Pere bastion, one of those that guarded the city on the sea side. The galleries mix old stone walls with concrete and glass, and the collection includes work by Miró and ceramics by Picasso.",
+            "DE": "Das Museum wurde 2004 in der Bastion Sant Pere eröffnet, einer der Bastionen, die die Stadt zum Meer hin schützten. Die Säle verbinden alte Steinmauern mit Beton und Glas, die Sammlung zeigt Werke von Miró und Keramiken von Picasso."
+          },
+          "tip": {
+            "ES": "Abre de martes a sábado hasta las 20:00 y los domingos hasta las 15:00. Los lunes cierra. Los viernes pagas lo que quieras.",
+            "EN": "It opens Tuesday to Saturday until 20:00 and Sundays until 15:00, and it is closed on Mondays. On Fridays you pay what you like.",
+            "DE": "Geöffnet Dienstag bis Samstag bis 20:00 Uhr, sonntags bis 15:00 Uhr, montags geschlossen. Freitags zahlen Sie, so viel Sie möchten."
+          },
+          "hora": "17:15",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/palma/img/baluard.jpg",
+          "lat": 39.57026,
+          "lng": 2.64095,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "Atardecer en la muralla",
+            "EN": "Sunset on the walls",
+            "DE": "Sonnenuntergang auf der Mauer"
+          },
+          "s": {
+            "ES": "El sol baja hacia Bellver",
+            "EN": "The sun sinks towards Bellver",
+            "DE": "Die Sonne sinkt Richtung Bellver"
+          },
+          "d": {
+            "ES": "Sal a la terraza alta, encima del baluarte. Abajo tienes el puerto deportivo, a un lado la catedral y al otro, en su colina, el castillo de Bellver. De octubre a febrero el sol se pone más o menos detrás del castillo.",
+            "EN": "Go out onto the upper terrace above the bastion. Below is the marina, on one side the cathedral and on the other, on its hill, Bellver Castle. From October to February the sun sets roughly behind the castle.",
+            "DE": "Gehen Sie auf die obere Terrasse über der Bastion. Unter Ihnen liegt der Jachthafen, auf der einen Seite die Kathedrale, auf der anderen, auf ihrem Hügel, die Burg Bellver. Von Oktober bis Februar geht die Sonne ungefähr hinter der Burg unter."
+          },
+          "tip": {
+            "ES": "Mira a qué hora se pone el sol ese día y llega media hora antes. En verano es pasadas las nueve, así que retrasa toda la ruta un par de horas.",
+            "EN": "Check the sunset time for the day and get there half an hour early. In summer it is after nine, so start the whole route a couple of hours later.",
+            "DE": "Schauen Sie nach, wann an dem Tag die Sonne untergeht, und seien Sie eine halbe Stunde vorher da. Im Sommer ist es nach 21 Uhr, verschieben Sie die ganze Route dann um etwa zwei Stunden."
+          },
+          "hora": "18:35",
+          "dur": "30 min",
+          "img": "/ciudades/palma/img/baluard-terraza.jpg",
+          "lat": 39.56993,
+          "lng": 2.64097,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Tapas en Santa Catalina",
+            "EN": "Tapas in Santa Catalina",
+            "DE": "Tapas in Santa Catalina"
+          },
+          "s": {
+            "ES": "La calle de la Fàbrica y sus terrazas",
+            "EN": "Carrer de la Fàbrica and its terraces",
+            "DE": "Die Carrer de la Fàbrica und ihre Terrassen"
+          },
+          "d": {
+            "ES": "Santa Catalina creció fuera de la muralla como barrio de marineros, y muchas casas bajas de entonces siguen en pie. Hoy la calle de la Fàbrica es peatonal y está llena de terrazas, y en las calles de alrededor hay bares de tapas y restaurantes de cocinas de medio mundo.",
+            "EN": "Santa Catalina grew up outside the walls as a sailors' quarter, and many of its low houses from that time still stand. Today Carrer de la Fàbrica is pedestrian and lined with terraces, and the streets around it are full of tapas bars and restaurants serving food from half the world.",
+            "DE": "Santa Catalina entstand außerhalb der Mauer als Seemannsviertel, und viele der niedrigen Häuser von damals stehen noch. Heute ist die Carrer de la Fàbrica Fußgängerzone voller Terrassen, und in den Straßen ringsum gibt es Tapasbars und Restaurants mit Küchen aus aller Welt."
+          },
+          "tip": {
+            "ES": "Pide un pa amb oli, pan moreno con tomate restregado, aceite y sal, con jamón o queso encima.",
+            "EN": "Order a pa amb oli, brown bread rubbed with tomato, with olive oil, salt and ham or cheese on top.",
+            "DE": "Bestellen Sie ein Pa amb Oli, dunkles Brot mit Tomate eingerieben, Olivenöl und Salz, belegt mit Schinken oder Käse."
+          },
+          "hora": "19:15",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/palma/img/fabrica.jpg",
+          "lat": 39.57231,
+          "lng": 2.63889,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 90
+        }
+      ],
+      "fotos": [
+        "/ciudades/palma/img/santa-catalina.jpg",
+        "/ciudades/palma/img/paseo-maritimo.jpg",
+        "/ciudades/palma/img/jonquet.jpg",
+        "/ciudades/palma/img/baluard.jpg",
+        "/ciudades/palma/img/baluard-terraza.jpg",
+        "/ciudades/palma/img/atardecer.jpg",
+        "/ciudades/palma/img/fabrica.jpg"
+      ],
+      "duracionMin": 250,
+      "distanciaKm": 7,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El paseo marítimo es llano y ancho. A es Jonquet y a la terraza de Es Baluard se sube por cuestas y escaleras.",
+        "EN": "The seafront promenade is wide and flat. Getting up to es Jonquet and the Es Baluard terrace involves slopes and steps.",
+        "DE": "Die Hafenpromenade ist breit und eben. Nach es Jonquet und zur Terrasse von Es Baluard geht es über Steigungen und Treppen."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 39.55534,
+        "lng": 2.62211,
+        "foto": "/ciudades/palma/img/paseo-maritimo.jpg",
+        "texto": {
+          "ES": "Puerta del hotel. Baja al paseo marítimo y síguelo hacia la catedral, con el mar a la derecha.",
+          "EN": "Hotel entrance. Head down to the seafront promenade and follow it towards the cathedral, with the sea on your right.",
+          "DE": "Hoteleingang. Gehen Sie hinunter zur Promenade und folgen Sie ihr Richtung Kathedrale, das Meer zu Ihrer Rechten."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Entrada a Es Baluard",
+          "Tapas y bebidas",
+          "Taxi de vuelta"
+        ],
+        "EN": [
+          "Es Baluard admission",
+          "Tapas and drinks",
+          "Taxi back"
+        ],
+        "DE": [
+          "Eintritt in Es Baluard",
+          "Tapas und Getränke",
+          "Taxi zurück"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Los lunes el museo cierra; ese día salta la visita y ve directo a la muralla.",
+        "EN": "Self-guided, so there is nothing to book or cancel. The museum is closed on Mondays; that day, skip the visit and go straight up to the walls.",
+        "DE": "Freie Route, nichts zu buchen oder zu stornieren. Montags ist das Museum geschlossen; lassen Sie den Besuch dann aus und gehen Sie direkt auf die Mauer."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "una ensaïmada en el desayuno del hotel, invita la casa",
+      "EN": "an ensaïmada at the hotel breakfast, on the house",
+      "DE": "eine Ensaïmada beim Frühstück im Hotel, aufs Haus"
+    }
+  },
+  "creditos": [
+    "Castell de Bellver y su planta circular: Wolfgang Moroder, CC BY-SA 3.0, Wikimedia Commons",
+    "Taller Sert de la Fundació Pilar i Joan Miró: AxelBoldt, CC0, Wikimedia Commons",
+    "Catedral de Mallorca desde el Parc de la Mar: AlbertoDV, CC0, Wikimedia Commons",
+    "Palau de l'Almudaina al atardecer: Diego Delso, CC BY-SA 4.0, Wikimedia Commons",
+    "Sala de columnas y cúpula de los Banys Àrabs: Enric, CC BY-SA 4.0, Wikimedia Commons",
+    "Entrada de Es Baluard junto a la muralla: Olaf Tausch, CC BY 3.0, Wikimedia Commons",
+    "Fachada del Mercat de Santa Catalina: Chixoy, CC BY-SA 3.0, Wikimedia Commons",
+    "Llaüt amarrado en Es Portitxol: Chixoy, CC BY-SA 3.0, Wikimedia Commons",
+    "Escalinata y muros de piedra del casco antiguo: Olaf Tausch, CC BY 3.0, Wikimedia Commons",
+    "Nave y rosetón de la catedral: Alejandro Caro, CC BY-SA 4.0, Wikimedia Commons",
+    "Jardín y portal de los Banys Àrabs: Enric, CC BY-SA 4.0, Wikimedia Commons",
+    "Patio de Can Vivot: Enric, CC BY-SA 4.0, Wikimedia Commons",
+    "Olivera de Cort, en la plaça de Cort: Rafael Ortega Díaz, Dominio público, Wikimedia Commons",
+    "Mercat de l'Olivar: Enric, CC BY-SA 4.0, Wikimedia Commons",
+    "Terraza de Es Baluard con la catedral y la bahía al fondo: Esbaluard, CC BY-SA 3.0, Wikimedia Commons",
+    "Tren de Sóller en el tramo del mirador des Pujol d'en Banya: Diesellokophren, CC0, Wikimedia Commons",
+    "Subiendo al tren de Sóller en la estación de Palma: BIG ALBERT from UK, Dominio público, Wikimedia Commons",
+    "Valle de Sóller: Top Cat 14, Dominio público, Wikimedia Commons",
+    "Rótulo de la plaça de sa Constitució, Sóller: Kritzolina, CC BY-SA 4.0, Wikimedia Commons",
+    "Tren en la estación de Sóller: Isiwal, CC BY-SA 4.0, Wikimedia Commons",
+    "Tranvía de Sóller: Isiwal, CC BY-SA 4.0, Wikimedia Commons",
+    "Bahía del Port de Sóller: Heuschrecke (Dmitry Tonkonog and Ksenia Fedosova), CC BY-SA 3.0, Wikimedia Commons",
+    "Olivos y bancales de piedra seca en Deià: georama, CC BY 3.0, Wikimedia Commons",
+    "Plaça de la Cartoixa, Valldemossa: Isiwal, CC BY-SA 4.0, Wikimedia Commons",
+    "Carrer Vell, Valldemossa: Enric, CC BY-SA 4.0, Wikimedia Commons",
+    "Sa Foradada desde Son Marroig: Philipcolev, CC BY-SA 3.0 es, Wikimedia Commons",
+    "Iglesia de Sant Joan Baptista, Deià: Chixoy, CC BY-SA 3.0, Wikimedia Commons",
+    "Ca n'Alluny, la casa de Robert Graves en Deià: Gargola87, CC BY-SA 2.0, Wikimedia Commons",
+    "Molinos de es Jonquet: Chixoy, CC BY-SA 3.0, Wikimedia Commons",
+    "Nubes al atardecer sobre el puerto de Palma: Enric, CC BY-SA 4.0, Wikimedia Commons",
+    "Atardecer en el paseo marítimo de Palma: Mariana Suijkerbuijk, CC BY-SA 4.0, Wikimedia Commons",
+    "Un rincón del paseo marítimo de Palma: LANOEL, CC BY-SA 3.0, Wikimedia Commons",
+    "Pa amb oli con jamón y queso: Rafael Ortega Díaz, CC BY-SA 4.0, Wikimedia Commons"
+  ]
+}
