@@ -1,0 +1,978 @@
+{
+  "slug": "pamplona",
+  "nombre": "Pamplona",
+  "intro": {
+    "ES": "El hostal está en el polígono de Noáin, a 800 metros del aeropuerto. En coche o en taxi llegas al casco viejo de Pamplona en unos 15 minutos, y por la autopista estás en Olite en media hora. Las Bardenas Reales quedan a una hora hacia el sur.",
+    "EN": "The hostal is in the Noáin business park, 800 metres from the airport. By car or taxi you reach Pamplona old town in about 15 minutes, and the motorway gets you to Olite in half an hour. The Bardenas Reales desert is an hour to the south."
+  },
+  "lugares": [
+    {
+      "id": "casco-antiguo",
+      "img": "/ciudades/pamplona/img/casco.jpg",
+      "nombre": "Casco Antiguo",
+      "zona": {
+        "ES": "Centro de Pamplona, a 6 km del hotel",
+        "EN": "Central Pamplona, 6 km from the hotel"
+      },
+      "d": {
+        "ES": "Pamplona nació de tres burgos medievales que vivieron enfrentados hasta que Carlos III el Noble los unió en 1423. El Ayuntamiento se levantó en la tierra de nadie que los separaba, y desde su balcón se lanza el chupinazo cada 6 de julio a las doce del mediodía. La fachada barroca es del siglo XVIII.",
+        "EN": "Pamplona grew out of three medieval boroughs that feuded until Charles III the Noble united them in 1423. The town hall was built on the no man's land between them, and the chupinazo rocket that opens San Fermín is fired from its balcony every 6 July at noon. The Baroque façade dates from the 18th century."
+      },
+      "cuando": {
+        "ES": "A media mañana o al caer la tarde, cuando la gente sale a la calle",
+        "EN": "Mid-morning or early evening, when everyone is out in the streets"
+      },
+      "min": 14,
+      "modo": "coche",
+      "lat": 42.8183,
+      "lng": -1.64405
+    },
+    {
+      "id": "plaza-castillo",
+      "img": "/ciudades/pamplona/img/plaza-castillo.jpg",
+      "nombre": "Plaza del Castillo",
+      "zona": {
+        "ES": "Centro de Pamplona, entre el casco viejo y el Ensanche",
+        "EN": "Central Pamplona, between the old town and the Ensanche"
+      },
+      "d": {
+        "ES": "En Pamplona la llaman el cuarto de estar de la ciudad. Tiene soportales en los cuatro lados, casi 14.000 metros cuadrados y un quiosco de música de 1943 en el centro. En una esquina está el Café Iruña, abierto en 1888, uno de los sitios que más frecuentó Hemingway.",
+        "EN": "Locals call it the city's living room. It has arcades on all four sides, covers almost 14,000 square metres and has a 1943 bandstand in the middle. In one corner is Café Iruña, open since 1888 and one of Hemingway's regular haunts."
+      },
+      "cuando": {
+        "ES": "A la hora del vermut o al anochecer, con las terrazas llenas",
+        "EN": "At aperitif time or in the evening, when the terraces fill up"
+      },
+      "min": 13,
+      "modo": "coche",
+      "lat": 42.81683,
+      "lng": -1.64276
+    },
+    {
+      "id": "ciudadela",
+      "img": "/ciudades/pamplona/img/ciudadela.jpg",
+      "nombre": "Ciudadela",
+      "zona": {
+        "ES": "Junto al Ensanche, al oeste del centro",
+        "EN": "Next to the Ensanche, west of the centre"
+      },
+      "d": {
+        "ES": "Felipe II mandó construirla en 1571 con planta de estrella de cinco puntas, siguiendo el modelo de la ciudadela de Amberes. Fue recinto militar hasta 1964. Hoy paseas por fosos y murallas cubiertos de césped, y los antiguos pabellones del ejército acogen exposiciones.",
+        "EN": "Philip II ordered it built in 1571 as a five-pointed star, on the model of the Antwerp citadel. It remained a military site until 1964. Today you walk along grassy moats and ramparts, and the old army buildings host exhibitions."
+      },
+      "cuando": {
+        "ES": "Una tarde de sol, para pasear por los fosos",
+        "EN": "On a sunny afternoon, to stroll along the moats"
+      },
+      "min": 12,
+      "modo": "coche",
+      "lat": 42.81344,
+      "lng": -1.65025
+    },
+    {
+      "id": "catedral",
+      "img": "/ciudades/pamplona/img/catedral.jpg",
+      "nombre": "Catedral de Santa María la Real",
+      "zona": {
+        "ES": "En lo alto del casco viejo, barrio de la Navarrería",
+        "EN": "At the top of the old town, in the Navarrería quarter"
+      },
+      "d": {
+        "ES": "Por fuera ves una fachada neoclásica de Ventura Rodríguez, del siglo XVIII. Dentro es gótica y guarda el sepulcro de alabastro de Carlos III el Noble y Leonor de Trastámara. El claustro, del siglo XIV, está considerado de los mejores de Europa, y en la torre norte cuelga la María, la mayor campana en uso de España.",
+        "EN": "Outside you see an 18th-century Neoclassical façade by Ventura Rodríguez. Inside it is Gothic and holds the alabaster tomb of Charles III the Noble and Eleanor of Trastámara. The 14th-century cloister is counted among the finest in Europe, and the north tower holds the María, the largest bell in use in Spain."
+      },
+      "cuando": {
+        "ES": "De lunes a sábado. En otoño e invierno el último acceso es a las 16:00",
+        "EN": "Monday to Saturday. In autumn and winter last entry is at 16:00"
+      },
+      "min": 16,
+      "modo": "coche",
+      "lat": 42.8194,
+      "lng": -1.64074
+    },
+    {
+      "id": "camara-comptos",
+      "img": "/ciudades/pamplona/img/comptos.jpg",
+      "nombre": "Cámara de Comptos",
+      "zona": {
+        "ES": "Calle Ansoleaga, en el casco viejo",
+        "EN": "Calle Ansoleaga, in the old town"
+      },
+      "d": {
+        "ES": "Es uno de los edificios civiles más antiguos de Pamplona, del siglo XIII. Aquí se revisaban las cuentas del reino. Carlos II creó el tribunal en 1365, y es el tribunal de cuentas más antiguo de España. Todavía funciona, y el edificio sigue siendo su sede.",
+        "EN": "It is one of the oldest civil buildings in Pamplona, from the 13th century. The kingdom's accounts were audited here. Charles II set up the court in 1365, and it is the oldest audit court in Spain. It still works today, and the building is still its seat."
+      },
+      "cuando": {
+        "ES": "De paso, entre la iglesia de San Saturnino y la calle Mayor",
+        "EN": "On your way between San Saturnino church and Calle Mayor"
+      },
+      "min": 17,
+      "modo": "coche",
+      "lat": 42.8176,
+      "lng": -1.64571
+    },
+    {
+      "id": "museo-navarra",
+      "img": "/ciudades/pamplona/img/museo-navarra.jpg",
+      "nombre": "Museo de Navarra",
+      "zona": {
+        "ES": "Cuesta de Santo Domingo, en el casco viejo",
+        "EN": "Cuesta de Santo Domingo, in the old town"
+      },
+      "d": {
+        "ES": "Ocupa el antiguo hospital de Nuestra Señora de la Misericordia y conserva su portada renacentista de 1556. Dentro hay mosaicos romanos hallados en Navarra, la arqueta de Leyre, una pieza islámica de hacia el año 1000, y el retrato del marqués de San Adrián que pintó Goya.",
+        "EN": "It occupies the former Our Lady of Mercy hospital and keeps its Renaissance doorway from 1556. Inside are Roman mosaics found in Navarre, the Leyre casket, an Islamic piece from around the year 1000, and Goya's portrait of the Marquis of San Adrián."
+      },
+      "cuando": {
+        "ES": "De martes a sábado, de 9:30 a 14:00 y de 17:00 a 19:00. Domingos y festivos, de 11:00 a 14:00. Los lunes cierra",
+        "EN": "Tuesday to Saturday, 9:30 to 14:00 and 17:00 to 19:00. Sundays and holidays, 11:00 to 14:00. Closed on Mondays"
+      },
+      "min": 18,
+      "modo": "coche",
+      "lat": 42.81954,
+      "lng": -1.64644
+    },
+    {
+      "id": "parque-taconera",
+      "img": "/ciudades/pamplona/img/taconera.jpg",
+      "nombre": "Parque de la Taconera",
+      "zona": {
+        "ES": "Al oeste del casco viejo, junto a las murallas",
+        "EN": "West of the old town, by the city walls"
+      },
+      "d": {
+        "ES": "Un parque grande pegado a lo que queda de las murallas. En los fosos hay un pequeño zoo desde los años setenta, con ciervas y más de cien aves acuáticas. Desde el antiguo baluarte de Gonzaga ves el valle del Arga y los montes del norte. Aquí está también la Mariblanca, la estatua que coronaba la fuente de la Plaza del Castillo.",
+        "EN": "A large park right against what is left of the city walls. Since the 1970s the old moats have held a small zoo, with deer and more than a hundred waterfowl. From the old Gonzaga bastion you look out over the Arga valley and the hills to the north. The Mariblanca is here too, the statue that once topped the fountain in Plaza del Castillo."
+      },
+      "cuando": {
+        "ES": "Por la mañana o a media tarde, si vas con niños",
+        "EN": "In the morning or mid-afternoon, especially with children"
+      },
+      "min": 13,
+      "modo": "coche",
+      "lat": 42.81747,
+      "lng": -1.65279
+    },
+    {
+      "id": "baluarte",
+      "img": "/ciudades/pamplona/img/baluarte.jpg",
+      "nombre": "Baluarte",
+      "zona": {
+        "ES": "Plaza del Baluarte, junto a la Ciudadela",
+        "EN": "Plaza del Baluarte, next to the Citadel"
+      },
+      "d": {
+        "ES": "El palacio de congresos y auditorio de Navarra abrió en 2003 y lo firmó el arquitecto navarro Francisco Mangado. Va forrado de cuarcita gris traída de Zimbabue y toma el nombre del baluarte de la Ciudadela sobre el que se levanta. Su sala sinfónica tiene 1.568 butacas.",
+        "EN": "Navarre's conference centre and concert hall opened in 2003, designed by Navarrese architect Francisco Mangado. It is clad in grey quartzite from Zimbabwe and takes its name from the Citadel bastion it stands on. The symphony hall seats 1,568."
+      },
+      "cuando": {
+        "ES": "Por la tarde, si hay concierto. Mira antes la programación en su web",
+        "EN": "In the evening, if there is a concert. Check the programme on its website first"
+      },
+      "min": 13,
+      "modo": "coche",
+      "lat": 42.81372,
+      "lng": -1.64753
+    }
+  ],
+  "rutas": [
+    {
+      "id": "pamplona-tarde",
+      "expId": "ex4",
+      "img": "/ciudades/pamplona/img/casco.jpg",
+      "titulo": {
+        "ES": "Pamplona en una tarde",
+        "EN": "Pamplona in an afternoon"
+      },
+      "tipo": {
+        "ES": "Historia",
+        "EN": "History"
+      },
+      "dur": "3 h 40 min",
+      "d": {
+        "ES": "Una tarde por el Pamplona de siempre. Entras en la catedral antes del último acceso, bajas al Ayuntamiento, haces andando el recorrido del encierro por la Estafeta hasta la plaza de toros y acabas con un café en la Plaza del Castillo.",
+        "EN": "An afternoon in old Pamplona. You visit the cathedral before last entry, walk down to the town hall, follow the bull run route along Estafeta to the bullring and finish with a coffee in Plaza del Castillo."
+      },
+      "salida": {
+        "ES": "En taxi hasta la catedral, unos 15 minutos. Sal hacia las 15:15",
+        "EN": "Taxi to the cathedral, about 15 minutes. Leave around 15:15"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo, que el casco viejo tiene cuestas",
+          "Algo de efectivo para la entrada y el café"
+        ],
+        "EN": [
+          "Comfortable shoes, as the old town has slopes",
+          "Some cash for the admission and the coffee"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Catedral de Santa María la Real",
+            "EN": "Cathedral of Santa María la Real"
+          },
+          "s": {
+            "ES": "El claustro gótico y la tumba de un rey",
+            "EN": "A Gothic cloister and a king's tomb"
+          },
+          "d": {
+            "ES": "La catedral gótica se empezó en 1394, después de que se hundiera la románica. En el centro de la nave está el sepulcro de alabastro de Carlos III el Noble y Leonor de Trastámara, rodeado de 28 figuras que lloran a los reyes. Desde la iglesia pasas al claustro del siglo XIV y a la cocina gótica, una de las pocas que quedan en Europa.",
+            "EN": "The Gothic cathedral was begun in 1394, after the Romanesque one collapsed. In the middle of the nave is the alabaster tomb of Charles III the Noble and Eleanor of Trastámara, surrounded by 28 mourning figures. From the church you go into the 14th-century cloister and the Gothic kitchen, one of the few left in Europe."
+          },
+          "tip": {
+            "ES": "En otoño e invierno abre de lunes a sábado de 10:30 a 17:00, con último acceso a las 16:00. Llega antes de las 16:00 o no te dejarán entrar.",
+            "EN": "In autumn and winter it opens Monday to Saturday from 10:30 to 17:00, with last entry at 16:00. Get there before 16:00 or you will not be let in."
+          },
+          "hora": "15:30",
+          "dur": "1 h",
+          "img": "/ciudades/pamplona/img/claustro.jpg",
+          "lat": 42.8194,
+          "lng": -1.64074,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Ayuntamiento y cuesta de Santo Domingo",
+            "EN": "Town hall and Cuesta de Santo Domingo"
+          },
+          "s": {
+            "ES": "Donde empiezan las fiestas y el encierro",
+            "EN": "Where the festival and the bull run begin"
+          },
+          "d": {
+            "ES": "Desde el balcón del Ayuntamiento se lanza el chupinazo que abre San Fermín. Baja por la cuesta de Santo Domingo y verás en la pared una hornacina con la imagen del santo. Ahí se juntan los corredores antes de cada encierro, que sale a las ocho de la mañana de los corrales que hay al pie de la cuesta.",
+            "EN": "The chupinazo rocket that opens San Fermín is fired from the town hall balcony. Walk down Cuesta de Santo Domingo and you will see a niche in the wall with an image of the saint. Runners gather there before every bull run, which starts at eight in the morning from the pens at the bottom of the slope."
+          },
+          "tip": {
+            "ES": "Fíjate en la fachada del Ayuntamiento, barroca, con estatuas en lo alto. Debajo empieza la calle Mercaderes, el siguiente tramo del encierro.",
+            "EN": "Look at the Baroque town hall façade, with statues along the top. Below it starts Calle Mercaderes, the next stretch of the bull run."
+          },
+          "hora": "16:35",
+          "dur": "30 min",
+          "img": "/ciudades/pamplona/img/santo-domingo.jpg",
+          "lat": 42.81903,
+          "lng": -1.64557,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Calle Estafeta hasta la plaza de toros",
+            "EN": "Calle Estafeta to the bullring"
+          },
+          "s": {
+            "ES": "El recorrido del encierro, sin toros",
+            "EN": "The bull run route, without the bulls"
+          },
+          "d": {
+            "ES": "Desde la curva de Mercaderes entras en la Estafeta, el tramo más largo del encierro, de unos 315 metros. Al final pasas por el tramo de Telefónica y el callejón, y llegas a la plaza de toros, inaugurada en 1922. Junto a ella, en el paseo que lleva su nombre, está el monumento a Hemingway.",
+            "EN": "From the Mercaderes bend you turn into Estafeta, the longest stretch of the bull run, about 315 metres. At the end you pass the Telefónica stretch and the callejón and reach the bullring, opened in 1922. Beside it, on the promenade named after him, is the Hemingway monument."
+          },
+          "tip": {
+            "ES": "En San Fermín se corre en unos tres minutos. Tú tómatelo con calma y mira los balcones, que en julio se alquilan para ver el encierro.",
+            "EN": "During San Fermín the run takes about three minutes. Take your time and look up at the balconies, which are rented out in July to watch the run."
+          },
+          "hora": "17:10",
+          "dur": "40 min",
+          "img": "/ciudades/pamplona/img/mercaderes.jpg",
+          "lat": 42.81724,
+          "lng": -1.64206,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Plaza del Castillo",
+            "EN": "Plaza del Castillo"
+          },
+          "s": {
+            "ES": "Un café en el Iruña, como Hemingway",
+            "EN": "A coffee at the Iruña, like Hemingway"
+          },
+          "d": {
+            "ES": "Desde la plaza de toros, en cinco minutos estás en la Plaza del Castillo. El Café Iruña abrió en 1888 y conserva el salón de columnas de hierro, espejos y lámparas. Fuera, bajo los soportales, las terrazas se llenan al caer la tarde.",
+            "EN": "From the bullring it is a five-minute walk to Plaza del Castillo. Café Iruña opened in 1888 and still has its hall of iron columns, mirrors and chandeliers. Outside, under the arcades, the terraces fill up as evening falls."
+          },
+          "tip": {
+            "ES": "Si hace frío, pide dentro. El salón es lo más bonito del café.",
+            "EN": "If it is cold, sit inside. The hall is the best part of the café."
+          },
+          "hora": "17:55",
+          "dur": "1 h",
+          "img": "/ciudades/pamplona/img/cafe-iruna.jpg",
+          "lat": 42.81748,
+          "lng": -1.64325,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 60
+        }
+      ],
+      "fotos": [
+        "/ciudades/pamplona/img/casco.jpg",
+        "/ciudades/pamplona/img/claustro.jpg",
+        "/ciudades/pamplona/img/catedral.jpg",
+        "/ciudades/pamplona/img/santo-domingo.jpg",
+        "/ciudades/pamplona/img/mercaderes.jpg",
+        "/ciudades/pamplona/img/plaza-toros.jpg",
+        "/ciudades/pamplona/img/cafe-iruna.jpg",
+        "/ciudades/pamplona/img/plaza-castillo.jpg"
+      ],
+      "duracionMin": 220,
+      "distanciaKm": 14,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El casco viejo es peatonal pero tiene cuestas, como la de Santo Domingo, y suelo de losas. La Estafeta es casi llana. En la catedral pregunta en la entrada por el acceso sin escalones.",
+        "EN": "The old town is pedestrian but has slopes, such as Cuesta de Santo Domingo, and paved streets. Estafeta is almost flat. At the cathedral, ask at the entrance about step-free access."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 42.81938,
+        "lng": -1.64135,
+        "foto": "/ciudades/pamplona/img/catedral.jpg",
+        "texto": {
+          "ES": "Fachada principal de la catedral, al final de la calle Curia.",
+          "EN": "Main façade of the cathedral, at the end of Calle Curia."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Entrada a la catedral",
+          "Taxi de ida y vuelta",
+          "Consumiciones"
+        ],
+        "EN": [
+          "Cathedral admission",
+          "Taxi there and back",
+          "Drinks"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Los domingos la catedral no abre a la visita turística; ese día empieza directamente por el Ayuntamiento. Del 6 al 14 de julio, en San Fermín, el recorrido del encierro está vallado y el plan cambia por completo.",
+        "EN": "Self-guided, so there is nothing to book or cancel. The cathedral is closed to tourist visits on Sundays; that day, start at the town hall. From 6 to 14 July, during San Fermín, the bull run route is fenced off and the plan changes completely."
+      },
+      "salidasFijas": [],
+      "precioDesde": 20
+    },
+    {
+      "id": "estafeta-san-nicolas",
+      "expId": "ex1",
+      "img": "/ciudades/pamplona/img/pinchos.jpg",
+      "titulo": {
+        "ES": "De pinchos por la Estafeta y San Nicolás",
+        "EN": "Pintxos along Estafeta and San Nicolás"
+      },
+      "tipo": {
+        "ES": "Gastronomía",
+        "EN": "Food & drink"
+      },
+      "dur": "3 h 5 min",
+      "d": {
+        "ES": "Una noche de barra en barra por el casco viejo. Empiezas en la Estafeta, paras a tomar algo en el Café Iruña y sigues por la calle San Nicolás y su paralela, San Gregorio, donde se juntan muchos de los bares de pinchos de Pamplona.",
+        "EN": "An evening hopping from bar to bar in the old town. You start on Estafeta, stop for a drink at Café Iruña and carry on along Calle San Nicolás and the parallel Calle San Gregorio, where many of Pamplona's pintxo bars are."
+      },
+      "salida": {
+        "ES": "En taxi hasta la Plaza del Castillo, unos 15 minutos. Sal hacia las 19:15",
+        "EN": "Taxi to Plaza del Castillo, about 15 minutes. Leave around 19:15"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Algo de efectivo, que en algunas barras se paga mejor así",
+          "Una chaqueta para la vuelta"
+        ],
+        "EN": [
+          "Some cash, as it is easier to pay that way at some bars",
+          "A jacket for the way back"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Calle Estafeta",
+            "EN": "Calle Estafeta"
+          },
+          "s": {
+            "ES": "La calle del encierro, de bar en bar",
+            "EN": "The bull run street, bar by bar"
+          },
+          "d": {
+            "ES": "La calle más famosa de Pamplona tiene bares a los dos lados casi de punta a punta. Se pide en la barra un pincho y un vino o un zurito, que es un vaso pequeño de cerveza, y se pasa al siguiente bar.",
+            "EN": "Pamplona's best-known street has bars on both sides almost from end to end. You order a pintxo at the counter with a glass of wine or a zurito, a small glass of beer, then move on to the next bar."
+          },
+          "tip": {
+            "ES": "Pregunta por el pincho de la casa. Cada barra tiene el suyo.",
+            "EN": "Ask for the house pintxo. Every bar has its own."
+          },
+          "hora": "19:30",
+          "dur": "50 min",
+          "img": "/ciudades/pamplona/img/estafeta.jpg",
+          "lat": 42.81724,
+          "lng": -1.64206,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 50
+        },
+        {
+          "n": {
+            "ES": "Café Iruña",
+            "EN": "Café Iruña"
+          },
+          "s": {
+            "ES": "El café de Hemingway en la Plaza del Castillo",
+            "EN": "Hemingway's café on Plaza del Castillo"
+          },
+          "d": {
+            "ES": "Abrió en 1888 en los bajos de un edificio de la Plaza del Castillo. Dentro hay columnas de hierro, espejos y lámparas de época. Es buen sitio para una pausa entre barra y barra, sentado.",
+            "EN": "It opened in 1888 on the ground floor of a building on Plaza del Castillo. Inside are iron columns, mirrors and period lamps. A good place for a sit-down break between bars."
+          },
+          "tip": {
+            "ES": "Pide un pacharán, el licor de endrinas de Navarra. Se toma solo o con hielo.",
+            "EN": "Order a pacharán, Navarre's sloe liqueur. It is drunk neat or on the rocks."
+          },
+          "hora": "20:25",
+          "dur": "30 min",
+          "img": "/ciudades/pamplona/img/cafe-iruna.jpg",
+          "lat": 42.81748,
+          "lng": -1.64325,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Calles San Nicolás y San Gregorio",
+            "EN": "Calle San Nicolás and Calle San Gregorio"
+          },
+          "s": {
+            "ES": "Dos calles paralelas llenas de barras",
+            "EN": "Two parallel streets full of bars"
+          },
+          "d": {
+            "ES": "La calle San Nicolás sale de la Plaza del Castillo hacia la iglesia del mismo nombre, y San Gregorio va en paralelo. Los bares van uno detrás de otro y por la noche se llenan de gente de Pamplona. Baja por una y vuelve por la otra.",
+            "EN": "Calle San Nicolás runs from Plaza del Castillo towards the church of the same name, with San Gregorio running parallel. The bars come one after another and fill up with locals at night. Walk down one street and come back along the other."
+          },
+          "tip": {
+            "ES": "Los pimientos del piquillo y los espárragos de Navarra salen en muchos pinchos. Pide lo que veas que lleva más gente.",
+            "EN": "Piquillo peppers and Navarre asparagus turn up in many pintxos. Order whatever you see most people having."
+          },
+          "hora": "21:00",
+          "dur": "1 h",
+          "img": "/ciudades/pamplona/img/calle-san-nicolas.jpg",
+          "lat": 42.81674,
+          "lng": -1.64348,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Iglesia de San Nicolás",
+            "EN": "San Nicolás church"
+          },
+          "s": {
+            "ES": "Una iglesia que fue fortaleza",
+            "EN": "A church that was a fortress"
+          },
+          "d": {
+            "ES": "Al final de la calle está la iglesia de San Nicolás, levantada en el siglo XII junto a la muralla del burgo. Por eso tiene aspecto de fortaleza. Para volver, el paseo de Sarasate está a dos minutos y por allí pasan taxis.",
+            "EN": "At the end of the street is San Nicolás church, built in the 12th century beside the borough wall. That is why it looks like a fortress. To get back, Paseo de Sarasate is two minutes away and taxis pass along it."
+          },
+          "tip": {
+            "ES": "De noche la iglesia suele estar cerrada. La ves por fuera desde la plaza de San Nicolás.",
+            "EN": "At night the church is usually closed. You see it from the outside, from Plaza de San Nicolás."
+          },
+          "hora": "22:05",
+          "dur": "15 min",
+          "img": "/ciudades/pamplona/img/san-nicolas.jpg",
+          "lat": 42.81573,
+          "lng": -1.64493,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 15
+        }
+      ],
+      "fotos": [
+        "/ciudades/pamplona/img/pinchos.jpg",
+        "/ciudades/pamplona/img/estafeta.jpg",
+        "/ciudades/pamplona/img/cafe-iruna.jpg",
+        "/ciudades/pamplona/img/plaza-castillo.jpg",
+        "/ciudades/pamplona/img/calle-san-nicolas.jpg",
+        "/ciudades/pamplona/img/san-nicolas.jpg"
+      ],
+      "duracionMin": 185,
+      "distanciaKm": 13,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Todo el recorrido es llano y peatonal. Muchos bares tienen un escalón en la entrada y dentro hay poco sitio cuando se llenan.",
+        "EN": "The whole route is flat and pedestrian. Many bars have a step at the door and get crowded inside when busy."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 42.81683,
+        "lng": -1.64276,
+        "foto": "/ciudades/pamplona/img/plaza-castillo.jpg",
+        "texto": {
+          "ES": "Plaza del Castillo, junto al quiosco. La Estafeta queda detrás de la plaza. Sal por la calle Javier, en la esquina noreste.",
+          "EN": "Plaza del Castillo, by the bandstand. Estafeta runs behind the square. Take Calle Javier, at the north-east corner."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Pinchos y bebidas",
+          "Taxi de ida y vuelta"
+        ],
+        "EN": [
+          "Pintxos and drinks",
+          "Taxi there and back"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Entre semana hay menos ambiente y algunos bares cierran un día a la semana. Del 6 al 14 de julio, en San Fermín, las calles están llenas a cualquier hora.",
+        "EN": "Self-guided, so there is nothing to book or cancel. Weeknights are quieter and some bars close one day a week. From 6 to 14 July, during San Fermín, the streets are packed at all hours."
+      },
+      "salidasFijas": [],
+      "precioDesde": 39
+    },
+    {
+      "id": "olite",
+      "expId": "ex2",
+      "img": "/ciudades/pamplona/img/olite.jpg",
+      "titulo": {
+        "ES": "Olite: el palacio de los reyes y una bodega",
+        "EN": "Olite: the royal palace and a winery"
+      },
+      "tipo": {
+        "ES": "Excursión",
+        "EN": "Day trip"
+      },
+      "dur": "6 h",
+      "d": {
+        "ES": "Media hora al sur por la autopista está Olite, la villa donde vivían los reyes de Navarra. Subes a las torres del Palacio Real, ves la portada gótica de Santa María, visitas una bodega de la Denominación de Origen Navarra y comes en la plaza de Carlos III.",
+        "EN": "Half an hour south on the motorway is Olite, the town where the kings of Navarre lived. You climb the towers of the Royal Palace, see the Gothic doorway of Santa María, visit a winery of the Navarra wine appellation and have lunch on Plaza de Carlos III."
+      },
+      "salida": {
+        "ES": "En coche desde el hotel, unos 30 minutos por la AP-15. Sal hacia las 10:00",
+        "EN": "By car from the hotel, about 30 minutes on the AP-15. Leave around 10:00"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "La visita a la bodega reservada con antelación",
+          "Calzado cómodo para las escaleras de caracol del palacio",
+          "Alguien que conduzca a la vuelta sin haber catado"
+        ],
+        "EN": [
+          "The winery visit booked in advance",
+          "Comfortable shoes for the palace spiral staircases",
+          "A driver for the way back who skips the tasting"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Palacio Real de Olite",
+            "EN": "Royal Palace of Olite"
+          },
+          "s": {
+            "ES": "El palacio de Carlos III el Noble",
+            "EN": "The palace of Charles III the Noble"
+          },
+          "d": {
+            "ES": "Carlos III el Noble lo amplió a principios del siglo XV, con jardines colgantes y hasta un pequeño zoológico. En 1813 el guerrillero Espoz y Mina lo mandó quemar para que no lo usaran los franceses, y se restauró a partir de 1937. Recorres las salas y subes a las torres, como la de la Vit, de 40 metros.",
+            "EN": "Charles III the Noble enlarged it in the early 15th century, adding hanging gardens and even a small zoo. In 1813 the guerrilla leader Espoz y Mina had it burned so the French could not use it, and restoration began in 1937. You walk through the halls and climb the towers, such as the 40-metre Vit tower."
+          },
+          "tip": {
+            "ES": "Sube a las torres. Desde arriba ves los tejados de Olite y los viñedos que rodean el pueblo.",
+            "EN": "Climb the towers. From the top you see the rooftops of Olite and the vineyards around the town."
+          },
+          "hora": "10:30",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/pamplona/img/olite.jpg",
+          "lat": 42.48173,
+          "lng": -1.64928,
+          "tramo": "coche",
+          "tramoDuracionMin": 30,
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "Iglesia de Santa María la Real",
+            "EN": "Church of Santa María la Real"
+          },
+          "s": {
+            "ES": "Una portada gótica pegada al palacio",
+            "EN": "A Gothic doorway next to the palace"
+          },
+          "d": {
+            "ES": "La iglesia de la corte está pegada al palacio. Se empezó en el siglo XIII y su portada, llena de figuras talladas, es de lo mejor de la escultura gótica de Navarra.",
+            "EN": "The court church stands right against the palace. It was begun in the 13th century, and its doorway, covered in carved figures, is among the finest Gothic sculpture in Navarre."
+          },
+          "tip": {
+            "ES": "Si está abierta, entra a ver el retablo mayor, renacentista, obra de Pedro de Aponte.",
+            "EN": "If it is open, go in to see the Renaissance high altarpiece by Pedro de Aponte."
+          },
+          "hora": "11:50",
+          "dur": "25 min",
+          "img": "/ciudades/pamplona/img/olite-santa-maria.jpg",
+          "lat": 42.48173,
+          "lng": -1.6499,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Bodegas Ochoa",
+            "EN": "Bodegas Ochoa"
+          },
+          "s": {
+            "ES": "Visita y cata en una bodega familiar de Olite",
+            "EN": "Tour and tasting at a family winery in Olite"
+          },
+          "d": {
+            "ES": "La familia Ochoa hace vino en Olite desde 1845. La visita recorre la viña y la bodega, explica cómo se elabora cada vino y termina con una cata. Olite está en la Ribera Alta, una de las cinco zonas de la Denominación de Origen Navarra.",
+            "EN": "The Ochoa family has been making wine in Olite since 1845. The tour takes in the vineyard and the cellar, explains how each wine is made and ends with a tasting. Olite lies in the Ribera Alta, one of the five areas of the Navarra appellation."
+          },
+          "tip": {
+            "ES": "Reserva la visita antes por teléfono o en su web y confirma la hora. Se llega andando desde el centro en un cuarto de hora.",
+            "EN": "Book the tour beforehand by phone or on their website and confirm the time. It is a 15-minute walk from the centre."
+          },
+          "hora": "12:30",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/pamplona/img/vinedo.jpg",
+          "lat": 42.48492,
+          "lng": -1.65807,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Plaza de Carlos III y galerías medievales",
+            "EN": "Plaza de Carlos III and the medieval galleries"
+          },
+          "s": {
+            "ES": "Comida en la plaza y túneles del siglo XIV",
+            "EN": "Lunch on the square and 14th-century tunnels"
+          },
+          "d": {
+            "ES": "La plaza mayor de Olite tiene terrazas y restaurantes donde comer. Bajo el suelo hay unas galerías medievales que formaban parte de la primera muralla. Se abrieron al público en 1987.",
+            "EN": "Olite's main square has terraces and restaurants for lunch. Underneath are medieval galleries that were part of the first town wall. They opened to the public in 1987."
+          },
+          "tip": {
+            "ES": "Pide una menestra de verduras o unos pimientos del piquillo, y un rosado de Navarra.",
+            "EN": "Order a menestra vegetable stew or piquillo peppers, with a Navarra rosé."
+          },
+          "hora": "14:15",
+          "dur": "1 h 45 min",
+          "img": "/ciudades/pamplona/img/olite-plaza.jpg",
+          "lat": 42.4814,
+          "lng": -1.6505,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 105
+        }
+      ],
+      "fotos": [
+        "/ciudades/pamplona/img/olite.jpg",
+        "/ciudades/pamplona/img/olite-santa-maria.jpg",
+        "/ciudades/pamplona/img/vinedo.jpg",
+        "/ciudades/pamplona/img/olite-plaza.jpg"
+      ],
+      "duracionMin": 360,
+      "distanciaKm": 79,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El centro de Olite es llano y empedrado. En el palacio, las torres se suben por escaleras de caracol estrechas. La bodega y la plaza no tienen cuestas.",
+        "EN": "Olite's centre is flat and cobbled. In the palace, the towers are reached by narrow spiral staircases. The winery and the square are on level ground."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 42.48173,
+        "lng": -1.64928,
+        "foto": "/ciudades/pamplona/img/olite.jpg",
+        "texto": {
+          "ES": "Palacio Real de Olite, en el centro del pueblo, junto a la iglesia de Santa María.",
+          "EN": "Royal Palace of Olite, in the town centre, next to Santa María church."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Entrada al palacio",
+          "Visita y cata en la bodega",
+          "Comida",
+          "Gasolina y peajes"
+        ],
+        "EN": [
+          "Palace admission",
+          "Winery tour and tasting",
+          "Lunch",
+          "Fuel and tolls"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. La visita a la bodega sí se reserva aparte, y conviene confirmar antes los horarios del palacio y de las galerías, que cambian según la temporada.",
+        "EN": "Self-guided, so there is nothing to book or cancel here. The winery tour is booked separately, and it is worth checking the palace and gallery opening times first, as they change with the season."
+      },
+      "salidasFijas": [],
+      "precioDesde": 45
+    },
+    {
+      "id": "bardenas",
+      "expId": "ex3",
+      "img": "/ciudades/pamplona/img/castildetierra.jpg",
+      "titulo": {
+        "ES": "Bardenas Reales y Tudela",
+        "EN": "Bardenas Reales and Tudela"
+      },
+      "tipo": {
+        "ES": "Naturaleza",
+        "EN": "Nature"
+      },
+      "dur": "5 h 50 min",
+      "d": {
+        "ES": "Una hora al sur empieza el paisaje semidesértico de las Bardenas. Ves las cuevas donde vivía gente en Arguedas, entras en coche en la Bardena Blanca hasta Castildetierra, la chimenea de arcilla más conocida del parque, y comes en Tudela, al lado de la catedral.",
+        "EN": "An hour south, the semi-desert of the Bardenas begins. You see the cave homes of Arguedas, drive into the Bardena Blanca to Castildetierra, the park's best-known clay chimney, and have lunch in Tudela, next to the cathedral."
+      },
+      "salida": {
+        "ES": "En coche desde el hotel, una hora por la AP-15 hasta Arguedas. Sal hacia las 09:00",
+        "EN": "By car from the hotel, an hour on the AP-15 to Arguedas. Leave around 09:00"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "El depósito lleno, que dentro del parque no hay gasolineras",
+          "Agua y gorra, que en la Bardena casi no hay sombra",
+          "Calzado que se pueda manchar de barro"
+        ],
+        "EN": [
+          "A full tank, as there are no petrol stations in the park",
+          "Water and a cap, as there is hardly any shade",
+          "Shoes you do not mind getting muddy"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Cuevas de Arguedas",
+            "EN": "Arguedas caves"
+          },
+          "s": {
+            "ES": "Casas excavadas en el cerro",
+            "EN": "Homes dug into the hillside"
+          },
+          "d": {
+            "ES": "En la ladera que hay sobre Arguedas, las familias excavaron sus casas en la roca blanda. Se vivió en ellas hasta mediados del siglo pasado. Un sendero sube entre las puertas y ventanas de las cuevas.",
+            "EN": "On the slope above Arguedas, families dug their homes into the soft rock. People lived in them until the middle of the last century. A path climbs past the cave doors and windows."
+          },
+          "tip": {
+            "ES": "Ve por la mañana. A mediodía el sol pega de lleno en la ladera.",
+            "EN": "Go in the morning. At midday the sun beats straight down on the slope."
+          },
+          "hora": "10:00",
+          "dur": "30 min",
+          "img": "/ciudades/pamplona/img/arguedas.jpg",
+          "lat": 42.17459,
+          "lng": -1.59205,
+          "tramo": "coche",
+          "tramoDuracionMin": 60,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Centro de información de las Bardenas",
+            "EN": "Bardenas information centre"
+          },
+          "s": {
+            "ES": "El mapa de pistas antes de entrar",
+            "EN": "Get the track map before you go in"
+          },
+          "d": {
+            "ES": "Está en Los Aguilares, a la entrada de la Bardena Blanca. Aquí te dan el mapa y te dicen qué pistas están abiertas ese día. Las Bardenas ocupan casi 42.000 hectáreas, son parque natural desde 1999 y Reserva de la Biosfera desde 2000.",
+            "EN": "It is at Los Aguilares, at the entrance to the Bardena Blanca. They give you the map and tell you which tracks are open that day. The Bardenas cover almost 42,000 hectares, have been a nature park since 1999 and a Biosphere Reserve since 2000."
+          },
+          "tip": {
+            "ES": "Circula solo por las pistas señaladas. Salirse con el coche está prohibido y en el centro del parque hay un polígono de tiro militar.",
+            "EN": "Drive only on the marked tracks. Leaving them is forbidden, and there is a military firing range in the middle of the park."
+          },
+          "hora": "10:45",
+          "dur": "20 min",
+          "img": "/ciudades/pamplona/img/bardenas.jpg",
+          "lat": 42.17969,
+          "lng": -1.53354,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Castildetierra",
+            "EN": "Castildetierra"
+          },
+          "s": {
+            "ES": "La chimenea de arcilla de la Bardena Blanca",
+            "EN": "The clay chimney of the Bardena Blanca"
+          },
+          "d": {
+            "ES": "Un cerro de arcilla y arenisca con una capa de roca más dura arriba que le hace de sombrero. La lluvia y el viento se comen la base más deprisa que la cima, y así sale su forma. Es la imagen más conocida del parque.",
+            "EN": "A mound of clay and sandstone with a harder layer of rock on top that acts as a cap. Rain and wind wear away the base faster than the top, which gives it its shape. It is the best-known sight in the park."
+          },
+          "tip": {
+            "ES": "No te subas ni lo toques. Rodéalo y busca el ángulo con la luz de lado.",
+            "EN": "Do not climb or touch it. Walk around it and find the angle with the light from the side."
+          },
+          "hora": "11:20",
+          "dur": "45 min",
+          "img": "/ciudades/pamplona/img/castildetierra.jpg",
+          "lat": 42.21019,
+          "lng": -1.5158,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Tudela y la Puerta del Juicio",
+            "EN": "Tudela and the Doorway of Judgement"
+          },
+          "s": {
+            "ES": "Catedral románica y verdura de la Ribera",
+            "EN": "A Romanesque cathedral and Ribera vegetables"
+          },
+          "d": {
+            "ES": "La catedral de Tudela se levantó a finales del siglo XII sobre los cimientos de la mezquita mayor. Su puerta principal, la del Juicio, tiene 115 piezas talladas con el Juicio Final: a un lado los que van al Cielo y al otro los castigos del Infierno. Después, a comer cerca de la plaza de los Fueros.",
+            "EN": "Tudela cathedral was built in the late 12th century on the foundations of the great mosque. Its main doorway, the Doorway of Judgement, has 115 carved stones showing the Last Judgement, with the saved on one side and the punishments of Hell on the other. Then lunch near Plaza de los Fueros."
+          },
+          "tip": {
+            "ES": "Es tierra de huerta. Pide menestra, alcachofas o cogollos, según la temporada.",
+            "EN": "This is market-garden country. Order menestra, artichokes or lettuce hearts, depending on the season."
+          },
+          "hora": "12:45",
+          "dur": "2 h",
+          "img": "/ciudades/pamplona/img/tudela.jpg",
+          "lat": 42.06365,
+          "lng": -1.60523,
+          "tramo": "coche",
+          "tramoDuracionMin": 40,
+          "duracionMin": 120
+        }
+      ],
+      "fotos": [
+        "/ciudades/pamplona/img/castildetierra.jpg",
+        "/ciudades/pamplona/img/arguedas.jpg",
+        "/ciudades/pamplona/img/bardenas.jpg",
+        "/ciudades/pamplona/img/tudela.jpg"
+      ],
+      "duracionMin": 350,
+      "distanciaKm": 206,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Casi todo se ve desde el coche o a pocos pasos del aparcamiento. Las pistas de la Bardena son de tierra y con lluvia hacen barro. El sendero de las cuevas de Arguedas tiene cuesta.",
+        "EN": "Almost everything can be seen from the car or a few steps from where you park. The Bardena tracks are dirt and turn muddy in the rain. The path at the Arguedas caves is steep."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 42.17459,
+        "lng": -1.59205,
+        "foto": "/ciudades/pamplona/img/arguedas.jpg",
+        "texto": {
+          "ES": "Cuevas de Arguedas, a la entrada de las Bardenas. Desde el hotel se baja por la AP-15 hacia Tudela.",
+          "EN": "Arguedas caves, at the gateway to the Bardenas. From the hotel, head south on the AP-15 towards Tudela."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida",
+          "Gasolina y peajes"
+        ],
+        "EN": [
+          "Lunch",
+          "Fuel and tolls"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Con lluvia fuerte las pistas se ponen intransitables y no se recomienda entrar. Algunos días se cortan caminos por ejercicios militares o batidas de caza; mira los avisos en bardenasreales.es antes de salir.",
+        "EN": "Self-guided, so there is nothing to book or cancel. After heavy rain the tracks become impassable and entry is not advised. Some days roads are closed for military exercises or hunts; check the notices on bardenasreales.es before you leave."
+      },
+      "salidasFijas": [],
+      "precioDesde": 75
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "un pacharán en el bar del hotel, invita la casa",
+      "EN": "a glass of pacharán at the hotel bar, on the house"
+    }
+  },
+  "creditos": [
+    "Fachada barroca del Ayuntamiento de Pamplona: Kent Wang, CC BY-SA 4.0, Wikimedia Commons",
+    "Plaza del Castillo y su quiosco: Anass Sedrati, CC BY-SA 4.0, Wikimedia Commons",
+    "Murallas y foso de la Ciudadela: Zarateman, CC0, Wikimedia Commons",
+    "Fachada neoclásica de la catedral de Pamplona: Yiorsito, CC BY-SA 4.0, Wikimedia Commons",
+    "Cámara de Comptos de Navarra: Zarateman, CC0, Wikimedia Commons",
+    "Portada del Museo de Navarra: José Luis Filpo Cabana, CC BY 3.0, Wikimedia Commons",
+    "Fosos del parque de la Taconera: JLVwiki, CC BY-SA 4.0, Wikimedia Commons",
+    "Baluarte, Palacio de Congresos y Auditorio de Navarra: Zarateman, CC0, Wikimedia Commons",
+    "Claustro de la catedral de Pamplona: Zarateman, CC0, Wikimedia Commons",
+    "Hornacina de San Fermín en la cuesta de Santo Domingo: Josi, CC BY-SA 4.0, Wikimedia Commons",
+    "Esquina de Mercaderes y Estafeta, en el recorrido del encierro: Joanbanjo, CC BY 3.0, Wikimedia Commons",
+    "Entrada de la plaza de toros de Pamplona: Zarateman, CC0, Wikimedia Commons",
+    "Salón del Café Iruña: José Luis Filpo Cabana, CC BY-SA 4.0, Wikimedia Commons",
+    "Calle Estafeta: Joanbanjo, CC BY-SA 3.0, Wikimedia Commons",
+    "Calle San Nicolás: Tim Adams, CC BY 3.0, Wikimedia Commons",
+    "Iglesia de San Nicolás: Kent Wang, CC BY-SA 4.0, Wikimedia Commons",
+    "Pincho de pimientos del piquillo en un bar de Pamplona: Yann from Madrid, Spain, CC BY 2.0, Wikimedia Commons",
+    "Palacio Real de Olite: Jorab, CC BY 3.0, Wikimedia Commons",
+    "Portada de Santa María la Real, Olite: Zarateman, CC0, Wikimedia Commons",
+    "Viñedos de Navarra en otoño: Feranza, CC BY-SA 3.0, Wikimedia Commons",
+    "Plaza de Carlos III, Olite: Artistosteles, CC BY-SA 4.0, Wikimedia Commons",
+    "Cuevas de Arguedas: Araceli Merino, CC BY-SA 3.0, Wikimedia Commons",
+    "Bardena Blanca: Andrés Flajszer, CC BY-SA 3.0 es, Wikimedia Commons",
+    "Castildetierra, Bardenas Reales: Jean-Christophe BENOIST, CC BY 3.0, Wikimedia Commons",
+    "Puerta del Juicio de la catedral de Tudela: Fernando, CC BY-SA 4.0, Wikimedia Commons"
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "pamplona-tarde-1": {
+    "pregunta": {
+      "ES": "¿Qué tiene de especial la María, una de las campanas de la catedral?",
+      "EN": "What is special about the María, one of the cathedral bells?"
+    },
+    "opciones": [
+      {
+        "ES": "Es la mayor campana en uso de España",
+        "EN": "It is the largest bell in use in Spain"
+      },
+      {
+        "ES": "Se fundió con cañones de la Ciudadela",
+        "EN": "It was cast from Citadel cannons"
+      },
+      {
+        "ES": "Solo suena el día de San Fermín",
+        "EN": "It only rings on San Fermín day"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La María cuelga en la torre norte y es la mayor campana en uso de toda España. Entre las dos torres hay once campanas; la más antigua, la Gabriela, es de 1519.",
+      "EN": "The María hangs in the north tower and is the largest bell in use in Spain. The two towers hold eleven bells; the oldest, the Gabriela, dates from 1519."
+    }
+  },
+  "pamplona-tarde-2": {
+    "pregunta": {
+      "ES": "Antes de cada encierro, los corredores cantan a San Fermín ante su hornacina. ¿Cuántas veces?",
+      "EN": "Before each bull run, the runners sing to San Fermín in front of his niche. How many times?"
+    },
+    "opciones": [
+      {
+        "ES": "Una",
+        "EN": "Once"
+      },
+      {
+        "ES": "Tres",
+        "EN": "Three times"
+      },
+      {
+        "ES": "Siete",
+        "EN": "Seven times"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Lo cantan tres veces en los minutos previos, con el periódico enrollado en la mano, para pedirle al santo que los guíe en la carrera. La costumbre empezó a principios de los años sesenta.",
+      "EN": "They sing it three times in the minutes before the run, rolled-up newspaper in hand, asking the saint to guide them. The custom began in the early 1960s."
+    }
+  },
+  "pamplona-tarde-3": {
+    "pregunta": {
+      "ES": "¿Cuánto mide la calle Estafeta, el tramo más largo del encierro?",
+      "EN": "How long is Calle Estafeta, the longest stretch of the bull run?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 100 metros",
+        "EN": "About 100 metres"
+      },
+      {
+        "ES": "Casi un kilómetro",
+        "EN": "Almost a kilometre"
+      },
+      {
+        "ES": "Unos 315 metros",
+        "EN": "About 315 metres"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "La Estafeta mide unos 315 metros y tiene una pendiente suave. El recorrido entero, desde los corrales de Santo Domingo hasta la plaza de toros, pasa de los 800 metros.",
+      "EN": "Estafeta is about 315 metres long with a gentle slope. The whole route, from the Santo Domingo pens to the bullring, is over 800 metres."
+    }
+  },
+  "pamplona-tarde-4": {
+    "pregunta": {
+      "ES": "El Café Iruña abrió en 1888. ¿Qué novedad se le atribuye en Pamplona?",
+      "EN": "Café Iruña opened in 1888. What first is it credited with in Pamplona?"
+    },
+    "opciones": [
+      {
+        "ES": "Fue el primer local con luz eléctrica",
+        "EN": "It was the first premises with electric light"
+      },
+      {
+        "ES": "Fue el primer café con terraza en la plaza",
+        "EN": "It was the first café with a terrace on the square"
+      },
+      {
+        "ES": "Fue la primera sala de cine",
+        "EN": "It was the first cinema"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Abrió la víspera de San Fermín de 1888 y, según se cuenta, fue el primer establecimiento de la ciudad con luz eléctrica. Hemingway lo frecuentó en sus estancias en Pamplona.",
+      "EN": "It opened on the eve of San Fermín in 1888 and is said to have been the first business in the city with electric light. Hemingway was a regular during his stays in Pamplona."
+    }
+  },
+  "estafeta-san-nicolas-1": {
+    "pregunta": {
+      "ES": "¿De dónde le viene el nombre a la calle Estafeta?",
+      "EN": "Where does Calle Estafeta get its name?"
+    },
+    "opciones": [
+      {
+        "ES": "De un cartel de la feria taurina",
+        "EN": "From a bullfighting poster"
+      },
+      {
+        "ES": "De una antigua oficina de correos",
+        "EN": "From an old post office"
+      },
+      {
+        "ES": "Del apellido de un alcalde",
+        "EN": "From a mayor's surname"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "En el siglo XVIII se abrió en ella una estafeta, una oficina de correos, y la calle se quedó con ese nombre. Antes se llamó calle de San Tirso y, mucho antes, rúa Tras del Castillo.",
+      "EN": "In the 18th century a post office, an estafeta, opened on it and the street kept the name. Before that it was Calle de San Tirso, and earlier still Rúa Tras del Castillo."
+    }
+  },
+  "estafeta-san-nicolas-2": {
+    "pregunta": {
+      "ES": "¿Qué hay en el centro de la Plaza del Castillo desde 1943?",
+      "EN": "What has stood in the middle of Plaza del Castillo since 1943?"
+    },
+    "opciones": [
+      {
+        "ES": "Una fuente de Luis Paret",
+        "EN": "A fountain by Luis Paret"
+      },
+      {
+        "ES": "La estatua de Carlos III",
+        "EN": "The statue of Charles III"
+      },
+      {
+        "ES": "Un quiosco de música",
+        "EN": "A bandstand"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El quiosco mide 18 metros de alto y sustituyó a otro de madera. Antes, en ese sitio estuvo la fuente de la Mariblanca, de Luis Paret, cuya estatua está hoy en la Taconera.",
+      "EN": "The bandstand is 18 metres high and replaced a wooden one. Before that, the spot was taken by Luis Paret's Mariblanca fountain, whose statue now stands in the Taconera park."
+    }
+  },
+  "estafeta-san-nicolas-3": {
+    "pregunta": {
+      "ES": "En la Edad Media, Pamplona eran tres burgos separados. ¿Qué rey los unió en 1423?",
+      "EN": "In the Middle Ages, Pamplona was three separate boroughs. Which king united them in 1423?"
+    },
+    "opciones": [
+      {
+        "ES": "Carlos III el Noble",
+        "EN": "Charles III the Noble"
+      },
+      {
+        "ES": "Sancho VII el Fuerte",
+        "EN": "Sancho VII the Strong"
+      },
+      {
+        "ES": "Fernando el Católico",
+        "EN": "Ferdinand the Catholic"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Carlos III el Noble firmó el Privilegio de la Unión en 1423. Hasta entonces la Navarrería, el burgo de San Cernin y la población de San Nicolás funcionaban por separado y llegaron a atacarse entre ellos.",
+      "EN": "Charles III the Noble signed the Privilege of Union in 1423. Until then the Navarrería, the borough of San Cernin and the San Nicolás quarter were run separately and at times attacked each other."
+    }
+  },
+  "estafeta-san-nicolas-4": {
+    "pregunta": {
+      "ES": "¿Por qué la iglesia de San Nicolás parece una fortaleza?",
+      "EN": "Why does San Nicolás church look like a fortress?"
+    },
+    "opciones": [
+      {
+        "ES": "Porque fue cuartel de la Ciudadela",
+        "EN": "Because it was a Citadel barracks"
+      },
+      {
+        "ES": "Porque servía de defensa frente al burgo vecino",
+        "EN": "Because it defended the quarter against the neighbouring borough"
+      },
+      {
+        "ES": "Porque guardaba el tesoro del reino",
+        "EN": "Because it held the royal treasury"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Se levantó junto a la muralla del barrio y hacía de bastión. En 1222 los vecinos del burgo de San Cernin la asaltaron y la quemaron.",
+      "EN": "It was built beside the quarter's wall and served as a stronghold. In 1222 people from the borough of San Cernin attacked it and burned it."
+    }
+  },
+  "olite-1": {
+    "pregunta": {
+      "ES": "¿Qué animales vivían en el palacio de Carlos III el Noble?",
+      "EN": "Which animals lived at the palace of Charles III the Noble?"
+    },
+    "opciones": [
+      {
+        "ES": "Solo caballos de guerra",
+        "EN": "Only warhorses"
+      },
+      {
+        "ES": "Un león y un camello, entre otros",
+        "EN": "A lion and a camel, among others"
+      },
+      {
+        "ES": "Osos del Pirineo",
+        "EN": "Pyrenean bears"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El palacio tenía jardines colgantes y un pequeño zoológico, con un león regalado por el rey de Aragón, un camello, búfalos africanos, loros y halcones.",
+      "EN": "The palace had hanging gardens and a small zoo, with a lion given by the King of Aragon, a camel, African buffalo, parrots and falcons."
+    }
+  },
+  "olite-2": {
+    "pregunta": {
+      "ES": "¿Para quién se construyó la iglesia de Santa María la Real?",
+      "EN": "Who was the church of Santa María la Real built for?"
+    },
+    "opciones": [
+      {
+        "ES": "Para los peregrinos del Camino",
+        "EN": "For pilgrims on the Way of St James"
+      },
+      {
+        "ES": "Para los monjes del Císter",
+        "EN": "For Cistercian monks"
+      },
+      {
+        "ES": "Para los reyes de Navarra",
+        "EN": "For the kings of Navarre"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Se empezó en el siglo XIII junto al palacio de los Teobaldos para los actos religiosos de los reyes. El palacio tenía dentro una capilla propia dedicada a San Jorge.",
+      "EN": "It was begun in the 13th century next to the Teobaldos palace for the royal family's religious ceremonies. The palace had its own chapel inside, dedicated to St George."
+    }
+  },
+  "olite-3": {
+    "pregunta": {
+      "ES": "¿En qué año se creó la Denominación de Origen Navarra?",
+      "EN": "In which year was the Navarra wine appellation created?"
+    },
+    "opciones": [
+      {
+        "ES": "En 1933",
+        "EN": "In 1933"
+      },
+      {
+        "ES": "En 1967",
+        "EN": "In 1967"
+      },
+      {
+        "ES": "En 1986",
+        "EN": "In 1986"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Se constituyó en 1933, aunque su primer reglamento no llegó hasta 1967. Durante décadas Navarra fue conocida sobre todo por sus rosados.",
+      "EN": "It was set up in 1933, although its first regulations did not arrive until 1967. For decades Navarre was known above all for its rosé."
+    }
+  },
+  "olite-4": {
+    "pregunta": {
+      "ES": "¿Qué eran en origen las galerías medievales que hay bajo la plaza?",
+      "EN": "What were the medieval galleries under the square originally?"
+    },
+    "opciones": [
+      {
+        "ES": "Una cárcel del palacio",
+        "EN": "A palace prison"
+      },
+      {
+        "ES": "Parte de la muralla del primer recinto",
+        "EN": "Part of the first town wall"
+      },
+      {
+        "ES": "Una mina de sal",
+        "EN": "A salt mine"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Eran los puentes del portal sur del primer recinto amurallado. En el siglo XIII perdieron su función defensiva y sirvieron de taller de cantería y de mercado.",
+      "EN": "They were the bridges of the south gate of the first walled town. In the 13th century they lost their defensive role and were used as a stonemasons' workshop and a market."
+    }
+  },
+  "bardenas-1": {
+    "pregunta": {
+      "ES": "¿Hasta cuándo vivió gente en las cuevas de Arguedas?",
+      "EN": "Until when did people live in the Arguedas caves?"
+    },
+    "opciones": [
+      {
+        "ES": "Hasta mediados del siglo XX",
+        "EN": "Until the mid-20th century"
+      },
+      {
+        "ES": "Hasta la Edad Media",
+        "EN": "Until the Middle Ages"
+      },
+      {
+        "ES": "Siguen habitadas",
+        "EN": "People still live there"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Las familias vivieron en estas casas excavadas en la roca hasta mediados del siglo pasado. El ayuntamiento las ha restaurado y hoy se pueden visitar.",
+      "EN": "Families lived in these homes dug into the rock until the middle of the last century. The town council has restored them and they can be visited today."
+    }
+  },
+  "bardenas-2": {
+    "pregunta": {
+      "ES": "¿De qué municipio son las Bardenas Reales?",
+      "EN": "Which municipality do the Bardenas Reales belong to?"
+    },
+    "opciones": [
+      {
+        "ES": "De Tudela",
+        "EN": "Tudela"
+      },
+      {
+        "ES": "De Arguedas",
+        "EN": "Arguedas"
+      },
+      {
+        "ES": "De ninguno: las comparten 22 congozantes",
+        "EN": "None: 22 co-owners share them"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Las Bardenas no forman parte de ningún término municipal. Su uso lo comparten 22 congozantes: diecinueve pueblos, dos valles y un monasterio, que forman la Comunidad de Bardenas Reales.",
+      "EN": "The Bardenas are not part of any municipality. Their use is shared by 22 co-owners, nineteen towns, two valleys and a monastery, which make up the Bardenas Reales Community."
+    }
+  },
+  "bardenas-3": {
+    "pregunta": {
+      "ES": "Con el clima habitual, ¿cuánta vida le calculan a Castildetierra?",
+      "EN": "With normal weather, how long is Castildetierra expected to last?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos cuarenta años",
+        "EN": "About forty years"
+      },
+      {
+        "ES": "Unos cuatrocientos años",
+        "EN": "About four hundred years"
+      },
+      {
+        "ES": "Varios miles de años",
+        "EN": "Several thousand years"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La capa dura de arriba frena la erosión, pero la base de arcilla se desgasta rápido. Con las lluvias y el viento de siempre, se calcula que le quedan unos cuarenta años.",
+      "EN": "The hard cap slows erosion, but the clay base wears away quickly. With the usual rain and wind, it is estimated to have about forty years left."
+    }
+  },
+  "bardenas-4": {
+    "pregunta": {
+      "ES": "En la Puerta del Juicio de Tudela, ¿qué ocupa más piezas talladas?",
+      "EN": "On Tudela's Doorway of Judgement, which takes up more carved stones?"
+    },
+    "opciones": [
+      {
+        "ES": "El Cielo",
+        "EN": "Heaven"
+      },
+      {
+        "ES": "El Infierno",
+        "EN": "Hell"
+      },
+      {
+        "ES": "La vida de la Virgen",
+        "EN": "The life of the Virgin"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "De sus 115 dovelas, 50 muestran castigos del Infierno, dos más que las dedicadas al Cielo. El Infierno queda a la derecha según miras la puerta.",
+      "EN": "Of its 115 voussoirs, 50 show the punishments of Hell, two more than those given to Heaven. Hell is on the right as you face the doorway."
+    }
+  }
+}
