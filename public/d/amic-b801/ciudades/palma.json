@@ -203,6 +203,7 @@
   "rutas": [
     {
       "id": "casco-antiguo",
+      "expId": "ex9",
       "img": "/ciudades/palma/img/catedral-interior.jpg",
       "titulo": {
         "ES": "El casco antiguo en una mañana",
@@ -428,7 +429,7 @@
         "DE": "Freie Route, nichts zu buchen oder zu stornieren. Machen Sie sie von Montag bis Samstag, sonntags ist die Kathedrale für Besucher geschlossen."
       },
       "salidasFijas": [],
-      "precioDesde": null
+      "precioDesde": 39
     },
     {
       "id": "soller",
