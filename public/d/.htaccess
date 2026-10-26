@@ -1,0 +1,16 @@
+# Caché de las demos (/d/...). Sin esto el móvil vuelve a descargar fotos,
+# vídeos y fuentes en cada visita.
+<IfModule mod_headers.c>
+  # Archivos de Angular con huella en el nombre: no cambian nunca.
+  <FilesMatch "^(chunk|main|polyfills|styles)-[A-Za-z0-9]+\.(js|css)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # Fotos, vídeos y fuentes: una semana, y mientras se revisa sigue sirviendo la copia.
+  <FilesMatch "\.(jpe?g|png|webp|svg|mp4|woff2?)$">
+    Header set Cache-Control "public, max-age=604800, stale-while-revalidate=86400"
+  </FilesMatch>
+  # Datos de las guías: una hora.
+  <FilesMatch "\.json$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+</IfModule>
