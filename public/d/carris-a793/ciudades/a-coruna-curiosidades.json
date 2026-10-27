@@ -1,0 +1,482 @@
+{
+  "coruna-tarde-1": {
+    "pregunta": {
+      "ES": "Según la tradición, ¿qué gritó María Pita a los vecinos en 1589?",
+      "EN": "According to tradition, what did María Pita shout to her neighbours in 1589?",
+      "PT": "Segundo a tradição, o que gritou María Pita aos vizinhos em 1589?"
+    },
+    "opciones": [
+      {
+        "ES": "«Quen teña honra, que me siga»",
+        "EN": "\"Whoever has honour, follow me\"",
+        "PT": "«Quem tiver honra, que me siga»"
+      },
+      {
+        "ES": "«A Coruña non se rende»",
+        "EN": "\"A Coruña does not surrender\"",
+        "PT": "«A Corunha não se rende»"
+      },
+      {
+        "ES": "«Por Galicia e polo rei»",
+        "EN": "\"For Galicia and the king\"",
+        "PT": "«Pela Galiza e pelo rei»"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "En mayo de 1589 la flota de Francis Drake atacó la ciudad. María Pita mató al alférez inglés que subía a la muralla con la bandera y animó a los vecinos con esa frase, que en castellano sería «quien tenga honra, que me siga». Los ingleses acabaron retirándose.",
+      "EN": "In May 1589 Francis Drake's fleet attacked the city. María Pita killed the English ensign climbing the wall with the flag and rallied her neighbours with that cry in Galician, meaning \"whoever has honour, follow me\". The English eventually withdrew.",
+      "PT": "Em maio de 1589 a frota de Francis Drake atacou a cidade. María Pita matou o alferes inglês que subia à muralha com a bandeira e animou os vizinhos com essa frase, que em português seria «quem tiver honra, que me siga». Os ingleses acabaram por se retirar."
+    }
+  },
+  "coruna-tarde-2": {
+    "pregunta": {
+      "ES": "¿Quién está enterrado en el jardín de San Carlos?",
+      "EN": "Who is buried in the San Carlos garden?",
+      "PT": "Quem está sepultado no jardim de San Carlos?"
+    },
+    "opciones": [
+      {
+        "ES": "Sir John Moore, un general británico",
+        "EN": "Sir John Moore, a British general",
+        "PT": "Sir John Moore, um general britânico"
+      },
+      {
+        "ES": "Francis Drake, el corsario inglés",
+        "EN": "Francis Drake, the English privateer",
+        "PT": "Francis Drake, o corsário inglês"
+      },
+      {
+        "ES": "Lord Byron, el poeta",
+        "EN": "Lord Byron, the poet",
+        "PT": "Lord Byron, o poeta"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Moore murió en enero de 1809 en la batalla de Elviña, a las afueras de la ciudad, mientras cubría el embarque de sus tropas para huir de los franceses. Lo enterraron en la muralla esa misma noche. En la entrada del jardín hay versos que le dedicaron Rosalía de Castro y el irlandés Charles Wolfe.",
+      "EN": "Moore died in January 1809 at the battle of Elviña, on the edge of the city, while covering the embarkation of his troops as they escaped the French. He was buried on the ramparts that same night. At the garden entrance are verses written for him by Rosalía de Castro and the Irish poet Charles Wolfe.",
+      "PT": "Moore morreu em janeiro de 1809 na batalha de Elviña, nos arredores da cidade, enquanto protegia o embarque das suas tropas para fugirem aos franceses. Foi sepultado na muralha nessa mesma noite. À entrada do jardim há versos que lhe dedicaram Rosalía de Castro e o irlandês Charles Wolfe."
+    }
+  },
+  "coruna-tarde-3": {
+    "pregunta": {
+      "ES": "El general Porlier, preso en este castillo, preparó una sublevación en 1815. ¿Dónde?",
+      "EN": "General Porlier, held in this castle, plotted an uprising in 1815. Where?",
+      "PT": "O general Porlier, preso neste castelo, preparou uma revolta em 1815. Onde?"
+    },
+    "opciones": [
+      {
+        "ES": "En los baños de Arteixo, adonde le dejaban ir a tomar las aguas",
+        "EN": "At the Arteixo spa, where he was allowed to take the waters",
+        "PT": "Nas termas de Arteixo, onde o deixavam ir a banhos"
+      },
+      {
+        "ES": "En una taberna del puerto",
+        "EN": "In a harbour tavern",
+        "PT": "Numa taberna do porto"
+      },
+      {
+        "ES": "En lo alto de la Torre de Hércules",
+        "EN": "At the top of the Tower of Hercules",
+        "PT": "No alto da Torre de Hércules"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Le dieron permiso para tomar las aguas en Arteixo por su salud, y allí se reunió con quienes le apoyaban. En septiembre de 1815 se levantó contra Fernando VII, pero fracasó y lo ejecutaron en A Coruña ese mismo año. La carretera que pasa por el hotel todavía se llama de los Baños de Arteixo.",
+      "EN": "He was allowed to take the waters at Arteixo for his health, and there he met his supporters. In September 1815 he rose against Ferdinand VII, but failed and was executed in A Coruña that same year. The road past the hotel is still called the Baños de Arteixo road.",
+      "PT": "Deram-lhe autorização para ir a banhos em Arteixo por causa da saúde, e aí reuniu-se com quem o apoiava. Em setembro de 1815 revoltou-se contra Fernando VII, mas falhou e foi executado na Corunha nesse mesmo ano. A estrada que passa pelo hotel ainda se chama dos Baños de Arteixo."
+    }
+  },
+  "coruna-tarde-4": {
+    "pregunta": {
+      "ES": "¿Qué tiene la Torre de Hércules que no tiene ningún otro faro del mundo?",
+      "EN": "What does the Tower of Hercules have that no other lighthouse in the world has?",
+      "PT": "O que tem a Torre de Hércules que nenhum outro farol do mundo tem?"
+    },
+    "opciones": [
+      {
+        "ES": "Es el único faro romano que sigue funcionando",
+        "EN": "It is the only Roman lighthouse still working",
+        "PT": "É o único farol romano que continua a funcionar"
+      },
+      {
+        "ES": "Es el faro más alto de Europa",
+        "EN": "It is the tallest lighthouse in Europe",
+        "PT": "É o farol mais alto da Europa"
+      },
+      {
+        "ES": "Se construyó con piedra traída de Roma",
+        "EN": "It was built with stone brought from Rome",
+        "PT": "Foi construído com pedra trazida de Roma"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Se levantó a finales del siglo I o principios del II y sigue guiando a los barcos. En una roca de la base hay una inscripción de su arquitecto, Cayo Sevio Lupo, que venía de Aeminium, la actual Coímbra. Es Patrimonio de la Humanidad desde 2009.",
+      "EN": "It was built in the late 1st or early 2nd century and still guides ships today. On a rock at its base is an inscription by its architect, Gaius Sevius Lupus, who came from Aeminium, today's Coimbra in Portugal. It has been a World Heritage Site since 2009.",
+      "PT": "Foi erguido no final do século I ou no início do II e continua a guiar os barcos. Numa rocha da base há uma inscrição do seu arquiteto, Caio Sévio Lupo, que vinha de Aeminium, a atual Coimbra. É Património Mundial desde 2009."
+    }
+  },
+  "estrela-franxa-1": {
+    "pregunta": {
+      "ES": "¿En qué año empezó a hacer cerveza en A Coruña la familia de Estrella Galicia?",
+      "EN": "In what year did the Estrella Galicia family start brewing in A Coruña?",
+      "PT": "Em que ano começou a família da Estrella Galicia a fazer cerveja na Corunha?"
+    },
+    "opciones": [
+      {
+        "ES": "En 1906",
+        "EN": "In 1906",
+        "PT": "Em 1906"
+      },
+      {
+        "ES": "En 1951",
+        "EN": "In 1951",
+        "PT": "Em 1951"
+      },
+      {
+        "ES": "En 1972",
+        "EN": "In 1972",
+        "PT": "Em 1972"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "José María Rivera Corral la fundó en 1906, a la vuelta de Cuba, y la llamó La Estrella de Galicia. Más de un siglo después la empresa sigue en manos de la misma familia.",
+      "EN": "José María Rivera Corral founded it in 1906, after returning from Cuba, and named it La Estrella de Galicia. More than a century later the company is still run by the same family.",
+      "PT": "José María Rivera Corral fundou-a em 1906, quando voltou de Cuba, e chamou-lhe La Estrella de Galicia. Mais de um século depois a empresa continua nas mãos da mesma família."
+    }
+  },
+  "estrela-franxa-2": {
+    "pregunta": {
+      "ES": "Los pimientos de Padrón tienen un dicho famoso. ¿Cuál?",
+      "EN": "Padrón peppers have a famous saying. Which one?",
+      "PT": "Os pimentos de Padrón têm um ditado famoso. Qual?"
+    },
+    "opciones": [
+      {
+        "ES": "«Uns pican e outros non»",
+        "EN": "\"Some are hot and some are not\"",
+        "PT": "«Uns picam e outros não»"
+      },
+      {
+        "ES": "«Canto máis verdes, máis doces»",
+        "EN": "\"The greener, the sweeter\"",
+        "PT": "«Quanto mais verdes, mais doces»"
+      },
+      {
+        "ES": "«O de Padrón, sempre en San Xoán»",
+        "EN": "\"Padrón peppers, always at Midsummer\"",
+        "PT": "«O de Padrón, sempre no São João»"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Unos pican y otros no. La mayoría son suaves, pero de vez en cuando te toca uno que pica, y no hay forma de saberlo antes de morderlo. Se fríen enteros con aceite y sal gorda.",
+      "EN": "Some are hot and some are not. Most are mild, but every so often you get a fiery one, and there is no way to tell before you bite. They are fried whole in olive oil with coarse salt.",
+      "PT": "Uns picam e outros não. A maioria é suave, mas de vez em quando calha-te um que pica, e não há maneira de saber antes de o morder. Fritam-se inteiros em azeite com sal grosso."
+    }
+  },
+  "estrela-franxa-3": {
+    "pregunta": {
+      "ES": "¿De dónde viene el nombre del pulpo á feira?",
+      "EN": "Where does the name pulpo á feira come from?",
+      "PT": "De onde vem o nome polvo à feira?"
+    },
+    "opciones": [
+      {
+        "ES": "De las ferias de los pueblos, donde lo cocinaban las pulpeiras",
+        "EN": "From village fairs, where the pulpeiras cooked it",
+        "PT": "Das feiras das aldeias, onde as pulpeiras o cozinhavam"
+      },
+      {
+        "ES": "De una pescadera de A Coruña llamada Feira",
+        "EN": "From an A Coruña fishmonger called Feira",
+        "PT": "De uma peixeira da Corunha chamada Feira"
+      },
+      {
+        "ES": "Del barrio de A Feira, junto al puerto",
+        "EN": "From the A Feira neighbourhood, by the harbour",
+        "PT": "Do bairro de A Feira, junto ao porto"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Las pulpeiras iban de feria en feria con sus ollas de cobre. Cocían el pulpo allí mismo, lo cortaban con tijera y lo servían en platos de madera con aceite, sal y pimentón, que es como se sigue sirviendo.",
+      "EN": "The pulpeiras travelled from fair to fair with their copper pots. They boiled the octopus on the spot, cut it with scissors and served it on wooden plates with olive oil, salt and paprika, which is how it is still served.",
+      "PT": "As pulpeiras andavam de feira em feira com as suas panelas de cobre. Coziam o polvo ali mesmo, cortavam-no à tesoura e serviam-no em pratos de madeira com azeite, sal e colorau, que é como ainda se serve."
+    }
+  },
+  "estrela-franxa-4": {
+    "pregunta": {
+      "ES": "¿Qué se fundó en 1916 en un local de la Franja?",
+      "EN": "What was founded in 1916 in a building on Franja street?",
+      "PT": "O que foi fundado em 1916 num espaço da rua da Franja?"
+    },
+    "opciones": [
+      {
+        "ES": "Las Irmandades da Fala, que defendían el gallego",
+        "EN": "The Irmandades da Fala, which championed the Galician language",
+        "PT": "As Irmandades da Fala, que defendiam o galego"
+      },
+      {
+        "ES": "El Real Club Deportivo de La Coruña",
+        "EN": "Real Club Deportivo de La Coruña football club",
+        "PT": "O Real Club Deportivo de La Coruña"
+      },
+      {
+        "ES": "La primera cofradía de pescadores de la ciudad",
+        "EN": "The city's first fishermen's guild",
+        "PT": "A primeira confraria de pescadores da cidade"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "En 1916 un grupo de coruñeses se reunió aquí para crear las Irmandades da Fala, que pedían usar el gallego en la vida pública y la escritura. Una placa en la calle lo recuerda.",
+      "EN": "In 1916 a group of local people met here to found the Irmandades da Fala, which campaigned for Galician to be used in public life and in writing. A plaque on the street marks the spot.",
+      "PT": "Em 1916 um grupo de corunheses reuniu-se aqui para criar as Irmandades da Fala, que defendiam o uso do galego na vida pública e na escrita. Uma placa na rua recorda-o."
+    }
+  },
+  "santiago-1": {
+    "pregunta": {
+      "ES": "¿Cuántas personas hacen falta para mover el botafumeiro?",
+      "EN": "How many people does it take to swing the botafumeiro?",
+      "PT": "Quantas pessoas são precisas para fazer balançar o botafumeiro?"
+    },
+    "opciones": [
+      {
+        "ES": "Ocho",
+        "EN": "Eight",
+        "PT": "Oito"
+      },
+      {
+        "ES": "Dos",
+        "EN": "Two",
+        "PT": "Duas"
+      },
+      {
+        "ES": "Veinte",
+        "EN": "Twenty",
+        "PT": "Vinte"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Lo mueven ocho tiraboleiros, que tiran de una cuerda que pasa por una polea en lo alto del crucero. El incensario pesa unos 53 kilos y en cada vuelta pasa casi rozando la bóveda.",
+      "EN": "It is swung by eight tiraboleiros, who pull a rope running over a pulley high above the crossing. The censer weighs about 53 kilos and almost brushes the vault on each swing.",
+      "PT": "É movido por oito tiraboleiros, que puxam uma corda que passa por uma roldana no alto do cruzeiro. O incensário pesa cerca de 53 quilos e em cada volta passa quase a roçar a abóbada."
+    }
+  },
+  "santiago-2": {
+    "pregunta": {
+      "ES": "¿De qué está hecho el edificio del Mercado de Abastos, de 1941?",
+      "EN": "What is the 1941 Abastos market building made of?",
+      "PT": "De que é feito o edifício do Mercado de Abastos, de 1941?"
+    },
+    "opciones": [
+      {
+        "ES": "De granito",
+        "EN": "Granite",
+        "PT": "De granito"
+      },
+      {
+        "ES": "De hierro y cristal",
+        "EN": "Iron and glass",
+        "PT": "De ferro e vidro"
+      },
+      {
+        "ES": "De ladrillo",
+        "EN": "Brick",
+        "PT": "De tijolo"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Lo diseñó el arquitecto Joaquín Vaquero Palacios en granito, la piedra de todo el casco viejo, con naves alargadas y tejados a dos aguas. Por eso parece mucho más antiguo de lo que es.",
+      "EN": "It was designed by the architect Joaquín Vaquero Palacios in granite, the stone of the whole old town, with long halls and pitched roofs. That is why it looks much older than it is.",
+      "PT": "Foi desenhado pelo arquiteto Joaquín Vaquero Palacios em granito, a pedra de todo o centro histórico, com naves compridas e telhados de duas águas. Por isso parece muito mais antigo do que é."
+    }
+  },
+  "santiago-3": {
+    "pregunta": {
+      "ES": "¿Qué lleva por encima la tarta de Santiago?",
+      "EN": "What is on top of a tarta de Santiago?",
+      "PT": "O que leva por cima a tarte de Santiago?"
+    },
+    "opciones": [
+      {
+        "ES": "La cruz de Santiago dibujada con azúcar glas",
+        "EN": "The cross of Saint James drawn in icing sugar",
+        "PT": "A cruz de Santiago desenhada com açúcar em pó"
+      },
+      {
+        "ES": "Una concha de chocolate",
+        "EN": "A chocolate scallop shell",
+        "PT": "Uma concha de chocolate"
+      },
+      {
+        "ES": "Almendra caramelizada",
+        "EN": "Caramelised almonds",
+        "PT": "Amêndoa caramelizada"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es una tarta de almendra, huevo y azúcar. Para la cruz se pone una plantilla en el centro y se espolvorea azúcar glas alrededor; al quitarla, la cruz queda marcada.",
+      "EN": "It is a cake made with almonds, eggs and sugar. For the cross, a stencil is laid in the middle and icing sugar is dusted around it; when it is lifted, the cross is left behind.",
+      "PT": "É uma tarte de amêndoa, ovo e açúcar. Para a cruz põe-se um molde no centro e polvilha-se açúcar em pó à volta; quando se retira, a cruz fica marcada."
+    }
+  },
+  "santiago-4": {
+    "pregunta": {
+      "ES": "¿Quiénes eran las Dúas Marías, las mujeres de la estatua de colores?",
+      "EN": "Who were the Dúas Marías, the women in the colourful statue?",
+      "PT": "Quem eram as Dúas Marías, as mulheres da estátua colorida?"
+    },
+    "opciones": [
+      {
+        "ES": "Dos hermanas que paseaban por aquí cada día",
+        "EN": "Two sisters who walked here every day",
+        "PT": "Duas irmãs que passeavam aqui todos os dias"
+      },
+      {
+        "ES": "Dos peregrinas que llegaron desde Francia",
+        "EN": "Two pilgrims who walked from France",
+        "PT": "Duas peregrinas que chegaram de França"
+      },
+      {
+        "ES": "Dos santas de la catedral",
+        "EN": "Two saints from the cathedral",
+        "PT": "Duas santas da catedral"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Maruxa y Coralia Fandiño paseaban a diario por la Alameda a la misma hora, maquilladas y vestidas de colores, en los años grises de la posguerra. Toda la ciudad las conocía, y la estatua las recuerda tal como se las veía.",
+      "EN": "Maruxa and Coralia Fandiño walked through the Alameda every day at the same time, made up and dressed in bright colours, in the grey years after the Civil War. The whole city knew them, and the statue shows them as people saw them.",
+      "PT": "Maruxa e Coralia Fandiño passeavam todos os dias pela Alameda à mesma hora, maquilhadas e vestidas de cores vivas, nos anos cinzentos do pós-guerra. A cidade inteira conhecia-as, e a estátua recorda-as tal como eram vistas."
+    }
+  },
+  "costa-da-morte-1": {
+    "pregunta": {
+      "ES": "Según la leyenda, ¿cómo llegó la Virgen a Muxía?",
+      "EN": "According to legend, how did the Virgin arrive at Muxía?",
+      "PT": "Segundo a lenda, como chegou a Virgem a Muxía?"
+    },
+    "opciones": [
+      {
+        "ES": "En una barca de piedra",
+        "EN": "In a stone boat",
+        "PT": "Num barco de pedra"
+      },
+      {
+        "ES": "A caballo desde Santiago",
+        "EN": "On horseback from Santiago",
+        "PT": "A cavalo desde Santiago"
+      },
+      {
+        "ES": "A bordo de un barco pesquero",
+        "EN": "On a fishing boat",
+        "PT": "A bordo de um barco de pesca"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Vino en una barca de piedra para animar al apóstol Santiago, que predicaba en esta costa. Las rocas que hay junto al santuario serían los restos de la barca. Una de ellas, la Pedra de Abalar, se balancea cuando la pisas.",
+      "EN": "She came in a stone boat to encourage the apostle James, who was preaching on this coast. The rocks beside the sanctuary are said to be what is left of the boat. One of them, the Pedra de Abalar, rocks when you step on it.",
+      "PT": "Veio num barco de pedra para animar o apóstolo Santiago, que pregava nesta costa. As rochas junto ao santuário seriam os restos do barco. Uma delas, a Pedra de Abalar, baloiça quando a pisas."
+    }
+  },
+  "costa-da-morte-2": {
+    "pregunta": {
+      "ES": "¿De qué río es la cascada del Ézaro?",
+      "EN": "Which river forms the Ézaro waterfall?",
+      "PT": "De que rio é a cascata do Ézaro?"
+    },
+    "opciones": [
+      {
+        "ES": "Del Xallas",
+        "EN": "The Xallas",
+        "PT": "Do Xallas"
+      },
+      {
+        "ES": "Del Miño",
+        "EN": "The Miño",
+        "PT": "Do Minho"
+      },
+      {
+        "ES": "Del Tambre",
+        "EN": "The Tambre",
+        "PT": "Do Tambre"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El Xallas termina aquí, en la ría del Ézaro. Arriba hay una presa, y durante años la cascada solo llevaba agua cuando la abrían, sobre todo los fines de semana. Hoy cae todo el año.",
+      "EN": "The Xallas ends here, in the Ézaro inlet. There is a dam upstream, and for years the waterfall only ran when it was opened, mostly at weekends. Today it flows all year.",
+      "PT": "O Xallas termina aqui, na ria do Ézaro. Lá em cima há uma barragem, e durante anos a cascata só tinha água quando a abriam, sobretudo aos fins de semana. Hoje cai todo o ano."
+    }
+  },
+  "costa-da-morte-3": {
+    "pregunta": {
+      "ES": "¿Por qué se llama Costa da Morte?",
+      "EN": "Why is it called Costa da Morte, the Coast of Death?",
+      "PT": "Porque se chama Costa da Morte?"
+    },
+    "opciones": [
+      {
+        "ES": "Por los muchos naufragios",
+        "EN": "Because of its many shipwrecks",
+        "PT": "Pelos muitos naufrágios"
+      },
+      {
+        "ES": "Por una batalla contra los romanos",
+        "EN": "After a battle against the Romans",
+        "PT": "Por causa de uma batalha contra os romanos"
+      },
+      {
+        "ES": "Porque aquí se pone el sol",
+        "EN": "Because the sun sets here",
+        "PT": "Porque aqui se põe o sol"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Las rocas, los temporales y la niebla han hundido aquí cientos de barcos. En Camariñas, entre Muxía y Malpica, está el cementerio de los ingleses, con los marineros del HMS Serpent, que naufragó en 1890.",
+      "EN": "Rocks, storms and fog have sunk hundreds of ships here. At Camariñas, between Muxía and Malpica, is the English Cemetery, where the sailors of HMS Serpent, wrecked in 1890, are buried.",
+      "PT": "As rochas, os temporais e o nevoeiro afundaram aqui centenas de barcos. Em Camariñas, entre Muxía e Malpica, fica o cemitério dos ingleses, com os marinheiros do HMS Serpent, que naufragou em 1890."
+    }
+  },
+  "costa-da-morte-4": {
+    "pregunta": {
+      "ES": "¿Qué marca el mojón del kilómetro 0,000 del cabo Fisterra?",
+      "EN": "What does the kilometre 0.000 marker at Cape Fisterra mark?",
+      "PT": "O que assinala o marco do quilómetro 0,000 do cabo Fisterra?"
+    },
+    "opciones": [
+      {
+        "ES": "El final del Camino que sigue de Santiago a Fisterra",
+        "EN": "The end of the Way that continues from Santiago to Fisterra",
+        "PT": "O fim do Caminho que segue de Santiago até Fisterra"
+      },
+      {
+        "ES": "La frontera marítima con Portugal",
+        "EN": "The sea border with Portugal",
+        "PT": "A fronteira marítima com Portugal"
+      },
+      {
+        "ES": "El punto más occidental de Europa",
+        "EN": "The westernmost point of Europe",
+        "PT": "O ponto mais ocidental da Europa"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Muchos peregrinos siguen andando desde Santiago hasta aquí, unos 90 kilómetros. El punto más occidental de la Europa continental está en Portugal, en el cabo da Roca, y el de España es el cabo Touriñán, cerca de Muxía.",
+      "EN": "Many pilgrims keep walking from Santiago to here, about 90 kilometres. The westernmost point of mainland Europe is Cabo da Roca in Portugal, and Spain's is Cape Touriñán, near Muxía.",
+      "PT": "Muitos peregrinos continuam a caminhar de Santiago até aqui, cerca de 90 quilómetros. O ponto mais ocidental da Europa continental fica em Portugal, no cabo da Roca, e o de Espanha é o cabo Touriñán, perto de Muxía."
+    }
+  }
+}

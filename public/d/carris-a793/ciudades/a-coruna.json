@@ -1,0 +1,1149 @@
+{
+  "slug": "a-coruna",
+  "nombre": "A Coruña",
+  "intro": {
+    "ES": "El hotel está en Marineda City, a la entrada de A Coruña. En coche o en taxi llegas a la plaza de María Pita en unos 12 minutos, y a la Torre de Hércules en un cuarto de hora. En el propio centro comercial hay parada de taxis. Santiago de Compostela queda a una hora por la AP-9, y Fisterra, a hora y media.",
+    "EN": "The hotel is at Marineda City, on the way into A Coruña. By car or taxi you reach María Pita square in about 12 minutes and the Tower of Hercules in a quarter of an hour. There is a taxi rank at the shopping centre itself. Santiago de Compostela is an hour away on the AP-9, and Fisterra an hour and a half.",
+    "PT": "O hotel fica no Marineda City, à entrada da Corunha. De carro ou de táxi chegas à praça de María Pita em cerca de 12 minutos e à Torre de Hércules num quarto de hora. No próprio centro comercial há uma praça de táxis. Santiago de Compostela fica a uma hora pela AP-9, e Fisterra a hora e meia."
+  },
+  "lugares": [
+    {
+      "id": "torre-hercules",
+      "img": "/ciudades/a-coruna/img/torre.jpg",
+      "nombre": "Torre de Hércules",
+      "zona": {
+        "ES": "Península de la Torre, a 7 km del hotel",
+        "EN": "Torre peninsula, 7 km from the hotel",
+        "PT": "Península da Torre, a 7 km do hotel"
+      },
+      "d": {
+        "ES": "Es el único faro romano que sigue funcionando. Se levantó a finales del siglo I o principios del II, y en el siglo XVIII se forró con la fachada neoclásica que ves hoy. Dentro recorres los cimientos romanos y subes por una escalera interior hasta la terraza. Es Patrimonio de la Humanidad desde 2009.",
+        "EN": "It is the only Roman lighthouse still in use. It was built in the late 1st or early 2nd century, and in the 18th century it was clad in the neoclassical stone shell you see today. Inside you walk through the Roman foundations and climb an inner staircase to the terrace. It has been a World Heritage Site since 2009.",
+        "PT": "É o único farol romano que continua a funcionar. Foi erguido no final do século I ou no início do II, e no século XVIII foi revestido com a fachada neoclássica que vês hoje. Lá dentro percorres os alicerces romanos e sobes por uma escada interior até ao terraço. É Património Mundial desde 2009."
+      },
+      "cuando": {
+        "ES": "Por la mañana, con buena luz para las fotos desde el parque. Los lunes la entrada es gratis",
+        "EN": "In the morning, with good light for photos from the park. Entry is free on Mondays",
+        "PT": "De manhã, com boa luz para as fotos a partir do parque. À segunda-feira a entrada é gratuita"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 43.38594,
+      "lng": -8.40652
+    },
+    {
+      "id": "maria-pita",
+      "img": "/ciudades/a-coruna/img/maria-pita.jpg",
+      "nombre": "Plaza de María Pita",
+      "zona": {
+        "ES": "Centro, junto a la Ciudad Vieja, a 5 km del hotel",
+        "EN": "City centre, by the Old Town, 5 km from the hotel",
+        "PT": "Centro, junto à Cidade Velha, a 5 km do hotel"
+      },
+      "d": {
+        "ES": "La plaza mayor de A Coruña. La preside el Palacio Municipal, de principios del siglo XX, con tres cúpulas. En el centro está la estatua de María Pita, la vecina que en 1589 animó a la ciudad a resistir el ataque de la flota inglesa de Francis Drake. Los otros tres lados tienen soportales con cafés y terrazas.",
+        "EN": "A Coruña's main square. It is presided over by the early 20th-century town hall with its three domes. In the middle stands the statue of María Pita, the local woman who in 1589 rallied the city against the English fleet of Francis Drake. The other three sides have arcades with cafés and terraces.",
+        "PT": "A praça principal da Corunha. É presidida pelos Paços do Concelho, do início do século XX, com três cúpulas. Ao centro está a estátua de María Pita, a vizinha que em 1589 levou a cidade a resistir ao ataque da frota inglesa de Francis Drake. Os outros três lados têm arcadas com cafés e esplanadas."
+      },
+      "cuando": {
+        "ES": "A media tarde, para un café bajo los soportales",
+        "EN": "Mid-afternoon, for a coffee under the arcades",
+        "PT": "A meio da tarde, para um café debaixo das arcadas"
+      },
+      "min": 12,
+      "modo": "coche",
+      "lat": 43.37104,
+      "lng": -8.39594
+    },
+    {
+      "id": "ciudad-vieja",
+      "img": "/ciudades/a-coruna/img/ciudad-vieja.jpg",
+      "nombre": "Ciudad Vieja",
+      "zona": {
+        "ES": "Detrás del Ayuntamiento, a 6 km del hotel",
+        "EN": "Behind the town hall, 6 km from the hotel",
+        "PT": "Atrás dos Paços do Concelho, a 6 km do hotel"
+      },
+      "d": {
+        "ES": "Es el barrio alto y medieval de la ciudad, de calles de piedra y plazas pequeñas con árboles. Aquí están la colegiata románica de Santa María do Campo, la iglesia de Santiago, la casa donde vivió Emilia Pardo Bazán y el jardín de San Carlos, donde está enterrado el general británico Sir John Moore.",
+        "EN": "The medieval upper town, with stone streets and small tree-lined squares. Here you find the Romanesque collegiate church of Santa María do Campo, the church of Santiago, the house where the writer Emilia Pardo Bazán lived and the San Carlos garden, where the British general Sir John Moore is buried.",
+        "PT": "É o bairro alto e medieval da cidade, de ruas de pedra e pracetas com árvores. Aqui estão a colegiada românica de Santa María do Campo, a igreja de Santiago, a casa onde viveu Emilia Pardo Bazán e o jardim de San Carlos, onde está sepultado o general britânico Sir John Moore."
+      },
+      "cuando": {
+        "ES": "A última hora de la tarde, con las plazas tranquilas",
+        "EN": "Late afternoon, when the squares are quiet",
+        "PT": "Ao fim da tarde, com as praças tranquilas"
+      },
+      "min": 13,
+      "modo": "coche",
+      "lat": 43.36985,
+      "lng": -8.3931
+    },
+    {
+      "id": "castillo-san-anton",
+      "img": "/ciudades/a-coruna/img/san-anton.jpg",
+      "nombre": "Castillo de San Antón",
+      "zona": {
+        "ES": "Al final del paseo del Parrote, a 5 km del hotel",
+        "EN": "At the end of Paseo do Parrote, 5 km from the hotel",
+        "PT": "No fim do passeio do Parrote, a 5 km do hotel"
+      },
+      "d": {
+        "ES": "Una fortaleza del siglo XVI que se levantó en un islote de la bahía para defender la entrada del puerto. Más tarde fue cárcel, y en ella estuvieron presos el marino Alejandro Malaspina y el general Porlier. Hoy es el Museo Arqueológico e Histórico, con piezas de los castros gallegos y de época romana, y desde las murallas ves toda la bahía.",
+        "EN": "A 16th-century fortress built on an islet in the bay to guard the harbour entrance. It later became a prison, holding the navigator Alessandro Malaspina and General Porlier. Today it houses the Archaeological and History Museum, with finds from Galician hillforts and Roman times, and from the walls you see the whole bay.",
+        "PT": "Uma fortaleza do século XVI construída num ilhéu da baía para defender a entrada do porto. Mais tarde foi prisão, e nela estiveram presos o navegador Alejandro Malaspina e o general Porlier. Hoje é o Museu Arqueológico e Histórico, com peças dos castros galegos e da época romana, e das muralhas vês a baía inteira."
+      },
+      "cuando": {
+        "ES": "Por la tarde, de martes a sábado. Los domingos cierra a mediodía y los lunes no abre",
+        "EN": "In the afternoon, Tuesday to Saturday. On Sundays it closes at midday and on Mondays it is shut",
+        "PT": "À tarde, de terça a sábado. Ao domingo fecha ao meio-dia e à segunda não abre"
+      },
+      "min": 12,
+      "modo": "coche",
+      "lat": 43.36569,
+      "lng": -8.38752
+    },
+    {
+      "id": "paseo-maritimo",
+      "img": "/ciudades/a-coruna/img/paseo.jpg",
+      "nombre": "Paseo Marítimo",
+      "zona": {
+        "ES": "Rodea la ciudad por la costa. El tramo de Riazor y Orzán está a 4 km del hotel",
+        "EN": "It runs round the city along the coast. The Riazor and Orzán stretch is 4 km from the hotel",
+        "PT": "Contorna a cidade junto à costa. O troço de Riazor e Orzán fica a 4 km do hotel"
+      },
+      "d": {
+        "ES": "Unos 13 kilómetros junto al mar que dan la vuelta a la península, del puerto a la Torre de Hércules y más allá, con las farolas rojas que salen en todas las fotos de la ciudad. Se hace andando o en bici. El tramo de Riazor y Orzán es el más animado, con surfistas en el agua casi todo el año.",
+        "EN": "About 13 kilometres along the sea, all the way round the peninsula from the port to the Tower of Hercules and beyond, lined with the red lamp posts you see in every photo of the city. You can walk it or cycle it. The Riazor and Orzán stretch is the liveliest, with surfers in the water almost all year.",
+        "PT": "Cerca de 13 quilómetros junto ao mar que dão a volta à península, do porto à Torre de Hércules e mais além, com os candeeiros vermelhos que aparecem em todas as fotos da cidade. Faz-se a pé ou de bicicleta. O troço de Riazor e Orzán é o mais animado, com surfistas na água quase todo o ano."
+      },
+      "cuando": {
+        "ES": "Al atardecer, con el sol cayendo sobre la bahía de Orzán",
+        "EN": "At sunset, with the sun going down over Orzán bay",
+        "PT": "Ao pôr do sol, com o sol a cair sobre a baía de Orzán"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 43.37194,
+      "lng": -8.40549
+    },
+    {
+      "id": "monte-san-pedro",
+      "img": "/ciudades/a-coruna/img/monte-san-pedro.jpg",
+      "nombre": "Monte de San Pedro",
+      "zona": {
+        "ES": "Al oeste de la ciudad, a 6 km del hotel",
+        "EN": "West of the city, 6 km from the hotel",
+        "PT": "A oeste da cidade, a 6 km do hotel"
+      },
+      "d": {
+        "ES": "Un parque en lo alto de un monte junto al mar, con la vista más completa de la ciudad y de la Torre de Hércules. Arriba quedan los cañones enormes de la antigua batería de costa y hay un laberinto de setos. Puedes subir desde el paseo marítimo en un ascensor acristalado con forma de bola.",
+        "EN": "A park on a hilltop by the sea, with the widest view of the city and the Tower of Hercules. At the top are the huge guns of the old coastal battery and a hedge maze. You can ride up from the seafront in a glass, ball-shaped lift.",
+        "PT": "Um parque no alto de um monte junto ao mar, com a vista mais completa da cidade e da Torre de Hércules. Lá em cima ficam os canhões enormes da antiga bateria de costa e há um labirinto de sebes. Podes subir a partir do passeio marítimo num elevador envidraçado em forma de bola."
+      },
+      "cuando": {
+        "ES": "Un día despejado, a última hora de la tarde. El ascensor panorámico no funciona los lunes",
+        "EN": "On a clear day, late in the afternoon. The panoramic lift does not run on Mondays",
+        "PT": "Num dia limpo, ao fim da tarde. O elevador panorâmico não funciona à segunda-feira"
+      },
+      "min": 13,
+      "modo": "coche",
+      "lat": 43.37776,
+      "lng": -8.43678
+    },
+    {
+      "id": "aquarium",
+      "img": "/ciudades/a-coruna/img/aquarium.jpg",
+      "nombre": "Aquarium Finisterrae",
+      "zona": {
+        "ES": "En el paseo marítimo, junto a la Torre de Hércules, a 7 km del hotel",
+        "EN": "On the seafront, next to the Tower of Hercules, 7 km from the hotel",
+        "PT": "No passeio marítimo, junto à Torre de Hércules, a 7 km do hotel"
+      },
+      "d": {
+        "ES": "El acuario de la ciudad abrió en 1999 y está dedicado sobre todo al mar de Galicia. Lo más visitado es la sala Nautilus, inspirada en el submarino de Julio Verne, donde quedas bajo el agua rodeado por los tiburones y los peces del gran tanque. En las piscinas de fuera viven focas.",
+        "EN": "The city aquarium opened in 1999 and focuses mainly on the Galician sea. The highlight is the Nautilus room, inspired by Jules Verne's submarine, where you sit underwater surrounded by the sharks and fish of the big tank. Seals live in the outdoor pools.",
+        "PT": "O aquário da cidade abriu em 1999 e é dedicado sobretudo ao mar da Galiza. O mais visitado é a sala Nautilus, inspirada no submarino de Júlio Verne, onde ficas debaixo de água rodeado pelos tubarões e peixes do grande tanque. Nas piscinas de fora vivem focas."
+      },
+      "cuando": {
+        "ES": "Una mañana de lluvia, sobre todo si vas con niños",
+        "EN": "A rainy morning, especially with children",
+        "PT": "Numa manhã de chuva, sobretudo se fores com crianças"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 43.38389,
+      "lng": -8.40972
+    },
+    {
+      "id": "playa-riazor",
+      "img": "/ciudades/a-coruna/img/riazor.jpg",
+      "nombre": "Playa de Riazor",
+      "zona": {
+        "ES": "Centro, junto al estadio, a 4 km del hotel",
+        "EN": "City centre, by the stadium, 4 km from the hotel",
+        "PT": "Centro, junto ao estádio, a 4 km do hotel"
+      },
+      "d": {
+        "ES": "Una playa de arena fina en plena ciudad, pegada a la de Orzán, de la que la separa un muro de piedra que aquí llaman la Coraza. Detrás está el estadio de Riazor, el del Deportivo. La noche de San Juan, del 23 al 24 de junio, la arena se llena de hogueras.",
+        "EN": "A fine-sand beach right in the city, next to Orzán beach, separated from it by a stone wall known locally as the Coraza. Behind it is Riazor stadium, home of Deportivo. On the night of San Juan, 23 to 24 June, the sand fills with bonfires.",
+        "PT": "Uma praia de areia fina em plena cidade, colada à de Orzán, da qual a separa um muro de pedra a que aqui chamam a Coraza. Atrás fica o estádio de Riazor, o do Deportivo. Na noite de São João, de 23 para 24 de junho, a areia enche-se de fogueiras."
+      },
+      "cuando": {
+        "ES": "En verano, a primera hora. El resto del año, para pasear por la orilla con la marea baja",
+        "EN": "In summer, early in the day. The rest of the year, for a walk along the shore at low tide",
+        "PT": "No verão, logo de manhã. No resto do ano, para passear à beira-mar com a maré baixa"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 43.36915,
+      "lng": -8.41138
+    }
+  ],
+  "rutas": [
+    {
+      "id": "coruna-tarde",
+      "img": "/ciudades/a-coruna/img/torre-breogan.jpg",
+      "titulo": {
+        "ES": "A Coruña en una tarde",
+        "EN": "A Coruña in an afternoon",
+        "PT": "A Corunha numa tarde"
+      },
+      "tipo": {
+        "ES": "Historia",
+        "EN": "History",
+        "PT": "História"
+      },
+      "dur": "3 h 45 min",
+      "d": {
+        "ES": "Una tarde por el casco antiguo y la costa. Empiezas en la plaza de María Pita, subes a la Ciudad Vieja, bajas al castillo de San Antón y vas andando por el paseo marítimo hasta la Torre de Hércules a la caída de la tarde.",
+        "EN": "An afternoon in the old town and along the coast. You start in María Pita square, climb into the Old Town, go down to San Antón castle and walk the seafront to the Tower of Hercules as the light fades.",
+        "PT": "Uma tarde pelo centro histórico e pela costa. Começas na praça de María Pita, sobes à Cidade Velha, desces ao castelo de San Antón e segues a pé pelo passeio marítimo até à Torre de Hércules ao cair da tarde."
+      },
+      "salida": {
+        "ES": "En taxi hasta la plaza de María Pita, unos 15 minutos. Sal hacia las 15:00",
+        "EN": "Taxi to María Pita square, about 15 minutes. Leave around 15:00",
+        "PT": "De táxi até à praça de María Pita, cerca de 15 minutos. Sai por volta das 15:00"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "PT": [
+          "Percurso livre, sem reserva",
+          "Plano do dia e mapa"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo, que del castillo a la Torre son 3 kilómetros andando",
+          "Una chaqueta o un chubasquero, que en la costa sopla el viento"
+        ],
+        "EN": [
+          "Comfortable shoes, as it is a 3 km walk from the castle to the Tower",
+          "A jacket or raincoat, as it gets windy on the coast"
+        ],
+        "PT": [
+          "Calçado confortável, porque do castelo à Torre são 3 quilómetros a pé",
+          "Um casaco ou um impermeável, porque na costa sopra o vento"
+        ]
+      },
+      "fotos": [
+        "/ciudades/a-coruna/img/torre-breogan.jpg",
+        "/ciudades/a-coruna/img/maria-pita.jpg",
+        "/ciudades/a-coruna/img/santa-maria.jpg",
+        "/ciudades/a-coruna/img/ciudad-vieja.jpg",
+        "/ciudades/a-coruna/img/san-carlos.jpg",
+        "/ciudades/a-coruna/img/san-anton.jpg",
+        "/ciudades/a-coruna/img/paseo.jpg",
+        "/ciudades/a-coruna/img/torre.jpg"
+      ],
+      "duracionMin": 225,
+      "distanciaKm": 17,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "La plaza de María Pita y el paseo marítimo son llanos. La Ciudad Vieja tiene cuestas y suelo de piedra. En el castillo hay escaleras para subir a las murallas, y el parque de la Torre tiene subidas suaves por caminos asfaltados.",
+        "EN": "María Pita square and the seafront are flat. The Old Town has slopes and stone paving. The castle has steps up to the walls, and the Tower park has gentle climbs on paved paths.",
+        "PT": "A praça de María Pita e o passeio marítimo são planos. A Cidade Velha tem subidas e chão de pedra. No castelo há escadas para subir às muralhas, e o parque da Torre tem subidas suaves por caminhos alcatroados."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 43.37104,
+        "lng": -8.39594,
+        "foto": "/ciudades/a-coruna/img/maria-pita.jpg",
+        "texto": {
+          "ES": "Plaza de María Pita, junto a la estatua y frente al Ayuntamiento.",
+          "EN": "María Pita square, by the statue and facing the town hall.",
+          "PT": "Praça de María Pita, junto à estátua e em frente aos Paços do Concelho."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Entrada al museo del castillo de San Antón",
+          "Subida a la Torre de Hércules",
+          "Taxi de ida y vuelta",
+          "Consumiciones"
+        ],
+        "EN": [
+          "San Antón castle museum admission",
+          "Climbing the Tower of Hercules",
+          "Taxi there and back",
+          "Drinks"
+        ],
+        "PT": [
+          "Entrada no museu do castelo de San Antón",
+          "Subida à Torre de Hércules",
+          "Táxi de ida e volta",
+          "Consumos"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Los lunes el museo de San Antón está cerrado y los domingos cierra a mediodía; esos días ves el castillo por fuera. Con temporal deja el paseo para otro día, que las olas saltan por encima del muro.",
+        "EN": "Self-guided, so there is nothing to book or cancel. San Antón museum is closed on Mondays and shuts at midday on Sundays; on those days, see the castle from outside. In stormy weather leave the seafront walk for another day, as waves break over the wall.",
+        "PT": "Percurso livre, sem reserva nem cancelamento. À segunda o museu de San Antón está fechado e ao domingo fecha ao meio-dia; nesses dias vês o castelo por fora. Com temporal deixa o passeio para outro dia, porque as ondas saltam por cima do muro."
+      },
+      "salidasFijas": [],
+      "expId": "ex1",
+      "precioDesde": 25,
+      "paradas": [
+        {
+          "n": {
+            "ES": "Plaza de María Pita",
+            "EN": "María Pita square",
+            "PT": "Praça de María Pita"
+          },
+          "s": {
+            "ES": "La plaza del Ayuntamiento y de la heroína de 1589",
+            "EN": "The town hall square and the heroine of 1589",
+            "PT": "A praça dos Paços do Concelho e da heroína de 1589"
+          },
+          "d": {
+            "ES": "El Palacio Municipal ocupa todo un lado de la plaza, con sus tres cúpulas. Delante está la estatua de María Pita, lanza en mano. En 1589 la flota de Francis Drake atacó la ciudad, y ella mató al alférez inglés que subía a la muralla con la bandera. Los otros tres lados tienen soportales con cafés.",
+            "EN": "The town hall fills one whole side of the square, with its three domes. In front stands the statue of María Pita, spear in hand. In 1589 Francis Drake's fleet attacked the city, and she killed the English ensign who was climbing the wall with the flag. The other three sides have arcades with cafés.",
+            "PT": "Os Paços do Concelho ocupam um lado inteiro da praça, com as suas três cúpulas. À frente está a estátua de María Pita, de lança na mão. Em 1589 a frota de Francis Drake atacou a cidade, e ela matou o alferes inglês que subia à muralha com a bandeira. Os outros três lados têm arcadas com cafés."
+          },
+          "tip": {
+            "ES": "Fíjate en las galerías acristaladas de los edificios del centro. Por ellas llaman a A Coruña la ciudad de cristal.",
+            "EN": "Look at the glazed balconies on the buildings around the centre. They are why A Coruña is called the city of glass.",
+            "PT": "Repara nas varandas envidraçadas dos edifícios do centro. É por elas que chamam à Corunha a cidade de cristal."
+          },
+          "hora": "15:15",
+          "dur": "30 min",
+          "img": "/ciudades/a-coruna/img/maria-pita.jpg",
+          "lat": 43.37104,
+          "lng": -8.39594,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Ciudad Vieja y jardín de San Carlos",
+            "EN": "Old Town and San Carlos garden",
+            "PT": "Cidade Velha e jardim de San Carlos"
+          },
+          "s": {
+            "ES": "Iglesias románicas, plazas tranquilas y la tumba de un general",
+            "EN": "Romanesque churches, quiet squares and a general's tomb",
+            "PT": "Igrejas românicas, praças tranquilas e o túmulo de um general"
+          },
+          "d": {
+            "ES": "Sube por detrás del Ayuntamiento hasta la colegiata de Santa María do Campo, románica, empezada en el siglo XIII. Al lado está la plaza de Azcárraga, con su fuente entre plátanos. Acaba en el jardín de San Carlos, levantado sobre una antigua fortaleza. En el centro está la tumba de Sir John Moore, el general británico que murió en la batalla de Elviña en 1809.",
+            "EN": "Walk up behind the town hall to the Romanesque collegiate church of Santa María do Campo, begun in the 13th century. Next to it is Azcárraga square, with its fountain among plane trees. Finish in the San Carlos garden, laid out on an old fortress. In the middle is the tomb of Sir John Moore, the British general who died at the battle of Elviña in 1809.",
+            "PT": "Sobe por trás dos Paços do Concelho até à colegiada de Santa María do Campo, românica, começada no século XIII. Ao lado fica a praça de Azcárraga, com a sua fonte entre plátanos. Termina no jardim de San Carlos, construído sobre uma antiga fortaleza. Ao centro está o túmulo de Sir John Moore, o general britânico que morreu na batalha de Elviña em 1809."
+          },
+          "tip": {
+            "ES": "Asómate al muro del jardín de San Carlos. Desde ahí ves el puerto y, abajo, el castillo de San Antón, que es la siguiente parada.",
+            "EN": "Look over the wall of the San Carlos garden. From there you see the harbour and, below, San Antón castle, your next stop.",
+            "PT": "Espreita do muro do jardim de San Carlos. Daí vês o porto e, lá em baixo, o castelo de San Antón, que é a próxima paragem."
+          },
+          "hora": "15:50",
+          "dur": "45 min",
+          "img": "/ciudades/a-coruna/img/santa-maria.jpg",
+          "lat": 43.37077,
+          "lng": -8.39255,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Castillo de San Antón",
+            "EN": "San Antón castle",
+            "PT": "Castelo de San Antón"
+          },
+          "s": {
+            "ES": "Fortaleza, cárcel y museo en la bahía",
+            "EN": "Fortress, prison and museum in the bay",
+            "PT": "Fortaleza, prisão e museu na baía"
+          },
+          "d": {
+            "ES": "Se construyó en el siglo XVI sobre un islote para defender la entrada del puerto, y hoy está unido a tierra. Más tarde fue cárcel. Dentro está el Museo Arqueológico e Histórico, con piezas de los castros gallegos y de época romana. Sube a las murallas a ver la bahía.",
+            "EN": "It was built in the 16th century on an islet to guard the harbour entrance, and is now joined to the land. It later became a prison. Inside is the Archaeological and History Museum, with finds from Galician hillforts and Roman times. Climb the walls for the view over the bay.",
+            "PT": "Foi construído no século XVI sobre um ilhéu para defender a entrada do porto, e hoje está ligado a terra. Mais tarde foi prisão. Lá dentro está o Museu Arqueológico e Histórico, com peças dos castros galegos e da época romana. Sobe às muralhas para ver a baía."
+          },
+          "tip": {
+            "ES": "Los domingos el museo cierra a mediodía y los lunes no abre. Esos días lo ves por fuera desde el paseo del Parrote.",
+            "EN": "On Sundays the museum closes at midday and on Mondays it is shut. On those days, see it from outside from Paseo do Parrote.",
+            "PT": "Ao domingo o museu fecha ao meio-dia e à segunda não abre. Nesses dias vês o castelo por fora, a partir do passeio do Parrote."
+          },
+          "hora": "16:45",
+          "dur": "45 min",
+          "img": "/ciudades/a-coruna/img/san-anton.jpg",
+          "lat": 43.36569,
+          "lng": -8.38752,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Paseo marítimo hasta la Torre de Hércules",
+            "EN": "Seafront walk to the Tower of Hercules",
+            "PT": "Passeio marítimo até à Torre de Hércules"
+          },
+          "s": {
+            "ES": "Tres kilómetros junto al mar hasta el faro romano",
+            "EN": "Three kilometres by the sea to the Roman lighthouse",
+            "PT": "Três quilómetros junto ao mar até ao farol romano"
+          },
+          "d": {
+            "ES": "Desde el castillo sigues el paseo marítimo por la costa, con las farolas rojas a un lado y el mar al otro. En unos 45 minutos llegas al parque de la Torre de Hércules, el faro romano que lleva casi dos mil años guiando a los barcos. En el camino de subida está la estatua de Breogán, el rey de la leyenda gallega que nombra el himno.",
+            "EN": "From the castle you follow the seafront promenade along the coast, with the red lamp posts on one side and the sea on the other. In about 45 minutes you reach the Tower of Hercules park, the Roman lighthouse that has guided ships for almost two thousand years. On the path up stands the statue of Breogán, the legendary Galician king named in the regional anthem.",
+            "PT": "Do castelo segues pelo passeio marítimo ao longo da costa, com os candeeiros vermelhos de um lado e o mar do outro. Em cerca de 45 minutos chegas ao parque da Torre de Hércules, o farol romano que há quase dois mil anos guia os barcos. No caminho de subida está a estátua de Breogán, o rei da lenda galega que o hino nomeia."
+          },
+          "tip": {
+            "ES": "De junio a septiembre la Torre abre hasta tarde y puedes subir. El resto del año cierra a media tarde, así que a esta hora la ves por fuera. Para volver, pide un taxi por teléfono o con una aplicación.",
+            "EN": "From June to September the Tower stays open late and you can climb it. The rest of the year it closes mid-afternoon, so at this time you see it from outside. To get back, call a taxi or book one through an app.",
+            "PT": "De junho a setembro a Torre abre até tarde e podes subir. No resto do ano fecha a meio da tarde, por isso a esta hora vê-la por fora. Para voltar, chama um táxi por telefone ou por uma aplicação."
+          },
+          "hora": "18:15",
+          "dur": "30 min",
+          "img": "/ciudades/a-coruna/img/torre-breogan.jpg",
+          "lat": 43.38594,
+          "lng": -8.40652,
+          "tramo": "pie",
+          "tramoDuracionMin": 45,
+          "duracionMin": 30
+        }
+      ]
+    },
+    {
+      "id": "estrela-franxa",
+      "img": "/ciudades/a-coruna/img/pulpo.jpg",
+      "titulo": {
+        "ES": "MEGA y tapas por la Estrella y la Franja",
+        "EN": "MEGA and tapas on Estrella and Franja streets",
+        "PT": "MEGA e petiscos pela Estrella e pela Franja"
+      },
+      "tipo": {
+        "ES": "Gastronomía",
+        "EN": "Food and drink",
+        "PT": "Gastronomia"
+      },
+      "dur": "4 h 40 min",
+      "d": {
+        "ES": "Empiezas con la visita a MEGA, el museo de Estrella Galicia, que está a cinco minutos del hotel. Después vas en taxi al centro y sigues de tapas por la calle de la Estrella, Olmos y Galera y la Franja, las calles de vinos de toda la vida, hasta acabar junto a la plaza de María Pita.",
+        "EN": "You start with a visit to MEGA, the Estrella Galicia beer museum, five minutes from the hotel. Then you take a taxi into town and go for tapas along Estrella, Olmos, Galera and Franja, the old wine-bar streets, finishing beside María Pita square.",
+        "PT": "Começas com a visita ao MEGA, o museu da Estrella Galicia, a cinco minutos do hotel. Depois vais de táxi até ao centro e segues para os petiscos pela rua da Estrella, Olmos e Galera e a Franja, as ruas de vinhos de sempre, até acabar junto à praça de María Pita."
+      },
+      "salida": {
+        "ES": "En taxi hasta MEGA, unos 5 minutos, o andando en 20. Sal hacia las 17:20",
+        "EN": "Taxi to MEGA, about 5 minutes, or a 20-minute walk. Leave around 17:20",
+        "PT": "De táxi até ao MEGA, cerca de 5 minutos, ou 20 a pé. Sai por volta das 17:20"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "PT": [
+          "Percurso livre, sem reserva",
+          "Plano do dia e mapa"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "La visita a MEGA reservada en su web",
+          "Algo de efectivo para las barras",
+          "Una chaqueta para la vuelta"
+        ],
+        "EN": [
+          "Your MEGA visit booked on their website",
+          "Some cash for the bars",
+          "A jacket for the way back"
+        ],
+        "PT": [
+          "A visita ao MEGA reservada no site",
+          "Algum dinheiro para os balcões",
+          "Um casaco para a volta"
+        ]
+      },
+      "fotos": [
+        "/ciudades/a-coruna/img/pulpo.jpg",
+        "/ciudades/a-coruna/img/mega.jpg",
+        "/ciudades/a-coruna/img/pimientos.jpg",
+        "/ciudades/a-coruna/img/maria-pita-plaza.jpg"
+      ],
+      "duracionMin": 280,
+      "distanciaKm": 12,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Las calles de tapas son peatonales y llanas. Muchos bares tienen un escalón en la entrada y poco sitio cuando se llenan. Para MEGA, pregunta por el acceso al hacer la reserva.",
+        "EN": "The tapas streets are pedestrian and flat. Many bars have a step at the door and little room when they fill up. For MEGA, ask about access when you book.",
+        "PT": "As ruas dos petiscos são pedonais e planas. Muitos bares têm um degrau à entrada e pouco espaço quando enchem. Para o MEGA, pergunta pelo acesso quando fizeres a reserva."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 43.35249,
+        "lng": -8.42016,
+        "foto": "/ciudades/a-coruna/img/mega.jpg",
+        "texto": {
+          "ES": "Entrada de MEGA, en la calle José María Rivera Corral, 6, en el polígono de A Grela.",
+          "EN": "MEGA entrance, at Rúa José María Rivera Corral 6, in the A Grela business park.",
+          "PT": "Entrada do MEGA, na rua José María Rivera Corral, 6, no parque empresarial de A Grela."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Entrada a MEGA",
+          "Tapas y bebidas",
+          "Taxis"
+        ],
+        "EN": [
+          "MEGA admission",
+          "Food and drinks",
+          "Taxis"
+        ],
+        "PT": [
+          "Entrada no MEGA",
+          "Petiscos e bebidas",
+          "Táxis"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. La visita a MEGA se reserva aparte; según el Concello, de octubre a marzo la última entrada es a las 18:00. Si no llegas, empieza directamente en la calle de la Estrella. Algunos bares cierran un día a la semana.",
+        "EN": "Self-guided, so there is nothing to book or cancel. The MEGA visit is booked separately; according to the city council, last entry from October to March is at 18:00. If you miss it, start straight away on Estrella street. Some bars close one day a week.",
+        "PT": "Percurso livre, sem reserva nem cancelamento. A visita ao MEGA reserva-se à parte; segundo o Concello, de outubro a março a última entrada é às 18:00. Se não chegares a tempo, começa logo na rua da Estrella. Alguns bares fecham um dia por semana."
+      },
+      "salidasFijas": [],
+      "precioDesde": null,
+      "paradas": [
+        {
+          "n": {
+            "ES": "MEGA, el museo de Estrella Galicia",
+            "EN": "MEGA, the Estrella Galicia museum",
+            "PT": "MEGA, o museu da Estrella Galicia"
+          },
+          "s": {
+            "ES": "La cerveza de A Coruña, con cata al final",
+            "EN": "A Coruña's beer, with a tasting at the end",
+            "PT": "A cerveja da Corunha, com prova no fim"
+          },
+          "d": {
+            "ES": "Está dentro de la fábrica de Estrella Galicia, en A Grela, y abrió en 2019. Recorres la historia de la familia Rivera, que empezó a hacer cerveza en la ciudad en 1906, y ves de qué materias primas sale y cómo se elabora. La visita acaba con una cerveza en la sala de cata.",
+            "EN": "It sits inside the Estrella Galicia brewery in A Grela and opened in 2019. You follow the story of the Rivera family, who began brewing in the city in 1906, and see what goes into the beer and how it is made. The visit ends with a beer in the tasting room.",
+            "PT": "Fica dentro da fábrica da Estrella Galicia, em A Grela, e abriu em 2019. Percorres a história da família Rivera, que começou a fazer cerveja na cidade em 1906, e vês de que matérias-primas sai e como se faz. A visita termina com uma cerveja na sala de prova."
+          },
+          "tip": {
+            "ES": "Hay varias visitas, desde la libre hasta otras guiadas con maridaje. Elige y reserva en su web; de octubre a marzo la última entrada es a las 18:00.",
+            "EN": "There are several tours, from self-guided to guided ones with food pairing. Choose and book on their website; from October to March last entry is at 18:00.",
+            "PT": "Há várias visitas, da livre a outras guiadas com harmonização. Escolhe e reserva no site; de outubro a março a última entrada é às 18:00."
+          },
+          "hora": "17:30",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/a-coruna/img/mega.jpg",
+          "lat": 43.35249,
+          "lng": -8.42016,
+          "tramo": "coche",
+          "tramoDuracionMin": 5,
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Calle de la Estrella",
+            "EN": "Estrella street",
+            "PT": "Rua da Estrella"
+          },
+          "s": {
+            "ES": "La calle de vinos más conocida de la ciudad",
+            "EN": "The city's best-known wine-bar street",
+            "PT": "A rua de vinhos mais conhecida da cidade"
+          },
+          "d": {
+            "ES": "Entre el Obelisco y la plaza de María Pita hay un puñado de calles estrechas llenas de tabernas, y la Estrella es la principal. Se va de barra en barra pidiendo un vino o una caña con algo de picar: pimientos de Padrón, tortilla, zorza o croquetas.",
+            "EN": "Between the Obelisco and María Pita square there is a cluster of narrow streets full of taverns, and Estrella is the main one. You go from bar to bar ordering a glass of wine or a small beer with something to eat: Padrón peppers, tortilla, zorza (spiced pork) or croquettes.",
+            "PT": "Entre o Obelisco e a praça de María Pita há um punhado de ruas estreitas cheias de tascas, e a Estrella é a principal. Vai-se de balcão em balcão a pedir um vinho ou uma imperial com algo para petiscar: pimentos de Padrón, tortilha, zorza ou croquetes."
+          },
+          "tip": {
+            "ES": "Pide un Ribeiro. En muchas tabernas te lo sirven en cunca, un cuenco blanco de cerámica.",
+            "EN": "Order a Ribeiro white wine. Many taverns serve it in a cunca, a white ceramic bowl.",
+            "PT": "Pede um Ribeiro. Em muitas tascas servem-to numa cunca, uma tigela branca de cerâmica."
+          },
+          "hora": "19:15",
+          "dur": "45 min",
+          "img": "/ciudades/a-coruna/img/pimientos.jpg",
+          "lat": 43.36869,
+          "lng": -8.40328,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Calles Olmos y Galera",
+            "EN": "Olmos and Galera streets",
+            "PT": "Ruas Olmos e Galera"
+          },
+          "s": {
+            "ES": "Dos calles paralelas de raciones",
+            "EN": "Two parallel streets of sharing plates",
+            "PT": "Duas ruas paralelas de doses"
+          },
+          "d": {
+            "ES": "Olmos y Galera van en paralelo, a un paso de la Estrella, con bares de raciones uno detrás de otro. Es buen sitio para pedir pulpo á feira, que se cuece, se corta con tijera y se sirve en plato de madera con aceite, sal gorda y pimentón.",
+            "EN": "Olmos and Galera run side by side, a step from Estrella, with one bar after another serving sharing plates. It is a good place to order pulpo á feira, octopus that is boiled, cut with scissors and served on a wooden plate with olive oil, coarse salt and paprika.",
+            "PT": "Olmos e Galera são paralelas, a um passo da Estrella, com bares de doses uns atrás dos outros. É bom sítio para pedir polvo à feira, que se coze, se corta à tesoura e se serve em prato de madeira com azeite, sal grosso e colorau."
+          },
+          "tip": {
+            "ES": "Las raciones son grandes. Si sois dos, pedid media y así probáis más sitios.",
+            "EN": "Portions are large. If there are two of you, order a half portion so you can try more places.",
+            "PT": "As doses são grandes. Se forem dois, peçam meia dose e assim provam mais sítios."
+          },
+          "hora": "20:05",
+          "dur": "45 min",
+          "img": "/ciudades/a-coruna/img/pulpo.jpg",
+          "lat": 43.36955,
+          "lng": -8.40206,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "La Franja y la plaza de María Pita",
+            "EN": "Franja street and María Pita square",
+            "PT": "A Franja e a praça de María Pita"
+          },
+          "s": {
+            "ES": "Última ronda con el Ayuntamiento iluminado",
+            "EN": "Last round with the town hall lit up",
+            "PT": "Última ronda com os Paços do Concelho iluminados"
+          },
+          "d": {
+            "ES": "La Franja desemboca casi en la plaza de María Pita y es otra de las calles de siempre para comer de raciones. Termina con algo en las terrazas de los soportales, con el Ayuntamiento iluminado delante.",
+            "EN": "Franja street opens almost onto María Pita square and is another of the classic streets for sharing plates. Finish with a drink on the terraces under the arcades, with the town hall lit up in front of you.",
+            "PT": "A Franja desemboca quase na praça de María Pita e é outra das ruas de sempre para comer doses. Termina com uma bebida nas esplanadas das arcadas, com os Paços do Concelho iluminados à frente."
+          },
+          "tip": {
+            "ES": "Los viernes y sábados estas calles se llenan a partir de las nueve. Si quieres sitio en la barra, llega antes.",
+            "EN": "On Fridays and Saturdays these streets fill up from nine o'clock. If you want room at the bar, arrive earlier.",
+            "PT": "Às sextas e sábados estas ruas enchem a partir das nove. Se queres lugar ao balcão, chega mais cedo."
+          },
+          "hora": "20:55",
+          "dur": "1 h",
+          "img": "/ciudades/a-coruna/img/maria-pita-plaza.jpg",
+          "lat": 43.37086,
+          "lng": -8.39786,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 60
+        }
+      ]
+    },
+    {
+      "id": "santiago",
+      "img": "/ciudades/a-coruna/img/obradoiro.jpg",
+      "titulo": {
+        "ES": "Santiago de Compostela en un día",
+        "EN": "Santiago de Compostela in a day",
+        "PT": "Santiago de Compostela num dia"
+      },
+      "tipo": {
+        "ES": "Excursión",
+        "EN": "Day trip",
+        "PT": "Excursão"
+      },
+      "dur": "6 h 15 min",
+      "d": {
+        "ES": "A una hora por la autopista llegas a Santiago. Ves la catedral desde la plaza del Obradoiro y bajas al sepulcro del apóstol, pasas por el Mercado de Abastos, comes en la rúa do Franco y acabas en la Alameda, con la mejor vista de las torres.",
+        "EN": "An hour up the motorway is Santiago. You see the cathedral from Obradoiro square and go down to the apostle's tomb, walk through the Abastos market, have lunch on Rúa do Franco and finish in the Alameda park, with the best view of the towers.",
+        "PT": "A uma hora pela autoestrada chegas a Santiago. Vês a catedral a partir da praça do Obradoiro e desces ao túmulo do apóstolo, passas pelo Mercado de Abastos, almoças na rua do Franco e terminas na Alameda, com a melhor vista das torres."
+      },
+      "salida": {
+        "ES": "En coche desde el hotel, unos 60 minutos por la AP-9, que es de peaje. Sal hacia las 09:20. También hay tren desde la estación de A Coruña, a 2 km del hotel",
+        "EN": "By car from the hotel, about 60 minutes on the AP-9 toll motorway. Leave around 09:20. There are also trains from A Coruña station, 2 km from the hotel",
+        "PT": "De carro a partir do hotel, cerca de 60 minutos pela AP-9, que tem portagem. Sai por volta das 09:20. Também há comboio a partir da estação da Corunha, a 2 km do hotel"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "PT": [
+          "Percurso livre, sem reserva",
+          "Plano do dia e mapa"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo, que el casco viejo es todo de piedra",
+          "Un paraguas, que en Santiago llueve a menudo",
+          "La entrada del Pórtico de la Gloria comprada antes, si quieres verlo"
+        ],
+        "EN": [
+          "Comfortable shoes, as the old town is all stone",
+          "An umbrella, as it often rains in Santiago",
+          "A ticket for the Portico of Glory bought in advance, if you want to see it"
+        ],
+        "PT": [
+          "Calçado confortável, porque o centro histórico é todo de pedra",
+          "Um guarda-chuva, porque em Santiago chove muitas vezes",
+          "O bilhete do Pórtico da Glória comprado antes, se o quiseres ver"
+        ]
+      },
+      "fotos": [
+        "/ciudades/a-coruna/img/obradoiro.jpg",
+        "/ciudades/a-coruna/img/abastos.jpg",
+        "/ciudades/a-coruna/img/pulpo-santiago.jpg",
+        "/ciudades/a-coruna/img/alameda.jpg"
+      ],
+      "duracionMin": 375,
+      "distanciaKm": 151,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El casco viejo tiene cuestas y suelo de losas de granito, que resbala con la lluvia. En la catedral pregunta por el acceso sin escalones.",
+        "EN": "The old town has slopes and granite paving, which is slippery in the rain. At the cathedral, ask about step-free access.",
+        "PT": "O centro histórico tem subidas e chão de lajes de granito, que escorrega com a chuva. Na catedral pergunta pelo acesso sem degraus."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 42.8805,
+        "lng": -8.54576,
+        "foto": "/ciudades/a-coruna/img/obradoiro.jpg",
+        "texto": {
+          "ES": "Plaza del Obradoiro, delante de la fachada principal de la catedral.",
+          "EN": "Obradoiro square, in front of the cathedral's main façade.",
+          "PT": "Praça do Obradoiro, em frente à fachada principal da catedral."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Peajes y aparcamiento",
+          "Entradas al museo y al Pórtico de la Gloria",
+          "Comida"
+        ],
+        "EN": [
+          "Tolls and parking",
+          "Museum and Portico of Glory tickets",
+          "Lunch"
+        ],
+        "PT": [
+          "Portagens e estacionamento",
+          "Entradas no museu e no Pórtico da Glória",
+          "Almoço"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. El Mercado de Abastos cierra los domingos. El casco viejo es peatonal, así que deja el coche en un aparcamiento público de fuera y entra andando.",
+        "EN": "Self-guided, so there is nothing to book or cancel. The Abastos market is closed on Sundays. The old town is pedestrianised, so leave the car in a public car park outside it and walk in.",
+        "PT": "Percurso livre, sem reserva nem cancelamento. O Mercado de Abastos fecha ao domingo. O centro histórico é pedonal, por isso deixa o carro num parque de estacionamento público de fora e entra a pé."
+      },
+      "salidasFijas": [],
+      "expId": "ex3",
+      "precioDesde": 49,
+      "paradas": [
+        {
+          "n": {
+            "ES": "Catedral y plaza del Obradoiro",
+            "EN": "Cathedral and Obradoiro square",
+            "PT": "Catedral e praça do Obradoiro"
+          },
+          "s": {
+            "ES": "Donde termina el Camino",
+            "EN": "Where the Way ends",
+            "PT": "Onde termina o Caminho"
+          },
+          "d": {
+            "ES": "La plaza se abre ante la fachada barroca de la catedral, del siglo XVIII, que protege el Pórtico de la Gloria del Maestro Mateo. Dentro, detrás del altar mayor, bajas a la cripta con el sepulcro del apóstol y subes a abrazar su imagen. En la plaza verás llegar peregrinos toda la mañana.",
+            "EN": "The square opens onto the cathedral's 18th-century Baroque façade, which shelters Master Mateo's Portico of Glory. Inside, behind the high altar, you go down to the crypt with the apostle's tomb and up to embrace his statue. All morning you will see pilgrims arriving in the square.",
+            "PT": "A praça abre-se diante da fachada barroca da catedral, do século XVIII, que protege o Pórtico da Glória do Mestre Mateus. Lá dentro, atrás do altar-mor, desces à cripta com o túmulo do apóstolo e sobes para abraçar a sua imagem. Na praça verás chegar peregrinos toda a manhã."
+          },
+          "tip": {
+            "ES": "La entrada a la catedral es gratis. El Pórtico de la Gloria y el museo se ven con entrada aparte, que conviene comprar en la web de la catedral.",
+            "EN": "Entry to the cathedral is free. The Portico of Glory and the museum need a separate ticket, best bought on the cathedral website.",
+            "PT": "A entrada na catedral é gratuita. O Pórtico da Glória e o museu veem-se com bilhete à parte, que convém comprar no site da catedral."
+          },
+          "hora": "10:30",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/a-coruna/img/obradoiro.jpg",
+          "lat": 42.8805,
+          "lng": -8.54576,
+          "tramo": "coche",
+          "tramoDuracionMin": 70,
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Mercado de Abastos",
+            "EN": "Abastos market",
+            "PT": "Mercado de Abastos"
+          },
+          "s": {
+            "ES": "Pescado, marisco y quesos bajo techos de granito",
+            "EN": "Fish, seafood and cheese under granite roofs",
+            "PT": "Peixe, marisco e queijos debaixo de telhados de granito"
+          },
+          "d": {
+            "ES": "El edificio actual es de 1941, de granito, con naves alargadas que parecen parte del casco viejo. Hay puestos de pescado, marisco y quesos gallegos, y paisanas que traen verdura de las aldeas. En algunos sitios de dentro y de alrededor te cocinan lo que compras.",
+            "EN": "The current building dates from 1941, in granite, with long halls that look like part of the old town. There are stalls of fish, seafood and Galician cheeses, and country women selling vegetables from nearby villages. A few places inside and around will cook what you buy.",
+            "PT": "O edifício atual é de 1941, em granito, com naves compridas que parecem parte do centro histórico. Há bancas de peixe, marisco e queijos galegos, e mulheres das aldeias que trazem legumes. Nalguns sítios lá dentro e à volta cozinham-te o que compras."
+          },
+          "tip": {
+            "ES": "Ve por la mañana, que es cuando hay más puestos abiertos. Los domingos cierra.",
+            "EN": "Go in the morning, when most stalls are open. It is closed on Sundays.",
+            "PT": "Vai de manhã, que é quando há mais bancas abertas. Ao domingo está fechado."
+          },
+          "hora": "12:10",
+          "dur": "50 min",
+          "img": "/ciudades/a-coruna/img/abastos.jpg",
+          "lat": 42.87998,
+          "lng": -8.54121,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 50
+        },
+        {
+          "n": {
+            "ES": "Comida en la rúa do Franco",
+            "EN": "Lunch on Rúa do Franco",
+            "PT": "Almoço na rua do Franco"
+          },
+          "s": {
+            "ES": "La calle de los restaurantes",
+            "EN": "The restaurant street",
+            "PT": "A rua dos restaurantes"
+          },
+          "d": {
+            "ES": "Sale casi de la plaza del Obradoiro y está llena de restaurantes y tabernas. Pide pulpo, pimientos de Padrón o empanada, y de postre tarta de Santiago, que es de almendra.",
+            "EN": "It starts almost at Obradoiro square and is lined with restaurants and taverns. Order octopus, Padrón peppers or empanada, and for dessert tarta de Santiago, an almond cake.",
+            "PT": "Começa quase na praça do Obradoiro e está cheia de restaurantes e tascas. Pede polvo, pimentos de Padrón ou empada, e de sobremesa tarte de Santiago, que é de amêndoa."
+          },
+          "tip": {
+            "ES": "Mira también la rúa da Raíña, paralela al Franco, con más tabernas y algo menos de gente.",
+            "EN": "Also try Rúa da Raíña, which runs parallel to Franco, with more taverns and slightly smaller crowds.",
+            "PT": "Experimenta também a rua da Raíña, paralela ao Franco, com mais tascas e um pouco menos de gente."
+          },
+          "hora": "13:10",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/a-coruna/img/pulpo-santiago.jpg",
+          "lat": 42.87816,
+          "lng": -8.54532,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Parque de la Alameda",
+            "EN": "Alameda park",
+            "PT": "Parque da Alameda"
+          },
+          "s": {
+            "ES": "La mejor vista de la catedral",
+            "EN": "The best view of the cathedral",
+            "PT": "A melhor vista da catedral"
+          },
+          "d": {
+            "ES": "Es el gran parque del centro, a cinco minutos del casco viejo. Por el paseo de la Herradura llegas al mirador desde donde ves las torres de la catedral por encima de los tejados. A la entrada está la estatua de colores de las Dúas Marías.",
+            "EN": "The big central park, five minutes from the old town. Along the Paseo da Ferradura you reach the viewpoint where the cathedral towers rise above the rooftops. At the entrance stands the colourful statue of the Dúas Marías.",
+            "PT": "É o grande parque do centro, a cinco minutos do centro histórico. Pelo passeio da Ferradura chegas ao miradouro de onde vês as torres da catedral por cima dos telhados. À entrada está a estátua colorida das Dúas Marías."
+          },
+          "tip": {
+            "ES": "A media tarde el sol da de lleno en las torres. Desde aquí vuelve andando al aparcamiento donde dejaste el coche.",
+            "EN": "In the afternoon the sun lights up the towers. From here, walk back to the car park where you left the car.",
+            "PT": "A meio da tarde o sol bate em cheio nas torres. Daqui volta a pé ao parque onde deixaste o carro."
+          },
+          "hora": "14:50",
+          "dur": "40 min",
+          "img": "/ciudades/a-coruna/img/alameda.jpg",
+          "lat": 42.87787,
+          "lng": -8.54947,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 40
+        }
+      ]
+    },
+    {
+      "id": "costa-da-morte",
+      "img": "/ciudades/a-coruna/img/muxia.jpg",
+      "titulo": {
+        "ES": "Costa da Morte: Muxía, el Ézaro y Fisterra",
+        "EN": "Costa da Morte: Muxía, Ézaro and Fisterra",
+        "PT": "Costa da Morte: Muxía, o Ézaro e Fisterra"
+      },
+      "tipo": {
+        "ES": "Naturaleza",
+        "EN": "Nature",
+        "PT": "Natureza"
+      },
+      "dur": "7 h 15 min",
+      "d": {
+        "ES": "Un día por la costa más brava de Galicia. Ves el santuario de Muxía sobre las rocas y la cascada del río Xallas cayendo al mar en el Ézaro, comes pescado en el puerto de Fisterra y acabas en el cabo, el fin del mundo para los romanos.",
+        "EN": "A day on the wildest stretch of the Galician coast. You see the Muxía sanctuary on the rocks and the Xallas river falling into the sea at Ézaro, eat fish at Fisterra harbour and finish at the cape, the end of the world for the Romans.",
+        "PT": "Um dia pela costa mais brava da Galiza. Vês o santuário de Muxía sobre as rochas e a cascata do rio Xallas a cair no mar no Ézaro, comes peixe no porto de Fisterra e terminas no cabo, o fim do mundo para os romanos."
+      },
+      "salida": {
+        "ES": "En coche desde el hotel, 1 h 20 min hasta Muxía. Sal hacia las 09:00",
+        "EN": "By car from the hotel, 1 h 20 min to Muxía. Leave around 09:00",
+        "PT": "De carro a partir do hotel, 1 h 20 min até Muxía. Sai por volta das 09:00"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ],
+        "PT": [
+          "Percurso livre, sem reserva",
+          "Plano do dia e mapa"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "El depósito lleno, que hay muchos kilómetros de carretera secundaria",
+          "Chubasquero y ropa de abrigo, que en los cabos sopla fuerte",
+          "Calzado con buena suela para las rocas de Muxía"
+        ],
+        "EN": [
+          "A full tank, as there are many kilometres of minor roads",
+          "A raincoat and warm clothes, as it blows hard on the capes",
+          "Shoes with good grip for the rocks at Muxía"
+        ],
+        "PT": [
+          "O depósito cheio, porque há muitos quilómetros de estrada secundária",
+          "Impermeável e roupa quente, porque nos cabos sopra forte",
+          "Calçado com boa sola para as rochas de Muxía"
+        ]
+      },
+      "fotos": [
+        "/ciudades/a-coruna/img/muxia.jpg",
+        "/ciudades/a-coruna/img/ezaro.jpg",
+        "/ciudades/a-coruna/img/fisterra-porto.jpg",
+        "/ciudades/a-coruna/img/faro-fisterra.jpg"
+      ],
+      "duracionMin": 435,
+      "distanciaKm": 256,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "En Muxía y en el cabo de Fisterra caminarás sobre roca y tierra, con desniveles. La cascada del Ézaro se ve tras un paseo corto desde el aparcamiento.",
+        "EN": "At Muxía and Cape Fisterra you walk on rock and earth, with uneven ground. The Ézaro waterfall is a short walk from the car park.",
+        "PT": "Em Muxía e no cabo de Fisterra caminharás sobre rocha e terra, com desníveis. A cascata do Ézaro vê-se depois de um passeio curto a partir do estacionamento."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 43.11198,
+        "lng": -9.21964,
+        "foto": "/ciudades/a-coruna/img/muxia.jpg",
+        "texto": {
+          "ES": "Santuario da Virxe da Barca, en la punta de Muxía, al final del pueblo.",
+          "EN": "Santuario da Virxe da Barca, on the point at the far end of Muxía.",
+          "PT": "Santuário da Virxe da Barca, na ponta de Muxía, no fim da vila."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida",
+          "Gasolina"
+        ],
+        "EN": [
+          "Lunch",
+          "Fuel"
+        ],
+        "PT": [
+          "Almoço",
+          "Combustível"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Con temporal no te acerques a las rocas de Muxía ni del cabo, que las olas llegan más lejos de lo que parece. En verano, si quieres ver el atardecer en Fisterra, deja el cabo para el final de la tarde.",
+        "EN": "Self-guided, so there is nothing to book or cancel. In stormy weather keep away from the rocks at Muxía and the cape, as waves reach further than you think. In summer, if you want the sunset at Fisterra, leave the cape until late in the day.",
+        "PT": "Percurso livre, sem reserva nem cancelamento. Com temporal não te aproximes das rochas de Muxía nem do cabo, porque as ondas chegam mais longe do que parece. No verão, se quiseres ver o pôr do sol em Fisterra, deixa o cabo para o fim da tarde."
+      },
+      "salidasFijas": [],
+      "precioDesde": null,
+      "paradas": [
+        {
+          "n": {
+            "ES": "Santuario da Virxe da Barca, Muxía",
+            "EN": "Virxe da Barca sanctuary, Muxía",
+            "PT": "Santuário da Virxe da Barca, Muxía"
+          },
+          "s": {
+            "ES": "Un santuario sobre las rocas del Atlántico",
+            "EN": "A sanctuary on the Atlantic rocks",
+            "PT": "Um santuário sobre as rochas do Atlântico"
+          },
+          "d": {
+            "ES": "El santuario barroco está en la punta de Muxía, entre rocas lisas que bate el mar. Según la leyenda, aquí llegó la Virgen en una barca de piedra. Un rayo lo incendió el día de Navidad de 2013 y se restauró. Al lado está A Ferida, una gran piedra partida que recuerda el hundimiento del Prestige en 2002.",
+            "EN": "The Baroque sanctuary stands on the point at Muxía, among smooth rocks pounded by the sea. Legend says the Virgin arrived here in a stone boat. Lightning set it on fire on Christmas Day 2013 and it has been restored. Next to it is A Ferida, a huge split stone that recalls the Prestige oil tanker disaster of 2002.",
+            "PT": "O santuário barroco fica na ponta de Muxía, entre rochas lisas batidas pelo mar. Segundo a lenda, a Virgem chegou aqui num barco de pedra. Um raio incendiou-o no dia de Natal de 2013 e foi restaurado. Ao lado está A Ferida, uma grande pedra partida que lembra o naufrágio do Prestige em 2002."
+          },
+          "tip": {
+            "ES": "Sube al monte Corpiño, detrás del santuario, para ver la costa desde arriba.",
+            "EN": "Climb Monte Corpiño, behind the sanctuary, to see the coast from above.",
+            "PT": "Sobe ao monte Corpiño, atrás do santuário, para ver a costa lá de cima."
+          },
+          "hora": "10:20",
+          "dur": "1 h",
+          "img": "/ciudades/a-coruna/img/muxia.jpg",
+          "lat": 43.11198,
+          "lng": -9.21964,
+          "tramo": "coche",
+          "tramoDuracionMin": 80,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Cascada del Ézaro",
+            "EN": "Ézaro waterfall",
+            "PT": "Cascata do Ézaro"
+          },
+          "s": {
+            "ES": "Un río que acaba en cascada junto al mar",
+            "EN": "A river that ends in a waterfall by the sea",
+            "PT": "Um rio que acaba em cascata junto ao mar"
+          },
+          "d": {
+            "ES": "El río Xallas baja entre las rocas del Monte Pindo y salta unos 40 metros hasta la ría del Ézaro, casi sobre el mar. Pocas cascadas de Europa desembocan así. El agua cae todo el año, con más fuerza en invierno.",
+            "EN": "The Xallas river runs down through the granite of Monte Pindo and drops about 40 metres into the Ézaro inlet, almost straight into the sea. Few waterfalls in Europe end like this. Water flows all year, strongest in winter.",
+            "PT": "O rio Xallas desce entre as rochas do Monte Pindo e salta cerca de 40 metros até à ria do Ézaro, quase sobre o mar. Poucas cascatas da Europa desaguam assim. A água cai todo o ano, com mais força no inverno."
+          },
+          "tip": {
+            "ES": "Arriba hay un mirador al que se sube en coche por una carretera muy empinada. Si el día está claro, la vista de la ría y de la costa merece la pena.",
+            "EN": "There is a viewpoint at the top, reached by car up a very steep road. On a clear day the view of the inlet and the coast is worth it.",
+            "PT": "Lá em cima há um miradouro a que se sobe de carro por uma estrada muito íngreme. Num dia limpo, a vista da ria e da costa vale a pena."
+          },
+          "hora": "12:05",
+          "dur": "45 min",
+          "img": "/ciudades/a-coruna/img/ezaro.jpg",
+          "lat": 42.91288,
+          "lng": -9.11644,
+          "tramo": "coche",
+          "tramoDuracionMin": 45,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Puerto de Fisterra",
+            "EN": "Fisterra harbour",
+            "PT": "Porto de Fisterra"
+          },
+          "s": {
+            "ES": "Pescado del día frente a los barcos",
+            "EN": "Fish of the day facing the boats",
+            "PT": "Peixe do dia em frente aos barcos"
+          },
+          "d": {
+            "ES": "Fisterra es un pueblo marinero con el puerto en el centro y restaurantes con terraza junto a los barcos. Es buen sitio para comer pescado del día o marisco de la Costa da Morte, como los percebes.",
+            "EN": "Fisterra is a fishing town with the harbour at its heart and restaurants with terraces beside the boats. It is a good place for fish of the day or Costa da Morte shellfish, such as goose barnacles.",
+            "PT": "Fisterra é uma vila piscatória com o porto ao centro e restaurantes com esplanada junto aos barcos. É bom sítio para comer peixe do dia ou marisco da Costa da Morte, como os percebes."
+          },
+          "tip": {
+            "ES": "Pregunta qué ha entrado hoy en la lonja. Lo que se ha pescado esa mañana es lo que mejor está.",
+            "EN": "Ask what came into the fish market today. Whatever was caught that morning is the best choice.",
+            "PT": "Pergunta o que entrou hoje na lota. O que foi pescado nessa manhã é o que está melhor."
+          },
+          "hora": "13:20",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/a-coruna/img/fisterra-porto.jpg",
+          "lat": 42.90756,
+          "lng": -9.26028,
+          "tramo": "coche",
+          "tramoDuracionMin": 30,
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Cabo Fisterra",
+            "EN": "Cape Fisterra",
+            "PT": "Cabo Fisterra"
+          },
+          "s": {
+            "ES": "El fin del mundo de los romanos",
+            "EN": "The Romans' end of the world",
+            "PT": "O fim do mundo dos romanos"
+          },
+          "d": {
+            "ES": "El cabo está a tres kilómetros del pueblo. Los romanos lo llamaron Finis Terrae, el fin de la tierra conocida. El faro es de 1853, y a su lado está el mojón del kilómetro 0,000, donde muchos peregrinos terminan el Camino después de pasar por Santiago.",
+            "EN": "The cape is three kilometres from the town. The Romans called it Finis Terrae, the end of the known world. The lighthouse dates from 1853, and beside it is the kilometre 0.000 marker, where many pilgrims end the Way after passing through Santiago.",
+            "PT": "O cabo fica a três quilómetros da vila. Os romanos chamaram-lhe Finis Terrae, o fim da terra conhecida. O farol é de 1853, e ao lado está o marco do quilómetro 0,000, onde muitos peregrinos terminam o Caminho depois de passarem por Santiago."
+          },
+          "tip": {
+            "ES": "Baja un poco por las rocas de detrás del faro para ver el mar abierto. Con viento, no te acerques al borde.",
+            "EN": "Walk a little way down the rocks behind the lighthouse to see the open sea. In strong wind, stay away from the edge.",
+            "PT": "Desce um pouco pelas rochas atrás do farol para ver o mar aberto. Com vento, não te aproximes da beira."
+          },
+          "hora": "15:00",
+          "dur": "1 h",
+          "img": "/ciudades/a-coruna/img/faro-fisterra.jpg",
+          "lat": 42.88242,
+          "lng": -9.27199,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 60
+        }
+      ]
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "una caña de Estrella Galicia en el hotel, invita la casa",
+      "EN": "an Estrella Galicia beer at the hotel, on the house",
+      "PT": "uma imperial de Estrella Galicia no hotel, oferta da casa"
+    }
+  },
+  "creditos": [
+    "Torre de Hércules: Luis Miguel Bugallo Sánchez (Lmbuga), CC BY-SA 3.0, Wikimedia Commons",
+    "Estatua de Breogán y Torre de Hércules: Luis Miguel Bugallo Sánchez (Lmbuga), CC BY-SA 3.0, Wikimedia Commons",
+    "Plaza de María Pita y Palacio Municipal: José Luis Filpo Cabana, CC BY 3.0, Wikimedia Commons",
+    "Plaza de María Pita: isol, CC BY-SA 3.0, Wikimedia Commons",
+    "Fuente de la plaza de Azcárraga, Ciudad Vieja: FirkinCat, CC BY-SA 3.0 es, Wikimedia Commons",
+    "Colegiata de Santa María do Campo: Diego Delso, CC BY-SA 4.0, Wikimedia Commons",
+    "Jardín de San Carlos: Diego Delso, CC BY-SA 4.0, Wikimedia Commons",
+    "Castillo de San Antón desde el paseo: Diego Delso, CC BY-SA 4.0, Wikimedia Commons",
+    "Paseo marítimo y playas de Orzán y Riazor: Luis Carrera, CC BY 2.0, Wikimedia Commons",
+    "Playa de Riazor: Elisardojm, CC BY-SA 3.0, Wikimedia Commons",
+    "A Coruña desde el Monte de San Pedro: Ramon Piñeiro, CC BY-SA 2.0, Wikimedia Commons",
+    "Edificio del Aquarium Finisterrae: Fernando Losada Rodríguez, CC BY-SA 4.0, Wikimedia Commons",
+    "Fábrica de Estrella Galicia en A Grela, donde está MEGA: Nemigo, dominio público, Wikimedia Commons",
+    "Pimientos de Padrón: Luis Miguel Bugallo Sánchez (Lmbuga), CC BY-SA 3.0, Wikimedia Commons",
+    "Pulpo á feira con cachelos: José Antonio Gil Martínez, CC BY 2.0, Wikimedia Commons",
+    "Ración de pulpo con pimentón: Tamorlan, CC BY 3.0, Wikimedia Commons",
+    "Catedral de Santiago desde la plaza del Obradoiro: D.Rovchak, CC BY-SA 4.0, Wikimedia Commons",
+    "Mercado de Abastos de Santiago: CarlosVdeHabsburgo, CC BY-SA 4.0, Wikimedia Commons",
+    "Catedral de Santiago desde el parque de la Alameda: Fernando Pascullo, CC BY-SA 4.0, Wikimedia Commons",
+    "Santuario da Virxe da Barca, Muxía: Xosema, CC BY-SA 4.0, Wikimedia Commons",
+    "Cascada del Ézaro: Xosema, CC BY-SA 4.0, Wikimedia Commons",
+    "Puerto de Fisterra: Luis Miguel Bugallo Sánchez (Lmbuga), CC BY-SA 4.0, Wikimedia Commons",
+    "Faro del cabo Fisterra: Fernando Losada Rodríguez, CC BY-SA 4.0, Wikimedia Commons"
+  ]
+}
