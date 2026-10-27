@@ -29,6 +29,7 @@ const nextConfig: NextConfig = {
       { source: "/d/nooe-a332/:path*", destination: "/d/nooe-a332/index.html" },
       { source: "/d/sheraton-5e38/:path*", destination: "/d/sheraton-5e38/index.html" },
       { source: "/d/fiestainn-aec3/:path*", destination: "/d/fiestainn-aec3/index.html" },
+      { source: "/d/carris-a793/:path*", destination: "/d/carris-a793/index.html" },
       { source: "/d/izaga-ca5b/:path*", destination: "/d/izaga-ca5b/index.html" },
       { source: "/d/amic-b801/:path*", destination: "/d/amic-b801/index.html" },
       { source: "/d/panel-2819/:path*", destination: "/d/panel-2819/index.html" },
