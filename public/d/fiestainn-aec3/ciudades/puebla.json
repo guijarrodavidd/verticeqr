@@ -569,7 +569,6 @@
     },
     {
       "id": "cocina",
-      "expId": "ex3",
       "img": "/ciudades/puebla/img/cocina.jpg",
       "titulo": {
         "ES": "Del mole a la calle de los Dulces",
@@ -760,8 +759,7 @@
         "ES": "Ruta libre, sin reserva ni cancelación. En lunes el museo está cerrado; empieza directamente en el mercado.",
         "EN": "Self-guided, so there is nothing to book or cancel. The museum is closed on Mondays; start straight at the market."
       },
-      "salidasFijas": [],
-      "precioDesde": 1450
+      "salidasFijas": []
     },
     {
       "id": "atlixco",
