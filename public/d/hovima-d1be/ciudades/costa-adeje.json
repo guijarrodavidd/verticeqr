@@ -2,9 +2,9 @@
  "slug": "costa-adeje",
  "nombre": "Costa Adeje",
  "intro": {
-  "ES": "Sol todo el año, playas de arena dorada y el Teide asomando detrás. Calderones a diez minutos en barco, pueblos colgados entre barrancos y uno de los mejores cielos estrellados del mundo.",
-  "EN": "Sunshine all year round, golden-sand beaches and Teide rising behind. Pilot whales ten minutes away by boat, villages hanging between ravines and one of the world’s best starry skies.",
-  "DE": "Sonne das ganze Jahr, goldene Sandstrände und dahinter der Teide. Grindwale zehn Bootsminuten entfernt, Dörfer zwischen Schluchten und einer der besten Sternenhimmel der Welt."
+  "ES": "Aquí hace sol todo el año y la playa es de arena dorada, con el Teide asomando por detrás. A diez minutos en barco tienes calderones, y en una excursión de un día, pueblos colgados entre barrancos o uno de los mejores cielos estrellados del mundo.",
+  "EN": "The sun shines here all year and the beach is golden sand, with Teide rising behind. Pilot whales are ten minutes away by boat, and a day trip takes you to villages hanging between ravines or under one of the world’s best starry skies.",
+  "DE": "Hier scheint das ganze Jahr die Sonne, und hinter dem goldenen Sandstrand ragt der Teide auf. Grindwale sind zehn Bootsminuten entfernt, und an einem Ausflugstag kommen Sie zu Dörfern zwischen Schluchten oder unter einen der besten Sternenhimmel der Welt."
  },
  "lugares": [
   {
@@ -17,9 +17,9 @@
     "DE": "Vor dem Hotel"
    },
    "d": {
-    "ES": "Arena dorada y agua tranquila, protegida por el espigón de Puerto Colón. Cruzas el paseo y estás dentro: perfecta para los peques.",
-    "EN": "Golden sand and calm water, sheltered by the Puerto Colón breakwater. Cross the promenade and you are in: perfect for little ones.",
-    "DE": "Goldener Sand und ruhiges Wasser, geschützt von der Mole von Puerto Colón. Promenade überqueren und schon sind Sie da: ideal für Kinder."
+    "ES": "Arena dorada y agua tranquila, protegida por el espigón de Puerto Colón. Solo tienes que cruzar el paseo, y es la mejor playa para ir con peques.",
+    "EN": "Golden sand and calm water, sheltered by the Puerto Colón breakwater. You only have to cross the promenade, and it is the best beach to bring little ones.",
+    "DE": "Goldener Sand und ruhiges Wasser, geschützt von der Mole von Puerto Colón. Sie müssen nur die Promenade überqueren, und für Kinder ist es der beste Strand."
    },
    "cuando": {
     "ES": "Por la mañana, con el agua como un plato",
@@ -685,9 +685,9 @@
    },
    "dur": "8 h",
    "d": {
-    "ES": "Un pueblo de piedra colgado entre barrancos y unos acantilados de 600 metros que caen al mar. El noroeste salvaje de Tenerife en un día.",
-    "EN": "A stone village hanging between ravines and 600-metre cliffs dropping into the sea. Tenerife’s wild north-west in a day.",
-    "DE": "Ein Steindorf zwischen Schluchten und 600 Meter hohe Klippen über dem Meer. Der wilde Nordwesten Teneriffas an einem Tag."
+    "ES": "Un día por el noroeste, la parte más salvaje de Tenerife, para ver Masca, un pueblo de piedra colgado entre barrancos, y los acantilados de Los Gigantes, que caen 600 metros al mar.",
+    "EN": "A day in the north-west, the wildest part of Tenerife, to see Masca, a stone village hanging between ravines, and the Los Gigantes cliffs, which drop 600 metres into the sea.",
+    "DE": "Ein Tag im Nordwesten, dem wildesten Teil Teneriffas, mit Masca, einem Steindorf zwischen Schluchten, und den Klippen von Los Gigantes, die 600 Meter ins Meer abfallen."
    },
    "salida": {
     "ES": "Recogida en la puerta del hotel a las 8:30",
@@ -915,9 +915,9 @@
    },
    "dur": "3 h",
    "d": {
-    "ES": "Del hotel a La Caleta por el paseo marítimo: cuatro playas, un pueblo de pescadores y pescado fresco al final. Sin reservar nada.",
-    "EN": "From the hotel to La Caleta along the seafront: four beaches, a fishing village and fresh fish at the end. Nothing to book.",
-    "DE": "Vom Hotel nach La Caleta über die Promenade: vier Strände, ein Fischerdorf und frischer Fisch zum Schluss. Ohne Buchung."
+    "ES": "Del hotel a La Caleta por el paseo marítimo, pasando por cuatro playas, hasta un pueblo de pescadores donde comer pescado fresco. No hace falta reservar nada.",
+    "EN": "From the hotel to La Caleta along the seafront, past four beaches, to a fishing village where you can eat fresh fish. There is nothing to book.",
+    "DE": "Vom Hotel über die Promenade nach La Caleta, vorbei an vier Stränden, bis zu einem Fischerdorf mit frischem Fisch. Buchen müssen Sie nichts."
    },
    "salida": {
     "ES": "Desde la puerta del hotel, cuando quieras. Mejor a primera hora o a última de la tarde",

@@ -65,9 +65,9 @@
     "PT": "Centro"
    },
    "d": {
-    "ES": "La foto obligada: el cartel de «Ushuaia, fin del mundo» con el Beagle detrás. De aquí salen los barcos al faro y a la Antártida.",
-    "EN": "The must-have photo: the «Ushuaia, fin del mundo» sign with the Beagle behind. Boats leave from here for the lighthouse and Antarctica.",
-    "PT": "A foto obrigatória: a placa «Ushuaia, fin del mundo» com o Beagle atrás. Daqui saem os barcos para o farol e a Antártida."
+    "ES": "Todo el que pasa por Ushuaia se hace la foto con el cartel de «Ushuaia, fin del mundo» y el Beagle detrás. De este muelle salen los barcos al faro y a la Antártida.",
+    "EN": "Everyone who comes to Ushuaia takes a photo with the «Ushuaia, fin del mundo» sign and the Beagle behind it. Boats leave from this pier for the lighthouse and Antarctica.",
+    "PT": "Todo mundo que passa por Ushuaia tira foto com a placa «Ushuaia, fin del mundo» e o Beagle atrás. Deste cais saem os barcos para o farol e a Antártida."
    },
    "cuando": {
     "ES": "Temprano, antes de que llegue la gente de los cruceros",
@@ -389,9 +389,9 @@
       "PT": "Ushuaia inteira entre o canal e a montanha"
      },
      "d": {
-      "ES": "De vuelta al puerto se ve por qué Ushuaia es única: casas de colores apretadas en la ladera, el Martial arriba y, enfrente, las islas chilenas.",
-      "EN": "Heading back to port you see why Ushuaia is unique: colourful houses packed on the slope, the Martial above and, opposite, the Chilean islands.",
-      "PT": "Na volta ao porto dá para entender por que Ushuaia é única: casas coloridas apertadas na encosta, o Martial lá em cima e, em frente, as ilhas chilenas."
+      "ES": "De vuelta al puerto tienes Ushuaia entera delante, con las casas de colores apretadas en la ladera y el Martial arriba. Enfrente quedan las islas chilenas.",
+      "EN": "Heading back to port you have the whole of Ushuaia in front of you, with its colourful houses packed on the slope and the Martial above. Opposite are the Chilean islands.",
+      "PT": "Na volta ao porto você tem Ushuaia inteira à frente, com as casas coloridas apertadas na encosta e o Martial lá em cima. Em frente ficam as ilhas chilenas."
      },
      "tip": {
       "ES": "Si quedaste con hambre, pide la centolla para la noche antes de bajar del barco.",

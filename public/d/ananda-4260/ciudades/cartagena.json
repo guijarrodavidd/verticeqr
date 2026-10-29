@@ -2,9 +2,9 @@
   "slug": "cartagena",
   "nombre": "Cartagena de Indias",
   "intro": {
-    "ES": "Murallas de piedra coralina, balcones llenos de buganvillas y un mar que se pone naranja cada tarde. Sales del hotel y ya estás dentro de la ciudad amurallada: madruga, que el calor aprieta, y guarda el atardecer para la muralla.",
-    "EN": "Coral-stone walls, balconies spilling bougainvillea and a sea that turns orange every evening. Step out of the hotel and you're already inside the walled city: start early, as the heat builds, and save the sunset for the ramparts.",
-    "DE": "Mauern aus Korallenstein, Balkone voller Bougainvillea und ein Meer, das sich jeden Abend orange färbt. Du trittst aus dem Hotel und bist schon mitten in der Altstadt: Starte früh, denn die Hitze nimmt zu, und heb dir den Sonnenuntergang für die Stadtmauer auf."
+    "ES": "Murallas de piedra coralina y balcones llenos de buganvillas que cada tarde se tiñen de naranja con la puesta de sol. Sales del hotel y ya estás dentro de la ciudad amurallada: madruga, que el calor aprieta, y guarda el atardecer para la muralla.",
+    "EN": "Coral-stone walls and balconies spilling bougainvillea that turn orange every evening as the sun goes down. Step out of the hotel and you're already inside the walled city: start early, as the heat builds, and save the sunset for the ramparts.",
+    "DE": "Mauern aus Korallenstein und Balkone voller Bougainvillea, die sich jeden Abend im Licht der untergehenden Sonne orange färben. Du trittst aus dem Hotel und bist schon mitten in der Altstadt: Starte früh, denn die Hitze nimmt zu, und heb dir den Sonnenuntergang für die Stadtmauer auf."
   },
   "lugares": [
     {
@@ -233,9 +233,9 @@
         "DE": "Bocagrande"
       },
       "d": {
-        "ES": "La Cartagena moderna: torres frente al mar, playa larga de arena oscura y paseo para caminar al final del día. Para bañarse, mejor las islas; para ver el atardecer, perfecta.",
-        "EN": "Modern Cartagena: towers facing the sea, a long dark-sand beach and a promenade for an end-of-day stroll. For swimming, the islands are better; for the sunset, it's perfect.",
-        "DE": "Das moderne Cartagena: Hochhäuser am Meer, ein langer Strand mit dunklem Sand und eine Promenade für den Abendspaziergang. Zum Baden sind die Inseln besser, für den Sonnenuntergang ist es perfekt."
+        "ES": "La Cartagena moderna: torres frente al mar, playa larga de arena oscura y paseo para caminar al final del día. Para bañarte hay mejor agua en las islas, aunque el atardecer desde su paseo es de los mejores de la ciudad.",
+        "EN": "Modern Cartagena: towers facing the sea, a long dark-sand beach and a promenade for an end-of-day stroll. The water is better for swimming out on the islands, though the sunset from the promenade is one of the best in the city.",
+        "DE": "Das moderne Cartagena: Hochhäuser am Meer, ein langer Strand mit dunklem Sand und eine Promenade für den Abendspaziergang. Zum Baden ist das Wasser auf den Inseln besser, aber der Sonnenuntergang von der Promenade aus gehört zu den schönsten der Stadt."
       },
       "cuando": {
         "ES": "A última hora de la tarde",
@@ -533,9 +533,9 @@
       },
       "dur": "2 h 30 min",
       "d": {
-        "ES": "El barrio que hizo la independencia y hoy pinta sus paredes. Murales, banderines de colores, plazas de barrio y la Trinidad cuando empieza a llenarse de vida.",
-        "EN": "The neighbourhood that sparked independence and now paints its walls. Murals, colourful bunting, local squares and the Trinidad just as it starts to come alive.",
-        "DE": "Das Viertel, das die Unabhängigkeit anstieß und heute seine Wände bemalt. Wandbilder, bunte Wimpel, Nachbarschaftsplätze und die Trinidad, wenn sie gerade zum Leben erwacht."
+        "ES": "Getsemaní hizo la independencia y hoy pinta sus paredes. Recorres sus murales, los banderines de colores y sus plazas de barrio, y llegas a la Trinidad justo cuando empieza a llenarse de gente.",
+        "EN": "Getsemaní sparked independence and now paints its walls. You'll walk past its murals, colourful bunting and local squares, reaching the Trinidad just as it starts to fill up.",
+        "DE": "Getsemaní hat die Unabhängigkeit angestoßen und bemalt heute seine Wände. Du gehst an Wandbildern, bunten Wimpeln und Nachbarschaftsplätzen vorbei und kommst zur Trinidad, wenn sie sich gerade füllt."
       },
       "salida": {
         "ES": "Puerta del hotel, en la Calle del Cuartel, cada tarde a las 16:00",
@@ -712,9 +712,9 @@
             "DE": "Ein kleiner Nachbarschaftsplatz voller Wandbilder"
           },
           "d": {
-            "ES": "Una placita con el pozo que le da nombre y paredes llenas de color. El final perfecto: los vecinos sacan las sillas a la puerta y el barrio se prepara para la noche.",
-            "EN": "A little square with the well that gives it its name and walls full of colour. The perfect finish: neighbours bring their chairs out to the door and the barrio gets ready for the night.",
-            "DE": "Ein kleiner Platz mit dem Brunnen, der ihm den Namen gibt, und farbenfrohen Wänden. Der perfekte Abschluss: Die Nachbarn stellen ihre Stühle vor die Tür, und das Viertel macht sich bereit für die Nacht."
+            "ES": "Una placita con el pozo que le da nombre y paredes llenas de color. Aquí acaba el paseo, a la hora en que los vecinos sacan las sillas a la puerta y el barrio se prepara para la noche.",
+            "EN": "A little square with the well that gives it its name and walls full of colour. The walk ends here, at the hour when neighbours bring their chairs out to the door and the barrio gets ready for the night.",
+            "DE": "Ein kleiner Platz mit dem Brunnen, der ihm den Namen gibt, und farbenfrohen Wänden. Hier endet der Rundgang, zu der Stunde, in der die Nachbarn ihre Stühle vor die Tür stellen und das Viertel sich für die Nacht bereit macht."
           },
           "tip": {
             "ES": "Si te quedas a cenar en Getsemaní, vuelve al hotel en taxi o por la Torre del Reloj, por calles iluminadas.",
@@ -798,9 +798,9 @@
       },
       "dur": "4 h",
       "d": {
-        "ES": "La fortaleza que nadie logró tomar, sus túneles y, después, el convento en lo más alto de la ciudad con toda la bahía a tus pies. En carro y con guía, antes de que apriete el calor.",
-        "EN": "The fortress no one managed to take, its tunnels and then the convent at the city's highest point with the whole bay at your feet. By car with a guide, before the heat sets in.",
-        "DE": "Die Festung, die niemand einnehmen konnte, ihre Tunnel und danach das Kloster am höchsten Punkt der Stadt mit der ganzen Bucht zu deinen Füßen. Mit Auto und Guide, bevor die Hitze kommt."
+        "ES": "Recorres la fortaleza que nadie logró tomar y sus túneles, y después subes al convento de lo más alto de la ciudad, con toda la bahía a tus pies. Vas en carro y con guía, antes de que apriete el calor.",
+        "EN": "You explore the fortress no one managed to take and its tunnels, then go up to the convent at the city's highest point, with the whole bay at your feet. You go by car with a guide, before the heat sets in.",
+        "DE": "Du erkundest die Festung, die niemand einnehmen konnte, und ihre Tunnel, danach geht es hinauf zum Kloster am höchsten Punkt der Stadt, mit der ganzen Bucht zu deinen Füßen. Du fährst mit Auto und Guide, bevor die Hitze kommt."
       },
       "salida": {
         "ES": "Puerta del hotel, en la Calle del Cuartel, cada mañana a las 08:30",
@@ -1069,9 +1069,9 @@
       },
       "dur": "8 h 30 min",
       "d": {
-        "ES": "Sales de la bahía por Bocachica, entre fuertes coloniales, y en una hora estás en un parque nacional de agua turquesa y corales. Playa, snorkel y vuelta con la piel salada.",
-        "EN": "You leave the bay through Bocachica, between colonial forts, and within an hour you're in a national park of turquoise water and coral. Beach, snorkelling and back with salt on your skin.",
-        "DE": "Du verlässt die Bucht durch Bocachica zwischen Kolonialfestungen und bist in einer Stunde in einem Nationalpark mit türkisfarbenem Wasser und Korallen. Strand, Schnorcheln und zurück mit Salz auf der Haut."
+        "ES": "Sales de la bahía por Bocachica, entre fuertes coloniales, y en una hora estás en un parque nacional de agua turquesa y corales. Pasas el día entre la playa y el snorkel, y vuelves con la piel salada.",
+        "EN": "You leave the bay through Bocachica, between colonial forts, and within an hour you're in a national park of turquoise water and coral. You spend the day on the beach and snorkelling, and come back with salt on your skin.",
+        "DE": "Du verlässt die Bucht durch Bocachica zwischen Kolonialfestungen und bist in einer Stunde in einem Nationalpark mit türkisfarbenem Wasser und Korallen. Den Tag verbringst du am Strand und beim Schnorcheln, und du kommst mit Salz auf der Haut zurück."
       },
       "salida": {
         "ES": "Muelle turístico La Bodeguita, frente a la Torre del Reloj. Salida a diario hacia las 08:30; vuelta entre las 15:30 y las 16:30",
@@ -1348,9 +1348,9 @@
       },
       "dur": "3 h 15 min",
       "d": {
-        "ES": "Sales por la puerta del hotel y en tres horas recorres las plazas, iglesias y palacios que hicieron de Cartagena la joya del Caribe. Sin guía, a tu ritmo y gratis.",
-        "EN": "Step out of the hotel door and in three hours you'll cover the squares, churches and palaces that made Cartagena the jewel of the Caribbean. No guide, at your own pace and free.",
-        "DE": "Du trittst aus der Hoteltür und erkundest in drei Stunden die Plätze, Kirchen und Paläste, die Cartagena zum Juwel der Karibik machten. Ohne Guide, in deinem Tempo und kostenlos."
+        "ES": "Sales por la puerta del hotel y en tres horas recorres las plazas, iglesias y palacios que hicieron de Cartagena la joya del Caribe. La haces a tu ritmo y sin guía; solo pagas la entrada de los sitios en que quieras entrar.",
+        "EN": "Step out of the hotel door and in three hours you'll cover the squares, churches and palaces that made Cartagena the jewel of the Caribbean. You go at your own pace, without a guide, and only pay to get into the places you want to visit.",
+        "DE": "Du trittst aus der Hoteltür und erkundest in drei Stunden die Plätze, Kirchen und Paläste, die Cartagena zum Juwel der Karibik machten. Du gehst in deinem Tempo und ohne Guide und zahlst nur den Eintritt dort, wo du hineinwillst."
       },
       "salida": {
         "ES": "Desde la puerta del hotel, en la Calle del Cuartel. Mejor a las 09:00, cuando abren museos e iglesias y aún no aprieta el calor",
@@ -1464,9 +1464,9 @@
             "DE": "Der bunte Turm, den man in der ganzen Stadt sieht"
           },
           "d": {
-            "ES": "Empezó a construirse en 1577 y en 1586 los cañones de Francis Drake derribaron parte de sus muros. Por fuera, piedra y una torre con cúpula de colores; por dentro, arcos altos y frescor.",
-            "EN": "Construction began in 1577, and in 1586 Francis Drake's cannons brought down part of its walls. Outside, stone and a tower with a colourful dome; inside, high arches and cool air.",
-            "DE": "Der Bau begann 1577, und 1586 rissen die Kanonen von Francis Drake einen Teil der Mauern ein. Außen Stein und ein Turm mit bunter Kuppel, innen hohe Bögen und angenehme Kühle."
+            "ES": "Empezó a construirse en 1577 y en 1586 los cañones de Francis Drake derribaron parte de sus muros. La fachada es de piedra, con una torre rematada por una cúpula de colores, y dentro te esperan arcos altos y un frescor que se agradece.",
+            "EN": "Construction began in 1577, and in 1586 Francis Drake's cannons brought down part of its walls. The façade is stone, with a tower topped by a colourful dome, and inside you'll find high arches and welcome cool air.",
+            "DE": "Der Bau begann 1577, und 1586 rissen die Kanonen von Francis Drake einen Teil der Mauern ein. Die Fassade ist aus Stein, mit einem Turm unter einer bunten Kuppel, und drinnen erwarten dich hohe Bögen und eine angenehme Kühle."
           },
           "tip": {
             "ES": "La catedral cobra entrada a los visitantes y tiene horario de misa en el que no se visita: si está cerrada, mírala desde la Plaza de la Proclamación.",
@@ -1499,9 +1499,9 @@
             "DE": "Pedro Claver, ein katalanischer Jesuit, kümmerte sich fast vierzig Jahre lang um die versklavten Afrikaner, die mit Schiffen im Hafen ankamen. Er unterschrieb mit «Sklave der Sklaven für immer». Seine Gebeine ruhen unter dem Hochaltar."
           },
           "tip": {
-            "ES": "No te quedes solo en la iglesia: el claustro de al lado, con su pozo y sus palmeras, es de lo más fresco del centro a esta hora.",
-            "EN": "Don't stop at the church: the cloister next door, with its well and palm trees, is one of the coolest spots in the old town at this time.",
-            "DE": "Bleib nicht nur in der Kirche: Der Kreuzgang nebenan mit Brunnen und Palmen ist um diese Zeit einer der kühlsten Orte der Altstadt."
+            "ES": "Al salir de la iglesia, entra en el claustro de al lado: con su pozo y sus palmeras, es de lo más fresco del centro a esta hora.",
+            "EN": "When you come out of the church, step into the cloister next door: with its well and palm trees, it's one of the coolest spots in the old town at this time.",
+            "DE": "Wenn du aus der Kirche kommst, geh in den Kreuzgang nebenan: Mit Brunnen und Palmen ist er um diese Zeit einer der kühlsten Orte der Altstadt."
           },
           "hora": "10:55",
           "dur": "40 min",

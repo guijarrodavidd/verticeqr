@@ -84,9 +84,9 @@
     ],
     "correcta": 2,
     "explicacion": {
-      "ES": "La UNESCO lo inscribió en 2019 como ejemplo único de «Sacro Monte» barroco.",
-      "EN": "UNESCO listed it in 2019 as a unique example of a baroque \"Sacred Mount\".",
-      "PT": "A UNESCO classificou o santuário em 2019, como exemplo único de «Sacro Monte» barroco."
+      "ES": "La UNESCO lo inscribió en 2019 como un «Sacro Monte» barroco único en su género.",
+      "EN": "UNESCO listed it in 2019 as a one-of-a-kind baroque \"Sacred Mount\".",
+      "PT": "A UNESCO classificou o santuário em 2019 como um «Sacro Monte» barroco único no seu género."
     }
   },
   "bom-jesus-4": {
@@ -174,9 +174,9 @@
     ],
     "correcta": 1,
     "explicacion": {
-      "ES": "El arco se quedó siempre abierto, de día y de noche. La broma se quedó para siempre.",
-      "EN": "The arch stayed open day and night, and the joke stuck forever.",
-      "PT": "O arco ficou sempre aberto, de dia e de noite. A piada ficou para sempre."
+      "ES": "El arco nunca tuvo puertas y estaba abierto de día y de noche. De ahí viene la broma.",
+      "EN": "The arch never had doors and stood open day and night. That is where the joke comes from.",
+      "PT": "O arco nunca teve portas e estava aberto de dia e de noite. Vem daí a piada."
     }
   },
   "centro-3": {
@@ -324,9 +324,9 @@
     ],
     "correcta": 0,
     "explicacion": {
-      "ES": "Pequeño, oscuro y resistente, el garrano vaga libre por las sierras del norte desde hace siglos.",
-      "EN": "Small, dark and hardy, the garrano has roamed the northern hills for centuries.",
-      "PT": "Pequeno, escuro e resistente, o garrano anda à solta pelas serras do Norte há séculos."
+      "ES": "Pequeño y oscuro, el garrano vaga libre por las sierras del norte desde hace siglos.",
+      "EN": "Small and dark, the garrano has roamed the northern hills for centuries.",
+      "PT": "Pequeno e escuro, o garrano anda à solta pelas serras do Norte há séculos."
     }
   },
   "geres-3": {

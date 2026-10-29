@@ -2,9 +2,9 @@
   "slug": "pucon",
   "nombre": "Pucón",
   "intro": {
-    "ES": "Un lago inmenso a tus pies, un volcán nevado que humea en el horizonte y, alrededor, termas entre helechos y bosques de araucarias milenarias. Pucón se vive al aire libre: playa por la mañana, volcán o sendero de día y agua caliente al anochecer.",
-    "EN": "A vast lake at your feet, a snowy volcano smoking on the horizon and, all around, hot springs among ferns and forests of ancient monkey-puzzle trees. Pucón is lived outdoors: beach in the morning, volcano or trail by day and hot water at nightfall.",
-    "PT": "Um lago imenso aos seus pés, um vulcão nevado soltando fumaça no horizonte e, em volta, termas entre samambaias e florestas de araucárias milenares. Pucón se vive ao ar livre: praia de manhã, vulcão ou trilha de dia e água quente ao anoitecer."
+    "ES": "Un lago inmenso a tus pies, un volcán nevado que humea en el horizonte y, alrededor, termas entre helechos y bosques de araucarias milenarias. En Pucón casi todo se hace al aire libre, y después de un día de playa, volcán o sendero apetece acabar en el agua caliente de unas termas.",
+    "EN": "A vast lake at your feet, a snowy volcano smoking on the horizon and, all around, hot springs among ferns and forests of ancient monkey-puzzle trees. In Pucón almost everything happens outdoors, and after a day of beach, volcano or trail you’ll want to end up in the hot water of a thermal spring.",
+    "PT": "Um lago imenso aos seus pés, um vulcão nevado soltando fumaça no horizonte e, em volta, termas entre samambaias e florestas de araucárias milenares. Em Pucón quase tudo se faz ao ar livre, e depois de um dia de praia, vulcão ou trilha dá vontade de terminar na água quente de umas termas."
   },
   "lugares": [
     {
@@ -115,7 +115,7 @@
       "d": {
         "ES": "Cascadas que caen a pozas de un azul turquesa imposible, en medio del bosque. Un sendero corto con pasarelas de madera lleva a los miradores.",
         "EN": "Waterfalls tumbling into pools of an impossible turquoise, deep in the forest. A short trail with wooden walkways leads to the viewpoints.",
-        "PT": "Cachoeiras que caem em poços de um azul-turquesa inacreditável, no meio da mata. Uma trilha curta com passarelas de madeira leva aos mirantes."
+        "PT": "Cachoeiras que caem em poços de um azul-turquesa impossível, no meio da mata. Uma trilha curta com passarelas de madeira leva aos mirantes."
       },
       "cuando": {
         "ES": "Con sol de mediodía, cuando el agua brilla más",
@@ -241,9 +241,9 @@
       },
       "dur": "10 h",
       "d": {
-        "ES": "Crampones, piolet y un guía de montaña hasta el borde de un cráter activo, a 2.847 metros. Arriba, el lago a tus pies y, con suerte, el rugido de la lava.",
-        "EN": "Crampons, ice axe and a mountain guide to the rim of an active crater, 2,847 metres up. At the top, the lake at your feet and, with luck, the rumble of lava.",
-        "PT": "Grampons, piolet e um guia de montanha até a borda de uma cratera ativa, a 2.847 metros. Lá em cima, o lago aos seus pés e, com sorte, o ronco da lava."
+        "ES": "Con crampones, piolet y un guía de montaña subes hasta el borde de un cráter activo, a 2.847 metros. Desde arriba ves el lago a tus pies y, si hay suerte, oyes retumbar la lava.",
+        "EN": "With crampons, an ice axe and a mountain guide you climb to the rim of an active crater, 2,847 metres up. From the top you see the lake at your feet and, if you’re lucky, hear the lava rumble.",
+        "PT": "Com grampons, piolet e um guia de montanha você sobe até a borda de uma cratera ativa, a 2.847 metros. Lá de cima se vê o lago aos seus pés e, com sorte, dá para ouvir o ronco da lava."
       },
       "salida": {
         "ES": "Recogida en el hotel de madrugada. Se sube solo con buen tiempo y con la alerta del volcán en verde: el guía lo decide esa misma mañana",
@@ -780,9 +780,9 @@
             "PT": "Um lago comprido entre morros cobertos de mata, com um píer de madeira e o silêncio da montanha. Aqui se registra a entrada e começa a trilha Los Lagos."
           },
           "tip": {
-            "ES": "La entrada al parque se compra online en pasesparques.cl: tenla en el móvil. Llegar temprano es clave, porque el ingreso cierra a primera hora de la tarde.",
-            "EN": "Park entry is bought online at pasesparques.cl: keep it on your phone. Arriving early is key, as entry closes in the early afternoon.",
-            "PT": "A entrada do parque se compra on-line em pasesparques.cl: deixe no celular. Chegar cedo é essencial, porque a entrada fecha no começo da tarde."
+            "ES": "La entrada al parque se compra online en pasesparques.cl: tenla en el móvil. Llega temprano, porque el ingreso cierra a primera hora de la tarde.",
+            "EN": "Park entry is bought online at pasesparques.cl: keep it on your phone. Get there early, as entry closes in the early afternoon.",
+            "PT": "A entrada do parque se compra on-line em pasesparques.cl: deixe no celular. Chegue cedo, porque a entrada fecha no começo da tarde."
           },
           "hora": "08:45",
           "dur": "15 min",

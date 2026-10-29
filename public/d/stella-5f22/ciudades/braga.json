@@ -300,9 +300,9 @@
             "PT": "A descer, de patamar em patamar"
           },
           "d": {
-            "ES": "En cada rellano una fuente para un sentido —vista, oído, olfato, gusto y tacto— y, más arriba, las virtudes. Es el zigzag blanco y granito de las fotos.",
-            "EN": "Each landing has a fountain for one sense — sight, hearing, smell, taste and touch — and higher up, the virtues. The white-and-granite zigzag from the photos.",
-            "PT": "Em cada patamar uma fonte para um sentido — vista, ouvido, olfato, gosto e tato — e, mais acima, as virtudes. É o ziguezague branco e granito das fotografias."
+            "ES": "En cada rellano, una fuente para un sentido (vista, oído, olfato, gusto y tacto) y, más arriba, las virtudes. Es el zigzag blanco y granito de las fotos.",
+            "EN": "Each landing has a fountain for one sense (sight, hearing, smell, taste and touch) and, higher up, the virtues. The white-and-granite zigzag from the photos.",
+            "PT": "Em cada patamar, uma fonte para um sentido (vista, ouvido, olfato, gosto e tato) e, mais acima, as virtudes. É o ziguezague branco e granito das fotografias."
           },
           "tip": {
             "ES": "La mejor foto es de abajo arriba, desde el primer rellano.",
@@ -444,9 +444,9 @@
       },
       "dur": "2 h 30 min",
       "d": {
-        "ES": "Dos mil años en cinco paradas: de la ciudad romana a la barroca, con un café en A Brasileira por medio.",
-        "EN": "Two thousand years in five stops: from the Roman city to the baroque one, with a coffee at A Brasileira on the way.",
-        "PT": "Dois mil anos em cinco paragens: da cidade romana à barroca, com café n’A Brasileira pelo meio."
+        "ES": "Cinco paradas a pie, de la ciudad romana a la barroca, con un café en A Brasileira por medio.",
+        "EN": "Five stops on foot, from the Roman city to the baroque one, with a coffee at A Brasileira on the way.",
+        "PT": "Cinco paragens a pé, da cidade romana à barroca, com café n’A Brasileira pelo meio."
       },
       "salida": {
         "ES": "Taxi o autobús hasta los Biscainhos (10 minutos)",
