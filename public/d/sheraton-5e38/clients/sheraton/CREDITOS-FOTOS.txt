@@ -71,15 +71,25 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al lead. No publicar.
 
 3) VÍDEOS — Pexels (Licencia Pexels). Recortados y recodificados a H.264 sin audio
    con AVFoundation (macOS).
-     vid/welcome.mp4  «Cityscape View from Hotel Room at Night» · Adit Syahfiar ·
-                      https://www.pexels.com/video/38879271/
-                      (habitación de hotel de noche: cortinas, silla y la ciudad iluminada
-                      tras el ventanal; plano fijo). Vertical 1080×1920, 30 fps (es el
-                      máximo del original; sin ralentizar), 12 s (tramo 3–15 s), H.264 High
-                      sin audio, 3,5 Mbps, fast start, fundido final de 1,5 s para el bucle.
-                      Acercado un 18 % anclado abajo y con un difuminado sobre el rótulo de
-                      un edificio (MNC, una empresa ajena) para que no se lea ninguna marca.
-     img/welcome.jpg  Primer fotograma de ese mismo vídeo (póster), 1080×1920.
+     vid/welcome.mp4  (rehecho el 30-oct-2026) Cuatro planos de unos 3 s con fundidos de 0,4 s y
+                      el final fundido sobre el arranque para que el bucle no salte. Como la
+                      demo es de un Sheraton sin hotel concreto, los dos planos de hotel son
+                      de archivo genérico, sin marcas a la vista:
+                      1. Azotea con dos piscinas vista desde el dron · «Aerial View of Luxurious
+                         Poolside Resort» · hugoteconecta · https://www.pexels.com/video/36720422/
+                         (original 2160×3840, tramo 2,0–5,8 s)
+                      2. Habitación · «Luxury Modern Bedroom with Ocean View» · Real Estate 4k ·
+                         https://www.pexels.com/video/40397784/ (original 2160×3840, tramo 0,3–3,6 s)
+                      3. Playa de la Barceloneta desde el aire, agua turquesa · Pexels, vídeo
+                         27590233 · https://www.pexels.com/video/27590233/ (original 3840×2160,
+                         tramo 0,5–3,8 s; recorte que deja fuera el hotel W)
+                      4. La Sagrada Família con cielo azul · Pexels, vídeo 35134148 ·
+                         https://www.pexels.com/video/35134148/ (original 3840×2160, tramo 1,0–4,3 s)
+                      Todo con Licencia Pexels. Antes de usarlo en público se cambian los
+                      planos 1 y 2 por material del hotel real.
+                      Vertical 1080×1920, 30 fps, 12,1 s, H.264 High CRF 24 con un filtrado
+                      suave de ruido, sin audio, fast start, 6,9 MB.
+     img/welcome.jpg  Primer fotograma de ese mismo vídeo (póster), 1080×1920, JPEG calidad 85.
      vid/ex4.mp4      «Person having Back Massage» · Kaboompics (@karola-g) ·
                       https://www.pexels.com/video/6629951/ · 640×360, 10 s.
      vid/ex1.mp4      «Driving On A Highway» · Christopher Schultz ·

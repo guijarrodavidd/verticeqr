@@ -32,7 +32,7 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
      ex4.jpg   Exterior view of Castelo de Guimarães 08 · John Samuel · CC BY-SA 4.0
      ex5.jpg   2026-09-27 Braga, Rua do Souto at sunset 1 · Alexkom000 · CC BY 4.0
      ex2.jpg   Monção-Palácio da Brejoeira-Vinha de enforcado-20140911 · Daniel VILLAFRUELA. · CC BY-SA 4.0
-     (welcome: «Treppenaufgang Bom Jesus do Monte» · Botafogo · dominio público)
+     (la bienvenida ya no usa «Treppenaufgang Bom Jesus do Monte»; sus fuentes están en el punto 4)
 
 3) PEXELS (Licencia Pexels: uso libre, también comercial, sin atribución obligatoria; se acredita igualmente)
      cm1.jpg   Potatoes and Octopus on Plate · Luiz Henrique  Mendes · https://www.pexels.com/photo/potatoes-and-octopus-on-plate-26571194/
@@ -60,12 +60,22 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
      am1, am4, am6 (de casa-roman: mendez-nunez, plantilla evenia-zoraida)
 
 4) VÍDEOS
-     vid/welcome.mp4  Montaje de Vértice con fotos del propio hotel (entrada de noche, fachada,
-                      desayuno en el jardín, barra del Seara) y la escalinata del Bom Jesus
-                      (Botafogo, dominio público). Movimiento lento sobre cada foto, fundidos
-                      encadenados y fundido final al primer fotograma para el bucle.
-                      Vertical 720×1280, 30 fps, 12,5 s, H.264 sin audio, 1,1 Mbps, fast start.
-     img/welcome.jpg  Primer fotograma de ese vídeo (póster).
+     vid/welcome.mp4  (rehecho el 30-oct-2026) Cuatro planos de unos 3 s con movimiento lento
+                      sobre fotos, fundidos de 0,4 s y el final fundido sobre el arranque para
+                      que el bucle no salte:
+                      1. La fachada con cielo azul · foto del hotel, stellabraga.pt
+                         (static-resources-elementor.mirai.com/…/sites/1863/Fachada-do-Hotel-.webp, 1920×1080)
+                      2. El patio interior · foto del hotel, stellabraga.pt (Artboard7-1.webp, 1921×1080)
+                      3. La escalinata y la basílica del Bom Jesus do Monte · «Escadaria e basílica
+                         do Bom Jesus.jpg» · ArielSL98 · CC BY-SA 4.0 ·
+                         https://commons.wikimedia.org/wiki/File:Escadaria_e_bas%C3%ADlica_do_Bom_Jesus.jpg
+                      4. El centro de Braga reflejado en el estanque de la Avenida Central, con los
+                         Congregados · «Avenida Central em Braga.jpg» · Gabriele Iuvara · CC BY 2.0 ·
+                         https://commons.wikimedia.org/wiki/File:Avenida_Central_em_Braga.jpg
+                         (recorte que deja fuera un cartel publicitario)
+                      Vertical 1080×1920, 30 fps, 12,1 s, H.264 High CRF 20, sin audio, fast start,
+                      5,7 MB.
+     img/welcome.jpg  Primer fotograma de ese vídeo (póster), 1080×1920, JPEG calidad 85.
      vid/ex1.mp4      «Bom Jesus do Monte» (vista aérea) · Borys Trusevych · pexels.com/video/20708825
                       El original dura 2 s: va hacia delante y hacia atrás para que el bucle no salte
                       (sin ralentizar). 640×360.

@@ -59,14 +59,21 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
      bb1.jpg, ds2.jpg, am1.jpg, am2.jpg, am4.jpg, am6.jpg  (casa-roman/img, mismos nombres)
 
 4) VÍDEOS
-     vid/welcome.mp4  Hecho por Vértice con fotos del propio hotel (galería de ihg.com): Plaça
-                      d'Espanya y el MNAC, la fachada, el comedor de Reversible, la barra y un
-                      cóctel de autor, con un Ken Burns lento y fundidos. No hay vídeo propio del
-                      hotel publicado (ni en ihg.com ni en un canal oficial; en YouTube solo hay
-                      reseñas de terceros). Vertical 1080×1920, 60 fps, 13,5 s, H.264 High sin
-                      audio, 3,5 Mbps, fast start, con el final fundido sobre el principio para
-                      que el bucle no salte. Generado con AVFoundation (macOS).
-     img/welcome.jpg  Primer fotograma de ese vídeo (póster), 1080×1920.
+     vid/welcome.mp4  (rehecho el 30-oct-2026) Cuatro planos de unos 3 s con fundidos de 0,4 s y
+                      el final fundido sobre el arranque para que el bucle no salte:
+                      1. La fachada en la Gran Via, acercamiento lento · foto del hotel, galería de
+                         ihg.com (digital.ihg.com/is/image/ihg/hotel-indigo-barcelona-10114274816-original)
+                      2. Habitación, paneo lento · foto del hotel, ihg.com (…-10114276908-original)
+                      3. Plaça d'Espanya, las torres venecianas y el MNAC al fondo · foto del hotel,
+                         ihg.com (…-10118437743-original)
+                      4. El MNAC al atardecer · Pexels (Licencia Pexels), «Museu Nacional d'Art de
+                         Catalunya on Sunset Time» · https://www.pexels.com/video/20204266/
+                         (original 3840×2160, tramo 3,0–6,3 s, recorte vertical)
+                      No hay vídeo propio del hotel publicado. El hotel no tiene piscina ni
+                      terraza en la azotea (ni en ihg.com ni en Booking), así que no sale.
+                      Vertical 1080×1920, 30 fps, 12,1 s, H.264 High CRF 20, sin audio, fast start,
+                      6,6 MB.
+     img/welcome.jpg  Primer fotograma de ese vídeo (póster), 1080×1920, JPEG calidad 85.
    Pexels (Licencia Pexels: uso libre, también comercial; se acredita igualmente).
    Recortados a 640×360, 9-9,5 s, H.264 sin audio, con fundido final para el bucle.
      vid/ex1.mp4  «Museu Nacional d'Art de Catalunya on Sunset Time» · pexels.com/video/20204266

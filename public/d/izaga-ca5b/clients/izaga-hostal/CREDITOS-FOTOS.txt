@@ -22,14 +22,24 @@ Todas las imágenes, recortadas a 800×533 y calidad ~70.
       ampliado a 700 px; logo-white.png pasa «HOSTAL» a blanco y deja «IZAGA» en su
       coral #F2968C, para la bienvenida sobre el vídeo.
 
-2) VÍDEO DE BIENVENIDA
-     vid/welcome.mp4 (póster img/welcome.jpg = primer fotograma)
-                  Hecho por Vértice a partir de la foto «Plaza del Castillo in Pamplona (5).jpg»
-                  · Krzysztof Golik · CC BY-SA 4.0 · Wikimedia Commons
-                  https://commons.wikimedia.org/wiki/File:Plaza_del_Castillo_in_Pamplona_(5).jpg
-                  Acercamiento lento sobre la plaza (no se encontró un vídeo libre de Pamplona
-                  en Pexels, Pixabay ni Commons que sirviera). Vertical 720×1280, 30 fps, 12 s,
-                  H.264 sin audio, ~1,28 Mbps.
+2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026; póster img/welcome.jpg = primer fotograma,
+   1080×1920, JPEG calidad 85)
+     vid/welcome.mp4  Cuatro planos de unos 3 s con movimiento lento sobre fotos, fundidos de
+                  0,4 s y el final fundido sobre el arranque para que el bucle no salte:
+                  1. La fachada con el rótulo Hostal Izaga · foto del hotel, su web
+                     (static-resources-elementor.mirai.com/…/sites/2281/izaga-home-1.webp, 1200×800)
+                  2. Habitación doble · foto del hotel, su web (IZAGA-hotel-card.webp, 1200×854)
+                  3. El quiosco de la plaza del Castillo · «Kiosco of Plaza del Castillo -
+                     Pamplona, Spain - July 17, 2024.jpg» · Giorgio Galeotti · CC BY-SA 4.0 ·
+                     https://commons.wikimedia.org/wiki/File:Kiosco_of_Plaza_del_Castillo_-_Pamplona,_Spain_-_July_17,_2024.jpg
+                  4. La catedral de Pamplona con cielo azul · «Pamplona 2022 - west facade
+                     front.jpg» · Fernando · CC BY-SA 4.0 ·
+                     https://commons.wikimedia.org/wiki/File:Pamplona_2022_-_west_facade_front.jpg
+                  Las dos fotos del hotel son pequeñas (1200 px) y se amplían unas 2,3 veces
+                  con un enfoque suave: con fotos más grandes del hotel quedarían más nítidas.
+                  En Pexels y Pixabay sigue sin haber vídeo libre de Pamplona que sirva.
+                  Vertical 1080×1920, 30 fps, 12,1 s, H.264 High CRF 20, sin audio, fast start,
+                  6,0 MB.
 
 3) WIKIMEDIA COMMONS (licencias libres)
      cm1.jpg    Piquillos rellenos · «Pimientos del piquillo rellenos en cazuela.jpg» · Juan Mejuto · CC BY-SA 2.0

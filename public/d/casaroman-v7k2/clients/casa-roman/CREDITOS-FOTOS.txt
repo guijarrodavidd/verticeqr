@@ -65,13 +65,22 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
 4) VÍDEOS — Pexels (Licencia Pexels: uso libre, también comercial, sin
    atribución obligatoria; se acredita igualmente). Recortados y recodificados
    a H.264 sin audio con avconvert / AVFoundation (macOS).
-     vid/welcome.mp4  «Winterabend am Strand» · Antje Urban · Licencia Pexels ·
-                      https://www.pexels.com/video/19683564/
-                      (atardecer de invierno en una playa de arena, orilla mojada con espuma y
-                      olas suaves; plano fijo). Vertical 1080×1920, 59,94 fps (sin ralentizar),
-                      12 s (tramo 37,5–49,5 s del original), H.264 High sin audio, 3,5 Mbps,
-                      fast start, con fundido final de 1,5 s para que el bucle no salte.
-     img/welcome.jpg  Primer fotograma de ese mismo vídeo (póster), 1080×1920.
+     vid/welcome.mp4  (rehecho el 30-oct-2026) Cuatro planos de unos 3 s con movimiento lento
+                      sobre fotos, fundidos de 0,4 s y el final fundido sobre el arranque para
+                      que el bucle no salte:
+                      1. La terraza cubierta de día · foto del hotel, casaromanhotel.com
+                         (wp-content/uploads/2022/05/IMG_8969.jpg, 6000×4000)
+                      2. La fachada de la tapería al anochecer, con «ROMÁN» en el pilar · foto del
+                         hotel, casaromanhotel.com (hotel-casa-román.jpeg, 2180×1100)
+                      3. La playa de Silgar y el agua de la ría · «Playa Silgar Sanxenxo -
+                         panoramio.jpg» · joselomba · CC BY-SA 3.0 ·
+                         https://commons.wikimedia.org/wiki/File:Playa_Silgar_Sanxenxo_-_panoramio.jpg
+                      4. La Madama de Silgar · «Madama de Silgar por Alfonso Vilar Lamelas.
+                         Sanxenxo. Galiza SX-4.jpg» · Luis Miguel Bugallo Sánchez (Lmbuga) ·
+                         CC BY-SA 3.0 · https://commons.wikimedia.org/wiki/File:Madama_de_Silgar_por_Alfonso_Vilar_Lamelas._Sanxenxo._Galiza_SX-4.jpg
+                      Vertical 1080×1920, 30 fps, 12,1 s, H.264 High CRF 22, sin audio, fast start,
+                      6,7 MB.
+     img/welcome.jpg  Primer fotograma de ese mismo vídeo (póster), 1080×1920, JPEG calidad 85.
      vid/ex1.mp4      «Vigo» · Borys Trusevych · pexels.com/video/20690479
                       (costa de Vigo con las Cíes en el horizonte). 640×360, 10 s.
      vid/ex2.mp4      «White Wine Being Poured into a Glass» · Fernando Lacerda Branco ·
