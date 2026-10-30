@@ -67,8 +67,7 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
 4) VÍDEOS — Pexels, licencia Pexels. Recodificados con AVFoundation (H.264,
    sin audio, fast start): welcome a 720×1280 y 60 fps con fundido para el
    bucle; los de experiencias a 640×360, 8 s.
-     vid/welcome.mp4  Charming Winter Sunrise in Snowy Village · Yuliya Duzhaya · https://www.pexels.com/video/37395808/
-                      (póster: img/welcome.jpg, primer fotograma)
+     vid/welcome.mp4 e img/welcome.jpg: ver el apartado 6 (bienvenida rehecha el 30-oct-2026).
      vid/ex1.mp4      Serene Lake View from Speedboat Adventure · maria Chaile · https://www.pexels.com/video/39670135/
      vid/ex2.mp4      Penguins Waddling on Shore · Corey Dupree · https://www.pexels.com/video/5403934/
                       (pingüinos genéricos, no de Isla Martillo: cambiar por material propio del operador)
@@ -76,3 +75,18 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
 
 5) GUÍA DE USHUAIA — los créditos de public/ciudades/ushuaia/img están en el
    campo «creditos» de public/ciudades/ushuaia.json.
+
+6) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026)
+   vid/welcome.mp4 · 1080×1920, 30 fps, 11,8 s, H.264 High sin audio, CRF 23, fast start, 6,7 MB.
+   img/welcome.jpg · póster = primer fotograma, 1080×1920, JPEG calidad 85.
+   Cuatro planos de unos 3 s con fundidos de 0,4 s; el último funde con el arranque para que el bucle no salte.
+     1. Cabaña de madera en el bosque en primavera, con sol. Foto de su web (Pxsol), zoom lento.
+        https://files-p.pxsol.com/5337/company/library/user/1866764508408ffb22ecccfd2f4061a2941de3069c3.jpg (1333×2000)
+     2. Cabañas en el bosque nevado. Foto de su web (Pxsol), zoom lento.
+        https://files-p.pxsol.com/5337/company/library/user/10520211768a24b8223df93490770627ee87fa9fec3.jpg (960×1280)
+     3. Ushuaia y el canal Beagle desde el aire al atardecer. Pexels, 4K horizontal recortado en vertical.
+        «Breathtaking aerial of Ushuaia at sunset» · https://www.pexels.com/video/36758608/ (tramo 5,0–8,3 s)
+     4. Montañas nevadas sobre el bosque en otoño, cielo azul. Foto de su web (Pxsol), desplazamiento lento.
+        https://files-p.pxsol.com/5337/company/library/user/83966177156fa3ddcd871a1291ccc6cb83b518d9e8.jpg (2000×1500)
+   Licencia Pexels: uso libre, sin atribución obligatoria. Las fotos son de Aldea Nevada, solo para la demo privada.
+   La versión anterior (Pexels 37395808, aldea nevada genérica) queda sustituida.

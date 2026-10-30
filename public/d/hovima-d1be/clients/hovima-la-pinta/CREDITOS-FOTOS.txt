@@ -123,12 +123,7 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
 
 4) VÍDEOS — Pexels (Licencia Pexels). Recortados y recodificados con AVFoundation (macOS),
    H.264 sin audio, fast start, a la velocidad original (nada ralentizado).
-     vid/welcome.mp4  «A bird's eye view of the beach and the city» · Atlantic Ambience ·
-                      https://www.pexels.com/video/27408756/ (vista aérea de la playa de Fañabé /
-                      Costa Adeje con el macizo de Adeje detrás, a 1 km del hotel). Vertical,
-                      12 s (tramo 1,6–13,6 s), 720×1280, 30 fps, ~1,2 Mbps, con fundido cruzado de
-                      1,2 s al final para que el bucle no salte. 1,8 MB.
-     img/welcome.jpg  Primer fotograma de ese mismo vídeo (póster), 720×1280.
+     vid/welcome.mp4 e img/welcome.jpg: ver el apartado 5 (bienvenida rehecha el 30-oct-2026).
      vid/ex1.mp4      «A Group of Dolphins Swimming with the Tourist Boat» · Philippe WEICKMANN · https://www.pexels.com/video/4079786/ · 640×360, ~10 s
      vid/ex2.mp4      «Day and Night over City» · chris clark · https://www.pexels.com/video/13322952/ · 640×360, ~10 s
      vid/ex5.mp4      «Aerial Shot of a Landscape» · Drone Shots · https://www.pexels.com/video/5966208/ · 640×360, ~10 s
@@ -140,3 +135,17 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
    El vídeo de ex1 (delfines con un barco turístico) no es de Tenerife: ilustra la salida;
    el de ex4 (toboganes) no es Siam Park; el de sv1 no es el Cool Spa. Sustituir por material
    propio del hotel o de los colaboradores cuando lo haya.
+
+5) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026)
+   vid/welcome.mp4 · 1080×1920, 30 fps, 11,8 s, H.264 High sin audio, CRF 22, fast start, 6,2 MB.
+   img/welcome.jpg · póster = primer fotograma, 1080×1920, JPEG calidad 85.
+   Cuatro planos de unos 3 s con fundidos de 0,4 s; el último funde con el arranque para que el bucle no salte.
+     1. Piscina, edificio curvo y mar con cielo azul. Foto oficial del hotel, zoom lento.
+        https://cdn2.paraty.es/hovima-pinta/images/262d88fbcf3fad7 («Hovima: La Pinta, vistas frontales al mar, piscina y playa», 2500×1686)
+     2. El hotel y la playa desde el aire. Foto oficial del hotel, zoom lento.
+        https://cdn2.paraty.es/hovima-pinta/images/27febd862940f97 (vista aérea del hotel y la playa, 3000×2160)
+     3. Terraza con tumbonas de La Pinta frente a la playa y Puerto Colón. Foto oficial del hotel, desplazamiento lento.
+        https://cdn2.paraty.es/hovima-pinta/images/bcfe424c81902ef («Terraza con tumbonas y vistas al mar y la playa», 3000×2471)
+     4. El Teide en hora dorada entre pinos. Pexels (licencia Pexels, sin atribución obligatoria), 4K vertical.
+        «Sunrise over mountain with scenic forest view» · https://www.pexels.com/video/31193025/ (tramo 0,8–4,1 s)
+   Las fotos del hotel son material de HOVIMA Hotels, solo para la demo privada.

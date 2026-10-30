@@ -35,17 +35,20 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
    en blanco tal cual (la bienvenida); logo.png lo recompone Vértice en horizontal,
    como el de la cabecera de su web, en su gris pizarra #484B54.
 
-2) VÍDEO DE BIENVENIDA
-     vid/welcome.mp4 (póster img/welcome.jpg = primer fotograma)
-                  Montaje de Vértice con fotos del propio hotel: la fachada al
-                  anochecer con el rooftop en morado (Fachada3), el lobby
-                  (Lobby1), la terraza de Enebro (Enebro_4), la portada de la carta
-                  (causa con pulpo) y el spritz de la Carta Bar. Movimiento lento
-                  sobre cada foto, fundidos encadenados y fundido final al primer
-                  fotograma para el bucle. El hotel no tiene vídeo propio publicado
-                  del Ebro (su canal de YouTube solo trae vídeos antiguos de otras
-                  propiedades). Vertical 720×1280, 30 fps, 11,7 s, H.264 sin audio,
-                  ~1,25 Mbps, fast start.
+2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026)
+     vid/welcome.mp4 · 1080×1920, 30 fps, 11,8 s, H.264 High sin audio, CRF 22, fast start, 6,9 MB.
+     img/welcome.jpg · póster = primer fotograma, 1080×1920, JPEG calidad 85.
+     Cuatro planos de unos 3 s con fundidos de 0,4 s; el último funde con el arranque para que el bucle no salte.
+       1. La torre del hotel al atardecer con la terraza de la azotea iluminada, desde el aire. Foto de su web, zoom lento.
+          www.plazaelbosque.cl/wp-content/uploads/2024/04/IMG1-EBRO-Home.webp (1107×1050)
+       2. La fachada de día con el logotipo y el cielo azul. Foto de su web, desplazamiento lento.
+          www.plazaelbosque.cl/wp-content/uploads/2024/06/Fachada1.webp (1920×1080)
+       3. Santiago desde el aire con la cordillera nevada y cielo azul. Pexels, 4K horizontal recortado en vertical.
+          https://www.pexels.com/video/33585295/ (tramo 2,0–5,3 s)
+       4. El teleférico del Parque Metropolitano con la cordillera nevada. Pexels, 4K vertical.
+          https://www.pexels.com/video/20453027/ (tramo 0,3–3,6 s)
+     Licencia Pexels: uso libre, sin atribución obligatoria. La versión anterior (fotos de la fachada, el
+     lobby, Enebro y la carta, a 720×1280) queda sustituida.
 
 3) PEXELS (licencia Pexels: uso libre, sin atribución obligatoria; se cita igual)
    Fotos genéricas de bebidas, desayuno, bienestar, servicios y amenities: no son

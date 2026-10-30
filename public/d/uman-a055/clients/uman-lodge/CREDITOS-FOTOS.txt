@@ -92,15 +92,20 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio lodge. No publicar.
    vid/ex-pesca.mp4 (ex4), vid/ex-kayak.mp4 (ex5), vid/ex-cabalgata.mp4 (ex6),
    vid/ex-spa.mp4 (momento «Jacuzzi al atardecer», pk2).
 
-welcome.mp4 (+ welcome.jpg, póster = primer fotograma)
-  Qué se ve: río turquesa de montaña entre rocas y laderas
-  Título:    Scenic Mountain River Flowing Through Rocky Terrain
-  Autora:    Khrystyna Ivanova
-  Fuente:    https://www.pexels.com/video/31826933/
-  Archivo:   https://videos.pexels.com/video-files/31826933/13559139_1080_1920_30fps.mp4
-  Tramo:     de 2,0 s a 14,0 s del original, con fundido final de 1,5 s hacia el inicio
-  Licencia:  Licencia de Pexels
-  USO EXCLUSIVO PARA LA DEMO PRIVADA
+welcome.mp4 (+ welcome.jpg, póster = primer fotograma) — REHECHA el 30-oct-2026
+  1080×1920, 30 fps, 11,8 s, H.264 High sin audio, CRF 22, fast start, 6,7 MB. Póster a 1080×1920, JPEG 85.
+  Cuatro planos de unos 3 s con fundidos de 0,4 s; el último funde con el arranque para que el bucle no salte.
+    1. El lodge desde el aire con la piscina exterior y las terrazas. Foto de su web, zoom lento.
+       https://umanlodge.com/img/home/story-a-2.webp (1600×2133)
+    2. La terraza de la piscina con el valle y la cordillera, cielo azul. Foto de su web, desplazamiento lento.
+       https://umanlodge.com/img/home/story-a-3.webp (1600×1280)
+    3. Río turquesa con rápidos entre bosque, cenital de dron. Pexels, 4K horizontal recortado en vertical.
+       «An aerial view of a river flowing through a forest» · https://www.pexels.com/video/24837087/
+       (tramo 8,0–11,3 s). Es de archivo: NO es el Futaleufú.
+    4. El valle del Futaleufú con el río y las cumbres nevadas (Fundo La Confluencia). Foto de su web.
+       https://umanlodge.com/img/photos/fundo-new.jpg (1920×1277)
+  Licencia Pexels: uso libre, sin atribución obligatoria. Las fotos son del lodge, solo para la demo privada.
+  La versión anterior (Pexels 31826933, Khrystyna Ivanova) queda sustituida.
 
 ex-rafting.mp4
   Qué se ve: balsa de rafting en río turquesa entre bosque
