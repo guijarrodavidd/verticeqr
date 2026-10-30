@@ -26,14 +26,26 @@ Todas las imágenes, recortadas a 800×533 y calidad ~70.
    (concha #D6AD77, letras #8C7457); logo-white.png, en blanco, para la bienvenida. Sustituir
    por el vectorial oficial que facilite el hotel.
 
-2) VÍDEO DE BIENVENIDA
+2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026)
      vid/welcome.mp4 (póster img/welcome.jpg = primer fotograma)
-                  «Punta De Mita, Ocean, Drone, Beach» · Ponleplay · Pixabay, vídeo 42529
-                  https://pixabay.com/videos/punta-de-mita-ocean-drone-beach-42529/
-                  Las pangas de los pescadores de Punta de Mita, las que salen a las Islas
-                  Marietas, sobre el agua turquesa de la bahía. Recorte vertical, del segundo
-                  0,6 al 12,6. Vertical 720×1280, 30 fps, 12 s, H.264 sin audio, ~1,2 Mbps.
-                  Licencia de contenido de Pixabay.
+     1080×1920, 30 fps, 12,4 s, H.264 High sin audio, CRF 24, fast start, ~6,8 MB.
+     Cuatro planos con fundidos de 0,4 s; el último funde con el arranque del primero
+     para que el bucle no salte.
+       1. El resort desde el aire, con la selva detrás y la playa delante. Paneo lento
+          sobre la foto del hotel de la galería de Trip.com (2048×1364).
+          https://ak-d.tripcdn.com/images/0221u12000ky2jcbrA31E.jpg
+       2. Las albercas y el edificio en curva con el mar al fondo. Zoom lento sobre la foto
+          del hotel de la galería de Trip.com (2000×1500).
+          https://ak-d.tripcdn.com/images/0226m12000sg8r19k3F4D.jpg
+       3. Playa de arena blanca y mar azul desde un dron (tramo 1,0–4,4 s, recorte vertical).
+          «People on Beach» · Davis Arenas · Pexels, 4K · Licencia Pexels
+          https://www.pexels.com/video/11563634/
+       4. Cala de agua turquesa entre rocas, desde un dron (tramo 10,0–13,4 s, recorte vertical
+          con zoom lento). «A View From Above Of A Beautiful Shoreline With Waves Breaking» ·
+          Daniel Rojas Roa · Pexels, 4K · Licencia Pexels · https://www.pexels.com/video/2640253/
+       Los planos 3 y 4 son playas de archivo libre; Pexels no indica la playa exacta.
+     Sustituye a la versión anterior (las pangas de Punta de Mita, de Ponleplay en Pixabay,
+     vídeo 42529), que se guarda fuera del repo.
 
 3) WIKIMEDIA COMMONS (en https://commons.wikimedia.org/wiki/File:<nombre>)
      ex12.jpg   Playa Escondida, Islas Marietas · «Isla Marieta( isla del amor).jpg» ·

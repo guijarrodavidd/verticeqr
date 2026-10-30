@@ -25,14 +25,24 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
    SVG de su web (fiesta-inn-puebla-las-animas_logo.svg en color y _second-logo.svg en
    blanco). logo-white.png es la versión blanca para la bienvenida.
 
-2) VÍDEO DE BIENVENIDA
+2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026)
      vid/welcome.mp4 (póster img/welcome.jpg = primer fotograma)
-                  «Catedral de Puebla (fachada) desde un dron» · Luisalvaz · Wikimedia
-                  Commons · CC0 (dominio público).
-                  https://commons.wikimedia.org/wiki/File:Catedral_de_Puebla_(fachada)_desde_un_dron.webm
-                  Tramo de 0:07 a 0:19 de la versión 1080p, recortado en vertical sobre
-                  la torre y la cúpula. Vertical 720×1280, 30 fps, 12 s, H.264 sin audio,
-                  ~1,16 Mbps, fast start.
+     1080×1920, 30 fps, 12,4 s, H.264 High sin audio, CRF 20, fast start, ~6,2 MB.
+     Cuatro planos con zoom lento sobre fotos fijas y fundidos de 0,4 s; el último funde con
+     el arranque del primero para que el bucle no salte.
+       1. La torre del hotel a la hora azul, con el rótulo encendido. Foto del hotel de su web
+          (130973768-exterior-2986x4560, servida a 1257×1920).
+          https://image-tc.galaxy.tf/wijpeg-7moe9ijgx5yuaao5udrak28k/130973768-exterior-2986x4560-result.jpg
+       2. La alberca. Foto del hotel de su web (77989260-alberca-3744x5616, servida a 1280×1920).
+          https://image-tc.galaxy.tf/wijpeg-7qz2j6fjwb1v4le2c7l6zf1lc/77989260-alberca-3744x5616-result.jpg
+       3. La fuente del zócalo y la cúpula de azulejo de la Catedral de Puebla, con cielo azul.
+          «Fountain and Dome of Puebla Cathedral behind» · Danny Graphy · Pexels (3449×5173) ·
+          Licencia Pexels · https://www.pexels.com/photo/17413920/
+       4. El santuario de los Remedios en Cholula con el Popocatépetl nevado detrás, a la hora
+          dorada. «Church with Majestic Volcano in Background» · Felipe Perez · Pexels
+          (2133×3200) · Licencia Pexels · https://www.pexels.com/photo/12282043/
+     Sustituye a la versión anterior (la Catedral de Puebla desde un dron, de Luisalvaz en
+     Wikimedia Commons, CC0), que se guarda fuera del repo.
 
 3) PEXELS (licencia Pexels: uso libre, sin atribución obligatoria; se cita igual)
    Fotos genéricas de platos, bebidas, desayunos, postres, bienestar, planes, servicios

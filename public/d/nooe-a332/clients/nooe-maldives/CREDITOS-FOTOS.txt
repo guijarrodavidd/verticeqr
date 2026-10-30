@@ -26,13 +26,17 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio resort. No publicar.
      og.jpg                  Cócteles junto a la piscina, vista previa del enlace (20230329_095454618_iOS-1-scaled.webp)
 
      vid/welcome.mp4         Vídeo de presentación del resort, el de la cabecera de nooe.com
-                             (NOOE-Presentation-Video-_-with-Logos-2023-1.mp4, 1920×1080, 29,97 fps).
-                             Montaje de tres planos de dron sin la marca de agua: la isla con las
-                             villas sobre el agua (33,3–38,4 s), el pabellón del muelle (11,0–14,3 s)
-                             y la piscina con las villas sobre el agua al fondo (21,0–24,6 s).
-                             Recorte vertical 9:16 del centro, escalado a 1080×1920, 12 s, a su
-                             velocidad (29,97 fps, no hay versión a 60), H.264 sin audio, fast
-                             start, fundido de entrada y de salida para el bucle.
+                             (NOOE-Presentation-Video-_-with-Logos-2023-1.mp4, 1920×1080, 29,97 fps,
+                             ~20 Mbps; no hay versión 4K publicada).
+                             https://nooe.com/wp-content/uploads/2024/01/NOOE-Presentation-Video-_-with-Logos-2023-1.mp4
+                             Rehecho el 30-oct-2026 a 1080×1920 desde ese original, con los mismos
+                             tres planos de dron sin la marca de agua: la isla con las villas sobre
+                             el agua (33,0–38,0 s), el pabellón del muelle (10,7–14,0 s) y la
+                             piscina con las villas sobre el agua al fondo (21,0–24,5 s).
+                             Recorte vertical 9:16, escalado con lanczos y un enfoque suave,
+                             fundidos de 0,4 s y el último fundido enlazado con el arranque para que
+                             el bucle no salte. 10,6 s, 30 fps, H.264 High sin audio, CRF 23, fast
+                             start, ~6,6 MB. La versión anterior (720×1280) se guarda fuera del repo.
      welcome.jpg             Primer fotograma de ese montaje (póster), 1080×1920.
 
    logo.png / logo-white.png — composición hecha por Vértice para la demo: el
