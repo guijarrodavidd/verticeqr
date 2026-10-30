@@ -387,5 +387,41 @@
       "san-pancho": 50,
       "jardin-botanico": 50
     }
+  },
+  {
+    "hotel": "vibra-yamm",
+    "ciudad": "ibiza",
+    "ubicacion": {
+      "lat": 38.98017,
+      "lng": 1.29652
+    },
+    "minutos": {
+      "dalt-vila": 25,
+      "es-vedra": 35,
+      "cala-comte": 25,
+      "cala-dhort": 30,
+      "las-dalias": 40,
+      "punta-arabi": 40,
+      "benirras": 40,
+      "calo-des-moro": 8
+    }
+  },
+  {
+    "hotel": "quinta-eden",
+    "ciudad": "villahermosa",
+    "ubicacion": {
+      "lat": 18.00122,
+      "lng": -92.95635
+    },
+    "minutos": {
+      "la-venta": 10,
+      "laguna-ilusiones": 10,
+      "malecon-grijalva": 15,
+      "zona-luz": 15,
+      "mercado-pino-suarez": 15,
+      "museo-papagayo": 5,
+      "yumka": 25,
+      "comalcalco": 65
+    }
   }
 ]

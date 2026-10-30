@@ -32,27 +32,30 @@ Todas las imágenes, recortadas a 800×533 y calidad ~70 (og.jpg a 1200×630).
    dorado, el mismo de la carta picancun (Presidente InterContinental Cancún), sin la
    línea «Cancun Resort». logo-white.png, en blanco, para la bienvenida.
 
-2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026)
-     vid/welcome.mp4 (póster img/welcome.jpg = primer fotograma)
-     1080×1920, 30 fps, 12,4 s, H.264 High sin audio, CRF 22, fast start, ~6,8 MB.
-     Cuatro planos con fundidos de 0,4 s; el último funde con el arranque del primero
-     para que el bucle no salte.
-       1. La torre de Miyana con el rótulo del hotel, desde el aire y con cielo azul.
-          Zoom lento sobre la foto del hotel (8064×6048).
-          https://presidenteicmiyana.com/wp-content/uploads/2026/09/fachada-miyana-1.jpg
-       2. Habitación con la ventana a la ciudad. Paneo lento sobre la foto oficial de IHG
-          (2880×2160). Material del hotel, solo para la demo privada.
-          https://digital.ihg.com/is/image/ihg/intercontinental-ciudad-de-m-xico-11259211151-4x3
-       3. El Ángel de la Independencia a la hora dorada, desde un dron (tramo 19,2–22,6 s,
-          recorte vertical que sigue a la estatua, sin rótulos de terceros).
-          «ANGEL DE LA INDEPENDENCIA» · Fernando Paleta · Pexels, 4K · Licencia Pexels
-          https://www.pexels.com/video/15809009/
-       4. Palacio de Bellas Artes al atardecer, desde lo alto (tramo 1,0–4,4 s, recorte
-          vertical sobre la cúpula con un zoom lento).
-          «Historic Palace of Fine Arts in Mexico City» · Jorge Pantaleon · Pexels, 4K ·
-          Licencia Pexels · https://www.pexels.com/video/35645084/
-     Sustituye a la versión anterior (sobrevuelo del Castillo de Chapultepec, de
-     ProtoplasmaKid en Wikimedia Commons, CC0), que se guarda fuera del repo.
+2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026, solo vídeo, sin fotos fijas)
+     vid/welcome.mp4 (póster img/welcome.jpg = primer fotograma, el Ángel)
+     1080×1920, 30 fps, 11,3 s, H.264 High sin audio, CRF 19, fast start, ~7,5 MB.
+     Cuatro planos de vídeo 4K, recortados en vertical sin deformar, con fundidos de
+     0,4 s; el último funde con el arranque del primero para que el bucle no salte.
+     El hotel no publica vídeo propio en presidenteicmiyana.com, así que todo es
+     vídeo de archivo de la zona.
+       1. El Ángel de la Independencia a la hora dorada, de cerca y con jacarandas
+          (tramo 11,0–13,6 s a 0,8×, recorte que sigue a la estatua, sin rótulos).
+          «ANGEL DE LA INDEPENDENCIA» · Fernando Paleta · Pexels, 3840×2160 ·
+          Licencia Pexels · https://www.pexels.com/video/15809009/
+       2. El skyline de Reforma sobre el bosque de Chapultepec, con jacarandas
+          (tramo 1,4–4,6 s).
+          «Aerial View of Mexico City Skyline in Spring» · Jorge Pantaleon · Pexels,
+          3840×2160 · Licencia Pexels · https://www.pexels.com/video/36843141/
+       3. Palacio de Bellas Artes al atardecer, desde lo alto (tramo 1,0–4,2 s, zoom
+          lento sobre la cúpula).
+          «Historic Palace of Fine Arts in Mexico City» · Jorge Pantaleon · Pexels,
+          3840×2160 · Licencia Pexels · https://www.pexels.com/video/35645084/
+       4. Puesta de sol sobre la ciudad desde un dron (tramo 0,8–4,0 s).
+          «Stunning Mexico City Sunset Aerial View» · Jorge Pantaleon · Pexels,
+          3840×2160 · Licencia Pexels · https://www.pexels.com/video/36745801/
+     Sustituye a la versión anterior, con dos fotos fijas del hotel con zoom, que se
+     guarda fuera del repo.
 
 3) WIKIMEDIA COMMONS
      ex1.jpg   «Catedral Metropolitana de la Ciudad de México 1» · ProtoplasmaKid · CC BY-SA 4.0
