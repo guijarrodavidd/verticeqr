@@ -26,26 +26,28 @@ Todas las imágenes, recortadas a 800×533 y calidad ~70.
    (concha #D6AD77, letras #8C7457); logo-white.png, en blanco, para la bienvenida. Sustituir
    por el vectorial oficial que facilite el hotel.
 
-2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026)
+2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026, solo vídeo, sin fotos fijas)
      vid/welcome.mp4 (póster img/welcome.jpg = primer fotograma)
-     1080×1920, 30 fps, 12,4 s, H.264 High sin audio, CRF 24, fast start, ~6,8 MB.
-     Cuatro planos con fundidos de 0,4 s; el último funde con el arranque del primero
-     para que el bucle no salte.
-       1. El resort desde el aire, con la selva detrás y la playa delante. Paneo lento
-          sobre la foto del hotel de la galería de Trip.com (2048×1364).
-          https://ak-d.tripcdn.com/images/0221u12000ky2jcbrA31E.jpg
-       2. Las albercas y el edificio en curva con el mar al fondo. Zoom lento sobre la foto
-          del hotel de la galería de Trip.com (2000×1500).
-          https://ak-d.tripcdn.com/images/0226m12000sg8r19k3F4D.jpg
-       3. Playa de arena blanca y mar azul desde un dron (tramo 1,0–4,4 s, recorte vertical).
-          «People on Beach» · Davis Arenas · Pexels, 4K · Licencia Pexels
-          https://www.pexels.com/video/11563634/
-       4. Cala de agua turquesa entre rocas, desde un dron (tramo 10,0–13,4 s, recorte vertical
-          con zoom lento). «A View From Above Of A Beautiful Shoreline With Waves Breaking» ·
-          Daniel Rojas Roa · Pexels, 4K · Licencia Pexels · https://www.pexels.com/video/2640253/
-       Los planos 3 y 4 son playas de archivo libre; Pexels no indica la playa exacta.
-     Sustituye a la versión anterior (las pangas de Punta de Mita, de Ponleplay en Pixabay,
-     vídeo 42529), que se guarda fuera del repo.
+     1080×1920, 30 fps, 11,0 s, H.264 High sin audio, CRF 19, fast start, ~7,3 MB.
+     Cuatro planos de vídeo 4K, recortados en vertical sin deformar, con fundidos de 0,4 s;
+     el último funde con el arranque del primero para que el bucle no salte. El hotel no
+     publica vídeo propio que se pueda bajar de su web, así que todo es vídeo de archivo
+     de la costa del Pacífico.
+       1. Playa larga de arena blanca, mar azul y cielo despejado, desde un dron
+          (tramo 1,0–3,6 s a 0,8×). «Beach and Town» · Davis Arenas · Pexels, 3840×2160 ·
+          Licencia Pexels · https://www.pexels.com/video/11563637/
+       2. Los Arcos de Mismaloya, en la bahía de Banderas, con un velero (tramo 8,0–11,1 s).
+          «Islas Mismayola» · Ricky Ortega · Pexels, 4096×2160 · Licencia Pexels ·
+          https://www.pexels.com/video/17808412/
+       3. Playa con rocas y selva a la hora dorada, desde arriba (tramo 5,0–7,5 s a 0,8×).
+          «An Aerial Footage of a Beach Resort» · Griffin Wooldridge · Pexels, 3840×2160 ·
+          Licencia Pexels · https://www.pexels.com/video/14994550/
+       4. Puesta de sol sobre el mar con surfistas (tramo 2,0–5,1 s).
+          «Drone Footage of Surfers Riding Waves at Sunset» · Vladimir Miranda · Pexels,
+          2160×3840 · Licencia Pexels · https://www.pexels.com/video/13169679/
+       Pexels no indica la playa exacta de los planos 1, 3 y 4.
+     Sustituye a la versión anterior, con dos fotos fijas del hotel con zoom, que se guarda
+     fuera del repo.
 
 3) WIKIMEDIA COMMONS (en https://commons.wikimedia.org/wiki/File:<nombre>)
      ex12.jpg   Playa Escondida, Islas Marietas · «Isla Marieta( isla del amor).jpg» ·

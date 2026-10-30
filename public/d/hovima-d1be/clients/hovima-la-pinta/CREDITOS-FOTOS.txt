@@ -136,16 +136,22 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
    el de ex4 (toboganes) no es Siam Park; el de sv1 no es el Cool Spa. Sustituir por material
    propio del hotel o de los colaboradores cuando lo haya.
 
-5) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026)
-   vid/welcome.mp4 · 1080×1920, 30 fps, 11,8 s, H.264 High sin audio, CRF 22, fast start, 6,2 MB.
+5) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026, solo vídeo, sin fotos fijas)
+   vid/welcome.mp4 · 1080×1920, 30 fps, 11,0 s, H.264 High sin audio, CRF 19, fast start, 7,0 MB.
    img/welcome.jpg · póster = primer fotograma, 1080×1920, JPEG calidad 85.
-   Cuatro planos de unos 3 s con fundidos de 0,4 s; el último funde con el arranque para que el bucle no salte.
-     1. Piscina, edificio curvo y mar con cielo azul. Foto oficial del hotel, zoom lento.
-        https://cdn2.paraty.es/hovima-pinta/images/262d88fbcf3fad7 («Hovima: La Pinta, vistas frontales al mar, piscina y playa», 2500×1686)
-     2. El hotel y la playa desde el aire. Foto oficial del hotel, zoom lento.
-        https://cdn2.paraty.es/hovima-pinta/images/27febd862940f97 (vista aérea del hotel y la playa, 3000×2160)
-     3. Terraza con tumbonas de La Pinta frente a la playa y Puerto Colón. Foto oficial del hotel, desplazamiento lento.
-        https://cdn2.paraty.es/hovima-pinta/images/bcfe424c81902ef («Terraza con tumbonas y vistas al mar y la playa», 3000×2471)
-     4. El Teide en hora dorada entre pinos. Pexels (licencia Pexels, sin atribución obligatoria), 4K vertical.
-        «Sunrise over mountain with scenic forest view» · https://www.pexels.com/video/31193025/ (tramo 0,8–4,1 s)
-   Las fotos del hotel son material de HOVIMA Hotels, solo para la demo privada.
+   Cuatro planos de vídeo 4K de unos 3 s, recortados en vertical sin deformar, con fundidos de 0,4 s;
+   el último funde con el arranque para que el bucle no salte. La web del hotel solo tiene un clip
+   propio de 2 s a 1920×1080 (Frame LP.mp4), demasiado pequeño, así que todo es vídeo de archivo.
+     1. Olas turquesa rompiendo frente a la costa sur de Tenerife, con el pueblo blanco y la montaña
+        (tramo 0,2–1,9 s, a cámara lenta desde 60 fps). Pexels, 3840×2160, licencia Pexels.
+        «Aerial View of Coastal Town with Waves» · https://www.pexels.com/video/29566634/
+     2. El Teide sobre el mar de nubes, entre pinos y con cielo azul (tramo 1,0–4,1 s). Pexels,
+        2160×3840, licencia Pexels. «Beautiful View of Mount Teide and Surrounding Forest» ·
+        https://www.pexels.com/video/38308533/
+     3. Paseo marítimo con palmeras y playa a la hora dorada, en la costa sur (tramo 4,0–7,1 s).
+        Pexels, 3840×2160, licencia Pexels. «Scenic Aerial View of Tenerife Coastline» ·
+        https://www.pexels.com/video/30181389/
+     4. El Teide al amanecer entre pinos (tramo 0,5–3,6 s). Pexels, 2160×3840, licencia Pexels.
+        «Sunrise over mountain with scenic forest view» · https://www.pexels.com/video/31193025/
+   Pexels no indica el sitio exacto de los planos 1 y 3. La versión anterior (tres fotos del hotel
+   con zoom y el Teide) se guarda fuera del repo.

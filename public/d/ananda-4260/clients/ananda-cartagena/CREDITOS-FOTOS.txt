@@ -84,19 +84,24 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
      vid/ex4.mp4      640×360, 10 s · Castillo de San Felipe de Barajas · Enrique
                       https://www.pexels.com/video/3940080/
 
-5) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026)
+5) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026, solo vídeo, sin fotos fijas)
      vid/welcome.mp4 (póster img/welcome.jpg = primer fotograma)
-     1080×1920, 30 fps, 12,4 s, H.264 High sin audio, CRF 20, fast start, ~6,9 MB.
-     Cuatro planos con zoom o paneo lento sobre fotos fijas y fundidos de 0,4 s; el último
-     funde con el arranque del primero para que el bucle no salte.
-       1. El patio con la piscina y la palmera a la hora azul. Foto del hotel de su web
-          (dsc6921dok, servida a 1920×1281).
-          https://image-tc.galaxy.tf/wijpeg-moxg1j99qlhap7lp3qbtxzye/dsc6921dok.jpg
-       2. La piscina de la azotea al anochecer, con las cúpulas iluminadas. Foto del hotel de
-          su web (psicina, servida a 1920×1281).
-          https://image-tc.galaxy.tf/wijpeg-8hewonav74a3ypmnh69l5ozpe/psicina.jpg
-       3. Calle de la ciudad amurallada con balcones de madera y la cúpula de la Catedral al
-          fondo, con cielo azul. «View of a Cathedral Tower from the Street» · Ariel Foletto ·
-          Pexels (2258×4014) · Licencia Pexels · https://www.pexels.com/photo/13767911/
-       4. La Torre del Reloj contra el cielo azul. «Clock Tower in Cartagena's Historic Center» ·
-          Woody Willis · Pexels (6144×8192) · Licencia Pexels · https://www.pexels.com/photo/36856198/
+     1080×1920, 30 fps, 11,0 s, H.264 High sin audio, CRF 19, fast start, ~7,2 MB.
+     Cuatro planos de vídeo 4K, recortados en vertical sin deformar, con fundidos de 0,4 s;
+     el último funde con el arranque del primero para que el bucle no salte. El vídeo del
+     hotel en su web está alojado en YouTube, así que no se usa: todo es vídeo de archivo.
+       1. La cúpula de la Catedral con el mar Caribe detrás, desde un dron (tramo 0,3–1,9 s,
+          a cámara lenta desde 60 fps). «Aerial View of Cartagena's Historic Skyline» ·
+          willington j urrea g · Pexels, 3840×2160 · Licencia Pexels ·
+          https://www.pexels.com/video/30391239/
+       2. San Pedro Claver y la muralla con cielo azul (tramo 3,0–6,1 s).
+          «CATEDRAL DE SAN PEDRO CLAVER - CARTAGENA» · Julián Armando Santos · Pexels,
+          3840×2160 · Licencia Pexels · https://www.pexels.com/video/27757012/
+       3. Isla con agua turquesa, palapas y lanchas, cerca de Cartagena (tramo 6,0–9,1 s).
+          «Drone Footage Of An Island» · LUIS ADOLFO BURGOS · Pexels, 3840×2160 ·
+          Licencia Pexels · https://www.pexels.com/video/4279475/
+       4. Amanecer naranja sobre Bocagrande y la bahía (tramo 3,0–6,1 s).
+          «AMANECER CARTAGENA DE INDIAS COLOMBIA» · JOSÉ ANDRÉS GUTIÉRREZ GARCÍA · Pexels,
+          3840×2160 · Licencia Pexels · https://www.pexels.com/video/15618305/
+     Sustituye a la versión anterior, con fotos fijas del hotel y de la ciudad con zoom, que
+     se guarda fuera del repo.

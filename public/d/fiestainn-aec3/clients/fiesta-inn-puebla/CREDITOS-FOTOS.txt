@@ -25,24 +25,27 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
    SVG de su web (fiesta-inn-puebla-las-animas_logo.svg en color y _second-logo.svg en
    blanco). logo-white.png es la versión blanca para la bienvenida.
 
-2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026)
+2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026, solo vídeo, sin fotos fijas)
      vid/welcome.mp4 (póster img/welcome.jpg = primer fotograma)
-     1080×1920, 30 fps, 12,4 s, H.264 High sin audio, CRF 20, fast start, ~6,2 MB.
-     Cuatro planos con zoom lento sobre fotos fijas y fundidos de 0,4 s; el último funde con
-     el arranque del primero para que el bucle no salte.
-       1. La torre del hotel a la hora azul, con el rótulo encendido. Foto del hotel de su web
-          (130973768-exterior-2986x4560, servida a 1257×1920).
-          https://image-tc.galaxy.tf/wijpeg-7moe9ijgx5yuaao5udrak28k/130973768-exterior-2986x4560-result.jpg
-       2. La alberca. Foto del hotel de su web (77989260-alberca-3744x5616, servida a 1280×1920).
-          https://image-tc.galaxy.tf/wijpeg-7qz2j6fjwb1v4le2c7l6zf1lc/77989260-alberca-3744x5616-result.jpg
-       3. La fuente del zócalo y la cúpula de azulejo de la Catedral de Puebla, con cielo azul.
-          «Fountain and Dome of Puebla Cathedral behind» · Danny Graphy · Pexels (3449×5173) ·
-          Licencia Pexels · https://www.pexels.com/photo/17413920/
-       4. El santuario de los Remedios en Cholula con el Popocatépetl nevado detrás, a la hora
-          dorada. «Church with Majestic Volcano in Background» · Felipe Perez · Pexels
-          (2133×3200) · Licencia Pexels · https://www.pexels.com/photo/12282043/
-     Sustituye a la versión anterior (la Catedral de Puebla desde un dron, de Luisalvaz en
-     Wikimedia Commons, CC0), que se guarda fuera del repo.
+     1080×1920, 30 fps, 11,0 s, H.264 High sin audio, CRF 19, fast start, ~7,2 MB.
+     Cuatro planos de vídeo 4K, recortados en vertical sin deformar, con fundidos de 0,4 s;
+     el último funde con el arranque del primero para que el bucle no salte. El hotel no
+     publica vídeo propio en su web, así que todo es vídeo de archivo de la zona.
+       1. El santuario de los Remedios sobre la pirámide de Cholula, con cielo azul y los
+          volcanes al fondo (tramo 0,5–3,8 s). «Scenic View of Cholula Pyramid and Church» ·
+          Elchino portrait · Pexels, 3840×2160 · Licencia Pexels ·
+          https://www.pexels.com/video/34985650/
+       2. La fachada de talavera y la cúpula de San Francisco Acatepec (tramo 0,3–3,4 s).
+          «Aerial View of San Francisco Acatepec Church» · INOCENTE SANCHEZ GUADARRAMA ·
+          Pexels, 3840×2160 · Licencia Pexels · https://www.pexels.com/video/36810765/
+       3. La Estrella de Puebla entre árboles y jacarandas en flor (tramo 0,3–3,4 s).
+          «Aerial View of Jacaranda Trees and Ferris Wheel» · Diana Reyes · Pexels,
+          3840×2160 · Licencia Pexels · https://www.pexels.com/video/39928154/
+       4. El Popocatépetl con su fumarola al amanecer (tramo 3,9–6,5 s a 0,83×).
+          «An aerial view of a volcano with smoke coming out of it» · Amar Preciado ·
+          Pexels, 3840×2160 · Licencia Pexels · https://www.pexels.com/video/27500689/
+     Sustituye a la versión anterior, con fotos fijas del hotel y de Puebla con zoom, que se
+     guarda fuera del repo.
 
 3) PEXELS (licencia Pexels: uso libre, sin atribución obligatoria; se cita igual)
    Fotos genéricas de platos, bebidas, desayunos, postres, bienestar, planes, servicios

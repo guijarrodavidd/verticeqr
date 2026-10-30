@@ -28,23 +28,24 @@ Todas las imágenes, recortadas a 800×533 y calidad ~70.
    (logo-carrishoteles.jpg): la C, «Carrís» y «Marineda» en negro #1D1D1B, la H
    y «Hoteles» en gris #9D9D9C. logo-white.png, en blanco, para la bienvenida.
 
-2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026; póster img/welcome.jpg = primer fotograma,
-   1080×1920, JPEG calidad 85)
-     vid/welcome.mp4  Cuatro planos de unos 3 s con movimiento lento sobre fotos, fundidos de
-                  0,4 s y el final fundido sobre el arranque para que el bucle no salte:
-                  1. La fachada del hotel con cielo azul, paneo hacia el rótulo · foto del hotel,
-                     carrishoteles.com (wp-content/uploads/2022/10/hotel-marineda-2.jpg, 1920×1080)
-                  2. Habitación Premium · foto del hotel, carrishoteles.com (premium-1.jpg, 1920×1080)
-                  3. La Torre de Hércules desde el mar · «Torre de Hércules, La Coruña, España,
-                     2015-09-24, DD 11.jpg» · Diego Delso · CC BY-SA 4.0 ·
-                     https://commons.wikimedia.org/wiki/File:Torre_de_H%C3%A9rcules,_La_Coru%C3%B1a,_Espa%C3%B1a,_2015-09-24,_DD_11.jpg
-                  4. Las galerías de la Marina · «Avenida da Mariña, A Coruña 2026-08-10 3008.jpg» ·
-                     C messier · CC BY-SA 4.0 ·
-                     https://commons.wikimedia.org/wiki/File:Avenida_da_Mari%C3%B1a,_A_Coru%C3%B1a_2026-08-10_3008.jpg
-                  Las dos fotos del hotel se amplían 1,8 veces para el formato vertical, con un
-                  enfoque suave; con fotos más grandes del hotel quedarían más nítidas.
-                  Vertical 1080×1920, 30 fps, 12,1 s, H.264 High CRF 20, sin audio, fast start,
-                  6,1 MB.
+2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026, solo vídeo, sin fotos fijas; póster img/welcome.jpg =
+   primer fotograma, 1080×1920, JPEG calidad 85)
+     vid/welcome.mp4  Cuatro planos de vídeo 4K de unos 3 s, recortados en vertical sin deformar, con
+                  fundidos de 0,4 s y el final fundido sobre el arranque para que el bucle no salte.
+                  El vídeo de carrishoteles.com es de la cadena y está a 1280×720, así que no sirve:
+                  todo es vídeo de archivo de Pexels (licencia Pexels), grabado desde tierra.
+                  1. Acantilados verdes y mar azul de la costa gallega (tramo 3,0–6,1 s) ·
+                     «Scenic Coastal Landscape with Waves and Cliffs» · https://www.pexels.com/video/31923160/
+                  2. La Torre de Hércules sobre el mar con olas (tramo 2,0–3,7 s, a cámara lenta
+                     desde 60 fps) · «A Lighthouse Is Seen from the Shoreline» ·
+                     https://www.pexels.com/video/17549542/
+                  3. Playa gallega con olas y el monte detrás (tramo 2,0–5,1 s; 3240×2160) ·
+                     «Scenic Coastal View of Galicia's Beaches» · https://www.pexels.com/video/34376902/
+                  4. Mar abierto y la costa con cielo azul (tramo 12,0–15,1 s) · mismo vídeo que el plano 1.
+                  Pexels solo identifica la Torre de Hércules; los otros planos son costa gallega
+                  sin sitio exacto.
+                  Vertical 1080×1920, 30 fps, 11,0 s, H.264 High CRF 19, sin audio, fast start,
+                  7,3 MB.
 
 3) WIKIMEDIA COMMONS (licencias libres; en https://commons.wikimedia.org/wiki/File:<nombre>)
      cm2.jpg    Tortilla de Betanzos · «Tortilla de Betanzos.jpg» · Javier Lastras · CC BY 2.0

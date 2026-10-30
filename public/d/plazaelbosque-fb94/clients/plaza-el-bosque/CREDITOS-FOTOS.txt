@@ -35,20 +35,22 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
    en blanco tal cual (la bienvenida); logo.png lo recompone Vértice en horizontal,
    como el de la cabecera de su web, en su gris pizarra #484B54.
 
-2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026)
-     vid/welcome.mp4 · 1080×1920, 30 fps, 11,8 s, H.264 High sin audio, CRF 22, fast start, 6,9 MB.
+2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026, solo vídeo, sin fotos fijas)
+     vid/welcome.mp4 · 1080×1920, 30 fps, 11,0 s, H.264 High sin audio, CRF 19, fast start, 7,4 MB.
      img/welcome.jpg · póster = primer fotograma, 1080×1920, JPEG calidad 85.
-     Cuatro planos de unos 3 s con fundidos de 0,4 s; el último funde con el arranque para que el bucle no salte.
-       1. La torre del hotel al atardecer con la terraza de la azotea iluminada, desde el aire. Foto de su web, zoom lento.
-          www.plazaelbosque.cl/wp-content/uploads/2024/04/IMG1-EBRO-Home.webp (1107×1050)
-       2. La fachada de día con el logotipo y el cielo azul. Foto de su web, desplazamiento lento.
-          www.plazaelbosque.cl/wp-content/uploads/2024/06/Fachada1.webp (1920×1080)
-       3. Santiago desde el aire con la cordillera nevada y cielo azul. Pexels, 4K horizontal recortado en vertical.
-          https://www.pexels.com/video/33585295/ (tramo 2,0–5,3 s)
-       4. El teleférico del Parque Metropolitano con la cordillera nevada. Pexels, 4K vertical.
-          https://www.pexels.com/video/20453027/ (tramo 0,3–3,6 s)
-     Licencia Pexels: uso libre, sin atribución obligatoria. La versión anterior (fotos de la fachada, el
-     lobby, Enebro y la carta, a 720×1280) queda sustituida.
+     Cuatro planos de vídeo 4K de unos 3 s, recortados en vertical sin deformar, con fundidos de 0,4 s;
+     el último funde con el arranque para que el bucle no salte. La web del hotel solo enlaza vídeo de
+     YouTube, así que todo es vídeo de archivo de Santiago.
+       1. La cordillera nevada sobre la ciudad y la iglesia de Los Dominicos, desde el aire (tramo 6,0–9,3 s).
+          «Aerial View of Santiago with Andes Mountains» · Pexels, 3840×2160 · https://www.pexels.com/video/33585295/
+       2. El teleférico del Parque Metropolitano con los Andes nevados detrás (tramo 6,0–9,1 s).
+          «Chile Cable Car Santiago» · Pexels, 3840×2160 · https://www.pexels.com/video/20453024/
+       3. Los Andes nevados sobre los barrios del oriente de Santiago (tramo 39,0–42,1 s).
+          «Aerial View of Santiago with Snow-Capped Andes» · Pexels, 3840×2160 · https://www.pexels.com/video/33585272/
+       4. Avenida arbolada de un parque de Santiago hacia los Andes nevados (tramo 6,0–9,1 s).
+          «Aerial View of Santiago Park and Mountains» · Pexels, 3840×2160 · https://www.pexels.com/video/33585457/
+     Licencia Pexels: uso libre, sin atribución obligatoria. La versión anterior (dos fotos del hotel con
+     zoom y dos vídeos de Pexels) se guarda fuera del repo.
 
 3) PEXELS (licencia Pexels: uso libre, sin atribución obligatoria; se cita igual)
    Fotos genéricas de bebidas, desayuno, bienestar, servicios y amenities: no son

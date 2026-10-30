@@ -441,5 +441,41 @@
       "luminous-lagoon": 30,
       "appleton-estate": 115
     }
+  },
+  {
+    "hotel": "megapolis-panama",
+    "ciudad": "panama",
+    "ubicacion": {
+      "lat": 8.97745,
+      "lng": -79.51775
+    },
+    "minutos": {
+      "cinta-costera": 5,
+      "casco-antiguo": 10,
+      "miraflores": 25,
+      "panama-viejo": 15,
+      "amador": 20,
+      "cerro-ancon": 15,
+      "mercado-mariscos": 10,
+      "taboga": 65
+    }
+  },
+  {
+    "hotel": "decapolis-panama",
+    "ciudad": "panama",
+    "ubicacion": {
+      "lat": 8.9775,
+      "lng": -79.51706
+    },
+    "minutos": {
+      "cinta-costera": 5,
+      "casco-antiguo": 10,
+      "miraflores": 25,
+      "panama-viejo": 15,
+      "amador": 20,
+      "cerro-ancon": 15,
+      "mercado-mariscos": 10,
+      "taboga": 65
+    }
   }
 ]

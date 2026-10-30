@@ -65,21 +65,22 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
 4) VÍDEOS — Pexels (Licencia Pexels: uso libre, también comercial, sin
    atribución obligatoria; se acredita igualmente). Recortados y recodificados
    a H.264 sin audio con avconvert / AVFoundation (macOS).
-     vid/welcome.mp4  (rehecho el 30-oct-2026) Cuatro planos de unos 3 s con movimiento lento
-                      sobre fotos, fundidos de 0,4 s y el final fundido sobre el arranque para
-                      que el bucle no salte:
-                      1. La terraza cubierta de día · foto del hotel, casaromanhotel.com
-                         (wp-content/uploads/2022/05/IMG_8969.jpg, 6000×4000)
-                      2. La fachada de la tapería al anochecer, con «ROMÁN» en el pilar · foto del
-                         hotel, casaromanhotel.com (hotel-casa-román.jpeg, 2180×1100)
-                      3. La playa de Silgar y el agua de la ría · «Playa Silgar Sanxenxo -
-                         panoramio.jpg» · joselomba · CC BY-SA 3.0 ·
-                         https://commons.wikimedia.org/wiki/File:Playa_Silgar_Sanxenxo_-_panoramio.jpg
-                      4. La Madama de Silgar · «Madama de Silgar por Alfonso Vilar Lamelas.
-                         Sanxenxo. Galiza SX-4.jpg» · Luis Miguel Bugallo Sánchez (Lmbuga) ·
-                         CC BY-SA 3.0 · https://commons.wikimedia.org/wiki/File:Madama_de_Silgar_por_Alfonso_Vilar_Lamelas._Sanxenxo._Galiza_SX-4.jpg
-                      Vertical 1080×1920, 30 fps, 12,1 s, H.264 High CRF 22, sin audio, fast start,
-                      6,7 MB.
+     vid/welcome.mp4  (rehecho el 30-oct-2026, solo vídeo, sin fotos fijas) Cuatro planos de vídeo 4K
+                      de unos 3 s, recortados en vertical sin deformar, con fundidos de 0,4 s y el final
+                      fundido sobre el arranque para que el bucle no salte. El hotel no publica vídeo
+                      en su web; todo es vídeo de archivo de Pexels (licencia Pexels) de las Rías
+                      Baixas, grabado desde tierra. Pexels no da el sitio exacto de ninguno.
+                      1. Playa de arena blanca con agua verde y pinos detrás (tramo 20,0–23,3 s) ·
+                         «A Beach at or Near the Apartment» · https://www.pexels.com/video/28321347/
+                      2. Puerto deportivo y paseo con edificios, agua transparente y cielo azul
+                         (tramo 1,0–4,1 s) · «A Beach with Boats and Buildings in the Background» ·
+                         https://www.pexels.com/video/20112690/
+                      3. Olas en una playa con rocas de granito a la hora dorada (tramo 10,0–13,1 s) ·
+                         «A Beach at or Near the Apartment» · https://www.pexels.com/video/20041747/
+                      4. La ría en calma con islotes de roca (tramo 2,0–5,1 s) ·
+                         «Tranquil Coastal View with Rocky Shoreline» · https://www.pexels.com/video/32996035/
+                      Vertical 1080×1920, 30 fps, 11,0 s, H.264 High CRF 19, sin audio, fast start,
+                      7,3 MB.
      img/welcome.jpg  Primer fotograma de ese mismo vídeo (póster), 1080×1920, JPEG calidad 85.
      vid/ex1.mp4      «Vigo» · Borys Trusevych · pexels.com/video/20690479
                       (costa de Vigo con las Cíes en el horizonte). 640×360, 10 s.

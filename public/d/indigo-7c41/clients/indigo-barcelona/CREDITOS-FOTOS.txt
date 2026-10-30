@@ -59,20 +59,24 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
      bb1.jpg, ds2.jpg, am1.jpg, am2.jpg, am4.jpg, am6.jpg  (casa-roman/img, mismos nombres)
 
 4) VÍDEOS
-     vid/welcome.mp4  (rehecho el 30-oct-2026) Cuatro planos de unos 3 s con fundidos de 0,4 s y
-                      el final fundido sobre el arranque para que el bucle no salte:
-                      1. La fachada en la Gran Via, acercamiento lento · foto del hotel, galería de
-                         ihg.com (digital.ihg.com/is/image/ihg/hotel-indigo-barcelona-10114274816-original)
-                      2. Habitación, paneo lento · foto del hotel, ihg.com (…-10114276908-original)
-                      3. Plaça d'Espanya, las torres venecianas y el MNAC al fondo · foto del hotel,
-                         ihg.com (…-10118437743-original)
-                      4. El MNAC al atardecer · Pexels (Licencia Pexels), «Museu Nacional d'Art de
-                         Catalunya on Sunset Time» · https://www.pexels.com/video/20204266/
-                         (original 3840×2160, tramo 3,0–6,3 s, recorte vertical)
-                      No hay vídeo propio del hotel publicado. El hotel no tiene piscina ni
-                      terraza en la azotea (ni en ihg.com ni en Booking), así que no sale.
-                      Vertical 1080×1920, 30 fps, 12,1 s, H.264 High CRF 20, sin audio, fast start,
-                      6,6 MB.
+     vid/welcome.mp4  (rehecho el 30-oct-2026, solo vídeo, sin fotos fijas) Cuatro planos de vídeo
+                      4K de unos 3 s, recortados en vertical sin deformar, con fundidos de 0,4 s y el
+                      final fundido sobre el arranque para que el bucle no salte:
+                      1. Las torres de la Sagrada Família con cielo azul (tramo 0,2–2,9 s a 0,83×) ·
+                         Pexels (Licencia Pexels), «Sagrada Familia» (vertical 2160×3840) ·
+                         https://www.pexels.com/video/20204343/
+                      2. El Port Olímpic y las playas desde el aire, con el mar azul (tramo
+                         4,0–7,1 s) · Pexels (Licencia Pexels), 3840×2160 ·
+                         https://www.pexels.com/video/27590231/
+                      3. La Torre Glòries con cielo azul y nubes (tramo 0,3–3,4 s, recorte que deja
+                         fuera el rótulo de la base) · Pexels (Licencia Pexels), «Explore Torre
+                         Glòries in Sunny Barcelona» (3840×2160) · https://www.pexels.com/video/30157380/
+                      4. El MNAC a la hora dorada (tramo 6,0–8,6 s a 0,83×) · Pexels (Licencia
+                         Pexels), «Museu Nacional d'Art de Catalunya on Sunset Time» (3840×2160) ·
+                         https://www.pexels.com/video/20204266/
+                      No hay vídeo propio del hotel publicado. Los autores de Pexels no constan en
+                      la búsqueda guardada; la licencia no obliga a citarlos.
+                      Vertical 1080×1920, 30 fps, 11,0 s, H.264 High CRF 19, sin audio, fast start, 6,7 MB.
      img/welcome.jpg  Primer fotograma de ese vídeo (póster), 1080×1920, JPEG calidad 85.
    Pexels (Licencia Pexels: uso libre, también comercial; se acredita igualmente).
    Recortados a 640×360, 9-9,5 s, H.264 sin audio, con fundido final para el bucle.

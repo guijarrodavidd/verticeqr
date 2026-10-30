@@ -152,18 +152,20 @@ USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
                       https://www.pexels.com/video/12453909/ (masaje de espalda con aceite;
                       original 3840×2160, 29,97 fps). 640×360, 9 s (tramo 0–9 s).
 
-5) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026)
-   vid/welcome.mp4 · 1080×1920, 30 fps, 11,8 s, H.264 High sin audio, CRF 22, fast start, 5,4 MB.
+5) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026, solo vídeo, sin fotos fijas)
+   vid/welcome.mp4 · 1080×1920, 30 fps, 11,0 s, H.264 High sin audio, CRF 19, fast start, 6,9 MB.
    img/welcome.jpg · póster = primer fotograma, 1080×1920, JPEG calidad 85.
-   Cuatro planos de unos 3 s con fundidos de 0,4 s; el último funde con el arranque para que el bucle no salte.
-   Todo es material del propio hotel (su web, files-p.pxsol.com/24678/company/library/user/), con zoom o
-   desplazamiento lento sobre cada foto. Solo para la demo privada.
-     1. El hotel desde el aire en hora dorada, con el volcán Villarrica nevado detrás.
-        14242052864f82799ae5b0dea2a8c1eab0c074b871e.jpg (2000×1125)
-     2. La piscina con las velas de sombra y la tarima de madera.
-        28297644688ac12f6b9ea5198c843072925998049d1.jpg (1500×2000)
-     3. La terraza con vista al lago Villarrica y cielo azul.
-        3525054690ab4e9d0a1208bfaad33908b5e9ad1bdc.jpg (2000×1125)
-     4. El lago y el volcán Villarrica desde el aire, con el bosque en otoño.
-        19582822688c2ace3aee921f01dec22d1434e5726bf.jpg (2000×1125)
-   La versión anterior (volcán entre nubes, Pexels 4814999) queda sustituida.
+   Cuatro planos de vídeo de unos 3 s, recortados en vertical sin deformar, con fundidos de 0,4 s; el
+   último funde con el arranque para que el bucle no salte. La web del hotel solo enlaza vídeo de
+   YouTube, así que todo es vídeo de archivo de los lagos del sur de Chile. Pexels no confirma que
+   ninguno sea Pucón ni el Villarrica.
+     1. Lago en calma con un volcán reflejado y cielo azul (tramo 12,0–15,3 s).
+        «Drone Footage of a Beautiful Landscape» · https://www.pexels.com/video/9357202/ (3840×2160)
+     2. Volcán nevado sobre el bosque, cielo azul (tramo 1,0–4,1 s). De la misma serie que «Volcán
+        Osorno» en Pexels. https://www.pexels.com/video/20585171/ (2730×1440)
+     3. Cascada entre el bosque nativo, desde un dron (tramo 27,0–30,1 s).
+        «Stunning Aerial Waterfall View in Lush Forest» · https://www.pexels.com/video/31600245/ (3840×2160)
+     4. Lago azul con la orilla, el pueblo y la montaña (tramo 3,0–6,1 s).
+        «City on Lakeshore Against Mountains, Aerial Footage» · https://www.pexels.com/video/14062330/ (3840×2160)
+   Licencia Pexels: uso libre, sin atribución obligatoria. La versión anterior (cuatro fotos del hotel con
+   zoom) se guarda fuera del repo.

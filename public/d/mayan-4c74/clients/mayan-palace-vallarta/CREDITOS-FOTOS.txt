@@ -50,28 +50,29 @@ y el póster welcome.jpg, a 1080×1920 y calidad 85.
      mesa-tramonto.jpg       Salón de Tramonto (vidanta.com/documents/36219/190535/vidanta-dining-nuevo-vallarta-tramonto-gallery.jpg, 630 px, la única foto del salón en su web)
      rs3.jpg                 Ravioli de queso y espinaca (Tastes of paradise make Tramonto's famous ravioli, Tramonto_Ravioli_01.jpg)
 
-2) VÍDEO DE BIENVENIDA (30-oct-2026) — vid/welcome.mp4 y su póster welcome.jpg
-   1080×1920, 30 fps, 11,6 s, H.264 High, CRF 20, sin audio, 6,5 MB. Cuatro
-   planos de 3,2 s con fundidos de 0,4 s; al final funde con el primer
-   fotograma para que el bucle no salte. welcome.jpg es ese primer fotograma.
-     Plano 1  Main Pool de Beachland: la palapa del bar y la alberca infinita,
-              acercamiento lento. Foto oficial de la revista de Vidanta
-              (Beachland now open at Vidanta Nuevo Vallarta, 01-Main-pool-1.jpg,
-              1660×1060).
-     Plano 2  Main Pool de Beachland: palmeras, letrero de Balché, piedras en
-              el agua, playa y sierra, travelling lateral. Foto oficial
-              (Discover delicious dining in Beachland's seafront, Beachland.jpg,
-              2048×1021), con el contraste recuperado (viene con un velo oscuro).
-     Plano 3  Punta de Mita: pangas sobre el agua turquesa, dron en movimiento.
-              Pixabay, licencia de contenido de Pixabay (uso libre, sin
-              atribución obligatoria), «Punta De Mita, Ocean, Drone» de
-              Ponleplay: https://pixabay.com/videos/punta-de-mita-ocean-drone-beach-42529/
-              (segundos 3,5 a 6,7, recorte vertical de 2560×1440, color subido).
-     Plano 4  Atardecer sobre el Pacífico desde la Main Pool, alejamiento lento.
-              Foto oficial (Bienvenido a Beachland, Bienvenido-a-Beachland.jpg,
-              2048×1021).
-   El vídeo anterior (la parroquia de Puerto Vallarta, Pexels) queda guardado
-   fuera del repo. De él sale todavía ex16.jpg:
+2) VÍDEO DE BIENVENIDA (rehecho el 30-oct-2026, solo vídeo, sin fotos fijas) — vid/welcome.mp4 y su póster welcome.jpg
+   1080×1920, 30 fps, 11,0 s, H.264 High, CRF 19, sin audio, fast start. Cuatro planos de
+   vídeo 4K recortados en vertical sin deformar, con fundidos de 0,4 s; al final funde con el
+   primer fotograma para que el bucle no salte. welcome.jpg es ese primer fotograma.
+   Vidanta publica en su portada un vídeo propio (VW_HOME_16X9_250825_V1.mp4), pero está a
+   1520×800 y en vertical quedaría borroso, así que no se usa.
+     Plano 1  Playa con muelle y pangas, agua verde turquesa, cenital de dron (tramo
+              2,0–5,3 s). «Aerial View of Tropical Beach and Pier» · Anderson Jagradatt
+              Sonnysingh · Pexels, 3840×2160 · Licencia Pexels ·
+              https://www.pexels.com/video/31113193/ (Pexels no indica la playa).
+     Plano 2  La bahía de Banderas con la zona hotelera de Nuevo Vallarta y la sierra al
+              fondo (tramo 0,5–3,6 s, color subido). «Aerial View of a Scenic Beachfront
+              with Hotel Structures» · Ricky Ortega · Pexels, 3840×2160 · Licencia Pexels ·
+              https://www.pexels.com/video/30364268/
+     Plano 3  Sayulita (Riviera Nayarit): la punta con villas entre la selva y el mar,
+              cielo azul (tramo 13,0–16,1 s, color subido). «Playa de los Muertos y de
+              Sayulita desde un dron» · Luisalvaz · Wikimedia Commons, 3840×2160 · CC0 ·
+              https://commons.wikimedia.org/wiki/File:Playa_de_los_Muertos_y_de_Sayulita_desde_un_dron.webm
+     Plano 4  La bahía de Sayulita con la playa y la sierra (tramo 50,0–53,1 s, color
+              subido). Mismo vídeo de Luisalvaz, CC0.
+   La versión anterior (dos fotos oficiales de Beachland con zoom, el vídeo de Ponleplay en
+   Pixabay y otra foto) queda guardada fuera del repo. Del vídeo de antes de esa (la
+   parroquia de Puerto Vallarta, Pexels) sale todavía ex16.jpg:
      ex16.jpg  Fotograma de «Aerial view of church and coastline in Puerto Vallarta»,
                Pexels, licencia Pexels: https://www.pexels.com/video/aerial-view-of-church-and-coastline-in-puerto-vallarta-32258584/
 
