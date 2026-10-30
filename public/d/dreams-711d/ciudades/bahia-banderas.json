@@ -1,0 +1,995 @@
+{
+  "slug": "bahia-banderas",
+  "nombre": "Bahía de Banderas",
+  "intro": {
+    "ES": "La bahía tiene Puerto Vallarta al sur y Punta de Mita al norte, con Nuevo Vallarta, Bucerías y La Cruz en medio. Las Islas Marietas quedan frente a Punta de Mita, a 20 minutos en lancha. Con un día fuera del resort te da para el malecón al atardecer, y con otro, para Sayulita. De diciembre a marzo salen lanchas a ver ballenas jorobadas.",
+    "EN": "The bay has Puerto Vallarta to the south and Punta de Mita to the north, with Nuevo Vallarta, Bucerías and La Cruz in between. The Marieta Islands lie off Punta de Mita, 20 minutes away by boat. One day out of the resort is enough for the malecón at sunset, and another for Sayulita. From December to March, boats go out to see humpback whales."
+  },
+  "lugares": [
+    {
+      "id": "islas-marietas",
+      "img": "/ciudades/bahia-banderas/img/islas-marietas.jpg",
+      "nombre": "Islas Marietas",
+      "zona": {
+        "ES": "Parque nacional frente a Punta de Mita",
+        "EN": "National park off Punta de Mita"
+      },
+      "d": {
+        "ES": "Dos islas de origen volcánico a unos 8 km de Punta de Mita. Solo se llega en lancha con un operador autorizado, y alrededor se hace snorkel entre peces de colores. En las rocas anidan pájaros bobos de patas azules. La Playa Escondida, dentro de un hueco abierto en la roca, tiene cupo diario y se entra nadando.",
+        "EN": "Two volcanic islands about 8 km off Punta de Mita. You can only get there by boat with an authorized operator, and around them you snorkel among colorful fish. Blue-footed boobies nest on the rocks. The Hidden Beach, inside a hollow in the rock, has a daily cap and you swim in."
+      },
+      "cuando": {
+        "ES": "Por la mañana, con el mar más tranquilo",
+        "EN": "In the morning, when the sea is calmer"
+      },
+      "min": 60,
+      "modo": "barco",
+      "lat": 20.70416,
+      "lng": -105.56493
+    },
+    {
+      "id": "malecon-vallarta",
+      "img": "/ciudades/bahia-banderas/img/malecon.jpg",
+      "nombre": "Malecón de Puerto Vallarta",
+      "zona": {
+        "ES": "Centro de Puerto Vallarta, Jalisco",
+        "EN": "Downtown Puerto Vallarta, Jalisco"
+      },
+      "d": {
+        "ES": "El paseo peatonal junto al mar, del centro hasta el río Cuale. Por el camino hay esculturas de bronce que puedes tocar y usar para la foto, como El Caballito o las sillas de la Rotonda del Mar. Al llegar a Los Arcos tienes enfrente la torre de la parroquia de Guadalupe.",
+        "EN": "The seafront promenade, from downtown to the Cuale River. Along the way there are bronze sculptures you can touch and pose with, like the boy on the seahorse or the chairs of the Rotonda del Mar. At Los Arcos you face the tower of the Guadalupe church."
+      },
+      "cuando": {
+        "ES": "Al atardecer, cuando el sol se pone sobre la bahía",
+        "EN": "At sunset, when the sun goes down over the bay"
+      },
+      "min": 25,
+      "modo": "coche",
+      "lat": 20.60889,
+      "lng": -105.23611
+    },
+    {
+      "id": "zona-romantica",
+      "img": "/ciudades/bahia-banderas/img/zona-romantica.jpg",
+      "nombre": "Zona Romántica",
+      "zona": {
+        "ES": "Viejo Vallarta, al sur del río Cuale",
+        "EN": "Old Town, south of the Cuale River"
+      },
+      "d": {
+        "ES": "El barrio de calles empedradas al sur del río Cuale, también llamado Viejo Vallarta. Tiene la playa de Los Muertos con su muelle y la calle Basilio Badillo, con restaurantes y galerías. Por la noche es la zona con más ambiente para cenar.",
+        "EN": "The cobbled neighborhood south of the Cuale River, also called Old Town. It has Los Muertos beach with its pier and Basilio Badillo street, lined with restaurants and galleries. At night it is the liveliest part of town for dinner."
+      },
+      "cuando": {
+        "ES": "De noche, para cenar y pasear por el muelle",
+        "EN": "At night, for dinner and a walk on the pier"
+      },
+      "min": 25,
+      "modo": "coche",
+      "lat": 20.6025,
+      "lng": -105.2366
+    },
+    {
+      "id": "sayulita",
+      "img": "/ciudades/bahia-banderas/img/sayulita.jpg",
+      "nombre": "Sayulita",
+      "zona": {
+        "ES": "Costa norte de Bahía de Banderas, Nayarit",
+        "EN": "North coast of Bahía de Banderas, Nayarit"
+      },
+      "d": {
+        "ES": "Un pueblo de pescadores que hoy vive del surf. Las calles tienen papel picado colgado de lado a lado y la gente se mueve en carritos de golf. Frente al pueblo las olas rompen suaves, por eso hay escuelas de surf en la misma playa.",
+        "EN": "A fishing village that now lives off surfing. Papel picado banners hang across the streets and people get around in golf carts. The waves break gently right in front of town, which is why there are surf schools on the beach itself."
+      },
+      "cuando": {
+        "ES": "Por la mañana, antes de que llegue la gente",
+        "EN": "In the morning, before the crowds arrive"
+      },
+      "min": 45,
+      "modo": "coche",
+      "lat": 20.86891,
+      "lng": -105.44072
+    },
+    {
+      "id": "punta-de-mita",
+      "img": "/ciudades/bahia-banderas/img/punta-de-mita.jpg",
+      "nombre": "Punta de Mita",
+      "zona": {
+        "ES": "Punta norte de la bahía, Nayarit",
+        "EN": "Northern tip of the bay, Nayarit"
+      },
+      "d": {
+        "ES": "El pueblo de pescadores en la punta norte de la bahía. Desde la playa de El Anclote salen las lanchas hacia las Islas Marietas. Allí mismo hay olas suaves para una primera clase de surf y restaurantes con mesas casi en la arena.",
+        "EN": "The fishing village at the northern tip of the bay. Boats to the Marieta Islands leave from El Anclote beach. Right there you find gentle waves for a first surf lesson and restaurants with tables almost on the sand."
+      },
+      "cuando": {
+        "ES": "Al caer la tarde, para ver el sol bajar sobre el mar",
+        "EN": "Late afternoon, to watch the sun go down over the sea"
+      },
+      "min": 45,
+      "modo": "coche",
+      "lat": 20.77,
+      "lng": -105.5185
+    },
+    {
+      "id": "bucerias",
+      "img": "/ciudades/bahia-banderas/img/bucerias.jpg",
+      "nombre": "Bucerías",
+      "zona": {
+        "ES": "Entre Nuevo Vallarta y La Cruz de Huanacaxtle",
+        "EN": "Between Nuevo Vallarta and La Cruz de Huanacaxtle"
+      },
+      "d": {
+        "ES": "Un pueblo de calles empedradas con una playa larga y plana, buena para caminar con niños. Junto a la plaza hay puestos de artesanía en la calle. Por la tarde, los restaurantes de la playa sacan las mesas a la arena.",
+        "EN": "A town of cobbled streets with a long, flat beach that is easy to walk with kids. Next to the main square, craft stalls line the street. In the afternoon the beach restaurants put their tables out on the sand."
+      },
+      "cuando": {
+        "ES": "A media tarde, para pasear y quedarte a ver el atardecer",
+        "EN": "Mid-afternoon, for a stroll and to stay for the sunset"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 20.75559,
+      "lng": -105.33435
+    },
+    {
+      "id": "san-pancho",
+      "img": "/ciudades/bahia-banderas/img/san-pancho.jpg",
+      "nombre": "San Pancho",
+      "zona": {
+        "ES": "San Francisco, Nayarit, al norte de Sayulita",
+        "EN": "San Francisco, Nayarit, north of Sayulita"
+      },
+      "d": {
+        "ES": "Su nombre oficial es San Francisco y está a 12 minutos de Sayulita por carretera. Es más chico y tranquilo. La calle principal baja recta hasta una playa ancha, donde al final del día la gente se sienta en la arena a ver el atardecer.",
+        "EN": "Its official name is San Francisco, 12 minutes by road from Sayulita. It is smaller and quieter. The main street runs straight down to a wide beach, where at the end of the day people sit on the sand to watch the sunset."
+      },
+      "cuando": {
+        "ES": "Al atardecer, sentado en la arena",
+        "EN": "At sunset, sitting on the sand"
+      },
+      "min": 50,
+      "modo": "coche",
+      "lat": 20.90224,
+      "lng": -105.41334
+    },
+    {
+      "id": "jardin-botanico",
+      "img": "/ciudades/bahia-banderas/img/jardin-botanico.jpg",
+      "nombre": "Jardín Botánico de Vallarta",
+      "zona": {
+        "ES": "Carretera 200 al sur de Puerto Vallarta, Cabo Corrientes, Jalisco",
+        "EN": "Highway 200 south of Puerto Vallarta, Cabo Corrientes, Jalisco"
+      },
+      "d": {
+        "ES": "Un jardín en plena selva, al sur de Puerto Vallarta, por la carretera que sube a El Tuito. Tiene senderos entre árboles tropicales y una colección de orquídeas. Entre las plantas aparecen esculturas, como una figura de chac mool. Al fondo pasa el río Los Horcones.",
+        "EN": "A garden in the middle of the jungle, south of Puerto Vallarta, on the road up to El Tuito. It has trails among tropical trees and an orchid collection. Sculptures appear among the plants, such as a chac mool figure. The Los Horcones River runs along the bottom."
+      },
+      "cuando": {
+        "ES": "Por la mañana, antes del calor fuerte",
+        "EN": "In the morning, before the strongest heat"
+      },
+      "min": 50,
+      "modo": "coche",
+      "lat": 20.46574,
+      "lng": -105.2927
+    }
+  ],
+  "rutas": [
+    {
+      "id": "marietas",
+      "expId": "ex12",
+      "img": "/ciudades/bahia-banderas/img/marietas-ruta.jpg",
+      "titulo": {
+        "ES": "Islas Marietas en lancha",
+        "EN": "Marieta Islands by boat"
+      },
+      "tipo": {
+        "ES": "Mar",
+        "EN": "Sea"
+      },
+      "dur": "5 h",
+      "d": {
+        "ES": "Sales temprano de Punta de Mita, con el mar en calma. En 20 minutos de lancha llegas a las islas, ves los pájaros bobos de patas azules y haces snorkel junto a las rocas. Si tu operador tiene el permiso, entras nadando a la Playa Escondida.",
+        "EN": "You leave Punta de Mita early, while the sea is calm. A 20-minute boat ride takes you to the islands, where you see blue-footed boobies and snorkel by the rocks. If your operator holds the permit, you swim into the Hidden Beach."
+      },
+      "salida": {
+        "ES": "Desde el muelle de Punta de Mita hacia las 8:00. Desde Nuevo Vallarta son unos 45 minutos en taxi; desde Punta de Mita, 10. Llega 20 minutos antes para el registro",
+        "EN": "From the Punta de Mita pier at around 8:00. From Nuevo Vallarta it is about 45 minutes by taxi; from Punta de Mita, 10. Arrive 20 minutes early to check in"
+      },
+      "incluye": {
+        "ES": [
+          "Plan del día y mapa",
+          "Las reglas del parque, explicadas antes de salir"
+        ],
+        "EN": [
+          "Day plan and map",
+          "The park rules, explained before you leave"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Traje de baño puesto y una toalla",
+          "Bloqueador solar biodegradable",
+          "Lentes de sol y gorra",
+          "Una bolsa seca para el celular",
+          "Pastilla para el mareo si te mareas en barco"
+        ],
+        "EN": [
+          "Swimsuit on and a towel",
+          "Biodegradable sunscreen",
+          "Sunglasses and a cap",
+          "A dry bag for your phone",
+          "A seasickness pill if you get seasick"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Muelle de Punta de Mita",
+            "EN": "Punta de Mita pier"
+          },
+          "s": {
+            "ES": "Registro, chaleco y a la lancha",
+            "EN": "Check-in, life jacket and on board"
+          },
+          "d": {
+            "ES": "Las lanchas salen de la playa de El Anclote, en el pueblo de Punta de Mita. El operador revisa tu reserva, te da el brazalete del parque nacional y te prueba el chaleco salvavidas. Desde aquí las islas se ven en el horizonte.",
+            "EN": "The boats leave from El Anclote beach, in the village of Punta de Mita. The operator checks your booking, gives you the national park wristband and fits your life jacket. From here you can see the islands on the horizon."
+          },
+          "tip": {
+            "ES": "Pregunta antes de pagar si tu tour entra a la Playa Escondida. Muchos solo rodean las islas y hacen snorkel fuera.",
+            "EN": "Ask before you pay whether your tour goes into the Hidden Beach. Many only circle the islands and snorkel outside."
+          },
+          "hora": "08:00",
+          "dur": "20 min",
+          "img": "/ciudades/bahia-banderas/img/punta-de-mita.jpg",
+          "lat": 20.77077,
+          "lng": -105.5165,
+          "tramo": "coche",
+          "tramoDuracionMin": 45,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Las islas y sus aves",
+            "EN": "The islands and their birds"
+          },
+          "s": {
+            "ES": "Pájaros bobos de patas azules",
+            "EN": "Blue-footed boobies"
+          },
+          "d": {
+            "ES": "La lancha rodea las islas despacio. En las rocas se ven los pájaros bobos de patas azules y, con suerte, rabijuncos de pico rojo con su cola larga. Está prohibido bajar a tierra, así que se miran desde el agua.",
+            "EN": "The boat circles the islands slowly. On the rocks you see blue-footed boobies and, with luck, red-billed tropicbirds with their long tails. Landing on the islands is not allowed, so you watch them from the water."
+          },
+          "tip": {
+            "ES": "Lleva los lentes de sol puestos. Con el reflejo del agua cuesta distinguir el azul de las patas.",
+            "EN": "Keep your sunglasses on. With the glare off the water it is hard to make out the blue of their feet."
+          },
+          "hora": "08:40",
+          "dur": "50 min",
+          "img": "/ciudades/bahia-banderas/img/bobos.jpg",
+          "lat": 20.69858,
+          "lng": -105.57639,
+          "tramo": "barco",
+          "tramoDuracionMin": 20,
+          "duracionMin": 50
+        },
+        {
+          "n": {
+            "ES": "Playa Escondida",
+            "EN": "Hidden Beach"
+          },
+          "s": {
+            "ES": "Solo con permiso y por turnos",
+            "EN": "Permit only, in turns"
+          },
+          "d": {
+            "ES": "Se entra nadando con chaleco por un paso entre las rocas, en grupos pequeños y por poco tiempo. Desde 2016 el parque limita las visitas a 116 personas al día y la entrada depende de la marea y del oleaje. Dentro, la arena queda rodeada de roca, con el cielo abierto encima.",
+            "EN": "You swim in wearing a life jacket through a gap in the rocks, in small groups and for a short time. Since 2016 the park has capped visits at 116 people a day, and entry depends on the tide and the swell. Inside, the sand is ringed by rock with open sky above."
+          },
+          "tip": {
+            "ES": "Si el mar está movido, el guía puede no dejar entrar aunque tengas el permiso. Es por seguridad y no se discute.",
+            "EN": "If the sea is rough, the guide may not let you in even with a permit. It is for safety and there is no arguing."
+          },
+          "hora": "09:40",
+          "dur": "40 min",
+          "img": "/ciudades/bahia-banderas/img/marietas-escondida.jpg",
+          "lat": 20.70416,
+          "lng": -105.56493,
+          "tramo": "barco",
+          "tramoDuracionMin": 10,
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Snorkel junto a las rocas",
+            "EN": "Snorkeling by the rocks"
+          },
+          "s": {
+            "ES": "Peces tropicales en agua clara",
+            "EN": "Tropical fish in clear water"
+          },
+          "d": {
+            "ES": "La lancha se para en una zona de snorkel señalada por el parque. Te tiras con visor y chaleco y ves peces de colores pegados a la roca. Luego vuelves al muelle de Punta de Mita.",
+            "EN": "The boat stops at a snorkeling area marked by the park. You jump in with a mask and life jacket and see colorful fish close to the rock. Then you head back to the Punta de Mita pier."
+          },
+          "tip": {
+            "ES": "Usa solo bloqueador biodegradable, y mejor una camiseta de licra. En el parque se pide no dejar nada en el agua.",
+            "EN": "Use only biodegradable sunscreen, or better still a rash guard. The park asks you to leave nothing in the water."
+          },
+          "hora": "10:30",
+          "dur": "1 h",
+          "img": "/ciudades/bahia-banderas/img/marietas-islas.jpg",
+          "lat": 20.6995,
+          "lng": -105.5715,
+          "tramo": "barco",
+          "tramoDuracionMin": 10,
+          "duracionMin": 60
+        }
+      ],
+      "fotos": [
+        "/ciudades/bahia-banderas/img/marietas-ruta.jpg",
+        "/ciudades/bahia-banderas/img/bobos.jpg",
+        "/ciudades/bahia-banderas/img/marietas-escondida.jpg",
+        "/ciudades/bahia-banderas/img/marietas-islas.jpg",
+        "/ciudades/bahia-banderas/img/islas-marietas.jpg",
+        "/ciudades/bahia-banderas/img/punta-de-mita.jpg"
+      ],
+      "duracionMin": 300,
+      "distanciaKm": 90,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Se sube y se baja de la lancha con ayuda de la tripulación. Para entrar a la Playa Escondida hay que nadar unos metros con chaleco, con oleaje. Con movilidad reducida, o con niños que no nadan, consulta antes con el operador.",
+        "EN": "You get on and off the boat with help from the crew. To reach the Hidden Beach you have to swim a short way in a life jacket, with waves. If you have reduced mobility, or children who cannot swim, check with the operator first."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 20.77077,
+        "lng": -105.5165,
+        "foto": "/ciudades/bahia-banderas/img/punta-de-mita.jpg",
+        "texto": {
+          "ES": "Muelle de Punta de Mita, en la playa de El Anclote. Unos 45 minutos en taxi desde Nuevo Vallarta y 10 desde Punta de Mita. Llega 20 minutos antes.",
+          "EN": "Punta de Mita pier, on El Anclote beach. About 45 minutes by taxi from Nuevo Vallarta and 10 from Punta de Mita. Arrive 20 minutes early."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxi hasta el muelle",
+          "Lancha y brazalete del parque nacional",
+          "Comida y bebidas"
+        ],
+        "EN": [
+          "Taxi to the pier",
+          "Boat and national park wristband",
+          "Food and drinks"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Depende del operador. Si la capitanía cierra el puerto por mal tiempo, la salida se cambia de día.",
+        "EN": "It depends on the operator. If the harbor master closes the port due to bad weather, the trip moves to another day."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    },
+    {
+      "id": "vallarta-tarde",
+      "expId": "ex16",
+      "img": "/ciudades/bahia-banderas/img/malecon-2.jpg",
+      "titulo": {
+        "ES": "Puerto Vallarta al atardecer",
+        "EN": "Puerto Vallarta at sunset"
+      },
+      "tipo": {
+        "ES": "Ciudad",
+        "EN": "Town"
+      },
+      "dur": "4 h",
+      "d": {
+        "ES": "Llegas al malecón a media tarde y lo recorres de punta a punta entre esculturas. Ves la corona de la parroquia de Guadalupe, cruzas el río Cuale hasta el muelle de Los Muertos y cenas en la Zona Romántica.",
+        "EN": "You reach the malecón in the late afternoon and walk it end to end among sculptures. You see the crown on the Guadalupe church, cross the Cuale River to Los Muertos pier and have dinner in the Zona Romántica."
+      },
+      "salida": {
+        "ES": "En taxi hasta el norte del malecón, a la altura de la escultura Nostalgia. Unos 35 minutos desde Nuevo Vallarta y una hora desde Punta de Mita. Sal hacia las 16:30",
+        "EN": "By taxi to the north end of the malecón, by the Nostalgia sculpture. About 35 minutes from Nuevo Vallarta and an hour from Punta de Mita. Leave around 16:30"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Sandalias o tenis cómodos",
+          "Algo de efectivo en pesos para la cena",
+          "Una camisa ligera de manga larga por si hay mosquitos"
+        ],
+        "EN": [
+          "Comfortable sandals or sneakers",
+          "Some cash in pesos for dinner",
+          "A light long-sleeved shirt in case of mosquitoes"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "El malecón y sus esculturas",
+            "EN": "The malecón and its sculptures"
+          },
+          "s": {
+            "ES": "Bronce frente al mar",
+            "EN": "Bronze by the sea"
+          },
+          "d": {
+            "ES": "Empiezas en Nostalgia, una pareja de bronce mirando al mar, y caminas hacia el sur. Pasas por las sillas de la Rotonda del Mar de Alejandro Colunga y por En busca de la razón, de Sergio Bustamante, con su escalera hacia el cielo. Más adelante está El Caballito, el niño sobre un caballito de mar.",
+            "EN": "You start at Nostalgia, a bronze couple looking out to sea, and walk south. You pass the chairs of Alejandro Colunga's Rotonda del Mar and Sergio Bustamante's In Search of Reason, with its ladder to the sky. Further on is El Caballito, the boy riding a seahorse."
+          },
+          "tip": {
+            "ES": "De noviembre a febrero el sol se pone mientras caminas. En verano se pone más tarde y lo ves ya en la cena.",
+            "EN": "From November to February the sun sets while you walk. In summer it sets later and you catch it at dinner."
+          },
+          "hora": "17:00",
+          "dur": "1 h",
+          "img": "/ciudades/bahia-banderas/img/rotonda.jpg",
+          "lat": 20.61339,
+          "lng": -105.23355,
+          "tramo": "coche",
+          "tramoDuracionMin": 35,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Los Arcos y la parroquia de Guadalupe",
+            "EN": "Los Arcos and the Guadalupe church"
+          },
+          "s": {
+            "ES": "Arcos de piedra y una torre con corona",
+            "EN": "Stone arches and a crowned tower"
+          },
+          "d": {
+            "ES": "Los Arcos son cuatro arcos de piedra frente al mar donde por la tarde hay música y artistas callejeros. Cruzas la calle y subes una cuadra hasta la parroquia de Nuestra Señora de Guadalupe, con su torre rematada en una corona.",
+            "EN": "Los Arcos are four stone arches by the sea where there is music and street performers in the evening. Cross the street and walk one block up to the church of Our Lady of Guadalupe, its tower topped by a crown."
+          },
+          "tip": {
+            "ES": "Si hay misa, entra en silencio y quédate al fondo. Del 1 al 12 de diciembre hay procesiones cada día y las calles se llenan.",
+            "EN": "If Mass is on, go in quietly and stay at the back. From December 1 to 12 there are processions every day and the streets fill up."
+          },
+          "hora": "18:05",
+          "dur": "25 min",
+          "img": "/ciudades/bahia-banderas/img/arcos.jpg",
+          "lat": 20.60889,
+          "lng": -105.23611,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Muelle de Los Muertos",
+            "EN": "Los Muertos pier"
+          },
+          "s": {
+            "ES": "Una vela iluminada sobre el mar",
+            "EN": "A lit-up sail over the sea"
+          },
+          "d": {
+            "ES": "Cruzas el puente del río Cuale y entras en la Zona Romántica. Al final de la calle está la playa de Los Muertos y su muelle, rematado por una estructura alta en forma de vela que de noche se ilumina.",
+            "EN": "Cross the bridge over the Cuale River into the Zona Romántica. At the end of the street are Los Muertos beach and its pier, topped by a tall sail-shaped structure that lights up at night."
+          },
+          "tip": {
+            "ES": "Camina hasta la punta del muelle. Desde ahí ves toda la bahía y las luces del malecón.",
+            "EN": "Walk to the end of the pier. From there you see the whole bay and the lights of the malecón."
+          },
+          "hora": "18:45",
+          "dur": "20 min",
+          "img": "/ciudades/bahia-banderas/img/muertos.jpg",
+          "lat": 20.60053,
+          "lng": -105.23926,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Cena en la Zona Romántica",
+            "EN": "Dinner in the Zona Romántica"
+          },
+          "s": {
+            "ES": "Mariscos o tacos a dos cuadras del mar",
+            "EN": "Seafood or tacos two blocks from the sea"
+          },
+          "d": {
+            "ES": "En la calle Basilio Badillo y en Olas Altas hay restaurantes para todos los presupuestos, desde puestos de tacos hasta mesas en la arena de Los Muertos. Pide pescado del día o aguachile, que aquí se preparan con lo que entra en la mañana.",
+            "EN": "On Basilio Badillo and Olas Altas streets there are restaurants for every budget, from taco stands to tables on the sand at Los Muertos. Order the catch of the day or aguachile, made here with what came in that morning."
+          },
+          "tip": {
+            "ES": "Para la vuelta, pide el taxi o el Uber desde la mesa. En la Zona Romántica las calles son estrechas y cuesta parar uno.",
+            "EN": "For the ride back, call a taxi or Uber from your table. The streets in the Zona Romántica are narrow and hailing one can be tricky."
+          },
+          "hora": "19:10",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/bahia-banderas/img/zona-romantica-atardecer.jpg",
+          "lat": 20.6025,
+          "lng": -105.2366,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 75
+        }
+      ],
+      "fotos": [
+        "/ciudades/bahia-banderas/img/malecon-2.jpg",
+        "/ciudades/bahia-banderas/img/malecon.jpg",
+        "/ciudades/bahia-banderas/img/rotonda.jpg",
+        "/ciudades/bahia-banderas/img/arcos.jpg",
+        "/ciudades/bahia-banderas/img/muertos.jpg",
+        "/ciudades/bahia-banderas/img/zona-romantica.jpg"
+      ],
+      "duracionMin": 240,
+      "distanciaKm": 41,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El malecón es llano, ancho y peatonal. En la Zona Romántica las calles son de piedra y las banquetas estrechas. El muelle de Los Muertos se recorre sin escalones.",
+        "EN": "The malecón is flat, wide and pedestrian. In the Zona Romántica the streets are cobbled and the sidewalks narrow. Los Muertos pier has no steps."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 20.61339,
+        "lng": -105.23355,
+        "foto": "/ciudades/bahia-banderas/img/malecon.jpg",
+        "texto": {
+          "ES": "Escultura Nostalgia, en el extremo norte del malecón de Puerto Vallarta. El taxi te deja en la avenida, a unos pasos.",
+          "EN": "The Nostalgia sculpture, at the north end of the Puerto Vallarta malecón. The taxi drops you on the avenue, a few steps away."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxis",
+          "Cena"
+        ],
+        "EN": [
+          "Taxis",
+          "Dinner"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación.",
+        "EN": "Self-guided, so there is nothing to book or cancel."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    },
+    {
+      "id": "sayulita",
+      "expId": "ex14",
+      "img": "/ciudades/bahia-banderas/img/sayulita-ruta.jpg",
+      "titulo": {
+        "ES": "Sayulita y San Pancho",
+        "EN": "Sayulita and San Pancho"
+      },
+      "tipo": {
+        "ES": "Pueblos y playa",
+        "EN": "Villages and beach"
+      },
+      "dur": "6 h",
+      "d": {
+        "ES": "Paseas por el centro de Sayulita, pasas la mañana en su playa y, si te animas, tomas una clase de surf. Después subes 12 minutos hasta San Pancho, más tranquilo, y comes pescado zarandeado cerca del mar.",
+        "EN": "You stroll through the center of Sayulita, spend the morning on its beach and, if you feel like it, take a surf lesson. Then you drive 12 minutes up to quieter San Pancho and eat pescado zarandeado near the sea."
+      },
+      "salida": {
+        "ES": "En taxi hasta la plaza de Sayulita. Unos 45 minutos desde Nuevo Vallarta y 25 desde Punta de Mita. Sal hacia las 9:15",
+        "EN": "By taxi to the main square in Sayulita. About 45 minutes from Nuevo Vallarta and 25 from Punta de Mita. Leave around 9:15"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Traje de baño y toalla",
+          "Bloqueador solar y gorra",
+          "Efectivo en pesos, porque muchos puestos no aceptan tarjeta",
+          "Sandalias que se puedan mojar"
+        ],
+        "EN": [
+          "Swimsuit and towel",
+          "Sunscreen and a cap",
+          "Cash in pesos, as many stalls do not take cards",
+          "Sandals that can get wet"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "El centro de Sayulita",
+            "EN": "Downtown Sayulita"
+          },
+          "s": {
+            "ES": "Papel picado y carritos de golf",
+            "EN": "Papel picado and golf carts"
+          },
+          "d": {
+            "ES": "La plaza es el centro del pueblo. Alrededor hay tiendas de ropa de playa y puestos de arte wixárika hecho con chaquira. Encima de las calles cuelga papel picado de colores.",
+            "EN": "The square is the heart of the village. Around it you find beachwear shops and stalls selling Wixárika beadwork. Colorful papel picado hangs above the streets."
+          },
+          "tip": {
+            "ES": "Si compras arte wixárika, pregunta quién lo hizo y de dónde es. Las piezas hechas a mano llevan horas de trabajo y se notan en el detalle.",
+            "EN": "If you buy Wixárika art, ask who made it and where they are from. Handmade pieces take hours of work and it shows in the detail."
+          },
+          "hora": "10:00",
+          "dur": "45 min",
+          "img": "/ciudades/bahia-banderas/img/sayulita-pueblo.jpg",
+          "lat": 20.86891,
+          "lng": -105.44072,
+          "tramo": "coche",
+          "tramoDuracionMin": 45,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Playa de Sayulita",
+            "EN": "Sayulita beach"
+          },
+          "s": {
+            "ES": "Primera clase de surf",
+            "EN": "Your first surf lesson"
+          },
+          "d": {
+            "ES": "La playa está a dos cuadras de la plaza. Las olas rompen suaves frente al pueblo y en la arena hay escuelas que alquilan tablas y dan clases cortas. Si prefieres mirar, siéntate en la arena y ve a los surfistas entrar y salir.",
+            "EN": "The beach is two blocks from the square. The waves break gently in front of town, and on the sand there are schools that rent boards and give short lessons. If you would rather watch, sit on the sand and see the surfers come and go."
+          },
+          "tip": {
+            "ES": "Báñate solo donde no haya bandera roja y lejos de donde surfean. Una tabla suelta pega fuerte.",
+            "EN": "Only swim where there is no red flag and away from the surfers. A loose board hits hard."
+          },
+          "hora": "10:50",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/bahia-banderas/img/sayulita-surf.jpg",
+          "lat": 20.87101,
+          "lng": -105.44064,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "San Pancho",
+            "EN": "San Pancho"
+          },
+          "s": {
+            "ES": "El pueblo tranquilo de al lado",
+            "EN": "The quiet village next door"
+          },
+          "d": {
+            "ES": "En 12 minutos por carretera llegas a San Francisco, que todos llaman San Pancho. La avenida principal baja recta hasta una playa ancha, con menos gente que la de Sayulita y espacio de sobra para tender la toalla.",
+            "EN": "Twelve minutes by road and you reach San Francisco, which everyone calls San Pancho. The main avenue runs straight down to a wide beach, less crowded than Sayulita's, with plenty of room for your towel."
+          },
+          "tip": {
+            "ES": "Aquí el mar rompe fuerte en la orilla. Con niños, mejor que jueguen en la arena y mojen los pies.",
+            "EN": "Here the waves break hard on the shore. With kids, it is better to play on the sand and just get your feet wet."
+          },
+          "hora": "12:35",
+          "dur": "1 h",
+          "img": "/ciudades/bahia-banderas/img/san-pancho-2.jpg",
+          "lat": 20.90436,
+          "lng": -105.4147,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Comida en San Pancho",
+            "EN": "Lunch in San Pancho"
+          },
+          "s": {
+            "ES": "Pescado zarandeado",
+            "EN": "Pescado zarandeado"
+          },
+          "d": {
+            "ES": "El zarandeado es el platillo de la costa de Nayarit. El pescado se abre entero, se unta con adobo de chiles y se asa sobre brasas dentro de una rejilla que se voltea. Se come con tortillas, cebolla morada y salsa.",
+            "EN": "Zarandeado is the signature dish of the Nayarit coast. The whole fish is opened up, rubbed with a chili marinade and grilled over embers in a hinged rack that gets flipped. You eat it with tortillas, red onion and salsa."
+          },
+          "tip": {
+            "ES": "Un pescado entero alcanza para dos o tres personas. Pide por kilo y pregunta cuánto tarda, porque se asa al momento.",
+            "EN": "One whole fish feeds two or three people. Order by the kilo and ask how long it takes, since it is grilled to order."
+          },
+          "hora": "13:45",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/bahia-banderas/img/zarandeado.jpg",
+          "lat": 20.9022,
+          "lng": -105.4133,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 90
+        }
+      ],
+      "fotos": [
+        "/ciudades/bahia-banderas/img/sayulita-ruta.jpg",
+        "/ciudades/bahia-banderas/img/sayulita-pueblo.jpg",
+        "/ciudades/bahia-banderas/img/sayulita-surf.jpg",
+        "/ciudades/bahia-banderas/img/san-pancho-2.jpg",
+        "/ciudades/bahia-banderas/img/zarandeado.jpg",
+        "/ciudades/bahia-banderas/img/san-pancho.jpg"
+      ],
+      "duracionMin": 360,
+      "distanciaKm": 80,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Las calles de Sayulita y San Pancho son de piedra o de tierra y tienen pendiente en algunos tramos. Para llegar a la arena hay que caminar por la playa, sin rampas.",
+        "EN": "The streets of Sayulita and San Pancho are cobbled or dirt and slope in places. To reach the water you walk across the sand, with no ramps."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 20.86891,
+        "lng": -105.44072,
+        "foto": "/ciudades/bahia-banderas/img/sayulita-pueblo.jpg",
+        "texto": {
+          "ES": "Plaza de Sayulita. El taxi te deja a una cuadra, porque el centro se llena de carritos.",
+          "EN": "Sayulita main square. The taxi drops you a block away, as the center fills up with golf carts."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxis",
+          "Clase de surf y alquiler de tabla",
+          "Comida"
+        ],
+        "EN": [
+          "Taxis",
+          "Surf lesson and board rental",
+          "Lunch"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación.",
+        "EN": "Self-guided, so there is nothing to book or cancel."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    },
+    {
+      "id": "ballenas",
+      "expId": "ex13",
+      "img": "/ciudades/bahia-banderas/img/ballenas-1.jpg",
+      "titulo": {
+        "ES": "Ballenas jorobadas en la bahía",
+        "EN": "Humpback whales in the bay"
+      },
+      "tipo": {
+        "ES": "Naturaleza",
+        "EN": "Wildlife"
+      },
+      "dur": "3 h",
+      "d": {
+        "ES": "Solo en temporada, de diciembre a marzo. Sales en lancha de La Cruz de Huanacaxtle hacia el centro de la bahía, donde las jorobadas llegan desde el Pacífico norte a tener a sus crías. Ves los soplos, los saltos y las colas desde la distancia que marca la ley.",
+        "EN": "Only in season, from December to March. You leave La Cruz de Huanacaxtle by boat for the middle of the bay, where humpbacks arrive from the North Pacific to have their calves. You see the blows, the breaches and the tails from the distance set by law."
+      },
+      "salida": {
+        "ES": "Desde la marina de La Cruz de Huanacaxtle hacia las 8:30. Unos 30 minutos en taxi desde Nuevo Vallarta y 15 desde Punta de Mita",
+        "EN": "From the La Cruz de Huanacaxtle marina at around 8:30. About 30 minutes by taxi from Nuevo Vallarta and 15 from Punta de Mita"
+      },
+      "incluye": {
+        "ES": [
+          "Plan del día y mapa",
+          "Las reglas de avistamiento, explicadas antes de salir"
+        ],
+        "EN": [
+          "Day plan and map",
+          "The whale-watching rules, explained before you leave"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Una chamarra ligera, que a primera hora en el mar hace fresco",
+          "Lentes de sol y gorra",
+          "El celular cargado y con espacio para fotos",
+          "Pastilla para el mareo si te mareas en barco"
+        ],
+        "EN": [
+          "A light jacket, as it is cool on the water early on",
+          "Sunglasses and a cap",
+          "A charged phone with room for photos",
+          "A seasickness pill if you get seasick"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Marina de La Cruz de Huanacaxtle",
+            "EN": "La Cruz de Huanacaxtle marina"
+          },
+          "s": {
+            "ES": "Chaleco y a bordo",
+            "EN": "Life jacket and on board"
+          },
+          "d": {
+            "ES": "La marina queda a mitad de camino entre Nuevo Vallarta y Punta de Mita. Te dan el chaleco, el capitán explica cómo se va a acercar y sales hacia el centro de la bahía.",
+            "EN": "The marina sits halfway between Nuevo Vallarta and Punta de Mita. You get your life jacket, the captain explains how the boat will approach and you head out to the middle of the bay."
+          },
+          "tip": {
+            "ES": "Elige un lugar a un costado de la lancha. Desde ahí ves mejor que desde la proa cuando el barco se para.",
+            "EN": "Pick a spot on the side of the boat. From there you see more than from the bow once the boat stops."
+          },
+          "hora": "08:30",
+          "dur": "15 min",
+          "img": "/ciudades/bahia-banderas/img/ballenas-bahia.jpg",
+          "lat": 20.74877,
+          "lng": -105.37914,
+          "tramo": "coche",
+          "tramoDuracionMin": 30,
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Los primeros soplos",
+            "EN": "The first blows"
+          },
+          "s": {
+            "ES": "Una columna de agua a lo lejos",
+            "EN": "A plume of spray in the distance"
+          },
+          "d": {
+            "ES": "La lancha avanza despacio y todos miran el horizonte. Lo primero que se ve casi siempre es el soplo, una nube de agua que sale cuando la ballena sube a respirar. El capitán se acerca por un lado, nunca de frente.",
+            "EN": "The boat moves slowly and everyone scans the horizon. The first thing you usually see is the blow, a cloud of spray that rises when the whale surfaces to breathe. The captain approaches from the side, never head-on."
+          },
+          "tip": {
+            "ES": "Para avisar, di la hora del reloj, «¡a las tres!», y todos sabrán hacia dónde mirar.",
+            "EN": "To point one out, call it like a clock face, \"three o'clock!\", and everyone will know where to look."
+          },
+          "hora": "09:05",
+          "dur": "30 min",
+          "img": "/ciudades/bahia-banderas/img/ballenas-5.jpg",
+          "lat": 20.705,
+          "lng": -105.4,
+          "tramo": "barco",
+          "tramoDuracionMin": 20,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Treinta minutos con un grupo",
+            "EN": "Thirty minutes with one group"
+          },
+          "s": {
+            "ES": "Saltos y aletazos a 60 metros",
+            "EN": "Breaches and fin slaps at 60 meters"
+          },
+          "d": {
+            "ES": "La norma mexicana fija la distancia: 60 metros para lanchas pequeñas, como mucho cuatro barcos por grupo y media hora con cada uno. Desde ahí ves saltar a los machos, golpear el agua con la aleta y, si hay suerte, a una madre con su cría.",
+            "EN": "Mexican rules set the distance: 60 meters for small boats, no more than four boats per group and half an hour with each. From there you can watch males breach, slap the water with their fins and, with luck, a mother with her calf."
+          },
+          "tip": {
+            "ES": "Graba en video en vez de foto. Los saltos duran un segundo y en video luego puedes sacar el fotograma.",
+            "EN": "Shoot video instead of photos. A breach lasts a second, and from a video you can grab the frame later."
+          },
+          "hora": "09:40",
+          "dur": "30 min",
+          "img": "/ciudades/bahia-banderas/img/ballenas-3.jpg",
+          "lat": 20.69,
+          "lng": -105.42,
+          "tramo": "barco",
+          "tramoDuracionMin": 5,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Las colas",
+            "EN": "The tails"
+          },
+          "s": {
+            "ES": "Cada cola es distinta",
+            "EN": "Every tail is different"
+          },
+          "d": {
+            "ES": "Cuando una ballena se sumerge a fondo, levanta la cola fuera del agua. La parte de abajo tiene un dibujo blanco y negro que no se repite, y los biólogos la fotografían para saber qué ballena es. Después la lancha vuelve a la marina.",
+            "EN": "When a whale dives deep, it lifts its tail out of the water. The underside has a black-and-white pattern that never repeats, and biologists photograph it to identify each whale. Then the boat heads back to the marina."
+          },
+          "tip": {
+            "ES": "Si el barco lleva hidrófono, pide escuchar. En temporada los machos cantan bajo el agua.",
+            "EN": "If the boat has a hydrophone, ask to listen. In season the males sing underwater."
+          },
+          "hora": "10:15",
+          "dur": "25 min",
+          "img": "/ciudades/bahia-banderas/img/ballenas-4.jpg",
+          "lat": 20.7,
+          "lng": -105.39,
+          "tramo": "barco",
+          "tramoDuracionMin": 5,
+          "duracionMin": 25
+        }
+      ],
+      "fotos": [
+        "/ciudades/bahia-banderas/img/ballenas-1.jpg",
+        "/ciudades/bahia-banderas/img/ballenas-5.jpg",
+        "/ciudades/bahia-banderas/img/ballenas-2.jpg",
+        "/ciudades/bahia-banderas/img/ballenas-3.jpg",
+        "/ciudades/bahia-banderas/img/ballenas-4.jpg",
+        "/ciudades/bahia-banderas/img/ballenas-bahia.jpg"
+      ],
+      "duracionMin": 180,
+      "distanciaKm": 60,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Se sube a la lancha desde el muelle de la marina con ayuda de la tripulación. Una vez a bordo vas sentado, aunque con oleaje la lancha se mueve. Con movilidad reducida, consulta antes con el operador.",
+        "EN": "You board from the marina dock with help from the crew. Once on board you stay seated, though the boat rocks with the swell. If you have reduced mobility, check with the operator first."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 20.74877,
+        "lng": -105.37914,
+        "foto": "/ciudades/bahia-banderas/img/ballenas-bahia.jpg",
+        "texto": {
+          "ES": "Marina de La Cruz de Huanacaxtle. Unos 30 minutos en taxi desde Nuevo Vallarta y 15 desde Punta de Mita. Llega 15 minutos antes.",
+          "EN": "La Cruz de Huanacaxtle marina. About 30 minutes by taxi from Nuevo Vallarta and 15 from Punta de Mita. Arrive 15 minutes early."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxi hasta la marina",
+          "Lancha y guía",
+          "Bebidas"
+        ],
+        "EN": [
+          "Taxi to the marina",
+          "Boat and guide",
+          "Drinks"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Depende del operador. Fuera de temporada no hay salidas. La SEMARNAT fija las fechas cada año y en 2025-2026 fueron del 8 de diciembre al 23 de marzo.",
+        "EN": "It depends on the operator. There are no trips out of season. SEMARNAT sets the dates every year, and for 2025-2026 they ran from December 8 to March 23."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Una margarita, o una limonada para los niños, en el bar del resort a la vuelta",
+      "EN": "A margarita, or a lemonade for the kids, at the resort bar when you get back"
+    }
+  },
+  "creditos": [
+    "Playa Escondida vista desde dentro, Islas Marietas: Christian Frausto Bernal, CC BY-SA 2.0, Wikimedia Commons",
+    "Entrada de la Playa Escondida, Islas Marietas: Christian Frausto Bernal, CC BY-SA 2.0, Wikimedia Commons",
+    "Arena y roca de la Playa Escondida, Islas Marietas: Christian Frausto Bernal, CC BY-SA 2.0, Wikimedia Commons",
+    "Playa Escondida desde arriba, Islas Marietas: Luis Carlos Soria Contreras, CC BY-SA 4.0, Wikimedia Commons",
+    "Pájaro bobo de patas azules en las Islas Marietas: terri_bateman, CC BY 2.0, Wikimedia Commons",
+    "Atardecer en Punta de Mita: LoreGcano, CC BY-SA 4.0, Wikimedia Commons",
+    "El Caballito al atardecer, malecón de Puerto Vallarta: Vdevphotography, CC BY 3.0, Wikimedia Commons",
+    "Silla de la Rotonda del Mar, malecón de Puerto Vallarta (recorte horizontal): Another Believer, CC BY-SA 4.0, Wikimedia Commons",
+    "Malecón de Puerto Vallarta al atardecer: Another Believer, CC BY-SA 4.0, Wikimedia Commons",
+    "Los Arcos del malecón de Puerto Vallarta (recorte horizontal): Mtmontenegro, CC BY-SA 4.0, Wikimedia Commons",
+    "Muelle de la playa de Los Muertos al atardecer: Renata Cabrera Rosas, CC BY-SA 4.0, Wikimedia Commons",
+    "Atardecer en la Zona Romántica, Puerto Vallarta: Another Believer, CC BY-SA 4.0, Wikimedia Commons",
+    "Playa de Los Muertos y la Zona Romántica, Puerto Vallarta: Another Believer, CC BY-SA 4.0, Wikimedia Commons",
+    "Playa de Sayulita desde un dron: Luisalvaz, CC0, Wikimedia Commons",
+    "Sayulita y su playa desde un dron: Luisalvaz, CC0, Wikimedia Commons",
+    "Calle del centro de Sayulita con papel picado: গীতাশ্ৰী গগৈ আপ্তে (Gitashree Gogoi Apte), CC BY-SA 4.0, Wikimedia Commons",
+    "Playa de Sayulita: Teresa Jimenez Arreola, CC BY-SA 3.0, Wikimedia Commons",
+    "Atardecer en la playa de San Pancho: Luisalvaz, CC BY-SA 4.0, Wikimedia Commons",
+    "Playa de San Pancho al caer la tarde: Luisalvaz, CC BY-SA 4.0, Wikimedia Commons",
+    "Puestos de artesanía en una calle de Bucerías: Michelle Maria, CC BY 3.0, Wikimedia Commons",
+    "Escultura de chac mool en el Jardín Botánico de Vallarta: Another Believer, CC BY-SA 4.0, Wikimedia Commons",
+    "Ballena jorobada frente a Puerto Vallarta: TerryDOtt, CC BY 2.0, Wikimedia Commons",
+    "Ballena jorobada sumergiéndose, Puerto Vallarta: terri_bateman, CC BY 2.0, Wikimedia Commons",
+    "Dos ballenas jorobadas en la bahía de Banderas: terri_bateman, CC BY 2.0, Wikimedia Commons",
+    "Ballena jorobada a punto de saltar, cerca de las Islas Marietas: terri_bateman, CC BY 2.0, Wikimedia Commons",
+    "Cola de ballena jorobada en la bahía de Banderas: terri_bateman, CC BY 2.0, Wikimedia Commons",
+    "Soplos de ballena jorobada en la bahía de Banderas: terri_bateman, CC BY 2.0, Wikimedia Commons",
+    "Pescado zarandeado (foto tomada en Mazatlán): El Nuevo Doge, CC0, Wikimedia Commons"
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "centro-1": {
+    "pregunta": {
+      "ES": "¿Por qué Diego Rivera pintó dos veces El hombre controlador del universo?",
+      "EN": "Why did Diego Rivera paint Man, Controller of the Universe twice?"
+    },
+    "opciones": [
+      {
+        "ES": "Porque el primero se dañó en un sismo",
+        "EN": "Because the first was damaged in an earthquake"
+      },
+      {
+        "ES": "Porque destruyeron el original en Nueva York",
+        "EN": "Because the original in New York was destroyed"
+      },
+      {
+        "ES": "Porque el gobierno le pidió una copia",
+        "EN": "Because the government asked him for a copy"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Lo pintó en 1933 para el Rockefeller Center. Incluía a Lenin, los Rockefeller pidieron quitarlo y Rivera se negó, así que el mural acabó destruido. En 1934 lo volvió a pintar aquí, en Bellas Artes.",
+      "EN": "He painted it in 1933 for the Rockefeller Center. It included Lenin, the Rockefellers asked for him to be removed and Rivera refused, so the mural was destroyed. In 1934 he painted it again here, in Bellas Artes."
+    }
+  },
+  "centro-2": {
+    "pregunta": {
+      "ES": "Según la leyenda, ¿por qué se cubrió de azulejos esta casa?",
+      "EN": "According to legend, why was this house covered in tiles?"
+    },
+    "opciones": [
+      {
+        "ES": "Para protegerla de la humedad",
+        "EN": "To protect it from damp"
+      },
+      {
+        "ES": "Por una promesa a la Virgen",
+        "EN": "To keep a promise to the Virgin"
+      },
+      {
+        "ES": "Para demostrarle a un padre que su hijo había sentado cabeza",
+        "EN": "To show a father that his son had settled down"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Cuenta la leyenda que un conde le dijo a su hijo, dado al derroche: «Hijo, así nunca harás casa de azulejos». El joven cambió de vida y, para demostrarlo, cubrió la fachada de talavera de Puebla. Los documentos dicen que la obra la encargó la condesa Graciana Suárez de Peredo en 1737.",
+      "EN": "Legend has it that a count told his spendthrift son: \"Son, at this rate you will never build a house of tiles.\" The young man changed his ways and, to prove it, covered the facade in Puebla Talavera. The records say the work was commissioned by Countess Graciana Suárez de Peredo in 1737."
+    }
+  },
+  "centro-3": {
+    "pregunta": {
+      "ES": "¿De dónde viene el nombre de Zócalo?",
+      "EN": "Where does the name Zócalo come from?"
+    },
+    "opciones": [
+      {
+        "ES": "De la base de un monumento que nunca se terminó",
+        "EN": "From the base of a monument that was never finished"
+      },
+      {
+        "ES": "De una palabra náhuatl que significa plaza",
+        "EN": "From a Nahuatl word meaning square"
+      },
+      {
+        "ES": "Del apellido de un virrey",
+        "EN": "From a viceroy's surname"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "En 1843 Santa Anna convocó un concurso para levantar una columna a la Independencia en el centro de la plaza. Solo se llegó a poner la base, el zócalo, y la gente empezó a llamar así a la plaza. Hoy en México se le dice zócalo a la plaza principal de muchas ciudades.",
+      "EN": "In 1843 Santa Anna held a competition for a column to Independence in the middle of the square. Only the base, the zócalo, was ever built, and people started calling the square by that name. Today in Mexico the main square of many towns is called the zócalo."
+    }
+  },
+  "centro-4": {
+    "pregunta": {
+      "ES": "¿Qué tomó su nombre de este café?",
+      "EN": "What took its name from this café?"
+    },
+    "opciones": [
+      {
+        "ES": "Una marca de chocolate",
+        "EN": "A chocolate brand"
+      },
+      {
+        "ES": "Una banda de rock mexicana",
+        "EN": "A Mexican rock band"
+      },
+      {
+        "ES": "Un barrio del norte de la ciudad",
+        "EN": "A neighborhood in the north of the city"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Café Tacvba, la banda formada en Ciudad Satélite a finales de los ochenta, tomó el nombre de este restaurante, abierto en 1912. El café, a su vez, se llama así por la calle Tacuba, que sigue el trazo de una de las calzadas que salían de Tenochtitlan.",
+      "EN": "Café Tacvba, the band formed in Ciudad Satélite in the late eighties, took its name from this restaurant, open since 1912. The café in turn is named after Tacuba street, which follows one of the causeways that led out of Tenochtitlan."
+    }
+  },
+  "teotihuacan-1": {
+    "pregunta": {
+      "ES": "¿Quién le puso el nombre de Teotihuacán a la ciudad?",
+      "EN": "Who gave the city the name Teotihuacan?"
+    },
+    "opciones": [
+      {
+        "ES": "Los mexicas, siglos después de que se abandonara",
+        "EN": "The Mexica, centuries after it was abandoned"
+      },
+      {
+        "ES": "Sus primeros habitantes",
+        "EN": "Its first inhabitants"
+      },
+      {
+        "ES": "Los españoles, en el siglo XVI",
+        "EN": "The Spanish, in the 16th century"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Cuando llegaron los mexicas, la ciudad llevaba siglos abandonada. La llamaron Teotihuacán, que suele traducirse como el lugar donde se hicieron los dioses. No se sabe cómo la llamaban quienes la construyeron.",
+      "EN": "When the Mexica arrived, the city had been abandoned for centuries. They called it Teotihuacan, usually translated as the place where the gods were made. Nobody knows what its builders called it."
+    }
+  },
+  "teotihuacan-2": {
+    "pregunta": {
+      "ES": "¿Qué se encontró en 2003 bajo el Templo de la Serpiente Emplumada?",
+      "EN": "What was found in 2003 beneath the Temple of the Feathered Serpent?"
+    },
+    "opciones": [
+      {
+        "ES": "Una tumba real llena de oro",
+        "EN": "A royal tomb full of gold"
+      },
+      {
+        "ES": "Una cámara inundada",
+        "EN": "A flooded chamber"
+      },
+      {
+        "ES": "Un túnel sellado de más de cien metros",
+        "EN": "A sealed tunnel over a hundred meters long"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "En 2003 apareció la entrada de un túnel sellado que corre bajo el templo a más de diez metros de profundidad y mide más de cien metros. Dentro había miles de objetos de ofrenda, y años después se encontró mercurio líquido al fondo.",
+      "EN": "In 2003 the entrance to a sealed tunnel was found, running more than ten meters below the temple and over a hundred meters long. Inside were thousands of offerings, and years later liquid mercury was found at the far end."
+    }
+  },
+  "teotihuacan-3": {
+    "pregunta": {
+      "ES": "¿Por qué se llama Calzada de los Muertos?",
+      "EN": "Why is it called the Avenue of the Dead?"
+    },
+    "opciones": [
+      {
+        "ES": "Porque allí se hacían sacrificios",
+        "EN": "Because sacrifices were made there"
+      },
+      {
+        "ES": "Porque los mexicas creyeron que sus plataformas eran tumbas",
+        "EN": "Because the Mexica thought its platforms were tombs"
+      },
+      {
+        "ES": "Porque llevaba a un cementerio",
+        "EN": "Because it led to a cemetery"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Al ver los montículos a los lados de la avenida, los mexicas pensaron que eran tumbas de gobernantes. En realidad eran bases de templos y de palacios. La calzada mide más de dos kilómetros.",
+      "EN": "Seeing the mounds along the avenue, the Mexica thought they were the tombs of rulers. They were in fact the bases of temples and palaces. The avenue is more than two kilometers long."
+    }
+  },
+  "teotihuacan-4": {
+    "pregunta": {
+      "ES": "¿Qué quiere decir Quetzalpapálotl?",
+      "EN": "What does Quetzalpapalotl mean?"
+    },
+    "opciones": [
+      {
+        "ES": "Quetzal mariposa",
+        "EN": "Quetzal butterfly"
+      },
+      {
+        "ES": "Serpiente de jade",
+        "EN": "Jade serpent"
+      },
+      {
+        "ES": "Señor de la luna",
+        "EN": "Lord of the moon"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Une dos palabras en náhuatl, quetzalli, el ave de plumas verdes, y papálotl, mariposa. De papálotl viene papalote, como se le llama en México a la cometa.",
+      "EN": "It joins two Nahuatl words, quetzalli, the bird with green feathers, and papálotl, butterfly. Papálotl is also where papalote comes from, the Mexican word for a kite."
+    }
+  },
+  "coyoacan-1": {
+    "pregunta": {
+      "ES": "¿En qué año decía Frida Kahlo que había nacido?",
+      "EN": "What year did Frida Kahlo say she was born?"
+    },
+    "opciones": [
+      {
+        "ES": "En 1907, como dice su acta",
+        "EN": "In 1907, as her birth certificate says"
+      },
+      {
+        "ES": "En 1904, cuando se construyó la casa",
+        "EN": "In 1904, when the house was built"
+      },
+      {
+        "ES": "En 1910, el año en que empezó la Revolución",
+        "EN": "In 1910, the year the Revolution began"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Nació el 6 de julio de 1907 en esta casa, pero decía que había nacido en 1910 para que su vida empezara con la Revolución Mexicana. Murió aquí mismo en 1954.",
+      "EN": "She was born in this house on 6 July 1907, but she said she was born in 1910 so that her life began with the Mexican Revolution. She died here too, in 1954."
+    }
+  },
+  "coyoacan-2": {
+    "pregunta": {
+      "ES": "¿Quién encabezó el primer ataque contra Trotsky en esta casa, en mayo de 1940?",
+      "EN": "Who led the first attack on Trotsky in this house, in May 1940?"
+    },
+    "opciones": [
+      {
+        "ES": "Diego Rivera",
+        "EN": "Diego Rivera"
+      },
+      {
+        "ES": "El muralista David Alfaro Siqueiros",
+        "EN": "The muralist David Alfaro Siqueiros"
+      },
+      {
+        "ES": "Ramón Mercader",
+        "EN": "Ramón Mercader"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El 24 de mayo de 1940 un grupo encabezado por Siqueiros entró de madrugada y disparó contra el cuarto. Trotsky y su esposa sobrevivieron escondidos bajo la cama. Tres meses después, Ramón Mercader, que se había ganado la confianza de la casa, lo mató con un piolet.",
+      "EN": "On 24 May 1940 a group led by Siqueiros broke in before dawn and fired into the bedroom. Trotsky and his wife survived by hiding under the bed. Three months later Ramón Mercader, who had won the household's trust, killed him with an ice axe."
+    }
+  },
+  "coyoacan-3": {
+    "pregunta": {
+      "ES": "¿Qué es la tinga que se pone en las tostadas?",
+      "EN": "What is the tinga served on tostadas?"
+    },
+    "opciones": [
+      {
+        "ES": "Carne deshebrada guisada con jitomate y chipotle",
+        "EN": "Shredded meat stewed with tomato and chipotle"
+      },
+      {
+        "ES": "Frijoles refritos con queso",
+        "EN": "Refried beans with cheese"
+      },
+      {
+        "ES": "Carne de res frita con cebolla",
+        "EN": "Fried beef with onion"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La tinga es carne deshebrada, casi siempre de pollo, guisada con jitomate, cebolla y chile chipotle. Viene de Puebla y en Ciudad de México es de las tostadas más pedidas.",
+      "EN": "Tinga is shredded meat, usually chicken, stewed with tomato, onion and chipotle chili. It comes from Puebla and in Mexico City it is one of the most popular tostada toppings."
+    }
+  },
+  "coyoacan-4": {
+    "pregunta": {
+      "ES": "¿Qué significa Coyoacán?",
+      "EN": "What does Coyoacán mean?"
+    },
+    "opciones": [
+      {
+        "ES": "Lugar de agua",
+        "EN": "Place of water"
+      },
+      {
+        "ES": "Cerro de la serpiente",
+        "EN": "Serpent hill"
+      },
+      {
+        "ES": "Lugar de coyotes",
+        "EN": "Place of coyotes"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El nombre suele traducirse como lugar de coyotes, y por eso la fuente del Jardín Centenario tiene dos de bronce. Tras la caída de Tenochtitlan, en 1521, Hernán Cortés instaló aquí el primer ayuntamiento de la ciudad.",
+      "EN": "The name is usually translated as place of coyotes, which is why the fountain in Jardín Centenario has two bronze ones. After the fall of Tenochtitlan in 1521, Hernán Cortés set up the city's first town council here."
+    }
+  },
+  "antropologia-chapultepec-1": {
+    "pregunta": {
+      "ES": "¿Cuántas columnas sostienen el techo del Paraguas?",
+      "EN": "How many columns hold up the roof of the Umbrella?"
+    },
+    "opciones": [
+      {
+        "ES": "Cuatro",
+        "EN": "Four"
+      },
+      {
+        "ES": "Una",
+        "EN": "One"
+      },
+      {
+        "ES": "Dos",
+        "EN": "Two"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Una sola columna central aguanta el techo que cubre buena parte del patio. Lleva relieves de bronce de los hermanos José y Tomás Chávez Morado, y del borde del techo cae una cortina de agua.",
+      "EN": "A single central column holds up the roof that covers much of the courtyard. It bears bronze reliefs by the brothers José and Tomás Chávez Morado, and a curtain of water falls from the edge of the roof."
+    }
+  },
+  "antropologia-chapultepec-2": {
+    "pregunta": {
+      "ES": "¿Dónde estuvo la Piedra del Sol casi un siglo antes de llegar a un museo?",
+      "EN": "Where did the Sun Stone spend almost a century before reaching a museum?"
+    },
+    "opciones": [
+      {
+        "ES": "Junto a una torre de la Catedral",
+        "EN": "Beside one of the Cathedral towers"
+      },
+      {
+        "ES": "En el patio del Palacio Nacional",
+        "EN": "In the courtyard of the National Palace"
+      },
+      {
+        "ES": "Enterrada en Chapultepec",
+        "EN": "Buried in Chapultepec"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Tras encontrarla en 1790, la colocaron en 1791 junto a la torre poniente de la Catedral, a la vista de la plaza. Allí estuvo hasta 1885, cuando pasó al Museo Nacional, y en 1964 llegó a esta sala.",
+      "EN": "After it was found in 1790, it was set up in 1791 beside the west tower of the Cathedral, facing the square. It stayed there until 1885, when it moved to the National Museum, and in 1964 it came to this hall."
+    }
+  },
+  "antropologia-chapultepec-3": {
+    "pregunta": {
+      "ES": "¿Qué fecha recuerdan los Niños Héroes?",
+      "EN": "What date do the Boy Heroes commemorate?"
+    },
+    "opciones": [
+      {
+        "ES": "El 16 de septiembre de 1810",
+        "EN": "16 September 1810"
+      },
+      {
+        "ES": "El 5 de mayo de 1862",
+        "EN": "5 May 1862"
+      },
+      {
+        "ES": "El 13 de septiembre de 1847",
+        "EN": "13 September 1847"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Ese día las tropas de Estados Unidos tomaron el castillo, entonces Colegio Militar. Murieron seis cadetes, y la tradición cuenta que Juan Escutia se lanzó al vacío envuelto en la bandera para que no la capturaran.",
+      "EN": "On that day United States troops took the castle, then the Military College. Six cadets died, and tradition says Juan Escutia leapt from the heights wrapped in the flag so it would not be captured."
+    }
+  },
+  "antropologia-chapultepec-4": {
+    "pregunta": {
+      "ES": "¿Para qué mandó Maximiliano trazar el Paseo de la Reforma?",
+      "EN": "Why did Maximilian have Paseo de la Reforma laid out?"
+    },
+    "opciones": [
+      {
+        "ES": "Para los desfiles militares",
+        "EN": "For military parades"
+      },
+      {
+        "ES": "Para ir en línea recta del castillo al centro",
+        "EN": "To go in a straight line from the castle to the center"
+      },
+      {
+        "ES": "Para llevar agua del bosque a la ciudad",
+        "EN": "To carry water from the park to the city"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Se llamó primero Paseo de la Emperatriz, por Carlota, y unía el castillo con el centro de la ciudad. Tras la caída del imperio cambió de nombre, y hoy es la avenida de monumentos como el Ángel de la Independencia.",
+      "EN": "It was first called the Empress's Promenade, after Carlota, and linked the castle with the city center. After the empire fell it was renamed, and today it is the avenue of monuments such as the Angel of Independence."
+    }
+  }
+}

@@ -1,0 +1,994 @@
+{
+  "slug": "cdmx",
+  "nombre": "Ciudad de México",
+  "intro": {
+    "ES": "Desde el hotel, en Miyana, el Museo Soumaya queda a ocho minutos a pie y Polanco a diez en taxi. Una tarde libre después de las juntas da para ver Bellas Artes y la Catedral y cenar en el Centro, a unos 35 minutos en coche. El fin de semana hay tiempo para Coyoacán, Chapultepec o las pirámides de Teotihuacán, a una hora por carretera.",
+    "EN": "From the hotel in Miyana, the Museo Soumaya is an eight-minute walk and Polanco ten minutes by taxi. A free afternoon after your meetings is enough to see Bellas Artes and the Cathedral and have dinner downtown, about 35 minutes by car. At the weekend there is time for Coyoacán, Chapultepec or the pyramids of Teotihuacan, an hour away by road."
+  },
+  "lugares": [
+    {
+      "id": "museo-soumaya",
+      "img": "/ciudades/cdmx/img/soumaya.jpg",
+      "nombre": "Museo Soumaya",
+      "zona": {
+        "ES": "Plaza Carso, a un paso del hotel",
+        "EN": "Plaza Carso, a short walk from the hotel"
+      },
+      "d": {
+        "ES": "Lo diseñó Fernando Romero y abrió en 2011. Mide 46 metros y lo recubren más de 16,000 hexágonos de aluminio. Lleva el nombre de Soumaya Domit, esposa de Carlos Slim, y guarda una de las colecciones de Rodin más importantes fuera de Francia. La entrada es gratis.",
+        "EN": "Designed by Fernando Romero, it opened in 2011. It stands 46 meters tall and is clad in more than 16,000 aluminum hexagons. It is named after Soumaya Domit, Carlos Slim's wife, and holds one of the most important Rodin collections outside France. Admission is free."
+      },
+      "cuando": {
+        "ES": "Al salir de una junta; abre todos los días de 10:30 a 18:30",
+        "EN": "After a meeting; open every day from 10:30 to 18:30"
+      },
+      "min": 8,
+      "modo": "pie",
+      "lat": 19.44078,
+      "lng": -99.20457
+    },
+    {
+      "id": "polanco",
+      "img": "/ciudades/cdmx/img/polanco.jpg",
+      "nombre": "Polanco y Masaryk",
+      "zona": {
+        "ES": "Avenida Presidente Masaryk y Parque Lincoln",
+        "EN": "Avenida Presidente Masaryk and Lincoln Park"
+      },
+      "d": {
+        "ES": "Las calles de Polanco llevan nombres de escritores y filósofos, como Homero o Alejandro Dumas. Sobre la avenida Presidente Masaryk hay tiendas de diseño y restaurantes, y a dos cuadras está el Parque Lincoln, con su estanque y su torre del reloj. Para cenar cerca del hotel, es lo más rápido.",
+        "EN": "Polanco's streets are named after writers and philosophers, such as Homer or Alexandre Dumas. Avenida Presidente Masaryk is lined with design shops and restaurants, and two blocks away is Lincoln Park, with its pond and clock tower. For dinner near the hotel, it is the quickest option."
+      },
+      "cuando": {
+        "ES": "Al anochecer, para cenar a diez minutos del hotel",
+        "EN": "At nightfall, for dinner ten minutes from the hotel"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 19.42953,
+      "lng": -99.19708
+    },
+    {
+      "id": "museo-antropologia",
+      "img": "/ciudades/cdmx/img/antropologia.jpg",
+      "nombre": "Museo Nacional de Antropología",
+      "zona": {
+        "ES": "Paseo de la Reforma, Bosque de Chapultepec",
+        "EN": "Paseo de la Reforma, Chapultepec Forest"
+      },
+      "d": {
+        "ES": "Lo proyectó Pedro Ramírez Vázquez y abrió en 1964. En el patio, una sola columna sostiene un techo enorme del que cae una cortina de agua, el Paraguas. En la Sala Mexica está la Piedra del Sol, de más de 24 toneladas, que apareció enterrada en el Zócalo en 1790.",
+        "EN": "Designed by Pedro Ramírez Vázquez, it opened in 1964. In the courtyard a single column holds up a huge roof with a curtain of water falling from its edge, known as the Umbrella. The Mexica Hall holds the Sun Stone, over 24 tonnes, found buried under the Zócalo in 1790."
+      },
+      "cuando": {
+        "ES": "Por la mañana, de martes a domingo; los lunes cierra",
+        "EN": "In the morning, Tuesday to Sunday; closed on Mondays"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 19.42615,
+      "lng": -99.18665
+    },
+    {
+      "id": "chapultepec",
+      "img": "/ciudades/cdmx/img/chapultepec.jpg",
+      "nombre": "Castillo de Chapultepec",
+      "zona": {
+        "ES": "Cerro del Chapulín, Bosque de Chapultepec",
+        "EN": "Grasshopper Hill, Chapultepec Forest"
+      },
+      "d": {
+        "ES": "Chapultepec quiere decir cerro del chapulín en náhuatl. El castillo de la cima se empezó en 1785, fue Colegio Militar y después casa del emperador Maximiliano y de Carlota. Hoy es el Museo Nacional de Historia, y desde su terraza se ve el Paseo de la Reforma recto hacia el centro.",
+        "EN": "Chapultepec means grasshopper hill in Nahuatl. The castle on top was begun in 1785, became the Military College and later the home of Emperor Maximilian and Carlota. Today it is the National Museum of History, and from its terrace you see Paseo de la Reforma running straight towards downtown."
+      },
+      "cuando": {
+        "ES": "Por la mañana, antes de que apriete el sol; cierra los lunes",
+        "EN": "In the morning, before the sun gets strong; closed on Mondays"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 19.42046,
+      "lng": -99.18209
+    },
+    {
+      "id": "zocalo",
+      "img": "/ciudades/cdmx/img/zocalo.jpg",
+      "nombre": "Zócalo y Catedral",
+      "zona": {
+        "ES": "Plaza de la Constitución, Centro Histórico",
+        "EN": "Plaza de la Constitución, Historic Center"
+      },
+      "d": {
+        "ES": "Es una de las plazas más grandes del mundo, de unos 195 por 240 metros. En 1843 Santa Anna mandó levantar un monumento a la Independencia, pero solo se llegó a poner la base, el zócalo, y la plaza se quedó con el nombre. Al norte tiene la Catedral Metropolitana y al este el Palacio Nacional.",
+        "EN": "One of the largest squares in the world, about 195 by 240 meters. In 1843 Santa Anna ordered a monument to Independence, but only its base, the zócalo, was ever built, and the square kept the name. The Metropolitan Cathedral stands on the north side and the National Palace on the east."
+      },
+      "cuando": {
+        "ES": "A última hora de la tarde, cuando se iluminan las fachadas",
+        "EN": "Late in the afternoon, as the facades are lit up"
+      },
+      "min": 35,
+      "modo": "coche",
+      "lat": 19.43265,
+      "lng": -99.1332
+    },
+    {
+      "id": "bellas-artes",
+      "img": "/ciudades/cdmx/img/bellas-artes.jpg",
+      "nombre": "Palacio de Bellas Artes",
+      "zona": {
+        "ES": "Avenida Juárez y Eje Central, junto a la Alameda",
+        "EN": "Avenida Juárez and Eje Central, by the Alameda"
+      },
+      "d": {
+        "ES": "Las obras empezaron en 1904 con Adamo Boari y, tras la pausa de la Revolución, lo terminó Federico Mariscal en 1934. Por fuera es de mármol de Carrara, y dentro hay murales de Diego Rivera y José Clemente Orozco. El edificio se hunde poco a poco en el suelo blando del antiguo lago.",
+        "EN": "Work began in 1904 under Adamo Boari and, after the pause of the Revolution, Federico Mariscal finished it in 1934. Outside it is Carrara marble, and inside there are murals by Diego Rivera and José Clemente Orozco. The building is slowly sinking into the soft ground of the old lake."
+      },
+      "cuando": {
+        "ES": "A media tarde, de martes a domingo; el museo cierra los lunes",
+        "EN": "Mid-afternoon, Tuesday to Sunday; the museum is closed on Mondays"
+      },
+      "min": 30,
+      "modo": "coche",
+      "lat": 19.4355,
+      "lng": -99.14126
+    },
+    {
+      "id": "coyoacan",
+      "img": "/ciudades/cdmx/img/coyoacan.jpg",
+      "nombre": "Coyoacán",
+      "zona": {
+        "ES": "Jardín Centenario y Plaza Hidalgo, al sur de la ciudad",
+        "EN": "Jardín Centenario and Plaza Hidalgo, in the south of the city"
+      },
+      "d": {
+        "ES": "Su nombre en náhuatl se traduce como lugar de coyotes, y por eso hay dos de bronce en la fuente del Jardín Centenario. Tras la caída de Tenochtitlan, Hernán Cortés gobernó desde aquí antes de mudarse a la nueva ciudad. Hoy es un barrio de calles empedradas y casas con jardín, con la Casa Azul de Frida Kahlo a unos diez minutos a pie.",
+        "EN": "Its Nahuatl name is usually translated as place of coyotes, which is why two bronze ones stand in the fountain of Jardín Centenario. After the fall of Tenochtitlan, Hernán Cortés governed from here before moving to the new city. Today it is a neighborhood of cobbled streets and houses with gardens, with Frida Kahlo's Blue House about ten minutes away on foot."
+      },
+      "cuando": {
+        "ES": "El fin de semana, con la plaza llena de familias",
+        "EN": "At the weekend, when the square fills with families"
+      },
+      "min": 45,
+      "modo": "coche",
+      "lat": 19.34926,
+      "lng": -99.16367
+    },
+    {
+      "id": "roma-condesa",
+      "img": "/ciudades/cdmx/img/roma-condesa.jpg",
+      "nombre": "Roma y Condesa",
+      "zona": {
+        "ES": "Parque México y avenida Ámsterdam",
+        "EN": "Parque México and Avenida Ámsterdam"
+      },
+      "d": {
+        "ES": "La avenida Ámsterdam da una vuelta ovalada completa porque sigue el trazo del antiguo hipódromo de la Condesa. En medio quedó el Parque México, de los años veinte, rodeado de edificios art déco. Al lado, en la Roma, hay casonas de principios del siglo XX convertidas en cafés y restaurantes.",
+        "EN": "Avenida Ámsterdam runs in a full oval because it follows the track of the old Condesa racecourse. In the middle is Parque México, from the 1920s, surrounded by art deco buildings. Next door, in Roma, early 20th-century mansions have been turned into cafés and restaurants."
+      },
+      "cuando": {
+        "ES": "Un domingo por la mañana, o para cenar el fin de semana",
+        "EN": "A Sunday morning, or for dinner at the weekend"
+      },
+      "min": 25,
+      "modo": "coche",
+      "lat": 19.41186,
+      "lng": -99.16981
+    }
+  ],
+  "rutas": [
+    {
+      "id": "centro",
+      "expId": "ex1",
+      "img": "/ciudades/cdmx/img/centro.jpg",
+      "titulo": {
+        "ES": "El Centro Histórico en una tarde",
+        "EN": "The Historic Center in an afternoon"
+      },
+      "tipo": {
+        "ES": "Historia",
+        "EN": "History"
+      },
+      "dur": "4 h 20 min",
+      "d": {
+        "ES": "Para cuando terminas las juntas a media tarde. Subes a ver los murales de Bellas Artes, entras en la casa forrada de azulejos de la calle Madero, caminas hasta el Zócalo y la Catedral, y cenas en el Café de Tacuba, abierto desde 1912. Todo a pie, en menos de dos kilómetros.",
+        "EN": "For when your meetings end mid-afternoon. You go up to see the murals in Bellas Artes, step into the tile-covered house on Madero street, walk to the Zócalo and the Cathedral, and have dinner at Café de Tacuba, open since 1912. All on foot, in under two kilometers."
+      },
+      "salida": {
+        "ES": "En taxi o en coche del hotel hasta Bellas Artes, unos 30 minutos con el tráfico de la tarde. Sal hacia las 15:30, porque el museo cierra a las 18:00",
+        "EN": "By taxi or hotel car to Bellas Artes, about 30 minutes in afternoon traffic. Leave around 15:30, as the museum closes at 18:00"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo para las banquetas del Centro",
+          "Una chamarra ligera, que al anochecer refresca",
+          "Algo de efectivo para la cena",
+          "El celular con batería para pedir el taxi de vuelta"
+        ],
+        "EN": [
+          "Comfortable shoes for the downtown sidewalks",
+          "A light jacket, as it cools down after dark",
+          "Some cash for dinner",
+          "A charged phone to call a taxi back"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Palacio de Bellas Artes",
+            "EN": "Palacio de Bellas Artes"
+          },
+          "s": {
+            "ES": "Murales de Rivera y Orozco en los pisos altos",
+            "EN": "Rivera and Orozco murals on the upper floors"
+          },
+          "d": {
+            "ES": "Entras por la avenida Juárez y subes a los pisos de los murales. Allí está El hombre controlador del universo, que Diego Rivera volvió a pintar aquí en 1934 después de que destruyeran el original en Nueva York. Antes de salir, mira el techo del vestíbulo.",
+            "EN": "Go in from Avenida Juárez and climb to the mural floors. Up there is Man, Controller of the Universe, which Diego Rivera painted again here in 1934 after the original in New York was destroyed. Before you leave, look up at the lobby ceiling."
+          },
+          "tip": {
+            "ES": "Va primero porque el museo cierra a las 18:00 y los lunes no abre. En lunes, empieza directamente en la Casa de los Azulejos.",
+            "EN": "It comes first because the museum closes at 18:00 and does not open on Mondays. On a Monday, start straight at the Casa de los Azulejos."
+          },
+          "hora": "16:00",
+          "dur": "45 min",
+          "img": "/ciudades/cdmx/img/bellas-artes-cupula.jpg",
+          "lat": 19.4355,
+          "lng": -99.14126,
+          "tramo": "coche",
+          "tramoDuracionMin": 30,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Casa de los Azulejos",
+            "EN": "House of Tiles"
+          },
+          "s": {
+            "ES": "Talavera de Puebla en la calle Madero",
+            "EN": "Puebla Talavera tiles on Madero street"
+          },
+          "d": {
+            "ES": "Cruzas el Eje Central y la tienes a la entrada de Madero. Los azulejos de talavera poblana se pusieron en 1737 en el palacio de los condes del Valle de Orizaba. Desde 1919 es una cafetería con tienda, y puedes entrar al patio y subir la escalera, donde José Clemente Orozco pintó el mural Omnisciencia en 1925.",
+            "EN": "Cross Eje Central and it is at the start of Madero street. The Puebla Talavera tiles were added in 1737 to the palace of the Counts of the Valle de Orizaba. Since 1919 it has been a café with a shop, and you can walk into the courtyard and up the staircase, where José Clemente Orozco painted the mural Omniscience in 1925."
+          },
+          "tip": {
+            "ES": "Si es entre semana, asómate también al Palacio Postal, el edificio de correos de 1907 en la esquina de Tacuba con el Eje Central. Los fines de semana cierra pronto.",
+            "EN": "On a weekday, also look into the Palacio Postal, the 1907 post office on the corner of Tacuba and Eje Central. At weekends it closes early."
+          },
+          "hora": "16:50",
+          "dur": "30 min",
+          "img": "/ciudades/cdmx/img/azulejos.jpg",
+          "lat": 19.43435,
+          "lng": -99.14012,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Zócalo y Catedral",
+            "EN": "Zócalo and Cathedral"
+          },
+          "s": {
+            "ES": "La catedral que tardó 240 años en terminarse",
+            "EN": "The cathedral that took 240 years to finish"
+          },
+          "d": {
+            "ES": "Bajas por Madero, que es peatonal, y sales al Zócalo frente a la Catedral Metropolitana. Se empezó en 1573 y el exterior no se terminó hasta 1813, por eso mezcla estilos de tres siglos. En sus dos torres cuelgan 35 campanas.",
+            "EN": "Walk down Madero, which is pedestrian, and you come out on the Zócalo facing the Metropolitan Cathedral. It was begun in 1573 and the exterior was not finished until 1813, which is why it mixes styles from three centuries. Its two towers hold 35 bells."
+          },
+          "tip": {
+            "ES": "Entra aunque sea diez minutos; la entrada es libre. Al salir, cruza al centro de la plaza para ver la Catedral y el Palacio Nacional a la vez.",
+            "EN": "Go in, even for ten minutes; entry is free. Then cross to the middle of the square to see the Cathedral and the National Palace together."
+          },
+          "hora": "17:30",
+          "dur": "50 min",
+          "img": "/ciudades/cdmx/img/zocalo.jpg",
+          "lat": 19.43438,
+          "lng": -99.13307,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 50
+        },
+        {
+          "n": {
+            "ES": "Café de Tacuba",
+            "EN": "Café de Tacuba"
+          },
+          "s": {
+            "ES": "Cena en un comedor abierto desde 1912",
+            "EN": "Dinner in a dining room open since 1912"
+          },
+          "d": {
+            "ES": "Subes por la calle 5 de Mayo o por Tacuba, a unas cinco cuadras de la plaza. El café abrió en 1912 en una casona del Centro, con azulejos y óleos antiguos en las paredes. Una banda de rock de finales de los ochenta, Café Tacvba, tomó su nombre de aquí.",
+            "EN": "Walk up 5 de Mayo or Tacuba street, about five blocks from the square. The café opened in 1912 in an old downtown house, with tiles and old oil paintings on the walls. A rock band formed in the late eighties, Café Tacvba, took its name from it."
+          },
+          "tip": {
+            "ES": "Pide unas enchiladas o un tamal con chocolate. No toman reservaciones y a la hora de la cena puede haber 15 o 20 minutos de espera. Para volver, el taxi tarda unos 35 minutos hasta el hotel.",
+            "EN": "Order enchiladas or a tamal with hot chocolate. They do not take reservations, and at dinner time there can be a 15 to 20 minute wait. A taxi back to the hotel takes about 35 minutes."
+          },
+          "hora": "18:30",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/cdmx/img/tacuba.jpg",
+          "lat": 19.43572,
+          "lng": -99.13761,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 75
+        }
+      ],
+      "fotos": [
+        "/ciudades/cdmx/img/centro.jpg",
+        "/ciudades/cdmx/img/bellas-artes.jpg",
+        "/ciudades/cdmx/img/bellas-artes-cupula.jpg",
+        "/ciudades/cdmx/img/azulejos.jpg",
+        "/ciudades/cdmx/img/zocalo.jpg",
+        "/ciudades/cdmx/img/tacuba.jpg"
+      ],
+      "duracionMin": 260,
+      "distanciaKm": 16,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Todo el recorrido es llano y la calle Madero es peatonal. En otras calles del Centro hay banquetas estrechas y con desniveles. Si vas en silla de ruedas, pregunta en recepción antes de salir.",
+        "EN": "The whole route is flat and Madero street is pedestrian. Other downtown streets have narrow, uneven sidewalks. If you use a wheelchair, ask at reception before setting off."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 19.4355,
+        "lng": -99.14126,
+        "foto": "/ciudades/cdmx/img/bellas-artes.jpg",
+        "texto": {
+          "ES": "Explanada de Bellas Artes, sobre la avenida Juárez, frente a la Alameda. El taxi te deja ahí, unos 30 minutos desde el hotel.",
+          "EN": "The Bellas Artes forecourt on Avenida Juárez, facing the Alameda. The taxi drops you there, about 30 minutes from the hotel."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxis",
+          "Entrada al museo de Bellas Artes",
+          "Cena"
+        ],
+        "EN": [
+          "Taxis",
+          "Bellas Artes museum admission",
+          "Dinner"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Los lunes el museo de Bellas Artes cierra; ese día empieza en la Casa de los Azulejos.",
+        "EN": "Self-guided, so there is nothing to book or cancel. The Bellas Artes museum is closed on Mondays; that day, start at the Casa de los Azulejos."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    },
+    {
+      "id": "teotihuacan",
+      "expId": "ex2",
+      "img": "/ciudades/cdmx/img/teotihuacan.jpg",
+      "titulo": {
+        "ES": "Teotihuacán",
+        "EN": "Teotihuacan"
+      },
+      "tipo": {
+        "ES": "Arqueología",
+        "EN": "Archaeology"
+      },
+      "dur": "8 h",
+      "d": {
+        "ES": "Un día entero en la ciudad que los mexicas encontraron ya en ruinas. Recorres la Calzada de los Muertos desde la Ciudadela hasta la Plaza de la Luna, pasando al pie de la Pirámide del Sol, y comes en una cueva junto a la Puerta 5 antes de volver.",
+        "EN": "A full day in the city the Mexica found already in ruins. You walk the Avenue of the Dead from the Ciudadela to the Plaza of the Moon, passing the foot of the Pyramid of the Sun, and have lunch in a cave by Gate 5 before heading back."
+      },
+      "salida": {
+        "ES": "En coche con chofer o en taxi desde la puerta del hotel a las 7:30. Son unos 50 km por la autopista México-Pachuca, una hora y diez con el tráfico de la mañana",
+        "EN": "By car with driver or taxi from the hotel door at 7:30. It is about 50 km on the México-Pachuca highway, an hour and ten minutes in morning traffic"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Sombrero o gorra y bloqueador, que en la Calzada casi no hay sombra",
+          "Agua, al menos un litro por persona",
+          "Una chamarra para la salida, que a las 7:30 hace fresco",
+          "Efectivo para la entrada y la comida"
+        ],
+        "EN": [
+          "A hat or cap and sunscreen, as there is hardly any shade on the Avenue",
+          "Water, at least a liter per person",
+          "A jacket for the early start, as it is cool at 7:30",
+          "Cash for admission and lunch"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Departure from the hotel"
+          },
+          "s": {
+            "ES": "Rumbo al norte por la autopista México-Pachuca",
+            "EN": "Heading north on the México-Pachuca highway"
+          },
+          "d": {
+            "ES": "El coche sale de Miyana hacia el norte y deja la ciudad por la autopista México-Pachuca. En algo más de una hora los edificios dan paso a cerros cubiertos de casas y después a campos de nopales. La zona arqueológica abre a las 8:00, así que llegas con poca gente y antes del calor.",
+            "EN": "The car leaves Miyana heading north and exits the city on the México-Pachuca highway. In a little over an hour the buildings give way to hills covered in houses and then to prickly pear fields. The site opens at 8:00, so you arrive before the crowds and the heat."
+          },
+          "tip": {
+            "ES": "Desayuna antes de salir. Hasta la hora de la comida no hay restaurantes en la ruta.",
+            "EN": "Have breakfast before you leave. There are no restaurants along the route until lunchtime."
+          },
+          "hora": "07:30",
+          "dur": "5 min",
+          "img": "/ciudades/cdmx/img/teotihuacan.jpg",
+          "lat": 19.4397,
+          "lng": -99.1999,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Ciudadela y Templo de la Serpiente Emplumada",
+            "EN": "Ciudadela and Temple of the Feathered Serpent"
+          },
+          "s": {
+            "ES": "Cabezas de serpiente talladas hace unos 1,800 años",
+            "EN": "Serpent heads carved some 1,800 years ago"
+          },
+          "d": {
+            "ES": "Entras por la Puerta 1 a la Ciudadela, una plaza enorme cerrada por plataformas. Al fondo está el templo, con cabezas de serpiente emplumada que salen de la fachada, alternadas con otras de un tocado con ojos redondos. Bajo el templo los arqueólogos encontraron a más de cien personas enterradas como ofrenda.",
+            "EN": "Enter through Gate 1 into the Ciudadela, a vast square enclosed by platforms. At the far end is the temple, with feathered serpent heads jutting from the facade, alternating with a headdress with round eyes. Under the temple archaeologists found more than a hundred people buried as an offering."
+          },
+          "tip": {
+            "ES": "La parte mejor conservada es la que quedó tapada durante siglos por la plataforma que se construyó delante. Rodéala por un lado para verla de cerca.",
+            "EN": "The best-preserved part is the one that stayed covered for centuries by the platform built in front of it. Walk around one side to see it up close."
+          },
+          "hora": "08:45",
+          "dur": "1 h",
+          "img": "/ciudades/cdmx/img/quetzalcoatl.jpg",
+          "lat": 19.6819,
+          "lng": -98.84617,
+          "tramo": "coche",
+          "tramoDuracionMin": 70,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Pirámide del Sol",
+            "EN": "Pyramid of the Sun"
+          },
+          "s": {
+            "ES": "Unos 65 metros de piedra a un lado de la Calzada",
+            "EN": "Some 65 meters of stone beside the Avenue"
+          },
+          "d": {
+            "ES": "Caminas hacia el norte por la Calzada de los Muertos, que los mexicas llamaron así porque creyeron que las plataformas de los lados eran tumbas. La Pirámide del Sol mide unos 65 metros de alto y unos 225 por lado en la base. Desde hace años no se puede subir, así que la ves desde la Calzada y desde su plaza.",
+            "EN": "Walk north along the Avenue of the Dead, which the Mexica named because they believed the platforms on either side were tombs. The Pyramid of the Sun is about 65 meters high and about 225 meters on each side at the base. Climbing has not been allowed for years, so you see it from the Avenue and from its plaza."
+          },
+          "tip": {
+            "ES": "Detrás de la pirámide, junto a la Puerta 5, está el museo de sitio, abierto de 9:00 a 16:30. Si el sol aprieta, es buen sitio para refrescarte media hora.",
+            "EN": "Behind the pyramid, next to Gate 5, is the site museum, open from 9:00 to 16:30. If the sun is strong, it is a good place to cool off for half an hour."
+          },
+          "hora": "10:05",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/cdmx/img/sol.jpg",
+          "lat": 19.69241,
+          "lng": -98.84354,
+          "tramo": "pie",
+          "tramoDuracionMin": 20,
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "Plaza de la Luna y Palacio de Quetzalpapálotl",
+            "EN": "Plaza of the Moon and Palace of Quetzalpapalotl"
+          },
+          "s": {
+            "ES": "Pilares tallados con un ave mitad mariposa",
+            "EN": "Pillars carved with a bird that is half butterfly"
+          },
+          "d": {
+            "ES": "Al final de la Calzada se abre la Plaza de la Luna, con la pirámide al fondo y el Cerro Gordo detrás. En una esquina está el Palacio de Quetzalpapálotl, cuyo patio conserva pilares con relieves de un ave con rasgos de mariposa. Los huecos de los ojos llevaban incrustaciones de obsidiana.",
+            "EN": "At the end of the Avenue opens the Plaza of the Moon, with the pyramid at the far end and Cerro Gordo behind it. In one corner is the Palace of Quetzalpapalotl, whose courtyard keeps pillars carved with a bird with butterfly features. The eye sockets were once inlaid with obsidian."
+          },
+          "tip": {
+            "ES": "Desde abril de 2026 la Pirámide de la Luna está cerrada al público; pregunta en la entrada si ya se puede subir. Para comer, el coche te recoge en la Puerta 3 y en unos minutos estás en La Gruta, un restaurante dentro de una cueva junto a la Puerta 5.",
+            "EN": "Since April 2026 the Pyramid of the Moon has been closed to visitors; ask at the entrance whether it has reopened. For lunch, the car picks you up at Gate 3 and a few minutes later you are at La Gruta, a restaurant inside a cave by Gate 5."
+          },
+          "hora": "11:35",
+          "dur": "1 h",
+          "img": "/ciudades/cdmx/img/quetzalpapalotl.jpg",
+          "lat": 19.69783,
+          "lng": -98.84572,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 60
+        }
+      ],
+      "fotos": [
+        "/ciudades/cdmx/img/teotihuacan.jpg",
+        "/ciudades/cdmx/img/quetzalcoatl.jpg",
+        "/ciudades/cdmx/img/quetzalcoatl-2.jpg",
+        "/ciudades/cdmx/img/sol.jpg",
+        "/ciudades/cdmx/img/quetzalpapalotl.jpg"
+      ],
+      "duracionMin": 480,
+      "distanciaKm": 110,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "La Calzada es de tierra y piedra, con escalones para pasar de una plaza a otra, y casi no hay sombra. Si vas en silla de ruedas o caminas con dificultad, pide en recepción que el coche te deje en la puerta más cercana a cada parada.",
+        "EN": "The Avenue is earth and stone, with steps between one plaza and the next, and there is almost no shade. If you use a wheelchair or have trouble walking, ask reception to have the car drop you at the gate closest to each stop."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 19.4397,
+        "lng": -99.1999,
+        "foto": "/ciudades/cdmx/img/miyana.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, en el complejo Miyana, a las 7:30.",
+          "EN": "The hotel entrance, in the Miyana complex, at 7:30."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Coche con chofer o taxi",
+          "Entrada a la zona arqueológica",
+          "Comida"
+        ],
+        "EN": [
+          "Car with driver or taxi",
+          "Archaeological site admission",
+          "Lunch"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. De junio a septiembre suele llover por la tarde y la Calzada resbala, así que no retrases la salida.",
+        "EN": "Self-guided, so there is nothing to book or cancel. From June to September it often rains in the afternoon and the Avenue gets slippery, so do not delay the start."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    },
+    {
+      "id": "coyoacan",
+      "expId": "ex3",
+      "img": "/ciudades/cdmx/img/coyoacan-ruta.jpg",
+      "titulo": {
+        "ES": "Coyoacán y la Casa Azul",
+        "EN": "Coyoacán and the Blue House"
+      },
+      "tipo": {
+        "ES": "Arte y barrio",
+        "EN": "Art and neighborhood"
+      },
+      "dur": "5 h",
+      "d": {
+        "ES": "Para un sábado o un domingo. Entras en la casa donde nació y murió Frida Kahlo, ves el estudio donde mataron a Trotsky, comes tostadas en el mercado y terminas con un café junto a la fuente de los coyotes.",
+        "EN": "For a Saturday or Sunday. You step into the house where Frida Kahlo was born and died, see the study where Trotsky was killed, have lunch on tostadas at the market and finish with a coffee by the coyote fountain."
+      },
+      "salida": {
+        "ES": "En taxi o en coche del hotel hasta la calle Londres, unos 45 minutos. Sal hacia las 10:15 con los boletos de la Casa Azul comprados para las 11:00",
+        "EN": "By taxi or hotel car to Londres street, about 45 minutes. Leave around 10:15 with your Blue House tickets already booked for 11:00"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Los boletos de la Casa Azul en el celular",
+          "Calzado cómodo para las banquetas empedradas",
+          "Efectivo para el mercado",
+          "Una chamarra ligera por si refresca"
+        ],
+        "EN": [
+          "Your Blue House tickets on your phone",
+          "Comfortable shoes for the cobbled sidewalks",
+          "Cash for the market",
+          "A light jacket in case it cools down"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Museo Frida Kahlo, la Casa Azul",
+            "EN": "Frida Kahlo Museum, the Blue House"
+          },
+          "s": {
+            "ES": "La casa donde Frida nació en 1907 y murió en 1954",
+            "EN": "The house where Frida was born in 1907 and died in 1954"
+          },
+          "d": {
+            "ES": "La construyó su padre, el fotógrafo Guillermo Kahlo, en 1904. Frida vivió aquí casi toda su vida, a ratos con Diego Rivera, y desde 1958 es museo. Recorres la cocina amarilla y el estudio, con su silla de ruedas frente al caballete.",
+            "EN": "Her father, the photographer Guillermo Kahlo, built it in 1904. Frida lived here almost all her life, at times with Diego Rivera, and it has been a museum since 1958. You walk through the yellow kitchen and the studio, with her wheelchair in front of the easel."
+          },
+          "tip": {
+            "ES": "Los boletos se compran en la web oficial del museo y se agotan con días de antelación, sobre todo el fin de semana. Los lunes cierra y los miércoles abre a las 11:00.",
+            "EN": "Tickets are sold on the museum's official website and sell out days ahead, especially at weekends. It is closed on Mondays and opens at 11:00 on Wednesdays."
+          },
+          "hora": "11:00",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/cdmx/img/casa-azul.jpg",
+          "lat": 19.35514,
+          "lng": -99.16236,
+          "tramo": "coche",
+          "tramoDuracionMin": 45,
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "Museo Casa de León Trotsky",
+            "EN": "Leon Trotsky House Museum"
+          },
+          "s": {
+            "ES": "La casa fortificada donde lo mataron en 1940",
+            "EN": "The fortified house where he was killed in 1940"
+          },
+          "d": {
+            "ES": "Trotsky llegó a México en 1937 y vivió primero en la Casa Azul, invitado por Diego Rivera. Después se mudó aquí y reforzó la casa con muros altos y torres de vigilancia. En mayo de 1940 sobrevivió a un ataque a balazos, y en agosto Ramón Mercader lo mató en su estudio con un piolet.",
+            "EN": "Trotsky arrived in Mexico in 1937 and lived first at the Blue House, as Diego Rivera's guest. He later moved here and fortified the house with high walls and watchtowers. In May 1940 he survived a gun attack, and in August Ramón Mercader killed him in his study with an ice axe."
+          },
+          "tip": {
+            "ES": "En el cuarto todavía se ven los agujeros de las balas del primer ataque. Sus cenizas están en el jardín, bajo una estela con la hoz y el martillo.",
+            "EN": "The bullet holes from the first attack are still visible in the bedroom. His ashes lie in the garden, under a stone marked with the hammer and sickle."
+          },
+          "hora": "12:25",
+          "dur": "45 min",
+          "img": "/ciudades/cdmx/img/trotsky.jpg",
+          "lat": 19.35769,
+          "lng": -99.15955,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Mercado de Coyoacán",
+            "EN": "Coyoacán Market"
+          },
+          "s": {
+            "ES": "Tostadas de pata, tinga o mariscos en la barra",
+            "EN": "Tostadas with pig's trotters, tinga or seafood at the counter"
+          },
+          "d": {
+            "ES": "Bajas por la calle Allende hasta el mercado. Dentro, varios puestos de tostadas ponen en la barra cazuelas con lo que va encima, de la tinga al ceviche, y tú eliges dos o tres. Por los pasillos hay fruterías y puestos de antojitos.",
+            "EN": "Walk down Allende street to the market. Inside, several tostada stalls line the counter with bowls of toppings, from tinga to ceviche, and you pick two or three. Along the aisles there are fruit stalls and snack stands."
+          },
+          "tip": {
+            "ES": "Siéntate en la barra y pide por tostada; las de pata y las de tinga son las clásicas. Para acompañar, un agua fresca de jamaica.",
+            "EN": "Sit at the counter and order by the tostada; pig's trotters and tinga are the classics. To drink, a hibiscus agua fresca."
+          },
+          "hora": "13:25",
+          "dur": "1 h",
+          "img": "/ciudades/cdmx/img/mercado.jpg",
+          "lat": 19.35279,
+          "lng": -99.1615,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Jardín Centenario y Plaza Hidalgo",
+            "EN": "Jardín Centenario and Plaza Hidalgo"
+          },
+          "s": {
+            "ES": "La fuente de los coyotes y la parroquia de San Juan Bautista",
+            "EN": "The coyote fountain and San Juan Bautista church"
+          },
+          "d": {
+            "ES": "Sigues por Allende hasta el centro de Coyoacán. En el Jardín Centenario está la fuente con dos coyotes de bronce, que recuerdan el nombre del lugar, y al lado, en la Plaza Hidalgo, la parroquia de San Juan Bautista, del siglo XVI. Los fines de semana hay músicos y familias por todas partes.",
+            "EN": "Carry on along Allende to the center of Coyoacán. In Jardín Centenario stands the fountain with two bronze coyotes, a nod to the place's name, and next to it, on Plaza Hidalgo, the 16th-century church of San Juan Bautista. At weekends there are musicians and families everywhere."
+          },
+          "tip": {
+            "ES": "Busca una banca a la sombra o un café en las calles de alrededor para terminar sin prisa. Para volver, el taxi tarda unos 40 minutos hasta el hotel.",
+            "EN": "Find a shady bench or a café in the surrounding streets to finish at an easy pace. A taxi back to the hotel takes about 40 minutes."
+          },
+          "hora": "14:35",
+          "dur": "45 min",
+          "img": "/ciudades/cdmx/img/coyotes.jpg",
+          "lat": 19.34916,
+          "lng": -99.16356,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 45
+        }
+      ],
+      "fotos": [
+        "/ciudades/cdmx/img/coyoacan-ruta.jpg",
+        "/ciudades/cdmx/img/casa-azul.jpg",
+        "/ciudades/cdmx/img/trotsky.jpg",
+        "/ciudades/cdmx/img/mercado.jpg",
+        "/ciudades/cdmx/img/coyotes.jpg",
+        "/ciudades/cdmx/img/coyoacan.jpg"
+      ],
+      "duracionMin": 300,
+      "distanciaKm": 30,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El recorrido es llano, pero las banquetas de Coyoacán son estrechas y en algunos tramos de piedra irregular. La Casa Azul y la de Trotsky son casas antiguas con escalones en algunos cuartos. Si vas en silla de ruedas, pregunta en recepción antes de salir.",
+        "EN": "The route is flat, but Coyoacán's sidewalks are narrow and some stretches are uneven stone. The Blue House and Trotsky's house are old homes with steps between some rooms. If you use a wheelchair, ask at reception before setting off."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 19.35514,
+        "lng": -99.16236,
+        "foto": "/ciudades/cdmx/img/casa-azul.jpg",
+        "texto": {
+          "ES": "Entrada de la Casa Azul, en la calle Londres 247, esquina con Allende. Unos 45 minutos en taxi desde el hotel.",
+          "EN": "Blue House entrance, at Londres 247, on the corner of Allende. About 45 minutes by taxi from the hotel."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxis",
+          "Boletos de la Casa Azul y de la casa de Trotsky",
+          "Comida"
+        ],
+        "EN": [
+          "Taxis",
+          "Blue House and Trotsky house tickets",
+          "Lunch"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Los boletos de la Casa Azul tienen sus propias condiciones de cambio. Los lunes cierran los dos museos.",
+        "EN": "Self-guided, so there is nothing to book or cancel. Blue House tickets have their own change policy. Both museums are closed on Mondays."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    },
+    {
+      "id": "antropologia-chapultepec",
+      "expId": "ex4",
+      "img": "/ciudades/cdmx/img/antropologia-ruta.jpg",
+      "titulo": {
+        "ES": "Antropología y Chapultepec",
+        "EN": "Anthropology and Chapultepec"
+      },
+      "tipo": {
+        "ES": "Museos y bosque",
+        "EN": "Museums and park"
+      },
+      "dur": "4 h",
+      "d": {
+        "ES": "Una mañana entre el Museo de Antropología y el castillo del cerro. Ves la Piedra del Sol en la Sala Mexica, cruzas el bosque hasta el monumento a los Niños Héroes y subes al castillo de Maximiliano y Carlota, con la vista de Reforma desde la terraza.",
+        "EN": "A morning between the Anthropology Museum and the castle on the hill. You see the Sun Stone in the Mexica Hall, cross the park to the Boy Heroes monument and climb to Maximilian and Carlota's castle, with the view down Reforma from the terrace."
+      },
+      "salida": {
+        "ES": "En taxi o en coche del hotel hasta el museo, sobre Reforma, unos 15 minutos. Sal hacia las 9:45",
+        "EN": "By taxi or hotel car to the museum on Reforma, about 15 minutes. Leave around 9:45"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo para la subida al castillo",
+          "Agua y una gorra para cruzar el bosque",
+          "Tarjeta o efectivo para las dos entradas"
+        ],
+        "EN": [
+          "Comfortable shoes for the climb to the castle",
+          "Water and a cap for crossing the park",
+          "A card or cash for both admissions"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "El Paraguas del Museo de Antropología",
+            "EN": "The Umbrella at the Anthropology Museum"
+          },
+          "s": {
+            "ES": "Una sola columna bajo el techo del patio",
+            "EN": "A single column under the courtyard roof"
+          },
+          "d": {
+            "ES": "El museo abrió en 1964 con el proyecto de Pedro Ramírez Vázquez. En el patio central, una columna sostiene un techo enorme, y del borde cae una cortina de agua. Los relieves de bronce de la columna son de los hermanos José y Tomás Chávez Morado.",
+            "EN": "The museum opened in 1964, designed by Pedro Ramírez Vázquez. In the central courtyard a single column holds up a huge roof, and a curtain of water falls from its edge. The bronze reliefs on the column are by the brothers José and Tomás Chávez Morado."
+          },
+          "tip": {
+            "ES": "Compra la entrada en la taquilla al llegar. La Sala Mexica está en la planta baja, al fondo del patio.",
+            "EN": "Buy your ticket at the box office when you arrive. The Mexica Hall is on the ground floor, at the far end of the courtyard."
+          },
+          "hora": "10:00",
+          "dur": "25 min",
+          "img": "/ciudades/cdmx/img/paraguas.jpg",
+          "lat": 19.42599,
+          "lng": -99.18612,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Sala Mexica y Piedra del Sol",
+            "EN": "Mexica Hall and the Sun Stone"
+          },
+          "s": {
+            "ES": "Un disco de basalto de más de 24 toneladas",
+            "EN": "A basalt disc of over 24 tonnes"
+          },
+          "d": {
+            "ES": "La Piedra del Sol apareció el 17 de diciembre de 1790, enterrada en el Zócalo durante unas obras. Mide 3.6 metros de diámetro y pesa más de 24 toneladas. En el centro hay un rostro rodeado por los signos de los días del calendario mexica.",
+            "EN": "The Sun Stone turned up on 17 December 1790, buried under the Zócalo during building works. It is 3.6 meters across and weighs over 24 tonnes. At its center is a face surrounded by the day signs of the Mexica calendar."
+          },
+          "tip": {
+            "ES": "En la misma sala busca la Coatlicue, la diosa con falda de serpientes, que se encontró en el Zócalo unos meses antes, también en 1790.",
+            "EN": "In the same hall, look for Coatlicue, the goddess with a skirt of serpents, found under the Zócalo a few months earlier, also in 1790."
+          },
+          "hora": "10:30",
+          "dur": "1 h 5 min",
+          "img": "/ciudades/cdmx/img/piedra-sol.jpg",
+          "lat": 19.42615,
+          "lng": -99.18665,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 65
+        },
+        {
+          "n": {
+            "ES": "Altar a la Patria",
+            "EN": "Altar to the Homeland"
+          },
+          "s": {
+            "ES": "Seis columnas por los Niños Héroes de 1847",
+            "EN": "Six columns for the Boy Heroes of 1847"
+          },
+          "d": {
+            "ES": "Cruzas Reforma y el bosque hasta el pie del cerro. El monumento se inauguró en 1952 y sus seis columnas de mármol recuerdan a los seis cadetes del Colegio Militar que murieron el 13 de septiembre de 1847 defendiendo el castillo de las tropas de Estados Unidos. En su base se guardan los restos que el Ejército identificó como suyos en 1947.",
+            "EN": "Cross Reforma and the park to the foot of the hill. The monument was unveiled in 1952, and its six marble columns honor the six Military College cadets who died on 13 September 1847 defending the castle from United States troops. Its base holds the remains the Army identified as theirs in 1947."
+          },
+          "tip": {
+            "ES": "Desde aquí sale la rampa que sube al castillo, unos 15 minutos a pie en cuesta.",
+            "EN": "The ramp up to the castle starts here, about 15 minutes uphill on foot."
+          },
+          "hora": "11:55",
+          "dur": "15 min",
+          "img": "/ciudades/cdmx/img/altar-patria.jpg",
+          "lat": 19.42194,
+          "lng": -99.17999,
+          "tramo": "pie",
+          "tramoDuracionMin": 20,
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Castillo de Chapultepec",
+            "EN": "Chapultepec Castle"
+          },
+          "s": {
+            "ES": "Las habitaciones de Maximiliano y Carlota y la vista de Reforma",
+            "EN": "Maximilian and Carlota's rooms and the view down Reforma"
+          },
+          "d": {
+            "ES": "Arriba, el castillo es hoy el Museo Nacional de Historia. En el Alcázar se conservan las habitaciones que arreglaron Maximiliano y Carlota entre 1864 y 1867, y una galería de vitrales que da a la terraza. Desde allí ves el Paseo de la Reforma, que Maximiliano mandó trazar para bajar en línea recta hasta el centro.",
+            "EN": "At the top, the castle is now the National Museum of History. The Alcázar keeps the rooms Maximilian and Carlota furnished between 1864 and 1867, and a stained-glass gallery opening onto the terrace. From there you see Paseo de la Reforma, which Maximilian had laid out to run straight down to the center."
+          },
+          "tip": {
+            "ES": "El castillo cierra a las 17:00 y los lunes no abre. Para volver, baja por la misma rampa y toma un taxi en Reforma, unos 15 minutos hasta el hotel.",
+            "EN": "The castle closes at 17:00 and does not open on Mondays. To get back, walk down the same ramp and take a taxi on Reforma, about 15 minutes to the hotel."
+          },
+          "hora": "12:30",
+          "dur": "1 h",
+          "img": "/ciudades/cdmx/img/castillo-vitrales.jpg",
+          "lat": 19.42046,
+          "lng": -99.18209,
+          "tramo": "pie",
+          "tramoDuracionMin": 20,
+          "duracionMin": 60
+        }
+      ],
+      "fotos": [
+        "/ciudades/cdmx/img/antropologia-ruta.jpg",
+        "/ciudades/cdmx/img/paraguas.jpg",
+        "/ciudades/cdmx/img/piedra-sol.jpg",
+        "/ciudades/cdmx/img/altar-patria.jpg",
+        "/ciudades/cdmx/img/chapultepec.jpg",
+        "/ciudades/cdmx/img/castillo-vitrales.jpg"
+      ],
+      "duracionMin": 240,
+      "distanciaKm": 11,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "En el museo, la ruta va por la planta baja, alrededor del patio. La subida al castillo es una rampa larga en cuesta y dentro hay escaleras entre los pisos. Si vas en silla de ruedas, pregunta en recepción antes de salir.",
+        "EN": "In the museum, the route stays on the ground floor around the courtyard. The way up to the castle is a long sloping ramp, and inside there are stairs between floors. If you use a wheelchair, ask at reception before setting off."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 19.42615,
+        "lng": -99.18665,
+        "foto": "/ciudades/cdmx/img/antropologia.jpg",
+        "texto": {
+          "ES": "Entrada del Museo Nacional de Antropología, sobre Paseo de la Reforma a la altura de la calzada Gandhi. Unos 15 minutos en taxi desde el hotel.",
+          "EN": "Entrance of the National Museum of Anthropology, on Paseo de la Reforma at Calzada Gandhi. About 15 minutes by taxi from the hotel."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxis",
+          "Entradas al museo y al castillo",
+          "Comida"
+        ],
+        "EN": [
+          "Taxis",
+          "Museum and castle admission",
+          "Lunch"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Los lunes cierran el museo y el castillo; hazla de martes a domingo.",
+        "EN": "Self-guided, so there is nothing to book or cancel. The museum and the castle are closed on Mondays; do it Tuesday to Sunday."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un mezcal en el lobby bar del hotel a la vuelta",
+      "EN": "A mezcal at the hotel lobby bar when you get back"
+    }
+  },
+  "creditos": [
+    "Museo Soumaya: Diego Delso, CC BY-SA 4.0, Wikimedia Commons",
+    "Estanque del Parque Lincoln, Polanco: AlejandroLinaresGarcia, CC BY-SA 3.0, Wikimedia Commons",
+    "El Paraguas del Museo Nacional de Antropología: Photograph by Mike Peel (www.mikepeel.net)., CC BY-SA 4.0, Wikimedia Commons",
+    "Castillo de Chapultepec desde el aire: ProtoplasmaKid, CC BY-SA 4.0, Wikimedia Commons",
+    "Catedral Metropolitana desde el Zócalo: ProtoplasmaKid, CC BY-SA 4.0, Wikimedia Commons",
+    "Palacio de Bellas Artes al anochecer: Daniel Case, CC BY-SA 3.0, Wikimedia Commons",
+    "Fuente de los Coyotes, Jardín Centenario: Nan Palmero from San Antonio, TX, USA, CC BY 2.0, Wikimedia Commons",
+    "Parque México desde el aire, Condesa: ProtoplasmaKid, CC BY-SA 4.0, Wikimedia Commons",
+    "Zócalo, Catedral y Palacio Nacional desde lo alto: ProtoplasmaKid, CC BY-SA 4.0, Wikimedia Commons",
+    "Cúpula interior del Palacio de Bellas Artes: Diego Delso, CC BY-SA 3.0, Wikimedia Commons",
+    "Casa de los Azulejos: Thomas Ledl, CC BY-SA 4.0, Wikimedia Commons",
+    "Interior del Café de Tacuba: Elisa.rolle, CC BY-SA 4.0, Wikimedia Commons",
+    "Teotihuacán y el Cerro Gordo: Adert, CC BY-SA 4.0, Wikimedia Commons",
+    "Templo de la Serpiente Emplumada, Teotihuacán: ProtoplasmaKid, CC BY 4.0, Wikimedia Commons",
+    "Escalinata del Templo de Quetzalcóatl, Teotihuacán: Thomas Ledl, CC BY-SA 4.0, Wikimedia Commons",
+    "Calzada de los Muertos y Pirámide del Sol: Juan Carlos Fonseca Mata, CC BY-SA 4.0, Wikimedia Commons",
+    "Patio del Palacio de Quetzalpapálotl: Peachseltzer, CC BY-SA 4.0, Wikimedia Commons",
+    "Complejo Miyana, Nuevo Polanco: Tbhotch, CC BY-SA 4.0, Wikimedia Commons",
+    "Calle Londres y la Casa Azul: Rebeccananonof, CC0, Wikimedia Commons",
+    "Museo Frida Kahlo, la Casa Azul (recorte horizontal): Alex1210O, CC BY-SA 4.0, Wikimedia Commons",
+    "Museo Casa de León Trotsky: Tonatiuh101, CC BY-SA 3.0, Wikimedia Commons",
+    "Puesto de tostadas en el Mercado de Coyoacán: katiebordner, CC BY 2.0, Wikimedia Commons",
+    "Fuente de los Coyotes, Coyoacán: Ferfive, CC BY 4.0, Wikimedia Commons",
+    "Patio del Museo Nacional de Antropología: Photograph by Mike Peel (www.mikepeel.net)., CC BY-SA 4.0, Wikimedia Commons",
+    "El Paraguas y su cortina de agua: Photograph by Mike Peel (www.mikepeel.net)., CC BY-SA 4.0, Wikimedia Commons",
+    "Piedra del Sol, Sala Mexica: El Comandante, CC BY-SA 3.0, Wikimedia Commons",
+    "Altar a la Patria, Chapultepec: Thelmadatter, CC BY-SA 3.0, Wikimedia Commons",
+    "Galería de vitrales del Castillo de Chapultepec (recorte horizontal): José Luiz, CC BY-SA 4.0, Wikimedia Commons"
+  ]
+}

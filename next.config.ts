@@ -22,6 +22,7 @@ const nextConfig: NextConfig = {
       { source: "/ventas", destination: "/ventas/index.html" },
       { source: "/asistentes", destination: "/asistentes/index.html" },
       { source: "/nivel", destination: "/nivel/index.html" },
+      { source: "/gm", destination: "/gm/index.html" },
       // Demo privada de la carta de Casa Román (app Angular): cualquier ruta
       // dentro de la demo la resuelve su index.html. Sin enlazar desde la web.
       { source: "/d/casaroman-v7k2/:path*", destination: "/d/casaroman-v7k2/index.html" },
@@ -30,6 +31,9 @@ const nextConfig: NextConfig = {
       { source: "/d/sheraton-5e38/:path*", destination: "/d/sheraton-5e38/index.html" },
       { source: "/d/fiestainn-aec3/:path*", destination: "/d/fiestainn-aec3/index.html" },
       { source: "/d/carris-a793/:path*", destination: "/d/carris-a793/index.html" },
+      { source: "/d/mayan-4c74/:path*", destination: "/d/mayan-4c74/index.html" },
+      { source: "/d/dreams-711d/:path*", destination: "/d/dreams-711d/index.html" },
+      { source: "/d/presidente-cc35/:path*", destination: "/d/presidente-cc35/index.html" },
       { source: "/d/izaga-ca5b/:path*", destination: "/d/izaga-ca5b/index.html" },
       { source: "/d/amic-b801/:path*", destination: "/d/amic-b801/index.html" },
       { source: "/d/panel-2819/:path*", destination: "/d/panel-2819/index.html" },

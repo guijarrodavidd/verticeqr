@@ -229,6 +229,21 @@ export const RECURSOS: Recurso[] = [
     destino: "/nivel",
     cta: "Hacer el test y subir de nivel",
   },
+  {
+    slug: "gm",
+    etiqueta: "Recurso gratuito",
+    titulo: "La guía completa GM 2026",
+    subtitulo:
+      "Todo lo que necesitas saber para dirigir tu hotel con IA. El trabajo de despacho de cada semana, listo para copiar en Claude o en ChatGPT, con ejemplos hechos y lo que tienes que revisar antes de enviarlo.",
+    incluye: [
+      "50 prompts por área: dirección, equipo, huésped, carta, experiencias, reseñas y precios",
+      "20 asistentes con sus instrucciones completas, para pegar una vez y usar cada semana",
+      "19 plantillas para rellenar, del cierre de mes al parte de turno",
+      "Tu semana con IA: 4 horas y 25 minutos al mes y un plan de 30 días",
+    ],
+    destino: "/gm",
+    cta: "Abrir la guía",
+  },
   // Plantilla: copia este bloque, cambia el slug, el título y el enlace, y ya
   // está publicada en /recurso/<slug>.
   {

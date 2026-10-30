@@ -1,0 +1,402 @@
+{
+  "marietas-1": {
+    "pregunta": {
+      "ES": "¿A qué distancia de Punta de Mita quedan las Islas Marietas?",
+      "EN": "How far are the Marieta Islands from Punta de Mita?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 8 kilómetros",
+        "EN": "About 8 kilometers"
+      },
+      {
+        "ES": "Unos 30 kilómetros",
+        "EN": "About 30 kilometers"
+      },
+      {
+        "ES": "Unos 2 kilómetros",
+        "EN": "About 2 kilometers"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Están a unos 8 km al suroeste de la punta. Por eso desde Punta de Mita la lancha tarda unos 20 minutos, y desde Puerto Vallarta, cerca de una hora.",
+      "EN": "They lie about 8 km southwest of the point. That is why the boat takes about 20 minutes from Punta de Mita and close to an hour from Puerto Vallarta."
+    }
+  },
+  "marietas-2": {
+    "pregunta": {
+      "ES": "¿Qué ave anida en las Marietas y se reconoce por el color de sus patas?",
+      "EN": "Which bird nests on the Marietas and is known for the color of its feet?"
+    },
+    "opciones": [
+      {
+        "ES": "El flamenco",
+        "EN": "The flamingo"
+      },
+      {
+        "ES": "El pájaro bobo de patas azules",
+        "EN": "The blue-footed booby"
+      },
+      {
+        "ES": "El pelícano pardo",
+        "EN": "The brown pelican"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El bobo de patas azules cría en las islas. Los machos levantan las patas, una y otra vez, para lucirlas ante la hembra. También anida el rabijunco de pico rojo, con una cola muy larga.",
+      "EN": "The blue-footed booby breeds on the islands. Males lift their feet, one after the other, to show them off to the female. The red-billed tropicbird, with its very long tail, nests there too."
+    }
+  },
+  "marietas-3": {
+    "pregunta": {
+      "ES": "¿Cuántas personas al día pueden entrar a la Playa Escondida desde que reabrió en 2016?",
+      "EN": "How many people a day can enter the Hidden Beach since it reopened in 2016?"
+    },
+    "opciones": [
+      {
+        "ES": "Sin límite",
+        "EN": "No limit"
+      },
+      {
+        "ES": "Unas 1,000",
+        "EN": "About 1,000"
+      },
+      {
+        "ES": "116",
+        "EN": "116"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "En 2016 llegaban más de 2,500 personas al día y el parque la cerró para que se recuperara el coral. Reabrió con un cupo de 116 visitantes diarios, en grupos pequeños y con tiempo limitado.",
+      "EN": "By 2016 more than 2,500 people a day were arriving, and the park closed it so the coral could recover. It reopened with a cap of 116 visitors a day, in small groups and with a time limit."
+    }
+  },
+  "marietas-4": {
+    "pregunta": {
+      "ES": "¿Quién encabezó en los años sesenta la protesta para proteger las islas?",
+      "EN": "Who led the protest to protect the islands in the 1960s?"
+    },
+    "opciones": [
+      {
+        "ES": "Jacques Cousteau",
+        "EN": "Jacques Cousteau"
+      },
+      {
+        "ES": "John Huston",
+        "EN": "John Huston"
+      },
+      {
+        "ES": "Ernest Hemingway",
+        "EN": "Ernest Hemingway"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "A principios del siglo XX el gobierno usó las islas para pruebas militares. El oceanógrafo Jacques Cousteau levantó la voz a finales de los sesenta, y con el tiempo las islas se declararon parque nacional.",
+      "EN": "In the early 20th century the government used the islands for military testing. Oceanographer Jacques Cousteau spoke out in the late 1960s, and in time the islands were declared a national park."
+    }
+  },
+  "vallarta-tarde-1": {
+    "pregunta": {
+      "ES": "¿Quién hizo las sillas con orejas y patas de la Rotonda del Mar?",
+      "EN": "Who made the chairs with ears and feet at the Rotonda del Mar?"
+    },
+    "opciones": [
+      {
+        "ES": "Sergio Bustamante",
+        "EN": "Sergio Bustamante"
+      },
+      {
+        "ES": "Alejandro Colunga",
+        "EN": "Alejandro Colunga"
+      },
+      {
+        "ES": "Frida Kahlo",
+        "EN": "Frida Kahlo"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Son del artista tapatío Alejandro Colunga y están hechas para sentarse en ellas. Sergio Bustamante es el autor de otra escultura del mismo malecón, En busca de la razón, la de la escalera.",
+      "EN": "They are by Guadalajara artist Alejandro Colunga and are made to be sat on. Sergio Bustamante made another sculpture on the same malecón, In Search of Reason, the one with the ladder."
+    }
+  },
+  "vallarta-tarde-2": {
+    "pregunta": {
+      "ES": "¿Qué hay en lo alto de la torre de la parroquia de Guadalupe?",
+      "EN": "What sits on top of the Guadalupe church tower?"
+    },
+    "opciones": [
+      {
+        "ES": "Una veleta",
+        "EN": "A weather vane"
+      },
+      {
+        "ES": "Una campana gigante",
+        "EN": "A giant bell"
+      },
+      {
+        "ES": "Una corona",
+        "EN": "A crown"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "La torre termina en una corona, que se ve desde casi todo el malecón y se ha vuelto el símbolo de la ciudad. La parroquia está dedicada a la Virgen de Guadalupe, y del 1 al 12 de diciembre hay procesiones cada día.",
+      "EN": "The tower ends in a crown, visible from almost the whole malecón, and it has become the symbol of the city. The church is dedicated to the Virgin of Guadalupe, and from December 1 to 12 there are processions every day."
+    }
+  },
+  "vallarta-tarde-3": {
+    "pregunta": {
+      "ES": "¿Qué forma tiene la estructura que corona el muelle de Los Muertos?",
+      "EN": "What shape is the structure on top of Los Muertos pier?"
+    },
+    "opciones": [
+      {
+        "ES": "La vela de un barco",
+        "EN": "A ship's sail"
+      },
+      {
+        "ES": "Una ola",
+        "EN": "A wave"
+      },
+      {
+        "ES": "La aleta de una ballena",
+        "EN": "A whale's fin"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es una aguja alta de la que bajan cables tensos, como la vela de un barco. De noche se ilumina y se ve desde lejos, desde el malecón y desde las lanchas.",
+      "EN": "It is a tall spire with taut cables running down from it, like a ship's sail. At night it lights up and can be seen from far away, from the malecón and from the boats."
+    }
+  },
+  "vallarta-tarde-4": {
+    "pregunta": {
+      "ES": "¿Qué película de 1964 dio a conocer Puerto Vallarta en todo el mundo?",
+      "EN": "Which 1964 film made Puerto Vallarta famous around the world?"
+    },
+    "opciones": [
+      {
+        "ES": "Tiburón",
+        "EN": "Jaws"
+      },
+      {
+        "ES": "La noche de la iguana",
+        "EN": "The Night of the Iguana"
+      },
+      {
+        "ES": "Casablanca",
+        "EN": "Casablanca"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "John Huston la rodó en Mismaloya, al sur de la ciudad, con Richard Burton. Elizabeth Taylor vino con él, y la prensa que los seguía puso a Vallarta en las revistas de medio mundo.",
+      "EN": "John Huston shot it at Mismaloya, south of town, with Richard Burton. Elizabeth Taylor came along with him, and the press that followed them put Vallarta in magazines across the world."
+    }
+  },
+  "sayulita-1": {
+    "pregunta": {
+      "ES": "¿Qué son las banderitas de colores que cuelgan sobre las calles?",
+      "EN": "What are the colorful little flags hanging over the streets?"
+    },
+    "opciones": [
+      {
+        "ES": "Papel picado",
+        "EN": "Papel picado"
+      },
+      {
+        "ES": "Señales para los surfistas",
+        "EN": "Signals for surfers"
+      },
+      {
+        "ES": "Adornos de Navidad",
+        "EN": "Christmas decorations"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es papel picado, hojas de papel de china recortadas con dibujos. En México se cuelga en fiestas y celebraciones, y en el centro de Sayulita lo vas a ver casi siempre.",
+      "EN": "It is papel picado, tissue paper sheets cut into patterns. In Mexico it is hung for parties and celebrations, and in downtown Sayulita you will almost always see it."
+    }
+  },
+  "sayulita-2": {
+    "pregunta": {
+      "ES": "¿Qué hay que hacer si en la playa ondea la bandera roja?",
+      "EN": "What should you do if a red flag is flying on the beach?"
+    },
+    "opciones": [
+      {
+        "ES": "Nadar solo cerca de la orilla",
+        "EN": "Swim only close to shore"
+      },
+      {
+        "ES": "No meterse al mar",
+        "EN": "Stay out of the sea"
+      },
+      {
+        "ES": "Ponerse chaleco y entrar",
+        "EN": "Put on a life jacket and go in"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "En las playas de México la bandera roja avisa de peligro por oleaje fuerte o corrientes. Con amarilla, se nada con precaución, y con verde, el mar está tranquilo.",
+      "EN": "On Mexican beaches a red flag warns of danger from strong waves or currents. With yellow you swim with caution, and green means the sea is calm."
+    }
+  },
+  "sayulita-3": {
+    "pregunta": {
+      "ES": "¿Cuál es el nombre oficial de San Pancho?",
+      "EN": "What is San Pancho's official name?"
+    },
+    "opciones": [
+      {
+        "ES": "San Patricio",
+        "EN": "San Patricio"
+      },
+      {
+        "ES": "San Pedro",
+        "EN": "San Pedro"
+      },
+      {
+        "ES": "San Francisco",
+        "EN": "San Francisco"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El pueblo se llama San Francisco. En México, a quien se llama Francisco le dicen Pancho, y el apodo acabó siendo el nombre de todos los días.",
+      "EN": "The village is called San Francisco. In Mexico, people named Francisco are nicknamed Pancho, and the nickname became the everyday name."
+    }
+  },
+  "sayulita-4": {
+    "pregunta": {
+      "ES": "¿Cómo se cocina el pescado zarandeado?",
+      "EN": "How is pescado zarandeado cooked?"
+    },
+    "opciones": [
+      {
+        "ES": "Abierto y asado sobre brasas",
+        "EN": "Butterflied and grilled over embers"
+      },
+      {
+        "ES": "Frito en mucho aceite",
+        "EN": "Deep-fried"
+      },
+      {
+        "ES": "Cocido en caldo",
+        "EN": "Simmered in broth"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Se abre el pescado entero por la mitad, se unta con adobo de chiles y se asa sobre brasas dentro de una rejilla que se voltea. Es el platillo típico de la costa de Nayarit.",
+      "EN": "The whole fish is split open, rubbed with a chili marinade and grilled over embers in a hinged rack that gets flipped. It is the classic dish of the Nayarit coast."
+    }
+  },
+  "ballenas-1": {
+    "pregunta": {
+      "ES": "¿De dónde llegan las ballenas jorobadas que pasan el invierno en la bahía?",
+      "EN": "Where do the humpbacks that winter in the bay come from?"
+    },
+    "opciones": [
+      {
+        "ES": "Del Pacífico norte, de Alaska a California",
+        "EN": "The North Pacific, from Alaska to California"
+      },
+      {
+        "ES": "Del océano Atlántico",
+        "EN": "The Atlantic Ocean"
+      },
+      {
+        "ES": "De la Antártida",
+        "EN": "Antarctica"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Pasan el verano comiendo en las aguas frías del Pacífico norte y bajan en invierno a aguas templadas para aparearse y tener a sus crías. Puede que la ballena que ves aquí la vean en verano desde un barco en Alaska.",
+      "EN": "They spend the summer feeding in the cold waters of the North Pacific and come south in winter to warmer water to mate and give birth. The whale you see here may be spotted from a boat in Alaska next summer."
+    }
+  },
+  "ballenas-2": {
+    "pregunta": {
+      "ES": "¿Qué es el soplo que ves a lo lejos?",
+      "EN": "What is the blow you see in the distance?"
+    },
+    "opciones": [
+      {
+        "ES": "Agua que la ballena traga y escupe",
+        "EN": "Water the whale swallows and spits out"
+      },
+      {
+        "ES": "El aire que suelta al subir a respirar",
+        "EN": "The air it lets out when it surfaces to breathe"
+      },
+      {
+        "ES": "Vapor que sale del mar",
+        "EN": "Steam rising from the sea"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Las ballenas respiran aire. La jorobada tiene dos orificios en lo alto de la cabeza, y al exhalar con fuerza se forma esa nube de agua y vapor que delata dónde está.",
+      "EN": "Whales breathe air. The humpback has two blowholes on top of its head, and when it exhales hard it makes that cloud of spray and vapor that gives away where it is."
+    }
+  },
+  "ballenas-3": {
+    "pregunta": {
+      "ES": "¿Cuánto tiempo puede quedarse una lancha con el mismo grupo de ballenas?",
+      "EN": "How long can a boat stay with the same group of whales?"
+    },
+    "opciones": [
+      {
+        "ES": "Sin límite",
+        "EN": "No limit"
+      },
+      {
+        "ES": "Dos horas",
+        "EN": "Two hours"
+      },
+      {
+        "ES": "30 minutos",
+        "EN": "30 minutes"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "La norma mexicana NOM-131 lo limita a 30 minutos, con un máximo de cuatro barcos por grupo y 60 metros de distancia para lanchas pequeñas. También prohíbe nadar con ellas.",
+      "EN": "Mexico's NOM-131 rule sets a 30-minute limit, a maximum of four boats per group and a 60-meter distance for small boats. It also bans swimming with them."
+    }
+  },
+  "ballenas-4": {
+    "pregunta": {
+      "ES": "¿Para qué fotografían los biólogos la cola de cada ballena?",
+      "EN": "Why do biologists photograph each whale's tail?"
+    },
+    "opciones": [
+      {
+        "ES": "Para identificarla",
+        "EN": "To identify it"
+      },
+      {
+        "ES": "Para medir su tamaño",
+        "EN": "To measure its size"
+      },
+      {
+        "ES": "Para saber su edad",
+        "EN": "To tell its age"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La parte de abajo de la cola tiene un dibujo blanco y negro, con marcas y cicatrices que no se repiten, como una huella digital. Con esas fotos siguen a cada ballena de un año a otro.",
+      "EN": "The underside of the tail has a black-and-white pattern, with marks and scars that never repeat, like a fingerprint. With those photos they follow each whale from one year to the next."
+    }
+  }
+}
