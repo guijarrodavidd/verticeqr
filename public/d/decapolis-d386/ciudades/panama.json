@@ -1,0 +1,1168 @@
+{
+  "slug": "panama",
+  "nombre": "Ciudad de Panamá",
+  "intro": {
+    "ES": "Megapolis World está en la Avenida Balboa, con la Cinta Costera enfrente. El Casco Antiguo queda a 10 minutos en auto y el Canal, en Miraflores, a 25.",
+    "EN": "Megapolis World stands on Avenida Balboa, with the Cinta Costera right opposite. The Old Quarter is 10 minutes by car and the Canal, at Miraflores, 25."
+  },
+  "lugares": [
+    {
+      "id": "cinta-costera",
+      "img": "/ciudades/panama/img/cinta-costera.jpg",
+      "nombre": "Cinta Costera",
+      "zona": {
+        "ES": "Enfrente, al otro lado de la Avenida Balboa",
+        "EN": "Right opposite, across Avenida Balboa"
+      },
+      "d": {
+        "ES": "El paseo junto a la bahía que va de Punta Paitilla al Casco Antiguo, ganado al mar y abierto en 2009. Tiene ciclovía, canchas y miradores, y al caer la tarde se llena de gente corriendo con las torres encendidas detrás.",
+        "EN": "The bayside promenade from Punta Paitilla to the Old Quarter, built on reclaimed land and opened in 2009. It has a bike lane, sports courts and lookouts, and at dusk it fills with runners, with the towers lit up behind them."
+      },
+      "cuando": {
+        "ES": "Al amanecer o desde las 17:30, cuando baja el calor",
+        "EN": "At sunrise or from 5:30 pm, when the heat drops"
+      },
+      "min": 5,
+      "modo": "pie",
+      "lat": 8.975,
+      "lng": -79.519
+    },
+    {
+      "id": "casco-antiguo",
+      "img": "/ciudades/panama/img/casco-antiguo.jpg",
+      "nombre": "Casco Antiguo",
+      "zona": {
+        "ES": "San Felipe, en la punta de la bahía",
+        "EN": "San Felipe, at the tip of the bay"
+      },
+      "d": {
+        "ES": "La ciudad que se levantó en 1673, después de que Henry Morgan asaltara la primera. Calles de balcones, la catedral, el Altar de Oro de San José y el Paseo de las Bóvedas sobre el mar. Es Patrimonio de la Humanidad desde 1997.",
+        "EN": "The city built in 1673, after Henry Morgan sacked the first one. Streets of balconies, the cathedral, the Golden Altar of San José and the Paseo de las Bóvedas above the sea. A World Heritage Site since 1997."
+      },
+      "cuando": {
+        "ES": "A media tarde, para quedarte al atardecer en la Plaza de Francia",
+        "EN": "Mid-afternoon, so you stay for sunset at Plaza de Francia"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 8.95249,
+      "lng": -79.53474
+    },
+    {
+      "id": "miraflores",
+      "img": "/ciudades/panama/img/miraflores.jpg",
+      "nombre": "Esclusas de Miraflores",
+      "zona": {
+        "ES": "Canal de Panamá, a 25 minutos en auto",
+        "EN": "Panama Canal, 25 minutes by car"
+      },
+      "d": {
+        "ES": "Desde las terrazas del centro de visitantes ves a un barco entrar en la esclusa y bajar 16,5 metros en dos escalones hasta el nivel del Pacífico. Dentro hay un museo sobre la construcción del Canal.",
+        "EN": "From the visitor center terraces you watch a ship enter the lock and drop 16.5 meters in two steps to Pacific level. Inside there is a museum on how the Canal was built."
+      },
+      "cuando": {
+        "ES": "De 9:00 a 11:00 o de 15:00 a 17:00, que es cuando pasan más barcos",
+        "EN": "9 to 11 am or 3 to 5 pm, when most ships go through"
+      },
+      "min": 25,
+      "modo": "coche",
+      "lat": 8.99724,
+      "lng": -79.59093
+    },
+    {
+      "id": "panama-viejo",
+      "img": "/ciudades/panama/img/panama-viejo.jpg",
+      "nombre": "Panamá Viejo",
+      "zona": {
+        "ES": "Vía Cincuentenario, a 15 minutos en auto",
+        "EN": "Vía Cincuentenario, 15 minutes by car"
+      },
+      "d": {
+        "ES": "Las ruinas de la primera ciudad española en la costa del Pacífico, fundada en 1519 y quemada en 1671. Se puede subir a la torre de la catedral y ver la bahía desde arriba.",
+        "EN": "The ruins of the first Spanish city on the Pacific coast, founded in 1519 and burned in 1671. You can climb the cathedral tower and look out over the bay."
+      },
+      "cuando": {
+        "ES": "De martes a domingo, temprano o después de las 14:30",
+        "EN": "Tuesday to Sunday, early or after 2:30 pm"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 9.0062,
+      "lng": -79.48629
+    },
+    {
+      "id": "amador",
+      "img": "/ciudades/panama/img/biomuseo.jpg",
+      "nombre": "Biomuseo y Calzada de Amador",
+      "zona": {
+        "ES": "Calzada de Amador, a 20 minutos en auto",
+        "EN": "Amador Causeway, 20 minutes by car"
+      },
+      "d": {
+        "ES": "El museo de colores de Frank Gehry, el primero suyo en América Latina, cuenta cómo el istmo cambió los animales de dos continentes. Detrás, la calzada une cuatro islas con la roca que se sacó al abrir el Canal.",
+        "EN": "Frank Gehry’s colorful museum, his first in Latin America, tells how the isthmus changed the wildlife of two continents. Behind it, the causeway links four islands using rock dug out to make the Canal."
+      },
+      "cuando": {
+        "ES": "A última hora de la tarde, en bici o caminando",
+        "EN": "Late afternoon, by bike or on foot"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 8.93193,
+      "lng": -79.54477
+    },
+    {
+      "id": "cerro-ancon",
+      "img": "/ciudades/panama/img/cerro-ancon.jpg",
+      "nombre": "Cerro Ancón",
+      "zona": {
+        "ES": "Ancón, a 15 minutos en auto",
+        "EN": "Ancón, 15 minutes by car"
+      },
+      "d": {
+        "ES": "El punto más alto de la ciudad, con una bandera enorme en la cima. Se sube a pie por una carretera con sombra, entre ñeques, tucanes y algún perezoso, y arriba ves el Canal, el Casco y las torres.",
+        "EN": "The highest point in the city, with a huge flag on top. You walk up a shaded road among agoutis, toucans and the odd sloth, and from the top you see the Canal, the Old Quarter and the towers."
+      },
+      "cuando": {
+        "ES": "Entre las 6:30 y las 8:30, antes del sol fuerte",
+        "EN": "Between 6:30 and 8:30 am, before the strong sun"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 8.95765,
+      "lng": -79.5492
+    },
+    {
+      "id": "mercado-mariscos",
+      "img": "/ciudades/panama/img/mercado-mariscos.jpg",
+      "nombre": "Mercado de Mariscos",
+      "zona": {
+        "ES": "Avenida Balboa, a la entrada del Casco",
+        "EN": "Avenida Balboa, at the entrance to the Old Quarter"
+      },
+      "d": {
+        "ES": "Abajo se vende el pescado que traen las barcas esa mañana. Fuera, los puestos sirven ceviche en vasito, y arriba hay un restaurante con corvina frita y patacones.",
+        "EN": "Downstairs they sell the fish the boats bring in that morning. Outside, the stalls serve ceviche in a cup, and upstairs there is a restaurant with fried corvina and patacones."
+      },
+      "cuando": {
+        "ES": "Al mediodía, para comer",
+        "EN": "At midday, for lunch"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 8.9583,
+      "lng": -79.53899
+    },
+    {
+      "id": "taboga",
+      "img": "/ciudades/panama/img/taboga.jpg",
+      "nombre": "Isla Taboga",
+      "zona": {
+        "ES": "En ferry desde la Calzada de Amador",
+        "EN": "By ferry from the Amador Causeway"
+      },
+      "d": {
+        "ES": "La isla de las flores, a unos 20 km de la costa. Tiene un pueblo de casas de colores, la iglesia de San Pedro, que la tradición fecha en 1524, y una playa que con la marea baja te deja cruzar a pie al islote de enfrente.",
+        "EN": "The island of flowers, about 20 km offshore. It has a village of colorful houses, the church of San Pedro, which tradition dates to 1524, and a beach where low tide lets you walk across to the islet opposite."
+      },
+      "cuando": {
+        "ES": "Un día entre semana, cuando va menos gente",
+        "EN": "On a weekday, when it is quieter"
+      },
+      "min": 65,
+      "modo": "barco",
+      "lat": 8.79822,
+      "lng": -79.55485
+    }
+  ],
+  "rutas": [
+    {
+      "id": "canal-miraflores",
+      "expId": "ex1",
+      "img": "/ciudades/panama/img/miraflores-2.jpg",
+      "titulo": {
+        "ES": "El Canal en Miraflores y la Calzada de Amador",
+        "EN": "The Canal at Miraflores and the Amador Causeway"
+      },
+      "tipo": {
+        "ES": "Canal de Panamá",
+        "EN": "Panama Canal"
+      },
+      "dur": "4 h",
+      "d": {
+        "ES": "Llegas a Miraflores cuando suben los barcos de la mañana y los ves bajar o subir por la esclusa desde la terraza. Después, la Calzada de Amador y el Biomuseo, con los barcos esperando turno en la bahía. A las 12:30 estás en el hotel.",
+        "EN": "You reach Miraflores when the morning ships come through and watch them rise or drop in the lock from the terrace. Then the Amador Causeway and the Biomuseo, with ships waiting their turn in the bay. You are back at the hotel by 12:30."
+      },
+      "salida": {
+        "ES": "Salida en auto desde la puerta del hotel a las 8:30. Vuelta hacia las 12:30",
+        "EN": "Car leaves from the hotel door at 8:30. Back around 12:30"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta",
+          "Guía en español o inglés",
+          "Entrada al Centro de Visitantes de Miraflores"
+        ],
+        "EN": [
+          "Return transfer",
+          "Guide in Spanish or English",
+          "Miraflores Visitor Center admission"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Entrada al Biomuseo",
+          "Comida y bebidas"
+        ],
+        "EN": [
+          "Biomuseo admission",
+          "Food and drinks"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Gorra y protector solar: la terraza da al sol",
+          "Agua",
+          "Ropa fresca"
+        ],
+        "EN": [
+          "A cap and sunscreen: the terrace is in full sun",
+          "Water",
+          "Light clothes"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida desde Megapolis World",
+            "EN": "Leaving Megapolis World"
+          },
+          "s": {
+            "ES": "Rumbo al Canal",
+            "EN": "Heading for the Canal"
+          },
+          "d": {
+            "ES": "El auto sale por la Avenida Balboa, pasa por Albrook y sigue por la avenida Omar Torrijos. Son unos 25 minutos hasta Miraflores.",
+            "EN": "The car takes Avenida Balboa, passes Albrook and follows Avenida Omar Torrijos. It is about 25 minutes to Miraflores."
+          },
+          "tip": {
+            "ES": "Al pasar por Albrook, el cerro con la bandera en lo alto es el Ancón.",
+            "EN": "As you pass Albrook, the hill with the flag on top is Ancón."
+          },
+          "hora": "08:30",
+          "dur": "5 min",
+          "img": "/ciudades/panama/img/balboa.jpg",
+          "lat": 8.97745,
+          "lng": -79.51775,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Esclusas de Miraflores",
+            "EN": "Miraflores Locks"
+          },
+          "s": {
+            "ES": "Un barco baja 16,5 metros",
+            "EN": "A ship drops 16.5 meters"
+          },
+          "d": {
+            "ES": "Desde la terraza ves cómo cierran las compuertas, cómo baja el agua y cómo las locomotoras, que aquí llaman mulas, guían al barco sin tirar de él. Cada cámara mide 33,5 metros de ancho y hay barcos que pasan con medio metro de sobra a cada lado. Entre barco y barco, el museo y la película del Canal.",
+            "EN": "From the terrace you watch the gates close, the water drop and the locomotives, known here as mules, guide the ship without towing it. Each chamber is 33.5 meters wide and some ships go through with half a meter to spare on each side. Between ships, the museum and the Canal film."
+          },
+          "tip": {
+            "ES": "Un locutor cuenta por los altavoces qué barco pasa y de dónde viene.",
+            "EN": "An announcer tells you over the loudspeakers which ship is passing and where it comes from."
+          },
+          "hora": "09:00",
+          "dur": "2 h",
+          "img": "/ciudades/panama/img/miraflores.jpg",
+          "lat": 8.99724,
+          "lng": -79.59093,
+          "tramo": "coche",
+          "tramoDuracionMin": 25,
+          "duracionMin": 120
+        },
+        {
+          "n": {
+            "ES": "Calzada de Amador y Biomuseo",
+            "EN": "Amador Causeway and Biomuseo"
+          },
+          "s": {
+            "ES": "La salida del Canal al Pacífico",
+            "EN": "Where the Canal meets the Pacific"
+          },
+          "d": {
+            "ES": "La calzada se hizo con la roca que se sacó del Corte Culebra y une las islas de Naos, Culebra, Perico y Flamenco. Paras frente al Biomuseo de Frank Gehry y miras el Puente de las Américas y los barcos fondeados que esperan para entrar.",
+            "EN": "The causeway was built with rock dug out of the Culebra Cut and links the islands of Naos, Culebra, Perico and Flamenco. You stop in front of Frank Gehry’s Biomuseo and look at the Bridge of the Americas and the ships at anchor waiting to go in."
+          },
+          "tip": {
+            "ES": "Cuenta los barcos fondeados: suele haber decenas esperando su turno.",
+            "EN": "Count the ships at anchor: there are usually dozens waiting their turn."
+          },
+          "hora": "11:20",
+          "dur": "50 min",
+          "img": "/ciudades/panama/img/amador.jpg",
+          "lat": 8.93193,
+          "lng": -79.54477,
+          "tramo": "coche",
+          "tramoDuracionMin": 20,
+          "duracionMin": 50
+        }
+      ],
+      "fotos": [
+        "/ciudades/panama/img/miraflores-2.jpg",
+        "/ciudades/panama/img/miraflores.jpg",
+        "/ciudades/panama/img/miraflores-3.jpg",
+        "/ciudades/panama/img/biomuseo.jpg",
+        "/ciudades/panama/img/amador.jpg",
+        "/ciudades/panama/img/amador-atardecer.jpg"
+      ],
+      "duracionMin": 240,
+      "distanciaKm": 38,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El centro de visitantes tiene ascensor hasta las terrazas. En Amador se camina por acera llana.",
+        "EN": "The visitor center has a lift to the terraces. At Amador you walk on flat pavement."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 8.97745,
+        "lng": -79.51775,
+        "foto": "/ciudades/panama/img/balboa.jpg",
+        "texto": {
+          "ES": "Puerta de tu hotel, a las 8:30. Baja cinco minutos antes.",
+          "EN": "Your hotel door, at 8:30. Come down five minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale todos los días.",
+        "EN": "Free up to 24 h before. Runs every day."
+      },
+      "salidasFijas": [
+        "08:30"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "casco-panama-viejo",
+      "expId": "ex2",
+      "img": "/ciudades/panama/img/casco-antiguo.jpg",
+      "titulo": {
+        "ES": "Panamá Viejo y el Casco Antiguo al atardecer",
+        "EN": "Panamá Viejo and the Old Quarter at sunset"
+      },
+      "tipo": {
+        "ES": "Historia",
+        "EN": "History"
+      },
+      "dur": "4 h 15 min",
+      "d": {
+        "ES": "Las dos ciudades que hubo antes de esta. Primero las ruinas de 1519 y su torre. Luego el Casco de 1673, con el Altar de Oro y la catedral, y el atardecer desde el Paseo de las Bóvedas. Vuelta a las 18:45.",
+        "EN": "The two cities that came before this one. First the ruins from 1519 and their tower. Then the 1673 Old Quarter, with the Golden Altar and the cathedral, and sunset from the Paseo de las Bóvedas. Back at 6:45 pm."
+      },
+      "salida": {
+        "ES": "Salida en auto desde la puerta del hotel a las 14:30. Vuelta hacia las 18:45",
+        "EN": "Car leaves from the hotel door at 2:30 pm. Back around 6:45 pm"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta",
+          "Guía en español o inglés",
+          "Entrada a Panamá Viejo y a su museo"
+        ],
+        "EN": [
+          "Return transfer",
+          "Guide in Spanish or English",
+          "Panamá Viejo and museum admission"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Propinas"
+        ],
+        "EN": [
+          "Food and drinks",
+          "Tips"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Hombros y rodillas cubiertos para entrar en las iglesias",
+          "Calzado cómodo: el Casco tiene adoquines",
+          "Agua"
+        ],
+        "EN": [
+          "Shoulders and knees covered to go into the churches",
+          "Comfortable shoes: the Old Quarter is cobbled",
+          "Water"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida desde Megapolis World",
+            "EN": "Leaving Megapolis World"
+          },
+          "s": {
+            "ES": "Rumbo a Panamá Viejo",
+            "EN": "Heading for Panamá Viejo"
+          },
+          "d": {
+            "ES": "El auto va hacia el este por la Vía Israel hasta la Vía Cincuentenario. Son unos 20 minutos.",
+            "EN": "The car heads east along Vía Israel to Vía Cincuentenario. It is about 20 minutes."
+          },
+          "tip": {
+            "ES": "Las torres que dejas atrás son Punta Paitilla y Punta Pacífica, el Panamá de hoy. En una hora estás en el de 1519.",
+            "EN": "The towers you leave behind are Punta Paitilla and Punta Pacífica, today’s Panama. In an hour you will be in the one from 1519."
+          },
+          "hora": "14:30",
+          "dur": "5 min",
+          "img": "/ciudades/panama/img/balboa.jpg",
+          "lat": 8.97745,
+          "lng": -79.51775,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Panamá Viejo",
+            "EN": "Panamá Viejo"
+          },
+          "s": {
+            "ES": "La ciudad de 1519",
+            "EN": "The city of 1519"
+          },
+          "d": {
+            "ES": "Pedrarias Dávila la fundó el 15 de agosto de 1519 y fue la primera ciudad española en la costa del Pacífico. En 1671, con el asalto del pirata Henry Morgan, ardió entera. Recorres la Plaza Mayor, el museo y subes a la torre de la catedral, desde donde ves la bahía y los rascacielos.",
+            "EN": "Pedrarias Dávila founded it on August 15, 1519, the first Spanish city on the Pacific coast. In 1671, when the pirate Henry Morgan attacked, it burned to the ground. You walk the main square and the museum and climb the cathedral tower, which looks over the bay and the skyscrapers."
+          },
+          "tip": {
+            "ES": "El 15 de agosto, día de la fundación, sigue siendo fiesta en la ciudad.",
+            "EN": "August 15, the founding day, is still a holiday in the city."
+          },
+          "hora": "14:50",
+          "dur": "1 h 20 min",
+          "img": "/ciudades/panama/img/panama-viejo.jpg",
+          "lat": 9.0062,
+          "lng": -79.48629,
+          "tramo": "coche",
+          "tramoDuracionMin": 20,
+          "duracionMin": 80
+        },
+        {
+          "n": {
+            "ES": "Iglesia de San José",
+            "EN": "Iglesia de San José"
+          },
+          "s": {
+            "ES": "El Altar de Oro",
+            "EN": "The Golden Altar"
+          },
+          "d": {
+            "ES": "Un retablo barroco de caoba cubierto de pan de oro. Cuenta la leyenda que estaba en Panamá Viejo y que, cuando llegó Henry Morgan en 1671, un fraile lo pintó de negro para que los piratas no vieran el oro.",
+            "EN": "A baroque mahogany altarpiece covered in gold leaf. Legend says it stood in Panamá Viejo and that, when Henry Morgan arrived in 1671, a friar painted it black so the pirates would not see the gold."
+          },
+          "tip": {
+            "ES": "La iglesia es pequeña y suele haber gente rezando: entra en silencio.",
+            "EN": "The church is small and people are often praying: go in quietly."
+          },
+          "hora": "16:40",
+          "dur": "20 min",
+          "img": "/ciudades/panama/img/altar-oro.jpg",
+          "lat": 8.95142,
+          "lng": -79.536,
+          "tramo": "coche",
+          "tramoDuracionMin": 30,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Plaza de la Independencia y la catedral",
+            "EN": "Plaza de la Independencia and the cathedral"
+          },
+          "s": {
+            "ES": "Donde se proclamó la separación de 1903",
+            "EN": "Where the 1903 separation was proclaimed"
+          },
+          "d": {
+            "ES": "La catedral tardó 108 años en hacerse, de 1688 a 1796, y sus torres llevan incrustaciones de nácar. En esta plaza se proclamó la separación de Colombia el 3 de noviembre de 1903.",
+            "EN": "The cathedral took 108 years to build, from 1688 to 1796, and its towers are inlaid with mother-of-pearl. The separation from Colombia was proclaimed in this square on November 3, 1903."
+          },
+          "tip": {
+            "ES": "Las torres brillan al sol de la tarde por el nácar. Míralas desde el centro de la plaza.",
+            "EN": "The towers shine in the afternoon sun because of the mother-of-pearl. Look at them from the middle of the square."
+          },
+          "hora": "17:05",
+          "dur": "25 min",
+          "img": "/ciudades/panama/img/catedral.jpg",
+          "lat": 8.9526,
+          "lng": -79.5351,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Plaza de Francia y Paseo de las Bóvedas",
+            "EN": "Plaza de Francia and Paseo de las Bóvedas"
+          },
+          "s": {
+            "ES": "El atardecer sobre la bahía",
+            "EN": "Sunset over the bay"
+          },
+          "d": {
+            "ES": "El obelisco con el gallo recuerda a los franceses que intentaron el Canal antes que Estados Unidos. Subes al paseo sobre la muralla, entre buganvillas, y ves caer el sol con las torres de Paitilla enfrente.",
+            "EN": "The obelisk with the rooster honors the French who tried to build the Canal before the United States. You go up to the walk along the old wall, among bougainvillea, and watch the sun go down with the Paitilla towers opposite."
+          },
+          "tip": {
+            "ES": "Las bóvedas de debajo del paseo fueron calabozos. Hoy, arriba, mujeres guna venden molas.",
+            "EN": "The vaults under the walk were once cells. Today Guna women sell molas up on the walk."
+          },
+          "hora": "17:40",
+          "dur": "50 min",
+          "img": "/ciudades/panama/img/plaza-francia.jpg",
+          "lat": 8.94986,
+          "lng": -79.53208,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 50
+        }
+      ],
+      "fotos": [
+        "/ciudades/panama/img/casco-antiguo.jpg",
+        "/ciudades/panama/img/panama-viejo.jpg",
+        "/ciudades/panama/img/panama-viejo-2.jpg",
+        "/ciudades/panama/img/altar-oro.jpg",
+        "/ciudades/panama/img/catedral.jpg",
+        "/ciudades/panama/img/plaza-francia.jpg",
+        "/ciudades/panama/img/bovedas.jpg",
+        "/ciudades/panama/img/skyline.jpg"
+      ],
+      "duracionMin": 255,
+      "distanciaKm": 30,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Panamá Viejo tiene senderos llanos; la torre se sube por escalera. El Casco tiene adoquines y aceras estrechas.",
+        "EN": "Panamá Viejo has flat paths; the tower is reached by stairs. The Old Quarter is cobbled with narrow pavements."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 8.97745,
+        "lng": -79.51775,
+        "foto": "/ciudades/panama/img/balboa.jpg",
+        "texto": {
+          "ES": "Puerta de tu hotel, a las 14:30. Baja cinco minutos antes.",
+          "EN": "Your hotel door, at 14:30. Come down five minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale de martes a domingo: Panamá Viejo cierra los lunes.",
+        "EN": "Free up to 24 h before. Runs Tuesday to Sunday: Panamá Viejo is closed on Mondays."
+      },
+      "salidasFijas": [
+        "14:30"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "san-blas",
+      "expId": "ex3",
+      "img": "/ciudades/panama/img/san-blas.jpg",
+      "titulo": {
+        "ES": "San Blas: un día en Guna Yala",
+        "EN": "San Blas: a day in Guna Yala"
+      },
+      "tipo": {
+        "ES": "Islas",
+        "EN": "Islands"
+      },
+      "dur": "13 h",
+      "d": {
+        "ES": "Dos horas y media de carretera por la selva y una lancha hasta las islas de los guna. Snorkel en Isla Perro, comida de pescado en Chichime y vuelta al atardecer.",
+        "EN": "Two and a half hours of road through the jungle and a boat out to the Guna islands. Snorkeling at Isla Perro, a fish lunch at Chichime and back at sunset."
+      },
+      "salida": {
+        "ES": "Te recoge un 4x4 en la puerta del hotel a las 5:00. Vuelta hacia las 18:00",
+        "EN": "A 4x4 picks you up at the hotel door at 5 am. Back around 6 pm"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado en 4x4 y lancha",
+          "Comida en la isla",
+          "Agua y refrescos"
+        ],
+        "EN": [
+          "4x4 transfer and boat",
+          "Lunch on the island",
+          "Water and soft drinks"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "La entrada a la comarca y a cada isla, en efectivo",
+          "Equipo de snorkel"
+        ],
+        "EN": [
+          "Entry to the comarca and each island, in cash",
+          "Snorkel gear"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "El pasaporte: lo piden en el control de entrada",
+          "Efectivo en dólares",
+          "Traje de baño, toalla y protector solar",
+          "Una bolsa seca para el celular"
+        ],
+        "EN": [
+          "Your passport: it is checked at the entry point",
+          "Cash in dollars",
+          "Swimsuit, towel and sunscreen",
+          "A dry bag for your phone"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida desde Megapolis World",
+            "EN": "Leaving Megapolis World"
+          },
+          "s": {
+            "ES": "Rumbo a Guna Yala",
+            "EN": "Heading for Guna Yala"
+          },
+          "d": {
+            "ES": "El 4x4 sale por el Corredor Norte hacia El Llano y sube la carretera de Cartí, con curvas entre la selva. En la entrada de la comarca hay un control donde enseñas el pasaporte.",
+            "EN": "The 4x4 takes the Corredor Norte towards El Llano and climbs the winding Cartí road through the jungle. At the edge of the comarca there is a checkpoint where you show your passport."
+          },
+          "tip": {
+            "ES": "Si te mareas en curvas, tómate algo antes de salir: la carretera de Cartí tiene muchas.",
+            "EN": "If bends make you queasy, take something before you leave: the Cartí road has plenty."
+          },
+          "hora": "05:00",
+          "dur": "5 min",
+          "img": "/ciudades/panama/img/balboa.jpg",
+          "lat": 8.97745,
+          "lng": -79.51775,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Puerto de Cartí",
+            "EN": "Cartí port"
+          },
+          "s": {
+            "ES": "Del auto a la lancha",
+            "EN": "From car to boat"
+          },
+          "d": {
+            "ES": "Aquí acaba la carretera y empieza la comarca por mar. Las lanchas guna salen hacia las islas: hay más de 300 y menos de 50 están habitadas.",
+            "EN": "The road ends here and the comarca continues by sea. Guna boats leave for the islands: there are more than 300, and fewer than 50 are inhabited."
+          },
+          "tip": {
+            "ES": "Guarda el celular en la bolsa seca: la lancha salpica.",
+            "EN": "Put your phone in the dry bag: the boat ride is splashy."
+          },
+          "hora": "07:30",
+          "dur": "15 min",
+          "img": "/ciudades/panama/img/san-blas-2.jpg",
+          "lat": 9.45547,
+          "lng": -78.97866,
+          "tramo": "coche",
+          "tramoDuracionMin": 150,
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Isla Perro",
+            "EN": "Isla Perro"
+          },
+          "s": {
+            "ES": "Snorkel junto a un barco hundido",
+            "EN": "Snorkeling by a sunken ship"
+          },
+          "d": {
+            "ES": "Una isla de arena blanca y palmeras, con un barco hundido a pocos metros de la orilla y a poca profundidad. Los peces se ven desde la superficie.",
+            "EN": "An island of white sand and palm trees, with a sunken ship a few meters off the beach in shallow water. You see the fish from the surface."
+          },
+          "tip": {
+            "ES": "Las mujeres guna venden molas en la isla. Cada una tarda semanas en coser una.",
+            "EN": "Guna women sell molas on the island. Each one takes weeks to sew."
+          },
+          "hora": "08:30",
+          "dur": "3 h 30 min",
+          "img": "/ciudades/panama/img/san-blas.jpg",
+          "lat": 9.55815,
+          "lng": -78.87614,
+          "tramo": "barco",
+          "tramoDuracionMin": 45,
+          "duracionMin": 210
+        },
+        {
+          "n": {
+            "ES": "Chichime",
+            "EN": "Chichime"
+          },
+          "s": {
+            "ES": "Comida frente al arrecife",
+            "EN": "Lunch facing the reef"
+          },
+          "d": {
+            "ES": "Dos islas casi pegadas, con cabañas guna y agua de color turquesa. Comes pescado frito con arroz con coco y patacones, y te queda un rato de playa antes de volver.",
+            "EN": "Two islands almost side by side, with Guna cabins and turquoise water. You eat fried fish with coconut rice and patacones, and there is time for the beach before heading back."
+          },
+          "tip": {
+            "ES": "La langosta se pide aparte y se paga allí. Pregunta el precio antes.",
+            "EN": "Lobster is ordered separately and paid there. Ask the price first."
+          },
+          "hora": "12:15",
+          "dur": "1 h 45 min",
+          "img": "/ciudades/panama/img/san-blas-3.jpg",
+          "lat": 9.58592,
+          "lng": -78.87883,
+          "tramo": "barco",
+          "tramoDuracionMin": 20,
+          "duracionMin": 105
+        }
+      ],
+      "fotos": [
+        "/ciudades/panama/img/san-blas.jpg",
+        "/ciudades/panama/img/san-blas-2.jpg",
+        "/ciudades/panama/img/san-blas-3.jpg",
+        "/ciudades/panama/img/molas.jpg",
+        "/ciudades/panama/img/mola.jpg"
+      ],
+      "duracionMin": 780,
+      "distanciaKm": 150,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Se sube y se baja de la lancha desde la playa, con el agua por las rodillas. Con movilidad reducida, pregunta antes en recepción.",
+        "EN": "You get on and off the boat from the beach, knee-deep in water. With reduced mobility, ask at reception first."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 8.97745,
+        "lng": -79.51775,
+        "foto": "/ciudades/panama/img/balboa.jpg",
+        "texto": {
+          "ES": "Puerta de tu hotel, a las 5:00. Baja cinco minutos antes.",
+          "EN": "Your hotel door, at 5:00. Come down five minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 48 h antes. Si el mar está malo, se mueve a otro día sin cargo.",
+        "EN": "Free up to 48 h before. If the sea is rough, it moves to another day at no charge."
+      },
+      "salidasFijas": [
+        "05:00"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "embera",
+      "expId": "ex4",
+      "img": "/ciudades/panama/img/embera.jpg",
+      "titulo": {
+        "ES": "Los emberá del río Chagres",
+        "EN": "The Emberá of the Chagres River"
+      },
+      "tipo": {
+        "ES": "Selva y comunidad",
+        "EN": "Rainforest and community"
+      },
+      "dur": "8 h",
+      "d": {
+        "ES": "Una hora de auto, unos 40 minutos de piragua río arriba y un día con una comunidad emberá dentro del Parque Nacional Chagres. Baile, artesanía, comida en hoja de plátano y un baño en el río.",
+        "EN": "An hour by car, about 40 minutes by dugout canoe upriver and a day with an Emberá community inside Chagres National Park. Dancing, crafts, lunch on a banana leaf and a swim in the river."
+      },
+      "salida": {
+        "ES": "Salida en auto desde la puerta del hotel a las 7:30. Vuelta hacia las 15:30",
+        "EN": "Car leaves from the hotel door at 7:30. Back around 3:30 pm"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta",
+          "Piragua por el río",
+          "Comida en la comunidad",
+          "Aporte a la comunidad"
+        ],
+        "EN": [
+          "Return transfer",
+          "Dugout canoe on the river",
+          "Lunch in the community",
+          "Contribution to the community"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Artesanía",
+          "Tatuaje de jagua"
+        ],
+        "EN": [
+          "Crafts",
+          "Jagua tattoo"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Traje de baño y toalla",
+          "Repelente",
+          "Efectivo para la artesanía",
+          "Sandalias que se puedan mojar"
+        ],
+        "EN": [
+          "Swimsuit and towel",
+          "Insect repellent",
+          "Cash for crafts",
+          "Sandals you can get wet"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida desde Megapolis World",
+            "EN": "Leaving Megapolis World"
+          },
+          "s": {
+            "ES": "Rumbo al lago Alajuela",
+            "EN": "Heading for Lake Alajuela"
+          },
+          "d": {
+            "ES": "El auto toma el Corredor Norte y la carretera Transístmica hacia Chilibre. En una hora estás en la orilla del lago Alajuela.",
+            "EN": "The car takes the Corredor Norte and the Trans-Isthmian highway towards Chilibre. In an hour you reach the shore of Lake Alajuela."
+          },
+          "tip": {
+            "ES": "Ponte el repelente antes de salir del hotel.",
+            "EN": "Put on insect repellent before you leave the hotel."
+          },
+          "hora": "07:30",
+          "dur": "5 min",
+          "img": "/ciudades/panama/img/balboa.jpg",
+          "lat": 8.97745,
+          "lng": -79.51775,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Puerto Corotú",
+            "EN": "Puerto Corotú"
+          },
+          "s": {
+            "ES": "Las piraguas en el lago Alajuela",
+            "EN": "The canoes on Lake Alajuela"
+          },
+          "d": {
+            "ES": "El lago nació en 1935 con la presa de Madden, que guarda el agua del Chagres para el Canal y para la ciudad. Aquí esperan las piraguas, talladas de un solo tronco.",
+            "EN": "The lake was created in 1935 by Madden Dam, which holds back the Chagres water for the Canal and the city. The dugout canoes, each carved from a single trunk, wait here."
+          },
+          "tip": {
+            "ES": "En temporada seca el lago baja y verás la marca del agua en las orillas.",
+            "EN": "In the dry season the lake drops and you can see the water line on the banks."
+          },
+          "hora": "08:30",
+          "dur": "10 min",
+          "img": "/ciudades/panama/img/corotu.jpg",
+          "lat": 9.2226,
+          "lng": -79.54642,
+          "tramo": "coche",
+          "tramoDuracionMin": 60,
+          "duracionMin": 10
+        },
+        {
+          "n": {
+            "ES": "Comunidad Emberá Drúa",
+            "EN": "Emberá Drúa community"
+          },
+          "s": {
+            "ES": "Un día río arriba",
+            "EN": "A day upriver"
+          },
+          "d": {
+            "ES": "Te reciben con música, te cuentan cómo viven en casas sobre pilotes y bailan. Comes pescado con patacones servido en hoja de plátano, caminas hasta una poza del río y, si quieres, te pintan un dibujo de jagua.",
+            "EN": "They welcome you with music, explain how they live in houses on stilts and dance. You eat fish with patacones served on a banana leaf, walk to a pool in the river and, if you like, get a jagua design painted on."
+          },
+          "tip": {
+            "ES": "El tatuaje de jagua es un tinte vegetal: no sale con agua y dura unas dos semanas.",
+            "EN": "The jagua tattoo is a plant dye: it won’t wash off and lasts about two weeks."
+          },
+          "hora": "09:20",
+          "dur": "4 h 30 min",
+          "img": "/ciudades/panama/img/embera-aldea.jpg",
+          "lat": 9.26244,
+          "lng": -79.51747,
+          "tramo": "barco",
+          "tramoDuracionMin": 40,
+          "duracionMin": 270
+        }
+      ],
+      "fotos": [
+        "/ciudades/panama/img/embera.jpg",
+        "/ciudades/panama/img/embera-aldea.jpg",
+        "/ciudades/panama/img/corotu.jpg"
+      ],
+      "duracionMin": 480,
+      "distanciaKm": 50,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Se sube a la piragua desde la orilla y en la comunidad hay escaleras de madera. Con movilidad reducida, pregunta antes en recepción.",
+        "EN": "You board the canoe from the bank and the community has wooden steps. With reduced mobility, ask at reception first."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 8.97745,
+        "lng": -79.51775,
+        "foto": "/ciudades/panama/img/balboa.jpg",
+        "texto": {
+          "ES": "Puerta de tu hotel, a las 7:30. Baja cinco minutos antes.",
+          "EN": "Your hotel door, at 7:30. Come down five minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale todos los días.",
+        "EN": "Free up to 24 h before. Runs every day."
+      },
+      "salidasFijas": [
+        "07:30"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "taboga",
+      "expId": "ex5",
+      "img": "/ciudades/panama/img/taboga.jpg",
+      "titulo": {
+        "ES": "Isla Taboga en ferry",
+        "EN": "Taboga Island by ferry"
+      },
+      "tipo": {
+        "ES": "Playa",
+        "EN": "Beach"
+      },
+      "dur": "8 h 30 min",
+      "d": {
+        "ES": "Ferry de la mañana desde Amador, el pueblo y su iglesia de 1524, y el día en la playa de La Restinga. Vuelves en el ferry de la tarde.",
+        "EN": "The morning ferry from Amador, the village and its church from 1524, and a day on La Restinga beach. You come back on the afternoon ferry."
+      },
+      "salida": {
+        "ES": "Salida en auto desde la puerta del hotel a las 7:45 hacia el muelle de Amador. Vuelta hacia las 16:15",
+        "EN": "Car leaves from the hotel door at 7:45 for the Amador pier. Back around 4:15 pm"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado al muelle de ida y vuelta",
+          "Billete de ferry de ida y vuelta"
+        ],
+        "EN": [
+          "Return transfer to the pier",
+          "Return ferry ticket"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Sombrilla y silla en la playa"
+        ],
+        "EN": [
+          "Food and drinks",
+          "Beach umbrella and chair"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Traje de baño, toalla y protector solar",
+          "Efectivo para comer en el pueblo",
+          "Agua"
+        ],
+        "EN": [
+          "Swimsuit, towel and sunscreen",
+          "Cash for lunch in the village",
+          "Water"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida desde Megapolis World",
+            "EN": "Leaving Megapolis World"
+          },
+          "s": {
+            "ES": "Rumbo al muelle de Amador",
+            "EN": "Heading for the Amador pier"
+          },
+          "d": {
+            "ES": "El auto bordea la bahía por la Cinta Costera y el Casco hasta la Calzada de Amador. Son unos 20 minutos.",
+            "EN": "The car follows the bay along the Cinta Costera and past the Old Quarter to the Amador Causeway. It is about 20 minutes."
+          },
+          "tip": {
+            "ES": "Siéntate a la izquierda: el mar va de ese lado.",
+            "EN": "Sit on the left: the sea is on that side."
+          },
+          "hora": "07:45",
+          "dur": "5 min",
+          "img": "/ciudades/panama/img/balboa.jpg",
+          "lat": 8.97745,
+          "lng": -79.51775,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Muelle de Amador",
+            "EN": "Amador pier"
+          },
+          "s": {
+            "ES": "El ferry de las 8:30",
+            "EN": "The 8:30 ferry"
+          },
+          "d": {
+            "ES": "El ferry cruza la entrada del Canal entre barcos fondeados. Desde cubierta ves el Puente de las Américas a un lado y las torres de la ciudad al otro.",
+            "EN": "The ferry crosses the Canal entrance among anchored ships. From the deck you see the Bridge of the Americas on one side and the city towers on the other."
+          },
+          "tip": {
+            "ES": "Sube a la cubierta de arriba: desde ahí ves el puente y la ciudad a la vez.",
+            "EN": "Go up to the top deck: from there you see the bridge and the city at once."
+          },
+          "hora": "08:05",
+          "dur": "25 min",
+          "img": "/ciudades/panama/img/amador-atardecer.jpg",
+          "lat": 8.91425,
+          "lng": -79.52986,
+          "tramo": "coche",
+          "tramoDuracionMin": 20,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Pueblo de Taboga e iglesia de San Pedro",
+            "EN": "Taboga village and San Pedro church"
+          },
+          "s": {
+            "ES": "La isla de las flores",
+            "EN": "The island of flowers"
+          },
+          "d": {
+            "ES": "Bajas en el muelle y subes por calles estrechas de casas pintadas. La iglesia de San Pedro, blanca y pequeña, es según la tradición de 1524, de las más antiguas de América.",
+            "EN": "You get off at the pier and walk up narrow streets of painted houses. San Pedro church, small and white, dates by tradition from 1524, one of the oldest in the Americas."
+          },
+          "tip": {
+            "ES": "Paul Gauguin trabajó en las obras del Canal en 1887 y quiso quedarse a vivir en esta isla.",
+            "EN": "Paul Gauguin worked on the Canal in 1887 and wanted to settle on this island."
+          },
+          "hora": "09:15",
+          "dur": "45 min",
+          "img": "/ciudades/panama/img/taboga-iglesia.jpg",
+          "lat": 8.7978,
+          "lng": -79.5562,
+          "tramo": "barco",
+          "tramoDuracionMin": 45,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Playa La Restinga",
+            "EN": "La Restinga beach"
+          },
+          "s": {
+            "ES": "Hasta el islote con la marea baja",
+            "EN": "Out to the islet at low tide"
+          },
+          "d": {
+            "ES": "La playa principal del pueblo. Con la marea baja aparece una lengua de arena que te deja cruzar caminando al islote de El Morro. A las 15:00 vuelves al muelle para el ferry.",
+            "EN": "The village’s main beach. At low tide a strip of sand appears and you can walk across to El Morro islet. At 3 pm you head back to the pier for the ferry."
+          },
+          "tip": {
+            "ES": "Mira la hora de la marea al llegar: si cruzas al islote, vuelve antes de que suba.",
+            "EN": "Check the tide time when you arrive: if you cross to the islet, come back before it rises."
+          },
+          "hora": "10:10",
+          "dur": "4 h 50 min",
+          "img": "/ciudades/panama/img/taboga-playa.jpg",
+          "lat": 8.7996,
+          "lng": -79.553,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 290
+        }
+      ],
+      "fotos": [
+        "/ciudades/panama/img/taboga.jpg",
+        "/ciudades/panama/img/taboga-muelle.jpg",
+        "/ciudades/panama/img/taboga-iglesia.jpg",
+        "/ciudades/panama/img/taboga-playa.jpg"
+      ],
+      "duracionMin": 510,
+      "distanciaKm": 45,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El ferry tiene rampa. En el pueblo hay cuestas y escalones.",
+        "EN": "The ferry has a ramp. The village has slopes and steps."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 8.97745,
+        "lng": -79.51775,
+        "foto": "/ciudades/panama/img/balboa.jpg",
+        "texto": {
+          "ES": "Puerta de tu hotel, a las 7:45. Baja cinco minutos antes.",
+          "EN": "Your hotel door, at 7:45. Come down five minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale todos los días si hay ferry.",
+        "EN": "Free up to 24 h before. Runs every day the ferry sails."
+      },
+      "salidasFijas": [
+        "07:45"
+      ],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un café de Boquete en tu hotel, a la vuelta",
+      "EN": "A cup of Boquete coffee at your hotel when you get back"
+    }
+  },
+  "creditos": [
+    "La Cinta Costera de noche, con la bahía y Punta Paitilla: Ciudad PMA500, CC BY-SA 2.0, Wikimedia Commons",
+    "Torres de la Avenida Balboa desde la Cinta Costera: 123Hollic, CC BY-SA 4.0, Wikimedia Commons",
+    "La bahía y las torres de Punta Paitilla desde el Casco Antiguo: Felipe Valduga, CC BY 2.0, Wikimedia Commons",
+    "El Casco Antiguo desde el aire, con la Cinta Costera 3 alrededor: Garcia.dennis, CC BY-SA 4.0, Wikimedia Commons",
+    "Catedral Basílica de Santa María la Antigua, Plaza de la Independencia: Carlos Siu, CC BY-SA 2.0, Wikimedia Commons",
+    "Altar de Oro de la iglesia de San José: Manuel Calderón Quintana, CC BY-SA 4.0, Wikimedia Commons",
+    "Obelisco de la Plaza de Francia: Rodolfo Aragundi, CC BY-SA 2.0, Wikimedia Commons",
+    "Paseo de las Bóvedas, con las buganvillas: Ayaita, CC BY-SA 3.0, Wikimedia Commons",
+    "Plaza Mayor y torre de la catedral de Panamá Viejo: Gualberto107, CC BY-SA 3.0, Wikimedia Commons",
+    "Ruinas de Panamá Viejo: xiquinhosilva, CC BY 4.0, Wikimedia Commons",
+    "Un crucero en las Esclusas de Miraflores: Alexey Komarov, CC BY-SA 4.0, Wikimedia Commons",
+    "Las locomotoras guían un portacontenedores en Miraflores: Adam Jones, CC BY-SA 2.0, Wikimedia Commons",
+    "Torre de control de las Esclusas de Miraflores: David Brossard, CC BY-SA 2.0, Wikimedia Commons",
+    "El Biomuseo de Frank Gehry en la Calzada de Amador: F Delventhal, CC BY 2.0, Wikimedia Commons",
+    "La Calzada de Amador desde el aire, desde isla Naos: Joy Nuñez, CC BY-SA 4.0, Wikimedia Commons",
+    "Atardecer en la Calzada de Amador: Edwinosb, CC BY-SA 4.0, Wikimedia Commons",
+    "La bandera de la cima del Cerro Ancón: brian.gratwicke aka Brian Gratwicke on Flickr., CC BY 2.0, Wikimedia Commons",
+    "Barcas de pescadores frente al Mercado de Mariscos: Darmok and jalad at tanagra, CC BY-SA 4.0, Wikimedia Commons",
+    "El pueblo de Taboga desde el agua: Otávio Nogueira from Fortaleza, BR, CC BY 2.0, Wikimedia Commons",
+    "El muelle de Taboga: Otávio Nogueira from Fortaleza, BR, CC BY 2.0, Wikimedia Commons",
+    "Iglesia de San Pedro, Taboga: Osopolar, CC BY-SA 3.0, Wikimedia Commons",
+    "La playa de Taboga y el islote El Morro: Astrid Vergara, CC BY-SA 4.0, Wikimedia Commons",
+    "Isla Perro, Guna Yala: Mónica J. Mora, CC BY-SA 3.0, Wikimedia Commons",
+    "Una isla de Guna Yala: Ayaita, CC BY 3.0, Wikimedia Commons",
+    "Cabaña sobre el agua en Guna Yala: Ben Kucinski, CC BY 2.0, Wikimedia Commons",
+    "Mola guna hecha a mano: Harminon2, CC BY 4.0, Wikimedia Commons",
+    "Una mujer guna con sus molas: Johantheghost, CC BY-SA 3.0, Wikimedia Commons",
+    "Mujeres emberá vestidas para el baile: Yves Picq http://veton.picq.fr, CC BY-SA 3.0, Wikimedia Commons",
+    "Casas emberá de techo de palma: Elvin Flaco, CC BY-SA 4.0, Wikimedia Commons",
+    "Piraguas en Puerto Corotú, lago Alajuela: National507, CC0, Wikimedia Commons"
+  ]
+}

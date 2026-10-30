@@ -1,0 +1,477 @@
+{
+ "canal-miraflores-1": {
+  "pregunta": {
+   "ES": "¿En qué año pasó el primer barco por el Canal?",
+   "EN": "In what year did the first ship go through the Canal?"
+  },
+  "opciones": [
+   {
+    "ES": "1904",
+    "EN": "1904"
+   },
+   {
+    "ES": "1914",
+    "EN": "1914"
+   },
+   {
+    "ES": "1925",
+    "EN": "1925"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "El vapor Ancon lo cruzó el 15 de agosto de 1914. En 1904 empezaron las obras de Estados Unidos.",
+   "EN": "The steamship Ancon crossed on August 15, 1914. The United States started work in 1904."
+  }
+ },
+ "canal-miraflores-2": {
+  "pregunta": {
+   "ES": "¿Cuánto pagó Richard Halliburton por cruzar el Canal a nado en 1928?",
+   "EN": "How much did Richard Halliburton pay to swim the Canal in 1928?"
+  },
+  "opciones": [
+   {
+    "ES": "36 centavos",
+    "EN": "36 cents"
+   },
+   {
+    "ES": "36 dólares",
+    "EN": "36 dollars"
+   },
+   {
+    "ES": "Nada",
+    "EN": "Nothing"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Le cobraron por peso, como a un barco. Pesaba unos 64 kilos y pagó 36 centavos, el peaje más bajo de la historia del Canal.",
+   "EN": "He was charged by weight, like a ship. He weighed about 64 kilos and paid 36 cents, the lowest toll in the Canal’s history."
+  }
+ },
+ "canal-miraflores-3": {
+  "pregunta": {
+   "ES": "¿Con qué se construyó la Calzada de Amador?",
+   "EN": "What was the Amador Causeway built with?"
+  },
+  "opciones": [
+   {
+    "ES": "Arena traída de Taboga",
+    "EN": "Sand brought from Taboga"
+   },
+   {
+    "ES": "Piedras de Panamá Viejo",
+    "EN": "Stones from Panamá Viejo"
+   },
+   {
+    "ES": "Roca sacada del Corte Culebra",
+    "EN": "Rock dug out of the Culebra Cut"
+   }
+  ],
+  "correcta": 2,
+  "explicacion": {
+   "ES": "Se aprovechó la roca que salió al abrir el Corte Culebra, el tramo del Canal que atraviesa la cordillera.",
+   "EN": "It used the rock that came out when the Culebra Cut, the stretch of Canal through the mountains, was dug."
+  }
+ },
+ "casco-panama-viejo-1": {
+  "pregunta": {
+   "ES": "¿De qué país se separó Panamá en 1903?",
+   "EN": "Which country did Panama separate from in 1903?"
+  },
+  "opciones": [
+   {
+    "ES": "España",
+    "EN": "Spain"
+   },
+   {
+    "ES": "Colombia",
+    "EN": "Colombia"
+   },
+   {
+    "ES": "Estados Unidos",
+    "EN": "The United States"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Se separó de Colombia el 3 de noviembre de 1903. De España se había independizado el 28 de noviembre de 1821.",
+   "EN": "It separated from Colombia on November 3, 1903. It had won independence from Spain on November 28, 1821."
+  }
+ },
+ "casco-panama-viejo-2": {
+  "pregunta": {
+   "ES": "¿Cuántos años duró la primera ciudad de Panamá?",
+   "EN": "How long did the first Panama City last?"
+  },
+  "opciones": [
+   {
+    "ES": "52",
+    "EN": "52"
+   },
+   {
+    "ES": "152",
+    "EN": "152"
+   },
+   {
+    "ES": "252",
+    "EN": "252"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Se fundó en 1519 y ardió en 1671, durante el asalto de Henry Morgan: 152 años.",
+   "EN": "It was founded in 1519 and burned in 1671, during Henry Morgan’s raid: 152 years."
+  }
+ },
+ "casco-panama-viejo-3": {
+  "pregunta": {
+   "ES": "Según la leyenda, ¿qué hizo un fraile para salvar el Altar de Oro de los piratas?",
+   "EN": "According to legend, what did a friar do to save the Golden Altar from the pirates?"
+  },
+  "opciones": [
+   {
+    "ES": "Lo enterró",
+    "EN": "He buried it"
+   },
+   {
+    "ES": "Lo pintó de negro",
+    "EN": "He painted it black"
+   },
+   {
+    "ES": "Lo tiró al mar",
+    "EN": "He threw it into the sea"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Lo cubrió de pintura negra para que pareciera de madera vieja, y los piratas no se lo llevaron.",
+   "EN": "He covered it in black paint so it looked like old wood, and the pirates left it."
+  }
+ },
+ "casco-panama-viejo-4": {
+  "pregunta": {
+   "ES": "¿Cuántos años tardó en construirse la catedral?",
+   "EN": "How long did the cathedral take to build?"
+  },
+  "opciones": [
+   {
+    "ES": "18",
+    "EN": "18"
+   },
+   {
+    "ES": "58",
+    "EN": "58"
+   },
+   {
+    "ES": "108",
+    "EN": "108"
+   }
+  ],
+  "correcta": 2,
+  "explicacion": {
+   "ES": "Se empezó en 1688 y se terminó en 1796. En 2018 se restauró entera.",
+   "EN": "It was begun in 1688 and finished in 1796. It was fully restored in 2018."
+  }
+ },
+ "casco-panama-viejo-5": {
+  "pregunta": {
+   "ES": "¿Qué animal corona el obelisco de la Plaza de Francia?",
+   "EN": "What animal tops the obelisk in Plaza de Francia?"
+  },
+  "opciones": [
+   {
+    "ES": "Un gallo",
+    "EN": "A rooster"
+   },
+   {
+    "ES": "Un águila",
+    "EN": "An eagle"
+   },
+   {
+    "ES": "Un león",
+    "EN": "A lion"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "El gallo es el símbolo de Francia. El monumento recuerda a los franceses que intentaron el Canal entre 1881 y 1889.",
+   "EN": "The rooster is the symbol of France. The monument honors the French who tried to build the Canal between 1881 and 1889."
+  }
+ },
+ "san-blas-1": {
+  "pregunta": {
+   "ES": "¿Qué te piden en el control de entrada a Guna Yala?",
+   "EN": "What do they ask for at the Guna Yala checkpoint?"
+  },
+  "opciones": [
+   {
+    "ES": "Un visado",
+    "EN": "A visa"
+   },
+   {
+    "ES": "El pasaporte",
+    "EN": "Your passport"
+   },
+   {
+    "ES": "Nada",
+    "EN": "Nothing"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Guna Yala es una comarca con gobierno propio, el Congreso General Guna. Revisan el pasaporte y cobran su entrada.",
+   "EN": "Guna Yala is a self-governing comarca, run by the Guna General Congress. They check passports and charge an entry fee."
+  }
+ },
+ "san-blas-2": {
+  "pregunta": {
+   "ES": "¿Cuántas islas de Guna Yala están habitadas?",
+   "EN": "How many Guna Yala islands are inhabited?"
+  },
+  "opciones": [
+   {
+    "ES": "Menos de 50",
+    "EN": "Fewer than 50"
+   },
+   {
+    "ES": "Unas 150",
+    "EN": "About 150"
+   },
+   {
+    "ES": "Todas",
+    "EN": "All of them"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Hay más de 300 islas y menos de 50 tienen gente viviendo en ellas. El resto son de palmeras y arena.",
+   "EN": "There are more than 300 islands and fewer than 50 have people living on them. The rest are palm trees and sand."
+  }
+ },
+ "san-blas-3": {
+  "pregunta": {
+   "ES": "¿Qué es una mola?",
+   "EN": "What is a mola?"
+  },
+  "opciones": [
+   {
+    "ES": "Una canoa guna",
+    "EN": "A Guna canoe"
+   },
+   {
+    "ES": "Un pescado de arrecife",
+    "EN": "A reef fish"
+   },
+   {
+    "ES": "Un tejido de capas de tela recortadas y cosidas",
+    "EN": "A textile of layered cloth cut and stitched"
+   }
+  ],
+  "correcta": 2,
+  "explicacion": {
+   "ES": "Las mujeres guna superponen telas de colores, recortan dibujos y los cosen a mano. La llevan en el pecho y la espalda de la blusa.",
+   "EN": "Guna women layer colored cloth, cut designs into it and sew it by hand. They wear it on the front and back of their blouses."
+  }
+ },
+ "san-blas-4": {
+  "pregunta": {
+   "ES": "¿En qué año se levantaron los guna para defender su forma de vida?",
+   "EN": "In what year did the Guna rise up to defend their way of life?"
+  },
+  "opciones": [
+   {
+    "ES": "1903",
+    "EN": "1903"
+   },
+   {
+    "ES": "1925",
+    "EN": "1925"
+   },
+   {
+    "ES": "1968",
+    "EN": "1968"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "En febrero de 1925, con la Revolución Guna. Cada año lo celebran en las islas.",
+   "EN": "In February 1925, in the Guna Revolution. They celebrate it every year on the islands."
+  }
+ },
+ "embera-1": {
+  "pregunta": {
+   "ES": "¿De qué río sale buena parte del agua del Canal?",
+   "EN": "Which river supplies much of the Canal’s water?"
+  },
+  "opciones": [
+   {
+    "ES": "Del Chagres",
+    "EN": "The Chagres"
+   },
+   {
+    "ES": "Del Bayano",
+    "EN": "The Bayano"
+   },
+   {
+    "ES": "Del Tuira",
+    "EN": "The Tuira"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "El lago Gatún, por donde pasan los barcos, se formó al cerrar el Chagres con una presa.",
+   "EN": "Gatún Lake, which the ships cross, was created by damming the Chagres."
+  }
+ },
+ "embera-2": {
+  "pregunta": {
+   "ES": "¿En qué año se creó el lago Alajuela?",
+   "EN": "In what year was Lake Alajuela created?"
+  },
+  "opciones": [
+   {
+    "ES": "1914",
+    "EN": "1914"
+   },
+   {
+    "ES": "1935",
+    "EN": "1935"
+   },
+   {
+    "ES": "1977",
+    "EN": "1977"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "La presa de Madden se terminó en 1935 para guardar agua para el Canal en la temporada seca.",
+   "EN": "Madden Dam was finished in 1935 to store water for the Canal in the dry season."
+  }
+ },
+ "embera-3": {
+  "pregunta": {
+   "ES": "¿Cuánto dura un dibujo de jagua en la piel?",
+   "EN": "How long does a jagua design last on the skin?"
+  },
+  "opciones": [
+   {
+    "ES": "Un día",
+    "EN": "One day"
+   },
+   {
+    "ES": "Unas dos semanas",
+    "EN": "About two weeks"
+   },
+   {
+    "ES": "Para siempre",
+    "EN": "Forever"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Es el jugo de un fruto que tiñe la piel de azul oscuro. Se va solo en unas dos semanas.",
+   "EN": "It is the juice of a fruit that stains the skin dark blue. It fades on its own in about two weeks."
+  }
+ },
+ "taboga-1": {
+  "pregunta": {
+   "ES": "¿A qué distancia de la costa está Taboga?",
+   "EN": "How far offshore is Taboga?"
+  },
+  "opciones": [
+   {
+    "ES": "Unos 5 km",
+    "EN": "About 5 km"
+   },
+   {
+    "ES": "Unos 20 km",
+    "EN": "About 20 km"
+   },
+   {
+    "ES": "Unos 60 km",
+    "EN": "About 60 km"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Está a unos 20 km de la ciudad. El ferry tarda entre media hora y tres cuartos.",
+   "EN": "It is about 20 km from the city. The ferry takes half an hour to forty-five minutes."
+  }
+ },
+ "taboga-2": {
+  "pregunta": {
+   "ES": "¿En qué año se abrió el Puente de las Américas?",
+   "EN": "In what year did the Bridge of the Americas open?"
+  },
+  "opciones": [
+   {
+    "ES": "1914",
+    "EN": "1914"
+   },
+   {
+    "ES": "1962",
+    "EN": "1962"
+   },
+   {
+    "ES": "2004",
+    "EN": "2004"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Se abrió en 1962 y fue durante décadas la única forma de cruzar el Canal en auto. El Puente Centenario es de 2004.",
+   "EN": "It opened in 1962 and for decades was the only way to cross the Canal by car. The Centennial Bridge dates from 2004."
+  }
+ },
+ "taboga-3": {
+  "pregunta": {
+   "ES": "¿Qué pintor trabajó en las obras del Canal y quiso vivir en Taboga?",
+   "EN": "Which painter worked on the Canal and wanted to live on Taboga?"
+  },
+  "opciones": [
+   {
+    "ES": "Paul Gauguin",
+    "EN": "Paul Gauguin"
+   },
+   {
+    "ES": "Vincent van Gogh",
+    "EN": "Vincent van Gogh"
+   },
+   {
+    "ES": "Claude Monet",
+    "EN": "Claude Monet"
+   }
+  ],
+  "correcta": 0,
+  "explicacion": {
+   "ES": "Gauguin llegó en 1887, trabajó unas semanas en las obras francesas y siguió viaje a Martinica.",
+   "EN": "Gauguin arrived in 1887, worked a few weeks on the French works and moved on to Martinique."
+  }
+ },
+ "taboga-4": {
+  "pregunta": {
+   "ES": "¿Cómo llaman en Panamá a Taboga?",
+   "EN": "What do Panamanians call Taboga?"
+  },
+  "opciones": [
+   {
+    "ES": "La isla de las perlas",
+    "EN": "The pearl island"
+   },
+   {
+    "ES": "La isla de las flores",
+    "EN": "The island of flowers"
+   },
+   {
+    "ES": "La isla del tesoro",
+    "EN": "Treasure island"
+   }
+  ],
+  "correcta": 1,
+  "explicacion": {
+   "ES": "Por las flores de sus jardines. Las Perlas es otro archipiélago, más al sur.",
+   "EN": "For the flowers in its gardens. Las Perlas is a different archipelago, further south."
+  }
+ }
+}
