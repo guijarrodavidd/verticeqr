@@ -1,0 +1,990 @@
+{
+  "slug": "villahermosa",
+  "nombre": "Villahermosa",
+  "intro": {
+    "ES": "Desde el hotel, en el Paseo Usumacinta, el Parque-Museo La Venta y la Laguna de las Ilusiones quedan a diez minutos en coche, y el centro histórico a quince. Si terminas las juntas a las cinco, te da tiempo a ver la Casa de los Azulejos y caminar por el malecón del Grijalva antes de cenar. El fin de semana hay mañana para el Yumká, junto al aeropuerto, o un día entero para la ruta del cacao en Comalcalco, a una hora por carretera.",
+    "EN": "From the hotel on Paseo Usumacinta, the La Venta Park Museum and the Laguna de las Ilusiones are ten minutes away by car, and the historic center fifteen. If your meetings end at five, there is time to see the Casa de los Azulejos and walk the Grijalva riverfront before dinner. At the weekend you can spend a morning at Yumká, next to the airport, or a whole day on the cacao route in Comalcalco, an hour away by road."
+  },
+  "lugares": [
+    {
+      "id": "la-venta",
+      "img": "/ciudades/villahermosa/img/la-venta.jpg",
+      "nombre": "Parque-Museo La Venta",
+      "zona": {
+        "ES": "Avenida Adolfo Ruiz Cortines, a 3.4 km del hotel",
+        "EN": "Avenida Adolfo Ruiz Cortines, 3.4 km from the hotel"
+      },
+      "d": {
+        "ES": "Aquí están las esculturas olmecas que el poeta Carlos Pellicer se trajo de La Venta, en Huimanguillo, cuando Pemex empezó a sacar petróleo junto a la zona arqueológica en los años cincuenta. Las colocó en la selva casi como se habían encontrado y abrió el parque el 4 de marzo de 1958. En sus 6.5 hectáreas hay 33 monumentos, entre ellos tres cabezas colosales y el Altar 4, que pesa más de 30 toneladas.",
+        "EN": "This is where the poet Carlos Pellicer brought the Olmec sculptures from La Venta, in Huimanguillo, after Pemex began drilling for oil next to the archaeological site in the 1950s. He set them in the jungle much as they had been found and opened the park on March 4, 1958. Its 6.5 hectares hold 33 monuments, among them three colossal heads and Altar 4, which weighs over 30 tons."
+      },
+      "cuando": {
+        "ES": "Por la mañana, antes del calor; abre de 8:00 a 16:00",
+        "EN": "In the morning, before the heat; open from 8:00 to 16:00"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 18.00046,
+      "lng": -92.93542
+    },
+    {
+      "id": "laguna-ilusiones",
+      "img": "/ciudades/villahermosa/img/laguna.jpg",
+      "nombre": "Laguna de las Ilusiones y Mirador de las Águilas",
+      "zona": {
+        "ES": "Parque Tomás Garrido Canabal, junto a La Venta",
+        "EN": "Tomás Garrido Canabal Park, next to La Venta"
+      },
+      "d": {
+        "ES": "Es la laguna más grande de las que hay dentro de la ciudad. Llegó a ocupar más de 360 hectáreas, los rellenos de las colonias la dejaron en unas 156 y hoy está protegida como reserva ecológica. En su orilla, el parque Tomás Garrido Canabal tiene un malecón a pie de agua y el Mirador de las Águilas, una torre de 46 metros que diseñó Ramón Torres Martínez.",
+        "EN": "It is the largest of the lagoons inside the city. It once covered more than 360 hectares, landfill for new neighborhoods cut it to about 156, and today it is protected as an ecological reserve. On its shore, Tomás Garrido Canabal Park has a waterside promenade and the Mirador de las Águilas, a 46-meter tower designed by Ramón Torres Martínez."
+      },
+      "cuando": {
+        "ES": "A media mañana, después de La Venta, que queda al lado",
+        "EN": "Mid-morning, after La Venta, which is right next door"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 17.99883,
+      "lng": -92.93521
+    },
+    {
+      "id": "malecon-grijalva",
+      "img": "/ciudades/villahermosa/img/malecon.jpg",
+      "nombre": "Malecón del Grijalva y Torre del Caballero",
+      "zona": {
+        "ES": "Centro histórico, junto a la Plaza de Armas",
+        "EN": "Historic center, by the Plaza de Armas"
+      },
+      "d": {
+        "ES": "El río Grijalva pasa por el oriente del centro histórico. En noviembre de 2007 se desbordó y el centro quedó bajo el agua. El malecón nuevo se entregó en febrero de 2024 y recorre unos seis kilómetros de orilla, con andadores, jardines e iluminación. Frente a la Plaza de Armas está la Torre del Caballero, un mirador inaugurado en 1994 junto con el puente peatonal Solidaridad, que cruza el río.",
+        "EN": "The Grijalva River runs along the east side of the historic center. In November 2007 it burst its banks and the center was left under water. The new riverfront opened in February 2024 and runs for about six kilometers along the bank, with walkways, gardens and lighting. Facing the Plaza de Armas stands the Torre del Caballero, a lookout tower opened in 1994 together with the Solidaridad footbridge across the river."
+      },
+      "cuando": {
+        "ES": "Al atardecer, cuando baja el calor",
+        "EN": "At sunset, when the heat eases off"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 17.98631,
+      "lng": -92.91845
+    },
+    {
+      "id": "zona-luz",
+      "img": "/ciudades/villahermosa/img/azulejos.jpg",
+      "nombre": "Zona Luz y Casa de los Azulejos",
+      "zona": {
+        "ES": "Centro histórico, Juárez esquina con 27 de Febrero",
+        "EN": "Historic center, corner of Juárez and 27 de Febrero"
+      },
+      "d": {
+        "ES": "La Zona Luz son las calles más antiguas de la ciudad, como Juárez, Lerdo o Reforma, hoy peatonales y llenas de cafés y neverías. En la esquina de Juárez con 27 de Febrero está la Casa de los Azulejos, de 1889, con la fachada forrada de azulejos traídos de Barcelona y once esculturas en lo alto. La de la esquina es Mercurio, el dios del comercio. Desde 1985 la casa es el Museo de Historia de Tabasco.",
+        "EN": "Zona Luz is the oldest part of the city, streets such as Juárez, Lerdo or Reforma, now pedestrian and full of cafés and ice cream shops. On the corner of Juárez and 27 de Febrero stands the Casa de los Azulejos, built in 1889, its front covered in tiles brought from Barcelona and topped by eleven statues. The one on the corner is Mercury, god of trade. Since 1985 the house has been the Tabasco History Museum."
+      },
+      "cuando": {
+        "ES": "Por la tarde; el museo abre de martes a viernes hasta las 17:00 y el fin de semana hasta las 18:00",
+        "EN": "In the afternoon; the museum opens Tuesday to Friday until 17:00 and at weekends until 18:00"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 17.98838,
+      "lng": -92.91841
+    },
+    {
+      "id": "mercado-pino-suarez",
+      "img": "/ciudades/villahermosa/img/pejelagarto.jpg",
+      "nombre": "Mercado Pino Suárez y el pejelagarto asado",
+      "zona": {
+        "ES": "Centro, al norte de la Zona Luz",
+        "EN": "Downtown, north of Zona Luz"
+      },
+      "d": {
+        "ES": "El pejelagarto es el pez de Tabasco, con hocico largo y una piel tan dura que hace de olla. Se atraviesa a lo largo con una vara de madera y se asa sobre las brasas, y se come en tacos de tortilla de maíz con chile amashito y limón. En los mercados públicos lo encuentras siempre fresco o ya asado, y el Pino Suárez es el que más se recomienda en Villahermosa. Para beber, pide pozol, la bebida de masa de maíz con cacao que se sirve en jícara.",
+        "EN": "The pejelagarto, or tropical gar, is the fish of Tabasco, with a long snout and skin so hard it works as a cooking pot. It is skewered lengthwise on a wooden stick, roasted over embers and eaten in corn tortilla tacos with amashito chili and lime. Public markets always have it, fresh or already roasted, and Pino Suárez is the one most often recommended in Villahermosa. To drink, ask for pozol, made from corn dough with cacao and served in a gourd."
+      },
+      "cuando": {
+        "ES": "A mediodía, para comer",
+        "EN": "At midday, for lunch"
+      },
+      "min": 15,
+      "modo": "coche",
+      "lat": 17.99642,
+      "lng": -92.91437
+    },
+    {
+      "id": "museo-papagayo",
+      "img": "/ciudades/villahermosa/img/planetario.jpg",
+      "nombre": "Museo Papagayo y Planetario Tabasco 2000",
+      "zona": {
+        "ES": "Paseo Usumacinta y Tabasco 2000, a menos de 3 km del hotel",
+        "EN": "Paseo Usumacinta and Tabasco 2000, under 3 km from the hotel"
+      },
+      "d": {
+        "ES": "Para el fin de semana con niños. El Museo Interactivo Papagayo está en el mismo Paseo Usumacinta, a 1.8 km, con salas temáticas pensadas para que los niños toquen y experimenten. A 2.6 km queda el Planetario Tabasco 2000, inaugurado en 1982, que proyecta películas Omnimax en una pantalla curva para unas 300 personas. En el vestíbulo, el pintor Daniel Ponce Montuy tardó cinco años en terminar su mural sobre el universo maya.",
+        "EN": "For a weekend with children. The Papagayo Interactive Museum is on the same Paseo Usumacinta, 1.8 km away, with themed rooms made for kids to touch and try things out. 2.6 km away is the Tabasco 2000 Planetarium, opened in 1982, which shows Omnimax films on a curved screen for about 300 people. In the lobby, the painter Daniel Ponce Montuy spent five years finishing his mural on the Maya universe."
+      },
+      "cuando": {
+        "ES": "Sábado o domingo por la mañana; Papagayo abre de martes a domingo de 9:00 a 17:00. Pide en recepción la cartelera del Planetario",
+        "EN": "Saturday or Sunday morning; Papagayo opens Tuesday to Sunday from 9:00 to 17:00. Ask at reception for the Planetarium schedule"
+      },
+      "min": 5,
+      "modo": "coche",
+      "lat": 18.00593,
+      "lng": -92.96593
+    },
+    {
+      "id": "yumka",
+      "img": "/ciudades/villahermosa/img/yumka.jpg",
+      "nombre": "Yumká",
+      "zona": {
+        "ES": "Junto al aeropuerto, a unos 21 km del hotel",
+        "EN": "Next to the airport, about 21 km from the hotel"
+      },
+      "d": {
+        "ES": "Son 101 hectáreas protegidas que abrieron al público en 1993. Los chontales llamaban Yumká al duende que cuidaba las plantas y los animales. La selva se recorre a pie hasta un puente colgante sobre la laguna, y la sabana en un tren desde el que ves cebras y antílopes. En la laguna vive el manatí del Caribe.",
+        "EN": "It covers 101 protected hectares and opened to the public in 1993. The Chontal people called Yumká the spirit that looked after plants and animals. You walk through the jungle to a suspension bridge over the lagoon and cross the savanna on a train, watching zebras and antelopes. The lagoon is home to the Caribbean manatee."
+      },
+      "cuando": {
+        "ES": "Por la mañana; abre de martes a domingo desde las 9:00 y la taquilla cierra a las 14:30",
+        "EN": "In the morning; open Tuesday to Sunday from 9:00, with the ticket office closing at 14:30"
+      },
+      "min": 25,
+      "modo": "coche",
+      "lat": 18.00091,
+      "lng": -92.80416
+    },
+    {
+      "id": "comalcalco",
+      "img": "/ciudades/villahermosa/img/comalcalco.jpg",
+      "nombre": "Zona arqueológica de Comalcalco",
+      "zona": {
+        "ES": "Comalcalco, a unos 58 km del hotel",
+        "EN": "Comalcalco, about 58 km from the hotel"
+      },
+      "d": {
+        "ES": "Es la ciudad maya más occidental que se conoce, y la construyeron con ladrillo cocido porque en la llanura de Tabasco no había piedra. Sus habitantes la llamaban Joy Chan, cielo rodeado. Los ladrillos se unían con cal de conchas de ostión quemadas y muchos llevan dibujos grabados por una cara. El Templo I se levanta unos 20 metros sobre la plaza.",
+        "EN": "It is the westernmost Maya city known, and it was built of fired brick because there was no stone on the Tabasco plain. Its people called it Joy Chan, the encircled sky. The bricks were bound with lime made from burnt oyster shells, and many carry drawings scratched into one face. Temple I rises about 20 meters above the plaza."
+      },
+      "cuando": {
+        "ES": "Por la mañana; abre todos los días de 9:00 a 17:00, con último acceso a las 16:00",
+        "EN": "In the morning; open daily from 9:00 to 17:00, last entry at 16:00"
+      },
+      "min": 65,
+      "modo": "coche",
+      "lat": 18.27944,
+      "lng": -93.20111
+    }
+  ],
+  "rutas": [
+    {
+      "id": "la-venta",
+      "expId": "ex1",
+      "img": "/ciudades/villahermosa/img/venta-guerrero.jpg",
+      "titulo": {
+        "ES": "La Venta y la Laguna de las Ilusiones",
+        "EN": "La Venta and the Laguna de las Ilusiones"
+      },
+      "tipo": {
+        "ES": "Arqueología",
+        "EN": "Archaeology"
+      },
+      "dur": "3 h 30 min",
+      "d": {
+        "ES": "Una mañana entre cabezas olmecas. Caminas dos horas por la selva del Parque-Museo La Venta con un guía que te cuenta qué representa cada pieza y cómo llegó hasta Villahermosa. Después te asomas a la Laguna de las Ilusiones desde el parque de al lado, y a las 12:30 estás de vuelta, con tiempo para comer en Persé.",
+        "EN": "A morning among Olmec heads. You spend two hours walking through the jungle of the La Venta Park Museum with a guide who explains what each piece shows and how it reached Villahermosa. Then you look out over the Laguna de las Ilusiones from the park next door, and by 12:30 you are back, in time for lunch at Persé."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 9:00, unos 10 minutos hasta La Venta. Vuelta al hotel hacia las 12:30",
+        "EN": "Car leaves from the hotel door at 9:00, about 10 minutes to La Venta. Back at the hotel around 12:30"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el hotel",
+          "Guía en español o inglés",
+          "Entrada al Parque-Museo La Venta"
+        ],
+        "EN": [
+          "Return transfer from the hotel",
+          "Guide in Spanish or English",
+          "La Venta Park Museum admission"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Propinas"
+        ],
+        "EN": [
+          "Food and drinks",
+          "Tips"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Repelente de mosquitos, porque el sendero va por la selva",
+          "Calzado cómodo y cerrado",
+          "Gorra y agua",
+          "Ropa ligera, que en primavera la humedad pasa del 90 %"
+        ],
+        "EN": [
+          "Insect repellent, as the trail runs through the jungle",
+          "Comfortable closed shoes",
+          "A cap and water",
+          "Light clothes, as humidity tops 90 % in spring"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "Rumbo al Parque-Museo La Venta",
+            "EN": "Heading for the La Venta Park Museum"
+          },
+          "d": {
+            "ES": "El coche toma el Paseo Usumacinta y luego la avenida Adolfo Ruiz Cortines, unos 3.4 km. La entrada del parque da a esa avenida, en la orilla de la Laguna de las Ilusiones.",
+            "EN": "The car takes Paseo Usumacinta and then Avenida Adolfo Ruiz Cortines, about 3.4 km. The park entrance is on that avenue, on the shore of the Laguna de las Ilusiones."
+          },
+          "tip": {
+            "ES": "Ponte el repelente en la habitación. En la selva del parque hay sombra y humedad, y con ellas mosquitos.",
+            "EN": "Put on insect repellent in your room. The park jungle is shady and humid, and that brings mosquitoes."
+          },
+          "hora": "09:00",
+          "dur": "5 min",
+          "img": "/ciudades/villahermosa/img/hotel.jpg",
+          "lat": 18.00122,
+          "lng": -92.95635,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Parque-Museo La Venta",
+            "EN": "La Venta Park Museum"
+          },
+          "s": {
+            "ES": "Tres cabezas colosales en la selva",
+            "EN": "Three colossal heads in the jungle"
+          },
+          "d": {
+            "ES": "La visita empieza en una sala con una maqueta que sitúa La Venta, en Huimanguillo, a 128 km de aquí. Luego entras al sendero, donde las piezas están puestas casi como se encontraron, entre árboles y hojarasca, y se cruzan animales sueltos como tejones o monos. La cabeza llamada Monumento 1 mide 2.41 metros y pesa 24 toneladas. El Altar 4, con un personaje sentado en la boca de una cueva que sujeta una cuerda, pesa más de 30.",
+            "EN": "The visit starts in a room with a scale model that places La Venta, in Huimanguillo, 128 km from here. Then you take the trail, where the pieces sit almost as they were found, among trees and fallen leaves, and animals such as coatis or monkeys wander loose. The head known as Monument 1 is 2.41 meters tall and weighs 24 tons. Altar 4, with a figure seated in the mouth of a cave holding a rope, weighs over 30."
+          },
+          "tip": {
+            "ES": "El basalto de estas piezas viene de la sierra de Los Tuxtlas, en Veracruz, a unos 80 km de La Venta. Pregúntale al guía cómo creen los arqueólogos que lo movieron.",
+            "EN": "The basalt for these pieces came from the Los Tuxtlas mountains in Veracruz, about 80 km from La Venta. Ask your guide how archaeologists think it was moved."
+          },
+          "hora": "09:15",
+          "dur": "2 h",
+          "img": "/ciudades/villahermosa/img/altar4.jpg",
+          "lat": 18.00046,
+          "lng": -92.93542,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 120
+        },
+        {
+          "n": {
+            "ES": "Laguna de las Ilusiones y Mirador de las Águilas",
+            "EN": "Laguna de las Ilusiones and Mirador de las Águilas"
+          },
+          "s": {
+            "ES": "La laguna desde el parque Tomás Garrido",
+            "EN": "The lagoon from Tomás Garrido Park"
+          },
+          "d": {
+            "ES": "El coche te deja en el parque Tomás Garrido Canabal, en la misma orilla. La laguna llegó a ocupar más de 360 hectáreas y hoy tiene unas 156, protegidas como reserva ecológica. Desde el malecón del parque ves el Mirador de las Águilas, la torre de 46 metros que diseñó Ramón Torres Martínez cuando el arquitecto Teodoro González de León rehízo el parque, entre 1983 y 1985.",
+            "EN": "The car drops you at Tomás Garrido Canabal Park, on the same shore. The lagoon once covered more than 360 hectares and today has about 156, protected as an ecological reserve. From the park promenade you see the Mirador de las Águilas, the 46-meter tower by Ramón Torres Martínez, built when architect Teodoro González de León rebuilt the park between 1983 and 1985."
+          },
+          "tip": {
+            "ES": "El parque lleva el nombre del gobernador que a finales de los años veinte y en los treinta mandó cerrar y derribar iglesias en todo Tabasco. Su estatua está a la salida del parque.",
+            "EN": "The park is named after the governor who, in the late 1920s and the 1930s, had churches closed and torn down all over Tabasco. His statue stands at the park exit."
+          },
+          "hora": "11:25",
+          "dur": "45 min",
+          "img": "/ciudades/villahermosa/img/mirador-aguilas.jpg",
+          "lat": 17.99883,
+          "lng": -92.93521,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 45
+        }
+      ],
+      "fotos": [
+        "/ciudades/villahermosa/img/venta-guerrero.jpg",
+        "/ciudades/villahermosa/img/la-venta.jpg",
+        "/ciudades/villahermosa/img/altar4.jpg",
+        "/ciudades/villahermosa/img/venta-cabeza3.jpg",
+        "/ciudades/villahermosa/img/venta-entrada.jpg",
+        "/ciudades/villahermosa/img/mirador-aguilas.jpg",
+        "/ciudades/villahermosa/img/laguna-aerea.jpg"
+      ],
+      "duracionMin": 210,
+      "distanciaKm": 9,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Los andadores de La Venta están pavimentados y son llanos. Las fuentes no coinciden sobre el acceso en silla de ruedas, así que si la usas, pregunta en recepción antes de reservar.",
+        "EN": "The paths at La Venta are paved and flat. Sources disagree on wheelchair access, so if you use one, ask at reception before booking."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 18.00122,
+        "lng": -92.95635,
+        "foto": "/ciudades/villahermosa/img/hotel.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 9:00. Baja cinco minutos antes.",
+          "EN": "Hotel door, at 9:00. Come down five minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale de martes a domingo.",
+        "EN": "Free up to 24 h before. Runs Tuesday to Sunday."
+      },
+      "salidasFijas": [
+        "09:00"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "centro-malecon",
+      "expId": "ex2",
+      "img": "/ciudades/villahermosa/img/malecon.jpg",
+      "titulo": {
+        "ES": "El centro y el malecón del Grijalva al atardecer",
+        "EN": "Downtown and the Grijalva riverfront at sunset"
+      },
+      "tipo": {
+        "ES": "Historia",
+        "EN": "History"
+      },
+      "dur": "3 h",
+      "d": {
+        "ES": "Para cuando acabas las juntas. A las cinco te recogen en la puerta y en quince minutos estás en la Zona Luz, las calles peatonales del centro viejo. Ves la Casa de los Azulejos y el Palacio de Gobierno y bajas al malecón del Grijalva, junto a la Torre del Caballero. De vuelta, el coche para frente a la Catedral, y a las 20:00 estás en el hotel, a tiempo para cenar en Persé.",
+        "EN": "For when your meetings are over. You are picked up at the door at five and fifteen minutes later you are in Zona Luz, the pedestrian streets of the old center. You see the Casa de los Azulejos and the Government Palace and walk down to the Grijalva riverfront by the Torre del Caballero. On the way back the car stops in front of the Cathedral, and at 20:00 you are at the hotel, in time for dinner at Persé."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 17:00, unos 15 minutos hasta el centro. Vuelta al hotel hacia las 20:00",
+        "EN": "Car leaves from the hotel door at 17:00, about 15 minutes to downtown. Back at the hotel around 20:00"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el hotel",
+          "Guía"
+        ],
+        "EN": [
+          "Return transfer from the hotel",
+          "Guide"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Entrada al Museo de Historia de Tabasco",
+          "Cena y bebidas"
+        ],
+        "EN": [
+          "Tabasco History Museum admission",
+          "Dinner and drinks"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo para caminar por el centro",
+          "Repelente de mosquitos para el rato junto al río",
+          "Agua",
+          "El celular con batería para las fotos del río"
+        ],
+        "EN": [
+          "Comfortable shoes for walking downtown",
+          "Insect repellent for the time by the river",
+          "Water",
+          "A charged phone for photos of the river"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "Rumbo al centro histórico",
+            "EN": "Heading for the historic center"
+          },
+          "d": {
+            "ES": "El coche toma el Paseo Usumacinta hacia el centro, unos 5.5 km. Diego de Quijada fundó la ciudad el 24 de junio de 1564 sobre tres lomas junto al Grijalva, y el centro histórico sigue en ese mismo sitio.",
+            "EN": "The car takes Paseo Usumacinta toward downtown, about 5.5 km. Diego de Quijada founded the city on June 24, 1564, on three low hills by the Grijalva, and the historic center is still in the same place."
+          },
+          "tip": {
+            "ES": "Si vienes directo de una junta, cámbiate de zapatos. Las calles de la Zona Luz son peatonales y de adoquín.",
+            "EN": "If you are coming straight from a meeting, change your shoes. The Zona Luz streets are pedestrian and cobbled."
+          },
+          "hora": "17:00",
+          "dur": "5 min",
+          "img": "/ciudades/villahermosa/img/hotel.jpg",
+          "lat": 18.00122,
+          "lng": -92.95635,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Zona Luz y Plaza de Armas",
+            "EN": "Zona Luz and Plaza de Armas"
+          },
+          "s": {
+            "ES": "La Casa de los Azulejos y el Palacio de Gobierno",
+            "EN": "The Casa de los Azulejos and the Government Palace"
+          },
+          "d": {
+            "ES": "El coche te deja en la Zona Luz. En la esquina de Juárez con 27 de Febrero está la Casa de los Azulejos, que el comerciante José María Graham McGregor quiso que fuera la casa más elegante de la ciudad en 1889. Mira hacia arriba. En la balaustrada hay once esculturas, y la de la esquina es Mercurio. A menos de 200 metros sales a la Plaza de Armas, trazada en 1564, con el Palacio de Gobierno, inaugurado en 1894, y la iglesia de la Concepción, La Conchita, que se ha reconstruido varias veces. La última fue entre 1910 y 1911, después de los bombardeos franceses de 1863 y 1864.",
+            "EN": "The car drops you in Zona Luz. On the corner of Juárez and 27 de Febrero stands the Casa de los Azulejos, which the merchant José María Graham McGregor wanted to be the finest house in the city in 1889. Look up at the balustrade and you will count eleven statues, with Mercury on the corner. Less than 200 meters away you come out on the Plaza de Armas, laid out in 1564, with the Government Palace, opened in 1894, and the church of La Concepción, known as La Conchita, rebuilt several times. The last rebuild was in 1910 and 1911, after the French bombardments of 1863 and 1864."
+          },
+          "tip": {
+            "ES": "Entre semana el museo de la casa cierra a las 17:00 y la ves por fuera. Sábado y domingo abre hasta las 18:00 y te da tiempo a entrar a ver los pisos y las paredes de azulejo.",
+            "EN": "On weekdays the museum in the house closes at 17:00, so you see it from outside. On Saturday and Sunday it stays open until 18:00 and there is time to go in and see the tiled floors and walls."
+          },
+          "hora": "17:20",
+          "dur": "50 min",
+          "img": "/ciudades/villahermosa/img/azulejos-esquina.jpg",
+          "lat": 17.98838,
+          "lng": -92.91841,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 50
+        },
+        {
+          "n": {
+            "ES": "Malecón del Grijalva y Torre del Caballero",
+            "EN": "Grijalva riverfront and Torre del Caballero"
+          },
+          "s": {
+            "ES": "El río al caer la tarde",
+            "EN": "The river as the day ends"
+          },
+          "d": {
+            "ES": "Bajas de la Plaza de Armas al río. La Torre del Caballero se inauguró en 1994 junto con el puente peatonal Solidaridad, que cruza el Grijalva. En noviembre de 2007 el río se desbordó y dejó el centro histórico bajo el agua. El malecón nuevo, entregado en febrero de 2024, recorre unos seis kilómetros de orilla con andadores y jardines.",
+            "EN": "You walk down from the Plaza de Armas to the river. The Torre del Caballero opened in 1994 together with the Solidaridad footbridge across the Grijalva. In November 2007 the river burst its banks and left the historic center under water. The new riverfront, opened in February 2024, runs for about six kilometers along the bank with walkways and gardens."
+          },
+          "tip": {
+            "ES": "La luz depende del mes. De mayo a agosto el sol se pone entre las 18:30 y las 18:50, cuando ya estás aquí. De noviembre a enero se pone hacia las 17:40 y el río lo ves de noche, con el alumbrado encendido. Desde 2016 la Sociedad Astronómica de Tabasco usa el mirador de la torre para observar el cielo; pregúntale al guía si ese día está abierto.",
+            "EN": "The light depends on the month. From May to August the sun sets between 18:30 and 18:50, when you are already here. From November to January it sets around 17:40 and you see the river after dark, with the lights on. Since 2016 the Tabasco Astronomical Society has used the lookout at the top of the tower for stargazing; ask your guide whether it is open that day."
+          },
+          "hora": "18:15",
+          "dur": "55 min",
+          "img": "/ciudades/villahermosa/img/grijalva.jpg",
+          "lat": 17.98631,
+          "lng": -92.91845,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 55
+        },
+        {
+          "n": {
+            "ES": "Catedral del Señor de Tabasco",
+            "EN": "Cathedral of the Lord of Tabasco"
+          },
+          "s": {
+            "ES": "Dos torres de más de 80 metros",
+            "EN": "Two towers over 80 meters tall"
+          },
+          "d": {
+            "ES": "De camino al hotel, el coche para frente al atrio. La catedral anterior, la del Señor de Esquipulas, se demolió en 1934, durante la campaña contra la Iglesia del gobernador Tomás Garrido Canabal. La de ahora se empezó en 1945 y se terminó en 1970, y Juan Pablo II la consagró el 11 de mayo de 1990.",
+            "EN": "On the way back to the hotel the car stops in front of the forecourt. The previous cathedral, dedicated to the Lord of Esquipulas, was demolished in 1934 during Governor Tomás Garrido Canabal's campaign against the Church. The present one was begun in 1945 and finished in 1970, and John Paul II consecrated it on May 11, 1990."
+          },
+          "tip": {
+            "ES": "Por dentro es pequeña al lado de su fachada. Si está abierta, entra a ver el Cristo de madera de tamaño real del altar mayor.",
+            "EN": "Inside it feels small next to its facade. If it is open, step in to see the life-size wooden Christ on the high altar."
+          },
+          "hora": "19:20",
+          "dur": "20 min",
+          "img": "/ciudades/villahermosa/img/catedral.jpg",
+          "lat": 17.98917,
+          "lng": -92.92806,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 20
+        }
+      ],
+      "fotos": [
+        "/ciudades/villahermosa/img/malecon.jpg",
+        "/ciudades/villahermosa/img/azulejos.jpg",
+        "/ciudades/villahermosa/img/azulejos-interior.jpg",
+        "/ciudades/villahermosa/img/palacio.jpg",
+        "/ciudades/villahermosa/img/palacio-noche.jpg",
+        "/ciudades/villahermosa/img/grijalva.jpg",
+        "/ciudades/villahermosa/img/catedral.jpg"
+      ],
+      "duracionMin": 180,
+      "distanciaKm": 12,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El recorrido es llano. Las calles de la Zona Luz son peatonales y de adoquín, y el malecón nuevo tiene rampas de acceso. Si vas en silla de ruedas, pregunta en recepción antes de reservar.",
+        "EN": "The route is flat. The Zona Luz streets are pedestrian and cobbled, and the new riverfront has access ramps. If you use a wheelchair, ask at reception before booking."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 18.00122,
+        "lng": -92.95635,
+        "foto": "/ciudades/villahermosa/img/hotel.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 17:00. Baja cinco minutos antes.",
+          "EN": "Hotel door, at 17:00. Come down five minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale todos los días; los lunes el museo de la Casa de los Azulejos cierra y la casa se ve por fuera.",
+        "EN": "Free up to 24 h before. Runs every day; on Mondays the museum in the Casa de los Azulejos is closed and you see the house from outside."
+      },
+      "salidasFijas": [
+        "17:00"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "ruta-cacao",
+      "expId": "ex3",
+      "img": "/ciudades/villahermosa/img/cacao.jpg",
+      "titulo": {
+        "ES": "La ruta del cacao en Comalcalco",
+        "EN": "The cacao route in Comalcalco"
+      },
+      "tipo": {
+        "ES": "Cacao y arqueología",
+        "EN": "Cacao and archaeology"
+      },
+      "dur": "8 h",
+      "d": {
+        "ES": "Un día en la Chontalpa, la tierra del cacao. Empiezas en Comalcalco, la ciudad maya hecha de ladrillo, y a las 11:00 entras en la Hacienda La Luz a caminar por el cacaotal y ver cómo se hace el chocolate. Después comes cocina tabasqueña y, de vuelta, paras en Cupilco a ver su iglesia pintada de colores. A las 16:30 estás en el hotel.",
+        "EN": "A day in the Chontalpa, cacao country. You start at Comalcalco, the Maya city made of brick, and at 11:00 you enter Hacienda La Luz to walk through the cacao groves and see how chocolate is made. Then you have a Tabasco-style lunch and, on the way back, stop in Cupilco to see its brightly painted church. At 16:30 you are back at the hotel."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 8:30, algo más de una hora y unos 58 km hasta Comalcalco. Vuelta al hotel hacia las 16:30",
+        "EN": "Car leaves from the hotel door at 8:30, just over an hour and about 58 km to Comalcalco. Back at the hotel around 16:30"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el hotel",
+          "Guía",
+          "Entrada a la Hacienda La Luz y a la zona arqueológica de Comalcalco"
+        ],
+        "EN": [
+          "Return transfer from the hotel",
+          "Guide",
+          "Admission to Hacienda La Luz and the Comalcalco archaeological site"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Compras en la tienda de chocolates de la hacienda"
+        ],
+        "EN": [
+          "Food and drinks",
+          "Purchases at the hacienda chocolate shop"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Repelente de mosquitos para el cacaotal",
+          "Gorra y bloqueador solar para la zona arqueológica",
+          "Agua, al menos un litro por persona",
+          "Algo de efectivo para la comida"
+        ],
+        "EN": [
+          "Insect repellent for the cacao groves",
+          "A cap and sunscreen for the archaeological site",
+          "Water, at least a liter each",
+          "Some cash for lunch"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "Rumbo a Comalcalco",
+            "EN": "Heading for Comalcalco"
+          },
+          "d": {
+            "ES": "El coche sale hacia el poniente, a la Chontalpa, unos 58 km hasta Comalcalco. Es una de las zonas que más cacao produce en México.",
+            "EN": "The car heads west into the Chontalpa, about 58 km to Comalcalco. It is one of the main cacao-growing areas in Mexico."
+          },
+          "tip": {
+            "ES": "Desayuna bien antes de salir. La comida es hacia la una.",
+            "EN": "Have a good breakfast before you leave. Lunch is around one."
+          },
+          "hora": "08:30",
+          "dur": "5 min",
+          "img": "/ciudades/villahermosa/img/hotel.jpg",
+          "lat": 18.00122,
+          "lng": -92.95635,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Zona arqueológica de Comalcalco",
+            "EN": "Comalcalco archaeological site"
+          },
+          "s": {
+            "ES": "La ciudad maya de ladrillo",
+            "EN": "The Maya city of brick"
+          },
+          "d": {
+            "ES": "Comalcalco es la ciudad maya más occidental que se conoce. En la llanura de Tabasco no había piedra, así que a partir del año 250 la construyeron con ladrillos de barro cocido unidos con cal de conchas de ostión. Sus habitantes la llamaban Joy Chan, cielo rodeado, y el nombre de casa de los comales se lo pusieron después hablantes de náhuatl al ver los ladrillos. Recorres la Plaza Norte, con el Templo I de unos 20 metros, y la Gran Acrópolis, sobre una plataforma de hasta 35.",
+            "EN": "Comalcalco is the westernmost Maya city known. There was no stone on the Tabasco plain, so from the year 250 it was built with fired clay bricks bound with oyster shell lime. Its people called it Joy Chan, the encircled sky, and the name meaning house of the griddles was given later by Nahuatl speakers who saw the bricks. You walk round the North Plaza, with Temple I about 20 meters high, and the Great Acropolis, on a platform up to 35 meters high."
+          },
+          "tip": {
+            "ES": "Pasa por el museo de sitio. Ahí están los ladrillos con dibujos grabados por una cara, de animales y de rostros.",
+            "EN": "Stop at the site museum. It holds bricks with drawings scratched into one face, of animals and of faces."
+          },
+          "hora": "09:40",
+          "dur": "1 h 10 min",
+          "img": "/ciudades/villahermosa/img/comalcalco-acropolis.jpg",
+          "lat": 18.27944,
+          "lng": -93.20111,
+          "tramo": "coche",
+          "tramoDuracionMin": 65,
+          "duracionMin": 70
+        },
+        {
+          "n": {
+            "ES": "Hacienda La Luz",
+            "EN": "Hacienda La Luz"
+          },
+          "s": {
+            "ES": "Del cacaotal al chocolate",
+            "EN": "From cacao grove to chocolate"
+          },
+          "d": {
+            "ES": "La hacienda es de 1890. En los años treinta la compró el médico alemán Otto Wolter Hayer, que la convirtió en una de las primeras de la región en hacer chocolate, y hoy la lleva su familia. El recorrido dura unas dos horas. Caminas por el cacaotal a la sombra de árboles de mango y de caoba, con monos aulladores arriba, y pasas por el taller donde se hace el chocolate. La visita termina en la casa principal, donde vive la cuarta generación de la familia.",
+            "EN": "The hacienda dates from 1890. In the 1930s it was bought by the German doctor Otto Wolter Hayer, who made it one of the first in the region to produce chocolate, and his family still runs it. The tour takes about two hours. You walk through the cacao grove in the shade of mango and mahogany trees, with howler monkeys overhead, and pass the workshop where the chocolate is made. The visit ends at the main house, where the fourth generation of the family lives."
+          },
+          "tip": {
+            "ES": "Los recorridos salen de lunes a sábado a las 9:00, 11:00 y 13:00, y esta ruta entra en el de las 11:00. En la tienda está el chocolate de 70 % con sal de hormiga chicatana y cardamomo que ganó la medalla de oro de los International Chocolate Awards de Londres en 2017.",
+            "EN": "Tours run Monday to Saturday at 9:00, 11:00 and 13:00, and this route joins the 11:00 one. The shop sells the 70 % chocolate with chicatana ant salt and cardamom that won gold at the International Chocolate Awards in London in 2017."
+          },
+          "hora": "11:00",
+          "dur": "2 h",
+          "img": "/ciudades/villahermosa/img/hacienda-la-luz.jpg",
+          "lat": 18.26762,
+          "lng": -93.22753,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 120
+        },
+        {
+          "n": {
+            "ES": "Comida tabasqueña e iglesia de Cupilco",
+            "EN": "Tabasco lunch and the church of Cupilco"
+          },
+          "s": {
+            "ES": "La iglesia pintada, de camino al hotel",
+            "EN": "The painted church, on the way back"
+          },
+          "d": {
+            "ES": "Comes en Comalcalco. Pide tamalitos de chipilín y, para beber, pozol con cacao; si hay pejelagarto asado, se come en taco con chile amashito y limón. La comida va por tu cuenta y el guía te propone dónde. De vuelta, a 10 km por la misma carretera, paras en Cupilco. Su iglesia de la Asunción, de finales del siglo XVIII, tiene la fachada pintada de amarillo, azul, rojo y verde, con flores y plantas. Fue de los pocos templos que se salvaron en la campaña de Tomás Garrido Canabal.",
+            "EN": "Lunch is in Comalcalco. Order chipilín tamales and, to drink, pozol with cacao; if there is roast pejelagarto, it comes in a taco with amashito chili and lime. Lunch is at your own expense and the guide suggests where to go. On the way back, 10 km along the same road, you stop in Cupilco. Its church of the Assumption, from the late 18th century, has a facade painted yellow, blue, red and green, with flowers and plants. It was one of the few churches spared in Tomás Garrido Canabal's campaign."
+          },
+          "tip": {
+            "ES": "Según la tradición, la imagen de la Virgen apareció en 1638 en una barca frente a la playa de Tupilco. Pregúntale al guía por qué dicen que se movía cada noche hasta llegar aquí.",
+            "EN": "Tradition says the image of the Virgin appeared in 1638 in a small boat off Tupilco beach. Ask your guide why people say it moved every night until it reached this village."
+          },
+          "hora": "13:10",
+          "dur": "2 h",
+          "img": "/ciudades/villahermosa/img/cupilco.jpg",
+          "lat": 18.23806,
+          "lng": -93.1275,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 120
+        }
+      ],
+      "fotos": [
+        "/ciudades/villahermosa/img/cacao.jpg",
+        "/ciudades/villahermosa/img/comalcalco.jpg",
+        "/ciudades/villahermosa/img/comalcalco-acropolis.jpg",
+        "/ciudades/villahermosa/img/hacienda-la-luz.jpg",
+        "/ciudades/villahermosa/img/chocotour.jpg",
+        "/ciudades/villahermosa/img/cacao-mazorca.jpg",
+        "/ciudades/villahermosa/img/tamal-chipilin.jpg",
+        "/ciudades/villahermosa/img/pozol.jpg",
+        "/ciudades/villahermosa/img/cupilco.jpg",
+        "/ciudades/villahermosa/img/cupilco-interior.jpg"
+      ],
+      "duracionMin": 480,
+      "distanciaKm": 120,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Se camina en total unas tres horas, por senderos de tierra en el cacaotal y por escalinatas en la zona arqueológica. Con movilidad reducida, pregunta en recepción antes de reservar.",
+        "EN": "You walk for about three hours in total, on dirt paths in the cacao grove and up steps at the archaeological site. If you have reduced mobility, ask at reception before booking."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 18.00122,
+        "lng": -92.95635,
+        "foto": "/ciudades/villahermosa/img/hotel.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 8:30. Baja diez minutos antes.",
+          "EN": "Hotel door, at 8:30. Come down ten minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale de martes a sábado; la Hacienda La Luz no hace recorridos los domingos.",
+        "EN": "Free up to 24 h before. Runs Tuesday to Saturday; Hacienda La Luz does not run tours on Sundays."
+      },
+      "salidasFijas": [
+        "08:30"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "yumka",
+      "expId": "ex4",
+      "img": "/ciudades/villahermosa/img/yumka.jpg",
+      "titulo": {
+        "ES": "El Yumká, selva y sabana a 20 minutos",
+        "EN": "Yumká, jungle and savanna 20 minutes away"
+      },
+      "tipo": {
+        "ES": "Naturaleza",
+        "EN": "Nature"
+      },
+      "dur": "4 h",
+      "d": {
+        "ES": "Una mañana de fin de semana en familia. El Yumká tiene 101 hectáreas junto al aeropuerto. La selva se recorre a pie hasta un puente colgante y la sabana en un tren entre cebras y antílopes. En la laguna ves el manatí y das una vuelta en lancha, y a la una estás de vuelta en el hotel.",
+        "EN": "A weekend morning with the family. Yumká covers 101 hectares next to the airport. You walk through the jungle to a suspension bridge and cross the savanna on a train among zebras and antelopes. At the lagoon you see the manatee and take a boat ride, and by one o'clock you are back at the hotel."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 9:00, entre 20 y 25 minutos y unos 21 km hasta el Yumká. Vuelta al hotel hacia las 13:00",
+        "EN": "Car leaves from the hotel door at 9:00, 20 to 25 minutes and about 21 km to Yumká. Back at the hotel around 13:00"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el hotel",
+          "Entrada al Yumká",
+          "Recorridos por la selva, la sabana y la laguna"
+        ],
+        "EN": [
+          "Return transfer from the hotel",
+          "Yumká admission",
+          "Jungle, savanna and lagoon tours"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Propinas"
+        ],
+        "EN": [
+          "Food and drinks",
+          "Tips"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Repelente de mosquitos",
+          "Gorra y bloqueador solar para el tren de la sabana",
+          "Agua",
+          "Calzado cómodo para el sendero de la selva"
+        ],
+        "EN": [
+          "Insect repellent",
+          "A cap and sunscreen for the savanna train",
+          "Water",
+          "Comfortable shoes for the jungle trail"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "Rumbo al Yumká",
+            "EN": "Heading for Yumká"
+          },
+          "d": {
+            "ES": "El coche sale hacia el oriente por la carretera del aeropuerto. El Yumká queda unos 4 km después de la terminal, a unos 17 km del centro de Villahermosa.",
+            "EN": "The car heads east along the airport road. Yumká lies about 4 km past the terminal, some 17 km from downtown Villahermosa."
+          },
+          "tip": {
+            "ES": "Ponte el repelente antes de salir. La primera parte es a pie por la selva.",
+            "EN": "Put on insect repellent before you leave. The first part is on foot through the jungle."
+          },
+          "hora": "09:00",
+          "dur": "5 min",
+          "img": "/ciudades/villahermosa/img/hotel.jpg",
+          "lat": 18.00122,
+          "lng": -92.95635,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "La selva a pie",
+            "EN": "The jungle on foot"
+          },
+          "s": {
+            "ES": "Un sendero de 700 metros hasta el puente colgante",
+            "EN": "A 700-meter trail to the suspension bridge"
+          },
+          "d": {
+            "ES": "Un guía te lleva por un sendero de unos 700 metros y te va diciendo qué árbol es cada uno. Hay animales sueltos, como monos aulladores, mapaches o iguanas, y los felinos están en sus recintos. El sendero acaba en un puente colgante que cruza una parte de la laguna. La selva ocupa 33 hectáreas y es el hábitat original de la región.",
+            "EN": "A guide leads you along a trail of about 700 meters, naming the trees as you go. Some animals roam free, such as howler monkeys, raccoons or iguanas, and the big cats are in their enclosures. The trail ends at a suspension bridge over part of the lagoon. The jungle covers 33 hectares and is the original habitat of the region."
+          },
+          "tip": {
+            "ES": "Los chontales llamaban Yumká al duende que cuidaba las plantas y los animales de la selva. De ahí viene el nombre del parque.",
+            "EN": "The Chontal people gave the name Yumká to the spirit that looked after the plants and animals of the jungle. That is where the park gets its name."
+          },
+          "hora": "09:30",
+          "dur": "50 min",
+          "img": "/ciudades/villahermosa/img/yumka-selva.jpg",
+          "lat": 18.00091,
+          "lng": -92.80416,
+          "tramo": "coche",
+          "tramoDuracionMin": 25,
+          "duracionMin": 50
+        },
+        {
+          "n": {
+            "ES": "La sabana en tren",
+            "EN": "The savanna by train"
+          },
+          "s": {
+            "ES": "Cebras y antílopes desde el tren",
+            "EN": "Zebras and antelopes from the train"
+          },
+          "d": {
+            "ES": "La sabana ocupa 26 hectáreas y es la zona con más animales. La recorres en un tren de vagones abiertos, y los animales andan sueltos por el pasto, entre ellos cebras y varias especies de antílopes.",
+            "EN": "The savanna covers 26 hectares and has the most animals. You ride through it on a train with open carriages, while the animals roam the grassland, zebras and several kinds of antelope among them."
+          },
+          "tip": {
+            "ES": "La sabana es la parte con menos árboles. Ponte la gorra antes de subir al tren.",
+            "EN": "The savanna has the fewest trees. Put your cap on before you board the train."
+          },
+          "hora": "10:25",
+          "dur": "45 min",
+          "img": "/ciudades/villahermosa/img/yumka-sabana.jpg",
+          "lat": 18.00091,
+          "lng": -92.80416,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "La laguna en lancha",
+            "EN": "The lagoon by boat"
+          },
+          "s": {
+            "ES": "El manatí y la vuelta en lancha",
+            "EN": "The manatee and a boat ride"
+          },
+          "d": {
+            "ES": "El tren para en la laguna y la casa club. La laguna es el área más grande del Yumká, con 42 hectáreas, y casi todos sus animales son de Tabasco, como el manatí del Caribe y el cocodrilo de pantano. Aquí está el manatinario, y de aquí salen los recorridos en lancha.",
+            "EN": "The train stops at the lagoon and the clubhouse. The lagoon is the largest area of Yumká, at 42 hectares, and almost all its animals are native to Tabasco, such as the Caribbean manatee and the swamp crocodile. The manatee pool is here, and the boat rides leave from here too."
+          },
+          "tip": {
+            "ES": "El manatí del Caribe está en peligro de extinción. Pregunta a los guías si ese día se le puede ver de cerca.",
+            "EN": "The Caribbean manatee is endangered. Ask the guides whether you can see it up close that day."
+          },
+          "hora": "11:15",
+          "dur": "1 h",
+          "img": "/ciudades/villahermosa/img/yumka-laguna.jpg",
+          "lat": 18.00091,
+          "lng": -92.80416,
+          "tramo": "tram",
+          "tramoDuracionMin": 5,
+          "duracionMin": 60
+        }
+      ],
+      "fotos": [
+        "/ciudades/villahermosa/img/yumka.jpg",
+        "/ciudades/villahermosa/img/yumka-selva.jpg",
+        "/ciudades/villahermosa/img/yumka-sabana.jpg",
+        "/ciudades/villahermosa/img/yumka-antilopes.jpg",
+        "/ciudades/villahermosa/img/yumka-guacamayas.jpg",
+        "/ciudades/villahermosa/img/yumka-laguna.jpg"
+      ],
+      "duracionMin": 240,
+      "distanciaKm": 44,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El sendero de la selva es de tierra y termina en un puente colgante. Con silla de ruedas o carriola, pregunta en recepción antes de reservar.",
+        "EN": "The jungle trail is a dirt path that ends at a suspension bridge. With a wheelchair or stroller, ask at reception before booking."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 18.00122,
+        "lng": -92.95635,
+        "foto": "/ciudades/villahermosa/img/hotel.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 9:00. Baja cinco minutos antes.",
+          "EN": "Hotel door, at 9:00. Come down five minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale de martes a domingo; los lunes el Yumká cierra.",
+        "EN": "Free up to 24 h before. Runs Tuesday to Sunday; Yumká is closed on Mondays."
+      },
+      "salidasFijas": [
+        "09:00"
+      ],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Una taza de chocolate tabasqueño en Persé a la vuelta",
+      "EN": "A cup of Tabasco hot chocolate at Persé when you get back"
+    }
+  },
+  "creditos": [
+    "Cabeza colosal olmeca, Parque-Museo La Venta: Glysiak, CC BY-SA 4.0, Wikimedia Commons",
+    "Laguna de las Ilusiones y Mirador de las Águilas (recorte): Krlosherrera192, CC BY-SA 4.0, Wikimedia Commons",
+    "Malecón del Grijalva y Torre del Caballero: Alfonsobouchot, CC BY-SA 4.0, Wikimedia Commons",
+    "Casa de los Azulejos, Zona Luz: Alfonsobouchot, Public domain, Wikimedia Commons",
+    "Pejelagartos asados: Alfonsobouchot, Public domain, Wikimedia Commons",
+    "Planetario Tabasco 2000: Sachavir, CC BY-SA 2.0, Wikimedia Commons",
+    "Puente colgante del Yumká: Alfonsobouchot, CC BY-SA 3.0, Wikimedia Commons",
+    "Templo I, Comalcalco: Alfonsobouchot, CC BY-SA 3.0, Wikimedia Commons",
+    "Cabeza colosal Monumento 4, Parque-Museo La Venta: Arian Zwegers from Brussels, Belgium, CC BY 2.0, Wikimedia Commons",
+    "Altar 4 de La Venta: Ruben Charles, CC BY 2.0, Wikimedia Commons",
+    "Cabeza olmeca en la selva del Parque-Museo La Venta: diego_cue, CC BY-SA 3.0, Wikimedia Commons",
+    "Entrada al Parque-Museo La Venta: Alfonsobouchot, CC BY-SA 4.0, Wikimedia Commons",
+    "Laguna de las Ilusiones desde el parque Tomás Garrido Canabal: Alfonsobouchot, CC BY-SA 4.0, Wikimedia Commons",
+    "Laguna de las Ilusiones desde lo alto: Comisión Mexicana de Filmaciones from México D. F., México, CC BY-SA 2.0, Wikimedia Commons",
+    "Entrada del hotel en el Paseo Usumacinta (recorte): Alfonsobouchot, CC BY-SA 4.0, Wikimedia Commons",
+    "Interior de la Casa de los Azulejos: Alfonsobouchot, CC BY-SA 3.0, Wikimedia Commons",
+    "Palacio de Gobierno de Tabasco: Richardth, CC BY-SA 3.0, Wikimedia Commons",
+    "Palacio de Gobierno de noche: Alfonsobouchot, CC BY-SA 3.0, Wikimedia Commons",
+    "Río Grijalva y Torre del Caballero: Alfonsobouchot, CC BY 3.0, Wikimedia Commons",
+    "Catedral del Señor de Tabasco (recorte): Alfonsobouchot, CC BY-SA 3.0, Wikimedia Commons",
+    "Casa de los Azulejos desde la esquina: Kazekage AMT, CC BY-SA 3.0, Wikimedia Commons",
+    "Mazorcas de cacao en una hacienda de Tabasco: AlejandroLinaresGarcia, CC BY-SA 3.0, Wikimedia Commons",
+    "Estructura 1 de la Gran Acrópolis, Comalcalco: Alfonsobouchot, CC BY-SA 4.0, Wikimedia Commons",
+    "Casco de la Hacienda La Luz, Comalcalco: Alfonsobouchot, CC BY-SA 3.0, Wikimedia Commons",
+    "Tienda y oficinas de la Hacienda La Luz: Alfonsobouchot, CC BY-SA 3.0, Wikimedia Commons",
+    "Mazorca de cacao en el tronco: AlejandroLinaresGarcia, CC BY-SA 3.0, Wikimedia Commons",
+    "Tamal de chipilín: Alfonsobouchot, CC BY-SA 3.0, Wikimedia Commons",
+    "Pozol en jícara y dulces tabasqueños: Irene Barrueta, CC BY-SA 4.0, Wikimedia Commons",
+    "Iglesia de la Asunción, Cupilco: AlejandroLinaresGarcia, CC BY-SA 3.0, Wikimedia Commons",
+    "Nave de la iglesia de Cupilco: AlejandroLinaresGarcia, CC BY-SA 3.0, Wikimedia Commons",
+    "Sendero de la selva en el Yumká: Alfonsobouchot, CC BY-SA 3.0, Wikimedia Commons",
+    "Cebra en la sabana del Yumká: Alfonsobouchot, CC BY-SA 3.0, Wikimedia Commons",
+    "Antílopes en la sabana del Yumká: Alfonsobouchot, CC BY-SA 3.0, Wikimedia Commons",
+    "Guacamayas en el Yumká: Alfonsobouchot, CC BY-SA 3.0, Wikimedia Commons",
+    "Laguna del Yumká: Alfonsobouchot, CC BY-SA 3.0, Wikimedia Commons"
+  ]
+}

@@ -1,0 +1,127 @@
+CRÉDITOS DE FOTOGRAFÍA Y VÍDEO — carta Quinta Edén Villahermosa (Tabasco, México)
+==================================================================================
+USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
+Las fotos de la carta, recortadas a 800×533 y calidad ~72 (og.jpg a 1200×630).
+
+1) MATERIAL DEL HOTEL — propiedad de Quinta Edén Villahermosa, solo para la demo privada
+   Origen: la galería que sirve su web hotelquintaeden.com (GuruHotel, bucket
+   guruhotelfiles/production/736292d0-8af8-4c56-96a4-8cf68fff5486/; entre paréntesis,
+   el fichero original). Consultado el 30-oct-2026. Antes de cualquier uso público se
+   sustituye por el material que facilite el hotel.
+     banner.jpg     Fachada blanca con tejados rojos y palmeras (image-1713996774426.png)
+     og.jpg         Fachada y fuente de la entrada al atardecer (image-1713996774360.png)
+     sv4.jpg        Master Suite (room-3024-image-1713997524540.png)
+     ex7.jpg        Alberca del patio, con los arcos (image-1776191653056-sq55ncev4ar.png)
+     mesa-perse.jpg Mesa de desayuno de Persé junto a los ventanales (image-1729025909890-y3febibvpv.jpg)
+     cm9.jpg        Platillo de Persé, camarones y res (image-1714067987387-2hqu4ufj6yq.jpg)
+     cm12.jpg       Corte a la parrilla en tabla con chiles toreados (image-1764287610686-v7r4mxr9kxl.jpg)
+     cm13.jpg       Parrillada con guacamole y cerveza (image-1729631955822-kbez7146opi.jpg)
+     cm14.jpg       Pizzas y ensalada de Persé (image-1728594963247-rkdjhigrhj.jpg)
+     ds3.jpg        Huevos con tocino, jamón y plátano frito (image-1729631942121-2q37koozhvj.jpg)
+     pk3.jpg        Desayuno completo visto desde arriba (image-1714072427848-6637d8s01mt.jpg)
+     up1.jpg, up2.jpg, up4.jpg, up5.jpg  Suites del hotel (image-1740443732248-e72y1lsgeis.JPG,
+                    image-1740443732248-z21cu2ny6a.JPG, image-1740443833802-iwmb3zvoi3.JPG,
+                    image-1740443911160-p9nkqwdznv.JPG). Su web no dice qué suite es cada foto.
+     up3.jpg        Lobby con palmeras y candil (image-1713996786348.png)
+     sv3.jpg        Sala del business center (image-1729364545804-nb9cr2fb25i.jpg)
+     sv12.jpg       Salón montado en U (image-1714069885231-6jan9m01ih8.jpg)
+     ex5.jpg        Patio central con sombrillas y la fachada (image-1713996779243.png)
+     ex6.jpg        Galería de arte del lobby (image-1713996782707.png)
+   Los nombres exactos de cada foto están en el scratchpad de la sesión (imgs.json), por
+   si hace falta pedírselas al hotel en alta.
+
+   logo.png / logo-white.png — el monograma QE dorado y «Hotel Quinta Edén», sacados del
+   logotipo que enlaza su web (zavia-public, logos/40116.png, 1619×1517), sin la línea
+   «Villahermosa», que va en el lema de la bienvenida. logo-white.png, en blanco.
+
+2) VÍDEO DE BIENVENIDA (30-oct-2026)
+     vid/welcome.mp4 (póster img/welcome.jpg = primer fotograma)
+     1080×1920, 30 fps, 11,7 s, H.264 High sin audio, CRF 20, fast start, 7,2 MB.
+     Cuatro planos de unos 3 s con fundidos de 0,4 s; el último funde con el arranque del
+     primero para que el bucle no salte. Recorte vertical sobre vídeo real de dron, sin
+     fotos fijas.
+       1. La Laguna de las Ilusiones con el Mirador de las Águilas en el centro (tramo
+          44,0–47,7 s, acercamiento lento).
+       2. La laguna y el parque Tomás Garrido Canabal, con las torres de la Catedral al
+          fondo (tramo 10,0–13,2 s).
+       3. La copa de los árboles del parque al despegar el dron (tramo 1,0–4,2 s).
+       4. La laguna entre la selva y la ciudad (tramo 28,0–31,2 s).
+       Fuente de los cuatro: «Laguna de las Ilusiones y Parque Garrido Canabal» ·
+       ProtoplasmaKid · Wikimedia Commons · CC BY-SA 4.0 · 1920×1080
+       https://commons.wikimedia.org/wiki/File:Laguna_de_las_Ilusiones_y_Parque_Garrido_Canabal.webm
+     Pendiente: el vídeo oficial del hotel está en su portada (Vimeo 1018391953), pero el
+     reproductor solo funciona dentro de hotelquintaeden.com y no se ha podido descargar.
+     Con ese fichero, el primer plano pasa a ser el hotel.
+
+3) WIKIMEDIA COMMONS (las mismas fotos que la guía de Villahermosa, public/ciudades/villahermosa)
+     ex1.jpg   Cabeza olmeca en la selva del Parque-Museo La Venta · diego_cue · CC BY-SA 3.0
+               https://commons.wikimedia.org/wiki/File:Olmec_Head_in_Villahermosa_-_Mexico_-_panoramio.jpg
+     ex2.jpg   Malecón del Grijalva y Torre del Caballero · Alfonsobouchot · CC BY-SA 4.0
+               https://commons.wikimedia.org/wiki/File:Villahermosa_Vista_del_Grijalva.jpg
+     ex3.jpg   Casco de la Hacienda La Luz, Comalcalco · Alfonsobouchot · CC BY-SA 3.0
+               https://commons.wikimedia.org/wiki/File:Comalcalco_Hacienda_La_Luz_2.JPG
+     ex4.jpg   Cebra en la sabana del Yumká · Alfonsobouchot · CC BY-SA 3.0
+               https://commons.wikimedia.org/wiki/File:Yumk%C3%A1_05.JPG
+     cm2.jpg   Pejelagartos asados · Alfonsobouchot · dominio público
+               https://commons.wikimedia.org/wiki/File:Tabasco_Gastronom%C3%ADa_1.jpg
+     cm3.jpg   Tamal de chipilín · Alfonsobouchot · CC BY-SA 3.0
+               https://commons.wikimedia.org/wiki/File:Tabasco_Tamal_de_Chipil%C3%ADn.jpg
+     ds10.jpg  Pozol en jícara y dulces tabasqueños · Irene Barrueta · CC BY-SA 4.0
+               https://commons.wikimedia.org/wiki/File:Pozol_y_dulces_t%C3%ADpicos_tabasque%C3%B1os.jpg
+     sp3.jpg   Mazorca de cacao en el tronco · AlejandroLinaresGarcia · CC BY-SA 3.0
+               https://commons.wikimedia.org/wiki/File:CacaoChonita12.JPG
+   De la carta presidente-miyana (sección 3 de sus créditos):
+     cm4.jpg   «Tortilla Soup» · Wikiwrimo · CC BY-SA 4.0
+     cm11.jpg  «Tacos de Arrachera» · T.Tseng · CC BY 2.0
+     pk4.jpg   «Shot de mezcal en el Bar Baltra» · Janramwill · CC BY-SA 4.0
+     bb7.jpg   «Negroni served in Vancouver BC» · Geoff Peters · CC BY 2.0
+
+4) PEXELS (licencia Pexels: uso libre, sin atribución obligatoria; se cita igual)
+   Las mismas que la carta presidente-miyana (entre paréntesis, su nombre allí). No son
+   del hotel ni de su cocina.
+     cm5 (cm11)  Sandwiches on a Plate · Yuen Tou Zan · https://www.pexels.com/photo/sandwiches-on-a-plate-15362507/
+     cm6 (cm6)   Vegetable Salad with Chicken Strips · Shameel mukkath · https://www.pexels.com/photo/vegetable-salad-with-chicken-strips-5639372/
+     cm10 (cm10) Delicious Green Enchiladas with Creamy Garnish · Willians Huerta · https://www.pexels.com/photo/delicious-green-enchiladas-with-creamy-garnish-36429905/
+     cm8 (cm12)  Btl Burger With Fries · Foodie Factor · https://www.pexels.com/photo/btl-burger-with-fries-551991/
+     cm1 (cm1)   Authentic Mexican Food · Snappr · https://www.pexels.com/photo/authentic-mexican-food-27603271/
+     cm7 (cm3)   Delicious Cheese Quesadillas with Salsa and Dip · Tiwi Riders · https://www.pexels.com/photo/delicious-cheese-quesadillas-with-salsa-and-dip-28443135/
+     pk1 (pk1)   A Steaming Bowl of Soup · Calvin · https://www.pexels.com/photo/a-steaming-bowl-of-soup-5820105/
+     pk2 (pk2)   Silver and Black Laptop · Burak The Weekender · https://www.pexels.com/photo/silver-and-black-laptop-205508/
+     pk5 (pk5)   Dinner with Wine and Candles · Vinícius Vieira ft · https://www.pexels.com/photo/dinner-with-wine-and-candles-19763210/
+     pk6 (pk6)   A White Cake with Burning Candle on a Wooden Bench · Cup of Couple · https://www.pexels.com/photo/a-white-cake-with-burning-candle-on-a-wooden-bench-8015274/
+     dl1 (dl2)   Yummy chocolate cake served with blackberry · Alex Dugquem · https://www.pexels.com/photo/yummy-chocolate-cake-served-with-blackberry-4329844/
+     dl2 (dl3)   Delicious Tres Leches Cake with Cherries in Quito, Ecuador · Cristian Arteaga · https://www.pexels.com/photo/delicious-tres-leches-cake-with-cherries-in-quito-ecuador-37228442/
+     dl3 (dl4)   A Close-Up Shot of a Cheesecake with Berries · Suzy Hazelwood · https://www.pexels.com/photo/a-close-up-shot-of-a-cheesecake-with-berries-7227435/
+     ds5 (ds5)   Brown Paper Bag on Concrete Stairs · MART PRODUCTION · https://www.pexels.com/photo/brown-paper-bag-on-concrete-stairs-8165417/
+     ds1 (ds1)   Egg and Meat in Bowl · 23 Audiovisual · https://www.pexels.com/photo/egg-and-meat-in-bowl-19029777/
+     ds6 (ds6)   Delicious Mexican Molletes on Rustic Plate · Amar Preciado · https://www.pexels.com/photo/delicious-mexican-molletes-on-rustic-plate-30925108/
+     ds7 (ds7)   Delicious Granola Breakfast with Berries · Not My Real Name · https://www.pexels.com/photo/delicious-granola-breakfast-with-berries-30529077/
+     ds9 (ds9)   Stack of Pancakes with Strawberries and Syrup · Tochukwu Ekeh · https://www.pexels.com/photo/stack-of-pancakes-with-strawberries-and-syrup-37648012/
+     ds8 (ds8)   Photograph of a Black Cup with Coffee · Sami Aksu · https://www.pexels.com/photo/photograph-of-a-black-cup-with-coffee-14356266/
+     ds4 (ds4)   Cup of Coffee on Saucer · Pixabay · https://www.pexels.com/photo/cup-of-coffee-on-saucer-459489/
+     ds2 (ds2)   Selective Focus Photography of Pure Orange Juice · Pixabay · https://www.pexels.com/photo/selective-focus-photography-of-pure-orange-juice-158053/
+     sv5 (pk3)   Breakfast table. · Jakub Zerdzicki · https://www.pexels.com/photo/breakfast-table-27846221/
+     sv6 (sv6)   Neatly Folded White Crew Neck T-shirt Over Other Shirts · Polina Tankilevitch · https://www.pexels.com/photo/neatly-folded-white-crew-neck-t-shirt-over-other-shirts-4440572/
+     sv7 (sv7)   Close-up of Row · Pixabay · https://www.pexels.com/photo/close-up-of-row-325876/
+     sv1 (sv1)   Man Opening Car Door For Woman · Сергей Тарасов · https://www.pexels.com/photo/man-opening-car-door-for-woman-15774577/
+     sv2 (sv2)   Aerial View of Mexican Countryside Highway at Daytime · Heriberto Hernández · https://www.pexels.com/photo/aerial-view-of-mexican-countryside-highway-at-daytime-30741104/
+     am1 (am1)   Side Table Near Bead Frame · Castorly Stock · https://www.pexels.com/photo/side-table-near-bead-frame-3682238/
+     am2 (am2)   Blue and White Toothpaste on Toothbrush · AS Photography · https://www.pexels.com/photo/blue-and-white-toothpaste-on-toothbrush-216729/
+     am3 (am3)   Smartphone charging port and charger usb connector · kaboompics.com · https://www.pexels.com/photo/smartphone-charging-port-and-charger-usb-connector-4195332/
+     am4 (am4)   Wooden Bed with Checkered Linen · Anastasia Prideina · https://www.pexels.com/photo/wooden-bed-with-checkered-linen-7765002/
+     am5 (am5)   Sausage on a Cutting Board and Beer Bottles in an Ice Bucket · Alex Tyson · https://www.pexels.com/photo/sausage-on-a-cutting-board-and-beer-bottles-in-an-ice-bucket-19955750/
+     am6 (am6)   Baby Blanket Hanging on a White Wooden Crib · kaboompics.com · https://www.pexels.com/photo/baby-blanket-hanging-on-a-white-wooden-crib-4964488/
+     bb3 (bb3)   Refreshing Green Margarita Cocktail in Focus · Roy Muriithi · https://www.pexels.com/photo/refreshing-green-margarita-cocktail-in-focus-30591631/
+     bb1 (bb9)   Bottles of Mezcal and Shot Glasses Standing on a Table · Viridiana Rivera · https://www.pexels.com/photo/bottles-of-mezcal-and-shot-glasses-standing-on-a-table-22891891/
+     bb10 (bb10) Clear Drinking Glass On Table · Li Sun · https://www.pexels.com/photo/clear-drinking-glass-on-table-2466319/
+     bb6 (bb6)   Bottles of Beer on Bar Counter · Jonathan Reynaga · https://www.pexels.com/photo/bottles-of-beer-on-bar-counter-19841825/
+     bb2 (bb2)   Clear Wine Glass · SplitShire · https://www.pexels.com/photo/alcohol-drink-glass-drinking-1484/
+     bb4 (bb4)   Close-up Photo of Brand of Wine beside Wine Glass · Edoardo Tommasini · https://www.pexels.com/photo/close-up-photo-of-brand-of-wine-beside-wine-glass-11675005/
+     bb8 (bb8)   Close Up Photo of Champagne Bottles and Wine Glasses · Pavel Danilyuk · https://www.pexels.com/photo/close-up-photo-of-champagne-bottles-and-wine-glasses-6405650/
+     bb11 (bb11) Glass of Lemonade · çiğdem çelenk · https://www.pexels.com/photo/glass-of-lemonade-18187120/
+     bb12 (bb12) Glass Bottles of Water Near Stones on a White Surface · Marina Leonova · https://www.pexels.com/photo/glass-bottles-of-water-near-stones-on-a-white-surface-7509048/
+     sp1 (sp1)   A Woman Doing Back Massage · cottonbro studio · https://www.pexels.com/photo/a-woman-doing-back-massage-7235064/
+     sp2 (sp2)   A Person Having a Foot Massage · KoolShooters · https://www.pexels.com/photo/a-person-having-a-foot-massage-6628697/
+
+   Ojo antes de enseñarla: bb6 (cervezas) y bb1 (mezcal) llevan la etiqueta de su marca,
+   y bb4 la de un tinto italiano. Son producto que se sirve, sin marca de otro hotel.

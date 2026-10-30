@@ -1,0 +1,377 @@
+{
+  "la-venta-1": {
+    "pregunta": {
+      "ES": "¿Qué encontró Pemex cerca de La Venta en los años cincuenta?",
+      "EN": "What did Pemex find near La Venta in the 1950s?"
+    },
+    "opciones": [
+      {
+        "ES": "Un yacimiento de petróleo",
+        "EN": "An oil field"
+      },
+      {
+        "ES": "Una mina de basalto",
+        "EN": "A basalt quarry"
+      },
+      {
+        "ES": "Un río subterráneo",
+        "EN": "An underground river"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Encontró petróleo junto al poblado de La Venta y empezó a explotarlo enseguida, destruyendo vestigios. Por eso Carlos Pellicer se trajo las piezas a Villahermosa.",
+      "EN": "It struck oil next to the village of La Venta and began drilling at once, destroying remains. That is why Carlos Pellicer moved the pieces to Villahermosa."
+    }
+  },
+  "la-venta-2": {
+    "pregunta": {
+      "ES": "¿Cuánto pesa la cabeza colosal llamada Monumento 1?",
+      "EN": "How much does the colossal head known as Monument 1 weigh?"
+    },
+    "opciones": [
+      {
+        "ES": "Unas 8 toneladas",
+        "EN": "About 8 tons"
+      },
+      {
+        "ES": "Unas 24 toneladas",
+        "EN": "About 24 tons"
+      },
+      {
+        "ES": "Unas 60 toneladas",
+        "EN": "About 60 tons"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Mide 2.41 metros de alto y pesa unas 24 toneladas. Es la segunda más pesada de todas las cabezas olmecas encontradas hasta hoy.",
+      "EN": "It is 2.41 meters tall and weighs about 24 tons. It is the second heaviest of all the Olmec heads found so far."
+    }
+  },
+  "la-venta-3": {
+    "pregunta": {
+      "ES": "¿Cuántas hectáreas tiene hoy la Laguna de las Ilusiones?",
+      "EN": "How many hectares does the Laguna de las Ilusiones cover today?"
+    },
+    "opciones": [
+      {
+        "ES": "Unas 40",
+        "EN": "About 40"
+      },
+      {
+        "ES": "Más de 900",
+        "EN": "Over 900"
+      },
+      {
+        "ES": "Unas 156",
+        "EN": "About 156"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Llegó a ocupar más de 360 hectáreas. Los rellenos de las colonias de alrededor la dejaron en poco más de 156, y hoy es reserva ecológica.",
+      "EN": "It once covered more than 360 hectares. Landfill for the surrounding neighborhoods cut it to just over 156, and today it is an ecological reserve."
+    }
+  },
+  "centro-malecon-1": {
+    "pregunta": {
+      "ES": "¿Qué nombre le puso Diego de Quijada a la ciudad en 1564?",
+      "EN": "What name did Diego de Quijada give the city in 1564?"
+    },
+    "opciones": [
+      {
+        "ES": "Villa Carmona",
+        "EN": "Villa Carmona"
+      },
+      {
+        "ES": "Santa María de la Victoria",
+        "EN": "Santa María de la Victoria"
+      },
+      {
+        "ES": "San Juan de Ulúa",
+        "EN": "San Juan de Ulúa"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La llamó Villa Carmona porque las vegas del río le recordaban a las del Guadalquivir junto a Carmona, en España. El nombre de Villahermosa llegó después.",
+      "EN": "He called it Villa Carmona because the riverbanks reminded him of the Guadalquivir meadows near Carmona, in Spain. The name Villahermosa came later."
+    }
+  },
+  "centro-malecon-2": {
+    "pregunta": {
+      "ES": "¿Qué dios romano está en la esquina de lo alto de la Casa de los Azulejos?",
+      "EN": "Which Roman god stands on the top corner of the Casa de los Azulejos?"
+    },
+    "opciones": [
+      {
+        "ES": "Neptuno",
+        "EN": "Neptune"
+      },
+      {
+        "ES": "Mercurio",
+        "EN": "Mercury"
+      },
+      {
+        "ES": "Júpiter",
+        "EN": "Jupiter"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Es Mercurio, el dios del comercio, y la casa era de un comerciante, José María Graham McGregor. En la balaustrada lo acompañan otras diez esculturas.",
+      "EN": "It is Mercury, god of trade, and the house belonged to a merchant, José María Graham McGregor. Ten more statues stand with him on the balustrade."
+    }
+  },
+  "centro-malecon-3": {
+    "pregunta": {
+      "ES": "¿Qué pasó en Villahermosa en noviembre de 2007?",
+      "EN": "What happened in Villahermosa in November 2007?"
+    },
+    "opciones": [
+      {
+        "ES": "Un terremoto",
+        "EN": "An earthquake"
+      },
+      {
+        "ES": "Un huracán",
+        "EN": "A hurricane"
+      },
+      {
+        "ES": "Se desbordó el Grijalva",
+        "EN": "The Grijalva burst its banks"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El 1 de noviembre de 2007 el Grijalva se desbordó. El agua llegó a cubrir el 70 % del estado y el centro histórico quedó inundado por completo.",
+      "EN": "On November 1, 2007, the Grijalva burst its banks. Water covered 70 % of the state and the historic center was completely flooded."
+    }
+  },
+  "centro-malecon-4": {
+    "pregunta": {
+      "ES": "¿Quién consagró la Catedral del Señor de Tabasco?",
+      "EN": "Who consecrated the Cathedral of the Lord of Tabasco?"
+    },
+    "opciones": [
+      {
+        "ES": "Juan Pablo II",
+        "EN": "John Paul II"
+      },
+      {
+        "ES": "Benedicto XVI",
+        "EN": "Benedict XVI"
+      },
+      {
+        "ES": "El papa Francisco",
+        "EN": "Pope Francis"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Juan Pablo II la consagró el 11 de mayo de 1990, durante su visita a Villahermosa. La obra había empezado en 1945 y se terminó en 1970.",
+      "EN": "John Paul II consecrated it on May 11, 1990, during his visit to Villahermosa. Work had begun in 1945 and was finished in 1970."
+    }
+  },
+  "ruta-cacao-1": {
+    "pregunta": {
+      "ES": "¿Qué bebida tabasqueña se hace con masa de maíz y, muchas veces, cacao?",
+      "EN": "Which Tabasco drink is made from corn dough and often cacao?"
+    },
+    "opciones": [
+      {
+        "ES": "Tepache",
+        "EN": "Tepache"
+      },
+      {
+        "ES": "Horchata",
+        "EN": "Horchata"
+      },
+      {
+        "ES": "Pozol",
+        "EN": "Pozol"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El pozol es la bebida típica de Tabasco. Se hace con masa de maíz, con o sin cacao, y quita la sed y el hambre, por eso se toma en las horas de trabajo en el campo.",
+      "EN": "Pozol is the typical drink of Tabasco. It is made from corn dough, with or without cacao, and it eases both thirst and hunger, which is why it is drunk during long hours in the fields."
+    }
+  },
+  "ruta-cacao-2": {
+    "pregunta": {
+      "ES": "¿Con qué unían los mayas de Comalcalco sus ladrillos?",
+      "EN": "What did the Maya of Comalcalco use to bind their bricks?"
+    },
+    "opciones": [
+      {
+        "ES": "Con barro del río",
+        "EN": "River mud"
+      },
+      {
+        "ES": "Con cal hecha de conchas de ostión",
+        "EN": "Lime made from oyster shells"
+      },
+      {
+        "ES": "Con resina de árbol",
+        "EN": "Tree resin"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Quemaban grandes cantidades de conchas de ostión de la Laguna de Mecoacán para hacer cal, y la mezclaban con arena.",
+      "EN": "They burned large amounts of oyster shells from the Mecoacán lagoon to make lime, and mixed it with sand."
+    }
+  },
+  "ruta-cacao-3": {
+    "pregunta": {
+      "ES": "¿De qué año es la Hacienda La Luz?",
+      "EN": "What year does Hacienda La Luz date from?"
+    },
+    "opciones": [
+      {
+        "ES": "1890",
+        "EN": "1890"
+      },
+      {
+        "ES": "1958",
+        "EN": "1958"
+      },
+      {
+        "ES": "1775",
+        "EN": "1775"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La hacienda se construyó en 1890. En los años treinta la compró el médico alemán Otto Wolter Hayer, y en 1958 se fundó la fábrica de chocolates de la familia.",
+      "EN": "The hacienda was built in 1890. In the 1930s the German doctor Otto Wolter Hayer bought it, and in 1958 the family chocolate factory was founded."
+    }
+  },
+  "ruta-cacao-4": {
+    "pregunta": {
+      "ES": "Según la tradición, ¿cómo llegó la imagen de la Virgen de Cupilco?",
+      "EN": "According to tradition, how did the image of the Virgin of Cupilco arrive?"
+    },
+    "opciones": [
+      {
+        "ES": "La trajo un obispo de Yucatán",
+        "EN": "A bishop from Yucatán brought it"
+      },
+      {
+        "ES": "Apareció en una barca frente a la playa de Tupilco",
+        "EN": "It appeared in a boat off Tupilco beach"
+      },
+      {
+        "ES": "Llegó en un barco de Hernán Cortés",
+        "EN": "It came on one of Hernán Cortés's ships"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La tradición cuenta que en 1638 unos pescadores la encontraron en una barca frente a la Barra de Tupilco, en Paraíso. La llevaron de pueblo en pueblo y dejó de moverse al llegar a Cupilco.",
+      "EN": "Tradition says fishermen found it in 1638 in a boat off the Barra de Tupilco, in Paraíso. They carried it from village to village and it stopped moving when it reached Cupilco."
+    }
+  },
+  "yumka-1": {
+    "pregunta": {
+      "ES": "¿Qué significa Yumká?",
+      "EN": "What does Yumká mean?"
+    },
+    "opciones": [
+      {
+        "ES": "Agua que corre",
+        "EN": "Running water"
+      },
+      {
+        "ES": "Tierra de jaguares",
+        "EN": "Land of jaguars"
+      },
+      {
+        "ES": "El duende que cuida la selva",
+        "EN": "The spirit that guards the jungle"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Para los chontales, Yumká era el duende que cuidaba las plantas y los animales de la selva.",
+      "EN": "For the Chontal people, Yumká was the spirit that looked after the plants and animals of the jungle."
+    }
+  },
+  "yumka-2": {
+    "pregunta": {
+      "ES": "¿Cuánto mide el sendero de la selva del Yumká?",
+      "EN": "How long is the Yumká jungle trail?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 200 metros",
+        "EN": "About 200 meters"
+      },
+      {
+        "ES": "Unos 700 metros",
+        "EN": "About 700 meters"
+      },
+      {
+        "ES": "Unos 3 kilómetros",
+        "EN": "About 3 kilometers"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Son unos 700 metros entre árboles de la selva tabasqueña, y al final se cruza un puente colgante sobre una parte de la laguna.",
+      "EN": "It runs for about 700 meters among Tabasco jungle trees, and at the end you cross a suspension bridge over part of the lagoon."
+    }
+  },
+  "yumka-3": {
+    "pregunta": {
+      "ES": "¿Cuántas hectáreas ocupa la sabana del Yumká?",
+      "EN": "How many hectares does the Yumká savanna cover?"
+    },
+    "opciones": [
+      {
+        "ES": "Unas 26",
+        "EN": "About 26"
+      },
+      {
+        "ES": "Unas 101",
+        "EN": "About 101"
+      },
+      {
+        "ES": "Unas 5",
+        "EN": "About 5"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La sabana mide 26 hectáreas y es la zona con más animales. La laguna es la más grande, con 42, y la selva tiene 33.",
+      "EN": "The savanna covers 26 hectares and has the most animals. The lagoon is the largest area, at 42, and the jungle has 33."
+    }
+  },
+  "yumka-4": {
+    "pregunta": {
+      "ES": "¿Qué animal en peligro de extinción vive en la laguna del Yumká?",
+      "EN": "Which endangered animal lives in the Yumká lagoon?"
+    },
+    "opciones": [
+      {
+        "ES": "La vaquita marina",
+        "EN": "The vaquita porpoise"
+      },
+      {
+        "ES": "El manatí del Caribe",
+        "EN": "The Caribbean manatee"
+      },
+      {
+        "ES": "El ajolote",
+        "EN": "The axolotl"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El manatí del Caribe. En el manatinario del Yumká, cuando las condiciones lo permiten, los guías dejan acercarse a verlo.",
+      "EN": "The Caribbean manatee. At the Yumká manatee pool, when conditions allow, the guides let visitors get close to it."
+    }
+  }
+}
