@@ -2,7 +2,9 @@ CRÉDITOS DE FOTOGRAFÍA Y VÍDEO — carta Mayan Palace (Vidanta Nuevo Vallarta
 =========================================================================
 USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio resort. No publicar.
 Todas las imágenes, a 800 px de ancho como máximo (las de su web vienen a
-540-630 px y se dejan a su tamaño, sin ampliar) y calidad ~70.
+540-630 px y se dejan a su tamaño, sin ampliar) y calidad ~70. Excepciones:
+las de los restaurantes (mesa-*.jpg y rs1-rs3.jpg), a 1200 px y calidad 80,
+y el póster welcome.jpg, a 1080×1920 y calidad 85.
 
 1) MATERIAL DEL RESORT — propiedad de Grupo Vidanta, solo para la demo privada
    Origen: vidanta.com/documents/36219/… (entre paréntesis, el fichero
@@ -15,8 +17,6 @@ Todas las imágenes, a 800 px de ancho como máximo (las de su web vienen a
      up1.jpg      Suite con comedor (…-mayan-palace-gallery-3.jpg)
      up2.jpg      Lobby con una familia (…-mayan-palace-gallery-4.jpg)
      up3.jpg      Pareja en las escaleras de los jardines (…-mayan-palace-gallery-7.jpg)
-     mesa.jpg     Terraza bajo palapa de noche (…-mayan-palace-gallery-10.jpg)
-     rs4.jpg      Salón mexicano con equipales (…-mayan-palace-gallery-8.jpg)
      sp2.jpg      Hidroterapia (…-mayan-palace-gallery-11.jpg)
      gf1.jpg      Campo de golf (…-mayan-palace-gallery-12.jpg)
      sp1.jpg      Brio Spa (vidanta-nuevo-vallarta-spa-brio.jpg)
@@ -40,12 +40,40 @@ Todas las imágenes, a 800 px de ancho como máximo (las de su web vienen a
    desde el vector a 1200×198 sin escalones: logo-white.png en blanco para la
    bienvenida y logo.png en carbón #1F1F1F.
 
-2) VÍDEO — Pexels, licencia Pexels (uso libre, sin atribución obligatoria)
-     vid/welcome.mp4  «Aerial view of church and coastline in Puerto Vallarta»
-                      https://www.pexels.com/video/aerial-view-of-church-and-coastline-in-puerto-vallarta-32258584/
-                      Recorte vertical 720×1280, 12 s, desde el segundo 3, sin audio.
-     welcome.jpg      Fotograma del mismo vídeo.
-     ex16.jpg         Fotograma del mismo vídeo (la parroquia de Guadalupe).
+   Restaurantes con reserva (30-oct-2026). Las de la revista de Vidanta
+   (magazine.vidanta.com) se sirven desde images.contentstack.io/v3/assets/
+   blt440de00c5519ec3c/…; entre paréntesis, el artículo y el fichero.
+     mesa-puerto-manjar.jpg  Terraza de Puerto Manjar al atardecer (Bienvenido a Beachland, 02-Beachland-Restaurants.jpg; es la misma foto de vidanta.com/web/nuevo-nayarit/puerto-manjar)
+     rs1.jpg                 Pérgola de Puerto Manjar con lámparas tejidas (Discover delicious dining in Beachland's seafront, Puerto-Manjar.jpg)
+     mesa-la-cantina.jpg     Patio de La Cantina con The Lake Show (The Lake Show, The_Lake_Show_04.jpg)
+     rs2.jpg                 Salón y barra de La Cantina (Now open: La Cantina, La_Cantina_03.jpg)
+     mesa-tramonto.jpg       Salón de Tramonto (vidanta.com/documents/36219/190535/vidanta-dining-nuevo-vallarta-tramonto-gallery.jpg, 630 px, la única foto del salón en su web)
+     rs3.jpg                 Ravioli de queso y espinaca (Tastes of paradise make Tramonto's famous ravioli, Tramonto_Ravioli_01.jpg)
+
+2) VÍDEO DE BIENVENIDA (30-oct-2026) — vid/welcome.mp4 y su póster welcome.jpg
+   1080×1920, 30 fps, 11,6 s, H.264 High, CRF 20, sin audio, 6,5 MB. Cuatro
+   planos de 3,2 s con fundidos de 0,4 s; al final funde con el primer
+   fotograma para que el bucle no salte. welcome.jpg es ese primer fotograma.
+     Plano 1  Main Pool de Beachland: la palapa del bar y la alberca infinita,
+              acercamiento lento. Foto oficial de la revista de Vidanta
+              (Beachland now open at Vidanta Nuevo Vallarta, 01-Main-pool-1.jpg,
+              1660×1060).
+     Plano 2  Main Pool de Beachland: palmeras, letrero de Balché, piedras en
+              el agua, playa y sierra, travelling lateral. Foto oficial
+              (Discover delicious dining in Beachland's seafront, Beachland.jpg,
+              2048×1021), con el contraste recuperado (viene con un velo oscuro).
+     Plano 3  Punta de Mita: pangas sobre el agua turquesa, dron en movimiento.
+              Pixabay, licencia de contenido de Pixabay (uso libre, sin
+              atribución obligatoria), «Punta De Mita, Ocean, Drone» de
+              Ponleplay: https://pixabay.com/videos/punta-de-mita-ocean-drone-beach-42529/
+              (segundos 3,5 a 6,7, recorte vertical de 2560×1440, color subido).
+     Plano 4  Atardecer sobre el Pacífico desde la Main Pool, alejamiento lento.
+              Foto oficial (Bienvenido a Beachland, Bienvenido-a-Beachland.jpg,
+              2048×1021).
+   El vídeo anterior (la parroquia de Puerto Vallarta, Pexels) queda guardado
+   fuera del repo. De él sale todavía ex16.jpg:
+     ex16.jpg  Fotograma de «Aerial view of church and coastline in Puerto Vallarta»,
+               Pexels, licencia Pexels: https://www.pexels.com/video/aerial-view-of-church-and-coastline-in-puerto-vallarta-32258584/
 
 3) COMIDA, BEBIDA Y HABITACIÓN — Pexels, licencia Pexels. Las mismas fotos que
    la carta de fiesta-inn-puebla (ver su CREDITOS-FOTOS.txt); aquí, con su id:
@@ -56,11 +84,10 @@ Todas las imágenes, a 800 px de ancho como máximo (las de su web vienen a
      cm5.jpg   Btl Burger With Fries · Foodie Factor · https://www.pexels.com/photo/btl-burger-with-fries-551991/
      cm6.jpg   Vegetable Salad with Chicken Strips · Shameel mukkath · https://www.pexels.com/photo/vegetable-salad-with-chicken-strips-5639372/
      cm7.jpg   Chicken Wings on White Plate · Valeria Boltneva · https://www.pexels.com/photo/chicken-wings-on-white-plate-8862763/
-     cm8.jpg, rs3.jpg  Salmon with Tomatoes · Chen Te · https://www.pexels.com/photo/salmon-with-tomatoes-16729168/
+     cm8.jpg   Salmon with Tomatoes · Chen Te · https://www.pexels.com/photo/salmon-with-tomatoes-16729168/
      cm9.jpg   Delicious Green Enchiladas with Creamy Garnish · Willians Huerta · https://www.pexels.com/photo/delicious-green-enchiladas-with-creamy-garnish-36429905/
      cm10.jpg  Sandwiches on a Plate · Yuen Tou Zan · https://www.pexels.com/photo/sandwiches-on-a-plate-15362507/
-     cm11.jpg, rs1.jpg  Pasta With Green Leaf On Top · Lucio Panerai · https://www.pexels.com/photo/pasta-with-green-leaf-on-top-on-white-ceramic-plate-3908197/
-     rs2.jpg   Juicy Grilled Steak Sizzling on BBQ · Mohamed Olwy · https://www.pexels.com/photo/juicy-grilled-steak-sizzling-on-bbq-36683024/
+     cm11.jpg  Pasta With Green Leaf On Top · Lucio Panerai · https://www.pexels.com/photo/pasta-with-green-leaf-on-top-on-white-ceramic-plate-3908197/
      ds1.jpg   Egg and Meat in Bowl · 23 Audiovisual · https://www.pexels.com/photo/egg-and-meat-in-bowl-19029777/
      ds2.jpg   Selective Focus Photography of Pure Orange Juice · Pixabay · https://www.pexels.com/photo/selective-focus-photography-of-pure-orange-juice-158053/
      ds3.jpg   Huevos Rancheros with Avocado · Allan González · https://www.pexels.com/photo/huevos-rancheros-with-avocado-in-salamanca-restaurant-31823015/

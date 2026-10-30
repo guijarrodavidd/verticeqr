@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { CALENDLY_URL } from "@/lib/site";
-import { getRecurso, RECURSOS } from "@/lib/recursos";
+import { getRecurso, normalizarSlug, RECURSOS } from "@/lib/recursos";
 import { pedirRecurso } from "./actions";
 import styles from "../recurso.module.css";
 import { Cabecera, Pie } from "../Marca";
@@ -22,7 +22,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const recurso = getRecurso((await params).slug);
+  const recurso = getRecurso(normalizarSlug((await params).slug));
   const title = recurso ? `${recurso.titulo} — Vértice` : "Recurso — Vértice";
   return {
     metadataBase: new URL("https://verticeqr.com"),
@@ -38,6 +38,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function RecursoPage({ params, searchParams }: Props) {
   const { slug } = await params;
+  // «/recurso/GM» o «/recurso/hotel.» llevan a su página en vez de a un error.
+  const limpio = normalizarSlug(slug);
+  if (limpio !== slug && (getRecurso(limpio) || limpio === "hotel")) redirect(`/recurso/${limpio}`);
   const recurso = getRecurso(slug);
   if (!recurso) notFound();
   const { error } = await searchParams;

@@ -297,5 +297,95 @@
       "mercat-santa-catalina": 40,
       "portitxol": 15
     }
+  },
+  {
+    "hotel": "izaga-hostal",
+    "ciudad": "pamplona",
+    "ubicacion": {
+      "lat": 42.77347,
+      "lng": -1.63706
+    },
+    "minutos": {
+      "casco-antiguo": 15,
+      "plaza-castillo": 15,
+      "ciudadela": 13,
+      "catedral": 16,
+      "camara-comptos": 15,
+      "museo-navarra": 17,
+      "parque-taconera": 15,
+      "baluarte": 13
+    }
+  },
+  {
+    "hotel": "carris-marineda",
+    "ciudad": "a-coruna",
+    "ubicacion": {
+      "lat": 43.34553,
+      "lng": -8.42869
+    },
+    "minutos": {
+      "torre-hercules": 15,
+      "maria-pita": 13,
+      "ciudad-vieja": 14,
+      "castillo-san-anton": 14,
+      "paseo-maritimo": 10,
+      "monte-san-pedro": 14,
+      "aquarium": 15,
+      "playa-riazor": 10
+    }
+  },
+  {
+    "hotel": "presidente-miyana",
+    "ciudad": "cdmx",
+    "ubicacion": {
+      "lat": 19.4392,
+      "lng": -99.1999
+    },
+    "minutos": {
+      "museo-soumaya": 5,
+      "polanco": 5,
+      "museo-antropologia": 10,
+      "chapultepec": 15,
+      "zocalo": 25,
+      "bellas-artes": 20,
+      "coyoacan": 35,
+      "roma-condesa": 20
+    }
+  },
+  {
+    "hotel": "dreams-punta-mita",
+    "ciudad": "bahia-banderas",
+    "ubicacion": {
+      "lat": 20.75354,
+      "lng": -105.45174
+    },
+    "minutos": {
+      "islas-marietas": 30,
+      "malecon-vallarta": 45,
+      "zona-romantica": 45,
+      "sayulita": 30,
+      "punta-de-mita": 10,
+      "bucerias": 15,
+      "san-pancho": 35,
+      "jardin-botanico": 70
+    }
+  },
+  {
+    "hotel": "mayan-palace-vallarta",
+    "ciudad": "bahia-banderas",
+    "ubicacion": {
+      "lat": 20.68091,
+      "lng": -105.28605
+    },
+    "minutos": {
+      "islas-marietas": 60,
+      "malecon-vallarta": 25,
+      "zona-romantica": 25,
+      "sayulita": 45,
+      "punta-de-mita": 45,
+      "bucerias": 20,
+      "san-pancho": 50,
+      "jardin-botanico": 50
+    }
   }
 ]

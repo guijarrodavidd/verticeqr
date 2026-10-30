@@ -261,6 +261,21 @@ export const RECURSOS: Recurso[] = [
   },
 ];
 
+/**
+ * El enlace pegado en un mensaje a veces llega con el punto o la coma de la
+ * frase pegados («/recurso/gm,») o en mayúsculas por el corrector del móvil
+ * («/recurso/GM»). Se limpia y se redirige a la buena en vez de dar 404.
+ */
+export function normalizarSlug(slug: string): string {
+  let s = slug;
+  try {
+    s = decodeURIComponent(slug);
+  } catch {
+    // Un % suelto: se deja como venía.
+  }
+  return s.toLowerCase().replace(/[^a-z0-9-]+$/, "");
+}
+
 export function getRecurso(slug: string): Recurso | undefined {
   return RECURSOS.find((r) => r.slug === slug);
 }
