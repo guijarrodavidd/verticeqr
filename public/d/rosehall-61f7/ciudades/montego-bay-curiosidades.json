@@ -1,0 +1,702 @@
+{
+  "rose-hall-noche-1": {
+    "pregunta": {
+      "ES": "¿Qué se cultivaba en la finca de Rose Hall?",
+      "EN": "What was grown on the Rose Hall estate?"
+    },
+    "opciones": [
+      {
+        "ES": "Café",
+        "EN": "Coffee"
+      },
+      {
+        "ES": "Caña de azúcar",
+        "EN": "Sugar cane"
+      },
+      {
+        "ES": "Cacao",
+        "EN": "Cocoa"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Rose Hall era una plantación de caña. Hacia 1827 tenía unas 650 acres de caña, pastos y potreros, y la trabajaban personas esclavizadas.",
+      "EN": "Rose Hall was a sugar plantation. Around 1827 it had some 650 acres of cane, grass and pasture, and it was worked by enslaved people."
+    }
+  },
+  "rose-hall-noche-2": {
+    "pregunta": {
+      "ES": "¿Qué arquitecto dibujó Rose Hall en la década de 1820?",
+      "EN": "Which architect drew Rose Hall in the 1820s?"
+    },
+    "opciones": [
+      {
+        "ES": "Christopher Wren",
+        "EN": "Christopher Wren"
+      },
+      {
+        "ES": "Thomas Jefferson",
+        "EN": "Thomas Jefferson"
+      },
+      {
+        "ES": "James Hakewill",
+        "EN": "James Hakewill"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Hakewill la incluyó en A Picturesque Tour of the Island of Jamaica, publicado en 1825, y escribió que la casa estaba colocada a una elevación encantadora.",
+      "EN": "Hakewill included it in A Picturesque Tour of the Island of Jamaica, published in 1825, and wrote that the house was placed at a delightful elevation."
+    }
+  },
+  "rose-hall-noche-3": {
+    "pregunta": {
+      "ES": "¿En qué año se publicó la novela que dio forma a la leyenda de la bruja blanca?",
+      "EN": "In what year was the novel that shaped the White Witch legend published?"
+    },
+    "opciones": [
+      {
+        "ES": "En 1929",
+        "EN": "In 1929"
+      },
+      {
+        "ES": "En 1829",
+        "EN": "In 1829"
+      },
+      {
+        "ES": "En 1979",
+        "EN": "In 1979"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Herbert de Lisser publicó The White Witch of Rosehall en 1929. Los registros dicen que Anne Mary Patterson se casó con John Rose Palmer en 1820, y en 2007 una investigación concluyó que la leyenda sigue a la protagonista de la novela.",
+      "EN": "Herbert de Lisser published The White Witch of Rosehall in 1929. Records show that Anne Mary Patterson married John Rose Palmer in 1820, and in 2007 an investigation concluded that the legend follows the heroine of the novel."
+    }
+  },
+  "rose-hall-noche-4": {
+    "pregunta": {
+      "ES": "¿Qué músico, vecino de Rose Hall, dedicó una canción a Annie Palmer?",
+      "EN": "Which musician, a Rose Hall neighbor, wrote a song about Annie Palmer?"
+    },
+    "opciones": [
+      {
+        "ES": "Bob Marley",
+        "EN": "Bob Marley"
+      },
+      {
+        "ES": "Johnny Cash",
+        "EN": "Johnny Cash"
+      },
+      {
+        "ES": "Elvis Presley",
+        "EN": "Elvis Presley"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Johnny Cash y June Carter tenían casa en Cinnamon Hill, la finca de al lado. En 1973 él publicó The Ballad of Annie Palmer.",
+      "EN": "Johnny Cash and June Carter had a home at Cinnamon Hill, the estate next door. In 1973 he released The Ballad of Annie Palmer."
+    }
+  },
+  "dunns-river-1": {
+    "pregunta": {
+      "ES": "¿De dónde viene el nombre de Ocho Rios?",
+      "EN": "Where does the name Ocho Rios come from?"
+    },
+    "opciones": [
+      {
+        "ES": "De ocho ríos que bajan al mar",
+        "EN": "From eight rivers running into the sea"
+      },
+      {
+        "ES": "De Las Chorreras, el nombre español de la zona",
+        "EN": "From Las Chorreras, the Spanish name for the area"
+      },
+      {
+        "ES": "De un capitán inglés",
+        "EN": "From an English captain"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Los españoles llamaban a la zona Las Chorreras por las cascadas de Dunn's River. Los ingleses lo pronunciaron a su manera y quedó Ocho Rios, aunque en la zona no hay ocho ríos.",
+      "EN": "The Spanish called the area Las Chorreras, after the Dunn's River waterfalls. The English pronounced it their own way and it became Ocho Rios, although there are not eight rivers in the area."
+    }
+  },
+  "dunns-river-2": {
+    "pregunta": {
+      "ES": "¿A qué hora abre el parque los días que hay crucero en Ocho Rios?",
+      "EN": "What time does the park open on cruise ship days in Ocho Rios?"
+    },
+    "opciones": [
+      {
+        "ES": "A las 07:00",
+        "EN": "At 07:00"
+      },
+      {
+        "ES": "A las 08:30",
+        "EN": "At 08:30"
+      },
+      {
+        "ES": "A las 10:00",
+        "EN": "At 10:00"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Los días normales abre a las 08:30 y los días de crucero, a las 07:00, porque llegan muchos grupos a la vez. En los dos casos cierra a las 16:00.",
+      "EN": "On regular days it opens at 08:30, and on cruise days at 07:00, because many groups arrive at once. Either way it closes at 16:00."
+    }
+  },
+  "dunns-river-3": {
+    "pregunta": {
+      "ES": "¿Qué batalla recuerda la placa al pie de la cascada?",
+      "EN": "Which battle does the plaque at the foot of the falls commemorate?"
+    },
+    "opciones": [
+      {
+        "ES": "La de Trafalgar, de 1805",
+        "EN": "Trafalgar, 1805"
+      },
+      {
+        "ES": "La de Portobelo, de 1739",
+        "EN": "Porto Bello, 1739"
+      },
+      {
+        "ES": "La de Las Chorreras, de 1657",
+        "EN": "Las Chorreras, 1657"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "En 1657 las tropas inglesas vencieron aquí a una fuerza española llegada desde Cuba. La Sociedad Histórica de Jamaica puso la placa al pie de la cascada.",
+      "EN": "In 1657 English troops defeated a Spanish force from Cuba here. The Jamaican Historical Society placed the plaque at the foot of the falls."
+    }
+  },
+  "dunns-river-4": {
+    "pregunta": {
+      "ES": "¿Qué película de 1988 tiene escenas rodadas en Dunn's River Falls?",
+      "EN": "Which 1988 film has scenes shot at Dunn's River Falls?"
+    },
+    "opciones": [
+      {
+        "ES": "Cocktail",
+        "EN": "Cocktail"
+      },
+      {
+        "ES": "Top Gun",
+        "EN": "Top Gun"
+      },
+      {
+        "ES": "Rain Man",
+        "EN": "Rain Man"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Cocktail, con Tom Cruise, rodó escenas en la cascada. La roca es travertino, que el río va formando con la cal que arrastra, así que los escalones se renuevan con los años.",
+      "EN": "Cocktail, starring Tom Cruise, shot scenes at the falls. The rock is travertine, which the river keeps building from the lime it carries, so the steps renew themselves over the years."
+    }
+  },
+  "martha-brae-1": {
+    "pregunta": {
+      "ES": "¿Desde qué año se baja el Martha Brae en balsa de bambú como negocio?",
+      "EN": "Since what year has bamboo rafting run as a business on the Martha Brae?"
+    },
+    "opciones": [
+      {
+        "ES": "Desde 1920",
+        "EN": "Since 1920"
+      },
+      {
+        "ES": "Desde 1970",
+        "EN": "Since 1970"
+      },
+      {
+        "ES": "Desde 2001",
+        "EN": "Since 2001"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Rafting on the Martha Brae funciona desde 1970 y trabaja con unos 85 capitanes con licencia.",
+      "EN": "Rafting on the Martha Brae has run since 1970 and works with around 85 licensed captains."
+    }
+  },
+  "martha-brae-2": {
+    "pregunta": {
+      "ES": "Según la leyenda, ¿qué esconde el río Martha Brae?",
+      "EN": "According to legend, what is hidden in the Martha Brae?"
+    },
+    "opciones": [
+      {
+        "ES": "Oro de los españoles",
+        "EN": "Spanish gold"
+      },
+      {
+        "ES": "Un barco pirata",
+        "EN": "A pirate ship"
+      },
+      {
+        "ES": "Una campana de iglesia",
+        "EN": "A church bell"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Cuentan que los españoles obligaron a una mujer taína, a la que llamaban bruja, a decirles dónde había oro. Ella cambió el curso del río, los ahogó y dejó tapada la cueva del tesoro. El nombre del río vendría de Rio Mateberino.",
+      "EN": "The story goes that the Spanish forced a Taino woman, said to be a witch, to show them where gold was hidden. She changed the river's course, drowned them and sealed the cave with the treasure. The river's name is said to come from Rio Mateberino."
+    }
+  },
+  "martha-brae-3": {
+    "pregunta": {
+      "ES": "¿Qué tuvo Falmouth antes que Nueva York?",
+      "EN": "What did Falmouth have before New York City?"
+    },
+    "opciones": [
+      {
+        "ES": "Luz eléctrica",
+        "EN": "Electric light"
+      },
+      {
+        "ES": "Tranvía",
+        "EN": "A streetcar"
+      },
+      {
+        "ES": "Agua por tubería",
+        "EN": "Piped water"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Entre 1798 y 1805 se construyó en Water Square un depósito que repartía agua por tubería al pueblo. Funcionó unos 150 años, hasta 1952.",
+      "EN": "Between 1798 and 1805 a reservoir was built in Water Square to pipe water to the town. It worked for about 150 years, until 1952."
+    }
+  },
+  "martha-brae-4": {
+    "pregunta": {
+      "ES": "¿En qué año se fundó Falmouth?",
+      "EN": "In what year was Falmouth founded?"
+    },
+    "opciones": [
+      {
+        "ES": "En 1655",
+        "EN": "In 1655"
+      },
+      {
+        "ES": "En 1769",
+        "EN": "In 1769"
+      },
+      {
+        "ES": "En 1888",
+        "EN": "In 1888"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Falmouth se fundó en 1769 y conserva tantos edificios georgianos que se cuenta entre los pueblos de esa época mejor conservados del Caribe. En 2011 abrió su puerto de cruceros.",
+      "EN": "Falmouth was founded in 1769 and keeps so many Georgian buildings that it ranks among the best-preserved towns of that period in the Caribbean. Its cruise port opened in 2011."
+    }
+  },
+  "negril-ricks-1": {
+    "pregunta": {
+      "ES": "¿A qué distancia está Negril del aeropuerto de Montego Bay?",
+      "EN": "How far is Negril from Montego Bay airport?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 20 km",
+        "EN": "About 12 miles"
+      },
+      {
+        "ES": "Unos 80 km",
+        "EN": "About 50 miles"
+      },
+      {
+        "ES": "Unos 200 km",
+        "EN": "About 125 miles"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Negril está a unos 80 km al suroeste del aeropuerto Sangster, en la punta oeste de la isla. Desde el resort son unos 95 km.",
+      "EN": "Negril is about 50 miles southwest of Sangster airport, at the western tip of the island. From the resort it is about 60 miles."
+    }
+  },
+  "negril-ricks-2": {
+    "pregunta": {
+      "ES": "¿Desde qué año el mar de Negril es parque marino?",
+      "EN": "Since what year have Negril's waters been a marine park?"
+    },
+    "opciones": [
+      {
+        "ES": "Desde 1958",
+        "EN": "Since 1958"
+      },
+      {
+        "ES": "Desde 2018",
+        "EN": "Since 2018"
+      },
+      {
+        "ES": "Desde 1998",
+        "EN": "Since 1998"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El Parque Marino de Negril se declaró el 4 de marzo de 1998 y cubre unos 160 km² de mar.",
+      "EN": "The Negril Marine Park was declared on March 4, 1998 and covers about 62 square miles of sea."
+    }
+  },
+  "negril-ricks-3": {
+    "pregunta": {
+      "ES": "¿En qué año abrió Rick's Café?",
+      "EN": "In what year did Rick's Café open?"
+    },
+    "opciones": [
+      {
+        "ES": "En 1974",
+        "EN": "In 1974"
+      },
+      {
+        "ES": "En 1954",
+        "EN": "In 1954"
+      },
+      {
+        "ES": "En 1994",
+        "EN": "In 1994"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Richard Hershman lo abrió en abril de 1974. Los huracanes Gilbert, en 1988, e Iván, en 2004, lo destrozaron, y las dos veces se volvió a construir.",
+      "EN": "Richard Hershman opened it in April 1974. Hurricanes Gilbert in 1988 and Ivan in 2004 wrecked it, and both times it was rebuilt."
+    }
+  },
+  "negril-ricks-4": {
+    "pregunta": {
+      "ES": "¿Por qué en Negril el sol se pone sobre el mar?",
+      "EN": "Why does the sun set over the sea in Negril?"
+    },
+    "opciones": [
+      {
+        "ES": "Porque está en la punta oeste de Jamaica",
+        "EN": "Because it is at the western tip of Jamaica"
+      },
+      {
+        "ES": "Porque está en una isla aparte",
+        "EN": "Because it is on a separate island"
+      },
+      {
+        "ES": "Porque mira al norte",
+        "EN": "Because it faces north"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Negril ocupa el extremo oeste de la isla, así que el sol cae al agua delante de los acantilados. Se pone hacia las 17:40 en noviembre y hacia las 18:50 en junio y julio.",
+      "EN": "Negril sits at the western end of the island, so the sun drops into the water in front of the cliffs. It sets around 17:40 in November and around 18:50 in June and July."
+    }
+  },
+  "luminous-lagoon-1": {
+    "pregunta": {
+      "ES": "¿Qué río llega al mar en la Luminous Lagoon?",
+      "EN": "Which river meets the sea at the Luminous Lagoon?"
+    },
+    "opciones": [
+      {
+        "ES": "El Black River",
+        "EN": "The Black River"
+      },
+      {
+        "ES": "El Martha Brae",
+        "EN": "The Martha Brae"
+      },
+      {
+        "ES": "El Río Grande",
+        "EN": "The Rio Grande"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El Martha Brae, el mismo de las balsas de bambú, desemboca en esta laguna. Su agua dulce se mezcla con la del mar, y en esa mezcla viven los organismos que brillan.",
+      "EN": "The Martha Brae, the same river as the bamboo rafts, flows into this lagoon. Its fresh water mixes with the sea, and the glowing organisms live in that mix."
+    }
+  },
+  "luminous-lagoon-2": {
+    "pregunta": {
+      "ES": "¿Cuándo se ve mejor el brillo de la laguna?",
+      "EN": "When does the lagoon's glow show best?"
+    },
+    "opciones": [
+      {
+        "ES": "Con luna llena",
+        "EN": "Under a full moon"
+      },
+      {
+        "ES": "A mediodía",
+        "EN": "At midday"
+      },
+      {
+        "ES": "En una noche sin luna",
+        "EN": "On a moonless night"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Cuanto más oscura está la noche, más se nota el brillo. Con luna llena se ve bastante menos, por eso conviene salir al menos media hora después de la puesta de sol.",
+      "EN": "The darker the night, the more the glow stands out. Under a full moon it is much fainter, which is why it is best to go out at least half an hour after sunset."
+    }
+  },
+  "luminous-lagoon-3": {
+    "pregunta": {
+      "ES": "¿Qué produce la luz azul del agua?",
+      "EN": "What makes the water glow blue?"
+    },
+    "opciones": [
+      {
+        "ES": "Medusas",
+        "EN": "Jellyfish"
+      },
+      {
+        "ES": "Dinoflagelados, organismos de una sola célula",
+        "EN": "Dinoflagellates, single-celled organisms"
+      },
+      {
+        "ES": "Algas grandes del fondo",
+        "EN": "Large seaweed on the bottom"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Son dinoflagelados de la especie Pyrodinium bahamense. Durante el día hacen la fotosíntesis y de noche emiten luz cuando el agua se mueve a su alrededor.",
+      "EN": "They are dinoflagellates of the species Pyrodinium bahamense. They photosynthesize by day and at night give off light when the water around them is stirred."
+    }
+  },
+  "luminous-lagoon-4": {
+    "pregunta": {
+      "ES": "¿Qué profundidad tiene la laguna en buena parte de su superficie?",
+      "EN": "How deep is most of the lagoon?"
+    },
+    "opciones": [
+      {
+        "ES": "Entre 1 y 2 metros",
+        "EN": "Between 4 and 6 feet"
+      },
+      {
+        "ES": "Unos 20 metros",
+        "EN": "About 65 feet"
+      },
+      {
+        "ES": "Unos 50 metros",
+        "EN": "About 165 feet"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Tiene entre 4 y 6 pies, de 1,2 a 1,8 metros, y el agua dulce del río flota sobre la salada. Por eso al bañarte notas que el agua de arriba es distinta a la de abajo.",
+      "EN": "It is 4 to 6 feet deep, and the river's fresh water floats on top of the salt water. That is why, when you swim, the top layer feels different from the water below."
+    }
+  },
+  "appleton-1": {
+    "pregunta": {
+      "ES": "¿En qué parroquia de Jamaica está Appleton Estate?",
+      "EN": "Which Jamaican parish is Appleton Estate in?"
+    },
+    "opciones": [
+      {
+        "ES": "St. James",
+        "EN": "St. James"
+      },
+      {
+        "ES": "Portland",
+        "EN": "Portland"
+      },
+      {
+        "ES": "St. Elizabeth",
+        "EN": "St. Elizabeth"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Está en el valle de Nassau, en St. Elizabeth, al sur de la isla. Desde Rose Hall, en St. James, se llega en unas 2 horas por el interior.",
+      "EN": "It lies in the Nassau Valley, in St. Elizabeth, in the south of the island. From Rose Hall, in St. James, it takes about 2 hours through the interior."
+    }
+  },
+  "appleton-2": {
+    "pregunta": {
+      "ES": "¿En qué año Joy Spence se convirtió en maestra mezcladora de Appleton?",
+      "EN": "In what year did Joy Spence become Appleton's master blender?"
+    },
+    "opciones": [
+      {
+        "ES": "En 1997",
+        "EN": "In 1997"
+      },
+      {
+        "ES": "En 1967",
+        "EN": "In 1967"
+      },
+      {
+        "ES": "En 2017",
+        "EN": "In 2017"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Fue la primera mujer maestra mezcladora de la industria del ron. Desde 2018 la visita de la finca lleva su nombre, Joy Spence Appleton Estate Rum Experience.",
+      "EN": "She was the first woman master blender in the rum industry. Since 2018 the estate tour has carried her name, the Joy Spence Appleton Estate Rum Experience."
+    }
+  },
+  "appleton-3": {
+    "pregunta": {
+      "ES": "¿Qué sale de la caña y es la base del ron jamaicano?",
+      "EN": "What comes from sugar cane and is the base of Jamaican rum?"
+    },
+    "opciones": [
+      {
+        "ES": "La miel de abeja",
+        "EN": "Honey"
+      },
+      {
+        "ES": "La melaza",
+        "EN": "Molasses"
+      },
+      {
+        "ES": "El jarabe de maíz",
+        "EN": "Corn syrup"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "De la caña sale la melaza, que se fermenta y se destila para hacer ron. En la visita te dan a probar el jugo de caña frío, el primer paso de todo el proceso.",
+      "EN": "Cane gives molasses, which is fermented and distilled into rum. On the tour you get to taste chilled cane juice, the first step of the whole process."
+    }
+  },
+  "appleton-4": {
+    "pregunta": {
+      "ES": "¿Cómo se llama el ron que se evapora de las barricas mientras envejece?",
+      "EN": "What is the rum that evaporates from the barrels while aging called?"
+    },
+    "opciones": [
+      {
+        "ES": "La copa del capitán",
+        "EN": "The captain's cup"
+      },
+      {
+        "ES": "El trago del diablo",
+        "EN": "The devil's drop"
+      },
+      {
+        "ES": "La parte de los ángeles",
+        "EN": "The angels' share"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Con el calor de Jamaica el ron envejece más deprisa y se evapora más que en climas fríos. Appleton envejece unas 240 mil barricas de roble americano que antes guardaron bourbon.",
+      "EN": "In the Jamaican heat rum ages faster and evaporates more than in cooler climates. Appleton ages around 240,000 American oak barrels that once held bourbon."
+    }
+  },
+  "appleton-5": {
+    "pregunta": {
+      "ES": "¿Desde qué año hay registros de ron en Appleton?",
+      "EN": "How far back do Appleton's rum records go?"
+    },
+    "opciones": [
+      {
+        "ES": "Desde 1749",
+        "EN": "To 1749"
+      },
+      {
+        "ES": "Desde 1849",
+        "EN": "To 1849"
+      },
+      {
+        "ES": "Desde 1949",
+        "EN": "To 1949"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Los primeros registros de ron en Appleton son de 1749, y es la destilería de Jamaica que lleva más tiempo funcionando sin parar.",
+      "EN": "Appleton's earliest rum records date from 1749, and it is the longest continuously operating distillery in Jamaica."
+    }
+  },
+  "montego-bay-hip-strip-1": {
+    "pregunta": {
+      "ES": "¿Por qué la playa se llama Doctor's Cave?",
+      "EN": "Why is the beach called Doctor's Cave?"
+    },
+    "opciones": [
+      {
+        "ES": "Por un pirata al que llamaban el Doctor",
+        "EN": "After a pirate known as the Doctor"
+      },
+      {
+        "ES": "Por el doctor McCatty y la cueva por la que se entraba",
+        "EN": "After Dr. McCatty and the cave you entered through"
+      },
+      {
+        "ES": "Por un hospital que hubo en la arena",
+        "EN": "After a hospital that stood on the sand"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Alexander McCatty abrió un sanatorio en 1880 y dejaba a sus amigos, casi todos médicos, bañarse en su playa, a la que se llegaba por una cueva. En 1906 donó el terreno para el club.",
+      "EN": "Alexander McCatty opened a sanatorium in 1880 and let his friends, most of them doctors, bathe on his beach, which you reached through a cave. In 1906 he donated the land for the club."
+    }
+  },
+  "montego-bay-hip-strip-2": {
+    "pregunta": {
+      "ES": "¿Qué nombre oficial tiene hoy la Gloucester Avenue?",
+      "EN": "What is Gloucester Avenue's official name today?"
+    },
+    "opciones": [
+      {
+        "ES": "Jimmy Cliff Boulevard",
+        "EN": "Jimmy Cliff Boulevard"
+      },
+      {
+        "ES": "Bob Marley Avenue",
+        "EN": "Bob Marley Avenue"
+      },
+      {
+        "ES": "Sam Sharpe Street",
+        "EN": "Sam Sharpe Street"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El cambio se hizo el 28 de marzo de 2019 en honor a Jimmy Cliff, nacido en Somerton, en la parroquia de St. James. El cantante murió el 24 de noviembre de 2025.",
+      "EN": "The change was made on March 28, 2019 in honor of Jimmy Cliff, born in Somerton, St. James parish. The singer died on November 24, 2025."
+    }
+  },
+  "montego-bay-hip-strip-3": {
+    "pregunta": {
+      "ES": "¿Sobre qué leña se asa el jerk tradicional?",
+      "EN": "What wood is traditional jerk cooked over?"
+    },
+    "opciones": [
+      {
+        "ES": "Leña de pino",
+        "EN": "Pine"
+      },
+      {
+        "ES": "Carbón de coco",
+        "EN": "Coconut charcoal"
+      },
+      {
+        "ES": "Leña de pimienta de Jamaica",
+        "EN": "Pimento (allspice) wood"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Se usa la leña del árbol de la pimienta de Jamaica, el mismo que da la especia que en inglés llaman allspice. En The Pork Pit el cerdo y el pollo se sirven con festival, un pan frito un poco dulce.",
+      "EN": "It is the wood of the pimento tree, the same tree that gives allspice. At The Pork Pit the pork and chicken come with festival, a slightly sweet fried bread."
+    }
+  }
+}

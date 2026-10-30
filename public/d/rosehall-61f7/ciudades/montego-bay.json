@@ -1,0 +1,1597 @@
+{
+  "slug": "montego-bay",
+  "nombre": "Montego Bay",
+  "intro": {
+    "ES": "El resort está en Rose Hall, en la costa norte de Jamaica, a unos 20 minutos del aeropuerto de Montego Bay y a 25 del Hip Strip. Rose Hall Great House, la casa del siglo XVIII de la antigua finca, queda a 5 minutos en auto. Hacia el este tienes Falmouth y la Luminous Lagoon a media hora, y Dunn's River Falls, en Ocho Rios, a 1 h 40. Negril queda al oeste, a 1 h 45, y la destilería de Appleton, al sur, a unas 2 horas por el interior.",
+    "EN": "The resort is in Rose Hall, on Jamaica's north coast, about 20 minutes from Montego Bay airport and 25 from the Hip Strip. Rose Hall Great House, the old estate's 18th-century mansion, is a 5-minute drive away. To the east, Falmouth and the Luminous Lagoon are half an hour away, and Dunn's River Falls in Ocho Rios about 1 h 40. Negril lies 1 h 45 to the west, and the Appleton distillery about 2 hours south through the interior."
+  },
+  "lugares": [
+    {
+      "id": "rose-hall-great-house",
+      "img": "/ciudades/montego-bay/img/rose-hall-great-house.jpg",
+      "nombre": "Rose Hall Great House",
+      "zona": {
+        "ES": "Rose Hall, junto al resort",
+        "EN": "Rose Hall, next to the resort"
+      },
+      "d": {
+        "ES": "La casa principal de una antigua plantación de caña, terminada en la década de 1770 en una loma con vista al mar. Se restauró en los años sesenta, y hoy tiene pisos de caoba y papel tapiz de seda. La visita guiada dura entre 45 minutos y una hora, y la de la noche cuenta la leyenda de Annie Palmer, la bruja blanca de Rose Hall.",
+        "EN": "The great house of a former sugar plantation, finished in the 1770s on a rise looking out to sea. It was restored in the 1960s and now has mahogany floors and silk wallpaper. The guided tour lasts 45 minutes to an hour, and the evening one tells the legend of Annie Palmer, the White Witch of Rose Hall."
+      },
+      "cuando": {
+        "ES": "De miércoles a sábado por la noche, en la visita a la luz de las velas",
+        "EN": "Wednesday to Saturday evenings, on the candlelit tour"
+      },
+      "min": 5,
+      "modo": "coche",
+      "lat": 18.51632,
+      "lng": -77.81922
+    },
+    {
+      "id": "dunns-river",
+      "img": "/ciudades/montego-bay/img/dunns-river.jpg",
+      "nombre": "Dunn's River Falls",
+      "zona": {
+        "ES": "Ocho Rios, costa norte",
+        "EN": "Ocho Rios, north coast"
+      },
+      "d": {
+        "ES": "Una cascada que baja unos 55 metros por escalones de travertino y desemboca directamente en el mar. Se sube desde la playa, río arriba, de la mano en cadena humana detrás de un guía, y se tarda entre 45 minutos y hora y media. Junto al agua hay escaleras para quien prefiera verla sin mojarse.",
+        "EN": "A waterfall that drops about 180 feet (55 m) over travertine steps and runs straight into the sea. You climb it from the beach, upstream, holding hands in a human chain behind a guide, and it takes 45 minutes to an hour and a half. There are stairs beside the water for anyone who would rather watch without getting wet."
+      },
+      "cuando": {
+        "ES": "A primera hora, antes de que lleguen los grupos de los cruceros",
+        "EN": "First thing in the morning, before the cruise ship groups arrive"
+      },
+      "min": 100,
+      "modo": "coche",
+      "lat": 18.41676,
+      "lng": -77.13992
+    },
+    {
+      "id": "martha-brae",
+      "img": "/ciudades/montego-bay/img/martha-brae.jpg",
+      "nombre": "Martha Brae",
+      "zona": {
+        "ES": "Trelawny, cerca de Falmouth",
+        "EN": "Trelawny, near Falmouth"
+      },
+      "d": {
+        "ES": "Un río verde entre árboles que se baja en balsas de bambú de unos 9 metros, para dos personas, con un capitán de pie que la empuja con una vara larga. El recorrido es de unos 5 km y dura alrededor de 1 h 15. Las balsas salen de Rafter's Village, donde el negocio funciona desde 1970.",
+        "EN": "A green, tree-lined river that you float down on a 30-foot bamboo raft built for two, with a captain standing up front pushing it along with a long pole. The ride covers about 3 miles and takes around 1 h 15. Rafts leave from Rafter's Village, where the business has run since 1970."
+      },
+      "cuando": {
+        "ES": "Por la mañana, antes de que el sol caliente fuerte",
+        "EN": "In the morning, before the sun gets strong"
+      },
+      "min": 35,
+      "modo": "coche",
+      "lat": 18.45187,
+      "lng": -77.6474
+    },
+    {
+      "id": "doctors-cave",
+      "img": "/ciudades/montego-bay/img/doctors-cave.jpg",
+      "nombre": "Doctor's Cave Beach",
+      "zona": {
+        "ES": "Hip Strip, Montego Bay",
+        "EN": "Hip Strip, Montego Bay"
+      },
+      "d": {
+        "ES": "La playa de club más conocida de Montego Bay, con arena blanca y socorristas en la orilla. Se llama así por el doctor Alexander McCatty, que se bañaba aquí con sus amigos, casi todos médicos, y que en 1906 donó el terreno para fundar el club. Abre todos los días de 08:30 a 17:30, y la entrada cuesta 8 dólares para adultos y 4 para menores de 12.",
+        "EN": "Montego Bay's best-known club beach, with white sand and lifeguards at the water's edge. It is named after Dr. Alexander McCatty, who bathed here with his friends, most of them doctors, and donated the land in 1906 to found the club. It opens daily from 08:30 to 17:30, and entry is US$8 for adults and US$4 for children under 12."
+      },
+      "cuando": {
+        "ES": "Por la tarde, para bañarte antes de pasear por el Hip Strip",
+        "EN": "In the afternoon, for a swim before a walk along the Hip Strip"
+      },
+      "min": 25,
+      "modo": "coche",
+      "lat": 18.4882,
+      "lng": -77.92881
+    },
+    {
+      "id": "hip-strip",
+      "img": "/ciudades/montego-bay/img/hip-strip.jpg",
+      "nombre": "Hip Strip",
+      "zona": {
+        "ES": "Jimmy Cliff Boulevard, Montego Bay",
+        "EN": "Jimmy Cliff Boulevard, Montego Bay"
+      },
+      "d": {
+        "ES": "Así llaman a la avenida junto al mar de Montego Bay, con tiendas de artesanía y bares con terraza sobre el agua. Se llamó Gloucester Avenue hasta marzo de 2019, cuando le pusieron el nombre de Jimmy Cliff, el cantante de reggae nacido en la parroquia de St. James, que murió en noviembre de 2025.",
+        "EN": "The name everyone uses for Montego Bay's seafront avenue, with craft shops and bars on terraces over the water. It was Gloucester Avenue until March 2019, when it was renamed after Jimmy Cliff, the reggae singer born in St. James parish, who died in November 2025."
+      },
+      "cuando": {
+        "ES": "Al final de la tarde, cuando baja el calor y se llenan las terrazas",
+        "EN": "Late afternoon, when the heat eases and the terraces fill up"
+      },
+      "min": 25,
+      "modo": "coche",
+      "lat": 18.48605,
+      "lng": -77.92909
+    },
+    {
+      "id": "ricks-cafe",
+      "img": "/ciudades/montego-bay/img/ricks-cafe.jpg",
+      "nombre": "Rick's Café",
+      "zona": {
+        "ES": "West End, Negril",
+        "EN": "West End, Negril"
+      },
+      "d": {
+        "ES": "Un bar sobre los acantilados del West End de Negril, abierto en abril de 1974. La gente salta al mar desde salientes de roca de distintas alturas, y al caer la tarde se llena para ver la puesta de sol. Lo reconstruyeron después de los huracanes Gilbert, en 1988, e Iván, en 2004. Abre todos los días de 12:00 a 22:00 y no se paga entrada.",
+        "EN": "A bar on the West End cliffs of Negril, opened in April 1974. People jump into the sea from rock ledges of different heights, and late in the day it fills up for the sunset. It was rebuilt after Hurricane Gilbert in 1988 and Hurricane Ivan in 2004. It opens daily from 12:00 to 22:00 with no cover charge."
+      },
+      "cuando": {
+        "ES": "Desde las 16:00, para conseguir lugar antes de la puesta de sol",
+        "EN": "From 16:00, to get a spot before sunset"
+      },
+      "min": 105,
+      "modo": "coche",
+      "lat": 18.25423,
+      "lng": -78.36328
+    },
+    {
+      "id": "luminous-lagoon",
+      "img": "/ciudades/montego-bay/img/luminous-lagoon.jpg",
+      "nombre": "Luminous Lagoon",
+      "zona": {
+        "ES": "Glistening Waters, Falmouth",
+        "EN": "Glistening Waters, Falmouth"
+      },
+      "d": {
+        "ES": "Una laguna poco profunda donde el río Martha Brae se junta con el mar. En el agua viven millones de dinoflagelados, organismos de una sola célula que se encienden de azul cuando algo los mueve. Las barcas salen del muelle de Glistening Waters después de que oscurece, y en algunas puedes meterte al agua.",
+        "EN": "A shallow lagoon where the Martha Brae River meets the sea. Millions of dinoflagellates, single-celled organisms that flash blue when something stirs them, live in the water. Boats leave the Glistening Waters dock after dark, and on some of them you can get into the water."
+      },
+      "cuando": {
+        "ES": "En una noche sin luna, cuando más se nota el brillo",
+        "EN": "On a moonless night, when the glow shows best"
+      },
+      "min": 30,
+      "modo": "coche",
+      "lat": 18.48305,
+      "lng": -77.62824
+    },
+    {
+      "id": "appleton-estate",
+      "img": "/ciudades/montego-bay/img/appleton-estate.jpg",
+      "nombre": "Appleton Estate",
+      "zona": {
+        "ES": "Valle de Nassau, St. Elizabeth",
+        "EN": "Nassau Valley, St. Elizabeth"
+      },
+      "d": {
+        "ES": "La destilería de ron de Jamaica que lleva más tiempo funcionando sin parar, con registros de ron desde 1749, en un valle de caña al sur de la isla. La visita empieza con un cóctel de bienvenida. Después ves cómo se molía la caña y pasas por los alambiques de cobre antes de terminar en la sala de cata. Abre de martes a sábado, de 09:00 a 15:30.",
+        "EN": "Jamaica's oldest continuously operating rum distillery, with rum records going back to 1749, in a valley of sugar cane in the south of the island. The visit starts with a welcome cocktail. Then you see how cane was crushed and walk past the copper pot stills before ending in the tasting room. It opens Tuesday to Saturday, 09:00 to 15:30."
+      },
+      "cuando": {
+        "ES": "De martes a sábado, llegando a media mañana",
+        "EN": "Tuesday to Saturday, arriving mid-morning"
+      },
+      "min": 115,
+      "modo": "coche",
+      "lat": 18.16507,
+      "lng": -77.72604
+    }
+  ],
+  "rutas": [
+    {
+      "id": "rose-hall-noche",
+      "expId": "ex13",
+      "img": "/ciudades/montego-bay/img/rose-hall-great-house.jpg",
+      "titulo": {
+        "ES": "Rose Hall Great House de noche",
+        "EN": "Rose Hall Great House by night"
+      },
+      "tipo": {
+        "ES": "Historia",
+        "EN": "History"
+      },
+      "dur": "1 h 50 min",
+      "d": {
+        "ES": "Cinco minutos en auto y estás en la casa de la plantación que domina Rose Hall. A las 19:00 empieza la visita a la luz de las velas. Un guía te lleva por los salones y los dormitorios mientras cuenta la historia de Annie Palmer, la bruja blanca, y la de las personas esclavizadas que trabajaron la finca. Hacia las 20:20 estás de vuelta en el resort.",
+        "EN": "Five minutes by car and you are at the plantation house that looks over Rose Hall. At 19:00 the candlelit tour begins. A guide takes you through the drawing rooms and bedrooms while telling the story of Annie Palmer, the White Witch, and of the enslaved people who worked the estate. You are back at the resort around 20:20."
+      },
+      "salida": {
+        "ES": "Salida en auto desde el lobby del resort a las 18:30, unos 5 minutos hasta la casa. La visita nocturna solo se hace de miércoles a sábado. Vuelta al resort hacia las 20:20",
+        "EN": "By car from the resort lobby at 18:30, about 5 minutes to the house. The night tour only runs Wednesday to Saturday. Back at the resort around 20:20"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el resort",
+          "Entrada a la visita nocturna con guía",
+          "Reserva del grupo de las 19:00"
+        ],
+        "EN": [
+          "Return transfer from the resort",
+          "Admission to the guided night tour",
+          "Booking for the 19:00 group"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Zapatos cómodos y cerrados, porque hay escaleras de piedra y de madera",
+          "Repelente de mosquitos para los jardines",
+          "Unos dólares en efectivo si quieres algo en el Dungeon Bar"
+        ],
+        "EN": [
+          "Comfortable closed shoes, as there are stone and wooden stairs",
+          "Mosquito repellent for the grounds",
+          "A few dollars in cash if you want a drink at the Dungeon Bar"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del resort",
+            "EN": "Leaving the resort"
+          },
+          "s": {
+            "ES": "Loma arriba, hacia Rose Hall",
+            "EN": "Up the hill to Rose Hall"
+          },
+          "d": {
+            "ES": "La camioneta sale del lobby, cruza la carretera de la costa y sube la loma por Rose Hall Road. Son menos de 2 km. La casa está arriba, mirando al mar.",
+            "EN": "The van leaves the lobby, crosses the coast road and climbs the hill on Rose Hall Road. It is just under a mile. The house sits at the top, looking out to sea."
+          },
+          "tip": {
+            "ES": "Cena temprano antes de salir, o reserva mesa en el resort para después de las 20:30.",
+            "EN": "Have an early dinner before you leave, or book a table at the resort for after 20:30."
+          },
+          "hora": "18:30",
+          "dur": "5 min",
+          "img": "/ciudades/montego-bay/img/resort.jpg",
+          "lat": 18.52162,
+          "lng": -77.8107,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "La escalinata de Rose Hall",
+            "EN": "The Rose Hall staircase"
+          },
+          "s": {
+            "ES": "Llegada y entradas",
+            "EN": "Arrival and tickets"
+          },
+          "d": {
+            "ES": "Delante de la casa, una doble escalinata de piedra sube hasta el pórtico. El arquitecto James Hakewill la dibujó en la década de 1820 y escribió que estaba colocada a una elevación encantadora. Aquí recoges las entradas y esperas al grupo de las 19:00. Las visitas nocturnas salen cada media hora, de 18:00 a 20:00.",
+            "EN": "In front of the house, a double flight of stone steps climbs to the portico. The architect James Hakewill drew it in the 1820s and wrote that it was placed at a delightful elevation. Here you pick up the tickets and wait for the 19:00 group. Night tours leave every half hour from 18:00 to 20:00."
+          },
+          "tip": {
+            "ES": "Dentro de la casa no se permiten fotos ni videos. Haz ahora las fotos de la fachada.",
+            "EN": "Photos and videos are not allowed inside the house. Take your pictures of the facade now."
+          },
+          "hora": "18:40",
+          "dur": "20 min",
+          "img": "/ciudades/montego-bay/img/rose-hall-escalinata.jpg",
+          "lat": 18.51632,
+          "lng": -77.81922,
+          "tramo": "coche",
+          "tramoDuracionMin": 5,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "La casa a la luz de las velas",
+            "EN": "The house by candlelight"
+          },
+          "s": {
+            "ES": "Los salones y la leyenda de Annie Palmer",
+            "EN": "The rooms and the Annie Palmer legend"
+          },
+          "d": {
+            "ES": "El guía te lleva por la planta principal y el piso de arriba. Los pisos son de caoba y el papel tapiz de seda lleva dibujos de palmeras y pájaros. Por el camino cuenta la leyenda de Annie Palmer, que habría matado a tres maridos y muerto a manos de uno de sus amantes. Los registros de la época dicen que Anne Mary Patterson se casó con John Rose Palmer en 1820 y que él murió en 1827.",
+            "EN": "The guide leads you through the main floor and the floor above. The floors are mahogany and the silk wallpaper is printed with palms and birds. On the way you hear the legend of Annie Palmer, who supposedly killed three husbands and died at the hands of one of her lovers. Records from the time say that Anne Mary Patterson married John Rose Palmer in 1820 and that he died in 1827."
+          },
+          "tip": {
+            "ES": "Si vas con menores de 12 años, piensa que la visita de noche busca dar algo de miedo. La propia casa pide a los padres que lo valoren.",
+            "EN": "If you have children under 12, keep in mind that the night tour is meant to be a little scary. The house itself asks parents to use their judgment."
+          },
+          "hora": "19:00",
+          "dur": "45 min",
+          "img": "/ciudades/montego-bay/img/rose-hall-lateral.jpg",
+          "lat": 18.51632,
+          "lng": -77.81922,
+          "tramo": "pie",
+          "tramoDuracionMin": 0,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "La tumba de Annie Palmer y el Dungeon Bar",
+            "EN": "Annie Palmer's tomb and the Dungeon Bar"
+          },
+          "s": {
+            "ES": "El final, en los jardines y el sótano",
+            "EN": "The finish, in the grounds and the cellar"
+          },
+          "d": {
+            "ES": "En los jardines hay una tumba de piedra que se atribuye a Annie Palmer. En 2007 una investigación concluyó que la leyenda sigue a la protagonista de la novela The White Witch of Rosehall, que Herbert de Lisser publicó en 1929. En el antiguo sótano está el Dungeon Bar, donde sirven un cóctel que llaman Witches Brew. A las 20:10 sale la camioneta de vuelta.",
+            "EN": "In the grounds there is a stone tomb said to be Annie Palmer's. A 2007 investigation concluded that the legend follows the heroine of The White Witch of Rosehall, the novel Herbert de Lisser published in 1929. The old cellar holds the Dungeon Bar, which serves a cocktail called Witches Brew. The van leaves for the resort at 20:10."
+          },
+          "tip": {
+            "ES": "El cóctel del Dungeon Bar no entra en la visita. Si quieres probarlo, lleva efectivo en billetes pequeños.",
+            "EN": "The Dungeon Bar cocktail is not included in the tour. If you want to try it, bring cash in small bills."
+          },
+          "hora": "19:45",
+          "dur": "25 min",
+          "img": "/ciudades/montego-bay/img/annie-palmer-tumba.jpg",
+          "lat": 18.5162,
+          "lng": -77.81935,
+          "tramo": "pie",
+          "tramoDuracionMin": 0,
+          "duracionMin": 25
+        }
+      ],
+      "fotos": [
+        "/ciudades/montego-bay/img/rose-hall-great-house.jpg",
+        "/ciudades/montego-bay/img/rose-hall-escalinata.jpg",
+        "/ciudades/montego-bay/img/rose-hall-lateral.jpg",
+        "/ciudades/montego-bay/img/rose-hall-1825.jpg",
+        "/ciudades/montego-bay/img/annie-palmer-tumba.jpg"
+      ],
+      "duracionMin": 110,
+      "distanciaKm": 3.5,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "La casa no está adaptada para sillas de ruedas y la visita tiene escaleras de piedra y de madera. La propia casa no la recomienda a personas con problemas de espalda.",
+        "EN": "The house is not wheelchair accessible and the tour includes stone and wooden stairs. The house itself does not recommend it for people with back problems."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 18.52162,
+        "lng": -77.8107,
+        "foto": "/ciudades/montego-bay/img/resort.jpg",
+        "texto": {
+          "ES": "Lobby del resort, a las 18:30. Baja cinco minutos antes.",
+          "EN": "Resort lobby, at 18:30. Come down five minutes early."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Bebidas en el Dungeon Bar",
+          "Propina del guía"
+        ],
+        "EN": [
+          "Drinks at the Dungeon Bar",
+          "Guide's tip"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. La visita nocturna solo funciona de miércoles a sábado, así que se reserva para uno de esos días.",
+        "EN": "Free up to 24 h before. The night tour only runs Wednesday to Saturday, so it is booked for one of those days."
+      },
+      "salidasFijas": [
+        "18:30"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "dunns-river",
+      "expId": "ex14",
+      "img": "/ciudades/montego-bay/img/dunns-cadena.jpg",
+      "titulo": {
+        "ES": "Dunn's River Falls en cadena humana",
+        "EN": "Dunn's River Falls in a human chain"
+      },
+      "tipo": {
+        "ES": "Cascada",
+        "EN": "Waterfall"
+      },
+      "dur": "5 h 45 min",
+      "d": {
+        "ES": "Sales temprano por la costa norte hasta Ocho Rios. En Dunn's River empiezas en la playa, donde el río llega al mar, y subes la cascada por dentro del agua, de la mano de los demás y detrás de un guía. Son unos 55 metros de desnivel. Hacia las 13:15 estás de vuelta en el resort.",
+        "EN": "You leave early along the north coast to Ocho Rios. At Dunn's River you start on the beach, where the river meets the sea, and climb the falls through the water, holding hands with the rest of the group behind a guide. It is about 180 feet (55 m) of climb. You are back at the resort around 13:15."
+      },
+      "salida": {
+        "ES": "Salida en auto desde el lobby del resort a las 07:30, unos 100 minutos por la costa norte. Vuelta al resort hacia las 13:15",
+        "EN": "By car from the resort lobby at 07:30, about 100 minutes along the north coast. Back at the resort around 13:15"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el resort",
+          "Entrada al parque, con guía de la cascada",
+          "Plan de la mañana y mapa"
+        ],
+        "EN": [
+          "Return transfer from the resort",
+          "Park admission, with a falls guide",
+          "Morning plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Traje de baño puesto debajo de la ropa",
+          "Zapatos de agua que agarren bien, o los compras o alquilas en el parque",
+          "Una bolsa seca para el celular",
+          "Una muda de ropa y una toalla"
+        ],
+        "EN": [
+          "Swimsuit on under your clothes",
+          "Water shoes with good grip, or buy or rent them at the park",
+          "A dry bag for your phone",
+          "A change of clothes and a towel"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del resort",
+            "EN": "Leaving the resort"
+          },
+          "s": {
+            "ES": "Por la costa norte hacia Ocho Rios",
+            "EN": "Along the north coast to Ocho Rios"
+          },
+          "d": {
+            "ES": "La camioneta va hacia el este por la carretera de la costa norte, unos 80 km. Pasa junto a Falmouth y por Runaway Bay, con el mar casi siempre a la izquierda.",
+            "EN": "The van heads east on the north coast highway, about 50 miles. It goes past Falmouth and through Runaway Bay, with the sea on your left most of the way."
+          },
+          "tip": {
+            "ES": "Desayuna antes de salir y ponte ya el traje de baño. Así en el parque solo dejas la ropa en el casillero.",
+            "EN": "Have breakfast before you leave and put your swimsuit on now. That way you only drop your clothes in a locker at the park."
+          },
+          "hora": "07:30",
+          "dur": "5 min",
+          "img": "/ciudades/montego-bay/img/resort.jpg",
+          "lat": 18.52162,
+          "lng": -77.8107,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Entrada del parque",
+            "EN": "Park entrance"
+          },
+          "s": {
+            "ES": "Casilleros, guía y zapatos de agua",
+            "EN": "Lockers, guide and water shoes"
+          },
+          "d": {
+            "ES": "El parque abre a las 08:30, y a las 07:00 los días que hay crucero en Ocho Rios. En la entrada dejas tus cosas en un casillero de alquiler y te asignan un guía con licencia. Si no llevas zapatos de agua, aquí los venden y los alquilan.",
+            "EN": "The park opens at 08:30, and at 07:00 on days when a cruise ship is in Ocho Rios. At the entrance you leave your things in a rental locker and are assigned a licensed guide. If you have no water shoes, they sell and rent them here."
+          },
+          "tip": {
+            "ES": "Guarda el efectivo y la llave del casillero en una bolsa con cierre. En la cascada todo acaba mojado.",
+            "EN": "Keep your cash and the locker key in a zip-lock bag. Everything gets wet on the falls."
+          },
+          "hora": "09:15",
+          "dur": "20 min",
+          "img": "/ciudades/montego-bay/img/dunns-entrada.jpg",
+          "lat": 18.4156,
+          "lng": -77.1385,
+          "tramo": "coche",
+          "tramoDuracionMin": 100,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "La playa al pie de la cascada",
+            "EN": "The beach at the foot of the falls"
+          },
+          "s": {
+            "ES": "Donde el río llega al mar",
+            "EN": "Where the river meets the sea"
+          },
+          "d": {
+            "ES": "La subida empieza abajo, en la arena, donde el agua dulce cae directamente al Caribe. Al pie de la cascada hay una placa por la batalla de Las Chorreras, de 1657, cuando los ingleses vencieron aquí a una fuerza española llegada desde Cuba. Los españoles llamaban Las Chorreras a esta zona por sus cascadas.",
+            "EN": "The climb starts at the bottom, on the sand, where the fresh water falls straight into the Caribbean. At the foot of the falls a plaque marks the Battle of Las Chorreras in 1657, when the English defeated a Spanish force from Cuba here. The Spanish called this area Las Chorreras, after its waterfalls."
+          },
+          "tip": {
+            "ES": "Quítate anillos y pulseras y déjalos en el casillero. Con el agua fría y la roca resbalosa se pierden fácil.",
+            "EN": "Take off rings and bracelets and leave them in the locker. With cold water and slippery rock they are easy to lose."
+          },
+          "hora": "09:40",
+          "dur": "15 min",
+          "img": "/ciudades/montego-bay/img/dunns-playa.jpg",
+          "lat": 18.417,
+          "lng": -77.1397,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "La subida en cadena",
+            "EN": "The climb in a chain"
+          },
+          "s": {
+            "ES": "Unos 55 metros de escalones de travertino",
+            "EN": "About 180 feet of travertine steps"
+          },
+          "d": {
+            "ES": "Vas río arriba, de escalón en escalón, agarrado de la mano de quien tienes delante y detrás. La roca es travertino que el propio río sigue formando con la cal que arrastra, así que la cascada se va renovando. Según el ritmo del grupo se tarda entre 45 minutos y hora y media. Arriba te cambias, y a las 11:30 sale la camioneta de vuelta.",
+            "EN": "You work your way upstream, step by step, holding the hand of the person in front and the one behind. The rock is travertine that the river keeps building from the lime it carries, so the falls keep renewing themselves. Depending on the group's pace it takes 45 minutes to an hour and a half. At the top you change, and the van leaves at 11:30."
+          },
+          "tip": {
+            "ES": "Los días con varios cruceros en el puerto hay más gente, y los miércoles suelen ser los más llenos. Si puedes elegir, reserva otro día.",
+            "EN": "Days with several cruise ships in port are busier, and Wednesdays tend to be the most crowded. If you can choose, book another day."
+          },
+          "hora": "09:55",
+          "dur": "1 h 35 min",
+          "img": "/ciudades/montego-bay/img/dunns-subida.jpg",
+          "lat": 18.4162,
+          "lng": -77.139,
+          "tramo": "pie",
+          "tramoDuracionMin": 0,
+          "duracionMin": 95
+        }
+      ],
+      "fotos": [
+        "/ciudades/montego-bay/img/dunns-cadena.jpg",
+        "/ciudades/montego-bay/img/dunns-river.jpg",
+        "/ciudades/montego-bay/img/dunns-subida.jpg",
+        "/ciudades/montego-bay/img/dunns-playa.jpg",
+        "/ciudades/montego-bay/img/dunns-pozas.jpg",
+        "/ciudades/montego-bay/img/dunns-selva.jpg"
+      ],
+      "duracionMin": 345,
+      "distanciaKm": 165,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "La subida va por dentro del agua sobre roca resbalosa y pide algo de agilidad. Junto a la cascada hay escaleras y pasarelas para verla sin subir. Con movilidad reducida, pregunta en recepción antes de reservar.",
+        "EN": "The climb goes through the water over slippery rock and needs some agility. There are stairs and walkways beside the falls to see them without climbing. If you have reduced mobility, ask at reception before booking."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 18.52162,
+        "lng": -77.8107,
+        "foto": "/ciudades/montego-bay/img/resort.jpg",
+        "texto": {
+          "ES": "Lobby del resort, a las 07:30. Baja diez minutos antes.",
+          "EN": "Resort lobby, at 07:30. Come down ten minutes early."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Alquiler de casillero y de zapatos de agua",
+          "Propina del guía de la cascada",
+          "Comida y bebidas"
+        ],
+        "EN": [
+          "Locker and water shoe rental",
+          "Tip for the falls guide",
+          "Food and drinks"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Si llueve fuerte y el río crece, se cambia de día.",
+        "EN": "Free up to 24 h before. If heavy rain swells the river, it moves to another day."
+      },
+      "salidasFijas": [
+        "07:30"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "martha-brae",
+      "expId": "ex15",
+      "img": "/ciudades/montego-bay/img/martha-brae.jpg",
+      "titulo": {
+        "ES": "Balsa de bambú por el Martha Brae",
+        "EN": "Bamboo rafting on the Martha Brae"
+      },
+      "tipo": {
+        "ES": "Río",
+        "EN": "River"
+      },
+      "dur": "3 h 35 min",
+      "d": {
+        "ES": "En 35 minutos estás en Rafter's Village, en Trelawny. Subes a una balsa de bambú para dos y un capitán la lleva río abajo durante 1 h 15, unos 5 km entre árboles. A la vuelta paras en Falmouth, un pueblo fundado en 1769 con casas georgianas, y hacia las 12:35 estás en el resort.",
+        "EN": "In 35 minutes you reach Rafter's Village, in Trelawny. You board a bamboo raft for two and a captain takes it downstream for 1 h 15, about 3 miles under the trees. On the way back you stop in Falmouth, a town founded in 1769 with Georgian buildings, and you are at the resort around 12:35."
+      },
+      "salida": {
+        "ES": "Salida en auto desde el lobby del resort a las 09:00, unos 35 minutos hasta Rafter's Village. Vuelta al resort hacia las 12:35",
+        "EN": "By car from the resort lobby at 09:00, about 35 minutes to Rafter's Village. Back at the resort around 12:35"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el resort",
+          "Balsa de bambú para dos con su capitán",
+          "Parada en Falmouth"
+        ],
+        "EN": [
+          "Return transfer from the resort",
+          "Bamboo raft for two with its captain",
+          "Stop in Falmouth"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Camiseta, shorts y zapatos deportivos, como recomiendan en el propio río",
+          "Protector solar y gorra",
+          "Repelente de mosquitos",
+          "Billetes pequeños de dólar para la propina del capitán"
+        ],
+        "EN": [
+          "T-shirt, shorts and sneakers, as the rafting company itself recommends",
+          "Sunscreen and a cap",
+          "Mosquito repellent",
+          "Small US bills for the captain's tip"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del resort",
+            "EN": "Leaving the resort"
+          },
+          "s": {
+            "ES": "Hacia el este, a Trelawny",
+            "EN": "East to Trelawny"
+          },
+          "d": {
+            "ES": "La camioneta toma la carretera de la costa hacia Falmouth y, antes de llegar al pueblo, gira tierra adentro hacia el río. Son unos 22 km.",
+            "EN": "The van takes the coast road toward Falmouth and, before reaching town, turns inland toward the river. It is about 14 miles."
+          },
+          "tip": {
+            "ES": "Ponte protector solar antes de salir. En la balsa vas sentado y en los tramos sin árboles da el sol de lleno.",
+            "EN": "Put sunscreen on before you leave. You sit on the raft, and where there are no trees the sun hits you full on."
+          },
+          "hora": "09:00",
+          "dur": "5 min",
+          "img": "/ciudades/montego-bay/img/resort.jpg",
+          "lat": 18.52162,
+          "lng": -77.8107,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Río Martha Brae",
+            "EN": "Martha Brae River"
+          },
+          "s": {
+            "ES": "Una balsa de bambú para dos",
+            "EN": "A bamboo raft for two"
+          },
+          "d": {
+            "ES": "En Rafter's Village un encargado con licencia reparte las balsas, de unos 9 metros y hechas con cañas de bambú atadas. Te sientas y el capitán, de pie, la empuja con una vara larga contra el fondo. Son unos 5 km río abajo, alrededor de 1 h 15, con el agua verde por la piedra caliza. Al final te recoge la camioneta.",
+            "EN": "At Rafter's Village a licensed dispatcher assigns the rafts, 30 feet long and made of lashed bamboo poles. You sit down and the captain, standing, pushes off the riverbed with a long pole. It is about 3 miles downstream, around 1 h 15, on water turned green by the limestone. At the end the van picks you up."
+          },
+          "tip": {
+            "ES": "Pregúntale al capitán por la leyenda del oro escondido en el río. Cada uno la cuenta a su manera.",
+            "EN": "Ask your captain about the legend of the gold hidden in the river. Each one tells it his own way."
+          },
+          "hora": "09:40",
+          "dur": "1 h 35 min",
+          "img": "/ciudades/montego-bay/img/martha-brae.jpg",
+          "lat": 18.45187,
+          "lng": -77.6474,
+          "tramo": "coche",
+          "tramoDuracionMin": 35,
+          "duracionMin": 95
+        },
+        {
+          "n": {
+            "ES": "Water Square, Falmouth",
+            "EN": "Water Square, Falmouth"
+          },
+          "s": {
+            "ES": "La plaza que dio agua al pueblo",
+            "EN": "The square that gave the town its water"
+          },
+          "d": {
+            "ES": "Falmouth se fundó en 1769 y es uno de los pueblos georgianos mejor conservados del Caribe. La plaza debe su nombre al depósito que se construyó aquí entre 1798 y 1805 y que repartía agua por tubería, antes de que Nueva York la tuviera. Funcionó unos 150 años, hasta 1952.",
+            "EN": "Falmouth was founded in 1769 and is one of the best-preserved Georgian towns in the Caribbean. The square is named after the reservoir built here between 1798 and 1805, which piped water to the town before New York City had it. It worked for about 150 years, until 1952."
+          },
+          "tip": {
+            "ES": "A mediodía el sol cae fuerte en la plaza. Camina por la sombra de los portales.",
+            "EN": "At midday the sun beats down on the square. Walk in the shade of the arcades."
+          },
+          "hora": "11:30",
+          "dur": "20 min",
+          "img": "/ciudades/montego-bay/img/falmouth-plaza.jpg",
+          "lat": 18.49237,
+          "lng": -77.65262,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "El juzgado de Falmouth",
+            "EN": "Falmouth Courthouse"
+          },
+          "s": {
+            "ES": "Columnas georgianas frente a la plaza",
+            "EN": "Georgian columns on the square"
+          },
+          "d": {
+            "ES": "El juzgado de la parroquia de Trelawny se terminó a principios del siglo XIX, con un pórtico de columnas dóricas sobre una escalinata. Era el centro de la vida pública cuando Falmouth vivía de embarcar el azúcar de las plantaciones de Trelawny. A las 12:10 sale la camioneta hacia el resort.",
+            "EN": "The Trelawny parish courthouse was finished in the early 19th century, with a portico of Doric columns above a flight of steps. It was the center of public life when Falmouth made its living shipping sugar from the Trelawny plantations. The van leaves for the resort at 12:10."
+          },
+          "tip": {
+            "ES": "Míralo desde la plaza. El interior no siempre está abierto al público.",
+            "EN": "View it from the square. The inside is not always open to the public."
+          },
+          "hora": "11:55",
+          "dur": "15 min",
+          "img": "/ciudades/montego-bay/img/falmouth-juzgado.jpg",
+          "lat": 18.49304,
+          "lng": -77.65243,
+          "tramo": "pie",
+          "tramoDuracionMin": 3,
+          "duracionMin": 15
+        }
+      ],
+      "fotos": [
+        "/ciudades/montego-bay/img/martha-brae.jpg",
+        "/ciudades/montego-bay/img/martha-brae-noria.jpg",
+        "/ciudades/montego-bay/img/falmouth-plaza.jpg",
+        "/ciudades/montego-bay/img/falmouth-juzgado.jpg",
+        "/ciudades/montego-bay/img/falmouth-puerto.jpg"
+      ],
+      "duracionMin": 215,
+      "distanciaKm": 50,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Para subir a la balsa se pasa del muelle a la balsa con ayuda del capitán, y una vez sentado no hay que hacer esfuerzo. En Falmouth las aceras son irregulares. Con movilidad reducida, pregunta en recepción antes de reservar.",
+        "EN": "To board you step from the dock onto the raft with the captain's help, and once seated there is no effort involved. In Falmouth the sidewalks are uneven. If you have reduced mobility, ask at reception before booking."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 18.52162,
+        "lng": -77.8107,
+        "foto": "/ciudades/montego-bay/img/resort.jpg",
+        "texto": {
+          "ES": "Lobby del resort, a las 09:00. Baja diez minutos antes.",
+          "EN": "Resort lobby, at 09:00. Come down ten minutes early."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Propina del capitán",
+          "Comida y bebidas"
+        ],
+        "EN": [
+          "Captain's tip",
+          "Food and drinks"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Si el río baja crecido después de una tormenta, se cambia de día.",
+        "EN": "Free up to 24 h before. If the river runs high after a storm, it moves to another day."
+      },
+      "salidasFijas": [
+        "09:00"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "negril-ricks",
+      "expId": "ex16",
+      "img": "/ciudades/montego-bay/img/negril-atardecer.jpg",
+      "titulo": {
+        "ES": "Negril y la puesta de sol en Rick's Café",
+        "EN": "Negril and sunset at Rick's Café"
+      },
+      "tipo": {
+        "ES": "Playa y atardecer",
+        "EN": "Beach and sunset"
+      },
+      "dur": "9 h 45 min",
+      "d": {
+        "ES": "Vas hacia el oeste hasta Negril, en la punta de la isla. Pasas la tarde en Seven Mile Beach y hacia las 16:00 subes a los acantilados del West End, donde en Rick's Café la gente salta al mar desde la roca. Te quedas a ver cómo el sol se mete en el agua y hacia las 20:45 estás en el resort.",
+        "EN": "You head west to Negril, at the tip of the island. You spend the afternoon on Seven Mile Beach and around 16:00 go up to the West End cliffs, where people jump into the sea from the rocks at Rick's Café. You stay to watch the sun go down into the water and are back at the resort around 20:45."
+      },
+      "salida": {
+        "ES": "Salida en auto desde el lobby del resort a las 11:00, unos 105 minutos por la costa oeste. Vuelta al resort hacia las 20:45",
+        "EN": "By car from the resort lobby at 11:00, about 105 minutes along the west coast. Back at the resort around 20:45"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el resort",
+          "Tiempo libre en Seven Mile Beach",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Return transfer from the resort",
+          "Free time on Seven Mile Beach",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Traje de baño y toalla",
+          "Protector solar biodegradable",
+          "Efectivo en dólares para la comida y las bebidas",
+          "Zapatos de agua si piensas saltar en Rick's"
+        ],
+        "EN": [
+          "Swimsuit and a towel",
+          "Reef-safe sunscreen",
+          "US dollars in cash for food and drinks",
+          "Water shoes if you plan to jump at Rick's"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del resort",
+            "EN": "Leaving the resort"
+          },
+          "s": {
+            "ES": "Hacia el oeste por la costa",
+            "EN": "West along the coast"
+          },
+          "d": {
+            "ES": "La camioneta cruza Montego Bay y sigue por la costa, pasando por Lucea, hasta Negril, en el extremo oeste de la isla. Son unos 95 km.",
+            "EN": "The van crosses Montego Bay and follows the coast through Lucea to Negril, at the western end of the island. It is about 60 miles."
+          },
+          "tip": {
+            "ES": "Come algo ligero antes de salir. En Negril la comida es hacia las 13:00.",
+            "EN": "Have a light snack before you leave. Lunch in Negril is around 13:00."
+          },
+          "hora": "11:00",
+          "dur": "5 min",
+          "img": "/ciudades/montego-bay/img/resort.jpg",
+          "lat": 18.52162,
+          "lng": -77.8107,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Seven Mile Beach",
+            "EN": "Seven Mile Beach"
+          },
+          "s": {
+            "ES": "La playa larga de Negril",
+            "EN": "Negril's long beach"
+          },
+          "d": {
+            "ES": "La arena sigue casi en línea recta por Long Bay y Bloody Bay, con el agua turquesa y tranquila. Desde 1998 el mar de Negril es parque marino. Comes en uno de los bares de playa y te bañas hasta media tarde.",
+            "EN": "The sand runs almost straight along Long Bay and Bloody Bay, with calm turquoise water. Negril's waters have been a marine park since 1998. You have lunch at one of the beach bars and swim until mid-afternoon."
+          },
+          "tip": {
+            "ES": "Lleva el efectivo en billetes de 5 y 10 dólares. En los bares de playa casi todo se puede pagar en dólares estadounidenses.",
+            "EN": "Carry cash in 5 and 10 dollar bills. At the beach bars almost everything can be paid in US dollars."
+          },
+          "hora": "12:50",
+          "dur": "3 h",
+          "img": "/ciudades/montego-bay/img/seven-mile.jpg",
+          "lat": 18.30742,
+          "lng": -78.33859,
+          "tramo": "coche",
+          "tramoDuracionMin": 105,
+          "duracionMin": 180
+        },
+        {
+          "n": {
+            "ES": "Rick's Café",
+            "EN": "Rick's Café"
+          },
+          "s": {
+            "ES": "Saltos desde el acantilado",
+            "EN": "Cliff jumping"
+          },
+          "d": {
+            "ES": "Rick's abrió en abril de 1974, cuando Negril era un pueblo de pescadores, y es el bar más conocido de los acantilados del West End. La gente se tira al agua desde salientes de roca de distintas alturas, y en estos acantilados los puntos de salto más altos pasan de los 12 metros. No se paga entrada, solo lo que pidas.",
+            "EN": "Rick's opened in April 1974, when Negril was a fishing village, and it is the best-known bar on the West End cliffs. People jump into the water from rock ledges of different heights, and on these cliffs the highest jumping points are over 40 feet. There is no cover charge, you only pay for what you order."
+          },
+          "tip": {
+            "ES": "Si vas a saltar, empieza por el saliente más bajo y mira antes por dónde entran los demás al agua.",
+            "EN": "If you plan to jump, start from the lowest ledge and watch first where the others enter the water."
+          },
+          "hora": "16:05",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/montego-bay/img/ricks-cafe.jpg",
+          "lat": 18.25423,
+          "lng": -78.36328,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Puesta de sol en el acantilado",
+            "EN": "Sunset from the cliffs"
+          },
+          "s": {
+            "ES": "El sol se mete en el mar",
+            "EN": "The sun drops into the sea"
+          },
+          "d": {
+            "ES": "Negril ocupa la punta oeste de Jamaica, así que el sol cae al agua justo delante del acantilado. Se pone hacia las 17:40 en noviembre y diciembre y hacia las 18:50 en junio y julio. Cuando oscurece vuelves a la camioneta, que sale hacia el resort a las 19:00.",
+            "EN": "Negril sits at the western tip of Jamaica, so the sun drops into the water right in front of the cliffs. It sets around 17:40 in November and December and around 18:50 in June and July. Once it gets dark you walk back to the van, which leaves for the resort at 19:00."
+          },
+          "tip": {
+            "ES": "Busca lugar junto a la baranda una hora antes de la puesta de sol. Después se llena y cuesta ver el mar.",
+            "EN": "Find a spot by the railing an hour before sunset. After that it fills up and the sea is hard to see."
+          },
+          "hora": "17:35",
+          "dur": "1 h 25 min",
+          "img": "/ciudades/montego-bay/img/ricks-sol.jpg",
+          "lat": 18.2544,
+          "lng": -78.3634,
+          "tramo": "pie",
+          "tramoDuracionMin": 0,
+          "duracionMin": 85
+        }
+      ],
+      "fotos": [
+        "/ciudades/montego-bay/img/negril-atardecer.jpg",
+        "/ciudades/montego-bay/img/seven-mile.jpg",
+        "/ciudades/montego-bay/img/seven-mile-tarde.jpg",
+        "/ciudades/montego-bay/img/ricks-cafe.jpg",
+        "/ciudades/montego-bay/img/ricks-salto.jpg",
+        "/ciudades/montego-bay/img/ricks-sol.jpg"
+      ],
+      "duracionMin": 585,
+      "distanciaKm": 200,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "En Seven Mile Beach se camina por arena. Rick's tiene escaleras entre las terrazas del acantilado. Saltar es opcional y bajo tu responsabilidad.",
+        "EN": "On Seven Mile Beach you walk on sand. Rick's has stairs between the cliff terraces. Jumping is optional and at your own risk."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 18.52162,
+        "lng": -77.8107,
+        "foto": "/ciudades/montego-bay/img/resort.jpg",
+        "texto": {
+          "ES": "Lobby del resort, a las 11:00. Baja diez minutos antes.",
+          "EN": "Resort lobby, at 11:00. Come down ten minutes early."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Sillas de playa y sombrillas"
+        ],
+        "EN": [
+          "Food and drinks",
+          "Beach loungers and umbrellas"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Si hay mal tiempo, se cambia de día.",
+        "EN": "Free up to 24 h before. In bad weather it moves to another day."
+      },
+      "salidasFijas": [
+        "11:00"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "luminous-lagoon",
+      "expId": "ex17",
+      "img": "/ciudades/montego-bay/img/luminous-lagoon.jpg",
+      "titulo": {
+        "ES": "La Luminous Lagoon de noche",
+        "EN": "The Luminous Lagoon at night"
+      },
+      "tipo": {
+        "ES": "Noche",
+        "EN": "Night"
+      },
+      "dur": "2 h 15 min",
+      "d": {
+        "ES": "Media hora en auto hasta el muelle de Glistening Waters, pasando Falmouth. Ya de noche, la barca sale a la laguna y el agua se ilumina de azul en la estela del motor y alrededor de tu mano. En algunas salidas puedes meterte al agua. Hacia las 21:15 estás de vuelta.",
+        "EN": "Half an hour by car to the Glistening Waters dock, just past Falmouth. Once it is dark, the boat heads out onto the lagoon and the water lights up blue in the wake of the engine and around your hand. On some trips you can get into the water. You are back around 21:15."
+      },
+      "salida": {
+        "ES": "Salida en auto desde el lobby del resort a las 19:00, unos 30 minutos hasta Glistening Waters. Vuelta al resort hacia las 21:15",
+        "EN": "By car from the resort lobby at 19:00, about 30 minutes to Glistening Waters. Back at the resort around 21:15"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el resort",
+          "Paseo en barca por la laguna",
+          "Plan de la noche y mapa"
+        ],
+        "EN": [
+          "Return transfer from the resort",
+          "Boat ride on the lagoon",
+          "Evening plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Traje de baño puesto, por si te metes al agua",
+          "Una toalla y una muda seca",
+          "Repelente de mosquitos",
+          "Una bolsa seca para el celular"
+        ],
+        "EN": [
+          "Swimsuit on, in case you get in the water",
+          "A towel and dry clothes",
+          "Mosquito repellent",
+          "A dry bag for your phone"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del resort",
+            "EN": "Leaving the resort"
+          },
+          "s": {
+            "ES": "Hacia Falmouth por la costa",
+            "EN": "To Falmouth along the coast"
+          },
+          "d": {
+            "ES": "La camioneta va hacia el este por la carretera de la costa, unos 22 km. La laguna está pasando Falmouth, en la zona de Rock.",
+            "EN": "The van heads east on the coast road, about 14 miles. The lagoon is just past Falmouth, in the Rock area."
+          },
+          "tip": {
+            "ES": "Cena antes de salir. Glistening Waters tiene restaurante, pero cierra a las 21:00.",
+            "EN": "Have dinner before you leave. Glistening Waters has a restaurant, but it closes at 21:00."
+          },
+          "hora": "19:00",
+          "dur": "5 min",
+          "img": "/ciudades/montego-bay/img/resort.jpg",
+          "lat": 18.52162,
+          "lng": -77.8107,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Muelle de Glistening Waters",
+            "EN": "Glistening Waters dock"
+          },
+          "s": {
+            "ES": "Embarque en la barca",
+            "EN": "Boarding the boat"
+          },
+          "d": {
+            "ES": "Las barcas salen del muelle del restaurante Glistening Waters, en la orilla de la laguna. El paseo dura entre 45 minutos y una hora, y cuanto más oscura está la noche, más se nota el brillo.",
+            "EN": "The boats leave from the dock of the Glistening Waters restaurant, on the edge of the lagoon. The ride lasts 45 minutes to an hour, and the darker the night, the stronger the glow looks."
+          },
+          "tip": {
+            "ES": "Si puedes elegir fecha, evita las noches de luna llena. Con la luna alta el brillo se ve mucho menos.",
+            "EN": "If you can pick the date, avoid full-moon nights. With the moon high the glow is much harder to see."
+          },
+          "hora": "19:35",
+          "dur": "15 min",
+          "img": "/ciudades/montego-bay/img/laguna-muelle.jpg",
+          "lat": 18.48305,
+          "lng": -77.62824,
+          "tramo": "coche",
+          "tramoDuracionMin": 30,
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "La laguna en barca",
+            "EN": "Out on the lagoon"
+          },
+          "s": {
+            "ES": "El agua se enciende de azul",
+            "EN": "The water lights up blue"
+          },
+          "d": {
+            "ES": "La laguna es poco profunda, de menos de 2 metros, y aquí el agua dulce del Martha Brae flota sobre el agua de mar. En esa mezcla viven millones de dinoflagelados, organismos de una sola célula que brillan cuando algo los agita. Lo ves en la estela del motor y en las gotas que caen cuando sacas la mano del agua.",
+            "EN": "The lagoon is shallow, less than 6 feet deep, and here the fresh water of the Martha Brae floats on top of the seawater. Millions of dinoflagellates, single-celled organisms that glow when something stirs them, live in that mix. You see it in the engine's wake and in the drops that fall when you lift your hand out of the water."
+          },
+          "tip": {
+            "ES": "Apaga el flash del celular. Para que el brillo salga en la foto, usa el modo noche y apoya el teléfono en la borda.",
+            "EN": "Turn off your phone's flash. To catch the glow in a photo, use night mode and rest the phone on the side of the boat."
+          },
+          "hora": "19:55",
+          "dur": "25 min",
+          "img": "/ciudades/montego-bay/img/laguna-estela.jpg",
+          "lat": 18.48617,
+          "lng": -77.62791,
+          "tramo": "barco",
+          "tramoDuracionMin": 5,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Un baño en el agua que brilla",
+            "EN": "A swim in the glowing water"
+          },
+          "s": {
+            "ES": "Si tu barca para a bañarse",
+            "EN": "If your boat stops for a swim"
+          },
+          "d": {
+            "ES": "Si tu barca hace parada para bañarse, te metes desde la escalera y, al mover brazos y piernas, se te dibuja el contorno en azul. Después la barca vuelve al muelle, y a las 20:45 sale la camioneta hacia el resort.",
+            "EN": "If your boat stops for a swim, you climb in from the ladder, and as you move your arms and legs your outline glows blue. Then the boat returns to the dock, and the van leaves for the resort at 20:45."
+          },
+          "tip": {
+            "ES": "Si no quieres mojarte, mete la mano desde la barca y muévela rápido. El efecto se ve igual.",
+            "EN": "If you would rather stay dry, put your hand in from the boat and move it quickly. You see the same effect."
+          },
+          "hora": "20:20",
+          "dur": "15 min",
+          "img": "/ciudades/montego-bay/img/laguna-bano.jpg",
+          "lat": 18.4868,
+          "lng": -77.6286,
+          "tramo": "barco",
+          "tramoDuracionMin": 0,
+          "duracionMin": 15
+        }
+      ],
+      "fotos": [
+        "/ciudades/montego-bay/img/luminous-lagoon.jpg",
+        "/ciudades/montego-bay/img/laguna-muelle.jpg",
+        "/ciudades/montego-bay/img/laguna-estela.jpg",
+        "/ciudades/montego-bay/img/laguna-brillo.jpg",
+        "/ciudades/montego-bay/img/laguna-bano.jpg",
+        "/ciudades/montego-bay/img/laguna-motor.jpg"
+      ],
+      "duracionMin": 135,
+      "distanciaKm": 46,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Para subir a la barca hay un escalón desde el muelle y la tripulación ayuda. El baño es opcional, y para los niños pequeños el agua cubre.",
+        "EN": "There is a step down from the dock into the boat and the crew helps. The swim is optional, and the water is too deep for small children to stand."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 18.52162,
+        "lng": -77.8107,
+        "foto": "/ciudades/montego-bay/img/resort.jpg",
+        "texto": {
+          "ES": "Lobby del resort, a las 19:00. Baja cinco minutos antes.",
+          "EN": "Resort lobby, at 19:00. Come down five minutes early."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Cena y bebidas",
+          "Propina de la tripulación"
+        ],
+        "EN": [
+          "Dinner and drinks",
+          "Crew tip"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Si hay tormenta, se cambia de noche.",
+        "EN": "Free up to 24 h before. If there is a storm, it moves to another night."
+      },
+      "salidasFijas": [
+        "19:00"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "appleton",
+      "expId": "ex18",
+      "img": "/ciudades/montego-bay/img/appleton-estate.jpg",
+      "titulo": {
+        "ES": "Ron Appleton en el valle de Nassau",
+        "EN": "Appleton rum in the Nassau Valley"
+      },
+      "tipo": {
+        "ES": "Ron",
+        "EN": "Rum"
+      },
+      "dur": "6 h 50 min",
+      "d": {
+        "ES": "Dos horas hacia el sur, por el interior de la isla, hasta el valle de Nassau. En Appleton Estate pruebas el jugo de caña recién molida y ves los alambiques de cobre y las bodegas donde envejece el ron. La visita acaba con una cata, comes en la finca y hacia las 14:50 estás de vuelta.",
+        "EN": "Two hours south, through the interior of the island, to the Nassau Valley. At Appleton Estate you taste freshly crushed cane juice and see the copper pot stills and the warehouses where the rum ages. The visit ends with a tasting, you have lunch on the estate and you are back around 14:50."
+      },
+      "salida": {
+        "ES": "Salida en auto desde el lobby del resort a las 08:00, unas 2 horas hasta el valle de Nassau. Appleton abre de martes a sábado. Vuelta al resort hacia las 14:50",
+        "EN": "By car from the resort lobby at 08:00, about 2 hours to the Nassau Valley. Appleton opens Tuesday to Saturday. Back at the resort around 14:50"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el resort",
+          "Entrada a la visita de Appleton Estate con cata",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Return transfer from the resort",
+          "Appleton Estate tour admission with tasting",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Zapatos cómodos y cerrados",
+          "Una pastilla para el mareo si te mareas en carreteras con curvas",
+          "Protector solar y gorra para la parte al aire libre"
+        ],
+        "EN": [
+          "Comfortable closed shoes",
+          "A motion sickness pill if winding roads bother you",
+          "Sunscreen and a cap for the outdoor part"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del resort",
+            "EN": "Leaving the resort"
+          },
+          "s": {
+            "ES": "Hacia el sur por el interior",
+            "EN": "South through the interior"
+          },
+          "d": {
+            "ES": "La camioneta sale por Montego Bay y se mete hacia el interior por carreteras de montaña hasta St. Elizabeth. Son unos 85 km y alrededor de 2 horas, con bastantes curvas.",
+            "EN": "The van goes out through Montego Bay and into the interior on mountain roads to St. Elizabeth. It is about 55 miles and around 2 hours, with plenty of bends."
+          },
+          "tip": {
+            "ES": "Desayuna algo ligero. La primera bebida de la visita es un cóctel, hacia las 10:00.",
+            "EN": "Have a light breakfast. The first drink of the visit is a cocktail, around 10:00."
+          },
+          "hora": "08:00",
+          "dur": "5 min",
+          "img": "/ciudades/montego-bay/img/resort.jpg",
+          "lat": 18.52162,
+          "lng": -77.8107,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Centro de visitantes de Appleton",
+            "EN": "Appleton welcome center"
+          },
+          "s": {
+            "ES": "Cóctel de bienvenida y video",
+            "EN": "Welcome cocktail and video"
+          },
+          "d": {
+            "ES": "La visita lleva el nombre de Joy Spence, que en 1997 se convirtió en maestra mezcladora de Appleton, la primera mujer en ese puesto en la industria del ron. Empiezas con un cóctel de bienvenida, si tienes la edad legal para beber, y un video corto sobre la historia del ron y de la finca.",
+            "EN": "The tour is named after Joy Spence, who became Appleton's master blender in 1997, the first woman to hold that job in the rum industry. You start with a welcome cocktail, if you are of legal drinking age, and a short video on the history of rum and the estate."
+          },
+          "tip": {
+            "ES": "Guarda el celular dentro de la destilería. En algunas zonas no dejan hacer fotos.",
+            "EN": "Put your phone away inside the distillery. Photos are not allowed in some areas."
+          },
+          "hora": "10:00",
+          "dur": "20 min",
+          "img": "/ciudades/montego-bay/img/appleton-estate.jpg",
+          "lat": 18.1645,
+          "lng": -77.7256,
+          "tramo": "coche",
+          "tramoDuracionMin": 115,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "La caña y el molino",
+            "EN": "The cane and the mill"
+          },
+          "s": {
+            "ES": "Jugo de caña recién molida",
+            "EN": "Freshly crushed cane juice"
+          },
+          "d": {
+            "ES": "En el recorrido por los jardines ves cómo se molía la caña antes de las máquinas y te dan un vaso de jugo de caña frío. De la caña sale la melaza, la base del ron jamaicano.",
+            "EN": "Walking through the grounds you see how cane was crushed before machines, and you get a glass of chilled cane juice. Cane gives molasses, the base of Jamaican rum."
+          },
+          "tip": {
+            "ES": "Si viajas con niños, este es su momento. El jugo de caña no lleva alcohol.",
+            "EN": "If you are traveling with kids, this part is for them. Cane juice has no alcohol."
+          },
+          "hora": "10:25",
+          "dur": "25 min",
+          "img": "/ciudades/montego-bay/img/appleton-boiling.jpg",
+          "lat": 18.1648,
+          "lng": -77.7259,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Destilería y bodegas",
+            "EN": "Distillery and aging warehouses"
+          },
+          "s": {
+            "ES": "Alambiques de cobre y barricas",
+            "EN": "Copper pot stills and barrels"
+          },
+          "d": {
+            "ES": "El ron se destila en alambiques de cobre y envejece en barricas de roble americano que antes guardaron bourbon. Con el calor de Jamaica envejece más rápido y se evapora más, y a lo que se pierde lo llaman la parte de los ángeles. Appleton envejece unas 240 mil barricas en distintos puntos de la isla.",
+            "EN": "The rum is distilled in copper pot stills and aged in American oak barrels that once held bourbon. In the Jamaican heat it ages faster and evaporates more, and the part that is lost is called the angels' share. Appleton ages around 240,000 barrels at different sites around the island."
+          },
+          "tip": {
+            "ES": "Fíjate en los tubos con ron de distintas edades. Pasa de transparente a color caoba solo por el tiempo en la barrica.",
+            "EN": "Look at the tubes of rum of different ages. It goes from clear to mahogany just from the time spent in the barrel."
+          },
+          "hora": "10:55",
+          "dur": "30 min",
+          "img": "/ciudades/montego-bay/img/appleton-barricas.jpg",
+          "lat": 18.16507,
+          "lng": -77.72604,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Sala de cata y comida",
+            "EN": "Tasting room and lunch"
+          },
+          "s": {
+            "ES": "Rones añejos y cocina jamaicana",
+            "EN": "Aged rums and Jamaican food"
+          },
+          "d": {
+            "ES": "La visita termina en la sala de cata, donde pruebas varios rones añejos de la casa. Después comes en Joy's Lounge, el restaurante de la finca, con platos jamaicanos. A las 12:50 sale la camioneta hacia el resort.",
+            "EN": "The tour ends in the tasting room, where you try several of the estate's aged rums. Then you have lunch at Joy's Lounge, the estate restaurant, which serves Jamaican dishes. The van leaves for the resort at 12:50."
+          },
+          "tip": {
+            "ES": "En la tienda de la finca a veces hay ediciones limitadas. Si quieres llevarte una botella, mira ahí antes que en el aeropuerto.",
+            "EN": "The estate shop sometimes has limited editions. If you want to take a bottle home, look there before the airport."
+          },
+          "hora": "11:30",
+          "dur": "1 h 20 min",
+          "img": "/ciudades/montego-bay/img/appleton-anejamiento.jpg",
+          "lat": 18.1647,
+          "lng": -77.7254,
+          "tramo": "pie",
+          "tramoDuracionMin": 3,
+          "duracionMin": 80
+        }
+      ],
+      "fotos": [
+        "/ciudades/montego-bay/img/appleton-estate.jpg",
+        "/ciudades/montego-bay/img/appleton-fabrica.jpg",
+        "/ciudades/montego-bay/img/appleton-boiling.jpg",
+        "/ciudades/montego-bay/img/appleton-barricas.jpg",
+        "/ciudades/montego-bay/img/appleton-anejamiento.jpg"
+      ],
+      "duracionMin": 410,
+      "distanciaKm": 175,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "La visita es a pie, con tramos al aire libre, y algunas zonas no tienen acceso para sillas de ruedas. Pregunta en recepción antes de reservar.",
+        "EN": "The tour is on foot, partly outdoors, and some areas are not wheelchair accessible. Ask at reception before booking."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 18.52162,
+        "lng": -77.8107,
+        "foto": "/ciudades/montego-bay/img/resort.jpg",
+        "texto": {
+          "ES": "Lobby del resort, a las 08:00. Baja diez minutos antes.",
+          "EN": "Resort lobby, at 08:00. Come down ten minutes early."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida en Joy's Lounge",
+          "Botellas de la tienda"
+        ],
+        "EN": [
+          "Lunch at Joy's Lounge",
+          "Bottles from the shop"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Appleton solo abre de martes a sábado y cierra los días festivos, así que se reserva para uno de esos días.",
+        "EN": "Free up to 24 h before. Appleton only opens Tuesday to Saturday and closes on public holidays, so it is booked for one of those days."
+      },
+      "salidasFijas": [
+        "08:00"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "montego-bay-hip-strip",
+      "img": "/ciudades/montego-bay/img/doctors-cave.jpg",
+      "titulo": {
+        "ES": "Doctor's Cave y el Hip Strip",
+        "EN": "Doctor's Cave and the Hip Strip"
+      },
+      "tipo": {
+        "ES": "Playa y ciudad",
+        "EN": "Beach and town"
+      },
+      "dur": "4 h 30 min",
+      "d": {
+        "ES": "Una tarde por tu cuenta en Montego Bay. Recepción te pide un taxi hasta Doctor's Cave Beach, te bañas hasta las 16:30 y caminas por el Hip Strip junto al mar. Cenas jerk en The Pork Pit y vuelves en taxi hacia las 19:00.",
+        "EN": "An afternoon on your own in Montego Bay. Reception calls you a taxi to Doctor's Cave Beach, you swim until 16:30 and walk the Hip Strip along the sea. You have jerk for dinner at The Pork Pit and take a taxi back around 19:00."
+      },
+      "salida": {
+        "ES": "Desde el lobby del resort, en un taxi que pide recepción, hacia las 14:05. Son unos 25 minutos hasta Doctor's Cave Beach. Acuerda el precio con el taxista antes de subir",
+        "EN": "From the resort lobby, in a taxi called by reception, around 14:05. It is about 25 minutes to Doctor's Cave Beach. Agree on the fare with the driver before you get in"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan de la tarde y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Afternoon plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Traje de baño y toalla",
+          "Protector solar",
+          "Efectivo en dólares para la entrada, el taxi y la cena"
+        ],
+        "EN": [
+          "Swimsuit and a towel",
+          "Sunscreen",
+          "US dollars in cash for admission, the taxi and dinner"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Doctor's Cave Beach",
+            "EN": "Doctor's Cave Beach"
+          },
+          "s": {
+            "ES": "La playa del club de 1906",
+            "EN": "The 1906 club beach"
+          },
+          "d": {
+            "ES": "En 1880 el doctor Alexander McCatty abrió un sanatorio en Montego Bay y dejaba a sus amigos bañarse en esta playa, a la que se llegaba por una cueva. En 1906 donó el terreno y nació el club. En los años veinte el osteópata inglés Herbert Barker escribió sobre sus aguas y la playa se hizo famosa. Hoy forma parte del parque marino de Montego Bay.",
+            "EN": "In 1880 Dr. Alexander McCatty opened a sanatorium in Montego Bay and let his friends bathe on this beach, which was reached through a cave. In 1906 he donated the land and the club was born. In the 1920s the English osteopath Herbert Barker wrote about its waters and the beach became famous. Today it is part of the Montego Bay Marine Park."
+          },
+          "tip": {
+            "ES": "La entrada cuesta 8 dólares los adultos y 4 los menores de 12. Si llevas visor de snorkel, úsalo, porque el agua es clara y forma parte del parque marino.",
+            "EN": "Entry is US$8 for adults and US$4 for under-12s. If you have a snorkel mask, use it, since the water is clear and part of the marine park."
+          },
+          "hora": "14:30",
+          "dur": "2 h",
+          "img": "/ciudades/montego-bay/img/doctors-cave.jpg",
+          "lat": 18.4882,
+          "lng": -77.92881,
+          "tramo": "coche",
+          "tramoDuracionMin": 25,
+          "duracionMin": 120
+        },
+        {
+          "n": {
+            "ES": "Hip Strip",
+            "EN": "Hip Strip"
+          },
+          "s": {
+            "ES": "Jimmy Cliff Boulevard",
+            "EN": "Jimmy Cliff Boulevard"
+          },
+          "d": {
+            "ES": "La avenida junto al mar se llamó Gloucester Avenue hasta el 28 de marzo de 2019, cuando le pusieron el nombre de Jimmy Cliff, el cantante de The Harder They Come, nacido en Somerton, en esta misma parroquia. Murió en noviembre de 2025, y en 2026 la ciudad aprobó levantarle una estatua a la entrada del bulevar. Caminando hacia el sur pasas por tiendas de artesanía y por Margaritaville, con su terraza sobre el agua.",
+            "EN": "The seafront avenue was Gloucester Avenue until March 28, 2019, when it was renamed after Jimmy Cliff, the singer of The Harder They Come, born in Somerton in this same parish. He died in November 2025, and in 2026 the city approved a statue of him at the entrance to the boulevard. Walking south you pass craft shops and Margaritaville, with its terrace over the water."
+          },
+          "tip": {
+            "ES": "En los puestos de artesanía se regatea. Pregunta el precio, ofrece algo menos y cierra el trato con calma.",
+            "EN": "At the craft stalls people haggle. Ask the price, offer a bit less and settle calmly."
+          },
+          "hora": "16:35",
+          "dur": "45 min",
+          "img": "/ciudades/montego-bay/img/hip-strip.jpg",
+          "lat": 18.48386,
+          "lng": -77.93032,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "The Pork Pit",
+            "EN": "The Pork Pit"
+          },
+          "s": {
+            "ES": "Jerk asado sobre leña de pimienta",
+            "EN": "Jerk grilled over pimento wood"
+          },
+          "d": {
+            "ES": "Un local de jerk en el número 27 del bulevar, junto a la playa de Walter Fletcher. Asan el cerdo y el pollo adobados sobre leña de pimienta de Jamaica, y los sirven con festival, un pan frito un poco dulce. Al terminar, el taxi te lleva al resort en unos 20 minutos.",
+            "EN": "A jerk spot at number 27 on the boulevard, next to Walter Fletcher Beach. They grill marinated pork and chicken over pimento wood and serve it with festival, a slightly sweet fried bread. Afterwards a taxi takes you back to the resort in about 20 minutes."
+          },
+          "tip": {
+            "ES": "Pide la salsa picante aparte y pruébala con un trozo pequeño. Si prefieres Scotchies, otro clásico del jerk, queda de camino, a unos 8 minutos del resort.",
+            "EN": "Ask for the hot sauce on the side and try it with a small piece first. If you prefer Scotchies, another jerk classic, it is on the way back, about 8 minutes from the resort."
+          },
+          "hora": "17:30",
+          "dur": "1 h",
+          "img": "/ciudades/montego-bay/img/jerk.jpg",
+          "lat": 18.47975,
+          "lng": -77.9283,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 60
+        }
+      ],
+      "fotos": [
+        "/ciudades/montego-bay/img/doctors-cave.jpg",
+        "/ciudades/montego-bay/img/doctors-cave-agua.jpg",
+        "/ciudades/montego-bay/img/doctors-cave-bahia.jpg",
+        "/ciudades/montego-bay/img/hip-strip.jpg",
+        "/ciudades/montego-bay/img/jerk.jpg"
+      ],
+      "duracionMin": 270,
+      "distanciaKm": 33,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "La playa es de arena y la avenida es llana, con aceras en casi todo el tramo.",
+        "EN": "The beach is sand and the avenue is flat, with sidewalks along most of it."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 18.52162,
+        "lng": -77.8107,
+        "foto": "/ciudades/montego-bay/img/resort.jpg",
+        "texto": {
+          "ES": "Lobby del resort. Pide el taxi en recepción unos 15 minutos antes de salir.",
+          "EN": "Resort lobby. Ask reception for a taxi about 15 minutes before you want to leave."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Taxi de ida y vuelta",
+          "Entrada a Doctor's Cave Beach",
+          "Cena en The Pork Pit"
+        ],
+        "EN": [
+          "Taxi there and back",
+          "Doctor's Cave Beach admission",
+          "Dinner at The Pork Pit"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación.",
+        "EN": "Self-guided, so there is nothing to book or cancel."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un ponche de ron, o una limonada para los niños, en el Bar King Frog a la vuelta",
+      "EN": "A rum punch, or a lemonade for the kids, at Bar King Frog when you get back"
+    }
+  },
+  "creditos": [
+    "Piscina y playa del antiguo Hilton Rose Hall, hoy Dreams Rose Hall: Shannon Kaiser, CC BY 2.0, Flickr",
+    "Fachada de Rose Hall Great House, Montego Bay: Urban Walnut, CC BY-SA 3.0, Wikimedia Commons",
+    "Escalinata y pórtico de Rose Hall Great House: Don Ramey Logan, CC BY-SA 3.0, Wikimedia Commons",
+    "Rose Hall Great House entre los árboles del jardín: Don Ramey Logan, CC BY-SA 3.0, Wikimedia Commons",
+    "Rose Hall, St. James, lámina 20 de A Picturesque Tour of the Island of Jamaica (1825): James Hakewill, Dominio público, Wikimedia Commons",
+    "Tumba atribuida a Annie Palmer, Rose Hall: Urban Walnut, CC BY-SA 3.0, Wikimedia Commons",
+    "Dunn's River Falls, Ocho Rios: Thank You (23 Millions+) views, CC BY 2.0, Wikimedia Commons",
+    "Subida en grupo por Dunn's River Falls: Thank You (23 Millions+) views, CC BY 2.0, Wikimedia Commons",
+    "Turistas subiendo Dunn's River Falls detrás de un guía: Breakyunit, CC BY-SA 3.0, Wikimedia Commons",
+    "Playa al pie de Dunn's River Falls: Dr. Thomas Liptak, CC BY-SA 4.0, Wikimedia Commons",
+    "Pozas de Dunn's River Falls: Dr. Thomas Liptak, CC BY-SA 4.0, Wikimedia Commons",
+    "Dunn's River Falls entre la vegetación: Don Ramey Logan, CC BY-SA 3.0, Wikimedia Commons",
+    "Entrada superior de Dunn's River Falls and Park: Balou46, CC BY-SA 4.0, Wikimedia Commons",
+    "Balsa de bambú en el río Martha Brae: Donna-Kay Delahaye, CC BY-SA 4.0, Wikimedia Commons",
+    "Noria del Martha Brae que daba agua a Falmouth, principios del siglo XX (recorte horizontal): James Johnston, Dominio público, Wikimedia Commons",
+    "Water Square, Falmouth: rh43, CC BY 3.0, Wikimedia Commons",
+    "Juzgado de la parroquia de Trelawny, Falmouth (recorte horizontal): Concord, CC BY-SA 4.0, Wikimedia Commons",
+    "Puerto de cruceros de Falmouth visto desde un barco: Derek Hatfield, CC BY 2.0, Wikimedia Commons",
+    "Seven Mile Beach, Negril: Alphakaya, Dominio público, Wikimedia Commons",
+    "Atardecer en Seven Mile Beach, Negril: VV Nincic, CC BY 2.0, Wikimedia Commons",
+    "Saltos desde el acantilado de Rick's Café, Negril: Don Ramey Logan, CC BY-SA 3.0, Wikimedia Commons",
+    "Bañista después de saltar en Rick's Café, Negril: Simson Petrol, CC0, Wikimedia Commons",
+    "Puesta de sol desde Rick's Café, Negril: Fulvio Barudoni, CC BY 3.0, Wikimedia Commons",
+    "Atardecer frente a los acantilados de Rick's Café: Johannes49, CC BY 2.5, Wikimedia Commons",
+    "Doctor's Cave Beach, Montego Bay: Matt Howry, CC BY 2.0, Flickr",
+    "Agua de Doctor's Cave Beach, Montego Bay: Matt Howry, CC BY 2.0, Flickr",
+    "Doctor's Cave Beach Club, Montego Bay: Op. Deo, Dominio público, Wikimedia Commons",
+    "Margaritaville en el Hip Strip, Montego Bay: mcclouds, CC BY-SA 2.0, Wikimedia Commons",
+    "Pollo jerk asándose bajo una lámina de zinc, Montego Bay: Grahampurse, CC BY-SA 4.0, Wikimedia Commons",
+    "Estela luminosa en la Luminous Lagoon: Daniel Gillaspia, CC BY 2.0, Flickr",
+    "Embarque nocturno en el muelle de la Luminous Lagoon: Daniel Gillaspia, CC BY 2.0, Flickr",
+    "La Luminous Lagoon de noche, con las luces de la costa: Daniel Gillaspia, CC BY 2.0, Flickr",
+    "Brillo azul en el agua de la Luminous Lagoon: Daniel Gillaspia, CC BY 2.0, Flickr",
+    "Bañistas en el agua que brilla, Luminous Lagoon: Daniel Gillaspia, CC BY 2.0, Flickr",
+    "Estela azul detrás del motor, Luminous Lagoon: Daniel Gillaspia, CC BY 2.0, Flickr",
+    "Arco de entrada de Appleton Estate: Jeremy T. Hetzel, CC BY 2.0, Flickr",
+    "Fábrica y chimenea de Appleton Estate: Jeremy T. Hetzel, CC BY 2.0, Flickr",
+    "Antigua casa de calderas de Appleton Estate: Jeremy T. Hetzel, CC BY 2.0, Flickr",
+    "Bodega de barricas de Appleton Estate: Jeremy T. Hetzel, CC BY 2.0, Flickr",
+    "Ron de distintas edades en Appleton Estate: Jeremy T. Hetzel, CC BY 2.0, Flickr"
+  ]
+}

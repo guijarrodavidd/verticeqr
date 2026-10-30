@@ -1,0 +1,95 @@
+CRÉDITOS DE FOTOGRAFÍA Y VÍDEO — carta Dreams Rose Hall Resort & Spa (Rose Hall, Montego Bay, Jamaica)
+=====================================================================================================
+USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
+Todas las imágenes, recortadas a 800×533 y calidad ~72 (og.jpg a 1200×630).
+
+1) MATERIAL DEL HOTEL — propiedad de Hyatt / Dreams Resorts & Spas (antes Playa), solo para la demo privada
+   Origen: la web del resort, https://www.resortsbyhyatt.com/dreams/dreams-rose-hall (sus páginas de
+   inicio, dining-drinks, activities, activities/spa, family-suites y gallery), servidas desde
+   playa-cms-assets.s3.amazonaws.com y playa-media.imgix.net. Antes de cualquier uso público se
+   sustituye por el material que facilite el hotel.
+     banner.jpg   Piscina principal frente al mar al atardecer (dreams-rose-hall-main-pool-03.jpg)
+     sv4.jpg      Ocean Front Walkout, salón con salida al patio (DRRHM_Oceanfront_Walkout_Living_Area.jpg)
+     ex7.jpg      Familia en la playa del resort, «En la piscina o la playa» (Dreams-Rose-Hall-Beach-Check-In-Family.jpg)
+     rs1.jpg      Cena frente al mar en Seaside (Dreams-Rose-Hall-Seaside-Restaurant-Lifestyle.jpg)
+     rs2.jpg      Rum Factory, salón con reservados de barrica (dreams-rose-hall-rum-factory-01.jpg)
+     rs3.jpg      Moonstone, terraza de madera frente al mar (Dreams-Resort-&-Spa-Rose-Hall-Moonstone-di-Mare.Jpg)
+     rs4.jpg      Mangoes, terraza junto a la playa (DRRHM-Mangoes-Restaurant-Family-Service.jpg)
+     rs5.jpg      Three Palms, salón (MBJRHHF_Three_Palms_Interior_01.jpg)
+     rs6.jpg      Cena para dos junto al mar (sunrise.jpg)
+     bb1.jpg      Cócteles en el bar dentro de la piscina (dreams-rose-hall-swim-up-bar-lifestyle-01.jpg)
+     sp1.jpg      Soothe Spa by the Sea, cabina frente al mar (MBJRHHF_Soothe_Spa_By_The_Sea_2.jpg)
+     sp2.jpg      Piedras calientes del Radiant Spa (Dreams-Resort-&-Spa-Rose-Hall-Radiant-Spa-Hot-Stones.jpg)
+     sp3.jpg      Soothe Spa by the Sea, cabina doble (MBJRHHF_Soothe_Spa_By_The_Sea_4.jpg)
+     sp4.jpg      Cabina de tratamiento del Radiant Spa (MBJRHHF_Radiant_Spa_Treatment_Room.jpg)
+     sp5.jpg      Sillones de pedicura del Radiant Spa (MBJRHHF_Radiant_Spa.jpg)
+     up1.jpg      Partial Ocean View, zona de estar (MBJRHHF_Partial_Ocean_View_King_Living_Area.jpg)
+     up2.jpg      Pareja en la costa del resort (Dreams-Rose-Hall-Coastline-Couple.jpg)
+     up3.jpg      Ocean Front King (MBJRHHF_Ocean_Front_King.jpg)
+     up4.jpg      Habitación con vista al mar, cabecera de «Suites» (suites-hero.jpg)
+     up5.jpg      Ocean Front Royal Suite, dormitorio (MBJRHHF_Royal_Suite_Bedroom.jpg)
+     up6.jpg      Resort View King (Dreams_Rose_Hall_Resort_View_King.jpg)
+     up7.jpg      Cabaña junto a la piscina frente al mar (DRRHM_Pool_Cabana_Couple_Ocean_View.jpg)
+     up10.jpg     Pareja en la costa del resort (Dreams-Rose-Hall-Coastline-Couple-2.jpg)
+     ex3.jpg      Bartender del Cricket Club (mbjrhhf-crickets-service.jpg)
+     ex4.jpg      Niños en Sugar Mill Falls (dreams-rose-hall-waterpark-kids-4e.jpg)
+     ex5.jpg      Pistas de tenis desde el aire (dreams-rose-hall-aerial-tennis-courts-copy.jpg)
+     ex9.jpg      Bar King Frog de noche (dreams-rose-hall-bar-king-frog-couple.jpg)
+     ex10.jpg     Campo de golf Cinnamon Hill (Dreams-Resort-&-Spa-Rose-Hall-Cinnamon-Hill-Golf-Course.Jpg)
+     ex11.jpg     Buceo, foto de archivo que usa la web del resort (stock-scuba.jpg)
+     sv1.jpg      Paseo por la playa del resort (Dreams-Rose-Hall-Beach-Family-Walk-4.jpg)
+     sv3.jpg      Tobogán de Sugar Mill Falls (dreams-rose-hall-water-park-lifestyle-01-copy.jpg)
+     sv5.jpg      Snorkel en agua turquesa (activities-aqua.jpg)
+     og.jpg       Composición de Vértice: banner.jpg con un velo azul y el logotipo en blanco
+
+   logo.png / logo-white.png / vertice.png — los mismos de dreams-punta-mita: logotipo clásico
+   «Dreams Resorts & Spas». Sustituir por el vectorial oficial que facilite el hotel.
+
+2) VÍDEO DE BIENVENIDA (hecho el 30-oct-2026)
+        vid/welcome.mp4 (póster img/welcome.jpg = primer fotograma)
+        1080×1920, 30 fps, 11,4 s, H.264 High sin audio, CRF 19 (maxrate 5000k), fast start, ~7,2 MB.
+        Cuatro planos de vídeo real (ninguna foto fija) con fundidos de 0,4 s; el último funde
+        con el arranque del primero para que el bucle no salte.
+        Planos 1 a 3: vídeo oficial del resort, el que se reproduce en la cabecera de su web
+        (https://www.resortsbyhyatt.com/dreams/dreams-rose-hall). Está alojado en Cloudflare Stream
+        (ID 85e16daa1a587e9bc8997405ccf36029), 1920×1080, 30,6 s, sin texto ni logos en los tramos usados.
+        https://cloudflarestream.com/85e16daa1a587e9bc8997405ccf36029/manifest/video.m3u8 (versión 1080p)
+        Cada tramo dura entre 1 y 2 s en el original: se recorta en vertical y se ralentiza con
+        interpolación de movimiento hasta unos 3 s.
+          1. El resort desde el aire: las dos torres, la piscina, la playa y el espigón, con las
+             colinas de Rose Hall detrás (tramo 16,43–17,51 s, a cámara lenta ×3,2).
+          2. El parque acuático desde arriba: el tobogán y la piscina entre palmeras
+             (tramo 9,53–10,86 s, a cámara lenta ×2,4).
+          3. La costa de Rose Hall desde un dron, con el agua turquesa y un catamarán de vela
+             (tramo 18,75–20,62 s, a cámara lenta ×1,72).
+          4. Atardecer sobre el mar con una palmera a contraluz, vertical en 4K (tramo 0,3–3,5 s).
+             «Stunning Tropical Beach Sunset View» · Stijn Dijkstra · Pexels, 2160×3840 ·
+             Licencia Pexels · https://www.pexels.com/video/29988786/
+          El plano 4 es de archivo libre y Pexels no indica la playa; en Pexels y Pixabay no hay
+          ningún atardecer identificado como de Jamaica.
+
+3) WIKIMEDIA COMMONS (licencias libres; en https://commons.wikimedia.org/wiki/File:<nombre>)
+     cm2.jpg    Beef patty (3154002720).jpg · stu_spivack · CC BY-SA 2.0
+     cm3.jpg    Curry Goat and Rice.jpg · Leon Brocard · CC BY 2.0
+     ds1.jpg    Ackee and Saltfish.jpg · gailf548 · CC BY 2.0
+     bb3.jpg    Red Stripe (Unsplash).jpg · Jakob Owens · CC0
+     dl1.jpg    Banana Fritters (2437981960).jpg · Mack Male · CC BY-SA 2.0
+     ex1.jpg    Morning Yoga (134921595).jpeg · Baruc Acosta · CC BY-SA 3.0
+     ex8.jpg    Hobie Cat Segel Katamarane am Strand Sarigerme, Türkei (49070976142).jpg · dronepicr · CC BY 2.0
+     up8.jpg    Montego Bay plane Photo Don Ramey Logan.jpg · Don Ramey Logan · CC BY-SA 3.0
+     tn1.jpg    Jamaica Blue Mountain Coffee 9494.JPG · Mariordo Mario Roberto Duran Ortiz · CC BY-SA 3.0
+     tn3.jpg    Sunbum sunscreen spf 30.jpg · David Chancey · CC BY-SA 4.0 (girada 90°)
+     tn4.jpg    Rum cakes Jamaica.jpg · Xaymacan · CC BY-SA 4.0
+     tn5.jpg    Straw Hat And Sun Glasses On Beach (31194617497).jpg · Jernej Furman · CC BY 2.0
+     tn6.jpg    Aloe vera leaf showing the gel (1).JPG · Ellywa · CC BY-SA 4.0
+   De la guía de Montego Bay (ver public/ciudades/montego-bay/CREDITOS-FOTOS.txt):
+     cm1.jpg    Pollo jerk asándose bajo una lámina de zinc · Grahampurse · CC BY-SA 4.0 (jerk.jpg)
+     tn2.jpg    Ron de distintas edades en Appleton Estate · Jeremy T. Hetzel · CC BY 2.0, Flickr (appleton-anejamiento.jpg)
+   Las excursiones (ex13 a ex18) usan directamente las fotos de /ciudades/montego-bay/img/.
+
+4) PEXELS (licencia Pexels; las mismas fotos genéricas de dreams-punta-mita, con su crédito allí)
+     cm4.jpg = cm6 (burger) · cm5.jpg = cm7 (pizza) · cm6.jpg = cm10 (nuggets) · cm7.jpg = cm9 (sándwich)
+     ds2.jpg = ds3 · ds3.jpg = ds4 · ds4.jpg = ds8 · ds5.jpg = ds5 · ds6.jpg = ds6
+     bb2.jpg = bb2 · bb4.jpg = bb4 · bb6.jpg = bb6 · bb7.jpg = bb7 · bb8.jpg = bb8
+     dl2.jpg = dl2 · dl4.jpg = dl4 · ex2.jpg = ex2 · ex6.jpg = ex8 · up9.jpg = up4 · sv2.jpg = sv2
+     am1.jpg = am1 · am2.jpg = am2 · am3.jpg = am3 · am4.jpg = am4
