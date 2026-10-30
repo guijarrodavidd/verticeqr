@@ -1,0 +1,602 @@
+{
+  "formentera-1": {
+    "pregunta": {
+      "ES": "¿Qué nombre dieron los romanos a la ciudad de Ibiza?",
+      "EN": "What did the Romans call the town of Ibiza?",
+      "DE": "Wie nannten die Römer die Stadt Ibiza?"
+    },
+    "opciones": [
+      {
+        "ES": "Portus Magnus",
+        "EN": "Portus Magnus",
+        "DE": "Portus Magnus"
+      },
+      {
+        "ES": "Ebusus",
+        "EN": "Ebusus",
+        "DE": "Ebusus"
+      },
+      {
+        "ES": "Palma",
+        "EN": "Palma",
+        "DE": "Palma"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La llamaron Ebusus, a partir del nombre púnico de la ciudad. De ahí vienen Eivissa e Ibiza.",
+      "EN": "They called it Ebusus, after the Punic name of the town. Eivissa and Ibiza both come from it.",
+      "DE": "Sie nannten sie Ebusus, nach dem punischen Namen der Stadt. Davon stammen Eivissa und Ibiza ab."
+    }
+  },
+  "formentera-2": {
+    "pregunta": {
+      "ES": "¿Cómo se llama el paso de mar con islotes entre Ibiza y Formentera?",
+      "EN": "What is the islet-dotted strait between Ibiza and Formentera called?",
+      "DE": "Wie heißt die Meerenge mit kleinen Inseln zwischen Ibiza und Formentera?"
+    },
+    "opciones": [
+      {
+        "ES": "Es Freus",
+        "EN": "Es Freus",
+        "DE": "Es Freus"
+      },
+      {
+        "ES": "Es Trucadors",
+        "EN": "Es Trucadors",
+        "DE": "Es Trucadors"
+      },
+      {
+        "ES": "Sa Conillera",
+        "EN": "Sa Conillera",
+        "DE": "Sa Conillera"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es Freus es el estrecho entre las dos islas, con islotes como Espalmador. Los ferris rápidos lo cruzan en unos 30-35 minutos de puerto a puerto.",
+      "EN": "Es Freus is the strait between the two islands, with islets such as Espalmador. Fast ferries cross it in about 30-35 minutes from port to port.",
+      "DE": "Es Freus ist die Meerenge zwischen den beiden Inseln, mit kleinen Inseln wie Espalmador. Die Schnellfähren brauchen von Hafen zu Hafen etwa 30-35 Minuten."
+    }
+  },
+  "formentera-3": {
+    "pregunta": {
+      "ES": "¿Qué fue la principal fuente de ingresos de Formentera antes del turismo?",
+      "EN": "What was Formentera's main source of income before tourism?",
+      "DE": "Was war vor dem Tourismus die wichtigste Einnahmequelle Formenteras?"
+    },
+    "opciones": [
+      {
+        "ES": "El vino",
+        "EN": "Wine",
+        "DE": "Wein"
+      },
+      {
+        "ES": "La pesca del atún",
+        "EN": "Tuna fishing",
+        "DE": "Thunfischfang"
+      },
+      {
+        "ES": "La sal",
+        "EN": "Salt",
+        "DE": "Salz"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Las salinas empiezan justo detrás de La Savina. Hoy forman parte del parque natural de ses Salines, junto con las de Ibiza.",
+      "EN": "The salt flats start right behind La Savina. Today they are part of the ses Salines natural park, together with those on Ibiza.",
+      "DE": "Die Salinen beginnen direkt hinter La Savina. Heute gehören sie zusammen mit denen auf Ibiza zum Naturpark ses Salines."
+    }
+  },
+  "formentera-4": {
+    "pregunta": {
+      "ES": "¿Qué edad calculó un estudio del CSIC para algunas praderas de posidonia de esta zona?",
+      "EN": "How old did a CSIC study find some posidonia meadows in this area to be?",
+      "DE": "Wie alt sind laut einer Studie des CSIC manche Posidonia-Wiesen in dieser Gegend?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 100 años",
+        "EN": "About 100 years",
+        "DE": "Etwa 100 Jahre"
+      },
+      {
+        "ES": "Unos 1.000 años",
+        "EN": "About 1,000 years",
+        "DE": "Etwa 1.000 Jahre"
+      },
+      {
+        "ES": "Al menos 100.000 años",
+        "EN": "At least 100,000 years",
+        "DE": "Mindestens 100.000 Jahre"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "La posidonia crece clonándose, así que una misma planta puede cubrir kilómetros. El estudio se publicó en la revista PLoS ONE. Por eso está protegida y no se puede fondear encima.",
+      "EN": "Posidonia grows by cloning itself, so a single plant can cover kilometres. The study was published in the journal PLoS ONE. That is why it is protected and boats may not anchor on it.",
+      "DE": "Posidonia wächst durch Klonen, eine einzige Pflanze kann so Kilometer bedecken. Die Studie erschien in der Fachzeitschrift PLoS ONE. Deshalb steht sie unter Schutz, und Boote dürfen darauf nicht ankern."
+    }
+  },
+  "es-vedra-1": {
+    "pregunta": {
+      "ES": "¿Cómo se llama el islote más pequeño que acompaña a Es Vedrà?",
+      "EN": "What is the smaller islet next to Es Vedrà called?",
+      "DE": "Wie heißt die kleinere Insel neben Es Vedrà?"
+    },
+    "opciones": [
+      {
+        "ES": "Es Vedranell",
+        "EN": "Es Vedranell",
+        "DE": "Es Vedranell"
+      },
+      {
+        "ES": "Sa Conillera",
+        "EN": "Sa Conillera",
+        "DE": "Sa Conillera"
+      },
+      {
+        "ES": "Espalmador",
+        "EN": "Espalmador",
+        "DE": "Espalmador"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es Vedranell está al lado de Es Vedrà, más bajo y alargado. Los dos, junto con los islotes de Ponent, son reserva natural desde 2002.",
+      "EN": "Es Vedranell sits beside Es Vedrà, lower and longer. Both, together with the Ponent islets, have been a nature reserve since 2002.",
+      "DE": "Es Vedranell liegt neben Es Vedrà, niedriger und länglich. Beide sind zusammen mit den Ponent-Inseln seit 2002 Naturreservat."
+    }
+  },
+  "es-vedra-2": {
+    "pregunta": {
+      "ES": "¿Qué ave rapaz cría en los acantilados de Es Vedrà?",
+      "EN": "Which bird of prey breeds on Es Vedrà's cliffs?",
+      "DE": "Welcher Greifvogel brütet an den Klippen von Es Vedrà?"
+    },
+    "opciones": [
+      {
+        "ES": "El águila real",
+        "EN": "The golden eagle",
+        "DE": "Der Steinadler"
+      },
+      {
+        "ES": "El halcón de Eleonor",
+        "EN": "Eleonora's falcon",
+        "DE": "Der Eleonorenfalke"
+      },
+      {
+        "ES": "El buitre leonado",
+        "EN": "The griffon vulture",
+        "DE": "Der Gänsegeier"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Pasa el invierno en Madagascar y cría a finales del verano, cuando miles de pájaros cruzan el Mediterráneo en su migración y tiene caza para sus pollos.",
+      "EN": "It spends the winter in Madagascar and breeds in late summer, when thousands of birds are crossing the Mediterranean on migration and there is prey for its chicks.",
+      "DE": "Er überwintert auf Madagaskar und brütet im Spätsommer, wenn Tausende Zugvögel das Mittelmeer überqueren und es Beute für die Jungen gibt."
+    }
+  },
+  "es-vedra-3": {
+    "pregunta": {
+      "ES": "¿Qué escritor convirtió la Torre des Savinar en la Torre del Pirata?",
+      "EN": "Which writer turned Torre des Savinar into the Pirate's Tower?",
+      "DE": "Welcher Schriftsteller machte die Torre des Savinar zum Piratenturm?"
+    },
+    "opciones": [
+      {
+        "ES": "Benito Pérez Galdós",
+        "EN": "Benito Pérez Galdós",
+        "DE": "Benito Pérez Galdós"
+      },
+      {
+        "ES": "Pío Baroja",
+        "EN": "Pío Baroja",
+        "DE": "Pío Baroja"
+      },
+      {
+        "ES": "Vicente Blasco Ibáñez",
+        "EN": "Vicente Blasco Ibáñez",
+        "DE": "Vicente Blasco Ibáñez"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Blasco Ibáñez ambientó en ella parte de Los muertos mandan, una novela sobre Ibiza. La torre se terminó en 1763 y está protegida como Bien de Interés Cultural desde 1949.",
+      "EN": "Blasco Ibáñez set part of Los muertos mandan, a novel about Ibiza, there. The tower was finished in 1763 and has been a protected heritage site since 1949.",
+      "DE": "Blasco Ibáñez ließ einen Teil von Los muertos mandan, einem Roman über Ibiza, dort spielen. Der Turm wurde 1763 fertig und steht seit 1949 unter Denkmalschutz."
+    }
+  },
+  "es-vedra-4": {
+    "pregunta": {
+      "ES": "¿Cuánto mide Es Vedrà?",
+      "EN": "How high is Es Vedrà?",
+      "DE": "Wie hoch ist Es Vedrà?"
+    },
+    "opciones": [
+      {
+        "ES": "182 metros",
+        "EN": "182 metres",
+        "DE": "182 Meter"
+      },
+      {
+        "ES": "382 metros",
+        "EN": "382 metres",
+        "DE": "382 Meter"
+      },
+      {
+        "ES": "682 metros",
+        "EN": "682 metres",
+        "DE": "682 Meter"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Con 382 metros es más alto que la Torre Eiffel, que mide 330 con su antena. A mediados del siglo XIX el carmelita Francesc Palau vivió allí como ermitaño.",
+      "EN": "At 382 metres it is taller than the Eiffel Tower, which is 330 including its antenna. In the mid-19th century the Carmelite friar Francesc Palau lived there as a hermit.",
+      "DE": "Mit 382 Metern ist sie höher als der Eiffelturm, der mit Antenne 330 misst. Mitte des 19. Jahrhunderts lebte der Karmelit Francesc Palau dort als Einsiedler."
+    }
+  },
+  "calas-oeste-1": {
+    "pregunta": {
+      "ES": "¿De qué nombre romano viene el Portmany de Sant Antoni de Portmany?",
+      "EN": "Which Roman name does the Portmany in Sant Antoni de Portmany come from?",
+      "DE": "Von welchem römischen Namen stammt das Portmany in Sant Antoni de Portmany?"
+    },
+    "opciones": [
+      {
+        "ES": "Portus Magnus",
+        "EN": "Portus Magnus",
+        "DE": "Portus Magnus"
+      },
+      {
+        "ES": "Portus Minor",
+        "EN": "Portus Minor",
+        "DE": "Portus Minor"
+      },
+      {
+        "ES": "Porta Maris",
+        "EN": "Porta Maris",
+        "DE": "Porta Maris"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Portus Magnus significa puerto grande. Los romanos llamaron así a esta bahía, una de las más amplias de la isla.",
+      "EN": "Portus Magnus means great harbour. The Romans gave that name to this bay, one of the widest on the island.",
+      "DE": "Portus Magnus bedeutet großer Hafen. So nannten die Römer diese Bucht, eine der weitesten der Insel."
+    }
+  },
+  "calas-oeste-2": {
+    "pregunta": {
+      "ES": "¿Qué árbol da nombre a las Pitiusas, las islas de Ibiza y Formentera?",
+      "EN": "Which tree gives the Pityusic Islands, Ibiza and Formentera, their name?",
+      "DE": "Welcher Baum gab den Pityusen, also Ibiza und Formentera, ihren Namen?"
+    },
+    "opciones": [
+      {
+        "ES": "La sabina",
+        "EN": "The juniper",
+        "DE": "Der Wacholder"
+      },
+      {
+        "ES": "El pino",
+        "EN": "The pine",
+        "DE": "Die Kiefer"
+      },
+      {
+        "ES": "El olivo",
+        "EN": "The olive tree",
+        "DE": "Der Olivenbaum"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Los griegos las llamaron Pityoussai, islas de los pinos, por los pinares que bajan hasta el mar, como aquí en Cala Bassa.",
+      "EN": "The Greeks called them Pityoussai, the pine islands, for the pine woods that run down to the sea, as here at Cala Bassa.",
+      "DE": "Die Griechen nannten sie Pityoussai, Kieferninseln, wegen der Kiefernwälder, die bis ans Meer reichen, wie hier in Cala Bassa."
+    }
+  },
+  "calas-oeste-3": {
+    "pregunta": {
+      "ES": "¿Con qué otra torre se comunicaba la Torre d'en Rovira?",
+      "EN": "Which other tower did Torre d'en Rovira signal to?",
+      "DE": "Mit welchem anderen Turm stand die Torre d'en Rovira in Verbindung?"
+    },
+    "opciones": [
+      {
+        "ES": "La Torre de ses Portes, en ses Salines",
+        "EN": "Torre de ses Portes, at ses Salines",
+        "DE": "Mit der Torre de ses Portes bei ses Salines"
+      },
+      {
+        "ES": "El campanario de la catedral",
+        "EN": "The cathedral bell tower",
+        "DE": "Mit dem Glockenturm der Kathedrale"
+      },
+      {
+        "ES": "La Torre des Savinar, en Cala d'Hort",
+        "EN": "Torre des Savinar, at Cala d'Hort",
+        "DE": "Mit der Torre des Savinar bei Cala d'Hort"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Las dos se terminaron en 1763 dentro de la red de torres de vigía de la costa. Con fuego y humo se avisaban de los barcos piratas que veían llegar.",
+      "EN": "Both were finished in 1763 as part of the network of coastal watchtowers. They used fire and smoke to warn each other of pirate ships they saw coming.",
+      "DE": "Beide wurden 1763 als Teil des Netzes von Küstenwachtürmen fertig. Mit Feuer und Rauch warnten sie sich gegenseitig vor herannahenden Piratenschiffen."
+    }
+  },
+  "calas-oeste-4": {
+    "pregunta": {
+      "ES": "¿Qué islote tienes justo enfrente de Cala Comte?",
+      "EN": "Which islet lies right opposite Cala Comte?",
+      "DE": "Welche Insel liegt direkt gegenüber von Cala Comte?"
+    },
+    "opciones": [
+      {
+        "ES": "S'Illa des Bosc",
+        "EN": "S'Illa des Bosc",
+        "DE": "S'Illa des Bosc"
+      },
+      {
+        "ES": "Es Vedrà",
+        "EN": "Es Vedrà",
+        "DE": "Es Vedrà"
+      },
+      {
+        "ES": "Espalmador",
+        "EN": "Espalmador",
+        "DE": "Espalmador"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "S'Illa des Bosc es el islote que ves delante de la playa. Más al norte asoma Sa Conillera, la mayor de los islotes de Ponent.",
+      "EN": "S'Illa des Bosc is the islet you see in front of the beach. Further north you can make out Sa Conillera, the largest of the Ponent islets.",
+      "DE": "S'Illa des Bosc ist die Insel vor dem Strand. Weiter nördlich sieht man Sa Conillera, die größte der Ponent-Inseln."
+    }
+  },
+  "dalt-vila-1": {
+    "pregunta": {
+      "ES": "¿Desde qué año es Dalt Vila Patrimonio de la Humanidad?",
+      "EN": "Since which year has Dalt Vila been a World Heritage Site?",
+      "DE": "Seit welchem Jahr gehört Dalt Vila zum Welterbe?"
+    },
+    "opciones": [
+      {
+        "ES": "1985",
+        "EN": "1985",
+        "DE": "1985"
+      },
+      {
+        "ES": "1999",
+        "EN": "1999",
+        "DE": "1999"
+      },
+      {
+        "ES": "2010",
+        "EN": "2010",
+        "DE": "2010"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La UNESCO declaró en 1999 el conjunto Ibiza, biodiversidad y cultura. Incluye Dalt Vila, la necrópolis del Puig des Molins, el poblado fenicio de Sa Caleta y las praderas de posidonia.",
+      "EN": "In 1999 UNESCO listed Ibiza, Biodiversity and Culture. It includes Dalt Vila, the Puig des Molins necropolis, the Phoenician settlement of Sa Caleta and the posidonia meadows.",
+      "DE": "Die UNESCO nahm 1999 „Ibiza, Biodiversität und Kultur“ auf. Dazu gehören Dalt Vila, die Nekropole Puig des Molins, die phönizische Siedlung Sa Caleta und die Posidonia-Wiesen."
+    }
+  },
+  "dalt-vila-2": {
+    "pregunta": {
+      "ES": "¿Qué año aparece en la lápida del Portal de ses Taules?",
+      "EN": "Which year is carved on the plaque at the Portal de ses Taules?",
+      "DE": "Welche Jahreszahl steht auf der Tafel am Portal de ses Taules?"
+    },
+    "opciones": [
+      {
+        "ES": "1585",
+        "EN": "1585",
+        "DE": "1585"
+      },
+      {
+        "ES": "1235",
+        "EN": "1235",
+        "DE": "1235"
+      },
+      {
+        "ES": "1782",
+        "EN": "1782",
+        "DE": "1782"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es el año en que se dio por acabada la muralla renacentista, empezada en 1555. Encima de la fecha está el escudo de Felipe II.",
+      "EN": "It is the year the Renaissance walls, begun in 1555, were declared finished. Above the date is the coat of arms of Philip II.",
+      "DE": "In diesem Jahr galt die 1555 begonnene Renaissancemauer als fertig. Über der Jahreszahl prangt das Wappen Philipps II."
+    }
+  },
+  "dalt-vila-3": {
+    "pregunta": {
+      "ES": "¿A qué virgen está dedicada la catedral de Eivissa?",
+      "EN": "To which Virgin is Ibiza Cathedral dedicated?",
+      "DE": "Welcher Muttergottes ist die Kathedrale von Ibiza geweiht?"
+    },
+    "opciones": [
+      {
+        "ES": "A la Virgen del Carmen",
+        "EN": "Our Lady of Mount Carmel",
+        "DE": "Der Muttergottes vom Berge Karmel"
+      },
+      {
+        "ES": "A la Virgen de Montserrat",
+        "EN": "Our Lady of Montserrat",
+        "DE": "Der Muttergottes von Montserrat"
+      },
+      {
+        "ES": "A la Virgen de las Nieves",
+        "EN": "Our Lady of the Snows",
+        "DE": "Der Muttergottes vom Schnee"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Su fiesta es el 5 de agosto, la más cercana al 8 de agosto de 1235, día de la conquista catalana de la isla. Es la patrona de Ibiza y Formentera.",
+      "EN": "Her feast day is 5 August, the closest to 8 August 1235, the day of the Catalan conquest of the island. She is the patron saint of Ibiza and Formentera.",
+      "DE": "Ihr Fest ist am 5. August, dem 8. August 1235 am nächsten, dem Tag der katalanischen Eroberung der Insel. Sie ist die Schutzpatronin von Ibiza und Formentera."
+    }
+  },
+  "dalt-vila-4": {
+    "pregunta": {
+      "ES": "¿Cuántos baluartes tiene la muralla de Dalt Vila?",
+      "EN": "How many bastions do the walls of Dalt Vila have?",
+      "DE": "Wie viele Bastionen hat die Mauer von Dalt Vila?"
+    },
+    "opciones": [
+      {
+        "ES": "Cuatro",
+        "EN": "Four",
+        "DE": "Vier"
+      },
+      {
+        "ES": "Siete",
+        "EN": "Seven",
+        "DE": "Sieben"
+      },
+      {
+        "ES": "Doce",
+        "EN": "Twelve",
+        "DE": "Zwölf"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La muralla forma un heptágono irregular con un baluarte en cada vértice. El de Santa Llúcia lo diseñó el Fratín en 1575 para dejar dentro el barrio que le da nombre.",
+      "EN": "The walls form an irregular heptagon with a bastion at each corner. Santa Llúcia was designed by el Fratín in 1575 to bring the quarter it is named after inside.",
+      "DE": "Die Mauer bildet ein unregelmäßiges Siebeneck mit einer Bastion an jeder Ecke. Santa Llúcia entwarf el Fratín 1575, um das gleichnamige Viertel einzuschließen."
+    }
+  },
+  "sant-antoni-1": {
+    "pregunta": {
+      "ES": "¿Por qué en Sant Antoni el sol se pone sobre el mar?",
+      "EN": "Why does the sun set over the sea in Sant Antoni?",
+      "DE": "Warum geht die Sonne in Sant Antoni über dem Meer unter?"
+    },
+    "opciones": [
+      {
+        "ES": "Porque la bahía mira al oeste",
+        "EN": "Because the bay faces west",
+        "DE": "Weil die Bucht nach Westen liegt"
+      },
+      {
+        "ES": "Porque está en la costa este",
+        "EN": "Because it is on the east coast",
+        "DE": "Weil es an der Ostküste liegt"
+      },
+      {
+        "ES": "Porque está más al sur que Eivissa",
+        "EN": "Because it is further south than Ibiza Town",
+        "DE": "Weil es südlicher als Ibiza-Stadt liegt"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La bahía se abre hacia poniente, así que el sol baja directamente sobre el agua. En julio se pone hacia las 21:20 y a mediados de septiembre, hacia las 20:05.",
+      "EN": "The bay opens to the west, so the sun goes down straight over the water. In July it sets around 21:20, and in mid-September around 20:05.",
+      "DE": "Die Bucht öffnet sich nach Westen, die Sonne sinkt also direkt über dem Wasser. Im Juli geht sie gegen 21:20 Uhr unter, Mitte September gegen 20:05 Uhr."
+    }
+  },
+  "sant-antoni-2": {
+    "pregunta": {
+      "ES": "¿En qué año abrió el Café del Mar?",
+      "EN": "In which year did Café del Mar open?",
+      "DE": "In welchem Jahr öffnete das Café del Mar?"
+    },
+    "opciones": [
+      {
+        "ES": "1965",
+        "EN": "1965",
+        "DE": "1965"
+      },
+      {
+        "ES": "1980",
+        "EN": "1980",
+        "DE": "1980"
+      },
+      {
+        "ES": "1999",
+        "EN": "1999",
+        "DE": "1999"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Abrió en junio de 1980. Con José Padilla pinchando desde 1991, su música para la puesta de sol acabó en discos recopilatorios a partir de 1994.",
+      "EN": "It opened in June 1980. With José Padilla on the decks from 1991, its sunset music ended up on compilation albums from 1994.",
+      "DE": "Es öffnete im Juni 1980. Mit José Padilla am Plattenteller ab 1991 landete seine Musik zum Sonnenuntergang ab 1994 auf Compilation-Alben."
+    }
+  },
+  "sant-antoni-3": {
+    "pregunta": {
+      "ES": "¿Qué hay dentro del huevo de Colón de Sant Antoni?",
+      "EN": "What is inside Sant Antoni's Columbus Egg?",
+      "DE": "Was befindet sich im Ei des Kolumbus in Sant Antoni?"
+    },
+    "opciones": [
+      {
+        "ES": "Una fuente",
+        "EN": "A fountain",
+        "DE": "Ein Brunnen"
+      },
+      {
+        "ES": "Un reloj de sol",
+        "EN": "A sundial",
+        "DE": "Eine Sonnenuhr"
+      },
+      {
+        "ES": "La maqueta de una nave de Colón",
+        "EN": "A model of one of Columbus's ships",
+        "DE": "Das Modell eines Schiffes von Kolumbus"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El monumento recuerda la anécdota de Colón, que puso un huevo de pie aplastándole la punta. Dentro, en el hueco, está la maqueta de una de sus naves.",
+      "EN": "The monument recalls the story of Columbus standing an egg on end by cracking its tip. Inside the hollow is a model of one of his ships.",
+      "DE": "Das Denkmal erinnert an die Anekdote, in der Kolumbus ein Ei aufrecht hinstellte, indem er die Spitze eindrückte. In der Öffnung steht das Modell eines seiner Schiffe."
+    }
+  },
+  "sant-antoni-4": {
+    "pregunta": {
+      "ES": "¿Qué se sirve después del bullit de peix?",
+      "EN": "What is served after bullit de peix?",
+      "DE": "Was wird nach dem Bullit de peix serviert?"
+    },
+    "opciones": [
+      {
+        "ES": "Un arroz hecho con el caldo",
+        "EN": "Rice cooked in the broth",
+        "DE": "Reis, in der Brühe gekocht"
+      },
+      {
+        "ES": "Una ensaimada",
+        "EN": "An ensaïmada",
+        "DE": "Eine Ensaïmada"
+      },
+      {
+        "ES": "Una sopa de verduras",
+        "EN": "A vegetable soup",
+        "DE": "Eine Gemüsesuppe"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El bullit de peix es pescado de roca cocido con patatas y servido con alioli. Con el caldo que sobra se hace el arròs a banda, que llega a la mesa después.",
+      "EN": "Bullit de peix is rockfish boiled with potatoes and served with allioli. The leftover broth is used for arròs a banda, which comes to the table afterwards.",
+      "DE": "Bullit de peix ist Felsenfisch, mit Kartoffeln gekocht und mit Allioli serviert. Aus der übrigen Brühe entsteht der Arròs a banda, der danach auf den Tisch kommt."
+    }
+  }
+}

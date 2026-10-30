@@ -1,0 +1,409 @@
+[
+  {
+    "hotel": "mendez-nunez",
+    "ciudad": "alicante",
+    "ubicacion": {
+      "lat": 38.34438,
+      "lng": -0.48326
+    },
+    "minutos": {
+      "santa-barbara": 25,
+      "explanada": 2,
+      "santa-cruz": 9,
+      "postiguet": 7,
+      "mercado": 9,
+      "marq": 20,
+      "santa-maria": 6
+    }
+  },
+  {
+    "hotel": "casa-alberola",
+    "ciudad": "alicante",
+    "ubicacion": {
+      "lat": 38.3422,
+      "lng": -0.48659
+    },
+    "minutos": {
+      "santa-barbara": 35,
+      "explanada": 1,
+      "santa-cruz": 17,
+      "postiguet": 13,
+      "mercado": 14,
+      "marq": 22,
+      "santa-maria": 12
+    }
+  },
+  {
+    "hotel": "travelodge-alicante",
+    "ciudad": "alicante",
+    "ubicacion": {
+      "lat": 38.33702,
+      "lng": -0.50178
+    },
+    "minutos": {
+      "santa-barbara": 40,
+      "explanada": 22,
+      "santa-cruz": 35,
+      "postiguet": 32,
+      "mercado": 25,
+      "marq": 45,
+      "santa-maria": 30
+    }
+  },
+  {
+    "hotel": "casa-roman",
+    "ciudad": "sanxenxo",
+    "ubicacion": {
+      "lat": 42.4004,
+      "lng": -8.8076
+    },
+    "minutos": {
+      "silgar": 2,
+      "paseo": 2,
+      "porto": 6
+    }
+  },
+  {
+    "hotel": "nooe-maldives",
+    "ciudad": "kunavaashi",
+    "ubicacion": {
+      "lat": 3.6367,
+      "lng": 73.3648
+    },
+    "minutos": {
+      "playa-arrecife": 3,
+      "piscina-veli": 3,
+      "flame": 5,
+      "thari-spa": 4,
+      "clubhouse": 4,
+      "muelle": 5,
+      "banco-arena": 10,
+      "fulidhoo": 20
+    }
+  },
+  {
+    "hotel": "indigo-barcelona",
+    "ciudad": "barcelona",
+    "ubicacion": {
+      "lat": 41.37336,
+      "lng": 2.14734
+    },
+    "minutos": {
+      "espanya": 7,
+      "font-magica": 7,
+      "mnac": 11,
+      "caixaforum": 4,
+      "poble-espanyol": 9,
+      "joan-miro": 9,
+      "sant-antoni": 20,
+      "blai": 18
+    }
+  },
+  {
+    "hotel": "hovima-la-pinta",
+    "ciudad": "costa-adeje",
+    "ubicacion": {
+      "lat": 28.08062,
+      "lng": -16.73455
+    },
+    "minutos": {
+      "playa-la-pinta": 1,
+      "puerto-colon": 4,
+      "fanabe": 15,
+      "playa-del-duque": 25,
+      "la-caleta": 10,
+      "siam-park": 10,
+      "barranco-infierno": 15
+    }
+  },
+  {
+    "hotel": "hospes-amerigo",
+    "ciudad": "alicante",
+    "ubicacion": {
+      "lat": 38.34448,
+      "lng": -0.48257
+    },
+    "minutos": {
+      "santa-barbara": 20,
+      "explanada": 3,
+      "santa-cruz": 7,
+      "postiguet": 8,
+      "mercado": 9,
+      "marq": 20,
+      "santa-maria": 5
+    }
+  },
+  {
+    "hotel": "stella-braga",
+    "ciudad": "braga",
+    "ubicacion": {
+      "lat": 41.5369,
+      "lng": -8.4055
+    },
+    "minutos": {
+      "se": 10,
+      "bom-jesus": 10,
+      "sameiro": 12,
+      "santa-barbara": 10,
+      "porta-nova": 12,
+      "biscainhos": 12,
+      "brasileira": 10,
+      "theatro-circo": 9
+    }
+  },
+  {
+    "hotel": "bordeluz",
+    "ciudad": "pucon",
+    "ubicacion": {
+      "lat": -39.30228,
+      "lng": -72.0915
+    },
+    "minutos": {
+      "calfurray": 3,
+      "playa-grande": 15,
+      "centro": 15,
+      "villarrica": 15,
+      "ojos": 40,
+      "playa-blanca": 45,
+      "ski": 40,
+      "huerquehue": 60,
+      "geometricas": 90
+    }
+  },
+  {
+    "hotel": "ananda-cartagena",
+    "ciudad": "cartagena",
+    "ubicacion": {
+      "lat": 10.42565,
+      "lng": -75.55063
+    },
+    "minutos": {
+      "torre-reloj": 6,
+      "santo-domingo": 3,
+      "murallas": 4,
+      "getsemani": 12,
+      "san-felipe": 10,
+      "la-popa": 15,
+      "bovedas": 8,
+      "bolivar": 4,
+      "san-pedro-claver": 6,
+      "bocagrande": 10
+    }
+  },
+  {
+    "hotel": "aldea-nevada",
+    "ciudad": "ushuaia",
+    "ubicacion": {
+      "lat": -54.808997,
+      "lng": -68.345897
+    },
+    "minutos": {
+      "aldea": 1,
+      "martial": 8,
+      "puerto": 10,
+      "presidio": 12,
+      "sanmartin": 10,
+      "esmeralda": 30,
+      "castor": 35,
+      "pinguinos": 90
+    }
+  },
+  {
+    "hotel": "uman-lodge",
+    "ciudad": "futaleufu",
+    "ubicacion": {
+      "lat": -43.21194,
+      "lng": -71.85889
+    },
+    "minutos": {
+      "rio": 3,
+      "pueblo": 8,
+      "piedra-aguila": 20,
+      "espolon": 15,
+      "lonconao": 25,
+      "reserva": 15,
+      "yelcho": 75,
+      "trevelin": 60
+    }
+  },
+  {
+    "hotel": "sheraton",
+    "ciudad": "barcelona",
+    "ubicacion": {
+      "lat": 41.37352,
+      "lng": 2.14705
+    },
+    "minutos": {
+      "espanya": 7,
+      "font-magica": 7,
+      "mnac": 11,
+      "caixaforum": 4,
+      "poble-espanyol": 9,
+      "joan-miro": 9,
+      "sant-antoni": 20,
+      "blai": 18
+    }
+  },
+  {
+    "hotel": "plaza-el-bosque",
+    "ciudad": "santiago",
+    "ubicacion": {
+      "lat": -33.41488,
+      "lng": -70.60207
+    },
+    "minutos": {
+      "sky-costanera": 10,
+      "san-cristobal": 10,
+      "lastarria": 15,
+      "la-moneda": 20,
+      "mercado-central": 20,
+      "barrio-italia": 15,
+      "los-dominicos": 15,
+      "parque-bicentenario": 25
+    }
+  },
+  {
+    "hotel": "fiesta-inn-puebla",
+    "ciudad": "puebla",
+    "ubicacion": {
+      "lat": 19.04317,
+      "lng": -98.23625
+    },
+    "minutos": {
+      "zocalo": 20,
+      "catedral": 20,
+      "capilla-rosario": 20,
+      "palafoxiana": 20,
+      "museo-amparo": 20,
+      "talavera-uriarte": 15,
+      "estrella": 10,
+      "cholula": 25
+    }
+  },
+  {
+    "hotel": "amic-horizonte",
+    "ciudad": "palma",
+    "ubicacion": {
+      "lat": 39.55534,
+      "lng": 2.62211
+    },
+    "minutos": {
+      "bellver": 25,
+      "fundacio-miro": 30,
+      "catedral": 15,
+      "almudaina": 15,
+      "banys-arabs": 15,
+      "es-baluard": 45,
+      "mercat-santa-catalina": 40,
+      "portitxol": 15
+    }
+  },
+  {
+    "hotel": "izaga-hostal",
+    "ciudad": "pamplona",
+    "ubicacion": {
+      "lat": 42.77347,
+      "lng": -1.63706
+    },
+    "minutos": {
+      "casco-antiguo": 15,
+      "plaza-castillo": 15,
+      "ciudadela": 13,
+      "catedral": 16,
+      "camara-comptos": 15,
+      "museo-navarra": 17,
+      "parque-taconera": 15,
+      "baluarte": 13
+    }
+  },
+  {
+    "hotel": "carris-marineda",
+    "ciudad": "a-coruna",
+    "ubicacion": {
+      "lat": 43.34553,
+      "lng": -8.42869
+    },
+    "minutos": {
+      "torre-hercules": 15,
+      "maria-pita": 13,
+      "ciudad-vieja": 14,
+      "castillo-san-anton": 14,
+      "paseo-maritimo": 10,
+      "monte-san-pedro": 14,
+      "aquarium": 15,
+      "playa-riazor": 10
+    }
+  },
+  {
+    "hotel": "presidente-miyana",
+    "ciudad": "cdmx",
+    "ubicacion": {
+      "lat": 19.4392,
+      "lng": -99.1999
+    },
+    "minutos": {
+      "museo-soumaya": 5,
+      "polanco": 5,
+      "museo-antropologia": 10,
+      "chapultepec": 15,
+      "zocalo": 25,
+      "bellas-artes": 20,
+      "coyoacan": 35,
+      "roma-condesa": 20
+    }
+  },
+  {
+    "hotel": "dreams-punta-mita",
+    "ciudad": "bahia-banderas",
+    "ubicacion": {
+      "lat": 20.75354,
+      "lng": -105.45174
+    },
+    "minutos": {
+      "islas-marietas": 30,
+      "malecon-vallarta": 45,
+      "zona-romantica": 45,
+      "sayulita": 30,
+      "punta-de-mita": 10,
+      "bucerias": 15,
+      "san-pancho": 35,
+      "jardin-botanico": 70
+    }
+  },
+  {
+    "hotel": "mayan-palace-vallarta",
+    "ciudad": "bahia-banderas",
+    "ubicacion": {
+      "lat": 20.68091,
+      "lng": -105.28605
+    },
+    "minutos": {
+      "islas-marietas": 60,
+      "malecon-vallarta": 25,
+      "zona-romantica": 25,
+      "sayulita": 45,
+      "punta-de-mita": 45,
+      "bucerias": 20,
+      "san-pancho": 50,
+      "jardin-botanico": 50
+    }
+  },
+  {
+    "hotel": "vibra-yamm",
+    "ciudad": "ibiza",
+    "ubicacion": {
+      "lat": 38.98017,
+      "lng": 1.29652
+    },
+    "minutos": {
+      "dalt-vila": 25,
+      "es-vedra": 35,
+      "cala-comte": 25,
+      "cala-dhort": 30,
+      "las-dalias": 40,
+      "punta-arabi": 40,
+      "benirras": 40,
+      "calo-des-moro": 8
+    }
+  }
+]

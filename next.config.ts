@@ -31,6 +31,7 @@ const nextConfig: NextConfig = {
       { source: "/d/sheraton-5e38/:path*", destination: "/d/sheraton-5e38/index.html" },
       { source: "/d/fiestainn-aec3/:path*", destination: "/d/fiestainn-aec3/index.html" },
       { source: "/d/carris-a793/:path*", destination: "/d/carris-a793/index.html" },
+      { source: "/d/vibra-d5e4/:path*", destination: "/d/vibra-d5e4/index.html" },
       { source: "/d/mayan-4c74/:path*", destination: "/d/mayan-4c74/index.html" },
       { source: "/d/dreams-711d/:path*", destination: "/d/dreams-711d/index.html" },
       { source: "/d/presidente-cc35/:path*", destination: "/d/presidente-cc35/index.html" },

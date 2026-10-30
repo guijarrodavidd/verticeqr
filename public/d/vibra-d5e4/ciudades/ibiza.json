@@ -1,0 +1,1419 @@
+{
+  "slug": "ibiza",
+  "nombre": "Ibiza",
+  "intro": {
+    "ES": "Sant Antoni mira al oeste, así que aquí el sol se pone sobre el mar. Desde el hotel llegas en coche a Eivissa y a Dalt Vila en unos 25 minutos, y al aeropuerto en unos 30. Del puerto, a 8 minutos andando, salen de mayo a octubre los barcos a Cala Bassa y Cala Comte. Para ir a Formentera se coge el ferri en Eivissa, y la travesía dura una media hora.",
+    "EN": "Sant Antoni faces west, so the sun sets over the sea here. From the hotel it is about 25 minutes by car to Ibiza Town and Dalt Vila, and about 30 to the airport. From May to October, boats to Cala Bassa and Cala Comte leave from the harbour, an 8-minute walk away. For Formentera you take the ferry from Ibiza Town, and the crossing takes about half an hour.",
+    "DE": "Sant Antoni liegt nach Westen, deshalb geht die Sonne hier über dem Meer unter. Vom Hotel sind es mit dem Auto etwa 25 Minuten nach Ibiza-Stadt und Dalt Vila und rund 30 zum Flughafen. Von Mai bis Oktober fahren am Hafen, 8 Gehminuten entfernt, die Boote nach Cala Bassa und Cala Comte ab. Nach Formentera nehmen Sie die Fähre in Ibiza-Stadt, die Überfahrt dauert etwa eine halbe Stunde."
+  },
+  "lugares": [
+    {
+      "id": "dalt-vila",
+      "img": "/ciudades/ibiza/img/dalt-vila.jpg",
+      "nombre": "Dalt Vila",
+      "zona": {
+        "ES": "Ciudad de Eivissa",
+        "EN": "Ibiza Town",
+        "DE": "Ibiza-Stadt"
+      },
+      "d": {
+        "ES": "La ciudad alta de Eivissa, rodeada por la muralla renacentista que se levantó entre 1555 y 1585, con siete baluartes. Se entra por el Portal de ses Taules y se sube por calles empedradas hasta la catedral. Es Patrimonio de la Humanidad desde 1999.",
+        "EN": "The upper town of Ibiza, ringed by the Renaissance wall built between 1555 and 1585, with seven bastions. You enter through the Portal de ses Taules and climb cobbled lanes to the cathedral. It has been a World Heritage Site since 1999.",
+        "DE": "Die Oberstadt von Ibiza, umschlossen von der Renaissancemauer, die zwischen 1555 und 1585 entstand, mit sieben Bastionen. Durch das Portal de ses Taules geht es über gepflasterte Gassen hinauf zur Kathedrale. Seit 1999 gehört sie zum Welterbe."
+      },
+      "cuando": {
+        "ES": "A última hora de la tarde, cuando baja el calor y se iluminan las murallas",
+        "EN": "Late afternoon, when the heat eases and the walls are lit up",
+        "DE": "Am späten Nachmittag, wenn die Hitze nachlässt und die Mauern beleuchtet werden"
+      },
+      "min": 25,
+      "modo": "coche",
+      "lat": 38.90821,
+      "lng": 1.43666
+    },
+    {
+      "id": "es-vedra",
+      "img": "/ciudades/ibiza/img/es-vedra.jpg",
+      "nombre": "Es Vedrà",
+      "zona": {
+        "ES": "Mirador de la Torre des Savinar",
+        "EN": "Torre des Savinar viewpoint",
+        "DE": "Aussichtspunkt Torre des Savinar"
+      },
+      "d": {
+        "ES": "Un islote de roca de 382 metros a unos 2 km de la costa suroeste, reserva natural desde 2002. A su lado está Es Vedranell, más bajo y alargado. El mejor sitio para verlo es el acantilado de la Torre des Savinar, a unos 15 minutos a pie desde el aparcamiento de la pista de tierra.",
+        "EN": "A 382-metre rock islet about 2 km off the south-west coast, a nature reserve since 2002. Beside it lies Es Vedranell, lower and longer. The best place to see it is the clifftop at Torre des Savinar, about 15 minutes on foot from the car park on the dirt track.",
+        "DE": "Eine 382 Meter hohe Felsinsel rund 2 km vor der Südwestküste, seit 2002 Naturreservat. Daneben liegt Es Vedranell, niedriger und länglich. Am besten sieht man sie von der Klippe an der Torre des Savinar, etwa 15 Minuten zu Fuß vom Parkplatz an der Schotterpiste."
+      },
+      "cuando": {
+        "ES": "Al atardecer, cuando el sol baja junto al islote",
+        "EN": "At sunset, as the sun drops beside the islet",
+        "DE": "Bei Sonnenuntergang, wenn die Sonne neben der Insel sinkt"
+      },
+      "min": 35,
+      "modo": "coche",
+      "lat": 38.8741,
+      "lng": 1.22864
+    },
+    {
+      "id": "cala-comte",
+      "img": "/ciudades/ibiza/img/cala-comte.jpg",
+      "nombre": "Cala Comte",
+      "zona": {
+        "ES": "Sant Josep, costa oeste",
+        "EN": "Sant Josep, west coast",
+        "DE": "Sant Josep, Westküste"
+      },
+      "d": {
+        "ES": "Varias calas pequeñas de arena y roca con agua turquesa y poco profunda. Enfrente tienes s'Illa des Bosc y, más lejos, Sa Conillera. De mayo a octubre hay barco desde el puerto de Sant Antoni, unos 40 minutos.",
+        "EN": "Several small coves of sand and rock with shallow turquoise water. Opposite lies s'Illa des Bosc and, further out, Sa Conillera. From May to October a boat runs from Sant Antoni harbour, about 40 minutes.",
+        "DE": "Mehrere kleine Buchten aus Sand und Fels mit flachem, türkisfarbenem Wasser. Gegenüber liegt s'Illa des Bosc, weiter draußen Sa Conillera. Von Mai bis Oktober fährt ein Boot ab dem Hafen von Sant Antoni, etwa 40 Minuten."
+      },
+      "cuando": {
+        "ES": "Por la mañana para el baño, o al final del día para la puesta de sol",
+        "EN": "In the morning for a swim, or at the end of the day for the sunset",
+        "DE": "Morgens zum Baden oder am Abend zum Sonnenuntergang"
+      },
+      "min": 25,
+      "modo": "coche",
+      "lat": 38.96289,
+      "lng": 1.22127
+    },
+    {
+      "id": "cala-dhort",
+      "img": "/ciudades/ibiza/img/cala-dhort.jpg",
+      "nombre": "Cala d'Hort",
+      "zona": {
+        "ES": "Sant Josep, frente a Es Vedrà",
+        "EN": "Sant Josep, facing Es Vedrà",
+        "DE": "Sant Josep, gegenüber von Es Vedrà"
+      },
+      "d": {
+        "ES": "Una playa de arena y piedra con Es Vedrà justo enfrente, a unos 2 km mar adentro. A pie de playa hay restaurantes de pescado con terraza frente al mar. Por la tarde el islote queda a contraluz.",
+        "EN": "A beach of sand and pebbles with Es Vedrà straight ahead, about 2 km out to sea. Right on the beach there are fish restaurants with terraces facing the water. In the afternoon the islet is backlit.",
+        "DE": "Ein Strand aus Sand und Kieseln mit Es Vedrà direkt gegenüber, rund 2 km vor der Küste. Direkt am Strand gibt es Fischrestaurants mit Terrassen zum Meer. Am Nachmittag steht die Insel im Gegenlicht."
+      },
+      "cuando": {
+        "ES": "A media tarde, para bañarte con el islote delante",
+        "EN": "Mid-afternoon, for a swim with the islet in front of you",
+        "DE": "Am Nachmittag, zum Baden mit der Insel vor Augen"
+      },
+      "min": 30,
+      "modo": "coche",
+      "lat": 38.89046,
+      "lng": 1.22427
+    },
+    {
+      "id": "las-dalias",
+      "img": "/ciudades/ibiza/img/las-dalias.jpg",
+      "nombre": "Mercadillo de Las Dalias",
+      "zona": {
+        "ES": "Sant Carles de Peralta",
+        "EN": "Sant Carles de Peralta",
+        "DE": "Sant Carles de Peralta"
+      },
+      "d": {
+        "ES": "Un bar junto a la carretera de Sant Carles, abierto desde 1954, que desde 1985 monta los sábados un mercadillo con cerca de 200 puestos de joyas, ropa, instrumentos, libros y antigüedades. En verano abre también de noche; en 2026, los domingos, lunes y martes de junio a septiembre.",
+        "EN": "A bar on the Sant Carles road, open since 1954, which has held a Saturday market since 1985, with around 200 stalls of jewellery, clothes, instruments, books and antiques. In summer it also opens at night; in 2026, on Sundays, Mondays and Tuesdays from June to September.",
+        "DE": "Eine Bar an der Straße nach Sant Carles, seit 1954 geöffnet, die seit 1985 samstags einen Markt mit rund 200 Ständen für Schmuck, Kleidung, Instrumente, Bücher und Antiquitäten veranstaltet. Im Sommer öffnet er auch abends, 2026 sonntags, montags und dienstags von Juni bis September."
+      },
+      "cuando": {
+        "ES": "El sábado por la mañana, antes de las 12, cuando aún se pasea bien",
+        "EN": "Saturday morning, before noon, while it is still easy to stroll",
+        "DE": "Samstagvormittag vor 12 Uhr, solange man noch gut durchkommt"
+      },
+      "min": 40,
+      "modo": "coche",
+      "lat": 39.0286,
+      "lng": 1.55805
+    },
+    {
+      "id": "punta-arabi",
+      "img": "/ciudades/ibiza/img/punta-arabi.jpg",
+      "nombre": "Mercadillo de Punta Arabí",
+      "zona": {
+        "ES": "Es Canar, Santa Eulària des Riu",
+        "EN": "Es Canar, Santa Eulària des Riu",
+        "DE": "Es Canar, Santa Eulària des Riu"
+      },
+      "d": {
+        "ES": "El mercadillo hippy más antiguo de la isla, en marcha desde 1973. Monta más de 400 puestos los miércoles de abril a octubre; en 2026, de 10:00 a 19:00 (en octubre, hasta las 18:00). Hay música en directo y puestos de comida.",
+        "EN": "The island's oldest hippy market, running since 1973. More than 400 stalls set up on Wednesdays from April to October; in 2026, from 10:00 to 19:00 (until 18:00 in October). There is live music and food stalls.",
+        "DE": "Der älteste Hippiemarkt der Insel, seit 1973. Mittwochs von April bis Oktober bauen über 400 Stände auf, 2026 von 10 bis 19 Uhr (im Oktober bis 18 Uhr). Es gibt Livemusik und Essensstände."
+      },
+      "cuando": {
+        "ES": "El miércoles nada más abrir, con menos gente y menos calor",
+        "EN": "Wednesday right at opening time, with fewer people and less heat",
+        "DE": "Mittwochs gleich zur Öffnung, mit weniger Leuten und weniger Hitze"
+      },
+      "min": 40,
+      "modo": "coche",
+      "lat": 38.98939,
+      "lng": 1.58122
+    },
+    {
+      "id": "benirras",
+      "img": "/ciudades/ibiza/img/benirras.jpg",
+      "nombre": "Benirràs",
+      "zona": {
+        "ES": "Sant Joan de Labritja, costa norte",
+        "EN": "Sant Joan de Labritja, north coast",
+        "DE": "Sant Joan de Labritja, Nordküste"
+      },
+      "d": {
+        "ES": "Una cala del norte con unos 160 metros de arena y el islote de Cap Bernat en medio de la bahía, una roca de unos 27 metros a la que llaman el dedo de Dios. Los domingos de verano, al caer el sol, se juntan grupos con tambores en la playa, una costumbre de hace décadas sin horario ni organizador. Algunos veranos el ayuntamiento ha cortado la carretera a los coches el domingo por la tarde, así que pregunta en recepción antes de ir.",
+        "EN": "A cove in the north with about 160 metres of sand and the Cap Bernat islet in the middle of the bay, a rock of about 27 metres known as God's finger. On summer Sundays, as the sun goes down, groups gather on the beach with drums, a custom that goes back decades with no timetable or organiser. Some summers the council has closed the road to cars on Sunday afternoons, so ask at reception before you go.",
+        "DE": "Eine Bucht im Norden mit rund 160 Metern Sand und der Felsinsel Cap Bernat mitten in der Bucht, etwa 27 Meter hoch und „Finger Gottes“ genannt. An Sommersonntagen treffen sich bei Sonnenuntergang Gruppen mit Trommeln am Strand, ein Brauch seit Jahrzehnten, ohne feste Zeit und ohne Veranstalter. In manchen Sommern hat die Gemeinde die Straße sonntags nachmittags für Autos gesperrt, fragen Sie deshalb vorher an der Rezeption."
+      },
+      "cuando": {
+        "ES": "El domingo al atardecer, llegando antes de las 18:00 para aparcar",
+        "EN": "Sunday at sunset, arriving before 18:00 to find parking",
+        "DE": "Sonntags bei Sonnenuntergang, vor 18 Uhr da sein, um einen Parkplatz zu finden"
+      },
+      "min": 40,
+      "modo": "coche",
+      "lat": 39.08944,
+      "lng": 1.45392
+    },
+    {
+      "id": "calo-des-moro",
+      "img": "/ciudades/ibiza/img/calo-des-moro.jpg",
+      "nombre": "Caló des Moro y el Sunset Strip",
+      "zona": {
+        "ES": "Sant Antoni, junto al hotel",
+        "EN": "Sant Antoni, next to the hotel",
+        "DE": "Sant Antoni, neben dem Hotel"
+      },
+      "d": {
+        "ES": "Una calita de arena y roca al final del paseo de la costa, a 8 minutos del hotel. Por el camino pasas por el Sunset Strip, la fila de bares frente al mar donde está el Café del Mar, abierto en 1980. En verano las terrazas se llenan bastante antes de la puesta de sol.",
+        "EN": "A small cove of sand and rock at the end of the coastal path, 8 minutes from the hotel. On the way you pass the Sunset Strip, the row of seafront bars that includes Café del Mar, open since 1980. In summer the terraces fill up well before sunset.",
+        "DE": "Eine kleine Bucht aus Sand und Fels am Ende des Küstenwegs, 8 Minuten vom Hotel. Unterwegs kommen Sie am Sunset Strip vorbei, der Reihe von Bars am Meer mit dem Café del Mar, das 1980 eröffnete. Im Sommer füllen sich die Terrassen lange vor Sonnenuntergang."
+      },
+      "cuando": {
+        "ES": "A última hora de la tarde, para el último baño y la puesta de sol",
+        "EN": "Late afternoon, for a last swim and the sunset",
+        "DE": "Am späten Nachmittag, zum letzten Bad und zum Sonnenuntergang"
+      },
+      "min": 8,
+      "modo": "pie",
+      "lat": 38.98522,
+      "lng": 1.29667
+    }
+  ],
+  "rutas": [
+    {
+      "id": "formentera",
+      "expId": "ex1",
+      "img": "/ciudades/ibiza/img/formentera.jpg",
+      "titulo": {
+        "ES": "Formentera en barco",
+        "EN": "Formentera by boat",
+        "DE": "Formentera mit dem Boot"
+      },
+      "tipo": {
+        "ES": "Isla",
+        "EN": "Island",
+        "DE": "Insel"
+      },
+      "dur": "10 h 15 min",
+      "d": {
+        "ES": "Un día en la isla de al lado. Cruzas en ferri rápido desde el puerto de Eivissa, desembarcas en La Savina y pasas el día en Ses Illetes, una lengua de arena con mar a los dos lados. A media tarde vuelves en ferri y hacia las 19:00 estás en el hotel.",
+        "EN": "A day on the next island. You cross by fast ferry from Ibiza Town harbour, land at La Savina and spend the day at Ses Illetes, a strip of sand with sea on both sides. In the late afternoon you take the ferry back and are at the hotel around 19:00.",
+        "DE": "Ein Tag auf der Nachbarinsel. Mit der Schnellfähre geht es ab dem Hafen von Ibiza-Stadt nach La Savina, und den Tag verbringen Sie in Ses Illetes, einer Landzunge aus Sand mit Meer auf beiden Seiten. Am späten Nachmittag fahren Sie mit der Fähre zurück und sind gegen 19 Uhr im Hotel."
+      },
+      "salida": {
+        "ES": "Recogida en la puerta del hotel a las 08:45 y traslado al puerto de Eivissa, unos 25 minutos. Vuelta al hotel hacia las 19:00",
+        "EN": "Pick-up at the hotel door at 08:45 and transfer to Ibiza Town harbour, about 25 minutes. Back at the hotel around 19:00",
+        "DE": "Abholung an der Hoteltür um 8:45 Uhr und Transfer zum Hafen von Ibiza-Stadt, etwa 25 Minuten. Zurück im Hotel gegen 19 Uhr"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado del hotel al puerto de Eivissa y vuelta",
+          "Ferri rápido de ida y vuelta a La Savina",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Transfer from the hotel to Ibiza Town harbour and back",
+          "Return fast ferry to La Savina",
+          "Day plan and map"
+        ],
+        "DE": [
+          "Transfer vom Hotel zum Hafen von Ibiza-Stadt und zurück",
+          "Schnellfähre nach La Savina hin und zurück",
+          "Tagesplan und Karte"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Bañador y toalla",
+          "Crema solar y gorra, porque en Ses Illetes casi no hay sombra",
+          "Agua, al menos un litro por persona",
+          "Una pastilla para el mareo si lo sueles pasar mal en barco"
+        ],
+        "EN": [
+          "Swimwear and a towel",
+          "Sunscreen and a cap, as there is hardly any shade at Ses Illetes",
+          "Water, at least a litre each",
+          "A seasickness tablet if boats don't agree with you"
+        ],
+        "DE": [
+          "Badesachen und Handtuch",
+          "Sonnencreme und Kappe, in Ses Illetes gibt es kaum Schatten",
+          "Wasser, mindestens einen Liter pro Person",
+          "Eine Tablette gegen Seekrankheit, falls nötig"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel",
+            "DE": "Abfahrt am Hotel"
+          },
+          "s": {
+            "ES": "Rumbo al puerto de Eivissa",
+            "EN": "Heading for Ibiza Town harbour",
+            "DE": "Richtung Hafen von Ibiza-Stadt"
+          },
+          "d": {
+            "ES": "El coche sale de Sant Antoni y cruza la isla de oeste a este, unos 16 km. Al llegar a Eivissa ves Dalt Vila encima del puerto, con la catedral en lo alto. Los ferris a Formentera salen de su propia estación marítima, en el lado de La Marina.",
+            "EN": "The car leaves Sant Antoni and crosses the island from west to east, about 16 km. As you reach Ibiza Town you see Dalt Vila above the harbour, with the cathedral at the top. Ferries to Formentera leave from their own terminal, on the La Marina side.",
+            "DE": "Das Auto verlässt Sant Antoni und durchquert die Insel von West nach Ost, etwa 16 km. In Ibiza-Stadt sehen Sie Dalt Vila über dem Hafen, oben die Kathedrale. Die Fähren nach Formentera legen an einem eigenen Terminal auf der Seite von La Marina ab."
+          },
+          "tip": {
+            "ES": "Desayuna antes de salir. Lo siguiente que comes es ya en Formentera, hacia el mediodía.",
+            "EN": "Have breakfast before you leave. Your next meal is in Formentera, around midday.",
+            "DE": "Frühstücken Sie vor der Abfahrt. Die nächste Mahlzeit gibt es auf Formentera gegen Mittag."
+          },
+          "hora": "08:45",
+          "dur": "5 min",
+          "img": "/ciudades/ibiza/img/sant-antoni.jpg",
+          "lat": 38.98017,
+          "lng": 1.29652,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Ferri en el puerto de Eivissa",
+            "EN": "Ferry at Ibiza Town harbour",
+            "DE": "Fähre im Hafen von Ibiza-Stadt"
+          },
+          "s": {
+            "ES": "Media hora de travesía hasta La Savina",
+            "EN": "Half an hour across to La Savina",
+            "DE": "Eine halbe Stunde bis La Savina"
+          },
+          "d": {
+            "ES": "Baleària y Trasmapi tienen ferris rápidos que hacen la travesía en unos 30-35 minutos, con salidas frecuentes en verano. Al salir del puerto dejas Dalt Vila a la derecha y, a mitad de camino, pasas entre islotes por el estrecho de Es Freus, con Espalmador a la vista.",
+            "EN": "Baleària and Trasmapi run fast ferries that cross in about 30-35 minutes, with frequent sailings in summer. Leaving the harbour you have Dalt Vila on your right, and halfway across you pass between islets through the Es Freus strait, with Espalmador in sight.",
+            "DE": "Baleària und Trasmapi fahren mit Schnellfähren in etwa 30-35 Minuten hinüber, im Sommer häufig. Beim Auslaufen liegt Dalt Vila rechts, und auf halber Strecke geht es zwischen kleinen Inseln durch die Meerenge Es Freus, mit Blick auf Espalmador."
+          },
+          "tip": {
+            "ES": "Si el barco tiene cubierta exterior, sal a la popa al zarpar. Desde ahí haces la mejor foto de Dalt Vila.",
+            "EN": "If the boat has an open deck, go to the stern as you leave. From there you get the best photo of Dalt Vila.",
+            "DE": "Wenn das Schiff ein offenes Deck hat, gehen Sie beim Ablegen ans Heck. Von dort gelingt das beste Foto von Dalt Vila."
+          },
+          "hora": "09:15",
+          "dur": "15 min",
+          "img": "/ciudades/ibiza/img/ferry.jpg",
+          "lat": 38.91243,
+          "lng": 1.43525,
+          "tramo": "coche",
+          "tramoDuracionMin": 25,
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "La Savina",
+            "EN": "La Savina",
+            "DE": "La Savina"
+          },
+          "s": {
+            "ES": "El puerto de Formentera",
+            "EN": "Formentera's harbour",
+            "DE": "Der Hafen von Formentera"
+          },
+          "d": {
+            "ES": "Todos los ferris de Eivissa llegan aquí. Detrás del puerto empiezan las salinas, la principal fuente de ingresos de la isla antes del turismo. Hasta Ses Illetes hay 3,3 km, unos 15 minutos en bici o 50 a pie, y en verano también hay autobús de línea.",
+            "EN": "Every ferry from Ibiza docks here. Behind the harbour the salt flats begin, the island's main source of income before tourism. Ses Illetes is 3.3 km away, about 15 minutes by bike or 50 on foot, and in summer there is also a bus.",
+            "DE": "Alle Fähren aus Ibiza legen hier an. Hinter dem Hafen beginnen die Salinen, vor dem Tourismus die wichtigste Einnahmequelle der Insel. Bis Ses Illetes sind es 3,3 km, etwa 15 Minuten mit dem Rad oder 50 zu Fuß, und im Sommer fährt auch ein Linienbus."
+          },
+          "tip": {
+            "ES": "Si vas en bici, alquílala nada más bajar del barco, en las tiendas del puerto. El camino hasta Ses Illetes es llano y pasa junto a las salinas.",
+            "EN": "If you are going by bike, rent one as soon as you get off the boat, at the shops by the harbour. The way to Ses Illetes is flat and runs past the salt flats.",
+            "DE": "Wenn Sie radeln möchten, leihen Sie das Rad gleich nach dem Anlegen in den Läden am Hafen. Der Weg nach Ses Illetes ist flach und führt an den Salinen vorbei."
+          },
+          "hora": "10:05",
+          "dur": "15 min",
+          "img": "/ciudades/ibiza/img/la-savina.jpg",
+          "lat": 38.7317,
+          "lng": 1.41695,
+          "tramo": "barco",
+          "tramoDuracionMin": 35,
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Ses Illetes",
+            "EN": "Ses Illetes",
+            "DE": "Ses Illetes"
+          },
+          "s": {
+            "ES": "Arena blanca y mar a los dos lados",
+            "EN": "White sand with sea on both sides",
+            "DE": "Weißer Sand, Meer auf beiden Seiten"
+          },
+          "d": {
+            "ES": "La playa debe su nombre a los islotes que tiene delante. Al norte sigue Es Trucadors, una lengua de arena que acaba frente a la isla de Espalmador. El agua es así de clara gracias a las praderas de posidonia del fondo, Patrimonio de la Humanidad desde 1999; según un estudio del CSIC, algunas tienen al menos 100.000 años. Hacia las 16:30 vuelves a La Savina para coger el ferri.",
+            "EN": "The beach is named after the islets just offshore. To the north runs Es Trucadors, a spit of sand that ends opposite the island of Espalmador. The water is this clear thanks to the posidonia seagrass meadows on the seabed, a World Heritage Site since 1999; according to a CSIC study, some are at least 100,000 years old. Around 16:30 you head back to La Savina for the ferry.",
+            "DE": "Der Strand ist nach den kleinen Inseln vor der Küste benannt. Nach Norden zieht sich Es Trucadors, eine Sandzunge, die gegenüber der Insel Espalmador endet. So klar ist das Wasser dank der Seegraswiesen aus Posidonia am Meeresgrund, seit 1999 Welterbe; laut einer Studie des CSIC sind manche mindestens 100.000 Jahre alt. Gegen 16:30 Uhr geht es zurück nach La Savina zur Fähre."
+          },
+          "tip": {
+            "ES": "Si haces esnórquel, no pises ni arranques la posidonia. Está protegida, y gracias a ella el agua se ve así.",
+            "EN": "If you snorkel, don't stand on or pull up the posidonia. It is protected, and it is what keeps the water looking like this.",
+            "DE": "Beim Schnorcheln bitte nicht auf die Posidonia treten und nichts ausreißen. Sie steht unter Schutz und sorgt dafür, dass das Wasser so aussieht."
+          },
+          "hora": "10:35",
+          "dur": "6 h",
+          "img": "/ciudades/ibiza/img/illetes-bici.jpg",
+          "lat": 38.75413,
+          "lng": 1.43365,
+          "tramo": "bus",
+          "tramoDuracionMin": 15,
+          "duracionMin": 360
+        }
+      ],
+      "fotos": [
+        "/ciudades/ibiza/img/formentera.jpg",
+        "/ciudades/ibiza/img/ferry.jpg",
+        "/ciudades/ibiza/img/estacion-formentera.jpg",
+        "/ciudades/ibiza/img/la-savina.jpg",
+        "/ciudades/ibiza/img/illetes-bici.jpg",
+        "/ciudades/ibiza/img/illetes-mar.jpg"
+      ],
+      "duracionMin": 615,
+      "distanciaKm": 78,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Los ferris tienen rampa de embarque. En Ses Illetes hay pasarelas de madera en algunos accesos, pero al final se camina por arena. Con movilidad reducida, pregunta en recepción antes de reservar.",
+        "EN": "The ferries have a boarding ramp. At Ses Illetes some access points have wooden boardwalks, but in the end you walk on sand. If you have reduced mobility, ask at reception before booking.",
+        "DE": "Die Fähren haben eine Einstiegsrampe. In Ses Illetes gibt es an einigen Zugängen Holzstege, am Ende geht man aber über Sand. Bei eingeschränkter Mobilität fragen Sie bitte vor der Buchung an der Rezeption."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 38.98017,
+        "lng": 1.29652,
+        "foto": "/ciudades/ibiza/img/sant-antoni.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 08:45. Baja diez minutos antes.",
+          "EN": "Hotel door, at 08:45. Come down ten minutes early.",
+          "DE": "Hoteltür, um 8:45 Uhr. Kommen Sie zehn Minuten früher herunter."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Transporte de La Savina a Ses Illetes",
+          "Hamacas y sombrillas"
+        ],
+        "EN": [
+          "Food and drinks",
+          "Transport from La Savina to Ses Illetes",
+          "Sunbeds and parasols"
+        ],
+        "DE": [
+          "Essen und Getränke",
+          "Transport von La Savina nach Ses Illetes",
+          "Liegen und Sonnenschirme"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Si hay temporal y los ferris no salen, se cambia de día.",
+        "EN": "Free up to 24 h before. If a storm keeps the ferries in port, it moves to another day.",
+        "DE": "Kostenlos bis 24 Std. vorher. Wenn die Fähren wegen Sturm nicht fahren, wird verschoben."
+      },
+      "salidasFijas": [
+        "08:45"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "es-vedra",
+      "expId": "ex2",
+      "img": "/ciudades/ibiza/img/vedra-sol.jpg",
+      "titulo": {
+        "ES": "Puesta de sol frente a Es Vedrà",
+        "EN": "Sunset facing Es Vedrà",
+        "DE": "Sonnenuntergang vor Es Vedrà"
+      },
+      "tipo": {
+        "ES": "Atardecer",
+        "EN": "Sunset",
+        "DE": "Sonnenuntergang"
+      },
+      "dur": "3 h 30 min",
+      "d": {
+        "ES": "Sales del hotel a las 19:00 hacia el suroeste de la isla. En Cala d'Hort te bañas o cenas con Es Vedrà enfrente, y después subes a pie a la Torre des Savinar, una torre de vigía de 1763 sobre el acantilado, para ver ponerse el sol junto al islote.",
+        "EN": "You leave the hotel at 19:00 for the south-west of the island. At Cala d'Hort you swim or have dinner with Es Vedrà in front of you, then walk up to Torre des Savinar, a 1763 watchtower on the cliff, to watch the sun set beside the islet.",
+        "DE": "Um 19 Uhr geht es vom Hotel in den Südwesten der Insel. In Cala d'Hort baden Sie oder essen zu Abend mit Es Vedrà vor Augen, danach steigen Sie zu Fuß zur Torre des Savinar hinauf, einem Wachturm von 1763 über der Klippe, und sehen die Sonne neben der Insel untergehen."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 19:00, unos 30 minutos hasta Cala d'Hort. En mayo, septiembre y octubre el sol se pone antes y recepción adelanta la salida",
+        "EN": "By car from the hotel door at 19:00, about 30 minutes to Cala d'Hort. In May, September and October the sun sets earlier and reception brings the departure forward",
+        "DE": "Mit dem Auto ab der Hoteltür um 19 Uhr, etwa 30 Minuten bis Cala d'Hort. Im Mai, September und Oktober geht die Sonne früher unter, dann zieht die Rezeption die Abfahrt vor"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado en coche de ida y vuelta",
+          "Plan de la tarde y mapa"
+        ],
+        "EN": [
+          "Return transfer by car",
+          "Evening plan and map"
+        ],
+        "DE": [
+          "Transfer mit dem Auto hin und zurück",
+          "Abendplan und Karte"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Bañador y toalla para Cala d'Hort",
+          "Zapatillas para la subida, que el camino es de tierra y piedra",
+          "Una linterna o el móvil cargado para bajar ya de noche",
+          "Una chaqueta fina, porque arriba suele soplar el viento"
+        ],
+        "EN": [
+          "Swimwear and a towel for Cala d'Hort",
+          "Trainers for the climb, as the path is earth and stone",
+          "A torch or a charged phone for the walk down after dark",
+          "A light jacket, as it is often windy at the top"
+        ],
+        "DE": [
+          "Badesachen und Handtuch für Cala d'Hort",
+          "Turnschuhe für den Aufstieg, der Weg ist aus Erde und Stein",
+          "Eine Taschenlampe oder ein geladenes Handy für den Abstieg im Dunkeln",
+          "Eine leichte Jacke, oben weht oft Wind"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel",
+            "DE": "Abfahrt am Hotel"
+          },
+          "s": {
+            "ES": "Hacia el suroeste por Sant Josep",
+            "EN": "South-west through Sant Josep",
+            "DE": "Nach Südwesten über Sant Josep"
+          },
+          "d": {
+            "ES": "El coche va hacia el sur hasta Sant Josep y sigue por la carretera de Es Cubells hasta el desvío de Cala d'Hort, entre pinares. Son unos 19 km. Al bajar hacia la cala ya tienes Es Vedrà delante.",
+            "EN": "The car heads south to Sant Josep and follows the Es Cubells road to the Cala d'Hort turn-off, through pine woods. It is about 19 km. As you drive down to the cove, Es Vedrà is already in front of you.",
+            "DE": "Das Auto fährt nach Süden bis Sant Josep und weiter auf der Straße nach Es Cubells bis zur Abzweigung nach Cala d'Hort, durch Kiefernwald. Es sind etwa 19 km. Auf dem Weg hinunter zur Bucht liegt Es Vedrà schon vor Ihnen."
+          },
+          "tip": {
+            "ES": "Ponte el bañador en el hotel y así aprovechas más rato de playa.",
+            "EN": "Put your swimwear on at the hotel so you get more time on the beach.",
+            "DE": "Ziehen Sie die Badesachen schon im Hotel an, dann haben Sie mehr Zeit am Strand."
+          },
+          "hora": "19:00",
+          "dur": "5 min",
+          "img": "/ciudades/ibiza/img/sant-antoni.jpg",
+          "lat": 38.98017,
+          "lng": 1.29652,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Cala d'Hort",
+            "EN": "Cala d'Hort",
+            "DE": "Cala d'Hort"
+          },
+          "s": {
+            "ES": "Baño o cena con Es Vedrà delante",
+            "EN": "A swim or dinner facing Es Vedrà",
+            "DE": "Baden oder Abendessen mit Blick auf Es Vedrà"
+          },
+          "d": {
+            "ES": "Una playa de arena y piedra con el islote a unos 2 km mar adentro y Es Vedranell a su lado. A esta hora el agua sigue caliente y el sol ya está bajo. Si prefieres cenar pronto, los restaurantes de la playa sirven pescado en mesas que miran al mar.",
+            "EN": "A beach of sand and pebbles with the islet about 2 km out to sea and Es Vedranell beside it. At this hour the water is still warm and the sun is already low. If you would rather eat early, the beach restaurants serve fish at tables facing the sea.",
+            "DE": "Ein Strand aus Sand und Kieseln, die Insel rund 2 km vor der Küste und Es Vedranell daneben. Um diese Zeit ist das Wasser noch warm und die Sonne steht schon tief. Wer früh essen möchte, bekommt in den Strandrestaurants Fisch an Tischen mit Meerblick."
+          },
+          "tip": {
+            "ES": "Si vas a cenar, pide en recepción que te reserven mesa en terraza el día antes.",
+            "EN": "If you plan to have dinner, ask reception to book you a terrace table the day before.",
+            "DE": "Wenn Sie zu Abend essen möchten, lassen Sie sich am Vortag an der Rezeption einen Terrassentisch reservieren."
+          },
+          "hora": "19:35",
+          "dur": "1 h",
+          "img": "/ciudades/ibiza/img/cala-dhort.jpg",
+          "lat": 38.89046,
+          "lng": 1.22427,
+          "tramo": "coche",
+          "tramoDuracionMin": 30,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Torre des Savinar",
+            "EN": "Torre des Savinar",
+            "DE": "Torre des Savinar"
+          },
+          "s": {
+            "ES": "Una torre de vigía de 1763 sobre el acantilado",
+            "EN": "A 1763 watchtower above the cliff",
+            "DE": "Ein Wachturm von 1763 über der Klippe"
+          },
+          "d": {
+            "ES": "El coche te deja en el aparcamiento de la pista de tierra y subes a pie unos 15 minutos entre pinos y sabinas. La torre se terminó en 1763 para vigilar la llegada de piratas. Vicente Blasco Ibáñez la sacó en su novela Los muertos mandan, y desde entonces muchos la llaman la Torre del Pirata. Hoy está vallada y se ve desde fuera.",
+            "EN": "The car drops you at the car park on the dirt track and you walk up for about 15 minutes through pines and junipers. The tower was finished in 1763 to watch for pirates. Vicente Blasco Ibáñez used it in his novel Los muertos mandan, and since then many people call it the Pirate's Tower. Today it is fenced off and you see it from outside.",
+            "DE": "Das Auto hält am Parkplatz an der Schotterpiste, und Sie gehen etwa 15 Minuten zwischen Kiefern und Wacholder bergauf. Der Turm wurde 1763 fertig, um nach Piraten Ausschau zu halten. Vicente Blasco Ibáñez machte ihn zum Schauplatz seines Romans Los muertos mandan, seitdem heißt er bei vielen Piratenturm. Heute ist er eingezäunt und nur von außen zu sehen."
+          },
+          "tip": {
+            "ES": "No te acerques al borde para la foto. El acantilado cae a pico y la roca está suelta.",
+            "EN": "Don't go near the edge for a photo. The cliff drops sheer and the rock is loose.",
+            "DE": "Gehen Sie für das Foto nicht an den Rand. Die Klippe fällt senkrecht ab, und der Fels ist locker."
+          },
+          "hora": "20:55",
+          "dur": "20 min",
+          "img": "/ciudades/ibiza/img/savinar.jpg",
+          "lat": 38.87418,
+          "lng": 1.22837,
+          "tramo": "pie",
+          "tramoDuracionMin": 20,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Puesta de sol frente a Es Vedrà",
+            "EN": "Sunset facing Es Vedrà",
+            "DE": "Sonnenuntergang vor Es Vedrà"
+          },
+          "s": {
+            "ES": "El sol baja al mar junto al islote",
+            "EN": "The sun drops into the sea beside the islet",
+            "DE": "Die Sonne sinkt neben der Insel ins Meer"
+          },
+          "d": {
+            "ES": "Es Vedrà mide 382 metros y es reserva natural desde 2002, igual que Es Vedranell. En sus paredes cría el halcón de Eleonor, y a mediados del siglo XIX el carmelita Francesc Palau vivió allí como ermitaño. En julio el sol se pone hacia las 21:20 y a mediados de agosto, hacia las 20:50. Cuando se va la luz, bajas al coche y vuelves al hotel.",
+            "EN": "Es Vedrà is 382 metres high and has been a nature reserve since 2002, as has Es Vedranell. Eleonora's falcons breed on its cliffs, and in the mid-19th century the Carmelite friar Francesc Palau lived there as a hermit. In July the sun sets around 21:20, and in mid-August around 20:50. Once the light fades, you walk back to the car and return to the hotel.",
+            "DE": "Es Vedrà ist 382 Meter hoch und seit 2002 Naturreservat, ebenso Es Vedranell. An den Felswänden brüten Eleonorenfalken, und Mitte des 19. Jahrhunderts lebte der Karmelit Francesc Palau dort als Einsiedler. Im Juli geht die Sonne gegen 21:20 Uhr unter, Mitte August gegen 20:50 Uhr. Wenn das Licht verschwindet, gehen Sie zurück zum Auto und fahren ins Hotel."
+          },
+          "tip": {
+            "ES": "Baja antes de que sea noche cerrada, con la linterna del móvil encendida. En mayo, septiembre y octubre el sol se pone antes y recepción adelanta la salida.",
+            "EN": "Walk down before it is fully dark, with your phone torch on. In May, September and October the sun sets earlier and reception brings the departure forward.",
+            "DE": "Gehen Sie hinunter, bevor es ganz dunkel ist, mit eingeschalteter Handylampe. Im Mai, September und Oktober geht die Sonne früher unter, dann zieht die Rezeption die Abfahrt vor."
+          },
+          "hora": "21:15",
+          "dur": "25 min",
+          "img": "/ciudades/ibiza/img/vedra-atardecer.jpg",
+          "lat": 38.8741,
+          "lng": 1.22864,
+          "tramo": "pie",
+          "tramoDuracionMin": 0,
+          "duracionMin": 25
+        }
+      ],
+      "fotos": [
+        "/ciudades/ibiza/img/vedra-sol.jpg",
+        "/ciudades/ibiza/img/cala-dhort.jpg",
+        "/ciudades/ibiza/img/savinar-camino.jpg",
+        "/ciudades/ibiza/img/savinar.jpg",
+        "/ciudades/ibiza/img/vedra-atardecer.jpg",
+        "/ciudades/ibiza/img/es-vedra.jpg"
+      ],
+      "duracionMin": 210,
+      "distanciaKm": 41,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "La subida a la torre es un camino de tierra con piedra suelta, unos 15 minutos cuesta arriba y sin barandilla junto al acantilado. Cala d'Hort se ve bien desde la carretera, sin bajar a la playa.",
+        "EN": "The climb to the tower is an earth path with loose stones, about 15 minutes uphill and with no railing along the cliff. Cala d'Hort can be seen well from the road without going down to the beach.",
+        "DE": "Der Aufstieg zum Turm ist ein Erdweg mit losem Geröll, etwa 15 Minuten bergauf und ohne Geländer an der Klippe. Cala d'Hort sieht man gut von der Straße aus, ohne zum Strand hinunterzugehen."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 38.98017,
+        "lng": 1.29652,
+        "foto": "/ciudades/ibiza/img/sant-antoni.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 19:00.",
+          "EN": "Hotel door, at 19:00.",
+          "DE": "Hoteltür, um 19 Uhr."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Cena en Cala d'Hort",
+          "Bebidas"
+        ],
+        "EN": [
+          "Dinner at Cala d'Hort",
+          "Drinks"
+        ],
+        "DE": [
+          "Abendessen in Cala d'Hort",
+          "Getränke"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Si llueve o hay mucho viento, se cambia de día.",
+        "EN": "Free up to 24 h before. If it rains or is very windy, it moves to another day.",
+        "DE": "Kostenlos bis 24 Std. vorher. Bei Regen oder starkem Wind wird verschoben."
+      },
+      "salidasFijas": [
+        "19:00"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "calas-oeste",
+      "expId": "ex3",
+      "img": "/ciudades/ibiza/img/cala-bassa.jpg",
+      "titulo": {
+        "ES": "Cala Bassa y Cala Comte",
+        "EN": "Cala Bassa and Cala Comte",
+        "DE": "Cala Bassa und Cala Comte"
+      },
+      "tipo": {
+        "ES": "Playas",
+        "EN": "Beaches",
+        "DE": "Strände"
+      },
+      "dur": "7 h 35 min",
+      "d": {
+        "ES": "Un día de playa sin coche. Cruzas la bahía en barco hasta Cala Bassa, sigues a pie por la costa hasta Cala Comte pasando por una torre de vigía del siglo XVIII, comes allí y vuelves en barco a Sant Antoni por la tarde.",
+        "EN": "A beach day without a car. You cross the bay by boat to Cala Bassa, walk along the coast to Cala Comte past an 18th-century watchtower, have lunch there and take the boat back to Sant Antoni in the afternoon.",
+        "DE": "Ein Strandtag ohne Auto. Mit dem Boot geht es über die Bucht nach Cala Bassa und zu Fuß an der Küste entlang nach Cala Comte, vorbei an einem Wachturm aus dem 18. Jahrhundert. Dort essen Sie zu Mittag und fahren am Nachmittag mit dem Boot zurück nach Sant Antoni."
+      },
+      "salida": {
+        "ES": "Del hotel al puerto de Sant Antoni a pie, unos 8 minutos, para estar a las 10:00 en el Passeig de la Mar. Los barcos de línea funcionan de mayo a octubre y los domingos no salen",
+        "EN": "Walk from the hotel to Sant Antoni harbour, about 8 minutes, to be on the Passeig de la Mar at 10:00. Scheduled boats run from May to October, with no sailings on Sundays",
+        "DE": "Zu Fuß vom Hotel zum Hafen von Sant Antoni, etwa 8 Minuten, um 10 Uhr am Passeig de la Mar. Die Linienboote fahren von Mai bis Oktober, sonntags nicht"
+      },
+      "incluye": {
+        "ES": [
+          "Barco de Sant Antoni a Cala Bassa",
+          "Barco de vuelta desde Cala Comte",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Boat from Sant Antoni to Cala Bassa",
+          "Return boat from Cala Comte",
+          "Day plan and map"
+        ],
+        "DE": [
+          "Boot von Sant Antoni nach Cala Bassa",
+          "Rückfahrt mit dem Boot ab Cala Comte",
+          "Tagesplan und Karte"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Bañador y toalla",
+          "Crema solar y gorra",
+          "Zapatillas o sandalias cerradas para el camino de la costa, que tiene roca",
+          "Agua, porque en el camino no hay sombra ni fuentes",
+          "Gafas de esnórquel si las tienes"
+        ],
+        "EN": [
+          "Swimwear and a towel",
+          "Sunscreen and a cap",
+          "Trainers or closed sandals for the rocky coastal path",
+          "Water, as there is no shade or fountain on the path",
+          "A snorkel mask if you have one"
+        ],
+        "DE": [
+          "Badesachen und Handtuch",
+          "Sonnencreme und Kappe",
+          "Turnschuhe oder geschlossene Sandalen für den felsigen Küstenweg",
+          "Wasser, am Weg gibt es weder Schatten noch Brunnen",
+          "Eine Schnorchelmaske, falls vorhanden"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Puerto de Sant Antoni",
+            "EN": "Sant Antoni harbour",
+            "DE": "Hafen von Sant Antoni"
+          },
+          "s": {
+            "ES": "Barco a Cala Bassa",
+            "EN": "Boat to Cala Bassa",
+            "DE": "Boot nach Cala Bassa"
+          },
+          "d": {
+            "ES": "Los barcos a las calas salen del Passeig de la Mar, entre llaüts, las barcas de pesca de madera de las Baleares. Los romanos llamaron a esta bahía Portus Magnus, el puerto grande, y de ahí viene el Portmany del nombre del pueblo.",
+            "EN": "The boats to the coves leave from the Passeig de la Mar, among llaüts, the traditional wooden fishing boats of the Balearics. The Romans called this bay Portus Magnus, the great harbour, which is where the Portmany in the town's name comes from.",
+            "DE": "Die Boote zu den Buchten legen am Passeig de la Mar ab, zwischen Llaüts, den traditionellen hölzernen Fischerbooten der Balearen. Die Römer nannten die Bucht Portus Magnus, großer Hafen, daher stammt das Portmany im Ortsnamen."
+          },
+          "tip": {
+            "ES": "Siéntate a la izquierda del barco. A la ida la costa sur de la bahía te queda a ese lado.",
+            "EN": "Sit on the left side of the boat. On the way out the south shore of the bay is on that side.",
+            "DE": "Setzen Sie sich auf die linke Seite des Bootes. Auf der Hinfahrt liegt dort das Südufer der Bucht."
+          },
+          "hora": "10:00",
+          "dur": "30 min",
+          "img": "/ciudades/ibiza/img/puerto-sant-antoni.jpg",
+          "lat": 38.97857,
+          "lng": 1.30074,
+          "tramo": "pie",
+          "tramoDuracionMin": 8,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Cala Bassa",
+            "EN": "Cala Bassa",
+            "DE": "Cala Bassa"
+          },
+          "s": {
+            "ES": "Arena fina entre pinos",
+            "EN": "Fine sand among the pines",
+            "DE": "Feiner Sand zwischen Kiefern"
+          },
+          "d": {
+            "ES": "Una cala en forma de herradura, con el pinar casi tocando la arena y agua turquesa poco profunda. Hay hamacas y un beach club, y a media mañana todavía encuentras sitio en la orilla.",
+            "EN": "A horseshoe cove with the pine wood almost touching the sand and shallow turquoise water. There are sunbeds and a beach club, and by mid-morning you can still find a spot by the water.",
+            "DE": "Eine hufeisenförmige Bucht, der Kiefernwald reicht fast bis an den Sand, das Wasser ist flach und türkis. Es gibt Liegen und einen Beachclub, und am Vormittag finden Sie noch einen Platz am Wasser."
+          },
+          "tip": {
+            "ES": "Si llevas gafas de esnórquel, nada hacia las rocas de los extremos. Ahí hay más peces que en el centro de la playa.",
+            "EN": "If you have a snorkel mask, swim towards the rocks at either end. There are more fish there than in the middle of the beach.",
+            "DE": "Wenn Sie eine Schnorchelmaske dabeihaben, schwimmen Sie zu den Felsen an den Enden. Dort gibt es mehr Fische als in der Mitte des Strandes."
+          },
+          "hora": "10:55",
+          "dur": "1 h 45 min",
+          "img": "/ciudades/ibiza/img/cala-bassa-2.jpg",
+          "lat": 38.96807,
+          "lng": 1.23962,
+          "tramo": "barco",
+          "tramoDuracionMin": 25,
+          "duracionMin": 105
+        },
+        {
+          "n": {
+            "ES": "Torre d'en Rovira",
+            "EN": "Torre d'en Rovira",
+            "DE": "Torre d'en Rovira"
+          },
+          "s": {
+            "ES": "El camino de la costa hacia Cala Comte",
+            "EN": "The coastal path to Cala Comte",
+            "DE": "Der Küstenweg nach Cala Comte"
+          },
+          "d": {
+            "ES": "Desde Cala Bassa sale un camino llano junto al mar, de unos 3 km, hasta Cala Comte. A medio camino está esta torre redonda, construida en 1763 para vigilar la costa y comunicarse con la Torre des Savinar, en Cala d'Hort. Desde la punta se ve la isla de Sa Conillera.",
+            "EN": "A flat path of about 3 km runs along the sea from Cala Bassa to Cala Comte. Halfway is this round tower, built in 1763 to watch the coast and signal to Torre des Savinar at Cala d'Hort. From the point you can see the island of Sa Conillera.",
+            "DE": "Von Cala Bassa führt ein flacher Weg von etwa 3 km am Meer entlang nach Cala Comte. Auf halber Strecke steht dieser runde Turm, 1763 gebaut, um die Küste zu überwachen und Signale mit der Torre des Savinar bei Cala d'Hort auszutauschen. Von der Landspitze sehen Sie die Insel Sa Conillera."
+          },
+          "tip": {
+            "ES": "A mediodía no hay sombra en el camino. Moja la gorra en el mar antes de salir de Cala Bassa.",
+            "EN": "There is no shade on the path at midday. Dip your cap in the sea before you leave Cala Bassa.",
+            "DE": "Mittags gibt es auf dem Weg keinen Schatten. Tauchen Sie Ihre Kappe ins Meer, bevor Sie in Cala Bassa losgehen."
+          },
+          "hora": "13:00",
+          "dur": "15 min",
+          "img": "/ciudades/ibiza/img/rovira.jpg",
+          "lat": 38.97276,
+          "lng": 1.23045,
+          "tramo": "pie",
+          "tramoDuracionMin": 20,
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Cala Comte",
+            "EN": "Cala Comte",
+            "DE": "Cala Comte"
+          },
+          "s": {
+            "ES": "Agua turquesa frente a los islotes",
+            "EN": "Turquoise water facing the islets",
+            "DE": "Türkises Wasser vor den Inseln"
+          },
+          "d": {
+            "ES": "Son varias calas pequeñas de arena entre plataformas de roca, con agua turquesa y s'Illa des Bosc justo enfrente. Comes en uno de los restaurantes de la parte alta y te bañas hasta la hora del barco. La vuelta a Sant Antoni dura unos 40 minutos y llegas al puerto hacia las 17:30.",
+            "EN": "Several small sandy coves between rock platforms, with turquoise water and s'Illa des Bosc right opposite. You have lunch at one of the restaurants on the higher ground and swim until the boat leaves. The trip back to Sant Antoni takes about 40 minutes, reaching the harbour around 17:30.",
+            "DE": "Mehrere kleine Sandbuchten zwischen Felsplatten, türkises Wasser und s'Illa des Bosc direkt gegenüber. Sie essen in einem der Restaurants weiter oben zu Mittag und baden bis zur Abfahrt des Bootes. Die Rückfahrt nach Sant Antoni dauert etwa 40 Minuten, gegen 17:30 Uhr sind Sie am Hafen."
+          },
+          "tip": {
+            "ES": "Por la mañana, al subir al barco, pregunta a qué hora sale el último de vuelta desde Cala Comte. Cambia según la temporada.",
+            "EN": "When you board in the morning, ask what time the last boat back from Cala Comte leaves. It changes with the season.",
+            "DE": "Fragen Sie morgens beim Einsteigen, wann das letzte Boot ab Cala Comte zurückfährt. Das ändert sich je nach Saison."
+          },
+          "hora": "13:40",
+          "dur": "3 h 5 min",
+          "img": "/ciudades/ibiza/img/comte-barcos.jpg",
+          "lat": 38.96289,
+          "lng": 1.22127,
+          "tramo": "pie",
+          "tramoDuracionMin": 25,
+          "duracionMin": 185
+        }
+      ],
+      "fotos": [
+        "/ciudades/ibiza/img/cala-bassa.jpg",
+        "/ciudades/ibiza/img/puerto-sant-antoni.jpg",
+        "/ciudades/ibiza/img/cala-bassa-2.jpg",
+        "/ciudades/ibiza/img/rovira.jpg",
+        "/ciudades/ibiza/img/comte-barcos.jpg",
+        "/ciudades/ibiza/img/conillera.jpg",
+        "/ciudades/ibiza/img/cala-comte.jpg"
+      ],
+      "duracionMin": 455,
+      "distanciaKm": 19,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Se sube al barco por una pasarela, con ayuda de la tripulación. El camino de la costa entre Cala Bassa y Cala Comte tiene unos 3 km con tramos de roca. Si prefieres no andarlo, en taxi son unos 10 minutos.",
+        "EN": "You board the boat via a gangway, with help from the crew. The coastal path between Cala Bassa and Cala Comte is about 3 km with rocky stretches. If you would rather not walk it, a taxi takes about 10 minutes.",
+        "DE": "Der Einstieg ins Boot erfolgt über eine Planke, die Crew hilft. Der Küstenweg zwischen Cala Bassa und Cala Comte ist etwa 3 km lang und stellenweise felsig. Wer ihn nicht gehen möchte, braucht mit dem Taxi etwa 10 Minuten."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 38.97857,
+        "lng": 1.30074,
+        "foto": "/ciudades/ibiza/img/puerto-sant-antoni.jpg",
+        "texto": {
+          "ES": "Passeig de la Mar, junto a los quioscos de los barcos a las calas. A 8 minutos andando del hotel.",
+          "EN": "Passeig de la Mar, by the kiosks for the boats to the coves. An 8-minute walk from the hotel.",
+          "DE": "Passeig de la Mar, an den Kiosken der Boote zu den Buchten. 8 Gehminuten vom Hotel."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida",
+          "Hamacas y sombrillas"
+        ],
+        "EN": [
+          "Lunch",
+          "Sunbeds and parasols"
+        ],
+        "DE": [
+          "Mittagessen",
+          "Liegen und Sonnenschirme"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Si hay mala mar y el barco no sale, se cambia de día.",
+        "EN": "Free up to 24 h before. If the sea is rough and the boat does not sail, it moves to another day.",
+        "DE": "Kostenlos bis 24 Std. vorher. Wenn das Boot wegen rauer See nicht fährt, wird verschoben."
+      },
+      "salidasFijas": [
+        "10:00"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "dalt-vila",
+      "expId": "ex4",
+      "img": "/ciudades/ibiza/img/portal-noche.jpg",
+      "titulo": {
+        "ES": "Dalt Vila al atardecer, con guía",
+        "EN": "Dalt Vila at sunset, with a guide",
+        "DE": "Dalt Vila bei Sonnenuntergang, mit Guide"
+      },
+      "tipo": {
+        "ES": "Historia",
+        "EN": "History",
+        "DE": "Geschichte"
+      },
+      "dur": "5 h",
+      "d": {
+        "ES": "Una tarde con guía por la ciudad amurallada de Eivissa. Entras por el Portal de ses Taules, subes junto a las murallas del siglo XVI hasta la catedral y acabas en el Baluard de Santa Llúcia cuando cae el sol. Después bajas a cenar a La Marina, junto al puerto.",
+        "EN": "An afternoon in Ibiza's walled town with a guide. You go in through the Portal de ses Taules, climb beside the 16th-century walls to the cathedral and finish at the Baluard de Santa Llúcia as the sun goes down. Afterwards you walk down to La Marina, by the harbour, for dinner.",
+        "DE": "Ein Nachmittag mit Guide in der ummauerten Altstadt von Ibiza. Sie betreten sie durch das Portal de ses Taules, steigen an den Mauern aus dem 16. Jahrhundert entlang hinauf zur Kathedrale und enden bei Sonnenuntergang auf dem Baluard de Santa Llúcia. Danach geht es hinunter nach La Marina am Hafen zum Abendessen."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 17:30, unos 25 minutos hasta el Portal de ses Taules. Vuelta al hotel hacia las 22:30",
+        "EN": "By car from the hotel door at 17:30, about 25 minutes to the Portal de ses Taules. Back at the hotel around 22:30",
+        "DE": "Mit dem Auto ab der Hoteltür um 17:30 Uhr, etwa 25 Minuten bis zum Portal de ses Taules. Zurück im Hotel gegen 22:30 Uhr"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado en coche de ida y vuelta",
+          "Guía por Dalt Vila",
+          "Plan de la tarde y mapa"
+        ],
+        "EN": [
+          "Return transfer by car",
+          "Guided walk through Dalt Vila",
+          "Evening plan and map"
+        ],
+        "DE": [
+          "Transfer mit dem Auto hin und zurück",
+          "Führung durch Dalt Vila",
+          "Abendplan und Karte"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo, que las calles son empinadas y de piedra",
+          "Agua para la subida",
+          "Algo para cubrir los hombros si quieres entrar en la catedral"
+        ],
+        "EN": [
+          "Comfortable shoes, as the streets are steep and cobbled",
+          "Water for the climb",
+          "Something to cover your shoulders if you want to go into the cathedral"
+        ],
+        "DE": [
+          "Bequeme Schuhe, die Gassen sind steil und gepflastert",
+          "Wasser für den Aufstieg",
+          "Etwas, um die Schultern zu bedecken, falls Sie in die Kathedrale möchten"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel",
+            "DE": "Abfahrt am Hotel"
+          },
+          "s": {
+            "ES": "Rumbo a Eivissa",
+            "EN": "Heading for Ibiza Town",
+            "DE": "Richtung Ibiza-Stadt"
+          },
+          "d": {
+            "ES": "El coche cruza la isla por la carretera de Sant Antoni, unos 16 km. Entrando en Eivissa ves Dalt Vila en lo alto, con la torre de la catedral y la muralla encima del puerto. El coche te deja cerca del Mercat Vell, al pie de la rampa del Portal de ses Taules.",
+            "EN": "The car crosses the island on the Sant Antoni road, about 16 km. Coming into Ibiza Town you see Dalt Vila up high, with the cathedral tower and the walls above the harbour. The car drops you near the Mercat Vell, at the foot of the ramp to the Portal de ses Taules.",
+            "DE": "Das Auto durchquert die Insel auf der Straße von Sant Antoni, etwa 16 km. Bei der Einfahrt nach Ibiza-Stadt sehen Sie Dalt Vila oben, mit dem Kathedralturm und den Mauern über dem Hafen. Das Auto setzt Sie nahe dem Mercat Vell ab, am Fuß der Rampe zum Portal de ses Taules."
+          },
+          "tip": {
+            "ES": "Ponte calzado con suela que agarre. El empedrado de Dalt Vila resbala, sobre todo de bajada.",
+            "EN": "Wear shoes with a good grip. The cobbles in Dalt Vila are slippery, especially on the way down.",
+            "DE": "Tragen Sie Schuhe mit griffiger Sohle. Das Pflaster in Dalt Vila ist rutschig, vor allem bergab."
+          },
+          "hora": "17:30",
+          "dur": "5 min",
+          "img": "/ciudades/ibiza/img/sant-antoni.jpg",
+          "lat": 38.98017,
+          "lng": 1.29652,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Portal de ses Taules",
+            "EN": "Portal de ses Taules",
+            "DE": "Portal de ses Taules"
+          },
+          "s": {
+            "ES": "La puerta principal de la muralla",
+            "EN": "The main gate in the walls",
+            "DE": "Das Haupttor der Stadtmauer"
+          },
+          "d": {
+            "ES": "Se llega por una rampa y un puente levadizo. Encima de la puerta hay una lápida con el escudo de Felipe II y la fecha de 1585, cuando se dio por acabada la muralla, y a los lados, dos estatuas romanas sin cabeza, copias de las que guarda el Museu Arqueològic. Dentro está el Pati d'Armes, el patio de armas con soportales.",
+            "EN": "You reach it by a ramp and a drawbridge. Above the gate is a plaque with the coat of arms of Philip II and the date 1585, when the walls were declared finished, and on either side stand two headless Roman statues, copies of the ones kept in the Archaeological Museum. Inside is the Pati d'Armes, the arcaded parade ground.",
+            "DE": "Man erreicht es über eine Rampe und eine Zugbrücke. Über dem Tor hängt eine Tafel mit dem Wappen Philipps II. und der Jahreszahl 1585, als die Mauer als fertig galt, und zu beiden Seiten stehen zwei kopflose römische Statuen, Kopien der Originale im Archäologischen Museum. Dahinter liegt der Pati d'Armes, der Waffenhof mit Arkaden."
+          },
+          "tip": {
+            "ES": "Antes de cruzar, date la vuelta en la rampa. Desde ahí ves el Mercat Vell y el puerto a tus pies.",
+            "EN": "Before you cross, turn round on the ramp. From there you see the Mercat Vell and the harbour below you.",
+            "DE": "Drehen Sie sich vor dem Tor auf der Rampe um. Von dort sehen Sie den Mercat Vell und den Hafen unter sich."
+          },
+          "hora": "18:00",
+          "dur": "30 min",
+          "img": "/ciudades/ibiza/img/portal-taules.jpg",
+          "lat": 38.90821,
+          "lng": 1.43666,
+          "tramo": "coche",
+          "tramoDuracionMin": 25,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Catedral de Santa Maria",
+            "EN": "Santa Maria Cathedral",
+            "DE": "Kathedrale Santa Maria"
+          },
+          "s": {
+            "ES": "Arriba del todo, junto al castillo",
+            "EN": "At the top, next to the castle",
+            "DE": "Ganz oben, neben der Burg"
+          },
+          "d": {
+            "ES": "Se levantó en gótico catalán donde estaba la mezquita, tras la conquista cristiana del 8 de agosto de 1235, y por dentro se rehízo más tarde en barroco. Es catedral desde 1782, cuando se creó la diócesis de Ibiza. Está dedicada a la Virgen de las Nieves, cuya fiesta, el 5 de agosto, era la más cercana a la fecha de la conquista.",
+            "EN": "It was built in Catalan Gothic style on the site of the mosque after the Christian conquest of 8 August 1235, and its interior was later redone in Baroque. It has been a cathedral since 1782, when the diocese of Ibiza was created. It is dedicated to Our Lady of the Snows, whose feast day, 5 August, was the closest to the date of the conquest.",
+            "DE": "Sie entstand im katalanisch-gotischen Stil an der Stelle der Moschee, nach der christlichen Eroberung am 8. August 1235, innen wurde sie später barock umgestaltet. Kathedrale ist sie seit 1782, als das Bistum Ibiza gegründet wurde. Geweiht ist sie der Muttergottes vom Schnee, deren Fest am 5. August dem Tag der Eroberung am nächsten lag."
+          },
+          "tip": {
+            "ES": "Asómate al mirador de la plaza de la catedral. En los días claros se ve Formentera al sur.",
+            "EN": "Look out from the viewpoint on the cathedral square. On clear days you can see Formentera to the south.",
+            "DE": "Schauen Sie vom Aussichtspunkt am Kathedralplatz. An klaren Tagen sieht man im Süden Formentera."
+          },
+          "hora": "18:45",
+          "dur": "30 min",
+          "img": "/ciudades/ibiza/img/catedral.jpg",
+          "lat": 38.90664,
+          "lng": 1.43671,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Baluard de Santa Llúcia",
+            "EN": "Baluard de Santa Llúcia",
+            "DE": "Baluard de Santa Llúcia"
+          },
+          "s": {
+            "ES": "El puerto desde las murallas",
+            "EN": "The harbour from the walls",
+            "DE": "Der Hafen von den Mauern aus"
+          },
+          "d": {
+            "ES": "Este baluarte lo diseñó en 1575 el ingeniero Giacomo Palearo, el Fratín, para dejar dentro de la muralla el barrio de Santa Llúcia. Conserva cañones y un polvorín del siglo XVIII. Desde arriba ves el puerto entero, con Sa Penya, el antiguo barrio de pescadores, a tus pies, y a esta hora se van encendiendo las luces de La Marina. Desde aquí bajas a cenar en diez minutos.",
+            "EN": "This bastion was designed in 1575 by the engineer Giacomo Palearo, known as el Fratín, to bring the Santa Llúcia quarter inside the walls. It still has cannons and an 18th-century powder store. From the top you see the whole harbour, with Sa Penya, the old fishermen's quarter, right below you, and at this hour the lights of La Marina start coming on. From here it is a ten-minute walk down to dinner.",
+            "DE": "Diese Bastion entwarf 1575 der Ingenieur Giacomo Palearo, genannt el Fratín, um das Viertel Santa Llúcia in die Mauer einzuschließen. Sie hat noch Kanonen und ein Pulvermagazin aus dem 18. Jahrhundert. Von oben sehen Sie den ganzen Hafen, unter Ihnen Sa Penya, das alte Fischerviertel, und um diese Zeit gehen in La Marina die Lichter an. Von hier sind es zehn Minuten zu Fuß hinunter zum Abendessen."
+          },
+          "tip": {
+            "ES": "En septiembre y octubre el sol se pone mientras estás aquí arriba. En julio y agosto aún queda luz cuando bajas a cenar a La Marina.",
+            "EN": "In September and October the sun sets while you are up here. In July and August there is still light when you walk down to La Marina for dinner.",
+            "DE": "Im September und Oktober geht die Sonne unter, während Sie hier oben sind. Im Juli und August ist es noch hell, wenn Sie zum Abendessen nach La Marina hinuntergehen."
+          },
+          "hora": "19:30",
+          "dur": "40 min",
+          "img": "/ciudades/ibiza/img/santa-llucia.jpg",
+          "lat": 38.90827,
+          "lng": 1.43859,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 40
+        }
+      ],
+      "fotos": [
+        "/ciudades/ibiza/img/portal-noche.jpg",
+        "/ciudades/ibiza/img/dalt-vila.jpg",
+        "/ciudades/ibiza/img/portal-taules.jpg",
+        "/ciudades/ibiza/img/catedral.jpg",
+        "/ciudades/ibiza/img/catedral-2.jpg",
+        "/ciudades/ibiza/img/santa-llucia.jpg",
+        "/ciudades/ibiza/img/dalt-vila-aire.jpg"
+      ],
+      "duracionMin": 300,
+      "distanciaKm": 35,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Dalt Vila es todo cuesta, con rampas empedradas y algún tramo de escaleras. Con movilidad reducida, avísalo al reservar y el guía adapta el recorrido.",
+        "EN": "Dalt Vila is all uphill, with cobbled ramps and a few flights of steps. If you have reduced mobility, mention it when booking and the guide will adapt the route.",
+        "DE": "Dalt Vila geht ständig bergauf, mit gepflasterten Rampen und einigen Treppen. Bei eingeschränkter Mobilität sagen Sie es bitte bei der Buchung, dann passt der Guide die Route an."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 38.98017,
+        "lng": 1.29652,
+        "foto": "/ciudades/ibiza/img/sant-antoni.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 17:30. El guía os espera en el Portal de ses Taules.",
+          "EN": "Hotel door, at 17:30. The guide meets you at the Portal de ses Taules.",
+          "DE": "Hoteltür, um 17:30 Uhr. Der Guide erwartet Sie am Portal de ses Taules."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Cena en La Marina",
+          "Entradas a museos"
+        ],
+        "EN": [
+          "Dinner in La Marina",
+          "Museum tickets"
+        ],
+        "DE": [
+          "Abendessen in La Marina",
+          "Museumseintritte"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes.",
+        "EN": "Free up to 24 h before.",
+        "DE": "Kostenlos bis 24 Std. vorher."
+      },
+      "salidasFijas": [
+        "17:30"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "sant-antoni",
+      "img": "/ciudades/ibiza/img/cafe-del-mar-sol.jpg",
+      "titulo": {
+        "ES": "Sant Antoni a pie, al atardecer",
+        "EN": "Sant Antoni on foot at sunset",
+        "DE": "Sant Antoni zu Fuß bei Sonnenuntergang"
+      },
+      "tipo": {
+        "ES": "A pie",
+        "EN": "On foot",
+        "DE": "Zu Fuß"
+      },
+      "dur": "4 h 15 min",
+      "d": {
+        "ES": "Sales del hotel por el Sunset Strip hasta Caló des Moro para el último baño, vuelves para ver la puesta de sol desde las terrazas del Café Mambo y el Café del Mar y sigues por la costa hasta el huevo de Colón. Terminas con la cena en el Passeig de ses Fonts. No hace falta reservar nada.",
+        "EN": "You leave the hotel along the Sunset Strip to Caló des Moro for a last swim, come back to watch the sunset from the terraces of Café Mambo and Café del Mar, and carry on along the coast to the Columbus Egg. You finish with dinner on the Passeig de ses Fonts. There is nothing to book.",
+        "DE": "Vom Hotel geht es über den Sunset Strip zur Caló des Moro für ein letztes Bad, zurück zum Sonnenuntergang auf den Terrassen von Café Mambo und Café del Mar und weiter an der Küste bis zum Ei des Kolumbus. Zum Schluss essen Sie am Passeig de ses Fonts zu Abend. Buchen müssen Sie nichts."
+      },
+      "salida": {
+        "ES": "Desde la puerta del hotel, a pie. Sal unas dos horas antes de la puesta de sol. En julio eso es hacia las 19:30; a mediados de agosto, hacia las 19:00, y a mediados de septiembre, hacia las 18:15",
+        "EN": "From the hotel door, on foot. Leave about two hours before sunset. In July that is around 19:30, in mid-August around 19:00 and in mid-September around 18:15",
+        "DE": "Ab der Hoteltür, zu Fuß. Brechen Sie etwa zwei Stunden vor Sonnenuntergang auf. Im Juli ist das gegen 19:30 Uhr, Mitte August gegen 19 Uhr und Mitte September gegen 18:15 Uhr"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan de la tarde y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Evening plan and map"
+        ],
+        "DE": [
+          "Freie Route, ohne Buchung",
+          "Abendplan und Karte"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Bañador y una toalla pequeña para Caló des Moro",
+          "Calzado cómodo para el paseo",
+          "Algo de efectivo para la terraza y la cena"
+        ],
+        "EN": [
+          "Swimwear and a small towel for Caló des Moro",
+          "Comfortable shoes for the walk",
+          "Some cash for the terrace and dinner"
+        ],
+        "DE": [
+          "Badesachen und ein kleines Handtuch für die Caló des Moro",
+          "Bequeme Schuhe für den Spaziergang",
+          "Etwas Bargeld für die Terrasse und das Abendessen"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Caló des Moro",
+            "EN": "Caló des Moro",
+            "DE": "Caló des Moro"
+          },
+          "s": {
+            "ES": "El último baño del día",
+            "EN": "The last swim of the day",
+            "DE": "Das letzte Bad des Tages"
+          },
+          "d": {
+            "ES": "Una cala pequeña de arena y roca, a 8 minutos del hotel siguiendo la costa hacia el norte. Por el camino pasas por delante del Café del Mar y del Café Mambo. En la roca plana de los lados te puedes tumbar a secarte mientras baja el sol.",
+            "EN": "A small cove of sand and rock, 8 minutes from the hotel heading north along the coast. On the way you pass Café del Mar and Café Mambo. On the flat rock at either side you can lie down to dry off as the sun drops.",
+            "DE": "Eine kleine Bucht aus Sand und Fels, 8 Minuten vom Hotel an der Küste entlang nach Norden. Unterwegs kommen Sie am Café del Mar und am Café Mambo vorbei. Auf den flachen Felsen an den Seiten können Sie sich zum Trocknen hinlegen, während die Sonne sinkt."
+          },
+          "tip": {
+            "ES": "Lleva escarpines o chanclas para entrar al agua. La orilla tiene roca en algunos tramos.",
+            "EN": "Bring water shoes or flip-flops to get into the sea. The shore is rocky in places.",
+            "DE": "Nehmen Sie Badeschuhe oder Flip-Flops mit. Am Ufer ist es stellenweise felsig."
+          },
+          "hora": "19:30",
+          "dur": "50 min",
+          "img": "/ciudades/ibiza/img/calo-des-moro.jpg",
+          "lat": 38.98522,
+          "lng": 1.29667,
+          "tramo": "pie",
+          "tramoDuracionMin": 8,
+          "duracionMin": 50
+        },
+        {
+          "n": {
+            "ES": "Café Mambo y Café del Mar",
+            "EN": "Café Mambo and Café del Mar",
+            "DE": "Café Mambo und Café del Mar"
+          },
+          "s": {
+            "ES": "La puesta de sol del Sunset Strip",
+            "EN": "The Sunset Strip sunset",
+            "DE": "Der Sonnenuntergang am Sunset Strip"
+          },
+          "d": {
+            "ES": "El Café del Mar abrió en junio de 1980. En 1991 llegó el DJ José Padilla, que ponía música tranquila mientras se iba el sol, y en 1994 salió el primer disco recopilatorio del local. Cuando el sol toca el mar, la gente de las terrazas y de las rocas aplaude.",
+            "EN": "Café del Mar opened in June 1980. In 1991 DJ José Padilla arrived and played mellow music as the sun went down, and in 1994 the bar released its first compilation album. When the sun touches the sea, people on the terraces and the rocks applaud.",
+            "DE": "Das Café del Mar öffnete im Juni 1980. 1991 kam DJ José Padilla, der zum Sonnenuntergang ruhige Musik auflegte, und 1994 erschien das erste Compilation-Album des Lokals. Wenn die Sonne das Meer berührt, applaudieren die Leute auf den Terrassen und Felsen."
+          },
+          "tip": {
+            "ES": "Si no quieres pagar terraza, siéntate en las rocas de delante. La vista es la misma y es gratis.",
+            "EN": "If you don't want to pay for a terrace seat, sit on the rocks in front. The view is the same and it is free.",
+            "DE": "Wer nicht auf der Terrasse sitzen will, setzt sich auf die Felsen davor. Die Sicht ist dieselbe, und es kostet nichts."
+          },
+          "hora": "20:30",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/ibiza/img/cafe-del-mar.jpg",
+          "lat": 38.9808,
+          "lng": 1.29625,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "Huevo de Colón",
+            "EN": "Columbus Egg",
+            "DE": "Ei des Kolumbus"
+          },
+          "s": {
+            "ES": "Un barco dentro de un huevo",
+            "EN": "A ship inside an egg",
+            "DE": "Ein Schiff in einem Ei"
+          },
+          "d": {
+            "ES": "Sigues la costa hacia el pueblo, pasando por el puerto, hasta la rotonda del final del Passeig de ses Fonts. Ahí está este huevo blanco gigante, un homenaje a Cristóbal Colón, con la maqueta de una de sus naves dentro. Recuerda la anécdota del huevo de Colón, que lo puso de pie aplastándole la punta.",
+            "EN": "You follow the coast towards town, past the harbour, to the roundabout at the end of the Passeig de ses Fonts. There stands this giant white egg, a tribute to Christopher Columbus, with a model of one of his ships inside. It recalls the story of Columbus's egg, which he stood on end by cracking its tip.",
+            "DE": "Sie folgen der Küste Richtung Ort, am Hafen vorbei, bis zum Kreisverkehr am Ende des Passeig de ses Fonts. Dort steht dieses riesige weiße Ei, eine Hommage an Christoph Kolumbus, mit dem Modell eines seiner Schiffe darin. Es erinnert an die Anekdote vom Ei des Kolumbus, das er aufrecht hinstellte, indem er die Spitze eindrückte."
+          },
+          "tip": {
+            "ES": "Por la noche está iluminado. Hazle la foto desde el lado del paseo, con las palmeras detrás.",
+            "EN": "It is lit up at night. Take the photo from the promenade side, with the palm trees behind it.",
+            "DE": "Nachts ist es beleuchtet. Fotografieren Sie es von der Promenade aus, mit den Palmen dahinter."
+          },
+          "hora": "22:00",
+          "dur": "10 min",
+          "img": "/ciudades/ibiza/img/huevo.jpg",
+          "lat": 38.97987,
+          "lng": 1.30603,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 10
+        },
+        {
+          "n": {
+            "ES": "Passeig de ses Fonts",
+            "EN": "Passeig de ses Fonts",
+            "DE": "Passeig de ses Fonts"
+          },
+          "s": {
+            "ES": "Cena junto al puerto",
+            "EN": "Dinner by the harbour",
+            "DE": "Abendessen am Hafen"
+          },
+          "d": {
+            "ES": "Un paseo con palmeras y fuentes en paralelo al puerto, con terrazas a lo largo. En verano, a las diez de la noche las cocinas siguen abiertas. Para volver al hotel tienes unos 12 minutos andando por la costa.",
+            "EN": "A promenade with palm trees and fountains running alongside the harbour, lined with terraces. In summer the kitchens are still open at ten at night. Back to the hotel it is about a 12-minute walk along the coast.",
+            "DE": "Eine Promenade mit Palmen und Brunnen parallel zum Hafen, gesäumt von Terrassen. Im Sommer haben die Küchen um zehn Uhr abends noch geöffnet. Zurück zum Hotel sind es etwa 12 Minuten zu Fuß an der Küste."
+          },
+          "tip": {
+            "ES": "Si ves bullit de peix en la carta, pídelo. Es el guiso de pescado de Ibiza, y después se sirve un arroz hecho con el caldo.",
+            "EN": "If you see bullit de peix on the menu, order it. It is Ibiza's fish stew, followed by rice cooked in the broth.",
+            "DE": "Wenn Bullit de peix auf der Karte steht, bestellen Sie es. Das ist der Fischeintopf Ibizas, danach kommt Reis, der in der Brühe gekocht wird."
+          },
+          "hora": "22:15",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/ibiza/img/puerto-tarde.jpg",
+          "lat": 38.97951,
+          "lng": 1.30317,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 75
+        }
+      ],
+      "fotos": [
+        "/ciudades/ibiza/img/cafe-del-mar-sol.jpg",
+        "/ciudades/ibiza/img/calo-des-moro.jpg",
+        "/ciudades/ibiza/img/cafe-del-mar.jpg",
+        "/ciudades/ibiza/img/strip-sol.jpg",
+        "/ciudades/ibiza/img/huevo.jpg",
+        "/ciudades/ibiza/img/puerto-tarde.jpg"
+      ],
+      "duracionMin": 255,
+      "distanciaKm": 3.5,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Paseo llano junto al mar, casi todo asfaltado. Para llegar al agua en Caló des Moro hay que pasar por roca.",
+        "EN": "A flat seafront walk, almost all paved. To reach the water at Caló des Moro you have to cross some rock.",
+        "DE": "Ein flacher Spaziergang am Meer, fast durchgehend befestigt. Um in der Caló des Moro ins Wasser zu kommen, muss man über Felsen gehen."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 38.98017,
+        "lng": 1.29652,
+        "foto": "/ciudades/ibiza/img/cafe-del-mar.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, en el Sunset Strip. Caló des Moro queda a 8 minutos a la derecha, mirando al mar.",
+          "EN": "Hotel door, on the Sunset Strip. Caló des Moro is 8 minutes to the right as you face the sea.",
+          "DE": "Hoteltür, am Sunset Strip. Die Caló des Moro liegt 8 Minuten rechts, mit Blick aufs Meer."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Bebidas en el Sunset Strip",
+          "Cena"
+        ],
+        "EN": [
+          "Drinks on the Sunset Strip",
+          "Dinner"
+        ],
+        "DE": [
+          "Getränke am Sunset Strip",
+          "Abendessen"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación.",
+        "EN": "Self-guided, so there is nothing to book or cancel.",
+        "DE": "Freie Route, nichts zu buchen oder zu stornieren."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un cóctel al atardecer en Dusk by Yamm, el rooftop del hotel",
+      "EN": "A sunset cocktail at Dusk by Yamm, the hotel's rooftop",
+      "DE": "Ein Cocktail bei Sonnenuntergang im Dusk by Yamm, der Dachterrasse des Hotels"
+    }
+  },
+  "creditos": [
+    "Dalt Vila y sus murallas desde el mirador, Eivissa: A.Savin, FAL (Licencia Arte Libre), Wikimedia Commons",
+    "Es Vedrà desde el este, Ibiza: A.Savin, FAL (Licencia Arte Libre), Wikimedia Commons",
+    "Cala Comte y su islote, Ibiza: stavros1, CC BY 3.0, Wikimedia Commons",
+    "Playa de Cala d'Hort, Ibiza: A.Savin, FAL (Licencia Arte Libre), Wikimedia Commons",
+    "Puestos del mercadillo de Las Dalias, Sant Carles de Peralta: DetFerMai, CC BY-SA 4.0, Wikimedia Commons",
+    "Playa de Es Canar, junto al mercadillo de Punta Arabí: UnFUG-Fabi, CC0, Wikimedia Commons",
+    "Puesta de sol en Benirràs con el islote de Cap Bernat (ampliada a 800 px): Josep a.k.a xamonich, CC BY-SA 2.0, Wikimedia Commons",
+    "Caló des Moro, Sant Antoni de Portmany: JanManu, CC BY-SA 4.0, Wikimedia Commons",
+    "Playa de Ses Illetes, Formentera: MrPepanos, CC BY 3.0, Wikimedia Commons",
+    "Sant Antoni de Portmany desde Sa Punta des Molí: A.Savin, FAL (Licencia Arte Libre), Wikimedia Commons",
+    "Ferry rápido de Formentera entrando en el puerto de Eivissa: Charles from Port Chester, New York, CC BY 2.0, Wikimedia Commons",
+    "Estació Marítima de Formentera, puerto de Eivissa: Fabian Hurst, CC BY-SA 4.0, Wikimedia Commons",
+    "Barca de pesca en el puerto de La Savina, Formentera: Ana Ulin, CC BY-SA 2.0, Wikimedia Commons",
+    "Bicicleta en la playa de Ses Illetes, Formentera: Ana Ulin, CC BY-SA 2.0, Wikimedia Commons",
+    "Agua de Ses Illetes, Formentera: acediscovery, CC BY 4.0, Wikimedia Commons",
+    "Puesta de sol junto a Es Vedrà, Ibiza: A.Savin, FAL (Licencia Arte Libre), Wikimedia Commons",
+    "Es Vedrà y Es Vedranell al atardecer, Ibiza: A.Savin, FAL (Licencia Arte Libre), Wikimedia Commons",
+    "Torre des Savinar con Es Vedrà al fondo: LetoIbz, CC BY-SA 4.0, Wikimedia Commons",
+    "Cala d'Hort desde el camino a la Torre des Savinar: Gerda Arendt, CC0, Wikimedia Commons",
+    "Cala Bassa entre pinos, Ibiza: Daria, CC BY 3.0, Wikimedia Commons",
+    "Barcos fondeados en Cala Bassa, Ibiza: Daria, CC BY 3.0, Wikimedia Commons",
+    "Llaüts en el puerto de Sant Antoni de Portmany: JanManu, CC BY-SA 3.0 de, Wikimedia Commons",
+    "Torre d'en Rovira, entre Cala Bassa y Cala Comte: JanManu, CC BY-SA 3.0, Wikimedia Commons",
+    "Veleros frente a Cala Comte, Ibiza: anibal amaro, CC BY 3.0, Wikimedia Commons",
+    "Isla de Sa Conillera desde el aire, frente a Sant Antoni: Xaviduran, CC BY-SA 3.0, Wikimedia Commons",
+    "Muralla renacentista de Dalt Vila iluminada al anochecer: Xaviduran, CC BY-SA 3.0 es, Wikimedia Commons",
+    "Portal de ses Taules, Dalt Vila: Nanosanchez, dominio público, Wikimedia Commons",
+    "Torre de la catedral de Eivissa sobre Dalt Vila, desde el mirador: A.Savin, FAL (Licencia Arte Libre), Wikimedia Commons",
+    "Catedral de Eivissa en Dalt Vila: A.Savin, FAL (Licencia Arte Libre), Wikimedia Commons",
+    "Camino al Baluard de Santa Llúcia, Dalt Vila: Charles from Port Chester, New York, CC BY 2.0, Wikimedia Commons",
+    "Dalt Vila y la catedral desde el aire: UnFUG-Fabi, CC BY-SA 4.0, Wikimedia Commons",
+    "Puesta de sol desde el Café del Mar, Sant Antoni de Portmany: A.Savin, FAL (Licencia Arte Libre), Wikimedia Commons",
+    "Café del Mar al caer la tarde, Sant Antoni de Portmany: A.Savin, FAL (Licencia Arte Libre), Wikimedia Commons",
+    "Puesta de sol en el Sunset Strip, Sant Antoni de Portmany: Ibizawinter, CC BY-SA 4.0, Wikimedia Commons",
+    "Huevo de Colón, Sant Antoni de Portmany: Lesbardd, CC BY-SA 4.0, Wikimedia Commons",
+    "Puerto de Sant Antoni de Portmany al anochecer: A.Savin, FAL (Licencia Arte Libre), Wikimedia Commons"
+  ]
+}
