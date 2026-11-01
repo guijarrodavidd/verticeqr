@@ -1,0 +1,1276 @@
+{
+  "slug": "jerez",
+  "nombre": "Jerez de la Frontera",
+  "intro": {
+    "ES": "Desde el hotel, el centro de Jerez queda a unos 20 minutos en coche, y el Circuito está aquí al lado, a 5. En el centro, el Alcázar y la Catedral están a cinco minutos andando de las bodegas de González Byass, y por la noche los tabancos del barrio de San Miguel tienen flamenco en directo. Si tienes un día libre, Sanlúcar y El Puerto de Santa María quedan a unos 40 minutos, y Cádiz a 45.",
+    "EN": "From the hotel, the centre of Jerez is about 20 minutes by car, and the racing circuit is right next door, 5 minutes away. In the centre, the Alcázar and the Cathedral are a five-minute walk from the González Byass bodegas, and at night the tabancos of the San Miguel quarter have live flamenco. With a free day, Sanlúcar and El Puerto de Santa María are about 40 minutes away, and Cádiz 45."
+  },
+  "lugares": [
+    {
+      "id": "gonzalez-byass",
+      "img": "/ciudades/jerez/img/gonzalez-byass.jpg",
+      "nombre": "Bodegas González Byass (Tío Pepe)",
+      "zona": {
+        "ES": "Centro de Jerez, calle Manuel María González 12, junto a la Catedral",
+        "EN": "Central Jerez, Calle Manuel María González 12, next to the Cathedral"
+      },
+      "d": {
+        "ES": "Manuel María González Ángel fundó la bodega en 1835 y le puso a su fino el nombre de un tío suyo, el Tío Pepe. El inglés Robert Blake Byass era su agente en Inglaterra, y en 1863 la casa pasó a llamarse González y Byass. Dentro hay calles que antes eran públicas, como la calle Ciegos, cubierta por una parra, y botas firmadas por visitantes como Paco de Lucía o Arturo Pérez-Reverte.",
+        "EN": "Manuel María González Ángel founded the bodega in 1835 and named his fino after one of his uncles, Tío Pepe. The Englishman Robert Blake Byass was his agent in England, and in 1863 the house became González y Byass. Inside there are streets that used to be public, such as Calle Ciegos under its vine canopy, and casks signed by visitors like Paco de Lucía and Arturo Pérez-Reverte."
+      },
+      "cuando": {
+        "ES": "A mediodía y siempre con reserva; hay pases desde las 12:00",
+        "EN": "Around midday, always booked ahead; tours run from 12:00"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 36.68032,
+      "lng": -6.14246
+    },
+    {
+      "id": "lustau",
+      "img": "/ciudades/jerez/img/lustau.jpg",
+      "nombre": "Bodegas Lustau",
+      "zona": {
+        "ES": "Calle Arcos 53, centro de Jerez",
+        "EN": "Calle Arcos 53, central Jerez"
+      },
+      "d": {
+        "ES": "La casa nace en 1896, cuando José Ruiz-Berdejo, secretario judicial en Jerez, empezó a criar vino en su finca para vendérselo a las bodegas grandes. Desde 2000 ocupa en la calle Arcos seis bodegas del siglo XIX, unos 20.000 m² de naves altas con arcos, de las que en Jerez llaman bodegas catedral. Su gama Almacenista, de 1981, lleva en la etiqueta el nombre del pequeño criador de cada vino.",
+        "EN": "The house began in 1896, when José Ruiz-Berdejo, a court clerk in Jerez, started ageing wine on his estate to sell to the big bodegas. Since 2000 it has occupied six 19th-century bodegas on Calle Arcos, some 20,000 m² of tall arched halls of the kind Jerez calls cathedral bodegas. Its Almacenista range, launched in 1981, puts the name of the small grower behind each wine on the label."
+      },
+      "cuando": {
+        "ES": "Con reserva; la visita «Las catedrales del vino» dura una hora y cuesta 26 €",
+        "EN": "Booking required; the Las catedrales del vino tour lasts an hour and costs €26"
+      },
+      "min": 17,
+      "modo": "coche",
+      "lat": 36.68458,
+      "lng": -6.13072
+    },
+    {
+      "id": "real-escuela",
+      "img": "/ciudades/jerez/img/real-escuela.jpg",
+      "nombre": "Real Escuela Andaluza del Arte Ecuestre",
+      "zona": {
+        "ES": "Avenida Duque de Abrantes, al norte del centro",
+        "EN": "Avenida Duque de Abrantes, north of the centre"
+      },
+      "d": {
+        "ES": "La fundó Álvaro Domecq Romero en 1973, y el espectáculo «Cómo bailan los caballos andaluces» lo presentó por primera vez para celebrar un Caballo de Oro que había recibido. Tiene su sede en el Recreo de las Cadenas, un palacio del siglo XIX que, según la propia escuela, diseñó Charles Garnier, el arquitecto de la Ópera de París. En el recinto entrenan los caballos cada mañana, y en una bodega de principios del siglo XIX está el Museo del Enganche, abierto en 2002.",
+        "EN": "Álvaro Domecq Romero founded it in 1973, and he first staged the show «How the Andalusian Horses Dance» to celebrate a Caballo de Oro award he had received. It is based at the Recreo de las Cadenas, a 19th-century palace that, according to the school, was designed by Charles Garnier, architect of the Paris Opera. The horses train on the grounds every morning, and an early 19th-century bodega houses the Carriage Museum, opened in 2002."
+      },
+      "cuando": {
+        "ES": "El espectáculo es a las 12:00, normalmente los martes y jueves; los demás días laborables, de 10:00 a 14:00, se ven los entrenamientos. Pide en recepción el calendario del mes",
+        "EN": "The show starts at 12:00, usually on Tuesdays and Thursdays; on other weekdays, from 10:00 to 14:00, you can watch the training. Ask at reception for the month's calendar"
+      },
+      "min": 16,
+      "modo": "coche",
+      "lat": 36.69343,
+      "lng": -6.13644
+    },
+    {
+      "id": "catedral",
+      "img": "/ciudades/jerez/img/catedral.jpg",
+      "nombre": "Catedral de Jerez",
+      "zona": {
+        "ES": "Plaza de la Encarnación, junto al Alcázar",
+        "EN": "Plaza de la Encarnación, beside the Alcázar"
+      },
+      "d": {
+        "ES": "El cabildo de la colegiata empezó el templo nuevo el 9 de mayo de 1695, con trazas de Diego Moreno Meléndez, y la obra se terminó en 1778. Es catedral desde 1980, cuando se creó la diócesis de Asidonia-Jerez. La torre de las campanas está separada del templo, al otro lado de la escalinata.",
+        "EN": "The collegiate chapter began the new church on 9 May 1695 to plans by Diego Moreno Meléndez, and the work was finished in 1778. It has been a cathedral since 1980, when the diocese of Asidonia-Jerez was created. The bell tower stands apart from the church, across the great flight of steps."
+      },
+      "cuando": {
+        "ES": "De lunes a sábado, de 10:00 a 19:00, y el domingo desde las 13:00. La entrada cuesta 8 € con audioguía y la subida a la torre está suspendida por ahora",
+        "EN": "Monday to Saturday from 10:00 to 19:00, and on Sundays from 13:00. Admission is €8 with audio guide, and the tower climb is suspended for now"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 36.68232,
+      "lng": -6.14111
+    },
+    {
+      "id": "alcazar",
+      "img": "/ciudades/jerez/img/alcazar.jpg",
+      "nombre": "Alcázar de Jerez",
+      "zona": {
+        "ES": "Alameda Vieja, en el centro",
+        "EN": "Alameda Vieja, in the centre"
+      },
+      "d": {
+        "ES": "Es una fortaleza almohade del siglo XII. Dentro se conserva la única de las 18 mezquitas que tuvo Jerez en época islámica, con su patio de abluciones y su mihrab, y unos baños árabes con lucernarios en forma de estrella. En la torre del Palacio de Villavicencio, de época barroca, una cámara oscura proyecta la ciudad en directo.",
+        "EN": "It is a 12th-century Almohad fortress. Inside stands the only one of the 18 mosques Jerez had in Islamic times, with its ablutions courtyard and mihrab, and a set of Arab baths with star-shaped skylights. In the tower of the Baroque Villavicencio Palace, a camera obscura projects a live view of the city."
+      },
+      "cuando": {
+        "ES": "Por la mañana; abre todos los días desde las 9:30 y casi todo el año cierra a las 14:30",
+        "EN": "In the morning; open daily from 9:30, closing at 14:30 for most of the year"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 36.68077,
+      "lng": -6.13987
+    },
+    {
+      "id": "tabanco-el-pasaje",
+      "img": "/ciudades/jerez/img/el-pasaje.jpg",
+      "nombre": "Tabanco El Pasaje",
+      "zona": {
+        "ES": "Calle Santa María 8, junto al Teatro Villamarta",
+        "EN": "Calle Santa María 8, near the Teatro Villamarta"
+      },
+      "d": {
+        "ES": "José González Navarro lo abrió el 16 de diciembre de 1925, y se tiene por el tabanco más antiguo de la ciudad. Se llama así porque tiene dos puertas, una a la calle Santa María y otra a la calle Mesones. Todos los días hay flamenco en directo a las 14:00, a las 19:30 y a las 21:30, y el amontillado se sirve de la bota.",
+        "EN": "José González Navarro opened it on 16 December 1925, and it is held to be the oldest tabanco in the city. The name, meaning the passage, comes from its two doors, one on Calle Santa María and one on Calle Mesones. There is live flamenco every day at 14:00, 19:30 and 21:30, and the amontillado is poured straight from the cask."
+      },
+      "cuando": {
+        "ES": "Por la tarde, para el pase de las 19:30; con reserva hay un consumo mínimo de 35 € por persona",
+        "EN": "In the evening, for the 19:30 show; booked tables carry a minimum spend of €35 per person"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 36.68283,
+      "lng": -6.1362
+    },
+    {
+      "id": "circuito",
+      "img": "/ciudades/jerez/img/circuito.jpg",
+      "nombre": "Circuito de Jerez-Ángel Nieto",
+      "zona": {
+        "ES": "Carretera de Arcos, a 2 km del hotel",
+        "EN": "Carretera de Arcos, 2 km from the hotel"
+      },
+      "d": {
+        "ES": "Se inauguró el 8 de diciembre de 1985 y mide 4,4 km. En 1986 Ayrton Senna le ganó aquí a Nigel Mansell por 14 milésimas en la Fórmula 1, y desde 1987 se corre el Gran Premio de España de motociclismo. Lleva el nombre de Ángel Nieto desde el 3 de mayo de 2018, y en invierno vienen a probar los equipos de MotoGP y de Superbikes.",
+        "EN": "It opened on 8 December 1985 and is 4.4 km long. In 1986 Ayrton Senna beat Nigel Mansell here by 0.014 seconds in Formula One, and the Spanish motorcycle Grand Prix has been held here since 1987. It has carried Ángel Nieto's name since 3 May 2018, and in winter the MotoGP and Superbike teams come here to test."
+      },
+      "cuando": {
+        "ES": "En primavera, el fin de semana del Gran Premio de motos, y los días de tandas y cursos de conducción. Pide en recepción el calendario",
+        "EN": "In spring, for the motorcycle Grand Prix weekend, and on track days and driving course days. Ask at reception for the calendar"
+      },
+      "min": 5,
+      "modo": "coche",
+      "lat": 36.7078,
+      "lng": -6.03251
+    },
+    {
+      "id": "bajo-de-guia",
+      "img": "/ciudades/jerez/img/bajo-de-guia.jpg",
+      "nombre": "Bajo de Guía, Sanlúcar de Barrameda",
+      "zona": {
+        "ES": "Sanlúcar de Barrameda, a unos 42 km del hotel",
+        "EN": "Sanlúcar de Barrameda, about 42 km from the hotel"
+      },
+      "d": {
+        "ES": "Es la playa de Sanlúcar en la desembocadura del Guadalquivir, con Doñana en la otra orilla. De Sanlúcar salió el 20 de septiembre de 1519 la expedición de Magallanes, y aquí volvió Elcano en 1522 con 18 hombres tras dar la vuelta al mundo. Hoy la playa es la de las casas de comidas de langostinos, y en la antigua Fábrica de Hielo está el centro de visitantes de Doñana, de donde sale el barco.",
+        "EN": "This is Sanlúcar's beach at the mouth of the Guadalquivir, with Doñana on the far bank. Magellan's expedition left Sanlúcar on 20 September 1519, and Elcano sailed back here in 1522 with 18 men after going round the world. Today the beach is lined with prawn restaurants, and the old ice factory, the Fábrica de Hielo, is the Doñana visitor centre where the boat leaves from."
+      },
+      "cuando": {
+        "ES": "Por la mañana, con el barco de las 10:00, y a mediodía para comer",
+        "EN": "In the morning, for the 10:00 boat, and at midday for lunch"
+      },
+      "min": 40,
+      "modo": "coche",
+      "lat": 36.7885,
+      "lng": -6.35241
+    },
+    {
+      "id": "cadiz",
+      "img": "/ciudades/jerez/img/cadiz.jpg",
+      "nombre": "Cádiz: la Catedral y el Campo del Sur",
+      "zona": {
+        "ES": "Cádiz, a unos 43 km del hotel",
+        "EN": "Cádiz, about 43 km from the hotel"
+      },
+      "d": {
+        "ES": "Los fenicios la fundaron como Gadir hacia el año 1100 antes de Cristo, y Cádiz presume de ser de las ciudades más antiguas de Occidente. La Catedral se empezó en 1722 y se terminó en 1838, 116 años de obra, y en su cripta está enterrado Manuel de Falla. Detrás, el Campo del Sur es el paseo sobre el Atlántico que muchos comparan con el malecón de La Habana.",
+        "EN": "The Phoenicians founded it as Gadir around 1100 BC, and Cádiz likes to call itself one of the oldest cities in the Western world. The Cathedral was begun in 1722 and finished in 1838, after 116 years of work, and Manuel de Falla is buried in its crypt. Behind it, the Campo del Sur is the promenade above the Atlantic that many compare to the Malecón in Havana."
+      },
+      "cuando": {
+        "ES": "La Catedral abre de lunes a sábado de 10:00 a 20:00 y el domingo desde las 13:30; la entrada general cuesta 12 €",
+        "EN": "The Cathedral opens Monday to Saturday from 10:00 to 20:00 and on Sundays from 13:30; general admission is €12"
+      },
+      "min": 45,
+      "modo": "coche",
+      "lat": 36.52895,
+      "lng": -6.29532
+    },
+    {
+      "id": "el-puerto",
+      "img": "/ciudades/jerez/img/san-marcos.jpg",
+      "nombre": "El Puerto de Santa María",
+      "zona": {
+        "ES": "En la bahía de Cádiz, a unos 37 km del hotel",
+        "EN": "On the Bay of Cádiz, about 37 km from the hotel"
+      },
+      "d": {
+        "ES": "Con Jerez y Sanlúcar forma el triángulo del jerez, las tres ciudades donde se cría este vino. El Castillo de San Marcos fue una mezquita que Alfonso X convirtió en iglesia fortificada, y aquí dibujó Juan de la Cosa en 1500 el primer mapa en el que aparece América. Osborne cría sus vinos en El Puerto desde 1772.",
+        "EN": "Together with Jerez and Sanlúcar it forms the sherry triangle, the three towns where this wine is aged. The Castillo de San Marcos was a mosque that Alfonso X turned into a fortified church, and it was here that Juan de la Cosa drew the first map to show America, in 1500. Osborne has been ageing its wines in El Puerto since 1772."
+      },
+      "cuando": {
+        "ES": "Por la mañana; en las Bodegas de Mora de Osborne puedes catar sin reserva de 10:00 a 13:00",
+        "EN": "In the morning; at Osborne's Bodegas de Mora you can taste without booking from 10:00 to 13:00"
+      },
+      "min": 35,
+      "modo": "coche",
+      "lat": 36.59642,
+      "lng": -6.22662
+    }
+  ],
+  "rutas": [
+    {
+      "id": "bodegas",
+      "expId": "ex1",
+      "img": "/ciudades/jerez/img/gb-calle-ciegos.jpg",
+      "titulo": {
+        "ES": "Jerez de bodegas, del Alcázar al Tío Pepe",
+        "EN": "The bodegas of Jerez, from the Alcázar to Tío Pepe"
+      },
+      "tipo": {
+        "ES": "Bodegas e historia",
+        "EN": "Sherry and history"
+      },
+      "dur": "6 h",
+      "d": {
+        "ES": "Una mañana en el centro de Jerez. Empiezas en el Alcázar almohade a primera hora y cruzas a la Catedral. A las 12:00 entras en González Byass, la casa del Tío Pepe, para una visita de hora y media con dos vinos. Comes en un tabanco de la calle Algarve y a las 15:30 estás de vuelta en el hotel.",
+        "EN": "A morning in the centre of Jerez. You start at the Almohad Alcázar first thing and cross to the Cathedral. At 12:00 you walk into González Byass, the home of Tío Pepe, for a ninety-minute tour with two wines. Lunch is at a tabanco on Calle Algarve, and by 15:30 you are back at the hotel."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 9:30, unos 20 minutos y 14 km hasta el centro. Vuelta al hotel hacia las 15:30",
+        "EN": "Car leaves from the hotel door at 9:30, about 20 minutes and 14 km to the centre. Back at the hotel around 15:30"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el hotel",
+          "Guía en español o inglés",
+          "Entradas al Alcázar y a la Catedral, con audioguía",
+          "Visita «Experiencia Tío Pepe» en González Byass, con dos vinos"
+        ],
+        "EN": [
+          "Return transfer from the hotel",
+          "Guide in Spanish or English",
+          "Alcázar and Cathedral admission, with audio guide",
+          "The Tío Pepe Experience tour at González Byass, with two wines"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas en el tabanco",
+          "Propinas"
+        ],
+        "EN": [
+          "Food and drinks at the tabanco",
+          "Tips"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo, que el centro es de adoquín",
+          "Una chaqueta fina, que dentro de las bodegas baja la temperatura",
+          "Gorra y agua de mayo a septiembre",
+          "Algo de efectivo para el tabanco"
+        ],
+        "EN": [
+          "Comfortable shoes, as the centre is cobbled",
+          "A light jacket, as it is cooler inside the bodegas",
+          "A cap and water from May to September",
+          "Some cash for the tabanco"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "Rumbo al centro de Jerez",
+            "EN": "Heading for central Jerez"
+          },
+          "d": {
+            "ES": "El coche toma la carretera de Arcos hacia el oeste, unos 14 km hasta el centro. En época andalusí la ciudad se llamaba Šeriš, y de ese nombre salen la palabra jerez y el sherry de los ingleses.",
+            "EN": "The car takes the Arcos road west, about 14 km into the centre. In Moorish times the city was called Šeriš, and that name gave Spanish its jerez and the English their sherry."
+          },
+          "tip": {
+            "ES": "Desayuna fuerte. Hasta las 13:40 no te sientas a comer.",
+            "EN": "Have a proper breakfast. You won't sit down to lunch until 13:40."
+          },
+          "hora": "09:30",
+          "dur": "5 min",
+          "img": "/ciudades/jerez/img/hotel.jpg",
+          "lat": 36.70248,
+          "lng": -6.03812,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Alcázar de Jerez",
+            "EN": "Alcázar of Jerez"
+          },
+          "s": {
+            "ES": "La fortaleza almohade del siglo XII",
+            "EN": "The 12th-century Almohad fortress"
+          },
+          "d": {
+            "ES": "Llegas con el Alcázar recién abierto y casi vacío. Dentro está la única de las 18 mezquitas que tuvo Jerez en época islámica, con su patio de abluciones y su mihrab, y los baños árabes, con lucernarios en forma de estrella en las bóvedas.",
+            "EN": "You arrive with the Alcázar just open and almost empty. Inside is the only one of the 18 mosques Jerez had in Islamic times, with its ablutions courtyard and mihrab, and the Arab baths, with star-shaped skylights in the vaults."
+          },
+          "tip": {
+            "ES": "Si el día está despejado, sube a la cámara oscura del Palacio de Villavicencio, que proyecta la ciudad en directo. Va por pases y se paga aparte.",
+            "EN": "On a clear day, go up to the camera obscura in the Villavicencio Palace, which projects a live view of the city. It runs in sessions and costs extra."
+          },
+          "hora": "09:55",
+          "dur": "1 h",
+          "img": "/ciudades/jerez/img/alcazar-mezquita.jpg",
+          "lat": 36.68077,
+          "lng": -6.13987,
+          "tramo": "coche",
+          "tramoDuracionMin": 20,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Catedral de Jerez",
+            "EN": "Jerez Cathedral"
+          },
+          "s": {
+            "ES": "Casi un siglo de obra junto al Alcázar",
+            "EN": "Almost a century in the building, beside the Alcázar"
+          },
+          "d": {
+            "ES": "Está a 200 metros, al otro lado de la Alameda Vieja. El cabildo de la colegiata empezó el templo el 9 de mayo de 1695 y lo terminó en 1778, y es catedral desde 1980. La torre de las campanas está separada del edificio, al otro lado de la escalinata.",
+            "EN": "It is 200 metres away, across the Alameda Vieja. The collegiate chapter began the church on 9 May 1695 and finished it in 1778, and it has been a cathedral since 1980. The bell tower stands apart from the building, across the flight of steps."
+          },
+          "tip": {
+            "ES": "Dentro busca «La Virgen Niña dormida», un cuadro de Zurbarán.",
+            "EN": "Inside, look for The Sleeping Virgin Child, a painting by Zurbarán."
+          },
+          "hora": "11:00",
+          "dur": "40 min",
+          "img": "/ciudades/jerez/img/catedral.jpg",
+          "lat": 36.68232,
+          "lng": -6.14111,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Bodegas González Byass",
+            "EN": "González Byass bodegas"
+          },
+          "s": {
+            "ES": "La casa del Tío Pepe",
+            "EN": "The home of Tío Pepe"
+          },
+          "d": {
+            "ES": "Llegas un cuarto de hora antes de la visita de las 12:00, que dura hora y media. Parte del recorrido se hace en un trenecito entre viñas y jardines, y a pie pasas por la calle Ciegos, cubierta por una parra, y por las botas firmadas por visitantes como Paco de Lucía. Terminas con dos vinos de la casa.",
+            "EN": "You arrive a quarter of an hour before the 12:00 tour, which lasts ninety minutes. Part of it is on a little train through the vines and gardens, and on foot you pass down Calle Ciegos, under its vine canopy, and by casks signed by visitors such as Paco de Lucía. You finish with two of the house wines."
+          },
+          "tip": {
+            "ES": "Fíjate en La Concha, una bodega redonda con cubierta de hierro de 1869. Se pensó a raíz de la visita de Isabel II en 1862.",
+            "EN": "Look out for La Concha, a round bodega with an iron roof from 1869. It was conceived after Queen Isabella II's visit in 1862."
+          },
+          "hora": "11:45",
+          "dur": "1 h 45 min",
+          "img": "/ciudades/jerez/img/gb-botas.jpg",
+          "lat": 36.68032,
+          "lng": -6.14246,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 105
+        },
+        {
+          "n": {
+            "ES": "Comida en el Tabanco Plateros",
+            "EN": "Lunch at Tabanco Plateros"
+          },
+          "s": {
+            "ES": "Fino y tapas en la calle Algarve",
+            "EN": "Fino and tapas on Calle Algarve"
+          },
+          "d": {
+            "ES": "Diez minutos andando te llevan a la calle Algarve. Luz Saldaña y Jaime Jiménez abrieron Plateros en 2011 en la plaza del mismo nombre, y en 2016 se mudaron aquí, al número 35. Pide un fino y, si la tienen, una tapa de zanahorias aliñás, con comino y ajo.",
+            "EN": "A ten-minute walk takes you to Calle Algarve. Luz Saldaña and Jaime Jiménez opened Plateros in 2011 on the square of the same name, and in 2016 moved here, to number 35. Order a fino and, if they have it, a tapa of zanahorias aliñás, carrots dressed with cumin and garlic."
+          },
+          "tip": {
+            "ES": "En muchos tabancos la cuenta se apunta con tiza en la barra. Pide que te la sumen antes de irte.",
+            "EN": "In many tabancos the bill is chalked up on the bar. Ask them to add it up before you leave."
+          },
+          "hora": "13:40",
+          "dur": "1 h 20 min",
+          "img": "/ciudades/jerez/img/tabanco-tapa.jpg",
+          "lat": 36.6832,
+          "lng": -6.13802,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 80
+        }
+      ],
+      "fotos": [
+        "/ciudades/jerez/img/gb-calle-ciegos.jpg",
+        "/ciudades/jerez/img/gb-botas.jpg",
+        "/ciudades/jerez/img/alcazar.jpg",
+        "/ciudades/jerez/img/alcazar-mezquita.jpg",
+        "/ciudades/jerez/img/catedral.jpg",
+        "/ciudades/jerez/img/tabanco-tapa.jpg"
+      ],
+      "duracionMin": 360,
+      "distanciaKm": 30,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Se camina algo más de un kilómetro por el centro, sobre adoquín, con escaleras en algunas zonas del Alcázar. González Byass tiene espacios adaptados para movilidad reducida; para el resto, pregunta en recepción antes de reservar.",
+        "EN": "You walk a little over a kilometre around the centre, on cobbles, with steps in parts of the Alcázar. González Byass has spaces adapted for reduced mobility; for the rest, ask at reception before booking."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 36.70248,
+        "lng": -6.03812,
+        "foto": "/ciudades/jerez/img/hotel.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 9:30. Baja cinco minutos antes.",
+          "EN": "Hotel door, at 9:30. Come down five minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale de martes a sábado; el domingo la Catedral no abre hasta las 13:00.",
+        "EN": "Free up to 24 h before. Runs Tuesday to Saturday; on Sundays the Cathedral does not open until 13:00."
+      },
+      "salidasFijas": [
+        "09:30"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "caballos",
+      "expId": "ex2",
+      "img": "/ciudades/jerez/img/reae-entreno.jpg",
+      "titulo": {
+        "ES": "Los caballos de la Real Escuela y Bodegas Lustau",
+        "EN": "The Royal School horses and Bodegas Lustau"
+      },
+      "tipo": {
+        "ES": "Caballos y bodegas",
+        "EN": "Horses and sherry"
+      },
+      "dur": "3 h 50 min",
+      "d": {
+        "ES": "Los martes y jueves a las 12:00 ves «Cómo bailan los caballos andaluces», hora y media de doma clásica y vaquera con música española y trajes del siglo XVIII. Los lunes, miércoles y viernes ves el entrenamiento de la mañana y recorres el palacio y las cuadras. Después, a cinco minutos, catas cinco vinos en las naves del siglo XIX de Bodegas Lustau, y a las 15:00 estás en el hotel para comer.",
+        "EN": "On Tuesdays and Thursdays at 12:00 you watch «How the Andalusian Horses Dance», ninety minutes of classical and vaquero dressage set to Spanish music, with riders in 18th-century dress. On Mondays, Wednesdays and Fridays you watch the morning training and tour the palace and stables. Then, five minutes away, you taste five wines in the 19th-century halls of Bodegas Lustau, and by 15:00 you are back at the hotel for lunch."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 11:10, unos 20 minutos y 13 km hasta la Real Escuela. Vuelta al hotel hacia las 15:00",
+        "EN": "Car leaves from the hotel door at 11:10, about 20 minutes and 13 km to the Royal School. Back at the hotel around 15:00"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el hotel",
+          "Martes y jueves, entrada de grada central al espectáculo «Cómo bailan los caballos andaluces»",
+          "Lunes, miércoles y viernes, visita temática con el entrenamiento de los caballos",
+          "Visita «Las catedrales del vino» en Bodegas Lustau, con cinco vinos y un vermut"
+        ],
+        "EN": [
+          "Return transfer from the hotel",
+          "Tuesdays and Thursdays, a central-stand seat for «How the Andalusian Horses Dance»",
+          "Mondays, Wednesdays and Fridays, the themed visit with the horses' training",
+          "The Las catedrales del vino tour at Bodegas Lustau, with five wines and a vermouth"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas fuera de la cata",
+          "Propinas"
+        ],
+        "EN": [
+          "Food and drinks beyond the tasting",
+          "Tips"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo para los jardines y las cuadras",
+          "Gafas de sol para las pistas exteriores",
+          "Agua de mayo a septiembre",
+          "El móvil en silencio durante el espectáculo"
+        ],
+        "EN": [
+          "Comfortable shoes for the gardens and stables",
+          "Sunglasses for the outdoor arenas",
+          "Water from May to September",
+          "Your phone on silent during the show"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "Rumbo a la Real Escuela",
+            "EN": "Heading for the Royal School"
+          },
+          "d": {
+            "ES": "El coche cruza Jerez hasta la avenida Duque de Abrantes, unos 13 km. La escuela ocupa el Recreo de las Cadenas, una finca de recreo del siglo XIX al norte del centro.",
+            "EN": "The car crosses Jerez to Avenida Duque de Abrantes, about 13 km. The school occupies the Recreo de las Cadenas, a 19th-century country retreat north of the centre."
+          },
+          "tip": {
+            "ES": "El espectáculo empieza a las 12:00 en punto. Baja a la puerta con cinco minutos de margen.",
+            "EN": "The show starts at 12:00 sharp. Be at the door five minutes early."
+          },
+          "hora": "11:10",
+          "dur": "5 min",
+          "img": "/ciudades/jerez/img/hotel.jpg",
+          "lat": 36.70248,
+          "lng": -6.03812,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Real Escuela Andaluza del Arte Ecuestre",
+            "EN": "Royal Andalusian School of Equestrian Art"
+          },
+          "s": {
+            "ES": "El ballet ecuestre o el entrenamiento",
+            "EN": "The horse ballet or the morning training"
+          },
+          "d": {
+            "ES": "Los martes y jueves ves el espectáculo en el picadero cubierto. Son entre seis y ocho coreografías de doma vaquera, doma clásica, enganches y trabajos a la mano, con un descanso. Los demás días entras a ver el entrenamiento en el picadero y recorres el palacio y el Museo del Enganche.",
+            "EN": "On Tuesdays and Thursdays you watch the show in the covered arena. It has six to eight routines of vaquero dressage, classical dressage, carriage driving and work in hand, with an interval. On other days you watch the training in the arena and tour the palace and the Carriage Museum."
+          },
+          "tip": {
+            "ES": "Las cuadras forman un octógono, y en el centro está el guadarnés, donde se guardan las sillas y los arreos de gala.",
+            "EN": "The stables form an octagon, and at the centre is the tack room, where the saddles and gala harnesses are kept."
+          },
+          "hora": "11:35",
+          "dur": "1 h 55 min",
+          "img": "/ciudades/jerez/img/reae-picadero.jpg",
+          "lat": 36.69343,
+          "lng": -6.13644,
+          "tramo": "coche",
+          "tramoDuracionMin": 20,
+          "duracionMin": 115
+        },
+        {
+          "n": {
+            "ES": "Bodegas Lustau",
+            "EN": "Bodegas Lustau"
+          },
+          "s": {
+            "ES": "Cinco vinos en una bodega catedral",
+            "EN": "Five wines in a cathedral bodega"
+          },
+          "d": {
+            "ES": "Lustau está en la calle Arcos, a unos 2 km. Recorres con la copa en la mano sus naves del siglo XIX, altas y con arcos, y entre bota y bota catas cinco vinos. Al final te sirven un vermut de la casa.",
+            "EN": "Lustau is on Calle Arcos, about 2 km away. Glass in hand, you walk through its tall 19th-century arched halls and taste five wines among the casks. At the end they pour you a house vermouth."
+          },
+          "tip": {
+            "ES": "Las naves son tan altas para que corra el aire y el vino se mantenga fresco en verano. Por eso en Jerez las llaman bodegas catedral.",
+            "EN": "The halls are this tall so the air can move and the wine stays cool in summer. That is why Jerez calls them cathedral bodegas."
+          },
+          "hora": "13:40",
+          "dur": "1 h 5 min",
+          "img": "/ciudades/jerez/img/lustau-botas.jpg",
+          "lat": 36.68458,
+          "lng": -6.13072,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 65
+        }
+      ],
+      "fotos": [
+        "/ciudades/jerez/img/reae-entreno.jpg",
+        "/ciudades/jerez/img/real-escuela.jpg",
+        "/ciudades/jerez/img/reae-picadero.jpg",
+        "/ciudades/jerez/img/lustau.jpg",
+        "/ciudades/jerez/img/lustau-botas.jpg"
+      ],
+      "duracionMin": 230,
+      "distanciaKm": 28,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Los recorridos son llanos y el picadero tiene sitio para sillas de ruedas, con tarifa propia. Para Lustau, pregunta en recepción antes de reservar.",
+        "EN": "The routes are level and the arena has wheelchair spaces, with their own rate. For Lustau, ask at reception before booking."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 36.70248,
+        "lng": -6.03812,
+        "foto": "/ciudades/jerez/img/hotel.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 11:10. Baja cinco minutos antes.",
+          "EN": "Hotel door, at 11:10. Come down five minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale de lunes a viernes; el espectáculo es los martes y jueves, y los demás días se ve el entrenamiento.",
+        "EN": "Free up to 24 h before. Runs Monday to Friday; the show is on Tuesdays and Thursdays, and on other days you see the training."
+      },
+      "salidasFijas": [
+        "11:10"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "sanlucar",
+      "expId": "ex3",
+      "img": "/ciudades/jerez/img/guadalquivir.jpg",
+      "titulo": {
+        "ES": "Sanlúcar, el barco a Doñana y langostinos en Bajo de Guía",
+        "EN": "Sanlúcar, the boat to Doñana and prawns at Bajo de Guía"
+      },
+      "tipo": {
+        "ES": "Naturaleza y mesa",
+        "EN": "Nature and food"
+      },
+      "dur": "6 h 45 min",
+      "d": {
+        "ES": "Un día en la desembocadura del Guadalquivir. A las 10:00 subes al barco en Bajo de Guía y remontas el río unos 6 km hasta Doñana, donde caminas una hora con una guía entre pinares y chozas. De vuelta comes langostinos con manzanilla frente a la playa, y a las 15:30 estás en el hotel.",
+        "EN": "A day at the mouth of the Guadalquivir. At 10:00 you board the boat at Bajo de Guía and sail about 6 km upriver to Doñana, where you walk for an hour with a guide among pinewoods and thatched huts. Back on the beach you have prawns with manzanilla, and by 15:30 you are at the hotel."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 8:45, unos 40 minutos y 42 km hasta Sanlúcar. Vuelta al hotel hacia las 15:30",
+        "EN": "Car leaves from the hotel door at 8:45, about 40 minutes and 42 km to Sanlúcar. Back at the hotel around 15:30"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el hotel",
+          "Billete del barco a Doñana, con guía en español o inglés",
+          "Ruta guiada a pie por el Poblado de La Plancha",
+          "Mesa reservada en Bajo de Guía"
+        ],
+        "EN": [
+          "Return transfer from the hotel",
+          "Boat ticket to Doñana, with a guide in Spanish or English",
+          "Guided walk through the Poblado de La Plancha",
+          "A table booked at Bajo de Guía"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Propinas"
+        ],
+        "EN": [
+          "Food and drinks",
+          "Tips"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Repelente de mosquitos, que lo pide la propia naviera",
+          "Agua",
+          "Una chaqueta, que en el río sopla el viento",
+          "Calzado cómodo para la arena del sendero"
+        ],
+        "EN": [
+          "Insect repellent, which the boat company asks for",
+          "Water",
+          "A jacket, as it gets windy on the river",
+          "Comfortable shoes for the sandy trail"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "Rumbo a Sanlúcar de Barrameda",
+            "EN": "Heading for Sanlúcar de Barrameda"
+          },
+          "d": {
+            "ES": "El coche cruza la campiña hacia el noroeste, unos 42 km. Sanlúcar cierra con Jerez y El Puerto el triángulo del jerez, y es el único sitio donde se cría la manzanilla.",
+            "EN": "The car crosses the farmland to the north-west, about 42 km. Sanlúcar completes the sherry triangle with Jerez and El Puerto, and it is the only place where manzanilla is aged."
+          },
+          "tip": {
+            "ES": "Desayuna bien. La comida es a la vuelta del barco, hacia la una.",
+            "EN": "Have a good breakfast. Lunch comes after the boat, at around one."
+          },
+          "hora": "08:45",
+          "dur": "5 min",
+          "img": "/ciudades/jerez/img/hotel.jpg",
+          "lat": 36.70248,
+          "lng": -6.03812,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Centro de visitantes Fábrica de Hielo",
+            "EN": "Fábrica de Hielo visitor centre"
+          },
+          "s": {
+            "ES": "Donde se embarca",
+            "EN": "Where you board"
+          },
+          "d": {
+            "ES": "La naviera pide estar media hora antes en este centro de visitantes de Doñana, instalado en una antigua fábrica de hielo de la playa de Bajo de Guía. Desde Sanlúcar salió en septiembre de 1519 la expedición de Magallanes, y aquí volvió Elcano en 1522.",
+            "EN": "The boat company asks you to be at this Doñana visitor centre half an hour early. It is housed in an old ice factory on Bajo de Guía beach. Magellan's expedition left Sanlúcar in September 1519, and Elcano sailed back here in 1522."
+          },
+          "tip": {
+            "ES": "Dentro hay una exposición sobre Doñana. Te da para la media hora de espera.",
+            "EN": "There is an exhibition on Doñana inside, just right for the half-hour wait."
+          },
+          "hora": "09:30",
+          "dur": "30 min",
+          "img": "/ciudades/jerez/img/fabrica-hielo.jpg",
+          "lat": 36.7885,
+          "lng": -6.35241,
+          "tramo": "coche",
+          "tramoDuracionMin": 40,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Doñana, el Poblado de La Plancha",
+            "EN": "Doñana, the Poblado de La Plancha"
+          },
+          "s": {
+            "ES": "Pinar y chozas al otro lado del río",
+            "EN": "Pinewoods and huts across the river"
+          },
+          "d": {
+            "ES": "El barco remonta unos 6 km el Guadalquivir y te deja en la orilla de Huelva, ya dentro del Parque Nacional. Con la guía caminas un kilómetro por pasarelas de madera y arena hasta el Poblado de La Plancha, un antiguo asentamiento de chozas, y vuelves por el mismo camino.",
+            "EN": "The boat sails about 6 km up the Guadalquivir and drops you on the Huelva bank, inside the National Park. With the guide you walk a kilometre along boardwalks and sand to the Poblado de La Plancha, an old settlement of thatched huts, and come back the same way."
+          },
+          "tip": {
+            "ES": "Doñana toma el nombre de doña Ana de Silva y Mendoza, mujer del séptimo duque de Medina Sidonia, que tenía aquí su retiro.",
+            "EN": "Doñana takes its name from Doña Ana de Silva y Mendoza, wife of the 7th Duke of Medina Sidonia, who had her country retreat here."
+          },
+          "hora": "10:30",
+          "dur": "1 h",
+          "img": "/ciudades/jerez/img/plancha.jpg",
+          "lat": 36.83562,
+          "lng": -6.35982,
+          "tramo": "barco",
+          "tramoDuracionMin": 30,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Langostinos en Bajo de Guía",
+            "EN": "Prawns at Bajo de Guía"
+          },
+          "s": {
+            "ES": "Manzanilla frente a Doñana",
+            "EN": "Manzanilla facing Doñana"
+          },
+          "d": {
+            "ES": "El barco vuelve por la marisma y las salinas de Bonanza y te deja otra vez en la playa. Las casas de comidas de Bajo de Guía están a pie de arena. Pide langostinos cocidos y tortillitas de camarones, con una manzanilla bien fría.",
+            "EN": "The boat comes back past the marshes and the Bonanza salt pans and leaves you on the beach again. The Bajo de Guía restaurants stand right on the sand. Order boiled prawns and shrimp fritters, with a well-chilled manzanilla."
+          },
+          "tip": {
+            "ES": "Pide mesa en la terraza. Desde ahí ves la otra orilla, la de Doñana, donde acabas de estar.",
+            "EN": "Ask for a table on the terrace. From there you can see the far bank, Doñana, where you have just been."
+          },
+          "hora": "12:45",
+          "dur": "2 h",
+          "img": "/ciudades/jerez/img/langostinos.jpg",
+          "lat": 36.7892,
+          "lng": -6.35145,
+          "tramo": "barco",
+          "tramoDuracionMin": 75,
+          "duracionMin": 120
+        }
+      ],
+      "fotos": [
+        "/ciudades/jerez/img/guadalquivir.jpg",
+        "/ciudades/jerez/img/bajo-de-guia.jpg",
+        "/ciudades/jerez/img/fabrica-hielo.jpg",
+        "/ciudades/jerez/img/plancha.jpg",
+        "/ciudades/jerez/img/langostinos.jpg"
+      ],
+      "duracionMin": 405,
+      "distanciaKm": 96,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El sendero de Doñana va por pasarela de madera y arena, y la naviera lo da por fácil. Para subir al barco hay que cruzar una pasarela; con silla de ruedas, pregunta en recepción antes de reservar.",
+        "EN": "The Doñana trail runs along boardwalk and sand, and the boat company rates it easy. Boarding means crossing a gangway; with a wheelchair, ask at reception before booking."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 36.70248,
+        "lng": -6.03812,
+        "foto": "/ciudades/jerez/img/hotel.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 8:45. Baja diez minutos antes.",
+          "EN": "Hotel door, at 8:45. Come down ten minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale de lunes a sábado con el barco de las 10:00. En enero y en algunos festivos de Navidad la naviera puede no salir.",
+        "EN": "Free up to 24 h before. Runs Monday to Saturday with the 10:00 boat. In January and on some Christmas holidays the boat may not sail."
+      },
+      "salidasFijas": [
+        "08:45"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "tabancos",
+      "expId": "ex4",
+      "img": "/ciudades/jerez/img/flamenco.jpg",
+      "titulo": {
+        "ES": "Noche de tabancos con flamenco",
+        "EN": "A night of tabancos and flamenco"
+      },
+      "tipo": {
+        "ES": "Flamenco y vino",
+        "EN": "Flamenco and sherry"
+      },
+      "dur": "3 h 30 min",
+      "d": {
+        "ES": "Una noche en el barrio de San Miguel, donde nació Lola Flores. A las 19:30 te sientas en El Pasaje, el tabanco más antiguo de Jerez, para el pase de flamenco en directo, y luego cruzas a San Pablo a cenar de tapas con el jerez de sus botas. A las 22:30 estás en el hotel.",
+        "EN": "An evening in the San Miguel quarter, where Lola Flores was born. At 19:30 you take your seat at El Pasaje, the oldest tabanco in Jerez, for the live flamenco show, then walk over to San Pablo for a dinner of tapas with sherry from its casks. By 22:30 you are back at the hotel."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 19:00, unos 20 minutos y 13 km hasta el centro. Vuelta al hotel hacia las 22:30",
+        "EN": "Car leaves from the hotel door at 19:00, about 20 minutes and 13 km to the centre. Back at the hotel around 22:30"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el hotel",
+          "Mesa reservada en El Pasaje para el pase de las 19:30",
+          "El consumo mínimo de El Pasaje, 35 € por persona en vino y tapas",
+          "Guía en español o inglés"
+        ],
+        "EN": [
+          "Return transfer from the hotel",
+          "A table booked at El Pasaje for the 19:30 show",
+          "El Pasaje's minimum spend, €35 per person in wine and tapas",
+          "Guide in Spanish or English"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Lo que pidas en el Tabanco San Pablo",
+          "Propinas"
+        ],
+        "EN": [
+          "Whatever you order at Tabanco San Pablo",
+          "Tips"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Efectivo para el segundo tabanco",
+          "Una chaqueta de octubre a abril, que de noche refresca",
+          "Calzado cómodo, que el centro es de adoquín"
+        ],
+        "EN": [
+          "Cash for the second tabanco",
+          "A jacket from October to April, as the evenings turn cool",
+          "Comfortable shoes, as the centre is cobbled"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "Rumbo al barrio de San Miguel",
+            "EN": "Heading for the San Miguel quarter"
+          },
+          "d": {
+            "ES": "El coche te deja junto al Teatro Villamarta, a dos minutos andando de la calle Santa María. Jerez es una de las cunas del flamenco, y aquí la bulería se tiene por cosa de casa.",
+            "EN": "The car drops you by the Teatro Villamarta, a two-minute walk from Calle Santa María. Jerez is one of the birthplaces of flamenco, and the bulería is treated here as a home-grown style."
+          },
+          "tip": {
+            "ES": "No cenes antes de salir. En los dos tabancos vas a picar.",
+            "EN": "Don't have dinner before you go. You will be eating tapas at both tabancos."
+          },
+          "hora": "19:00",
+          "dur": "5 min",
+          "img": "/ciudades/jerez/img/hotel.jpg",
+          "lat": 36.70248,
+          "lng": -6.03812,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Tabanco El Pasaje",
+            "EN": "Tabanco El Pasaje"
+          },
+          "s": {
+            "ES": "Flamenco en el tabanco más antiguo de Jerez",
+            "EN": "Flamenco at the oldest tabanco in Jerez"
+          },
+          "d": {
+            "ES": "José González Navarro lo abrió el 16 de diciembre de 1925, el año en que Alfonso XIII vino a Jerez a coronar a la Virgen del Carmen. Conserva azulejos y carteles de toros de los años veinte, y el pase de las 19:30 se ve desde la mesa, con un fino o un amontillado de la bota.",
+            "EN": "José González Navarro opened it on 16 December 1925, the year Alfonso XIII came to Jerez to crown the Virgen del Carmen. It keeps its tiles and bullfight posters from the 1920s, and you watch the 19:30 show from your table with a fino or an amontillado from the cask."
+          },
+          "tip": {
+            "ES": "Su dueño cuenta que aquí bailaban de niños Lola Flores y Fernando Terremoto.",
+            "EN": "The owner says Lola Flores and Fernando Terremoto used to dance here as children."
+          },
+          "hora": "19:25",
+          "dur": "1 h 25 min",
+          "img": "/ciudades/jerez/img/el-pasaje.jpg",
+          "lat": 36.68283,
+          "lng": -6.1362,
+          "tramo": "coche",
+          "tramoDuracionMin": 20,
+          "duracionMin": 85
+        },
+        {
+          "n": {
+            "ES": "Tabanco San Pablo",
+            "EN": "Tabanco San Pablo"
+          },
+          "s": {
+            "ES": "Tapas en una barra de 1934",
+            "EN": "Tapas at a bar from 1934"
+          },
+          "d": {
+            "ES": "Está a cinco minutos, en la calle San Pablo. Manuel lo abrió en 1934 con las 6.000 pesetas de un premio de lotería, y hoy lo lleva la cuarta generación de su familia. La barra de caoba mide unos 12 metros, y aquí se piden chicharrones o un ajo campero con el jerez a granel.",
+            "EN": "It is five minutes away, on Calle San Pablo. Manuel opened it in 1934 with 6,000 pesetas from a lottery win, and the fourth generation of his family runs it today. The mahogany bar is about 12 metres long, and people order chicharrones or an ajo campero with sherry drawn from the cask."
+          },
+          "tip": {
+            "ES": "En la pared hay un azulejo del segundo premio del concurso de tabancos de 1953. Búscalo mientras esperas la tapa.",
+            "EN": "On the wall there is a tile marking second prize in the 1953 tabanco competition. Look for it while you wait for your tapa."
+          },
+          "hora": "20:55",
+          "dur": "1 h 5 min",
+          "img": "/ciudades/jerez/img/san-pablo.jpg",
+          "lat": 36.68094,
+          "lng": -6.13668,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 65
+        }
+      ],
+      "fotos": [
+        "/ciudades/jerez/img/flamenco.jpg",
+        "/ciudades/jerez/img/el-pasaje.jpg",
+        "/ciudades/jerez/img/san-pablo.jpg",
+        "/ciudades/jerez/img/catedral-noche.jpg"
+      ],
+      "duracionMin": 210,
+      "distanciaKm": 27,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Los dos tabancos están a pie de calle y el paseo entre ellos es corto y llano, sobre adoquín. Si vas en silla de ruedas, pregunta en recepción antes de reservar.",
+        "EN": "Both tabancos are at street level and the walk between them is short and flat, on cobbles. If you use a wheelchair, ask at reception before booking."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 36.70248,
+        "lng": -6.03812,
+        "foto": "/ciudades/jerez/img/hotel.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 19:00. Baja cinco minutos antes.",
+          "EN": "Hotel door, at 19:00. Come down five minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale de lunes a sábado.",
+        "EN": "Free up to 24 h before. Runs Monday to Saturday."
+      },
+      "salidasFijas": [
+        "19:00"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "cadiz",
+      "expId": "ex5",
+      "img": "/ciudades/jerez/img/campo-del-sur.jpg",
+      "titulo": {
+        "ES": "El Puerto de Santa María y Cádiz en un día",
+        "EN": "El Puerto de Santa María and Cádiz in a day"
+      },
+      "tipo": {
+        "ES": "Costa e historia",
+        "EN": "Coast and history"
+      },
+      "dur": "7 h",
+      "d": {
+        "ES": "Un día en la bahía. Empiezas en El Puerto, frente al Castillo de San Marcos, y catas cuatro vinos en la bodega de Osborne. A mediodía entras en la Catedral de Cádiz y comes pescaíto frito junto al Mercado Central. Por la tarde paseas el Campo del Sur hasta La Caleta, y a las 16:30 estás de vuelta en el hotel.",
+        "EN": "A day on the bay. You start in El Puerto, in front of the Castillo de San Marcos, and taste four wines at the Osborne bodega. At midday you visit Cádiz Cathedral and have fried fish by the Central Market. In the afternoon you stroll the Campo del Sur to La Caleta, and by 16:30 you are back at the hotel."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 9:30, unos 35 minutos y 37 km hasta El Puerto. Vuelta al hotel hacia las 16:30",
+        "EN": "Car leaves from the hotel door at 9:30, about 35 minutes and 37 km to El Puerto. Back at the hotel around 16:30"
+      },
+      "incluye": {
+        "ES": [
+          "Coche todo el día, con vuelta desde Cádiz",
+          "Guía en español o inglés",
+          "Cata de cuatro vinos generosos en las Bodegas de Mora de Osborne",
+          "Entrada a la Catedral de Cádiz, con audioguía"
+        ],
+        "EN": [
+          "Car for the whole day, with the return from Cádiz",
+          "Guide in Spanish or English",
+          "Tasting of four sherries at Osborne's Bodegas de Mora",
+          "Cádiz Cathedral admission, with audio guide"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Propinas"
+        ],
+        "EN": [
+          "Food and drinks",
+          "Tips"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Gorra y protector solar para el Campo del Sur",
+          "Una chaqueta, que junto al mar sopla el levante",
+          "Calzado cómodo, que se caminan unos 3 km",
+          "Algo de efectivo para la comida"
+        ],
+        "EN": [
+          "A cap and sun cream for the Campo del Sur",
+          "A jacket, as the levante wind blows by the sea",
+          "Comfortable shoes, as you walk about 3 km",
+          "Some cash for lunch"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "Rumbo a El Puerto de Santa María",
+            "EN": "Heading for El Puerto de Santa María"
+          },
+          "d": {
+            "ES": "El coche baja hacia la bahía, unos 37 km. El Puerto es la tercera esquina del triángulo del jerez, y sus bodegas crían el fino a pocos metros del mar.",
+            "EN": "The car heads down to the bay, about 37 km. El Puerto is the third corner of the sherry triangle, and its bodegas age their fino a stone's throw from the sea."
+          },
+          "tip": {
+            "ES": "Desayuna temprano. La comida en Cádiz es hacia la una y media.",
+            "EN": "Have an early breakfast. Lunch in Cádiz is at around half past one."
+          },
+          "hora": "09:30",
+          "dur": "5 min",
+          "img": "/ciudades/jerez/img/hotel.jpg",
+          "lat": 36.70248,
+          "lng": -6.03812,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Castillo de San Marcos",
+            "EN": "Castillo de San Marcos"
+          },
+          "s": {
+            "ES": "La mezquita que Alfonso X hizo fortaleza",
+            "EN": "The mosque Alfonso X made a fortress"
+          },
+          "d": {
+            "ES": "El castillo está en la plaza de Alfonso X el Sabio, en el centro de El Puerto. Se levantó sobre una mezquita que Alfonso X convirtió en iglesia fortificada en el siglo XIII. Lo ves por fuera y das la vuelta a sus murallas almenadas.",
+            "EN": "The castle stands on Plaza de Alfonso X el Sabio, in the centre of El Puerto. It was built over a mosque that Alfonso X turned into a fortified church in the 13th century. You see it from outside and walk round its battlemented walls."
+          },
+          "tip": {
+            "ES": "En El Puerto dibujó Juan de la Cosa en 1500 el primer mapa en el que aparece América. El original está en el Museo Naval de Madrid.",
+            "EN": "It was in El Puerto that Juan de la Cosa drew the first map to show America, in 1500. The original is in the Naval Museum in Madrid."
+          },
+          "hora": "10:05",
+          "dur": "25 min",
+          "img": "/ciudades/jerez/img/san-marcos.jpg",
+          "lat": 36.59642,
+          "lng": -6.22662,
+          "tramo": "coche",
+          "tramoDuracionMin": 30,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Bodegas Osborne",
+            "EN": "Osborne bodegas"
+          },
+          "s": {
+            "ES": "Cuatro generosos en la casa del toro",
+            "EN": "Four sherries at the house of the bull"
+          },
+          "d": {
+            "ES": "Thomas Osborne Mann, un comerciante de Exeter, fundó la casa en 1772. En las Bodegas de Mora, en la calle Los Moros, catas cuatro vinos generosos en la sala de catas, sin pasar por las naves.",
+            "EN": "Thomas Osborne Mann, a merchant from Exeter, founded the house in 1772. At the Bodegas de Mora, on Calle Los Moros, you taste four sherries in the tasting room, without touring the cellars."
+          },
+          "tip": {
+            "ES": "El toro negro de las carreteras lo dibujó Manolo Prieto en 1956 para anunciar el brandy Veterano. Hoy quedan unos noventa por toda España.",
+            "EN": "The black roadside bull was drawn by Manolo Prieto in 1956 to advertise Veterano brandy. About ninety are still standing across Spain."
+          },
+          "hora": "10:35",
+          "dur": "50 min",
+          "img": "/ciudades/jerez/img/toro-osborne.jpg",
+          "lat": 36.59482,
+          "lng": -6.22929,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 50
+        },
+        {
+          "n": {
+            "ES": "Catedral de Cádiz",
+            "EN": "Cádiz Cathedral"
+          },
+          "s": {
+            "ES": "116 años de obra frente al Atlántico",
+            "EN": "116 years in the building, facing the Atlantic"
+          },
+          "d": {
+            "ES": "Se empezó en 1722 con trazas de Vicente Acero y se terminó en 1838. En esos años cambió el gusto, y al barroco de Acero se le fueron sumando partes neoclásicas. La cúpula está forrada de azulejos dorados, y en la cripta, bajo el altar mayor, está la tumba de Manuel de Falla.",
+            "EN": "It was begun in 1722 to plans by Vicente Acero and finished in 1838. Tastes changed over those years, and Neoclassical parts were added to Acero's Baroque. The dome is clad in golden tiles, and the crypt beneath the high altar holds the tomb of Manuel de Falla."
+          },
+          "tip": {
+            "ES": "La entrada incluye la Torre del Reloj, a la que se llega por rampas. Desde arriba ves la ciudad metida en el mar.",
+            "EN": "Your ticket includes the Clock Tower, which you climb by ramps. From the top you see the whole city surrounded by sea."
+          },
+          "hora": "11:55",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/jerez/img/cadiz-catedral.jpg",
+          "lat": 36.52895,
+          "lng": -6.29532,
+          "tramo": "coche",
+          "tramoDuracionMin": 30,
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "Mercado Central de Cádiz",
+            "EN": "Cádiz Central Market"
+          },
+          "s": {
+            "ES": "Pescaíto frito para comer",
+            "EN": "Fried fish for lunch"
+          },
+          "d": {
+            "ES": "El mercado abrió en 1838 y es de los mercados cubiertos más antiguos de España. Por la mañana se llena de pescado de la bahía, y a mediodía los puestos de comida y las freidurías de alrededor sirven el pescaíto frito en cartucho de papel.",
+            "EN": "The market opened in 1838 and is one of the oldest covered markets in Spain. In the morning it fills with fish from the bay, and at midday the food stalls and the frying shops around it serve fried fish in paper cones."
+          },
+          "tip": {
+            "ES": "Pide cazón en adobo y, si es temporada, tortillitas de camarones.",
+            "EN": "Order marinated dogfish and, in season, shrimp fritters."
+          },
+          "hora": "13:20",
+          "dur": "1 h 20 min",
+          "img": "/ciudades/jerez/img/mercado-cadiz.jpg",
+          "lat": 36.53041,
+          "lng": -6.29821,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 80
+        },
+        {
+          "n": {
+            "ES": "Campo del Sur y La Caleta",
+            "EN": "Campo del Sur and La Caleta"
+          },
+          "s": {
+            "ES": "El paseo sobre el Atlántico",
+            "EN": "The promenade above the Atlantic"
+          },
+          "d": {
+            "ES": "Bajas a la espalda de la Catedral y sigues el Campo del Sur, el paseo sobre las rocas que muchos comparan con el malecón de La Habana. Al final está La Caleta, la playa entre los castillos de Santa Catalina y San Sebastián, con sus barcas y el balneario de La Palma.",
+            "EN": "You go down behind the Cathedral and follow the Campo del Sur, the promenade above the rocks that many compare to the Malecón in Havana. At the end is La Caleta, the beach between the castles of Santa Catalina and San Sebastián, with its fishing boats and the La Palma bathhouse."
+          },
+          "tip": {
+            "ES": "En 2002 se rodó aquí «Muere otro día», de James Bond, y La Caleta hizo de playa de La Habana.",
+            "EN": "In 2002 the Bond film Die Another Day was shot here, with La Caleta standing in for a beach in Havana."
+          },
+          "hora": "14:55",
+          "dur": "50 min",
+          "img": "/ciudades/jerez/img/caleta.jpg",
+          "lat": 36.52848,
+          "lng": -6.3065,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 50
+        }
+      ],
+      "fotos": [
+        "/ciudades/jerez/img/campo-del-sur.jpg",
+        "/ciudades/jerez/img/cadiz-catedral.jpg",
+        "/ciudades/jerez/img/caleta.jpg",
+        "/ciudades/jerez/img/mercado-cadiz.jpg",
+        "/ciudades/jerez/img/san-marcos.jpg",
+        "/ciudades/jerez/img/toro-osborne.jpg"
+      ],
+      "duracionMin": 420,
+      "distanciaKm": 102,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Se caminan unos 3 km por calles llanas y por el paseo marítimo. Si vas en silla de ruedas, pregunta en recepción antes de reservar.",
+        "EN": "You walk about 3 km on level streets and along the seafront. If you use a wheelchair, ask at reception before booking."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 36.70248,
+        "lng": -6.03812,
+        "foto": "/ciudades/jerez/img/hotel.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 9:30. Baja cinco minutos antes.",
+          "EN": "Hotel door, at 9:30. Come down five minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale de martes a sábado; los domingos la Catedral abre a las 13:30, y domingos y lunes cierran muchos puestos del Mercado Central.",
+        "EN": "Free up to 24 h before. Runs Tuesday to Saturday; on Sundays the Cathedral opens at 13:30, and many Central Market stalls close on Sundays and Mondays."
+      },
+      "salidasFijas": [
+        "09:30"
+      ],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Una copa de fino en la terraza de El Lagar, mirando al campo de golf",
+      "EN": "A glass of fino on the El Lagar terrace, looking out over the golf course"
+    }
+  },
+  "creditos": [
+    "Fachada de las Bodegas González Byass: Zarateman, CC0, Wikimedia Commons",
+    "Bodegas Lustau: Anual, CC BY-SA 4.0, Wikimedia Commons",
+    "Palacio del Recreo de las Cadenas, Real Escuela Andaluza del Arte Ecuestre: Linksfuss, Public domain, Wikimedia Commons",
+    "Catedral de Jerez: Will, CC BY-SA 2.0, Wikimedia Commons",
+    "Murallas y Torre Octogonal del Alcázar de Jerez: José Luis Filpo Cabana, CC BY 3.0, Wikimedia Commons",
+    "Entrada del Tabanco El Pasaje (recorte): Jerezplataforma, CC BY-SA 3.0, Wikimedia Commons",
+    "Fórmula 1 en el Circuito de Jerez: Gil Abrantes, CC BY 2.0, Wikimedia Commons",
+    "Playa de Bajo de Guía, Sanlúcar de Barrameda: ArthurFerna, CC BY-SA 4.0, Wikimedia Commons",
+    "Catedral de Cádiz desde el Campo del Sur: Nicolas Vollmer from Munich, CC BY 2.0, Wikimedia Commons",
+    "Castillo de San Marcos, El Puerto de Santa María: Marostegui, CC BY-SA 3.0, Wikimedia Commons",
+    "Castillo del hotel: foto oficial del hotel, barcelo.com, solo para la demo privada",
+    "Calle Ciegos en González Byass: Michimaya, CC BY-SA 3.0, Wikimedia Commons",
+    "Botas firmadas en González Byass: Diego Delso, CC BY-SA 4.0, Wikimedia Commons",
+    "Mezquita del Alcázar de Jerez: Diego Delso, CC BY-SA 4.0, Wikimedia Commons",
+    "Fino con zanahorias aliñás: Xemenendura, CC BY-SA 4.0, Wikimedia Commons",
+    "Picadero de la Real Escuela Andaluza del Arte Ecuestre: Daniel VILLAFRUELA, CC BY-SA 4.0, Wikimedia Commons",
+    "Entrenamiento en la Real Escuela: Harvey Barrison from Massapequa, NY, USA, CC BY-SA 2.0, Wikimedia Commons",
+    "Botas en Bodegas Lustau: Anual, CC BY-SA 4.0, Wikimedia Commons",
+    "Flamenco en Jerez: El Pantera, CC BY-SA 4.0, Wikimedia Commons",
+    "Tabanco San Pablo: El Pantera, CC BY-SA 4.0, Wikimedia Commons",
+    "Catedral de Jerez de noche: Sheeva81, CC BY-SA 3.0, Wikimedia Commons",
+    "Centro de visitantes Fábrica de Hielo, Sanlúcar: Hispalois, CC BY-SA 3.0, Wikimedia Commons",
+    "Choza del Poblado de La Plancha, Doñana: Diego Delso, CC BY-SA 4.0, Wikimedia Commons",
+    "El Guadalquivir y Doñana desde Sanlúcar: Hispalois, CC BY-SA 3.0, Wikimedia Commons",
+    "Langostinos cocidos: Basotxerri, CC BY-SA 4.0, Wikimedia Commons",
+    "Campo del Sur y Catedral de Cádiz: Harlock20, CC BY-SA 3.0, Wikimedia Commons",
+    "Fachada de la Catedral de Cádiz: Kordas, CC BY-SA 3.0, Wikimedia Commons",
+    "Playa de La Caleta y balneario de La Palma: Emilio J. Rodríguez Posada, CC BY-SA 2.0, Wikimedia Commons",
+    "Mercado Central de Cádiz: Diego Delso, CC BY-SA 4.0, Wikimedia Commons",
+    "Toro de Osborne: Miguel Angel Masegosa Martínez, CC BY 2.0, Wikimedia Commons"
+  ]
+}

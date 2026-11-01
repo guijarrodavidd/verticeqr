@@ -1,0 +1,527 @@
+{
+  "bodegas-1": {
+    "pregunta": {
+      "ES": "¿De dónde viene la palabra sherry?",
+      "EN": "Where does the word sherry come from?"
+    },
+    "opciones": [
+      {
+        "ES": "Del nombre andalusí de Jerez, Šeriš",
+        "EN": "From the Moorish name for Jerez, Šeriš"
+      },
+      {
+        "ES": "De un comerciante inglés apellidado Sherry",
+        "EN": "From an English merchant called Sherry"
+      },
+      {
+        "ES": "De la uva con la que se hace",
+        "EN": "From the grape it is made from"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "En época andalusí la ciudad se llamaba Šeriš. De ahí salen Xerez, luego Jerez, y el sherry de los ingleses, que llevan siglos comprando este vino.",
+      "EN": "In Moorish times the city was called Šeriš. That became Xerez, then Jerez, and gave the English their sherry, a wine they have been buying for centuries."
+    }
+  },
+  "bodegas-2": {
+    "pregunta": {
+      "ES": "¿Cuántas mezquitas tuvo Jerez en época islámica?",
+      "EN": "How many mosques did Jerez have in Islamic times?"
+    },
+    "opciones": [
+      {
+        "ES": "3",
+        "EN": "3"
+      },
+      {
+        "ES": "18",
+        "EN": "18"
+      },
+      {
+        "ES": "60",
+        "EN": "60"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Tuvo 18, y la del Alcázar es la única que queda en pie, con su alminar y su patio de abluciones.",
+      "EN": "It had 18, and the one in the Alcázar is the only one still standing, with its minaret and ablutions courtyard."
+    }
+  },
+  "bodegas-3": {
+    "pregunta": {
+      "ES": "¿Desde qué año es catedral el templo de Jerez?",
+      "EN": "Since what year has the Jerez church been a cathedral?"
+    },
+    "opciones": [
+      {
+        "ES": "1695",
+        "EN": "1695"
+      },
+      {
+        "ES": "1980",
+        "EN": "1980"
+      },
+      {
+        "ES": "1778",
+        "EN": "1778"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Fue colegiata hasta 1980, cuando se creó la diócesis de Asidonia-Jerez. La obra había empezado en 1695 y se terminó en 1778.",
+      "EN": "It was a collegiate church until 1980, when the diocese of Asidonia-Jerez was created. Building had begun in 1695 and ended in 1778."
+    }
+  },
+  "bodegas-4": {
+    "pregunta": {
+      "ES": "¿Quién era el Tío Pepe que da nombre al fino?",
+      "EN": "Who was the Tío Pepe the fino is named after?"
+    },
+    "opciones": [
+      {
+        "ES": "Un tío del fundador",
+        "EN": "An uncle of the founder"
+      },
+      {
+        "ES": "El primer capataz de la bodega",
+        "EN": "The bodega's first cellar master"
+      },
+      {
+        "ES": "Un torero amigo de la familia",
+        "EN": "A bullfighter friend of the family"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Era un tío de Manuel María González Ángel, el fundador, al que le preparaban un fino muy seco. Ese vino acabó llevando su nombre.",
+      "EN": "He was an uncle of the founder, Manuel María González Ángel, and a very dry fino was made for him. That wine ended up bearing his name."
+    }
+  },
+  "bodegas-5": {
+    "pregunta": {
+      "ES": "¿Con qué uva se hace el fino?",
+      "EN": "Which grape is fino made from?"
+    },
+    "opciones": [
+      {
+        "ES": "Palomino",
+        "EN": "Palomino"
+      },
+      {
+        "ES": "Pedro Ximénez",
+        "EN": "Pedro Ximénez"
+      },
+      {
+        "ES": "Tempranillo",
+        "EN": "Tempranillo"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Con palomino, la uva blanca que crece en la albariza, la tierra blanca de Jerez. La pedro ximénez se usa para los vinos dulces.",
+      "EN": "Palomino, the white grape that grows in albariza, the chalk-white soil of Jerez. Pedro Ximénez is used for the sweet wines."
+    }
+  },
+  "caballos-1": {
+    "pregunta": {
+      "ES": "¿Qué caballos entrenan en la Real Escuela?",
+      "EN": "Which horses train at the Royal School?"
+    },
+    "opciones": [
+      {
+        "ES": "Pura sangre inglés",
+        "EN": "English thoroughbreds"
+      },
+      {
+        "ES": "Pura raza española",
+        "EN": "Pure Spanish breed"
+      },
+      {
+        "ES": "Árabes",
+        "EN": "Arabians"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Son de pura raza española. Empiezan a entrenar con tres años cumplidos y, tras cuatro años de doma, salen al espectáculo con los más veteranos.",
+      "EN": "They are pure Spanish horses. Training starts once they turn three, and after four years of schooling they join the veterans in the show."
+    }
+  },
+  "caballos-2": {
+    "pregunta": {
+      "ES": "Según la Real Escuela, ¿qué arquitecto diseñó el palacio del Recreo de las Cadenas?",
+      "EN": "According to the Royal School, which architect designed the Recreo de las Cadenas palace?"
+    },
+    "opciones": [
+      {
+        "ES": "Charles Garnier",
+        "EN": "Charles Garnier"
+      },
+      {
+        "ES": "Gustave Eiffel",
+        "EN": "Gustave Eiffel"
+      },
+      {
+        "ES": "Aníbal González",
+        "EN": "Aníbal González"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La escuela atribuye el palacio a Charles Garnier, el arquitecto de la Ópera de París. Lo de las Cadenas viene de las cadenas que adornan su portada.",
+      "EN": "The school credits the palace to Charles Garnier, architect of the Paris Opera. The name comes from the chains, cadenas, that decorate its gateway."
+    }
+  },
+  "caballos-3": {
+    "pregunta": {
+      "ES": "¿Qué era un almacenista en Jerez?",
+      "EN": "What was an almacenista in Jerez?"
+    },
+    "opciones": [
+      {
+        "ES": "El que criaba vino para vendérselo a las bodegas grandes",
+        "EN": "Someone who aged wine to sell to the big bodegas"
+      },
+      {
+        "ES": "El que fabricaba las botas",
+        "EN": "Someone who made the casks"
+      },
+      {
+        "ES": "El que cobraba los impuestos del vino",
+        "EN": "Someone who collected the wine taxes"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Criaba el vino en su bodega y lo vendía a las casas que lo embotellaban. Lustau empezó así en 1896, y desde 1981 su gama Almacenista pone el nombre de cada criador en la etiqueta.",
+      "EN": "They aged wine in their own bodega and sold it to the houses that bottled it. Lustau started that way in 1896, and since 1981 its Almacenista range has named each grower on the label."
+    }
+  },
+  "sanlucar-1": {
+    "pregunta": {
+      "ES": "¿Qué tres ciudades forman el triángulo del jerez?",
+      "EN": "Which three towns make up the sherry triangle?"
+    },
+    "opciones": [
+      {
+        "ES": "Jerez, Sanlúcar y El Puerto de Santa María",
+        "EN": "Jerez, Sanlúcar and El Puerto de Santa María"
+      },
+      {
+        "ES": "Jerez, Cádiz y Arcos",
+        "EN": "Jerez, Cádiz and Arcos"
+      },
+      {
+        "ES": "Jerez, Rota y Chipiona",
+        "EN": "Jerez, Rota and Chipiona"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El vino de Jerez solo puede envejecer en esas tres ciudades. La manzanilla, solo en Sanlúcar.",
+      "EN": "Sherry can only be aged in those three towns. Manzanilla, only in Sanlúcar."
+    }
+  },
+  "sanlucar-2": {
+    "pregunta": {
+      "ES": "¿Qué expedición salió de Sanlúcar en septiembre de 1519?",
+      "EN": "Which expedition left Sanlúcar in September 1519?"
+    },
+    "opciones": [
+      {
+        "ES": "La de Magallanes y Elcano",
+        "EN": "Magellan and Elcano's"
+      },
+      {
+        "ES": "La tercera expedición de Colón",
+        "EN": "Columbus's third expedition"
+      },
+      {
+        "ES": "La Armada Invencible",
+        "EN": "The Spanish Armada"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Salió el 20 de septiembre de 1519 con cinco naos. En 1522 volvió solo una, la Victoria, con Elcano y 18 hombres, después de dar la primera vuelta al mundo.",
+      "EN": "It sailed on 20 September 1519 with five ships. In 1522 only one came back, the Victoria, with Elcano and 18 men, after the first voyage round the world."
+    }
+  },
+  "sanlucar-3": {
+    "pregunta": {
+      "ES": "¿De quién toma el nombre Doñana?",
+      "EN": "Who is Doñana named after?"
+    },
+    "opciones": [
+      {
+        "ES": "De una reina de Castilla",
+        "EN": "A queen of Castile"
+      },
+      {
+        "ES": "De doña Ana de Silva y Mendoza",
+        "EN": "Doña Ana de Silva y Mendoza"
+      },
+      {
+        "ES": "De una aldea que se llamaba así",
+        "EN": "A village of that name"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Doña Ana de Silva y Mendoza era la mujer del séptimo duque de Medina Sidonia y tenía aquí su retiro, el coto de Doña Ana. Es Parque Nacional desde 1969.",
+      "EN": "Doña Ana de Silva y Mendoza was the wife of the 7th Duke of Medina Sidonia and had her retreat here, the Coto de Doña Ana. It has been a National Park since 1969."
+    }
+  },
+  "sanlucar-4": {
+    "pregunta": {
+      "ES": "¿Qué vino solo puede criarse en Sanlúcar?",
+      "EN": "Which wine can only be aged in Sanlúcar?"
+    },
+    "opciones": [
+      {
+        "ES": "El fino",
+        "EN": "Fino"
+      },
+      {
+        "ES": "La manzanilla",
+        "EN": "Manzanilla"
+      },
+      {
+        "ES": "El oloroso",
+        "EN": "Oloroso"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La manzanilla solo se cría en Sanlúcar. La humedad del río y del mar mantiene vivo el velo de flor, la capa de levaduras que la protege del aire dentro de la bota.",
+      "EN": "Manzanilla is only aged in Sanlúcar. The damp air from the river and the sea keeps alive the flor, the layer of yeast that shields it from the air inside the cask."
+    }
+  },
+  "tabancos-1": {
+    "pregunta": {
+      "ES": "¿Qué artista nació en el barrio de San Miguel en 1923?",
+      "EN": "Which performer was born in the San Miguel quarter in 1923?"
+    },
+    "opciones": [
+      {
+        "ES": "Lola Flores",
+        "EN": "Lola Flores"
+      },
+      {
+        "ES": "Camarón de la Isla",
+        "EN": "Camarón de la Isla"
+      },
+      {
+        "ES": "Rocío Jurado",
+        "EN": "Rocío Jurado"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Lola Flores nació en San Miguel el 21 de enero de 1923. Camarón era de San Fernando, y Rocío Jurado, de Chipiona.",
+      "EN": "Lola Flores was born in San Miguel on 21 January 1923. Camarón came from San Fernando, and Rocío Jurado from Chipiona."
+    }
+  },
+  "tabancos-2": {
+    "pregunta": {
+      "ES": "¿Por qué se llama El Pasaje este tabanco?",
+      "EN": "Why is this tabanco called El Pasaje, the passage?"
+    },
+    "opciones": [
+      {
+        "ES": "Por un pasaje de barco que ganó su dueño",
+        "EN": "After a ship's passage its owner won"
+      },
+      {
+        "ES": "Porque tiene dos entradas, por dos calles",
+        "EN": "Because it has two entrances, on two streets"
+      },
+      {
+        "ES": "Por un pasadizo hasta el Teatro Villamarta",
+        "EN": "After a tunnel to the Teatro Villamarta"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Tiene una puerta en el número 8 de la calle Santa María y otra en el 5 de la calle Mesones. Antes se llamó La Fortuna, y en 1925 tomó el nombre de El Pasaje.",
+      "EN": "It has one door at number 8 Calle Santa María and another at number 5 Calle Mesones. It used to be called La Fortuna, and took the name El Pasaje in 1925."
+    }
+  },
+  "tabancos-3": {
+    "pregunta": {
+      "ES": "¿Cómo abrió Manuel el Tabanco San Pablo en 1934?",
+      "EN": "How did Manuel open Tabanco San Pablo in 1934?"
+    },
+    "opciones": [
+      {
+        "ES": "Con la herencia de un bodeguero",
+        "EN": "With a bodega owner's inheritance"
+      },
+      {
+        "ES": "Con un premio de lotería de 6.000 pesetas",
+        "EN": "With a 6,000-peseta lottery win"
+      },
+      {
+        "ES": "Con un préstamo de sus clientes",
+        "EN": "With a loan from his customers"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Según cuenta la familia, le tocaron 6.000 pesetas y las invirtió todas en el tabanco. Hoy lo lleva la cuarta generación.",
+      "EN": "As the family tells it, he won 6,000 pesetas and put every one of them into the tabanco. The fourth generation runs it today."
+    }
+  },
+  "cadiz-1": {
+    "pregunta": {
+      "ES": "¿Qué pueblo fundó Cádiz con el nombre de Gadir?",
+      "EN": "Which people founded Cádiz under the name Gadir?"
+    },
+    "opciones": [
+      {
+        "ES": "Los romanos",
+        "EN": "The Romans"
+      },
+      {
+        "ES": "Los fenicios",
+        "EN": "The Phoenicians"
+      },
+      {
+        "ES": "Los griegos",
+        "EN": "The Greeks"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La tradición sitúa la fundación fenicia hacia el año 1100 antes de Cristo, y por eso Cádiz presume de ser de las ciudades más antiguas de Occidente.",
+      "EN": "Tradition dates the Phoenician founding to around 1100 BC, which is why Cádiz calls itself one of the oldest cities in the Western world."
+    }
+  },
+  "cadiz-2": {
+    "pregunta": {
+      "ES": "¿Qué dibujó Juan de la Cosa en El Puerto en el año 1500?",
+      "EN": "What did Juan de la Cosa draw in El Puerto in 1500?"
+    },
+    "opciones": [
+      {
+        "ES": "El primer mapa en el que aparece América",
+        "EN": "The first map to show America"
+      },
+      {
+        "ES": "Los planos del Castillo de San Marcos",
+        "EN": "The plans of the Castillo de San Marcos"
+      },
+      {
+        "ES": "El escudo de la ciudad",
+        "EN": "The town's coat of arms"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Era cartógrafo y había acompañado a Colón en sus primeras expediciones. El propio mapa dice que lo hizo en El Puerto de Santa María en 1500, y hoy se guarda en el Museo Naval de Madrid.",
+      "EN": "He was a cartographer who had gone with Columbus on his first expeditions. The map itself says he made it in El Puerto de Santa María in 1500, and it is kept today in the Naval Museum in Madrid."
+    }
+  },
+  "cadiz-3": {
+    "pregunta": {
+      "ES": "¿Para qué se dibujó el toro de Osborne?",
+      "EN": "What was the Osborne bull first drawn for?"
+    },
+    "opciones": [
+      {
+        "ES": "Para anunciar el brandy Veterano",
+        "EN": "To advertise Veterano brandy"
+      },
+      {
+        "ES": "Para una corrida en El Puerto",
+        "EN": "For a bullfight in El Puerto"
+      },
+      {
+        "ES": "Como escudo de la familia",
+        "EN": "As the family coat of arms"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Manolo Prieto lo dibujó en 1956 para el brandy Veterano. Cuando en los años noventa se prohibió la publicidad junto a las carreteras, le quitaron las letras y el toro se quedó.",
+      "EN": "Manolo Prieto drew it in 1956 for Veterano brandy. When roadside advertising was banned in the 1990s, the lettering came off and the bull stayed."
+    }
+  },
+  "cadiz-4": {
+    "pregunta": {
+      "ES": "¿Cuántos años duró la obra de la Catedral de Cádiz?",
+      "EN": "How many years did it take to build Cádiz Cathedral?"
+    },
+    "opciones": [
+      {
+        "ES": "36",
+        "EN": "36"
+      },
+      {
+        "ES": "116",
+        "EN": "116"
+      },
+      {
+        "ES": "300",
+        "EN": "300"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "De 1722 a 1838. En ese tiempo cambió el gusto, y al barroco del primer arquitecto, Vicente Acero, se le sumaron partes neoclásicas.",
+      "EN": "From 1722 to 1838. Tastes changed in that time, and Neoclassical parts were added to the Baroque of its first architect, Vicente Acero."
+    }
+  },
+  "cadiz-5": {
+    "pregunta": {
+      "ES": "¿En qué año abrió el Mercado Central de Cádiz?",
+      "EN": "In what year did the Cádiz Central Market open?"
+    },
+    "opciones": [
+      {
+        "ES": "1838",
+        "EN": "1838"
+      },
+      {
+        "ES": "1929",
+        "EN": "1929"
+      },
+      {
+        "ES": "1975",
+        "EN": "1975"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Abrió en 1838, sobre el solar de un antiguo convento, y es de los mercados cubiertos más antiguos de España.",
+      "EN": "It opened in 1838, on the site of a former convent, and is one of the oldest covered markets in Spain."
+    }
+  },
+  "cadiz-6": {
+    "pregunta": {
+      "ES": "¿Qué película de James Bond se rodó en La Caleta?",
+      "EN": "Which James Bond film was shot at La Caleta?"
+    },
+    "opciones": [
+      {
+        "ES": "«Muere otro día»",
+        "EN": "Die Another Day"
+      },
+      {
+        "ES": "«Casino Royale»",
+        "EN": "Casino Royale"
+      },
+      {
+        "ES": "«Skyfall»",
+        "EN": "Skyfall"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Se rodó en 2002 con Pierce Brosnan y Halle Berry, y Cádiz hizo de La Habana.",
+      "EN": "It was shot in 2002 with Pierce Brosnan and Halle Berry, with Cádiz standing in for Havana."
+    }
+  }
+}
