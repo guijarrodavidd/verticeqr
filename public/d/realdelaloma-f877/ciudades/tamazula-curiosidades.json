@@ -1,0 +1,422 @@
+{
+  "mazamitla-1": {
+    "pregunta": {
+      "ES": "¿Qué quiere decir Mazamitla, según la explicación más repetida?"
+    },
+    "opciones": [
+      {
+        "ES": "Lugar de pinos altos"
+      },
+      {
+        "ES": "Lugar donde se hacen flechas para cazar venados"
+      },
+      {
+        "ES": "Agua que cae entre piedras"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Viene del náhuatl. Mazatl es venado, mitl es flecha y tlan es lugar."
+    }
+  },
+  "mazamitla-2": {
+    "pregunta": {
+      "ES": "¿De dónde viene el nombre de Los Cazos?"
+    },
+    "opciones": [
+      {
+        "ES": "De la familia que fundó el lugar"
+      },
+      {
+        "ES": "De las pozas redondas que el agua talló en la roca"
+      },
+      {
+        "ES": "De las ollas de cobre de una vieja hacienda"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El arroyo fue tallando en la roca pozas redondas, como cazos. La cascada El Salto queda a un kilómetro y cae unos 30 metros."
+    }
+  },
+  "mazamitla-3": {
+    "pregunta": {
+      "ES": "¿Por iniciativa de quién se levantó la parroquia de San Cristóbal?"
+    },
+    "opciones": [
+      {
+        "ES": "Un arquitecto llegado de China"
+      },
+      {
+        "ES": "El cura José Santana García"
+      },
+      {
+        "ES": "El gobierno de Jalisco"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El cura José Santana García llegó a Mazamitla en 1929 y se quedó más de treinta años. La parroquia se levantó a mediados del siglo XX por iniciativa suya."
+    }
+  },
+  "mazamitla-4": {
+    "pregunta": {
+      "ES": "¿En qué se cuecen las carnes del bote?"
+    },
+    "opciones": [
+      {
+        "ES": "En pulque"
+      },
+      {
+        "ES": "En cerveza"
+      },
+      {
+        "ES": "En leche"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El bote lleva res, cerdo y pollo cocidos en pulque con verduras. El nombre viene del bote u olla grande donde se preparaba."
+    }
+  },
+  "zapotlan-1": {
+    "pregunta": {
+      "ES": "¿Cómo se llamaba Ciudad Guzmán antes de 1856?"
+    },
+    "opciones": [
+      {
+        "ES": "Santa María de Tuxpan"
+      },
+      {
+        "ES": "Zapotlán el Grande"
+      },
+      {
+        "ES": "Villa de Ávalos"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Fue Zapotlán el Grande hasta 1856, cuando tomó el nombre del insurgente Gordiano Guzmán, nacido en Tamazula. El municipio sigue llamándose Zapotlán el Grande."
+    }
+  },
+  "zapotlan-2": {
+    "pregunta": {
+      "ES": "¿Cuántos años pasaron desde la primera piedra de la catedral hasta que se abrió?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 10"
+      },
+      {
+        "ES": "Unos 34"
+      },
+      {
+        "ES": "Unos 80"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La primera piedra se puso el 27 de mayo de 1866 y la catedral se abrió el 8 de octubre de 1900, 34 años después."
+    }
+  },
+  "zapotlan-3": {
+    "pregunta": {
+      "ES": "¿Qué edad tenía José Clemente Orozco cuando su familia dejó Zapotlán?"
+    },
+    "opciones": [
+      {
+        "ES": "Dos años"
+      },
+      {
+        "ES": "Quince años"
+      },
+      {
+        "ES": "Treinta años"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Nació el 23 de noviembre de 1883 y con dos años su familia se mudó a Guadalajara, y después a la Ciudad de México."
+    }
+  },
+  "zapotlan-4": {
+    "pregunta": {
+      "ES": "¿Qué deportes de los Panamericanos de 2011 se hicieron en la laguna?"
+    },
+    "opciones": [
+      {
+        "ES": "Natación y triatlón"
+      },
+      {
+        "ES": "Vela y windsurf"
+      },
+      {
+        "ES": "Remo y canotaje"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "La laguna de Zapotlán fue la sede de remo y canotaje de los Juegos Panamericanos de Guadalajara 2011. Para ellos se montó una pista con gradas para unas mil personas."
+    }
+  },
+  "nevado-1": {
+    "pregunta": {
+      "ES": "¿Cuánto mide el Nevado de Colima?"
+    },
+    "opciones": [
+      {
+        "ES": "3,860 metros"
+      },
+      {
+        "ES": "4,260 metros"
+      },
+      {
+        "ES": "5,610 metros"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Mide 4,260 metros y es el punto más alto de Jalisco. Los 3,860 son del Volcán de Fuego, su vecino."
+    }
+  },
+  "nevado-2": {
+    "pregunta": {
+      "ES": "¿Qué presidente declaró el Nevado parque nacional en 1936?"
+    },
+    "opciones": [
+      {
+        "ES": "Lázaro Cárdenas"
+      },
+      {
+        "ES": "Plutarco Elías Calles"
+      },
+      {
+        "ES": "Miguel Alemán"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Lo decretó Lázaro Cárdenas en 1936, con unas 6,554 hectáreas. Desde 1997 lo administran los gobiernos de Jalisco y Colima."
+    }
+  },
+  "nevado-3": {
+    "pregunta": {
+      "ES": "¿Qué crece en el Nevado por encima de unos 4,000 metros?"
+    },
+    "opciones": [
+      {
+        "ES": "Selva baja"
+      },
+      {
+        "ES": "Pastos y musgos"
+      },
+      {
+        "ES": "Bosque de encino"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Más abajo hay pinos, encinos, oyameles y enebros. Por encima de unos 4,000 metros solo aguantan pastos y musgos, como en la tundra."
+    }
+  },
+  "nevado-4": {
+    "pregunta": {
+      "ES": "¿Qué pasó en el Volcán de Fuego el 3 de enero de 2015?"
+    },
+    "opciones": [
+      {
+        "ES": "Una explosión levantó una columna de unos 3 km"
+      },
+      {
+        "ES": "Se cubrió de nieve por primera vez"
+      },
+      {
+        "ES": "Se abrió un sendero hasta su cráter"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Ese día una explosión levantó una columna de unos 3 km y la ceniza llegó a pueblos de Jalisco. En julio de ese año otra erupción obligó a evacuar poblaciones cercanas."
+    }
+  },
+  "nevado-5": {
+    "pregunta": {
+      "ES": "¿Qué feria de comida organiza cada año Ciudad Guzmán?"
+    },
+    "opciones": [
+      {
+        "ES": "La Feria Nacional de la Birria"
+      },
+      {
+        "ES": "La Feria del Mole"
+      },
+      {
+        "ES": "La Feria del Tequila"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Ciudad Guzmán organiza la Feria Nacional de la Birria, que en 2025 llegó a su edición número 11."
+    }
+  },
+  "tapalpa-1": {
+    "pregunta": {
+      "ES": "¿Cómo se vende la cajeta de Sayula?"
+    },
+    "opciones": [
+      {
+        "ES": "En jarritos de barro"
+      },
+      {
+        "ES": "En cajitas de madera"
+      },
+      {
+        "ES": "En latas"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Va en cajitas de madera hechas a mano en la región, y es más firme que otras cajetas."
+    }
+  },
+  "tapalpa-2": {
+    "pregunta": {
+      "ES": "¿Cuánto mide la caída del Salto del Nogal?"
+    },
+    "opciones": [
+      {
+        "ES": "30 metros"
+      },
+      {
+        "ES": "105 metros"
+      },
+      {
+        "ES": "250 metros"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Con 105 metros es la cascada más alta de Jalisco."
+    }
+  },
+  "tapalpa-3": {
+    "pregunta": {
+      "ES": "¿Qué quiere decir Tapalpa?"
+    },
+    "opciones": [
+      {
+        "ES": "Tierra de colores"
+      },
+      {
+        "ES": "Lugar de pinos"
+      },
+      {
+        "ES": "Cerro del agua"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Viene del náhuatl tlapalpan, tierra de colores. En 2002 fue el primer pueblo de Jalisco nombrado Pueblo Mágico; Tequila llegó en 2003 y Mazamitla en 2005."
+    }
+  },
+  "tapalpa-4": {
+    "pregunta": {
+      "ES": "¿Con qué otro nombre se conoce el valle de Las Piedrotas?"
+    },
+    "opciones": [
+      {
+        "ES": "Valle de los Enigmas"
+      },
+      {
+        "ES": "Valle de las Ánimas"
+      },
+      {
+        "ES": "Valle del Silencio"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Lo llaman Valle de los Enigmas porque nadie se pone de acuerdo sobre el origen de las rocas. Unos hablan de meteoritos y otros de la erosión del viento y el agua."
+    }
+  },
+  "tamazula-1": {
+    "pregunta": {
+      "ES": "¿Qué quiere decir Tamazula?"
+    },
+    "opciones": [
+      {
+        "ES": "Lugar de sapos"
+      },
+      {
+        "ES": "Cerro de la caña"
+      },
+      {
+        "ES": "Río de piedras"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Viene del náhuatl Tlamazolan, lugar de sapos. Lo de «de Gordiano» se le añadió en 1856."
+    }
+  },
+  "tamazula-2": {
+    "pregunta": {
+      "ES": "¿A qué se dedicaban los Hermanos Záizar?"
+    },
+    "opciones": [
+      {
+        "ES": "Eran pintores"
+      },
+      {
+        "ES": "Cantaban música ranchera"
+      },
+      {
+        "ES": "Fundaron el ingenio"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "David y Juan Záizar formaron un dueto de música ranchera muy conocido. En 2009 se abrió en Tamazula el museo que lleva su nombre."
+    }
+  },
+  "tamazula-3": {
+    "pregunta": {
+      "ES": "¿Cuánto tardó en construirse el Santuario del Sagrario?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 5 años"
+      },
+      {
+        "ES": "Unos 40 años"
+      },
+      {
+        "ES": "Más de un siglo"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Se empezó el 1 de enero de 1899 y se terminó en 1939. Lo consagraron dos años después, en 1941."
+    }
+  },
+  "tamazula-4": {
+    "pregunta": {
+      "ES": "¿Cuánta caña molió el ingenio en su primera zafra, en 1924?"
+    },
+    "opciones": [
+      {
+        "ES": "Unas 1,200 toneladas"
+      },
+      {
+        "ES": "Unas 12,500 toneladas"
+      },
+      {
+        "ES": "Más de un millón de toneladas"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "En 1924 la Central Tamazula molió 12,500 toneladas. En los años cuarenta llegó Aarón Sáenz Garza y la empresa pasó a ser Ingenio Tamazula."
+    }
+  }
+}

@@ -1,0 +1,993 @@
+{
+  "slug": "tamazula",
+  "nombre": "Tamazula y el sur de Jalisco",
+  "intro": {
+    "ES": "El hotel está en el kilómetro 92.5 de la carretera Jiquilpan-Manzanillo, a unos 4 km del jardín principal de Tamazula. Si acabas de trabajar a las cinco, te da tiempo a caminar el centro y llegar hasta el ingenio de azúcar. Con un día libre, Ciudad Guzmán y la laguna de Zapotlán quedan a 45 minutos, Mazamitla a una hora por la sierra, y el Nevado de Colima y Tapalpa piden salir temprano."
+  },
+  "lugares": [
+    {
+      "id": "centro-tamazula",
+      "img": "/ciudades/tamazula/img/jardin.jpg",
+      "nombre": "Jardín principal y Santuario del Sagrario",
+      "zona": {
+        "ES": "Centro de Tamazula, a 4 km del hotel"
+      },
+      "d": {
+        "ES": "El jardín tiene kiosco y palmeras, y a unos pasos está el Santuario de Nuestra Señora del Sagrario, que se empezó a construir el 1 de enero de 1899 y se terminó en 1939. Junto a las letras de Tamazula hay una estatua de los Hermanos Záizar, el dueto de música ranchera que salió de este pueblo. El nombre viene del náhuatl Tlamazolan, lugar de sapos, y el apellido, de Gordiano Guzmán, el insurgente que nació aquí en 1789."
+      },
+      "cuando": {
+        "ES": "Por la tarde, a partir de las cinco, cuando baja el sol"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 19.6751,
+      "lng": -103.2541
+    },
+    {
+      "id": "ingenio",
+      "img": "/ciudades/tamazula/img/tamazula-aerea.jpg",
+      "nombre": "Ingenio Tamazula",
+      "zona": {
+        "ES": "Entre el hotel y el centro, a 2.6 km"
+      },
+      "d": {
+        "ES": "Es la mayor fuente de empleo del pueblo, y aquí la caña de los alrededores se convierte en azúcar y alcohol. Empezó entre 1921 y 1923 como Central Tamazula, de familias de la región como los Mendoza Ochoa, y en su primera zafra, en 1924, molió 12,500 toneladas de caña. En los años cuarenta entró como socio el industrial Aarón Sáenz Garza, que da nombre al parque de al lado. Se ve desde la calle, junto al Santuario de Guadalupe."
+      },
+      "cuando": {
+        "ES": "En temporada de zafra, cuando entran los camiones cargados de caña"
+      },
+      "min": 6,
+      "modo": "coche",
+      "lat": 19.6837,
+      "lng": -103.2444
+    },
+    {
+      "id": "mazamitla",
+      "img": "/ciudades/tamazula/img/mazamitla.jpg",
+      "nombre": "Mazamitla",
+      "zona": {
+        "ES": "Sierra del Tigre, a 46 km del hotel"
+      },
+      "d": {
+        "ES": "Pueblo Mágico desde 2005, a 2,237 metros de altura. Las casas son blancas, con la parte de abajo pintada de rojo y techos de teja, y alrededor todo es bosque de pino. La parroquia de San Cristóbal, de mediados del siglo XX, tiene torres con detalles de inspiración china que no se parecen a ninguna otra iglesia de la región. A las afueras, en Los Cazos, está la cascada El Salto, de unos 30 metros."
+      },
+      "cuando": {
+        "ES": "Por la mañana; a esa altura refresca, lleva chamarra"
+      },
+      "min": 55,
+      "modo": "coche",
+      "lat": 19.91556,
+      "lng": -103.02055
+    },
+    {
+      "id": "ciudad-guzman",
+      "img": "/ciudades/tamazula/img/catedral-guzman.jpg",
+      "nombre": "Ciudad Guzmán y su catedral",
+      "zona": {
+        "ES": "Zapotlán el Grande, a 40 km del hotel"
+      },
+      "d": {
+        "ES": "Hasta 1856 se llamó Zapotlán el Grande, y ese año tomó el nombre de Gordiano Guzmán, el mismo insurgente de Tamazula. La catedral, neoclásica, se empezó en 1866 y se abrió en 1900. Aquí nacieron el muralista José Clemente Orozco, en 1883, y el escritor Juan José Arreola, en 1918, que contó su pueblo en la novela La feria. A unos pasos del jardín, el Museo Arqueológico guarda piezas de los pueblos que vivieron en el valle antes de los españoles."
+      },
+      "cuando": {
+        "ES": "De martes a domingo, de 9:00 a 17:00, que es cuando abre el museo; el domingo la entrada es libre"
+      },
+      "min": 45,
+      "modo": "coche",
+      "lat": 19.70356,
+      "lng": -103.46315
+    },
+    {
+      "id": "laguna-zapotlan",
+      "img": "/ciudades/tamazula/img/laguna-zapotlan.jpg",
+      "nombre": "Laguna de Zapotlán",
+      "zona": {
+        "ES": "Al norte de Ciudad Guzmán, a 46 km del hotel"
+      },
+      "d": {
+        "ES": "Está a unos 6 km del centro de Ciudad Guzmán, a 1,520 metros de altura, y en los días claros tiene el Nevado de Colima al fondo. En 2011 fue la pista de remo y canotaje de los Juegos Panamericanos de Guadalajara, y en la orilla sigue la escuela de remo. Desde el 5 de junio de 2005 es sitio Ramsar, la lista internacional de humedales protegidos."
+      },
+      "cuando": {
+        "ES": "A media mañana, de camino o de vuelta de Ciudad Guzmán"
+      },
+      "min": 50,
+      "modo": "coche",
+      "lat": 19.75366,
+      "lng": -103.46605
+    },
+    {
+      "id": "nevado",
+      "img": "/ciudades/tamazula/img/nevado.jpg",
+      "nombre": "Parque Nacional Nevado de Colima",
+      "zona": {
+        "ES": "Por Ciudad Guzmán y El Fresnito, a 63 km del hotel"
+      },
+      "d": {
+        "ES": "El Nevado mide 4,260 metros y es el punto más alto de Jalisco. Es un volcán dormido, y a unos 6 km al sur tiene al Volcán de Colima, el de Fuego, de 3,860 metros, que sigue activo y está vigilado de forma permanente. Lázaro Cárdenas lo declaró parque nacional en 1936. Se sube por terracería desde El Fresnito, solo en camioneta 4x4, y en invierno suele tener nieve."
+      },
+      "cuando": {
+        "ES": "De noviembre a marzo, y temprano, porque en temporada alta cierran el acceso al llegar a 200 vehículos"
+      },
+      "min": 130,
+      "modo": "coche",
+      "lat": 19.5875,
+      "lng": -103.5977
+    },
+    {
+      "id": "tapalpa",
+      "img": "/ciudades/tamazula/img/tapalpa.jpg",
+      "nombre": "Tapalpa",
+      "zona": {
+        "ES": "Al noroeste de Ciudad Guzmán, a unos 115 km del hotel"
+      },
+      "d": {
+        "ES": "Fue el primer Pueblo Mágico de Jalisco, en 2002, y está a 2,077 metros. En la plaza está el templo de San Antonio, que se empezó en 1650 y es el edificio más antiguo del pueblo, y a su lado el de Guadalupe, de ladrillo rojo, empezado en 1950 con dinero de los vecinos. A 4 km al norte están Las Piedrotas y, hacia el sur, el Salto del Nogal, que con 105 metros es la cascada más alta del estado."
+      },
+      "cuando": {
+        "ES": "Un día entero, saliendo temprano"
+      },
+      "min": 125,
+      "modo": "coche",
+      "lat": 19.94489,
+      "lng": -103.75758
+    }
+  ],
+  "rutas": [
+    {
+      "id": "mazamitla",
+      "expId": "ex1",
+      "img": "/ciudades/tamazula/img/mazamitla.jpg",
+      "titulo": {
+        "ES": "Mazamitla, el bosque y el pueblo"
+      },
+      "tipo": {
+        "ES": "Pueblo Mágico"
+      },
+      "dur": "7 h",
+      "d": {
+        "ES": "Subes a la Sierra del Tigre por la federal 110 y empiezas en Los Cazos, bajando a pie hasta la cascada El Salto entre pinos. Luego subes al pueblo, a la parroquia de San Cristóbal y sus calles de casas blancas. Comes el bote, el caldo de Mazamitla, y a las 16:00 estás de vuelta en el hotel."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 9:00, unos 46 km y una hora hasta Mazamitla. Vuelta al hotel hacia las 16:00"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el hotel",
+          "Guía",
+          "Entrada a Los Cazos"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Las conservas y la cajeta que quieras llevarte"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado con buena suela para la bajada a la cascada",
+          "Una chamarra, que a 2,200 metros la mañana es fresca",
+          "Agua",
+          "Efectivo para la comida y las conservas"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel"
+          },
+          "s": {
+            "ES": "Rumbo a la Sierra del Tigre"
+          },
+          "d": {
+            "ES": "El coche toma la federal 110 hacia Mazamitla, unos 46 km. La carretera sube de los 1,117 metros de Tamazula a los 2,237 de Mazamitla, así que vas a notar el cambio de temperatura."
+          },
+          "tip": {
+            "ES": "Lleva la chamarra a mano. En Mazamitla la mañana es más fresca que en Tamazula."
+          },
+          "hora": "09:00",
+          "dur": "5 min",
+          "img": "/ciudades/tamazula/img/tamazula.jpg",
+          "lat": 19.6976,
+          "lng": -103.2312,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Los Cazos y la cascada El Salto"
+          },
+          "s": {
+            "ES": "Una caída de 30 metros entre pinos"
+          },
+          "d": {
+            "ES": "Los Cazos es un fraccionamiento privado en el bosque que deja pasar a los visitantes. Se llama así por las pozas redondas, como cazos, que el agua fue tallando en la roca del arroyo. Un kilómetro más abajo está El Salto, una cascada de unos 30 metros, y se baja hasta la poza por un sendero empinado con escalones de piedra."
+          },
+          "tip": {
+            "ES": "La subida de vuelta desde la poza es corta pero empinada. Tómala con calma, que estás a más de 2,000 metros."
+          },
+          "hora": "10:00",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/tamazula/img/cascada-el-salto.jpg",
+          "lat": 19.8937,
+          "lng": -103.0419,
+          "tramo": "coche",
+          "tramoDuracionMin": 55,
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Parroquia de San Cristóbal"
+          },
+          "s": {
+            "ES": "Torres blancas con detalles de inspiración china"
+          },
+          "d": {
+            "ES": "La parroquia se levantó a mediados del siglo XX por empeño del cura José Santana García, que llegó a Mazamitla en 1929 y se quedó más de treinta años. Sus torres blancas con remates rojos tienen un aire oriental que no vas a ver en otra iglesia de la región. Enfrente está la plaza, con su kiosco y los portales alrededor."
+          },
+          "tip": {
+            "ES": "San Cristóbal se celebra el último fin de semana de julio. Los dos últimos fines de semana de octubre el pueblo hace su Festival de las Flores."
+          },
+          "hora": "11:45",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/tamazula/img/mazamitla-parroquia.jpg",
+          "lat": 19.91556,
+          "lng": -103.02055,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "El bote y las conservas"
+          },
+          "s": {
+            "ES": "Comida en el centro"
+          },
+          "d": {
+            "ES": "El bote es el platillo de Mazamitla, carne de res, cerdo y pollo cocida en pulque con verduras, y se llama así porque se preparaba en un bote u olla grande. La comida va por tu cuenta y el guía te propone dónde. Después, en el andador de la calle Hidalgo venden las conservas de fruta de la sierra, como durazno o tejocote, y cajeta. A las tres el coche sale de vuelta."
+          },
+          "tip": {
+            "ES": "Pide también jocoque, una leche fermentada parecida a la crema agria que se vende en el mercado."
+          },
+          "hora": "13:05",
+          "dur": "1 h 55 min",
+          "img": "/ciudades/tamazula/img/mazamitla-portales.jpg",
+          "lat": 19.91599,
+          "lng": -103.0203,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 115
+        }
+      ],
+      "fotos": [
+        "/ciudades/tamazula/img/mazamitla.jpg",
+        "/ciudades/tamazula/img/cascada-el-salto.jpg",
+        "/ciudades/tamazula/img/mazamitla-parroquia.jpg",
+        "/ciudades/tamazula/img/mazamitla-calle.jpg",
+        "/ciudades/tamazula/img/mazamitla-kiosco.jpg",
+        "/ciudades/tamazula/img/mazamitla-portales.jpg",
+        "/ciudades/tamazula/img/mazamitla-sierra.jpg"
+      ],
+      "duracionMin": 420,
+      "distanciaKm": 97,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "La bajada a la cascada es un sendero de tierra con escalones de piedra, corto pero empinado. El centro de Mazamitla es empedrado y tiene cuestas. Con movilidad reducida, pregunta en recepción antes de reservar."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 19.6976,
+        "lng": -103.2312,
+        "foto": "/ciudades/tamazula/img/tamazula.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 9:00. Baja cinco minutos antes."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale todos los días."
+      },
+      "salidasFijas": [
+        "09:00"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "zapotlan",
+      "expId": "ex2",
+      "img": "/ciudades/tamazula/img/laguna-zapotlan.jpg",
+      "titulo": {
+        "ES": "Ciudad Guzmán y la laguna de Zapotlán"
+      },
+      "tipo": {
+        "ES": "Historia y naturaleza"
+      },
+      "dur": "5 h",
+      "d": {
+        "ES": "En 45 minutos estás en Ciudad Guzmán, la tierra de Orozco y de Arreola. Ves la catedral y el jardín, entras al Museo Arqueológico y bajas a la laguna de Zapotlán, donde se remó en los Panamericanos de 2011. A las 14:30 estás de vuelta en el hotel, a tiempo para comer en La Loma."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 9:30, unos 40 km y 45 minutos hasta Ciudad Guzmán. Vuelta al hotel hacia las 14:30"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el hotel",
+          "Guía",
+          "Entrada al Museo Arqueológico de Ciudad Guzmán"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Propinas"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Gorra y bloqueador para la laguna",
+          "Agua",
+          "Calzado cómodo para el centro",
+          "Algo de efectivo para un antojo en el jardín"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel"
+          },
+          "s": {
+            "ES": "Rumbo a Ciudad Guzmán"
+          },
+          "d": {
+            "ES": "El coche va por la federal 110 hasta Zapotiltic y de ahí a Ciudad Guzmán, unos 40 km. Las dos ciudades llevan el nombre del mismo hombre, Gordiano Guzmán, que nació en Tamazula en 1789 y peleó en la Independencia."
+          },
+          "tip": {
+            "ES": "En 1856 Zapotlán el Grande pasó a llamarse Ciudad Guzmán y Tamazula sumó «de Gordiano» a su nombre, las dos en su honor."
+          },
+          "hora": "09:30",
+          "dur": "5 min",
+          "img": "/ciudades/tamazula/img/tamazula.jpg",
+          "lat": 19.6976,
+          "lng": -103.2312,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "La catedral"
+          },
+          "s": {
+            "ES": "Neoclásica, de 1866 a 1900"
+          },
+          "d": {
+            "ES": "La primera piedra se puso el 27 de mayo de 1866 y la catedral se abrió el 8 de octubre de 1900. Es neoclásica, con fachada de piedra y bóvedas de estilo gótico por dentro. En octubre es el centro de las fiestas de San José, a quien la ciudad juró como patrono en 1747."
+          },
+          "tip": {
+            "ES": "Juan José Arreola, nacido aquí en 1918, contó su pueblo y esta fiesta en La feria, su única novela, publicada en 1963."
+          },
+          "hora": "10:15",
+          "dur": "35 min",
+          "img": "/ciudades/tamazula/img/catedral-guzman.jpg",
+          "lat": 19.70356,
+          "lng": -103.46315,
+          "tramo": "coche",
+          "tramoDuracionMin": 40,
+          "duracionMin": 35
+        },
+        {
+          "n": {
+            "ES": "Jardín principal y Museo Arqueológico"
+          },
+          "s": {
+            "ES": "Orozco en bronce y las piezas del valle"
+          },
+          "d": {
+            "ES": "En el jardín está la escultura de José Clemente Orozco con el brazo en alto. El muralista nació aquí el 23 de noviembre de 1883 y su familia se fue a Guadalajara cuando él tenía dos años. A unos pasos, en la calle Dr. Ángel González 21, está el Museo Arqueológico, que nació de las piezas que juntó el historiador Esteban Cibrián Guzmán. Entre ellas hay braseros con la imagen de Xipe Tótec que aparecieron en la propia ciudad."
+          },
+          "tip": {
+            "ES": "Busca el cajete con 15 figurillas, 14 de mujer y una de hombre. Era una ofrenda funeraria y apareció a dos metros bajo la calle del templo de La Merced."
+          },
+          "hora": "10:55",
+          "dur": "1 h",
+          "img": "/ciudades/tamazula/img/orozco.jpg",
+          "lat": 19.7049,
+          "lng": -103.4631,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Laguna de Zapotlán"
+          },
+          "s": {
+            "ES": "La pista de remo de los Panamericanos"
+          },
+          "d": {
+            "ES": "La laguna está a unos 6 km del centro, a 1,520 metros de altura. En 2011 fue la sede de remo y canotaje de los Juegos Panamericanos de Guadalajara, y en la orilla sigue la escuela de remo y canotaje. Desde 2005 es sitio Ramsar, la lista internacional de humedales protegidos. Si el día está claro, el Nevado de Colima se levanta al fondo, detrás del agua."
+          },
+          "tip": {
+            "ES": "En el agua es fácil ver gallaretas, y a veces pelícanos blancos."
+          },
+          "hora": "12:10",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/tamazula/img/laguna-zapotlan.jpg",
+          "lat": 19.75366,
+          "lng": -103.46605,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 90
+        }
+      ],
+      "fotos": [
+        "/ciudades/tamazula/img/laguna-zapotlan.jpg",
+        "/ciudades/tamazula/img/catedral-guzman.jpg",
+        "/ciudades/tamazula/img/kiosco-guzman.jpg",
+        "/ciudades/tamazula/img/orozco.jpg"
+      ],
+      "duracionMin": 300,
+      "distanciaKm": 93,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Todo el recorrido es llano. El centro de Ciudad Guzmán tiene banquetas y la orilla de la laguna es plana. Si vas en silla de ruedas, pregunta en recepción antes de reservar."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 19.6976,
+        "lng": -103.2312,
+        "foto": "/ciudades/tamazula/img/tamazula.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 9:30. Baja cinco minutos antes."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale de martes a domingo; los lunes el Museo Arqueológico cierra."
+      },
+      "salidasFijas": [
+        "09:30"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "nevado",
+      "expId": "ex3",
+      "img": "/ciudades/tamazula/img/volcanes.jpg",
+      "titulo": {
+        "ES": "El Nevado de Colima y el Volcán de Fuego"
+      },
+      "tipo": {
+        "ES": "Montaña"
+      },
+      "dur": "11 h",
+      "d": {
+        "ES": "Un día de alta montaña. Sales a las seis, subes en camioneta 4x4 por la terracería de El Fresnito y desde La Joya caminas hasta las antenas, a casi 4,000 metros, donde tienes de frente el Volcán de Fuego. Bajas a comer birria a Ciudad Guzmán y a las 17:00 estás en el hotel."
+      },
+      "salida": {
+        "ES": "Salida en camioneta 4x4 desde la puerta del hotel a las 6:00, algo más de dos horas y unos 63 km hasta la entrada del parque. Vuelta al hotel hacia las 17:00"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado en camioneta 4x4 desde el hotel",
+          "Guía de montaña",
+          "Entrada al Parque Nacional Nevado de Colima"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Propinas"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Ropa de abrigo por capas, gorro y guantes, que arriba puede helar",
+          "Botas o tenis de montaña",
+          "Agua y algo de comer para la subida, porque dentro del parque no venden comida",
+          "Bloqueador y lentes de sol"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel"
+          },
+          "s": {
+            "ES": "Rumbo a El Fresnito"
+          },
+          "d": {
+            "ES": "La camioneta va hasta Ciudad Guzmán por la federal 110 y sigue a El Fresnito, el último pueblo antes de la subida. Desde ahí son unos 17 km de terracería que suben de los 1,700 metros a más de 3,300."
+          },
+          "tip": {
+            "ES": "Vístete por capas. Sales con el fresco de la mañana y arriba hace bastante más frío."
+          },
+          "hora": "06:00",
+          "dur": "5 min",
+          "img": "/ciudades/tamazula/img/tamazula.jpg",
+          "lat": 19.6976,
+          "lng": -103.2312,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Entrada al Parque Nacional"
+          },
+          "s": {
+            "ES": "Bosque de pino y oyamel"
+          },
+          "d": {
+            "ES": "Lázaro Cárdenas declaró el Nevado parque nacional en 1936. En la caseta se registra la camioneta y se paga la entrada; en temporada alta solo dejan pasar 200 vehículos al día, y por eso salimos tan temprano. Alrededor crecen pinos, encinos y oyameles, y por encima de los 4,000 metros solo quedan pastos y musgos."
+          },
+          "tip": {
+            "ES": "Si te duele la cabeza o te falta el aire, avisa al guía. Pueden ser síntomas del mal de montaña."
+          },
+          "hora": "08:10",
+          "dur": "15 min",
+          "img": "/ciudades/tamazula/img/nevado-bosque.jpg",
+          "lat": 19.593,
+          "lng": -103.5934,
+          "tramo": "coche",
+          "tramoDuracionMin": 125,
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "La Joya"
+          },
+          "s": {
+            "ES": "Donde termina el camino para la camioneta"
+          },
+          "d": {
+            "ES": "La Joya es el único estacionamiento dentro del parque, a más de 3,300 metros. Hay cabañas de madera y mesas entre los árboles, y aquí empieza la caminata. Si prefieres no subir, puedes esperar aquí al grupo, que vuelve hacia la una."
+          },
+          "tip": {
+            "ES": "Camina despacio los primeros minutos y bebe agua aunque no tengas sed. A esta altura el cuerpo se cansa antes."
+          },
+          "hora": "08:35",
+          "dur": "25 min",
+          "img": "/ciudades/tamazula/img/la-joya.jpg",
+          "lat": 19.5875,
+          "lng": -103.5977,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Las antenas, frente al Volcán de Fuego"
+          },
+          "s": {
+            "ES": "A casi 4,000 metros"
+          },
+          "d": {
+            "ES": "Son unos 600 metros de subida por camino de tierra hasta las antenas y el observatorio vulcanológico, a casi 4,000 metros. Desde ahí tienes de frente el Volcán de Colima, el de Fuego, de 3,860 metros, a unos 6 km al sur, y muy cerca la cumbre del Nevado, de 4,260. En enero de 2015 una explosión del de Fuego levantó una columna de unos 3 km, y sigue vigilado día y noche. Te quedas unos 45 minutos arriba y bajas a pie a La Joya."
+          },
+          "tip": {
+            "ES": "Arriba sopla el viento. Ponte la chamarra antes de llegar arriba, aunque al subir tengas calor."
+          },
+          "hora": "11:00",
+          "dur": "2 h",
+          "img": "/ciudades/tamazula/img/volcan-de-fuego.jpg",
+          "lat": 19.565,
+          "lng": -103.6169,
+          "tramo": "pie",
+          "tramoDuracionMin": 120,
+          "duracionMin": 120
+        },
+        {
+          "n": {
+            "ES": "Birria en Ciudad Guzmán"
+          },
+          "s": {
+            "ES": "Comida de vuelta en el valle"
+          },
+          "d": {
+            "ES": "La camioneta baja de La Joya y a las 14:30 estás en Ciudad Guzmán. Comes birria en el centro; la comida va por tu cuenta y el guía te propone dónde. Si vienes en septiembre u octubre, pide ponche de granada, que esos meses se vende bajo los portales."
+          },
+          "tip": {
+            "ES": "Ciudad Guzmán organiza cada año la Feria Nacional de la Birria."
+          },
+          "hora": "14:30",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/tamazula/img/birria.jpg",
+          "lat": 19.7049,
+          "lng": -103.4631,
+          "tramo": "coche",
+          "tramoDuracionMin": 90,
+          "duracionMin": 90
+        }
+      ],
+      "fotos": [
+        "/ciudades/tamazula/img/volcanes.jpg",
+        "/ciudades/tamazula/img/nevado.jpg",
+        "/ciudades/tamazula/img/volcan-de-fuego.jpg",
+        "/ciudades/tamazula/img/volcan-fumarola.jpg",
+        "/ciudades/tamazula/img/la-joya.jpg",
+        "/ciudades/tamazula/img/nevado-bosque.jpg",
+        "/ciudades/tamazula/img/birria.jpg"
+      ],
+      "duracionMin": 660,
+      "distanciaKm": 145,
+      "dificultad": "exigente",
+      "accesibilidad": {
+        "ES": "La caminata sube unos 600 metros por encima de los 3,300 de altura, con unas dos horas de subida y una hora y cuarto de bajada. Con problemas de corazón o de respiración, o en el embarazo, pregunta en recepción antes de reservar."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 19.6976,
+        "lng": -103.2312,
+        "foto": "/ciudades/tamazula/img/tamazula.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 6:00. Baja diez minutos antes y con la ropa de abrigo puesta."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale todos los días. Si Protección Civil cierra el acceso al parque por nieve, granizo o lluvia, la excursión se cancela sin costo."
+      },
+      "salidasFijas": [
+        "06:00"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "tapalpa",
+      "expId": "ex4",
+      "img": "/ciudades/tamazula/img/salto-nogal.jpg",
+      "titulo": {
+        "ES": "Tapalpa, el Salto del Nogal y Las Piedrotas"
+      },
+      "tipo": {
+        "ES": "Pueblo Mágico"
+      },
+      "dur": "11 h",
+      "d": {
+        "ES": "Un día completo en la sierra de Tapalpa. Empiezas bajando a pie al Salto del Nogal, la cascada más alta de Jalisco, comes borrego o tamales de acelga en el pueblo y acabas la tarde entre Las Piedrotas. A las 18:30 estás en el hotel."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 7:30, unos 115 km y algo más de dos horas, pasando por Ciudad Guzmán y Sayula. Vuelta al hotel hacia las 18:30"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el hotel",
+          "Guía"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebidas",
+          "Cooperación voluntaria en Las Piedrotas"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Tenis o botas con buen agarre para el sendero del Salto",
+          "Agua, al menos un litro por persona",
+          "Una chamarra para la tarde en Tapalpa",
+          "Efectivo para la comida y la cooperación de Las Piedrotas"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel"
+          },
+          "s": {
+            "ES": "Rumbo a la sierra de Tapalpa"
+          },
+          "d": {
+            "ES": "El coche va a Ciudad Guzmán, toma la autopista hacia Guadalajara hasta Sayula y desde ahí sube a la sierra. Son unos 115 km."
+          },
+          "tip": {
+            "ES": "Sayula es famosa por su cajeta, que se vende en cajitas de madera hechas a mano."
+          },
+          "hora": "07:30",
+          "dur": "5 min",
+          "img": "/ciudades/tamazula/img/tamazula.jpg",
+          "lat": 19.6976,
+          "lng": -103.2312,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Salto del Nogal"
+          },
+          "s": {
+            "ES": "105 metros de caída"
+          },
+          "d": {
+            "ES": "Con 105 metros, es la cascada más alta de Jalisco. El coche te deja al final del camino de terracería y desde ahí bajas a pie por un sendero empinado, alrededor de una hora, hasta el fondo de la barranca. La subida de vuelta cuesta más, así que vas a tu ritmo y con el guía."
+          },
+          "tip": {
+            "ES": "La entrada es libre. En temporada de lluvias la cascada lleva mucha más agua."
+          },
+          "hora": "09:45",
+          "dur": "2 h 30 min",
+          "img": "/ciudades/tamazula/img/salto-nogal.jpg",
+          "lat": 19.8642,
+          "lng": -103.7657,
+          "tramo": "coche",
+          "tramoDuracionMin": 130,
+          "duracionMin": 150
+        },
+        {
+          "n": {
+            "ES": "La plaza de Tapalpa"
+          },
+          "s": {
+            "ES": "Dos templos y comida de la sierra"
+          },
+          "d": {
+            "ES": "Tapalpa fue el primer Pueblo Mágico de Jalisco, en 2002, y su nombre viene del náhuatl tlapalpan, tierra de colores. En la plaza está el templo de San Antonio, que se empezó en 1650 y es el edificio más antiguo del pueblo, y a su lado el de Guadalupe, de ladrillo rojo, empezado en 1950 con dinero de los vecinos. Para comer, el borrego al pastor y los tamales de acelga son de aquí; la comida va por tu cuenta."
+          },
+          "tip": {
+            "ES": "De postre, pregunta por el pegoste de durazno, una pasta de durazno más espesa que la mermelada, y prueba el rompope."
+          },
+          "hora": "12:45",
+          "dur": "2 h 30 min",
+          "img": "/ciudades/tamazula/img/tapalpa.jpg",
+          "lat": 19.94489,
+          "lng": -103.75758,
+          "tramo": "coche",
+          "tramoDuracionMin": 30,
+          "duracionMin": 150
+        },
+        {
+          "n": {
+            "ES": "Las Piedrotas"
+          },
+          "s": {
+            "ES": "Rocas gigantes en medio del pasto"
+          },
+          "d": {
+            "ES": "A unos 4 km al norte del pueblo, en el llamado Valle de los Enigmas, hay rocas enormes sueltas en medio del pasto. Hay quien dice que son meteoritos. Otra explicación es que quedaron de una roca mayor que el viento y el agua fueron desgastando durante millones de años."
+          },
+          "tip": {
+            "ES": "La entrada es con cooperación voluntaria para el mantenimiento. Lleva efectivo."
+          },
+          "hora": "15:30",
+          "dur": "50 min",
+          "img": "/ciudades/tamazula/img/piedrotas.jpg",
+          "lat": 19.978,
+          "lng": -103.7801,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 50
+        }
+      ],
+      "fotos": [
+        "/ciudades/tamazula/img/salto-nogal.jpg",
+        "/ciudades/tamazula/img/salto-nogal-2.jpg",
+        "/ciudades/tamazula/img/tapalpa.jpg",
+        "/ciudades/tamazula/img/tapalpa-templo.jpg",
+        "/ciudades/tamazula/img/tapalpa-calle.jpg",
+        "/ciudades/tamazula/img/tamales-acelga.jpg",
+        "/ciudades/tamazula/img/piedrotas.jpg",
+        "/ciudades/tamazula/img/piedrotas-2.jpg"
+      ],
+      "duracionMin": 660,
+      "distanciaKm": 256,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "El sendero del Salto del Nogal es de tierra y empinado, con cerca de una hora de bajada y algo más de subida. El centro de Tapalpa es empedrado y tiene cuestas. Con movilidad reducida, pregunta en recepción antes de reservar."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 19.6976,
+        "lng": -103.2312,
+        "foto": "/ciudades/tamazula/img/tamazula.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 7:30. Baja diez minutos antes."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale todos los días."
+      },
+      "salidasFijas": [
+        "07:30"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "tamazula",
+      "expId": "ex5",
+      "img": "/ciudades/tamazula/img/jardin.jpg",
+      "titulo": {
+        "ES": "Tamazula a pie, por la tarde"
+      },
+      "tipo": {
+        "ES": "Paseo"
+      },
+      "dur": "2 h 30 min",
+      "d": {
+        "ES": "Para cuando acabas de trabajar. A las cinco te dejamos en el jardín principal, ves el Santuario del Sagrario con la luz de la tarde y caminas hasta el ingenio, la mayor fuente de trabajo del pueblo. A las 19:30 estás de vuelta en el hotel."
+      },
+      "salida": {
+        "ES": "Salida en coche desde la puerta del hotel a las 17:00, unos 10 minutos hasta el centro. Vuelta al hotel hacia las 19:30"
+      },
+      "incluye": {
+        "ES": [
+          "Traslado de ida y vuelta desde el hotel",
+          "Guía"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Bebidas y antojitos",
+          "Propinas"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo para caminar unos 2 km",
+          "Agua",
+          "El celular con batería para la luz de la tarde"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel"
+          },
+          "s": {
+            "ES": "Rumbo al centro"
+          },
+          "d": {
+            "ES": "El coche baja por la federal 110 hasta el centro, unos 4 km. Tamazula está a 1,117 metros, en el valle, y alrededor del pueblo verás campos de caña."
+          },
+          "tip": {
+            "ES": "El nombre viene del náhuatl Tlamazolan, que quiere decir lugar de sapos."
+          },
+          "hora": "17:00",
+          "dur": "5 min",
+          "img": "/ciudades/tamazula/img/tamazula.jpg",
+          "lat": 19.6976,
+          "lng": -103.2312,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Jardín principal"
+          },
+          "s": {
+            "ES": "El kiosco y los Hermanos Záizar"
+          },
+          "d": {
+            "ES": "El jardín tiene kiosco y palmeras, y en un lado están los portales del palacio municipal. Junto a las letras de Tamazula está la estatua de los Hermanos Záizar, David y Juan, el dueto de música ranchera que salió de este pueblo. En 2009 se abrió en Tamazula el museo que lleva su nombre, con salas de historia del pueblo y de arqueología."
+          },
+          "tip": {
+            "ES": "Pide un vampirito, la bebida de la zona, que se prepara con tequila y sangrita."
+          },
+          "hora": "17:15",
+          "dur": "30 min",
+          "img": "/ciudades/tamazula/img/jardin.jpg",
+          "lat": 19.6751,
+          "lng": -103.2541,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Santuario de Nuestra Señora del Sagrario"
+          },
+          "s": {
+            "ES": "Cuarenta años de obra"
+          },
+          "d": {
+            "ES": "La obra empezó el 1 de enero de 1899 y no se terminó hasta 1939. Dos años después lo consagró José Garibi Rivera, que más tarde sería el primer cardenal mexicano. En su centenario se elevó a santuario diocesano."
+          },
+          "tip": {
+            "ES": "Gordiano Guzmán, el insurgente que le da apellido al pueblo, nació en Tamazula el 3 de octubre de 1789."
+          },
+          "hora": "17:50",
+          "dur": "30 min",
+          "img": "/ciudades/tamazula/img/santuario.jpg",
+          "lat": 19.67424,
+          "lng": -103.25408,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "El ingenio y el Santuario de Guadalupe"
+          },
+          "s": {
+            "ES": "La fábrica de azúcar, desde fuera"
+          },
+          "d": {
+            "ES": "Caminas unos 20 minutos hasta el ingenio. Empezó entre 1921 y 1923 como Central Tamazula, de familias de la región como los Mendoza Ochoa, y en su primera zafra, en 1924, molió 12,500 toneladas de caña. En los años cuarenta entró como socio Aarón Sáenz Garza, el industrial que da nombre al parque de al lado. Lo ves desde la calle, junto al Santuario de Guadalupe, una iglesia de la época colonial."
+          },
+          "tip": {
+            "ES": "En temporada de zafra vas a ver entrar los camiones cargados de caña. De noviembre a enero el sol se pone hacia las 18:20, y en junio hacia las 19:30."
+          },
+          "hora": "18:40",
+          "dur": "40 min",
+          "img": "/ciudades/tamazula/img/tamazula-aerea.jpg",
+          "lat": 19.6855,
+          "lng": -103.2461,
+          "tramo": "pie",
+          "tramoDuracionMin": 20,
+          "duracionMin": 40
+        }
+      ],
+      "fotos": [
+        "/ciudades/tamazula/img/jardin.jpg",
+        "/ciudades/tamazula/img/santuario.jpg",
+        "/ciudades/tamazula/img/zaizar.jpg",
+        "/ciudades/tamazula/img/tamazula.jpg",
+        "/ciudades/tamazula/img/tamazula-portales.jpg",
+        "/ciudades/tamazula/img/tamazula-aerea.jpg"
+      ],
+      "duracionMin": 150,
+      "distanciaKm": 9,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Se caminan unos 2 km por las calles del centro. Si vas en silla de ruedas, pregunta en recepción antes de reservar."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 19.6976,
+        "lng": -103.2312,
+        "foto": "/ciudades/tamazula/img/tamazula.jpg",
+        "texto": {
+          "ES": "Puerta del hotel, a las 17:00. Baja cinco minutos antes."
+        }
+      },
+      "cancelacion": {
+        "ES": "Gratis hasta 24 h antes. Sale todos los días."
+      },
+      "salidasFijas": [
+        "17:00"
+      ],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un café de olla en La Loma a la vuelta"
+    }
+  },
+  "creditos": [
+    "Jardín principal de Tamazula: José González Peña, CC BY-SA 4.0, Wikimedia Commons",
+    "Tamazula desde lo alto: José González Peña, CC BY-SA 4.0, Wikimedia Commons",
+    "Torres de la parroquia de San Cristóbal, Mazamitla: José González Peña, CC BY-SA 4.0, Wikimedia Commons",
+    "Catedral de Ciudad Guzmán (recorte): irengs9, CC BY-SA 4.0, Wikimedia Commons",
+    "Laguna de Zapotlán con el Nevado de Colima al fondo: Bere7115, CC BY 4.0, Wikimedia Commons",
+    "Nevado de Colima con nieve: Jrobertiko, CC BY-SA 3.0, Wikimedia Commons",
+    "Plaza principal de Tapalpa: José González Peña, CC BY-SA 4.0, Wikimedia Commons",
+    "Centro de Tamazula y el cerro: Juangallegos98, CC BY-SA 4.0, Wikimedia Commons",
+    "Cascada El Salto, Mazamitla (recorte): Salvador alc, CC BY 4.0, Wikimedia Commons",
+    "Fachada de la parroquia de San Cristóbal, Mazamitla: José González Peña, CC BY-SA 4.0, Wikimedia Commons",
+    "Plaza y portales de Mazamitla: Iqmann, CC BY 2.5, Wikimedia Commons",
+    "Calle del centro de Mazamitla: Luisalvaz, CC BY-SA 4.0, Wikimedia Commons",
+    "Kiosco de la plaza de Mazamitla: Salvador alc, CC BY 4.0, Wikimedia Commons",
+    "Bosque de la sierra junto a Mazamitla: Bellito25, CC BY-SA 4.0, Wikimedia Commons",
+    "Escultura de José Clemente Orozco en el jardín de Ciudad Guzmán: Mizael Contreras, CC BY-SA 4.0, Wikimedia Commons",
+    "Kiosco del jardín de Ciudad Guzmán: Alejandro Ags, CC BY 3.0, Wikimedia Commons",
+    "Volcán de Colima y Nevado de Colima: Jrobertiko, CC BY-SA 3.0, Wikimedia Commons",
+    "Bosque y cumbre del Nevado de Colima: Comisión Mexicana de Filmaciones from México D. F., México, CC BY-SA 2.0, Wikimedia Commons",
+    "Bosque y cabañas en el Nevado de Colima: Baruc Acosta, CC BY 3.0, Wikimedia Commons",
+    "Volcán de Fuego desde el observatorio de las antenas (recorte): Uwebart, CC BY-SA 3.0, Wikimedia Commons",
+    "Volcán de Fuego con fumarola y Nevado de Colima: antonio_vazquez4, CC BY-SA 3.0, Wikimedia Commons",
+    "Birria tatemada, Jalisco: Carloscurielfotografo, CC BY-SA 3.0, Wikimedia Commons",
+    "Salto del Nogal, Tapalpa: Pedro Iván Hernández…, CC BY-SA 3.0, Wikimedia Commons",
+    "Salto del Nogal y su poza (recorte): Pedro Iván Hernández…, CC BY-SA 3.0, Wikimedia Commons",
+    "Templo antiguo de la plaza de Tapalpa: Pabloangulo84, CC BY-SA 3.0, Wikimedia Commons",
+    "Calle de Tapalpa: Balakrishna.chuppala, CC BY-SA 3.0, Wikimedia Commons",
+    "Tamales de acelga (recorte): Wotancito, CC BY-SA 4.0, Wikimedia Commons",
+    "Las Piedrotas, Tapalpa: RiloProducciones, CC BY-SA 4.0, Wikimedia Commons",
+    "Las Piedrotas en verano: RiloProducciones, CC BY-SA 4.0, Wikimedia Commons",
+    "Santuario de Nuestra Señora del Sagrario, Tamazula: ZooFari, CC BY-SA 3.0, Wikimedia Commons",
+    "Letras de Tamazula y estatua de los Hermanos Záizar: José González Peña, CC BY-SA 4.0, Wikimedia Commons",
+    "Portales del palacio municipal de Tamazula: ZooFari, CC BY-SA 3.0, Wikimedia Commons"
+  ]
+}
