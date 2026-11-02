@@ -157,7 +157,7 @@
   inset: 64px 0 auto 0;
   z-index: 59;
   padding: 10px max(20px, env(safe-area-inset-left, 0px)) 26px;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.985);
   -webkit-backdrop-filter: saturate(1.6) blur(24px);
   backdrop-filter: saturate(1.6) blur(24px);
   box-shadow: 0 30px 50px -30px rgba(32, 35, 31, 0.35);
@@ -298,7 +298,7 @@
   height: 320vh;
   background: var(--gris-fondo);
 }
-.ruidoFijo { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+.ruidoFijo { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
 .ruidoTitulo {
   position: absolute;
   top: 11vh;
@@ -523,6 +523,7 @@
     padding-inline: max(20px, env(safe-area-inset-left, 0px));
   }
   .modulos::-webkit-scrollbar { display: none; }
+  .modulo { flex: none; }
   .flujo { grid-template-columns: minmax(0, 1fr); gap: 46px; padding: 22px; border-radius: 28px; }
   .conector {
     top: -46px;
@@ -682,6 +683,12 @@
 .pieEnlaces a:hover { color: var(--carbon); }
 
 /* ---------- Sin animaciones si se piden ---------- */
+/* En el móvil, sin desenfoque al aparecer: va igual de fluido en Android e iOS. */
+@media (max-width: 860px) {
+  .pagina[data-anim] [data-aparece] { filter: none; transform: translateY(20px); }
+  .pagina[data-anim] [data-aparece][data-visto] { transform: none; }
+  .nodo, .etiqueta, .bandeja { will-change: auto; }
+}
 @media (prefers-reduced-motion: reduce) {
   .pagina[data-anim] [data-aparece] { opacity: 1; transform: none; filter: none; transition: none; }
   .aviso { animation: none; opacity: 1; }

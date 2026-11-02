@@ -35,8 +35,12 @@ export default function Panel() {
   return (
     <>
       <div className={s.panelVentana} ref={ventana}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/inicio/panel-resumen.webp" alt="Resumen del panel de dirección de Vértice" loading="lazy" />
+        {/* En el móvil, la parte que se lee: sin la barra lateral y más grande. */}
+        <picture>
+          <source media="(max-width: 860px)" srcSet="/inicio/panel-resumen-movil.webp" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/inicio/panel-resumen.webp" alt="Resumen del panel de dirección de Vértice" loading="lazy" />
+        </picture>
       </div>
       <p className={s.pieFoto}>Panel de dirección con datos de demostración</p>
     </>
