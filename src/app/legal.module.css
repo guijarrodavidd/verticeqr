@@ -153,3 +153,18 @@
 }
 .footer a { color: var(--ink-soft); text-decoration: none; }
 .footer a:hover { color: var(--accent-deep); }
+
+/* Marca 2026: rótulos en minúscula normal y titulares en peso medio. */
+.eyebrow {
+  text-transform: none;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  font-size: 0.86rem;
+  color: #20231f;
+  padding: 0.38rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(32, 35, 31, 0.1);
+  background: rgba(255, 255, 255, 0.75);
+}
+.title { font-weight: 500; letter-spacing: -0.05em; }
+.table th { text-transform: none; letter-spacing: -0.01em; font-size: 0.86rem; }

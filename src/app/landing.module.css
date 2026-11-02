@@ -2477,3 +2477,193 @@ html {
   .shotReveal { clip-path: none; transform: none; transition: none; }
   .sceneBg.shotReveal, .sceneBg.shotReveal[data-in="1"] { transform: scale(1.04); }
 }
+
+/* ============================================================
+   MARCA 2026 — producto tecnológico con luz suave
+   Va al final a propósito: pisa lo de arriba sin tener que reescribirlo.
+   Blanco frío, carbón, halos de sol, cielo y salvia, y objetos de cristal
+   con un borde irisado suave. Una sola letra, Geist: titulares en peso
+   medio con las letras muy juntas y rótulos en minúscula normal. Los
+   colores son los de la marca. El logo no cambia.
+   ============================================================ */
+.page {
+  --paper: #f6f7f4;
+  --paper-2: #ffffff;
+  --paper-3: #eef0ec;
+  --niebla: #eef0ec;
+  --ink: #20231f;
+  --ink-soft: #5b5f57;
+  --ink-faint: #979a92;
+  --line: rgba(32, 35, 31, 0.09);
+  --line-2: rgba(32, 35, 31, 0.18);
+  --accent: #20231f;
+  --accent-deep: #20231f;
+  --gold: #6b6b55;
+  --olive: #6b6b55;
+  --granate: #20231f;
+  --salvia: #a5a58d;
+  --plata: linear-gradient(100deg, #afc387 0%, #93c0dc 42%, #e6cf86 78%, #afc387 100%);
+  --halo-salvia: rgba(190, 205, 160, 0.55);
+  --halo-cielo: rgba(184, 214, 232, 0.6);
+  --halo-sol: rgba(240, 222, 168, 0.6);
+  --num: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --shadow-sm: 0 1px 2px rgba(32, 35, 31, 0.04);
+  --shadow-md: 0 24px 50px -34px rgba(32, 35, 31, 0.32);
+  --shadow-lg: 0 40px 80px -48px rgba(32, 35, 31, 0.45);
+  font-weight: 430;
+  letter-spacing: -0.011em;
+}
+/* Halos de luz arriba, en lugar de la rejilla técnica. */
+.page::before {
+  height: 120vh;
+  background-image:
+    radial-gradient(34% 40% at 22% 30%, var(--halo-sol), transparent 72%),
+    radial-gradient(36% 44% at 78% 40%, var(--halo-cielo), transparent 72%),
+    radial-gradient(28% 34% at 50% 12%, var(--halo-salvia), transparent 72%);
+  background-size: auto;
+  mask-image: linear-gradient(to bottom, #000 0, #000 55%, transparent 100%);
+}
+
+/* ---------- Nav sobre claro ---------- */
+.nav:not(.navScrolled) .navLink { color: var(--ink-soft); }
+.nav:not(.navScrolled) .navLink:hover { background: rgba(32, 35, 31, 0.06); color: var(--ink); }
+.nav:not(.navScrolled) .navCta { background: var(--ink); color: #fff; }
+.nav:not(.navScrolled) .navCta:hover { background: var(--ink); color: #fff; }
+.nav:not(.navScrolled) .logoImgLight { display: none; }
+.nav:not(.navScrolled) .logoImgDark { display: block; }
+.navScrolled {
+  background: rgba(246, 247, 244, 0.8);
+  -webkit-backdrop-filter: saturate(1.4) blur(16px);
+  backdrop-filter: saturate(1.4) blur(16px);
+}
+.navLink { font-weight: 450; border-radius: 999px; }
+.navCta { font-weight: 520; letter-spacing: -0.015em; }
+
+/* ---------- Hero en claro: la frase y el móvil flotando sobre los halos ---------- */
+.heroBg,
+.hero .heroBg {
+  background-image:
+    radial-gradient(30% 42% at 18% 38%, var(--halo-sol), transparent 72%),
+    radial-gradient(34% 48% at 80% 46%, var(--halo-cielo), transparent 72%),
+    radial-gradient(26% 36% at 52% 18%, var(--halo-salvia), transparent 72%);
+  animation: none;
+}
+.heroBg::after { display: none; }
+.hero .heroTitle { color: var(--ink); }
+.hero .heroAccent { color: var(--ink); text-decoration-color: var(--salvia); text-decoration-thickness: 4px; }
+.hero .heroSub { color: var(--ink-soft); }
+.hero .heroCtaNote { color: var(--ink-soft); }
+.hero .heroCtaNote strong { color: var(--ink); font-weight: 560; }
+.hero .ctaPrimary { background: var(--ink); color: #fff; }
+.hero .ctaPrimary:hover { background: var(--ink); color: #fff; }
+.hero .ctaSecondary,
+.ctaSecondary {
+  position: relative;
+  isolation: isolate;
+  color: var(--ink);
+  border: 0;
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 40px -26px rgba(32, 35, 31, 0.45);
+}
+.hero .ctaSecondary:hover,
+.ctaSecondary:hover { background: #fff; }
+
+/* Borde irisado suave del cristal: en lo que se toca y en las etiquetas. */
+.ctaSecondary::before,
+.heroBadge::before,
+.heroDemoBadge::before,
+.sectionEyebrow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: var(--plata);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.heroBadge { position: relative; border-color: transparent; }
+
+/* ---------- Titulares: peso medio y letras juntas ---------- */
+.heroTitle,
+.sectionTitle,
+.bigCtaTitle,
+.chapterTitle,
+.sceneTitle {
+  font-weight: 500;
+  letter-spacing: -0.048em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+.heroTitle { letter-spacing: -0.055em; }
+.heroAccent { font-weight: 500; }
+.heroTitle b, .heroTitle strong, .sectionTitle b, .sectionTitle strong { font-weight: 560; }
+
+/* Lo que antes iba en 700-800, a 520-560. */
+.brand, .featureTitle, .railTitle, .stepTitle, .testName, .planMedidaName, .footerBrand,
+.trustTitle, .phoneBrand, .phoneItemName, .casoBadge, .vstBadge, .demoName, .faqQ {
+  font-weight: 540;
+  letter-spacing: -0.025em;
+}
+.vstX, .vstCheck, .planMedidaList li::before { font-weight: 560; }
+
+/* ---------- Cifras: Geist con números tabulares ---------- */
+.statNum, .featureStatNum, .planMedidaPrice, .calcBig, .calcSplit b, .railStat b, .panelFig b, .calcVal, .casoStatValue {
+  font-family: var(--num);
+  font-weight: 540;
+  letter-spacing: -0.045em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Rótulos: Geist en minúscula normal ---------- */
+.sectionEyebrow, .stepNum, .vstBadge, .demoTipo, .casoSector, .casoStatLabel, .planMedidaTag,
+.planMedidaPriceLabel, .footerCol h4, .panelShot figcaption, .chapterEyebrow, .panelCaption,
+.panelFig span, .railHint, .sceneEyebrow, .swipeHint, .calcTag, .calcBigUnit, .calcSplit span,
+.sceneIndex, .heroBadgeDot {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+/* El rótulo de sección, como una píldora de cristal. */
+.sectionEyebrow {
+  position: relative;
+  padding: 0.42rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 24px -18px rgba(32, 35, 31, 0.5);
+}
+
+/* ---------- Botones en píldora ---------- */
+.ctaPrimary, .compareCta, .calcCta, .navCta {
+  border-radius: 999px;
+  font-weight: 520;
+  letter-spacing: -0.015em;
+}
+.ctaSecondary { border-radius: 999px; font-weight: 500; letter-spacing: -0.015em; }
+.ctaPrimary, .compareCta { box-shadow: 0 16px 34px -18px rgba(32, 35, 31, 0.75); }
+
+/* ---------- Tarjetas: más redondas, sombra larga y suave ---------- */
+.stepCard, .railCard, .signal {
+  border-radius: 24px;
+  border-color: var(--line);
+  box-shadow: var(--shadow-md);
+}
+.signal { border-top: 1px solid var(--line); }
+.formInput, .formSelect, .formTextarea { border-radius: 14px; border-width: 1px; background: #fff; }
+.panelShot { border-radius: 24px; }
+
+/* ---------- Móvil de la portada: marco de teléfono de verdad ---------- */
+.phoneFrame { border-radius: 46px; padding: 10px; background: #0a0b0d; box-shadow: 0 50px 90px -50px rgba(32, 35, 31, 0.85); }
+.phoneScreen { border-radius: 37px; overflow: hidden; background: #0a0b0d; }
+.phoneFrame::after { inset: 10px; border-radius: 37px; }
+.heroDemoBadge { border: 0; background: rgba(255, 255, 255, 0.88); color: var(--ink); font-weight: 500; letter-spacing: -0.01em; box-shadow: 0 12px 28px -18px rgba(32, 35, 31, 0.55); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }

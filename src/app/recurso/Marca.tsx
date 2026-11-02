@@ -6,7 +6,7 @@ export function Cabecera({ centrada = false }: { centrada?: boolean }) {
   return (
     <header className={`${styles.header} ${centrada ? styles.headerCenter : ""}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className={styles.logo} src="/vertice-wordmark-light.png" alt="Vértice" />
+      <img className={styles.logo} src="/vertice-wordmark-dark.png" alt="Vértice" />
       <span className={styles.metodo}>Método Fricción 0</span>
     </header>
   );

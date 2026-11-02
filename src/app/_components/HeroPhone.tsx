@@ -46,8 +46,8 @@ export default function HeroPhone() {
         <div className={styles.phoneScreen}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/hotel/demo-poster.webp"
-            alt="Carta digital de room service en la pantalla del móvil del huésped"
+            src="/hotel/demo-poster-nooe.webp"
+            alt="Carta de NOOE Maldivas en el móvil del huésped"
             className={`${styles.phonePoster} ${lista ? styles.phonePosterOff : ""}`}
             width={390}
             height={792}
@@ -56,7 +56,7 @@ export default function HeroPhone() {
           />
           {montada && (
             <iframe
-              src="/demos/presidente/index.html?auto=1"
+              src="/d/nooe-a332/nooe-maldives/carta?hab=214&idioma=es"
               title="Carta digital de room service, demo real"
               className={styles.phoneIframe}
               loading="lazy"

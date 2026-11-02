@@ -477,5 +477,42 @@
       "mercado-mariscos": 10,
       "taboga": 65
     }
+  },
+  {
+    "hotel": "real-de-la-loma",
+    "ciudad": "tamazula",
+    "ubicacion": {
+      "lat": 19.6976,
+      "lng": -103.2312
+    },
+    "minutos": {
+      "centro-tamazula": 10,
+      "ingenio": 6,
+      "mazamitla": 55,
+      "ciudad-guzman": 45,
+      "laguna-zapotlan": 50,
+      "nevado": 130,
+      "tapalpa": 125
+    }
+  },
+  {
+    "hotel": "montecastillo",
+    "ciudad": "jerez",
+    "ubicacion": {
+      "lat": 36.70248,
+      "lng": -6.03812
+    },
+    "minutos": {
+      "gonzalez-byass": 20,
+      "lustau": 17,
+      "real-escuela": 16,
+      "catedral": 20,
+      "alcazar": 20,
+      "tabanco-el-pasaje": 20,
+      "circuito": 5,
+      "bajo-de-guia": 40,
+      "cadiz": 45,
+      "el-puerto": 35
+    }
   }
 ]

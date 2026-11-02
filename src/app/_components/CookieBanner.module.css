@@ -85,3 +85,25 @@
   border: 1px solid #ffffff;
 }
 .btnPrimary:hover { transform: translateY(-1px); background: #e7e7e4; }
+
+/* Marca 2026: tarjeta de cristal claro con botones en píldora. */
+.card {
+  background: rgba(255, 255, 255, 0.86);
+  color: #20231f;
+  border: 1px solid rgba(32, 35, 31, 0.09);
+  border-radius: 24px;
+  -webkit-backdrop-filter: saturate(1.4) blur(18px);
+  backdrop-filter: saturate(1.4) blur(18px);
+  box-shadow: 0 30px 70px -36px rgba(32, 35, 31, 0.5);
+}
+.title { color: #20231f; letter-spacing: -0.02em; }
+.text { color: #5b5f57; }
+.text strong { color: #20231f; font-weight: 560; }
+.link { color: #20231f; }
+.link:hover { color: #20231f; }
+.btnGhost,
+.btnPrimary { border-radius: 999px; font-weight: 520; letter-spacing: -0.015em; }
+.btnGhost { color: #20231f; border: 1px solid rgba(32, 35, 31, 0.18); background: rgba(255, 255, 255, 0.6); }
+.btnGhost:hover { color: #20231f; border-color: rgba(32, 35, 31, 0.4); }
+.btnPrimary { background: #20231f; color: #ffffff; border: 1px solid #20231f; }
+.btnPrimary:hover { background: #20231f; }

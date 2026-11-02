@@ -315,3 +315,111 @@
 @media (prefers-reduced-motion: reduce) {
   .submit, .finalCta, .deliver { transition: none; }
 }
+
+/* ============================================================
+   MARCA 2026 — mismo estilo que la portada de la web
+   Arriba en claro, con halos de sol, cielo y salvia, y la tarjeta del
+   formulario en blanco. Las secciones de abajo, en carbón. Geist en peso
+   medio con las letras juntas y rótulos en minúscula normal.
+   ============================================================ */
+.page {
+  --ink: #20231f;
+  --ink-2: #2a2e29;
+  --sec: #5b5f57;
+  --muted: #979a92;
+  --paper: #f6f7f4;
+  --line: rgba(32, 35, 31, 0.09);
+  --line-2: rgba(32, 35, 31, 0.18);
+  --on-dark: #f6f7f4;
+  --on-dark-2: #c9cbc4;
+  --on-dark-3: #9a9d95;
+  --iris: linear-gradient(100deg, #afc387 0%, #93c0dc 42%, #e6cf86 78%, #afc387 100%);
+  letter-spacing: -0.011em;
+}
+.hero {
+  background:
+    radial-gradient(32% 46% at 16% 30%, rgba(240, 222, 168, 0.6), transparent 72%),
+    radial-gradient(36% 50% at 84% 42%, rgba(184, 214, 232, 0.62), transparent 72%),
+    radial-gradient(28% 36% at 50% 6%, rgba(190, 205, 160, 0.55), transparent 72%),
+    var(--paper);
+  color: var(--ink);
+}
+.metodo {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  font-size: 0.86rem;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+.metodo::before { background: #a5a58d; }
+.badge {
+  position: relative;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  color: var(--ink);
+  box-shadow: 0 18px 40px -30px rgba(32, 35, 31, 0.45);
+}
+.badgeTitle { font-weight: 560; letter-spacing: -0.015em; text-transform: none; font-size: 0.92rem; }
+.badgeSub { color: var(--sec); }
+.title { font-weight: 500; letter-spacing: -0.052em; }
+.subtitle { color: var(--sec); }
+.incluye { border-top-color: var(--line); }
+.incluye li { color: var(--ink); }
+.incluye li::before { background: #a5a58d; border-radius: 50%; }
+.card {
+  position: relative;
+  isolation: isolate;
+  border-radius: 28px;
+  box-shadow: 0 40px 80px -46px rgba(32, 35, 31, 0.5), 0 0 0 1px var(--line);
+}
+/* Borde irisado suave en la tarjeta del formulario: es lo que hay que tocar. */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: var(--iris);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.cardTitle { font-weight: 540; letter-spacing: -0.03em; }
+.field span { font-weight: 500; }
+.field input { border-radius: 14px; border-color: var(--line-2); }
+.submit { border-radius: 999px; font-weight: 520; letter-spacing: -0.015em; background: var(--ink); }
+.submit:hover { background: #2f332d; }
+.noSpam { color: var(--muted); }
+
+.dark {
+  background:
+    radial-gradient(40% 50% at 85% 10%, rgba(147, 192, 220, 0.16), transparent 70%),
+    radial-gradient(40% 50% at 10% 95%, rgba(175, 195, 135, 0.14), transparent 70%),
+    var(--ink);
+}
+.eyebrowNum { font-family: var(--font-sans), sans-serif; letter-spacing: 0; }
+.eyebrow { text-transform: none; letter-spacing: -0.01em; font-weight: 500; font-size: 0.9rem; }
+.pilares > div { border-radius: 22px; border-color: rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.04); }
+.pilarTitle { font-weight: 540; letter-spacing: -0.025em; }
+.final {
+  background:
+    radial-gradient(50% 60% at 50% 0%, rgba(184, 214, 232, 0.14), transparent 70%),
+    var(--ink);
+}
+.finalTitle { font-weight: 500; letter-spacing: -0.05em; }
+.finalCta, .deliver { font-weight: 520; letter-spacing: -0.015em; }
+.footer { background: var(--ink); }
+
+/* Página de entrega (gracias): el hero también va en claro. */
+.ok { background: var(--ink); color: #fff; }
+.titleCenter { font-weight: 500; letter-spacing: -0.05em; }
+.subtitleCenter { color: var(--sec); }
+.hero .deliver { background: var(--ink); color: #fff; box-shadow: 0 16px 34px -18px rgba(32, 35, 31, 0.75); }
