@@ -1,667 +1,189 @@
-import { redirect } from "next/navigation";
-import { crearLead } from "@/lib/leads";
+import type { ReactNode } from "react";
 import { CALENDLY_URL } from "@/lib/site";
-import Nav from "./_components/Nav";
-import Reveal from "./_components/Reveal";
-import Counter from "./_components/Counter";
-import HeroPhone from "./_components/HeroPhone";
-import Chapter from "./_components/Chapter";
-import RevealOnView from "./_components/RevealOnView";
-import Calculadora from "./_components/Calculadora";
-import Logo from "./_components/Logo";
-import FormularioContacto from "./_components/FormularioContacto";
-import styles from "./landing.module.css";
+import Aparecer from "./_inicio/Aparecer";
+import Cabecera from "./_inicio/Cabecera";
+import Titular from "./_inicio/Titular";
+import MovilVivo, { CARTA_NOOE } from "./_inicio/MovilVivo";
+import Ruido from "./_inicio/Ruido";
+import Historia from "./_inicio/Historia";
+import Panel from "./_inicio/Panel";
+import Carrusel, { Flechas } from "./_inicio/Carrusel";
+import Preguntas from "./_inicio/Preguntas";
+import s from "./_inicio/inicio.module.css";
 
+// Portada de Vértice desde noviembre de 2026. Poco texto: cada bloque se
+// entiende tocándolo o viéndolo moverse al deslizar.
 
-async function enviarLead(formData: FormData) {
-  "use server";
-  if (String(formData.get("hp") ?? "").trim() !== "") redirect("/?ok=1#contacto");
-  const nombre = String(formData.get("nombre") ?? "").trim();
-  const email = String(formData.get("email") ?? "").trim();
-  if (!nombre || !email) redirect("/?error=campos#contacto");
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) redirect("/?error=email#contacto");
-  const mesasRaw = Number(formData.get("mesas"));
-  const num_mesas = Number.isInteger(mesasRaw) && mesasRaw > 0 && mesasRaw < 1000 ? mesasRaw : null;
-  await crearLead({
-    nombre,
-    email,
-    telefono: String(formData.get("telefono") ?? "").trim() || null,
-    empresa: String(formData.get("empresa") ?? "").trim() || null,
-    sector: String(formData.get("sector") ?? "").trim() || null,
-    num_mesas,
-    mensaje: String(formData.get("mensaje") ?? "").trim() || null,
-    origen: String(formData.get("origen") ?? "").trim() || "landing",
-  });
-  redirect("/?ok=1#contacto");
-}
+const CINTA = ["Room service", "Spa y masajes", "Mesas", "Salida tardía", "Excursiones", "Traslados", "Minibar", "Guía de la ciudad", "Avisos de quejas", "Reseñas"];
 
-// Bento 2×2 con captura real del producto (de nuestras demos).
-type FeatureSize = "big" | "small";
-const SENALES = [
-  { t: "Demanda sin atender" },
-  { t: "Habitaciones que no consumen" },
-  { t: "Escaneos sin pedido" },
-  { t: "Upsell desaprovechado" },
-  { t: "Experiencias infrautilizadas" },
-  { t: "Retrasos en hora punta" },
+const trazo = { fill: "none", stroke: "currentColor", strokeWidth: 1.6, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+const CAPACIDADES: { t: string; icono: ReactNode }[] = [
+  { t: "Pedidos a la habitación", icono: <svg viewBox="0 0 24 24" {...trazo}><path d="M4 16h16M5 16a7 7 0 0 1 14 0M12 9V7M10 7h4M3 19h18" /></svg> },
+  { t: "Spa y masajes con hora", icono: <svg viewBox="0 0 24 24" {...trazo}><path d="M12 20c-4.5 0-8-2.6-8-6.5 2.7 0 5.3 1.1 8 3.6 2.7-2.5 5.3-3.6 8-3.6 0 3.9-3.5 6.5-8 6.5Z" /><path d="M12 17.1c-2-2.3-2.6-5.4-1.4-8.6.4-1 .9-1.9 1.4-2.5.5.6 1 1.5 1.4 2.5 1.2 3.2.6 6.3-1.4 8.6Z" /></svg> },
+  { t: "Mesa en el restaurante", icono: <svg viewBox="0 0 24 24" {...trazo}><path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10" /><path d="M17 21V3c-2.2 1.2-3.5 3.6-3.5 6.5V13H17" /></svg> },
+  { t: "Salida tardía y mejoras", icono: <svg viewBox="0 0 24 24" {...trazo}><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></svg> },
+  { t: "Excursiones de la zona", icono: <svg viewBox="0 0 24 24" {...trazo}><path d="M12 21s-6.5-5.4-6.5-11a6.5 6.5 0 0 1 13 0c0 5.6-6.5 11-6.5 11Z" /><circle cx="12" cy="10" r="2.4" /></svg> },
+  { t: "Guía de la ciudad", icono: <svg viewBox="0 0 24 24" {...trazo}><path d="M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4Z" /><path d="M9 4v14M15 6v14" /></svg> },
+  { t: "Avisos de quejas al momento", icono: <svg viewBox="0 0 24 24" {...trazo}><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /><path d="M12 7v4M12 14h.01" /></svg> },
+  { t: "En el idioma del huésped", icono: <svg viewBox="0 0 24 24" {...trazo}><circle cx="12" cy="12" r="8.5" /><path d="M3.5 12h17M12 3.5c2.3 2.4 3.4 5.2 3.4 8.5s-1.1 6.1-3.4 8.5c-2.3-2.4-3.4-5.2-3.4-8.5S9.7 5.9 12 3.5Z" /></svg> },
 ];
 
-const LINEAS = [
-  {
-    id: "comida",
-    img: "/demos/presidente/img/nv_ceviche.webp",
-    eyebrow: "Línea 01 · Comida y bebida",
-    t: "Lo que ya cocinas, pedido sin llamar a nadie",
-    d: "De 19:00 a 23:30 se juega casi todo. Y es la franja con menos gente en sala.",
-  },
-  {
-    id: "experiencias",
-    img: "/demos/presidente/img/ex4.webp",
-    eyebrow: "Línea 02 · Experiencias",
-    t: "Lo que se vive en el hotel también se vende",
-    d: "Se reservan el primer día. Quien las descubre en el check-out ya no compra.",
-  },
-  {
-    id: "servicios",
-    img: "/demos/presidente/img/sv4.webp",
-    eyebrow: "Línea 03 · Servicios",
-    t: "Margen casi puro, y casi siempre invisible",
-    d: "Coste marginal cero: llega casi entero al GOP. Lo que hay que preguntar, no se pide.",
-  },
-  {
-    id: "colaboraciones",
-    img: "/demos/presidente/img/ex6.webp",
-    eyebrow: "Línea 05 · Colaboraciones",
-    t: "Lo que hay fuera del hotel también es tuyo",
-    d: "Lo va a contratar igual. O desde tu carta y con comisión, o en Google y sin que te enteres.",
-  },
-  {
-    id: "producto",
-    img: "/demos/presidente/img/nv_cafe.webp",
-    eyebrow: "Línea 04 · Producto",
-    t: "Minibar, amenities y producto local",
-    d: "Se ofrece a quien ya ha demostrado que compra.",
-  },
-];
+const vuelta = <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M20 12a8 8 0 1 1-2.4-5.7" /><path d="M20 4v4.5h-4.5" /></svg>;
 
-const FEATURES: {
-  size: FeatureSize;
-  img: string;
-  imgPos?: string;
-  color: string;
-  titulo: string;
-  desc: string;
-  statValue?: number;
-  statPrefix?: string;
-  statSuffix?: string;
-  statLabel?: string;
-}[] = [
-  {
-    size: "big",
-    img: "/features/ticket.webp",
-    imgPos: "center center",
-    color: "#111111",
-    titulo: "Sube el GOP, no la plantilla",
-    desc: "El huésped pide room service y extras desde la habitación, con los destacados que más margen te dejan. El ingreso de F&B sube y, casi sin coste añadido, va directo a tu GOP.",
-    statValue: 0,
-    statPrefix: "",
-    statSuffix: "",
-    statLabel: "personas que sumas a tu equipo para ofrecerlo — lo lleva el que ya tienes",
-  },
-  {
-    size: "small",
-    img: "/features/rapido.webp",
-    imgPos: "center 32%",
-    color: "#111111",
-    titulo: "Tu equipo deja de subir a las habitaciones",
-    desc: "Sin llamadas a recepción ni recados perdidos. El pedido entra directo a cocina y office con el número de habitación.",
-  },
-  {
-    size: "small",
-    img: "/features/apps.webp",
-    imgPos: "center center",
-    color: "#4f4f4c",
-    titulo: "Cero apps para el huésped",
-    desc: "Escanea con la cámara el QR de su habitación y ya tiene tu carta. Nada que descargar ni instalar.",
-  },
-  {
-    size: "big",
-    img: "/features/datos.webp",
-    imgPos: "center center",
-    color: "#3a3a37",
-    titulo: "Tu F&B convertido en datos",
-    desc: "Qué se pide en cada habitación, a qué hora, con qué se combina. Decides la carta y los precios con datos, no a intuición — y nosotros lo afinamos contigo.",
-    statValue: 100,
-    statSuffix: "%",
-    statLabel: "de tu F&B medido, habitación a habitación, sin apuntar nada a mano",
-  },
-];
-
-// Cómo funciona: 3 pasos con foto real + texto corto.
-const STEPS: { num: string; img: string; title: string; desc: string }[] = [
-  { num: "01 · Escanea", img: "/steps/escanea.webp", title: "Escanea el QR de la habitación", desc: "Su propio móvil. Sin app y sin llamar a nadie." },
-  { num: "02 · Elige", img: "/steps/pide.webp", title: "Ve la carta y pide", desc: "Con foto, precio y tiempo de entrega. Dos toques." },
-  { num: "03 · Recibe", img: "/steps/paga.webp", title: "Lo recibe y lo carga a la habitación", desc: "El pedido entra en cocina ya desglosado." },
-];
-
-// Diferenciador: tabla comparativa criterio a criterio.
-const COMPARE_ROWS: { crit: string; bad: string; good: string }[] = [
-  { crit: "El enfoque", bad: "Vender más volumen", good: "Subir tu GOP: más F&B sin sumar coste" },
-  { crit: "Tu carta", bad: "La misma plantilla que a todos", good: "Con la identidad de tu hotel: marca, fotos y carta" },
-  { crit: "Quién lo monta", bad: "Te peleas tú con el editor", good: "Lo montamos nosotros, llave en mano" },
-  { crit: "Tus sistemas", bad: "Otra plataforma más que sumar", good: "Convive con tu PMS y tu TPV — o te instalamos el nuestro" },
-  { crit: "El personal", bad: "Contratar para dar el servicio", good: "Lo lleva el equipo que ya tienes" },
-  { crit: "Puesta en marcha", bad: "Proyecto grande y arriesgado", good: "Empiezas por una pieza, sin riesgo" },
-  { crit: "Acompañamiento", bad: "El enlace y a apañarte", good: "Te enseñamos cuánto ganarías y lo afinamos contigo" },
-];
-
-// Preguntas frecuentes: rebate objeciones habituales de un director.
-const FAQS: { q: string; a: string }[] = [
-  { q: "¿Se adapta a cómo trabaja mi hotel?", a: "Sí. Lo montamos a la medida de tu hotel y convive con lo que ya usas. No tienes que cambiar tu forma de trabajar." },
-  { q: "¿Complica el día a día de mi equipo?", a: "No. Está pensado para que lo lleve el equipo que ya tienes, sin esfuerzo extra ni procesos nuevos que aprender." },
-  { q: "¿Es un proyecto largo y arriesgado?", a: "No. Empiezas por algo concreto, sin obras ni grandes cambios, y creces a tu ritmo cuando ves los resultados." },
-  { q: "¿Me ata a algo?", a: "No hay permanencia ni comisiones sobre tus ventas. Estás con nosotros porque te compensa, no porque estés atado." },
-  { q: "¿Le complica algo al huésped?", a: "Nada. Es todo tan sencillo que lo usa cualquiera, sin descargar nada ni registrarse. La experiencia sigue siendo la de tu hotel." },
-  { q: "¿Y los datos de mi hotel y mis huéspedes?", a: "Son tuyos y están seguros. Nosotros solo te ayudamos a usarlos a tu favor para decidir mejor tu carta y tus precios." },
-  { q: "¿Cuánto cuesta?", a: "Depende de tu hotel. Antes de hablar de precio te enseñamos lo que podrías estar ganando; el presupuesto va después y sin compromiso." },
-];
-
-export default function Home() {
+function Cabeza({ pildora, titulo, texto, centro }: { pildora: string; titulo: ReactNode; texto?: string; centro?: boolean }) {
   return (
-    <div className={styles.page}>
-      <RevealOnView />
-      <Nav />
-
-      {/* ============ HERO ============ */}
-      <section className={styles.hero}>
-        <div className={styles.heroBg} id="heroBg" />
-        <div className={styles.heroGrid}>
-          <div>
-            <h1 className={styles.heroTitle}>
-              <span className={styles.heroLine}>
-                <span>Vendes lo mismo.</span>
-              </span>
-              <span className={styles.heroLine}>
-                <span>Ganas <i className={styles.heroAccent}>menos</i> cada año.</span>
-              </span>
-            </h1>
-            <p className={styles.heroSub}>
-              El F&amp;B es el único ingreso que todavía sube. Y la mayoría de
-              tu hotel <strong>se queda sin pedir</strong>.
-            </p>
-            <div className={styles.heroCtas}>
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>
-                Reserva una reunión con el equipo <span>→</span>
-              </a>
-              <a href="#producto" className={styles.ctaSecondary}>
-                Ver cómo funciona
-              </a>
-            </div>
-            <p className={styles.heroCtaNote}>
-              <strong>20 minutos.</strong> Te decimos cuánto dejas cada mes.
-            </p>
-          </div>
-
-          <HeroPhone />
-        </div>
-      </section>
-
-      {/* ============ CAPÍTULO · EL MOMENTO ============ */}
-      <Chapter
-        id="momento"
-        img="/demos/presidente/img/sv3.webp"
-        eyebrow="El momento"
-        title={<>Son las 23:40 y tu huésped quiere algo. No lo pide.</>}
-      >
-        <p>
-          Hay que llamar a recepción. A esa hora nadie llama.
-          <strong> No es un problema de demanda: es de fricción.</strong>
-        </p>
-      </Chapter>
-
-      {/* ============ CAPÍTULO · LAS CUATRO LÍNEAS ============ */}
-      <Chapter
-        id="formas"
-        img="/demos/presidente/img/banner.webp"
-        eyebrow="Qué se vende"
-        title={<>Cinco formas de que tu huésped te compre más.</>}
-        align="center"
-        height="mid"
-      >
-        <p>Todo lo que ya tienes, y hoy depende de que pregunte.</p>
-      </Chapter>
-
-      <div className={styles.scenes}>
-        <div className={styles.scenesTrack}>
-          {LINEAS.map((l, n) => (
-            <article key={l.id} id={l.id} className={styles.scene}>
-              <div className={`${styles.sceneBg} ${styles.shotReveal}`} data-bg={l.img} aria-hidden data-reveal />
-              <div className={styles.sceneScrim} aria-hidden />
-              <div className={styles.sceneInner}>
-                <div className={styles.sceneIndex}>{String(n + 1).padStart(2, "0")} / 05</div>
-                <div className={styles.sceneEyebrow}>{l.eyebrow}</div>
-                <h3 className={styles.sceneTitle}>{l.t}</h3>
-                <p className={styles.sceneDesc}>{l.d}</p>
-              </div>
-            </article>
-          ))}
-          <div className={styles.sceneEnd} aria-hidden />
-        </div>
-        <div className={styles.swipeHint} aria-hidden>
-          <span className={styles.swipeDots}>
-            <i /><i /><i /><i /><i />
-          </span>
-          <span className={styles.swipeWord}>Desliza</span>
-          <span className={styles.swipeArrow}>→</span>
-        </div>
-      </div>
-
-      {/* ============ CÓMO FUNCIONA ============ */}
-      <section className={styles.section} id="como-funciona">
-        <Reveal>
-          <div className={styles.sectionEyebrow}>Cómo funciona</div>
-          <h2 className={styles.sectionTitle}>Tres pasos para tu huésped. Cero líos para tu equipo.</h2>
-          <p className={styles.sectionSub}>
-            No cambias de PMS ni formas a nadie. El huésped escanea el QR de su
-            habitación y pide en segundos — sin llamadas a recepción, sin recados
-            perdidos, sin que nadie suba a tomar nota. Tú solo ves llegar los
-            pedidos, listos para preparar y cargar a su cuenta.
-          </p>
-        </Reveal>
-
-        <div className={styles.steps}>
-          {STEPS.map((s, i) => (
-            <Reveal key={s.num} delay={i * 120}>
-              <div className={styles.stepCard}>
-                <div className={`${styles.stepShot} ${styles.shotReveal}`} data-reveal data-reveal-delay={i * 90}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img className={styles.stepImg} src={s.img} alt="" loading="lazy" />
-                </div>
-                <div className={styles.stepBody}>
-                  <div className={styles.stepNum}>{s.num}</div>
-                  <h3 className={styles.stepTitle}>{s.title}</h3>
-                  <p className={styles.stepDesc}>{s.desc}</p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* ============ FEATURES ============ */}
-      <section className={styles.section} id="producto" style={{ paddingTop: 0 }}>
-        <Reveal>
-          <div className={styles.sectionEyebrow}>Producto</div>
-          <h2 className={styles.sectionTitle}>
-            Solo lo que mueve tu margen.
-          </h2>
-          <p className={styles.sectionSub}>
-            Cada función sube el F&amp;B o te quita coste de personal. Ni una
-            pantalla de relleno.
-          </p>
-        </Reveal>
-
-        <div className={styles.rail}>
-          <div className={styles.railTrack}>
-            {FEATURES.map((f, i) => (
-              <Reveal key={f.titulo} delay={i * 110} className={styles.railItem}>
-              <article
-                className={styles.railCard}
-                style={{ ["--feature-color" as string]: f.color }}
-              >
-                <div className={`${styles.railShot} ${styles.shotReveal}`} data-reveal>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={f.img}
-                    alt=""
-                    loading="lazy"
-                    style={{ objectPosition: f.imgPos ?? "top center" }}
-                  />
-                </div>
-                <div className={styles.railBody}>
-                  <h3 className={styles.railTitle}>{f.titulo}</h3>
-                  <p className={styles.railDesc}>{f.desc}</p>
-                  {f.statValue != null && (
-                    <div className={styles.railStat}>
-                      <b>{f.statPrefix}<Counter value={f.statValue} suffix={f.statSuffix ?? ""} /></b>
-                      <span>{f.statLabel}</span>
-                    </div>
-                  )}
-                </div>
-              </article>
-              </Reveal>
-            ))}
-            <div className={styles.railEnd} aria-hidden />
-          </div>
-          <div className={`${styles.swipeHint} ${styles.swipeHintLight}`} aria-hidden>
-            <span className={styles.swipeDots}><i /><i /><i /><i /></span>
-            <span className={styles.swipeWord}>Desliza</span>
-            <span className={styles.swipeArrow}>→</span>
-          </div>
-        </div>
-      </section>
-
-      {/* ============ PANEL DE DIRECCIÓN ============ */}
-      <section className={styles.section} id="panel" style={{ paddingTop: 0 }}>
-        <Reveal>
-          <div className={styles.sectionEyebrow}>El panel</div>
-          <h2 className={styles.sectionTitle}>
-            El panel no mide ocupación. Mide intención.
-          </h2>
-          <p className={styles.sectionSub}>
-            Tu PMS registra lo que se pagó. Nada registra lo que intentó
-            comprar y no pudo.
-          </p>
-        </Reveal>
-
-        <Reveal delay={80} variant="wipe">
-          <div className={styles.ipad}>
-            <div className={styles.ipadScreen}>
-              <picture>
-                <source media="(max-width: 720px)" srcSet="/panel/oportunidades-movil.webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/panel/oportunidades.webp"
-                  alt="Panel de dirección de Vértice: oportunidades detectadas con su importe al mes"
-                  loading="lazy"
-                />
-              </picture>
-            </div>
-            <span className={styles.ipadCam} aria-hidden />
-          </div>
-          <p className={styles.panelCaption}>
-Vista de oportunidades · el dinero detrás de cada señal
-          </p>
-        </Reveal>
-
-        <div className={styles.panelFigs}>
-          <Reveal><div className={styles.panelFig}><b>5</b><span>etapas del embudo</span></div></Reveal>
-          <Reveal delay={90}><div className={styles.panelFig}><b>16</b><span>señales detectadas</span></div></Reveal>
-          <Reveal delay={180}><div className={styles.panelFig}><b>56.219 €</b><span>al mes sobre la mesa</span></div></Reveal>
-        </div>
-
-        <Reveal delay={240}>
-          <div className={styles.panelChips}>
-            {SENALES.map((s2) => (
-              <span key={s2.t} className={styles.panelChip}>{s2.t}</span>
-            ))}
-          </div>
-        </Reveal>
-
-        <Reveal delay={120}>
-          <p className={styles.panelQuote}>
-            Sabes perfectamente lo que has vendido.
-            <b> No sabes lo que te intentaron comprar.</b>
-          </p>
-        </Reveal>
-      </section>
-
-      {/* ============ CALCULADORA F&B ============ */}
-      <section className={styles.section} id="calculadora" style={{ paddingTop: 0 }}>
-        <Reveal>
-          <div className={styles.sectionEyebrow}>Calculadora</div>
-          <h2 className={styles.sectionTitle}>
-            ¿Cuánto F&amp;B se te escapa cada mes?
-          </h2>
-          <p className={styles.sectionSub}>
-            Ajusta los datos de tu hotel y te damos una estimación al instante.
-            Sin dejar ningún dato.
-          </p>
-        </Reveal>
-        <Reveal>
-          <Calculadora />
-        </Reveal>
-      </section>
-
-      {/* ============ A MEDIDA (diferenciador) ============ */}
-      <section className={styles.section} style={{ paddingTop: 0 }}>
-        <Reveal>
-          <div className={styles.sectionEyebrow}>Por qué nosotros</div>
-          <h2 className={styles.sectionTitle}>
-            Una plantilla no sube tu GOP. Tu sistema, sí.
-          </h2>
-          <p className={styles.sectionSub}>
-            La mayoría te vende la misma carta digital que a todos y te deja solo
-            frente a tu PMS. Nosotros estudiamos tu hotel y te lo montamos a
-            medida, conviviendo con lo que ya tienes. Mira la diferencia:
-          </p>
-        </Reveal>
-
-        <Reveal>
-          <div className={styles.vstable}>
-            {/* cabecera */}
-            <div className={`${styles.vstCell} ${styles.vstCorner}`} />
-            <div className={`${styles.vstCell} ${styles.vstHeadBad}`}>Una plantilla</div>
-            <div className={`${styles.vstCell} ${styles.vstHeadGood}`}>
-              <span className={styles.vstBrand}>VerticeQR</span>
-              <span className={styles.vstBadge}>a medida</span>
-            </div>
-
-            {/* filas */}
-            {COMPARE_ROWS.map((r) => (
-              <div key={r.crit} className={styles.vstRowContents}>
-                <div className={`${styles.vstCell} ${styles.vstCrit}`}>{r.crit}</div>
-                <div className={`${styles.vstCell} ${styles.vstBad}`}>
-                  <span className={styles.vstX}>✕</span>
-                  <span>{r.bad}</span>
-                </div>
-                <div className={`${styles.vstCell} ${styles.vstGood}`}>
-                  <span className={styles.vstCheck}>✓</span>
-                  <span>{r.good}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </Reveal>
-
-        <div className={styles.compareFooter}>
-          <p className={styles.compareClose}>
-            Cada hotel es un mundo. <strong>El tuyo también.</strong>
-          </p>
-          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={styles.compareCta}>
-            Reserva una reunión <span>→</span>
-          </a>
-        </div>
-      </section>
-
-      {/* ============ CAPÍTULO · POR DÓNDE EMPIEZAS ============ */}
-      <Chapter
-        id="empezar"
-        img="/demos/presidente/img/ex1.webp"
-        eyebrow="Por dónde empiezas"
-        title={<>Un punto de partida para cada hotel.</>}
-        align="center"
-        height="mid"
-      >
-        <p>Una zona. Sesenta días. Y decides con números.</p>
-        <a className={styles.chapterCta} href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-          Reserva tu llamada de diagnóstico <span>→</span>
-        </a>
-      </Chapter>
-
-      {/* ============ PLANES ============ */}
-      <section className={styles.section} id="planes" style={{ paddingTop: 0 }}>
-        <Reveal>
-          <div className={styles.sectionEyebrow}>Presupuesto</div>
-          <h2 className={styles.sectionTitle}>Sin planes de catálogo. Tu hotel, tu presupuesto.</h2>
-          <p className={styles.sectionSub}>
-            No tenemos paquetes cerrados con precio de góndola. Estudiamos tu
-            hotel y te pasamos un presupuesto a medida — y antes te enseñamos
-            cuánto ganarías. Pagas por lo que mueve tu GOP, ni más ni menos.
-          </p>
-        </Reveal>
-
-        <Reveal>
-          <div className={styles.planMedida}>
-            <div className={styles.planMedidaMain}>
-              <span className={styles.planMedidaTag}>Hecho a medida</span>
-              <div className={styles.planMedidaName}>Tu sistema de F&B, a tu medida</div>
-              <p className={styles.planMedidaSub}>
-                Cada hotel es un mundo. Montamos solo lo que mueve tu GOP:
-              </p>
-              <ul className={styles.planMedidaList}>
-                <li>Carta de room service y restaurante con la marca del hotel</li>
-                <li>Pedido desde la habitación, sin apps ni llamadas</li>
-                <li>Carga a la cuenta del huésped o pago en el momento</li>
-                <li>QR por habitación con tu identidad</li>
-                <li>Convive con tu PMS y TPV — o te instalamos el nuestro</li>
-                <li>Datos de F&B por habitación y acompañamiento continuo</li>
-                <li>Sin permanencia · sin comisión sobre tus ventas</li>
-              </ul>
-            </div>
-            <div className={styles.planMedidaAside}>
-              <div className={styles.planMedidaPriceLabel}>Inversión</div>
-              <div className={styles.planMedidaPrice}>A medida</div>
-              <p className={styles.planMedidaNote}>
-                En la reunión te enseñamos el cálculo y te pasamos el presupuesto
-                a medida. Sin compromiso.
-              </p>
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary} style={{ justifyContent: "center" }}>
-                Reserva una reunión <span>→</span>
-              </a>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* ============ FAQ ============ */}
-      <section className={styles.section} id="faq" style={{ paddingTop: 0 }}>
-        <Reveal>
-          <div className={styles.sectionEyebrow}>Preguntas frecuentes</div>
-          <h2 className={styles.sectionTitle}>Lo que suelen preguntarnos los directores.</h2>
-          <p className={styles.sectionSub}>
-            Y si tienes cualquier otra duda, la vemos juntos en la reunión — sin
-            compromiso.
-          </p>
-        </Reveal>
-        <Reveal>
-          <div className={styles.faqList}>
-            {FAQS.map((f) => (
-              <details key={f.q} className={styles.faqItem}>
-                <summary className={styles.faqQ}>
-                  <span>{f.q}</span>
-                  <span className={styles.faqIcon} aria-hidden />
-                </summary>
-                <p className={styles.faqA}>{f.a}</p>
-              </details>
-            ))}
-          </div>
-        </Reveal>
-      </section>
-
-      {/* ============ CTA grande (banda cinematográfica) ============ */}
-      <div className={styles.bigCta}>
-        <Reveal>
-          <div className={styles.bigCtaInner}>
-            <video
-              className={styles.bigCtaVideo}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              poster="/demos/cala-blava/img/banner.webp"
-            >
-              <source src="/demos/cala-blava/vid/ex4.mp4" type="video/mp4" />
-            </video>
-            <div className={styles.bigCtaContent}>
-              <h2 className={styles.bigCtaTitle}>
-                ¿Listo para subir tu GOP sin sumar personal?
-              </h2>
-              <p className={styles.bigCtaSub}>
-                En 20 minutos con el equipo te enseñamos cuánto F&amp;B estás
-                dejando en cada habitación y cómo recuperarlo. Sin compromiso, sin
-                tarjeta.
-              </p>
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>
-                Reserva una reunión con el equipo <span>→</span>
-              </a>
-            </div>
-          </div>
-        </Reveal>
-      </div>
-
-      {/* ============ FORM contacto ============ */}
-      <section id="contacto" style={{ padding: "1rem 0 5rem" }}>
-        <div className={styles.formWrap}>
-          <Reveal>
-            <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-              <div className={styles.sectionEyebrow}>Contacto</div>
-              <h2 className={styles.sectionTitle}>Hablemos de tu hotel</h2>
-              <p style={{ color: "var(--ink-soft)", marginTop: 0 }}>
-                Lo mejor es verlo juntos:{" "}
-                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent-deep)", fontWeight: 600, textDecoration: "underline" }}>
-                  reserva una reunión con el equipo
-                </a>
-                . ¿Prefieres que te escribamos? Déjanos tus datos y te respondemos
-                en menos de 24 h.
-              </p>
-            </div>
-          </Reveal>
-
-          <FormularioContacto enviarLead={enviarLead} />        </div>
-      </section>
-
-      {/* ============ FOOTER ============ */}
-      <footer className={styles.footer}>
-        <div className={styles.footerInner}>
-          <div>
-            <div className={styles.footerBrand}>
-              <Logo />
-            </div>
-            <p className={styles.footerTagline}>
-              Sistema de room service y F&amp;B digital a medida para hoteles
-              independientes y cadenas. Subes el GOP sin sumar personal. Cada
-              hotel es un mundo.
-            </p>
-          </div>
-          <div className={styles.footerCol}>
-            <h4>Producto</h4>
-            <a href="#como-funciona">Cómo funciona</a>
-            <a href="#faq">Preguntas frecuentes</a>
-            <a href="#contacto">Pedir demo</a>
-            <a href="#planes">Precios</a>
-            <a href="/login">Acceder</a>
-          </div>
-          <div className={styles.footerCol}>
-            <h4>Empresa</h4>
-            <a href="#contacto">Contacto</a>
-            <a href="mailto:vertice605@gmail.com">vertice605@gmail.com</a>
-          </div>
-          <div className={styles.footerCol}>
-            <h4>Legal</h4>
-            <a href="/terminos">Términos</a>
-            <a href="/privacidad">Privacidad</a>
-            <a href="/cookies">Cookies</a>
-          </div>
-        </div>
-        <div className={styles.footerLegal}>
-          <span>© {new Date().getFullYear()} VerticeQR · Hecho con cariño en España</span>
-          <span>v0.3</span>
-        </div>
-      </footer>
+    <div className={`${s.cabezaSeccion} ${centro ? s.cabezaCentro : ""}`}>
+      <span className={`${s.pildora} ${s.iris}`} data-aparece="">
+        <span className={s.punto} /> {pildora}
+      </span>
+      <h2 className={s.titulo} data-aparece="" style={{ ["--d" as string]: 1 }}>{titulo}</h2>
+      {texto && <p className={s.entradilla} data-aparece="" style={{ ["--d" as string]: 2 }}>{texto}</p>}
     </div>
   );
 }
 
-function Stat({
-  valor,
-  suffix,
-  label,
-  prefix = "",
-}: {
-  valor: number;
-  suffix: string;
-  label: string;
-  prefix?: string;
-}) {
+export default function Home() {
   return (
-    <div className={styles.statCell}>
-      <div className={styles.statNum}>
-        {prefix}
-        <Counter value={valor} suffix={suffix} />
+    <div className={s.pagina} data-pagina="">
+      <Aparecer />
+      <Cabecera />
+
+      {/* ============ PORTADA ============ */}
+      <section className={s.portada}>
+        <div className={`${s.envoltura} ${s.portadaRejilla}`}>
+          <div className={s.portadaTexto}>
+            <span className={`${s.pildora} ${s.iris}`}>
+              <span className={s.punto} /> Hecho para hoteles
+            </span>
+            <Titular />
+            <p className={s.portadaSub}>Desde su móvil, sin descargar nada y sin llamar a recepción.</p>
+            <div className={s.botones}>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={`${s.boton} ${s.botonOscuro}`}>
+                Reserva una llamada <span>→</span>
+              </a>
+              <a href={CARTA_NOOE} target="_blank" rel="noopener noreferrer" className={`${s.boton} ${s.botonCristal} ${s.cristal} ${s.iris}`}>
+                Prueba una carta real
+              </a>
+            </div>
+            <p className={s.nota}>20 minutos, con los números de tu hotel.</p>
+          </div>
+          <MovilVivo />
+        </div>
+      </section>
+
+      <div className={s.cinta} aria-hidden>
+        <div className={s.cintaPista}>
+          {[...CINTA, ...CINTA].map((c, n) => (
+            <span key={n}>{c}</span>
+          ))}
+        </div>
       </div>
-      <div className={styles.statLabel}>{label}</div>
+
+      {/* ============ EL RUIDO DE RECEPCIÓN ============ */}
+      <Ruido />
+
+      {/* ============ TODO EN UN QR ============ */}
+      <section className={s.seccion} id="todo">
+        <div className={s.envoltura}>
+          <Cabeza pildora="Un solo QR" titulo="Todo lo que vende tu hotel, en el móvil del huésped." />
+          <div className={s.capacidades}>
+            {CAPACIDADES.map((c, n) => (
+              <div key={c.t} className={s.capacidad} data-aparece="" style={{ ["--d" as string]: n }}>
+                <span className={s.capIcono}>{c.icono}</span>
+                <span className={s.capNombre}>{c.t}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ CÓMO FUNCIONA ============ */}
+      <div className={s.marquesina} aria-hidden>
+        <div className={s.marquesinaPista}>
+          {[0, 1, 2, 3].map((n) => (
+            <span key={n}>Cómo funciona {vuelta}</span>
+          ))}
+        </div>
+      </div>
+      <section className={s.seccion} id="como" style={{ paddingTop: 40 }}>
+        <div className={s.envoltura}>
+          <Cabeza pildora="Un pedido de verdad" titulo="Así pide un huésped a las 22:40" />
+          <Historia />
+        </div>
+      </section>
+
+      {/* ============ EL PANEL ============ */}
+      <section className={`${s.seccion} ${s.panelSeccion}`} id="panel">
+        <div className={s.envoltura}>
+          <Cabeza
+            centro
+            pildora="Panel de dirección"
+            titulo="Dos hoteles igual de llenos pueden ganar muy distinto."
+            texto="El panel te enseña dónde está la diferencia en el tuyo."
+          />
+          <Panel />
+        </div>
+      </section>
+
+      {/* ============ LO QUE SE VENDE ============ */}
+      <section className={s.seccion} id="vende" style={{ paddingBottom: 60 }}>
+        <div className={`${s.envoltura} ${s.cabezaFila}`}>
+          <Cabeza pildora="Qué se vende" titulo="Lo que tu huésped compraría si se lo pones delante." />
+          <Flechas objetivo="carrusel-vende" />
+        </div>
+        <Carrusel id="carrusel-vende" />
+      </section>
+
+      {/* ============ PREGUNTAS ============ */}
+      <section className={s.seccion} id="preguntas">
+        <div className={s.envoltura}>
+          <Cabeza pildora="Preguntas" titulo="Lo que nos preguntan los directores" />
+          <Preguntas />
+        </div>
+      </section>
+
+      {/* ============ CIERRE ============ */}
+      <section className={`${s.seccion} ${s.cierre}`}>
+        <div className={s.envoltura}>
+          <div className={`${s.cierreLogo} ${s.cristal} ${s.iris}`} data-aparece="">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/vertice-wordmark-dark.png" alt="Vértice" />
+          </div>
+          <h2 className={s.titulo} data-aparece="" style={{ ["--d" as string]: 1 }}>
+            Tu huésped ya está dentro del hotel. Ponle el botón delante.
+          </h2>
+          <div className={s.botones} data-aparece="" style={{ ["--d" as string]: 2 }}>
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={`${s.boton} ${s.botonOscuro}`}>
+              Reserva una llamada <span>→</span>
+            </a>
+            <a href={CARTA_NOOE} target="_blank" rel="noopener noreferrer" className={`${s.boton} ${s.botonCristal} ${s.cristal} ${s.iris}`}>
+              Prueba una carta real
+            </a>
+          </div>
+          <p className={s.cierreNota}>20 minutos, con los números de tu hotel.</p>
+        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className={s.logoGigante} src="/vertice-wordmark-dark.png" alt="" aria-hidden />
+      </section>
+
+      {/* ============ PIE ============ */}
+      <footer className={s.pie}>
+        <div className={`${s.envoltura} ${s.pieDentro}`}>
+          <div className={s.pieMarca}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className={s.logo} src="/vertice-wordmark-dark.png" alt="Vértice" />
+            <p>Más ingreso por cada huésped, con el mismo equipo.</p>
+          </div>
+          <nav className={s.pieEnlaces}>
+            <a href={CARTA_NOOE} target="_blank" rel="noopener noreferrer">Prueba una carta</a>
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Reserva una llamada</a>
+            <a href="/privacidad">Privacidad</a>
+            <a href="/cookies">Cookies</a>
+            <a href="/terminos">Términos</a>
+            <a href="/login">Acceder</a>
+          </nav>
+        </div>
+      </footer>
     </div>
   );
 }
