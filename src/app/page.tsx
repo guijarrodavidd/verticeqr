@@ -67,7 +67,7 @@ export default function Home() {
         </div>
         <div className={s.envoltura} style={{ marginTop: "clamp(50px, 7vw, 90px)" }}>
           <h2 className={s.titulo} data-aparece="">
-            Un sistema entero en el móvil del huésped. <span>Toca cada parte.</span>
+            Del móvil del huésped a tu panel, sin pasar por el teléfono. <span>Toca cada parte.</span>
           </h2>
           <Sistema />
         </div>

@@ -387,109 +387,153 @@
 .marquesinaPista svg { width: 0.6em; height: 0.6em; color: var(--salvia); flex: none; }
 @keyframes corre { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* ---------- El sistema, módulo a módulo ---------- */
-.sistema {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: clamp(30px, 6vw, 90px);
-  align-items: center;
-  margin-top: clamp(40px, 5vw, 70px);
+/* ---------- El sistema por dentro: huésped → equipo → panel ---------- */
+.sistema { margin-top: clamp(40px, 5vw, 64px); display: grid; gap: clamp(30px, 4vw, 48px); }
+.modulos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.modulos { display: grid; }
 .modulo {
   position: relative;
-  display: grid;
-  gap: 6px;
-  text-align: left;
-  border: 0;
-  background: transparent;
-  font: inherit;
-  color: var(--gris-claro);
-  padding: 18px 0;
-  border-bottom: 1px solid var(--linea);
-  cursor: pointer;
-  transition: color 0.35s ease;
-}
-.modulo b { font-size: clamp(1.4rem, 2.6vw, 2.1rem); font-weight: 500; letter-spacing: -0.045em; line-height: 1.05; }
-.modulo span {
-  max-height: 0;
   overflow: hidden;
-  font-size: 1.02rem;
-  line-height: 1.45;
+  border: 1px solid var(--linea);
+  background: #fff;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
   color: var(--gris);
-  transition: max-height 0.5s var(--suave), opacity 0.4s ease;
-  opacity: 0;
+  padding: 11px 18px;
+  border-radius: 999px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
-.modulo:hover { color: var(--gris); }
-.modulo[aria-selected="true"] { color: var(--carbon); }
-.modulo[aria-selected="true"] span { max-height: 4em; opacity: 1; }
+.modulo:hover { color: var(--carbon); }
+.modulo[aria-selected="true"] { background: var(--carbon); border-color: var(--carbon); color: #fff; }
 /* La barra que se llena mientras el módulo está a la vista. */
-.modulo::after {
+.modulo[aria-selected="true"]::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -1px;
+  left: 18px;
+  right: 18px;
+  bottom: 5px;
   height: 2px;
-  width: 100%;
-  background: var(--carbon);
-  transform: scaleX(0);
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.45);
   transform-origin: left;
+  animation: llena var(--dur, 5s) linear forwards;
 }
-.modulo[aria-selected="true"]::after { animation: llena var(--dur, 6s) linear forwards; }
 .modulos[data-quieta] .modulo::after { animation: none; transform: scaleX(0); }
-@keyframes llena { to { transform: scaleX(1); } }
-.sistemaMovil { position: relative; }
-.sistemaMovil .pantalla img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  opacity: 0;
-  transform: scale(1.03);
-  transition: opacity 0.55s ease, transform 0.8s var(--suave);
-}
-.sistemaMovil .pantalla img[data-activa] { opacity: 1; transform: none; }
-.sistemaHalo {
-  position: absolute;
-  inset: -60px -80px;
-  z-index: -1;
+@keyframes llena { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+.flujo {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 64px;
+  padding: clamp(26px, 4vw, 48px);
+  border-radius: 36px;
   background:
-    radial-gradient(45% 40% at 30% 30%, var(--halo-sol), transparent 72%),
-    radial-gradient(45% 45% at 70% 70%, var(--halo-cielo), transparent 72%);
-  filter: blur(10px);
+    radial-gradient(40% 60% at 15% 30%, var(--halo-sol), transparent 72%),
+    radial-gradient(40% 60% at 85% 70%, var(--halo-cielo), transparent 72%),
+    var(--gris-fondo);
 }
+.nodo {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  opacity: 0.35;
+  transform: scale(0.97);
+  transition: opacity 0.5s ease, transform 0.6s var(--suave);
+}
+.nodo[data-on] { opacity: 1; transform: none; }
+.nodoQuien { font-size: 1rem; font-weight: 500; color: var(--gris); }
+/* El tramo entre dos tarjetas, con el punto que viaja cuando llega. */
+.conector {
+  position: absolute;
+  top: 86px;
+  left: -64px;
+  width: 64px;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, rgba(32, 35, 31, 0.22) 0 6px, transparent 6px 12px);
+}
+.conector::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--carbon);
+  box-shadow: 0 0 0 5px rgba(165, 165, 141, 0.35);
+  opacity: 0;
+}
+.nodo[data-on] .conector::after { animation: viaja 0.75s var(--suave) forwards; }
+@keyframes viaja { 0% { left: -5px; opacity: 1; } 85% { opacity: 1; } 100% { left: calc(100% - 5px); opacity: 0; } }
+.nodoCaja {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 22px;
+  min-height: 112px;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+.nodoCaja small { display: block; color: var(--gris); font-size: 0.78rem; font-weight: 500; }
+.nodoCaja b { display: block; font-weight: 540; letter-spacing: -0.02em; }
+.nodoCaja em { font-style: normal; font-weight: 540; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.nodoCaja .avisoIcono { width: 38px; height: 38px; }
+.nodoTicket {
+  display: grid;
+  gap: 6px;
+  padding: 20px;
+  border-radius: 22px;
+  min-height: 112px;
+  background: #fff;
+  box-shadow: 0 24px 50px -36px rgba(32, 35, 31, 0.5), inset 0 0 0 1px var(--linea);
+  border-left: 3px solid var(--salvia);
+}
+.nodoTicket small { font-size: 0.78rem; font-weight: 500; color: var(--gris); }
+.nodoTicket b { font-size: 1.15rem; font-weight: 540; letter-spacing: -0.02em; line-height: 1.25; }
+.nodoTicket em { justify-self: start; font-style: normal; font-size: 0.8rem; font-weight: 520; padding: 4px 10px; border-radius: 999px; background: var(--gris-fondo); }
+.nodoPanel {
+  display: grid;
+  gap: 4px;
+  padding: 20px 22px;
+  border-radius: 22px;
+  min-height: 112px;
+  background: var(--carbon);
+  color: #fff;
+  box-shadow: 0 30px 60px -36px rgba(32, 35, 31, 0.8);
+}
+.nodoPanel b { font-size: clamp(2.4rem, 4.2vw, 3.6rem); font-weight: 500; letter-spacing: -0.055em; line-height: 1; font-variant-numeric: tabular-nums; }
+.nodoPanel span { font-size: 0.92rem; color: rgba(255, 255, 255, 0.72); }
+.nodo [data-cambia] { animation: cambia 0.6s var(--suave); }
 @media (max-width: 860px) {
-  .sistema { grid-template-columns: minmax(0, 1fr); }
-  .sistemaMovil { order: -1; justify-self: center; }
-  .sistemaMovil .movil { width: 240px; height: 490px; border-radius: 42px; }
-  .sistemaMovil .pantalla { border-radius: 33px; }
   .modulos {
-    display: flex;
-    gap: 8px;
+    flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
-    scroll-snap-type: x mandatory;
     margin-inline: calc(-1 * max(20px, env(safe-area-inset-left, 0px)));
     padding-inline: max(20px, env(safe-area-inset-left, 0px));
   }
   .modulos::-webkit-scrollbar { display: none; }
-  .modulo {
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-    padding: 10px 16px;
-    border: 1px solid var(--linea);
-    border-radius: 999px;
-    color: var(--gris);
+  .flujo { grid-template-columns: minmax(0, 1fr); gap: 46px; padding: 22px; border-radius: 28px; }
+  .conector {
+    top: -46px;
+    left: 34px;
+    width: 2px;
+    height: 46px;
+    background: repeating-linear-gradient(180deg, rgba(32, 35, 31, 0.22) 0 6px, transparent 6px 12px);
   }
-  .modulo b { font-size: 0.98rem; letter-spacing: -0.02em; white-space: nowrap; }
-  .modulo span, .modulo::after { display: none; }
-  .modulo[aria-selected="true"] { background: var(--carbon); color: #fff; border-color: var(--carbon); }
-  .sistemaTexto { margin: 18px 0 0; text-align: center; color: var(--gris); font-size: 1.02rem; line-height: 1.45; min-height: 3em; }
-}
-@media (min-width: 861px) {
-  .sistemaTexto { display: none; }
+  .conector::after { left: -4px; top: -5px; }
+  .nodo[data-on] .conector::after { animation-name: baja; }
+  @keyframes baja { 0% { top: -5px; opacity: 1; } 85% { opacity: 1; } 100% { top: calc(100% - 5px); opacity: 0; } }
 }
 
 /* ---------- El panel ---------- */
@@ -639,6 +683,6 @@
   .pagina[data-anim] [data-aparece] { opacity: 1; transform: none; filter: none; transition: none; }
   .aviso { animation: none; opacity: 1; }
   .panelVentana { transform: none; }
-  .modulo::after, .marquesinaPista { animation: none; }
+  .modulo::after, .marquesinaPista, .conector::after { animation: none; }
   .puntos i { transform: none; transition: none; }
 }
