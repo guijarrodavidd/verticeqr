@@ -170,10 +170,14 @@ export default function Sistema() {
   useEffect(() => {
     const nodo = zona.current;
     if (!nodo || typeof IntersectionObserver === "undefined") return;
+    // Solo para y arranca el paso automático. La escena no se desmonta al salir
+    // de la pantalla: si lo hacía, la sección cambiaba de alto y en el móvil
+    // todo lo de debajo daba un salto mientras se deslizaba.
     const obs = new IntersectionObserver(([e]) => {
-      setVisible(e.isIntersecting);
-      // Al volver a verse, la escena empieza de nuevo.
-      if (e.isIntersecting) setVuelta((v) => v + 1);
+      setVisible((antes) => {
+        if (e.isIntersecting && !antes) setVuelta((v) => v + 1);
+        return e.isIntersecting;
+      });
     }, { threshold: 0.3 });
     obs.observe(nodo);
     return () => obs.disconnect();
@@ -253,7 +257,7 @@ export default function Sistema() {
           </span>
         </div>
         <div className={s.escenaVista} aria-hidden>
-          {visible && <Escena />}
+          <Escena />
         </div>
       </div>
       </div>

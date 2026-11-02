@@ -496,7 +496,7 @@
 }
 .escenaPanel b { font-weight: 560; font-variant-numeric: tabular-nums; }
 .escenaPanel i { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, 0.14); font-style: normal; font-size: 0.8rem; }
-.escenaVista { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; align-items: center; min-height: 360px; min-width: 0; }
+.escenaVista { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; align-items: center; min-height: 420px; min-width: 0; }
 .ui {
   width: 100%;
   max-width: 380px;
@@ -630,8 +630,10 @@
   .modulos::-webkit-scrollbar { display: none; }
   .modulo { flex: none; }
   .escenario { grid-template-columns: minmax(0, 1fr); min-height: 0; padding: 22px 18px 26px; border-radius: 28px; gap: 22px; }
-  .escenaVista { order: -1; min-height: 0; }
-  .escenaTexto { text-align: center; }
+  /* Alto fijo para todas las escenas: al cambiar de una a otra, nada de
+     debajo se mueve. */
+  .escenaVista { order: -1; min-height: 410px; align-items: start; }
+  .escenaTexto { text-align: center; min-height: 250px; }
   .escenaTexto p { margin-inline: auto; }
 }
 
