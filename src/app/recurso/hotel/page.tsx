@@ -8,7 +8,7 @@ import { pedirHotel } from "./actions";
 type Props = { searchParams: Promise<{ error?: string }> };
 
 const TITULO = "Así quedaría tu hotel vendiendo.";
-const SUBTITULO = "Contesta 10 preguntas y te monto tu sistema de venta, con tu marca y tu hotel dentro.";
+const SUBTITULO = "Contesta 10 preguntas y te preparo tu sistema de venta, con tu marca y tu hotel dentro.";
 
 const ERRORES: Record<string, string> = {
   hotel: "Escribe el nombre del hotel o de la cadena.",

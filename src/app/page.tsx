@@ -46,7 +46,11 @@ export default function Home() {
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={`${s.boton} ${s.botonOscuro}`}>
               Reserva una llamada <span>→</span>
             </a>
+            <a href="/recurso/hotel" className={`${s.boton} ${s.botonCristal} ${s.cristal} ${s.iris}`}>
+              Ver cómo quedaría en mi hotel
+            </a>
           </div>
+          <p className={s.nota} data-aparece="" style={{ ["--d" as string]: 2 }}>Te preparamos la carta con la marca de tu hotel y te la enseñamos en 24-48 horas.</p>
           <MovilVivo />
         </div>
       </section>
@@ -130,6 +134,9 @@ export default function Home() {
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={`${s.boton} ${s.botonOscuro}`}>
               Reserva una llamada <span>→</span>
             </a>
+            <a href="/recurso/hotel" className={`${s.boton} ${s.botonCristal} ${s.cristal} ${s.iris}`}>
+              Ver cómo quedaría en mi hotel
+            </a>
           </div>
           <p className={s.nota}>20 minutos, con los números de tu hotel.</p>
         </div>
@@ -147,6 +154,7 @@ export default function Home() {
           </div>
           <nav className={s.pieEnlaces}>
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Reserva una llamada</a>
+            <a href="/recurso/hotel">Ver cómo quedaría en mi hotel</a>
             <a href="/privacidad">Privacidad</a>
             <a href="/cookies">Cookies</a>
             <a href="/terminos">Términos</a>

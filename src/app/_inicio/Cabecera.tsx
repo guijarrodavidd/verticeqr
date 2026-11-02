@@ -65,6 +65,7 @@ export default function Cabecera() {
           {ENLACES.map((e) => (
             <a key={e.href} href={e.href}>{e.t}</a>
           ))}
+          <a href="/recurso/hotel">Ver cómo quedaría en mi hotel</a>
           <a href="/login">Acceder</a>
           <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={`${s.boton} ${s.botonOscuro}`}>
             Reserva una llamada <span>→</span>

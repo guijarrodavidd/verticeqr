@@ -215,6 +215,14 @@ export default function Sistema() {
     return () => clearTimeout(t);
   }, [i, visible, quieta]);
 
+  // Al tocar una parte se queda quieta para mirarla; si en 10 segundos no se
+  // toca nada más, vuelve a pasar sola.
+  useEffect(() => {
+    if (!quieta) return;
+    const t = setTimeout(() => setQuieta(false), 10000);
+    return () => clearTimeout(t);
+  }, [quieta, i]);
+
   useEffect(() => {
     const b = lista.current?.children[i] as HTMLElement | undefined;
     const l = lista.current;
