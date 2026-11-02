@@ -689,3 +689,40 @@
   .modulo::after, .marquesinaPista, .conector::after { animation: none; }
   .puntos i { transform: none; transition: none; }
 }
+
+/* ---------- Deslizadores de la calculadora ---------- */
+.deslizadores { display: grid; gap: 22px; margin-top: 26px; }
+.deslizador { display: grid; gap: 10px; }
+.deslizadorFila { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 0.98rem; color: var(--gris); }
+.deslizadorFila b { color: var(--carbon); font-weight: 540; font-size: 1.05rem; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.deslizador input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--carbon) 0 var(--pct), rgba(32, 35, 31, 0.12) var(--pct) 100%);
+  outline: none;
+  cursor: pointer;
+}
+.deslizador input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 14px -4px rgba(32, 35, 31, 0.5), inset 0 0 0 1px rgba(32, 35, 31, 0.12);
+  transition: transform 0.2s ease;
+}
+.deslizador input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.12); }
+.deslizador input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 14px -4px rgba(32, 35, 31, 0.5), inset 0 0 0 1px rgba(32, 35, 31, 0.12);
+}
+.deslizador input[type="range"]:focus-visible { outline: 2px solid var(--carbon); outline-offset: 6px; }
+.casoArriba { align-items: start; }
+.casoGrande { align-self: center; }

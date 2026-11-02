@@ -98,7 +98,7 @@ export default function Home() {
       <section className={s.seccion} id="caso">
         <div className={s.envoltura}>
           <h2 className={s.titulo} data-aparece="">
-            Lo que puede dejar en un mes. <span>Con números.</span>
+            Lo que puede dejar en tu hotel. <span>Con tus números.</span>
           </h2>
           <Caso />
         </div>
