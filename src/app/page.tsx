@@ -2,7 +2,6 @@ import { CALENDLY_URL } from "@/lib/site";
 import Aparecer from "./_inicio/Aparecer";
 import Cabecera from "./_inicio/Cabecera";
 import MovilVivo from "./_inicio/MovilVivo";
-import VisorCarta, { BotonCarta } from "./_inicio/VisorCarta";
 import Ruido from "./_inicio/Ruido";
 import Sistema from "./_inicio/Sistema";
 import Panel from "./_inicio/Panel";
@@ -33,7 +32,6 @@ export default function Home() {
     <div className={s.pagina} data-pagina="">
       <Aparecer />
       <Cabecera />
-      <VisorCarta />
 
       {/* ============ PORTADA ============ */}
       <section className={s.portada}>
@@ -48,7 +46,6 @@ export default function Home() {
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={`${s.boton} ${s.botonOscuro}`}>
               Reserva una llamada <span>→</span>
             </a>
-            <BotonCarta className={`${s.boton} ${s.botonCristal} ${s.cristal} ${s.iris}`}>Prueba una carta real</BotonCarta>
           </div>
           <MovilVivo />
         </div>
@@ -133,7 +130,6 @@ export default function Home() {
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={`${s.boton} ${s.botonOscuro}`}>
               Reserva una llamada <span>→</span>
             </a>
-            <BotonCarta className={`${s.boton} ${s.botonCristal} ${s.cristal} ${s.iris}`}>Prueba una carta real</BotonCarta>
           </div>
           <p className={s.nota}>20 minutos, con los números de tu hotel.</p>
         </div>
@@ -150,7 +146,6 @@ export default function Home() {
             <p>Más ingreso por cada huésped, con el mismo equipo.</p>
           </div>
           <nav className={s.pieEnlaces}>
-            <BotonCarta className={s.enlacePie}>Prueba una carta</BotonCarta>
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Reserva una llamada</a>
             <a href="/privacidad">Privacidad</a>
             <a href="/cookies">Cookies</a>

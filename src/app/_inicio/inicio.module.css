@@ -333,46 +333,57 @@
    se recogen en el panel. Cada cambio es una transición: se ve igual en
    Android y en iPhone aunque el dedo deslice rápido. */
 .ruido { position: relative; height: 300vh; background: var(--gris-fondo); }
-.ruidoFijo { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+.ruidoFijo {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 11vh max(20px, env(safe-area-inset-left, 0px)) 0 max(20px, env(safe-area-inset-right, 0px));
+}
+.ruidoTitulos { display: grid; width: min(100%, 900px); text-align: center; }
 .ruidoTitulo {
-  position: absolute;
-  top: 10vh;
-  left: 50%;
-  width: min(92vw, 900px);
+  grid-area: 1 / 1;
   margin: 0;
-  transform: translateX(-50%);
-  text-align: center;
   font-size: clamp(2rem, 4.6vw, 3.8rem);
   font-weight: 500;
   letter-spacing: -0.055em;
   line-height: 1.02;
   text-wrap: balance;
-  z-index: 3;
   transition: opacity 0.5s ease, transform 0.7s var(--suave);
 }
-.ruidoDespues { opacity: 0; transform: translateX(-50%) translateY(16px); }
-.ruido[data-recoge] .ruidoAntes { opacity: 0; transform: translateX(-50%) translateY(-16px); }
-.ruido[data-recoge] .ruidoDespues { opacity: 1; transform: translateX(-50%); }
+.ruidoDespues { opacity: 0; transform: translateY(16px); }
+.ruido[data-recoge] .ruidoAntes { opacity: 0; transform: translateY(-16px); }
+.ruido[data-recoge] .ruidoDespues { opacity: 1; transform: none; }
+.nube {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 14px 12px;
+  width: min(100%, 1040px);
+  margin-top: clamp(30px, 6vh, 64px);
+}
 .etiqueta {
-  position: absolute;
-  left: calc(var(--x) * 1%);
-  top: calc(var(--y) * 1%);
   padding: 10px 16px;
   border-radius: 14px;
-  font-size: clamp(0.84rem, 1.2vw, 1rem);
+  font-size: clamp(0.88rem, 1.15vw, 1rem);
   font-weight: 500;
   letter-spacing: -0.015em;
   white-space: nowrap;
   box-shadow: 0 14px 30px -20px rgba(32, 35, 31, 0.55);
   opacity: 0;
-  transform: translate(-50%, -50%) translateY(18px) scale(0.8) rotate(8deg);
-  transition: opacity 0.4s ease, transform 0.6s var(--suave);
+  transform: translateY(18px) scale(0.85) rotate(calc(var(--r) * 2deg));
+  transition: opacity 0.4s ease, transform 0.55s var(--suave);
 }
-.etiqueta[data-on] { opacity: 1; transform: translate(-50%, -50%) rotate(calc(var(--r) * 1deg)); }
+.etiqueta[data-on] { opacity: 1; transform: rotate(calc(var(--r) * 0.5deg)); }
 .ruido[data-recoge] .etiqueta {
   opacity: 0;
-  transform: translate(-50%, -50%) translate(calc((50 - var(--x)) * 1vw), calc((58 - var(--y)) * 1vh)) scale(0.35);
-  transition-duration: 0.5s, 0.8s;
+  transform: translateY(40px) scale(0.6);
+  transition-delay: calc(var(--i) * 12ms);
 }
 .tonoCarbon { background: var(--carbon); color: #fff; }
 .tonoBlanco { background: #fff; color: var(--carbon); }
@@ -405,8 +416,8 @@
 @media (max-width: 700px) {
   .ruido { height: 260vh; }
   .etiqueta:nth-of-type(n + 15) { display: none; }
-  /* En el móvil se juntan hacia el centro para que no se corten por los lados. */
-  .etiqueta { padding: 8px 12px; left: calc(22% + var(--x) * 0.56%); font-size: 0.8rem; }
+  .nube { gap: 9px 8px; margin-top: 28px; }
+  .etiqueta { padding: 8px 12px; font-size: 0.82rem; border-radius: 12px; }
 }
 
 /* ---------- Texto gigante que corre ---------- */
@@ -878,4 +889,20 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .portatil { transform: none; }
+}
+/* Pantallas bajas (iPhone SE): menos peticiones para que ninguna se salga. */
+@media (max-height: 700px) and (max-width: 700px) {
+  .ruidoFijo { padding-top: 8vh; }
+  .etiqueta:nth-of-type(n + 11) { display: none; }
+  .nube { margin-top: 20px; }
+}
+
+/* Portada sin móvil: la tablet centrada y los avisos alrededor. */
+.productoSolo { padding-bottom: 20px; }
+.productoSolo .productoTablet { width: 92%; margin-inline: auto; }
+.productoSolo .aviso1 { left: -2%; top: 10%; }
+.productoSolo .aviso2 { right: -3%; bottom: 14%; }
+.productoSolo .aviso3 { right: 4%; top: 6%; }
+@media (max-width: 860px) {
+  .productoSolo .productoTablet { width: 100%; }
 }

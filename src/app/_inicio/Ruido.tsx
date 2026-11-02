@@ -14,15 +14,8 @@ const PETICIONES = [
 ];
 const TONOS = ["tonoCarbon", "tonoBlanco", "tonoSalvia", "tonoPiedra", "tonoCielo", "tonoBlanco", "tonoSol"];
 
-// Posiciones fijas y repartidas, para que el resultado sea el mismo siempre.
-function sitio(n: number) {
-  const col = n % 4;
-  const fila = Math.floor(n / 4);
-  const x = 13 + col * 25 + ((n * 37) % 11) - 5;
-  const y = 24 + fila * 14 + ((n * 53) % 9) - 4;
-  const r = ((n * 29) % 7) - 3;
-  return { x, y, r };
-}
+// Un giro pequeño y fijo para cada una: se nota el agobio sin que se pisen.
+const giro = (n: number) => ((n * 29) % 7) - 3;
 
 const AVISOS = [
   { hab: "Hab. 214", que: "Cava · 2 copas", cuanto: "34 €" },
@@ -78,23 +71,24 @@ export default function Ruido() {
   return (
     <section ref={zona} className={s.ruido} aria-label="Lo que le llega a recepción y cómo queda ordenado">
       <div className={s.ruidoFijo}>
-        <h2 className={`${s.ruidoTitulo} ${s.ruidoAntes}`}>Así suena la recepción un sábado a las 22:40</h2>
-        <h2 className={`${s.ruidoTitulo} ${s.ruidoDespues}`}>Con Vértice, cada petición llega sola y en orden</h2>
+        <div className={s.ruidoTitulos}>
+          <h2 className={`${s.ruidoTitulo} ${s.ruidoAntes}`}>Así suena la recepción un sábado a las 22:40</h2>
+          <h2 className={`${s.ruidoTitulo} ${s.ruidoDespues}`}>Con Vértice, cada petición llega sola y en orden</h2>
+        </div>
 
-        {PETICIONES.map((t, n) => {
-          const { x, y, r } = sitio(n);
-          return (
+        {/* Una nube ordenada debajo del título: se amontonan sin taparse. */}
+        <div className={s.nube} aria-hidden>
+          {PETICIONES.map((t, n) => (
             <span
               key={t}
               data-etiqueta=""
               className={`${s.etiqueta} ${s[TONOS[n % TONOS.length]]}`}
-              style={{ ["--x" as string]: x, ["--y" as string]: y, ["--r" as string]: r }}
-              aria-hidden
+              style={{ ["--r" as string]: giro(n), ["--i" as string]: n }}
             >
               {t}
             </span>
-          );
-        })}
+          ))}
+        </div>
 
         <div className={`${s.bandeja} ${s.cristal} ${s.iris}`}>
           <div className={s.bandejaCabeza}>
