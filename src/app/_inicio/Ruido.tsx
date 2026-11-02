@@ -102,7 +102,6 @@ export default function Ruido() {
           ))}
         </div>
 
-        <span className={s.ruidoPista} aria-hidden>Desliza</span>
       </div>
     </section>
   );
