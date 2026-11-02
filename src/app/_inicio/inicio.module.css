@@ -599,6 +599,9 @@
 .cifra + .cifra { padding-left: clamp(14px, 2vw, 26px); border-left: 1px solid var(--linea); }
 .cifra b { font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 500; letter-spacing: -0.05em; line-height: 1; font-variant-numeric: tabular-nums; }
 .cifra span { color: var(--gris); font-size: 0.95rem; line-height: 1.35; }
+/* El antes y el después en pequeño, como en los casos de Virio. */
+.antes { margin-top: 6px; font-size: 0.84rem; color: var(--gris-claro); font-variant-numeric: tabular-nums; letter-spacing: -0.005em; }
+.antes i { font-style: normal; color: var(--salvia); padding-inline: 2px; }
 .cifra[data-cambia], .casoGrande[data-cambia] { animation: cambia 0.6s var(--suave); }
 @keyframes cambia { from { opacity: 0; transform: translateY(10px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
 /* Gráfico de puntos: cada columna es un día del mes y se llena al verlo. */
