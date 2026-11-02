@@ -832,3 +832,48 @@
 /* ---------- Casos, al estilo de los de Virio ---------- */
 .etiquetaDemo { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; padding: 6px 12px; border-radius: 999px; background: var(--gris-fondo); font-size: 0.82rem; font-weight: 520; color: var(--gris); }
 .cifras4 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+/* ---------- Cómo funciona dentro de un portátil que se endereza al deslizar ---------- */
+.portatil {
+  position: relative;
+  width: 100%;
+  max-width: 1120px;
+  margin: 10px auto 0;
+  transform: perspective(1800px) rotateX(calc(var(--p, 1) * 20deg)) scale(calc(1 - var(--p, 1) * 0.08));
+  transform-origin: center bottom;
+  will-change: transform;
+}
+.portatilPantalla {
+  padding: clamp(7px, 1.1vw, 14px);
+  border-radius: clamp(16px, 2vw, 26px) clamp(16px, 2vw, 26px) 6px 6px;
+  background: #0b0c0d;
+  box-shadow: 0 70px 120px -60px rgba(32, 35, 31, 0.6), inset 0 0 0 1.5px rgba(255, 255, 255, 0.08);
+}
+.portatilPantalla .escenario { border-radius: clamp(10px, 1.3vw, 16px); }
+.portatilBase {
+  position: relative;
+  height: clamp(10px, 1.4vw, 18px);
+  margin: 0 -5%;
+  border-radius: 2px 2px 22px 22px / 2px 2px 14px 14px;
+  background: linear-gradient(180deg, #e3e5e0 0%, #c3c6bf 100%);
+  box-shadow: 0 34px 40px -30px rgba(32, 35, 31, 0.55);
+}
+.portatilBase::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 14%;
+  height: 45%;
+  transform: translateX(-50%);
+  border-radius: 0 0 10px 10px;
+  background: #b5b8b1;
+}
+@media (max-width: 860px) {
+  .portatilPantalla { padding: 6px; border-radius: 16px 16px 5px 5px; }
+  .portatilPantalla .escenario { border-radius: 11px; }
+  .portatilBase { height: 9px; margin: 0 -3%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portatil { transform: none; }
+}

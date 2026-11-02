@@ -179,6 +179,32 @@ export default function Sistema() {
     return () => obs.disconnect();
   }, []);
 
+  // El portátil entra inclinado desde abajo y se endereza al llegar al centro.
+  const portatil = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const v = portatil.current;
+    if (!v || window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+    let marco = 0;
+    const calcula = () => {
+      marco = 0;
+      const r = v.getBoundingClientRect();
+      const alto = window.innerHeight;
+      const p = Math.min(1, Math.max(0, (r.top - alto * 0.12) / (alto * 0.6)));
+      v.style.setProperty("--p", p.toFixed(3));
+    };
+    const alMover = () => {
+      if (!marco) marco = requestAnimationFrame(calcula);
+    };
+    calcula();
+    window.addEventListener("scroll", alMover, { passive: true });
+    window.addEventListener("resize", alMover);
+    return () => {
+      window.removeEventListener("scroll", alMover);
+      window.removeEventListener("resize", alMover);
+      if (marco) cancelAnimationFrame(marco);
+    };
+  }, []);
+
   useEffect(() => {
     if (!visible || quieta) return;
     const t = setTimeout(() => setI((v) => (v + 1) % MODULOS.length), DURACION);
@@ -215,6 +241,8 @@ export default function Sistema() {
         ))}
       </div>
 
+      <div className={s.portatil} ref={portatil}>
+      <div className={s.portatilPantalla}>
       <div className={s.escenario} key={`${i}-${vuelta}`}>
         <div className={s.escenaTexto} aria-live="polite">
           <h3 className={s.aparece}>{m.t}</h3>
@@ -227,6 +255,9 @@ export default function Sistema() {
         <div className={s.escenaVista} aria-hidden>
           {visible && <Escena />}
         </div>
+      </div>
+      </div>
+      <div className={s.portatilBase} aria-hidden />
       </div>
     </div>
   );
