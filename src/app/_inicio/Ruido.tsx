@@ -20,7 +20,8 @@ function sitio(n: number) {
   const fila = Math.floor(n / 4);
   const x = 13 + col * 25 + ((n * 37) % 11) - 5;
   const y = 24 + fila * 14 + ((n * 53) % 9) - 4;
-  return { x, y };
+  const r = ((n * 29) % 7) - 3;
+  return { x, y, r };
 }
 
 const AVISOS = [
@@ -30,23 +31,34 @@ const AVISOS = [
   { hab: "Hab. 412", que: "No va el aire · avisado a mantenimiento", cuanto: "" },
 ];
 
+// El deslizar solo decide cuántas peticiones están encendidas y si ya se han
+// recogido; cada cambio lo anima una transición. Así se ve igual en iPhone y
+// en Android aunque el dedo vaya rápido o el navegador no avise de cada píxel.
 export default function Ruido() {
   const zona = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const el = zona.current;
     if (!el) return;
-    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
-      el.style.setProperty("--p", "1");
-      return;
-    }
+    const etiquetas = Array.from(el.querySelectorAll<HTMLElement>("[data-etiqueta]"));
+    let encendidas = -1;
+    let recogido: boolean | null = null;
     let marco = 0;
     const calcula = () => {
       marco = 0;
       const r = el.getBoundingClientRect();
       const recorrido = r.height - window.innerHeight;
       const p = Math.min(1, Math.max(0, -r.top / Math.max(1, recorrido)));
-      el.style.setProperty("--p", p.toFixed(4));
+      const n = Math.round(Math.min(1, p / 0.5) * etiquetas.length);
+      if (n !== encendidas) {
+        etiquetas.forEach((e, k) => e.toggleAttribute("data-on", k < n));
+        encendidas = n;
+      }
+      const ahora = p > 0.6;
+      if (ahora !== recogido) {
+        el.toggleAttribute("data-recoge", ahora);
+        recogido = ahora;
+      }
     };
     const alMover = () => {
       if (!marco) marco = requestAnimationFrame(calcula);
@@ -54,9 +66,11 @@ export default function Ruido() {
     calcula();
     window.addEventListener("scroll", alMover, { passive: true });
     window.addEventListener("resize", alMover);
+    window.addEventListener("touchmove", alMover, { passive: true });
     return () => {
       window.removeEventListener("scroll", alMover);
       window.removeEventListener("resize", alMover);
+      window.removeEventListener("touchmove", alMover);
       if (marco) cancelAnimationFrame(marco);
     };
   }, []);
@@ -68,12 +82,13 @@ export default function Ruido() {
         <h2 className={`${s.ruidoTitulo} ${s.ruidoDespues}`}>Con Vértice, cada petición llega sola y en orden</h2>
 
         {PETICIONES.map((t, n) => {
-          const { x, y } = sitio(n);
+          const { x, y, r } = sitio(n);
           return (
             <span
               key={t}
+              data-etiqueta=""
               className={`${s.etiqueta} ${s[TONOS[n % TONOS.length]]}`}
-              style={{ ["--x" as string]: x, ["--y" as string]: y, ["--u" as string]: (n / PETICIONES.length) * 0.5 }}
+              style={{ ["--x" as string]: x, ["--y" as string]: y, ["--r" as string]: r }}
               aria-hidden
             >
               {t}
@@ -101,7 +116,6 @@ export default function Ruido() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import s from "./inicio.module.css";
 
-// El resumen del panel, como foto de producto: entra inclinado desde abajo y
+// El resumen del panel dentro de una tablet: entra inclinada desde abajo y
 // se endereza cuando llega al centro de la pantalla.
 export default function Panel() {
   const ventana = useRef<HTMLDivElement>(null);
@@ -35,14 +35,18 @@ export default function Panel() {
   return (
     <>
       <div className={s.panelVentana} ref={ventana}>
-        {/* En el móvil, la parte que se lee: sin la barra lateral y más grande. */}
-        <picture>
-          <source media="(max-width: 860px)" srcSet="/inicio/panel-resumen-movil.webp" />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/inicio/panel-resumen.webp" alt="Resumen del panel de dirección de Vértice" loading="lazy" />
-        </picture>
+        <div className={s.tablet}>
+          <div className={s.tabletPantalla}>
+            {/* En el móvil, la parte que se lee: sin la barra lateral y más grande. */}
+            <picture>
+              <source media="(max-width: 860px)" srcSet="/inicio/panel-resumen-movil.webp" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/inicio/panel-resumen.webp" alt="Resumen del panel de análisis de Vértice" loading="lazy" />
+            </picture>
+          </div>
+        </div>
       </div>
-      <p className={s.pieFoto}>Panel de dirección con datos de demostración</p>
+      <p className={s.pieFoto}>Panel de análisis con datos de demostración</p>
     </>
   );
 }

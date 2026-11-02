@@ -7,7 +7,7 @@ import s from "./inicio.module.css";
 const ENLACES = [
   { href: "#sistema", t: "El sistema" },
   { href: "#panel", t: "El panel" },
-  { href: "#caso", t: "Números" },
+  { href: "#casos", t: "Números" },
   { href: "#preguntas", t: "Preguntas" },
 ];
 

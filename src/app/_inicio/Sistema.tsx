@@ -1,78 +1,188 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import s from "./inicio.module.css";
 
-// Cómo viaja cada cosa que pide el huésped: de su móvil a tu equipo y de ahí
-// al panel. La carta ya sale en la portada; aquí se ve el sistema por dentro.
-const MODULOS = [
-  {
-    t: "Pedir a la habitación",
-    huesped: { hab: "Hab. 214", que: "Pizza y dos cervezas", dato: "31 €" },
-    equipo: { quien: "Cocina", que: "Hab. 214 · sale en 20 min", dato: "En cocina" },
-    panel: { cifra: "+31 €", que: "Room service, 22:40" },
-  },
-  {
-    t: "Reservar el spa",
-    huesped: { hab: "Hab. 305", que: "Masaje de 55 min · hoy 18:00", dato: "70 €" },
-    equipo: { quien: "Spa", que: "Cabina 2 · 18:00 · Hab. 305", dato: "Reservado" },
-    panel: { cifra: "+70 €", que: "Spa, reservado desde la habitación" },
-  },
-  {
-    t: "Reservar mesa",
-    huesped: { hab: "Hab. 112", que: "Mesa para 2 · 21:00 · terraza", dato: "2 pers." },
-    equipo: { quien: "Restaurante", que: "Reserva de la Hab. 112", dato: "21:00" },
-    panel: { cifra: "+2", que: "Cubiertos de huéspedes alojados" },
-  },
-  {
-    t: "Salida tardía",
-    huesped: { hab: "Hab. 108", que: "Salir a las 15:00", dato: "40 €" },
-    equipo: { quien: "Recepción", que: "Confirmar salida de la 108", dato: "Hecho" },
-    panel: { cifra: "+40 €", que: "Mejoras y salidas tardías" },
-  },
-  {
-    t: "Avisar de un problema",
-    huesped: { hab: "Hab. 412", que: "No va el aire", dato: "Aviso" },
-    equipo: { quien: "Mantenimiento", que: "Hab. 412 · aire acondicionado", dato: "En 10 min" },
-    panel: { cifra: "12 min", que: "Resuelto antes de la reseña" },
-  },
-  {
-    t: "Excursiones",
-    huesped: { hab: "Hab. 220", que: "Barco al atardecer · mañana", dato: "2 pers." },
-    equipo: { quien: "Recepción", que: "Plazas confirmadas con el operador", dato: "Listo" },
-    panel: { cifra: "+190 €", que: "Experiencias de la zona" },
-  },
+// Cada parte del sistema con su propia escena animada. Las escenas se
+// vuelven a montar al cambiar de parte, así que su animación empieza de cero.
+
+const Pedido = () => (
+  <div className={s.ui}>
+    <div className={s.uiCab}>
+      <span>
+        <small>Hab. 214 · 22:40</small>
+        <b>Tu pedido</b>
+      </span>
+    </div>
+    <ul className={s.lineas}>
+      <li className={s.aparece} style={{ ["--t" as string]: "0.3s" }}><span>1×</span>Pizza margarita <em>18 €</em></li>
+      <li className={s.aparece} style={{ ["--t" as string]: "0.75s" }}><span>2×</span>Cerveza <em>13 €</em></li>
+    </ul>
+    <div className={`${s.uiTotal} ${s.aparece}`} style={{ ["--t" as string]: "1.2s" }}>
+      <span>Total</span>
+      <b>31 €</b>
+    </div>
+    <div className={s.estados}>
+      <div className={s.estado}><i style={{ ["--t" as string]: "1.7s" }} />Recibido</div>
+      <div className={s.estado}><i style={{ ["--t" as string]: "2.4s" }} />En cocina</div>
+      <div className={s.estado}><i style={{ ["--t" as string]: "3.2s" }} />En camino</div>
+    </div>
+  </div>
+);
+
+const Spa = () => (
+  <div className={s.ui}>
+    <div className={s.uiCab}>
+      <span>
+        <small>Spa · 55 min</small>
+        <b>Masaje relajante</b>
+      </span>
+      <em>70 €</em>
+    </div>
+    <div className={s.dias}>
+      <span>Hoy</span><span>Mañ.</span><span>Jue</span><span>Vie</span><span>Sáb</span>
+    </div>
+    <div className={s.horas}>
+      <span>10:00</span><span className={s.llena}>12:00</span><span>16:00</span>
+      <span className={s.elige}>18:00</span><span className={s.llena}>19:00</span><span>20:00</span>
+    </div>
+    <div className={`${s.confirma} ${s.aparece}`} style={{ ["--t" as string]: "1.9s" }}>
+      <i>✓</i> Cabina 2 · hoy a las 18:00
+    </div>
+  </div>
+);
+
+const Mesa = () => (
+  <div className={s.ui}>
+    <div className={s.uiCab}>
+      <span>
+        <small>Restaurante</small>
+        <b>Reservar mesa</b>
+      </span>
+    </div>
+    <div className={s.mesaDatos}>
+      <span>2 personas</span>
+      <span>Hoy · 21:00</span>
+    </div>
+    <div className={s.plano}>
+      {["libre", "ocupada", "libre", "ocupada", "ocupada", "elegida", "libre", "ocupada"].map((m, n) => (
+        <span key={n} className={`${s.mesaR} ${m === "ocupada" ? s.ocupada : m === "elegida" ? s.elegida : ""}`}>2</span>
+      ))}
+    </div>
+    <div className={`${s.confirma} ${s.aparece}`} style={{ ["--t" as string]: "2s" }}>
+      <i>✓</i> Mesa en la terraza · 21:00
+    </div>
+  </div>
+);
+
+const Salida = () => (
+  <div className={s.ui}>
+    <div className={s.uiCab}>
+      <span>
+        <small>Hab. 108 · último día</small>
+        <b>Salida tardía</b>
+      </span>
+    </div>
+    <div className={s.reloj}>
+      <span className={s.relleno} />
+      <span className={s.tirador}><b>15:00</b></span>
+    </div>
+    <div className={s.marcas}>
+      <span>12:00</span><span>13:00</span><span>14:00</span><span>15:00</span><span>16:00</span><span>17:00</span><span>18:00</span>
+    </div>
+    <div className={`${s.precioSalta} ${s.aparece}`} style={{ ["--t" as string]: "2s" }}>
+      <span>Sale a las 15:00</span>
+      <b>+40 €</b>
+    </div>
+  </div>
+);
+
+const Aviso = () => (
+  <div className={s.ui}>
+    <div className={s.uiCab}>
+      <span>
+        <small>Hab. 412</small>
+        <b>¿Algo no va bien?</b>
+      </span>
+    </div>
+    <div className={s.tipos}>
+      <span className={s.elige}>Aire</span><span>Agua caliente</span><span>Ruido</span><span>Wifi</span><span>Limpieza</span>
+    </div>
+    <div className={`${s.cuenta} ${s.aparece}`} style={{ ["--t" as string]: "1.2s" }}>
+      <svg className={s.anilloReloj} viewBox="0 0 58 58" aria-hidden>
+        <circle className={s.fondoAnillo} cx="29" cy="29" r="24" />
+        <circle className={s.avance} cx="29" cy="29" r="24" />
+      </svg>
+      <div className={s.cuentaTexto}>
+        <span className={s.antesTxt}>Mantenimiento en camino<small>Llega en 10 minutos</small></span>
+        <span className={s.despuesTxt}>Resuelto en 12 minutos<small>Antes de que llegue a la reseña</small></span>
+      </div>
+    </div>
+  </div>
+);
+
+const Excursion = () => (
+  <div className={s.ui}>
+    <div className={s.uiCab}>
+      <span>
+        <small>Guía de la zona</small>
+        <b>Barco al atardecer</b>
+      </span>
+      <em>190 €</em>
+    </div>
+    <div className={s.mapa}>
+      <svg viewBox="0 0 340 200" aria-hidden>
+        <path className={s.tierra} d="M0 120 C 40 110, 70 150, 110 160 C 150 170, 170 200, 0 200 Z" />
+        <path className={s.tierra} d="M260 40 C 290 20, 330 30, 340 50 L 340 110 C 320 120, 280 100, 262 80 Z" />
+        <path className={s.ruta} d="M 52 150 C 120 60, 220 190, 300 70" />
+        <circle className={s.pin} cx="52" cy="150" r="6" />
+        <circle className={s.pin} cx="300" cy="70" r="6" />
+      </svg>
+    </div>
+    <div className={`${s.billete} ${s.aparece}`} style={{ ["--t" as string]: "2.1s" }}>
+      <span>
+        <b>Mañana · 17:30</b>
+        <small>2 plazas · recepción las confirma</small>
+      </span>
+      <span>✓</span>
+    </div>
+  </div>
+);
+
+const MODULOS: { t: string; d: string; panel: string; fin: string; Escena: () => ReactNode }[] = [
+  { t: "Pedir a la habitación", d: "El pedido llega a cocina con la habitación y la hora. Nadie coge el teléfono.", panel: "+31 € en tu panel", fin: "3.5s", Escena: Pedido },
+  { t: "Reservar el spa", d: "Elige día y hora, y la cabina queda reservada.", panel: "+70 € en tu panel", fin: "2.5s", Escena: Spa },
+  { t: "Reservar mesa", d: "Personas, hora y zona, sin pasar por recepción.", panel: "2 cubiertos más en tu panel", fin: "2.6s", Escena: Mesa },
+  { t: "Salida tardía", d: "Se ofrece la noche antes de irse y se cobra con la cuenta.", panel: "+40 € en tu panel", fin: "2.5s", Escena: Salida },
+  { t: "Avisar de un problema", d: "Lo recibe el turno y se arregla mientras el huésped sigue en el hotel.", panel: "Resuelto antes de la reseña", fin: "3.8s", Escena: Aviso },
+  { t: "Excursiones", d: "Reserva la salida desde la guía y recepción confirma las plazas.", panel: "+190 € en tu panel", fin: "2.7s", Escena: Excursion },
 ];
-const DURACION = 5200;
+const DURACION = 6200;
 
 export default function Sistema() {
   const [i, setI] = useState(0);
-  const [etapa, setEtapa] = useState(0);
   const [quieta, setQuieta] = useState(false);
   const [visible, setVisible] = useState(false);
+  const [vuelta, setVuelta] = useState(0);
   const zona = useRef<HTMLDivElement>(null);
   const lista = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const nodo = zona.current;
     if (!nodo || typeof IntersectionObserver === "undefined") return;
-    const obs = new IntersectionObserver(([e]) => setVisible(e.isIntersecting), { threshold: 0.3 });
+    const obs = new IntersectionObserver(([e]) => {
+      setVisible(e.isIntersecting);
+      // Al volver a verse, la escena empieza de nuevo.
+      if (e.isIntersecting) setVuelta((v) => v + 1);
+    }, { threshold: 0.3 });
     obs.observe(nodo);
     return () => obs.disconnect();
   }, []);
 
-  // El punto sale del huésped, llega al equipo y termina en el panel.
   useEffect(() => {
-    if (!visible) return;
-    setEtapa(0);
-    const a = setTimeout(() => setEtapa(1), 750);
-    const b = setTimeout(() => setEtapa(2), 1500);
-    const c = quieta ? undefined : setTimeout(() => setI((v) => (v + 1) % MODULOS.length), DURACION);
-    return () => {
-      clearTimeout(a);
-      clearTimeout(b);
-      if (c) clearTimeout(c);
-    };
+    if (!visible || quieta) return;
+    const t = setTimeout(() => setI((v) => (v + 1) % MODULOS.length), DURACION);
+    return () => clearTimeout(t);
   }, [i, visible, quieta]);
 
   useEffect(() => {
@@ -83,6 +193,7 @@ export default function Sistema() {
   }, [i]);
 
   const m = MODULOS[i];
+  const Escena = m.Escena;
   return (
     <div ref={zona} className={s.sistema}>
       <div ref={lista} className={s.modulos} role="tablist" data-quieta={quieta || !visible ? "" : undefined} style={{ ["--dur" as string]: `${DURACION}ms` }}>
@@ -96,6 +207,7 @@ export default function Sistema() {
             onClick={() => {
               setI(n);
               setQuieta(true);
+              setVuelta((v) => v + 1);
             }}
           >
             {x.t}
@@ -103,37 +215,17 @@ export default function Sistema() {
         ))}
       </div>
 
-      <div className={s.flujo} aria-live="polite">
-        <div className={s.nodo} data-on={etapa >= 0 ? "" : undefined}>
-          <span className={s.nodoQuien}>El huésped</span>
-          <div className={`${s.nodoCaja} ${s.cristal}`} key={`h-${i}`} data-cambia="">
-            <span className={s.avisoIcono}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/inicio/v-blanca.png" alt="" />
-            </span>
-            <span>
-              <small>{m.huesped.hab}</small>
-              <b>{m.huesped.que}</b>
-            </span>
-            <em>{m.huesped.dato}</em>
-          </div>
+      <div className={s.escenario} key={`${i}-${vuelta}`}>
+        <div className={s.escenaTexto} aria-live="polite">
+          <h3 className={s.aparece}>{m.t}</h3>
+          <p className={s.aparece} style={{ ["--t" as string]: "0.1s" }}>{m.d}</p>
+          <span className={s.escenaPanel} style={{ ["--fin" as string]: m.fin }}>
+            <i>↗</i>
+            <b>{m.panel}</b>
+          </span>
         </div>
-        <div className={s.nodo} data-on={etapa >= 1 ? "" : undefined}>
-          <i className={s.conector} aria-hidden />
-          <span className={s.nodoQuien}>Tu equipo</span>
-          <div className={s.nodoTicket} key={`e-${i}`} data-cambia="">
-            <small>{m.equipo.quien}</small>
-            <b>{m.equipo.que}</b>
-            <em>{m.equipo.dato}</em>
-          </div>
-        </div>
-        <div className={s.nodo} data-on={etapa >= 2 ? "" : undefined}>
-          <i className={s.conector} aria-hidden />
-          <span className={s.nodoQuien}>Tu panel</span>
-          <div className={s.nodoPanel} key={`p-${i}`} data-cambia="">
-            <b>{m.panel.cifra}</b>
-            <span>{m.panel.que}</span>
-          </div>
+        <div className={s.escenaVista} aria-hidden>
+          {visible && <Escena />}
         </div>
       </div>
     </div>
