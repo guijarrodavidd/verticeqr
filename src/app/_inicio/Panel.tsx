@@ -46,7 +46,6 @@ export default function Panel() {
           </div>
         </div>
       </div>
-      <p className={s.pieFoto}>Panel de análisis con datos de demostración</p>
     </>
   );
 }
