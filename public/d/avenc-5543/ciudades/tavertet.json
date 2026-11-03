@@ -1,0 +1,1113 @@
+{
+  "slug": "tavertet",
+  "nombre": "Tavertet y el Collsacabra",
+  "intro": {
+    "ES": "L'Avenc está en lo alto de los cingles, a unos 3 km de Tavertet. A pie, los Salts de l'Avenc te quedan a un cuarto de hora y el pueblo a unos 45 minutos. En coche, Tavertet está a 13 minutos, Rupit a 16 y el Santuari del Far a 37. Vic queda a unos 55 minutos y el monasterio de Sant Pere de Casserres a algo más de una hora. El pantano de Sau lo ves desde los miradores, pero por carretera hay que rodearlo, y hasta la orilla de Sant Romà se tarda hora y media.",
+    "EN": "L'Avenc sits high on the cliffs, about 3 km from Tavertet. On foot, the Salts de l'Avenc are a quarter of an hour away and the village about 45 minutes. By car, Tavertet is 13 minutes away, Rupit 16 and the Santuari del Far 37. Vic is about 55 minutes away and the monastery of Sant Pere de Casserres a little over an hour. You can see the Sau reservoir from the viewpoints, but the road has to go all the way round it, so the shore at Sant Romà is an hour and a half's drive."
+  },
+  "lugares": [
+    {
+      "id": "mirador-tavertet",
+      "img": "/ciudades/tavertet/img/mirador-tavertet.jpg",
+      "nombre": "Mirador de Tavertet, sobre el pantano de Sau",
+      "zona": {
+        "ES": "Pla de cal Xicot, a la salida de Tavertet por el carrer de Sau",
+        "EN": "Pla de cal Xicot, at the edge of Tavertet along Carrer de Sau"
+      },
+      "d": {
+        "ES": "Desde el borde del pla de cal Xicot ves el pantano de Sau 400 metros más abajo, con paredes de caliza que caen 200 metros a plomo. Una placa de hierro con el dibujo del paisaje te dice qué es cada cosa, de las Guilleries al Montseny. Justo debajo, mirando al sur, está la lleixa del Relliquer, una repisa a media pared.",
+        "EN": "From the edge of the Pla de cal Xicot you look down on the Sau reservoir 400 metres below, with limestone walls that drop a sheer 200 metres. An iron plate with a sketch of the view tells you what is what, from the Guilleries to the Montseny. Right below you, facing south, is the lleixa del Relliquer, a ledge halfway down the wall."
+      },
+      "cuando": {
+        "ES": "Con el cielo despejado. Aparca a la entrada del pueblo y son unos 5 minutos andando",
+        "EN": "On a clear day. Park at the entrance to the village and it is about a 5-minute walk"
+      },
+      "min": 13,
+      "modo": "coche",
+      "lat": 41.99363,
+      "lng": 2.41872
+    },
+    {
+      "id": "salts-avenc",
+      "img": "/ciudades/tavertet/img/salts-avenc.jpg",
+      "nombre": "Salts de l'Avenc (Cua de Cavall)",
+      "zona": {
+        "ES": "Cingle de l'Avenc, a un cuarto de hora a pie del hotel",
+        "EN": "On the l'Avenc cliff, a quarter of an hour's walk from the hotel"
+      },
+      "d": {
+        "ES": "Los torrentes de l'Avellanosa y de l'Abeurador bajan casi en paralelo y se tiran por el cingle a poca distancia uno del otro. El agua cae unos 100 metros hasta una repisa y otros 100 hasta el gorg de la Plaja, la poza donde se juntan y nace el torrent de les Aigües. Al de l'Avellanosa, que lleva más agua, lo llaman la Cua de Cavall, cola de caballo en catalán.",
+        "EN": "The Avellanosa and Abeurador streams run almost side by side and pour over the cliff a short way apart. The water drops about 100 metres to a ledge and another 100 to the gorg de la Plaja, the pool where they meet and the torrent de les Aigües begins. The Avellanosa, which carries more water, is the one people call the Cua de Cavall, Catalan for horse's tail."
+      },
+      "cuando": {
+        "ES": "Después de unos días de lluvia. El resto del año los torrentes suelen ir secos y apenas se ve el salto",
+        "EN": "After a few days of rain. The rest of the year the streams are usually dry and there is little to see of the falls"
+      },
+      "min": 15,
+      "modo": "pie",
+      "lat": 42.00143,
+      "lng": 2.43717
+    },
+    {
+      "id": "tavertet",
+      "img": "/ciudades/tavertet/img/tavertet.jpg",
+      "nombre": "Tavertet",
+      "zona": {
+        "ES": "A 3 km de L'Avenc, 13 minutos en coche o unos 45 a pie",
+        "EN": "3 km from L'Avenc, 13 minutes by car or about 45 on foot"
+      },
+      "d": {
+        "ES": "El pueblo estuvo sin carretera hasta bien entrada la segunda mitad del siglo XX, y en 1991 la Generalitat declaró su casco antiguo bien de interés cultural. Al principio tenía solo tres calles, y aún se llaman carrer de Dalt, del Mig y de Baix. La iglesia de Sant Cristòfol ya aparece en las listas de parroquias del obispado de Vic de entre 1025 y 1050, con el ábside al filo del cingle. El pensador Raimon Panikkar vivió aquí sus últimos años.",
+        "EN": "The village had no road until well into the second half of the 20th century, and in 1991 the Catalan government declared its old quarter a protected historic site. It started with just three streets, still called Carrer de Dalt, del Mig and de Baix. The church of Sant Cristòfol already appears in the Vic diocese's parish lists from between 1025 and 1050, with its apse right on the edge of the cliff. The thinker Raimon Panikkar spent his last years here."
+      },
+      "cuando": {
+        "ES": "A cualquier hora. Deja el coche en el aparcamiento de la entrada y recorre el pueblo andando",
+        "EN": "Any time of day. Leave the car in the car park at the entrance and walk round the village"
+      },
+      "min": 13,
+      "modo": "coche",
+      "lat": 41.99548,
+      "lng": 2.41952
+    },
+    {
+      "id": "rupit",
+      "img": "/ciudades/tavertet/img/rupit.jpg",
+      "nombre": "Rupit y el puente colgante",
+      "zona": {
+        "ES": "Rupit i Pruit, a 8 km por la C-153 y la carretera de Rupit",
+        "EN": "Rupit i Pruit, 8 km away via the C-153 and the Rupit road"
+      },
+      "d": {
+        "ES": "El nombre viene del latín rupes, roca, por la peña donde se levantó el castillo hacia el año 1000. El puente colgante cruza la riera de Rupit por el lado de poniente y es la entrada más usada al casco antiguo. Lo diseñó el herrero Pere Rovira, lo hicieron él y otros vecinos con madera de los bosques de la Sala y se inauguró en noviembre de 1945. En 1994 se reconstruyó.",
+        "EN": "The name comes from the Latin rupes, rock, after the crag where the castle went up around the year 1000. The suspension bridge crosses the Rupit stream on the west side and is the most used way into the old village. The blacksmith Pere Rovira designed it, he and other villagers built it with timber from the woods of la Sala, and it opened in November 1945. It was rebuilt in 1994."
+      },
+      "cuando": {
+        "ES": "Entre semana o a primera hora. El aparcamiento público de la entrada es de pago",
+        "EN": "On a weekday or first thing in the morning. The public car park at the entrance charges a fee"
+      },
+      "min": 16,
+      "modo": "coche",
+      "lat": 42.02477,
+      "lng": 2.46502
+    },
+    {
+      "id": "salt-sallent",
+      "img": "/ciudades/tavertet/img/salt-sallent.jpg",
+      "nombre": "Salt de Sallent",
+      "zona": {
+        "ES": "Riera de Rupit. 16 minutos en coche hasta Rupit y 35 a pie por el camino del Salt",
+        "EN": "On the Rupit stream. 16 minutes by car to Rupit and 35 on foot along the path to the falls"
+      },
+      "d": {
+        "ES": "La riera de Rupit se tira por el cingle y cae unos 100 metros en vertical hasta el gorg de la Trapa, que también llaman del Diablo. Desde la parte sur del pueblo hasta ese gorg, la riera baja más de 500 metros entre saltos y pozas. El mirador está en la punta del cingle, con barandilla de hierro, y desde ahí ves el salto entero y la Agullola de Rupit.",
+        "EN": "The Rupit stream goes over the cliff and falls about 100 metres straight down into the gorg de la Trapa, also called the Devil's pool. From the south end of the village to that pool, the stream drops more than 500 metres through falls and pools. The viewpoint sits on the tip of the cliff, with an iron railing, and from there you see the whole fall and the Agullola de Rupit."
+      },
+      "cuando": {
+        "ES": "Después de llover, que es cuando baja más agua. Son unos 2,5 km desde Rupit, de bajada a la ida y de subida a la vuelta",
+        "EN": "After rain, when there is most water. It is about 2.5 km from Rupit, downhill on the way there and uphill on the way back"
+      },
+      "min": 50,
+      "modo": "coche",
+      "lat": 42.01485,
+      "lng": 2.47523
+    },
+    {
+      "id": "el-far",
+      "img": "/ciudades/tavertet/img/el-far.jpg",
+      "nombre": "Santuari del Far",
+      "zona": {
+        "ES": "En lo alto del cingle del Far, a 1.123 metros. 37 minutos en coche",
+        "EN": "On top of the El Far cliff, at 1,123 metres. 37 minutes by car"
+      },
+      "d": {
+        "ES": "El santuario corona el cingle del Far, el que separa el Collsacabra de las Guilleries y del valle de Hostoles. La primera noticia que hay de él es un testamento del 25 de agosto de 1269. Dentro guardan la Mare de Déu del Far, una imagen de alabastro de 105 cm de finales del gótico. El campanario es bajo y acaba en terraza porque los rayos lo castigaban, y uno de 1654 le tumbó el remate en pirámide.",
+        "EN": "The sanctuary crowns the El Far cliff, which separates the Collsacabra from the Guilleries and the Hostoles valley. The first record of it is a will dated 25 August 1269. Inside is the Mare de Déu del Far, a late Gothic alabaster figure 105 cm tall. The bell tower is low and flat-topped because lightning kept striking it, and a bolt in 1654 knocked off its pyramid spire."
+      },
+      "cuando": {
+        "ES": "Con el día claro. Tiene hospedería con restaurante y zona de pícnic con bancos",
+        "EN": "On a clear day. There is a hostel with a restaurant and a picnic area with benches"
+      },
+      "min": 37,
+      "modo": "coche",
+      "lat": 42.02118,
+      "lng": 2.5366
+    },
+    {
+      "id": "sau",
+      "img": "/ciudades/tavertet/img/sau.jpg",
+      "nombre": "Pantano de Sau y Sant Romà",
+      "zona": {
+        "ES": "Vilanova de Sau, en la orilla junto al Club Nàutic. 1 h 35 min en coche rodeando por Tavèrnoles",
+        "EN": "Vilanova de Sau, on the shore by the sailing club. 1 h 35 min by car, going round via Tavèrnoles"
+      },
+      "d": {
+        "ES": "El pantano tiene 17 km de largo y guarda hasta 177 hm³ del Ter. Cuando se llenó, a principios de los años sesenta, el agua cubrió el pueblo de Sant Romà de Sau, que en 1857 tenía 1.138 vecinos y al final unos 300. De su iglesia románica del siglo XI asoma el campanario, más o menos según el nivel. El 27 de febrero de 2024, con el pantano al 1,4 %, salió a la vista incluso el puente medieval.",
+        "EN": "The reservoir is 17 km long and holds up to 177 hm³ of water from the Ter. When it filled, in the early sixties, the water covered the village of Sant Romà de Sau, which had 1,138 inhabitants in 1857 and about 300 at the end. The bell tower of its 11th-century Romanesque church sticks out more or less depending on the level. On 27 February 2024, with the reservoir at 1.4 %, even the medieval bridge came into view."
+      },
+      "cuando": {
+        "ES": "Cuanto más bajo está el pantano, más iglesia se ve. La Agència Catalana de l'Aigua publica el nivel cada día",
+        "EN": "The lower the reservoir, the more of the church you see. The Catalan Water Agency publishes the level every day"
+      },
+      "min": 95,
+      "modo": "coche",
+      "lat": 41.97279,
+      "lng": 2.39291
+    },
+    {
+      "id": "casserres",
+      "img": "/ciudades/tavertet/img/casserres.jpg",
+      "nombre": "Monasterio de Sant Pere de Casserres",
+      "zona": {
+        "ES": "Les Masies de Roda, en un meandro del Ter. 1 h 7 min en coche",
+        "EN": "Les Masies de Roda, on a bend of the Ter. 1 h 7 min by car"
+      },
+      "d": {
+        "ES": "La vizcondesa Ermetruit empezó las obras en 1006 en la punta de un meandro del Ter, que hoy rodea el pantano de Sau. En 1012 ya vivían monjes, y la iglesia, más ancha que larga y con tres naves, se consagró en 1050. Según la leyenda, el sitio lo eligió una burra ciega que llevaba a lomos el cuerpo de un niño y se paró aquí. Desde 1991 es del Consell Comarcal d'Osona, que lo restauró con la Generalitat entre 1994 y 1998.",
+        "EN": "Viscountess Ermetruit began building it in 1006 at the tip of a bend in the Ter, now surrounded by the Sau reservoir. Monks were living here by 1012, and the church, wider than it is long, with three naves, was consecrated in 1050. Legend says the spot was chosen by a blind donkey carrying the body of a child, which stopped here. Since 1991 it has belonged to the Osona county council, which restored it with the Catalan government between 1994 and 1998."
+      },
+      "cuando": {
+        "ES": "De miércoles a domingo desde las 11:00. Cierra entre las 16:30 y las 18:00 según la época, el domingo antes, y todo enero. La entrada cuesta 5 €",
+        "EN": "Wednesday to Sunday from 11:00. It closes between 16:30 and 18:00 depending on the season, earlier on Sundays, and for all of January. Admission is €5"
+      },
+      "min": 67,
+      "modo": "coche",
+      "lat": 42.00147,
+      "lng": 2.34069
+    },
+    {
+      "id": "vic",
+      "img": "/ciudades/tavertet/img/vic.jpg",
+      "nombre": "Vic, la Plaça Major y la catedral",
+      "zona": {
+        "ES": "Vic, a 36 km. Unos 55 minutos en coche por la C-153",
+        "EN": "Vic, 36 km away. About 55 minutes by car on the C-153"
+      },
+      "d": {
+        "ES": "La Plaça Major, que en Vic llaman el Mercadal, tiene soportales en los cuatro lados y acoge mercado desde el siglo IX. El ayuntamiento, gótico, es de 1388. A cinco minutos andando está la catedral de Sant Pere, que conserva el campanario románico de 46 metros y la cripta, y lo demás es neoclásico, de 1781 a 1803. Josep Maria Sert pintó sus paredes dos veces, porque el incendio de 1936 quemó la primera.",
+        "EN": "The Plaça Major, which locals call the Mercadal, has arcades on all four sides and has hosted a market since the 9th century. The Gothic town hall dates from 1388. Five minutes' walk away is the cathedral of Sant Pere, which keeps its 46-metre Romanesque bell tower and its crypt, while the rest is neoclassical, built from 1781 to 1803. Josep Maria Sert painted its walls twice, because the 1936 fire destroyed his first version."
+      },
+      "cuando": {
+        "ES": "Martes o sábado por la mañana, que es cuando hay mercado. La catedral abre de 10:00 a 13:00 y por la tarde",
+        "EN": "Tuesday or Saturday morning, when the market is on. The cathedral opens from 10:00 to 13:00 and again in the afternoon"
+      },
+      "min": 56,
+      "modo": "coche",
+      "lat": 41.9304,
+      "lng": 2.25475
+    }
+  ],
+  "rutas": [
+    {
+      "id": "cingles",
+      "expId": "ex1",
+      "img": "/ciudades/tavertet/img/cingle.jpg",
+      "titulo": {
+        "ES": "Los cingles y los Salts de l'Avenc",
+        "EN": "The cliffs and the Salts de l'Avenc"
+      },
+      "tipo": {
+        "ES": "Senderismo con guía",
+        "EN": "Guided walk"
+      },
+      "dur": "3 h",
+      "d": {
+        "ES": "Sales andando desde la puerta de L'Avenc con un guía de la zona. Primero bajas a los Salts de l'Avenc, donde dos torrentes caen 200 metros por el cingle cuando ha llovido. Después vas hacia Tavertet por el GR 2, con el pantano de Sau 400 metros más abajo, entras en el pueblo y acabas en su mirador. Hacia las 13:00 estás de vuelta en el hotel.",
+        "EN": "You set off on foot from the door of L'Avenc with a local guide. First you go down to the Salts de l'Avenc, where two streams drop 200 metres over the cliff after rain. Then you head for Tavertet on the GR 2, with the Sau reservoir 400 metres below, walk into the village and finish at its viewpoint. You are back at the hotel around 13:00."
+      },
+      "salida": {
+        "ES": "A pie desde la puerta de L'Avenc a las 10:00, con el guía. Vuelta al hotel hacia las 13:00",
+        "EN": "On foot from the door of L'Avenc at 10:00, with the guide. Back at the hotel around 13:00"
+      },
+      "incluye": {
+        "ES": [
+          "Guía de senderismo durante toda la ruta",
+          "Mapa de la zona en préstamo"
+        ],
+        "EN": [
+          "Walking guide for the whole route",
+          "Map of the area on loan"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida y bebida",
+          "Prismáticos, que en recepción te dejan si los reservas"
+        ],
+        "EN": [
+          "Food and drink",
+          "Binoculars, which reception will lend you if you book them"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado de montaña con buena suela, que la bajada a los Salts tiene piedra suelta",
+          "Un litro de agua por persona",
+          "Gorra y crema, que en el camino del cingle casi no hay sombra",
+          "Una chaqueta de octubre a abril, que a 1.000 metros la mañana es fresca"
+        ],
+        "EN": [
+          "Walking boots with a good grip, as the path down to the Salts has loose stones",
+          "A litre of water per person",
+          "A cap and sun cream, as there is hardly any shade on the cliff path",
+          "A jacket from October to April, as mornings are cool at 1,000 metres"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "La masía de L'Avenc",
+            "EN": "The L'Avenc farmhouse"
+          },
+          "d": {
+            "ES": "Antes de salir, mira la casa. Hay documentos de quienes vivían aquí desde 1234, y la gran reforma del siglo XVI, la que le dio su aire entre gótico y renacentista, fue muy probablemente obra de Elisenda de l'Avenc y Segimon Amat, que se casaron en 1557. Estuvo abandonada desde los años cincuenta hasta 1996.",
+            "EN": "Before you set off, take a look at the house. There are records of the people living here from 1234, and the big 16th-century rebuild, which gave it its mix of Gothic and Renaissance, was most likely the work of Elisenda de l'Avenc and Segimon Amat, who married in 1557. It stood empty from the 1950s until 1996."
+          },
+          "tip": {
+            "ES": "Ponte las botas aquí. La senda que baja a los Salts tiene piedra suelta.",
+            "EN": "Put your boots on here. The path down to the Salts has loose stones."
+          },
+          "hora": "10:00",
+          "dur": "5 min",
+          "img": "/ciudades/tavertet/img/hotel.jpg",
+          "lat": 42.0053,
+          "lng": 2.44194,
+          "tramo": "pie",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Salts de l'Avenc",
+            "EN": "Salts de l'Avenc"
+          },
+          "s": {
+            "ES": "Dos torrentes que caen 200 metros",
+            "EN": "Two streams with a 200-metre drop"
+          },
+          "d": {
+            "ES": "Una senda te baja hasta lo alto de los saltos, en el cingle de l'Avenc. Aquí se tiran al vacío el torrente de l'Avellanosa y el de l'Abeurador, a poca distancia uno del otro. Caen unos 100 metros hasta una repisa y otros 100 hasta el gorg de la Plaja, donde se juntan.",
+            "EN": "A path takes you down to the top of the falls on the l'Avenc cliff. Here the Avellanosa and Abeurador streams pour over the edge a short way apart. They drop about 100 metres to a ledge and another 100 to the gorg de la Plaja, where they meet."
+          },
+          "tip": {
+            "ES": "Casi todo el año los torrentes van secos. El salto se ve después de unos días de lluvia fuerte.",
+            "EN": "For most of the year the streams are dry. You see the falls after a few days of heavy rain."
+          },
+          "hora": "10:20",
+          "dur": "20 min",
+          "img": "/ciudades/tavertet/img/salts-avenc.jpg",
+          "lat": 42.00143,
+          "lng": 2.43717,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "El camino del cingle",
+            "EN": "The cliff path"
+          },
+          "s": {
+            "ES": "Por el GR 2 hacia Tavertet",
+            "EN": "Along the GR 2 towards Tavertet"
+          },
+          "d": {
+            "ES": "Vuelves a subir al camino y sigues las marcas blancas y rojas del GR 2, el sendero que va de La Jonquera a Sant Adrià de Besòs. El camino corre a una distancia prudente del borde, con el pantano de Sau 400 metros más abajo. La roca del cingle es caliza de un antiguo fondo de mar, y en las piedras rotas del suelo a veces aparece la silueta de un erizo o de una caracola marina de hace unos 50 millones de años.",
+            "EN": "You climb back up to the track and follow the red and white marks of the GR 2, the long-distance path from La Jonquera to Sant Adrià de Besòs. It keeps a safe distance from the edge, with the Sau reservoir 400 metres below. The cliff is limestone from an ancient seabed, and in the broken stones underfoot you sometimes spot the outline of a sea urchin or a sea snail from about 50 million years ago."
+          },
+          "tip": {
+            "ES": "Si encuentras un fósil, hazle una foto y déjalo donde estaba.",
+            "EN": "If you find a fossil, take a photo and leave it where it was."
+          },
+          "hora": "10:55",
+          "dur": "10 min",
+          "img": "/ciudades/tavertet/img/cingle.jpg",
+          "lat": 41.99874,
+          "lng": 2.43265,
+          "tramo": "pie",
+          "tramoDuracionMin": 15,
+          "duracionMin": 10
+        },
+        {
+          "n": {
+            "ES": "Tavertet y Sant Cristòfol",
+            "EN": "Tavertet and Sant Cristòfol"
+          },
+          "s": {
+            "ES": "Un pueblo de tres calles",
+            "EN": "A village of three streets"
+          },
+          "d": {
+            "ES": "Entras por la iglesia de Sant Cristòfol, que aparece en las listas de parroquias del obispado de Vic de entre 1025 y 1050. El ábside, la parte más antigua, se levanta al filo del cingle. El casco antiguo es bien de interés cultural desde 1991, y sus tres primeras calles se siguen llamando carrer de Dalt, del Mig y de Baix.",
+            "EN": "You come in by the church of Sant Cristòfol, which appears in the Vic diocese's parish lists from between 1025 and 1050. The apse, the oldest part, stands right on the edge of the cliff. The old quarter has been a protected historic site since 1991, and its first three streets are still called Carrer de Dalt, del Mig and de Baix."
+          },
+          "tip": {
+            "ES": "Busca la calle de Galzeran Sacosta. Lleva el nombre del obispo de Vic que, según la historia de la casa, nació en L'Avenc.",
+            "EN": "Look for Carrer de Galzeran Sacosta. It is named after the bishop of Vic who, according to the history of the house, was born at L'Avenc."
+          },
+          "hora": "11:30",
+          "dur": "15 min",
+          "img": "/ciudades/tavertet/img/sant-cristofol.jpg",
+          "lat": 41.99548,
+          "lng": 2.41952,
+          "tramo": "pie",
+          "tramoDuracionMin": 25,
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Mirador de Tavertet",
+            "EN": "Tavertet viewpoint"
+          },
+          "s": {
+            "ES": "El pantano de Sau a tus pies",
+            "EN": "The Sau reservoir at your feet"
+          },
+          "d": {
+            "ES": "Sales del pueblo por el carrer de Sau hasta el pla de cal Xicot. Las paredes caen 200 metros a plomo y el pantano queda 400 metros más abajo. La placa de hierro del borde dibuja el paisaje, con las Guilleries enfrente y el Montseny al sur.",
+            "EN": "You leave the village along Carrer de Sau to the Pla de cal Xicot. The walls drop a sheer 200 metres and the reservoir lies 400 metres below. The iron plate at the edge sketches the view, with the Guilleries opposite and the Montseny to the south."
+          },
+          "tip": {
+            "ES": "La vuelta a L'Avenc son 3,4 km de subida suave, cerca de una hora. Bebe antes de arrancar.",
+            "EN": "The way back to L'Avenc is 3.4 km of gentle climbing, close to an hour. Have a drink before you start."
+          },
+          "hora": "11:50",
+          "dur": "10 min",
+          "img": "/ciudades/tavertet/img/mirador-tavertet.jpg",
+          "lat": 41.99363,
+          "lng": 2.41872,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 10
+        }
+      ],
+      "fotos": [
+        "/ciudades/tavertet/img/cingle.jpg",
+        "/ciudades/tavertet/img/salts-avenc.jpg",
+        "/ciudades/tavertet/img/sant-cristofol.jpg",
+        "/ciudades/tavertet/img/tavertet.jpg",
+        "/ciudades/tavertet/img/mirador-tavertet.jpg"
+      ],
+      "duracionMin": 180,
+      "distanciaKm": 6.5,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Unos 6,5 km entre ida y vuelta, por camino y por una senda de tierra con piedra suelta en la bajada a los Salts. La vuelta sube unos 170 metros. Con silla de ruedas o carrito no se puede hacer.",
+        "EN": "About 6.5 km there and back, on tracks and on an earth path with loose stones down to the Salts. The way back climbs about 170 metres. It cannot be done with a wheelchair or pushchair."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 42.0053,
+        "lng": 2.44194,
+        "foto": "/ciudades/tavertet/img/hotel.jpg",
+        "texto": {
+          "ES": "Puerta de L'Avenc, a las 10:00. Baja cinco minutos antes.",
+          "EN": "The door of L'Avenc, at 10:00. Come down five minutes early."
+        }
+      },
+      "cancelacion": {
+        "ES": "Se reserva la víspera, hasta las 22:00. Sale cada día a las 10:00.",
+        "EN": "Book by 10 pm the day before. It runs every day at 10:00."
+      },
+      "salidasFijas": [
+        "10:00"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "globo",
+      "expId": "ex2",
+      "img": "/ciudades/tavertet/img/globo.jpg",
+      "titulo": {
+        "ES": "Osona en globo y Vic",
+        "EN": "Osona by balloon, then Vic"
+      },
+      "tipo": {
+        "ES": "Vuelo en globo",
+        "EN": "Hot-air balloon flight"
+      },
+      "dur": "7 h",
+      "d": {
+        "ES": "Sales de L'Avenc a las 6:30 en tu coche y en 55 minutos estás en Vic, donde te espera Camins de Vent. Inflan el globo, vuelas una hora sobre la plana de Vic y al tocar tierra brindas con cava. Después desayunas en la Plaça Major y entras en la catedral. Hacia las 13:30 estás de vuelta en el hotel.",
+        "EN": "You leave L'Avenc at 6:30 in your own car and 55 minutes later you are in Vic, where Camins de Vent are waiting. They inflate the balloon, you fly for an hour over the Vic plain and toast with cava when you land. Then it is breakfast in the Plaça Major and a visit to the cathedral. You are back at the hotel around 13:30."
+      },
+      "salida": {
+        "ES": "En tu coche desde L'Avenc a las 6:30, unos 55 minutos y 36 km hasta las pistas del Club Atlètic Vic, donde quedas con Camins de Vent. Vuelta al hotel hacia las 13:30",
+        "EN": "In your own car from L'Avenc at 6:30, about 55 minutes and 36 km to the Club Atlètic Vic athletics track, where you meet Camins de Vent. Back at the hotel around 13:30"
+      },
+      "incluye": {
+        "ES": [
+          "Vuelo de una hora con Camins de Vent, con piloto con licencia EASA",
+          "Mochila con galletas y zumos",
+          "Brindis con cava, diploma de vuelo y reportaje de fotos",
+          "Vuelta en 4x4 al punto de salida"
+        ],
+        "EN": [
+          "One-hour flight with Camins de Vent and an EASA-licensed pilot",
+          "Backpack with biscuits and juice",
+          "Cava toast, flight certificate and photo set",
+          "4x4 ride back to the starting point"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Desayuno en Vic",
+          "Entrada a la catedral, 5 € la visita completa",
+          "Gasolina y aparcamiento en Vic"
+        ],
+        "EN": [
+          "Breakfast in Vic",
+          "Cathedral admission, €5 for the full visit",
+          "Fuel and parking in Vic"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Ropa de deporte y calzado cerrado, sin tacones ni chanclas, que se aterriza en el campo",
+          "Una chaqueta para la espera, que a esa hora hace fresco",
+          "Una correa para el móvil si quieres hacer fotos desde la cesta"
+        ],
+        "EN": [
+          "Sports clothes and closed shoes, no heels or flip-flops, as you land in a field",
+          "A jacket for the wait, as it is cool at that hour",
+          "A strap for your phone if you want to take photos from the basket"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "Rumbo a Vic por la C-153",
+            "EN": "Heading for Vic on the C-153"
+          },
+          "d": {
+            "ES": "Sales por el camino de L'Avenc hasta la C-153, la carretera de Vic a Olot, y bajas por L'Esquirol hacia Vic. Son 36 km y unos 55 minutos, de noche buena parte del año.",
+            "EN": "You take the L'Avenc lane to the C-153, the Vic to Olot road, and head down through L'Esquirol to Vic. It is 36 km and about 55 minutes, in the dark for much of the year."
+          },
+          "tip": {
+            "ES": "En la mochila de Camins de Vent hay galletas y zumo. El desayuno de verdad llega en Vic, después del vuelo.",
+            "EN": "There are biscuits and juice in the Camins de Vent backpack. The proper breakfast comes in Vic, after the flight."
+          },
+          "hora": "06:30",
+          "dur": "5 min",
+          "img": "/ciudades/tavertet/img/hotel.jpg",
+          "lat": 42.0053,
+          "lng": 2.44194,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Encuentro e inflado del globo",
+            "EN": "Meeting point and inflating the balloon"
+          },
+          "s": {
+            "ES": "Las pistas del Club Atlètic Vic",
+            "EN": "The Club Atlètic Vic track"
+          },
+          "d": {
+            "ES": "Aquí quedas con el equipo de Camins de Vent. La hora te la confirman el día antes según la salida del sol y el tiempo, y en invierno suele ser hacia las 8:00. Extienden la tela en el suelo y el quemador la llena de aire caliente hasta que el globo se pone de pie.",
+            "EN": "This is where you meet the Camins de Vent team. They confirm the time the day before, depending on sunrise and the weather, and in winter it is usually around 8:00. They spread the envelope on the ground and the burner fills it with hot air until the balloon stands up."
+          },
+          "tip": {
+            "ES": "En verano la cita se adelanta a las 7:00. Esos días sal de L'Avenc a las 6:00.",
+            "EN": "In summer the meeting moves forward to 7:00. On those days leave L'Avenc at 6:00."
+          },
+          "hora": "07:30",
+          "dur": "1 h",
+          "img": "/ciudades/tavertet/img/globo-inflado.jpg",
+          "lat": 41.93706,
+          "lng": 2.23934,
+          "tramo": "coche",
+          "tramoDuracionMin": 55,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Vuelo sobre la plana de Vic",
+            "EN": "Flight over the Vic plain"
+          },
+          "s": {
+            "ES": "Una hora donde lleve el viento",
+            "EN": "An hour wherever the wind takes you"
+          },
+          "d": {
+            "ES": "El globo va adonde lo lleva el viento, y el piloto solo sube o baja para buscar la corriente. Si sopla hacia la ciudad, pasas por encima del casco antiguo de Vic y de la Plaça Major. Luego vienen campos y granjas, y con el día claro se ve el Pirineo y hasta el Pedraforca.",
+            "EN": "The balloon goes wherever the wind takes it, and the pilot only climbs or drops to find the right current. If it blows towards town, you pass over the old quarter of Vic and the Plaça Major. Then come fields and farms, and on a clear day you can see the Pyrenees and even the Pedraforca."
+          },
+          "tip": {
+            "ES": "Se vuela de pie, en una cesta que te llega por encima de la cintura, y arriba no hace más frío que en tierra.",
+            "EN": "You fly standing up, in a basket that comes above your waist, and it is no colder up there than on the ground."
+          },
+          "hora": "08:30",
+          "dur": "1 h",
+          "img": "/ciudades/tavertet/img/globo.jpg",
+          "lat": 41.9304,
+          "lng": 2.25475,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Aterrizaje y brindis con cava",
+            "EN": "Landing and a cava toast"
+          },
+          "s": {
+            "ES": "Cava donde toque tierra",
+            "EN": "Cava wherever you touch down"
+          },
+          "d": {
+            "ES": "Nadie sabe antes dónde se aterriza. El equipo de tierra sigue al globo durante todo el vuelo y te recoge en el campo. Con el globo plegado llegan el brindis con cava y el diploma, y en 4x4 vuelves a las pistas, donde tienes el coche.",
+            "EN": "Nobody knows in advance where you will land. The ground crew follows the balloon for the whole flight and picks you up in the field. Once the balloon is packed away, out come the cava and your flight certificate, and a 4x4 takes you back to the track and your car."
+          },
+          "tip": {
+            "ES": "El aterrizaje puede ser suave o dar un golpe seco. El piloto te explica antes cómo ponerte.",
+            "EN": "The landing can be gentle or a bit of a bump. The pilot shows you how to stand beforehand."
+          },
+          "hora": "09:30",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/tavertet/img/globo-aterrizaje.jpg",
+          "lat": 41.93706,
+          "lng": 2.23934,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Plaça Major de Vic",
+            "EN": "Plaça Major, Vic"
+          },
+          "s": {
+            "ES": "Desayuno en el Mercadal",
+            "EN": "Breakfast on the Mercadal"
+          },
+          "d": {
+            "ES": "La plaza, que en Vic llaman el Mercadal, tiene soportales en los cuatro lados y acoge mercado desde el siglo IX. Los martes y los sábados por la mañana se llena de puestos de productos del campo y de flores. En los balcones del primer piso de la Casa Costa, de 1906, están esculpidos los cuatro estamentos de la época, el campesinado, la nobleza, la Iglesia y los menestrales.",
+            "EN": "The square, which locals call the Mercadal, has arcades on all four sides and has hosted a market since the 9th century. On Tuesday and Saturday mornings it fills with stalls of farm produce and flowers. The first-floor balconies of Casa Costa, from 1906, carry carvings of the four estates of the time, the peasantry, the nobility, the Church and the craftsmen."
+          },
+          "tip": {
+            "ES": "Pide un esmorzar de forquilla, el desayuno de tenedor de aquí. Si hay mercado, busca la llonganissa de Vic, que tiene indicación geográfica protegida.",
+            "EN": "Order an esmorzar de forquilla, the local knife-and-fork breakfast. If the market is on, look for llonganissa de Vic, a cured sausage with protected geographical indication."
+          },
+          "hora": "11:10",
+          "dur": "45 min",
+          "img": "/ciudades/tavertet/img/vic.jpg",
+          "lat": 41.9304,
+          "lng": 2.25475,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Catedral de Sant Pere",
+            "EN": "Cathedral of Sant Pere"
+          },
+          "s": {
+            "ES": "El campanario de Oliba y las pinturas de Sert",
+            "EN": "Oliba's bell tower and Sert's paintings"
+          },
+          "d": {
+            "ES": "Del templo románico que levantó el abad Oliba, consagrado en 1038, quedan el campanario de 46 metros y la cripta. Lo demás es neoclásico, de 1781 a 1803. Josep Maria Sert pintó las paredes entre 1926 y 1930, el incendio de 1936 lo destruyó todo y él volvió a pintarlas entre 1939 y 1945, el año en que murió con la obra sin acabar.",
+            "EN": "Of the Romanesque church built by Abbot Oliba and consecrated in 1038, the 46-metre bell tower and the crypt survive. The rest is neoclassical, from 1781 to 1803. Josep Maria Sert painted the walls between 1926 and 1930, the 1936 fire destroyed it all, and he painted them again between 1939 and 1945, the year he died with the work unfinished."
+          },
+          "tip": {
+            "ES": "La nave central es gratis. La visita completa, con cripta y claustro, cuesta 5 €, y el Espai Sert cierra domingo y lunes.",
+            "EN": "The central nave is free. The full visit, with crypt and cloister, costs €5, and the Espai Sert is closed on Sundays and Mondays."
+          },
+          "hora": "12:00",
+          "dur": "30 min",
+          "img": "/ciudades/tavertet/img/catedral-vic.jpg",
+          "lat": 41.92807,
+          "lng": 2.25561,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 30
+        }
+      ],
+      "fotos": [
+        "/ciudades/tavertet/img/globo.jpg",
+        "/ciudades/tavertet/img/globo-inflado.jpg",
+        "/ciudades/tavertet/img/globo-aterrizaje.jpg",
+        "/ciudades/tavertet/img/vic.jpg",
+        "/ciudades/tavertet/img/vic-mercat.jpg",
+        "/ciudades/tavertet/img/catedral-vic.jpg"
+      ],
+      "duracionMin": 420,
+      "distanciaKm": 72,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Se vuela de pie, en una cesta que llega por encima de la cintura. Las embarazadas no pueden volar. Camins de Vent tiene globos con cesta con puerta; si la necesitas, avísales al reservar.",
+        "EN": "You fly standing up, in a basket that comes above your waist. Pregnant women cannot fly. Camins de Vent has balloons with a door in the basket; if you need one, tell them when you book."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 42.0053,
+        "lng": 2.44194,
+        "foto": "/ciudades/tavertet/img/hotel.jpg",
+        "texto": {
+          "ES": "Aparcamiento de L'Avenc, a las 6:30. Desde aquí vas en tu coche hasta Vic.",
+          "EN": "L'Avenc car park, at 6:30. From here you drive yourself to Vic."
+        }
+      },
+      "cancelacion": {
+        "ES": "La hora de despegue la confirma Camins de Vent el día antes, según la salida del sol y el tiempo. Si el piloto no puede volar, se busca otra fecha sin coste.",
+        "EN": "Camins de Vent confirm the take-off time the day before, depending on sunrise and the weather. If the pilot cannot fly, you get a new date at no cost."
+      },
+      "salidasFijas": [
+        "06:30"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "rupit",
+      "img": "/ciudades/tavertet/img/rupit.jpg",
+      "titulo": {
+        "ES": "Rupit, el Salt de Sallent y el Far",
+        "EN": "Rupit, the Salt de Sallent and El Far"
+      },
+      "tipo": {
+        "ES": "En coche y a pie, por libre",
+        "EN": "By car and on foot, self-guided"
+      },
+      "dur": "6 h 15 min",
+      "d": {
+        "ES": "Un día por el Collsacabra en tu coche. A 16 minutos tienes Rupit, donde entras por el puente colgante y subes por sus calles hasta la iglesia de Sant Miquel. Desde el pueblo bajas andando al mirador del Salt de Sallent, un salto de 100 metros. Comes en el Santuari del Far, a 1.123 metros, y hacia las 16:15 estás de vuelta en L'Avenc.",
+        "EN": "A day around the Collsacabra in your own car. Rupit is 16 minutes away; you go in over the suspension bridge and up through the streets to the church of Sant Miquel. From the village you walk down to the viewpoint over the Salt de Sallent, a 100-metre fall. Lunch is at the Santuari del Far, at 1,123 metres, and you are back at L'Avenc around 16:15."
+      },
+      "salida": {
+        "ES": "En tu coche desde L'Avenc a las 10:00, 16 minutos y 8 km hasta el aparcamiento de Rupit. Vuelta al hotel hacia las 16:15",
+        "EN": "In your own car from L'Avenc at 10:00, 16 minutes and 8 km to the Rupit car park. Back at the hotel around 16:15"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Aparcamiento de Rupit, que es de pago",
+          "Comida",
+          "Gasolina"
+        ],
+        "EN": [
+          "Rupit car park, which charges a fee",
+          "Lunch",
+          "Fuel"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado con buena suela para el camino del Salt de Sallent",
+          "Agua para la caminata, unos 5 km entre ida y vuelta",
+          "Una chaqueta para el Far, que está a 1.123 metros",
+          "El pícnic del Raconet, si prefieres comer al aire libre"
+        ],
+        "EN": [
+          "Shoes with a good grip for the path to the Salt de Sallent",
+          "Water for the walk, about 5 km there and back",
+          "A jacket for El Far, which stands at 1,123 metres",
+          "The Raconet picnic, if you would rather eat outdoors"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "Hacia Rupit",
+            "EN": "Towards Rupit"
+          },
+          "d": {
+            "ES": "Sales por el camino de L'Avenc hasta la C-153 y enseguida tomas la carretera de Rupit, la BV-5208. Son 8 km y unos 16 minutos hasta el aparcamiento de la entrada del pueblo.",
+            "EN": "You take the L'Avenc lane to the C-153 and soon turn onto the Rupit road, the BV-5208. It is 8 km and about 16 minutes to the car park at the entrance to the village."
+          },
+          "tip": {
+            "ES": "Si quieres comer de pícnic en el Far, pide el del Raconet la tarde antes en recepción.",
+            "EN": "If you want a picnic lunch at El Far, order the Raconet picnic at reception the evening before."
+          },
+          "hora": "10:00",
+          "dur": "5 min",
+          "img": "/ciudades/tavertet/img/hotel.jpg",
+          "lat": 42.0053,
+          "lng": 2.44194,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "El puente colgante de Rupit",
+            "EN": "Rupit suspension bridge"
+          },
+          "s": {
+            "ES": "Hierro, cable y madera desde 1945",
+            "EN": "Iron, cable and timber since 1945"
+          },
+          "d": {
+            "ES": "Del aparcamiento bajas a la riera y la cruzas por el puente colgante. Lo diseñó el herrero Pere Rovira y lo construyó con Francesc Rovira, también herrero y entonces alcalde, el albañil Salvi Vila y Joaquim Marsal, de la Fonda Marsal. Los cables vinieron de Barcelona y la madera de los bosques de la Sala, y se inauguró en noviembre de 1945.",
+            "EN": "From the car park you go down to the stream and cross it on the suspension bridge. The blacksmith Pere Rovira designed it and built it with Francesc Rovira, also a blacksmith and then mayor, the bricklayer Salvi Vila and Joaquim Marsal of the Fonda Marsal. The cables came from Barcelona and the timber from the woods of la Sala, and it opened in November 1945."
+          },
+          "tip": {
+            "ES": "El puente se mueve al pisar. Con niños, que crucen de la mano.",
+            "EN": "The bridge sways as you walk. Hold children by the hand."
+          },
+          "hora": "10:25",
+          "dur": "15 min",
+          "img": "/ciudades/tavertet/img/rupit.jpg",
+          "lat": 42.02477,
+          "lng": 2.46502,
+          "tramo": "coche",
+          "tramoDuracionMin": 20,
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Rupit y Sant Miquel",
+            "EN": "Rupit and Sant Miquel"
+          },
+          "s": {
+            "ES": "Un pueblo agarrado a la roca",
+            "EN": "A village built on the rock"
+          },
+          "d": {
+            "ES": "El nombre viene del latín rupes, roca, por la peña del castillo, levantado hacia el año 1000. Las casas de piedra y las calles estrechas son de su mejor época, entre los siglos XVI y XVIII, y la más conocida es el carrer del Fossar. El campanario de Sant Miquel se labró en piedra entre 1786 y 1789.",
+            "EN": "The name comes from the Latin rupes, rock, after the castle crag, built on around the year 1000. The stone houses and narrow streets date from its heyday, between the 16th and 18th centuries, and the best known is Carrer del Fossar. The bell tower of Sant Miquel was cut in stone between 1786 and 1789."
+          },
+          "tip": {
+            "ES": "El camino al Salt de Sallent sale hacia el sur del pueblo y está señalizado.",
+            "EN": "The path to the Salt de Sallent leaves the village heading south and is signposted."
+          },
+          "hora": "10:45",
+          "dur": "45 min",
+          "img": "/ciudades/tavertet/img/rupit-pueblo.jpg",
+          "lat": 42.02382,
+          "lng": 2.46503,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Mirador del Salt de Sallent",
+            "EN": "Salt de Sallent viewpoint"
+          },
+          "s": {
+            "ES": "Cien metros de caída",
+            "EN": "A hundred-metre drop"
+          },
+          "d": {
+            "ES": "La riera de Rupit llega al borde del cingle y cae unos 100 metros en vertical hasta el gorg de la Trapa, que también llaman del Diablo. La mitad de abajo de la pared es travertino. El mirador tiene barandilla de hierro y desde él ves el salto entero y la Agullola de Rupit.",
+            "EN": "The Rupit stream reaches the edge of the cliff and falls about 100 metres straight down into the gorg de la Trapa, also called the Devil's pool. The lower half of the wall is travertine. The viewpoint has an iron railing, and from it you see the whole fall and the Agullola de Rupit."
+          },
+          "tip": {
+            "ES": "La vuelta a Rupit es cuesta arriba. Cuenta unos 40 minutos.",
+            "EN": "The way back to Rupit is uphill. Allow about 40 minutes."
+          },
+          "hora": "12:05",
+          "dur": "25 min",
+          "img": "/ciudades/tavertet/img/salt-sallent.jpg",
+          "lat": 42.01485,
+          "lng": 2.47523,
+          "tramo": "pie",
+          "tramoDuracionMin": 35,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Santuari del Far",
+            "EN": "Santuari del Far"
+          },
+          "s": {
+            "ES": "Comida a 1.123 metros",
+            "EN": "Lunch at 1,123 metres"
+          },
+          "d": {
+            "ES": "De vuelta en Rupit, subes en coche por la C-153 y la carretera de la Mare de Déu del Far, unos 25 minutos. El santuario aparece en un testamento de 1269 y guarda la Mare de Déu del Far, una imagen de alabastro de 105 cm de finales del gótico. El campanario es bajo y acaba en terraza porque los rayos lo castigaban.",
+            "EN": "Back in Rupit, you drive up the C-153 and the Mare de Déu del Far road, about 25 minutes. The sanctuary appears in a will from 1269 and holds the Mare de Déu del Far, a late Gothic alabaster figure 105 cm tall. The bell tower is low and flat-topped because lightning kept striking it."
+          },
+          "tip": {
+            "ES": "Para el restaurante de la hospedería, llama antes. Si traes pícnic, hay zona con bancos.",
+            "EN": "For the hostel restaurant, call ahead. If you bring a picnic, there is an area with benches."
+          },
+          "hora": "13:35",
+          "dur": "2 h",
+          "img": "/ciudades/tavertet/img/far-virgen.jpg",
+          "lat": 42.02118,
+          "lng": 2.5366,
+          "tramo": "coche",
+          "tramoDuracionMin": 65,
+          "duracionMin": 120
+        }
+      ],
+      "fotos": [
+        "/ciudades/tavertet/img/rupit.jpg",
+        "/ciudades/tavertet/img/rupit-pueblo.jpg",
+        "/ciudades/tavertet/img/salt-sallent.jpg",
+        "/ciudades/tavertet/img/el-far.jpg",
+        "/ciudades/tavertet/img/far-virgen.jpg"
+      ],
+      "duracionMin": 375,
+      "distanciaKm": 45,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Rupit tiene cuestas y calles empedradas, y el puente colgante se mueve. El camino al Salt de Sallent es de tierra, unos 5 km entre ida y vuelta con subida al final, y con silla de ruedas no se puede hacer.",
+        "EN": "Rupit has slopes and cobbled streets, and the suspension bridge sways. The path to the Salt de Sallent is an earth track, about 5 km there and back with a climb at the end, and it cannot be done in a wheelchair."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 42.0053,
+        "lng": 2.44194,
+        "foto": "/ciudades/tavertet/img/hotel.jpg",
+        "texto": {
+          "ES": "Aparcamiento de L'Avenc. El plan está pensado para salir a las 10:00.",
+          "EN": "L'Avenc car park. The plan assumes you set off at 10:00."
+        }
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Después de llover, el Salt de Sallent lleva mucha más agua.",
+        "EN": "Self-guided, no booking or cancellation. After rain the Salt de Sallent carries much more water."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    },
+    {
+      "id": "sau",
+      "img": "/ciudades/tavertet/img/sau.jpg",
+      "titulo": {
+        "ES": "El pantano de Sau y Sant Pere de Casserres",
+        "EN": "The Sau reservoir and Sant Pere de Casserres"
+      },
+      "tipo": {
+        "ES": "En coche, por libre",
+        "EN": "By car, self-guided"
+      },
+      "dur": "6 h 50 min",
+      "d": {
+        "ES": "Desde los cingles ves el pantano de Sau, pero por carretera hay que rodearlo por Tavèrnoles. A la orilla de Sant Romà de Sau llegas en hora y media y ves asomar el campanario del pueblo que cubrió el agua. Después vas al monasterio de Sant Pere de Casserres, empezado en 1006 en la punta de un meandro del Ter, y comes el pícnic mirando el embalse. Hacia las 16:20 estás de vuelta.",
+        "EN": "From the cliffs you can see the Sau reservoir, but by road you have to go round it via Tavèrnoles. You reach the shore at Sant Romà de Sau in an hour and a half and see the bell tower of the drowned village. Then it is on to the monastery of Sant Pere de Casserres, begun in 1006 at the tip of a bend in the Ter, and a picnic looking over the water. You are back around 16:20."
+      },
+      "salida": {
+        "ES": "En tu coche desde L'Avenc a las 9:30, 1 h 35 min y 54 km por la C-153 y Tavèrnoles hasta Sant Romà de Sau. Vuelta al hotel hacia las 16:20",
+        "EN": "In your own car from L'Avenc at 9:30, 1 h 35 min and 54 km via the C-153 and Tavèrnoles to Sant Romà de Sau. Back at the hotel around 16:20"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Entrada a Sant Pere de Casserres, 5 €",
+          "Comida",
+          "Gasolina"
+        ],
+        "EN": [
+          "Sant Pere de Casserres admission, €5",
+          "Lunch",
+          "Fuel"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "El pícnic del Raconet, que se pide en recepción",
+          "Calzado que se pueda manchar para bajar a la orilla",
+          "Agua para el día"
+        ],
+        "EN": [
+          "The Raconet picnic, which you order at reception",
+          "Shoes you do not mind getting muddy on the shore",
+          "Water for the day"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "Rodeando el pantano",
+            "EN": "Going round the reservoir"
+          },
+          "d": {
+            "ES": "Subes a la C-153 hacia Vic, tomas la BV-5213 hacia Tavèrnoles y sigues la carretera del pantano de Sau hasta el Club Nàutic. Son 54 km y 1 h 35 min, aunque en línea recta la orilla queda a unos 5 km.",
+            "EN": "You join the C-153 towards Vic, take the BV-5213 to Tavèrnoles and follow the Sau reservoir road to the sailing club. It is 54 km and 1 h 35 min, although in a straight line the shore is about 5 km away."
+          },
+          "tip": {
+            "ES": "Si el GPS te manda por el camino de Vilanova de Sau a Rupit, no le hagas caso. Tiene tramos de pista de tierra.",
+            "EN": "If your GPS sends you along the Vilanova de Sau to Rupit track, ignore it. Parts of it are dirt road."
+          },
+          "hora": "09:30",
+          "dur": "5 min",
+          "img": "/ciudades/tavertet/img/hotel.jpg",
+          "lat": 42.0053,
+          "lng": 2.44194,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Sant Romà de Sau",
+            "EN": "Sant Romà de Sau"
+          },
+          "s": {
+            "ES": "El campanario del pueblo sumergido",
+            "EN": "The bell tower of the drowned village"
+          },
+          "d": {
+            "ES": "Deja el coche en el aparcamiento junto al Club Nàutic y baja a la orilla. El pueblo quedó bajo el agua cuando se llenó el pantano, a principios de los sesenta, con su molino y un puente de cinco arcos de finales del siglo XIV. De la iglesia románica, del siglo XI, asoma el campanario, más o menos según el nivel.",
+            "EN": "Leave the car in the car park by the sailing club and walk down to the shore. The village went under when the reservoir filled in the early sixties, along with its mill and a five-arched bridge from the late 14th century. The bell tower of the 11th-century Romanesque church sticks out more or less depending on the level."
+          },
+          "tip": {
+            "ES": "Con el pantano bajo se llega andando cerca de la iglesia. Quédate fuera de las ruinas, que están medio derruidas.",
+            "EN": "When the reservoir is low you can walk close to the church. Stay out of the ruins, which are half collapsed."
+          },
+          "hora": "11:10",
+          "dur": "50 min",
+          "img": "/ciudades/tavertet/img/sau.jpg",
+          "lat": 41.97279,
+          "lng": 2.39291,
+          "tramo": "coche",
+          "tramoDuracionMin": 95,
+          "duracionMin": 50
+        },
+        {
+          "n": {
+            "ES": "Monasterio de Sant Pere de Casserres",
+            "EN": "Monastery of Sant Pere de Casserres"
+          },
+          "s": {
+            "ES": "Mil años en la punta del meandro",
+            "EN": "A thousand years at the tip of the bend"
+          },
+          "d": {
+            "ES": "Vuelves a Tavèrnoles y sigues la carretera de Casserres hasta el aparcamiento, y de ahí son unos 500 metros a pie. La vizcondesa Ermetruit empezó el monasterio en 1006 y la iglesia, más ancha que larga, se consagró en 1050. Según la leyenda, eligió el sitio una burra ciega que cargaba el cuerpo de un niño y se paró aquí.",
+            "EN": "You head back to Tavèrnoles and follow the Casserres road to the car park, then walk about 500 metres. Viscountess Ermetruit began the monastery in 1006 and the church, wider than it is long, was consecrated in 1050. Legend says a blind donkey carrying the body of a child chose the spot by stopping here."
+          },
+          "tip": {
+            "ES": "Venden la última entrada una hora antes de cerrar, y el domingo cierra a las 15:00 casi todo el año.",
+            "EN": "The last ticket is sold an hour before closing, and on Sundays it closes at 15:00 for most of the year."
+          },
+          "hora": "13:05",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/tavertet/img/casserres.jpg",
+          "lat": 42.00147,
+          "lng": 2.34069,
+          "tramo": "coche",
+          "tramoDuracionMin": 65,
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "Mirador sobre el embalse",
+            "EN": "Viewpoint over the reservoir"
+          },
+          "s": {
+            "ES": "El Ter dando la vuelta al monasterio",
+            "EN": "The Ter curling round the monastery"
+          },
+          "d": {
+            "ES": "En el camino de vuelta al coche, la pista se asoma al agua. Desde aquí ves el monasterio en lo alto de la península y el Ter, que aquí ya es pantano, dándole la vuelta casi entera. Es un buen sitio para sacar el pícnic.",
+            "EN": "On the way back to the car, the track looks out over the water. From here you see the monastery at the top of the peninsula and the Ter, already part of the reservoir, curling almost all the way round it. It is a good spot to get the picnic out."
+          },
+          "tip": {
+            "ES": "El pícnic del Raconet lleva bocadillo, fruta, dulces caseros, agua y zumo ecológico.",
+            "EN": "The Raconet picnic comes with a sandwich, fruit, homemade sweets, water and organic juice."
+          },
+          "hora": "14:25",
+          "dur": "40 min",
+          "img": "/ciudades/tavertet/img/casserres-mirador.jpg",
+          "lat": 41.99882,
+          "lng": 2.34128,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 40
+        }
+      ],
+      "fotos": [
+        "/ciudades/tavertet/img/sau.jpg",
+        "/ciudades/tavertet/img/sau-pantano.jpg",
+        "/ciudades/tavertet/img/casserres.jpg",
+        "/ciudades/tavertet/img/casserres-claustre.jpg",
+        "/ciudades/tavertet/img/casserres-mirador.jpg"
+      ],
+      "duracionMin": 410,
+      "distanciaKm": 128,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Casi todo se hace en coche. En Casserres hay unos 500 metros de pista entre el aparcamiento y el monasterio, y a la orilla de Sant Romà se baja por tierra.",
+        "EN": "Almost all of it is by car. At Casserres there are about 500 metres of track between the car park and the monastery, and the path down to the shore at Sant Romà is earth."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 42.0053,
+        "lng": 2.44194,
+        "foto": "/ciudades/tavertet/img/hotel.jpg",
+        "texto": {
+          "ES": "Aparcamiento de L'Avenc. El plan está pensado para salir a las 9:30.",
+          "EN": "L'Avenc car park. The plan assumes you set off at 9:30."
+        }
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Sant Pere de Casserres cierra los lunes, los martes y todo enero, y esos días el plan se queda en el pantano.",
+        "EN": "Self-guided, no booking or cancellation. Sant Pere de Casserres is closed on Mondays, Tuesdays and all of January, so on those days the plan is just the reservoir."
+      },
+      "salidasFijas": [],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un jabón artesanal de L'Avenc para llevarte a casa",
+      "EN": "A handmade L'Avenc soap to take home"
+    }
+  },
+  "creditos": [
+    "Pantano de Sau y cingles de Tavertet: Mtpla, CC BY-SA 3.0, Wikimedia Commons",
+    "Cingle de l'Avenc y lleix de Collsavenc desde Tavertet (recorte de la panorámica): Isidro Jabato, CC BY-SA 4.0, Wikimedia Commons",
+    "Tavertet y Sant Cristòfol: Josep Maria Viñolas Esteva, CC BY-SA 4.0, Wikimedia Commons",
+    "Puente colgante de Rupit: Angela Llop from Spain, CC BY-SA 2.0, Wikimedia Commons",
+    "Salt de Sallent: Mikipons, CC BY-SA 4.0, Wikimedia Commons",
+    "Cingle del Far desde Sant Martí Sacalm: Josep Maria Viñolas Esteva, CC BY-SA 4.0, Wikimedia Commons",
+    "Iglesia vieja de Sant Romà de Sau: Alberto-g-rovi, CC BY 3.0, Wikimedia Commons",
+    "Monasterio de Sant Pere de Casserres: Alberto-g-rovi, CC BY-SA 4.0, Wikimedia Commons",
+    "Plaça Major de Vic: Nostrix, CC BY-SA 3.0, Wikimedia Commons",
+    "Masía de L'Avenc: foto oficial del hotel, avenc.com, solo para la demo privada",
+    "Cingles de Tavertet: Angela Llop from Spain, CC BY-SA 2.0, Wikimedia Commons",
+    "Iglesia de Sant Cristòfol de Tavertet: Mikipons, CC BY-SA 4.0, Wikimedia Commons",
+    "Inflado de un globo en el European Balloon Festival de Igualada: Jordiferrer, CC BY-SA 4.0, Wikimedia Commons",
+    "Globos en el European Balloon Festival de Igualada: Albert Torelló, CC BY-SA 2.0, Wikimedia Commons",
+    "Globo tocando tierra (recorte): Cherubino, retocada por Greg A L, CC BY-SA 3.0, Wikimedia Commons",
+    "Mercado del sábado en la Plaça Major de Vic: Enric, CC BY 4.0, Wikimedia Commons",
+    "Catedral de Sant Pere de Vic: Enric, CC BY-SA 4.0, Wikimedia Commons",
+    "Rupit e iglesia de Sant Miquel: Josep Maria Viñolas Esteva, CC BY-SA 4.0, Wikimedia Commons",
+    "Santa Maria del Far: Angela Llop from Spain, CC BY-SA 2.0, Wikimedia Commons",
+    "Pantano de Sau: Jan Tomàs, CC0, Wikimedia Commons",
+    "El Ter y Sant Pere de Casserres: Alberto-g-rovi, CC BY-SA 4.0, Wikimedia Commons",
+    "Claustro de Sant Pere de Casserres: Oriol Sastre, CC BY-SA 4.0, Wikimedia Commons"
+  ]
+}

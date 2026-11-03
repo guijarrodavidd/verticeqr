@@ -1,0 +1,502 @@
+{
+  "cingles-1": {
+    "pregunta": {
+      "ES": "¿De qué año es el documento más antiguo que nombra a alguien de L'Avenc?",
+      "EN": "What year is the oldest document naming someone from L'Avenc?"
+    },
+    "opciones": [
+      {
+        "ES": "1557",
+        "EN": "1557"
+      },
+      {
+        "ES": "1234",
+        "EN": "1234"
+      },
+      {
+        "ES": "1696",
+        "EN": "1696"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Uno de los primeros que aparece es Petrus de Avench, un hombre de iglesia, en 1234. La casa ha conservado el nombre hasta hoy.",
+      "EN": "One of the first to appear is Petrus de Avench, a churchman, in 1234. The house has kept the name ever since."
+    }
+  },
+  "cingles-2": {
+    "pregunta": {
+      "ES": "¿Cómo llaman al salto del torrente de l'Avellanosa?",
+      "EN": "What is the Avellanosa stream's waterfall called?"
+    },
+    "opciones": [
+      {
+        "ES": "El Salt de Sallent",
+        "EN": "The Salt de Sallent"
+      },
+      {
+        "ES": "El Salt del Molí Bernat",
+        "EN": "The Salt del Molí Bernat"
+      },
+      {
+        "ES": "La Cua de Cavall",
+        "EN": "The Cua de Cavall"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Cua de cavall es cola de caballo en catalán. El otro torrente de los Salts, el de l'Abeurador, lleva menos agua.",
+      "EN": "Cua de cavall is Catalan for horse's tail. The other stream at the Salts, the Abeurador, carries less water."
+    }
+  },
+  "cingles-3": {
+    "pregunta": {
+      "ES": "¿Qué fósiles aparecen a veces en la caliza del cingle?",
+      "EN": "What fossils sometimes turn up in the cliff limestone?"
+    },
+    "opciones": [
+      {
+        "ES": "Erizos y caracolas de mar",
+        "EN": "Sea urchins and sea snails"
+      },
+      {
+        "ES": "Huesos de dinosaurio",
+        "EN": "Dinosaur bones"
+      },
+      {
+        "ES": "Hojas de helecho",
+        "EN": "Fern leaves"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La caliza se formó en el fondo de un antiguo mar, hace unos 50 millones de años. Por eso guarda erizos, bivalvos y numulites.",
+      "EN": "The limestone formed on the floor of an ancient sea, about 50 million years ago. That is why it holds sea urchins, bivalves and nummulites."
+    }
+  },
+  "cingles-4": {
+    "pregunta": {
+      "ES": "¿En qué año se declaró bien de interés cultural el casco antiguo de Tavertet?",
+      "EN": "In what year was Tavertet's old quarter declared a protected historic site?"
+    },
+    "opciones": [
+      {
+        "ES": "1963",
+        "EN": "1963"
+      },
+      {
+        "ES": "1991",
+        "EN": "1991"
+      },
+      {
+        "ES": "2010",
+        "EN": "2010"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El gobierno de la Generalitat lo aprobó el 25 de noviembre de 1991, en la categoría de conjunto histórico.",
+      "EN": "The Catalan government approved it on 25 November 1991, as a historic ensemble."
+    }
+  },
+  "cingles-5": {
+    "pregunta": {
+      "ES": "¿Cuánto se levantan los cingles de Tavertet por encima del pantano de Sau?",
+      "EN": "How high do the Tavertet cliffs rise above the Sau reservoir?"
+    },
+    "opciones": [
+      {
+        "ES": "Unos 100 metros",
+        "EN": "About 100 metres"
+      },
+      {
+        "ES": "Unos 1.000 metros",
+        "EN": "About 1,000 metres"
+      },
+      {
+        "ES": "Unos 400 metros",
+        "EN": "About 400 metres"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Las paredes suben unos 400 metros sobre el pantano, y el tramo vertical llega a 200.",
+      "EN": "The walls rise about 400 metres above the reservoir, and the sheer section reaches 200."
+    }
+  },
+  "globo-1": {
+    "pregunta": {
+      "ES": "¿Por qué los globos vuelan a primera hora de la mañana?",
+      "EN": "Why do balloons fly first thing in the morning?"
+    },
+    "opciones": [
+      {
+        "ES": "Porque de noche el globo pesa menos",
+        "EN": "Because the balloon weighs less at night"
+      },
+      {
+        "ES": "Porque hay menos viento y el aire está estable",
+        "EN": "Because there is less wind and the air is stable"
+      },
+      {
+        "ES": "Porque lo exige el ayuntamiento",
+        "EN": "Because the town hall requires it"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "A primera hora hay menos viento y el aire está fresco y estable. Cuando empieza a hacer calor, volar deja de ser seguro.",
+      "EN": "Early in the morning there is less wind and the air is cool and stable. Once it warms up, flying is no longer safe."
+    }
+  },
+  "globo-2": {
+    "pregunta": {
+      "ES": "¿Qué hace subir al globo?",
+      "EN": "What makes the balloon rise?"
+    },
+    "opciones": [
+      {
+        "ES": "Helio",
+        "EN": "Helium"
+      },
+      {
+        "ES": "Hidrógeno",
+        "EN": "Hydrogen"
+      },
+      {
+        "ES": "Aire caliente",
+        "EN": "Hot air"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "El quemador calienta el aire de dentro de la tela. El aire caliente pesa menos que el de fuera y el globo sube.",
+      "EN": "The burner heats the air inside the envelope. Hot air is lighter than the air outside, so the balloon rises."
+    }
+  },
+  "globo-3": {
+    "pregunta": {
+      "ES": "¿Qué montaña se distingue desde el globo en un día claro?",
+      "EN": "Which mountain can you pick out from the balloon on a clear day?"
+    },
+    "opciones": [
+      {
+        "ES": "El Pedraforca",
+        "EN": "The Pedraforca"
+      },
+      {
+        "ES": "El Teide",
+        "EN": "El Teide"
+      },
+      {
+        "ES": "El Mulhacén",
+        "EN": "Mulhacén"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Camins de Vent cuenta que desde el globo sobre Osona se ven el Pirineo y el Prepirineo, y con el día claro el Pedraforca.",
+      "EN": "Camins de Vent say that from a balloon over Osona you can see the Pyrenees and their foothills, and the Pedraforca on a clear day."
+    }
+  },
+  "globo-4": {
+    "pregunta": {
+      "ES": "¿Qué decide dónde aterriza el globo?",
+      "EN": "What decides where the balloon lands?"
+    },
+    "opciones": [
+      {
+        "ES": "Un plan de vuelo fijo",
+        "EN": "A fixed flight plan"
+      },
+      {
+        "ES": "El viento",
+        "EN": "The wind"
+      },
+      {
+        "ES": "El aeropuerto más cercano",
+        "EN": "The nearest airport"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El rumbo lo marca el viento. El piloto controla la altura para buscar la corriente, y el equipo de tierra sigue al globo hasta donde baja.",
+      "EN": "The wind sets the course. The pilot controls the height to find the right current, and the ground crew follows the balloon wherever it comes down."
+    }
+  },
+  "globo-5": {
+    "pregunta": {
+      "ES": "¿Desde cuándo hay mercado en la Plaça Major de Vic?",
+      "EN": "How long has there been a market in Vic's Plaça Major?"
+    },
+    "opciones": [
+      {
+        "ES": "Desde el siglo XVIII",
+        "EN": "Since the 18th century"
+      },
+      {
+        "ES": "Desde 1900",
+        "EN": "Since 1900"
+      },
+      {
+        "ES": "Desde el siglo IX",
+        "EN": "Since the 9th century"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Según Vic Turisme, el mercado se hace en ese sitio desde el siglo IX, antes de que se construyeran las primeras casas de la plaza.",
+      "EN": "According to Vic Turisme, the market has been held there since the 9th century, before the first houses around the square were built."
+    }
+  },
+  "globo-6": {
+    "pregunta": {
+      "ES": "¿Cuántas veces pintó Josep Maria Sert las paredes de la catedral?",
+      "EN": "How many times did Josep Maria Sert paint the cathedral walls?"
+    },
+    "opciones": [
+      {
+        "ES": "Dos",
+        "EN": "Twice"
+      },
+      {
+        "ES": "Una",
+        "EN": "Once"
+      },
+      {
+        "ES": "Tres",
+        "EN": "Three times"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Las primeras pinturas, de 1926 a 1930, se quemaron en el incendio de 1936. Sert volvió a pintarlas de 1939 a 1945 y murió sin acabarlas.",
+      "EN": "The first paintings, from 1926 to 1930, burned in the 1936 fire. Sert painted them again from 1939 to 1945 and died before finishing."
+    }
+  },
+  "rupit-1": {
+    "pregunta": {
+      "ES": "¿De dónde viene el nombre del Collsacabra?",
+      "EN": "Where does the name Collsacabra come from?"
+    },
+    "opciones": [
+      {
+        "ES": "De las cabras de los cingles",
+        "EN": "From the goats on the cliffs"
+      },
+      {
+        "ES": "Del castillo de Cabrera",
+        "EN": "From Cabrera castle"
+      },
+      {
+        "ES": "De un collado con forma de cabra",
+        "EN": "From a goat-shaped pass"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Viene del término del castillo de Cabrera, que se llamaba Cabrerès. Por eso a la comarca también se la llama así.",
+      "EN": "It comes from the lands of Cabrera castle, known as the Cabrerès. That is why the area also goes by that name."
+    }
+  },
+  "rupit-2": {
+    "pregunta": {
+      "ES": "¿En qué año se inauguró el puente colgante de Rupit?",
+      "EN": "In what year did the Rupit suspension bridge open?"
+    },
+    "opciones": [
+      {
+        "ES": "1890",
+        "EN": "1890"
+      },
+      {
+        "ES": "1975",
+        "EN": "1975"
+      },
+      {
+        "ES": "1945",
+        "EN": "1945"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Se inauguró en noviembre de 1945, hecho por gente del pueblo, y se reconstruyó en 1994.",
+      "EN": "It opened in November 1945, built by local people, and was rebuilt in 1994."
+    }
+  },
+  "rupit-3": {
+    "pregunta": {
+      "ES": "¿De qué palabra latina viene el nombre de Rupit?",
+      "EN": "Which Latin word does the name Rupit come from?"
+    },
+    "opciones": [
+      {
+        "ES": "Rupes, roca",
+        "EN": "Rupes, rock"
+      },
+      {
+        "ES": "Rivus, arroyo",
+        "EN": "Rivus, stream"
+      },
+      {
+        "ES": "Rupta, camino",
+        "EN": "Rupta, road"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Rupes es roca, por la peña donde se levantó el castillo hacia el año 1000 y alrededor de la cual creció el pueblo.",
+      "EN": "Rupes means rock, after the crag where the castle went up around the year 1000 and the village grew around it."
+    }
+  },
+  "rupit-4": {
+    "pregunta": {
+      "ES": "¿Cómo se llama la poza donde cae el Salt de Sallent?",
+      "EN": "What is the pool below the Salt de Sallent called?"
+    },
+    "opciones": [
+      {
+        "ES": "El gorg de la Plaja",
+        "EN": "The gorg de la Plaja"
+      },
+      {
+        "ES": "El gorg de la Trapa",
+        "EN": "The gorg de la Trapa"
+      },
+      {
+        "ES": "El gorg Negre",
+        "EN": "The gorg Negre"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Es el gorg de la Trapa, que también llaman del Diablo. El de la Plaja es el que hay bajo los Salts de l'Avenc.",
+      "EN": "It is the gorg de la Trapa, also called the Devil's pool. The gorg de la Plaja is the one below the Salts de l'Avenc."
+    }
+  },
+  "rupit-5": {
+    "pregunta": {
+      "ES": "¿Por qué el campanario del Far es tan bajo?",
+      "EN": "Why is the El Far bell tower so low?"
+    },
+    "opciones": [
+      {
+        "ES": "Por falta de dinero",
+        "EN": "For lack of money"
+      },
+      {
+        "ES": "Por el peso de las campanas",
+        "EN": "Because of the weight of the bells"
+      },
+      {
+        "ES": "Por los rayos",
+        "EN": "Because of lightning"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Los rayos lo castigaban tanto que lo dejaron plano, con una terraza arriba. Uno de 1654 ya había tumbado el remate en pirámide del anterior.",
+      "EN": "Lightning struck it so often that it was left flat, with a terrace on top. A bolt in 1654 had already knocked the pyramid spire off the earlier one."
+    }
+  },
+  "sau-1": {
+    "pregunta": {
+      "ES": "¿Cuánta agua cabe en el pantano de Sau?",
+      "EN": "How much water does the Sau reservoir hold?"
+    },
+    "opciones": [
+      {
+        "ES": "177 hm³",
+        "EN": "177 hm³"
+      },
+      {
+        "ES": "17 hm³",
+        "EN": "17 hm³"
+      },
+      {
+        "ES": "1.770 hm³",
+        "EN": "1,770 hm³"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Puede guardar hasta 177 hm³. Mide 17 km de largo y la presa tiene 75 metros de alto.",
+      "EN": "It can hold up to 177 hm³. It is 17 km long and the dam is 75 metres high."
+    }
+  },
+  "sau-2": {
+    "pregunta": {
+      "ES": "¿Qué salió a la vista en febrero de 2024, con el pantano al 1,4 %?",
+      "EN": "What came into view in February 2024, with the reservoir at 1.4 %?"
+    },
+    "opciones": [
+      {
+        "ES": "Un barco romano",
+        "EN": "A Roman boat"
+      },
+      {
+        "ES": "El puente medieval",
+        "EN": "The medieval bridge"
+      },
+      {
+        "ES": "La campana de la iglesia",
+        "EN": "The church bell"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "El 27 de febrero de 2024 asomó el puente medieval que cruzaba el Ter. Al estar en la parte más honda, no se veía desde que se llenó el pantano.",
+      "EN": "On 27 February 2024 the medieval bridge over the Ter appeared. It sits in the deepest part, so it had not been seen since the reservoir filled."
+    }
+  },
+  "sau-3": {
+    "pregunta": {
+      "ES": "Según la leyenda, ¿quién eligió el sitio de Sant Pere de Casserres?",
+      "EN": "According to legend, who chose the site of Sant Pere de Casserres?"
+    },
+    "opciones": [
+      {
+        "ES": "Un pastor perdido",
+        "EN": "A lost shepherd"
+      },
+      {
+        "ES": "Un monje francés",
+        "EN": "A French monk"
+      },
+      {
+        "ES": "Una burra ciega",
+        "EN": "A blind donkey"
+      }
+    ],
+    "correcta": 2,
+    "explicacion": {
+      "ES": "Llevaba a lomos el cuerpo de un niño, caminó sin que nadie la guiara y se paró en la punta del meandro, donde se levantó el monasterio.",
+      "EN": "It carried the body of a child, walked without anyone guiding it and stopped at the tip of the bend, where the monastery was built."
+    }
+  },
+  "sau-4": {
+    "pregunta": {
+      "ES": "¿A qué monasterio francés quedó unido Casserres en 1079?",
+      "EN": "Which French monastery was Casserres joined to in 1079?"
+    },
+    "opciones": [
+      {
+        "ES": "Cluny",
+        "EN": "Cluny"
+      },
+      {
+        "ES": "Cîteaux",
+        "EN": "Cîteaux"
+      },
+      {
+        "ES": "Saint-Denis",
+        "EN": "Saint-Denis"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Los vizcondes de Osona y Cardona lo unieron a Cluny, y en 1080 pasó a ser el centro de las posesiones de Cluny en Cataluña.",
+      "EN": "The viscounts of Osona and Cardona joined it to Cluny, and in 1080 it became the centre of Cluny's holdings in Catalonia."
+    }
+  }
+}
