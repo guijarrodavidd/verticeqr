@@ -1,0 +1,1 @@
+function c(n,t,r,o=0){if(t!=="new")return 0;let e=n+12e4-o-r;return e>0?Math.ceil(e/1e3):0}function s(n){let t=Math.floor(n/60),r=n%60;return`${t}:${String(r).padStart(2,"0")}`}var a="huesped_cancela";export{c as a,s as b,a as c};

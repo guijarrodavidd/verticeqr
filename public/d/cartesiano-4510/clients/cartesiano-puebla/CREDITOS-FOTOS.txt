@@ -1,0 +1,132 @@
+CRÉDITOS DE FOTOGRAFÍA Y VÍDEO · carta Cartesiano Boutique & Wellness Hotel (Puebla, México)
+=============================================================================================
+USO EXCLUSIVO PARA LA DEMO PRIVADA que se enseña al propio hotel. No publicar.
+Todas las imágenes, recortadas a 800×533 y calidad ~74 (banner 1200×800, og 1200×630).
+
+1) MATERIAL DEL HOTEL · propiedad de Cartesiano Boutique & Wellness Hotel, solo para la demo privada
+   Antes de cualquier uso público se sustituye por el material que facilite el hotel.
+
+   pk1, pk2, pk3, sp1, rt1, ex1, bb1, bb5, cm9, cm13 y cm14: ver los vídeos, más abajo.
+
+   a) Fotos de su web (cartesiano360.com, servidas desde cdn.prod.website-files.com; entre
+      paréntesis, el fichero original)
+     banner.jpg, og.jpg  Terraza de Comedor 360 con las torres de la catedral
+                         (Galería-restaurante-Comedor360-puebla-terrazas-vistas-ambiente.webp)
+     sv4.jpg, up5.jpg    Suite Deluxe (a-suite-deluxe-1_11zon.webp); am4.jpg, otro recorte de la misma
+     ex7.jpg             Alberca del tercer piso (Galería-espacios-…-alberca-infinita-vistas.webp)
+     mesa-comedor.jpg    Terraza de Comedor 360 (Galería-restaurante-Comedor360-puebla-terraza.webp)
+     mesa-custodia.jpg   Salón de Custodia (Galería-restaurante-…-Custodia-tradicion.webp)
+     rs1.jpg             Mesa de Comedor 360 (Restaurante-Comedor-360_11zon.webp)
+     rs2.jpg             Custodia (Galería-restaurante-…-Custodia-disfrutar.webp)
+     pk4.jpg             Desayuno de Comedor 360, recorte sin el rótulo (Desayun-comedor-esp_11zon.webp)
+     pk5.jpg             Piano (Piano_11zon.webp)
+     pk6.jpg, cm8.jpg    Pizza y copa de vino (pizza-mier.avif)
+     cm1.jpg             Mole de Custodia, el de temporada (Mole-caderas.avif), para el mole poblano
+     sp4.jpg             Cabina de masaje (Galería-espacios-…-spa-masajes-cabina-exclusiva.webp)
+     rt2.jpg             Hidrocircuito (Galería-espacios-…-spa-hidrocircuito.webp)
+     rt3.jpg             Vapor del spa (Galería-espacios-…-spa-vapor.webp)
+     rt4.jpg             The Love Ritual (The-Love-Ritual.avif)
+     rt5.jpg             Cena en batas (cena-batas-spa-parejas-exclusivo-puebla-romantico.webp)
+     up1.jpg             Huésped en la cama (descanso-promo_11zon.webp)
+     up2.jpg             Pareja con maletas en la habitación (poblanos_11zon.webp)
+     up3.jpg             Entrada y patio central (Galería-espacios-…-entrada-patio-central.webp)
+     up4.jpg             Pareja con vino en la habitación (romantico_11zon.webp)
+     up6.jpg             Lobby lounge (Galería-espacios-…-lobbylounge.webp)
+     am6.jpg             Calle del barrio de Los Sapos, de su página de Puebla (callejon de los sapos.webp)
+     am8.jpg             Clase de yoga del hotel (Wrooms-yoga-kundalini_11zon.webp)
+
+   b) logo.png / logo-white.png · logotipo en texto de su web (cartesiano-logo.avif, 600 px, en
+      blanco), pasado a PNG de 1050 px: logo.png en su morado #512C6F y logo-white.png en blanco,
+      para la bienvenida sobre el vídeo.
+
+2) VÍDEO DE BIENVENIDA (4-nov-2026; póster img/welcome.jpg = primer fotograma, 1080×1920, JPEG calidad 85)
+     vid/welcome.mp4  Cuatro planos de dron con fundidos de 0,4 s; el último funde con el arranque del
+                  primero para que el bucle no salte. El vídeo propio del hotel (su web) solo está a
+                  1280×720 en horizontal: recortado en vertical se vería borroso. Estos son 4K reales
+                  del centro de Puebla, de Wikimedia Commons, con licencia CC0 (dominio público, sin
+                  atribución obligatoria; se cita igual).
+                  1. La fachada de la catedral y su cúpula, el dron subiendo (tramo 4,0–7,2 s)
+                  2. La torre norte de la catedral con la ciudad detrás (tramo 14,0–16,7 s)
+                     Los dos: «Catedral de Puebla (fachada) desde un dron.webm» · Luisalvaz · 3840×2160 ·
+                     CC0 · https://commons.wikimedia.org/wiki/File:Catedral_de_Puebla_(fachada)_desde_un_dron.webm
+                  3. La catedral y el Zócalo desde arriba (tramo 9,5–12,2 s)
+                  4. El centro histórico con las montañas al fondo (tramo 0,5–3,2 s)
+                     Los dos: «Panorámica del centro histórico, catedral y zócalo de Puebla desde un dron.webm» ·
+                     Luisalvaz · 3840×2160 · CC0 · https://commons.wikimedia.org/wiki/File:Panorámica_del_centro_histórico,_catedral_y_zócalo_de_Puebla_desde_un_dron.webm
+                  Recorte vertical sin deformar y un desenfoque muy leve (gblur 1,1) para que la textura
+                  de los tejados quepa en el peso. Vertical 1080×1920, 30 fps, 9,8 s, H.264 High CRF 20,
+                  sin audio, fast start, 9,0 MB.
+
+   VÍDEOS DE LAS FICHAS (vid/*.mp4, 960×540, 30 fps, 8–9 s, H.264 sin audio, de 1 a 3 MB). La foto
+   de la tarjeta (img/<id>.jpg) es su primer fotograma, y hace de póster mientras carga.
+     pk1.mp4  Cena en la azotea: el sol cayendo tras la catedral, el Popocatépetl, la terraza de noche y
+              una pareja cenando · vídeo de portada de su web (VIDEO PORTADA PAGINA WEB PRINCIPAL, 1280×720,
+              s 44,5–47,0, 47,2–51,2 y 35,6–38,5)
+     pk2.mp4  Cata en el bar: el arco de botellas de Custodia (vídeo principal, s 40,5–42,0) y el destilado
+              servido en la mesa y los cócteles (vídeo de restaurantes de su web, 1280×720, s 27–32 y 43,5–46,3)
+     pk3.mp4  Masaje y vapor: el hidrocircuito (vídeo principal, s 28–30,6) y masajes (vídeo de spa y
+              wellness de su web, 1280×720, s 4–6, 23–28)
+     sp1.mp4  Masajes del spa (vídeo de spa, s 4,1–5,9, 9–12, 25–28 y 0–2,4)
+     rt1.mp4  Saquitos de hierbas, cuencos y el hidrocircuito (vídeo de spa, s 16,4–21; vídeo principal, s 28–30,6)
+     ex1.mp4  La catedral y el centro desde el dron · los dos vídeos 4K de Luisalvaz de Wikimedia Commons
+              (CC0) del punto 2
+   Fotos sacadas de esos vídeos (fotograma a 1280×720, recorte 800×533)
+     bb1.jpg  Cócteles de Comedor 360 (vídeo de restaurantes, s 44,6)
+     bb5.jpg  Cóctel con fuego (vídeo de restaurantes, s 30,6)
+     cm9.jpg  Tacos de aguacate (vídeo de restaurantes, s 21)
+     cm13.jpg Pulpo al Josper (vídeo de restaurantes, s 13)
+     cm14.jpg Tabla de quesos (vídeo de restaurantes, s 49)
+
+3) REUTILIZADAS DE OTRAS CARTAS DE VÉRTICE (mismo fichero; crédito completo en su CREDITOS-FOTOS.txt)
+   Fotos genéricas de platillos, bebidas, desayunos, postres, masajes y servicios: no son del hotel
+   ni de su cocina.
+     cm2  = fiesta-inn-puebla/cm4 (Pexels · Paul Seling), para la sopa poblana
+     cm3  = fiesta-inn-puebla/cm2 (Chalupas poblanas · Luis Alvaz)
+     cm4  = quinta-eden/cm11 (Tacos de arrachera · T.Tseng · CC BY 2.0)
+     cm5  = fiesta-inn-puebla/cm11 (Pexels · Yuen Tou Zan)
+     cm6  = fiesta-inn-puebla/cm12 (Pexels · Foodie Factor)
+     cm7  = fiesta-inn-puebla/cm1 (Pexels · Snappr)
+     cm10 = fiesta-inn-puebla/cm6 (Pexels · Shameel Mukkath)
+     cm11 = dreams-punta-mita/cm2 (Pexels · Ximena Savage)
+     cm12 = sheraton/cm8 (Pexels · Willians Huerta)
+     bb2  = fiesta-inn-puebla/bb2 (Pexels · SplitShire)
+     bb3  = fiesta-inn-puebla/bb3 (Pexels · Roy Muriithi)
+     bb4  = fiesta-inn-puebla/bb8 (Pexels · Pavel Danilyuk)
+     bb5  = fiesta-inn-puebla/bb7 (Pexels · Roman Odintsov)
+     bb6  = bordeluz/bb6 (Pexels · Evgeniy Alekseyev)
+     bb7  = vibra-yamm/bb5 (Pexels · Oliver Matos)
+     bb8  = fiesta-inn-puebla/bb10 (Pexels · Li Sun)
+     bb9  = fiesta-inn-puebla/bb9 (Pexels · Viridiana Rivera)
+     bb10 = real-de-la-loma/bb5 (Pexels · Israyosoy)
+     bb11 = izaga-hostal/bb3 (Jarra y copa de vino rosado · Abi Skipp · CC BY 2.0)
+     bb12 = fiesta-inn-puebla/bb6 (Pexels · Jonathan Reynaga)
+     bb13 = fiesta-inn-puebla/bb11 (Pexels · Çiğdem Çelenk)
+     bb14 = fiesta-inn-puebla/bb12 (Pexels · Marina Leonova)
+     sp2  = fiesta-inn-puebla/sp1 (Pexels · cottonbro studio)
+     sp3  = real-de-la-loma/sp3 (Pexels · tommy picone)
+     ds1  = fiesta-inn-puebla/ds1 (Pexels · 23 Audiovisual)
+     ds2  = real-de-la-loma/cm3 (Sopes de frijol · Dahyana Yasada R. R. · CC BY-SA 4.0), para el huarache
+     ds3  = quinta-eden/cm10 (Pexels · Willians Huerta)
+     ds4  = fiesta-inn-puebla/ds6 (Pexels · Amar Preciado)
+     ds5  = fiesta-inn-puebla/ds9 (Pexels · Tochukwu Ekeh)
+     ds6  = fiesta-inn-puebla/ds3 (Pexels · Allan González)
+     ds7  = fiesta-inn-puebla/ds7 (Pexels · Not My Real Name)
+     ds8  = fiesta-inn-puebla/ds8 (Pexels · Sami Aksu)
+     ds9  = fiesta-inn-puebla/ds2 (Pexels · Pixabay)
+     ds10 = fiesta-inn-puebla/ds4 (Pexels · Pixabay)
+     am1  = megapolis-panama/am1 (Pexels · Skylar Kang)
+     am2  = fiesta-inn-puebla/am1 (Pexels · Castorly Stock)
+     am3  = megapolis-panama/am3 (Pexels · AS Photography)
+     am5  = presidente-miyana/sv9 (Pexels · Erik Mclean)
+     am7  = montecastillo/am5 (Old fashioned clock · Nenad Stojkovic · CC BY 2.0)
+     am9  = fiesta-inn-puebla/sv7 (Pexels · Pixabay)
+     am10 = fiesta-inn-puebla/sv6 (Pexels · Polina Tankilevitch)
+     am11 = fiesta-inn-puebla/sv1 (Pexels · Сергей Тарасов)
+     am12 = fiesta-inn-puebla/sv2 (Pexels · Heriberto Hernández)
+     ex2  = fiesta-inn-puebla/ex2 (Pexels · Elchino portrait)
+     ex6  = fiesta-inn-puebla/ex6 (Pexels · Roger Ce)
+     dl1  = fiesta-inn-puebla/dl1 (Pexels · Cristian Arteaga)
+     dl2  = megapolis-panama/dl2 (Brownie with ice cream · Yoga Jaganathan · CC BY-SA 4.0)
+     dl3  = carris-marineda/dl4 (Flan casero · Horacio Cambeiro · CC BY-SA 4.0)
+     dl4  = quinta-eden/dl3 (Pexels · Suzy Hazelwood), para la tarta vasca
+     dl5  = fiesta-inn-puebla/dl4 (Pexels · Leeloo The First)
