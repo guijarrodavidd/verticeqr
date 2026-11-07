@@ -31,6 +31,7 @@ const nextConfig: NextConfig = {
       { source: "/d/sheraton-5e38/:path*", destination: "/d/sheraton-5e38/index.html" },
       { source: "/d/fiestainn-aec3/:path*", destination: "/d/fiestainn-aec3/index.html" },
       { source: "/d/carris-a793/:path*", destination: "/d/carris-a793/index.html" },
+      { source: "/d/teddys-ab10/:path*", destination: "/d/teddys-ab10/index.html" },
       { source: "/d/hotel23-0240/:path*", destination: "/d/hotel23-0240/index.html" },
       { source: "/d/cartesiano-4510/:path*", destination: "/d/cartesiano-4510/index.html" },
       { source: "/d/catedral-f4c1/:path*", destination: "/d/catedral-f4c1/index.html" },

@@ -1,0 +1,302 @@
+{
+  "north-unit-1": {
+    "pregunta": {
+      "ES": "¿Cómo se formaron las concreciones de bala de cañón?",
+      "EN": "How did the cannonball concretions form?"
+    },
+    "opciones": [
+      {
+        "ES": "Minerales que pegaron arena alrededor de un núcleo",
+        "EN": "Minerals that glued sand around a core"
+      },
+      {
+        "ES": "Rocas que arrastró un glaciar",
+        "EN": "Rocks dragged in by a glacier"
+      },
+      {
+        "ES": "Lava que se enfrió en bolas",
+        "EN": "Lava that cooled into balls"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Bajo tierra, el agua fue dejando minerales que cementaron la arena en capas alrededor de un núcleo. Después la erosión se llevó la roca blanda que las tapaba.",
+      "EN": "Underground, water left minerals that cemented the sand in layers around a core. Later, erosion carried away the softer rock that covered them."
+    }
+  },
+  "north-unit-2": {
+    "pregunta": {
+      "ES": "¿Qué mantiene en pie los pilares de Caprock Coulee?",
+      "EN": "What keeps the Caprock Coulee pillars standing?"
+    },
+    "opciones": [
+      {
+        "ES": "Una losa de roca más dura encima",
+        "EN": "A slab of harder rock on top"
+      },
+      {
+        "ES": "Las raíces de los enebros",
+        "EN": "Juniper roots"
+      },
+      {
+        "ES": "El hielo del invierno",
+        "EN": "Winter ice"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La roca dura de arriba hace de paraguas: la lluvia se lleva la arcilla de alrededor y el pilar que queda debajo aguanta.",
+      "EN": "The hard rock on top works like an umbrella: rain washes away the clay around it and the pillar underneath holds."
+    }
+  },
+  "north-unit-3": {
+    "pregunta": {
+      "ES": "¿Quién construyó el refugio de River Bend Overlook?",
+      "EN": "Who built the River Bend Overlook shelter?"
+    },
+    "opciones": [
+      {
+        "ES": "El Civilian Conservation Corps",
+        "EN": "The Civilian Conservation Corps"
+      },
+      {
+        "ES": "Theodore Roosevelt",
+        "EN": "Theodore Roosevelt"
+      },
+      {
+        "ES": "El ejército, en 1880",
+        "EN": "The army, in 1880"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Dos compañías del CCC acamparon junto al Little Missouri en 1934, cerca de la entrada actual, y levantaron el refugio hacia 1937.",
+      "EN": "Two CCC companies camped by the Little Missouri in 1934, near today’s entrance, and built the shelter around 1937."
+    }
+  },
+  "north-unit-4": {
+    "pregunta": {
+      "ES": "¿Hacia dónde corría el Little Missouri antes de los glaciares?",
+      "EN": "Which way did the Little Missouri flow before the glaciers?"
+    },
+    "opciones": [
+      {
+        "ES": "Al norte, hasta la bahía de Hudson",
+        "EN": "North, to Hudson Bay"
+      },
+      {
+        "ES": "Al sur, hasta el golfo de México",
+        "EN": "South, to the Gulf of Mexico"
+      },
+      {
+        "ES": "Al oeste, hasta el Pacífico",
+        "EN": "West, to the Pacific"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El hielo le cerró el paso hace unos 600,000 años y el río giró al este. El camino nuevo era más corto y empinado, y con esa fuerza empezó a excavar los badlands.",
+      "EN": "Ice blocked its path some 600,000 years ago and the river turned east. The new course was shorter and steeper, and with that force it began carving the badlands."
+    }
+  },
+  "fort-union-1": {
+    "pregunta": {
+      "ES": "¿Qué cambiaban los pueblos de las llanuras en Fort Union?",
+      "EN": "What did the Plains tribes trade at Fort Union?"
+    },
+    "opciones": [
+      {
+        "ES": "Pieles de bisonte",
+        "EN": "Bison robes"
+      },
+      {
+        "ES": "Oro",
+        "EN": "Gold"
+      },
+      {
+        "ES": "Caballos",
+        "EN": "Horses"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Los assiniboine, los crow y los cree traían pieles de bisonte y se llevaban mantas, armas, ollas y cuentas de vidrio de la American Fur Company.",
+      "EN": "The Assiniboine, Crow and Cree brought bison robes and left with blankets, guns, kettles and glass beads from the American Fur Company."
+    }
+  },
+  "fort-union-2": {
+    "pregunta": {
+      "ES": "¿Quién se rindió en Fort Buford en 1881?",
+      "EN": "Who surrendered at Fort Buford in 1881?"
+    },
+    "opciones": [
+      {
+        "ES": "Toro Sentado",
+        "EN": "Sitting Bull"
+      },
+      {
+        "ES": "Caballo Loco",
+        "EN": "Crazy Horse"
+      },
+      {
+        "ES": "Gerónimo",
+        "EN": "Geronimo"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Toro Sentado volvió de Canadá con menos de 200 de los suyos y se rindió en Fort Buford el 19 de julio de 1881.",
+      "EN": "Sitting Bull came back from Canada with fewer than 200 of his people and surrendered at Fort Buford on July 19, 1881."
+    }
+  },
+  "fort-union-3": {
+    "pregunta": {
+      "ES": "¿Qué dos ríos se juntan junto a Fort Buford?",
+      "EN": "Which two rivers meet by Fort Buford?"
+    },
+    "opciones": [
+      {
+        "ES": "El Missouri y el Yellowstone",
+        "EN": "The Missouri and the Yellowstone"
+      },
+      {
+        "ES": "El Missouri y el Little Missouri",
+        "EN": "The Missouri and the Little Missouri"
+      },
+      {
+        "ES": "El Yellowstone y el Platte",
+        "EN": "The Yellowstone and the Platte"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El Yellowstone baja de Montana y entra aquí en el Missouri. Por eso el sitio fue clave para el comercio de pieles y después para el ejército.",
+      "EN": "The Yellowstone comes down from Montana and joins the Missouri here. That made the spot key for the fur trade and later for the army."
+    }
+  },
+  "fort-union-4": {
+    "pregunta": {
+      "ES": "¿Cuándo llegaron Lewis y Clark a la confluencia?",
+      "EN": "When did Lewis and Clark reach the confluence?"
+    },
+    "opciones": [
+      {
+        "ES": "En 1805",
+        "EN": "In 1805"
+      },
+      {
+        "ES": "En 1828",
+        "EN": "In 1828"
+      },
+      {
+        "ES": "En 1883",
+        "EN": "In 1883"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Lewis llegó el 25 de abril de 1805, camino del Pacífico. 1828 es el año de Fort Union y 1883, el de Roosevelt en los badlands.",
+      "EN": "Lewis arrived on April 25, 1805, on the way to the Pacific. 1828 is the year of Fort Union, and 1883 the year Roosevelt came to the badlands."
+    }
+  },
+  "medora-1": {
+    "pregunta": {
+      "ES": "¿Qué son las franjas negras de Painted Canyon?",
+      "EN": "What are the black bands in Painted Canyon?"
+    },
+    "opciones": [
+      {
+        "ES": "Vetas de lignito, un carbón blando",
+        "EN": "Seams of lignite, a soft coal"
+      },
+      {
+        "ES": "Marcas de incendios recientes",
+        "EN": "Scars from recent fires"
+      },
+      {
+        "ES": "Roca volcánica",
+        "EN": "Volcanic rock"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Son lignito. Donde una veta ardió bajo tierra coció la arcilla de encima, y esa roca roja que ves en los cerros se llama escoria.",
+      "EN": "They are lignite. Where a seam burned underground it baked the clay above, and the red rock you see in the buttes is called scoria."
+    }
+  },
+  "medora-2": {
+    "pregunta": {
+      "ES": "¿Qué decía Roosevelt de sus años en Dakota del Norte?",
+      "EN": "What did Roosevelt say about his years in North Dakota?"
+    },
+    "opciones": [
+      {
+        "ES": "Que sin ellos no habría sido presidente",
+        "EN": "That without them he would not have been president"
+      },
+      {
+        "ES": "Que fueron los peores de su vida",
+        "EN": "That they were the worst of his life"
+      },
+      {
+        "ES": "Que nunca pensaba volver",
+        "EN": "That he never meant to come back"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Llegó en 1883 a cazar bisontes, compró un rancho y volvió al año siguiente, después de perder a su madre y a su mujer el mismo día. Aquí se hizo ganadero.",
+      "EN": "He came in 1883 to hunt bison, bought a ranch and came back the next year, after losing his mother and his wife on the same day. Here he became a rancher."
+    }
+  },
+  "medora-3": {
+    "pregunta": {
+      "ES": "¿Por qué estuvo cerrada seis años la carretera del South Unit?",
+      "EN": "Why was the South Unit road closed for six years?"
+    },
+    "opciones": [
+      {
+        "ES": "Por deslizamientos del terreno",
+        "EN": "Because of landslides"
+      },
+      {
+        "ES": "Por un incendio",
+        "EN": "Because of a fire"
+      },
+      {
+        "ES": "Por obras de la biblioteca",
+        "EN": "Because of the library works"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "La arcilla de los badlands se mueve con el agua y un tramo de la carretera se vino abajo. Reabrió entera en noviembre de 2025.",
+      "EN": "Badlands clay shifts with water, and a stretch of the road slid away. It reopened end to end in November 2025."
+    }
+  },
+  "medora-4": {
+    "pregunta": {
+      "ES": "¿De dónde viene el nombre de Medora?",
+      "EN": "Where does the name Medora come from?"
+    },
+    "opciones": [
+      {
+        "ES": "De la mujer del marqués de Morès",
+        "EN": "From the Marquis de Morès’s wife"
+      },
+      {
+        "ES": "De un río de la zona",
+        "EN": "From a local river"
+      },
+      {
+        "ES": "De una mina de carbón",
+        "EN": "From a coal mine"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El marqués, un noble francés, fundó el pueblo en 1883 para montar un matadero junto al ferrocarril y le puso el nombre de su mujer, Medora von Hoffman.",
+      "EN": "The marquis, a French nobleman, founded the town in 1883 to run a meatpacking plant by the railroad, and named it after his wife, Medora von Hoffman."
+    }
+  }
+}

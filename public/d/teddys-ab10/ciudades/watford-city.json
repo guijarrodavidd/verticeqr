@@ -1,0 +1,783 @@
+{
+  "slug": "watford-city",
+  "nombre": "Watford City",
+  "intro": {
+    "ES": "El hotel está en la 9th Avenue SE, en el lado sur de Watford City, el pueblo que creció con el petróleo del Bakken: de 1,744 vecinos en 2010 a 6,207 en 2020. El North Unit del parque nacional Theodore Roosevelt queda a 20 minutos al sur por la US-85. Con un día libre, el lago Sakakawea está a media hora y Medora, a hora y media.",
+    "EN": "The hotel is on 9th Avenue SE, on the south side of Watford City, the town that grew with Bakken oil: from 1,744 people in 2010 to 6,207 in 2020. The North Unit of Theodore Roosevelt National Park is 20 minutes south on US-85. With a day off, Lake Sakakawea is half an hour away and Medora about an hour and a half."
+  },
+  "lugares": [
+    {
+      "id": "north-unit",
+      "img": "/ciudades/watford-city/img/north-unit.jpg",
+      "nombre": "Theodore Roosevelt National Park · North Unit",
+      "zona": {
+        "ES": "15 millas al sur por la US-85, unos 20 minutos en auto",
+        "EN": "15 miles south on US-85, about 20 minutes by car"
+      },
+      "d": {
+        "ES": "Es la parte norte del único parque nacional de Dakota del Norte, que lleva el nombre de Theodore Roosevelt. Llegó a estos badlands en 1883 a cazar bisontes y volvió como ganadero. La carretera del parque recorre 14 millas entre cerros de franjas grises y ocres hasta Oxbow Overlook, ida y vuelta. Casi siempre hay bisontes a la vista, y el parque mantiene una pequeña manada de novillos longhorn desde 1967. La entrada son $30 por auto y vale siete días.",
+        "EN": "This is the northern part of North Dakota’s only national park, named for Theodore Roosevelt. He came to these badlands in 1883 to hunt bison and came back as a rancher. The park road runs 14 miles between gray and ochre striped buttes to Oxbow Overlook, out and back. Bison are almost always in sight, and the park has kept a small herd of longhorn steers since 1967. Entry is $30 per car and is good for seven days."
+      },
+      "cuando": {
+        "ES": "A última hora de la tarde, con la luz baja sobre los cerros",
+        "EN": "Late in the afternoon, when the low light hits the buttes"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 47.5948,
+      "lng": -103.262
+    },
+    {
+      "id": "river-bend",
+      "img": "/ciudades/watford-city/img/river-bend.jpg",
+      "nombre": "River Bend Overlook",
+      "zona": {
+        "ES": "En la carretera del North Unit, unos 35 minutos en auto",
+        "EN": "On the North Unit road, about 35 minutes by car"
+      },
+      "d": {
+        "ES": "Un refugio de piedra en el borde de un cerro, levantado por el Civilian Conservation Corps hacia 1937. Desde ahí ves el Little Missouri haciendo una curva amplia en el fondo del valle, con los álamos en la orilla. El servicio de parques la llama la vista más reconocible del North Unit.",
+        "EN": "A stone shelter on the edge of a butte, built by the Civilian Conservation Corps around 1937. From there you see the Little Missouri swing in a wide bend at the bottom of the valley, with cottonwoods along the bank. The Park Service calls it the best-known view in the North Unit."
+      },
+      "cuando": {
+        "ES": "Por la tarde, con el sol a la espalda",
+        "EN": "In the afternoon, with the sun behind you"
+      },
+      "min": 35,
+      "modo": "coche",
+      "lat": 47.6088,
+      "lng": -103.3776
+    },
+    {
+      "id": "oxbow",
+      "img": "/ciudades/watford-city/img/oxbow.jpg",
+      "nombre": "Oxbow Overlook",
+      "zona": {
+        "ES": "Al final de la carretera del parque, unos 45 minutos en auto",
+        "EN": "At the end of the park road, about 45 minutes by car"
+      },
+      "d": {
+        "ES": "Aquí termina la carretera del North Unit, a 14 millas de la entrada. Abajo, el Little Missouri gira hacia el este. Hace unos 600,000 años corría hacia el norte, hasta la bahía de Hudson, y el hielo de los glaciares le cerró el paso. Por el camino nuevo, más corto y más empinado, el río empezó a excavar los badlands.",
+        "EN": "This is where the North Unit road ends, 14 miles from the entrance. Below, the Little Missouri turns east. Some 600,000 years ago it flowed north to Hudson Bay, until glacial ice blocked the way. On the new route, shorter and steeper, the river started carving the badlands."
+      },
+      "cuando": {
+        "ES": "A la puesta de sol, que de noviembre a enero cae entre las 17:00 y las 17:30",
+        "EN": "At sunset, which from November to January comes between 5 and 5:30 pm"
+      },
+      "min": 45,
+      "modo": "coche",
+      "lat": 47.6028,
+      "lng": -103.4417
+    },
+    {
+      "id": "long-x",
+      "img": "/ciudades/watford-city/img/watford.jpg",
+      "nombre": "Long X Visitor Center · Pioneer Museum",
+      "zona": {
+        "ES": "100 2nd Ave SW, en el centro de Watford City, a 3 minutos en auto",
+        "EN": "100 2nd Ave SW, downtown Watford City, 3 minutes by car"
+      },
+      "d": {
+        "ES": "El centro de visitantes del pueblo lleva el nombre del rancho Long X, cuyos vaqueros subían ganado desde Texas por la ruta que hoy cruza el North Unit. Dentro está el Pioneer Museum del condado de McKenzie, con lo que dejaron los primeros colonos, y la tienda de recuerdos. Abre todo el año, de lunes a sábado de 10:00 a 18:00.",
+        "EN": "The town’s visitor center is named after the Long X Ranch, whose cowboys drove cattle up from Texas along the trail that now crosses the North Unit. Inside is the McKenzie County Pioneer Museum, with what the first settlers left behind, and the gift shop. It’s open all year, Monday to Saturday, 10 am to 6 pm."
+      },
+      "cuando": {
+        "ES": "Cualquier día menos el domingo, antes de las 18:00",
+        "EN": "Any day but Sunday, before 6 pm"
+      },
+      "min": 3,
+      "modo": "coche",
+      "lat": 47.7981,
+      "lng": -103.284
+    },
+    {
+      "id": "sakakawea",
+      "img": "/ciudades/watford-city/img/sakakawea.jpg",
+      "nombre": "Lake Sakakawea · Tobacco Garden",
+      "zona": {
+        "ES": "25 millas al norte por la ND-1806, unos 30 minutos en auto",
+        "EN": "25 miles north on ND-1806, about 30 minutes by car"
+      },
+      "d": {
+        "ES": "El lago nació cuando la presa de Garrison cerró el Missouri en 1953, y lleva el nombre de Sakakawea, la mujer shoshone que acompañó a Lewis y Clark. Tobacco Garden tiene marina, campamento y una bahía conocida por el walleye. El resort abre todo el año, también en invierno, para la pesca en hielo.",
+        "EN": "The lake was born when Garrison Dam closed off the Missouri in 1953, and it is named after Sakakawea, the Shoshone woman who traveled with Lewis and Clark. Tobacco Garden has a marina, a campground and a bay known for walleye. The resort stays open all year, winter included, for ice fishing."
+      },
+      "cuando": {
+        "ES": "Las mañanas de primavera, cuando pica el walleye",
+        "EN": "Spring mornings, when the walleye are biting"
+      },
+      "min": 30,
+      "modo": "coche",
+      "lat": 47.969,
+      "lng": -103.239
+    },
+    {
+      "id": "fort-union",
+      "img": "/ciudades/watford-city/img/fort-union.jpg",
+      "nombre": "Fort Union Trading Post",
+      "zona": {
+        "ES": "Junto a la frontera con Montana, 1 h 15 en auto",
+        "EN": "On the Montana line, 1 h 15 by car"
+      },
+      "d": {
+        "ES": "Fue el puesto de comercio de pieles más importante del alto Missouri entre 1828 y 1867, de la American Fur Company. Aquí los assiniboine, los crow y los cree cambiaban pieles de bisonte por mantas, armas y cuentas de vidrio. El fuerte de hoy está reconstruido sobre los cimientos originales, y la entrada es gratis.",
+        "EN": "It was the most important fur trading post on the upper Missouri from 1828 to 1867, run by the American Fur Company. Here the Assiniboine, Crow and Cree traded bison robes for blankets, guns and glass beads. Today’s fort is rebuilt on the original foundations, and admission is free."
+      },
+      "cuando": {
+        "ES": "En invierno abre de miércoles a domingo; mira el horario antes de salir",
+        "EN": "In winter it opens Wednesday to Sunday; check the hours before you go"
+      },
+      "min": 75,
+      "modo": "coche",
+      "lat": 47.99934,
+      "lng": -104.04065
+    },
+    {
+      "id": "tr-library",
+      "img": "/ciudades/watford-city/img/tr-library.jpg",
+      "nombre": "Theodore Roosevelt Presidential Library",
+      "zona": {
+        "ES": "En Medora, 1 h 25 al sur en auto",
+        "EN": "In Medora, 1 h 25 south by car"
+      },
+      "d": {
+        "ES": "Abrió el 4 de julio de 2026 en las colinas de Medora, a la entrada del South Unit del parque. La exposición recorre la vida de Roosevelt, que decía que nunca habría llegado a presidente sin sus años en Dakota del Norte. Pide unas tres horas y media, y la entrada de adulto cuesta $26; conviene sacarla antes.",
+        "EN": "It opened on July 4, 2026, in the hills above Medora, at the gateway to the park’s South Unit. The exhibition walks through the life of Roosevelt, who said he never would have been president without his years in North Dakota. Plan on about three and a half hours; adult tickets are $26 and it pays to book ahead."
+      },
+      "cuando": {
+        "ES": "Hasta el 30 de noviembre, de martes a domingo; de diciembre a marzo, de miércoles a domingo",
+        "EN": "Through November 30, Tuesday to Sunday; December to March, Wednesday to Sunday"
+      },
+      "min": 85,
+      "modo": "coche",
+      "lat": 46.91734,
+      "lng": -103.54941
+    },
+    {
+      "id": "medora",
+      "img": "/ciudades/watford-city/img/medora-1.jpg",
+      "nombre": "Medora y el South Unit",
+      "zona": {
+        "ES": "1 h 25 al sur, por la US-85 y la I-94",
+        "EN": "1 h 25 south, on US-85 and I-94"
+      },
+      "d": {
+        "ES": "El pueblo lo fundó en 1883 el marqués de Morès y le puso el nombre de su mujer, Medora. Es la puerta del South Unit, donde la carretera en bucle volvió a abrir entera en noviembre de 2025, después de seis años de obras. Desde ella se ven bisontes, perritos de las praderas y caballos salvajes.",
+        "EN": "The town was founded in 1883 by the Marquis de Morès, who named it after his wife, Medora. It is the gateway to the South Unit, where the loop road reopened end to end in November 2025 after six years of work. From the road you see bison, prairie dogs and wild horses."
+      },
+      "cuando": {
+        "ES": "En un día despejado. Medora va con la hora de la montaña, una hora menos que el hotel",
+        "EN": "On a clear day. Medora runs on Mountain Time, an hour behind the hotel"
+      },
+      "min": 85,
+      "modo": "coche",
+      "lat": 46.9139,
+      "lng": -103.5244
+    }
+  ],
+  "rutas": [
+    {
+      "id": "north-unit",
+      "expId": "ex1",
+      "img": "/ciudades/watford-city/img/river-bend-1.jpg",
+      "fotos": [
+        "/ciudades/watford-city/img/river-bend-1.jpg",
+        "/ciudades/watford-city/img/cannonball.jpg",
+        "/ciudades/watford-city/img/caprock.jpg",
+        "/ciudades/watford-city/img/river-bend.jpg",
+        "/ciudades/watford-city/img/oxbow.jpg",
+        "/ciudades/watford-city/img/little-mo.jpg"
+      ],
+      "titulo": {
+        "ES": "La puesta de sol en el North Unit",
+        "EN": "Sunset in the North Unit"
+      },
+      "tipo": {
+        "ES": "Badlands",
+        "EN": "Badlands"
+      },
+      "dur": "3 h",
+      "duracionMin": 180,
+      "distanciaKm": 80,
+      "dificultad": "facil",
+      "tipoEntorno": "exterior",
+      "d": {
+        "ES": "Para la tarde que sales pronto del turno. Manejas 20 minutos hasta el parque, paras a ver las piedras redondas de Cannonball, caminas un rato por Caprock Coulee y llegas a Oxbow Overlook cuando el sol se pone sobre el Little Missouri.",
+        "EN": "For the afternoon you get off early. You drive 20 minutes to the park, stop to see the round rocks at Cannonball, walk a bit of Caprock Coulee and reach Oxbow Overlook as the sun goes down over the Little Missouri."
+      },
+      "salida": {
+        "ES": "En auto desde el hotel, 15 millas al sur por la US-85 hasta la entrada del North Unit. Sal hacia las 15:30 para llegar a Oxbow con luz",
+        "EN": "By car from the hotel, 15 miles south on US-85 to the North Unit entrance. Leave around 3:30 pm to reach Oxbow in daylight"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan de la tarde y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Afternoon plan and map"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Entrada al parque, $30 por auto",
+          "Gasolina"
+        ],
+        "EN": [
+          "Park entry, $30 per car",
+          "Gas"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Una chamarra gruesa, gorro y guantes: en noviembre, con el sol se va el calor",
+          "Calzado que agarre, que el camino de Caprock es de arcilla y resbala mojado",
+          "Agua, que dentro del parque no hay tienda",
+          "El tanque lleno: no hay gasolinera entre Watford City y el parque"
+        ],
+        "EN": [
+          "A warm jacket, hat and gloves: in November the warmth leaves with the sun",
+          "Shoes with grip, as the Caprock trail is clay and slick when wet",
+          "Water, as there is no store inside the park",
+          "A full tank: there is no gas station between Watford City and the park"
+        ]
+      },
+      "accesibilidad": {
+        "ES": "Los miradores de River Bend y Oxbow tienen estacionamiento al lado y se ven desde el borde sin caminar mucho. El sendero de Caprock Coulee es de tierra, con cuestas.",
+        "EN": "The River Bend and Oxbow overlooks have parking right next to them and you can see the view without much walking. The Caprock Coulee trail is dirt, with slopes."
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Con nieve la carretera puede cerrar más allá de la entrada: pregunta en recepción antes de salir.",
+        "EN": "Self-guided, so there is nothing to book or cancel. In snow the road can close past the entrance: ask the front desk before you go."
+      },
+      "puntoEncuentro": {
+        "lat": 47.5948,
+        "lng": -103.262,
+        "foto": "/ciudades/watford-city/img/little-mo.jpg",
+        "texto": {
+          "ES": "Entrada del North Unit, en la US-85, justo después del puente sobre el Little Missouri. Unos 20 minutos en auto desde el hotel.",
+          "EN": "North Unit entrance on US-85, just past the bridge over the Little Missouri. About 20 minutes by car from the hotel."
+        }
+      },
+      "precioDesde": 42,
+      "salidasFijas": [],
+      "paradas": [
+        {
+          "n": {
+            "ES": "Cannonball Concretions",
+            "EN": "Cannonball Concretions"
+          },
+          "s": {
+            "ES": "Piedras redondas como balas de cañón",
+            "EN": "Rocks as round as cannonballs"
+          },
+          "d": {
+            "ES": "Junto a la carretera, la erosión ha dejado al aire bolas de arenisca de todos los tamaños, algunas sueltas y otras todavía metidas en el cerro. Se formaron bajo tierra hace millones de años, cuando el agua fue pegando granos de arena en capas alrededor de un núcleo.",
+            "EN": "By the road, erosion has uncovered sandstone balls of every size, some loose and some still set in the hillside. They formed underground millions of years ago, as water glued grains of sand in layers around a core."
+          },
+          "tip": {
+            "ES": "Está a pocos minutos de la entrada, con estacionamiento junto a la carretera. Se pueden tocar, pero no subirse ni llevarse nada.",
+            "EN": "It is a few minutes past the entrance, with parking by the road. You can touch them, but do not climb on them or take anything."
+          },
+          "hora": "15:55",
+          "dur": "10 min",
+          "img": "/ciudades/watford-city/img/cannonball.jpg",
+          "lat": 47.5963,
+          "lng": -103.3318,
+          "tramo": "coche",
+          "tramoDuracionMin": 25,
+          "duracionMin": 10
+        },
+        {
+          "n": {
+            "ES": "Caprock Coulee",
+            "EN": "Caprock Coulee"
+          },
+          "s": {
+            "ES": "Pilares de arcilla con su sombrero de roca",
+            "EN": "Clay pillars wearing a rock cap"
+          },
+          "d": {
+            "ES": "Un sendero corto sale de la carretera y entra en una hondonada con pilares de arcilla. Cada uno lleva encima una losa de roca más dura que lo protege de la lluvia, y por eso sigue en pie mientras el resto se deshace.",
+            "EN": "A short trail leaves the road and drops into a draw full of clay pillars. Each one has a slab of harder rock on top that shields it from the rain, which is why it stands while the rest washes away."
+          },
+          "tip": {
+            "ES": "Con media hora tienes de sobra para la parte del sendero de interpretación. El camino largo, de más de cuatro millas, déjalo para un día con más luz.",
+            "EN": "Half an hour is plenty for the nature trail section. Save the long loop, over four miles, for a day with more daylight."
+          },
+          "hora": "16:13",
+          "dur": "25 min",
+          "img": "/ciudades/watford-city/img/caprock.jpg",
+          "lat": 47.6118,
+          "lng": -103.3666,
+          "tramo": "coche",
+          "tramoDuracionMin": 8,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "River Bend Overlook",
+            "EN": "River Bend Overlook"
+          },
+          "s": {
+            "ES": "El refugio de piedra sobre la curva del río",
+            "EN": "The stone shelter above the river bend"
+          },
+          "d": {
+            "ES": "Del estacionamiento sale un camino corto hasta el refugio de piedra que levantó el Civilian Conservation Corps hacia 1937. Desde el borde ves el Little Missouri haciendo una curva amplia entre álamos, con los cerros a los dos lados.",
+            "EN": "From the parking lot a short path leads to the stone shelter the Civilian Conservation Corps built around 1937. From the edge you see the Little Missouri swing in a wide curve through the cottonwoods, with buttes on both sides."
+          },
+          "tip": {
+            "ES": "Es la foto más famosa del North Unit. Con viento, el refugio te para el aire mientras miras.",
+            "EN": "This is the North Unit’s most famous photo. On a windy day the shelter blocks the wind while you look."
+          },
+          "hora": "16:41",
+          "dur": "20 min",
+          "img": "/ciudades/watford-city/img/river-bend.jpg",
+          "lat": 47.6088,
+          "lng": -103.3776,
+          "tramo": "coche",
+          "tramoDuracionMin": 3,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Oxbow Overlook",
+            "EN": "Oxbow Overlook"
+          },
+          "s": {
+            "ES": "El final de la carretera, de cara al sol que se pone",
+            "EN": "The end of the road, facing the sunset"
+          },
+          "d": {
+            "ES": "La carretera acaba en un mirador sobre el punto en que el Little Missouri gira hacia el este. Antes de los glaciares corría hacia el norte, hasta la bahía de Hudson. Desde aquí se ve caer el sol sobre el valle.",
+            "EN": "The road ends at an overlook above the spot where the Little Missouri turns east. Before the glaciers it flowed north to Hudson Bay. From here you watch the sun drop over the valley."
+          },
+          "tip": {
+            "ES": "De noviembre a enero el sol se pone entre las 17:00 y las 17:30; en junio, hacia las 21:50, así que en verano sal del hotel hacia las 19:45. Vuelve despacio: de noche los bisontes cruzan la carretera.",
+            "EN": "From November to January the sun sets between 5 and 5:30 pm; in June, around 9:50 pm, so in summer leave the hotel around 7:45 pm. Drive back slowly: at night bison cross the road."
+          },
+          "hora": "17:13",
+          "dur": "25 min",
+          "img": "/ciudades/watford-city/img/oxbow.jpg",
+          "lat": 47.6028,
+          "lng": -103.4417,
+          "tramo": "coche",
+          "tramoDuracionMin": 12,
+          "duracionMin": 25
+        }
+      ]
+    },
+    {
+      "id": "fort-union",
+      "img": "/ciudades/watford-city/img/confluencia.jpg",
+      "fotos": [
+        "/ciudades/watford-city/img/confluencia.jpg",
+        "/ciudades/watford-city/img/fort-union.jpg",
+        "/ciudades/watford-city/img/fort-union-1.jpg",
+        "/ciudades/watford-city/img/buford.jpg",
+        "/ciudades/watford-city/img/confluencia-1.jpg"
+      ],
+      "titulo": {
+        "ES": "Fort Union y los dos ríos",
+        "EN": "Fort Union and the two rivers"
+      },
+      "tipo": {
+        "ES": "Historia",
+        "EN": "History"
+      },
+      "dur": "5 h 45 min",
+      "duracionMin": 345,
+      "distanciaKm": 230,
+      "dificultad": "facil",
+      "tipoEntorno": "mixta",
+      "d": {
+        "ES": "Para un día libre con frío. En hora y cuarto llegas al puesto de pieles más importante del alto Missouri, ves el fuerte donde se rindió Toro Sentado y terminas donde el Yellowstone se junta con el Missouri, el mismo sitio al que llegaron Lewis y Clark en 1805.",
+        "EN": "For a cold day off. In an hour and a quarter you reach the most important fur post on the upper Missouri, see the fort where Sitting Bull surrendered and finish where the Yellowstone joins the Missouri, the same spot Lewis and Clark reached in 1805."
+      },
+      "salida": {
+        "ES": "En auto desde el hotel, por la US-85 hasta Williston y luego la ND-1804 hacia el oeste, 1 h 15. Sal hacia las 10:00",
+        "EN": "By car from the hotel, on US-85 to Williston and then ND-1804 west, 1 h 15. Leave around 10 am"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Gasolina",
+          "Comida"
+        ],
+        "EN": [
+          "Gas",
+          "Lunch"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Ropa de abrigo: el fuerte es de patio abierto y el viento corre por la pradera",
+          "Algo de comer, que por allí hay pocos sitios abiertos en invierno",
+          "El horario de los dos centros, que en invierno cambia"
+        ],
+        "EN": [
+          "Warm clothes: the fort is an open yard and the wind sweeps the prairie",
+          "Something to eat, as few places are open out there in winter",
+          "The hours of both centers, which change in winter"
+        ]
+      },
+      "accesibilidad": {
+        "ES": "Fort Union y el centro de la confluencia tienen caminos llanos y estacionamiento al lado. En Fort Buford, los edificios tienen escalones.",
+        "EN": "Fort Union and the confluence center have level paths and parking next to them. At Fort Buford, the buildings have steps."
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Con nieve o mucho frío los centros pueden cerrar: llama antes de salir.",
+        "EN": "Self-guided, so there is nothing to book or cancel. In snow or extreme cold the sites can close: call before you go."
+      },
+      "puntoEncuentro": {
+        "lat": 47.99934,
+        "lng": -104.04065,
+        "foto": "/ciudades/watford-city/img/fort-union-1.jpg",
+        "texto": {
+          "ES": "Estacionamiento de Fort Union Trading Post, en la ND-1804. Unos 75 minutos en auto desde el hotel.",
+          "EN": "Fort Union Trading Post parking lot, on ND-1804. About 75 minutes by car from the hotel."
+        }
+      },
+      "salidasFijas": [],
+      "paradas": [
+        {
+          "n": {
+            "ES": "Fort Union Trading Post",
+            "EN": "Fort Union Trading Post"
+          },
+          "s": {
+            "ES": "El puesto de pieles del alto Missouri, de 1828",
+            "EN": "The upper Missouri fur post, from 1828"
+          },
+          "d": {
+            "ES": "Cruzas la portada pintada y entras en un patio cerrado por una empalizada blanca, con dos bastiones de piedra en las esquinas. En la casa del jefe del puesto, reconstruida, se ve cómo se vivía aquí cuando los barcos de vapor subían por el Missouri cargados de mercancía.",
+            "EN": "You walk through the painted gate into a yard closed by a white palisade, with two stone bastions at the corners. In the rebuilt house of the post manager you see how people lived here when steamboats came up the Missouri loaded with goods."
+          },
+          "tip": {
+            "ES": "La entrada es gratis. En invierno ha abierto de miércoles a domingo, de 9:00 a 17:00; confírmalo antes, en el (701) 572-9083.",
+            "EN": "Admission is free. In winter it has opened Wednesday to Sunday, 9 am to 5 pm; confirm first at (701) 572-9083."
+          },
+          "hora": "11:15",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/watford-city/img/fort-union.jpg",
+          "lat": 47.99934,
+          "lng": -104.04065,
+          "tramo": "coche",
+          "tramoDuracionMin": 75,
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "Fort Buford",
+            "EN": "Fort Buford"
+          },
+          "s": {
+            "ES": "El fuerte donde se rindió Toro Sentado",
+            "EN": "The fort where Sitting Bull surrendered"
+          },
+          "d": {
+            "ES": "A dos millas de Fort Union quedan algunos edificios del fuerte del ejército que vigilaba la confluencia. Aquí se rindió Toro Sentado en julio de 1881, después de cuatro años refugiado en Canadá con su gente.",
+            "EN": "Two miles from Fort Union stand a few buildings of the army post that guarded the confluence. Sitting Bull surrendered here in July 1881, after four years in Canada with his people."
+          },
+          "tip": {
+            "ES": "Pasa por el cementerio del fuerte, al lado: las lápidas cuentan quién vivió y murió en la frontera.",
+            "EN": "Walk through the post cemetery next door: the headstones tell who lived and died on the frontier."
+          },
+          "hora": "12:40",
+          "dur": "40 min",
+          "img": "/ciudades/watford-city/img/buford.jpg",
+          "lat": 47.98887,
+          "lng": -104.00189,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Centro de la Confluencia",
+            "EN": "Confluence Interpretive Center"
+          },
+          "s": {
+            "ES": "La historia de los dos ríos",
+            "EN": "The story of the two rivers"
+          },
+          "d": {
+            "ES": "Un edificio redondo junto a Fort Buford cuenta la confluencia del Missouri y el Yellowstone: los pueblos que vivían aquí, el paso de Lewis y Clark y el comercio de pieles que vino después.",
+            "EN": "A round building next to Fort Buford tells the story of where the Missouri and the Yellowstone meet: the tribes that lived here, the Lewis and Clark expedition and the fur trade that followed."
+          },
+          "tip": {
+            "ES": "Pregunta en el mostrador por la entrada conjunta con Fort Buford y por el camino hasta el río.",
+            "EN": "Ask at the desk about a combined ticket with Fort Buford and the path down to the river."
+          },
+          "hora": "13:25",
+          "dur": "40 min",
+          "img": "/ciudades/watford-city/img/confluencia-1.jpg",
+          "lat": 47.98511,
+          "lng": -103.98884,
+          "tramo": "coche",
+          "tramoDuracionMin": 5,
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "La confluencia",
+            "EN": "The confluence"
+          },
+          "s": {
+            "ES": "Donde el Yellowstone entra en el Missouri",
+            "EN": "Where the Yellowstone flows into the Missouri"
+          },
+          "d": {
+            "ES": "Un sendero corto baja entre álamos hasta la orilla. Lewis llegó aquí el 25 de abril de 1805 y escribió que era un buen sitio para un fuerte. Veintitrés años después se levantó Fort Union, río arriba.",
+            "EN": "A short trail drops through the cottonwoods to the bank. Lewis got here on April 25, 1805, and wrote that it was a good place for a fort. Twenty-three years later Fort Union went up, just upriver."
+          },
+          "tip": {
+            "ES": "Para volver, la ND-1804 hasta Williston y la US-85 al sur: unos 80 minutos hasta el hotel, a tiempo para cenar en el lounge.",
+            "EN": "To head back, take ND-1804 to Williston and US-85 south: about 80 minutes to the hotel, in time for dinner at the lounge."
+          },
+          "hora": "14:10",
+          "dur": "20 min",
+          "img": "/ciudades/watford-city/img/confluencia.jpg",
+          "lat": 47.9805,
+          "lng": -103.9858,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 20
+        }
+      ]
+    },
+    {
+      "id": "medora",
+      "expId": "ex3",
+      "img": "/ciudades/watford-city/img/south-unit.jpg",
+      "fotos": [
+        "/ciudades/watford-city/img/south-unit.jpg",
+        "/ciudades/watford-city/img/painted-canyon.jpg",
+        "/ciudades/watford-city/img/tr-library.jpg",
+        "/ciudades/watford-city/img/medora.jpg",
+        "/ciudades/watford-city/img/medora-1.jpg"
+      ],
+      "titulo": {
+        "ES": "Medora y el South Unit",
+        "EN": "Medora and the South Unit"
+      },
+      "tipo": {
+        "ES": "Parque y biblioteca",
+        "EN": "Park and library"
+      },
+      "dur": "9 h",
+      "duracionMin": 540,
+      "distanciaKm": 330,
+      "dificultad": "facil",
+      "tipoEntorno": "mixta",
+      "d": {
+        "ES": "Para el día entero libre. Bajas a Medora mirando Painted Canyon, pasas la mañana en la biblioteca presidencial de Theodore Roosevelt, que abrió en julio de 2026, y por la tarde recorres el South Unit buscando bisontes y caballos salvajes.",
+        "EN": "For a whole day off. You drive down to Medora with a stop at Painted Canyon, spend the morning at the Theodore Roosevelt Presidential Library, which opened in July 2026, and in the afternoon drive the South Unit looking for bison and wild horses."
+      },
+      "salida": {
+        "ES": "En auto desde el hotel, por la US-85 al sur hasta Belfield y la I-94 al oeste, 1 h 10 hasta Painted Canyon. Sal hacia las 8:30. Las horas van con la del hotel: en Medora es una hora menos",
+        "EN": "By car from the hotel, on US-85 south to Belfield and I-94 west, 1 h 10 to Painted Canyon. Leave around 8:30 am. Times are hotel time: Medora is one hour behind"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Entrada a la biblioteca, $26 por adulto",
+          "Entrada al parque, $30 por auto",
+          "Gasolina"
+        ],
+        "EN": [
+          "Library tickets, $26 per adult",
+          "Park entry, $30 per car",
+          "Gas"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Las entradas de la biblioteca sacadas antes, en trlibrary.com",
+          "Ropa de abrigo para los miradores",
+          "Prismáticos para los caballos salvajes, que suelen estar lejos",
+          "El pase del parque si ya fuiste al North Unit esa semana: vale para las dos partes"
+        ],
+        "EN": [
+          "Library tickets booked ahead, at trlibrary.com",
+          "Warm layers for the overlooks",
+          "Binoculars for the wild horses, which are often far off",
+          "Your park pass if you visited the North Unit that week: it covers both units"
+        ]
+      },
+      "accesibilidad": {
+        "ES": "La biblioteca es accesible en silla de ruedas. Painted Canyon y los miradores del South Unit tienen estacionamiento junto al borde.",
+        "EN": "The library is wheelchair accessible. Painted Canyon and the South Unit overlooks have parking right by the edge."
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. La biblioteca cierra los lunes hasta el 30 de noviembre, y lunes y martes de diciembre a marzo.",
+        "EN": "Self-guided, so there is nothing to book or cancel. The library is closed on Mondays through November 30, and on Mondays and Tuesdays from December to March."
+      },
+      "puntoEncuentro": {
+        "lat": 46.8955,
+        "lng": -103.3815,
+        "foto": "/ciudades/watford-city/img/painted-canyon.jpg",
+        "texto": {
+          "ES": "Painted Canyon Overlook, en la salida 32 de la I-94. Unos 70 minutos en auto desde el hotel.",
+          "EN": "Painted Canyon Overlook, at I-94 exit 32. About 70 minutes by car from the hotel."
+        }
+      },
+      "precioDesde": 48,
+      "salidasFijas": [],
+      "paradas": [
+        {
+          "n": {
+            "ES": "Painted Canyon",
+            "EN": "Painted Canyon"
+          },
+          "s": {
+            "ES": "El primer vistazo a los badlands del sur",
+            "EN": "Your first look at the southern badlands"
+          },
+          "d": {
+            "ES": "Junto a la autopista se abre un cañón de cerros con franjas rojas, grises y negras. Las negras son vetas de lignito, un carbón blando; donde una veta ardió bajo tierra, coció la arcilla de encima y la dejó roja.",
+            "EN": "Right off the interstate a canyon opens up, its buttes striped red, gray and black. The black bands are lignite, a soft coal; where a seam burned underground, it baked the clay above it red."
+          },
+          "tip": {
+            "ES": "El centro de visitantes de Painted Canyon cierra en invierno, pero el mirador queda abierto y tiene baños.",
+            "EN": "The Painted Canyon visitor center closes in winter, but the overlook stays open and has restrooms."
+          },
+          "hora": "09:40",
+          "dur": "20 min",
+          "img": "/ciudades/watford-city/img/painted-canyon.jpg",
+          "lat": 46.8955,
+          "lng": -103.3815,
+          "tramo": "coche",
+          "tramoDuracionMin": 70,
+          "duracionMin": 20
+        },
+        {
+          "n": {
+            "ES": "Biblioteca Presidencial de Theodore Roosevelt",
+            "EN": "Theodore Roosevelt Presidential Library"
+          },
+          "s": {
+            "ES": "Abierta desde el 4 de julio de 2026",
+            "EN": "Open since July 4, 2026"
+          },
+          "d": {
+            "ES": "El edificio se mete en la ladera, con tejados de hierba que siguen la forma de los cerros. Dentro, la exposición sigue a Roosevelt desde el niño enfermizo de Nueva York hasta el presidente, pasando por los años de ganadero en estos badlands.",
+            "EN": "The building sits into the hillside, with grass roofs that follow the shape of the buttes. Inside, the exhibition follows Roosevelt from the sickly boy in New York to the president, by way of his ranching years in these badlands."
+          },
+          "tip": {
+            "ES": "Hasta el 30 de noviembre abre de 9:00 a 16:00 entre semana y hasta las 18:00 el fin de semana, en la hora de Medora. Si quieres el paseo por la pasarela de una milla, suma media hora.",
+            "EN": "Through November 30 it opens 9 am to 4 pm on weekdays and until 6 pm on weekends, Medora time. For the one-mile boardwalk, add half an hour."
+          },
+          "hora": "10:15",
+          "dur": "3 h 30 min",
+          "img": "/ciudades/watford-city/img/tr-library.jpg",
+          "lat": 46.91734,
+          "lng": -103.54941,
+          "tramo": "coche",
+          "tramoDuracionMin": 25,
+          "duracionMin": 210
+        },
+        {
+          "n": {
+            "ES": "La carretera del South Unit",
+            "EN": "The South Unit loop road"
+          },
+          "s": {
+            "ES": "Bisontes, perritos de las praderas y caballos salvajes",
+            "EN": "Bison, prairie dogs and wild horses"
+          },
+          "d": {
+            "ES": "La carretera en bucle sale de Medora y da la vuelta al South Unit entre colonias de perritos de las praderas y prados con bisontes. Volvió a abrir entera en noviembre de 2025, después de seis años cerrada por deslizamientos del terreno.",
+            "EN": "The loop road leaves Medora and circles the South Unit past prairie dog towns and meadows full of bison. It reopened end to end in November 2025, after six years closed by landslides."
+          },
+          "tip": {
+            "ES": "Los bisontes pesan hasta una tonelada y corren más que tú: míralos desde el auto o a más de 25 metros. Los caballos salvajes van en grupos pequeños y cambian de sitio: si los ves de lejos, para y saca los prismáticos.",
+            "EN": "Bison weigh up to a ton and outrun you: watch them from the car or from more than 25 yards. The wild horses move around in small bands: if you spot them far off, pull over and get out the binoculars."
+          },
+          "hora": "14:00",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/watford-city/img/south-unit.jpg",
+          "lat": 46.9429,
+          "lng": -103.4432,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Medora",
+            "EN": "Medora"
+          },
+          "s": {
+            "ES": "El pueblo del marqués, antes de volver",
+            "EN": "The marquis’s town, before heading back"
+          },
+          "d": {
+            "ES": "Calles anchas de madera y ladrillo, la iglesia de St. Mary y la estatua del marqués de Morès, que fundó el pueblo en 1883 y le puso el nombre de su mujer. En invierno casi todo cierra y el pueblo se queda tranquilo.",
+            "EN": "Wide streets of wood and brick, St. Mary’s church and the statue of the Marquis de Morès, who founded the town in 1883 and named it after his wife. In winter most places close and the town goes quiet."
+          },
+          "tip": {
+            "ES": "Para volver, la I-94 al este hasta Belfield y la US-85 al norte: 1 h 25. Llegas a tiempo para cenar en el lounge.",
+            "EN": "To head back, take I-94 east to Belfield and US-85 north: 1 h 25. You get back in time for dinner at the lounge."
+          },
+          "hora": "15:40",
+          "dur": "30 min",
+          "img": "/ciudades/watford-city/img/medora.jpg",
+          "lat": 46.9148,
+          "lng": -103.5238,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 30
+        }
+      ]
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Una cerveza de barril en Teddy's Lounge a la vuelta",
+      "EN": "A draft beer at Teddy's Lounge when you get back"
+    }
+  },
+  "creditos": [
+    "Butte and road in the North Unit: Farragutful, CC BY-SA 4.0, Wikimedia Commons",
+    "River Bend Overlook shelter: Farragutful, CC BY-SA 4.0, Wikimedia Commons",
+    "River Bend Overlook above the Little Missouri valley: Farragutful, CC BY-SA 4.0, Wikimedia Commons",
+    "Oxbow Overlook and the Little Missouri: Acroterion, CC BY-SA 4.0, Wikimedia Commons",
+    "Cannonball concretions in the North Unit: Acroterion, CC BY-SA 4.0, Wikimedia Commons",
+    "The North Unit road by Caprock Coulee: Acroterion, CC BY-SA 4.0, Wikimedia Commons",
+    "The Little Missouri at the North Unit entrance: Acroterion, CC BY-SA 4.0, Wikimedia Commons",
+    "Main Street, Watford City: Jessie Veeder, CC0, Wikimedia Commons",
+    "Lake Sakakawea shoreline (Fort Stevenson State Park): David Becker, CC BY 2.0, Wikimedia Commons",
+    "Fort Union Trading Post: Farragutful, CC BY-SA 4.0, Wikimedia Commons",
+    "Fort Union Trading Post gate: Farragutful, CC BY-SA 4.0, Wikimedia Commons",
+    "Missouri and Yellowstone confluence: Farragutful, CC BY-SA 4.0, Wikimedia Commons",
+    "Missouri-Yellowstone Confluence Interpretive Center: Farragutful, CC BY-SA 4.0, Wikimedia Commons",
+    "Fort Buford State Historic Site: Farragutful, CC BY-SA 4.0, Wikimedia Commons",
+    "Painted Canyon Overlook: Farragutful, CC BY-SA 4.0, Wikimedia Commons",
+    "Theodore Roosevelt Presidential Library, aerial view (May 2026): Chad Ziemendorf for the Theodore Roosevelt Presidential Library Foundation, CC BY-SA 4.0, Wikimedia Commons",
+    "Bison in the South Unit: Farragutful, CC BY-SA 4.0, Wikimedia Commons",
+    "Third Avenue, Medora: Farragutful, CC BY-SA 4.0, Wikimedia Commons",
+    "Medora in the badlands: Farragutful, CC BY-SA 4.0, Wikimedia Commons"
+  ]
+}
