@@ -1,0 +1,402 @@
+{
+  "comuna13-1": {
+    "pregunta": {
+      "ES": "¿Cuándo se abrieron las escaleras eléctricas de la Comuna 13?",
+      "EN": "When did the Comuna 13 escalators open?"
+    },
+    "opciones": [
+      {
+        "ES": "En 2011",
+        "EN": "In 2011"
+      },
+      {
+        "ES": "En 1995",
+        "EN": "In 1995"
+      },
+      {
+        "ES": "En 2020",
+        "EN": "In 2020"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Se abrieron en diciembre de 2011. Son seis tramos y unos 384 metros, y ahorran a los vecinos una subida equivalente a 28 pisos.",
+      "EN": "They opened in December 2011. There are six sections covering about 384 meters, saving residents a climb equal to 28 floors."
+    }
+  },
+  "comuna13-2": {
+    "pregunta": {
+      "ES": "¿Qué línea del Metrocable sale de la estación San Javier?",
+      "EN": "Which Metrocable line leaves from San Javier station?"
+    },
+    "opciones": [
+      {
+        "ES": "La línea K",
+        "EN": "Line K"
+      },
+      {
+        "ES": "La línea J",
+        "EN": "Line J"
+      },
+      {
+        "ES": "La línea L",
+        "EN": "Line L"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La línea J sube desde San Javier hacia los barrios de la ladera occidental. Se abrió en 2008.",
+      "EN": "Line J climbs from San Javier to the neighborhoods on the western hillside. It opened in 2008."
+    }
+  },
+  "comuna13-3": {
+    "pregunta": {
+      "ES": "¿Qué es Casa Kolacho?",
+      "EN": "What is Casa Kolacho?"
+    },
+    "opciones": [
+      {
+        "ES": "Un colectivo de hip hop del barrio",
+        "EN": "A local hip hop collective"
+      },
+      {
+        "ES": "Una panadería famosa",
+        "EN": "A famous bakery"
+      },
+      {
+        "ES": "Un museo del metro",
+        "EN": "A metro museum"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Es un colectivo de hip hop y grafiti de la Comuna 13, con el nombre de un rapero del barrio asesinado en 2009. Fue de los primeros en hacer recorridos por los murales.",
+      "EN": "It is a hip hop and graffiti collective from Comuna 13, named after a local rapper killed in 2009. It was among the first to run mural tours."
+    }
+  },
+  "comuna13-4": {
+    "pregunta": {
+      "ES": "¿Cómo se llama el barrio de las escaleras eléctricas?",
+      "EN": "What is the neighborhood of the escalators called?"
+    },
+    "opciones": [
+      {
+        "ES": "Las Independencias",
+        "EN": "Las Independencias"
+      },
+      {
+        "ES": "Laureles",
+        "EN": "Laureles"
+      },
+      {
+        "ES": "Manila",
+        "EN": "Manila"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Las escaleras están en Las Independencias, uno de los barrios de la Comuna 13, en la ladera de San Javier.",
+      "EN": "The escalators are in Las Independencias, one of the Comuna 13 neighborhoods, on the San Javier hillside."
+    }
+  },
+  "guatape-1": {
+    "pregunta": {
+      "ES": "¿Cuántos escalones tiene la subida a la Piedra del Peñol?",
+      "EN": "How many steps lead up the Peñol rock?"
+    },
+    "opciones": [
+      {
+        "ES": "365",
+        "EN": "365"
+      },
+      {
+        "ES": "740",
+        "EN": "740"
+      },
+      {
+        "ES": "1.200",
+        "EN": "1,200"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Son 740 escalones metidos en una grieta de la roca. Arriba, el mirador da al embalse y sus islas.",
+      "EN": "There are 740 steps set into a crack in the rock. At the top, the lookout faces the reservoir and its islands."
+    }
+  },
+  "guatape-2": {
+    "pregunta": {
+      "ES": "¿Por qué en la roca solo se lee una G y parte de una U?",
+      "EN": "Why can you only read a G and part of a U on the rock?"
+    },
+    "opciones": [
+      {
+        "ES": "Porque la gente de El Peñol frenó la pintura",
+        "EN": "Because people from El Peñol stopped the painting"
+      },
+      {
+        "ES": "Porque se acabó la pintura",
+        "EN": "Because the paint ran out"
+      },
+      {
+        "ES": "Es la firma de un artista",
+        "EN": "It is an artist’s signature"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Los dos pueblos se disputaban la piedra. Cuando empezaron a pintar GUATAPÉ en la roca, vecinos de El Peñol llegaron a impedirlo y solo quedaron la G y un trazo de la U.",
+      "EN": "The two towns both claimed the rock. When someone started painting GUATAPÉ on it, people from El Peñol came to stop it, leaving only the G and part of the U."
+    }
+  },
+  "guatape-3": {
+    "pregunta": {
+      "ES": "¿Qué son los zócalos de Guatapé?",
+      "EN": "What are the zócalos of Guatapé?"
+    },
+    "opciones": [
+      {
+        "ES": "Relieves de colores en la parte baja de las fachadas",
+        "EN": "Colorful reliefs along the bottom of the facades"
+      },
+      {
+        "ES": "Los muelles del embalse",
+        "EN": "The reservoir’s piers"
+      },
+      {
+        "ES": "Un dulce típico",
+        "EN": "A local sweet"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Son relieves de colores en la parte baja de las casas. Muestran animales, oficios o escenas de la familia que vive ahí.",
+      "EN": "They are colorful reliefs along the bottom of the houses, showing animals, trades or scenes of the family living there."
+    }
+  },
+  "guatape-4": {
+    "pregunta": {
+      "ES": "¿Qué quedó bajo el agua del embalse?",
+      "EN": "What lies under the reservoir?"
+    },
+    "opciones": [
+      {
+        "ES": "El pueblo viejo de El Peñol",
+        "EN": "The old town of El Peñol"
+      },
+      {
+        "ES": "Una mina de oro",
+        "EN": "A gold mine"
+      },
+      {
+        "ES": "Una plaza de toros",
+        "EN": "A bullring"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El embalse se llenó a finales de los años setenta para generar electricidad, y el casco viejo de El Peñol quedó bajo el agua. El pueblo se reconstruyó en otro sitio.",
+      "EN": "The reservoir was filled in the late 1970s to generate electricity, and the old center of El Peñol was flooded. The town was rebuilt elsewhere."
+    }
+  },
+  "centro-1": {
+    "pregunta": {
+      "ES": "¿Cuántas esculturas de Botero hay en la plaza?",
+      "EN": "How many Botero sculptures are in the square?"
+    },
+    "opciones": [
+      {
+        "ES": "10",
+        "EN": "10"
+      },
+      {
+        "ES": "23",
+        "EN": "23"
+      },
+      {
+        "ES": "50",
+        "EN": "50"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Son 23, todas donadas por Fernando Botero. El mismo número que tu hotel.",
+      "EN": "There are 23, all donated by Fernando Botero. The same number as your hotel."
+    }
+  },
+  "centro-2": {
+    "pregunta": {
+      "ES": "¿Qué forma tiene la punta del edificio Coltejer?",
+      "EN": "What shape is the tip of the Coltejer building?"
+    },
+    "opciones": [
+      {
+        "ES": "Una aguja de tejer",
+        "EN": "A knitting needle"
+      },
+      {
+        "ES": "Una flor",
+        "EN": "A flower"
+      },
+      {
+        "ES": "Una vela",
+        "EN": "A candle"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Coltejer era una compañía textil, y el edificio, terminado en 1972, remata en una punta con forma de aguja.",
+      "EN": "Coltejer was a textile company, and the building, finished in 1972, ends in a needle-shaped tip."
+    }
+  },
+  "centro-3": {
+    "pregunta": {
+      "ES": "¿En qué año empezó a funcionar el metro de Medellín?",
+      "EN": "When did the Medellín metro start running?"
+    },
+    "opciones": [
+      {
+        "ES": "1975",
+        "EN": "1975"
+      },
+      {
+        "ES": "1995",
+        "EN": "1995"
+      },
+      {
+        "ES": "2010",
+        "EN": "2010"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Se inauguró en 1995 y es el único metro de Colombia. La gente lo cuida tanto que se habla de la cultura metro.",
+      "EN": "It opened in 1995 and is the only metro in Colombia. People look after it so much that locals talk about a metro culture."
+    }
+  },
+  "centro-4": {
+    "pregunta": {
+      "ES": "¿De dónde era el arquitecto del Palacio de la Cultura?",
+      "EN": "Where was the architect of the Palace of Culture from?"
+    },
+    "opciones": [
+      {
+        "ES": "De Bélgica",
+        "EN": "Belgium"
+      },
+      {
+        "ES": "De Italia",
+        "EN": "Italy"
+      },
+      {
+        "ES": "De Francia",
+        "EN": "France"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Lo diseñó el belga Agustín Goovaerts, que trabajó en Medellín en los años veinte y dejó varios edificios en el centro.",
+      "EN": "It was designed by Belgian Agustín Goovaerts, who worked in Medellín in the 1920s and left several buildings downtown."
+    }
+  },
+  "provenza-1": {
+    "pregunta": {
+      "ES": "¿Qué se fundó en 1616 donde hoy está el Parque El Poblado?",
+      "EN": "What was founded in 1616 where Parque El Poblado is today?"
+    },
+    "opciones": [
+      {
+        "ES": "San Lorenzo de Aburrá",
+        "EN": "San Lorenzo de Aburrá"
+      },
+      {
+        "ES": "Santa Fe de Antioquia",
+        "EN": "Santa Fe de Antioquia"
+      },
+      {
+        "ES": "El primer metro",
+        "EN": "The first metro"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Francisco de Herrera Campuzano fundó ahí San Lorenzo de Aburrá en 1616. La villa de Medellín llegó después, en 1675.",
+      "EN": "Francisco de Herrera Campuzano founded San Lorenzo de Aburrá there in 1616. The town of Medellín came later, in 1675."
+    }
+  },
+  "provenza-2": {
+    "pregunta": {
+      "ES": "¿Por qué a Medellín le dicen la ciudad de la eterna primavera?",
+      "EN": "Why is Medellín called the city of eternal spring?"
+    },
+    "opciones": [
+      {
+        "ES": "Porque tiene unos 22 grados casi todo el año",
+        "EN": "Because it is about 22 °C most of the year"
+      },
+      {
+        "ES": "Porque solo florece en marzo",
+        "EN": "Because it only blooms in March"
+      },
+      {
+        "ES": "Por una canción",
+        "EN": "Because of a song"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Está a unos 1.495 metros de altura y la temperatura media ronda los 22 grados todo el año, sin estaciones marcadas.",
+      "EN": "It sits at about 1,495 meters and the average temperature stays around 22 °C all year, with no marked seasons."
+    }
+  },
+  "provenza-3": {
+    "pregunta": {
+      "ES": "¿Qué cargan los silleteros en la Feria de las Flores?",
+      "EN": "What do the silleteros carry in the Flower Fair?"
+    },
+    "opciones": [
+      {
+        "ES": "Silletas de flores a la espalda",
+        "EN": "Flower frames on their backs"
+      },
+      {
+        "ES": "Barriles de café",
+        "EN": "Coffee barrels"
+      },
+      {
+        "ES": "Faroles",
+        "EN": "Lanterns"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "En agosto, campesinos de Santa Elena desfilan con silletas de flores a la espalda, como las que usaban para bajar flores a vender a la ciudad.",
+      "EN": "In August, farmers from Santa Elena parade with flower frames on their backs, like the ones they used to carry flowers down to sell in the city."
+    }
+  },
+  "provenza-4": {
+    "pregunta": {
+      "ES": "Si pides un tinto en Colombia, ¿qué te traen?",
+      "EN": "If you order a tinto in Colombia, what do you get?"
+    },
+    "opciones": [
+      {
+        "ES": "Un café negro",
+        "EN": "A black coffee"
+      },
+      {
+        "ES": "Una copa de vino tinto",
+        "EN": "A glass of red wine"
+      },
+      {
+        "ES": "Un jugo de mora",
+        "EN": "A blackberry juice"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Tinto es el café negro de todos los días. Si quieres vino, pide una copa de vino tinto.",
+      "EN": "Tinto is everyday black coffee. If you want wine, ask for a glass of vino tinto."
+    }
+  }
+}

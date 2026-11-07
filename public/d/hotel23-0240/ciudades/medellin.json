@@ -1,0 +1,969 @@
+{
+  "slug": "medellin",
+  "nombre": "Medellín",
+  "intro": {
+    "ES": "El hotel está en la carrera 34, en Provenza, dentro de El Poblado. Los cafés, el Parque Lleras y la quebrada La Presidenta quedan a menos de diez minutos a pie. El centro y la Plaza Botero están a unos 25 minutos en metro, la Comuna 13 a 35 en carro y Guatapé a unas dos horas por carretera.",
+    "EN": "The hotel is on Carrera 34, in Provenza, inside El Poblado. The cafés, Parque Lleras and La Presidenta creek are under ten minutes away on foot. Downtown and Plaza Botero are about 25 minutes by metro, Comuna 13 is 35 minutes by car and Guatapé about two hours by road."
+  },
+  "lugares": [
+    {
+      "id": "provenza",
+      "img": "/ciudades/medellin/img/provenza.jpg",
+      "nombre": "Provenza",
+      "zona": {
+        "ES": "El Poblado, a seis minutos a pie del hotel",
+        "EN": "El Poblado, six minutes on foot from the hotel"
+      },
+      "d": {
+        "ES": "Las calles de Provenza tienen árboles grandes, cafés de especialidad, tiendas de diseño y restaurantes con terraza. El hotel está en una de sus esquinas, así que casi todo queda a pie.",
+        "EN": "Provenza’s streets have big trees, specialty coffee shops, design stores and restaurants with terraces. The hotel sits on one of its corners, so almost everything is within walking distance."
+      },
+      "cuando": {
+        "ES": "Por la mañana para el café, por la noche para cenar",
+        "EN": "In the morning for coffee, at night for dinner"
+      },
+      "min": 6,
+      "modo": "pie",
+      "lat": 6.20935,
+      "lng": -75.56645
+    },
+    {
+      "id": "parque-lleras",
+      "img": "/ciudades/medellin/img/lleras.jpg",
+      "nombre": "Parque Lleras",
+      "zona": {
+        "ES": "El Poblado, a ocho minutos a pie",
+        "EN": "El Poblado, eight minutes on foot"
+      },
+      "d": {
+        "ES": "Un parque pequeño con árboles rodeado de restaurantes, bares y discotecas. De día es tranquilo; al caer la tarde se llena y la música sale a la calle.",
+        "EN": "A small tree-lined park surrounded by restaurants, bars and clubs. It is quiet by day; at dusk it fills up and the music spills onto the street."
+      },
+      "cuando": {
+        "ES": "Al anochecer, para cenar o tomar algo",
+        "EN": "At dusk, for dinner or a drink"
+      },
+      "min": 8,
+      "modo": "pie",
+      "lat": 6.20878,
+      "lng": -75.56727
+    },
+    {
+      "id": "la-presidenta",
+      "img": "/ciudades/medellin/img/presidenta.jpg",
+      "nombre": "Parque lineal La Presidenta",
+      "zona": {
+        "ES": "El Poblado, a siete minutos a pie",
+        "EN": "El Poblado, seven minutes on foot"
+      },
+      "d": {
+        "ES": "La quebrada La Presidenta baja entre árboles con un sendero corto al lado. La gente del barrio viene a caminar, correr o leer en las bancas.",
+        "EN": "The La Presidenta creek runs between trees with a short path beside it. Locals come here to walk, jog or read on the benches."
+      },
+      "cuando": {
+        "ES": "Temprano, antes del desayuno",
+        "EN": "Early, before breakfast"
+      },
+      "min": 7,
+      "modo": "pie",
+      "lat": 6.20665,
+      "lng": -75.56975
+    },
+    {
+      "id": "parque-poblado",
+      "img": "/ciudades/medellin/img/poblado.jpg",
+      "nombre": "Parque El Poblado",
+      "zona": {
+        "ES": "El Poblado, a catorce minutos a pie",
+        "EN": "El Poblado, fourteen minutes on foot"
+      },
+      "d": {
+        "ES": "Aquí se fundó en 1616 San Lorenzo de Aburrá, el primer poblado español del valle. Hoy tiene la iglesia de San José a un lado y la avenida El Poblado al otro.",
+        "EN": "San Lorenzo de Aburrá, the first Spanish settlement in the valley, was founded here in 1616. Today San José church stands on one side and El Poblado avenue on the other."
+      },
+      "cuando": {
+        "ES": "A media tarde, de camino a Provenza",
+        "EN": "Mid-afternoon, on the way to Provenza"
+      },
+      "min": 14,
+      "modo": "pie",
+      "lat": 6.20952,
+      "lng": -75.57088
+    },
+    {
+      "id": "el-castillo",
+      "img": "/ciudades/medellin/img/castillo.jpg",
+      "nombre": "Museo El Castillo",
+      "zona": {
+        "ES": "Loma de Los Balsos, a diez minutos en carro",
+        "EN": "Los Balsos hill, ten minutes by car"
+      },
+      "d": {
+        "ES": "Una casa de estilo gótico de los años treinta en lo alto de El Poblado, con salones amueblados y jardines grandes alrededor.",
+        "EN": "A 1930s Gothic-style house high up in El Poblado, with furnished rooms and large gardens around it."
+      },
+      "cuando": {
+        "ES": "Por la mañana, cuando los jardines tienen sombra",
+        "EN": "In the morning, when the gardens are shaded"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 6.1953,
+      "lng": -75.5616
+    },
+    {
+      "id": "plaza-botero",
+      "img": "/ciudades/medellin/img/botero-gato.jpg",
+      "nombre": "Plaza Botero",
+      "zona": {
+        "ES": "Centro, a unos 25 minutos en metro o en carro",
+        "EN": "Downtown, about 25 minutes by metro or car"
+      },
+      "d": {
+        "ES": "Veintitrés esculturas de bronce de Fernando Botero, al aire libre frente al Museo de Antioquia. Las donó él, que nació en Medellín.",
+        "EN": "Twenty-three bronze sculptures by Fernando Botero, outdoors in front of the Museo de Antioquia. He donated them; he was born in Medellín."
+      },
+      "cuando": {
+        "ES": "Entre semana por la mañana, con menos gente",
+        "EN": "On a weekday morning, when it is less crowded"
+      },
+      "min": 25,
+      "modo": "coche",
+      "lat": 6.2522,
+      "lng": -75.5684
+    },
+    {
+      "id": "comuna-13",
+      "img": "/ciudades/medellin/img/c13.jpg",
+      "nombre": "Comuna 13",
+      "zona": {
+        "ES": "San Javier, a unos 35 minutos en carro",
+        "EN": "San Javier, about 35 minutes by car"
+      },
+      "d": {
+        "ES": "El barrio de las escaleras eléctricas al aire libre y los murales. Se sube por la ladera entre grafitis, tiendas y terrazas con la ciudad abajo.",
+        "EN": "The neighborhood of the outdoor escalators and the murals. You climb the hillside past graffiti, shops and terraces with the city below."
+      },
+      "cuando": {
+        "ES": "Por la mañana, antes de que llegue el calor y la gente",
+        "EN": "In the morning, before the heat and the crowds"
+      },
+      "min": 35,
+      "modo": "coche",
+      "lat": 6.2557,
+      "lng": -75.6197
+    },
+    {
+      "id": "parque-arvi",
+      "img": "/ciudades/medellin/img/arvi.jpg",
+      "nombre": "Parque Arví",
+      "zona": {
+        "ES": "Santa Elena, una hora en metro y Metrocable",
+        "EN": "Santa Elena, one hour by metro and Metrocable"
+      },
+      "d": {
+        "ES": "Un bosque con senderos en lo alto de las montañas del oriente de la ciudad. Se llega en Metrocable, por encima de los barrios de la ladera y luego del bosque.",
+        "EN": "A forest with trails high in the mountains east of the city. You get there by Metrocable, first over the hillside neighborhoods and then over the forest."
+      },
+      "cuando": {
+        "ES": "De martes a domingo, el Metrocable de Arví no funciona los lunes",
+        "EN": "Tuesday to Sunday; the Arví Metrocable does not run on Mondays"
+      },
+      "min": 60,
+      "modo": "coche",
+      "lat": 6.2795,
+      "lng": -75.498
+    }
+  ],
+  "rutas": [
+    {
+      "id": "comuna13",
+      "expId": "ex1",
+      "img": "/ciudades/medellin/img/c13-ruta.jpg",
+      "titulo": {
+        "ES": "Una mañana en la Comuna 13",
+        "EN": "A morning in Comuna 13"
+      },
+      "tipo": {
+        "ES": "Barrio y arte",
+        "EN": "Neighborhood and art"
+      },
+      "dur": "3 h 35 min",
+      "d": {
+        "ES": "Para la mañana que tienes libre. Llegas a San Javier, subes por las escaleras eléctricas, caminas entre los murales del barrio y terminas con algo frío en una terraza con el occidente de Medellín delante.",
+        "EN": "For your free morning. You reach San Javier, ride the outdoor escalators, walk among the neighborhood murals and finish with something cold on a terrace facing western Medellín."
+      },
+      "salida": {
+        "ES": "En carro desde el hotel hasta la estación San Javier, unos 35 minutos. Sal hacia las 9:00, antes del calor",
+        "EN": "By car from the hotel to San Javier station, about 35 minutes. Leave around 9 am, before the heat"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Zapatos cómodos para las cuestas",
+          "Efectivo en billetes pequeños",
+          "Gorra y protector solar",
+          "El celular en el bolsillo de adelante"
+        ],
+        "EN": [
+          "Comfortable shoes for the slopes",
+          "Cash in small bills",
+          "A cap and sunscreen",
+          "Your phone in a front pocket"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Estación San Javier",
+            "EN": "San Javier station"
+          },
+          "s": {
+            "ES": "Donde termina la línea B del metro",
+            "EN": "Where metro line B ends"
+          },
+          "d": {
+            "ES": "Aquí acaba la línea B del metro y arranca el Metrocable de la línea J. Desde la estación se suben unas cuadras a pie hasta Las Independencias, el barrio de los murales.",
+            "EN": "Metro line B ends here and Metrocable line J begins. From the station you walk a few blocks up to Las Independencias, the neighborhood of the murals."
+          },
+          "tip": {
+            "ES": "Si vienes con guía, aquí te espera. Si vas por tu cuenta, pregunta por las escaleras eléctricas: todo el mundo sabe dónde están.",
+            "EN": "If you come with a guide, this is where they meet you. On your own, ask for the escalators: everyone knows where they are."
+          },
+          "hora": "09:35",
+          "dur": "15 min",
+          "img": "/ciudades/medellin/img/sanjavier.jpg",
+          "lat": 6.2565,
+          "lng": -75.6135,
+          "tramo": "coche",
+          "tramoDuracionMin": 35,
+          "duracionMin": 15
+        },
+        {
+          "n": {
+            "ES": "Escaleras eléctricas",
+            "EN": "Outdoor escalators"
+          },
+          "s": {
+            "ES": "Seis tramos al aire libre, desde 2011",
+            "EN": "Six open-air sections, since 2011"
+          },
+          "d": {
+            "ES": "Se abrieron en diciembre de 2011 para que los vecinos no tuvieran que subir la ladera a pie. Son seis tramos y unos 384 metros, y lo que suben equivale a un edificio de 28 pisos.",
+            "EN": "They opened in December 2011 so residents would not have to climb the hillside on foot. There are six sections covering about 384 meters, and they climb the equivalent of a 28-story building."
+          },
+          "tip": {
+            "ES": "Entre semana y por la mañana hay menos fila en cada tramo.",
+            "EN": "On weekday mornings there is less of a queue at each section."
+          },
+          "hora": "09:55",
+          "dur": "30 min",
+          "img": "/ciudades/medellin/img/escaleras.jpg",
+          "lat": 6.2557,
+          "lng": -75.6197,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Los murales del barrio",
+            "EN": "The neighborhood murals"
+          },
+          "s": {
+            "ES": "Grafitis que cuentan lo que pasó aquí",
+            "EN": "Murals that tell what happened here"
+          },
+          "d": {
+            "ES": "Los pintan artistas del barrio y cada pocos meses aparecen nuevos. Muchos hablan de lo que vivió la Comuna 13 a comienzos de los 2000 y de cómo cambió después.",
+            "EN": "Local artists paint them and new ones appear every few months. Many tell what Comuna 13 lived through in the early 2000s and how it changed afterwards."
+          },
+          "tip": {
+            "ES": "Pregunta antes de fotografiar a la gente. Si te gusta un artista, en su tienda venden lo que pinta.",
+            "EN": "Ask before photographing people. If you like an artist, their shop sells their work."
+          },
+          "hora": "10:35",
+          "dur": "45 min",
+          "img": "/ciudades/medellin/img/c13-mural.jpg",
+          "lat": 6.256,
+          "lng": -75.6202,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 45
+        },
+        {
+          "n": {
+            "ES": "Una terraza arriba del todo",
+            "EN": "A terrace at the very top"
+          },
+          "s": {
+            "ES": "La ciudad abajo, con algo frío",
+            "EN": "The city below, with something cold"
+          },
+          "d": {
+            "ES": "Arriba hay terrazas pequeñas que sirven jugos, cerveza y mango con limón y sal. Desde ahí ves el occidente de Medellín y las montañas del otro lado del valle.",
+            "EN": "At the top there are small terraces serving juices, beer and mango with lime and salt. From there you see western Medellín and the mountains across the valley."
+          },
+          "tip": {
+            "ES": "Para volver, el carro te espera abajo. En unos 35 minutos estás en el hotel.",
+            "EN": "To get back, the car waits at the bottom. You are at the hotel in about 35 minutes."
+          },
+          "hora": "11:25",
+          "dur": "35 min",
+          "img": "/ciudades/medellin/img/c13.jpg",
+          "lat": 6.2554,
+          "lng": -75.6205,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 35
+        }
+      ],
+      "fotos": [
+        "/ciudades/medellin/img/c13-ruta.jpg",
+        "/ciudades/medellin/img/sanjavier.jpg",
+        "/ciudades/medellin/img/escaleras.jpg",
+        "/ciudades/medellin/img/c13-mural.jpg",
+        "/ciudades/medellin/img/c13.jpg"
+      ],
+      "duracionMin": 215,
+      "distanciaKm": 1.5,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Hay cuestas y escalones, aunque las escaleras eléctricas cubren la subida principal. En silla de ruedas es difícil; pregunta en recepción antes de salir.",
+        "EN": "There are slopes and steps, although the escalators cover the main climb. It is hard in a wheelchair; ask at reception before you go."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 6.2565,
+        "lng": -75.6135,
+        "foto": "/ciudades/medellin/img/sanjavier.jpg",
+        "texto": {
+          "ES": "Estación San Javier del metro, línea B. Unos 35 minutos en carro desde el hotel.",
+          "EN": "San Javier metro station, line B. About 35 minutes by car from the hotel."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Transporte hasta San Javier",
+          "Bebidas y compras en el barrio"
+        ],
+        "EN": [
+          "Transport to San Javier",
+          "Drinks and shopping in the neighborhood"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Con el guía del hotel, se cancela sin costo hasta 12 horas antes.",
+        "EN": "Self-guided, so there is nothing to book or cancel. With the hotel’s guide, cancel free up to 12 hours before."
+      },
+      "salidasFijas": [],
+      "precioDesde": 170000
+    },
+    {
+      "id": "guatape",
+      "expId": "ex2",
+      "img": "/ciudades/medellin/img/penol-ruta.jpg",
+      "titulo": {
+        "ES": "Guatapé y la Piedra del Peñol",
+        "EN": "Guatapé and the Peñol rock"
+      },
+      "tipo": {
+        "ES": "Excursión de un día",
+        "EN": "Day trip"
+      },
+      "dur": "9 h 40 min",
+      "d": {
+        "ES": "Para un día libre. A unas dos horas por carretera subes los 740 escalones de la Piedra del Peñol, paseas por las calles de colores de Guatapé, almuerzas frente al embalse y lo recorres en lancha.",
+        "EN": "For a free day. About two hours by road you climb the 740 steps of the Peñol rock, stroll the colorful streets of Guatapé, have lunch by the reservoir and take a boat across it."
+      },
+      "salida": {
+        "ES": "En carro desde el hotel hasta la Piedra del Peñol, unas dos horas. Sal a las 7:00 para subir antes del sol fuerte",
+        "EN": "By car from the hotel to the Peñol rock, about two hours. Leave at 7 am to climb before the strong sun"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Zapatos con buen agarre para la escalera",
+          "Agua y protector solar",
+          "Una chaqueta ligera para la lancha",
+          "Efectivo para la entrada y el almuerzo"
+        ],
+        "EN": [
+          "Shoes with good grip for the stairs",
+          "Water and sunscreen",
+          "A light jacket for the boat",
+          "Cash for the entrance and lunch"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Piedra del Peñol",
+            "EN": "Peñol rock"
+          },
+          "s": {
+            "ES": "Los 740 escalones",
+            "EN": "The 740 steps"
+          },
+          "d": {
+            "ES": "Es una roca de unos 220 metros que sale sola del paisaje. Se sube por una escalera de 740 escalones metida en una grieta, y arriba hay un mirador con el embalse lleno de islas alrededor.",
+            "EN": "It is a rock about 220 meters high rising alone from the landscape. You climb a 740-step staircase set into a crack, and at the top a lookout faces the island-filled reservoir."
+          },
+          "tip": {
+            "ES": "Hay descansos en la escalera: tómatelos. Arriba venden jugos y algo de comer.",
+            "EN": "There are landings on the stairs: use them. At the top they sell juices and snacks."
+          },
+          "hora": "09:10",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/medellin/img/penol.jpg",
+          "lat": 6.2203,
+          "lng": -75.1787,
+          "tramo": "coche",
+          "tramoDuracionMin": 130,
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Las calles de Guatapé",
+            "EN": "The streets of Guatapé"
+          },
+          "s": {
+            "ES": "El pueblo de los zócalos",
+            "EN": "The town of the zócalos"
+          },
+          "d": {
+            "ES": "Las casas tienen la parte baja de la fachada decorada con relieves de colores, los zócalos. Cada uno cuenta algo de la familia o del oficio de quien vive ahí.",
+            "EN": "The houses have the lower part of their facades decorated with colorful reliefs, the zócalos. Each one tells something about the family or the trade of whoever lives there."
+          },
+          "tip": {
+            "ES": "La calle del Recuerdo es la más fotografiada. Las de alrededor son igual de bonitas y tienen menos gente.",
+            "EN": "Calle del Recuerdo is the most photographed. The streets around it are just as pretty and less crowded."
+          },
+          "hora": "10:50",
+          "dur": "1 h",
+          "img": "/ciudades/medellin/img/zocalos.jpg",
+          "lat": 6.2335,
+          "lng": -75.1593,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 60
+        },
+        {
+          "n": {
+            "ES": "Almuerzo en el malecón",
+            "EN": "Lunch on the waterfront"
+          },
+          "s": {
+            "ES": "Trucha o bandeja paisa frente al agua",
+            "EN": "Trout or bandeja paisa by the water"
+          },
+          "d": {
+            "ES": "En el malecón hay restaurantes con mesas frente al embalse. Lo típico es la trucha, que crían en la zona, o una bandeja paisa si vienes con hambre de la subida.",
+            "EN": "Along the waterfront there are restaurants with tables facing the reservoir. The local dish is trout, farmed nearby, or a bandeja paisa if the climb left you hungry."
+          },
+          "tip": {
+            "ES": "Pide aguapanela con limón bien fría para acompañar.",
+            "EN": "Order an ice-cold aguapanela with lime to go with it."
+          },
+          "hora": "12:00",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/medellin/img/embalse.jpg",
+          "lat": 6.2346,
+          "lng": -75.162,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "Paseo en lancha",
+            "EN": "Boat ride"
+          },
+          "s": {
+            "ES": "Islas y el pueblo que quedó bajo el agua",
+            "EN": "Islands and the town under the water"
+          },
+          "d": {
+            "ES": "Las lanchas pasan por donde estaba el pueblo viejo de El Peñol, que quedó bajo el agua cuando se llenó el embalse a finales de los años setenta. Desde el agua se ve la piedra entera.",
+            "EN": "The boats pass over where the old town of El Peñol stood until the reservoir was filled in the late 1970s. From the water you see the whole rock."
+          },
+          "tip": {
+            "ES": "En la lancha corre viento, lleva la chaqueta. De vuelta son unas dos horas hasta el hotel.",
+            "EN": "It gets windy on the boat, so bring the jacket. The drive back to the hotel is about two hours."
+          },
+          "hora": "13:20",
+          "dur": "1 h",
+          "img": "/ciudades/medellin/img/embalse-dron.jpg",
+          "lat": 6.238,
+          "lng": -75.165,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 60
+        }
+      ],
+      "fotos": [
+        "/ciudades/medellin/img/penol-ruta.jpg",
+        "/ciudades/medellin/img/penol.jpg",
+        "/ciudades/medellin/img/zocalos.jpg",
+        "/ciudades/medellin/img/embalse.jpg",
+        "/ciudades/medellin/img/embalse-dron.jpg"
+      ],
+      "duracionMin": 580,
+      "distanciaKm": 3,
+      "dificultad": "exigente",
+      "accesibilidad": {
+        "ES": "La subida a la piedra son 740 escalones sin ascensor. El pueblo y el malecón son llanos; si no vas a subir, la vista desde abajo y la lancha valen igual.",
+        "EN": "The climb up the rock is 740 steps with no lift. The town and the waterfront are flat; if you are not climbing, the view from below and the boat are just as worth it."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 6.2203,
+        "lng": -75.1787,
+        "foto": "/ciudades/medellin/img/penol.jpg",
+        "texto": {
+          "ES": "Entrada a la Piedra del Peñol, entre El Peñol y Guatapé. Unas dos horas en carro desde el hotel.",
+          "EN": "Entrance to the Peñol rock, between El Peñol and Guatapé. About two hours by car from the hotel."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Transporte",
+          "Entrada a la piedra, almuerzo y lancha"
+        ],
+        "EN": [
+          "Transport",
+          "Rock entrance, lunch and boat"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Con la salida del hotel, se cancela sin costo hasta 24 horas antes.",
+        "EN": "Self-guided, so there is nothing to book or cancel. With the hotel outing, cancel free up to 24 hours before."
+      },
+      "salidasFijas": [],
+      "precioDesde": 390000
+    },
+    {
+      "id": "centro",
+      "expId": "ex6",
+      "img": "/ciudades/medellin/img/botero.jpg",
+      "titulo": {
+        "ES": "El centro y la Plaza Botero",
+        "EN": "Downtown and Plaza Botero"
+      },
+      "tipo": {
+        "ES": "Historia",
+        "EN": "History"
+      },
+      "dur": "3 h 25 min",
+      "d": {
+        "ES": "Para una mañana. Bajas en metro, recorres las esculturas de Botero, ves el Palacio de la Cultura, pasas por el Parque Berrío y terminas bajo la aguja del Coltejer, todo a pie en menos de un kilómetro.",
+        "EN": "For a morning. You ride the metro down, walk among Botero’s sculptures, see the Palace of Culture, pass through Parque Berrío and finish under the Coltejer spire, all on foot in under a kilometer."
+      },
+      "salida": {
+        "ES": "A pie hasta la estación Poblado, unos 15 minutos, y en metro hasta Parque Berrío. Sal hacia las 9:30",
+        "EN": "On foot to Poblado station, about 15 minutes, then the metro to Parque Berrío. Leave around 9:30 am"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Tarjeta Cívica o efectivo para el metro",
+          "El celular en el bolsillo de adelante",
+          "Una sombrilla pequeña, por si llueve"
+        ],
+        "EN": [
+          "A Cívica card or cash for the metro",
+          "Your phone in a front pocket",
+          "A small umbrella, in case it rains"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Plaza Botero",
+            "EN": "Plaza Botero"
+          },
+          "s": {
+            "ES": "23 esculturas al aire libre",
+            "EN": "23 sculptures in the open air"
+          },
+          "d": {
+            "ES": "Fernando Botero, que nació en Medellín, donó las 23 esculturas de bronce de la plaza, frente al Museo de Antioquia. Están a ras de suelo y se pueden tocar.",
+            "EN": "Fernando Botero, born in Medellín, donated the square’s 23 bronze sculptures, in front of the Museo de Antioquia. They stand at ground level and you can touch them."
+          },
+          "tip": {
+            "ES": "Por la mañana hay menos gente. El centro es concurrido: lleva el celular a mano y la mochila delante.",
+            "EN": "There are fewer people in the morning. Downtown is busy: keep your phone close and your bag in front."
+          },
+          "hora": "10:05",
+          "dur": "40 min",
+          "img": "/ciudades/medellin/img/botero.jpg",
+          "lat": 6.2522,
+          "lng": -75.5684,
+          "tramo": "tram",
+          "tramoDuracionMin": 35,
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Palacio de la Cultura",
+            "EN": "Palace of Culture"
+          },
+          "s": {
+            "ES": "El edificio a cuadros",
+            "EN": "The checkered building"
+          },
+          "d": {
+            "ES": "Lo diseñó el arquitecto belga Agustín Goovaerts a comienzos del siglo XX, en piedra gris y blanca a cuadros. Fue sede de la gobernación y hoy tiene exposiciones.",
+            "EN": "Belgian architect Agustín Goovaerts designed it in the early 20th century, in checkered grey and white stone. It housed the regional government and now holds exhibitions."
+          },
+          "tip": {
+            "ES": "Si está abierto, asómate al patio central.",
+            "EN": "If it is open, take a look at the central courtyard."
+          },
+          "hora": "10:50",
+          "dur": "25 min",
+          "img": "/ciudades/medellin/img/palacio.jpg",
+          "lat": 6.2516,
+          "lng": -75.569,
+          "tramo": "pie",
+          "tramoDuracionMin": 2,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Parque Berrío y La Candelaria",
+            "EN": "Parque Berrío and La Candelaria"
+          },
+          "s": {
+            "ES": "La plaza más vieja del centro",
+            "EN": "The oldest square downtown"
+          },
+          "d": {
+            "ES": "Fue la plaza principal de Medellín desde la colonia. A un lado está la iglesia de La Candelaria y por encima pasa el metro elevado.",
+            "EN": "It was Medellín’s main square since colonial times. La Candelaria church stands on one side and the elevated metro runs overhead."
+          },
+          "tip": {
+            "ES": "Pide un tinto a uno de los vendedores del parque. Cuesta muy poco y es como lo toman aquí.",
+            "EN": "Get a tinto from one of the park’s vendors. It costs very little and it is how people drink it here."
+          },
+          "hora": "11:20",
+          "dur": "30 min",
+          "img": "/ciudades/medellin/img/candelaria.jpg",
+          "lat": 6.2505,
+          "lng": -75.5683,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Edificio Coltejer",
+            "EN": "Coltejer building"
+          },
+          "s": {
+            "ES": "La aguja de la ciudad",
+            "EN": "The city’s needle"
+          },
+          "d": {
+            "ES": "Se terminó en 1972 para la textilera Coltejer y su punta tiene forma de aguja de tejer. Con unos 175 metros, fue durante años el edificio más alto de Colombia.",
+            "EN": "It was finished in 1972 for the Coltejer textile company and its tip is shaped like a knitting needle. At about 175 meters, it was Colombia’s tallest building for years."
+          },
+          "tip": {
+            "ES": "Para volver, la estación Parque Berrío está a dos cuadras. En unos 20 minutos estás en El Poblado.",
+            "EN": "To get back, Parque Berrío station is two blocks away. You are in El Poblado in about 20 minutes."
+          },
+          "hora": "11:55",
+          "dur": "20 min",
+          "img": "/ciudades/medellin/img/coltejer.jpg",
+          "lat": 6.2499,
+          "lng": -75.5664,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 20
+        }
+      ],
+      "fotos": [
+        "/ciudades/medellin/img/botero.jpg",
+        "/ciudades/medellin/img/botero-gato.jpg",
+        "/ciudades/medellin/img/palacio.jpg",
+        "/ciudades/medellin/img/candelaria.jpg",
+        "/ciudades/medellin/img/coltejer.jpg"
+      ],
+      "duracionMin": 205,
+      "distanciaKm": 1,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El metro tiene ascensores y el recorrido por el centro es llano, aunque hay mucha gente y andenes estrechos en algunos tramos.",
+        "EN": "The metro has lifts and the downtown walk is flat, though it is crowded and some sidewalks are narrow."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 6.2522,
+        "lng": -75.5684,
+        "foto": "/ciudades/medellin/img/botero.jpg",
+        "texto": {
+          "ES": "Plaza Botero, frente al Museo de Antioquia. Unos 35 minutos desde el hotel entre caminata y metro.",
+          "EN": "Plaza Botero, in front of the Museo de Antioquia. About 35 minutes from the hotel by foot and metro."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Pasajes de metro",
+          "Entradas a museos"
+        ],
+        "EN": [
+          "Metro fares",
+          "Museum admissions"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación. Con el guía del hotel, se cancela sin costo hasta 6 horas antes.",
+        "EN": "Self-guided, so there is nothing to book or cancel. With the hotel’s guide, cancel free up to 6 hours before."
+      },
+      "salidasFijas": [],
+      "precioDesde": 160000
+    },
+    {
+      "id": "provenza",
+      "img": "/ciudades/medellin/img/provenza.jpg",
+      "titulo": {
+        "ES": "Una tarde a pie por El Poblado",
+        "EN": "An afternoon on foot in El Poblado"
+      },
+      "tipo": {
+        "ES": "Barrio",
+        "EN": "Neighborhood"
+      },
+      "dur": "3 h",
+      "d": {
+        "ES": "Para la tarde que vuelves temprano. Caminas junto a la quebrada La Presidenta, llegas al parque donde empezó Medellín, te tomas un café en Provenza y ves encenderse el Parque Lleras, sin alejarte más de un kilómetro del hotel.",
+        "EN": "For an afternoon when you are back early. You walk along La Presidenta creek, reach the park where Medellín began, have a coffee in Provenza and watch Parque Lleras light up, never more than a kilometer from the hotel."
+      },
+      "salida": {
+        "ES": "A pie desde el hotel hasta La Presidenta, unos 7 minutos. Sal hacia las 15:30",
+        "EN": "On foot from the hotel to La Presidenta, about 7 minutes. Leave around 3:30 pm"
+      },
+      "incluye": {
+        "ES": [
+          "Ruta libre, sin reserva",
+          "Plan del día y mapa"
+        ],
+        "EN": [
+          "Self-guided, no booking needed",
+          "Day plan and map"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Zapatos cómodos, que hay lomas",
+          "Una sombrilla pequeña para el aguacero de la tarde"
+        ],
+        "EN": [
+          "Comfortable shoes, it is hilly",
+          "A small umbrella for the afternoon shower"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Parque lineal La Presidenta",
+            "EN": "La Presidenta linear park"
+          },
+          "s": {
+            "ES": "Una quebrada entre árboles",
+            "EN": "A creek among trees"
+          },
+          "d": {
+            "ES": "La quebrada baja entre árboles grandes con un sendero al lado. Es el sitio donde la gente del barrio camina o lee en las bancas.",
+            "EN": "The creek runs between big trees with a path alongside. It is where locals walk or read on the benches."
+          },
+          "tip": {
+            "ES": "Casi todo el sendero tiene sombra a esta hora.",
+            "EN": "Almost the whole path is shaded at this time of day."
+          },
+          "hora": "15:40",
+          "dur": "25 min",
+          "img": "/ciudades/medellin/img/presidenta.jpg",
+          "lat": 6.20665,
+          "lng": -75.56975,
+          "tramo": "pie",
+          "tramoDuracionMin": 7,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Parque El Poblado",
+            "EN": "Parque El Poblado"
+          },
+          "s": {
+            "ES": "Donde empezó Medellín",
+            "EN": "Where Medellín began"
+          },
+          "d": {
+            "ES": "Aquí se fundó en 1616 San Lorenzo de Aburrá, el primer poblado español del valle. La iglesia de San José queda a un lado del parque.",
+            "EN": "San Lorenzo de Aburrá, the first Spanish settlement in the valley, was founded here in 1616. San José church stands on one side of the park."
+          },
+          "tip": {
+            "ES": "Si la iglesia está abierta, entra un momento.",
+            "EN": "If the church is open, step inside for a moment."
+          },
+          "hora": "16:15",
+          "dur": "25 min",
+          "img": "/ciudades/medellin/img/poblado.jpg",
+          "lat": 6.20952,
+          "lng": -75.57088,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 25
+        },
+        {
+          "n": {
+            "ES": "Un café en Provenza",
+            "EN": "A coffee in Provenza"
+          },
+          "s": {
+            "ES": "Café de fincas de Colombia",
+            "EN": "Coffee from Colombian farms"
+          },
+          "d": {
+            "ES": "Provenza tiene cafés de especialidad en casi cada cuadra. Pergamino, que el hotel recomienda en su blog, tuesta café de fincas colombianas y tiene terraza.",
+            "EN": "Provenza has specialty coffee on almost every block. Pergamino, which the hotel recommends on its blog, roasts coffee from Colombian farms and has a terrace."
+          },
+          "tip": {
+            "ES": "Pide un filtrado del día y pregunta de qué finca es.",
+            "EN": "Order the filter coffee of the day and ask which farm it is from."
+          },
+          "hora": "16:50",
+          "dur": "40 min",
+          "img": "/ciudades/medellin/img/provenza-cafe.jpg",
+          "lat": 6.20935,
+          "lng": -75.56645,
+          "tramo": "pie",
+          "tramoDuracionMin": 10,
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Parque Lleras al anochecer",
+            "EN": "Parque Lleras at dusk"
+          },
+          "s": {
+            "ES": "Restaurantes y bares a la vuelta del hotel",
+            "EN": "Restaurants and bars around the corner"
+          },
+          "d": {
+            "ES": "Alrededor del parque se juntan restaurantes, bares y discotecas. A esta hora empieza a llenarse y la música sale a la calle.",
+            "EN": "Restaurants, bars and clubs cluster around the park. At this hour it starts filling up and the music spills onto the street."
+          },
+          "tip": {
+            "ES": "Si prefieres algo más tranquilo, en ocho minutos estás en el hotel: sube a la Terraza Del Sol para ver caer la tarde.",
+            "EN": "If you prefer something quieter, the hotel is eight minutes away: go up to the Terraza Del Sol to watch the evening come in."
+          },
+          "hora": "17:40",
+          "dur": "45 min",
+          "img": "/ciudades/medellin/img/lleras.jpg",
+          "lat": 6.20878,
+          "lng": -75.56727,
+          "tramo": "pie",
+          "tramoDuracionMin": 5,
+          "duracionMin": 45
+        }
+      ],
+      "fotos": [
+        "/ciudades/medellin/img/provenza.jpg",
+        "/ciudades/medellin/img/presidenta.jpg",
+        "/ciudades/medellin/img/poblado.jpg",
+        "/ciudades/medellin/img/provenza-cafe.jpg",
+        "/ciudades/medellin/img/lleras.jpg"
+      ],
+      "duracionMin": 180,
+      "distanciaKm": 2.5,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "El Poblado tiene lomas y andenes irregulares. Con silla de ruedas, mejor en taxi entre parada y parada.",
+        "EN": "El Poblado is hilly with uneven sidewalks. In a wheelchair, take a taxi between stops."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 6.20665,
+        "lng": -75.56975,
+        "foto": "/ciudades/medellin/img/presidenta.jpg",
+        "texto": {
+          "ES": "Parque lineal La Presidenta, a unos 7 minutos a pie del hotel.",
+          "EN": "La Presidenta linear park, about 7 minutes on foot from the hotel."
+        }
+      },
+      "noIncluye": {
+        "ES": [
+          "Café y cena"
+        ],
+        "EN": [
+          "Coffee and dinner"
+        ]
+      },
+      "cancelacion": {
+        "ES": "Ruta libre, sin reserva ni cancelación.",
+        "EN": "Self-guided, so there is nothing to book or cancel."
+      },
+      "salidasFijas": []
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Un spritz de la casa en la Terraza Del Sol a la vuelta",
+      "EN": "A house spritz on the Terraza Del Sol when you get back"
+    }
+  },
+  "creditos": [
+    "Carrera 35, Provenza, de noche: José Luiz, CC BY-SA 4.0, Wikimedia Commons",
+    "Calle arbolada junto al Parque Lleras (recorte horizontal): Scabredon (usuario de Wikimedia Commons), Public domain, Wikimedia Commons",
+    "Parque Lleras: Scabredon (usuario de Wikimedia Commons), Public domain, Wikimedia Commons",
+    "Quebrada La Presidenta: Felipe Restrepo Acosta, CC BY-SA 4.0, Wikimedia Commons",
+    "Iglesia de San José, Parque El Poblado (recorte horizontal): Alejandro Rojas (SajoR), Public domain, Wikimedia Commons",
+    "Museo El Castillo: Zack Knowles, CC BY-SA 3.0, Wikimedia Commons",
+    "Plaza Botero: Steffen Schmitz, CC BY-SA 4.0, Wikimedia Commons",
+    "Mujer con espejo, Plaza Botero: José Luiz, CC BY-SA 4.0, Wikimedia Commons",
+    "Palacio de la Cultura Rafael Uribe Uribe: Martinduquea, CC BY-SA 3.0, Wikimedia Commons",
+    "Iglesia de La Candelaria (recorte horizontal): SajoR, CC BY-SA 2.5, Wikimedia Commons",
+    "Edificio Coltejer: Ephren23, CC BY-SA 4.0, Wikimedia Commons",
+    "Grafitis de la Comuna 13: Bernard Gagnon, CC BY-SA 4.0, Wikimedia Commons",
+    "Mural de la Comuna 13: Bernard Gagnon, CC BY-SA 4.0, Wikimedia Commons",
+    "Mural de la Comuna 13: Bernard Gagnon, CC BY-SA 4.0, Wikimedia Commons",
+    "Escaleras eléctricas de la Comuna 13 (recorte horizontal): Juan Gómez, CC BY 2.0, Wikimedia Commons",
+    "Estación San Javier: Bernard Gagnon, CC BY-SA 4.0, Wikimedia Commons",
+    "Metrocable del Parque Arví: Alejandro Rojas (SajoR), CC BY-SA 4.0, Wikimedia Commons",
+    "Piedra del Peñol: Dtarazona, CC BY-SA 3.0, Wikimedia Commons",
+    "Piedra del Peñol: Dtarazona, CC BY-SA 3.0, Wikimedia Commons",
+    "Calle de los zócalos en Guatapé: Aliman5040, CC BY-SA 3.0, Wikimedia Commons",
+    "Embalse Peñol-Guatapé: Nathaly 1106, CC BY-SA 4.0, Wikimedia Commons",
+    "La piedra y el embalse desde el aire: Juan Gómez, CC BY 2.0, Wikimedia Commons"
+  ]
+}
