@@ -615,6 +615,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
 }
 @media (prefers-reduced-motion: reduce) { .carrusel { overflow-x: auto; } }
 @media (max-width: 640px) { .carrusel blockquote { flex-basis: 78vw; font-size: 19px; padding: 24px; } }
+.plazos { text-align: center; font-size: 14px; color: var(--gris); margin-top: -2px; }
 </style>
 </head>
 <body>
@@ -921,6 +922,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
             <li>Soporte privado conmigo para tus dudas</li>
           </ul>
           <a class="boton borde" href="#precio" data-pago="director">Acceder al programa</a>
+          <p class="plazos">También en 3 plazos sin intereses con Klarna</p>
         </div>
         <div class="plan destacado" data-aparece style="--d:1">
           <span class="sello">Opción recomendada</span>
@@ -937,6 +939,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
             <li>La plantilla del parte semanal para cada departamento</li>
           </ul>
           <a class="boton negro" href="#precio" data-pago="hotel">Acceder para el hotel</a>
+          <p class="plazos">También en 3 plazos sin intereses con Klarna</p>
         </div>
       </div>
       <div class="recibe-todo" data-aparece>
@@ -1019,8 +1022,8 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
     precioHotel: "397 €",     // plan Hotel
     despuesHotel: "497 €",
     fin: "el domingo 22 de noviembre",
-    pago: "https://buy.stripe.com/28EaEYerr6gqebodQL5Rm02", // enlace de pago de Stripe del plan Director
-    pagoHotel: "",  // enlace de pago de Stripe del plan Hotel
+    pago: "https://buy.stripe.com/7sY3cwerr0W6ebo2835Rm03", // enlace de pago de Stripe del plan Director (197 €)
+    pagoHotel: "https://buy.stripe.com/28EaEYerr6gqebodQL5Rm02", // enlace de pago de Stripe del plan Hotel (397 €)
     whatsapp: "34637289369" // mientras no haya enlaces de pago, los botones abren WhatsApp
   };
   document.querySelectorAll("[data-cfg]").forEach(function (el) {
