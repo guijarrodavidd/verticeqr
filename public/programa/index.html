@@ -509,7 +509,100 @@ html[data-anim] [data-aparece][data-visto] { opacity: 1; transform: none; filter
   .plan.destacado { order: -1; margin-top: 14px; }
   .plan, .recibe-todo { padding: 30px 20px 24px; border-radius: 22px; }
 }
-.porque.sin-foto { grid-template-columns: 1fr; max-width: 860px; }
+/* Hoy / Con Claude: tarjetas que se deslizan y se dan la vuelta */
+.tareas-sec > .wrap { padding-bottom: 0; }
+.tareas-sec { padding-bottom: 96px; }
+.tareas {
+  display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+  overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch;
+  padding: 8px max(20px, calc((100% - 1140px) / 2)) 30px; scroll-padding-inline: max(20px, calc((100% - 1140px) / 2));
+}
+.tareas::-webkit-scrollbar { display: none; }
+.tarea {
+  flex: 0 0 min(300px, 80vw); scroll-snap-align: start; position: relative; display: grid; min-height: 250px;
+  padding: 24px 24px 70px; border: 0; border-radius: 26px; text-align: left; font: inherit; color: var(--tinta); cursor: pointer;
+  background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--linea), 0 24px 50px -36px rgba(11, 18, 32, .5); overflow: hidden;
+  -webkit-tap-highlight-color: transparent; transition: background .5s ease, box-shadow .5s ease, color .5s ease;
+}
+.cara { grid-area: 1 / 1; display: grid; gap: 10px; align-content: start; transition: opacity .45s ease, transform .45s ease; }
+.cara small { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--gris); }
+.cara small svg { width: 14px; height: 14px; display: block; }
+.cara b { font-size: 23px; font-weight: 700; letter-spacing: -0.04em; line-height: 1.1; }
+.cara span { font-size: 16px; line-height: 1.45; color: var(--gris); }
+.cara.con { opacity: 0; transform: translateY(18px); }
+.giro { position: absolute; left: 24px; bottom: 22px; display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; }
+.giro i { position: relative; width: 38px; height: 22px; border-radius: 999px; background: rgba(14, 17, 22, .12); transition: background .4s ease; }
+.giro i::after { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 2px 6px rgba(0, 0, 0, .25); transition: transform .4s cubic-bezier(.3, .7, .2, 1.2); }
+.tarea.on { background: var(--noche); color: #FFFFFF; box-shadow: 0 30px 60px -30px rgba(94, 230, 216, .75); }
+.tarea.on .cara.hoy { opacity: 0; transform: translateY(-18px); }
+.tarea.on .cara.con { opacity: 1; transform: none; }
+.tarea.on .cara span { color: #C3CCD6; }
+.tarea.on .cara small { color: var(--aqua); }
+.tarea.on .giro i { background: var(--grad); }
+.tarea.on .giro i::after { transform: translateX(16px); }
+
+/* Por qué lo he hecho, con la foto */
+.pq { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); grid-template-areas: "foto cab" "foto texto"; column-gap: 64px; row-gap: 18px; align-items: end; }
+.pq-foto { grid-area: foto; aspect-ratio: 4 / 5; border-radius: 28px; display: grid; place-items: center; background: linear-gradient(150deg, #CFF6F1 0%, #E6F4D2 100%); box-shadow: 0 40px 70px -45px rgba(11, 18, 32, .5); color: var(--teal); font-size: 64px; font-weight: 700; letter-spacing: -0.05em; overflow: hidden; }
+.pq-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pq-cab { grid-area: cab; align-self: end; }
+.pq-firma { margin-top: 10px; color: var(--teal); font-weight: 600; }
+.pq-texto { grid-area: texto; align-self: start; display: grid; gap: 16px; font-size: 1.12rem; color: var(--gris); max-width: 34em; }
+
+/* Los 21 días, por resultados */
+.filas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; }
+.d2 { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 14px; padding-block: 18px; border-bottom: 1px solid var(--linea); scroll-margin-top: 90px; }
+.d2 .num { font-size: 26px; font-weight: 700; letter-spacing: -0.06em; line-height: 1.05; font-variant-numeric: tabular-nums; }
+.d2 h4 { font-size: 17.5px; font-weight: 650; letter-spacing: -0.035em; line-height: 1.2; }
+.d2 p { margin-top: 4px; color: var(--gris); font-size: 15.5px; line-height: 1.45; }
+
+/* Y además, con gráficos pequeños */
+.extras2 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 32px; }
+.extras2 > div { padding: 22px; border-radius: 22px; background: var(--niebla); display: grid; gap: 16px; align-content: start; }
+.extras2 h3 { font-size: 17px; font-weight: 650; letter-spacing: -0.035em; line-height: 1.25; }
+.mini { height: 54px; display: flex; align-items: flex-end; gap: 6px; }
+.mini-depts { display: grid; grid-template-columns: repeat(3, 26px); gap: 5px; align-content: end; }
+.mini-depts i { height: 24px; border-radius: 7px; display: grid; place-items: center; font-style: normal; font-size: 11px; font-weight: 700; color: #FFFFFF; background: var(--grad); }
+.mini-depts i:nth-child(2n) { background: var(--noche); }
+.mini-barras i { width: 14px; height: var(--h); border-radius: 4px 4px 2px 2px; background: var(--grad); transition: height 1s cubic-bezier(.2, .7, .1, 1); }
+html[data-anim] .extras2:not([data-visto]) .mini-barras i { height: 8%; }
+.mini-doc { position: relative; width: 46px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 6px; padding: 9px 8px; border-radius: 8px; background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--linea); }
+.mini-doc i { display: block; height: 4px; width: 100%; border-radius: 2px; background: #DCE3E3; }
+.mini-doc i:nth-child(2) { width: 70%; }
+.mini-doc b { position: absolute; right: -10px; bottom: -6px; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; color: #FFFFFF; background: var(--grad); }
+.mini-dos b { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; font-size: 22px; font-weight: 750; color: #FFFFFF; background: var(--noche); box-shadow: 0 10px 24px -10px rgba(94, 230, 216, .9); }
+
+/* Movimiento que se nota también en el móvil */
+@media (prefers-reduced-motion: no-preference) {
+  .portada .grad, h2 .grad { background-image: linear-gradient(90deg, #36C6C0, #A8D86A, #36C6C0); background-size: 200% 100%; animation: brillo 5s linear infinite; }
+  @keyframes brillo { to { background-position: -200% 0; } }
+  .demo .claude, .demo .movil { animation: flota 6s ease-in-out infinite; }
+  @keyframes flota { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  .tarea:active { transform: scale(.98); }
+}
+html[data-anim] [data-aparece] { transform: translateY(40px) scale(.97); }
+html[data-anim] [data-aparece][data-visto] { transform: none; }
+
+@media (max-width: 860px) {
+  .pq { grid-template-columns: 84px minmax(0, 1fr); grid-template-areas: "foto cab" "texto texto"; column-gap: 18px; align-items: center; }
+  .pq-foto { aspect-ratio: 1; border-radius: 50%; font-size: 28px; }
+  .pq-cab h2 { font-size: 32px; }
+  .pq-firma { margin-top: 4px; font-size: 14px; }
+  .filas { grid-template-columns: 1fr; }
+  .extras2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html[data-anim] [data-aparece] { filter: none; transform: translateY(36px) scale(.96); }
+  html[data-anim] [data-aparece][data-visto] { transform: none; }
+}
+@media (max-width: 640px) {
+  .citas { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; gap: 12px; margin-inline: calc(-1 * max(20px, env(safe-area-inset-left, 0px))); padding-inline: max(20px, env(safe-area-inset-left, 0px)); padding-bottom: 6px; }
+  .citas::-webkit-scrollbar { display: none; }
+  .citas blockquote { flex: 0 0 80%; scroll-snap-align: start; }
+  .extras2 > div { padding: 18px; }
+  .tareas-sec { padding-bottom: 64px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-anim] [data-aparece] { opacity: 1; transform: none; filter: none; transition: none; }
+}
 </style>
 </head>
 <body>
@@ -529,7 +622,7 @@ html[data-anim] [data-aparece][data-visto] { opacity: 1; transform: none; filter
     <div class="wrap">
       <span class="pildora" data-aparece>Programa práctico desde el día 1</span>
       <h1 data-aparece style="--d:1">Aprende a usar <b>la IA en tu hotel</b> en solo <b class="grad">21 días</b></h1>
-      <p class="entradilla" data-aparece style="--d:2">Desde el día 1 trabajas con los datos de tu hotel, y cada ejercicio de 15 minutos lo aplicas esa misma mañana. Los informes, las reseñas, los correos y el cuadrante te salen en minutos, y ese tiempo lo dedicas a vender más.</p>
+      <p class="entradilla" data-aparece style="--d:2">15 minutos al día con los datos de tu hotel. Los informes salen en minutos y ese tiempo lo dedicas a vender.</p>
       <div class="acciones" data-aparece style="--d:3">
         <a class="boton negro" href="#precio">Acceder al programa · desde <span data-cfg="precio">197 €</span></a>
         <a class="boton borde" href="#dias">Ver los 21 días</a>
@@ -540,30 +633,31 @@ html[data-anim] [data-aparece][data-visto] { opacity: 1; transform: none; filter
     </div>
   </section>
 
-  <section class="seccion halo">
+  <section class="seccion halo tareas-sec">
     <div class="wrap">
-      <p class="frase" data-aparece>Hoy el trabajo de oficina se te come las mañanas. <span class="fino">El informe del mes, el correo a los dueños, la reseña de anoche y el cuadrante que hay que rehacer porque alguien se ha puesto malo.</span></p>
-      <div class="columnas" data-aparece style="--d:1">
-        <p>En un mes aprendes a pasárselo a Claude, con ejercicios cortos que puedes hacer entre dos reuniones o desde el móvil.</p>
-        <p>No hace falta saber de tecnología ni instalar nada. Trabajas con lo que ya tienes, <b>Claude prepara y tú decides qué sale.</b> Lo que montas cada día se queda funcionando para la semana siguiente.</p>
-      </div>
+      <div class="cabeza" data-aparece><h2>Hoy el trabajo de oficina <span class="fino">se te come las mañanas</span></h2><p class="entradilla">Toca cada tarjeta y mira cómo queda con Claude.</p></div>
+    </div>
+    <div class="tareas" data-aparece style="--d:1">
+      <button class="tarea" type="button" aria-pressed="false"><span class="cara hoy"><small>Hoy</small><b>El informe del mes</b><span>Copias números del programa de reservas al Excel y del Excel al correo.</span></span><span class="cara con"><small><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#chispa"/></svg>Con Claude</small><b>El informe del mes</b><span>Subes el informe tal cual y te devuelve el resumen para los dueños.</span></span><span class="giro"><i></i>Con Claude</span></button>
+      <button class="tarea" type="button" aria-pressed="false"><span class="cara hoy"><small>Hoy</small><b>Las reseñas</b><span>Las respondes una a una cuando sacas un rato, o se quedan sin respuesta.</span></span><span class="cara con"><small><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#chispa"/></svg>Con Claude</small><b>Las reseñas</b><span>Salen todas con tu tono y tú solo las revisas.</span></span><span class="giro"><i></i>Con Claude</span></button>
+      <button class="tarea" type="button" aria-pressed="false"><span class="cara hoy"><small>Hoy</small><b>El cuadrante</b><span>Lo rehaces entero cada vez que alguien se pone malo.</span></span><span class="cara con"><small><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#chispa"/></svg>Con Claude</small><b>El cuadrante</b><span>Le dices quién falta y te propone el cambio en minutos.</span></span><span class="giro"><i></i>Con Claude</span></button>
+      <button class="tarea" type="button" aria-pressed="false"><span class="cara hoy"><small>Hoy</small><b>El correo a los dueños</b><span>Le das vueltas toda la tarde para que suene bien.</span></span><span class="cara con"><small><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#chispa"/></svg>Con Claude</small><b>El correo a los dueños</b><span>Le cuentas lo que ha pasado y te lo deja listo para revisar.</span></span><span class="giro"><i></i>Con Claude</span></button>
+      <button class="tarea" type="button" aria-pressed="false"><span class="cara hoy"><small>Hoy</small><b>La reunión de jefes</b><span>Acaba sin saber muy bien quién hace qué.</span></span><span class="cara con"><small><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#chispa"/></svg>Con Claude</small><b>La reunión de jefes</b><span>Sales con el acta y las tareas repartidas.</span></span><span class="giro"><i></i>Con Claude</span></button>
     </div>
   </section>
   <section class="seccion">
-    <div class="wrap porque sin-foto">
-      
-      <div>
-        <h2>Por qué <span class="fino">lo he hecho</span></h2>
-        <div class="texto" data-aparece style="--d:1">
-          <p><b>Soy Héctor García.</b> He hablado con unos 300 hoteleros por LinkedIn y en casi todos los hoteles veo lo mismo. Cada informe se hace a su manera, copiando números a mano al Excel, y el cuadrante se rehace cada semana.</p>
-          <p>Con la IA bien ordenada, los informes salen siempre con el mismo formato y el cuadrante en minutos, y esas horas vuelven a tu equipo y a vender. En un solo post, más de 350 personas me pidieron mis agentes de Claude para automatizar procesos del hotel.</p>
-        </div>
+    <div class="wrap pq">
+      <div class="pq-foto" data-aparece role="img" aria-label="Foto de Héctor García"><span>HG</span></div>
+      <div class="pq-cab" data-aparece style="--d:1"><h2>Por qué <span class="fino">lo he hecho</span></h2><p class="pq-firma">Héctor García · Valencia</p></div>
+      <div class="pq-texto" data-aparece style="--d:2">
+        <p>He hablado con unos 300 hoteleros por LinkedIn y en casi todos los hoteles veo lo mismo. Cada informe se hace a su manera, copiando números a mano al Excel, y el cuadrante se rehace cada semana.</p>
+        <p>Con la IA bien ordenada, esas horas vuelven a tu equipo y a vender. En un solo post, más de 350 personas me pidieron mis agentes de Claude para automatizar procesos del hotel.</p>
       </div>
     </div>
   </section>
   <section class="seccion demo-sec">
     <div class="wrap">
-      <div class="cabeza" data-aparece><h2>Así trabajas <span class="fino">con Claude</span></h2><p class="entradilla">Cada día del programa usa una parte distinta de Claude. Toca una pestaña y mira cómo queda con un hotel de ejemplo.</p></div>
+      <div class="cabeza" data-aparece><h2>Así trabajas <span class="fino">con Claude</span></h2><p class="entradilla">Cada día usas una parte distinta de Claude.</p></div>
       <div class="demo" data-aparece style="--d:1">
         <div class="pestanas" role="tablist" aria-label="Las partes de Claude que usas en el programa">
           <button role="tab" aria-selected="true" data-vista="v-proyectos"><b>Día 4</b> · Proyectos</button>
@@ -741,70 +835,67 @@ html[data-anim] [data-aparece][data-visto] { opacity: 1; transform: none; filter
 
       <div class="semana" data-semana="1" role="tabpanel">
         <div class="semana-cab"><span class="pildora">Semana 1</span><h3>Claude trabaja para ti</h3><span class="nivel">Del nivel 1 al 3</span></div>
-        <article class="d" id="dia-1"><span class="num">1</span><div class="d-tit"><h4>Tu punto de partida</h4></div><div><ul><li>Haz el test de los 7 niveles y crea tu cuenta en claude.ai</li><li>Aprende las reglas. Ningún nombre, teléfono ni dato de huéspedes o empleados, y todo lo revisas tú antes de que salga</li><li>Responde con Claude la última reseña de tu hotel y publícala</li></ul><p class="recibes"><b>Recibes</b> el test, las reglas en una página y el prompt para tu primera reseña.</p></div></article>
-        <article class="d" id="dia-2"><span class="num">2</span><div class="d-tit"><h4>Cómo pedirle las cosas</h4></div><div><ul><li>Pide el mismo correo varias veces y quédate con lo mejor de cada versión</li><li>Añade «antes de empezar, pregúntame lo que necesites» y dale un ejemplo de cómo escribes tú</li></ul><p class="recibes"><b>Recibes</b> las frases que mejoran cualquier respuesta, cada una con su antes y su después.</p></div></article>
-        <article class="d" id="dia-3"><span class="num">3</span><div class="d-tit"><h4>La ficha de tu hotel</h4></div><div><ul><li>Rellena la plantilla con tus habitaciones, servicios, horarios y equipo</li><li>Pídele a Claude que te diga qué le falta</li></ul><p class="recibes"><b>Recibes</b> la plantilla y una ficha ya rellena de un hotel de 80 habitaciones.</p></div></article>
-        <article class="d" id="dia-4"><span class="num">4</span><div class="d-tit"><h4>El proyecto de tu hotel</h4></div><div><ul><li>Crea el proyecto con la ficha y sube los documentos que ya tienes, como la carta o el organigrama</li><li>Haz la misma pregunta dentro y fuera del proyecto y compara</li></ul><p class="recibes"><b>Recibes</b> la guía clic a clic y la lista de lo que conviene subir.</p></div></article>
-        <article class="d" id="dia-5"><span class="num">5</span><div class="d-tit"><h4>Claude en el bolsillo</h4></div><div><ul><li>Dicta desde el móvil lo que ves al pasar por cada departamento, y que te lo devuelva como tareas por responsable</li><li>Hazle una foto a una nota o a la pizarra de cocina y que la pase a limpio</li></ul><p class="recibes"><b>Recibes</b> el prompt de la ronda por el hotel y un ejemplo hecho.</p></div></article>
+        <div class="filas">
+          <article class="d2" id="dia-1"><span class="num">1</span><div><h4>Tu punto de partida</h4><p>Sabes en qué nivel estás y ya has respondido tu primera reseña con Claude.</p></div></article>
+          <article class="d2" id="dia-2"><span class="num">2</span><div><h4>Cómo pedirle las cosas</h4><p>Le pides las cosas para que la respuesta salga bien a la primera.</p></div></article>
+          <article class="d2" id="dia-3"><span class="num">3</span><div><h4>La ficha de tu hotel</h4><p>Claude conoce tu hotel y cómo trabajas.</p></div></article>
+          <article class="d2" id="dia-4"><span class="num">4</span><div><h4>El proyecto de tu hotel</h4><p>Dejas de explicarle tu hotel cada vez que le pides algo.</p></div></article>
+          <article class="d2" id="dia-5"><span class="num">5</span><div><h4>Claude en el bolsillo</h4><p>Repartes tareas desde el móvil mientras haces la ronda.</p></div></article>
+        </div>
       </div>
-
       <div class="semana" data-semana="2" role="tabpanel" hidden>
         <div class="semana-cab"><span class="pildora">Semana 2</span><h3>Fuera de la oficina</h3><span class="nivel">Nivel 4</span></div>
-        <article class="d" id="dia-6"><span class="num">6</span><div class="d-tit"><h4>Las reseñas de la semana</h4></div><div><ul><li>Crea el asistente de reseñas y responde las de la semana con tu voz</li><li>Si la queja es seria, que te prepare también el mensaje privado</li></ul><p class="recibes"><b>Recibes</b> las instrucciones del asistente y respuestas de ejemplo a una reseña buena y a otra mala.</p></div></article>
-        <article class="d" id="dia-7"><span class="num">7</span><div class="d-tit"><h4>Las reseñas del mes, en un plan</h4></div><div><ul><li>Pega todas las reseñas del mes, sin los nombres</li><li>Claude las agrupa por departamento y te dice qué arreglar primero y a quién pedírselo</li></ul><p class="recibes"><b>Recibes</b> el prompt y el plan de ejemplo de un mes con 64 reseñas.</p></div></article>
-        <article class="d" id="dia-8"><span class="num">8</span><div class="d-tit"><h4>Los correos que te cuestan</h4></div><div><ul><li>Crea el asistente de correos con tu firma y tu tono</li><li>Úsalo con el que llevas días sin contestar, sea al proveedor, al huésped que reclama o a los dueños</li></ul><p class="recibes"><b>Recibes</b> las instrucciones y cinco correos de ejemplo.</p></div></article>
-        <article class="d" id="dia-9"><span class="num">9</span><div class="d-tit"><h4>Reuniones que acaban en tareas</h4></div><div><ul><li>Pídele el orden del día de la reunión de jefes de departamento</li><li>Al acabar, pásale tus notas o díctale lo que se habló, y que te devuelva quién hace qué y para cuándo</li></ul><p class="recibes"><b>Recibes</b> los dos prompts y un acta de ejemplo.</p></div></article>
-        <article class="d" id="dia-10"><span class="num">10</span><div class="d-tit"><h4>Los proveedores</h4></div><div><ul><li>Dale varios presupuestos del mismo servicio y que te los compare línea a línea</li><li>Pídele los argumentos para negociar y el correo para pedir rebaja</li><li>Pásale un contrato y que te marque las cláusulas que tienes que mirar con calma</li></ul><p class="recibes"><b>Recibes</b> los prompts y una comparativa de ejemplo entre empresas de lavandería.</p></div></article>
+        <div class="filas">
+          <article class="d2" id="dia-6"><span class="num">6</span><div><h4>Las reseñas de la semana</h4><p>Las reseñas quedan respondidas con tu tono, también las malas.</p></div></article>
+          <article class="d2" id="dia-7"><span class="num">7</span><div><h4>Las reseñas del mes</h4><p>Sabes qué falla en cada departamento y qué arreglar primero.</p></div></article>
+          <article class="d2" id="dia-8"><span class="num">8</span><div><h4>Los correos que te cuestan</h4><p>Los correos difíciles salen en minutos.</p></div></article>
+          <article class="d2" id="dia-9"><span class="num">9</span><div><h4>Reuniones que acaban en tareas</h4><p>Cada reunión acaba con quién hace qué y para cuándo.</p></div></article>
+          <article class="d2" id="dia-10"><span class="num">10</span><div><h4>Los proveedores</h4><p>Comparas presupuestos y negocias con argumentos.</p></div></article>
+        </div>
       </div>
-
       <div class="semana" data-semana="3" role="tabpanel" hidden>
         <div class="semana-cab"><span class="pildora">Semana 3</span><h3>Tu equipo</h3><span class="nivel">Nivel 4, con tu equipo</span></div>
-        <article class="d" id="dia-11"><span class="num">11</span><div class="d-tit"><h4>El cuadrante</h4></div><div><ul><li>Pásale las horas de cada persona, las libranzas y las bajas</li><li>Que te proponga el cuadrante y te avise de lo que no cuadra</li></ul><p class="recibes"><b>Recibes</b> la plantilla de horas y un cuadrante de ejemplo de recepción.</p></div></article>
-        <article class="d" id="dia-12"><span class="num">12</span><div class="d-tit"><h4>El que entra nuevo</h4></div><div><ul><li>Cuéntale por voz desde el móvil cómo se hace un puesto, y Claude lo convierte en el manual de bienvenida</li><li>Pídele un test de diez preguntas para el final de su primera semana</li></ul><p class="recibes"><b>Recibes</b> el prompt y el manual de ejemplo para un recepcionista nuevo.</p></div></article>
-        <article class="d" id="dia-13"><span class="num">13</span><div class="d-tit"><h4>Los procedimientos</h4></div><div><ul><li>Pide a un jefe de departamento que le cuente a Claude por voz cómo se hace algo, como un check-in o el montaje del desayuno</li><li>Claude lo pasa a un procedimiento paso a paso con su lista de comprobación</li></ul><p class="recibes"><b>Recibes</b> el prompt y dos procedimientos de ejemplo.</p></div></article>
-        <article class="d" id="dia-14"><span class="num">14</span><div class="d-tit"><h4>Las conversaciones difíciles</h4></div><div><ul><li>Claude estudia a la persona con la que tienes que hablar y hace de ella</li><li>Ensayas con él, por ejemplo con el empleado que llega tarde, y al final te corrige</li><li>Hilton ya entrena así a su equipo, con huéspedes simulados</li></ul><p class="recibes"><b>Recibes</b> el prompt del simulador y una conversación de ejemplo entera.</p></div></article>
-        <article class="d" id="dia-15"><span class="num">15</span><div class="d-tit"><h4>Que tu equipo también lo use</h4></div><div><ul><li>Pasa la ficha y las instrucciones de tu proyecto a tu número dos y a los jefes de departamento</li><li>Firmad la política de IA del hotel, con lo que se puede pegar y quién revisa</li></ul><p class="recibes"><b>Recibes</b> la política lista para firmar y una guía de una página para cada jefe de departamento.</p></div></article>
+        <div class="filas">
+          <article class="d2" id="dia-11"><span class="num">11</span><div><h4>El cuadrante</h4><p>El cuadrante se rehace en minutos cuando alguien falla.</p></div></article>
+          <article class="d2" id="dia-12"><span class="num">12</span><div><h4>El que entra nuevo</h4><p>El que entra nuevo tiene su manual desde el primer día.</p></div></article>
+          <article class="d2" id="dia-13"><span class="num">13</span><div><h4>Los procedimientos</h4><p>Cada tarea del hotel queda escrita paso a paso.</p></div></article>
+          <article class="d2" id="dia-14"><span class="num">14</span><div><h4>Las conversaciones difíciles</h4><p>Llegas a la conversación difícil ya ensayada.</p></div></article>
+          <article class="d2" id="dia-15"><span class="num">15</span><div><h4>Que tu equipo también lo use</h4><p>Tu equipo usa Claude con las mismas reglas que tú.</p></div></article>
+        </div>
       </div>
-
       <div class="semana" data-semana="4" role="tabpanel" hidden>
         <div class="semana-cab"><span class="pildora">Semana 4</span><h3>Los números y los dueños</h3><span class="nivel">Niveles 5 y 6</span></div>
-        <article class="d" id="dia-16"><span class="num">16</span><div class="d-tit"><h4>La semana en cinco líneas y tu panel</h4></div><div><ul><li>Exporta de tu programa de reservas el informe de totales de la semana y súbelo tal cual</li><li>Comprueba la ocupación y el ingreso total con el original</li><li>Con los totales del mes, que Claude te monte un panel para mirarlo en el móvil</li></ul><p class="recibes"><b>Recibes</b> el prompt del resumen, el del panel y lo que tienes que pedirle a recepción si no sabes exportar el informe.</p></div></article>
-        <article class="d" id="dia-17"><span class="num">17</span><div class="d-tit"><h4>Más ingreso con el mismo equipo</h4></div><div><ul><li>Pásale tus servicios y tus reseñas</li><li>Claude te propone qué más puede comprar el huésped que ya está dentro, como la salida tardía o un plan con un negocio de la zona, y a qué precio</li></ul><p class="recibes"><b>Recibes</b> el prompt y propuestas de ejemplo para un hotel de playa y otro de ciudad.</p></div></article>
-        <article class="d" id="dia-18"><span class="num grad">18</span><div class="d-tit"><h4>El cierre de mes</h4></div><div><ul><li>Crea el Analista, que solo saca los hechos, y el Redactor, que solo escribe</li><li>Sube los informes del mes y te queda el informe de una página para los dueños</li></ul><p class="recibes"><b>Recibes</b> las instrucciones de los dos y el cierre de un mes de ejemplo.</p></div></article>
-        <article class="d" id="dia-19"><span class="num">19</span><div class="d-tit"><h4>La reunión con los dueños</h4></div><div><ul><li>Pídele la presentación del mes en PowerPoint</li><li>Ensaya con Claude haciendo de propietario, con las preguntas que menos te gustan</li></ul><p class="recibes"><b>Recibes</b> el prompt de la presentación y el del ensayo.</p></div></article>
-        <article class="d" id="dia-20"><span class="num">20</span><div class="d-tit"><h4>Tu semana con Claude</h4></div><div><ul><li>Deja que Claude te entreviste sobre tu semana y te diga dónde se te van las horas</li><li>Apunta los 5 momentos fijos en los que vas a usar Claude, como «cuando llega el informe del lunes»</li><li>En la próxima reunión de jefes de departamento, que cada uno cuente algo que le salió bien o mal con Claude</li></ul><p class="recibes"><b>Recibes</b> el prompt de la entrevista y la plantilla del mapa de tu semana.</p></div></article>
+        <div class="filas">
+          <article class="d2" id="dia-16"><span class="num">16</span><div><h4>La semana en cinco líneas</h4><p>Ves cómo va el hotel en cinco líneas y en un panel en el móvil.</p></div></article>
+          <article class="d2" id="dia-17"><span class="num">17</span><div><h4>Más ingreso con el mismo equipo</h4><p>Sabes qué más puede comprar el huésped y a qué precio.</p></div></article>
+          <article class="d2" id="dia-18"><span class="num grad">18</span><div><h4>El cierre de mes</h4><p>El cierre de mes sale en minutos y siempre con el mismo formato.</p></div></article>
+          <article class="d2" id="dia-19"><span class="num">19</span><div><h4>La reunión con los dueños</h4><p>Llegas a la reunión con la presentación hecha y ensayada.</p></div></article>
+          <article class="d2" id="dia-20"><span class="num">20</span><div><h4>Tu semana con Claude</h4><p>Sabes en qué momentos de tu semana te ayuda Claude.</p></div></article>
+        </div>
       </div>
     </div>
   </section>
   <section class="dia20 noche">
     <div class="wrap" id="dia-21">
       <span class="pildora" data-aparece>Día 21 · Método Fricción 0</span>
-      <h2 data-aparece style="--d:1">Ya lo haces tú.</h2>
-      <p class="entradilla">Cualquier tarea de tu hotel que se repita, convertida en tu propio asistente. Cuatro pasos y una lista para comprobarlo.</p>
-      <div class="pasos" data-aparece style="--d:2">
+      <h2 data-aparece style="--d:1">Ya lo haces <span class="grad">tú solo.</span></h2>
+      <p class="entradilla" data-aparece style="--d:2">Conviertes cualquier tarea de tu hotel en tu propio asistente, sin depender de nadie.</p>
+      <div class="pasos" data-aparece style="--d:3">
         <div><span>1</span><p>Qué tarea le pasas</p></div>
         <div><span>2</span><p>Qué le das</p></div>
-        <div><span>3</span><p>Qué te tiene que devolver</p></div>
+        <div><span>3</span><p>Qué te devuelve</p></div>
         <div><span>4</span><p>Cómo lo revisas</p></div>
-      </div>
-      <div class="lista" data-aparece style="--d:3">
-        <ul>
-          <li>Aplica el Método Fricción 0 tú solo a una tarea de tu hotel que no hayamos visto en el programa, y compruébalo con la lista</li>
-          <li>Aprende a ver qué le ha faltado a una respuesta mala y a arreglarla sin empezar de cero</li>
-          <li>Repite el test de los 7 niveles y mira cuánto has subido</li>
-        </ul>
-        <p class="recibes"><b>Recibes</b> el Método Fricción 0 en una página, la lista para comprobar cualquier asistente, la guía de qué hacer cuando Claude falla y el plan de los 30 días siguientes.</p>
       </div>
     </div>
   </section>
   <section class="seccion">
     <div class="wrap">
-      <div class="cabeza"><h2>Y además</h2><p class="entradilla">Para que te lleves todo lo que hace falta en el día a día del hotel.</p></div>
-      <div class="extras" data-aparece style="--d:1">
-        <div><h3>Asistentes por departamento</h3><p>Recepción, pisos, restaurante y bar, cocina, mantenimiento y comercial, cada uno con sus instrucciones.</p></div>
-        <div><h3>El presupuesto del año que viene</h3><p>Hecho a partir de los totales de este año, con el Excel montado.</p></div>
-        <div><h3>Propuestas para grupos y eventos</h3><p>Del correo con la petición a la propuesta con precio.</p></div>
-        <div><h3>La ruta del número dos</h3><p>Lo que suele llevar él, del cuadrante a las actas, con su acceso incluido.</p></div>
+      <h2 data-aparece>Y además</h2>
+      <div class="extras2" data-aparece style="--d:1">
+        <div><span class="mini mini-depts" aria-hidden="true"><i>R</i><i>P</i><i>B</i><i>C</i><i>M</i><i>V</i></span><h3>6 asistentes por departamento</h3></div>
+        <div><span class="mini mini-barras" aria-hidden="true"><i style="--h:38%"></i><i style="--h:55%"></i><i style="--h:47%"></i><i style="--h:72%"></i><i style="--h:90%"></i></span><h3>El presupuesto del año que viene, en Excel</h3></div>
+        <div><span class="mini mini-doc" aria-hidden="true"><i></i><i></i><i></i><b>€</b></span><h3>Propuestas para grupos y eventos</h3></div>
+        <div><span class="mini mini-dos" aria-hidden="true"><b>2</b></span><h3>La ruta de tu número dos</h3></div>
       </div>
     </div>
   </section>
@@ -921,7 +1012,7 @@ html[data-anim] [data-aparece][data-visto] { opacity: 1; transform: none; filter
     fin: "el domingo 22 de noviembre",
     pago: "",       // enlace de pago de Stripe del plan Director
     pagoHotel: "",  // enlace de pago de Stripe del plan Hotel
-    whatsapp: "34668569663" // mientras no haya enlaces de pago, los botones abren WhatsApp
+    whatsapp: "34637289369" // mientras no haya enlaces de pago, los botones abren WhatsApp
   };
   document.querySelectorAll("[data-cfg]").forEach(function (el) {
     const v = CONFIG[el.getAttribute("data-cfg")];
@@ -1010,19 +1101,78 @@ html[data-anim] [data-aparece][data-visto] { opacity: 1; transform: none; filter
     if (s) abrirSemana(s);
   });
   if (semanaDe(location.hash)) abrirSemana(semanaDe(location.hash));
-  // Aparecer al deslizar. Sin JavaScript todo se ve desde el principio.
+  // Aparecer al deslizar. Si el navegador no avisa, a los 3 s se enseña todo.
   (function () {
-    if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const els = Array.from(document.querySelectorAll("[data-aparece]"));
+    if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    document.documentElement.setAttribute("data-anim", "");
+    let algo = false;
     const obs = new IntersectionObserver(function (entradas) {
+      algo = true;
       entradas.forEach(function (e) {
         if (!e.isIntersecting) return;
         e.target.setAttribute("data-visto", "");
         obs.unobserve(e.target);
       });
-      document.documentElement.setAttribute("data-anim", "");
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.08 });
     els.forEach(function (el) { obs.observe(el); });
+    setTimeout(function () { if (!algo) els.forEach(function (el) { el.setAttribute("data-visto", ""); }); }, 3000);
+  })();
+
+  // Hoy / Con Claude: se dan la vuelta al tocarlas, y solas mientras nadie toca.
+  (function () {
+    const pista = document.querySelector(".tareas");
+    if (!pista) return;
+    const cartas = Array.from(pista.querySelectorAll(".tarea"));
+    let quieto = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let i = 0, reloj = null;
+    function poner(c, on) { c.classList.toggle("on", on); c.setAttribute("aria-pressed", on ? "true" : "false"); }
+    cartas.forEach(function (c) {
+      c.addEventListener("click", function (e) { if (e.isTrusted) parar(); poner(c, !c.classList.contains("on")); });
+    });
+    function parar() { quieto = true; if (reloj) { clearInterval(reloj); reloj = null; } }
+    ["touchstart", "pointerdown", "wheel"].forEach(function (ev) { pista.addEventListener(ev, parar, { passive: true }); });
+    function paso() {
+      if (i < cartas.length) {
+        const c = cartas[i++];
+        poner(c, true);
+        const izq = c.offsetLeft - (pista.clientWidth - c.clientWidth) / 2;
+        pista.scrollTo({ left: Math.max(0, izq), behavior: "smooth" });
+      } else {
+        cartas.forEach(function (c) { poner(c, false); });
+        pista.scrollTo({ left: 0, behavior: "smooth" });
+        i = 0;
+      }
+    }
+    if (!("IntersectionObserver" in window)) return;
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (quieto) return;
+        if (e.isIntersecting && !reloj) { reloj = setInterval(paso, 1800); }
+        if (!e.isIntersecting && reloj) { clearInterval(reloj); reloj = null; }
+      });
+    }, { threshold: 0.35 }).observe(pista);
+  })();
+
+  // Las pestañas de Claude cambian solas cada 7 s hasta que alguien toca una.
+  (function () {
+    const demo = document.querySelector(".demo");
+    const botones = Array.from(document.querySelectorAll(".pestanas button"));
+    if (!demo || !botones.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let reloj = null, quieto = false;
+    botones.forEach(function (b) { b.addEventListener("click", function (e) { if (e.isTrusted) { quieto = true; clearInterval(reloj); reloj = null; } }); });
+    function siguiente() {
+      const k = botones.findIndex(function (b) { return b.getAttribute("aria-selected") === "true"; });
+      botones[(k + 1) % botones.length].click();
+    }
+    if (!("IntersectionObserver" in window)) return;
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (quieto) return;
+        if (e.isIntersecting && !reloj) reloj = setInterval(siguiente, 7000);
+        if (!e.isIntersecting && reloj) { clearInterval(reloj); reloj = null; }
+      });
+    }, { threshold: 0.3 }).observe(demo);
   })();
 </script>
 
