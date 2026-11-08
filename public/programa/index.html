@@ -603,6 +603,18 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html[data-anim] [data-aparece] { opacity: 1; transform: none; filter: none; transition: none; }
 }
+/* Carrusel que se desplaza solo */
+.carrusel { overflow: hidden; margin-top: 40px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.carrusel-pista { display: flex; gap: 16px; padding-right: 16px; width: max-content; }
+.carrusel blockquote { flex: 0 0 340px; margin: 0; padding: 28px; border-radius: 24px; background: var(--niebla); font-size: 21px; line-height: 1.28; font-weight: 550; letter-spacing: -0.035em; }
+.carrusel blockquote::before { content: "«"; display: block; font-size: 42px; line-height: .8; font-weight: 700; margin-bottom: 10px; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+@media (prefers-reduced-motion: no-preference) {
+  .carrusel-pista { animation: desfile 38s linear infinite; }
+  .carrusel:hover .carrusel-pista, .carrusel:active .carrusel-pista { animation-play-state: paused; }
+  @keyframes desfile { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+}
+@media (prefers-reduced-motion: reduce) { .carrusel { overflow-x: auto; } }
+@media (max-width: 640px) { .carrusel blockquote { flex-basis: 78vw; font-size: 19px; padding: 24px; } }
 </style>
 </head>
 <body>
@@ -817,12 +829,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
   <section class="seccion" style="padding-top:0">
     <div class="wrap" style="padding-top:0">
       <h2>Lo que me cuentan <span class="fino">los directores</span></h2>
-      <div class="citas">
-        <blockquote data-aparece style="--d:0">Quitarme tiempo de estar encerrada en la oficina porque necesito estar en la operación.</blockquote>
-        <blockquote data-aparece style="--d:1">Me los da el PMS, pero otra cosa es que tengamos tiempo para analizarlo.</blockquote>
-        <blockquote data-aparece style="--d:2">Me frena el no saber cómo hacerlo y no meter la pata.</blockquote>
-        <blockquote data-aparece style="--d:3">Aunque se llegue a objetivo, siempre piden más.</blockquote>
-      </div>
+      <div class="carrusel" data-aparece style="--d:1"><div class="carrusel-pista"><blockquote>Quitarme tiempo de estar encerrada en la oficina porque necesito estar en la operación.</blockquote><blockquote>Me los da el PMS, pero otra cosa es que tengamos tiempo para analizarlo.</blockquote><blockquote>Me frena el no saber cómo hacerlo y no meter la pata.</blockquote><blockquote>Aunque se llegue a objetivo, siempre piden más.</blockquote><blockquote>Quiero quitarme el trabajo, y el tiempo que gane lo dedicaré a vender mejor.</blockquote><blockquote aria-hidden="true">Quitarme tiempo de estar encerrada en la oficina porque necesito estar en la operación.</blockquote><blockquote aria-hidden="true">Me los da el PMS, pero otra cosa es que tengamos tiempo para analizarlo.</blockquote><blockquote aria-hidden="true">Me frena el no saber cómo hacerlo y no meter la pata.</blockquote><blockquote aria-hidden="true">Aunque se llegue a objetivo, siempre piden más.</blockquote><blockquote aria-hidden="true">Quiero quitarme el trabajo, y el tiempo que gane lo dedicaré a vender mejor.</blockquote></div></div>
     </div>
   </section>
   <section class="seccion halo" id="dias">
