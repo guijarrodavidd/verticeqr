@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Director con Claude</title>
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Director con Claude">
+<meta property="og:description" content="Aprende a usar la IA en tu hotel en solo 21 días. Programa práctico desde el día 1, 15 minutos al día.">
+<meta property="og:url" content="https://verticeqr.com/programa">
+<meta name="theme-color" content="#FFFFFF">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}</style>
+<meta name="description" content="Programa de Claude para directores de hotel. 21 días, 15 minutos al día, de 0 a 100 con los datos de tu hotel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&display=swap">
+<style>
+/* Layout: escenas blancas con halos aguamarina y lima, escenas azul noche con brillo aguamarina para los momentos fuertes (como el banner); la ventana de Claude es la pieza central */
+:root {
+  --noche: #0B1220;
+  --tinta: #0E1116;
+  --gris: #5B6470;
+  --fondo: #FFFFFF;
+  --niebla: #F1F6F6;
+  --linea: rgba(14, 17, 22, .10);
+  --aqua: #5EE6D8;
+  --teal: #087F7B;
+  --lima: #A8D86A;
+  --grad: linear-gradient(90deg, #36C6C0 0%, #A8D86A 100%);
+  --halo-aqua: rgba(94, 230, 216, .34);
+  --halo-lima: rgba(168, 216, 106, .30);
+  --c-bg: #262624;
+  --c-user: #3A3A37;
+  --c-input: #30302E;
+  --c-text: #ECECEA;
+  --c-muted: #A3A39D;
+  --c-line: rgba(255, 255, 255, .09);
+  --f: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--fondo); color: var(--tinta);
+  font: 430 17px/1.6 var(--f); letter-spacing: -0.011em; -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--fondo); z-index: 30; }
+a { color: inherit; }
+a, button, summary { -webkit-tap-highlight-color: transparent; }
+img { max-width: 100%; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+h1, h2, h3, h4, p, ul, blockquote { margin: 0; }
+h1, h2, h3, h4 { text-wrap: balance; }
+
+.wrap {
+  max-width: 1180px; margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.gris { color: var(--gris); }
+h2 { font-size: clamp(36px, 5vw, 60px); line-height: 1; font-weight: 700; letter-spacing: -0.05em; }
+h2 .fino { font-weight: 400; }
+.entradilla { font-size: 1.15rem; color: var(--gris); max-width: 40em; }
+
+/* Escenas */
+.halo {
+  background:
+    radial-gradient(40% 55% at 6% 30%, var(--halo-aqua), transparent 70%),
+    radial-gradient(38% 50% at 96% 12%, var(--halo-lima), transparent 70%),
+    var(--fondo);
+}
+.noche {
+  color: #FFFFFF;
+  background:
+    radial-gradient(50% 75% at 0% 75%, rgba(94, 230, 216, .55), transparent 68%),
+    radial-gradient(35% 45% at 100% 0%, rgba(54, 198, 192, .20), transparent 70%),
+    var(--noche);
+}
+.noche .gris { color: #A9B4C2; }
+
+/* Píldoras y botones */
+.pildora {
+  display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px;
+  font-size: 14px; font-weight: 500; letter-spacing: -0.02em;
+  background: rgba(255, 255, 255, .85); box-shadow: inset 0 0 0 1px var(--linea), 0 10px 24px -18px rgba(11, 18, 32, .5);
+}
+.noche .pildora { background: rgba(255, 255, 255, .08); color: #FFFFFF; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .16); }
+.boton {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 15px 26px; border-radius: 999px; border: 0; cursor: pointer; text-decoration: none;
+  font: 600 16px/1 var(--f); letter-spacing: -0.02em;
+}
+.boton.negro { background: var(--tinta); color: #FFFFFF; box-shadow: 0 16px 34px -16px rgba(11, 18, 32, .7); }
+.boton.borde { background: transparent; color: var(--tinta); box-shadow: inset 0 0 0 2px var(--tinta); }
+.boton.claro { background: #FFFFFF; color: var(--tinta); }
+.boton:hover { transform: translateY(-1px); }
+.boton-sm { padding: 10px 16px; font-size: 14.5px; }
+@media (prefers-reduced-motion: no-preference) { .boton { transition: transform .15s ease; } }
+
+/* Cabecera */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(255, 255, 255, .92); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--linea); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.marca { display: flex; align-items: center; gap: 12px; text-decoration: none; font-size: 15px; font-weight: 500; color: var(--gris); }
+.marca img { height: 22px; width: auto; display: block; }
+.top nav { display: flex; align-items: center; gap: 24px; font-size: 15px; font-weight: 500; }
+.top nav a.t { text-decoration: none; }
+
+/* Portada */
+.portada .wrap { padding-block: 72px 96px; text-align: center; display: grid; justify-items: center; }
+.portada h1 { margin-top: 26px; max-width: 15em; font-size: clamp(40px, 6.2vw, 84px); line-height: 1; letter-spacing: -0.055em; font-weight: 400; }
+.portada h1 b { font-weight: 750; }
+.portada .entradilla { margin-top: 26px; font-size: clamp(18px, 1.6vw, 21px); max-width: 34em; }
+.acciones { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 32px; }
+.nota { margin-top: 14px; font-size: 14.5px; color: var(--gris); }
+.hecho-en { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 14px; margin-top: 34px; font-size: 17px; color: var(--gris); font-weight: 500; }
+.hecho-en img { height: 36px; width: auto; display: block; }
+.noche .hecho-en { color: #A9B4C2; justify-content: flex-start; margin-top: 0; }
+
+/* Las partes de Claude */
+.demo { width: 100%; max-width: 1060px; margin-top: 56px; display: grid; gap: 18px; text-align: left; }
+.pestanas { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.pestanas button {
+  font: 500 14.5px/1 var(--f); letter-spacing: -0.02em; cursor: pointer; border: 0;
+  padding: 11px 16px; border-radius: 999px; color: var(--tinta);
+  background: rgba(255, 255, 255, .85); box-shadow: inset 0 0 0 1px var(--linea);
+}
+.pestanas button[aria-selected="true"] { background: var(--tinta); color: #FFFFFF; box-shadow: none; }
+.pestanas button b { font-weight: 700; }
+.vista { min-height: 500px; }
+.claude {
+  background: var(--c-bg); color: var(--c-text); border-radius: 22px; overflow: hidden; font-size: 14.5px; line-height: 1.55;
+  box-shadow: 0 50px 90px -50px rgba(11, 18, 32, .75), 0 0 0 1px rgba(11, 18, 32, .12);
+}
+.c-top { display: flex; align-items: center; gap: 14px; padding: 13px 18px; border-bottom: 1px solid var(--c-line); }
+.c-dots { display: flex; gap: 7px; }
+.c-dots i { width: 11px; height: 11px; border-radius: 50%; background: #4A4A47; display: block; }
+.c-logo { height: 19px; width: auto; display: block; }
+.c-donde { margin-left: auto; color: var(--c-muted); font-size: 13px; padding: 5px 10px; border-radius: 8px; background: rgba(255, 255, 255, .05); }
+.c-spark { width: 22px; height: 22px; display: block; flex: none; }
+.c-ext { height: 38px; border-radius: 8px; display: grid; place-items: center; font-size: 10.5px; font-weight: 700; letter-spacing: .03em; background: rgba(255, 255, 255, .08); color: var(--c-text); }
+.c-entrada { padding: 13px 14px 13px 16px; border-radius: 16px; background: var(--c-input); box-shadow: inset 0 0 0 1px var(--c-line); display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--c-muted); }
+.c-enviar { width: 32px; height: 32px; border-radius: 9px; background: #D97757; display: grid; place-items: center; flex: none; }
+.c-enviar svg { width: 16px; height: 16px; }
+.c-chat { padding: 22px; display: grid; gap: 18px; align-content: start; border-right: 1px solid var(--c-line); min-width: 0; }
+.c-usuario { justify-self: end; max-width: 92%; display: grid; gap: 8px; justify-items: end; }
+.c-burbuja { background: var(--c-user); padding: 11px 14px; border-radius: 16px; }
+.c-adjuntos { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+.c-adjuntos span { font-size: 12px; padding: 5px 9px; border-radius: 8px; background: rgba(255, 255, 255, .06); color: var(--c-muted); box-shadow: inset 0 0 0 1px var(--c-line); }
+.c-respuesta { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 10px; }
+.c-respuesta .c-spark { margin-top: 1px; }
+.c-texto { display: grid; gap: 10px; min-width: 0; }
+.c-pieza { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 11px 12px; border-radius: 12px; background: var(--c-input); box-shadow: inset 0 0 0 1px var(--c-line); }
+.c-pieza small { display: block; color: var(--c-muted); font-size: 12px; }
+.c-pieza .bajar { font-size: 12px; color: var(--c-muted); }
+
+/* Proyectos */
+.v-proy { display: grid; grid-template-columns: 210px minmax(0, 1fr); min-height: 450px; }
+.c-lateral { background: #1F1F1D; padding: 18px 12px; border-right: 1px solid var(--c-line); display: grid; gap: 3px; align-content: start; }
+.c-lateral small { color: var(--c-muted); font-size: 12px; padding: 0 10px 8px; }
+.c-lateral span { padding: 9px 10px; border-radius: 9px; font-size: 14px; color: var(--c-muted); }
+.c-lateral span.on { background: rgba(255, 255, 255, .08); color: var(--c-text); }
+.c-proy { padding: 26px; display: grid; gap: 16px; align-content: start; min-width: 0; }
+.c-proy h3 { font-size: 22px; font-weight: 650; letter-spacing: -0.03em; }
+.c-proy .sub { color: var(--c-muted); font-size: 13.5px; margin-top: 2px; }
+.c-dos { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 14px; }
+.c-caja { background: var(--c-input); border-radius: 14px; box-shadow: inset 0 0 0 1px var(--c-line); padding: 16px; min-width: 0; }
+.c-caja h4 { font-size: 13.5px; font-weight: 600; margin-bottom: 10px; }
+.c-instr { color: var(--c-muted); font-size: 13.5px; }
+.c-fich { display: grid; gap: 9px; }
+.c-fich > div { display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 10px; align-items: center; font-size: 13.5px; min-width: 0; }
+.c-fich small { display: block; color: var(--c-muted); font-size: 12px; }
+
+/* Artefactos */
+.v-arte, .v-arch { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); min-height: 450px; }
+.c-panel { background: #1F1F1D; padding: 22px; display: grid; gap: 18px; align-content: start; min-width: 0; }
+.c-panel-cab { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.c-panel-cab b { font-size: 15.5px; font-weight: 650; }
+.c-panel-cab span { font-size: 12px; color: var(--c-muted); padding: 4px 9px; border-radius: 7px; background: rgba(255, 255, 255, .06); }
+.c-datos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.c-datos div { background: var(--c-input); border-radius: 12px; padding: 12px; }
+.c-datos strong { display: block; font-size: 26px; font-weight: 700; letter-spacing: -0.04em; line-height: 1.05; color: #FFFFFF; font-variant-numeric: tabular-nums; }
+.c-datos span { font-size: 12.5px; color: var(--c-muted); }
+.c-barras { display: grid; gap: 10px; }
+.c-barras h5, .c-orden-tit { margin: 0; font-size: 13px; font-weight: 600; color: var(--c-muted); }
+.c-barra { display: grid; grid-template-columns: 92px minmax(0, 1fr) 20px; gap: 10px; align-items: center; font-size: 13.5px; }
+.c-barra .pista { height: 10px; border-radius: 6px; background: rgba(255, 255, 255, .06); overflow: hidden; }
+.c-barra .pista i { display: block; height: 100%; border-radius: 6px; background: var(--grad); }
+.c-barra b { text-align: right; font-variant-numeric: tabular-nums; }
+.c-orden { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; counter-reset: o; }
+.c-orden li { counter-increment: o; display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 10px; font-size: 13.5px; }
+.c-orden li::before { content: counter(o); width: 24px; height: 24px; border-radius: 50%; background: rgba(255, 255, 255, .09); display: grid; place-items: center; font-size: 12px; font-weight: 700; }
+.c-orden small { display: block; color: var(--c-muted); font-size: 12px; }
+
+/* Modo voz */
+.v-voz { display: grid; grid-template-columns: 300px minmax(0, 460px); gap: 40px; align-items: center; justify-content: center; }
+.movil { width: 300px; max-width: 100%; height: 560px; border-radius: 44px; padding: 10px; background: #0A0B0D; box-shadow: 0 50px 90px -50px rgba(11, 18, 32, .85); justify-self: center; }
+.pantalla { height: 100%; border-radius: 35px; background: var(--c-bg); color: var(--c-text); display: grid; grid-template-rows: auto 1fr auto auto auto; gap: 14px; padding: 26px 18px 22px; text-align: center; font-size: 14px; }
+.p-cab { color: var(--c-muted); font-size: 12.5px; }
+.p-cab b { display: block; color: var(--c-text); font-size: 15px; font-weight: 600; }
+.orbe { position: relative; display: grid; place-items: center; }
+.orbe .c-spark { width: 62px; height: 62px; position: relative; z-index: 1; }
+.orbe::before, .orbe::after { content: ""; position: absolute; border-radius: 50%; }
+.orbe::before { width: 124px; height: 124px; background: radial-gradient(circle, rgba(217, 119, 87, .30), transparent 70%); }
+.orbe::after { width: 180px; height: 180px; background: radial-gradient(circle, rgba(217, 119, 87, .14), transparent 70%); }
+.onda { display: flex; justify-content: center; align-items: center; gap: 4px; height: 30px; }
+.onda i { width: 4px; height: 40%; border-radius: 3px; background: var(--c-text); display: block; }
+.onda i:nth-child(3n) { height: 75%; }
+.onda i:nth-child(4n) { height: 55%; }
+.p-frase { background: var(--c-user); border-radius: 16px; padding: 12px 14px; text-align: left; line-height: 1.45; }
+.p-frase small { display: block; color: var(--c-muted); font-size: 11.5px; margin-bottom: 4px; }
+.p-botones { display: flex; justify-content: center; gap: 22px; }
+.p-botones span { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, .09); }
+.p-botones span.fin { background: #E5484D; }
+.p-botones svg { width: 20px; height: 20px; }
+.correccion { display: grid; gap: 14px; }
+.correccion h3 { font-size: clamp(24px, 2.6vw, 32px); font-weight: 700; letter-spacing: -0.045em; line-height: 1.05; }
+.correccion > p { color: var(--gris); }
+.nota-c { padding: 18px 20px; border-radius: 18px; background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--linea), 0 20px 40px -30px rgba(11, 18, 32, .4); display: grid; gap: 4px; }
+.nota-c b { font-size: 14px; color: var(--teal); font-weight: 650; }
+.nota-c p { font-size: 15.5px; }
+
+/* Archivos */
+.hoja { background: #FFFFFF; color: #1A1A1A; border-radius: 10px; padding: 20px 22px; box-shadow: 0 20px 40px -24px rgba(0, 0, 0, .6); display: grid; gap: 2px; font-size: 13.5px; }
+.hoja h5 { margin: 0 0 8px; font-size: 17px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.2; }
+.hoja h5 small { display: block; font-size: 12px; color: #6B6B6B; font-weight: 500; letter-spacing: 0; }
+.hoja .fila { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid #ECECEC; font-variant-numeric: tabular-nums; }
+.hoja .fila b { font-weight: 650; }
+.hoja .ojo { margin-top: 8px; padding: 10px 12px; border-radius: 8px; background: var(--niebla); font-size: 13px; }
+.diapos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.diapos small { grid-column: 1 / -1; color: var(--c-muted); font-size: 12px; }
+.diapo { aspect-ratio: 16 / 9; max-width: 100%; border-radius: 8px; background: #FFFFFF; padding: 8px 9px; display: grid; align-content: space-between; color: #1A1A1A; font-size: 10px; font-weight: 650; line-height: 1.2; }
+.diapo i { display: block; height: 5px; border-radius: 3px; background: var(--grad); }
+.diapo i + i { width: 60%; background: #E3E6E6; }
+
+.demo-sec .demo { margin: 0 auto; max-width: none; }
+.pie-demo { text-align: center; font-size: 13.5px; color: var(--gris); }
+@media (prefers-reduced-motion: no-preference) {
+  .orbe::before { animation: respira 2.4s ease-in-out infinite; }
+  .orbe::after { animation: respira 2.4s ease-in-out .6s infinite; }
+  @keyframes respira { 50% { transform: scale(1.16); opacity: .55; } }
+  .onda i { animation: onda 1.1s ease-in-out infinite; }
+  .onda i:nth-child(2n) { animation-delay: .15s; }
+  .onda i:nth-child(3n) { animation-delay: .3s; }
+  .onda i:nth-child(5n) { animation-delay: .45s; }
+  @keyframes onda { 0%, 100% { height: 25%; } 50% { height: 100%; } }
+}
+@media (max-width: 820px) {
+  .vista { min-height: 0; }
+  .v-proy, .v-arte, .v-arch { grid-template-columns: 1fr; }
+  .c-lateral { display: none; }
+  .c-dos { grid-template-columns: 1fr; }
+  .c-chat { border-right: 0; border-bottom: 1px solid var(--c-line); }
+  .v-voz { grid-template-columns: 1fr; gap: 28px; }
+  .c-donde { display: none; }
+}
+
+/* El mes */
+.seccion > .wrap { padding-block: 112px; }
+.cabeza { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 24px 56px; align-items: end; margin-bottom: 48px; }
+.cabeza > * { min-width: 0; }
+.mes { background: #FFFFFF; border-radius: 28px; padding: 22px; box-shadow: inset 0 0 0 1px var(--linea), 0 40px 80px -60px rgba(11, 18, 32, .45); }
+.rejilla { display: grid; grid-template-columns: 86px repeat(5, minmax(0, 1fr)); gap: 8px; }
+.rejilla .ds { text-align: center; font-size: 13px; font-weight: 600; color: var(--gris); padding: 2px 0 6px; }
+.rejilla .sem { align-self: center; font-size: 13px; color: var(--gris); font-weight: 500; }
+.dia { display: flex; flex-direction: column; gap: 8px; min-height: 92px; padding: 12px; border-radius: 16px; background: var(--niebla); text-decoration: none; min-width: 0; }
+.dia .n { font-size: 26px; font-weight: 700; letter-spacing: -0.05em; line-height: 1; font-variant-numeric: tabular-nums; }
+.dia .t { font-size: 12.5px; line-height: 1.3; color: var(--gris); font-weight: 500; overflow-wrap: anywhere; }
+.dia:hover { box-shadow: inset 0 0 0 2px #36C6C0; }
+.dia.hito { background: #FFFFFF; box-shadow: inset 0 0 0 2px #36C6C0; }
+.dia.hito .n { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.dia.hito .t { color: var(--tinta); }
+.dia.final { background: var(--noche); color: #FFFFFF; box-shadow: 0 14px 34px -14px rgba(94, 230, 216, .8); }
+.dia.final .t { color: var(--aqua); }
+.dia.ancho { grid-column: span 5; flex-direction: row; align-items: center; gap: 16px; min-height: 70px; }
+.dia.ancho .t { font-size: 15px; }
+.leyenda { display: none; }
+
+/* Texto grande */
+.frase { font-size: clamp(28px, 3.6vw, 46px); line-height: 1.1; font-weight: 650; letter-spacing: -0.045em; max-width: 22em; }
+.frase .fino { font-weight: 380; color: var(--gris); }
+.columnas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 56px; margin-top: 48px; font-size: 1.12rem; color: var(--gris); }
+.columnas b { color: var(--tinta); font-weight: 600; }
+
+/* Por qué */
+.porque { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px 72px; align-items: center; }
+.foto { position: relative; max-width: 440px; }
+.foto::before { content: ""; position: absolute; inset: 8% -6% -6% 8%; border-radius: 32px; background: var(--grad); filter: blur(30px); opacity: .55; }
+.foto img { position: relative; display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 28px; background: var(--niebla); }
+.porque .texto { display: grid; gap: 18px; font-size: 1.1rem; color: var(--gris); }
+.porque .texto b { color: var(--tinta); font-weight: 600; }
+.porque h2 { margin-bottom: 8px; }
+
+/* Frases de directores */
+.citas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 48px; }
+.citas blockquote { padding: 30px; border-radius: 24px; background: var(--niebla); font-size: clamp(20px, 2vw, 25px); line-height: 1.25; font-weight: 550; letter-spacing: -0.035em; }
+.citas blockquote::before { content: "«"; display: block; font-size: 44px; line-height: .8; font-weight: 700; margin-bottom: 10px; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* Cada semana menos hecho */
+.rampa { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.rampa > div { padding: 24px; border-radius: 24px; background: var(--niebla); display: grid; gap: 14px; align-content: start; }
+.rampa h3 { font-size: 20px; font-weight: 700; letter-spacing: -0.04em; }
+.rampa p { color: var(--gris); font-size: 16px; }
+.barra { height: 8px; border-radius: 999px; background: rgba(14, 17, 22, .08); overflow: hidden; }
+.barra i { display: block; height: 100%; border-radius: inherit; background: var(--grad); }
+.barra-tit { font-size: 13px; color: var(--gris); font-weight: 500; margin-top: -6px; }
+
+/* Los 21 días */
+.semana { margin-top: 16px; background: #FFFFFF; border-radius: 28px; padding: 10px 30px 6px; box-shadow: inset 0 0 0 1px var(--linea); }
+.semana-cab { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 22px 0 18px; border-bottom: 1px solid var(--linea); }
+.semana-cab h3 { font-size: clamp(24px, 2.6vw, 32px); font-weight: 700; letter-spacing: -0.045em; line-height: 1.05; }
+.semana-cab .nivel { margin-left: auto; font-size: 14px; color: var(--teal); font-weight: 600; }
+.d { display: grid; grid-template-columns: 56px minmax(0, .8fr) minmax(0, 1.4fr); gap: 6px 28px; padding-block: 16px; border-bottom: 1px solid var(--linea); scroll-margin-top: 90px; }
+.d:last-child { border-bottom: 0; }
+.d .num { font-size: 26px; font-weight: 700; letter-spacing: -0.06em; line-height: 1; font-variant-numeric: tabular-nums; }
+.d h4 { font-size: 17.5px; font-weight: 650; letter-spacing: -0.035em; line-height: 1.2; }
+.d ul { list-style: none; padding: 0; display: grid; gap: 4px; font-size: 15.5px; line-height: 1.45; }
+.d li { position: relative; padding-left: 18px; }
+.d li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--grad); }
+.recibes { margin-top: 8px; font-size: 14px; line-height: 1.45; color: var(--gris); padding: 8px 12px; border-radius: 10px; background: var(--niebla); }
+.tabs-semana { display: flex; flex-wrap: wrap; gap: 8px; }
+.tabs-semana button, .tab-final { font: 500 14.5px/1 var(--f); letter-spacing: -0.02em; cursor: pointer; border: 0; text-decoration: none; padding: 11px 16px; border-radius: 999px; color: var(--tinta); background: rgba(255, 255, 255, .85); box-shadow: inset 0 0 0 1px var(--linea); }
+.tabs-semana button[aria-selected="true"] { background: var(--tinta); color: #FFFFFF; box-shadow: none; }
+.tabs-semana b, .tab-final b { font-weight: 700; }
+.tab-final { background: var(--noche); color: #FFFFFF; box-shadow: 0 10px 24px -14px rgba(94, 230, 216, .9); }
+.recibes b { color: var(--teal); font-weight: 650; }
+
+/* Día 21 */
+.dia20 > .wrap { padding-block: 112px; scroll-margin-top: 70px; }
+.dia20 h2 { margin-top: 22px; font-size: clamp(44px, 7vw, 92px); letter-spacing: -0.058em; }
+.dia20 .entradilla { color: #C3CCD6; margin-top: 18px; }
+.pasos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 44px; }
+.pasos div { padding: 22px; border-radius: 22px; background: rgba(255, 255, 255, .06); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .14), 0 0 40px -14px rgba(94, 230, 216, .5); display: grid; gap: 10px; }
+.pasos span { font-size: 40px; font-weight: 700; letter-spacing: -0.06em; line-height: 1; color: var(--aqua); font-variant-numeric: tabular-nums; }
+.pasos p { font-size: 17px; font-weight: 550; letter-spacing: -0.025em; line-height: 1.3; }
+.dia20 .lista { margin-top: 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 56px; }
+.dia20 ul { list-style: none; padding: 0; display: grid; gap: 12px; font-size: 1.05rem; }
+.dia20 li { position: relative; padding-left: 20px; }
+.dia20 li::before { content: ""; position: absolute; left: 1px; top: .6em; width: 8px; height: 8px; border-radius: 50%; background: var(--aqua); }
+.dia20 .recibes { margin-top: 0; line-height: 1.55; background: rgba(255, 255, 255, .06); color: #C3CCD6; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12); align-self: start; font-size: 16px; padding: 18px 20px; }
+.dia20 .recibes b { color: var(--aqua); }
+
+/* Además */
+.extras { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.extras > div { padding: 28px; border-radius: 24px; background: var(--niebla); display: grid; gap: 8px; }
+.extras h3 { font-size: 21px; font-weight: 700; letter-spacing: -0.04em; }
+.extras p { color: var(--gris); }
+
+/* Precio */
+.precio > .wrap { padding-block: 112px; display: grid; justify-items: center; }
+.tarjeta { position: relative; width: min(620px, 100%); padding: 40px; border-radius: 32px; background: #FFFFFF; box-shadow: 0 50px 90px -50px rgba(11, 18, 32, .5); scroll-margin-top: 90px; isolation: isolate; }
+.tarjeta::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 2px; background: var(--grad); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
+.tarjeta h2 { font-size: 30px; }
+.importe { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 16px; margin-top: 16px; }
+.importe strong { font-size: clamp(64px, 11vw, 104px); font-weight: 750; letter-spacing: -0.06em; line-height: .95; font-variant-numeric: tabular-nums; }
+.importe s { font-size: 24px; color: var(--gris); font-weight: 500; }
+.hasta { margin-top: 10px; color: var(--teal); font-weight: 600; }
+.recibe { margin: 10px 0 30px; }
+.grupo-tit { margin: 24px 0 12px; font-size: 14px; font-weight: 650; letter-spacing: -0.02em; color: var(--teal); }
+.incluye { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.incluye li { position: relative; padding-left: 30px; }
+.incluye li::before { content: ""; position: absolute; left: 0; top: .2em; width: 20px; height: 20px; border-radius: 50%; background: var(--grad); }
+.incluye li::after { content: ""; position: absolute; left: 7px; top: .42em; width: 5px; height: 9px; border: solid #FFFFFF; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.tarjeta .boton { width: 100%; font-size: 17px; padding-block: 18px; }
+.tarjeta .letra { margin-top: 14px; text-align: center; font-size: 14.5px; color: var(--gris); }
+.pendiente { margin-top: 10px; text-align: center; font-size: 13px; color: var(--gris); }
+
+/* Preguntas */
+.faq { margin-top: 8px; background: #FFFFFF; border-radius: 28px; padding: 6px 30px; box-shadow: inset 0 0 0 1px var(--linea); }
+.faq details { border-bottom: 1px solid var(--linea); }
+.faq details:last-child { border-bottom: 0; }
+.faq summary { list-style: none; cursor: pointer; padding: 22px 40px 22px 0; position: relative; font-size: 18px; font-weight: 600; letter-spacing: -0.03em; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 2px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 400; color: var(--teal); }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { padding-bottom: 22px; color: var(--gris); max-width: 46em; }
+
+/* Cierre */
+.cierre > .wrap { padding-block: 120px; display: grid; gap: 30px; justify-items: start; }
+.cierre h2 { font-size: clamp(42px, 6.4vw, 84px); letter-spacing: -0.058em; max-width: 13em; }
+.cierre img { height: 30px; width: auto; display: block; }
+
+footer .wrap { padding-block: 34px; display: grid; gap: 12px; font-size: 13.5px; color: var(--gris); }
+footer .fila { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+footer img { height: 18px; width: auto; display: block; }
+
+/* Móvil */
+@media (max-width: 900px) {
+  .cabeza, .porque, .columnas, .dia20 .lista { grid-template-columns: 1fr; }
+  .foto { max-width: 320px; }
+  .rampa, .pasos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .d { grid-template-columns: 64px minmax(0, 1fr); }
+  .d > div { grid-column: 2; }
+  .d .num { font-size: 28px; }
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .top nav a.t { display: none; }
+  .marca span { display: none; }
+  .portada .wrap { padding-block: 44px 64px; }
+  .demo { margin-top: 44px; }
+  .c-proy, .c-chat, .c-panel { padding: 18px 16px; }
+  .c-datos strong { font-size: 21px; }
+  .seccion > .wrap, .dia20 > .wrap, .precio > .wrap { padding-block: 72px; }
+  .mes { padding: 12px; border-radius: 22px; }
+  .rejilla { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; }
+  .rejilla .sem { grid-column: 1 / -1; padding-top: 8px; }
+  .rejilla .ds:first-child { display: none; }
+  .dia { min-height: 50px; padding: 10px 4px; align-items: center; justify-content: center; border-radius: 12px; }
+  .dia .n { font-size: 20px; }
+  .dia .t { display: none; }
+  .leyenda { display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 14px 4px 2px; font-size: 13.5px; color: var(--gris); }
+  .citas, .extras, .rampa { grid-template-columns: 1fr; }
+  .semana { padding: 4px 18px; border-radius: 22px; }
+  .semana-cab .nivel { margin-left: 0; width: 100%; }
+  .d { grid-template-columns: 1fr; gap: 8px; }
+  .d > div { grid-column: auto; }
+  .pasos { grid-template-columns: 1fr 1fr; }
+  .tarjeta { padding: 28px 20px; }
+  .faq { padding: 4px 18px; border-radius: 22px; }
+}
+/* Aparecer al deslizar */
+html[data-anim] [data-aparece] {
+  opacity: 0; transform: translateY(28px); filter: blur(8px);
+  transition: opacity 1s cubic-bezier(.2, .7, .1, 1), transform 1s cubic-bezier(.2, .7, .1, 1), filter 1s ease;
+  transition-delay: calc(var(--d, 0) * 100ms);
+}
+html[data-anim] [data-aparece][data-visto] { opacity: 1; transform: none; filter: none; }
+@media (max-width: 860px) {
+  html[data-anim] [data-aparece] { filter: none; transform: translateY(20px); }
+  html[data-anim] [data-aparece][data-visto] { transform: none; }
+}
+
+/* La chispa de Claude girando detrás de la portada */
+.portada { position: relative; overflow: hidden; }
+.portada::before {
+  content: ""; position: absolute; width: 560px; height: 560px; right: -170px; top: 30px; pointer-events: none;
+  background: url("/programa/claude-simbolo.svg") center / contain no-repeat; opacity: .09;
+}
+.portada .wrap { position: relative; z-index: 1; }
+
+/* Cinta con las partes de Claude */
+.cinta { overflow: hidden; background: #FFFFFF; border-block: 1px solid var(--linea); }
+.cinta-pista { display: flex; width: max-content; padding-block: 18px; will-change: transform; }
+.cinta span { display: inline-flex; align-items: center; gap: 12px; padding-inline: 24px; font-size: 19px; font-weight: 600; letter-spacing: -0.035em; white-space: nowrap; }
+.cinta svg { width: 18px; height: 18px; display: block; }
+
+/* Qué parte de Claude usa cada día */
+.d-tit { display: grid; gap: 8px; align-content: start; justify-items: start; }
+.herr { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px 4px 7px; border-radius: 999px; font-size: 12.5px; font-weight: 600; color: var(--tinta); background: #FFF4EF; box-shadow: inset 0 0 0 1px rgba(217, 119, 87, .28); }
+.herr svg { width: 13px; height: 13px; display: block; }
+
+/* Cabecera con el logo de Claude */
+.marca-c { display: flex; align-items: center; gap: 7px; padding-left: 12px; border-left: 1px solid var(--linea); }
+.firma { font-weight: 650; font-size: 16px; letter-spacing: -0.035em; color: var(--tinta); }
+.marca-c img { height: 16px; width: auto; display: block; }
+
+/* Hueco para la foto */
+.foto.hueco { aspect-ratio: 1; border-radius: 28px; background: var(--niebla); box-shadow: inset 0 0 0 2px rgba(14, 17, 22, .14); display: grid; place-items: center; color: var(--gris); font-weight: 600; font-size: 15px; }
+.foto.hueco::before { z-index: -1; }
+.foto.hueco { position: relative; isolation: isolate; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .portada::before { animation: gira 90s linear infinite; }
+  @keyframes gira { to { transform: rotate(360deg); } }
+  .cinta-pista { animation: cinta 45s linear infinite; }
+  @keyframes cinta { to { transform: translateX(-50%); } }
+}
+@media (max-width: 640px) {
+  .portada::before { width: 320px; height: 320px; right: -130px; top: 10px; }
+  .cinta span { font-size: 16px; padding-inline: 16px; }
+}
+@media (max-width: 640px) {
+  .pestanas, .tabs-semana {
+    flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; scrollbar-width: none;
+    margin-inline: calc(-1 * max(20px, env(safe-area-inset-left, 0px))); padding-inline: max(20px, env(safe-area-inset-left, 0px)); padding-bottom: 4px;
+  }
+  .pestanas::-webkit-scrollbar, .tabs-semana::-webkit-scrollbar { display: none; }
+  .pestanas button, .tabs-semana button, .tab-final { flex: none; white-space: nowrap; scroll-snap-align: start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-anim] [data-aparece] { opacity: 1; transform: none; filter: none; transition: none; }
+}
+/* Planes */
+.precio .cabeza { margin-bottom: 40px; }
+.planes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 20px; align-items: start; }
+.plan { position: relative; isolation: isolate; padding: 34px 32px 32px; border-radius: 28px; background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--linea); display: grid; gap: 12px; align-content: start; }
+.plan.destacado { box-shadow: 0 50px 90px -50px rgba(11, 18, 32, .55); }
+.plan.destacado::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 2px; background: var(--grad); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
+.sello { position: absolute; top: -15px; left: 28px; padding: 8px 14px; border-radius: 999px; background: var(--noche); color: #FFFFFF; font-size: 13px; font-weight: 600; letter-spacing: -0.01em; box-shadow: 0 10px 24px -10px rgba(94, 230, 216, .9); }
+.plan-tit { font-size: 15px; font-weight: 700; letter-spacing: -0.02em; color: var(--teal); }
+.plan .importe { margin-top: 0; }
+.plan .importe strong { font-size: clamp(54px, 7vw, 78px); }
+.plan-para { color: var(--gris); }
+.plan .grupo-tit { margin: 8px 0 2px; }
+.plan .boton { margin-top: 12px; width: 100%; font-size: 17px; padding-block: 18px; }
+.recibe-todo { margin-top: 20px; padding: 32px; border-radius: 28px; background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--linea); }
+.recibe-todo h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.04em; }
+.recibe-todo .recibe { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 28px; margin: 0; }
+.recibe-todo .recibe > div { min-width: 0; }
+.letra-c { margin-top: 22px; text-align: center; color: var(--gris); font-size: 15px; }
+.precio .pendiente { margin-top: 8px; }
+@media (max-width: 860px) {
+  .planes, .recibe-todo .recibe { grid-template-columns: 1fr; }
+  .plan.destacado { order: -1; margin-top: 14px; }
+  .plan, .recibe-todo { padding: 30px 20px 24px; border-radius: 22px; }
+}
+.porque.sin-foto { grid-template-columns: 1fr; max-width: 860px; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="marca" href="#inicio"><b class="firma">Héctor García</b><span class="marca-c">Director con <img src="/programa/claude-logo.svg" alt="Claude" width="75" height="16"></span></a>
+    <nav>
+      <a class="t" href="#dias">Los 21 días</a>
+      <a class="t" href="#preguntas">Preguntas</a>
+      <a class="boton negro boton-sm" href="#precio">Acceder al programa</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada halo">
+    <div class="wrap">
+      <span class="pildora" data-aparece>Programa práctico desde el día 1</span>
+      <h1 data-aparece style="--d:1">Aprende a usar <b>la IA en tu hotel</b> en solo <b class="grad">21 días</b></h1>
+      <p class="entradilla" data-aparece style="--d:2">Desde el día 1 trabajas con los datos de tu hotel, y cada ejercicio de 15 minutos lo aplicas esa misma mañana. Los informes, las reseñas, los correos y el cuadrante te salen en minutos, y ese tiempo lo dedicas a vender más.</p>
+      <div class="acciones" data-aparece style="--d:3">
+        <a class="boton negro" href="#precio">Acceder al programa · desde <span data-cfg="precio">197 €</span></a>
+        <a class="boton borde" href="#dias">Ver los 21 días</a>
+      </div>
+      <p class="nota" data-aparece style="--d:3">Pago único y acceso de por vida. Precio de lanzamiento hasta <span data-cfg="fin">el domingo 22 de noviembre</span>, después <span data-cfg="despues">297 €</span>.</p>
+      <p class="hecho-en" data-aparece style="--d:4">Practicas cada día con <img src="/programa/claude-logo.svg" alt="Claude" width="168" height="36"> la IA de Anthropic</p>
+
+    </div>
+  </section>
+
+  <section class="seccion halo">
+    <div class="wrap">
+      <p class="frase" data-aparece>Hoy el trabajo de oficina se te come las mañanas. <span class="fino">El informe del mes, el correo a los dueños, la reseña de anoche y el cuadrante que hay que rehacer porque alguien se ha puesto malo.</span></p>
+      <div class="columnas" data-aparece style="--d:1">
+        <p>En un mes aprendes a pasárselo a Claude, con ejercicios cortos que puedes hacer entre dos reuniones o desde el móvil.</p>
+        <p>No hace falta saber de tecnología ni instalar nada. Trabajas con lo que ya tienes, <b>Claude prepara y tú decides qué sale.</b> Lo que montas cada día se queda funcionando para la semana siguiente.</p>
+      </div>
+    </div>
+  </section>
+  <section class="seccion">
+    <div class="wrap porque sin-foto">
+      
+      <div>
+        <h2>Por qué <span class="fino">lo he hecho</span></h2>
+        <div class="texto" data-aparece style="--d:1">
+          <p><b>Soy Héctor García.</b> He hablado con unos 300 hoteleros por LinkedIn y en casi todos los hoteles veo lo mismo. Cada informe se hace a su manera, copiando números a mano al Excel, y el cuadrante se rehace cada semana.</p>
+          <p>Con la IA bien ordenada, los informes salen siempre con el mismo formato y el cuadrante en minutos, y esas horas vuelven a tu equipo y a vender. En un solo post, más de 350 personas me pidieron mis agentes de Claude para automatizar procesos del hotel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="seccion demo-sec">
+    <div class="wrap">
+      <div class="cabeza" data-aparece><h2>Así trabajas <span class="fino">con Claude</span></h2><p class="entradilla">Cada día del programa usa una parte distinta de Claude. Toca una pestaña y mira cómo queda con un hotel de ejemplo.</p></div>
+      <div class="demo" data-aparece style="--d:1">
+        <div class="pestanas" role="tablist" aria-label="Las partes de Claude que usas en el programa">
+          <button role="tab" aria-selected="true" data-vista="v-proyectos"><b>Día 4</b> · Proyectos</button>
+          <button role="tab" aria-selected="false" data-vista="v-artefacto"><b>Día 7</b> · Artefactos</button>
+          <button role="tab" aria-selected="false" data-vista="v-voz"><b>Día 14</b> · Modo voz</button>
+          <button role="tab" aria-selected="false" data-vista="v-archivos"><b>Días 18 y 19</b> · Informe y presentación</button>
+        </div>
+
+        <!-- Proyectos -->
+        <div class="vista" id="v-proyectos" role="tabpanel">
+          <div class="claude">
+            <div class="c-top"><span class="c-dots" aria-hidden="true"><i></i><i></i><i></i></span><img class="c-logo" src="/programa/claude-logo-blanco.svg" alt="Claude" width="89" height="19"><span class="c-donde">Proyectos</span></div>
+            <div class="v-proy">
+              <div class="c-lateral">
+                <small>Proyectos</small>
+                <span class="on">Hotel Las Dunas</span>
+                <span>Reseñas</span>
+                <span>Equipo</span>
+                <span>Dueños</span>
+                <span>Carta</span>
+              </div>
+              <div class="c-proy">
+                <div data-paso><h3>Hotel Las Dunas</h3><p class="sub">Hotel de playa · 80 habitaciones</p></div>
+                <div class="c-entrada" data-paso><span>¿En qué te ayudo hoy con el hotel?</span><span class="c-enviar" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+                <div class="c-dos">
+                  <div class="c-caja" data-paso>
+                    <h4>Instrucciones del proyecto</h4>
+                    <p class="c-instr" data-escribe>Eres la mano derecha de Laura Martín, directora del Hotel Las Dunas, un hotel de playa de 80 habitaciones. Escribe de tú y con frases cortas. Firma como Laura. No inventes cifras y pregunta siempre que te falte un dato.</p>
+                  </div>
+                  <div class="c-caja" data-paso>
+                    <h4>Conocimiento del proyecto</h4>
+                    <div class="c-fich">
+                      <div data-paso><span class="c-ext">DOCX</span><span>ficha-hotel-las-dunas.docx<small>4 páginas</small></span></div>
+                      <div data-paso><span class="c-ext">PDF</span><span>carta-restaurante.pdf<small>2 páginas</small></span></div>
+                      <div data-paso><span class="c-ext">PDF</span><span>organigrama.pdf<small>1 página</small></span></div>
+                      <div data-paso><span class="c-ext">XLSX</span><span>presupuesto-2026.xlsx<small>Hoja de cálculo</small></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artefactos -->
+        <div class="vista" id="v-artefacto" role="tabpanel" hidden>
+          <div class="claude">
+            <div class="c-top"><span class="c-dots" aria-hidden="true"><i></i><i></i><i></i></span><img class="c-logo" src="/programa/claude-logo-blanco.svg" alt="Claude" width="89" height="19"><span class="c-donde">Proyecto · Reseñas</span></div>
+            <div class="v-arte">
+              <div class="c-chat">
+                <div class="c-usuario" data-paso>
+                  <div class="c-burbuja">Aquí van las 64 reseñas de octubre, sin nombres. Agrúpalas por departamento y dime qué arreglo primero.</div>
+                  <div class="c-adjuntos"><span>resenas-octubre.txt</span></div>
+                </div>
+                <div class="c-respuesta" data-paso>
+                  <svg class="c-spark" viewBox="0 0 100 100" aria-hidden="true"><use href="#chispa"/></svg>
+                  <div class="c-texto">
+                    <p data-escribe>Te he dejado el plan en un artefacto. Empieza por el agua caliente de la tercera planta. Sale en 4 reseñas y en 2 de ellas baja la nota a 3 estrellas.</p>
+                    <div class="c-pieza"><span class="c-ext">PLAN</span><span>Plan de reseñas · Octubre<small>Artefacto</small></span><span class="bajar">Abierto</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-panel">
+                <div class="c-panel-cab"><b>Plan de reseñas · Octubre</b><span>Vista previa</span></div>
+                <div class="c-datos" data-paso>
+                  <div><strong>64</strong><span>reseñas</span></div>
+                  <div><strong>41</strong><span>de 5 estrellas</span></div>
+                  <div><strong>9</strong><span>con alguna queja</span></div>
+                </div>
+                <div class="c-barras" data-paso>
+                  <h5>Quejas por departamento</h5>
+                  <div class="c-barra"><span>Pisos</span><span class="pista"><i data-ancho="100%" style="width:100%"></i></span><b>4</b></div>
+                  <div class="c-barra"><span>Recepción</span><span class="pista"><i data-ancho="75%" style="width:75%"></i></span><b>3</b></div>
+                  <div class="c-barra"><span>Restaurante</span><span class="pista"><i data-ancho="50%" style="width:50%"></i></span><b>2</b></div>
+                </div>
+                <div data-paso>
+                  <p class="c-orden-tit">Qué arreglar primero</p>
+                  <ol class="c-orden" style="margin-top:10px">
+                    <li><span>Agua caliente en la tercera planta<small>Mantenimiento · esta semana</small></span></li>
+                    <li><span>Esperas en el check-in de 15:00 a 16:00<small>Recepción · reforzar esa hora</small></span></li>
+                    <li><span>Fruta en el desayuno a partir de las 10:00<small>Restaurante</small></span></li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modo voz -->
+        <div class="vista" id="v-voz" role="tabpanel" hidden>
+          <div class="v-voz">
+            <div class="movil">
+              <div class="pantalla">
+                <p class="p-cab"><b>Ensayo con Marcos</b>Modo voz</p>
+                <div class="orbe"><svg class="c-spark" viewBox="0 0 100 100" aria-hidden="true"><use href="#chispa"/></svg></div>
+                <div class="onda" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="p-frase" data-paso><small>Claude, haciendo de Marcos</small><span data-escribe>Ya sé lo que me vas a decir. Con el autobús de las 6:40 no llego, y el siguiente me deja en la puerta a las 7:05.</span></div>
+                <div class="p-botones" aria-hidden="true">
+                  <span><svg viewBox="0 0 20 20"><rect x="7" y="2.5" width="6" height="10" rx="3" fill="none" stroke="#ECECEA" stroke-width="1.6"/><path d="M4.5 9.5a5.5 5.5 0 0 0 11 0M10 15v2.5" fill="none" stroke="#ECECEA" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                  <span class="fin"><svg viewBox="0 0 20 20"><path d="M5 5l10 10M15 5 5 15" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+                </div>
+              </div>
+            </div>
+            <div class="correccion">
+              <h3>Ensayas la conversación hablando, y al colgar Claude te corrige</h3>
+              <p>Claude hace de Marcos, el recepcionista que lleva tres semanas llegando tarde. Tú le hablas desde el móvil como si lo tuvieras delante.</p>
+              <div class="nota-c" data-paso><b>Lo que has hecho bien</b><p>Has empezado por los hechos, las tres semanas, sin acusarle.</p></div>
+              <div class="nota-c" data-paso><b>Lo que cambiaría</b><p>Proponle tú una salida antes de que la pida él, como entrar a las 7:15 hasta que cambie el horario del autobús.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Archivos -->
+        <div class="vista" id="v-archivos" role="tabpanel" hidden>
+          <div class="claude">
+            <div class="c-top"><span class="c-dots" aria-hidden="true"><i></i><i></i><i></i></span><img class="c-logo" src="/programa/claude-logo-blanco.svg" alt="Claude" width="89" height="19"><span class="c-donde">Proyecto · Dueños</span></div>
+            <div class="v-arch">
+              <div class="c-chat">
+                <div class="c-usuario" data-paso>
+                  <div class="c-burbuja">Sácame el informe de octubre para los dueños y la presentación para la reunión del jueves.</div>
+                  <div class="c-adjuntos"><span>informe-octubre.pdf</span><span>ventas-bar-octubre.xlsx</span></div>
+                </div>
+                <div class="c-respuesta" data-paso>
+                  <svg class="c-spark" viewBox="0 0 100 100" aria-hidden="true"><use href="#chispa"/></svg>
+                  <div class="c-texto">
+                    <p data-escribe>Aquí tienes los dos archivos. Antes de enviarlos, comprueba la ocupación y el ingreso total con el informe original.</p>
+                    <div class="c-pieza" data-paso><span class="c-ext">DOCX</span><span>Informe de octubre<small>Documento de Word · 1 página</small></span><span class="bajar">Descargar</span></div>
+                    <div class="c-pieza" data-paso><span class="c-ext">PPTX</span><span>Reunión con los dueños<small>PowerPoint · 6 diapositivas</small></span><span class="bajar">Descargar</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-panel">
+                <div class="hoja">
+                  <h5>Hotel Las Dunas · Octubre<small>Informe para los dueños</small></h5>
+                  <div class="fila" data-paso><span>Ocupación</span><b>75 % · 4 puntos más</b></div>
+                  <div class="fila" data-paso><span>Precio medio</span><b>112 €</b></div>
+                  <div class="fila" data-paso><span>Habitaciones</span><b>208.320 €</b></div>
+                  <div class="fila" data-paso><span>Restaurante y bar</span><b>38.450 €</b></div>
+                  <div class="fila" data-paso><span>Ingreso total</span><b>246.770 €</b></div>
+                  <p class="ojo" data-paso>A vigilar · el bar baja un 9 % entre semana.</p>
+                </div>
+                <div class="diapos" data-paso>
+                  <div class="diapo"><span>Octubre en una página</span><i></i><i></i></div>
+                  <div class="diapo"><span>De dónde sale el ingreso</span><i></i><i></i></div>
+                  <div class="diapo"><span>Qué haremos en noviembre</span><i></i><i></i></div>
+                  <small>3 de las 6 diapositivas</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="pie-demo">Así se ve cada parte de Claude que usas en el programa. Ejemplo con datos inventados del Hotel Las Dunas, de 80 habitaciones.</p>
+      </div>
+    </div>
+  </section>
+  <section class="seccion" style="padding-top:0">
+    <div class="wrap" style="padding-top:0">
+      <h2>Lo que me cuentan <span class="fino">los directores</span></h2>
+      <div class="citas">
+        <blockquote data-aparece style="--d:0">Quitarme tiempo de estar encerrada en la oficina porque necesito estar en la operación.</blockquote>
+        <blockquote data-aparece style="--d:1">Me los da el PMS, pero otra cosa es que tengamos tiempo para analizarlo.</blockquote>
+        <blockquote data-aparece style="--d:2">Me frena el no saber cómo hacerlo y no meter la pata.</blockquote>
+        <blockquote data-aparece style="--d:3">Aunque se llegue a objetivo, siempre piden más.</blockquote>
+      </div>
+    </div>
+  </section>
+  <section class="seccion halo" id="dias">
+    <div class="wrap">
+      <div class="cabeza">
+        <h2 data-aparece>Los <span class="grad">21</span> días</h2>
+        <p class="entradilla" data-aparece style="--d:1">Cada día acabas con algo funcionando en tu hotel, empezando por el primero.</p>
+      </div>
+      <div class="tabs-semana" data-aparece style="--d:1" role="tablist" aria-label="Semanas del programa"><button role="tab" aria-selected="true" data-sem="1"><b>Semana 1</b> · Claude trabaja para ti</button><button role="tab" aria-selected="false" data-sem="2"><b>Semana 2</b> · Fuera de la oficina</button><button role="tab" aria-selected="false" data-sem="3"><b>Semana 3</b> · Tu equipo</button><button role="tab" aria-selected="false" data-sem="4"><b>Semana 4</b> · Los números y los dueños</button><a class="tab-final" href="#dia-21"><b>Día 21</b> · Ya lo haces tú</a></div>
+
+      <div class="semana" data-semana="1" role="tabpanel">
+        <div class="semana-cab"><span class="pildora">Semana 1</span><h3>Claude trabaja para ti</h3><span class="nivel">Del nivel 1 al 3</span></div>
+        <article class="d" id="dia-1"><span class="num">1</span><div class="d-tit"><h4>Tu punto de partida</h4></div><div><ul><li>Haz el test de los 7 niveles y crea tu cuenta en claude.ai</li><li>Aprende las reglas. Ningún nombre, teléfono ni dato de huéspedes o empleados, y todo lo revisas tú antes de que salga</li><li>Responde con Claude la última reseña de tu hotel y publícala</li></ul><p class="recibes"><b>Recibes</b> el test, las reglas en una página y el prompt para tu primera reseña.</p></div></article>
+        <article class="d" id="dia-2"><span class="num">2</span><div class="d-tit"><h4>Cómo pedirle las cosas</h4></div><div><ul><li>Pide el mismo correo varias veces y quédate con lo mejor de cada versión</li><li>Añade «antes de empezar, pregúntame lo que necesites» y dale un ejemplo de cómo escribes tú</li></ul><p class="recibes"><b>Recibes</b> las frases que mejoran cualquier respuesta, cada una con su antes y su después.</p></div></article>
+        <article class="d" id="dia-3"><span class="num">3</span><div class="d-tit"><h4>La ficha de tu hotel</h4></div><div><ul><li>Rellena la plantilla con tus habitaciones, servicios, horarios y equipo</li><li>Pídele a Claude que te diga qué le falta</li></ul><p class="recibes"><b>Recibes</b> la plantilla y una ficha ya rellena de un hotel de 80 habitaciones.</p></div></article>
+        <article class="d" id="dia-4"><span class="num">4</span><div class="d-tit"><h4>El proyecto de tu hotel</h4></div><div><ul><li>Crea el proyecto con la ficha y sube los documentos que ya tienes, como la carta o el organigrama</li><li>Haz la misma pregunta dentro y fuera del proyecto y compara</li></ul><p class="recibes"><b>Recibes</b> la guía clic a clic y la lista de lo que conviene subir.</p></div></article>
+        <article class="d" id="dia-5"><span class="num">5</span><div class="d-tit"><h4>Claude en el bolsillo</h4></div><div><ul><li>Dicta desde el móvil lo que ves al pasar por cada departamento, y que te lo devuelva como tareas por responsable</li><li>Hazle una foto a una nota o a la pizarra de cocina y que la pase a limpio</li></ul><p class="recibes"><b>Recibes</b> el prompt de la ronda por el hotel y un ejemplo hecho.</p></div></article>
+      </div>
+
+      <div class="semana" data-semana="2" role="tabpanel" hidden>
+        <div class="semana-cab"><span class="pildora">Semana 2</span><h3>Fuera de la oficina</h3><span class="nivel">Nivel 4</span></div>
+        <article class="d" id="dia-6"><span class="num">6</span><div class="d-tit"><h4>Las reseñas de la semana</h4></div><div><ul><li>Crea el asistente de reseñas y responde las de la semana con tu voz</li><li>Si la queja es seria, que te prepare también el mensaje privado</li></ul><p class="recibes"><b>Recibes</b> las instrucciones del asistente y respuestas de ejemplo a una reseña buena y a otra mala.</p></div></article>
+        <article class="d" id="dia-7"><span class="num">7</span><div class="d-tit"><h4>Las reseñas del mes, en un plan</h4></div><div><ul><li>Pega todas las reseñas del mes, sin los nombres</li><li>Claude las agrupa por departamento y te dice qué arreglar primero y a quién pedírselo</li></ul><p class="recibes"><b>Recibes</b> el prompt y el plan de ejemplo de un mes con 64 reseñas.</p></div></article>
+        <article class="d" id="dia-8"><span class="num">8</span><div class="d-tit"><h4>Los correos que te cuestan</h4></div><div><ul><li>Crea el asistente de correos con tu firma y tu tono</li><li>Úsalo con el que llevas días sin contestar, sea al proveedor, al huésped que reclama o a los dueños</li></ul><p class="recibes"><b>Recibes</b> las instrucciones y cinco correos de ejemplo.</p></div></article>
+        <article class="d" id="dia-9"><span class="num">9</span><div class="d-tit"><h4>Reuniones que acaban en tareas</h4></div><div><ul><li>Pídele el orden del día de la reunión de jefes de departamento</li><li>Al acabar, pásale tus notas o díctale lo que se habló, y que te devuelva quién hace qué y para cuándo</li></ul><p class="recibes"><b>Recibes</b> los dos prompts y un acta de ejemplo.</p></div></article>
+        <article class="d" id="dia-10"><span class="num">10</span><div class="d-tit"><h4>Los proveedores</h4></div><div><ul><li>Dale varios presupuestos del mismo servicio y que te los compare línea a línea</li><li>Pídele los argumentos para negociar y el correo para pedir rebaja</li><li>Pásale un contrato y que te marque las cláusulas que tienes que mirar con calma</li></ul><p class="recibes"><b>Recibes</b> los prompts y una comparativa de ejemplo entre empresas de lavandería.</p></div></article>
+      </div>
+
+      <div class="semana" data-semana="3" role="tabpanel" hidden>
+        <div class="semana-cab"><span class="pildora">Semana 3</span><h3>Tu equipo</h3><span class="nivel">Nivel 4, con tu equipo</span></div>
+        <article class="d" id="dia-11"><span class="num">11</span><div class="d-tit"><h4>El cuadrante</h4></div><div><ul><li>Pásale las horas de cada persona, las libranzas y las bajas</li><li>Que te proponga el cuadrante y te avise de lo que no cuadra</li></ul><p class="recibes"><b>Recibes</b> la plantilla de horas y un cuadrante de ejemplo de recepción.</p></div></article>
+        <article class="d" id="dia-12"><span class="num">12</span><div class="d-tit"><h4>El que entra nuevo</h4></div><div><ul><li>Cuéntale por voz desde el móvil cómo se hace un puesto, y Claude lo convierte en el manual de bienvenida</li><li>Pídele un test de diez preguntas para el final de su primera semana</li></ul><p class="recibes"><b>Recibes</b> el prompt y el manual de ejemplo para un recepcionista nuevo.</p></div></article>
+        <article class="d" id="dia-13"><span class="num">13</span><div class="d-tit"><h4>Los procedimientos</h4></div><div><ul><li>Pide a un jefe de departamento que le cuente a Claude por voz cómo se hace algo, como un check-in o el montaje del desayuno</li><li>Claude lo pasa a un procedimiento paso a paso con su lista de comprobación</li></ul><p class="recibes"><b>Recibes</b> el prompt y dos procedimientos de ejemplo.</p></div></article>
+        <article class="d" id="dia-14"><span class="num">14</span><div class="d-tit"><h4>Las conversaciones difíciles</h4></div><div><ul><li>Claude estudia a la persona con la que tienes que hablar y hace de ella</li><li>Ensayas con él, por ejemplo con el empleado que llega tarde, y al final te corrige</li><li>Hilton ya entrena así a su equipo, con huéspedes simulados</li></ul><p class="recibes"><b>Recibes</b> el prompt del simulador y una conversación de ejemplo entera.</p></div></article>
+        <article class="d" id="dia-15"><span class="num">15</span><div class="d-tit"><h4>Que tu equipo también lo use</h4></div><div><ul><li>Pasa la ficha y las instrucciones de tu proyecto a tu número dos y a los jefes de departamento</li><li>Firmad la política de IA del hotel, con lo que se puede pegar y quién revisa</li></ul><p class="recibes"><b>Recibes</b> la política lista para firmar y una guía de una página para cada jefe de departamento.</p></div></article>
+      </div>
+
+      <div class="semana" data-semana="4" role="tabpanel" hidden>
+        <div class="semana-cab"><span class="pildora">Semana 4</span><h3>Los números y los dueños</h3><span class="nivel">Niveles 5 y 6</span></div>
+        <article class="d" id="dia-16"><span class="num">16</span><div class="d-tit"><h4>La semana en cinco líneas y tu panel</h4></div><div><ul><li>Exporta de tu programa de reservas el informe de totales de la semana y súbelo tal cual</li><li>Comprueba la ocupación y el ingreso total con el original</li><li>Con los totales del mes, que Claude te monte un panel para mirarlo en el móvil</li></ul><p class="recibes"><b>Recibes</b> el prompt del resumen, el del panel y lo que tienes que pedirle a recepción si no sabes exportar el informe.</p></div></article>
+        <article class="d" id="dia-17"><span class="num">17</span><div class="d-tit"><h4>Más ingreso con el mismo equipo</h4></div><div><ul><li>Pásale tus servicios y tus reseñas</li><li>Claude te propone qué más puede comprar el huésped que ya está dentro, como la salida tardía o un plan con un negocio de la zona, y a qué precio</li></ul><p class="recibes"><b>Recibes</b> el prompt y propuestas de ejemplo para un hotel de playa y otro de ciudad.</p></div></article>
+        <article class="d" id="dia-18"><span class="num grad">18</span><div class="d-tit"><h4>El cierre de mes</h4></div><div><ul><li>Crea el Analista, que solo saca los hechos, y el Redactor, que solo escribe</li><li>Sube los informes del mes y te queda el informe de una página para los dueños</li></ul><p class="recibes"><b>Recibes</b> las instrucciones de los dos y el cierre de un mes de ejemplo.</p></div></article>
+        <article class="d" id="dia-19"><span class="num">19</span><div class="d-tit"><h4>La reunión con los dueños</h4></div><div><ul><li>Pídele la presentación del mes en PowerPoint</li><li>Ensaya con Claude haciendo de propietario, con las preguntas que menos te gustan</li></ul><p class="recibes"><b>Recibes</b> el prompt de la presentación y el del ensayo.</p></div></article>
+        <article class="d" id="dia-20"><span class="num">20</span><div class="d-tit"><h4>Tu semana con Claude</h4></div><div><ul><li>Deja que Claude te entreviste sobre tu semana y te diga dónde se te van las horas</li><li>Apunta los 5 momentos fijos en los que vas a usar Claude, como «cuando llega el informe del lunes»</li><li>En la próxima reunión de jefes de departamento, que cada uno cuente algo que le salió bien o mal con Claude</li></ul><p class="recibes"><b>Recibes</b> el prompt de la entrevista y la plantilla del mapa de tu semana.</p></div></article>
+      </div>
+    </div>
+  </section>
+  <section class="dia20 noche">
+    <div class="wrap" id="dia-21">
+      <span class="pildora" data-aparece>Día 21 · Método Fricción 0</span>
+      <h2 data-aparece style="--d:1">Ya lo haces tú.</h2>
+      <p class="entradilla">Cualquier tarea de tu hotel que se repita, convertida en tu propio asistente. Cuatro pasos y una lista para comprobarlo.</p>
+      <div class="pasos" data-aparece style="--d:2">
+        <div><span>1</span><p>Qué tarea le pasas</p></div>
+        <div><span>2</span><p>Qué le das</p></div>
+        <div><span>3</span><p>Qué te tiene que devolver</p></div>
+        <div><span>4</span><p>Cómo lo revisas</p></div>
+      </div>
+      <div class="lista" data-aparece style="--d:3">
+        <ul>
+          <li>Aplica el Método Fricción 0 tú solo a una tarea de tu hotel que no hayamos visto en el programa, y compruébalo con la lista</li>
+          <li>Aprende a ver qué le ha faltado a una respuesta mala y a arreglarla sin empezar de cero</li>
+          <li>Repite el test de los 7 niveles y mira cuánto has subido</li>
+        </ul>
+        <p class="recibes"><b>Recibes</b> el Método Fricción 0 en una página, la lista para comprobar cualquier asistente, la guía de qué hacer cuando Claude falla y el plan de los 30 días siguientes.</p>
+      </div>
+    </div>
+  </section>
+  <section class="seccion">
+    <div class="wrap">
+      <div class="cabeza"><h2>Y además</h2><p class="entradilla">Para que te lleves todo lo que hace falta en el día a día del hotel.</p></div>
+      <div class="extras" data-aparece style="--d:1">
+        <div><h3>Asistentes por departamento</h3><p>Recepción, pisos, restaurante y bar, cocina, mantenimiento y comercial, cada uno con sus instrucciones.</p></div>
+        <div><h3>El presupuesto del año que viene</h3><p>Hecho a partir de los totales de este año, con el Excel montado.</p></div>
+        <div><h3>Propuestas para grupos y eventos</h3><p>Del correo con la petición a la propuesta con precio.</p></div>
+        <div><h3>La ruta del número dos</h3><p>Lo que suele llevar él, del cuadrante a las actas, con su acceso incluido.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="precio halo">
+    <div class="wrap" id="precio">
+      <div class="cabeza" data-aparece><h2>Elige <span class="fino">cómo entras</span></h2><p class="entradilla">Pago único y acceso de por vida. Precio de lanzamiento hasta <span data-cfg="fin">el domingo 22 de noviembre</span>.</p></div>
+      <div class="planes">
+        <div class="plan" data-aparece>
+          <p class="plan-tit">Director</p>
+          <div class="importe"><strong data-cfg="precio">197 €</strong><s data-cfg="despues">297 €</s></div>
+          <p class="plan-para">Para ti y tu número dos.</p>
+          <ul class="incluye">
+            <li>Los 21 días del programa</li>
+            <li>Las plantillas y los 6 asistentes por departamento</li>
+            <li>El Método Fricción 0 para montarte tus asistentes</li>
+          </ul>
+          <a class="boton borde" href="#precio" data-pago="director">Acceder al programa</a>
+        </div>
+        <div class="plan destacado" data-aparece style="--d:1">
+          <span class="sello">La que más le conviene al hotel</span>
+          <p class="plan-tit">Hotel</p>
+          <div class="importe"><strong data-cfg="precioHotel">397 €</strong><s data-cfg="despuesHotel">497 €</s></div>
+          <p class="plan-para">Para ti, tu número dos y cuatro jefes de departamento.</p>
+          <p class="grupo-tit">Todo lo del plan Director, y además</p>
+          <ul class="incluye">
+            <li>Cada jefe usa Claude en su área, de recepción a mantenimiento</li>
+            <li>Te llegan los partes de cada departamento con el mismo formato, y tu asistente del cierre los junta en el informe del mes</li>
+            <li>Cada departamento rehace su cuadrante sin pasar por ti</li>
+            <li>Los manuales para el que entra nuevo los escribe quien sabe hacer el trabajo</li>
+            <li>Todo el equipo firma la misma política de IA</li>
+            <li>La plantilla del parte semanal para cada departamento</li>
+          </ul>
+          <a class="boton negro" href="#precio" data-pago="hotel">Acceder para el hotel</a>
+        </div>
+      </div>
+      <div class="recibe-todo" data-aparece>
+        <h3>Lo que recibes en los dos planes</h3>
+        <div class="recibe">
+          <div><p class="grupo-tit">Cada mañana, en tu correo</p>
+            <ul class="incluye">
+              <li>21 lecciones prácticas de 15 minutos, una cada día laborable. La primera te llega nada más pagar</li>
+              <li>En cada lección, lo que tienes que hacer y lo que le pides a Claude</li>
+            </ul>
+          </div>
+          <div><p class="grupo-tit">Para quedártelo y usarlo en tu hotel</p>
+            <ul class="incluye">
+              <li>La ficha de tu hotel en plantilla, con un ejemplo relleno</li>
+              <li>6 asistentes listos para pegar en Claude, uno por departamento: recepción, pisos, restaurante y bar, cocina, mantenimiento y comercial</li>
+              <li>Las plantillas del cuadrante, del informe del mes y de la presentación para los dueños</li>
+              <li>El Excel del presupuesto del año que viene</li>
+              <li>La plantilla de propuestas para grupos y eventos</li>
+              <li>La política de IA del hotel, lista para firmar</li>
+              <li>El Método Fricción 0 en una página, para montarte solo cualquier asistente nuevo</li>
+            </ul>
+          </div>
+          <div><p class="grupo-tit">Acceso</p>
+            <ul class="incluye">
+              <li>De por vida, con un solo pago</li>
+              <li>A todas las lecciones, plantillas y asistentes del programa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="letra-c">Nada más pagar te llega el día 1 al correo. Si en los primeros 7 días ves que no es para ti, te devuelvo el dinero.</p>
+      <p class="pendiente" data-pendiente>Faltan los enlaces de pago.</p>
+    </div>
+  </section>
+  <section class="seccion">
+    <div class="wrap">
+      <p class="frase" data-aparece>Nada del huésped sale del hotel. <span class="fino">Claude trabaja con lo que tú le pegas, que son los totales y tus notas. No se conecta a tu programa de reservas ni ve datos de ningún huésped, y las reseñas se pegan sin nombres.</span></p>
+    </div>
+  </section>
+  <section class="seccion" id="preguntas" style="padding-top:0">
+    <div class="wrap" style="padding-top:0">
+      <div class="cabeza"><h2>Preguntas</h2><p class="entradilla">Lo que suelen preguntar los directores antes de apuntarse.</p></div>
+      <div class="faq" data-aparece style="--d:1">
+        <details><summary>No tengo ni 20 minutos libres. ¿De verdad me da?</summary><p>Cada ejercicio dura 15 minutos. Desde el día 6, lo que montas te ahorra tiempo esa misma semana, empezando por las reseñas y los correos. Si un día no puedes, el ejercicio te espera.</p></details>
+        <details><summary>Ya probé ChatGPT y me daba respuestas genéricas. ¿Qué cambia?</summary><p>Te salían genéricas porque no conocía tu hotel. Los días 3 y 4 le das la ficha y tus documentos dentro de un proyecto, y desde ahí te contesta con tu tono, tus servicios y tu firma.</p></details>
+        <details><summary>¿Y si meto la pata y le llega algo mal a un huésped o a los dueños?</summary><p>De Claude no sale nada que no hayas leído tú. Cada día trae un «Revísalo tú» con lo que tienes que comprobar: importes, fechas, nombres y que no prometa nada que no puedas cumplir.</p></details>
+        <details><summary>¿Pongo en peligro los datos de mis huéspedes?</summary><p>Claude no se conecta a tu programa de reservas. Trabajas con totales, con tus notas y con reseñas sin nombres, y el día 15 firmáis una política con lo que se puede pegar y lo que no.</p></details>
+        <details><summary>No soy de tecnología. ¿Lo voy a poder seguir?</summary><p>El día 1 empieza creando la cuenta, y cada paso va clic a clic. Si sabes escribir un correo, lo puedes seguir.</p></details>
+        <details><summary>Ya tengo tus recursos gratis. ¿Qué me llevo de más?</summary><p>Los recursos te dan piezas sueltas. Aquí las tienes ordenadas día a día, con el ejemplo hecho de cada una. Acabas con el cierre de mes montado y con el Método Fricción 0 para montarte tú lo que te haga falta.</p></details>
+        <details><summary>¿Cuánto me cuesta Claude aparte?</summary><p>Los primeros días puedes hacerlos con el plan gratis. Para el resto te conviene el de pago, de unos 20 € al mes.</p></details>
+        <details><summary>¿Y si no me sirve?</summary><p>Si en los primeros 7 días ves que no es para ti, te devuelvo el dinero.</p></details>
+      </div>
+    </div>
+  </section>
+  <section class="cierre noche">
+    <div class="wrap">
+      <h2 data-aparece>Tu próximo cierre de mes, <span class="grad">ya con Claude.</span></h2>
+      <a class="boton claro" href="#precio">Acceder al programa · desde <span data-cfg="precio">197 €</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fila"><b class="firma">Héctor García</b><span>Valencia · © 2026</span></div>
+    <p>Claude es una marca de Anthropic. Este programa es independiente y no está afiliado a Anthropic.</p>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="chispa" viewBox="0 0 100 100"><path fill="#D97757" d="m19.6 66.5 19.7-11 .3-1-.3-.5h-1l-3.3-.2-11.2-.3L14 53l-9.5-.5-2.4-.5L0 49l.2-1.5 2-1.3 2.9.2 6.3.5 9.5.6 6.9.4L38 49.1h1.6l.2-.7-.5-.4-.4-.4L29 41l-10.6-7-5.6-4.1-3-2-1.5-2-.6-4.2 2.7-3 3.7.3.9.2 3.7 2.9 8 6.1L37 36l1.5 1.2.6-.4.1-.3-.7-1.1L33 25l-6-10.4-2.7-4.3-.7-2.6c-.3-1-.4-2-.4-3l3-4.2L28 0l4.2.6L33.8 2l2.6 6 4.1 9.3L47 29.9l2 3.8 1 3.4.3 1h.7v-.5l.5-7.2 1-8.7 1-11.2.3-3.2 1.6-3.8 3-2L61 2.6l2 2.9-.3 1.8-1.1 7.7L59 27.1l-1.5 8.2h.9l1-1.1 4.1-5.4 6.9-8.6 3-3.5L77 13l2.3-1.8h4.3l3.1 4.7-1.4 4.9-4.4 5.6-3.7 4.7-5.3 7.1-3.2 5.7.3.4h.7l12-2.6 6.4-1.1 7.6-1.3 3.5 1.6.4 1.6-1.4 3.4-8.2 2-9.6 2-14.3 3.3-.2.1.2.3 6.4.6 2.8.2h6.8l12.6 1 3.3 2 1.9 2.7-.3 2-5.1 2.6-6.8-1.6-16-3.8-5.4-1.3h-.8v.4l4.6 4.5 8.3 7.5L89 80.1l.5 2.4-1.3 2-1.4-.2-9.2-7-3.6-3-8-6.8h-.5v.7l1.8 2.7 9.8 14.7.5 4.5-.7 1.4-2.6 1-2.7-.6-5.8-8-6-9-4.7-8.2-.5.4-2.9 30.2-1.3 1.5-3 1.2-2.5-2-1.4-3 1.4-6.2 1.6-8 1.3-6.4 1.2-7.9.7-2.6v-.2H49L43 72l-9 12.3-7.2 7.6-1.7.7-3-1.5.3-2.8L24 86l10-12.8 6-7.9 4-4.6-.1-.5h-.3L17.2 77.4l-4.7.6-2-2 .2-3 1-1 8-5.5Z"/></symbol>
+</svg>
+
+<script>
+  // CONFIG: cambia aquí el precio, la fecha del lanzamiento y el enlace de pago.
+  const CONFIG = {
+    precio: "197 €",          // plan Director
+    despues: "297 €",
+    precioHotel: "397 €",     // plan Hotel
+    despuesHotel: "497 €",
+    fin: "el domingo 22 de noviembre",
+    pago: "",       // enlace de pago de Stripe del plan Director
+    pagoHotel: "",  // enlace de pago de Stripe del plan Hotel
+    whatsapp: "34668569663" // mientras no haya enlaces de pago, los botones abren WhatsApp
+  };
+  document.querySelectorAll("[data-cfg]").forEach(function (el) {
+    const v = CONFIG[el.getAttribute("data-cfg")];
+    if (v) el.textContent = v;
+  });
+  function whatsapp(plan) {
+    return "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent("Hola Héctor, quiero acceder al programa Director con Claude, plan " + plan + ".");
+  }
+  function enlazar(sel, pago, plan) {
+    document.querySelectorAll(sel).forEach(function (a) {
+      const destino = pago || (CONFIG.whatsapp ? whatsapp(plan) : "");
+      if (!destino) return;
+      a.href = destino; a.target = "_blank"; a.rel = "noopener";
+    });
+  }
+  enlazar('[data-pago="director"]', CONFIG.pago, "Director");
+  enlazar('[data-pago="hotel"]', CONFIG.pagoHotel, "Hotel");
+  if ((CONFIG.pago && CONFIG.pagoHotel) || CONFIG.whatsapp) {
+    document.querySelectorAll("[data-pendiente]").forEach(function (p) { p.hidden = true; });
+  }
+
+  // Pestañas de las partes de Claude: cambia de vista y la anima al entrar.
+  const pestanas = document.querySelectorAll(".pestanas button");
+  const vistas = document.querySelectorAll(".vista");
+  const sinMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let vez = 0;
+
+  function animar(v) {
+    if (sinMovimiento) return;
+    const mia = ++vez;
+    const pasos = v.querySelectorAll("[data-paso]");
+    const barras = v.querySelectorAll("[data-ancho]");
+    const textos = v.querySelectorAll("[data-escribe]");
+    pasos.forEach(function (el) { el.style.transition = "none"; el.style.opacity = "0"; el.style.transform = "translateY(8px)"; });
+    barras.forEach(function (b) { b.style.transition = "none"; b.style.width = "0%"; });
+    textos.forEach(function (t) { if (!t.dataset.completo) t.dataset.completo = t.textContent; t.textContent = ""; });
+    void v.offsetWidth;
+    pasos.forEach(function (el, i) {
+      setTimeout(function () {
+        el.style.transition = "opacity .45s ease, transform .45s ease";
+        el.style.opacity = "1"; el.style.transform = "none";
+      }, 100 + i * 150);
+    });
+    barras.forEach(function (b, i) {
+      setTimeout(function () { b.style.transition = "width .9s cubic-bezier(.2,.7,.1,1)"; b.style.width = b.dataset.ancho; }, 600 + i * 160);
+    });
+    textos.forEach(function (t) {
+      const completo = t.dataset.completo;
+      let i = 0;
+      (function paso() {
+        if (mia !== vez) { t.textContent = completo; return; }
+        i = Math.min(completo.length, i + 3);
+        t.textContent = completo.slice(0, i);
+        if (i < completo.length) setTimeout(paso, 16);
+      })();
+    });
+  }
+
+  pestanas.forEach(function (p) {
+    p.addEventListener("click", function () {
+      const destino = p.getAttribute("data-vista");
+      pestanas.forEach(function (q) { q.setAttribute("aria-selected", q === p ? "true" : "false"); });
+      vistas.forEach(function (v) { v.hidden = v.id !== destino; });
+      animar(document.getElementById(destino));
+    });
+  });
+
+  // Pestañas de semanas en «Los 21 días».
+  const botonesSemana = document.querySelectorAll(".tabs-semana button");
+  const semanas = document.querySelectorAll(".semana[data-semana]");
+  function abrirSemana(n) {
+    botonesSemana.forEach(function (b) { b.setAttribute("aria-selected", b.getAttribute("data-sem") === String(n) ? "true" : "false"); });
+    semanas.forEach(function (s) { s.hidden = s.getAttribute("data-semana") !== String(n); });
+  }
+  botonesSemana.forEach(function (b) { b.addEventListener("click", function () { abrirSemana(b.getAttribute("data-sem")); }); });
+  function semanaDe(hash) {
+    const m = /^#dia-(\d+)$/.exec(hash || "");
+    if (!m) return null;
+    const d = Number(m[1]);
+    return d >= 1 && d <= 20 ? Math.ceil(d / 5) : null;
+  }
+  document.addEventListener("click", function (e) {
+    const a = e.target.closest('a[href^="#dia-"]');
+    if (!a) return;
+    const s = semanaDe(a.getAttribute("href"));
+    if (s) abrirSemana(s);
+  });
+  if (semanaDe(location.hash)) abrirSemana(semanaDe(location.hash));
+  // Aparecer al deslizar. Sin JavaScript todo se ve desde el principio.
+  (function () {
+    if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const els = Array.from(document.querySelectorAll("[data-aparece]"));
+    const obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.setAttribute("data-visto", "");
+        obs.unobserve(e.target);
+      });
+      document.documentElement.setAttribute("data-anim", "");
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+    els.forEach(function (el) { obs.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
