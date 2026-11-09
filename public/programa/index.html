@@ -537,6 +537,7 @@ html[data-anim] [data-aparece][data-visto] { opacity: 1; transform: none; filter
 .tarea.on .cara.hoy { opacity: 0; transform: translateY(-18px); }
 .tarea.on .cara.con { opacity: 1; transform: none; }
 .tarea.on .cara span { color: #C3CCD6; }
+.tarea.on .cara b, .tarea.on .giro { color: #FFFFFF; }
 .tarea.on .cara small { color: var(--aqua); }
 .tarea.on .giro i { background: var(--grad); }
 .tarea.on .giro i::after { transform: translateX(16px); }
@@ -622,6 +623,30 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
 .plan.medida .plan-para, .plan.medida .plazos { color: #A9B4C2; }
 .plan.medida .incluye li { color: #E4E9EF; }
 @media (max-width: 1100px) and (min-width: 861px) { .planes { grid-template-columns: repeat(2, minmax(0, 1fr)); } .plan.medida { grid-column: 1 / -1; } }
+/* Móvil: selector de planes, «lo que incluye» plegable y portada ordenada */
+.selector-planes { display: none; }
+.recibe-todo summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.recibe-todo summary::-webkit-details-marker { display: none; }
+.recibe-todo .ver { width: 30px; height: 30px; border-radius: 50%; flex: none; display: grid; place-items: center; background: var(--niebla); }
+.recibe-todo .ver::before { content: "+"; font-size: 20px; color: var(--teal); line-height: 1; }
+.recibe-todo[open] .ver::before { content: "−"; }
+.recibe-todo[open] .recibe { margin-top: 6px; }
+@media (max-width: 860px) {
+  .selector-planes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; padding: 5px; margin: 0 0 22px; border-radius: 20px; background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--linea), 0 14px 30px -22px rgba(11, 18, 32, .5); }
+  .selector-planes button { border: 0; cursor: pointer; padding: 10px 6px; border-radius: 15px; background: transparent; font: 650 15px/1.1 var(--f); letter-spacing: -0.02em; color: var(--tinta); display: grid; gap: 3px; -webkit-tap-highlight-color: transparent; }
+  .selector-planes button small { font-size: 12px; font-weight: 500; color: var(--gris); }
+  .selector-planes button[aria-selected="true"] { background: var(--noche); color: #FFFFFF; box-shadow: 0 8px 20px -10px rgba(94, 230, 216, .9); }
+  .selector-planes button[aria-selected="true"] small { color: var(--aqua); }
+  .planes[data-ver] .plan { display: none; }
+  .planes[data-ver="director"] .plan[data-plan="director"], .planes[data-ver="hotel"] .plan[data-plan="hotel"], .planes[data-ver="medida"] .plan[data-plan="medida"] { display: grid; }
+  .plan.destacado { margin-top: 16px; }
+  .recibe-todo h3 { font-size: 19px; }
+  .hecho-en { flex-direction: column; gap: 4px; }
+  .hecho-sub { font-size: 14px; }
+}
+@media (max-width: 640px) {
+  .seccion > .wrap, .dia20 > .wrap, .precio > .wrap { padding-block: 60px; }
+}
 </style>
 </head>
 <body>
@@ -647,7 +672,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
         <a class="boton borde" href="#dias">Ver los 21 días</a>
       </div>
       <p class="nota" data-aparece style="--d:3">Pago único y acceso de por vida.</p>
-      <p class="hecho-en" data-aparece style="--d:4">Practicas cada día con <img src="/programa/claude-logo.svg" alt="Claude" width="168" height="36"> la IA de Anthropic</p>
+      <p class="hecho-en" data-aparece style="--d:4"><span>Practicas cada día con</span><img src="/programa/claude-logo.svg" alt="Claude" width="168" height="36"><span class="hecho-sub">la IA de Anthropic</span></p>
 
     </div>
   </section>
@@ -916,8 +941,13 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
   <section class="precio halo">
     <div class="wrap" id="precio">
       <div class="cabeza" data-aparece><h2>Elige <span class="fino">cómo entras</span></h2><p class="entradilla">Pago único y acceso de por vida.</p></div>
-      <div class="planes">
-        <div class="plan" data-aparece>
+      <div class="selector-planes" role="tablist" aria-label="Elige un plan">
+        <button type="button" role="tab" data-plan="director" aria-selected="false">Director<small>197 €</small></button>
+        <button type="button" role="tab" data-plan="hotel" aria-selected="true">Hotel<small>397 €</small></button>
+        <button type="button" role="tab" data-plan="medida" aria-selected="false">A medida<small>Para tu hotel</small></button>
+      </div>
+      <div class="planes" data-ver="hotel">
+        <div class="plan" data-plan="director" data-aparece>
           <p class="plan-tit">Director</p>
           <div class="importe"><strong data-cfg="precio">197 €</strong></div>
           <p class="plan-para">Solo para ti.</p>
@@ -930,7 +960,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
           <a class="boton borde" href="#precio" data-pago="director">Acceder al programa</a>
           <p class="plazos">También en 3 plazos sin intereses con Klarna</p>
         </div>
-        <div class="plan destacado" data-aparece style="--d:1">
+        <div class="plan destacado" data-plan="hotel" data-aparece style="--d:1">
           <span class="sello">Opción recomendada</span>
           <p class="plan-tit">Hotel</p>
           <div class="importe"><strong data-cfg="precioHotel">397 €</strong></div>
@@ -947,7 +977,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
           <a class="boton negro" href="#precio" data-pago="hotel">Acceder para el hotel</a>
           <p class="plazos">También en 3 plazos sin intereses con Klarna</p>
         </div>
-        <div class="plan medida" data-aparece style="--d:2">
+        <div class="plan medida" data-plan="medida" data-aparece style="--d:2">
           <p class="plan-tit">A medida</p>
           <p class="medida-tit">Te lo dejamos montado en tu hotel</p>
           <p class="plan-para">Para el hotel que quiere el sistema funcionando sin tener que montarlo. Tú dedicas unas dos horas y lo demás te lo damos hecho.</p>
@@ -962,8 +992,8 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
           <p class="plazos">Precio según tu hotel, después del diagnóstico</p>
         </div>
       </div>
-      <div class="recibe-todo" data-aparece>
-        <h3>Lo que recibes en los dos planes</h3>
+      <details class="recibe-todo" data-aparece open>
+        <summary><h3>Lo que incluye el programa</h3><span class="ver" aria-hidden="true"></span></summary>
         <div class="recibe">
           <div><p class="grupo-tit">Cada mañana, en tu correo</p>
             <ul class="incluye">
@@ -990,7 +1020,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
             </ul>
           </div>
         </div>
-      </div>
+      </details>
       <p class="letra-c">Nada más pagar te escribo por WhatsApp con el acceso. Si en los primeros 7 días ves que no es para ti, te devolvemos el dinero.</p>
       <p class="pendiente" data-pendiente>Faltan los enlaces de pago.</p>
     </div>
@@ -1210,6 +1240,22 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
         if (!e.isIntersecting && reloj) { clearInterval(reloj); reloj = null; }
       });
     }, { threshold: 0.3 }).observe(demo);
+  })();
+  // Móvil: un plan cada vez y «lo que incluye» plegado.
+  (function () {
+    const planes = document.querySelector(".planes");
+    const botones = document.querySelectorAll(".selector-planes button");
+    botones.forEach(function (b) {
+      b.addEventListener("click", function () {
+        const plan = b.getAttribute("data-plan");
+        planes.setAttribute("data-ver", plan);
+        botones.forEach(function (o) { o.setAttribute("aria-selected", o === b ? "true" : "false"); });
+        const tarjeta = planes.querySelector('[data-plan="' + plan + '"]');
+        if (tarjeta) tarjeta.setAttribute("data-visto", "");
+      });
+    });
+    const incluye = document.querySelector(".recibe-todo");
+    if (incluye && window.matchMedia("(max-width: 860px)").matches) incluye.open = false;
   })();
 </script>
 
