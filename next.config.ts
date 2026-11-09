@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
       { source: "/asistentes", destination: "/asistentes/index.html" },
       { source: "/nivel", destination: "/nivel/index.html" },
       { source: "/gm", destination: "/gm/index.html" },
+      { source: "/skills", destination: "/skills/index.html" },
       // Landing del programa Director con Claude (aparte de Vértice).
       { source: "/programa", destination: "/programa/index.html" },
       // Demo privada de la carta de Casa Román (app Angular): cualquier ruta

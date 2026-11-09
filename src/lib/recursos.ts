@@ -244,6 +244,21 @@ export const RECURSOS: Recurso[] = [
     destino: "/gm",
     cta: "Abrir la guía",
   },
+  {
+    slug: "skills",
+    etiqueta: "Recurso gratuito",
+    titulo: "6 skills de Claude para que tu hotel venda desde la habitación",
+    subtitulo:
+      "Una por cada cosa que vende tu hotel. Le pasas tus datos y cada skill te deja lista una parte de tu carta, en español y en inglés.",
+    incluye: [
+      "Servicio de habitación, mejoras y experiencias con negocios de tu zona",
+      "Productos, packs para parejas y familias, y la guía de tu zona",
+      "Cada una en un .zip listo para subir a Claude",
+      "Un ejemplo hecho de cada una y lo que tienes que revisar",
+    ],
+    destino: "/skills",
+    cta: "Abrir las 6 skills",
+  },
   // Plantilla: copia este bloque, cambia el slug, el título y el enlace, y ya
   // está publicada en /recurso/<slug>.
   {
