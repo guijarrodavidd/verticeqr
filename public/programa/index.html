@@ -825,6 +825,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
 [data-l="v"] .ag-cua span { height: 19px; }
 [data-l="v"] .ag-chip { font-size: 14px; }
 [data-l="v"] .ag-rev p, [data-l="v"] .ag-nota { font-size: 12.5px; }
+.ag-mas { margin: 26px 0 0; display: flex; justify-content: center; }
 /* agentes:fin */
 </style>
 </head>
@@ -880,10 +881,10 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
   </section>
   <section class="seccion demo-sec">
     <div class="wrap">
-      <div class="cabeza" data-aparece><h2>Así trabajas <span class="fino">con Claude</span></h2><p class="entradilla">Cada día usas una parte distinta de Claude.</p></div>
+      <div class="cabeza" data-aparece><h2>Así creas <span class="fino">tus agentes</span></h2><p class="entradilla">En el programa montas tus propios agentes en Claude, uno por tarea, y aprendes a usarlos con los datos de tu hotel.</p></div>
       <div class="demo" data-aparece style="--d:1">
         <div class="pestanas" role="tablist" aria-label="Las partes de Claude que usas en el programa">
-          <button role="tab" aria-selected="true" data-vista="v-proyectos"><b>Día 4</b> · Proyectos</button>
+          <button role="tab" aria-selected="true" data-vista="v-proyectos"><b>Día 4</b> · Tu primer agente</button>
           <button role="tab" aria-selected="false" data-vista="v-artefacto"><b>Día 7</b> · Artefactos</button>
           <button role="tab" aria-selected="false" data-vista="v-voz"><b>Día 14</b> · Modo voz</button>
           <button role="tab" aria-selected="false" data-vista="v-archivos"><b>Días 18 y 19</b> · Informe y presentación</button>
@@ -1033,10 +1034,34 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
           </div>
         </div>
 
-        <p class="pie-demo">Así se ve cada parte de Claude que usas en el programa. Ejemplo con datos inventados del Hotel Brisalta, de 80 habitaciones.</p>
+        <p class="pie-demo">Cada agente es un proyecto de Claude con sus instrucciones. Ejemplo con datos inventados del Hotel Brisalta.</p>
       </div>
     </div>
   </section>
+  <!-- agentes:inicio -->
+  <section class="seccion" id="agentes">
+    <div class="wrap">
+      <div class="cabeza" data-aparece><h2>Tus agentes, <span class="fino">trabajando solos</span></h2><p class="entradilla">En el programa los creas tú y los usas uno a uno. Con el plan A medida te los dejamos conectados y en automático. Los datos entran solos, cada agente hace su parte y a ti te llega el aviso al móvil.</p></div>
+<div class="ag">
+  <div class="ag-marco">
+    <div class="ag-esc" data-l="h" role="img" aria-label="Animación: los datos del hotel entran solos, el jefe de dirección los reparte entre sus agentes y al director le llega el aviso con el trabajo hecho en el móvil">
+      <div class="ag-rueda">
+        <svg class="ag-lineas" aria-hidden="true"><circle/><g></g></svg>
+      </div>
+      <div class="ag-in"></div>
+      <div class="ag-tel"><div class="ag-pant"><div class="ag-hora">8:00</div><div class="ag-auto"><i></i>En automático</div><div class="ag-nots"></div></div></div>
+      <div class="ag-chip"><em>Cada mañana</em><span>Reseñas</span></div>
+    </div>
+  </div>
+  <div class="ag-ctrl">
+    <button class="ag-play" type="button" aria-label="Pausar"><svg viewBox="0 0 16 16" aria-hidden="true"><g class="ag-ip"><rect x="3" y="2" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="9.5" y="2" width="3.5" height="12" rx="1" fill="currentColor"/></g><path class="ag-ij" d="M4 2.5v11l9-5.5z" fill="currentColor" style="display:none"/></svg></button>
+    <div class="ag-casos" role="group" aria-label="Casos del día a día"></div>
+  </div>
+</div>
+      <p class="ag-mas"><a class="boton negro" href="#precio" data-ver-plan="medida">Ver el plan A medida</a></p>
+    </div>
+  </section>
+  <!-- agentes:fin -->
   <section class="seccion" style="padding-top:0">
     <div class="wrap" style="padding-top:0">
       <h2>Lo que me cuentan <span class="fino">los directores</span></h2>
@@ -1117,30 +1142,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
       </div>
     </div>
   </section>
-  <!-- agentes:inicio -->
-  <section class="seccion" id="agentes">
-    <div class="wrap">
-      <div class="cabeza" data-aparece><h2>Tus agentes, <span class="fino">trabajando solos</span></h2><p class="entradilla">Así queda cuando te lo dejamos montado con el plan A medida. Los datos entran solos, cada agente hace su parte y a ti te llega el aviso al móvil.</p></div>
-<div class="ag">
-  <div class="ag-marco">
-    <div class="ag-esc" data-l="h" role="img" aria-label="Animación: los datos del hotel entran solos, el jefe de dirección los reparte entre sus agentes y al director le llega el aviso con el trabajo hecho en el móvil">
-      <div class="ag-rueda">
-        <svg class="ag-lineas" aria-hidden="true"><circle/><g></g></svg>
-      </div>
-      <div class="ag-in"></div>
-      <div class="ag-tel"><div class="ag-pant"><div class="ag-hora">8:00</div><div class="ag-auto"><i></i>En automático</div><div class="ag-nots"></div></div></div>
-      <div class="ag-chip"><em>Cada mañana</em><span>Reseñas</span></div>
-    </div>
-  </div>
-  <div class="ag-ctrl">
-    <button class="ag-play" type="button" aria-label="Pausar"><svg viewBox="0 0 16 16" aria-hidden="true"><g class="ag-ip"><rect x="3" y="2" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="9.5" y="2" width="3.5" height="12" rx="1" fill="currentColor"/></g><path class="ag-ij" d="M4 2.5v11l9-5.5z" fill="currentColor" style="display:none"/></svg></button>
-    <div class="ag-casos" role="group" aria-label="Casos del día a día"></div>
-  </div>
-</div>
-    </div>
-  </section>
-  <!-- agentes:fin -->
-<section class="precio halo">
+  <section class="precio halo">
     <div class="wrap" id="precio">
       <div class="cabeza" data-aparece><h2>Elige <span class="fino">cómo entras</span></h2><p class="entradilla">Pago único y acceso de por vida.</p></div>
       <div class="selector-planes" role="tablist" aria-label="Elige un plan">
@@ -1774,6 +1776,13 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
       esc.getAnimations({ subtree: true }).forEach(function (a) { if (pausado) a.pause(); else a.play(); });
       ponBoton();
       if (!pausado && !empezado) { empezado = true; nots.textContent = ""; corre(0); }
+    });
+
+    // «Ver el plan A medida»: en el móvil deja elegido ese plan en el selector de precios
+    const ver = document.querySelector("[data-ver-plan]");
+    if (ver) ver.addEventListener("click", function () {
+      const b = document.querySelector('[data-plan="' + ver.dataset.verPlan + '"]');
+      if (b) b.click();
     });
 
     encaja();
