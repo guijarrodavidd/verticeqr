@@ -1062,7 +1062,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
     </div>
   </section>
   <!-- agentes:fin -->
-  <section class="seccion" style="padding-top:0">
+    <section class="seccion" style="padding-top:0">
     <div class="wrap" style="padding-top:0">
       <h2>Lo que me cuentan <span class="fino">los directores</span></h2>
       <div class="carrusel" data-aparece style="--d:1"><div class="carrusel-pista"><blockquote>Quitarme tiempo de estar encerrada en la oficina porque necesito estar en la operación.</blockquote><blockquote>Me los da el PMS, pero otra cosa es que tengamos tiempo para analizarlo.</blockquote><blockquote>Me frena el no saber cómo hacerlo y no meter la pata.</blockquote><blockquote>Aunque se llegue a objetivo, siempre piden más.</blockquote><blockquote>Quiero quitarme el trabajo, y el tiempo que gane lo dedicaré a vender mejor.</blockquote><blockquote aria-hidden="true">Quitarme tiempo de estar encerrada en la oficina porque necesito estar en la operación.</blockquote><blockquote aria-hidden="true">Me los da el PMS, pero otra cosa es que tengamos tiempo para analizarlo.</blockquote><blockquote aria-hidden="true">Me frena el no saber cómo hacerlo y no meter la pata.</blockquote><blockquote aria-hidden="true">Aunque se llegue a objetivo, siempre piden más.</blockquote><blockquote aria-hidden="true">Quiero quitarme el trabajo, y el tiempo que gane lo dedicaré a vender mejor.</blockquote></div></div>
@@ -1585,8 +1585,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
     });
 
     let lay = LAY.h, s = 1, rot = 0, tok = 0, visible = false, empezado = false;
-    const reducido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let pausado = reducido;
+    let pausado = false;
 
     function colocar() {
       agEls.forEach(function (el, i) {
@@ -1792,13 +1791,12 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
 
     const fijo = /^#foto-([1-7])$/.exec(location.hash);
     if (fijo) { pausado = true; empezado = true; foto(+fijo[1] - 1); return; }
-    if (reducido) { empezado = true; foto(2); return; }
     marcaCaso(0);
     if ("IntersectionObserver" in window) {
       new IntersectionObserver(function (en) {
         visible = en[0].isIntersecting;
         if (visible && !empezado && !pausado) { empezado = true; corre(0); }
-      }, { threshold: 0.3 }).observe(marco);
+      }, { threshold: 0.15 }).observe(marco);
     } else { visible = true; empezado = true; corre(0); }
   })();
 /* agentes:fin */</script>
