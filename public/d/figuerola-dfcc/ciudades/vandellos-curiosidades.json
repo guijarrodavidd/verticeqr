@@ -1,0 +1,377 @@
+{
+  "genessies-1": {
+    "pregunta": {
+      "ES": "¿Qué carretera pasa junto a La Figuerola?",
+      "EN": "Which road runs past La Figuerola?"
+    },
+    "opciones": [
+      {
+        "ES": "La N-340",
+        "EN": "The N-340"
+      },
+      {
+        "ES": "La C-44",
+        "EN": "The C-44"
+      },
+      {
+        "ES": "La AP-7",
+        "EN": "The AP-7"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "La C-44, que va de l'Hospitalet de l'Infant a Móra la Nova. El hotel está en el kilómetro 11,4.",
+      "EN": "The C-44, from l'Hospitalet de l'Infant to Móra la Nova. The hotel is at kilometre 11.4."
+    }
+  },
+  "genessies-2": {
+    "pregunta": {
+      "ES": "¿De qué color son las marcas de un sendero de pequeño recorrido (PR)?",
+      "EN": "What colour are the marks on a short-distance trail (PR)?"
+    },
+    "opciones": [
+      {
+        "ES": "Blancas y rojas",
+        "EN": "White and red"
+      },
+      {
+        "ES": "Blancas y amarillas",
+        "EN": "White and yellow"
+      },
+      {
+        "ES": "Verdes y blancas",
+        "EN": "Green and white"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Blancas y amarillas. Las blancas y rojas son de los GR, de gran recorrido, y las verdes y blancas, de los senderos locales.",
+      "EN": "White and yellow. White and red are for the long-distance GR trails, and green and white for local paths."
+    }
+  },
+  "genessies-3": {
+    "pregunta": {
+      "ES": "¿Qué árbol da nombre a un «rourar»?",
+      "EN": "Which tree gives a \"rourar\" its name?"
+    },
+    "opciones": [
+      {
+        "ES": "El roble",
+        "EN": "The oak"
+      },
+      {
+        "ES": "El pino",
+        "EN": "The pine"
+      },
+      {
+        "ES": "El olivo",
+        "EN": "The olive"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El roble: en catalán se llama roure, y un rourar es un sitio de robles.",
+      "EN": "The oak: in Catalan it is called roure, and a rourar is a place full of oaks."
+    }
+  },
+  "genessies-4": {
+    "pregunta": {
+      "ES": "¿Desde cuándo levantaban los íberos sus poblados en lo alto de los cerros?",
+      "EN": "Since when did the Iberians build their villages on hilltops?"
+    },
+    "opciones": [
+      {
+        "ES": "Desde el siglo VI antes de Cristo",
+        "EN": "From the 6th century BC"
+      },
+      {
+        "ES": "Desde el siglo II después de Cristo",
+        "EN": "From the 2nd century AD"
+      },
+      {
+        "ES": "Desde el año 1000",
+        "EN": "From the year 1000"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Desde el siglo VI antes de Cristo. Elegían sitios altos y difíciles de alcanzar, con murallas, y su mundo se acabó con la romanización.",
+      "EN": "From the 6th century BC. They chose high, hard-to-reach spots, with walls, and their world came to an end with Romanisation."
+    }
+  },
+  "genessies-5": {
+    "pregunta": {
+      "ES": "¿Cómo se llamaba Vandellòs en un documento de 1342?",
+      "EN": "What was Vandellòs called in a document from 1342?"
+    },
+    "opciones": [
+      {
+        "ES": "Vallis Laurorum",
+        "EN": "Vallis Laurorum"
+      },
+      {
+        "ES": "Oleum Flumen",
+        "EN": "Oleum Flumen"
+      },
+      {
+        "ES": "Vall de Llastres",
+        "EN": "Vall de Llastres"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Vallis Laurorum, el valle de los laureles. En 1460 ya aparece como Vall de Llorer.",
+      "EN": "Vallis Laurorum, the valley of laurels. By 1460 it appears as Vall de Llorer."
+    }
+  },
+  "priorat-1": {
+    "pregunta": {
+      "ES": "¿Cuántas habitaciones tiene La Figuerola?",
+      "EN": "How many rooms does La Figuerola have?"
+    },
+    "opciones": [
+      {
+        "ES": "35",
+        "EN": "35"
+      },
+      {
+        "ES": "65",
+        "EN": "65"
+      },
+      {
+        "ES": "120",
+        "EN": "120"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "65: estándar, superiores con terraza y cinco suites con nombre de viento.",
+      "EN": "65: standard rooms, superior rooms with a terrace and five suites named after winds."
+    }
+  },
+  "priorat-2": {
+    "pregunta": {
+      "ES": "¿Qué forma tienen los arcos del Celler Cooperatiu de Falset?",
+      "EN": "What shape are the arches in the Falset Celler Cooperatiu?"
+    },
+    "opciones": [
+      {
+        "ES": "De medio punto",
+        "EN": "Round"
+      },
+      {
+        "ES": "Parabólica",
+        "EN": "Parabolic"
+      },
+      {
+        "ES": "Apuntada",
+        "EN": "Pointed"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Parabólica. Son de ladrillo, separan la nave central de las laterales y Martinell los repitió en casi todos sus cellers.",
+      "EN": "Parabolic. They are brick, they divide the central nave from the side ones, and Martinell repeated them in almost all his wineries."
+    }
+  },
+  "priorat-3": {
+    "pregunta": {
+      "ES": "¿Cómo se llama la pizarra gris de las viñas del Priorat?",
+      "EN": "What is the grey slate in the Priorat vineyards called?"
+    },
+    "opciones": [
+      {
+        "ES": "Llicorella",
+        "EN": "Llicorella"
+      },
+      {
+        "ES": "Tosca",
+        "EN": "Tosca"
+      },
+      {
+        "ES": "Gres",
+        "EN": "Gres"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Llicorella. Se rompe en piedras que protegen el suelo de la erosión y dejan cultivar la viña en pendientes muy fuertes.",
+      "EN": "Llicorella. It breaks into stones that protect the soil from erosion and let vines grow on very steep slopes."
+    }
+  },
+  "priorat-4": {
+    "pregunta": {
+      "ES": "¿En qué año se fundó la cartuja de Escaladei?",
+      "EN": "In what year was the Escaladei charterhouse founded?"
+    },
+    "opciones": [
+      {
+        "ES": "1194",
+        "EN": "1194"
+      },
+      {
+        "ES": "1492",
+        "EN": "1492"
+      },
+      {
+        "ES": "1835",
+        "EN": "1835"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "En 1194, por orden de Alfons el Cast. Fue la primera cartuja de la península Ibérica.",
+      "EN": "In 1194, on the orders of Alfonso II. It was the first charterhouse in the Iberian Peninsula."
+    }
+  },
+  "priorat-5": {
+    "pregunta": {
+      "ES": "¿De dónde viene el nombre del Priorat?",
+      "EN": "Where does the Priorat get its name?"
+    },
+    "opciones": [
+      {
+        "ES": "Del prior de Escaladei",
+        "EN": "From the prior of Escaladei"
+      },
+      {
+        "ES": "De un río",
+        "EN": "From a river"
+      },
+      {
+        "ES": "De un apellido noble",
+        "EN": "From a noble family name"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Las tierras de la cartuja se llamaban «Priorat de la Cartoixa d'Escaladei», porque las gobernaba su prior.",
+      "EN": "The charterhouse lands were called the \"Priorat of the Charterhouse of Escaladei\", because its prior governed them."
+    }
+  },
+  "costa-1": {
+    "pregunta": {
+      "ES": "¿A qué temperatura está la piscina climatizada del hotel?",
+      "EN": "What temperature is the hotel's heated pool?"
+    },
+    "opciones": [
+      {
+        "ES": "24 °C",
+        "EN": "24 °C"
+      },
+      {
+        "ES": "28 °C",
+        "EN": "28 °C"
+      },
+      {
+        "ES": "34 °C",
+        "EN": "34 °C"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "A 28 grados. Abre de 10:00 a 20:00 todo el año.",
+      "EN": "28 degrees. It is open from 10:00 to 20:00 all year round."
+    }
+  },
+  "costa-2": {
+    "pregunta": {
+      "ES": "¿Quién mandó construir el hospital que da nombre a l'Hospitalet de l'Infant?",
+      "EN": "Who had the hospital built that gives l'Hospitalet de l'Infant its name?"
+    },
+    "opciones": [
+      {
+        "ES": "El infante Pere d'Aragó",
+        "EN": "Prince Pere of Aragon"
+      },
+      {
+        "ES": "Jaume I",
+        "EN": "James I"
+      },
+      {
+        "ES": "Los templarios",
+        "EN": "The Templars"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "El infante Pere, hijo de Jaume II y Blanca de Nàpols, en 1344, para acoger a quien viajaba por el camino de la Via Augusta.",
+      "EN": "Prince Pere, son of James II and Blanche of Anjou, in 1344, to take in travellers on the Via Augusta road."
+    }
+  },
+  "costa-3": {
+    "pregunta": {
+      "ES": "¿Qué queda sobre el illot del Torn?",
+      "EN": "What stands on the illot del Torn?"
+    },
+    "opciones": [
+      {
+        "ES": "Un faro",
+        "EN": "A lighthouse"
+      },
+      {
+        "ES": "Los restos de una torre de vigilancia",
+        "EN": "The remains of a watchtower"
+      },
+      {
+        "ES": "Una ermita",
+        "EN": "A chapel"
+      }
+    ],
+    "correcta": 1,
+    "explicacion": {
+      "ES": "Los restos de la Torre del Torn, una antigua torre de vigilancia declarada bien cultural de interés nacional.",
+      "EN": "The remains of the Torre del Torn, an old watchtower listed as a cultural asset of national interest."
+    }
+  },
+  "costa-4": {
+    "pregunta": {
+      "ES": "¿De dónde sacó su nombre Miami Platja?",
+      "EN": "Where did Miami Platja get its name?"
+    },
+    "opciones": [
+      {
+        "ES": "De un noticiario del NO-DO",
+        "EN": "From a cinema newsreel"
+      },
+      {
+        "ES": "De un hotel americano",
+        "EN": "From an American hotel"
+      },
+      {
+        "ES": "De una canción",
+        "EN": "From a song"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Su fundador vio en el NO-DO la noticia de un huracán en Miami Beach y tradujo el nombre para que todo el mundo lo pudiera pronunciar.",
+      "EN": "Its founder saw a newsreel about a hurricane in Miami Beach and translated the name so everyone could pronounce it."
+    }
+  },
+  "costa-5": {
+    "pregunta": {
+      "ES": "¿Quién inauguró en 1960 la plaza de Alexander Fleming en Miami Platja?",
+      "EN": "Who opened the Alexander Fleming square in Miami Platja in 1960?"
+    },
+    "opciones": [
+      {
+        "ES": "Su viuda",
+        "EN": "His widow"
+      },
+      {
+        "ES": "El alcalde de Tarragona",
+        "EN": "The mayor of Tarragona"
+      },
+      {
+        "ES": "Joan Miró",
+        "EN": "Joan Miró"
+      }
+    ],
+    "correcta": 0,
+    "explicacion": {
+      "ES": "Amalia Koutsouri-Vourekas, viuda de Fleming, el 24 de julio de 1960.",
+      "EN": "Amalia Koutsouri-Vourekas, Fleming's widow, on 24 July 1960."
+    }
+  }
+}

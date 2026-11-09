@@ -1,0 +1,923 @@
+{
+  "slug": "vandellos",
+  "nombre": "Vandellòs, el Priorat y la costa",
+  "intro": {
+    "ES": "La Figuerola está en el valle de Vandellòs, a unos 2 km del pueblo por la carretera C-44. En coche, Vandellòs te queda a 5 minutos y el Mas de Genessies, donde empieza la subida a la Mola, a 10. Las playas de l'Hospitalet de l'Infant están a unos 17 minutos y las calas de Miami Platja a 20. Falset, la entrada al Priorat, queda a 35 minutos, igual que el castillo de Miravet sobre el Ebro. PortAventura está a 40 y la cartuja de Escaladei, a una hora.",
+    "EN": "La Figuerola sits in the Vandellòs valley, about 2 km from the village along the C-44. By car, Vandellòs is 5 minutes away and the Mas de Genessies, where the climb up the Mola begins, is 10. The beaches of l'Hospitalet de l'Infant are about 17 minutes away and the Miami Platja coves 20. Falset, the gateway to the Priorat, is 35 minutes away, the same as Miravet castle above the Ebro. PortAventura is 40 minutes away and the Escaladei charterhouse an hour."
+  },
+  "lugares": [
+    {
+      "id": "vandellos",
+      "img": "/ciudades/vandellos/img/vandellos.jpg",
+      "nombre": "Vandellòs y la iglesia de Sant Andreu",
+      "zona": {
+        "ES": "A 2 km del hotel, 5 minutos en coche por la C-44",
+        "EN": "2 km from the hotel, 5 minutes by car along the C-44"
+      },
+      "d": {
+        "ES": "El pueblo está a 281 metros, entre montañas, y aparece en un documento de 1342 como Vallis Laurorum, el valle de los laureles. La iglesia de Sant Andreu tiene tres naves y una cúpula de 1773 que hubo que rehacer después de la Guerra Civil; el campanario es bastante más antiguo. En 1813 lo saquearon las tropas del mariscal Suchet y en 1845 un terremoto dañó muchas casas.",
+        "EN": "The village sits at 281 metres among the mountains and appears in a document from 1342 as Vallis Laurorum, the valley of laurels. The church of Sant Andreu has three naves and a dome from 1773 that had to be rebuilt after the Civil War; the bell tower is much older. In 1813 Marshal Suchet's troops sacked the village, and in 1845 an earthquake damaged many of its houses."
+      },
+      "cuando": {
+        "ES": "El lunes por la mañana, que hay mercado. Deja el coche a la entrada del pueblo",
+        "EN": "Monday morning, when the market is on. Leave the car at the entrance to the village"
+      },
+      "min": 5,
+      "modo": "coche",
+      "lat": 41.0192,
+      "lng": 0.8328
+    },
+    {
+      "id": "genessies",
+      "img": "/ciudades/vandellos/img/genessies.jpg",
+      "nombre": "Mola de Genessies",
+      "zona": {
+        "ES": "Sierra de Vandellòs. 10 minutos en coche hasta el Mas de Genessies y hora y media a pie",
+        "EN": "Vandellòs hills. 10 minutes by car to the Mas de Genessies, then an hour and a half on foot"
+      },
+      "d": {
+        "ES": "Es la gran roca de caliza gris que ves al oeste del pueblo. Arriba quedan restos de un poblado ibérico: los íberos vivían en lo alto de los cerros desde el siglo VI antes de Cristo, con murallas, para vigilar los campos y los pasos. La cima tiene un vértice geodésico a unos 711 metros y desde ella ves la sierra y el mar.",
+        "EN": "It is the big grey limestone rock you see to the west of the village. Up top are the remains of an Iberian settlement: the Iberians lived on hilltops from the 6th century BC, behind walls, to watch over their fields and the passes. The summit has a survey marker at about 711 metres, with views over the hills and out to sea."
+      },
+      "cuando": {
+        "ES": "Por la mañana o a última hora de la tarde. El último tramo tiene un paso corto en el que hay que apoyar las manos",
+        "EN": "In the morning or late afternoon. The last stretch has a short step where you need your hands"
+      },
+      "min": 10,
+      "modo": "coche",
+      "lat": 41.01627,
+      "lng": 0.78543
+    },
+    {
+      "id": "llaberia",
+      "img": "/ciudades/vandellos/img/llaberia.jpg",
+      "nombre": "Llaberia y La Miranda",
+      "zona": {
+        "ES": "Tivissa, 30 minutos en coche",
+        "EN": "Tivissa, 30 minutes by car"
+      },
+      "d": {
+        "ES": "Llaberia está a 680 metros y es el pueblo más alto de las Terres de l'Ebre: una veintena de casas de piedra y, en 2023, cinco vecinos censados. Tiene la iglesia románica de Sant Joan, que se fortificó y aparece en los documentos desde 1279. Del pueblo sale una ruta de unos 9 km hasta La Miranda, el punto más alto de la sierra, a 918 metros, donde está el radar del Servei Meteorològic de Catalunya.",
+        "EN": "Llaberia sits at 680 metres, the highest village in the Terres de l'Ebre: some twenty stone houses and, in 2023, five registered residents. It has the Romanesque church of Sant Joan, which was fortified and appears in records from 1279. From the village a walk of about 9 km climbs to La Miranda, the highest point of the range at 918 metres, where the Catalan weather service has its radar."
+      },
+      "cuando": {
+        "ES": "Con el cielo limpio, que desde la cresta ves la costa del Camp de Tarragona. Cuenta entre tres y cuatro horas para la ruta",
+        "EN": "On a clear day, when the ridge looks out over the Camp de Tarragona coast. Allow three to four hours for the walk"
+      },
+      "min": 30,
+      "modo": "coche",
+      "lat": 41.08577,
+      "lng": 0.84212
+    },
+    {
+      "id": "hospitalet",
+      "img": "/ciudades/vandellos/img/hospitalet.jpg",
+      "nombre": "L'Hospitalet de l'Infant y su hospital del siglo XIV",
+      "zona": {
+        "ES": "En la costa, 17 minutos en coche",
+        "EN": "On the coast, 17 minutes by car"
+      },
+      "d": {
+        "ES": "El pueblo debe su nombre al hospital que mandó levantar en 1344 el infante Pere d'Aragó, hijo de Jaume II, para dar cobijo a quien viajaba entre Barcelona y València por el camino de la antigua Via Augusta. Era un recinto cuadrado de unos 55 metros de lado, con muros de casi 12 metros y torres de 18, y acogió viajeros hasta principios del siglo XIX. Hoy quedan una torre, tres fachadas y tres arcos góticos. La plaça del Pou era su patio, con el pozo.",
+        "EN": "The town is named after the hospital that Prince Pere of Aragon, son of James II, had built in 1344 to shelter travellers on the road between Barcelona and Valencia, the old Via Augusta. It was a square compound about 55 metres a side, with walls almost 12 metres high and 18-metre towers, and it took in travellers until the early 19th century. One tower, three walls and three Gothic arches still stand. The Plaça del Pou was its courtyard, with the well."
+      },
+      "cuando": {
+        "ES": "A media tarde, antes de bajar al paseo de la playa",
+        "EN": "Mid-afternoon, before heading down to the seafront"
+      },
+      "min": 17,
+      "modo": "coche",
+      "lat": 40.99173,
+      "lng": 0.92226
+    },
+    {
+      "id": "torn",
+      "img": "/ciudades/vandellos/img/torn.jpg",
+      "nombre": "Platja del Torn",
+      "zona": {
+        "ES": "Al sur de l'Hospitalet de l'Infant, 20 minutos en coche",
+        "EN": "South of l'Hospitalet de l'Infant, 20 minutes by car"
+      },
+      "d": {
+        "ES": "Son 1.300 metros de arena fina con dunas, matorral y pinos, dentro del espacio natural protegido de la Rojala. En la punta de poniente, sobre el illot del Torn, quedan los restos de una torre de vigilancia declarada bien cultural de interés nacional. Tiene bandera azul y es playa naturista, con unas 2.000 personas al día en julio y agosto.",
+        "EN": "It is 1,300 metres of fine sand with dunes, scrub and pine trees, inside the protected natural area of la Rojala. At the western tip, on the illot del Torn, stand the remains of a watchtower listed as a cultural asset of national interest. It has a Blue Flag and it is a naturist beach, with around 2,000 people a day in July and August."
+      },
+      "cuando": {
+        "ES": "Entra al agua despacio, que cubre enseguida. Con niños, mejor las calas de Miami Platja",
+        "EN": "Go into the water slowly, as it gets deep quickly. With children, the Miami Platja coves are a better choice"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 40.97117,
+      "lng": 0.89394
+    },
+    {
+      "id": "miami",
+      "img": "/ciudades/vandellos/img/miami.jpg",
+      "nombre": "Las calas de Miami Platja",
+      "zona": {
+        "ES": "Mont-roig del Camp, pegado a l'Hospitalet. 20 minutos en coche",
+        "EN": "Mont-roig del Camp, next to l'Hospitalet. 20 minutes by car"
+      },
+      "d": {
+        "ES": "La costa son calas pequeñas entre rocas rojizas, como la Cala Misteri, y una playa larga, la de Cristall. La urbanización nació en 1952, cuando Marcel·lí Esquius compró un antiguo coto de caza; el nombre lo sacó de un noticiario del NO-DO sobre un huracán en Miami Beach. En 1960 la viuda de Alexander Fleming inauguró la plaza y la estatua dedicadas a su marido.",
+        "EN": "The coast is a string of small coves between reddish rocks, like Cala Misteri, plus one long beach, Platja de Cristall. The resort was born in 1952, when Marcel·lí Esquius bought an old hunting estate; he took the name from a newsreel about a hurricane in Miami Beach. In 1960 Alexander Fleming's widow opened the square and the statue dedicated to her husband."
+      },
+      "cuando": {
+        "ES": "En agosto, antes de las 10:00, que las calas se llenan pronto",
+        "EN": "In August, before 10:00, as the coves fill up early"
+      },
+      "min": 20,
+      "modo": "coche",
+      "lat": 41.00845,
+      "lng": 0.94367
+    },
+    {
+      "id": "mas-miro",
+      "img": "/ciudades/vandellos/img/mas-miro.jpg",
+      "nombre": "Mas Miró, en Mont-roig del Camp",
+      "zona": {
+        "ES": "25 minutos en coche",
+        "EN": "25 minutes by car"
+      },
+      "d": {
+        "ES": "Los padres de Joan Miró compraron esta masía en 1910 y él pasó aquí una larga temporada para recuperarse de una enfermedad. En ese reposo decidió dedicarse solo a pintar, y aquí pintó «La masia» (1921-1922), el cuadro que compró Ernest Hemingway y que hoy cuelga en la National Gallery of Art de Washington. Se visita su estudio, con dos grafitis que Miró dibujó en la pared.",
+        "EN": "Joan Miró's parents bought this farmhouse in 1910, and he spent a long spell here recovering from an illness. During that rest he decided to devote himself to painting, and here he painted \"The Farm\" (1921-1922), the canvas Ernest Hemingway bought and which now hangs in the National Gallery of Art in Washington. You can visit his studio, with two graffiti Miró drew on the wall."
+      },
+      "cuando": {
+        "ES": "La visita es guiada y con reserva: mira los días en la web de la Fundació Mas Miró",
+        "EN": "Visits are guided and must be booked: check the days on the Fundació Mas Miró website"
+      },
+      "min": 25,
+      "modo": "coche",
+      "lat": 41.06062,
+      "lng": 0.99414
+    },
+    {
+      "id": "falset",
+      "img": "/ciudades/vandellos/img/falset.jpg",
+      "nombre": "Falset y su Celler Cooperatiu",
+      "zona": {
+        "ES": "Capital del Priorat, 35 minutos en coche",
+        "EN": "Capital of the Priorat, 35 minutes by car"
+      },
+      "d": {
+        "ES": "Cèsar Martinell levantó este celler en 1919 para el Sindicat Agrícola de Falset, con arcos parabólicos de ladrillo y una fachada de aire medieval entre dos torres. La torre del depósito de agua se sostiene con arcos parabólicos cruzados. Es bien cultural de interés nacional y hoy pertenece a la cooperativa Falset-Marçà, dentro de la D.O. Montsant.",
+        "EN": "Cèsar Martinell built this winery in 1919 for the Falset farmers' union, with brick parabolic arches and a medieval-looking façade between two towers. The water tower stands on crossed parabolic arches. It is listed as a cultural asset of national interest and now belongs to the Falset-Marçà cooperative, within the Montsant D.O."
+      },
+      "cuando": {
+        "ES": "Por la mañana. Si quieres ver el interior, pregunta antes por la visita",
+        "EN": "In the morning. If you want to see inside, ask about visits beforehand"
+      },
+      "min": 35,
+      "modo": "coche",
+      "lat": 41.14258,
+      "lng": 0.81805
+    },
+    {
+      "id": "escaladei",
+      "img": "/ciudades/vandellos/img/escaladei.jpg",
+      "nombre": "Cartoixa d'Escaladei",
+      "zona": {
+        "ES": "La Morera de Montsant, una hora en coche",
+        "EN": "La Morera de Montsant, one hour by car"
+      },
+      "d": {
+        "ES": "El rey Alfons el Cast la fundó en 1194 y fue la primera cartuja de la península Ibérica. Los primeros monjes llegaron de Provenza y las obras acabaron en 1228, al pie de la cara sur de la sierra del Montsant. Sus tierras se llamaron «Priorat de la Cartoixa d'Escaladei», porque las gobernaba su prior, y de ahí viene el nombre de toda la comarca.",
+        "EN": "King Alfonso II founded it in 1194, the first Carthusian monastery in the Iberian Peninsula. The first monks came from Provence and the building was finished in 1228, at the foot of the southern face of the Montsant range. Its lands were called the \"Priorat of the Charterhouse of Escaladei\", because its prior governed them, and that is where the whole county gets its name."
+      },
+      "cuando": {
+        "ES": "Suele cerrar los lunes. Mira el horario antes y cuenta una hora larga para la visita",
+        "EN": "It is usually closed on Mondays. Check opening times first and allow a good hour for the visit"
+      },
+      "min": 65,
+      "modo": "coche",
+      "lat": 41.2565,
+      "lng": 0.81038
+    },
+    {
+      "id": "miravet",
+      "img": "/ciudades/vandellos/img/miravet.jpg",
+      "nombre": "Castillo templario de Miravet y el pas de barca",
+      "zona": {
+        "ES": "Sobre el Ebro, 35 minutos en coche",
+        "EN": "Above the Ebro, 35 minutes by car"
+      },
+      "d": {
+        "ES": "Fue una de las encomiendas más importantes del Temple en Cataluña y se considera uno de los mejores ejemplos de arquitectura militar templera de Europa. En la torre del Tresor se guardaba el archivo de la orden en Cataluña y Aragón. Abajo, el pas de barca cruza el río sin motor, con la fuerza de la corriente: hay constancia de él desde 1153 y sus dos barcas, el Monturiol y el Isaac Peral, se construyeron en Tortosa en 1900.",
+        "EN": "It was one of the most important Templar commanderies in Catalonia and is considered one of the finest examples of Templar military architecture in Europe. The Treasure Tower held the order's archive for Catalonia and Aragon. Down below, the pas de barca crosses the river with no engine, using the current: it is recorded from 1153, and its two boats, the Monturiol and the Isaac Peral, were built in Tortosa in 1900."
+      },
+      "cuando": {
+        "ES": "Cruza en el pas de barca y luego sube al castillo. Con el río crecido o con cierzo fuerte, la barca no sale",
+        "EN": "Cross on the pas de barca, then go up to the castle. When the river is high or the north-west wind blows hard, the ferry does not run"
+      },
+      "min": 35,
+      "modo": "coche",
+      "lat": 41.03546,
+      "lng": 0.59409
+    },
+    {
+      "id": "portaventura",
+      "img": "/ciudades/vandellos/img/portaventura.jpg",
+      "nombre": "PortAventura Park",
+      "zona": {
+        "ES": "Salou y Vila-seca, 40 minutos en coche",
+        "EN": "Salou and Vila-seca, 40 minutes by car"
+      },
+      "d": {
+        "ES": "El parque abrió en 1995 y tiene seis zonas, de la Mediterrània al Far West. Para los niños pequeños está SésamoAventura y para los que ya miden lo suficiente, el Dragon Khan y el Shambhala, que bajan uno junto al otro.",
+        "EN": "The park opened in 1995 and has six areas, from Mediterrània to the Far West. Little ones have SésamoAventura, and those tall enough can ride Dragon Khan and Shambhala, which plunge side by side."
+      },
+      "cuando": {
+        "ES": "Abre según temporada: mira el calendario antes de salir y llega a la hora de apertura",
+        "EN": "It opens by season: check the calendar before you go and get there when it opens"
+      },
+      "min": 40,
+      "modo": "coche",
+      "lat": 41.08696,
+      "lng": 1.15858
+    }
+  ],
+  "rutas": [
+    {
+      "id": "genessies",
+      "expId": "ex1",
+      "img": "/ciudades/vandellos/img/genessies.jpg",
+      "titulo": {
+        "ES": "La Mola de Genessies, con picnic de la casa",
+        "EN": "The Mola de Genessies, with a picnic from the kitchen"
+      },
+      "tipo": {
+        "ES": "A pie, por libre",
+        "EN": "On foot, self-guided"
+      },
+      "dur": "3 h",
+      "d": {
+        "ES": "Sales a las 9:30 y en diez minutos estás en el Mas de Genessies. Subes por el PR 92 hasta el Coll del Rourar y, por un tramo más empinado, al poblado ibérico y a la cima, a unos 711 metros. Bajas por la Portella de Genessies y el Barranc Fondo, y el picnic te lo comes donde quieras. Hacia las 12:30 estás en el hotel.",
+        "EN": "You leave at 9:30 and ten minutes later you are at the Mas de Genessies. You walk up the PR 92 to the Coll del Rourar and, on a steeper stretch, to the Iberian settlement and the summit, at about 711 metres. You come down by the Portella de Genessies and the Barranc Fondo, and eat the picnic wherever you like. You are back at the hotel around 12:30."
+      },
+      "salida": {
+        "ES": "En tu coche desde el aparcamiento del hotel a las 9:30, con el picnic que te damos en recepción. Vuelta hacia las 12:30",
+        "EN": "In your car from the hotel car park at 9:30, with the picnic we hand you at reception. Back around 12:30"
+      },
+      "incluye": {
+        "ES": [
+          "Picnic para dos de la cocina del hotel",
+          "Mapa de la ruta"
+        ],
+        "EN": [
+          "Picnic for two from the hotel kitchen",
+          "Route map"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Guía",
+          "Transporte: vas en tu coche"
+        ],
+        "EN": [
+          "Guide",
+          "Transport: you drive yourself"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado de montaña, que la subida al coll es irregular",
+          "Un litro de agua por persona",
+          "Gorra y crema de mayo a septiembre"
+        ],
+        "EN": [
+          "Walking boots, as the climb to the col is uneven",
+          "A litre of water per person",
+          "A cap and sun cream from May to September"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "La Figuerola",
+            "EN": "La Figuerola"
+          },
+          "d": {
+            "ES": "La masía está en el valle de Vandellòs, a dos kilómetros del pueblo. Pon en el navegador el Mas de Genessies: son unos diez minutos.",
+            "EN": "The farmhouse sits in the Vandellòs valley, two kilometres from the village. Put the Mas de Genessies into your sat nav: it is about ten minutes away."
+          },
+          "tip": {
+            "ES": "Recoge el picnic en recepción antes de salir.",
+            "EN": "Pick up the picnic at reception before you leave."
+          },
+          "hora": "09:30",
+          "dur": "5 min",
+          "img": "/ciudades/vandellos/img/hotel.jpg",
+          "lat": 41.03003,
+          "lng": 0.81256,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Mas de Genessies",
+            "EN": "Mas de Genessies"
+          },
+          "s": {
+            "ES": "Donde dejas el coche",
+            "EN": "Where you park"
+          },
+          "d": {
+            "ES": "Aparca cerca del mas sin tapar ningún acceso, que es una finca privada. De aquí sale el PR 92, con las marcas blancas y amarillas de los senderos de pequeño recorrido, hacia el Coll del Rourar.",
+            "EN": "Park near the farmhouse without blocking any gate, as it is private land. From here the PR 92 sets off towards the Coll del Rourar, with the white and yellow marks of short-distance trails."
+          },
+          "tip": {
+            "ES": "Antes de echar a andar, mira la roca: el poblado está arriba del todo.",
+            "EN": "Before you set off, look up at the rock: the settlement is right at the top."
+          },
+          "hora": "09:40",
+          "dur": "5 min",
+          "img": "/ciudades/vandellos/img/genessies.jpg",
+          "lat": 41.01498,
+          "lng": 0.79626,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Coll del Rourar",
+            "EN": "Coll del Rourar"
+          },
+          "s": {
+            "ES": "Donde dejas el PR",
+            "EN": "Where you leave the PR"
+          },
+          "d": {
+            "ES": "El camino hasta el coll es firme pero irregular y empinado. En el coll dejas el PR 92 y subes por un tramo con más pendiente hacia la roca.",
+            "EN": "The path up to the col is firm but uneven and steep. At the col you leave the PR 92 and climb a steeper stretch towards the rock."
+          },
+          "tip": {
+            "ES": "Más arriba hay un paso corto en el que tendrás que apoyar las manos.",
+            "EN": "Higher up there is a short step where you will need your hands."
+          },
+          "hora": "10:15",
+          "dur": "5 min",
+          "img": "/ciudades/vandellos/img/genessies.jpg",
+          "lat": 41.01462,
+          "lng": 0.78332,
+          "tramo": "pie",
+          "tramoDuracionMin": 30,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Poblado ibérico y cima",
+            "EN": "Iberian settlement and summit"
+          },
+          "s": {
+            "ES": "Unos 711 metros",
+            "EN": "About 711 metres"
+          },
+          "d": {
+            "ES": "Primero pasas entre los restos del poblado ibérico y, a pocos minutos, llegas al vértice geodésico de la cima. Los íberos vivían en cerros como este desde el siglo VI antes de Cristo, protegidos por murallas, para controlar los campos y los pasos.",
+            "EN": "First you walk through the remains of the Iberian settlement and, a few minutes later, reach the survey marker on the summit. The Iberians lived on hills like this one from the 6th century BC, behind walls, to keep watch over their fields and the passes."
+          },
+          "tip": {
+            "ES": "Junto a las ruinas verás marcas de hasta tres senderos: todos bajan al barranco.",
+            "EN": "Near the ruins you will see marks for up to three paths: they all lead down to the ravine."
+          },
+          "hora": "10:40",
+          "dur": "30 min",
+          "img": "/ciudades/vandellos/img/genessies-cima.jpg",
+          "lat": 41.01627,
+          "lng": 0.78543,
+          "tramo": "pie",
+          "tramoDuracionMin": 25,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Portella de Genessies y vuelta",
+            "EN": "Portella de Genessies and back"
+          },
+          "s": {
+            "ES": "Por el Barranc Fondo",
+            "EN": "Through the Barranc Fondo"
+          },
+          "d": {
+            "ES": "Para volver puedes deshacer el camino o rodear la roca por la Portella de Genessies hasta el Barranc Fondo, donde se juntan la ida y la vuelta. Desde el coche, diez minutos al hotel.",
+            "EN": "To get back you can retrace your steps or go round the rock by the Portella de Genessies down to the Barranc Fondo, where the outward and return paths meet. From the car it is ten minutes to the hotel."
+          },
+          "tip": {
+            "ES": "Si comes en el monte, llévate la basura de vuelta.",
+            "EN": "If you eat on the hill, take your rubbish back with you."
+          },
+          "hora": "11:10",
+          "dur": "50 min",
+          "img": "/ciudades/vandellos/img/genessies.jpg",
+          "lat": 41.01938,
+          "lng": 0.78302,
+          "tramo": "pie",
+          "tramoDuracionMin": 20,
+          "duracionMin": 50
+        }
+      ],
+      "fotos": [
+        "/ciudades/vandellos/img/genessies.jpg",
+        "/ciudades/vandellos/img/genessies-cima.jpg",
+        "/ciudades/vandellos/img/hotel.jpg",
+        "/ciudades/vandellos/img/vandellos.jpg"
+      ],
+      "duracionMin": 180,
+      "distanciaKm": 4.4,
+      "dificultad": "media",
+      "accesibilidad": {
+        "ES": "Unos 4,4 km a pie entre ida y vuelta, con unos 190 metros de subida. El camino al Coll del Rourar es pedregoso y empinado, y el último tramo tiene un paso corto de trepar. Con silla de ruedas o carrito no se puede hacer.",
+        "EN": "About 4.4 km on foot there and back, with around 190 metres of climbing. The path to the Coll del Rourar is stony and steep, and the last stretch has a short scramble. It cannot be done with a wheelchair or pushchair."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 41.03003,
+        "lng": 0.81256,
+        "foto": "/ciudades/vandellos/img/hotel.jpg",
+        "texto": {
+          "ES": "Aparcamiento de La Figuerola, a las 9:30. El picnic, en recepción.",
+          "EN": "La Figuerola car park, at 9:30. The picnic is at reception."
+        }
+      },
+      "cancelacion": {
+        "ES": "El picnic se pide la víspera, hasta las 21:30. La ruta la haces por libre, el día que quieras.",
+        "EN": "Order the picnic by 21:30 the day before. You walk the route on your own, any day you like."
+      },
+      "salidasFijas": [
+        "09:30"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "priorat",
+      "expId": "ex2",
+      "img": "/ciudades/vandellos/img/vinyes.jpg",
+      "titulo": {
+        "ES": "El Priorat en un día: Falset, Gratallops y Escaladei",
+        "EN": "The Priorat in a day: Falset, Gratallops and Escaladei"
+      },
+      "tipo": {
+        "ES": "En coche, con visita a bodega",
+        "EN": "By car, with a winery visit"
+      },
+      "dur": "8 h",
+      "d": {
+        "ES": "Sales a las 9:30 y a las 10:05 estás en Falset, delante del Celler Cooperatiu de Cèsar Martinell. A las 11:00 te esperan en una bodega de Gratallops para ver las viñas en terrazas y catar sus vinos. Comes por la zona y a las 15:00 entras en la cartuja de Escaladei, al pie del Montsant. Hacia las 17:30 estás en el hotel.",
+        "EN": "You leave at 9:30 and by 10:05 you are in Falset, in front of Cèsar Martinell's Celler Cooperatiu. At 11:00 a winery in Gratallops expects you, to walk among its terraced vines and taste its wines. You have lunch in the area and at 15:00 you go into the Escaladei charterhouse, at the foot of the Montsant. You are back at the hotel around 17:30."
+      },
+      "salida": {
+        "ES": "En tu coche desde el aparcamiento del hotel a las 9:30. Vuelta hacia las 17:30",
+        "EN": "In your car from the hotel car park at 9:30. Back around 17:30"
+      },
+      "incluye": {
+        "ES": [
+          "Visita y cata en una bodega de la D.O.Q. Priorat",
+          "Hoja de ruta con las horas"
+        ],
+        "EN": [
+          "Visit and tasting at a D.O.Q. Priorat winery",
+          "Route sheet with times"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Comida",
+          "Entrada a la cartuja de Escaladei"
+        ],
+        "EN": [
+          "Lunch",
+          "Admission to the Escaladei charterhouse"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Calzado cómodo para andar entre viñas",
+          "Un conductor que pruebe sin beber: la carretera tiene muchas curvas"
+        ],
+        "EN": [
+          "Comfortable shoes for walking among the vines",
+          "A driver who tastes without drinking: the road has plenty of bends"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "La Figuerola",
+            "EN": "La Figuerola"
+          },
+          "d": {
+            "ES": "Pon en el navegador el Celler Cooperatiu de Falset, en la calle Cèsar Martinell. Son unos 35 minutos, casi todos por carretera de montaña.",
+            "EN": "Put the Celler Cooperatiu de Falset, on Carrer de Cèsar Martinell, into your sat nav. It is about 35 minutes, mostly on mountain roads."
+          },
+          "tip": {
+            "ES": "Si quieres comer en el Priorat un domingo, reserva antes de salir.",
+            "EN": "If you want lunch in the Priorat on a Sunday, book before you leave."
+          },
+          "hora": "09:30",
+          "dur": "5 min",
+          "img": "/ciudades/vandellos/img/hotel.jpg",
+          "lat": 41.03003,
+          "lng": 0.81256,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Falset · Celler Cooperatiu",
+            "EN": "Falset · Celler Cooperatiu"
+          },
+          "s": {
+            "ES": "Martinell, 1919",
+            "EN": "Martinell, 1919"
+          },
+          "d": {
+            "ES": "Cèsar Martinell levantó este celler en 1919 para el Sindicat Agrícola de Falset. Las naves se separan con arcos parabólicos de ladrillo y la fachada, entre dos torres almenadas, tiene un aire medieval. Hoy es de la cooperativa Falset-Marçà, de la D.O. Montsant.",
+            "EN": "Cèsar Martinell built this winery in 1919 for the Falset farmers' union. Its naves are divided by brick parabolic arches, and the façade, between two crenellated towers, has a medieval look. Today it belongs to the Falset-Marçà cooperative, in the Montsant D.O."
+          },
+          "tip": {
+            "ES": "Fíjate en la torre del depósito de agua: se sostiene con arcos parabólicos cruzados.",
+            "EN": "Look at the water tower: it stands on crossed parabolic arches."
+          },
+          "hora": "10:05",
+          "dur": "40 min",
+          "img": "/ciudades/vandellos/img/falset.jpg",
+          "lat": 41.14258,
+          "lng": 0.81805,
+          "tramo": "coche",
+          "tramoDuracionMin": 35,
+          "duracionMin": 40
+        },
+        {
+          "n": {
+            "ES": "Gratallops · visita y cata",
+            "EN": "Gratallops · visit and tasting"
+          },
+          "s": {
+            "ES": "Viñas sobre llicorella",
+            "EN": "Vines on llicorella slate"
+          },
+          "d": {
+            "ES": "Gratallops está dentro de la D.O.Q. Priorat, la única denominación catalana con la calificación más alta. Son menos de 20.000 hectáreas y solo unas 1.600 de viña, sobre llicorella, una pizarra gris que obliga a cultivar en terrazas. En la bodega paseas entre las cepas y catas sus vinos.",
+            "EN": "Gratallops lies within the D.O.Q. Priorat, the only Catalan wine region with the top classification. It covers under 20,000 hectares, only about 1,600 of them vineyards, on llicorella, a grey slate that forces growers to farm in terraces. At the winery you walk among the vines and taste the wines."
+          },
+          "tip": {
+            "ES": "Quien conduce, que pruebe y escupa: la vuelta tiene muchas curvas.",
+            "EN": "Whoever is driving should taste and spit: the way back is full of bends."
+          },
+          "hora": "11:00",
+          "dur": "1 h 30 min",
+          "img": "/ciudades/vandellos/img/vinyes.jpg",
+          "lat": 41.19341,
+          "lng": 0.77687,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 90
+        },
+        {
+          "n": {
+            "ES": "Cartoixa d'Escaladei",
+            "EN": "Cartoixa d'Escaladei"
+          },
+          "s": {
+            "ES": "La primera cartuja de la península",
+            "EN": "The first charterhouse in the peninsula"
+          },
+          "d": {
+            "ES": "Alfons el Cast la fundó en 1194 y fue la primera cartuja de la península Ibérica. Los monjes llegaron de Provenza y la acabaron en 1228, bajo la cara sur del Montsant. Sus tierras se llamaron Priorat por el prior que las gobernaba.",
+            "EN": "Alfonso II founded it in 1194, the first Carthusian monastery in the Iberian Peninsula. The monks came from Provence and finished it in 1228, under the southern face of the Montsant. Its lands were called the Priorat after the prior who governed them."
+          },
+          "tip": {
+            "ES": "Suele cerrar los lunes: mira el horario antes de salir del hotel.",
+            "EN": "It is usually closed on Mondays: check opening times before leaving the hotel."
+          },
+          "hora": "15:00",
+          "dur": "1 h 15 min",
+          "img": "/ciudades/vandellos/img/escaladei.jpg",
+          "lat": 41.2565,
+          "lng": 0.81038,
+          "tramo": "coche",
+          "tramoDuracionMin": 20,
+          "duracionMin": 75
+        },
+        {
+          "n": {
+            "ES": "Vuelta al hotel",
+            "EN": "Back to the hotel"
+          },
+          "s": {
+            "ES": "Una hora y diez de carretera",
+            "EN": "An hour and ten minutes by road"
+          },
+          "d": {
+            "ES": "Llegas sobre las 17:30, con tiempo para un baño en la piscina climatizada antes de cenar en El Safareig.",
+            "EN": "You get back around 17:30, with time for a swim in the heated pool before dinner at El Safareig."
+          },
+          "tip": {
+            "ES": "Reserva la mesa desde la carta antes de salir de Escaladei.",
+            "EN": "Book your table from the menu before you leave Escaladei."
+          },
+          "hora": "17:30",
+          "dur": "5 min",
+          "img": "/ciudades/vandellos/img/hotel-aire.jpg",
+          "lat": 41.03003,
+          "lng": 0.81256,
+          "tramo": "coche",
+          "tramoDuracionMin": 70,
+          "duracionMin": 5
+        }
+      ],
+      "fotos": [
+        "/ciudades/vandellos/img/vinyes.jpg",
+        "/ciudades/vandellos/img/falset.jpg",
+        "/ciudades/vandellos/img/gratallops.jpg",
+        "/ciudades/vandellos/img/escaladei.jpg",
+        "/ciudades/vandellos/img/escaladei-arc.jpg"
+      ],
+      "duracionMin": 480,
+      "distanciaKm": 115,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Casi todo es en coche, por carreteras de montaña con muchas curvas. En la bodega se camina un rato entre viñas en pendiente, y la visita a la cartuja no está adaptada a personas con movilidad reducida.",
+        "EN": "Almost all of it is by car, on winding mountain roads. At the winery you walk for a while among sloping vines, and the charterhouse visit is not adapted for people with reduced mobility."
+      },
+      "tipoEntorno": "mixta",
+      "puntoEncuentro": {
+        "lat": 41.03003,
+        "lng": 0.81256,
+        "foto": "/ciudades/vandellos/img/hotel.jpg",
+        "texto": {
+          "ES": "Aparcamiento de La Figuerola, a las 9:30. Desde aquí vas en tu coche.",
+          "EN": "La Figuerola car park, at 9:30. From here you drive yourself."
+        }
+      },
+      "cancelacion": {
+        "ES": "Se reserva la víspera, hasta las 20:30, para que la bodega confirme la hora. Si cancelas antes de las 9:00 del mismo día, no se cobra.",
+        "EN": "Book by 20:30 the day before so the winery can confirm the time. Cancel before 9:00 on the day and you are not charged."
+      },
+      "salidasFijas": [
+        "09:30"
+      ],
+      "precioDesde": null
+    },
+    {
+      "id": "costa",
+      "expId": "ex3",
+      "img": "/ciudades/vandellos/img/torn.jpg",
+      "titulo": {
+        "ES": "La costa: el hospital del Infant, el Torn y las calas de Miami",
+        "EN": "The coast: the Infant's hospital, the Torn and the Miami coves"
+      },
+      "tipo": {
+        "ES": "En coche y a pie, por libre",
+        "EN": "By car and on foot, self-guided"
+      },
+      "dur": "8 h",
+      "d": {
+        "ES": "Sales a las 10:00 y a las 10:20 paseas por lo que queda del hospital del siglo XIV en l'Hospitalet de l'Infant. A las 11:00 bajas a la Platja del Torn, con dunas y pinos. Por la tarde vas a las calas de Miami Platja, de agua más tranquila. Hacia las 18:00 estás en el hotel.",
+        "EN": "You leave at 10:00 and by 10:20 you are walking round what remains of the 14th-century hospital in l'Hospitalet de l'Infant. At 11:00 you head down to the Platja del Torn, with its dunes and pines. In the afternoon you go to the Miami Platja coves, where the water is calmer. You are back at the hotel around 18:00."
+      },
+      "salida": {
+        "ES": "En tu coche desde el aparcamiento del hotel a las 10:00, con la nevera que te preparamos. Vuelta hacia las 18:00",
+        "EN": "In your car from the hotel car park at 10:00, with the cool box we pack for you. Back around 18:00"
+      },
+      "incluye": {
+        "ES": [
+          "Nevera de playa para dos de la cocina del hotel",
+          "Dos toallas de playa en préstamo"
+        ],
+        "EN": [
+          "Beach cool box for two from the hotel kitchen",
+          "Two beach towels on loan"
+        ]
+      },
+      "noIncluye": {
+        "ES": [
+          "Sombrilla y tumbonas en la playa",
+          "Aparcamiento de pago, si lo hay"
+        ],
+        "EN": [
+          "Parasol and sunbeds on the beach",
+          "Paid parking, where there is any"
+        ]
+      },
+      "llevar": {
+        "ES": [
+          "Escarpines para las calas, que se entra entre rocas",
+          "Crema solar y gorra"
+        ],
+        "EN": [
+          "Water shoes for the coves, as you get in over rocks",
+          "Sun cream and a cap"
+        ]
+      },
+      "paradas": [
+        {
+          "n": {
+            "ES": "Salida del hotel",
+            "EN": "Leaving the hotel"
+          },
+          "s": {
+            "ES": "La Figuerola",
+            "EN": "La Figuerola"
+          },
+          "d": {
+            "ES": "Bajas por la C-44 hacia el mar. En unos 17 minutos estás en el centro de l'Hospitalet de l'Infant.",
+            "EN": "You drive down the C-44 towards the sea. In about 17 minutes you are in the centre of l'Hospitalet de l'Infant."
+          },
+          "tip": {
+            "ES": "Recoge la nevera en recepción antes de salir.",
+            "EN": "Pick up the cool box at reception before you leave."
+          },
+          "hora": "10:00",
+          "dur": "5 min",
+          "img": "/ciudades/vandellos/img/hotel.jpg",
+          "lat": 41.03003,
+          "lng": 0.81256,
+          "tramo": "coche",
+          "tramoDuracionMin": 0,
+          "duracionMin": 5
+        },
+        {
+          "n": {
+            "ES": "Hospital de l'Infant",
+            "EN": "The Infant's hospital"
+          },
+          "s": {
+            "ES": "1344",
+            "EN": "1344"
+          },
+          "d": {
+            "ES": "El infante Pere d'Aragó lo mandó levantar en 1344 para acoger a quien viajaba por el camino de la antigua Via Augusta. Era un cuadrado de unos 55 metros de lado con torres de 18 metros. Quedan una torre, tres fachadas y tres arcos góticos, y la plaça del Pou era su patio.",
+            "EN": "Prince Pere of Aragon had it built in 1344 to take in travellers on the old Via Augusta road. It was a square about 55 metres a side with 18-metre towers. One tower, three walls and three Gothic arches remain, and the Plaça del Pou was its courtyard."
+          },
+          "tip": {
+            "ES": "Entra por la plaça Berenguer d'Entença y sal por la del Pou.",
+            "EN": "Go in through Plaça Berenguer d'Entença and come out through Plaça del Pou."
+          },
+          "hora": "10:20",
+          "dur": "30 min",
+          "img": "/ciudades/vandellos/img/hospitalet.jpg",
+          "lat": 40.99173,
+          "lng": 0.92226,
+          "tramo": "coche",
+          "tramoDuracionMin": 17,
+          "duracionMin": 30
+        },
+        {
+          "n": {
+            "ES": "Platja del Torn",
+            "EN": "Platja del Torn"
+          },
+          "s": {
+            "ES": "Dunas, pinos y una torre",
+            "EN": "Dunes, pines and a tower"
+          },
+          "d": {
+            "ES": "Son 1.300 metros de arena fina dentro del espacio protegido de la Rojala. Sobre el illot del Torn quedan los restos de una torre de vigilancia. Es playa naturista y tiene bandera azul.",
+            "EN": "It is 1,300 metres of fine sand inside the protected area of la Rojala. On the illot del Torn stand the remains of a watchtower. It is a naturist beach with a Blue Flag."
+          },
+          "tip": {
+            "ES": "Entra al agua despacio, que cubre enseguida.",
+            "EN": "Go into the water slowly, as it gets deep quickly."
+          },
+          "hora": "11:00",
+          "dur": "3 h",
+          "img": "/ciudades/vandellos/img/torn.jpg",
+          "lat": 40.97117,
+          "lng": 0.89394,
+          "tramo": "coche",
+          "tramoDuracionMin": 10,
+          "duracionMin": 180
+        },
+        {
+          "n": {
+            "ES": "Cala Misteri, Miami Platja",
+            "EN": "Cala Misteri, Miami Platja"
+          },
+          "s": {
+            "ES": "Agua tranquila entre rocas",
+            "EN": "Calm water between rocks"
+          },
+          "d": {
+            "ES": "Miami Platja es una sucesión de calas pequeñas entre rocas rojizas. Su fundador, Marcel·lí Esquius, la bautizó en 1952 por un noticiario sobre un huracán en Miami Beach.",
+            "EN": "Miami Platja is a string of small coves between reddish rocks. Its founder, Marcel·lí Esquius, named it in 1952 after a newsreel about a hurricane in Miami Beach."
+          },
+          "tip": {
+            "ES": "Busca sitio antes de las 16:00: la cala es pequeña.",
+            "EN": "Find a spot before 16:00: the cove is small."
+          },
+          "hora": "15:00",
+          "dur": "2 h 30 min",
+          "img": "/ciudades/vandellos/img/miami.jpg",
+          "lat": 41.00845,
+          "lng": 0.94367,
+          "tramo": "coche",
+          "tramoDuracionMin": 15,
+          "duracionMin": 150
+        },
+        {
+          "n": {
+            "ES": "Vuelta al hotel",
+            "EN": "Back to the hotel"
+          },
+          "s": {
+            "ES": "20 minutos de carretera",
+            "EN": "20 minutes by road"
+          },
+          "d": {
+            "ES": "La piscina climatizada está a 28 grados y abre hasta las 20:00, buena para quitarte la sal antes de cenar.",
+            "EN": "The heated pool is kept at 28 degrees and is open until 20:00, just right for washing off the salt before dinner."
+          },
+          "tip": {
+            "ES": "Reserva la cena en El Safareig desde la carta.",
+            "EN": "Book dinner at El Safareig from the menu."
+          },
+          "hora": "17:50",
+          "dur": "5 min",
+          "img": "/ciudades/vandellos/img/hotel-aire.jpg",
+          "lat": 41.03003,
+          "lng": 0.81256,
+          "tramo": "coche",
+          "tramoDuracionMin": 20,
+          "duracionMin": 5
+        }
+      ],
+      "fotos": [
+        "/ciudades/vandellos/img/torn.jpg",
+        "/ciudades/vandellos/img/hospitalet.jpg",
+        "/ciudades/vandellos/img/hospitalet-torre.jpg",
+        "/ciudades/vandellos/img/torn-playa.jpg",
+        "/ciudades/vandellos/img/miami.jpg",
+        "/ciudades/vandellos/img/miami-aire.jpg"
+      ],
+      "duracionMin": 470,
+      "distanciaKm": 45,
+      "dificultad": "facil",
+      "accesibilidad": {
+        "ES": "Vas en coche hasta cada parada. Al Torn se llega por camino de tierra entre dunas, y a las calas se baja entre rocas. Con silla de ruedas o carrito, pregunta en recepción qué playa te va mejor.",
+        "EN": "You drive to every stop. The Torn is reached by an earth track through the dunes, and you climb down over rocks to the coves. With a wheelchair or pushchair, ask at reception which beach suits you best."
+      },
+      "tipoEntorno": "exterior",
+      "puntoEncuentro": {
+        "lat": 41.03003,
+        "lng": 0.81256,
+        "foto": "/ciudades/vandellos/img/hotel.jpg",
+        "texto": {
+          "ES": "Aparcamiento de La Figuerola, a las 10:00. La nevera, en recepción.",
+          "EN": "La Figuerola car park, at 10:00. The cool box is at reception."
+        }
+      },
+      "cancelacion": {
+        "ES": "La nevera se pide la víspera, hasta las 22:00. La ruta la haces por libre.",
+        "EN": "Order the cool box by 22:00 the day before. You do the route on your own."
+      },
+      "salidasFijas": [
+        "10:00"
+      ],
+      "precioDesde": null
+    }
+  ],
+  "pasaporte": {
+    "sellos": 3,
+    "premio": {
+      "ES": "Una copa de vermut de Reus en el Hoyo 19",
+      "EN": "A glass of Reus vermouth at Hoyo 19"
+    }
+  },
+  "creditos": [
+    "La masía de La Figuerola: vídeo de dron del hotel, solo para la demo privada",
+    "La Figuerola desde el aire: vídeo de dron del hotel, solo para la demo privada",
+    "Sant Andreu de Vandellós: Jordi Gili, CC BY-SA 4.0, Wikimedia Commons",
+    "Moleta de Genessies: Montfranc, CC BY 3.0, Wikimedia Commons",
+    "VG nº 256144001 ICGC Mola de Genessies: Caçavertex, CC0, Wikimedia Commons",
+    "Llaberia des de l'església: Jordi Gili, CC BY-SA 4.0, Wikimedia Commons",
+    "Hospitalet de l'Infant - Hospital Medieval de l'Infant Pere 1: User:LimoWreck, CC BY-SA 3.0, Wikimedia Commons",
+    "Tore d'Hospitalet de l'Infant: Joandrés, CC BY-SA 4.0, Wikimedia Commons",
+    "Playa del Torn: Jseoanepascual, CC BY-SA 4.0, Wikimedia Commons",
+    "Platja del Torn: Seryam, CC BY-SA 3.0, Wikimedia Commons",
+    "Miami Platja Hiszpania - panoramio (3): czernik.jerzy, CC BY 3.0, Wikimedia Commons",
+    "Spanish Mediterranean coast at Miami Platja (aerial view): Carcharoth (Commons), CC BY-SA 3.0, Wikimedia Commons",
+    "Mas Miró: E.J., CC BY-SA 3.0, Wikimedia Commons",
+    "Celler Cooperatiu (Falset) - 1: jorapa, CC BY-SA 2.0, Wikimedia Commons",
+    "Vinyes del Priorat, Gratallops.: Angela Llop, CC BY-SA 2.0, Wikimedia Commons",
+    "Gratallops: Lohen11 - Josep Renalias, CC BY-SA 3.0, Wikimedia Commons",
+    "Cartoixa d'escaladei-2012 (12): Alberto-g-rovi, CC BY-SA 3.0, Wikimedia Commons",
+    "Escaladei - Cartoixa: Lohen11 - Josep Renalias, CC BY-SA 3.0, Wikimedia Commons",
+    "Riu Ebre des del castell de Miravet: jordi domènech, CC BY-SA 3.0, Wikimedia Commons",
+    "Miravet pas de barca carregat 2018: flamenc, CC BY-SA 3.0, Wikimedia Commons",
+    "Baixada del Shambhala i Dragon Khan: candi..., CC BY 2.0, Wikimedia Commons"
+  ]
+}
