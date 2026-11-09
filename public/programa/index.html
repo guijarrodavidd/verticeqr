@@ -653,6 +653,179 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
 @media (max-width: 640px) {
   .seccion > .wrap, .dia20 > .wrap, .precio > .wrap { padding-block: 60px; }
 }
+/* agentes:inicio */
+/* Rueda de agentes: escenario fijo (960×540 horizontal, 440×580 vertical) escalado al ancho; el jefe en el centro, 8 agentes en círculo, lo que llega a la izquierda (arriba en móvil) y lo que sale a la derecha (encima de la rueda en móvil) */
+.ag { max-width: 1060px; margin: 0 auto; }
+.ag-marco { position: relative; width: 100%; height: 540px; border-radius: 28px; overflow: hidden; background: radial-gradient(55% 65% at 90% 6%, rgba(94, 230, 216, .30), transparent 70%), radial-gradient(50% 60% at 4% 100%, rgba(168, 216, 106, .26), transparent 70%), #F4F8F8; box-shadow: 0 0 0 1px var(--linea), 0 40px 80px -50px rgba(11, 18, 32, .45); }
+.ag-esc { position: absolute; left: 0; top: 0; width: 960px; height: 540px; transform-origin: 0 0; color: var(--tinta); font: 600 13px/1.25 var(--f); letter-spacing: -0.01em; }
+.ag-esc[data-l="v"] { width: 440px; height: 700px; }
+.ag-esc::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(11, 18, 32, .09) 1px, transparent 1.3px); background-size: 22px 22px; }
+.ag-esc * { box-sizing: border-box; }
+.ag-esc svg { display: block; }
+
+/* Etiqueta del caso */
+.ag-chip { position: absolute; left: 50%; top: 22px; transform: translateX(-50%); display: flex; align-items: center; gap: 8px; padding: 7px 16px 7px 8px; border-radius: 99px; background: var(--noche); color: #fff; font-size: 14px; font-weight: 650; white-space: nowrap; box-shadow: 0 14px 26px -16px rgba(11, 18, 32, .6); }
+.ag-chip em { font-style: normal; font-size: 12px; font-weight: 650; color: var(--noche); background: var(--grad); padding: 2px 9px; border-radius: 99px; }
+[data-l="v"] .ag-chip { top: 14px; font-size: 13px; }
+
+/* La rueda */
+.ag-rueda { position: absolute; inset: 0; transition: opacity .4s; }
+.ag-lineas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.ag-lineas circle { fill: none; stroke: rgba(8, 127, 123, .22); stroke-width: 2; stroke-dasharray: 3 7; }
+.ag-lineas line { stroke: rgba(8, 127, 123, .16); stroke-width: 2; transition: stroke .3s; }
+.ag-lineas line.on { stroke: #36C6C0; stroke-width: 3; }
+.ag-a { position: absolute; left: 0; top: 0; width: 88px; display: grid; justify-items: center; gap: 4px; text-align: center; }
+.ag-a b { font-size: 12.5px; font-weight: 650; color: var(--tinta); transition: color .3s; white-space: nowrap; }
+[data-l="v"] .ag-a { width: 80px; }
+[data-l="v"] .ag-a b { font-size: 11.5px; }
+.ag-px { width: 52px; height: 32px; overflow: visible; animation: ag-bob 1.4s steps(2) infinite; animation-delay: var(--d, 0s); }
+.ag-ojos { transform-box: fill-box; transform-origin: center; animation: ag-parpadeo 4.6s infinite; animation-delay: var(--d, 0s); }
+@keyframes ag-bob { 50% { transform: translateY(-2px); } }
+@keyframes ag-parpadeo { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.15); } }
+.ag-ico { position: absolute; top: -8px; right: 12px; width: 22px; height: 22px; border-radius: 50%; background: #fff; color: var(--teal); display: grid; place-items: center; box-shadow: 0 0 0 1px rgba(11, 18, 32, .1), 0 4px 10px -4px rgba(11, 18, 32, .4); }
+.ag-ico svg { width: 13px; height: 13px; }
+[data-l="v"] .ag-ico { right: 8px; }
+.ag-halo { position: absolute; left: 50%; top: 16px; width: 90px; height: 90px; margin: -45px 0 0 -45px; border-radius: 50%; background: radial-gradient(closest-side, rgba(94, 230, 216, .55), transparent); opacity: 0; transform: scale(.6); transition: opacity .3s, transform .4s; pointer-events: none; z-index: -1; }
+.ag-barra { width: 46px; height: 4px; border-radius: 4px; background: rgba(11, 18, 32, .1); overflow: hidden; opacity: 0; transition: opacity .2s; }
+.ag-barra i { display: block; height: 100%; width: 0; background: var(--grad); }
+.ag-chispa { position: absolute; left: 50%; top: 16px; width: 6px; height: 6px; margin: -3px; background: var(--c, #5EE6D8); opacity: 0; pointer-events: none; }
+.ag-a.on .ag-halo { opacity: 1; transform: scale(1); }
+.ag-a.on b { color: var(--teal); }
+.ag-a.on .ag-px { animation: ag-salto .32s steps(2) infinite; }
+.ag-a.on .ag-barra { opacity: 1; }
+.ag-a.on .ag-barra i { animation: ag-llena 1.3s linear forwards; }
+.ag-a.on .ag-chispa { animation: ag-chispa .9s ease-out infinite; }
+.ag-a.on .ag-chispa:nth-of-type(2) { --tx: 34px; --ty: -22px; --c: #A8D86A; animation-delay: .2s; }
+.ag-a.on .ag-chispa:nth-of-type(3) { --tx: -34px; --ty: -18px; animation-delay: .45s; }
+.ag-a.on .ag-chispa:nth-of-type(4) { --tx: 30px; --ty: 18px; --c: #D97757; animation-delay: .65s; }
+.ag-a.on .ag-chispa:nth-of-type(5) { --tx: -30px; --ty: 20px; --c: #A8D86A; animation-delay: .1s; }
+@keyframes ag-salto { 50% { transform: translateY(-6px); } }
+@keyframes ag-llena { to { width: 100%; } }
+@keyframes ag-chispa { 0% { opacity: 1; transform: translate(0, 0) scale(1); } 100% { opacity: 0; transform: translate(var(--tx, 0), var(--ty, -30px)) scale(.4); } }
+
+/* El jefe */
+.ag-jefe { position: absolute; left: 0; top: 0; width: 120px; display: grid; justify-items: center; gap: 6px; }
+.ag-jefe .ag-px { width: 78px; height: 66px; animation-duration: 1.8s; }
+.ag-jefe b { font-size: 12.5px; font-weight: 700; background: var(--noche); color: #fff; padding: 3px 10px; border-radius: 99px; white-space: nowrap; }
+.ag-jefe::before { content: ""; position: absolute; left: 50%; top: 34px; width: 150px; height: 150px; margin: -75px 0 0 -75px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 255, 255, .95), rgba(255, 255, 255, 0)); z-index: -1; }
+
+/* Paquete que viaja */
+.ag-pk { position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #36C6C0; box-shadow: 0 0 0 3px rgba(94, 230, 216, .35), 0 0 16px rgba(54, 198, 192, .8); pointer-events: none; z-index: 5; }
+
+/* Lo que llega y lo que sale */
+.ag-in, .ag-out { position: absolute; display: flex; pointer-events: none; z-index: 4; }
+[data-l="h"] .ag-in { left: 28px; top: 96px; width: 220px; height: 380px; flex-direction: column; justify-content: center; gap: 10px; }
+
+[data-l="v"] .ag-in { left: 14px; top: 54px; width: 412px; height: 104px; flex-direction: row; justify-content: center; align-items: center; gap: 8px; }
+[data-l="h"] .ag-in > * { width: 100%; }
+[data-l="v"] .ag-in.n1 > * { width: 250px; } [data-l="v"] .ag-in.n2 > * { width: 196px; } [data-l="v"] .ag-in.n3 > * { width: 130px; }
+
+.ag-c { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 0 0 1px rgba(11, 18, 32, .08), 0 14px 26px -16px rgba(11, 18, 32, .45); font-size: 12px; }
+.ag-xh { height: 24px; background: #107C41; color: #fff; display: flex; align-items: center; gap: 6px; padding: 0 8px; font-size: 11px; white-space: nowrap; overflow: hidden; }
+.ag-xh i { flex: none; width: 14px; height: 14px; border-radius: 3px; background: #fff; color: #107C41; font: 800 9.5px/14px var(--f); font-style: normal; text-align: center; }
+.ag-xg { display: grid; grid-template-columns: repeat(3, 1fr); font-size: 10.5px; font-variant-numeric: tabular-nums; }
+.ag-xg span { height: 19px; line-height: 18px; padding: 0 6px; border-right: 1px solid #E5E5E5; border-bottom: 1px solid #E5E5E5; text-align: right; color: #333; white-space: nowrap; overflow: hidden; }
+.ag-xg span:nth-child(-n+3) { background: #E9F4EE; color: #0B5A2F; font-weight: 700; text-align: left; }
+.ag-rev { padding: 8px 10px; display: grid; gap: 3px; }
+.ag-est { color: #F2B437; letter-spacing: 1px; font-size: 12px; }
+.ag-est s { color: #D7DBE0; text-decoration: none; }
+.ag-rev p { margin: 0; font-weight: 550; color: #333; }
+.ag-nota { background: #FFF1A8; border-radius: 4px; padding: 10px 12px; font-size: 12.5px; font-weight: 650; color: #5B4A00; transform: rotate(-2deg); box-shadow: 0 12px 20px -14px rgba(11, 18, 32, .5); }
+.ag-audio { display: flex; align-items: center; gap: 8px; padding: 10px 12px; }
+.ag-audio .pl { flex: none; width: 26px; height: 26px; border-radius: 50%; background: #25D366; display: grid; place-items: center; }
+.ag-audio .pl::after { content: ""; border-left: 8px solid #fff; border-top: 5px solid transparent; border-bottom: 5px solid transparent; margin-left: 2px; }
+.ag-onda { flex: 1; display: flex; align-items: center; gap: 2px; height: 24px; }
+.ag-onda i { flex: 1; background: #9AA3AE; border-radius: 2px; height: var(--h); }
+.ag-audio small { font-size: 11px; color: var(--gris); }
+.ag-quien { padding: 0 12px 8px; font-size: 11px; color: var(--gris); margin-top: -4px; }
+.ag-foto { height: 74px; border-radius: 10px; position: relative; background: linear-gradient(140deg, #9BB7C8, #5E7A8C); box-shadow: 0 14px 26px -16px rgba(11, 18, 32, .45); overflow: hidden; }
+.ag-foto.b { background: linear-gradient(140deg, #C9B79B, #8C735E); }
+.ag-foto::after { content: ""; position: absolute; right: 8px; bottom: 8px; width: 22px; height: 16px; border-radius: 4px; background: rgba(255, 255, 255, .85); }
+.ag-mail { padding: 10px 12px; display: grid; gap: 4px; }
+.ag-mail small { color: var(--gris); font-size: 11px; }
+.ag-mail p { margin: 0; font-weight: 700; font-size: 12.5px; }
+.ag-mail .l { height: 6px; border-radius: 6px; background: #E4E7EB; }
+
+.ag-doc { background: #fff; border-radius: 14px; padding: 14px 14px 12px; box-shadow: 0 0 0 1px rgba(11, 18, 32, .08), 0 30px 50px -26px rgba(11, 18, 32, .55); display: grid; gap: 9px; }
+.ag-doc h5 { margin: 0; display: flex; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 700; }
+.ag-doc h5 svg { width: 16px; height: 16px; color: var(--teal); }
+.ag-doc .ok { margin-left: auto; width: 18px; height: 18px; border-radius: 50%; background: #2BB673; position: relative; flex: none; }
+.ag-doc .ok::after { content: ""; position: absolute; left: 6px; top: 3px; width: 4px; height: 8px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.ag-fila { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; }
+.ag-fila .bar { flex: 1; display: grid; gap: 4px; }
+.ag-fila .bar i { display: block; height: 6px; border-radius: 6px; background: #E4E7EB; }
+.ag-fila .bar i + i { width: 70%; }
+.ag-cua { display: grid; grid-template-columns: 38px repeat(7, 1fr); gap: 3px; font-size: 10px; }
+.ag-cua span { height: 17px; border-radius: 4px; display: grid; place-items: center; font-weight: 700; }
+.ag-cua .d { color: var(--gris); }
+.ag-cua .p { justify-content: start; color: var(--tinta); font-weight: 650; }
+.ag-cua .m { background: #BFF1EB; color: #05625E; } .ag-cua .t { background: #DCEFC3; color: #46731B; } .ag-cua .n { background: var(--noche); color: #fff; } .ag-cua .x { background: #EEF0F2; color: #9AA3AE; }
+.ag-big { font-size: 34px; font-weight: 750; letter-spacing: -0.045em; line-height: 1; font-variant-numeric: tabular-nums; }
+.ag-mini { display: grid; grid-template-columns: 54px minmax(0, 1fr) 70px; gap: 6px; align-items: center; font-size: 11.5px; }
+.ag-mini i { height: 7px; border-radius: 7px; background: var(--grad); }
+.ag-mini em { font-style: normal; text-align: right; font-variant-numeric: tabular-nums; }
+.ag-pill { justify-self: start; font-size: 11.5px; font-weight: 700; padding: 3px 9px; border-radius: 99px; background: #E3F7F4; color: var(--teal); }
+.ag-dot { flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+.ag-tot { display: flex; justify-content: space-between; border-top: 1px solid var(--linea); padding-top: 8px; font-weight: 750; font-size: 14px; }
+.ag-btn { justify-self: end; background: var(--grad); color: var(--noche); font-weight: 750; font-size: 12px; padding: 5px 14px; border-radius: 99px; }
+.ag-up { flex: none; width: 20px; height: 20px; border-radius: 6px; background: #EEF6E2; color: #4A7D1E; display: grid; place-items: center; font-size: 12px; font-weight: 800; }
+
+/* Controles: la rueda de casos */
+.ag-ctrl { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
+.ag-play { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--noche); color: #fff; cursor: pointer; display: grid; place-items: center; }
+.ag-play svg { width: 16px; height: 16px; }
+.ag-casos { flex: 1; min-width: 0; display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding: 2px; }
+.ag-casos::-webkit-scrollbar { display: none; }
+.ag-caso { flex: none; border: 0; cursor: pointer; font: 600 13px/1 var(--f); color: var(--gris); background: #F1F4F6; padding: 0 14px; min-height: 40px; border-radius: 99px; white-space: nowrap; }
+.ag-caso[aria-current="true"] { background: var(--noche); color: #fff; }
+@media (max-width: 640px) { .ag-marco { border-radius: 22px; } .ag-caso { font-size: 12.5px; padding: 0 12px; } }
+@media (prefers-reduced-motion: reduce) { .ag-px, .ag-ojos, .ag-a.on .ag-px, .ag-a.on .ag-chispa { animation: none !important; } }
+
+/* Etiqueta de dónde llega cada dato */
+.ag-in > * { position: relative; overflow: visible; }
+.ag-tag { position: absolute; right: 8px; top: -9px; z-index: 2; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 99px; background: var(--noche); color: var(--aqua); white-space: nowrap; }
+
+/* El móvil del director */
+.ag-tel { position: absolute; z-index: 3; border-radius: 36px; background: #0E1116; padding: 8px; box-shadow: 0 40px 70px -36px rgba(11, 18, 32, .7); }
+[data-l="h"] .ag-tel { left: 716px; top: 40px; width: 222px; height: 470px; }
+[data-l="v"] .ag-tel { left: 58px; top: 474px; width: 324px; height: 320px; }
+.ag-pant { position: relative; height: 100%; border-radius: 29px; overflow: hidden; background: linear-gradient(165deg, #12454A 0%, #0B1220 55%, #1C2A1A 100%); padding: 34px 9px 10px; display: flex; flex-direction: column; gap: 7px; }
+.ag-pant::before { content: ""; position: absolute; left: 50%; top: 9px; width: 64px; height: 18px; margin-left: -32px; border-radius: 12px; background: #000; }
+.ag-hora { text-align: center; color: #fff; font-size: 44px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+.ag-auto { align-self: center; display: flex; align-items: center; gap: 6px; font-size: 10.5px; font-weight: 650; color: #DDF7F3; background: rgba(255, 255, 255, .12); padding: 3px 9px; border-radius: 99px; margin-bottom: 4px; }
+.ag-auto i { width: 7px; height: 7px; border-radius: 50%; background: #3BE08A; animation: ag-latido 1.6s infinite; }
+@keyframes ag-latido { 50% { box-shadow: 0 0 0 4px rgba(59, 224, 138, .25); } }
+[data-l="v"] .ag-pant { padding-top: 30px; }
+[data-l="v"] .ag-hora { font-size: 30px; }
+.ag-nots { display: flex; flex-direction: column; gap: 6px; }
+.ag-not { background: rgba(255, 255, 255, .9); border-radius: 16px; padding: 8px 10px 9px; color: var(--tinta); display: grid; gap: 4px; }
+.ag-noth { display: flex; align-items: center; gap: 6px; font-size: 10.5px; color: var(--gris); }
+.ag-noth .app { flex: none; width: 18px; height: 18px; border-radius: 5px; background: #F4E6DF; display: grid; place-items: center; }
+.ag-noth .app svg { width: 13px; height: 8px; animation: none; }
+.ag-noth b { color: var(--tinta); font-weight: 700; }
+.ag-noth small { margin-left: auto; font-size: 10px; }
+.ag-noth small.visto { color: #2BB673; font-weight: 700; }
+.ag-not > p { margin: 0; font-size: 12px; font-weight: 700; line-height: 1.25; }
+.ag-cuerpo { overflow: hidden; max-height: 220px; transition: max-height .5s ease, opacity .3s; }
+.ag-not.vieja { padding-block: 6px 7px; }
+.ag-not.vieja .ag-cuerpo { max-height: 0; opacity: 0; }
+.ag-not.vieja > p { font-size: 11px; font-weight: 650; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ag-cuerpo .ag-doc { box-shadow: none; padding: 6px 0 0; background: none; gap: 6px; border-radius: 0; }
+.ag-dedo { position: absolute; z-index: 6; width: 34px; height: 34px; margin: -17px; border-radius: 50%; background: rgba(255, 255, 255, .55); border: 2px solid #fff; pointer-events: none; }
+.ag-hab { flex: none; min-width: 30px; height: 20px; padding: 0 5px; border-radius: 6px; background: #E3F7F4; color: var(--teal); font-size: 10.5px; font-weight: 800; display: grid; place-items: center; }
+[data-l="v"] .ag-jefe .ag-px { width: 60px; height: 51px; }
+[data-l="v"] .ag-jefe b { font-size: 10.5px; padding: 2px 8px; }
+[data-l="v"] .ag-jefe::before { width: 110px; height: 110px; margin: -55px 0 0 -55px; top: 26px; }
+/* Móvil: el teléfono es más ancho, así que los avisos se leen más grandes */
+[data-l="v"] .ag-not > p { font-size: 13.5px; }
+[data-l="v"] .ag-noth { font-size: 11.5px; }
+[data-l="v"] .ag-doc .ag-fila, [data-l="v"] .ag-mini { font-size: 13px; }
+[data-l="v"] .ag-big { font-size: 38px; }
+[data-l="v"] .ag-cua { font-size: 11px; }
+[data-l="v"] .ag-cua span { height: 19px; }
+[data-l="v"] .ag-chip { font-size: 14px; }
+[data-l="v"] .ag-rev p, [data-l="v"] .ag-nota { font-size: 12.5px; }
+/* agentes:fin */
 </style>
 </head>
 <body>
@@ -944,7 +1117,30 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
       </div>
     </div>
   </section>
-  <section class="precio halo">
+  <!-- agentes:inicio -->
+  <section class="seccion" id="agentes">
+    <div class="wrap">
+      <div class="cabeza" data-aparece><h2>Tus agentes, <span class="fino">trabajando solos</span></h2><p class="entradilla">Así queda cuando te lo dejamos montado con el plan A medida. Los datos entran solos, cada agente hace su parte y a ti te llega el aviso al móvil.</p></div>
+<div class="ag">
+  <div class="ag-marco">
+    <div class="ag-esc" data-l="h" role="img" aria-label="Animación: los datos del hotel entran solos, el jefe de dirección los reparte entre sus agentes y al director le llega el aviso con el trabajo hecho en el móvil">
+      <div class="ag-rueda">
+        <svg class="ag-lineas" aria-hidden="true"><circle/><g></g></svg>
+      </div>
+      <div class="ag-in"></div>
+      <div class="ag-tel"><div class="ag-pant"><div class="ag-hora">8:00</div><div class="ag-auto"><i></i>En automático</div><div class="ag-nots"></div></div></div>
+      <div class="ag-chip"><em>Cada mañana</em><span>Reseñas</span></div>
+    </div>
+  </div>
+  <div class="ag-ctrl">
+    <button class="ag-play" type="button" aria-label="Pausar"><svg viewBox="0 0 16 16" aria-hidden="true"><g class="ag-ip"><rect x="3" y="2" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="9.5" y="2" width="3.5" height="12" rx="1" fill="currentColor"/></g><path class="ag-ij" d="M4 2.5v11l9-5.5z" fill="currentColor" style="display:none"/></svg></button>
+    <div class="ag-casos" role="group" aria-label="Casos del día a día"></div>
+  </div>
+</div>
+    </div>
+  </section>
+  <!-- agentes:fin -->
+<section class="precio halo">
     <div class="wrap" id="precio">
       <div class="cabeza" data-aparece><h2>Elige <span class="fino">cómo entras</span></h2><p class="entradilla">Pago único y acceso de por vida.</p></div>
       <div class="selector-planes" role="tablist" aria-label="Elige un plan">
@@ -1263,6 +1459,340 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
     if (incluye && window.matchMedia("(max-width: 860px)").matches) incluye.open = false;
   })();
 </script>
+<script>/* agentes:inicio */
+  // Rueda de agentes: los datos entran solos, el jefe de dirección los reparte, el agente trabaja y al director le llega el aviso al móvil
+  (function () {
+    const raiz = document.querySelector(".ag");
+    if (!raiz) return;
+    const marco = raiz.querySelector(".ag-marco");
+    const esc = raiz.querySelector(".ag-esc");
+    const rueda = esc.querySelector(".ag-rueda");
+    const svg = esc.querySelector(".ag-lineas");
+    const circulo = svg.querySelector("circle");
+    const radios = svg.querySelector("g");
+    const entrada = esc.querySelector(".ag-in");
+    const nots = esc.querySelector(".ag-nots");
+    const hora = esc.querySelector(".ag-hora");
+    const chip = esc.querySelector(".ag-chip");
+    const tel = esc.querySelector(".ag-tel");
+    const casosEl = raiz.querySelector(".ag-casos");
+    const boton = raiz.querySelector(".ag-play");
+    const NS = "http://www.w3.org/2000/svg";
+
+    const LAY = {
+      h: { w: 960, h: 540, cx: 476, cy: 292, r: 166, mira: 0 },
+      v: { w: 440, h: 700, cx: 220, cy: 316, r: 116, mira: 90 }
+    };
+
+    const ICO = {
+      estrella: '<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',
+      campana: '<path d="M4 17h16M5 17a7 7 0 0 1 14 0M12 7V5M10 5h4"/>',
+      calendario: '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',
+      grafica: '<path d="M5 20V10M12 20V4M19 20v-7"/>',
+      doc: '<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/>',
+      llave: '<path d="M14.5 6.5a4 4 0 0 0-5 5L4 17l3 3 5.5-5.5a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/>',
+      sobre: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+      plato: '<path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M17 3c-2 2-2 6 0 8v10"/>'
+    };
+    function ico(n) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + ICO[n] + "</svg>"; }
+
+    // El agente en 8 bits: X cuerpo, S sombra, E ojos; la corona va encima del jefe
+    const FILAS = ["..XXXXXXXXX..", "..XXXXXXXXX..", "XXXXEXXXEXXXX", "XXXXEXXXEXXXX", "..XXXXXXXXX..", "..SSSSSSSSS..", "..X.X...X.X..", "..X.X...X.X.."];
+    const CORONA = ["....Y.Y.Y....", "....YYYYY....", "....YYYYY...."];
+    function trazo(filas, letras, y0) {
+      let d = "";
+      filas.forEach(function (fila, y) {
+        for (let x = 0; x < fila.length; x++) if (letras.indexOf(fila[x]) >= 0) d += "M" + x + " " + (y + y0) + "h1v1h-1z";
+      });
+      return d;
+    }
+    function sprite(corona) {
+      return '<svg class="ag-px" viewBox="0 ' + (corona ? -3 : 0) + " 13 " + (corona ? 11 : 8) + '" shape-rendering="crispEdges" aria-hidden="true">' +
+        '<path fill="#D97757" d="' + trazo(FILAS, "XE", 0) + '"/><path fill="#B9583A" d="' + trazo(FILAS, "S", 0) + '"/>' +
+        '<g class="ag-ojos"><path fill="#1F1E1D" d="' + trazo(FILAS, "E", 0) + '"/></g>' +
+        (corona ? '<path fill="#F2B437" d="' + trazo(CORONA, "Y", -3) + '"/>' : "") + "</svg>";
+    }
+
+    const AGENTES = [
+      { n: "Reseñas", i: "estrella" }, { n: "Recepción", i: "campana" }, { n: "Cuadrantes", i: "calendario" }, { n: "Números", i: "grafica" },
+      { n: "Informes", i: "doc" }, { n: "Mantenimiento", i: "llave" }, { n: "Grupos", i: "sobre" }, { n: "Restaurante", i: "plato" }
+    ];
+
+    // Lo que llega
+    function tag(t, html) { return '<div><span class="ag-tag">' + t + "</span>" + html + "</div>"; }
+    function excel(nombre, celdas) { return '<div class="ag-c"><div class="ag-xh"><i>X</i>' + nombre + '</div><div class="ag-xg">' + celdas.map(function (c) { return "<span>" + c + "</span>"; }).join("") + "</div></div>"; }
+    function resena(est, txt) { return '<div class="ag-c ag-rev"><span class="ag-est">' + est + "</span><p>" + txt + "</p></div>"; }
+    function audio(t) { const h = [30, 70, 45, 90, 60, 35, 80, 50, 95, 40, 65, 30, 75, 55]; return '<div class="ag-c"><div class="ag-audio"><span class="pl"></span><span class="ag-onda">' + h.map(function (v) { return '<i style="--h:' + v + '%"></i>'; }).join("") + "</span><small>" + t + "</small></div></div>"; }
+    function fila(a, b) { return '<div class="ag-fila">' + a + "<span>" + b + "</span></div>"; }
+
+    const CASOS = [
+      { cuando: "Cada mañana", que: "Reseñas", hora: "8:00", agentes: [0],
+        entra: [tag("Google", resena("★★★★★", "La cena, de diez")), tag("Google", resena("★★<s>★★★</s>", "25 min para entrar")), tag("Google", resena("★★★★<s>★</s>", "Todo muy limpio"))],
+        titulo: "3 respuestas a reseñas, listas",
+        cuerpo: '<div class="ag-doc">' + [5, 2, 4].map(function (n) { return '<div class="ag-fila"><span class="ag-est" style="font-size:10px">' + "★".repeat(n) + "<s>" + "★".repeat(5 - n) + '</s></span><span class="bar"><i></i><i></i></span><span class="ok"></span></div>'; }).join("") + "</div>" },
+      { cuando: "Cada viernes", que: "Cuadrante", hora: "12:00", agentes: [2],
+        entra: [tag("Excel", excel("horas-del-equipo.xlsx", ["Puesto", "Personas", "Horas", "Recepción", "6", "228", "Pisos", "9", "315", "Sala", "7", "252"])), tag("WhatsApp", '<div class="ag-nota">2 bajas esta semana</div>')],
+        titulo: "Cuadrante de la semana 46",
+        cuerpo: (function () {
+          const dias = ["L", "M", "X", "J", "V", "S", "D"];
+          const gente = [["Ana", "MMMMMxx"], ["Luis", "TTTxxMM"], ["Marta", "NNNxxTT"], ["Jorge", "xxMMMTT"]];
+          let h = '<div class="ag-doc"><div class="ag-cua"><span></span>' + dias.map(function (d) { return '<span class="d">' + d + "</span>"; }).join("");
+          gente.forEach(function (g) { h += '<span class="p">' + g[0] + "</span>" + g[1].split("").map(function (c) { return '<span class="' + c.toLowerCase() + '">' + (c === "x" ? "L" : c) + "</span>"; }).join(""); });
+          return h + "</div></div>";
+        })() },
+      { cuando: "Cada mes", que: "Cierre de mes", hora: "9:00", agentes: [3, 4],
+        entra: [tag("PMS", excel("ocupacion-octubre.xlsx", ["Día", "Ocup.", "Precio", "lun 5", "52", "98 €", "mar 6", "54", "99 €", "mié 7", "57", "101 €"])), tag("TPV", excel("ventas-restaurante.xlsx", ["Día", "Cub.", "Ventas", "lun 5", "48", "1.104 €", "mar 6", "52", "1.196 €", "mié 7", "55", "1.265 €"]))],
+        titulo: "Cierre de octubre para la propiedad",
+        cuerpo: '<div class="ag-doc"><div class="ag-big">218.736 €</div><span class="ag-pill">+8,66 % sobre octubre de 2025</span><div class="ag-mini"><span>Hab.</span><i style="width:100%"></i><em>173.600 €</em></div><div class="ag-mini"><span>Rest.</span><i style="width:22%"></i><em>38.192 €</em></div><div class="ag-mini"><span>Otros</span><i style="width:4%"></i><em>6.944 €</em></div></div>' },
+      { cuando: "Cada noche", que: "Cambio de turno", hora: "7:00", agentes: [1],
+        entra: [tag("WhatsApp", audio("0:48"))],
+        titulo: "Lo que dejó el turno de noche",
+        cuerpo: '<div class="ag-doc">' + fila('<span class="ag-hab">214</span>', "Cuna antes de las 12") + fila('<span class="ag-hab">108</span>', "Taxi a las 5:00, hecho") + fila('<span class="ag-hab">Bar</span>', "Llamar al técnico del TPV") + "</div>" },
+      { cuando: "Cada ronda", que: "Mantenimiento", hora: "11:30", agentes: [5],
+        entra: [tag("Foto", '<div class="ag-foto"></div>'), tag("Foto", '<div class="ag-foto b"></div>'), tag("WhatsApp", audio("1:12"))],
+        titulo: "3 partes de mantenimiento, por urgencia",
+        cuerpo: '<div class="ag-doc">' + fila('<span class="ag-dot" style="--c:#E5484D"></span>', "Ducha de la piscina gotea") + fila('<span class="ag-dot" style="--c:#F2B437"></span>', "Moqueta frente a la 312") + fila('<span class="ag-dot" style="--c:#2BB673"></span>', "Bombilla del pasillo 2") + "</div>" },
+      { cuando: "Cuando llega", que: "Grupos y bodas", hora: "17:45", agentes: [6],
+        entra: [tag("Correo", '<div class="ag-c ag-mail"><small>Marta R. · Boda</small><p>120 invitados · 13 de junio</p><span class="l"></span><span class="l" style="width:70%"></span></div>')],
+        titulo: "Propuesta para la boda del 13 de junio",
+        cuerpo: '<div class="ag-doc">' + fila('<span class="ag-up">✓</span>', "Cóctel y cena") + fila('<span class="ag-up">✓</span>', "120 invitados × 85 €") + '<div class="ag-tot"><span>Total</span><span>10.200 €</span></div><span class="ag-btn">Revisar y enviar</span></div>' },
+      { cuando: "Cada jueves", que: "Fin de semana", hora: "10:00", agentes: [7],
+        entra: [tag("TPV", excel("ventas-semana.xlsx", ["Plato", "Uds.", "Ventas", "Arroz", "64", "1.152 €", "Lubina", "41", "902 €", "Entrecot", "38", "912 €"])), tag("PMS", '<div class="ag-nota">64 habitaciones el sábado</div>')],
+        titulo: "Plan del restaurante para el sábado",
+        cuerpo: '<div class="ag-doc">' + fila('<span class="ag-up">↑</span>', "Arroz a banda") + fila('<span class="ag-up">↑</span>', "Lubina a la sal, pedir más") + fila('<span class="ag-up">★</span>', "Terraza, 18 parejas") + "</div>" }
+    ];
+
+    // Montaje de la rueda
+    const agEls = AGENTES.map(function (a, i) {
+      const d = document.createElement("div");
+      d.className = "ag-a";
+      d.style.setProperty("--d", (i * 0.17).toFixed(2) + "s");
+      d.innerHTML = '<span class="ag-halo"></span>' + sprite(false) + '<span class="ag-ico">' + ico(a.i) + "</span><b>" + a.n + '</b><span class="ag-barra"><i></i></span><em class="ag-chispa"></em><em class="ag-chispa"></em><em class="ag-chispa"></em><em class="ag-chispa"></em>';
+      rueda.appendChild(d);
+      return d;
+    });
+    const jefe = document.createElement("div");
+    jefe.className = "ag-jefe";
+    jefe.innerHTML = sprite(true) + "<b>Jefe de dirección</b>";
+    rueda.appendChild(jefe);
+    CASOS.forEach(function (c, i) {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "ag-caso"; b.textContent = c.que;
+      b.addEventListener("click", function () { pausado = false; visible = true; ponBoton(); empezado = true; nots.textContent = ""; corre(i); });
+      casosEl.appendChild(b);
+    });
+
+    let lay = LAY.h, s = 1, rot = 0, tok = 0, visible = false, empezado = false;
+    const reducido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let pausado = reducido;
+
+    function colocar() {
+      agEls.forEach(function (el, i) {
+        const th = (-90 + i * 45 + rot) * Math.PI / 180;
+        const x = lay.cx + lay.r * Math.cos(th), y = lay.cy + lay.r * Math.sin(th);
+        el.style.transform = "translate(" + (x - el.offsetWidth / 2).toFixed(1) + "px," + (y - 16).toFixed(1) + "px)";
+      });
+      radios.setAttribute("transform", "rotate(" + rot.toFixed(2) + " " + lay.cx + " " + lay.cy + ")");
+      jefe.style.transform = "translate(" + (lay.cx - 60) + "px," + (lay.cy - (lay === LAY.v ? 36 : 46)) + "px)";
+    }
+    function lineas() {
+      svg.setAttribute("viewBox", "0 0 " + lay.w + " " + lay.h);
+      circulo.setAttribute("cx", lay.cx); circulo.setAttribute("cy", lay.cy); circulo.setAttribute("r", lay.r);
+      radios.textContent = "";
+      AGENTES.forEach(function (a, i) {
+        const th = (-90 + i * 45) * Math.PI / 180, l = document.createElementNS(NS, "line");
+        l.setAttribute("x1", lay.cx + 52 * Math.cos(th)); l.setAttribute("y1", lay.cy + 52 * Math.sin(th));
+        l.setAttribute("x2", lay.cx + (lay.r - 30) * Math.cos(th)); l.setAttribute("y2", lay.cy + (lay.r - 30) * Math.sin(th));
+        radios.appendChild(l);
+      });
+    }
+    function encaja() {
+      const w = marco.clientWidth;
+      const l = w < 640 ? "v" : "h";
+      if (esc.dataset.l !== l || !radios.childNodes.length) { esc.dataset.l = l; lay = LAY[l]; lineas(); }
+      s = w / lay.w;
+      esc.style.transform = "scale(" + s + ")";
+      marco.style.height = Math.round(lay.h * s) + "px";
+      colocar();
+    }
+
+    function centro(el) {
+      const r = el.getBoundingClientRect(), e = esc.getBoundingClientRect();
+      return { x: (r.left + r.width / 2 - e.left) / s, y: (r.top + r.height / 2 - e.top) / s };
+    }
+    function anima(el, kf, op) {
+      const a = el.animate(kf, Object.assign({ fill: "both", easing: "cubic-bezier(.2,.8,.2,1)" }, op));
+      if (pausado) a.pause();
+      return a;
+    }
+    // Espera que se para con la pausa o fuera de pantalla, y se corta si saltas a otro caso
+    function espera(ms) {
+      const mio = tok;
+      return new Promise(function (ok, corta) {
+        let quedan = ms, antes = performance.now();
+        (function tic(ahora) {
+          if (mio !== tok) return corta(new Error("corte"));
+          if (!pausado && visible) quedan -= ahora - antes;
+          antes = ahora;
+          if (quedan <= 0) ok(); else requestAnimationFrame(tic);
+        })(antes);
+      });
+    }
+    function girar(i) {
+      const mio = tok, base = lay.mira + 90 - i * 45;
+      const fin = base + 360 * Math.round((rot - base) / 360), ini = rot, dur = 850;
+      return new Promise(function (ok, corta) {
+        let pasado = 0, antes = performance.now();
+        (function tic(ahora) {
+          if (mio !== tok) return corta(new Error("corte"));
+          if (!pausado && visible) pasado += ahora - antes;
+          antes = ahora;
+          const p = Math.min(1, pasado / dur), e = p < .5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+          rot = ini + (fin - ini) * e;
+          colocar();
+          if (p < 1) requestAnimationFrame(tic); else ok();
+        })(antes);
+      });
+    }
+    async function paquete(de, a, ms) {
+      const p = document.createElement("i");
+      p.className = "ag-pk";
+      esc.appendChild(p);
+      anima(p, [{ transform: "translate(" + (de.x - 6) + "px," + (de.y - 6) + "px) scale(.5)" }, { transform: "translate(" + (a.x - 6) + "px," + (a.y - 6) + "px) scale(1)" }], { duration: ms, easing: "cubic-bezier(.5,0,.3,1)" });
+      try { await espera(ms); } finally { p.remove(); }
+    }
+    function avisa(c, quieto) {
+      nots.querySelectorAll(".ag-not").forEach(function (n) { n.classList.add("vieja"); });
+      const n = document.createElement("div");
+      n.className = "ag-not";
+      n.innerHTML = '<div class="ag-noth"><span class="app">' + sprite(false) + "</span><b>Tus agentes</b><small>ahora</small></div><p>" + c.titulo + '</p><div class="ag-cuerpo">' + c.cuerpo + "</div>";
+      nots.prepend(n);
+      while (nots.children.length > 4) nots.lastElementChild.remove();
+      if (!quieto) {
+        anima(n, [{ opacity: 0, transform: "translateY(-16px) scale(.96)" }, { opacity: 1, transform: "none" }], { duration: 450 });
+        anima(tel, [{ transform: "translateX(0)" }, { transform: "translateX(-3px)" }, { transform: "translateX(3px)" }, { transform: "translateX(-2px)" }, { transform: "translateX(0)" }], { duration: 360, fill: "none" });
+      }
+      return n;
+    }
+    async function toca(n) {
+      const c = centro(n), d = document.createElement("i");
+      d.className = "ag-dedo"; d.style.left = c.x + "px"; d.style.top = c.y + "px";
+      esc.appendChild(d);
+      anima(d, [{ opacity: 0, transform: "scale(1.6)" }, { opacity: 1, transform: "scale(1)", offset: .4 }, { opacity: 0, transform: "scale(.8)" }], { duration: 750 });
+      try {
+        await espera(450);
+        const sm = n.querySelector("small");
+        sm.textContent = "Visto"; sm.classList.add("visto");
+        await espera(350);
+      } finally { d.remove(); }
+    }
+    function ponChip(c, quieto) {
+      chip.innerHTML = "<em>" + c.cuando + "</em><span>" + c.que + "</span>";
+      hora.textContent = c.hora;
+      if (!quieto) anima(chip, [{ opacity: 0, transform: "translateX(-50%) translateY(-8px)" }, { opacity: 1, transform: "translateX(-50%)" }], { duration: 400 });
+    }
+    function marcaCaso(i) {
+      Array.from(casosEl.children).forEach(function (b, k) { b.setAttribute("aria-current", k === i ? "true" : "false"); });
+      const b = casosEl.children[i];
+      casosEl.scrollTo({ left: b.getBoundingClientRect().left - casosEl.getBoundingClientRect().left + casosEl.scrollLeft - 8, behavior: "smooth" });
+    }
+    function apaga() {
+      agEls.forEach(function (el) { el.classList.remove("on"); });
+      Array.from(radios.children).forEach(function (l) { l.classList.remove("on"); });
+    }
+    function limpia() {
+      esc.querySelectorAll(".ag-pk, .ag-dedo").forEach(function (el) { el.remove(); });
+      apaga();
+      entrada.textContent = "";
+    }
+
+    async function caso(i) {
+      const c = CASOS[i];
+      marcaCaso(i);
+      ponChip(c);
+      entrada.className = "ag-in n" + c.entra.length;
+      entrada.innerHTML = c.entra.join("");
+      const piezas = Array.from(entrada.children);
+      piezas.forEach(function (p, k) { anima(p, [{ opacity: 0, transform: lay === LAY.h ? "translateX(-70px)" : "translateY(-30px)" }, { opacity: 1, transform: "none" }], { duration: 600, delay: k * 150 }); });
+      await espera(1300);
+      const cj = centro(jefe.querySelector(".ag-px"));
+      piezas.forEach(function (p, k) {
+        const cp = centro(p);
+        anima(p, [{ opacity: 1, transform: "none" }, { opacity: 0, transform: "translate(" + (cj.x - cp.x) + "px," + (cj.y - cp.y) + "px) scale(.12)" }], { duration: 650, delay: k * 110, easing: "cubic-bezier(.55,0,.3,1)" });
+      });
+      await espera(700 + 110 * (piezas.length - 1));
+      anima(jefe.querySelector(".ag-px"), [{ transform: "scale(1)" }, { transform: "scale(1.15)" }, { transform: "scale(1)" }], { duration: 420, fill: "none" });
+      await girar(c.agentes[0]);
+      radios.children[c.agentes[0]].classList.add("on");
+      let de = cj;
+      for (const a of c.agentes) {
+        const hasta = centro(agEls[a].querySelector(".ag-px"));
+        await paquete(de, hasta, 600);
+        agEls[a].classList.add("on");
+        await espera(1300);
+        de = hasta;
+      }
+      const rn = nots.getBoundingClientRect(), re = esc.getBoundingClientRect();
+      await paquete(de, { x: (rn.left + rn.width / 2 - re.left) / s, y: (rn.top - re.top) / s + 24 }, 700);
+      const n = avisa(c);
+      await espera(1800);
+      await toca(n);
+      await espera(500);
+      apaga();
+      entrada.textContent = "";
+    }
+    async function corre(desde) {
+      tok++;
+      const mio = tok;
+      limpia();
+      let i = desde;
+      try {
+        while (mio === tok) { await caso(i); i = (i + 1) % CASOS.length; }
+      } catch (e) { /* se ha saltado a otro caso */ }
+    }
+
+    // Foto fija de un caso (sin movimiento): para movimiento reducido y para revisar
+    function foto(i) {
+      const c = CASOS[i];
+      rot = lay.mira + 90 - c.agentes[0] * 45; colocar();
+      ponChip(c, true); marcaCaso(i);
+      for (let k = 2; k >= 1; k--) avisa(CASOS[(i - k + CASOS.length) % CASOS.length], true);
+      avisa(c, true);
+      entrada.className = "ag-in n" + c.entra.length;
+      entrada.innerHTML = c.entra.join("");
+      c.agentes.forEach(function (a) { agEls[a].classList.add("on"); });
+      radios.children[c.agentes[0]].classList.add("on");
+    }
+
+    function ponBoton() {
+      boton.setAttribute("aria-label", pausado ? "Reproducir" : "Pausar");
+      boton.querySelector(".ag-ip").style.display = pausado ? "none" : "";
+      boton.querySelector(".ag-ij").style.display = pausado ? "" : "none";
+    }
+    boton.addEventListener("click", function () {
+      pausado = !pausado;
+      esc.getAnimations({ subtree: true }).forEach(function (a) { if (pausado) a.pause(); else a.play(); });
+      ponBoton();
+      if (!pausado && !empezado) { empezado = true; nots.textContent = ""; corre(0); }
+    });
+
+    encaja();
+    if ("ResizeObserver" in window) new ResizeObserver(encaja).observe(marco);
+    else window.addEventListener("resize", encaja);
+    ponBoton();
+
+    const fijo = /^#foto-([1-7])$/.exec(location.hash);
+    if (fijo) { pausado = true; empezado = true; foto(+fijo[1] - 1); return; }
+    if (reducido) { empezado = true; foto(2); return; }
+    marcaCaso(0);
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (en) {
+        visible = en[0].isIntersecting;
+        if (visible && !empezado && !pausado) { empezado = true; corre(0); }
+      }, { threshold: 0.3 }).observe(marco);
+    } else { visible = true; empezado = true; corre(0); }
+  })();
+/* agentes:fin */</script>
 
 </body>
 </html>
