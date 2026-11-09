@@ -589,11 +589,12 @@ html[data-anim] [data-aparece] { transform: translateY(40px) scale(.97); }
 html[data-anim] [data-aparece][data-visto] { transform: none; }
 
 @media (max-width: 860px) {
-  .pq { grid-template-columns: minmax(0, 1fr); grid-template-areas: "foto" "cab" "texto"; row-gap: 16px; align-items: start; }
-  .pq-foto { width: 100%; max-width: 420px; aspect-ratio: 1; border-radius: 26px; margin-bottom: 8px; }
+  .pq { grid-template-columns: 108px minmax(0, 1fr); grid-template-areas: "foto cab" "texto texto"; column-gap: 18px; align-items: center; }
+  .pq-foto { aspect-ratio: 1; border-radius: 50%; }
   .pq-foto picture { display: contents; }
-  .pq-cab h2 { font-size: 34px; }
-  .pq-firma { margin-top: 6px; font-size: 15px; }
+  .pq-foto img { object-position: 50% 50%; }
+  .pq-cab h2 { font-size: 32px; }
+  .pq-firma { margin-top: 4px; font-size: 14px; }
   .filas { grid-template-columns: 1fr; }
   .extras2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   html[data-anim] [data-aparece] { filter: none; transform: translateY(36px) scale(.96); }
