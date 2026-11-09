@@ -591,6 +591,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
 @media (max-width: 860px) {
   .pq { grid-template-columns: 84px minmax(0, 1fr); grid-template-areas: "foto cab" "texto texto"; column-gap: 18px; align-items: center; }
   .pq-foto { aspect-ratio: 1; border-radius: 50%; font-size: 28px; }
+  .pq-foto img { object-position: 50% 22%; }
   .pq-cab h2 { font-size: 32px; }
   .pq-firma { margin-top: 4px; font-size: 14px; }
   .filas { grid-template-columns: 1fr; }
@@ -695,7 +696,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
   </section>
   <section class="seccion">
     <div class="wrap pq">
-      <div class="pq-foto" data-aparece role="img" aria-label="Foto de Héctor García"><span>HG</span></div>
+      <div class="pq-foto" data-aparece><img src="/programa/hector.jpg" alt="Héctor García" width="720" height="900" loading="lazy"></div>
       <div class="pq-cab" data-aparece style="--d:1"><h2>Por qué <span class="fino">lo he hecho</span></h2><p class="pq-firma">Héctor García · Valencia</p></div>
       <div class="pq-texto" data-aparece style="--d:2">
         <p>He hablado con unos 300 hoteleros por LinkedIn y en casi todos los hoteles veo lo mismo. Cada informe se hace a su manera, copiando números a mano al Excel, y el cuadrante se rehace cada semana.</p>
