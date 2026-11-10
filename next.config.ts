@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
       { source: "/nivel", destination: "/nivel/index.html" },
       { source: "/gm", destination: "/gm/index.html" },
       { source: "/skills", destination: "/skills/index.html" },
+      { source: "/equipo-ia", destination: "/equipo-ia/index.html" },
       // Landing del programa Director con Claude (aparte de Vértice).
       { source: "/programa", destination: "/programa/index.html" },
       // Demo privada de la carta de Casa Román (app Angular): cualquier ruta
@@ -69,6 +70,9 @@ const nextConfig: NextConfig = {
       { source: "/auditoria-room-service", destination: "/auditoria-room-service/index.html", permanent: false },
       { source: "/mapa", destination: "/mapa/index.html", permanent: false },
       { source: "/biblioteca", destination: "/biblioteca/index.html", permanent: false },
+      // Recurso abierto, sin formulario (prueba de noviembre de 2026)
+      { source: "/recurso/equipo-ia", destination: "/equipo-ia", permanent: false },
+      { source: "/recurso/equipo", destination: "/equipo-ia", permanent: false },
     ];
   },
 };
