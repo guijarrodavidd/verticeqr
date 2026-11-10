@@ -72,7 +72,6 @@ const nextConfig: NextConfig = {
       { source: "/biblioteca", destination: "/biblioteca/index.html", permanent: false },
       // Recurso abierto, sin formulario (prueba de noviembre de 2026)
       { source: "/recurso/equipo-ia", destination: "/equipo-ia", permanent: false },
-      { source: "/recurso/equipo", destination: "/equipo-ia", permanent: false },
     ];
   },
 };
