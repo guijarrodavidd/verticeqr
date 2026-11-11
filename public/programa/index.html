@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Director con Claude">
-<meta property="og:description" content="Aprende a usar la IA en tu hotel en solo 21 días. Programa práctico desde el día 1, 15 minutos al día.">
+<meta property="og:description" content="Aprende a usar la IA en tu hotel en solo 21 días. Al acabar, tus turnos y tus informes salen solos.">
 <meta property="og:url" content="https://verticeqr.com/programa">
 <meta property="og:image" content="https://verticeqr.com/programa/og-programa.jpg">
 <meta property="og:image:width" content="1200">
@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FFFFFF">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}</style>
-<meta name="description" content="Programa de Claude para directores de hotel. 21 días, 15 minutos al día, de 0 a 100 con los datos de tu hotel.">
+<meta name="description" content="Programa de Claude para directores de hotel. En 21 días dejas tus turnos y tus informes en automático, con los datos de tu hotel.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&display=swap">
@@ -336,7 +336,7 @@ h2 .fino { font-weight: 400; }
 .dia20 > .wrap { padding-block: 112px; scroll-margin-top: 70px; }
 .dia20 h2 { margin-top: 22px; font-size: clamp(44px, 7vw, 92px); letter-spacing: -0.058em; }
 .dia20 .entradilla { color: #C3CCD6; margin-top: 18px; }
-.pasos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 44px; }
+.pasos { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 44px; }
 .pasos div { padding: 22px; border-radius: 22px; background: rgba(255, 255, 255, .06); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .14), 0 0 40px -14px rgba(94, 230, 216, .5); display: grid; gap: 10px; }
 .pasos span { font-size: 40px; font-weight: 700; letter-spacing: -0.06em; line-height: 1; color: var(--aqua); font-variant-numeric: tabular-nums; }
 .pasos p { font-size: 17px; font-weight: 550; letter-spacing: -0.025em; line-height: 1.3; }
@@ -396,6 +396,7 @@ footer img { height: 18px; width: auto; display: block; }
   .cabeza, .porque, .columnas, .dia20 .lista { grid-template-columns: 1fr; }
   .foto { max-width: 320px; }
   .rampa, .pasos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pasos div:last-child { grid-column: 1 / -1; }
   .d { grid-template-columns: 64px minmax(0, 1fr); }
   .d > div { grid-column: 2; }
   .d .num { font-size: 28px; }
@@ -827,6 +828,67 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
 [data-l="v"] .ag-rev p, [data-l="v"] .ag-nota { font-size: 12.5px; }
 .ag-mas { margin: 26px 0 0; display: flex; justify-content: center; }
 /* agentes:fin */
+/* demo:inicio */
+/* Sesión de Claude en directo: la caja se escribe sola, los archivos suben, Claude piensa y responde */
+.demo [data-d] { transition: opacity .45s ease, transform .45s ease; }
+.demo .c-oc { opacity: 0 !important; transform: translateY(8px); pointer-events: none; }
+.escribiendo::after { content: ""; display: inline-block; width: 2px; height: 1.05em; margin-left: 2px; vertical-align: -0.15em; background: currentColor; animation: c-cursor 1s steps(2) infinite; }
+@keyframes c-cursor { 50% { opacity: 0; } }
+.c-pulsa { animation: c-pulsa .45s ease; }
+@keyframes c-pulsa { 40% { transform: scale(.86); box-shadow: 0 0 0 6px rgba(217, 119, 87, .35); } }
+.c-gira { animation: c-gira 1.6s linear infinite; }
+@keyframes c-gira { to { transform: rotate(360deg); } }
+.c-nuevo { padding: 9px 10px; margin-bottom: 10px; border-radius: 9px; font-size: 14px; color: var(--c-text); background: rgba(255, 255, 255, .06); box-shadow: inset 0 0 0 1px var(--c-line); }
+.c-prog { display: block; height: 4px; margin-top: 6px; border-radius: 4px; background: rgba(255, 255, 255, .08); overflow: hidden; }
+.c-prog b { display: block; height: 100%; width: 0; background: var(--grad); transition: width .7s ease; }
+.c-f-ok .c-prog { display: none; }
+.c-listo { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: rgba(43, 182, 115, .14); color: #8FE3B5; font-size: 13.5px; font-weight: 600; }
+.c-listo i { flex: none; width: 20px; height: 20px; border-radius: 50%; background: #2BB673; color: #fff; display: grid; place-items: center; font-style: normal; font-size: 12px; }
+
+.c-col { display: grid; grid-template-rows: minmax(0, 1fr) auto auto; height: 480px; min-width: 0; border-right: 1px solid var(--c-line); }
+.c-col .c-chat { border: 0; padding: 20px 20px 10px; overflow-y: auto; scrollbar-width: none; scroll-behavior: smooth; align-content: start; }
+.c-col .c-chat::-webkit-scrollbar { display: none; }
+.c-compo { padding: 8px 16px 16px; display: grid; gap: 8px; }
+.c-adj { display: flex; flex-wrap: wrap; gap: 6px; }
+.c-adj:empty { display: none; }
+.c-adj span { position: relative; overflow: hidden; font-size: 12px; padding: 6px 10px; border-radius: 8px; background: rgba(255, 255, 255, .06); color: var(--c-muted); box-shadow: inset 0 0 0 1px var(--c-line); }
+.c-adj span i { position: absolute; left: 0; bottom: 0; height: 2px; width: 0; background: var(--grad); transition: width .6s ease; }
+.c-caja-t { min-width: 0; color: var(--c-muted); }
+.c-caja-t.lleno { color: var(--c-text); }
+.c-sug { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 16px 4px; }
+.c-sug button { font: 500 12.5px/1.25 var(--f); color: var(--c-text); background: rgba(255, 255, 255, .06); border: 1px solid var(--c-line); border-radius: 99px; padding: 8px 12px; cursor: pointer; text-align: left; }
+.c-sug button:hover { background: rgba(255, 255, 255, .12); }
+.c-sug button.usado { display: none; }
+.c-pensando { margin: 0; background: linear-gradient(90deg, #8E8E88 0%, #F2F2EE 50%, #8E8E88 100%); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: c-brillo 1.4s linear infinite; }
+@keyframes c-brillo { to { background-position: -200% 0; } }
+.c-cita { background: var(--c-input); border-radius: 12px; padding: 12px 14px; box-shadow: inset 0 0 0 1px var(--c-line); border-left: 3px solid #D97757; font-size: 13.5px; white-space: pre-line; }
+.c-pasos { display: grid; gap: 6px; font-size: 13px; color: var(--c-muted); }
+.c-pasos div { display: flex; align-items: center; gap: 8px; }
+.c-pasos i { flex: none; width: 14px; height: 14px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, .22); border-top-color: #D97757; animation: c-gira .8s linear infinite; }
+.c-pasos div.ok i { border: 0; background: #2BB673; animation: none; position: relative; }
+.c-pasos div.ok i::after { content: ""; position: absolute; left: 5px; top: 2.5px; width: 3px; height: 6px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.c-panel { position: relative; }
+.c-vacio { position: absolute; inset: 0; display: grid; place-items: center; color: var(--c-muted); font-size: 13px; pointer-events: none; }
+
+.p-trans { display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; height: 190px; overflow: hidden; text-align: left; }
+.p-trans p { margin: 0; padding: 9px 12px; border-radius: 14px; font-size: 13px; line-height: 1.4; max-width: 94%; }
+.p-trans small { display: block; font-size: 10.5px; color: var(--c-muted); margin-bottom: 2px; }
+.p-trans .tu { align-self: flex-end; background: var(--c-user); }
+.p-trans .el { align-self: flex-start; background: rgba(217, 119, 87, .16); }
+.onda.habla i { animation: c-onda 1.1s ease-in-out infinite; }
+@keyframes c-onda { 0%, 100% { height: 25%; } 50% { height: 100%; } }
+.onda.habla i:nth-child(2n) { animation-delay: .15s; }
+.onda.habla i:nth-child(3n) { animation-delay: .3s; }
+.onda.habla i:nth-child(5n) { animation-delay: .45s; }
+@media (max-width: 820px) {
+  .c-col { height: 400px; border-right: 0; border-bottom: 1px solid var(--c-line); }
+  .c-col .c-chat { padding: 16px 14px 8px; }
+  .c-compo { padding: 8px 12px 12px; }
+  .c-sug { padding: 0 12px 4px; }
+  .p-trans { height: 170px; }
+}
+.p-trans { -webkit-mask-image: linear-gradient(transparent 0, #000 34px); mask-image: linear-gradient(transparent 0, #000 34px); }
+/* demo:fin */
 </style>
 </head>
 <body>
@@ -846,7 +908,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
     <div class="wrap">
       <span class="pildora" data-aparece>Programa práctico desde el día 1</span>
       <h1 data-aparece style="--d:1">Aprende a usar <b>la IA en tu hotel</b> en solo <b class="grad">21 días</b></h1>
-      <p class="entradilla" data-aparece style="--d:2">15 minutos al día con los datos de tu hotel. Los informes salen en minutos y recuperas ese tiempo para lo que necesite tu hotel.</p>
+      <p class="entradilla" data-aparece style="--d:2">Practicas cada día con los datos de tu hotel. Al acabar, tus turnos y tus informes salen solos y sabes montar cualquier automatización sin depender de nadie.</p>
       <div class="acciones" data-aparece style="--d:3">
         <a class="boton negro" href="#precio">Acceder al programa · desde <span data-cfg="precio">197 €</span></a>
         <a class="boton borde" href="#dias">Ver los 21 días</a>
@@ -884,10 +946,10 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
       <div class="cabeza" data-aparece><h2>Así creas <span class="fino">tus agentes</span></h2><p class="entradilla">En el programa montas tus propios agentes en Claude, uno por tarea, y aprendes a usarlos con los datos de tu hotel.</p></div>
       <div class="demo" data-aparece style="--d:1">
         <div class="pestanas" role="tablist" aria-label="Las partes de Claude que usas en el programa">
-          <button role="tab" aria-selected="true" data-vista="v-proyectos"><b>Día 4</b> · Tu primer agente</button>
-          <button role="tab" aria-selected="false" data-vista="v-artefacto"><b>Día 7</b> · Artefactos</button>
-          <button role="tab" aria-selected="false" data-vista="v-voz"><b>Día 14</b> · Modo voz</button>
-          <button role="tab" aria-selected="false" data-vista="v-archivos"><b>Días 18 y 19</b> · Informe y presentación</button>
+          <button role="tab" aria-selected="true" data-vista="v-proyectos"><b>Proyectos</b> · Tu primer agente</button>
+          <button role="tab" aria-selected="false" data-vista="v-artefacto"><b>Artefactos</b> · Le pides el plan</button>
+          <button role="tab" aria-selected="false" data-vista="v-voz"><b>Voz</b> · Ensayas hablando</button>
+          <button role="tab" aria-selected="false" data-vista="v-archivos"><b>Archivos</b> · Te hace el informe</button>
         </div>
 
         <!-- Proyectos -->
@@ -896,31 +958,33 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
             <div class="c-top"><span class="c-dots" aria-hidden="true"><i></i><i></i><i></i></span><img class="c-logo" src="/programa/claude-logo-blanco.svg" alt="Claude" width="89" height="19"><span class="c-donde">Proyectos</span></div>
             <div class="v-proy">
               <div class="c-lateral">
+                <span class="c-nuevo" data-d="nuevo-btn">+ Nuevo proyecto</span>
                 <small>Proyectos</small>
-                <span class="on">Hotel Brisalta</span>
-                <span>Reseñas</span>
+                <span class="on" data-d="nuevo">Reseñas</span>
+                <span>Hotel Brisalta</span>
                 <span>Equipo</span>
                 <span>Dueños</span>
                 <span>Carta</span>
               </div>
               <div class="c-proy">
-                <div data-paso><h3>Hotel Brisalta</h3><p class="sub">Hotel de playa · 80 habitaciones</p></div>
-                <div class="c-entrada" data-paso><span>¿En qué te ayudo hoy con el hotel?</span><span class="c-enviar" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+                <div><h3 data-d="nombre" data-texto="Reseñas">Reseñas</h3><p class="sub" data-d="sub">Agente de reseñas · Hotel Brisalta</p></div>
                 <div class="c-dos">
-                  <div class="c-caja" data-paso>
+                  <div class="c-caja">
                     <h4>Instrucciones del proyecto</h4>
-                    <p class="c-instr" data-escribe>Eres la mano derecha de Laura Martín, directora del Hotel Brisalta, un hotel de playa de 80 habitaciones. Escribe de tú y con frases cortas. Firma como Laura. No inventes cifras y pregunta siempre que te falte un dato.</p>
+                    <p class="c-instr" data-d="instr" data-texto="Eres el agente de reseñas del Hotel Brisalta. Lees las reseñas sin nombres, las agrupas por departamento y me dices qué arreglar primero. Respondes de usted, con frases cortas, y nunca prometes compensaciones.">Eres el agente de reseñas del Hotel Brisalta. Lees las reseñas sin nombres, las agrupas por departamento y me dices qué arreglar primero. Respondes de usted, con frases cortas, y nunca prometes compensaciones.</p>
                   </div>
-                  <div class="c-caja" data-paso>
+                  <div class="c-caja">
                     <h4>Conocimiento del proyecto</h4>
                     <div class="c-fich">
-                      <div data-paso><span class="c-ext">DOCX</span><span>ficha-hotel-brisalta.docx<small>4 páginas</small></span></div>
-                      <div data-paso><span class="c-ext">PDF</span><span>carta-restaurante.pdf<small>2 páginas</small></span></div>
-                      <div data-paso><span class="c-ext">PDF</span><span>organigrama.pdf<small>1 página</small></span></div>
-                      <div data-paso><span class="c-ext">XLSX</span><span>presupuesto-2026.xlsx<small>Hoja de cálculo</small></span></div>
+                      <div data-d="f"><span class="c-ext">DOCX</span><span>ficha-hotel-brisalta.docx<small>4 páginas</small><i class="c-prog"><b></b></i></span></div>
+                      <div data-d="f"><span class="c-ext">PDF</span><span>carta-restaurante.pdf<small>2 páginas</small><i class="c-prog"><b></b></i></span></div>
+                      <div data-d="f"><span class="c-ext">PDF</span><span>organigrama.pdf<small>1 página</small><i class="c-prog"><b></b></i></span></div>
+                      <div data-d="f"><span class="c-ext">TXT</span><span>respuestas-que-nos-gustan.txt<small>12 ejemplos</small><i class="c-prog"><b></b></i></span></div>
                     </div>
                   </div>
                 </div>
+                <div class="c-listo" data-d="listo"><i aria-hidden="true">✓</i>Tu agente de reseñas ya conoce el hotel</div>
+                <div class="c-entrada" data-d="entrada"><span>¿Qué hago con las reseñas de esta semana?</span><span class="c-enviar" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
               </div>
             </div>
           </div>
@@ -931,38 +995,37 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
           <div class="claude">
             <div class="c-top"><span class="c-dots" aria-hidden="true"><i></i><i></i><i></i></span><img class="c-logo" src="/programa/claude-logo-blanco.svg" alt="Claude" width="89" height="19"><span class="c-donde">Proyecto · Reseñas</span></div>
             <div class="v-arte">
-              <div class="c-chat">
-                <div class="c-usuario" data-paso>
-                  <div class="c-burbuja">Aquí van las 64 reseñas de octubre, sin nombres. Agrúpalas por departamento y dime qué arreglo primero.</div>
-                  <div class="c-adjuntos"><span>resenas-octubre.txt</span></div>
+              <div class="c-col">
+                <div class="c-chat" data-d="chat"></div>
+                <div class="c-sug" data-d="sug">
+                  <button type="button" data-p="Escríbeme la respuesta a la de 2 estrellas">Escríbeme la respuesta a la de 2 estrellas</button>
+                  <button type="button" data-p="Pásalo a un correo para el equipo">Pásalo a un correo para el equipo</button>
                 </div>
-                <div class="c-respuesta" data-paso>
-                  <svg class="c-spark" viewBox="0 0 100 100" aria-hidden="true"><use href="#chispa"/></svg>
-                  <div class="c-texto">
-                    <p data-escribe>Te he dejado el plan en un artefacto. Empieza por el agua caliente de la tercera planta. Sale en 4 reseñas y en 2 de ellas baja la nota a 3 estrellas.</p>
-                    <div class="c-pieza"><span class="c-ext">PLAN</span><span>Plan de reseñas · Octubre<small>Artefacto</small></span><span class="bajar">Abierto</span></div>
-                  </div>
+                <div class="c-compo">
+                  <div class="c-adj" data-d="adj"></div>
+                  <div class="c-entrada"><span class="c-caja-t" data-d="caja">Responder a Claude…</span><span class="c-enviar" data-d="enviar" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
                 </div>
               </div>
               <div class="c-panel">
-                <div class="c-panel-cab"><b>Plan de reseñas · Octubre</b><span>Vista previa</span></div>
-                <div class="c-datos" data-paso>
-                  <div><strong>64</strong><span>reseñas</span></div>
-                  <div><strong>41</strong><span>de 5 estrellas</span></div>
-                  <div><strong>9</strong><span>con alguna queja</span></div>
+                <div class="c-vacio" data-d="vacio">El artefacto aparece aquí</div>
+                <div class="c-panel-cab" data-d="p"><b>Plan de reseñas · Octubre</b><span>Vista previa</span></div>
+                <div class="c-datos" data-d="p">
+                  <div><strong data-n="64">64</strong><span>reseñas</span></div>
+                  <div><strong data-n="41">41</strong><span>de 5 estrellas</span></div>
+                  <div><strong data-n="9">9</strong><span>con alguna queja</span></div>
                 </div>
-                <div class="c-barras" data-paso>
+                <div class="c-barras" data-d="p">
                   <h5>Quejas por departamento</h5>
                   <div class="c-barra"><span>Pisos</span><span class="pista"><i data-ancho="100%" style="width:100%"></i></span><b>4</b></div>
                   <div class="c-barra"><span>Recepción</span><span class="pista"><i data-ancho="75%" style="width:75%"></i></span><b>3</b></div>
                   <div class="c-barra"><span>Restaurante</span><span class="pista"><i data-ancho="50%" style="width:50%"></i></span><b>2</b></div>
                 </div>
-                <div data-paso>
+                <div data-d="p">
                   <p class="c-orden-tit">Qué arreglar primero</p>
                   <ol class="c-orden" style="margin-top:10px">
-                    <li><span>Agua caliente en la tercera planta<small>Mantenimiento · esta semana</small></span></li>
-                    <li><span>Esperas en el check-in de 15:00 a 16:00<small>Recepción · reforzar esa hora</small></span></li>
-                    <li><span>Fruta en el desayuno a partir de las 10:00<small>Restaurante</small></span></li>
+                    <li data-d="li"><span>Agua caliente en la tercera planta<small>Mantenimiento · esta semana</small></span></li>
+                    <li data-d="li"><span>Esperas en el check-in de 15:00 a 16:00<small>Recepción · reforzar esa hora</small></span></li>
+                    <li data-d="li"><span>Fruta en el desayuno a partir de las 10:00<small>Restaurante</small></span></li>
                   </ol>
                 </div>
               </div>
@@ -975,21 +1038,21 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
           <div class="v-voz">
             <div class="movil">
               <div class="pantalla">
-                <p class="p-cab"><b>Ensayo con Marcos</b>Modo voz</p>
+                <p class="p-cab"><b>Ensayo con Marcos</b><span data-d="reloj">Modo voz · 0:00</span></p>
                 <div class="orbe"><svg class="c-spark" viewBox="0 0 100 100" aria-hidden="true"><use href="#chispa"/></svg></div>
                 <div class="onda" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-                <div class="p-frase" data-paso><small>Claude, haciendo de Marcos</small><span data-escribe>Ya sé lo que me vas a decir. Con el autobús de las 6:40 no llego, y el siguiente me deja en la puerta a las 7:05.</span></div>
+                <div class="p-trans" data-d="trans"></div>
                 <div class="p-botones" aria-hidden="true">
                   <span><svg viewBox="0 0 20 20"><rect x="7" y="2.5" width="6" height="10" rx="3" fill="none" stroke="#ECECEA" stroke-width="1.6"/><path d="M4.5 9.5a5.5 5.5 0 0 0 11 0M10 15v2.5" fill="none" stroke="#ECECEA" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-                  <span class="fin"><svg viewBox="0 0 20 20"><path d="M5 5l10 10M15 5 5 15" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+                  <span class="fin" data-d="colgar"><svg viewBox="0 0 20 20"><path d="M5 5l10 10M15 5 5 15" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
                 </div>
               </div>
             </div>
             <div class="correccion">
               <h3>Ensayas la conversación hablando, y al colgar Claude te corrige</h3>
               <p>Claude hace de Marcos, el recepcionista que lleva tres semanas llegando tarde. Tú le hablas desde el móvil como si lo tuvieras delante.</p>
-              <div class="nota-c" data-paso><b>Lo que has hecho bien</b><p>Has empezado por los hechos, las tres semanas, sin acusarle.</p></div>
-              <div class="nota-c" data-paso><b>Lo que cambiaría</b><p>Proponle tú una salida antes de que la pida él, como entrar a las 7:15 hasta que cambie el horario del autobús.</p></div>
+              <div class="nota-c" data-d="nota"><b>Lo que has hecho bien</b><p>Has empezado por los hechos, las tres semanas, sin acusarle.</p></div>
+              <div class="nota-c" data-d="nota"><b>Lo que cambiaría</b><p>Proponle tú una salida antes de que la pida él, como entrar a las 7:15 hasta que cambie el horario del autobús.</p></div>
             </div>
           </div>
         </div>
@@ -999,34 +1062,28 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
           <div class="claude">
             <div class="c-top"><span class="c-dots" aria-hidden="true"><i></i><i></i><i></i></span><img class="c-logo" src="/programa/claude-logo-blanco.svg" alt="Claude" width="89" height="19"><span class="c-donde">Proyecto · Dueños</span></div>
             <div class="v-arch">
-              <div class="c-chat">
-                <div class="c-usuario" data-paso>
-                  <div class="c-burbuja">Sácame el informe de octubre para los dueños y la presentación para la reunión del jueves.</div>
-                  <div class="c-adjuntos"><span>informe-octubre.pdf</span><span>ventas-bar-octubre.xlsx</span></div>
-                </div>
-                <div class="c-respuesta" data-paso>
-                  <svg class="c-spark" viewBox="0 0 100 100" aria-hidden="true"><use href="#chispa"/></svg>
-                  <div class="c-texto">
-                    <p data-escribe>Aquí tienes los dos archivos. Antes de enviarlos, comprueba la ocupación y el ingreso total con el informe original.</p>
-                    <div class="c-pieza" data-paso><span class="c-ext">DOCX</span><span>Informe de octubre<small>Documento de Word · 1 página</small></span><span class="bajar">Descargar</span></div>
-                    <div class="c-pieza" data-paso><span class="c-ext">PPTX</span><span>Reunión con los dueños<small>PowerPoint · 6 diapositivas</small></span><span class="bajar">Descargar</span></div>
-                  </div>
+              <div class="c-col">
+                <div class="c-chat" data-d="chat"></div>
+                <div class="c-compo">
+                  <div class="c-adj" data-d="adj"></div>
+                  <div class="c-entrada"><span class="c-caja-t" data-d="caja">Responder a Claude…</span><span class="c-enviar" data-d="enviar" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
                 </div>
               </div>
               <div class="c-panel">
-                <div class="hoja">
+                <div class="c-vacio" data-d="vacio">Aquí verás el informe</div>
+                <div class="hoja" data-d="p">
                   <h5>Hotel Brisalta · Octubre<small>Informe para los dueños</small></h5>
-                  <div class="fila" data-paso><span>Ocupación</span><b>75 % · 4 puntos más</b></div>
-                  <div class="fila" data-paso><span>Precio medio</span><b>112 €</b></div>
-                  <div class="fila" data-paso><span>Habitaciones</span><b>208.320 €</b></div>
-                  <div class="fila" data-paso><span>Restaurante y bar</span><b>38.450 €</b></div>
-                  <div class="fila" data-paso><span>Ingreso total</span><b>246.770 €</b></div>
-                  <p class="ojo" data-paso>A vigilar · el bar baja un 9 % entre semana.</p>
+                  <div class="fila" data-d="fila"><span>Ocupación</span><b>70 %</b></div>
+                  <div class="fila" data-d="fila"><span>Precio medio</span><b>100 €</b></div>
+                  <div class="fila" data-d="fila"><span>Habitaciones</span><b>173.600 €</b></div>
+                  <div class="fila" data-d="fila"><span>Restaurante y bares</span><b>38.192 €</b></div>
+                  <div class="fila" data-d="fila"><span>Ingreso total</span><b>218.736 €</b></div>
+                  <p class="ojo" data-d="fila">A vigilar · el bar del lobby baja entre semana.</p>
                 </div>
-                <div class="diapos" data-paso>
-                  <div class="diapo"><span>Octubre en una página</span><i></i><i></i></div>
-                  <div class="diapo"><span>De dónde sale el ingreso</span><i></i><i></i></div>
-                  <div class="diapo"><span>Qué haremos en noviembre</span><i></i><i></i></div>
+                <div class="diapos" data-d="p">
+                  <div class="diapo" data-d="diapo"><span>Octubre en una página</span><i></i><i></i></div>
+                  <div class="diapo" data-d="diapo"><span>De dónde sale el ingreso</span><i></i><i></i></div>
+                  <div class="diapo" data-d="diapo"><span>Qué haremos en noviembre</span><i></i><i></i></div>
                   <small>3 de las 6 diapositivas</small>
                 </div>
               </div>
@@ -1041,7 +1098,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
   <!-- agentes:inicio -->
   <section class="seccion" id="agentes">
     <div class="wrap">
-      <div class="cabeza" data-aparece><h2>Tus agentes, <span class="fino">trabajando solos</span></h2><p class="entradilla">En el programa los creas tú y los usas uno a uno. Con el plan A medida te los dejamos conectados y en automático. Los datos entran solos, cada agente hace su parte y a ti te llega el aviso al móvil.</p></div>
+      <div class="cabeza" data-aparece><h2>Tus agentes, <span class="fino">trabajando solos</span></h2><p class="entradilla">En el programa aprendes a crearlos y a dejarlos en automático desde tu cuenta. Con el plan A medida lo montamos para todo tu equipo, con su panel y los avisos al móvil.</p></div>
 <div class="ag">
   <div class="ag-marco">
     <div class="ag-esc" data-l="h" role="img" aria-label="Animación: los datos del hotel entran solos, el jefe de dirección los reparte entre sus agentes y al director le llega el aviso con el trabajo hecho en el móvil">
@@ -1074,46 +1131,46 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
         <h2 data-aparece>Los <span class="grad">21</span> días</h2>
         <p class="entradilla" data-aparece style="--d:1">Cada día acabas con algo funcionando en tu hotel, empezando por el primero.</p>
       </div>
-      <div class="tabs-semana" data-aparece style="--d:1" role="tablist" aria-label="Semanas del programa"><button role="tab" aria-selected="true" data-sem="1"><b>Semana 1</b> · Claude trabaja para ti</button><button role="tab" aria-selected="false" data-sem="2"><b>Semana 2</b> · Fuera de la oficina</button><button role="tab" aria-selected="false" data-sem="3"><b>Semana 3</b> · Tu equipo</button><button role="tab" aria-selected="false" data-sem="4"><b>Semana 4</b> · Los números y los dueños</button><a class="tab-final" href="#dia-21"><b>Día 21</b> · Ya lo haces tú</a></div>
+      <div class="tabs-semana" data-aparece style="--d:1" role="tablist" aria-label="Semanas del programa"><button role="tab" aria-selected="true" data-sem="1"><b>Semana 1</b> · Tu punto de partida</button><button role="tab" aria-selected="false" data-sem="2"><b>Semana 2</b> · Los turnos</button><button role="tab" aria-selected="false" data-sem="3"><b>Semana 3</b> · Los informes</button><button role="tab" aria-selected="false" data-sem="4"><b>Semana 4</b> · En automático</button><a class="tab-final" href="#dia-21"><b>Día 21</b> · Ya lo haces tú</a></div>
 
       <div class="semana" data-semana="1" role="tabpanel">
-        <div class="semana-cab"><span class="pildora">Semana 1</span><h3>Claude trabaja para ti</h3><span class="nivel">Del nivel 1 al 3</span></div>
+        <div class="semana-cab"><span class="pildora">Semana 1</span><h3>Tu punto de partida</h3><span class="nivel">Del nivel 1 al 3</span></div>
         <div class="filas">
-          <article class="d2" id="dia-1"><span class="num">1</span><div><h4>Tu punto de partida</h4><p>Sabes en qué nivel estás y ya has respondido tu primera reseña con Claude.</p></div></article>
+          <article class="d2" id="dia-1"><span class="num">1</span><div><h4>La radiografía de tu despacho</h4><p>Sabes cuántas horas te comen los turnos y los informes, y por dónde empiezas.</p></div></article>
           <article class="d2" id="dia-2"><span class="num">2</span><div><h4>Cómo pedirle las cosas</h4><p>Le pides las cosas para que la respuesta salga bien a la primera.</p></div></article>
           <article class="d2" id="dia-3"><span class="num">3</span><div><h4>La ficha de tu hotel</h4><p>Claude conoce tu hotel y cómo trabajas.</p></div></article>
-          <article class="d2" id="dia-4"><span class="num">4</span><div><h4>El proyecto de tu hotel</h4><p>Dejas de explicarle tu hotel cada vez que le pides algo.</p></div></article>
-          <article class="d2" id="dia-5"><span class="num">5</span><div><h4>Claude en el bolsillo</h4><p>Repartes tareas desde el móvil mientras haces la ronda.</p></div></article>
+          <article class="d2" id="dia-4"><span class="num">4</span><div><h4>Tu primer agente</h4><p>Tu hotel queda dentro de un proyecto y creas tu primer agente.</p></div></article>
+          <article class="d2" id="dia-5"><span class="num">5</span><div><h4>Claude en el bolsillo</h4><p>Dictas los partes desde el móvil mientras haces la ronda.</p></div></article>
         </div>
       </div>
       <div class="semana" data-semana="2" role="tabpanel" hidden>
-        <div class="semana-cab"><span class="pildora">Semana 2</span><h3>Fuera de la oficina</h3><span class="nivel">Nivel 4</span></div>
+        <div class="semana-cab"><span class="pildora">Semana 2</span><h3>Los turnos</h3><span class="nivel">Nivel 4</span></div>
         <div class="filas">
-          <article class="d2" id="dia-6"><span class="num">6</span><div><h4>Las reseñas de la semana</h4><p>Las reseñas quedan respondidas con tu tono, también las malas.</p></div></article>
-          <article class="d2" id="dia-7"><span class="num">7</span><div><h4>Las reseñas del mes</h4><p>Sabes qué falla en cada departamento y qué arreglar primero.</p></div></article>
-          <article class="d2" id="dia-8"><span class="num">8</span><div><h4>Los correos que te cuestan</h4><p>Los correos difíciles salen en minutos.</p></div></article>
-          <article class="d2" id="dia-9"><span class="num">9</span><div><h4>Reuniones que acaban en tareas</h4><p>Cada reunión acaba con quién hace qué y para cuándo.</p></div></article>
-          <article class="d2" id="dia-10"><span class="num">10</span><div><h4>Los proveedores</h4><p>Comparas presupuestos y negocias con argumentos.</p></div></article>
+          <article class="d2" id="dia-6"><span class="num">6</span><div><h4>Las reglas de tu equipo</h4><p>Contratos, horas, libranzas y mínimos por ocupación quedan en una ficha.</p></div></article>
+          <article class="d2" id="dia-7"><span class="num grad">7</span><div><h4>El cuadrante de la semana</h4><p>El cuadrante sale de la ocupación prevista y de tus reglas.</p></div></article>
+          <article class="d2" id="dia-8"><span class="num">8</span><div><h4>Cuando alguien falla</h4><p>Le dices quién falta y te propone el cambio y el mensaje para el equipo.</p></div></article>
+          <article class="d2" id="dia-9"><span class="num">9</span><div><h4>Vacaciones y temporada alta</h4><p>El cuadrante del mes cuadra con las vacaciones y los picos.</p></div></article>
+          <article class="d2" id="dia-10"><span class="num">10</span><div><h4>Revisarlo y publicarlo</h4><p>Compruebas horas y descansos y lo cuelgas para tu equipo.</p></div></article>
         </div>
       </div>
       <div class="semana" data-semana="3" role="tabpanel" hidden>
-        <div class="semana-cab"><span class="pildora">Semana 3</span><h3>Tu equipo</h3><span class="nivel">Nivel 4, con tu equipo</span></div>
+        <div class="semana-cab"><span class="pildora">Semana 3</span><h3>Los informes</h3><span class="nivel">Nivel 5</span></div>
         <div class="filas">
-          <article class="d2" id="dia-11"><span class="num">11</span><div><h4>El cuadrante</h4><p>El cuadrante se rehace en minutos cuando alguien falla.</p></div></article>
-          <article class="d2" id="dia-12"><span class="num">12</span><div><h4>El que entra nuevo</h4><p>El que entra nuevo tiene su manual desde el primer día.</p></div></article>
-          <article class="d2" id="dia-13"><span class="num">13</span><div><h4>Los procedimientos</h4><p>Cada tarea del hotel queda escrita paso a paso.</p></div></article>
-          <article class="d2" id="dia-14"><span class="num">14</span><div><h4>Las conversaciones difíciles</h4><p>Llegas a la conversación difícil ya ensayada.</p></div></article>
-          <article class="d2" id="dia-15"><span class="num">15</span><div><h4>Que tu equipo también lo use</h4><p>Tu equipo usa Claude con las mismas reglas que tú.</p></div></article>
+          <article class="d2" id="dia-11"><span class="num">11</span><div><h4>Los informes que haces hoy</h4><p>Tienes el mapa de lo que haces cada día, cada semana y cada mes.</p></div></article>
+          <article class="d2" id="dia-12"><span class="num">12</span><div><h4>El parte de tus jefes</h4><p>Tus jefes mandan el parte con un formulario, todos con el mismo formato.</p></div></article>
+          <article class="d2" id="dia-13"><span class="num grad">13</span><div><h4>El cierre de mes</h4><p>Subes los totales y Claude te marca lo que no cuadra.</p></div></article>
+          <article class="d2" id="dia-14"><span class="num">14</span><div><h4>El informe para los dueños</h4><p>El informe queda en una página, con tu firma.</p></div></article>
+          <article class="d2" id="dia-15"><span class="num">15</span><div><h4>Lo real contra el presupuesto</h4><p>Cada desviación sale con su explicación.</p></div></article>
         </div>
       </div>
       <div class="semana" data-semana="4" role="tabpanel" hidden>
-        <div class="semana-cab"><span class="pildora">Semana 4</span><h3>Los números y los dueños</h3><span class="nivel">Niveles 5 y 6</span></div>
+        <div class="semana-cab"><span class="pildora">Semana 4</span><h3>En automático</h3><span class="nivel">Niveles 6 y 7</span></div>
         <div class="filas">
-          <article class="d2" id="dia-16"><span class="num">16</span><div><h4>La semana en cinco líneas</h4><p>Ves cómo va el hotel en cinco líneas y en un panel en el móvil.</p></div></article>
-          <article class="d2" id="dia-17"><span class="num">17</span><div><h4>Más ingreso con el mismo equipo</h4><p>Sabes qué más puede comprar el huésped y a qué precio.</p></div></article>
-          <article class="d2" id="dia-18"><span class="num grad">18</span><div><h4>El cierre de mes</h4><p>El cierre de mes sale en minutos y siempre con el mismo formato.</p></div></article>
-          <article class="d2" id="dia-19"><span class="num">19</span><div><h4>La reunión con los dueños</h4><p>Llegas a la reunión con la presentación hecha y ensayada.</p></div></article>
-          <article class="d2" id="dia-20"><span class="num">20</span><div><h4>Tu semana con Claude</h4><p>Sabes en qué momentos de tu semana te ayuda Claude.</p></div></article>
+          <article class="d2" id="dia-16"><span class="num">16</span><div><h4>Tu carpeta y tus formularios</h4><p>Lo que te manda tu equipo cae solo en una carpeta de tu Google.</p></div></article>
+          <article class="d2" id="dia-17"><span class="num">17</span><div><h4>Claude conectado a tu Google</h4><p>Tus agentes leen esa carpeta sin que les pases nada.</p></div></article>
+          <article class="d2" id="dia-18"><span class="num grad">18</span><div><h4>Tu primera tarea programada</h4><p>El resumen del lunes te llega solo, sin que lo pidas.</p></div></article>
+          <article class="d2" id="dia-19"><span class="num">19</span><div><h4>Tu registro</h4><p>Cada tarea queda apuntada y ves el tiempo que te devuelve.</p></div></article>
+          <article class="d2" id="dia-20"><span class="num">20</span><div><h4>Dos agentes encadenados</h4><p>El cierre de mes va de los números al informe para los dueños sin que lo toques.</p></div></article>
         </div>
       </div>
     </div>
@@ -1122,12 +1179,13 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
     <div class="wrap" id="dia-21">
       <span class="pildora" data-aparece>Día 21 · Método Fricción 0</span>
       <h2 data-aparece style="--d:1">Ya lo haces <span class="grad">tú solo.</span></h2>
-      <p class="entradilla" data-aparece style="--d:2">Conviertes cualquier tarea de tu hotel en tu propio asistente, sin depender de nadie.</p>
+      <p class="entradilla" data-aparece style="--d:2">Conviertes cualquier tarea de tu hotel en tu propio agente y la dejas en automático, sin depender de nadie.</p>
       <div class="pasos" data-aparece style="--d:3">
         <div><span>1</span><p>Qué tarea le pasas</p></div>
         <div><span>2</span><p>Qué le das</p></div>
         <div><span>3</span><p>Qué te devuelve</p></div>
         <div><span>4</span><p>Cómo lo revisas</p></div>
+        <div><span>5</span><p>Cuándo arranca solo</p></div>
       </div>
     </div>
   </section>
@@ -1187,7 +1245,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
           <ul class="incluye">
             <li>Diagnóstico de 45 minutos de las tareas de tu hotel</li>
             <li>Tus asistentes con sus jefes, uno por cada tarea y departamento</li>
-            <li>Lo que llega solo: los partes del viernes, el resumen del lunes y el borrador del cierre de mes</li>
+            <li>Todas las áreas en automático, con un panel para aprobar desde el móvil</li>
             <li>Entrega de 90 minutos con tu equipo y una tarjeta por puesto</li>
             <li>El programa para 6 personas y 30 días de soporte conmigo</li>
           </ul>
@@ -1200,7 +1258,7 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
         <div class="recibe">
           <div><p class="grupo-tit">Cada mañana, en tu correo</p>
             <ul class="incluye">
-              <li>21 lecciones prácticas de 15 minutos, una cada día laborable. La primera te llega nada más pagar</li>
+              <li>21 lecciones prácticas, una cada día laborable. La primera te llega nada más pagar</li>
               <li>En cada lección, lo que tienes que hacer y lo que le pides a Claude</li>
             </ul>
           </div>
@@ -1237,13 +1295,13 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
     <div class="wrap" style="padding-top:0">
       <div class="cabeza"><h2>Preguntas</h2><p class="entradilla">Lo que suelen preguntar los directores antes de apuntarse.</p></div>
       <div class="faq" data-aparece style="--d:1">
-        <details><summary>No tengo ni 20 minutos libres. ¿De verdad me da?</summary><p>Cada ejercicio dura 15 minutos. Desde el día 6, lo que montas te ahorra tiempo esa misma semana, empezando por las reseñas y los correos. Si un día no puedes, el ejercicio te espera.</p></details>
+        <details><summary>Voy muy liado con la operación. ¿De verdad me da?</summary><p>Cada lección es práctica y con los datos de tu hotel. Desde la segunda semana, lo que montas te ahorra tiempo esa misma semana, empezando por el cuadrante. Si un día no puedes, la lección te espera.</p></details>
         <details><summary>Ya probé ChatGPT y me daba respuestas genéricas. ¿Qué cambia?</summary><p>Te salían genéricas porque no conocía tu hotel. Los días 3 y 4 le das la ficha y tus documentos dentro de un proyecto, y desde ahí te contesta con tu tono, tus servicios y tu firma.</p></details>
         <details><summary>¿Y si meto la pata y le llega algo mal a un huésped o a los dueños?</summary><p>De Claude no sale nada que no hayas leído tú. Cada día trae un «Revísalo tú» con lo que tienes que comprobar: importes, fechas, nombres y que no prometa nada que no puedas cumplir.</p></details>
-        <details><summary>¿Pongo en peligro los datos de mis huéspedes?</summary><p>Claude no se conecta a tu programa de reservas. Trabajas con totales, con tus notas y con reseñas sin nombres, y el día 15 firmáis una política con lo que se puede pegar y lo que no.</p></details>
+        <details><summary>¿Pongo en peligro los datos de mis huéspedes?</summary><p>Claude no se conecta a tu programa de reservas. Trabajas con totales, con tus notas y con reseñas sin nombres, y desde el día 1 tienes por escrito lo que se puede pegar y lo que no.</p></details>
         <details><summary>No soy de tecnología. ¿Lo voy a poder seguir?</summary><p>El día 1 empieza creando la cuenta, y cada paso va clic a clic. Si sabes escribir un correo, lo puedes seguir. Y si te atascas, me escribes y lo vemos juntos.</p></details>
-        <details><summary>Ya tengo tus recursos gratis. ¿Qué me llevo de más?</summary><p>Los recursos te dan piezas sueltas. Aquí las tienes ordenadas día a día, con el ejemplo hecho de cada una. Acabas con el cierre de mes montado y con el Método Fricción 0 para montarte tú lo que te haga falta.</p></details>
-        <details><summary>¿Cuánto me cuesta Claude aparte?</summary><p>Los primeros días puedes hacerlos con el plan gratis. Para el resto te conviene el de pago, de unos 20 € al mes.</p></details>
+        <details><summary>Ya tengo tus recursos gratis. ¿Qué me llevo de más?</summary><p>Los recursos te dan piezas sueltas. Aquí las tienes ordenadas día a día, con el ejemplo hecho de cada una. Acabas con tus turnos y tus informes en automático y con el Método Fricción 0 para montarte tú lo que te haga falta.</p></details>
+        <details><summary>¿Cuánto me cuesta Claude aparte?</summary><p>Los primeros días puedes hacerlos con el plan gratis. Para dejar tus tareas en automático necesitas el de pago, de unos 20 € al mes.</p></details>
         <details><summary>¿Y si no me sirve?</summary><p>Si en los primeros 7 días ves que no es para ti, te devolvemos el dinero.</p></details>
       </div>
     </div>
@@ -1303,52 +1361,6 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
   if ((CONFIG.pago && CONFIG.pagoHotel) || CONFIG.whatsapp) {
     document.querySelectorAll("[data-pendiente]").forEach(function (p) { p.hidden = true; });
   }
-
-  // Pestañas de las partes de Claude: cambia de vista y la anima al entrar.
-  const pestanas = document.querySelectorAll(".pestanas button");
-  const vistas = document.querySelectorAll(".vista");
-  const sinMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let vez = 0;
-
-  function animar(v) {
-    if (sinMovimiento) return;
-    const mia = ++vez;
-    const pasos = v.querySelectorAll("[data-paso]");
-    const barras = v.querySelectorAll("[data-ancho]");
-    const textos = v.querySelectorAll("[data-escribe]");
-    pasos.forEach(function (el) { el.style.transition = "none"; el.style.opacity = "0"; el.style.transform = "translateY(8px)"; });
-    barras.forEach(function (b) { b.style.transition = "none"; b.style.width = "0%"; });
-    textos.forEach(function (t) { if (!t.dataset.completo) t.dataset.completo = t.textContent; t.textContent = ""; });
-    void v.offsetWidth;
-    pasos.forEach(function (el, i) {
-      setTimeout(function () {
-        el.style.transition = "opacity .45s ease, transform .45s ease";
-        el.style.opacity = "1"; el.style.transform = "none";
-      }, 100 + i * 150);
-    });
-    barras.forEach(function (b, i) {
-      setTimeout(function () { b.style.transition = "width .9s cubic-bezier(.2,.7,.1,1)"; b.style.width = b.dataset.ancho; }, 600 + i * 160);
-    });
-    textos.forEach(function (t) {
-      const completo = t.dataset.completo;
-      let i = 0;
-      (function paso() {
-        if (mia !== vez) { t.textContent = completo; return; }
-        i = Math.min(completo.length, i + 3);
-        t.textContent = completo.slice(0, i);
-        if (i < completo.length) setTimeout(paso, 16);
-      })();
-    });
-  }
-
-  pestanas.forEach(function (p) {
-    p.addEventListener("click", function () {
-      const destino = p.getAttribute("data-vista");
-      pestanas.forEach(function (q) { q.setAttribute("aria-selected", q === p ? "true" : "false"); });
-      vistas.forEach(function (v) { v.hidden = v.id !== destino; });
-      animar(document.getElementById(destino));
-    });
-  });
 
   // Pestañas de semanas en «Los 21 días».
   const botonesSemana = document.querySelectorAll(".tabs-semana button");
@@ -1424,26 +1436,6 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
     }, { threshold: 0.35 }).observe(pista);
   })();
 
-  // Las pestañas de Claude cambian solas cada 7 s hasta que alguien toca una.
-  (function () {
-    const demo = document.querySelector(".demo");
-    const botones = Array.from(document.querySelectorAll(".pestanas button"));
-    if (!demo || !botones.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let reloj = null, quieto = false;
-    botones.forEach(function (b) { b.addEventListener("click", function (e) { if (e.isTrusted) { quieto = true; clearInterval(reloj); reloj = null; } }); });
-    function siguiente() {
-      const k = botones.findIndex(function (b) { return b.getAttribute("aria-selected") === "true"; });
-      botones[(k + 1) % botones.length].click();
-    }
-    if (!("IntersectionObserver" in window)) return;
-    new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        if (quieto) return;
-        if (e.isIntersecting && !reloj) reloj = setInterval(siguiente, 7000);
-        if (!e.isIntersecting && reloj) { clearInterval(reloj); reloj = null; }
-      });
-    }, { threshold: 0.3 }).observe(demo);
-  })();
   // Móvil: un plan cada vez y «lo que incluye» plegado.
   (function () {
     const planes = document.querySelector(".planes");
@@ -1800,6 +1792,290 @@ html[data-anim] [data-aparece][data-visto] { transform: none; }
     } else { visible = true; empezado = true; corre(0); }
   })();
 /* agentes:fin */</script>
+<script>/* demo:inicio */
+  // «Así creas tus agentes»: cada pestaña se reproduce como una sesión real de Claude y pasa sola a la siguiente; las sugerencias se pueden tocar
+  (function () {
+    const demo = document.querySelector(".demo");
+    if (!demo) return;
+    const pestanas = Array.from(demo.querySelectorAll(".pestanas button"));
+    const CHISPA = '<svg class="c-spark" viewBox="0 0 100 100" aria-hidden="true"><use href="#chispa"/></svg>';
+    let tok = 0, visible = false, auto = true, empezado = false;
+
+    function q(v, d) { return v.querySelector('[data-d="' + d + '"]'); }
+    function qa(v, d) { return Array.from(v.querySelectorAll('[data-d="' + d + '"]')); }
+    function oculta(els) { els.forEach(function (el) { el.classList.add("c-oc"); }); }
+    function muestra(el) { el.classList.remove("c-oc"); }
+    function nodo(html) { const d = document.createElement("div"); d.innerHTML = html; return d.firstElementChild; }
+    function baja(el) { const chat = el.closest(".c-chat"); if (chat) chat.scrollTop = chat.scrollHeight; }
+    function pulsa(el) { el.classList.remove("c-pulsa"); void el.offsetWidth; el.classList.add("c-pulsa"); }
+
+    // Espera que se para fuera de pantalla y se corta al cambiar de pestaña
+    function espera(ms) {
+      const mio = tok;
+      return new Promise(function (ok, corta) {
+        let quedan = ms, antes = performance.now();
+        (function tic(ahora) {
+          if (mio !== tok) return corta(new Error("corte"));
+          if (visible) quedan -= ahora - antes;
+          antes = ahora;
+          if (quedan <= 0) ok(); else requestAnimationFrame(tic);
+        })(antes);
+      });
+    }
+    async function escribe(el, texto, ms) {
+      el.classList.add("escribiendo");
+      try {
+        for (let i = 1; i <= texto.length; i += 2) { el.textContent = texto.slice(0, i); await espera(ms); }
+        el.textContent = texto;
+      } finally { el.classList.remove("escribiendo"); }
+    }
+    async function fluye(el, texto, ms) {
+      const pal = texto.split(" ");
+      el.textContent = "";
+      for (let i = 0; i < pal.length; i++) { el.textContent += (i ? " " : "") + pal[i]; baja(el); await espera(ms); }
+    }
+    async function cuenta(el, n, ms) {
+      for (let k = 1; k <= 16; k++) { el.textContent = Math.round(n * k / 16); await espera(ms / 16); }
+    }
+
+    // El chat: se escribe en la caja, se adjunta, se envía, Claude piensa y responde
+    async function pide(v, texto, adjuntos, vel) {
+      const caja = q(v, "caja"), adj = q(v, "adj"), chat = q(v, "chat");
+      caja.classList.add("lleno");
+      await escribe(caja, texto, vel || 24);
+      for (const a of adjuntos || []) {
+        const s = nodo("<span><i></i></span>");
+        s.insertBefore(document.createTextNode(a), s.firstChild);
+        adj.appendChild(s);
+        await espera(60);
+        s.querySelector("i").style.width = "100%";
+        await espera(650);
+      }
+      pulsa(q(v, "enviar"));
+      await espera(350);
+      const m = nodo('<div class="c-usuario"><div class="c-burbuja"></div></div>');
+      m.firstChild.textContent = texto;
+      if (adjuntos && adjuntos.length) {
+        const fila = nodo('<div class="c-adjuntos"></div>');
+        adjuntos.forEach(function (a) { const s = document.createElement("span"); s.textContent = a; fila.appendChild(s); });
+        m.appendChild(fila);
+      }
+      chat.appendChild(m);
+      baja(m);
+      caja.textContent = "Responder a Claude…";
+      caja.classList.remove("lleno");
+      adj.textContent = "";
+      await espera(300);
+    }
+    async function piensa(v, pasos) {
+      const r = nodo('<div class="c-respuesta">' + CHISPA + '<div class="c-texto"><p class="c-pensando">Pensando…</p></div></div>');
+      q(v, "chat").appendChild(r);
+      baja(r);
+      const chispa = r.querySelector(".c-spark"), t = r.querySelector(".c-texto");
+      chispa.classList.add("c-gira");
+      if (pasos) {
+        const lista = nodo('<div class="c-pasos"></div>');
+        t.appendChild(lista);
+        for (const p of pasos) {
+          const fila = nodo("<div><i></i><span></span></div>");
+          fila.lastChild.textContent = p;
+          lista.appendChild(fila);
+          baja(fila);
+          await espera(750);
+          fila.classList.add("ok");
+        }
+      } else await espera(1300);
+      chispa.classList.remove("c-gira");
+      t.querySelector(".c-pensando").remove();
+      return t;
+    }
+    async function responde(t, texto) {
+      const p = document.createElement("p");
+      t.appendChild(p);
+      await fluye(p, texto, 55);
+      return p;
+    }
+
+    // Día 4 · Crear el agente de reseñas
+    async function proyectos(v) {
+      const nombre = q(v, "nombre"), instr = q(v, "instr"), fich = qa(v, "f");
+      oculta([q(v, "nuevo"), q(v, "sub"), q(v, "listo"), q(v, "entrada")].concat(fich));
+      nombre.textContent = ""; instr.textContent = "";
+      fich.forEach(function (f) { f.classList.remove("c-f-ok"); f.querySelector(".c-prog b").style.width = "0"; });
+      await espera(500);
+      pulsa(q(v, "nuevo-btn"));
+      await espera(400);
+      muestra(q(v, "nuevo"));
+      await escribe(nombre, nombre.dataset.texto, 90);
+      muestra(q(v, "sub"));
+      await espera(300);
+      await escribe(instr, instr.dataset.texto, 16);
+      for (const f of fich) {
+        muestra(f);
+        await espera(80);
+        f.querySelector(".c-prog b").style.width = "100%";
+        await espera(700);
+        f.classList.add("c-f-ok");
+      }
+      await espera(300);
+      muestra(q(v, "listo"));
+      await espera(600);
+      muestra(q(v, "entrada"));
+      await espera(2200);
+    }
+
+    // Día 7 · Le pide el plan y Claude lo deja en un artefacto
+    const RESPUESTAS = {
+      "Escríbeme la respuesta a la de 2 estrellas": ["Aquí la tienes, lista para revisar y publicar.", "Siento mucho los 25 minutos de espera a su llegada. Desde esta semana reforzamos la recepción los viernes de 15:00 a 16:00. Ojalá podamos recibirle de nuevo.\nLaura Martín, directora del Hotel Brisalta"],
+      "Pásalo a un correo para el equipo": ["Te dejo el correo para los jefes de departamento.", "Asunto: Reseñas de octubre\nEquipo, en octubre hemos tenido 64 reseñas y 41 de 5 estrellas. Esta semana mantenimiento revisa el agua caliente de la tercera planta, recepción refuerza los viernes de 15:00 a 16:00 y el restaurante repone fruta en el desayuno a partir de las 10:00.\nGracias, Laura"]
+    };
+    function eligeSugerencia(botones) {
+      const mio = tok;
+      return new Promise(function (ok, corta) {
+        let hecho = false;
+        function suelta() { botones.forEach(function (b) { b.removeEventListener("click", b._elige); }); }
+        function fin(b) { if (hecho) return; hecho = true; suelta(); ok(b); }
+        botones.forEach(function (b) { b._elige = function () { auto = false; fin(b); }; b.addEventListener("click", b._elige); });
+        let quedan = 3500, antes = performance.now();
+        (function tic(ahora) {
+          if (hecho) return;
+          if (mio !== tok) { hecho = true; suelta(); return corta(new Error("corte")); }
+          if (auto && visible) quedan -= ahora - antes;
+          antes = ahora;
+          if (auto && quedan <= 0) return fin(botones[0]);
+          requestAnimationFrame(tic);
+        })(antes);
+      });
+    }
+    async function artefacto(v) {
+      const chat = q(v, "chat"), sug = q(v, "sug"), botones = Array.from(sug.querySelectorAll("button"));
+      const partes = qa(v, "p"), lis = qa(v, "li");
+      const barras = Array.from(v.querySelectorAll("[data-ancho]")), nums = Array.from(v.querySelectorAll("[data-n]"));
+      chat.textContent = ""; q(v, "adj").textContent = "";
+      oculta([sug].concat(partes, lis));
+      botones.forEach(function (b) { b.classList.remove("usado"); });
+      muestra(q(v, "vacio"));
+      barras.forEach(function (b) { b.style.transition = "none"; b.style.width = "0%"; });
+      nums.forEach(function (n) { n.textContent = "0"; });
+      await espera(400);
+      await pide(v, "Aquí van las 64 reseñas de octubre, sin nombres. Agrúpalas por departamento y dime qué arreglo primero.", ["resenas-octubre.txt"]);
+      const t = await piensa(v);
+      await responde(t, "Te he dejado el plan en un artefacto. Empieza por el agua caliente de la tercera planta. Sale en 4 reseñas y en 2 de ellas baja la nota a 3 estrellas.");
+      const pieza = nodo('<div class="c-pieza"><span class="c-ext">PLAN</span><span>Plan de reseñas · Octubre<small>Artefacto</small></span><span class="bajar">Creando…</span></div>');
+      t.appendChild(pieza);
+      baja(pieza);
+      oculta([q(v, "vacio")]);
+      muestra(partes[0]);
+      await espera(250);
+      muestra(partes[1]);
+      await Promise.all(nums.map(function (n) { return cuenta(n, +n.dataset.n, 800); }));
+      muestra(partes[2]);
+      for (const b of barras) { await espera(160); b.style.transition = "width .9s cubic-bezier(.2,.7,.1,1)"; b.style.width = b.dataset.ancho; }
+      await espera(700);
+      muestra(partes[3]);
+      for (const li of lis) { await espera(380); muestra(li); }
+      pieza.querySelector(".bajar").textContent = "Abierto";
+      await espera(700);
+      muestra(sug);
+      let quedan = botones.slice();
+      while (quedan.length) {
+        const b = await eligeSugerencia(quedan);
+        b.classList.add("usado");
+        quedan = quedan.filter(function (x) { return x !== b; });
+        const texto = b.dataset.p;
+        await pide(v, texto, null, 14);
+        const r = await piensa(v);
+        await responde(r, RESPUESTAS[texto][0]);
+        const cita = nodo('<div class="c-cita"></div>');
+        r.appendChild(cita);
+        await fluye(cita, RESPUESTAS[texto][1], 45);
+        if (auto) break;
+      }
+      await espera(2200);
+    }
+
+    // Día 14 · Ensaya la conversación hablando
+    const GUION = [
+      ["tu", "Marcos, ¿tienes cinco minutos? Quiero hablar de los horarios."],
+      ["el", "Ya sé lo que me vas a decir. Con el autobús de las 6:40 no llego, y el siguiente me deja en la puerta a las 7:05."],
+      ["tu", "Llevas tres semanas entrando tarde y la recepción se queda sola a primera hora."],
+      ["el", "Lo sé, pero no sé qué más hacer."]
+    ];
+    async function voz(v) {
+      const trans = q(v, "trans"), reloj = q(v, "reloj"), onda = v.querySelector(".onda"), notas = qa(v, "nota");
+      trans.textContent = "";
+      oculta(notas);
+      reloj.textContent = "Modo voz · 0:00";
+      let vivo = true, seg = 0;
+      (async function () {
+        try {
+          while (vivo) { await espera(1000); if (!vivo) break; seg++; reloj.textContent = "Modo voz · " + Math.floor(seg / 60) + ":" + String(seg % 60).padStart(2, "0"); }
+        } catch (e) { /* cambio de pestaña */ }
+      })();
+      onda.classList.add("habla");
+      try {
+        await espera(600);
+        for (const linea of GUION) {
+          const p = nodo('<p class="' + linea[0] + '"><small>' + (linea[0] === "tu" ? "Tú" : "Claude, haciendo de Marcos") + "</small><span></span></p>");
+          trans.appendChild(p);
+          await fluye(p.lastChild, linea[1], 120);
+          await espera(550);
+        }
+      } finally { vivo = false; onda.classList.remove("habla"); }
+      pulsa(q(v, "colgar"));
+      reloj.textContent = "Llamada terminada";
+      await espera(800);
+      for (const n of notas) { muestra(n); await espera(800); }
+      await espera(2800);
+    }
+
+    // Días 18 y 19 · El informe y la presentación para los dueños
+    async function archivos(v) {
+      const chat = q(v, "chat"), partes = qa(v, "p"), filas = qa(v, "fila"), diapos = qa(v, "diapo");
+      chat.textContent = ""; q(v, "adj").textContent = "";
+      oculta(partes.concat(filas, diapos));
+      muestra(q(v, "vacio"));
+      await espera(400);
+      await pide(v, "Sácame el informe de octubre para los dueños y la presentación para la reunión del jueves.", ["informe-pms-octubre.pdf", "ventas-bar-octubre.xlsx"]);
+      const t = await piensa(v, ["Leyendo informe-pms-octubre.pdf", "Leyendo ventas-bar-octubre.xlsx", "Creando el informe en Word", "Creando la presentación"]);
+      await responde(t, "Aquí tienes los dos archivos. Antes de enviarlos, comprueba la ocupación y el ingreso total con el informe original.");
+      oculta([q(v, "vacio")]);
+      muestra(partes[0]);
+      const docx = nodo('<div class="c-pieza"><span class="c-ext">DOCX</span><span>Informe de octubre<small>Documento de Word · 1 página</small></span><span class="bajar">Descargar</span></div>');
+      t.appendChild(docx);
+      baja(docx);
+      for (const f of filas) { await espera(330); muestra(f); }
+      await espera(400);
+      const pptx = nodo('<div class="c-pieza"><span class="c-ext">PPTX</span><span>Reunión con los dueños<small>PowerPoint · 6 diapositivas</small></span><span class="bajar">Descargar</span></div>');
+      t.appendChild(pptx);
+      baja(pptx);
+      muestra(partes[1]);
+      for (const d of diapos) { await espera(380); muestra(d); }
+      await espera(3200);
+    }
+
+    const GUIONES = { "v-proyectos": proyectos, "v-artefacto": artefacto, "v-voz": voz, "v-archivos": archivos };
+    async function abre(i) {
+      const mio = ++tok;
+      const id = pestanas[i].getAttribute("data-vista");
+      pestanas.forEach(function (p, k) { p.setAttribute("aria-selected", k === i ? "true" : "false"); });
+      demo.querySelectorAll(".vista").forEach(function (v) { v.hidden = v.id !== id; });
+      try {
+        await GUIONES[id](document.getElementById(id));
+        if (auto && mio === tok) abre((i + 1) % pestanas.length);
+      } catch (e) { /* se ha cambiado de pestaña */ }
+    }
+    pestanas.forEach(function (p, k) {
+      p.addEventListener("click", function (e) { if (e.isTrusted) auto = false; empezado = true; abre(k); });
+    });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) {
+        visible = es[0].isIntersecting;
+        if (visible && !empezado) { empezado = true; abre(0); }
+      }, { threshold: 0.2 }).observe(demo);
+    }
+  })();
+/* demo:fin */</script>
 
 </body>
 </html>
