@@ -317,7 +317,91 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
   .mini.mini4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mini.mini4 > div:nth-child(3) { border-left: 0; padding-left: 0; }
 }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; } .trabajando i { animation: none; } }
+
+/* Móvil como una app: cabecera fija compacta, barra de secciones abajo y documentos en hoja que sube */
+.corto, .solo-movil, .barra-app { display: none; }
+.areas-lista { display: grid; gap: 10px; }
+.area-fila { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 2px 12px; width: 100%; border: 0; background: var(--blanco); box-shadow: inset 0 0 0 1px var(--linea); border-radius: 22px; padding: 16px 18px; text-align: left; }
+.area-fila b { font-size: 17px; font-weight: 520; letter-spacing: -0.03em; }
+.area-fila small { color: var(--gris); font-size: 12.5px; grid-column: 1; }
+.area-fila .der { grid-row: 1 / 3; grid-column: 2; display: grid; justify-items: end; gap: 4px; }
+.area-fila .der .t { font-size: 15px; font-weight: 520; letter-spacing: -0.02em; }
+.area-fila .flecha, li.toca .flecha { grid-row: 1 / 3; grid-column: 3; font-size: 22px; color: var(--gris-claro); line-height: 1; }
+li.toca { cursor: pointer; }
+li.toca .flecha { display: none; }
+.atras { border: 0; background: none; padding: 4px 0; font-size: 15px; font-weight: 520; color: var(--carbon); justify-self: start; letter-spacing: -0.02em; }
+.ver-todo { border: 0; background: var(--niebla); border-radius: 999px; padding: 10px 16px; font-size: 14px; font-weight: 520; width: 100%; margin-top: 6px; }
+dialog { overflow: auto; }
+dialog:focus { outline: none; }
+
+@media (max-width: 640px) {
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 16; background: var(--fondo); }
+  .app { gap: 14px; padding-block: 0 calc(100px + env(safe-area-inset-bottom, 0px)); }
+  .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 15; flex-wrap: nowrap; gap: 10px; padding-block: 10px;
+    background: rgba(246, 247, 244, .9); -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+    box-shadow: 0 0 0 100vmax rgba(246, 247, 244, .9), 0 1px 0 100vmax transparent; clip-path: inset(0 -100vmax -1px); border-bottom: 1px solid transparent; }
+  .marca { gap: 10px; }
+  .marca p, .ejemplo, .act { display: none; }
+  .logo { width: 36px; height: 36px; }
+  .logo img { width: 17px; }
+  .marca h1 { font-size: 18px; white-space: nowrap; }
+  .controles { gap: 0; }
+  .periodo { padding: 4px; }
+  .periodo button { padding: 7px 11px; font-size: 13px; }
+  .largo { display: none; }
+  .corto { display: inline; }
+  .solo-escritorio { display: none !important; }
+  .solo-movil { display: inline-flex; }
+  .areas { display: none; }
+
+  .hero { padding: 22px 20px 20px; border-radius: 26px; }
+  .saludo { font-size: 15px; }
+  .cifra { font-size: 56px; }
+  .jornadas { font-size: 15px; }
+  .mini { margin-top: 12px; }
+  .mini b { font-size: 21px; }
+  .copiar { width: 100%; padding: 13px 18px; }
+  .card { padding: 18px; border-radius: 24px; }
+  h2 { font-size: 20px; }
+
+  .areas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .area-card { padding: 14px; border-radius: 18px; }
+  .area-card .para, .area-card .ags { display: none; }
+  .area-card h3 { font-size: 16px; }
+  .area-card .t { font-size: 24px; margin-top: 8px; }
+  .area-card .est { margin-top: 8px; font-size: 11.5px; padding: 3px 8px; }
+
+  #listaPend li .btn, .lista-pend li .btn { display: none; }
+  li.toca .flecha { display: block; }
+  #listaPend li, .lista-pend li { padding: 14px 0; }
+
+  .barra-app { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); position: fixed; left: 0; right: 0; bottom: 0; z-index: 18;
+    padding: 6px max(8px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(8px, env(safe-area-inset-left, 0px));
+    background: rgba(255, 255, 255, .88); -webkit-backdrop-filter: blur(20px) saturate(1.4); backdrop-filter: blur(20px) saturate(1.4); box-shadow: 0 -1px 0 var(--linea); }
+  .barra-app button { border: 0; background: none; display: grid; justify-items: center; align-content: center; gap: 3px; padding: 6px 0; min-height: 52px; font-size: 11px; font-weight: 500; color: var(--gris-claro); position: relative; }
+  .barra-app svg { width: 24px; height: 24px; display: block; }
+  .barra-app button[aria-current="page"] { color: var(--carbon); }
+  .barra-app .cuenta { position: absolute; top: 2px; left: calc(50% + 7px); min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px; background: var(--carbon); color: #fff; font-size: 11px; font-weight: 560; display: grid; place-items: center; }
+  .toast { bottom: calc(86px + env(safe-area-inset-bottom, 0px)); border-radius: 18px; text-align: center; }
+
+  dialog { width: 100%; max-width: 100%; max-height: 92dvh; margin: auto 0 0; border-radius: 26px 26px 0 0; }
+  dialog[open] { animation: sube .3s cubic-bezier(.22, 1, .36, 1); }
+  .d-in { padding: 10px 18px 0; gap: 12px; }
+  .d-in::before { content: ""; width: 40px; height: 5px; border-radius: 3px; background: var(--niebla); justify-self: center; }
+  .d-cab h3 { font-size: 20px; }
+  .doc-cuerpo { max-height: none; padding: 14px; }
+  .acciones { position: sticky; bottom: 0; z-index: 2; margin-inline: -18px; padding: 12px 18px calc(14px + env(safe-area-inset-bottom, 0px)); background: rgba(255, 255, 255, .94); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 -1px 0 var(--linea); }
+  .acciones .btn { flex: 1; padding: 13px 16px; font-size: 15px; }
+  .opcion .btn { width: 100%; padding: 12px; }
+  .d-in > :last-child:not(.acciones) { margin-bottom: calc(18px + env(safe-area-inset-bottom, 0px)); }
+
+  .area-cab .area-tit { font-size: 38px; }
+  .ag-card h3 { font-size: 20px; }
+  .ag-pie .acc { width: 100%; }
+  .ag-pie .acc .btn { flex: 1; }
+}
+@keyframes sube { from { transform: translateY(48px); opacity: .5; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } .trabajando i { animation: none; } dialog[open] { animation: none; } }
 </style>
 </head>
 <body>
@@ -332,7 +416,7 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
     <div class="controles">
       <div class="periodo" role="tablist" aria-label="Periodo">
         <button type="button" role="tab" id="p-oct" data-p="oct" aria-selected="true">Octubre</button>
-        <button type="button" role="tab" id="p-nov" data-p="nov" aria-selected="false">Noviembre, hasta hoy</button>
+        <button type="button" role="tab" id="p-nov" data-p="nov" aria-selected="false"><span class="largo">Noviembre, hasta hoy</span><span class="corto">Este mes</span></button>
       </div>
       <p class="act" id="act">Actualizado hoy, 10:35</p>
     </div>
@@ -391,7 +475,7 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
     </details>
   </section>
 
-  <section class="card">
+  <section class="card solo-escritorio">
     <div class="cab">
       <h2>Avisos</h2>
       <p class="sub">Lo que los agentes creen que tienes que saber hoy.</p>
@@ -401,6 +485,7 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
   </div>
 
   <div class="vista" id="v-area" hidden></div>
+  <div class="vista" id="v-lista" hidden></div>
 
   <footer>
     <p>Ejemplo con datos inventados del Hotel Brisalta, un hotel de 80 habitaciones en la Costa Blanca.</p>
@@ -410,7 +495,9 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
   </footer>
 </div>
 
-<dialog id="doc" aria-labelledby="docTit"><div class="d-in" id="docIn"></div></dialog>
+<nav class="barra-app" id="barraApp" aria-label="Secciones"></nav>
+
+<dialog id="doc" aria-labelledby="docTit" tabindex="-1"><div class="d-in" id="docIn"></div></dialog>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
 <!-- datos:inicio -->
@@ -596,8 +683,10 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
       x.por[e.tipo].n += e.n; x.por[e.tipo].min += e.min;
     });
     pintaTabs();
+    pintaBarra();
     if (vista === "resumen") { grafico(); tablaDias(); areasGrid(); avisosLista(); pendientes(); }
-    else vistaArea(vista);
+    else if (AREA[vista]) vistaArea(vista);
+    else vistaLista(vista);
   }
 
   function fechaCorta(d) { const m = PER[per].m; return DC[new Date(AÑO, m, d).getDay()] + " " + d + " " + MC[m]; }
@@ -699,9 +788,10 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
       box.appendChild(b);
     });
   }
-  function avisosLista() {
-    const ul = $("#avisosLista"); ul.textContent = "";
-    const av = EV.filter(function (e) { return e.tipo === "aviso"; }).slice(0, 6);
+  function avisosLista() { llenaAvisos($("#avisosLista"), 6); }
+  function llenaAvisos(ul, limite) {
+    ul.textContent = "";
+    const av = EV.filter(function (e) { return e.tipo === "aviso"; }).slice(0, limite || 999);
     if (!av.length) { ul.appendChild(el("li", "l-vacio", "Sin avisos en este periodo.")); return; }
     av.forEach(function (e) {
       const li = el("li");
@@ -711,10 +801,64 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
     });
   }
 
+  // Las pantallas de la barra de abajo en el móvil: por revisar, áreas y avisos
+  function vistaLista(k) {
+    const box = $("#v-lista"); box.textContent = "";
+    if (k === "revisar") {
+      const s = el("section", "card pend"), c = el("div", "pend-cab"), items = itemsPend();
+      c.appendChild(el("h2", "", "Por revisar")); c.appendChild(el("span", "num" + (items.length ? "" : " cero"), items.length));
+      const ul = el("ul", "lista-pend");
+      s.appendChild(c); s.appendChild(ul);
+      s.appendChild(el("p", "pend-nota", "Toca cada cosa para leerla entera. Cuando la apruebas, el agente la envía."));
+      box.appendChild(s); listaPend(ul, items, true);
+    } else if (k === "areas") {
+      const cab = el("div", "cab"); cab.appendChild(el("h2", "", "Áreas")); cab.appendChild(el("p", "sub", "Cada área con sus agentes y lo suyo por revisar."));
+      const lista = el("div", "areas-lista");
+      AREAS.forEach(function (a) {
+        const t = totArea(a), b = el("button", "area-fila"); b.type = "button";
+        b.appendChild(el("b", "", a.n)); b.appendChild(el("small", "", a.agentes.map(function (g) { return g.n; }).join(" · ")));
+        const der = el("span", "der"); der.appendChild(el("span", "t", fmtMin(t.min)));
+        der.appendChild(el("span", "est " + (t.pend ? "revisar" : "ok"), t.pend ? t.pend + " por revisar" : "Al día"));
+        b.appendChild(der); b.appendChild(el("span", "flecha", "›"));
+        b.addEventListener("click", function () { ir(a.k); });
+        lista.appendChild(b);
+      });
+      box.appendChild(cab); box.appendChild(lista);
+    } else {
+      const s = el("section", "card"), cab = el("div", "cab"), ul = el("ul", "avisos");
+      cab.appendChild(el("h2", "", "Avisos")); cab.appendChild(el("p", "sub", "Lo que los agentes creen que tienes que saber."));
+      s.appendChild(cab); s.appendChild(ul); box.appendChild(s); llenaAvisos(ul);
+    }
+  }
+
+  // Barra de abajo (solo se ve en el móvil)
+  const ICONOS = {
+    resumen: '<path d="M3.5 10.5 12 3.5l8.5 7V20a1 1 0 0 1-1 1H15v-6H9v6H4.5a1 1 0 0 1-1-1z"/>',
+    revisar: '<circle cx="12" cy="12" r="8.5"/><path d="m8.2 12.4 2.6 2.6 5-5.3"/>',
+    areas: '<rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/>',
+    avisos: '<path d="M6 16.5V11a6 6 0 1 1 12 0v5.5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>'
+  };
+  function pintaBarra() {
+    const nav = $("#barraApp"), n = itemsPend().length; nav.textContent = "";
+    const activa = AREA[vista] ? "areas" : vista;
+    [["resumen", "Inicio"], ["revisar", "Por revisar"], ["areas", "Áreas"], ["avisos", "Avisos"]].forEach(function (s) {
+      const b = el("button"); b.type = "button";
+      b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICONOS[s[0]] + "</svg>";
+      b.appendChild(el("span", "", s[1]));
+      if (s[0] === "revisar" && n) b.appendChild(el("span", "cuenta", n));
+      if (activa === s[0]) b.setAttribute("aria-current", "page");
+      b.addEventListener("click", function () { ir(s[0]); });
+      nav.appendChild(b);
+    });
+  }
+
   // La vista de un área: cabecera, lo que espera tu OK, sus agentes, grupos (en comercial) y su registro
   function vistaArea(k) {
     const a = AREA[k], box = $("#v-area"), t = totArea(a);
     box.textContent = "";
+    const atras = el("button", "atras solo-movil", "‹ Áreas"); atras.type = "button";
+    atras.addEventListener("click", function () { ir("areas"); });
+    box.appendChild(atras);
     const cab = el("section", "card area-cab");
     cab.appendChild(el("p", "p-ag", a.para)); cab.appendChild(el("h2", "area-tit", a.n));
     const mini = el("div", "mini mini4");
@@ -841,33 +985,42 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
       ? DATOS.registro.filter(function (x) { return x.estado === "pend"; }).reverse().map(function (x) { return { id: x.id, ag: x.agente, tipo: x.tipo, cuando: "Hoy, " + x.h, tit: x.titulo, sub: x.detalle }; })
       : PEND.filter(function (p) { return !hecho(p.id); });
   }
-  function listaPend(ul, items, conArea) {
+  function listaPend(ul, items, conArea, limite) {
     ul.textContent = "";
     if (!items.length) { ul.appendChild(el("li", "vacio", "Todo revisado. Cuando un agente prepare algo nuevo, te llega aquí y al móvil.")); return; }
+    let puestos = 0;
     AREAS.forEach(function (a) {
       const suyos = items.filter(function (p) { return areaDe(p) === a; });
-      if (!suyos.length) return;
+      if (!suyos.length || (limite && puestos >= limite)) return;
       if (conArea) {
         const h = el("li", "p-area"), b = el("button", "", a.n + " · " + suyos.length);
         b.type = "button"; b.addEventListener("click", function () { ir(a.k); });
         h.appendChild(b); ul.appendChild(h);
       }
       suyos.forEach(function (p) {
-        const li = el("li"), t = el("div", "p-txt");
+        if (limite && puestos >= limite) return;
+        puestos++;
+        const li = el("li", "toca"), t = el("div", "p-txt");
         t.appendChild(el("span", "p-ag", nombreDe(p) + " · " + p.cuando));
         t.appendChild(el("p", "p-tit", p.tit));
         t.appendChild(el("p", "p-sub", p.sub));
         const b = el("button", "btn", "Revisar"); b.type = "button";
-        b.addEventListener("click", function () { abre(p.id); });
-        li.appendChild(t); li.appendChild(b); ul.appendChild(li);
+        li.addEventListener("click", function () { abre(p.id); });
+        li.appendChild(t); li.appendChild(b); li.appendChild(el("span", "flecha", "›")); ul.appendChild(li);
       });
     });
+    if (limite && items.length > puestos) {
+      const li = el("li"), b = el("button", "ver-todo", "Ver las " + items.length + " por revisar");
+      b.type = "button"; b.addEventListener("click", function () { ir("revisar"); });
+      li.appendChild(b); ul.appendChild(li);
+    }
   }
+  const MOVIL = window.matchMedia ? window.matchMedia("(max-width: 640px)") : { matches: false };
   function pendientes() {
     const items = itemsPend();
     const n = $("#nPend"); n.textContent = items.length; n.classList.toggle("cero", !items.length);
     $("#pendNota").hidden = !items.length;
-    listaPend($("#listaPend"), items, true);
+    listaPend($("#listaPend"), items, true, MOVIL.matches ? 3 : 0);
   }
 
   // Pestañas por área, con lo que espera tu OK en cada una. Se guardan en el enlace (#recepcion…)
@@ -885,10 +1038,12 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
     if (location.hash.slice(1) === k || (k === "resumen" && !location.hash)) { muestra(k); return; }
     location.hash = k;
   }
+  const PANTALLAS = { revisar: 1, areas: 1, avisos: 1 };
   function muestra(k) {
-    vista = AREA[k] ? k : "resumen"; visibles = 14;
+    vista = (AREA[k] || PANTALLAS[k]) ? k : "resumen"; visibles = 14;
     $("#v-resumen").hidden = vista !== "resumen";
-    $("#v-area").hidden = vista === "resumen";
+    $("#v-area").hidden = !AREA[vista];
+    $("#v-lista").hidden = !PANTALLAS[vista];
     pinta();
     window.scrollTo(0, 0);
   }
@@ -919,6 +1074,7 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
     dIn.innerHTML = x ? docHTML(x, soloVer) : DOCS[id];
     if (dlg.open) return;
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+    dlg.focus();
   }
 
   // El documento que ha preparado un agente: texto plano con títulos en mayúsculas, listas «- » y tablas con «|»
@@ -1088,8 +1244,9 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
 
   if (DATOS && DATOS.registro && DATOS.registro.length) { per = "nov"; marcaPeriodo(); }
   const h0 = location.hash.slice(1);
-  if (AREA[h0]) { vista = h0; $("#v-resumen").hidden = true; $("#v-area").hidden = false; }
+  if (AREA[h0] || PANTALLAS[h0]) { vista = h0; $("#v-resumen").hidden = true; $("#v-area").hidden = !AREA[h0]; $("#v-lista").hidden = !PANTALLAS[h0]; }
   pinta();
+  if (MOVIL.addEventListener) MOVIL.addEventListener("change", pinta);
   if (location.protocol.indexOf("http") === 0) {
     fetch("/api/datos", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
       if (!d || !d.registro || !d.agentes) return;
