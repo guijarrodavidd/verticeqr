@@ -54,6 +54,7 @@ const nextConfig: NextConfig = {
       { source: "/d/dreams-711d/:path*", destination: "/d/dreams-711d/index.html" },
       { source: "/d/presidente-cc35/:path*", destination: "/d/presidente-cc35/index.html" },
       { source: "/d/izaga-ca5b/:path*", destination: "/d/izaga-ca5b/index.html" },
+      { source: "/d/agentes-9830/:path*", destination: "/d/agentes-9830/index.html" },
       { source: "/d/amic-b801/:path*", destination: "/d/amic-b801/index.html" },
       { source: "/d/panel-2819/:path*", destination: "/d/panel-2819/index.html" },
       { source: "/d/plazaelbosque-fb94/:path*", destination: "/d/plazaelbosque-fb94/index.html" },

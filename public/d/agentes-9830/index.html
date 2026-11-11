@@ -1,0 +1,1279 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Panel de dirección · Hotel Brisalta</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Ejemplo de lo que hacen los agentes en un hotel: el tiempo que devuelven, lo que espera tu OK y cada área con sus agentes.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Panel de dirección · Hotel Brisalta">
+<meta property="og:description" content="Ejemplo de lo que hacen los agentes en un hotel: el tiempo que devuelven, lo que espera tu OK y cada área con sus agentes.">
+<meta property="og:image" content="https://verticeqr.com/d/agentes-9830/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://verticeqr.com/d/agentes-9830/brisalta">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="/d/agentes-9830/manifest.webmanifest">
+<link rel="icon" type="image/png" href="/d/agentes-9830/icono-192.png">
+<link rel="apple-touch-icon" href="/d/agentes-9830/icono-180.png">
+<meta name="theme-color" content="#F6F7F4">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Brisalta">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}body{margin:0}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&display=swap">
+<style>
+/* Panel de dirección con la marca Vértice: blanco frío con halos, cristal irisado en el resumen, carbón y salvia. Solo tema claro, a propósito. */
+:root {
+  --carbon: #20231F; --fondo: #F6F7F4; --blanco: #FFFFFF; --niebla: #EEF0EC; --piedra: #EAE8DF;
+  --gris: #5F635B; --gris-claro: #8E9188; --linea: rgba(32, 35, 31, .09); --linea2: rgba(32, 35, 31, .06);
+  --salvia: #A5A58D; --salvia-osc: #7C7E62; --salvia-on: #20231F;
+  --halo-sol: rgba(240, 222, 168, .62); --halo-cielo: rgba(184, 214, 232, .62); --halo-salvia: rgba(190, 205, 160, .58);
+  --iris: linear-gradient(100deg, #AFC387 0%, #93C0DC 42%, #E6CF86 78%, #AFC387 100%);
+  --ok: #3F4B2B; --ok-bg: rgba(175, 195, 135, .30);
+  --env: #2C5870; --env-bg: rgba(147, 192, 220, .30);
+  --esp: #614E14; --esp-bg: rgba(230, 207, 134, .45);
+  --av: #8A3A2C; --av-bg: rgba(138, 58, 44, .09);
+  --neu: #5F635B; --neu-bg: #EEF0EC;
+  --c-ok: #8C9A62; --c-env: #7FAFCB; --c-neu: #C9CBC4; --c-esp: #D8BC63;
+  --sombra: 0 30px 70px -44px rgba(13, 15, 18, .38);
+  --velo: rgba(32, 35, 31, .32);
+  --f: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--fondo); }
+body { background: var(--fondo); color: var(--carbon); font-family: var(--f); font-size: 15px; font-weight: 430; line-height: 1.5; letter-spacing: -0.011em; -webkit-font-smoothing: antialiased; overflow-x: clip; position: relative; }
+h1, h2, h3, p, ul, ol { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+h1, h2, h3 { text-wrap: balance; font-weight: 500; }
+h2 { font-size: 21px; letter-spacing: -0.04em; line-height: 1.15; }
+.fino { color: var(--gris-claro); }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--carbon); outline-offset: 2px; border-radius: 8px; }
+
+.halos { position: absolute; inset: 0 0 auto; height: 760px; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(34% 48% at 16% 22%, var(--halo-sol), transparent 72%),
+    radial-gradient(38% 52% at 52% 30%, var(--halo-cielo), transparent 72%),
+    radial-gradient(30% 44% at 34% 6%, var(--halo-salvia), transparent 72%);
+  -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
+
+.app {
+  position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px;
+  padding-block: 26px 44px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.card { background: var(--blanco); border-radius: 26px; box-shadow: inset 0 0 0 1px var(--linea); padding: 24px; min-width: 0; }
+.cab { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; margin-bottom: 16px; }
+.sub { color: var(--gris); font-size: 14px; }
+
+/* Cabecera */
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 20px; }
+.marca { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.logo { width: 44px; height: 44px; border-radius: 23%; background: var(--carbon); display: grid; place-items: center; flex: none; }
+.logo img { width: 21px; height: auto; display: block; }
+.marca p { color: var(--gris); font-size: 13px; font-weight: 500; line-height: 1.2; }
+.marca h1 { font-size: 23px; letter-spacing: -0.045em; line-height: 1.1; }
+.ejemplo { font-size: 13px; font-weight: 500; letter-spacing: -0.01em; color: var(--carbon); background: rgba(255, 255, 255, .8); border-radius: 999px; padding: 4px 11px; box-shadow: 0 10px 24px -16px rgba(13, 15, 18, .5), inset 0 0 0 1px var(--linea); align-self: center; }
+.controles { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.periodo { display: inline-flex; gap: 4px; padding: 5px; border-radius: 999px; background: rgba(255, 255, 255, .7); box-shadow: inset 0 0 0 1px var(--linea); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.periodo button { border: 0; background: none; padding: 8px 15px; border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--gris); transition: background .3s, color .3s; }
+.periodo button[aria-selected="true"] { background: var(--carbon); color: #fff; }
+.act { color: var(--gris); font-size: 13px; }
+
+/* Fila 1: el resumen en cristal y lo que espera tu OK */
+.fila1 { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.hero {
+  position: relative; isolation: isolate; border-radius: 30px; padding: 30px 30px 24px; min-width: 0;
+  background: rgba(255, 255, 255, .72); -webkit-backdrop-filter: blur(20px) saturate(1.4); backdrop-filter: blur(20px) saturate(1.4);
+  box-shadow: var(--sombra), inset 0 0 0 1px rgba(255, 255, 255, .9);
+  display: grid; gap: 6px; align-content: start;
+}
+.hero::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px; background: var(--iris);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
+.hero::after { content: ""; position: absolute; inset: -5px; border-radius: inherit; z-index: -1; background: var(--iris); filter: blur(18px); opacity: .35; }
+.saludo { color: var(--gris); font-size: 16px; }
+.saludo b { color: var(--carbon); font-weight: 520; }
+.cifra { font-size: clamp(52px, 7.6vw, 86px); font-weight: 500; letter-spacing: -0.06em; line-height: .98; padding-block: 6px 2px; color: var(--carbon); }
+.jornadas { font-size: 16px; color: var(--carbon); }
+.como { color: var(--gris); font-size: 13.5px; }
+.mini { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--linea); margin-top: 16px; }
+.mini > div { display: grid; gap: 4px; padding: 16px 12px 2px 0; }
+.mini > div + div { padding-left: 16px; border-left: 1px solid var(--linea); }
+.mini b { font-size: 26px; font-weight: 500; letter-spacing: -0.05em; line-height: 1; }
+.mini span { color: var(--gris); font-size: 13px; line-height: 1.3; }
+.copiar { justify-self: start; margin-top: 16px; border: 0; background: var(--carbon); color: #fff; border-radius: 999px; padding: 11px 18px; font-size: 14px; font-weight: 520; letter-spacing: -0.02em; box-shadow: 0 16px 34px -18px rgba(13, 15, 18, .8); }
+.copiar:hover { opacity: .9; }
+
+.pend { display: grid; align-content: start; gap: 4px; }
+.pend-cab { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.num { min-width: 28px; height: 28px; padding: 0 9px; border-radius: 999px; background: var(--esp-bg); color: var(--esp); font-weight: 560; display: grid; place-items: center; font-size: 14px; }
+.num.cero { background: var(--ok-bg); color: var(--ok); }
+#listaPend li { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-top: 1px solid var(--linea2); }
+#listaPend li:first-child { border-top: 0; }
+.p-txt { flex: 1; min-width: 0; }
+.p-ag { font-size: 12.5px; color: var(--gris); font-weight: 500; }
+.p-tit { font-weight: 540; letter-spacing: -0.02em; line-height: 1.3; }
+.p-sub { font-size: 13.5px; color: var(--gris); }
+.btn { border: 0; border-radius: 999px; padding: 9px 16px; font-size: 14px; font-weight: 520; letter-spacing: -0.02em; background: var(--carbon); color: #fff; white-space: nowrap; }
+.btn:hover { opacity: .88; }
+.btn.sec { background: var(--blanco); color: var(--carbon); box-shadow: inset 0 0 0 1px var(--linea); }
+.pend-nota { color: var(--gris); font-size: 13px; margin-top: 4px; }
+.vacio { color: var(--gris); padding: 12px 0; }
+
+/* Gráfico */
+.graf-box { position: relative; width: 100%; min-height: 200px; }
+.graf-box svg { display: block; overflow: visible; }
+.g { stroke: var(--linea2); stroke-width: 1; }
+.g.base { stroke: var(--linea); }
+.ty, .tx { fill: var(--gris-claro); font-size: 11.5px; font-family: var(--f); font-variant-numeric: tabular-nums; }
+.ty { text-anchor: end; }
+.tx { text-anchor: middle; }
+.tv { fill: var(--carbon); font-size: 12.5px; font-weight: 560; font-family: var(--f); text-anchor: middle; }
+.bar { fill: var(--salvia-osc); transition: fill .15s; }
+.bar.on { fill: var(--carbon); }
+.hit { fill: transparent; cursor: default; outline: none; }
+.tip { position: absolute; z-index: 2; pointer-events: none; background: rgba(255, 255, 255, .94); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-radius: 16px; box-shadow: 0 18px 40px -18px rgba(13, 15, 18, .45), inset 0 0 0 1px var(--linea); padding: 12px 14px; width: 260px; max-width: 100%; font-size: 13px; }
+.tip strong { display: block; font-size: 18px; font-weight: 500; letter-spacing: -0.04em; }
+.tip .tip-d { color: var(--gris); margin-bottom: 6px; display: block; }
+.tip li { display: flex; justify-content: space-between; gap: 10px; color: var(--gris); padding: 1px 0; }
+.tip li span:last-child { color: var(--carbon); font-variant-numeric: tabular-nums; white-space: nowrap; }
+details.datos { margin-top: 12px; }
+details.datos summary { color: var(--gris); font-size: 13.5px; cursor: pointer; width: fit-content; }
+.tabla-scroll { overflow-x: auto; margin-top: 8px; max-height: 280px; overflow-y: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 7px 12px 7px 0; border-bottom: 1px solid var(--linea2); white-space: nowrap; }
+th { color: var(--gris); font-weight: 500; }
+td.n { font-variant-numeric: tabular-nums; }
+
+/* Fila 2 */
+.fila2 { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.agentes h2, .grupos h2 { margin-bottom: 8px; }
+.ag-fila { display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr) 132px; gap: 4px 16px; align-items: center; text-align: left; border: 0; background: none; padding: 13px 10px; margin: 0 -10px; width: calc(100% + 20px); border-top: 1px solid var(--linea2); border-radius: 14px; }
+.ag-fila:first-of-type { border-top-color: transparent; }
+.ag-fila:hover { background: var(--niebla); }
+.ag-nom b { display: block; font-weight: 540; letter-spacing: -0.02em; }
+.ag-nom span, .ag-hecho small { color: var(--gris); font-size: 12.5px; display: block; line-height: 1.35; }
+.ag-hecho > div + div { margin-top: 4px; }
+.ag-hecho span { font-size: 14px; }
+.ag-t b { display: block; font-weight: 520; font-size: 16px; letter-spacing: -0.03em; text-align: right; font-variant-numeric: tabular-nums; }
+.barra { display: block; height: 6px; border-radius: 3px; background: var(--niebla); margin-top: 7px; overflow: hidden; }
+.barra i { display: block; height: 100%; background: var(--salvia-osc); border-radius: 0 3px 3px 0; }
+.nota { color: var(--gris); font-size: 13px; margin-top: 14px; }
+
+.g-sub { color: var(--gris); font-size: 14px; margin-bottom: 16px; }
+.embudo { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.embudo > div { display: grid; gap: 4px; padding-right: 10px; }
+.embudo > div + div { padding-left: 14px; border-left: 1px solid var(--linea); }
+.embudo div b { display: block; font-size: 22px; font-weight: 500; letter-spacing: -0.05em; font-variant-numeric: tabular-nums; }
+.embudo div span { font-size: 13px; color: var(--gris); display: flex; align-items: center; gap: 6px; }
+.embudo i { width: 8px; height: 8px; border-radius: 2px; display: inline-block; flex: none; }
+.reparto { display: flex; gap: 2px; height: 10px; margin: 16px 0 6px; }
+.reparto span { display: block; height: 100%; }
+.reparto span:first-child { border-radius: 5px 0 0 5px; }
+.reparto span:last-child { border-radius: 0 5px 5px 0; }
+.reparto span:only-child { border-radius: 5px; }
+.c-ok { background: var(--c-ok); } .c-env { background: var(--c-env); } .c-neu { background: var(--c-neu); } .c-esp { background: var(--c-esp); }
+.reparto-t { font-size: 12.5px; color: var(--gris); }
+#listaGrupos { margin-top: 10px; }
+#listaGrupos li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--linea2); }
+#listaGrupos .gq { min-width: 0; }
+#listaGrupos .gq b { display: block; font-weight: 520; font-size: 14.5px; letter-spacing: -0.02em; line-height: 1.35; }
+#listaGrupos .gq span { color: var(--gris); font-size: 12.5px; }
+#listaGrupos .gd { display: grid; justify-items: end; gap: 4px; }
+#listaGrupos .gd b { font-variant-numeric: tabular-nums; font-weight: 540; }
+
+/* Estados: píldora sin punto, el color dice el estado y el texto lo nombra */
+.est { display: inline-flex; align-items: center; font-size: 12.5px; font-weight: 500; letter-spacing: -0.01em; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+.est.ok, .est.elegido, .est.aceptada { color: var(--ok); background: var(--ok-bg); }
+.est.auto, .est.perdida { color: var(--neu); background: var(--neu-bg); }
+.est.enviada, .est.espera { color: var(--env); background: var(--env-bg); }
+.est.aviso { color: var(--av); background: var(--av-bg); }
+.est.revisar { color: var(--esp); background: var(--esp-bg); }
+
+/* Registro */
+.chips { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 8px; scrollbar-width: thin; }
+.chips button { border: 0; background: var(--niebla); border-radius: 999px; padding: 7px 13px; font-size: 13.5px; font-weight: 500; white-space: nowrap; color: var(--gris); }
+.chips button[aria-pressed="true"] { background: var(--carbon); color: #fff; }
+#log li { display: grid; grid-template-columns: 112px minmax(0, 1fr) auto; gap: 4px 16px; align-items: center; padding: 12px 0; border-top: 1px solid var(--linea2); }
+#log li:first-child { border-top: 0; }
+.l-f b { display: block; font-weight: 520; font-size: 14px; letter-spacing: -0.02em; }
+.l-f span { color: var(--gris); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.l-q { min-width: 0; }
+.l-q small { color: var(--gris); font-size: 12.5px; font-weight: 500; display: block; }
+.l-q p { font-size: 14.5px; line-height: 1.4; }
+.l-d { display: grid; justify-items: end; gap: 3px; }
+.l-d span.m { color: var(--gris); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.mas { margin-top: 12px; }
+.l-vacio { color: var(--gris); padding: 14px 0; }
+
+footer { color: var(--gris); font-size: 13px; display: grid; gap: 4px; padding-top: 8px; }
+.firma { display: flex; align-items: center; gap: 10px; margin-top: 10px; color: var(--gris-claro); font-size: 12.5px; }
+.firma img { height: 16px; width: auto; display: block; opacity: .85; }
+
+/* Documento */
+dialog { border: 0; padding: 0; border-radius: 28px; background: var(--blanco); color: var(--carbon); width: min(600px, calc(100% - 32px)); max-height: calc(100% - 48px); box-shadow: 0 40px 90px -30px rgba(13, 15, 18, .45); }
+dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.d-in { padding: 24px; display: grid; gap: 14px; }
+.d-cab { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.d-cab small { color: var(--gris); font-size: 13px; font-weight: 500; display: block; }
+.d-cab h3 { font-size: 22px; letter-spacing: -0.045em; line-height: 1.15; }
+.cerrar { border: 0; background: var(--niebla); width: 36px; height: 36px; border-radius: 999px; font-size: 18px; line-height: 1; flex: none; }
+.bloque small { color: var(--gris); font-size: 12.5px; display: block; margin-bottom: 4px; }
+.bloque p { font-size: 14.5px; }
+.cita { background: var(--niebla); border-radius: 16px; padding: 12px 14px; }
+.estrellas { letter-spacing: 1px; color: var(--carbon); }
+.estrellas s { text-decoration: none; color: var(--gris-claro); opacity: .5; }
+.borrador { box-shadow: inset 0 0 0 1px var(--linea); border-radius: 16px; padding: 12px 14px; }
+.opcion { box-shadow: inset 0 0 0 1px var(--linea); border-radius: 18px; padding: 14px 16px; display: grid; gap: 8px; }
+.opcion b { font-weight: 540; }
+.opcion .reco { color: var(--ok); font-weight: 500; font-size: 12.5px; margin-left: 6px; }
+.opcion .btn { justify-self: start; }
+.opcion .elegida { color: var(--ok); font-weight: 520; font-size: 13px; }
+.lineas { width: 100%; font-size: 14px; }
+.lineas td { white-space: normal; padding: 8px 10px 8px 0; }
+.lineas td:last-child { text-align: right; white-space: nowrap; padding-right: 0; font-variant-numeric: tabular-nums; }
+.lineas tr.total td { font-weight: 560; border-bottom: 0; font-size: 15.5px; }
+.acciones { display: flex; flex-wrap: wrap; gap: 8px; }
+.cambio { display: grid; gap: 8px; }
+.cambio textarea, .copia { width: 100%; min-height: 84px; border: 0; box-shadow: inset 0 0 0 1px var(--linea); border-radius: 16px; padding: 12px 14px; font: inherit; font-size: 14.5px; background: var(--blanco); color: var(--carbon); resize: vertical; }
+.privado { color: var(--gris); font-size: 12.5px; }
+.doc { display: grid; gap: 6px; font-size: 14.5px; }
+.doc h4 { margin: 12px 0 0; font-size: 13px; font-weight: 560; letter-spacing: -0.01em; color: var(--carbon); }
+.doc h4:first-child { margin-top: 0; }
+.doc ul { display: grid; gap: 4px; padding-left: 18px; list-style: disc; }
+.doc .tabla-scroll { margin: 2px 0; max-height: none; }
+.doc tr:first-child td { color: var(--gris); font-size: 13px; }
+.doc-cuerpo { background: var(--fondo); border-radius: 18px; padding: 16px; max-height: 52vh; overflow: auto; }
+.ver { border: 0; background: none; color: var(--carbon); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--salvia); font-size: 12.5px; font-weight: 500; padding: 0; }
+
+/* Lanzar agentes (solo con el servidor en marcha) */
+.demo-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.demo-btns button { border: 0; background: var(--niebla); border-radius: 18px; padding: 11px 14px; text-align: left; display: grid; gap: 1px; min-width: 0; }
+.demo-btns button:hover { background: var(--piedra); }
+.demo-btns button b { font-weight: 540; font-size: 14px; letter-spacing: -0.02em; }
+.demo-btns button small { color: var(--gris); font-size: 12px; }
+.demo-btns button.todos { background: var(--carbon); color: #fff; }
+.demo-btns button.todos small { color: inherit; opacity: .7; }
+.demo-btns button:disabled { opacity: .45; cursor: progress; }
+.trabajando { display: flex; align-items: center; gap: 10px; margin-top: 14px; color: var(--gris); font-size: 14px; }
+.trabajando i { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--niebla); border-top-color: var(--carbon); animation: gira .9s linear infinite; flex: none; }
+@keyframes gira { to { transform: rotate(360deg); } }
+
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 20; background: var(--carbon); color: #fff; padding: 12px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; width: max-content; max-width: calc(100% - 32px); box-shadow: 0 16px 34px -14px rgba(13, 15, 18, .6); }
+
+@media (max-width: 860px) {
+  .fila1, .fila2 { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .hero { padding: 24px 20px 20px; border-radius: 26px; }
+  .card { padding: 18px; border-radius: 22px; }
+  .mini b { font-size: 21px; }
+  .mini > div + div { padding-left: 10px; }
+  .ag-fila { grid-template-columns: minmax(0, 1fr) auto; }
+  .ag-fila .ag-hecho { grid-column: 1 / -1; grid-row: 2; }
+  .ag-t { grid-row: 1; grid-column: 2; min-width: 96px; }
+  #log li { grid-template-columns: minmax(0, 1fr) auto; }
+  .l-f { grid-column: 1 / -1; display: flex; gap: 8px; align-items: baseline; }
+  .l-f b { display: inline; font-size: 13px; }
+  .embudo div b { font-size: 17px; }
+  .d-in { padding: 20px; }
+}
+
+/* Áreas: pestañas, tarjetas del resumen y la vista de cada área */
+.areas { display: flex; gap: 6px; overflow-x: auto; padding: 4px; margin: -4px; scrollbar-width: none; }
+.areas::-webkit-scrollbar { display: none; }
+.areas button { border: 0; background: rgba(255, 255, 255, .72); box-shadow: inset 0 0 0 1px var(--linea); border-radius: 999px; padding: 9px 16px; font-size: 14px; font-weight: 500; letter-spacing: -0.015em; white-space: nowrap; color: var(--gris); display: inline-flex; align-items: center; gap: 8px; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.areas button[aria-selected="true"] { background: var(--carbon); color: #fff; box-shadow: none; }
+.areas .cuenta { min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--esp-bg); color: var(--esp); font-size: 12px; font-weight: 560; display: inline-grid; place-items: center; }
+.areas button[aria-selected="true"] .cuenta { background: rgba(255, 255, 255, .2); color: #fff; }
+.vista { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.areas-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.area-card { border: 0; text-align: left; background: var(--fondo); border-radius: 20px; padding: 18px; display: grid; gap: 2px; align-content: start; transition: background .2s; }
+.area-card:hover { background: var(--niebla); }
+.area-card h3 { font-size: 19px; letter-spacing: -0.04em; }
+.area-card .para { color: var(--gris); font-size: 12.5px; }
+.area-card .t { font-size: 30px; font-weight: 500; letter-spacing: -0.05em; line-height: 1.05; margin-top: 12px; }
+.area-card .n { color: var(--gris); font-size: 13px; }
+.area-card .est { justify-self: start; margin-top: 10px; }
+.area-card .ags { color: var(--gris-claro); font-size: 12.5px; margin-top: 8px; }
+.avisos li { display: grid; gap: 2px; padding: 12px 0; border-top: 1px solid var(--linea2); }
+.avisos li:first-child { border-top: 0; }
+.avisos small { color: var(--gris); font-size: 12.5px; font-weight: 500; }
+#listaPend li.p-area, .lista-pend li.p-area { padding: 16px 0 2px; border-top: 0; }
+.p-area button { border: 0; background: none; padding: 0; font-size: 13px; font-weight: 560; color: var(--carbon); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--salvia); }
+.lista-pend li { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-top: 1px solid var(--linea2); }
+.lista-pend li:first-child { border-top: 0; }
+.area-cab .area-tit { font-size: clamp(36px, 5vw, 54px); letter-spacing: -0.055em; line-height: 1; margin-top: 4px; }
+.mini.mini4 { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 20px; }
+.ag-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 18px; }
+.ag-card { display: grid; gap: 14px; align-content: start; }
+.ag-card h3 { font-size: 22px; letter-spacing: -0.045em; }
+.ag-hace { color: var(--gris); }
+.ag-datos { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 14px; margin: 0; font-size: 14px; }
+.ag-datos dt { color: var(--gris); }
+.ag-datos dd { margin: 0; }
+.ag-tareas { display: grid; gap: 10px; background: var(--fondo); border-radius: 16px; padding: 14px 16px; }
+.ag-tareas li b { font-weight: 520; display: block; letter-spacing: -0.02em; }
+.ag-tareas li small { color: var(--gris); font-size: 12.5px; }
+.ag-pie { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.ag-pie .dev b { font-size: 24px; font-weight: 500; letter-spacing: -0.05em; }
+.ag-pie .dev span { color: var(--gris); font-size: 13px; margin-left: 6px; }
+.ag-pie .acc { display: flex; gap: 8px; flex-wrap: wrap; }
+.ag-pie .btn:disabled { opacity: .5; cursor: progress; }
+@media (max-width: 860px) { .areas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) {
+  .areas-grid { grid-template-columns: minmax(0, 1fr); }
+  .mini.mini4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mini.mini4 > div:nth-child(3) { border-left: 0; padding-left: 0; }
+}
+
+/* Móvil como una app: cabecera fija compacta, barra de secciones abajo y documentos en hoja que sube */
+.corto, .solo-movil, .barra-app { display: none; }
+.areas-lista { display: grid; gap: 10px; }
+.area-fila { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 2px 12px; width: 100%; border: 0; background: var(--blanco); box-shadow: inset 0 0 0 1px var(--linea); border-radius: 22px; padding: 16px 18px; text-align: left; }
+.area-fila b { font-size: 17px; font-weight: 520; letter-spacing: -0.03em; }
+.area-fila small { color: var(--gris); font-size: 12.5px; grid-column: 1; }
+.area-fila .der { grid-row: 1 / 3; grid-column: 2; display: grid; justify-items: end; gap: 4px; }
+.area-fila .der .t { font-size: 15px; font-weight: 520; letter-spacing: -0.02em; }
+.area-fila .flecha, li.toca .flecha { grid-row: 1 / 3; grid-column: 3; font-size: 22px; color: var(--gris-claro); line-height: 1; }
+li.toca { cursor: pointer; }
+li.toca .flecha { display: none; }
+.atras { border: 0; background: none; padding: 4px 0; font-size: 15px; font-weight: 520; color: var(--carbon); justify-self: start; letter-spacing: -0.02em; }
+.ver-todo { border: 0; background: var(--niebla); border-radius: 999px; padding: 10px 16px; font-size: 14px; font-weight: 520; width: 100%; margin-top: 6px; }
+dialog { overflow: auto; }
+dialog:focus { outline: none; }
+
+@media (max-width: 640px) {
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 16; background: var(--fondo); }
+  .app { gap: 14px; padding-block: 0 calc(100px + env(safe-area-inset-bottom, 0px)); }
+  .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 15; flex-wrap: nowrap; gap: 10px; padding-block: 10px;
+    background: rgba(246, 247, 244, .9); -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+    box-shadow: 0 0 0 100vmax rgba(246, 247, 244, .9), 0 1px 0 100vmax transparent; clip-path: inset(0 -100vmax -1px); border-bottom: 1px solid transparent; }
+  .marca { gap: 10px; }
+  .marca p, .ejemplo, .act { display: none; }
+  .logo { width: 36px; height: 36px; }
+  .logo img { width: 17px; }
+  .marca h1 { font-size: 18px; white-space: nowrap; }
+  .controles { gap: 0; }
+  .periodo { padding: 4px; }
+  .periodo button { padding: 7px 11px; font-size: 13px; }
+  .largo { display: none; }
+  .corto { display: inline; }
+  .solo-escritorio { display: none !important; }
+  .solo-movil { display: inline-flex; }
+  .areas { display: none; }
+
+  .hero { padding: 22px 20px 20px; border-radius: 26px; }
+  .saludo { font-size: 15px; }
+  .cifra { font-size: 56px; }
+  .jornadas { font-size: 15px; }
+  .mini { margin-top: 12px; }
+  .mini b { font-size: 21px; }
+  .copiar { width: 100%; padding: 13px 18px; }
+  .card { padding: 18px; border-radius: 24px; }
+  h2 { font-size: 20px; }
+
+  .areas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .area-card { padding: 14px; border-radius: 18px; }
+  .area-card .para, .area-card .ags { display: none; }
+  .area-card h3 { font-size: 16px; }
+  .area-card .t { font-size: 24px; margin-top: 8px; }
+  .area-card .est { margin-top: 8px; font-size: 11.5px; padding: 3px 8px; }
+
+  #listaPend li .btn, .lista-pend li .btn { display: none; }
+  li.toca .flecha { display: block; }
+  #listaPend li, .lista-pend li { padding: 14px 0; }
+
+  .barra-app { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); position: fixed; left: 0; right: 0; bottom: 0; z-index: 18;
+    padding: 6px max(8px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(8px, env(safe-area-inset-left, 0px));
+    background: rgba(255, 255, 255, .88); -webkit-backdrop-filter: blur(20px) saturate(1.4); backdrop-filter: blur(20px) saturate(1.4); box-shadow: 0 -1px 0 var(--linea); }
+  .barra-app button { border: 0; background: none; display: grid; justify-items: center; align-content: center; gap: 3px; padding: 6px 0; min-height: 52px; font-size: 11px; font-weight: 500; color: var(--gris-claro); position: relative; }
+  .barra-app svg { width: 24px; height: 24px; display: block; }
+  .barra-app button[aria-current="page"] { color: var(--carbon); }
+  .barra-app .cuenta { position: absolute; top: 2px; left: calc(50% + 7px); min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px; background: var(--carbon); color: #fff; font-size: 11px; font-weight: 560; display: grid; place-items: center; }
+  .toast { bottom: calc(86px + env(safe-area-inset-bottom, 0px)); border-radius: 18px; text-align: center; }
+
+  dialog { width: 100%; max-width: 100%; max-height: 92dvh; margin: auto 0 0; border-radius: 26px 26px 0 0; }
+  dialog[open] { animation: sube .3s cubic-bezier(.22, 1, .36, 1); }
+  .d-in { padding: 10px 18px 0; gap: 12px; }
+  .d-in::before { content: ""; width: 40px; height: 5px; border-radius: 3px; background: var(--niebla); justify-self: center; }
+  .d-cab h3 { font-size: 20px; }
+  .doc-cuerpo { max-height: none; padding: 14px; }
+  .acciones { position: sticky; bottom: 0; z-index: 2; margin-inline: -18px; padding: 12px 18px calc(14px + env(safe-area-inset-bottom, 0px)); background: rgba(255, 255, 255, .94); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 -1px 0 var(--linea); }
+  .acciones .btn { flex: 1; padding: 13px 16px; font-size: 15px; }
+  .opcion .btn { width: 100%; padding: 12px; }
+  .d-in > :last-child:not(.acciones) { margin-bottom: calc(18px + env(safe-area-inset-bottom, 0px)); }
+
+  .area-cab .area-tit { font-size: 38px; }
+  .ag-card h3 { font-size: 20px; }
+  .ag-pie .acc { width: 100%; }
+  .ag-pie .acc .btn { flex: 1; }
+}
+@keyframes sube { from { transform: translateY(48px); opacity: .5; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } .trabajando i { animation: none; } dialog[open] { animation: none; } }
+</style>
+</head>
+<body>
+<div class="halos" aria-hidden="true"></div>
+<div class="app">
+  <header class="top">
+    <div class="marca">
+      <span class="logo"><img src="data:image/png;base64,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" alt="Vértice"></span>
+      <div><p>Panel de dirección</p><h1>Hotel Brisalta</h1></div>
+      <span class="ejemplo">Ejemplo</span>
+    </div>
+    <div class="controles">
+      <div class="periodo" role="tablist" aria-label="Periodo">
+        <button type="button" role="tab" id="p-oct" data-p="oct" aria-selected="true">Octubre</button>
+        <button type="button" role="tab" id="p-nov" data-p="nov" aria-selected="false"><span class="largo">Noviembre, hasta hoy</span><span class="corto">Este mes</span></button>
+      </div>
+      <p class="act" id="act">Actualizado hoy, 10:35</p>
+    </div>
+  </header>
+
+  <nav class="areas" id="areas" role="tablist" aria-label="Áreas del hotel"></nav>
+
+  <div class="vista" id="v-resumen">
+
+  <section class="fila1">
+    <div class="hero">
+      <p class="saludo"><b>Hola, Laura.</b> <span id="frase">En octubre</span> tus agentes os han devuelto</p>
+      <p class="cifra" id="horas">45 h 33 min</p>
+      <p class="jornadas" id="jornadas">Son 5,7 jornadas de 8 horas, entre tú y tu equipo.</p>
+      <p class="como">Lo calculamos con lo que tardabais en cada tarea antes de empezar.</p>
+      <div class="mini">
+        <div><b id="tTareas">193</b><span>tareas hechas</span></div>
+        <div><b id="tAvisos">4</b><span>avisos que te han llegado</span></div>
+        <div><b id="tPartes">28 de 30</b><span>partes del equipo recibidos</span></div>
+      </div>
+      <button type="button" class="copiar" id="copiar">Copiar el resumen para la propiedad</button>
+    </div>
+    <div class="card pend">
+      <div class="pend-cab"><h2>Esperando tu OK</h2><span class="num" id="nPend">3</span></div>
+      <ul id="listaPend"></ul>
+      <p class="pend-nota" id="pendNota">Cuando lo apruebas, el agente lo envía. Mientras tanto se queda aquí y en tu móvil.</p>
+    </div>
+  </section>
+
+  <section class="card" id="demo" hidden>
+    <div class="cab">
+      <h2>Lanzar un agente <span class="fino">ahora</span></h2>
+      <p class="sub">En el hotel se lanzan solos a su hora. Aquí lo lanzas tú para ver cómo trabaja.</p>
+    </div>
+    <div class="demo-btns" id="demoBtns"></div>
+    <p class="trabajando" id="trabajando" hidden><i aria-hidden="true"></i><span id="trabTxt"></span></p>
+  </section>
+
+  <section class="card">
+    <div class="cab">
+      <h2>Tus áreas</h2>
+      <p class="sub">Toca un área para ver sus agentes, lo que espera tu OK y su registro.</p>
+    </div>
+    <div class="areas-grid" id="areasGrid"></div>
+  </section>
+
+  <section class="card">
+    <div class="cab">
+      <h2>Tiempo devuelto <span class="fino">cada día</span></h2>
+      <p class="sub" id="grafSub">Pasa el ratón o toca una barra para ver qué se hizo ese día.</p>
+    </div>
+    <div class="graf-box" id="grafico"></div>
+    <details class="datos">
+      <summary>Ver los datos del gráfico</summary>
+      <div class="tabla-scroll"><table id="tablaDias"></table></div>
+    </details>
+  </section>
+
+  <section class="card solo-escritorio">
+    <div class="cab">
+      <h2>Avisos</h2>
+      <p class="sub">Lo que los agentes creen que tienes que saber hoy.</p>
+    </div>
+    <ul class="avisos" id="avisosLista"></ul>
+  </section>
+  </div>
+
+  <div class="vista" id="v-area" hidden></div>
+  <div class="vista" id="v-lista" hidden></div>
+
+  <footer>
+    <p>Ejemplo con datos inventados del Hotel Brisalta, un hotel de 80 habitaciones en la Costa Blanca.</p>
+    <p>En este panel solo hay totales y documentos de trabajo, sin ningún dato de huéspedes.</p>
+    <p>Si una tarea os lleva más o menos tiempo del que medimos, se cambia y el panel lo recalcula todo.</p>
+    <p class="firma"><img src="data:image/png;base64,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" alt="Vértice"></p>
+  </footer>
+</div>
+
+<nav class="barra-app" id="barraApp" aria-label="Secciones"></nav>
+
+<dialog id="doc" aria-labelledby="docTit" tabindex="-1"><div class="d-in" id="docIn"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<!-- datos:inicio -->
+<script>window.DATOS = {"hoy": {"y": 2026, "m": 11, "d": 11}, "actualizado": "12:56", "registro": [{"id": "relevo-0-20261111125242846830", "clave": "relevo", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:52", "agente": "recepcion", "tipo": "relevo", "n": 1, "titulo": "Hoja de recepción, mañana del 11 de noviembre", "detalle": "2 cosas para hoy: cuna en la 214 antes de las 12:00 y técnico del TPV del bar", "doc": "PARA HACER HOY\n- Habitación 214, antes de las 12:00. Necesitan una cuna porque llega familia con un bebé. Pedírsela a pisos y comprobar que está montada antes de esa hora.\n- Bar del lobby, antes de las 18:00, que es cuando abre. En noviembre es el único bar abierto. Hay que llamar al técnico del TPV. El audio no dice quién hace la llamada ni trae el contacto del técnico. Confirmarlo con el maître.\n\nPASA A OTRO DEPARTAMENTO\n- Pisos: cuna para la 214, montada antes de las 12:00.\n- Bar, al maître: el TPV se colgó a la 1:30. El recepcionista de noche lo reinició y ahora funciona. Es la tercera vez esta semana.\n- Mantenimiento: la máquina de hielo de la segunda planta hace un ruido raro. Que la revisen.\n\nYA RESUELTO ESTA NOCHE\n- Habitación 108: tenía taxi al aeropuerto a las 5:00 y salió sin problema.\n- Habitación 305: a las 2:15 se quejó del ruido de la 307. El recepcionista de noche subió y se arregló.", "opciones": [], "importe": 0, "estado": "auto", "previo": "", "version": 1}, {"id": "relevo-0-20261111125242846830-aviso", "clave": "relevo", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:52", "agente": "recepcion", "tipo": "aviso", "n": 0, "titulo": "El TPV del bar se ha colgado tres veces esta semana y hay que llamar al técnico antes de que abra el bar a las 18:00.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "resenas-0-20261111125303740024", "clave": "resenas", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "resenas", "tipo": "resena", "n": 3, "titulo": "Respuestas a 3 reseñas nuevas de Google", "detalle": "Una de 2 estrellas por la espera del check-in; las otras dos, de 4 y 5", "doc": "RESEÑA 1 · Google · 5 estrellas\n«La cena, de diez. El arroz a banda de lo mejor que hemos comido en la costa, y el camarero nos recomendó muy bien el vino.»\n\nRESPUESTA\nMuchas gracias por lo que cuentan de la cena. Nos alegra que el arroz a banda les pareciera de lo mejor que han comido en la costa, y se lo haremos llegar a cocina. Al equipo de sala le contaremos lo del vino, porque les hará ilusión saber que acertaron con la recomendación. Esperamos volver a verles en Salitre.\nLaura Martín, directora del Hotel Brisalta\n\nRESEÑA 2 · Google · 2 estrellas\n«25 minutos para hacer el check-in un viernes por la tarde. La habitación muy bien, pero la llegada nos dejó mal sabor de boca.»\n\nRESPUESTA\nGracias por su reseña y por lo que dicen de la habitación. Tienen razón en que 25 minutos de espera al llegar son demasiados, y sentimos que su estancia empezara con ese mal sabor de boca. Ya estamos estudiando cómo reforzar la recepción los viernes por la tarde. Nos gustaría recibirles mejor en su próxima visita.\nLaura Martín, directora del Hotel Brisalta\n\nRESEÑA 3 · Google · 4 estrellas\n«Todo muy limpio y las vistas al mar preciosas. Le quito una estrella porque el wifi de la habitación iba lento.»\n\nRESPUESTA\nMuchas gracias por lo que dice de la limpieza y de las vistas al mar. Nos alegra que disfrutara de ellas. Sentimos que el wifi de la habitación fuera lento. Lo vamos a revisar, y le agradecemos que nos lo haya contado. Le esperamos de vuelta cuando quiera.\nLaura Martín, directora del Hotel Brisalta", "opciones": [], "importe": 0, "estado": "pend", "previo": "", "version": 1}, {"id": "resenas-0-20261111125303740024-aviso", "clave": "resenas", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "resenas", "tipo": "aviso", "n": 0, "titulo": "El wifi lento de las habitaciones no aparece en ningún parte y la respuesta dice que se revisará, así que hay que encargárselo hoy a alguien.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "mantenimiento-0-20261111125322842709", "clave": "mantenimiento", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "mantenimiento", "tipo": "parte", "n": 4, "titulo": "Partes de la ronda de mantenimiento de las 11:10", "detalle": "2 urgentes: moqueta levantada ante la 312 y charco junto a la ducha de la piscina", "doc": "PARTES DE LA RONDA DE LAS 11:10\n\nURGENTE\n\nParte 1. Moqueta levantada delante de la 312\n- Sitio: pasillo, delante de la habitación 312.\n- Qué pasa: una esquina de la moqueta está levantada y se puede tropezar (foto 2).\n- Lo primero: fijar la esquina hoy, aunque sea de forma provisional, para que nadie tropiece. Después, pegarla bien o cambiar ese trozo.\n\nParte 2. Charco junto a la ducha de la piscina\n- Sitio: ducha exterior de la piscina, en el suelo de piedra de la zona de paso.\n- Qué pasa: la ducha gotea y deja un charco. La piedra mojada resbala (foto 1).\n- Lo primero: cortar el agua de la ducha, secar el charco y poner el cartel de suelo mojado. Luego, mirar de dónde sale la gota.\n- Ojo: según la ficha, la piscina abre de mayo a octubre, así que en noviembre debería estar cerrada. Si la gente sigue pasando por esa zona, el riesgo de resbalón sigue ahí.\n\nESTA SEMANA\n\nParte 3. Bombilla fundida en la segunda planta\n- Sitio: pasillo de la segunda planta, junto al ascensor.\n- Qué pasa: la bombilla está fundida (nota de voz).\n- Lo primero: cambiarla. Se tarda poco y se puede hacer hoy mismo. Si ese tramo se queda a oscuras por la noche, conviene pasarlo a urgente.\n\nParte 4. Ruido en la máquina de hielo de la segunda planta\n- Sitio: máquina de hielo de la segunda planta.\n- Qué pasa: hace un ruido raro. Lo avisó el relevo de noche, pero el aviso no dice si sigue haciendo hielo.\n- Lo primero: ir a escucharla y comprobar si hace hielo. Si ha dejado de hacerlo, pasa a urgente porque deja la planta sin ese servicio.\n\nCUANDO HAYA HUECO\n\n- Nada en esta ronda.\n\nLO QUE NO SABEMOS\n\n- Si la zona de la ducha de la piscina está abierta al paso ahora que la piscina está cerrada.\n- Si el ruido de la máquina de hielo se oye desde alguna habitación.", "opciones": [], "importe": 0, "estado": "auto", "previo": "", "version": 1}, {"id": "mantenimiento-0-20261111125322842709-aviso", "clave": "mantenimiento", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "mantenimiento", "tipo": "aviso", "n": 0, "titulo": "Hay riesgo de caída para huéspedes en dos sitios, la moqueta levantada delante de la 312 y el charco junto a la ducha de la piscina, y conviene señalizarlos hoy.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "resumen-0-20261111125326575652", "clave": "resumen", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "informes", "tipo": "resumen", "n": 1, "titulo": "Resumen de la semana del 2 al 8 de noviembre", "detalle": "Tienes 3 cosas que decidir y Comercial no ha mandado parte", "doc": "LO QUE HA IDO BIEN\n- Recepción: 14 reseñas nuevas y la nota media sube a 8,7. El parte no dice de qué nota venía.\n- Pisos: 236 habitaciones hechas sin ningún repaso, unas 34 al día (236 ÷ 7 = 33,7).\n- Restaurante y bares: 12 parejas en la cena de la terraza del sábado. Si se cobraron al precio de la ficha, son 12 × 85 € = 1.020 €. En la semana se sirvieron 298 cubiertos en cenas, unos 43 por noche (298 ÷ 7 = 42,6).\n- Cocina: el menú de grupo del jueves salió sin retrasos. En la semana salieron 64 arroces.\n\nLO QUE FALLA\n- Recepción: el viernes hubo 25 minutos de espera en el check-in entre las 15:00 y las 16:00. Llegó un grupo de 20 a la vez.\n- Cocina y Restaurante: el proveedor de pescado llegó tarde dos días y el viernes se acabó la lubina a las 21:30, con la cena abierta hasta las 22:30. Los partes no dicen si una cosa llevó a la otra.\n- Pisos: el sábado faltaron almohadas extra.\n- Mantenimiento: gotea la ducha de la piscina. Con la piscina cerrada hasta mayo es lo menos urgente, aunque sigue perdiendo agua.\n\nLO QUE QUEDA PENDIENTE\n- Fijar la moqueta delante de la 312. Lo tiene el jefe de mantenimiento. Mientras no esté fijada, un huésped puede tropezar.\n- El técnico del TPV del bar. Lo tiene la jefa de recepción. El parte no dice qué falla ni para cuándo está.\n- El pedido de lencería. Lo tiene la gobernanta.\n- La carta de cócteles con el precio nuevo del mojito. Lo tiene el maître. El parte no da el precio nuevo.\n\nLO QUE TIENES QUE DECIDIR\n- Refuerzo de recepción los viernes de 15:00 a 16:00. Recepción plantea dos opciones: poner a alguien de reservas o pagar un extra de 3 horas. El parte no dice cuánto cuesta el extra. Sin el parte de Comercial tampoco sé si vienen más grupos en viernes.\n- Bar de la piscina. Restaurante y bares plantea cerrarlo hasta mayo o abrirlo los domingos si hace bueno. En la ficha, el bar abre de mayo a octubre, igual que la piscina. Abrir los domingos pide personal en temporada baja y el parte no dice quién lo cubriría ni lo que costaría.\n- Proveedor de pescado. Cocina plantea probar el proveedor nuevo dos semanas o seguir con el actual, que esta semana llegó tarde dos días. El jefe de cocina ya tiene el cambio como pendiente, así que depende de lo que decidas.\n\nPARTES QUE FALTAN\n- Comercial", "opciones": [], "importe": 0, "estado": "auto", "previo": "", "version": 1}, {"id": "resumen-0-20261111125326575652-aviso", "clave": "resumen", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "informes", "tipo": "aviso", "n": 0, "titulo": "Comercial no ha mandado parte esta semana y la moqueta sin fijar delante de la 312 puede hacer tropezar a un huésped.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "baja-0-20261111125331758512", "clave": "baja", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "cuadrantes", "tipo": "ausencia", "n": 1, "titulo": "Falta la camarera C el jueves 12, turno de mañana", "detalle": "Quedan 6 unidades sin cubrir de 34. Las camareras A y B hacen 28", "doc": "LO QUE PASA\nMañana, jueves 12 de noviembre, falta la camarera C en el turno de mañana de pisos. Quedan la camarera A y la camarera B.\n\nTrabajo previsto del día:\nTipo | Habitaciones | Unidades\nSalidas | 22 | 22 × 1 = 22\nSiguen | 24 | 24 × 0,5 = 12\nTotal | 46 | 22 + 12 = 34\n\nLo que cubren las que quedan:\n- 2 camareras × 14 unidades = 28 unidades\n\nLo que falta:\n- 34 − 28 = 6 unidades\n\nPara pasar unidades a horas uso el ritmo del cuadrante. 14 unidades en 8 horas son 1,75 unidades por hora. Las 6 que faltan son unas 3 horas y 26 minutos de trabajo (6 ÷ 1,75 = 3,43 horas).\n\nOPCIÓN A\nEntra la camarera de refuerzo de 8:00 a 12:00.\n- Camarera A: su turno normal de 8 horas, 14 unidades.\n- Camarera B: su turno normal de 8 horas, 14 unidades.\n- Camarera de refuerzo: de 8:00 a 12:00, 4 horas. 4 × 1,75 = 7 unidades. Cubre las 6 que faltan y deja 1 de margen.\n- Gobernanta: su trabajo de siempre y el pedido de lencería.\nTotal cubierto: 14 + 14 + 7 = 35 unidades para 34 previstas.\n\nHoras de la semana:\n- Camarera de refuerzo: 26 + 4 = 30 de 40. Le quedan 10.\n- Si quieres más margen, puede quedarse hasta las 14:00. Haría 6 × 1,75 = 10,5 unidades y llegaría a 26 + 6 = 32 horas de 40.\n- Camareras A y B: sin cambios.\n\nReglas de horario:\n- 4 horas en el día, por debajo del máximo de 9.\n- Para entrar a las 8:00 con 12 horas de descanso, su último turno tiene que haber acabado el miércoles a las 20:00 como tarde. No me has pasado a qué hora termina.\n\nAntes de llamarla hay que comprobar esto:\n- Tiene contrato de fines de semana. Hay que confirmar que puede trabajar un jueves.\n- Si tiene turno el sábado y el domingo, esas horas tienen que caber en las 10 que le quedan, u 8 si se queda hasta las 14:00.\n\nOPCIÓN B\nSin refuerzo. Las camareras A y B alargan una hora y la gobernanta limpia lo que falta.\n- Camarera A: alarga 1 hora al final de su turno y hace 9 horas, el máximo. 14 + 1,75 = 15,75 unidades.\n- Camarera B: lo mismo, 9 horas y 15,75 unidades.\n- Gobernanta: 6 − 1,75 − 1,75 = 2,5 unidades. Por ejemplo, 1 salida y 3 habitaciones que siguen (1 + 3 × 0,5 = 2,5). Al ritmo de una camarera son unos 86 minutos (2,5 ÷ 1,75 = 1,43 horas). El pedido de lencería lo hace en el resto de su turno.\nTotal cubierto: 15,75 + 15,75 + 2,5 = 34 unidades. Llega justo a lo previsto, sin margen.\n\nHoras de la semana:\n- Camareras A y B: suman 1 hora cada una a lo que ya lleven. No me has pasado sus horas de la semana, así que hay que comprobar que caben en su contrato.\n- Gobernanta: si limpia dentro de su turno, no suma horas. Ese rato lo quita de supervisar y del pedido de lencería.\n\nReglas de horario:\n- Camareras A y B: 9 horas en el día, justo el máximo.\n- Descanso: si el viernes entran a la misma hora que el jueves, descansan 24 − 9 = 15 horas, por encima de 12.\n\nPOR QUÉ RECOMIENDO LA A\n- Cubre las 34 unidades con 1 de margen. La B llega justa a 34 y cualquier retraso deja habitaciones sin hacer.\n- Las camareras A y B hacen su turno normal. En la B se quedan en el tope de 9 horas y no sé cuántas llevan en la semana.\n- La gobernanta tiene el jueves para supervisar y para el pedido de lencería.\n- La camarera de refuerzo se queda en 30 de 40 horas.\nAntes de llamarla hay que hacer las comprobaciones que pongo en la opción A. Si alguna falla, la B sirve de reserva.", "opciones": [{"id": "A", "texto": "La camarera de refuerzo entra de 8:00 a 12:00 y cubre las 6 unidades que faltan."}, {"id": "B", "texto": "Las camareras A y B alargan una hora, hasta 9, y la gobernanta limpia las 2,5 unidades que quedan."}], "importe": 0, "estado": "pend", "previo": "", "version": 1}, {"id": "baja-0-20261111125331758512-aviso", "clave": "baja", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "cuadrantes", "tipo": "aviso", "n": 0, "titulo": "La camarera de refuerzo tiene contrato de fines de semana, así que hoy hay que confirmar que puede trabajar el jueves y que con el sábado y el domingo no pasa de 40 horas.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "grupos-0-20261111125345174540", "clave": "grupos", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "grupos", "tipo": "grupo", "n": 1, "titulo": "Propuesta para club de senderismo", "detalle": "28 personas, 3 noches (26 al 29 de noviembre), total 5.922 €", "doc": "LO QUE PIDEN\nClub de senderismo de Albacete. Son 28 personas en 14 habitaciones dobles, del jueves 26 al domingo 29 de noviembre: 3 noches en temporada baja.\nQuieren cenar en el hotel las tres noches y el traslado del aeropuerto de Alicante, a la ida el jueves y a la vuelta el domingo.\n\nLA PROPUESTA\nConcepto | Cálculo | Importe\nHabitación doble con desayuno | 14 habitaciones x 3 noches x 78 € | 3.276 €\nMenú de grupo para cenar | 28 personas x 3 cenas x 24 € | 2.016 €\nTraslado al aeropuerto de Alicante | 28 personas entre 4 por trayecto = 7 trayectos a la ida y 7 a la vuelta. 14 trayectos x 45 € | 630 €\nTotal | 3.276 + 2.016 + 630 | 5.922 €\nPor persona | 5.922 entre 28 | 211,50 €\n\nEL CORREO DE RESPUESTA\nAsunto: Precio para su club, del 26 al 29 de noviembre\n\nBuenos días:\n\nGracias por escribirnos. Le paso el precio cerrado para 28 personas, del jueves 26 al domingo 29 de noviembre.\n\nEl total es de 5.922 €, que salen a 211,50 € por persona. Incluye:\n- 14 habitaciones dobles con desayuno durante las tres noches.\n- La cena con nuestro menú de grupo el jueves, el viernes y el sábado.\n- El traslado desde el aeropuerto de Alicante el jueves y hasta el aeropuerto el domingo. Se hace en grupos de hasta 4 personas, así que son 7 trayectos a la ida y 7 a la vuelta.\n\nMantenemos este precio hasta el 18 de noviembre. Si le encaja, indíqueme la hora de llegada y la de salida de los vuelos y organizamos los traslados.\n\nUn saludo,\nLa directora del Hotel Brisalta", "opciones": [], "importe": 5922, "estado": "pend", "previo": "", "version": 1}, {"id": "cierre-0-20261111125414686360", "clave": "cierre", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:54", "agente": "numeros", "tipo": "cuentas", "n": 1, "titulo": "Cuentas del cierre de octubre de 2026", "detalle": "Todo cuadra. Ingreso 218.736,00 €, igual al presupuesto y un 8,66 % más que en 2025", "doc": "HECHOS DEL MES DE OCTUBRE DE 2026\n1. Ocupación. 70,00 %.\n2. Precio medio. 100,00 €.\n3. Noches ocupadas. 1.736.\n4. Ingreso de habitaciones. 173.600,00 €.\n5. Restaurante y bares. 38.192,00 €, que son el 17,46 % del ingreso total.\n6. Spa. 0,00 €. Otros ingresos. 6.944,00 €.\n7. Ingreso total. 218.736,00 €. El presupuesto era de 218.736,00 €, así que la diferencia es de 0,00 €, un 0,00 %.\n8. Diferencia con octubre de 2025. En 2025 se ingresaron 201.300,00 €. Este año son 17.436,00 € más, un 8,66 % más.\n9. La partida que más se ha desviado. Con este formulario no se puede saber. El presupuesto y el dato del año pasado vienen solo como total, sin repartir por partidas. En el total, la desviación con el presupuesto es de 0,00 €.\n\nCIFRAS QUE HAY QUE COMPROBAR\n- Suma de partidas. 173.600,00 € + 38.192,00 € + 0,00 € + 6.944,00 € = 218.736,00 €. Coincide con el ingreso total.\n- Noches por precio medio. 1.736 × 100,00 € = 173.600,00 €. Coincide con el ingreso de habitaciones.\n- Ocupación. 80 habitaciones × 31 días = 2.480 noches disponibles. 1.736 / 2.480 = 70,00 %. Coincide con la ocupación del formulario.\nTodo cuadra.\n\nCUENTAS DE LOS PORCENTAJES\n- Peso de restaurante y bares. 38.192,00 € / 218.736,00 € = 17,46 %.\n- Presupuesto. 218.736,00 € − 218.736,00 € = 0,00 €, un 0,00 %.\n- Año pasado. 218.736,00 € − 201.300,00 € = 17.436,00 €. 17.436,00 € / 201.300,00 € = 8,66 %.\n\nA TENER EN CUENTA\n- El presupuesto coincide al euro con el ingreso real. Puede ser casualidad, o puede que se haya copiado el total en la casilla del presupuesto. Hay que confirmarlo antes de dar el presupuesto por cumplido.\n- El spa sale a 0,00 €. La ficha del hotel no recoge spa, así que el cero encaja.\n- El comentario de la dirección dice que el bar del lobby baja entre semana. El formulario da restaurante y bares juntos y sin separar por días, así que con estas cifras esa bajada no se puede ver ni medir.", "opciones": [], "importe": 0, "estado": "auto", "previo": "", "version": 1}, {"id": "cierre-0-20261111125414686360-aviso", "clave": "cierre", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:54", "agente": "numeros", "tipo": "aviso", "n": 0, "titulo": "El presupuesto coincide al euro con el ingreso real y no viene por partidas, así que hoy no se puede medir ninguna desviación.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "cierre-1-20261111125536537859", "clave": "cierre", "paso": 1, "y": 2026, "m": 11, "d": 11, "h": "12:55", "agente": "informes", "tipo": "informe", "n": 1, "titulo": "Informe del cierre de octubre para la propiedad", "detalle": "Ingreso total 218.736 €, 17.436 € más que en octubre de 2025 (+8,66 %)", "doc": "Asunto: Hotel Brisalta · Cierre de octubre de 2026\n\nOctubre ha sido un buen mes para el hotel. El ingreso total ha sido de 218.736 €, igual al presupuesto y 17.436 € más que en octubre de 2025, un 8,66 % más.\n\nConcepto | Octubre de 2026 | Presupuesto o año pasado\nIngreso total frente al presupuesto | 218.736 € | 218.736 € (0 €, 0,00 %)\nIngreso total frente a octubre de 2025 | 218.736 € | 201.300 € (+17.436 €, +8,66 %)\nOcupación | 70 % | Sin dato\nPrecio medio | 100 € | Sin dato\nNoches ocupadas | 1.736 | Sin dato\nIngreso de habitaciones | 173.600 € | Sin dato\nRestaurante y bares | 38.192 € | Sin dato\nOtros ingresos | 6.944 € | Sin dato\n\nLO QUE HA IDO BIEN\n- Hemos ingresado 17.436 € más que en octubre de 2025, un 8,66 % más. Hemos pasado de 201.300 € a 218.736 €.\n- Las habitaciones han aportado 173.600 €. Son 1.736 noches ocupadas, con una ocupación del 70 % y un precio medio de 100 €.\n\nLO QUE HAY QUE MIRAR\n- El bar del lobby baja entre semana. En las cifras del mes, restaurante y bares van juntos, con 38.192 €, el 17,46 % del ingreso total, y sin separar por días. Por eso esa bajada aún no se puede medir. Causa y propuesta: a explicar por la dirección.\n- Este mes no podemos decirle qué partida se ha desviado más del presupuesto. El presupuesto y el dato del año pasado los tenemos solo en total, sin repartir por partidas.\n\nLaura Martín, directora del Hotel Brisalta\n\n\nPARA REVISAR ANTES DE ENVIAR\n- 218.736 € de ingreso total. Hecho 7.\n- 218.736 € de presupuesto, con 0 € y 0,00 % de diferencia. Hecho 7.\n- 201.300 € de octubre de 2025. Hecho 8.\n- 17.436 € y 8,66 % más que el año pasado. Hecho 8. Cuenta: 218.736 € − 201.300 € = 17.436 €. 17.436 / 201.300 = 8,66 %.\n- 70 % de ocupación. Hecho 1.\n- 100 € de precio medio. Hecho 2.\n- 1.736 noches ocupadas. Hecho 3.\n- 173.600 € de habitaciones. Hecho 4. Cuenta: 1.736 × 100 € = 173.600 €.\n- 38.192 € de restaurante y bares, el 17,46 % del total. Hecho 5. Cuenta: 38.192 / 218.736 = 17,46 %.\n- 6.944 € de otros ingresos. Hecho 6.\n- Partida que más se desvía, sin dato. Hecho 9.\n- Spa, 0 €. Hecho 6. Lo he dejado fuera de la tabla porque la ficha del hotel no recoge spa.\n- Suma de partidas: 173.600 € + 38.192 € + 6.944 € = 218.736 €. Cuadra con el ingreso total.\n\nAntes de enviarlo, dos cosas:\n- El presupuesto coincide al euro con el ingreso real. Confirma que la cifra del presupuesto es la buena y que no se copió el total en esa casilla. Si cambia, hay que corregir la primera frase, la primera fila de la tabla y la segunda línea de esta lista.\n- Cambia «a explicar por la dirección» en el punto del bar del lobby por la causa y lo que propones hacer. Ese texto no puede llegar así a la propiedad.", "opciones": [], "importe": 0, "estado": "pend", "previo": "HECHOS DEL MES DE OCTUBRE DE 2026\n1. Ocupación. 70,00 %.\n2. Precio medio. 100,00 €.\n3. Noches ocupadas. 1.736.\n4. Ingreso de habitaciones. 173.600,00 €.\n5. Restaurante y bares. 38.192,00 €, que son el 17,46 % del ingreso total.\n6. Spa. 0,00 €. Otros ingresos. 6.944,00 €.\n7. Ingreso total. 218.736,00 €. El presupuesto era de 218.736,00 €, así que la diferencia es de 0,00 €, un 0,00 %.\n8. Diferencia con octubre de 2025. En 2025 se ingresaron 201.300,00 €. Este año son 17.436,00 € más, un 8,66 % más.\n9. La partida que más se ha desviado. Con este formulario no se puede saber. El presupuesto y el dato del año pasado vienen solo como total, sin repartir por partidas. En el total, la desviación con el presupuesto es de 0,00 €.\n\nCIFRAS QUE HAY QUE COMPROBAR\n- Suma de partidas. 173.600,00 € + 38.192,00 € + 0,00 € + 6.944,00 € = 218.736,00 €. Coincide con el ingreso total.\n- Noches por precio medio. 1.736 × 100,00 € = 173.600,00 €. Coincide con el ingreso de habitaciones.\n- Ocupación. 80 habitaciones × 31 días = 2.480 noches disponibles. 1.736 / 2.480 = 70,00 %. Coincide con la ocupación del formulario.\nTodo cuadra.\n\nCUENTAS DE LOS PORCENTAJES\n- Peso de restaurante y bares. 38.192,00 € / 218.736,00 € = 17,46 %.\n- Presupuesto. 218.736,00 € − 218.736,00 € = 0,00 €, un 0,00 %.\n- Año pasado. 218.736,00 € − 201.300,00 € = 17.436,00 €. 17.436,00 € / 201.300,00 € = 8,66 %.\n\nA TENER EN CUENTA\n- El presupuesto coincide al euro con el ingreso real. Puede ser casualidad, o puede que se haya copiado el total en la casilla del presupuesto. Hay que confirmarlo antes de dar el presupuesto por cumplido.\n- El spa sale a 0,00 €. La ficha del hotel no recoge spa, así que el cero encaja.\n- El comentario de la dirección dice que el bar del lobby baja entre semana. El formulario da restaurante y bares juntos y sin separar por días, así que con estas cifras esa bajada no se puede ver ni medir.", "version": 1}, {"id": "cierre-1-20261111125536537859-aviso", "clave": "cierre", "paso": 1, "y": 2026, "m": 11, "d": 11, "h": "12:55", "agente": "informes", "tipo": "aviso", "n": 0, "titulo": "El presupuesto coincide al euro con el ingreso real, 218.736 €, y hay que confirmar que no se copió el total en esa casilla antes de enviar el informe.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "restaurante-0-20261111125652318978", "clave": "restaurante", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:56", "agente": "restaurante", "tipo": "plan", "n": 1, "titulo": "Plan del Salitre, fin de semana del 13 al 15 de noviembre", "detalle": "Lubina justa: 30 raciones para unas 27 de consumo; propongo pedir 6 más", "doc": "EL FIN DE SEMANA EN UNA FRASE\nEl sábado es la noche fuerte, con 64 de las 80 habitaciones ocupadas, y la lubina llega muy justa para las tres noches.\n\nQUÉ EMPUJAR\n- Arroz a banda, 18,00 € por persona, mínimo 2 (36,00 € la mesa de dos). Fue lo más vendido de la semana, 64, y encaja en las mesas de pareja.\n- Croquetas caseras de jamón (8), 11,00 €. Son las segundas en ventas, 52, y se ofrecen para compartir mientras sale el arroz.\n- Entrecot de ternera, 24,00 €. Lleva 38 vendidos y es el principal más caro de la carta. Es el que se ofrece cuando no quede lubina.\n- Tarta de queso, 6,50 €. Es el postre que más sale, 47, así que se ofrece en todas las mesas al retirar los principales.\n- Lubina a la sal, 22,00 €. Se sirve, pero sala no la recomienda, porque hay 30 raciones para tres noches (cuentas abajo).\n- Bebidas. El parte no trae ventas, así que no propongo ninguna.\n\nLA CENA DEL SÁBADO EN LA TERRAZA\n- Sábado 14 a las 21:00, 85 € para dos. Es el precio de la ficha, sin descuentos.\n- La semana pasada fueron 12 parejas: 12 × 85 € = 1.020 €.\n- Propuesta: repetir por lo menos esas 12 parejas. Es la noche con más habitaciones ocupadas y recepción la anuncia en el mensaje del viernes.\n- La ficha no dice qué lleva el menú ni cuántas parejas caben en la terraza. El menú lo cierra el jefe de cocina y el tope de mesas, el maître.\n- Si el menú lleva lubina, no hay raciones. 12 parejas son 24 lubinas y el pedido entero es de 30.\n\nMENSAJE PARA LOS HUÉSPEDES\nDurante su estancia, el restaurante Salitre sirve la cena de 19:30 a 22:30. Lo que más se pide es el arroz a banda. El sábado a las 21:00 hay cena en la terraza para dos, por 85 €. Si quiere mesa, puede pedirla en recepción.\nRecepción del Hotel Brisalta\n\nOBJETIVO DE CUBIERTOS POR NOCHE\n43 cubiertos por noche, de viernes a domingo. 129 en total.\n- Es la media de la semana pasada: 298 cubiertos / 7 noches = 42,6, redondeado a 43. Las tres noches: 3 × 43 = 129.\n- El parte no trae la ocupación de la semana del 2 al 8 ni los cubiertos de cada día. Sin eso no puedo saber qué parte de los huéspedes baja a cenar, ni ajustar la cifra a las 52, 64 y 38 habitaciones de este fin de semana.\n- Por habitaciones, el sábado es la noche más llena (64) y el domingo la más floja (38), así que el domingo puede quedarse por debajo de 43.\n- El parte tampoco dice si las 12 parejas de la terraza (24 cubiertos) están dentro de los 298. Si van aparte, el sábado son 43 en sala más los de la terraza.\n- Si recepción pasa la ocupación de la semana pasada, se afina la cifra de cada noche.\n\nLO QUE HAY QUE PEDIR\nLubina a la sal\n- Semana pasada: 41 vendidas de lunes a viernes. Se acabó el viernes a las 21:30, una hora antes de cerrar la cena.\n- Noches con lubina: 4 enteras y 2 de las 3 horas del viernes, o sea 4 + 2/3 = 4,7 noches.\n- Ritmo: 41 / 4,7 = 8,7 por noche. Lo redondeo a 9, y aun así es un mínimo, porque no sabemos cuántas más habrían salido el viernes.\n- Este fin de semana: 3 noches × 9 = 27 raciones.\n- Pedido hecho: 30. Sobran 3, que es un tercio de noche de margen.\n- El sábado es la noche más llena, con 64 habitaciones, 12 más que el viernes.\n- Propuesta: subir el pedido a 36, 6 raciones más, para tener una noche entera de margen (27 + 9 = 36).\n- Si no se puede ampliar, cuando queden 5 raciones sala avisa al tomar nota y ofrece el entrecot.\nResto de la carta\n- El parte solo trae el pedido de lubina. Del arroz a banda, las croquetas, la tarta de queso y el entrecot no hay existencias ni pedidos, así que no puedo decir si llegan. Son los platos que vamos a empujar, así que cocina tiene que revisarlos antes del viernes.", "opciones": [], "importe": 0, "estado": "pend", "previo": "", "version": 1}, {"id": "restaurante-0-20261111125652318978-aviso", "clave": "restaurante", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:56", "agente": "restaurante", "tipo": "aviso", "n": 0, "titulo": "Hay 30 raciones de lubina para unas 27 de consumo y la semana pasada ya se acabó el viernes, así que el pedido hay que ampliarlo antes del viernes 13.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}], "agentes": [{"clave": "relevo", "nombre": "Relevo del turno de noche", "cuando": "Cada día, 7:00"}, {"clave": "resenas", "nombre": "Reseñas nuevas", "cuando": "Cada día, 8:00"}, {"clave": "resumen", "nombre": "Resumen del lunes", "cuando": "Lunes, 8:00"}, {"clave": "baja", "nombre": "Baja en pisos", "cuando": "Al llegar una ausencia por el formulario"}, {"clave": "mantenimiento", "nombre": "Ronda de mantenimiento", "cuando": "Cada día, 11:30"}, {"clave": "grupos", "nombre": "Correo de un grupo", "cuando": "Al llegar un correo a grupos@"}, {"clave": "restaurante", "nombre": "Plan del restaurante", "cuando": "Jueves, 10:00"}, {"clave": "cierre", "nombre": "Cierre de mes", "cuando": "Al subir el informe del mes"}]};</script>
+<!-- datos:fin -->
+<script>
+(function () {
+  const $ = function (s) { return document.querySelector(s); };
+  const AÑO = 2026;
+  const DC = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
+  const DL = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+  const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+  const MC = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+
+  // Las áreas del hotel, cada una con su responsable y sus agentes. «tipos» son las tareas de cada agente.
+  const AREAS = [
+    { k: "direccion", n: "Dirección", para: "Para la directora", agentes: [
+      { n: "Resumen de la semana", clave: "resumen", tipos: ["resumen"], cuando: "Lunes, 8:00", lee: "Los partes que manda cada jefe por el formulario", hace: "Junta los partes de cada departamento y te deja lo que ha ido bien, lo que falla y lo que tienes que decidir." },
+      { n: "Cierre de mes", clave: "cierre", tipos: ["cuentas", "informe"], cuando: "Cuando subes los totales del mes", lee: "El formulario del cierre con los totales del informe del mes", hace: "Saca las cuentas, comprueba que cuadran y prepara el informe para la propiedad." }] },
+    { k: "recepcion", n: "Recepción", para: "Para la jefa de recepción", agentes: [
+      { n: "Relevo de noche", clave: "relevo", tipos: ["relevo"], cuando: "Cada día, 7:00", lee: "El formulario que dicta el recepcionista de noche", hace: "Convierte lo que deja el turno de noche en la hoja que lee recepción al entrar." },
+      { n: "Reseñas", clave: "resenas", tipos: ["resena"], cuando: "Cada día, 8:00", lee: "Los avisos de reseña nueva que llegan al correo de los agentes", hace: "Prepara la respuesta a cada reseña nueva con lo que sabe del hotel." }] },
+    { k: "equipo", n: "Equipo y turnos", para: "Para la gobernanta y los jefes de área", agentes: [
+      { n: "Cuadrante y bajas", clave: "baja", tipos: ["cuadrante", "ausencia"], cuando: "Viernes, 12:00, y cuando llega una baja", lee: "Las horas del equipo y el formulario de ausencias", hace: "Prepara el cuadrante de la semana y, cuando falta alguien, te da dos formas de cubrirlo." }] },
+    { k: "restaurante", n: "Restaurante", para: "Para el maître y el jefe de cocina", agentes: [
+      { n: "Plan del fin de semana", clave: "restaurante", tipos: ["plan"], cuando: "Jueves, 10:00", lee: "Las ventas del TPV, la ocupación prevista y los pedidos", hace: "Mira lo que se vende y la gente que habrá, y propone qué empujar y qué pedir." }] },
+    { k: "mantenimiento", n: "Mantenimiento", para: "Para el jefe de mantenimiento", agentes: [
+      { n: "Partes de mantenimiento", clave: "mantenimiento", tipos: ["parte"], cuando: "Cada día, 11:30", lee: "El formulario de la ronda con fotos y lo que deja el turno de noche", hace: "Ordena por urgencia lo que sale en la ronda para que se haga primero lo que puede hacer daño." }] },
+    { k: "comercial", n: "Comercial", para: "Para el responsable comercial", agentes: [
+      { n: "Propuestas a grupos", clave: "grupos", tipos: ["grupo"], cuando: "Cuando llega un correo a grupos@", lee: "Los correos de grupos y las tarifas de grupos", hace: "Prepara la propuesta con precio cerrado para que salga el mismo día." }] }
+  ];
+  const AREA = {}, AGENTE_DE_TIPO = {};
+  AREAS.forEach(function (a) { AREA[a.k] = a; a.agentes.forEach(function (g) { g.area = a; g.tipos.forEach(function (t) { AGENTE_DE_TIPO[t] = g; }); }); });
+  const AREA_DE_AG = { informes: "direccion", numeros: "direccion", recepcion: "recepcion", resenas: "recepcion", cuadrantes: "equipo", restaurante: "restaurante", mantenimiento: "mantenimiento", grupos: "comercial" };
+  function areaDe(e) { return AREA[AREA_DE_AG[e.ag || e.agente]]; }
+  function nombreDe(e) { const g = AGENTE_DE_TIPO[e.tipo]; return g ? g.n : (areaDe(e) ? areaDe(e).n : ""); }
+
+  // Minutos por tarea: antes (a mano, medido en el diagnóstico) y ahora (revisarlo)
+  const T = {
+    resena:    { ag: "resenas",       antes: 8,   ahora: 2,  u: ["respuesta a reseña", "respuestas a reseñas"] },
+    relevo:    { ag: "recepcion",     antes: 15,  ahora: 3,  u: ["relevo del turno de noche", "relevos del turno de noche"] },
+    cuadrante: { ag: "cuadrantes",    antes: 120, ahora: 20, u: ["cuadrante de la semana", "cuadrantes de la semana"] },
+    ausencia:  { ag: "cuadrantes",    antes: 35,  ahora: 5,  u: ["ausencia cubierta", "ausencias cubiertas"] },
+    cuentas:   { ag: "numeros",       antes: 180, ahora: 30, u: ["cierre de mes comprobado", "cierres de mes comprobados"] },
+    resumen:   { ag: "informes",      antes: 60,  ahora: 10, u: ["resumen del lunes", "resúmenes del lunes"] },
+    informe:   { ag: "informes",      antes: 180, ahora: 30, u: ["informe para la propiedad", "informes para la propiedad"] },
+    parte:     { ag: "mantenimiento", antes: 5,   ahora: 1,  u: ["parte ordenado por urgencia", "partes ordenados por urgencia"] },
+    grupo:     { ag: "grupos",        antes: 60,  ahora: 15, u: ["propuesta preparada", "propuestas preparadas"] },
+    plan:      { ag: "restaurante",   antes: 45,  ahora: 10, u: ["plan del fin de semana", "planes del fin de semana"] }
+  };
+  const ORDEN_T = Object.keys(T);
+  const ESTADO = { ok: "Aprobado por ti", elegido: "Elegido por ti", auto: "Automático", enviada: "Enviada", aviso: "Aviso" };
+  const CRM = { aceptada: "Aceptada", espera: "En espera", perdida: "Perdida", revisar: "Esperando tu OK" };
+
+  const PER = {
+    oct: {
+      m: 9, dias: 31, frase: "En octubre", corto: "Octubre", partes: "28 de 30",
+      res:  [3,2,4,3,2,3,3,4,2,3,3,2,4,3,2,3,2,3,4,2,3,3,2,3,2,4,3,2,3,3,2],
+      mant: [2,1,1,1,3,2,1,2,0,1,2,1,0,2,3,1,2,1,0,2,1,2,3,1,0,2,1,2,3,1,2],
+      aus: [[6, "7:10", "pisos"], [13, "6:45", "recepción"], [15, "15:20", "sala"], [20, "7:05", "pisos"], [23, "8:30", "cocina"], [27, "6:55", "pisos"], [29, "22:10", "recepción"]],
+      cierre: { d: 2, mes: "septiembre", extra: "" },
+      grupos: [
+        { d: 6,  h: "17:45", que: "Boda · 13 de junio · 120 invitados", eur: 10200, crm: "aceptada" },
+        { d: 9,  h: "11:20", que: "Empresa · 35 personas · 2 noches", eur: 4560, crm: "aceptada" },
+        { d: 14, h: "19:05", que: "Comunión · 16 de mayo · 60 invitados", eur: 3300, crm: "espera" },
+        { d: 20, h: "10:40", que: "Club ciclista · 22 personas · 3 noches", eur: 4785, crm: "espera" },
+        { d: 23, h: "13:15", que: "Cena de Navidad · 12 de diciembre · 45 personas", eur: 2160, crm: "aceptada" },
+        { d: 28, h: "16:30", que: "Boda · 18 de septiembre · 90 invitados", eur: 7650, crm: "perdida" }
+      ],
+      avisos: [
+        [9, "19:10", "resenas", "Una reseña de 2 estrellas lleva un día sin tu OK"],
+        [19, "8:00", "informes", "Falta el parte de Comercial de la semana pasada"],
+        [22, "10:00", "restaurante", "El sábado hay 64 habitaciones ocupadas y la lubina pedida da para 30 raciones"],
+        [27, "11:30", "mantenimiento", "Tercer parte en diez días por la ducha de la piscina"]
+      ],
+      extra: []
+    },
+    nov: {
+      m: 10, dias: 11, frase: "En lo que va de noviembre", corto: "Noviembre, hasta hoy", partes: "6 de 6",
+      res:  [3,2,2,3,2,1,3,2,2,2,2],
+      mant: [1,0,2,1,2,1,2,1,2,2,0],
+      aus: [[4, "7:00", "pisos"], [9, "16:40", "sala"]],
+      cierre: { d: 2, mes: "octubre", extra: " · 218.736 €, un 8,66 % más que en octubre de 2025" },
+      grupos: [
+        { d: 5, h: "12:10", que: "Cena de Navidad · 18 de diciembre · 60 personas", eur: 2880, crm: "espera" }
+      ],
+      avisos: [
+        [2, "8:00", "informes", "Falta el parte de Comercial de la semana pasada"],
+        [10, "11:30", "mantenimiento", "Tercer parte este mes por el agua caliente de la tercera planta"]
+      ],
+      extra: []
+    }
+  };
+  const SENDERISMO = { que: "Club de senderismo · del 26 al 29 de noviembre · 28 personas", eur: 5922 };
+
+  // Lo que hacen los agentes de verdad: window.DATOS (foto publicada) o /api/datos (servidor en marcha)
+  let DATOS = window.DATOS || null, VIVO = false;
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function ajustaHoy() {
+    PER.nov.dias = 11;
+    if (!DATOS) return;
+    const h = DATOS.hoy;
+    if (h && h.y === 2026 && h.m === 11) PER.nov.dias = Math.max(1, h.d);
+    $("#act").textContent = "Actualizado hoy, " + DATOS.actualizado;
+  }
+  function diaDe(x) { return (x.y === 2026 && x.m === 11 && x.d <= PER.nov.dias) ? x.d : PER.nov.dias; }
+  function reg(id) { return DATOS ? DATOS.registro.find(function (x) { return x.id === id; }) : null; }
+
+  const PEND = [
+    { id: "p1", ag: "resenas", tipo: "resena", cuando: "Hoy, 9:12", tit: "Respuesta a una reseña de 2 estrellas", sub: "Google · llegó hoy a las 8:55" },
+    { id: "p2", ag: "cuadrantes", tipo: "ausencia", cuando: "Hoy, 7:40", tit: "Baja en pisos mañana jueves", sub: "Dos formas de cubrirla" },
+    { id: "p3", ag: "grupos", tipo: "grupo", cuando: "Ayer, 18:20", tit: "Propuesta para un club de senderismo", sub: "28 personas · 3 noches · 5.922 €" }
+  ];
+
+  // Utilidades
+  function eur(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " €"; }
+  function fmtMin(m) { const h = Math.floor(m / 60), r = m % 60; return h ? (r ? h + " h " + r + " min" : h + " h") : r + " min"; }
+  function aMin(h) { const p = h.split(":"); return +p[0] * 60 + +p[1]; }
+  function isoWeek(dt) {
+    const d = new Date(Date.UTC(dt.getFullYear(), dt.getMonth(), dt.getDate())), day = d.getUTCDay() || 7;
+    d.setUTCDate(d.getUTCDate() + 4 - day);
+    return Math.ceil(((d - new Date(Date.UTC(d.getUTCFullYear(), 0, 1))) / 864e5 + 1) / 7);
+  }
+  function unidad(tipo, n) { return n + " " + (n === 1 ? T[tipo].u[0] : T[tipo].u[1]); }
+  function jornadas(m) { return (m / 480).toFixed(1).replace(".0", "").replace(".", ","); }
+  let reloj = 36;
+  function hora() { reloj += 3; return "10:" + String(reloj).padStart(2, "0"); }
+
+  function genera(k) {
+    const P = PER[k], ev = [];
+    function add(d, h, tipo, n, txt, estado) { ev.push({ d: d, h: h, ag: T[tipo].ag, tipo: tipo, n: n, txt: txt, estado: estado, min: n * (T[tipo].antes - T[tipo].ahora) }); }
+    const vivoHoy = !!DATOS && k === "nov";
+    for (let d = 1; d <= (vivoHoy ? P.dias - 1 : P.dias); d++) {
+      const wd = new Date(AÑO, P.m, d).getDay();
+      add(d, "7:00", "relevo", 1, "Lo que dejó el turno de noche, ordenado para recepción", "auto");
+      const r = P.res[d - 1];
+      if (r) add(d, "8:00", "resena", r, r === 1 ? "1 respuesta a una reseña preparada" : r + " respuestas a reseñas preparadas", "ok");
+      if (wd === 1 && !(vivoHoy && d >= P.dias - 7)) add(d, "8:00", "resumen", 1, "Resumen de la semana con los partes del equipo, enviado a las 8:00", "auto");
+      if (wd === 4) add(d, "10:00", "plan", 1, "Plan del restaurante para el fin de semana", "ok");
+      const mn = P.mant[d - 1];
+      if (mn) add(d, "11:30", "parte", mn, mn === 1 ? "1 parte de mantenimiento ordenado por urgencia" : mn + " partes de mantenimiento ordenados por urgencia", "auto");
+      if (wd === 5) add(d, "12:00", "cuadrante", 1, "Cuadrante de la semana " + isoWeek(new Date(AÑO, P.m, d + 3)), "ok");
+    }
+    P.aus.forEach(function (a) { add(a[0], a[1], "ausencia", 1, "Ausencia en " + a[2] + " cubierta", "elegido"); });
+    if (!vivoHoy) add(P.cierre.d, "9:00", "cuentas", 1, "Cuentas del cierre de " + P.cierre.mes + " hechas. Todo cuadra", "auto");
+    if (!vivoHoy) add(P.cierre.d, "9:04", "informe", 1, "Informe del cierre de " + P.cierre.mes + " para la propiedad" + P.cierre.extra, "ok");
+    P.grupos.forEach(function (g) { add(g.d, g.h, "grupo", 1, g.que + " · " + eur(g.eur), "enviada"); });
+    P.extra.forEach(function (e) { add(e.d, e.h, e.tipo, 1, e.txt, e.estado); });
+    P.avisos.forEach(function (a) { ev.push({ d: a[0], h: a[1], ag: a[2], tipo: "aviso", n: 0, txt: a[3], estado: "aviso", min: 0 }); });
+    if (vivoHoy) DATOS.registro.forEach(function (x) {
+      if (x.estado === "pend") return;
+      const d = diaDe(x);
+      if (x.tipo === "aviso") ev.push({ d: d, h: x.h, ag: x.agente, tipo: "aviso", n: 0, txt: x.titulo, estado: "aviso", min: 0 });
+      else if (T[x.tipo]) { add(d, x.h, x.tipo, Math.max(1, x.n | 0), x.titulo + (x.detalle ? " · " + x.detalle : ""), x.estado); ev[ev.length - 1].ref = x.id; }
+    });
+    ev.sort(function (a, b) { return b.d - a.d || aMin(b.h) - aMin(a.h); });
+    return ev;
+  }
+
+  let per = "oct", vista = "resumen", visibles = 14, EV = [], dias = [];
+
+  function pinta() {
+    ajustaHoy();
+    EV = genera(per);
+    const P = PER[per];
+    const total = EV.reduce(function (s, e) { return s + e.min; }, 0);
+    const tareas = EV.reduce(function (s, e) { return s + e.n; }, 0);
+    const avisos = EV.filter(function (e) { return e.tipo === "aviso"; }).length;
+    $("#frase").textContent = P.frase;
+    $("#horas").textContent = fmtMin(total);
+    const j = jornadas(total);
+    $("#jornadas").textContent = "Son " + j + (j === "1" ? " jornada" : " jornadas") + " de 8 horas, entre tú y tu equipo.";
+    $("#tTareas").textContent = tareas;
+    $("#tAvisos").textContent = avisos;
+    $("#tPartes").textContent = P.partes;
+
+    dias = [];
+    for (let d = 1; d <= P.dias; d++) dias.push({ d: d, min: 0, por: {} });
+    EV.forEach(function (e) {
+      if (e.tipo === "aviso") return;
+      const x = dias[e.d - 1]; x.min += e.min;
+      x.por[e.tipo] = x.por[e.tipo] || { n: 0, min: 0 };
+      x.por[e.tipo].n += e.n; x.por[e.tipo].min += e.min;
+    });
+    pintaTabs();
+    pintaBarra();
+    if (vista === "resumen") { grafico(); tablaDias(); areasGrid(); avisosLista(); pendientes(); }
+    else if (AREA[vista]) vistaArea(vista);
+    else vistaLista(vista);
+  }
+
+  function fechaCorta(d) { const m = PER[per].m; return DC[new Date(AÑO, m, d).getDay()] + " " + d + " " + MC[m]; }
+  function fechaLarga(d) { const m = PER[per].m, w = DL[new Date(AÑO, m, d).getDay()]; return w.charAt(0).toUpperCase() + w.slice(1) + " " + d + " de " + MESES[m]; }
+
+  // Gráfico de columnas, una por día
+  let anchoPrevio = 0;
+  function grafico() {
+    const box = $("#grafico"), W = Math.max(280, Math.floor(box.clientWidth)), n = dias.length;
+    anchoPrevio = W;
+    const H = W < 520 ? 210 : 250, pl = 36, pr = 4, pt = 26, pb = 26, ih = H - pt - pb;
+    const max = Math.max.apply(null, dias.map(function (x) { return x.min; }));
+    const paso = max > 480 ? 240 : 120, techo = Math.max(paso * 2, Math.ceil(max / paso) * paso);
+    const slot = (W - pl - pr) / n, bw = Math.max(3, Math.min(24, slot - Math.max(3, slot * 0.3)));
+    const y = function (v) { return pt + ih * (1 - v / techo); };
+    const base = pt + ih;
+    let s = '<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Tiempo devuelto cada día">';
+    for (let v = 0; v <= techo; v += paso) {
+      s += '<line class="g' + (v ? "" : " base") + '" x1="' + pl + '" x2="' + (W - pr) + '" y1="' + y(v).toFixed(1) + '" y2="' + y(v).toFixed(1) + '"/>';
+      s += '<text class="ty" x="' + (pl - 7) + '" y="' + (y(v) + 4).toFixed(1) + '">' + (v ? v / 60 + " h" : "0") + "</text>";
+    }
+    let iMax = 0; dias.forEach(function (x, i) { if (x.min > dias[iMax].min) iMax = i; });
+    const todos = slot >= 24;
+    dias.forEach(function (x, i) {
+      const cx = pl + slot * i + slot / 2, h = ih * x.min / techo, x0 = cx - bw / 2, r = Math.min(4, bw / 2, h), t = base - h;
+      if (x.min > 0) s += '<path class="bar" data-i="' + i + '" d="M' + x0.toFixed(1) + "," + base + " V" + (t + r).toFixed(1) + " Q" + x0.toFixed(1) + "," + t.toFixed(1) + " " + (x0 + r).toFixed(1) + "," + t.toFixed(1) + " H" + (x0 + bw - r).toFixed(1) + " Q" + (x0 + bw).toFixed(1) + "," + t.toFixed(1) + " " + (x0 + bw).toFixed(1) + "," + (t + r).toFixed(1) + " V" + base + ' Z"/>';
+      const esHoy = per === "nov" && x.d === PER.nov.dias;
+      if (todos || x.d === 1 || x.d % 5 === 0 || esHoy) s += '<text class="tx" x="' + cx.toFixed(1) + '" y="' + (H - 7) + '">' + (esHoy ? "hoy" : x.d) + "</text>";
+      if (i === iMax) s += '<text class="tv" x="' + Math.min(Math.max(cx, pl + 30), W - 30).toFixed(1) + '" y="' + (t - 8).toFixed(1) + '">' + fmtMin(x.min) + "</text>";
+    });
+    dias.forEach(function (x, i) {
+      s += '<rect class="hit" data-i="' + i + '" x="' + (pl + slot * i).toFixed(1) + '" y="' + pt + '" width="' + slot.toFixed(1) + '" height="' + ih + '" tabindex="0" aria-label="' + fechaLarga(x.d) + ", " + fmtMin(x.min) + '"/>';
+    });
+    s += "</svg>";
+    box.innerHTML = s + '<div class="tip" id="tip" hidden></div>';
+    const dMax = dias[iMax];
+    $("#grafSub").textContent = dMax.por.cuentas
+      ? "El día más alto es el " + dMax.d + ", el del cierre de " + PER[per].cierre.mes + ". Toca una barra para ver qué se hizo."
+      : "Toca una barra para ver qué se hizo ese día.";
+    box._geo = { pl: pl, slot: slot, base: base, ih: ih, techo: techo, W: W };
+  }
+
+  function muestraTip(i) {
+    const box = $("#grafico"), tip = $("#tip"), x = dias[i], g = box._geo;
+    if (!tip || !x) return;
+    box.querySelectorAll(".bar.on").forEach(function (b) { b.classList.remove("on"); });
+    const bar = box.querySelector('.bar[data-i="' + i + '"]'); if (bar) bar.classList.add("on");
+    tip.textContent = "";
+    const st = document.createElement("strong"); st.textContent = x.min ? fmtMin(x.min) : "Sin tareas";
+    const dd = document.createElement("span"); dd.className = "tip-d"; dd.textContent = fechaLarga(x.d);
+    const ul = document.createElement("ul");
+    ORDEN_T.forEach(function (tipo) {
+      const p = x.por[tipo]; if (!p) return;
+      const li = document.createElement("li"), a = document.createElement("span"), b = document.createElement("span");
+      a.textContent = unidad(tipo, p.n); b.textContent = fmtMin(p.min);
+      li.appendChild(a); li.appendChild(b); ul.appendChild(li);
+    });
+    tip.appendChild(st); tip.appendChild(dd); tip.appendChild(ul);
+    tip.hidden = false;
+    const cx = g.pl + g.slot * i + g.slot / 2, tw = tip.offsetWidth, th = tip.offsetHeight;
+    const left = Math.min(Math.max(0, cx - tw / 2), g.W - tw);
+    let top = g.base - g.ih * x.min / g.techo - th - 12; if (top < -th / 2) top = 0;
+    tip.style.left = left + "px"; tip.style.top = Math.max(-20, top) + "px";
+  }
+  function ocultaTip() { const tip = $("#tip"); if (tip) tip.hidden = true; $("#grafico").querySelectorAll(".bar.on").forEach(function (b) { b.classList.remove("on"); }); }
+  const gbox = $("#grafico");
+  gbox.addEventListener("pointerover", function (e) { const h = e.target.closest(".hit"); if (h) muestraTip(+h.dataset.i); });
+  gbox.addEventListener("pointerleave", ocultaTip);
+  gbox.addEventListener("focusin", function (e) { const h = e.target.closest(".hit"); if (h) muestraTip(+h.dataset.i); });
+  gbox.addEventListener("focusout", ocultaTip);
+  if (window.ResizeObserver) new ResizeObserver(function () { if (Math.floor(gbox.clientWidth) !== anchoPrevio) grafico(); }).observe(gbox);
+
+  function tablaDias() {
+    const t = $("#tablaDias"); t.textContent = "";
+    const cab = t.insertRow(); ["Día", "Tiempo devuelto", "Tareas"].forEach(function (c) { const th = document.createElement("th"); th.textContent = c; cab.appendChild(th); });
+    dias.forEach(function (x) {
+      const r = t.insertRow(), n = Object.keys(x.por).reduce(function (s, k) { return s + x.por[k].n; }, 0);
+      [fechaCorta(x.d), fmtMin(x.min), n].forEach(function (v, i) { const c = r.insertCell(); c.textContent = v; if (i) c.className = "n"; });
+    });
+  }
+
+  // Resumen: una tarjeta por área y los avisos
+  function totArea(a) {
+    const r = { min: 0, n: 0, avisos: 0, pend: itemsPend().filter(function (p) { return areaDe(p) === a; }).length };
+    EV.forEach(function (e) { if (areaDe(e) !== a) return; if (e.tipo === "aviso") r.avisos++; else { r.min += e.min; r.n += e.n; } });
+    return r;
+  }
+  function el(tag, cls, txt) { const x = document.createElement(tag); if (cls) x.className = cls; if (txt != null) x.textContent = txt; return x; }
+  function areasGrid() {
+    const box = $("#areasGrid"); box.textContent = "";
+    AREAS.forEach(function (a) {
+      const t = totArea(a), b = el("button", "area-card");
+      b.type = "button";
+      b.appendChild(el("h3", "", a.n)); b.appendChild(el("span", "para", a.para));
+      b.appendChild(el("span", "t", fmtMin(t.min))); b.appendChild(el("span", "n", t.n + (t.n === 1 ? " tarea hecha" : " tareas hechas")));
+      b.appendChild(el("span", "est " + (t.pend ? "revisar" : "ok"), t.pend ? t.pend + " esperando tu OK" : "Al día"));
+      b.appendChild(el("span", "ags", a.agentes.map(function (g) { return g.n; }).join(" · ")));
+      b.addEventListener("click", function () { ir(a.k); });
+      box.appendChild(b);
+    });
+  }
+  function avisosLista() { llenaAvisos($("#avisosLista"), 6); }
+  function llenaAvisos(ul, limite) {
+    ul.textContent = "";
+    const av = EV.filter(function (e) { return e.tipo === "aviso"; }).slice(0, limite || 999);
+    if (!av.length) { ul.appendChild(el("li", "l-vacio", "Sin avisos en este periodo.")); return; }
+    av.forEach(function (e) {
+      const li = el("li");
+      li.appendChild(el("small", "", (areaDe(e) ? areaDe(e).n : "") + " · " + fechaCorta(e.d) + ", " + e.h));
+      li.appendChild(el("p", "", e.txt));
+      ul.appendChild(li);
+    });
+  }
+
+  // Las pantallas de la barra de abajo en el móvil: por revisar, áreas y avisos
+  function vistaLista(k) {
+    const box = $("#v-lista"); box.textContent = "";
+    if (k === "revisar") {
+      const s = el("section", "card pend"), c = el("div", "pend-cab"), items = itemsPend();
+      c.appendChild(el("h2", "", "Por revisar")); c.appendChild(el("span", "num" + (items.length ? "" : " cero"), items.length));
+      const ul = el("ul", "lista-pend");
+      s.appendChild(c); s.appendChild(ul);
+      s.appendChild(el("p", "pend-nota", "Toca cada cosa para leerla entera. Cuando la apruebas, el agente la envía."));
+      box.appendChild(s); listaPend(ul, items, true);
+    } else if (k === "areas") {
+      const cab = el("div", "cab"); cab.appendChild(el("h2", "", "Áreas")); cab.appendChild(el("p", "sub", "Cada área con sus agentes y lo suyo por revisar."));
+      const lista = el("div", "areas-lista");
+      AREAS.forEach(function (a) {
+        const t = totArea(a), b = el("button", "area-fila"); b.type = "button";
+        b.appendChild(el("b", "", a.n)); b.appendChild(el("small", "", a.agentes.map(function (g) { return g.n; }).join(" · ")));
+        const der = el("span", "der"); der.appendChild(el("span", "t", fmtMin(t.min)));
+        der.appendChild(el("span", "est " + (t.pend ? "revisar" : "ok"), t.pend ? t.pend + " por revisar" : "Al día"));
+        b.appendChild(der); b.appendChild(el("span", "flecha", "›"));
+        b.addEventListener("click", function () { ir(a.k); });
+        lista.appendChild(b);
+      });
+      box.appendChild(cab); box.appendChild(lista);
+    } else {
+      const s = el("section", "card"), cab = el("div", "cab"), ul = el("ul", "avisos");
+      cab.appendChild(el("h2", "", "Avisos")); cab.appendChild(el("p", "sub", "Lo que los agentes creen que tienes que saber."));
+      s.appendChild(cab); s.appendChild(ul); box.appendChild(s); llenaAvisos(ul);
+    }
+  }
+
+  // Barra de abajo (solo se ve en el móvil)
+  const ICONOS = {
+    resumen: '<path d="M3.5 10.5 12 3.5l8.5 7V20a1 1 0 0 1-1 1H15v-6H9v6H4.5a1 1 0 0 1-1-1z"/>',
+    revisar: '<circle cx="12" cy="12" r="8.5"/><path d="m8.2 12.4 2.6 2.6 5-5.3"/>',
+    areas: '<rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/>',
+    avisos: '<path d="M6 16.5V11a6 6 0 1 1 12 0v5.5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>'
+  };
+  function pintaBarra() {
+    const nav = $("#barraApp"), n = itemsPend().length; nav.textContent = "";
+    const activa = AREA[vista] ? "areas" : vista;
+    [["resumen", "Inicio"], ["revisar", "Por revisar"], ["areas", "Áreas"], ["avisos", "Avisos"]].forEach(function (s) {
+      const b = el("button"); b.type = "button";
+      b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICONOS[s[0]] + "</svg>";
+      b.appendChild(el("span", "", s[1]));
+      if (s[0] === "revisar" && n) b.appendChild(el("span", "cuenta", n));
+      if (activa === s[0]) b.setAttribute("aria-current", "page");
+      b.addEventListener("click", function () { ir(s[0]); });
+      nav.appendChild(b);
+    });
+  }
+
+  // La vista de un área: cabecera, lo que espera tu OK, sus agentes, grupos (en comercial) y su registro
+  function vistaArea(k) {
+    const a = AREA[k], box = $("#v-area"), t = totArea(a);
+    box.textContent = "";
+    const atras = el("button", "atras solo-movil", "‹ Áreas"); atras.type = "button";
+    atras.addEventListener("click", function () { ir("areas"); });
+    box.appendChild(atras);
+    const cab = el("section", "card area-cab");
+    cab.appendChild(el("p", "p-ag", a.para)); cab.appendChild(el("h2", "area-tit", a.n));
+    const mini = el("div", "mini mini4");
+    [[fmtMin(t.min), "tiempo devuelto"], [t.n, "tareas hechas"], [t.pend, "esperando tu OK"], [t.avisos, "avisos"]].forEach(function (c) {
+      const d = el("div"); d.appendChild(el("b", "", c[0])); d.appendChild(el("span", "", c[1])); mini.appendChild(d);
+    });
+    cab.appendChild(mini); box.appendChild(cab);
+
+    const items = itemsPend().filter(function (p) { return areaDe(p) === a; });
+    if (items.length) {
+      const s = el("section", "card pend"), c = el("div", "pend-cab");
+      c.appendChild(el("h2", "", "Esperando tu OK")); c.appendChild(el("span", "num", items.length));
+      const ul = el("ul", "lista-pend");
+      s.appendChild(c); s.appendChild(ul); box.appendChild(s);
+      listaPend(ul, items, false);
+    }
+
+    const grid = el("section", "ag-grid");
+    a.agentes.forEach(function (g) { grid.appendChild(tarjetaAgente(g)); });
+    box.appendChild(grid);
+
+    if (k === "comercial") {
+      const s = el("section", "card grupos");
+      s.innerHTML = '<h2>En qué han quedado <span class="fino">las propuestas</span></h2><p class="g-sub">Las que has aprobado y ya tiene el cliente, las aceptadas y las perdidas.</p><div class="embudo" id="embudo"></div><div class="reparto" id="reparto"></div><p class="reparto-t" id="repartoT"></p><ul id="listaGrupos"></ul>';
+      box.appendChild(s); grupos();
+    }
+
+    const r = el("section", "card");
+    r.innerHTML = '<div class="cab"><h2>Registro</h2><p class="sub"></p></div><ol id="log"></ol><button type="button" class="btn sec mas" id="mas">Ver más</button>';
+    r.querySelector(".sub").textContent = "Lo que han hecho los agentes de " + a.n.toLowerCase() + ", con día y hora.";
+    box.appendChild(r);
+    r.querySelector("#mas").addEventListener("click", function () { visibles += 20; registro(a); });
+    registro(a);
+  }
+  function tarjetaAgente(g) {
+    const c = el("article", "card ag-card"), evs = EV.filter(function (e) { return g.tipos.indexOf(e.tipo) >= 0; });
+    c.appendChild(el("h3", "", g.n));
+    c.appendChild(el("p", "ag-hace", g.hace));
+    const dl = el("dl", "ag-datos");
+    dl.appendChild(el("dt", "", "Cuándo")); dl.appendChild(el("dd", "", g.cuando));
+    dl.appendChild(el("dt", "", "Qué lee")); dl.appendChild(el("dd", "", g.lee));
+    c.appendChild(dl);
+    const ul = el("ul", "ag-tareas");
+    let total = 0;
+    g.tipos.forEach(function (tipo) {
+      const n = evs.filter(function (e) { return e.tipo === tipo; }).reduce(function (s, e) { return s + e.n; }, 0);
+      const min = n * (T[tipo].antes - T[tipo].ahora); total += min;
+      const li = el("li");
+      li.appendChild(el("b", "", n ? unidad(tipo, n) : "Ningún " + T[tipo].u[0] + " en este periodo"));
+      li.appendChild(el("small", "", "Antes " + fmtMin(T[tipo].antes) + ", ahora " + fmtMin(T[tipo].ahora) + (n ? " · " + fmtMin(min) + " devueltos" : "")));
+      ul.appendChild(li);
+    });
+    c.appendChild(ul);
+    const pie = el("div", "ag-pie"), dev = el("div", "dev"), acc = el("div", "acc");
+    dev.appendChild(el("b", "", fmtMin(total))); dev.appendChild(el("span", "", "devueltos"));
+    const ultimo = DATOS ? DATOS.registro.filter(function (x) { return g.tipos.indexOf(x.tipo) >= 0 && x.doc; }).pop() : null;
+    if (ultimo) { const v = el("button", "btn sec", "Ver lo último que hizo"); v.type = "button"; v.addEventListener("click", function () { abre(ultimo.id, ultimo.estado !== "pend"); }); acc.appendChild(v); }
+    if (VIVO) { const l = el("button", "btn lanzar", "Lanzar ahora"); l.type = "button"; l.addEventListener("click", function () { lanza({ clave: g.clave, nombre: g.n }, l); }); acc.appendChild(l); }
+    pie.appendChild(dev); pie.appendChild(acc); c.appendChild(pie);
+    return c;
+  }
+
+  // Propuestas a grupos
+  function grupos() {
+    const lista = PER[per].grupos.map(function (g) { return g; });
+    if (per === "nov" && DATOS) DATOS.registro.forEach(function (x) {
+      if (x.tipo === "grupo") lista.push({ que: x.titulo + (x.detalle ? " · " + x.detalle : ""), eur: Math.round(Number(x.importe) || 0), crm: x.estado === "pend" ? "revisar" : "espera" });
+    });
+    else if (per === "nov" && !hecho("p3")) lista.push({ que: SENDERISMO.que, eur: SENDERISMO.eur, crm: "revisar" });
+    const suma = { aceptada: 0, espera: 0, perdida: 0, revisar: 0 }, cuenta = { aceptada: 0, espera: 0, perdida: 0, revisar: 0 };
+    lista.forEach(function (g) { suma[g.crm] += g.eur; cuenta[g.crm]++; });
+    const total = lista.reduce(function (s, g) { return s + g.eur; }, 0);
+    const em = $("#embudo"); em.textContent = "";
+    [["aceptada", "c-ok", "Aceptadas"], ["espera", "c-env", "En espera"], ["perdida", "c-neu", "Perdidas"]].forEach(function (c) {
+      const d = document.createElement("div"), b = document.createElement("b"), s = document.createElement("span"), i = document.createElement("i");
+      b.textContent = eur(suma[c[0]]); i.className = c[1]; s.appendChild(i); s.appendChild(document.createTextNode(c[2] + " (" + cuenta[c[0]] + ")"));
+      d.appendChild(b); d.appendChild(s); em.appendChild(d);
+    });
+    const rp = $("#reparto"); rp.textContent = "";
+    [["aceptada", "c-ok"], ["espera", "c-env"], ["perdida", "c-neu"], ["revisar", "c-esp"]].forEach(function (c) {
+      if (!suma[c[0]]) return;
+      const sp = document.createElement("span"); sp.className = c[1]; sp.style.flex = suma[c[0]] + " 1 0"; sp.title = CRM[c[0]] + ": " + eur(suma[c[0]]); rp.appendChild(sp);
+    });
+    $("#repartoT").textContent = lista.length + (lista.length === 1 ? " propuesta" : " propuestas") + " por " + eur(total) + (suma.revisar ? ", una esperando tu OK" : "");
+    const ul = $("#listaGrupos"); ul.textContent = "";
+    lista.slice().reverse().forEach(function (g) {
+      const li = document.createElement("li"), q = document.createElement("div"), d = document.createElement("div");
+      q.className = "gq"; d.className = "gd";
+      const partes = g.que.split(" · "), qb = document.createElement("b"), qs = document.createElement("span");
+      qb.textContent = partes[0]; qs.textContent = partes.slice(1).join(" · ");
+      q.appendChild(qb); q.appendChild(qs);
+      const db = document.createElement("b"), de = document.createElement("span");
+      db.textContent = eur(g.eur); de.className = "est " + g.crm; de.textContent = CRM[g.crm];
+      d.appendChild(db); d.appendChild(de);
+      li.appendChild(q); li.appendChild(d); ul.appendChild(li);
+    });
+  }
+
+  // Registro de un área
+  function registro(a) {
+    const ol = $("#log"); if (!ol) return;
+    ol.textContent = "";
+    const lista = EV.filter(function (e) { return areaDe(e) === a; });
+    if (!lista.length) ol.appendChild(el("li", "l-vacio", "Nada en este periodo."));
+    lista.slice(0, visibles).forEach(function (e) {
+      const li = el("li"), f = el("div", "l-f"), q = el("div", "l-q"), d = el("div", "l-d");
+      f.appendChild(el("b", "", fechaCorta(e.d))); f.appendChild(el("span", "", e.h));
+      q.appendChild(el("small", "", nombreDe(e))); q.appendChild(el("p", "", e.txt));
+      d.appendChild(el("span", "est " + e.estado, ESTADO[e.estado]));
+      if (e.min) d.appendChild(el("span", "m", fmtMin(e.min) + " devueltos"));
+      if (e.ref) { const v = el("button", "ver", "Ver lo que hizo"); v.type = "button"; v.addEventListener("click", function () { abre(e.ref, true); }); d.appendChild(v); }
+      li.appendChild(f); li.appendChild(q); li.appendChild(d); ol.appendChild(li);
+    });
+    const mas = $("#mas"), quedan = lista.length - visibles;
+    mas.hidden = quedan <= 0;
+    mas.textContent = "Ver " + Math.min(20, quedan) + " más";
+  }
+
+  // Pendientes
+  const hechos = {};
+  function hecho(id) { return !!hechos[id]; }
+  function itemsPend() {
+    return DATOS
+      ? DATOS.registro.filter(function (x) { return x.estado === "pend"; }).reverse().map(function (x) { return { id: x.id, ag: x.agente, tipo: x.tipo, cuando: "Hoy, " + x.h, tit: x.titulo, sub: x.detalle }; })
+      : PEND.filter(function (p) { return !hecho(p.id); });
+  }
+  function listaPend(ul, items, conArea, limite) {
+    ul.textContent = "";
+    if (!items.length) { ul.appendChild(el("li", "vacio", "Todo revisado. Cuando un agente prepare algo nuevo, te llega aquí y al móvil.")); return; }
+    let puestos = 0;
+    AREAS.forEach(function (a) {
+      const suyos = items.filter(function (p) { return areaDe(p) === a; });
+      if (!suyos.length || (limite && puestos >= limite)) return;
+      if (conArea) {
+        const h = el("li", "p-area"), b = el("button", "", a.n + " · " + suyos.length);
+        b.type = "button"; b.addEventListener("click", function () { ir(a.k); });
+        h.appendChild(b); ul.appendChild(h);
+      }
+      suyos.forEach(function (p) {
+        if (limite && puestos >= limite) return;
+        puestos++;
+        const li = el("li", "toca"), t = el("div", "p-txt");
+        t.appendChild(el("span", "p-ag", nombreDe(p) + " · " + p.cuando));
+        t.appendChild(el("p", "p-tit", p.tit));
+        t.appendChild(el("p", "p-sub", p.sub));
+        const b = el("button", "btn", "Revisar"); b.type = "button";
+        li.addEventListener("click", function () { abre(p.id); });
+        li.appendChild(t); li.appendChild(b); li.appendChild(el("span", "flecha", "›")); ul.appendChild(li);
+      });
+    });
+    if (limite && items.length > puestos) {
+      const li = el("li"), b = el("button", "ver-todo", "Ver las " + items.length + " por revisar");
+      b.type = "button"; b.addEventListener("click", function () { ir("revisar"); });
+      li.appendChild(b); ul.appendChild(li);
+    }
+  }
+  const MOVIL = window.matchMedia ? window.matchMedia("(max-width: 640px)") : { matches: false };
+  function pendientes() {
+    const items = itemsPend();
+    const n = $("#nPend"); n.textContent = items.length; n.classList.toggle("cero", !items.length);
+    $("#pendNota").hidden = !items.length;
+    listaPend($("#listaPend"), items, true, MOVIL.matches ? 3 : 0);
+  }
+
+  // Pestañas por área, con lo que espera tu OK en cada una. Se guardan en el enlace (#recepcion…)
+  function pintaTabs() {
+    const nav = $("#areas"), items = itemsPend(); nav.textContent = "";
+    [{ k: "resumen", n: "Resumen" }].concat(AREAS).forEach(function (a) {
+      const b = el("button", "", a.n); b.type = "button"; b.setAttribute("role", "tab");
+      b.setAttribute("aria-selected", String(vista === a.k));
+      if (AREA[a.k]) { const c = items.filter(function (p) { return areaDe(p) === a; }).length; if (c) b.appendChild(el("span", "cuenta", c)); }
+      b.addEventListener("click", function () { ir(a.k); });
+      nav.appendChild(b);
+    });
+  }
+  function ir(k) {
+    if (location.hash.slice(1) === k || (k === "resumen" && !location.hash)) { muestra(k); return; }
+    location.hash = k;
+  }
+  const PANTALLAS = { revisar: 1, areas: 1, avisos: 1 };
+  function muestra(k) {
+    vista = (AREA[k] || PANTALLAS[k]) ? k : "resumen"; visibles = 14;
+    $("#v-resumen").hidden = vista !== "resumen";
+    $("#v-area").hidden = !AREA[vista];
+    $("#v-lista").hidden = !PANTALLAS[vista];
+    pinta();
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", function () { muestra(location.hash.slice(1)); });
+
+  const DOCS = {
+    p1: '<div class="d-cab"><div><small>Reseñas · hoy, 9:12</small><h3 id="docTit">Respuesta a una reseña de 2 estrellas</h3></div><button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>' +
+      '<div class="bloque"><small>La reseña · Google, hoy a las 8:55</small><div class="cita"><p><span class="estrellas">★★<s>★★★</s></span></p><p>Buena ubicación y el desayuno muy rico, pero el aire acondicionado de la habitación hizo ruido toda la noche y casi no dormimos.</p></div></div>' +
+      '<div class="bloque"><small>Lo que sabía el agente</small><p>El parte de mantenimiento de ayer: ventilador del aire de la 214 cambiado.</p></div>' +
+      '<div class="bloque"><small>La respuesta preparada</small><div class="borrador"><p>Muchas gracias por su reseña y por lo que nos cuenta del desayuno. Sentimos mucho lo del aire acondicionado, porque una noche sin dormir bien estropea cualquier estancia. Ayer nuestro equipo de mantenimiento cambió la pieza que hacía el ruido, así que la próxima vez podrá descansar como se merece.</p><p style="margin-top:8px">Laura Martín, directora del Hotel Brisalta</p></div></div>' +
+      '<div class="acciones"><button type="button" class="btn" data-acc="aprobar">Aprobar respuesta</button><button type="button" class="btn sec" data-acc="cambio">Pedir un cambio</button></div>',
+    p2: '<div class="d-cab"><div><small>Cuadrantes · hoy, 7:40</small><h3 id="docTit">Baja en pisos mañana jueves 12</h3></div><button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>' +
+      '<div class="bloque"><small>Lo que pasa</small><p>Mañana falta una camarera del turno de mañana. Hay 46 habitaciones ocupadas, 22 salidas y 24 que siguen. Una salida cuenta 1 y una que sigue cuenta media, así que son 34. Cada camarera hace 14 y con dos quedan 6 sin cubrir.</p></div>' +
+      '<div class="opcion"><p><b>Opción A</b><span class="reco">La que recomienda el agente</span></p><p>La camarera de refuerzo entra de 8:00 a 14:00. Esta semana lleva 26 horas y se queda en 32, por debajo de las 40.</p><button type="button" class="btn" data-acc="A">Elegir la A</button></div>' +
+      '<div class="opcion"><p><b>Opción B</b></p><p>La gobernanta hace 12 habitaciones que siguen y las dos camareras hacen las otras 28, 14 cada una. El jueves la gobernanta tiene pendiente el pedido de lencería.</p><button type="button" class="btn sec" data-acc="B">Elegir la B</button></div>' +
+      '<p class="privado">El motivo de la baja no se guarda en ningún sitio.</p>',
+    p3: '<div class="d-cab"><div><small>Grupos · ayer, 18:20</small><h3 id="docTit">Propuesta para un club de senderismo</h3></div><button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>' +
+      '<div class="bloque"><small>Lo que pidieron · correo de ayer a las 17:45</small><p>28 personas del 26 al 29 de noviembre, con cena y traslado desde el aeropuerto.</p></div>' +
+      '<div class="bloque"><small>La propuesta preparada</small><table class="lineas"><tr><td>14 habitaciones dobles × 3 noches × 78 €</td><td>3.276 €</td></tr><tr><td>Cena de grupo, 28 personas × 3 noches × 24 €</td><td>2.016 €</td></tr><tr><td>Traslado al aeropuerto de Alicante, 14 trayectos × 45 €</td><td>630 €</td></tr><tr class="total"><td>Total</td><td>5.922 €</td></tr></table></div>' +
+      '<p class="privado">Precios sacados de la ficha del hotel y de la tarifa de grupos de temporada baja.</p>' +
+      '<div class="acciones"><button type="button" class="btn" data-acc="aprobar">Aprobar y enviar</button><button type="button" class="btn sec" data-acc="cambio">Pedir un cambio</button></div>'
+  };
+  const dlg = $("#doc"), dIn = $("#docIn");
+  let abierto = null;
+  function abre(id, soloVer) {
+    abierto = id;
+    const x = reg(id);
+    dIn.innerHTML = x ? docHTML(x, soloVer) : DOCS[id];
+    if (dlg.open) return;
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+    dlg.focus();
+  }
+
+  // El documento que ha preparado un agente: texto plano con títulos en mayúsculas, listas «- » y tablas con «|»
+  function renderDoc(t) {
+    let h = "", lista = false, tabla = [];
+    function cierraLista() { if (lista) { h += "</ul>"; lista = false; } }
+    function cierraTabla() {
+      if (!tabla.length) return;
+      h += '<div class="tabla-scroll"><table class="lineas">' + tabla.map(function (f) { return "<tr>" + f.map(function (c) { return "<td>" + esc(c) + "</td>"; }).join("") + "</tr>"; }).join("") + "</table></div>";
+      tabla = [];
+    }
+    String(t || "").split("\n").forEach(function (l) {
+      const s = l.trim();
+      if (s.charAt(0) === "|" || (s.indexOf(" | ") > 0 && !/^- /.test(s))) {
+        cierraLista();
+        const celdas = s.replace(/^\||\|$/g, "").split("|").map(function (c) { return c.trim(); });
+        if (!celdas.every(function (c) { return /^:?-{2,}:?$/.test(c); })) tabla.push(celdas);
+        return;
+      }
+      cierraTabla();
+      if (!s) { cierraLista(); return; }
+      if (/^- /.test(s)) { if (!lista) { h += "<ul>"; lista = true; } h += "<li>" + esc(s.slice(2)) + "</li>"; return; }
+      cierraLista();
+      if (s.length < 70 && s === s.toUpperCase() && /[A-ZÁÉÍÓÚÑ]/.test(s)) h += "<h4>" + esc(s) + "</h4>";
+      else h += "<p>" + esc(s) + "</p>";
+    });
+    cierraLista(); cierraTabla();
+    return h;
+  }
+  function docHTML(x, soloVer) {
+    let h = '<div class="d-cab"><div><small>' + esc(nombreDe(x)) + " · hoy, " + esc(x.h) + (x.version > 1 ? " · versión " + x.version : "") + '</small><h3 id="docTit">' + esc(x.titulo) + '</h3></div><button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>';
+    if (x.detalle) h += '<p class="p-sub">' + esc(x.detalle) + "</p>";
+    h += '<div class="doc doc-cuerpo">' + renderDoc(x.doc) + "</div>";
+    const pend = x.estado === "pend" && !soloVer;
+    if (x.opciones && x.opciones.length) {
+      x.opciones.forEach(function (o, i) {
+        h += '<div class="opcion"><p><b>Opción ' + esc(o.id) + "</b></p><p>" + esc(o.texto) + "</p>" +
+          (pend ? '<button type="button" class="btn' + (i ? " sec" : "") + '" data-acc="op" data-op="' + esc(o.id) + '">Elegir la ' + esc(o.id) + "</button>" : (x.elegida === o.id ? '<span class="elegida">La elegiste tú</span>' : "")) + "</div>";
+      });
+      if (pend) h += '<div class="acciones"><button type="button" class="btn sec" data-acc="cambio">Pedir un cambio</button></div>';
+    } else if (pend) {
+      h += '<div class="acciones"><button type="button" class="btn" data-acc="aprobar">' + (x.tipo === "grupo" ? "Aprobar y enviar" : "Aprobar") + '</button><button type="button" class="btn sec" data-acc="cambio">Pedir un cambio</button></div>';
+    } else {
+      h += '<p><span class="est ' + esc(x.estado) + '">' + esc(ESTADO[x.estado] || "") + "</span></p>";
+    }
+    return h;
+  }
+  function mensajeDe(x, op) {
+    if (op) return "Opción " + op + " elegida. El cuadrante se actualiza y la gobernanta recibe el aviso.";
+    return { resena: "Aprobadas. Recepción las publica en Google.", grupo: "Enviada. La tienes en Propuestas a grupos como En espera.",
+      informe: "Aprobado. Listo para mandarlo a la propiedad.", plan: "Aprobado. Le llega al maître y al jefe de cocina." }[x.tipo] || "Aprobado.";
+  }
+  function api(ruta, cuerpo) {
+    return fetch(ruta, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(cuerpo) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (d.error) throw new Error(d.error); return d; })
+      .catch(function (err) { aviso("No ha salido: " + err.message); throw err; });
+  }
+  function cierra() { if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); abierto = null; }
+  dlg.addEventListener("click", function (e) {
+    if (e.target === dlg || e.target.closest("[data-cerrar]")) return cierra();
+    const b = e.target.closest("[data-acc]"); if (!b) return;
+    const acc = b.dataset.acc;
+    if (acc === "cambio") {
+      const acc0 = dIn.querySelector(".acciones");
+      if (dIn.querySelector(".cambio")) return;
+      const c = document.createElement("div"); c.className = "cambio";
+      c.innerHTML = '<label for="cambioTxt" class="p-ag">¿Qué cambiarías?</label><textarea id="cambioTxt" placeholder="Por ejemplo, hazla más corta"></textarea><div class="acciones"><button type="button" class="btn" data-acc="mandar">Mandar al agente</button></div>';
+      acc0.after(c); c.querySelector("textarea").focus(); return;
+    }
+    if (acc === "mandar") {
+      const xm = reg(abierto), texto = ((dIn.querySelector("#cambioTxt") || {}).value || "").trim();
+      if (xm && VIVO && texto) {
+        const idm = abierto;
+        b.disabled = true; b.textContent = "El agente lo está rehaciendo…";
+        return api("/api/cambio", { id: idm, texto: texto }).then(function (d) { DATOS = d; pinta(); abre(idm); aviso("Nueva versión lista. Revísala antes de aprobar."); },
+          function () { b.disabled = false; b.textContent = "Mandar al agente"; });
+      }
+      cierra(); return aviso("Se lo hemos pasado al agente. Te avisa cuando tenga la nueva versión.");
+    }
+    if (acc === "copiado") return;
+    const x = reg(abierto);
+    if (x) {
+      const op = b.dataset.op || null, msg = mensajeDe(x, op);
+      if (VIVO) {
+        b.disabled = true;
+        return api("/api/decidir", { id: x.id, accion: op ? "opcion" : "aprobar", opcion: op }).then(function (d) { DATOS = d; cierra(); pinta(); aviso(msg); }, function () { b.disabled = false; });
+      }
+      x.estado = op ? "elegido" : (x.tipo === "grupo" ? "enviada" : "ok");
+      if (op) x.elegida = op;
+      cierra(); pinta(); return aviso(msg);
+    }
+    resuelve(abierto, acc); cierra();
+  });
+
+  function resuelve(id, acc) {
+    hechos[id] = true;
+    const N = PER.nov;
+    if (id === "p1") { N.extra.push({ d: 11, h: hora(), tipo: "resena", txt: "1 respuesta a una reseña de 2 estrellas aprobada", estado: "ok" }); aviso("Aprobada. Recepción la publica en Google."); }
+    if (id === "p2") { N.aus.push([11, hora(), "pisos"]); aviso(acc === "A" ? "Opción A elegida. La gobernanta y la camarera de refuerzo reciben el aviso." : "Opción B elegida. La gobernanta recibe el cuadrante cambiado."); }
+    if (id === "p3") { N.grupos.push({ d: 11, h: hora(), que: SENDERISMO.que, eur: SENDERISMO.eur, crm: "espera" }); aviso("Enviada al club. La tienes en Propuestas a grupos como En espera."); }
+    pinta();
+  }
+
+  let tAviso;
+  function aviso(txt) { const t = $("#toast"); t.textContent = txt; t.hidden = false; clearTimeout(tAviso); tAviso = setTimeout(function () { t.hidden = true; }, 4200); }
+
+  // Resumen para la propiedad
+  $("#copiar").addEventListener("click", function () {
+    const P = PER[per], total = EV.reduce(function (s, e) { return s + e.min; }, 0), tareas = EV.reduce(function (s, e) { return s + e.n; }, 0);
+    const acept = P.grupos.filter(function (g) { return g.crm === "aceptada"; }).reduce(function (s, g) { return s + g.eur; }, 0);
+    const esp = P.grupos.filter(function (g) { return g.crm === "espera"; }).reduce(function (s, g) { return s + g.eur; }, 0);
+    const txt = P.frase + ", en el Hotel Brisalta, los agentes han hecho " + tareas + " tareas y han devuelto al equipo " + fmtMin(total) + ", que son " + jornadas(total) + " jornadas de 8 horas. Propuestas a grupos: " + eur(acept) + " aceptados y " + eur(esp) + " en espera.";
+    const respaldo = function () {
+      abierto = null;
+      dIn.innerHTML = '<div class="d-cab"><div><small>Resumen para la propiedad</small><h3 id="docTit">Cópialo desde aquí</h3></div><button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button></div><textarea class="copia" id="copiaTxt" readonly></textarea>';
+      const ta = dIn.querySelector("textarea"); ta.value = txt;
+      if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+      ta.focus(); ta.select();
+    };
+    try {
+      navigator.clipboard.writeText(txt).then(function () { aviso("Copiado. Pégalo en tu correo o en el informe del mes."); }, respaldo);
+    } catch (e) { respaldo(); }
+  });
+
+  // Periodo
+  function marcaPeriodo() { document.querySelectorAll(".periodo button").forEach(function (o) { o.setAttribute("aria-selected", String(o.dataset.p === per)); }); }
+  document.querySelectorAll(".periodo button").forEach(function (b) {
+    b.addEventListener("click", function () { per = b.dataset.p; visibles = 14; marcaPeriodo(); pinta(); });
+  });
+
+  // Lanzar agentes desde el panel (solo con el servidor en marcha)
+  let cronoDemo;
+  function montaDemo() {
+    const box = $("#demoBtns"); box.textContent = "";
+    DATOS.agentes.concat([{ clave: "todos", nombre: "Todos a la vez", cuando: "Tarda alrededor de un minuto" }]).forEach(function (a) {
+      const b = document.createElement("button"); b.type = "button"; if (a.clave === "todos") b.className = "todos";
+      const n = document.createElement("b"); n.textContent = a.nombre;
+      const c = document.createElement("small"); c.textContent = a.cuando;
+      b.appendChild(n); b.appendChild(c);
+      b.addEventListener("click", function () { lanza(a); });
+      box.appendChild(b);
+    });
+  }
+  function lanza(a, boton) {
+    const sel = "#demoBtns button, .lanzar", t = $("#trabajando"), ini = Date.now();
+    document.querySelectorAll(sel).forEach(function (b) { b.disabled = true; });
+    const pon = function () {
+      const s = Math.round((Date.now() - ini) / 1000) + " s";
+      if (boton) boton.textContent = "Trabajando… " + s;
+      else $("#trabTxt").textContent = (a.clave === "todos" ? "Los agentes están trabajando" : a.nombre + ": el agente está trabajando") + "… " + s;
+    };
+    if (!boton) t.hidden = false;
+    pon(); cronoDemo = setInterval(pon, 1000);
+    const antes = DATOS.registro.length;
+    api("/api/correr", { clave: a.clave }).then(function (d) {
+      clearInterval(cronoDemo); t.hidden = true;
+      DATOS = d; per = "nov"; marcaPeriodo(); pinta();
+      const pend = d.registro.slice(antes).filter(function (x) { return x.estado === "pend"; }).length;
+      aviso((a.clave === "todos" ? "Han terminado." : a.nombre + " ha terminado.") + (pend ? " Tienes " + pend + " para revisar en Esperando tu OK." : " Lo tienes en el registro."));
+    }, function () {}).then(function () {
+      clearInterval(cronoDemo); t.hidden = true;
+      document.querySelectorAll(sel).forEach(function (b) { b.disabled = false; });
+      if (boton && document.body.contains(boton)) boton.textContent = "Lanzar ahora";
+    });
+  }
+
+  if (DATOS && DATOS.registro && DATOS.registro.length) { per = "nov"; marcaPeriodo(); }
+  const h0 = location.hash.slice(1);
+  if (AREA[h0] || PANTALLAS[h0]) { vista = h0; $("#v-resumen").hidden = true; $("#v-area").hidden = !AREA[h0]; $("#v-lista").hidden = !PANTALLAS[h0]; }
+  pinta();
+  if (MOVIL.addEventListener) MOVIL.addEventListener("change", pinta);
+  if (location.protocol.indexOf("http") === 0) {
+    fetch("/api/datos", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+      if (!d || !d.registro || !d.agentes) return;
+      DATOS = d; VIVO = true; $("#demo").hidden = false; montaDemo();
+      if (d.registro.length) { per = "nov"; marcaPeriodo(); }
+      pinta();
+    }).catch(function () {});
+  }
+})();
+</script>
+
+</body>
+</html>
