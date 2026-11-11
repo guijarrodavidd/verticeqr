@@ -269,6 +269,54 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
   .embudo div b { font-size: 17px; }
   .d-in { padding: 20px; }
 }
+
+/* Áreas: pestañas, tarjetas del resumen y la vista de cada área */
+.areas { display: flex; gap: 6px; overflow-x: auto; padding: 4px; margin: -4px; scrollbar-width: none; }
+.areas::-webkit-scrollbar { display: none; }
+.areas button { border: 0; background: rgba(255, 255, 255, .72); box-shadow: inset 0 0 0 1px var(--linea); border-radius: 999px; padding: 9px 16px; font-size: 14px; font-weight: 500; letter-spacing: -0.015em; white-space: nowrap; color: var(--gris); display: inline-flex; align-items: center; gap: 8px; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.areas button[aria-selected="true"] { background: var(--carbon); color: #fff; box-shadow: none; }
+.areas .cuenta { min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--esp-bg); color: var(--esp); font-size: 12px; font-weight: 560; display: inline-grid; place-items: center; }
+.areas button[aria-selected="true"] .cuenta { background: rgba(255, 255, 255, .2); color: #fff; }
+.vista { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.areas-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.area-card { border: 0; text-align: left; background: var(--fondo); border-radius: 20px; padding: 18px; display: grid; gap: 2px; align-content: start; transition: background .2s; }
+.area-card:hover { background: var(--niebla); }
+.area-card h3 { font-size: 19px; letter-spacing: -0.04em; }
+.area-card .para { color: var(--gris); font-size: 12.5px; }
+.area-card .t { font-size: 30px; font-weight: 500; letter-spacing: -0.05em; line-height: 1.05; margin-top: 12px; }
+.area-card .n { color: var(--gris); font-size: 13px; }
+.area-card .est { justify-self: start; margin-top: 10px; }
+.area-card .ags { color: var(--gris-claro); font-size: 12.5px; margin-top: 8px; }
+.avisos li { display: grid; gap: 2px; padding: 12px 0; border-top: 1px solid var(--linea2); }
+.avisos li:first-child { border-top: 0; }
+.avisos small { color: var(--gris); font-size: 12.5px; font-weight: 500; }
+#listaPend li.p-area, .lista-pend li.p-area { padding: 16px 0 2px; border-top: 0; }
+.p-area button { border: 0; background: none; padding: 0; font-size: 13px; font-weight: 560; color: var(--carbon); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--salvia); }
+.lista-pend li { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-top: 1px solid var(--linea2); }
+.lista-pend li:first-child { border-top: 0; }
+.area-cab .area-tit { font-size: clamp(36px, 5vw, 54px); letter-spacing: -0.055em; line-height: 1; margin-top: 4px; }
+.mini.mini4 { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 20px; }
+.ag-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 18px; }
+.ag-card { display: grid; gap: 14px; align-content: start; }
+.ag-card h3 { font-size: 22px; letter-spacing: -0.045em; }
+.ag-hace { color: var(--gris); }
+.ag-datos { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 14px; margin: 0; font-size: 14px; }
+.ag-datos dt { color: var(--gris); }
+.ag-datos dd { margin: 0; }
+.ag-tareas { display: grid; gap: 10px; background: var(--fondo); border-radius: 16px; padding: 14px 16px; }
+.ag-tareas li b { font-weight: 520; display: block; letter-spacing: -0.02em; }
+.ag-tareas li small { color: var(--gris); font-size: 12.5px; }
+.ag-pie { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.ag-pie .dev b { font-size: 24px; font-weight: 500; letter-spacing: -0.05em; }
+.ag-pie .dev span { color: var(--gris); font-size: 13px; margin-left: 6px; }
+.ag-pie .acc { display: flex; gap: 8px; flex-wrap: wrap; }
+.ag-pie .btn:disabled { opacity: .5; cursor: progress; }
+@media (max-width: 860px) { .areas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) {
+  .areas-grid { grid-template-columns: minmax(0, 1fr); }
+  .mini.mini4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mini.mini4 > div:nth-child(3) { border-left: 0; padding-left: 0; }
+}
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } .trabajando i { animation: none; } }
 </style>
 </head>
@@ -289,6 +337,10 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
       <p class="act" id="act">Actualizado hoy, 10:35</p>
     </div>
   </header>
+
+  <nav class="areas" id="areas" role="tablist" aria-label="Áreas del hotel"></nav>
+
+  <div class="vista" id="v-resumen">
 
   <section class="fila1">
     <div class="hero">
@@ -321,6 +373,14 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
 
   <section class="card">
     <div class="cab">
+      <h2>Tus áreas</h2>
+      <p class="sub">Toca un área para ver sus agentes, lo que espera tu OK y su registro.</p>
+    </div>
+    <div class="areas-grid" id="areasGrid"></div>
+  </section>
+
+  <section class="card">
+    <div class="cab">
       <h2>Tiempo devuelto <span class="fino">cada día</span></h2>
       <p class="sub" id="grafSub">Pasa el ratón o toca una barra para ver qué se hizo ese día.</p>
     </div>
@@ -331,31 +391,16 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
     </details>
   </section>
 
-  <section class="fila2">
-    <div class="card agentes">
-      <h2>Lo que ha hecho <span class="fino">cada agente</span></h2>
-      <div id="listaAgentes"></div>
-      <p class="nota">Los minutos de antes son lo que tardabais a mano, medido contigo en el diagnóstico. Los de ahora, lo que tardas en revisarlo. Toca un agente para ver su registro.</p>
-    </div>
-    <div class="card grupos">
-      <h2>Propuestas <span class="fino">a grupos</span></h2>
-      <p class="g-sub">Cada correo de un grupo sale con su propuesta preparada. Aquí ves en qué ha quedado.</p>
-      <div class="embudo" id="embudo"></div>
-      <div class="reparto" id="reparto"></div>
-      <p class="reparto-t" id="repartoT"></p>
-      <ul id="listaGrupos"></ul>
-    </div>
-  </section>
-
-  <section class="card" id="registro">
+  <section class="card">
     <div class="cab">
-      <h2>Registro</h2>
-      <p class="sub">Todo lo que han hecho los agentes, con día y hora.</p>
+      <h2>Avisos</h2>
+      <p class="sub">Lo que los agentes creen que tienes que saber hoy.</p>
     </div>
-    <div class="chips" id="chips" role="group" aria-label="Filtrar por agente"></div>
-    <ol id="log"></ol>
-    <button type="button" class="btn sec mas" id="mas">Ver más</button>
+    <ul class="avisos" id="avisosLista"></ul>
   </section>
+  </div>
+
+  <div class="vista" id="v-area" hidden></div>
 
   <footer>
     <p>Ejemplo con datos inventados del Hotel Brisalta, un hotel de 80 habitaciones en la Costa Blanca.</p>
@@ -380,17 +425,28 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
   const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
   const MC = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
 
-  const AG = [
-    { k: "resenas", n: "Reseñas", para: "Para dirección" },
-    { k: "recepcion", n: "Recepción", para: "Para la recepción de mañana" },
-    { k: "cuadrantes", n: "Cuadrantes", para: "Para la gobernanta y los jefes de área" },
-    { k: "numeros", n: "Números", para: "Para dirección" },
-    { k: "informes", n: "Informes", para: "Para dirección" },
-    { k: "mantenimiento", n: "Mantenimiento", para: "Para el jefe de mantenimiento" },
-    { k: "grupos", n: "Grupos", para: "Para comercial" },
-    { k: "restaurante", n: "Restaurante", para: "Para el maître y el jefe de cocina" }
+  // Las áreas del hotel, cada una con su responsable y sus agentes. «tipos» son las tareas de cada agente.
+  const AREAS = [
+    { k: "direccion", n: "Dirección", para: "Para la directora", agentes: [
+      { n: "Resumen de la semana", clave: "resumen", tipos: ["resumen"], cuando: "Lunes, 8:00", lee: "Los partes que manda cada jefe por el formulario", hace: "Junta los partes de cada departamento y te deja lo que ha ido bien, lo que falla y lo que tienes que decidir." },
+      { n: "Cierre de mes", clave: "cierre", tipos: ["cuentas", "informe"], cuando: "Cuando subes los totales del mes", lee: "El formulario del cierre con los totales del informe del mes", hace: "Saca las cuentas, comprueba que cuadran y prepara el informe para la propiedad." }] },
+    { k: "recepcion", n: "Recepción", para: "Para la jefa de recepción", agentes: [
+      { n: "Relevo de noche", clave: "relevo", tipos: ["relevo"], cuando: "Cada día, 7:00", lee: "El formulario que dicta el recepcionista de noche", hace: "Convierte lo que deja el turno de noche en la hoja que lee recepción al entrar." },
+      { n: "Reseñas", clave: "resenas", tipos: ["resena"], cuando: "Cada día, 8:00", lee: "Los avisos de reseña nueva que llegan al correo de los agentes", hace: "Prepara la respuesta a cada reseña nueva con lo que sabe del hotel." }] },
+    { k: "equipo", n: "Equipo y turnos", para: "Para la gobernanta y los jefes de área", agentes: [
+      { n: "Cuadrante y bajas", clave: "baja", tipos: ["cuadrante", "ausencia"], cuando: "Viernes, 12:00, y cuando llega una baja", lee: "Las horas del equipo y el formulario de ausencias", hace: "Prepara el cuadrante de la semana y, cuando falta alguien, te da dos formas de cubrirlo." }] },
+    { k: "restaurante", n: "Restaurante", para: "Para el maître y el jefe de cocina", agentes: [
+      { n: "Plan del fin de semana", clave: "restaurante", tipos: ["plan"], cuando: "Jueves, 10:00", lee: "Las ventas del TPV, la ocupación prevista y los pedidos", hace: "Mira lo que se vende y la gente que habrá, y propone qué empujar y qué pedir." }] },
+    { k: "mantenimiento", n: "Mantenimiento", para: "Para el jefe de mantenimiento", agentes: [
+      { n: "Partes de mantenimiento", clave: "mantenimiento", tipos: ["parte"], cuando: "Cada día, 11:30", lee: "El formulario de la ronda con fotos y lo que deja el turno de noche", hace: "Ordena por urgencia lo que sale en la ronda para que se haga primero lo que puede hacer daño." }] },
+    { k: "comercial", n: "Comercial", para: "Para el responsable comercial", agentes: [
+      { n: "Propuestas a grupos", clave: "grupos", tipos: ["grupo"], cuando: "Cuando llega un correo a grupos@", lee: "Los correos de grupos y las tarifas de grupos", hace: "Prepara la propuesta con precio cerrado para que salga el mismo día." }] }
   ];
-  const NOMBRE = {}; AG.forEach(function (a) { NOMBRE[a.k] = a.n; });
+  const AREA = {}, AGENTE_DE_TIPO = {};
+  AREAS.forEach(function (a) { AREA[a.k] = a; a.agentes.forEach(function (g) { g.area = a; g.tipos.forEach(function (t) { AGENTE_DE_TIPO[t] = g; }); }); });
+  const AREA_DE_AG = { informes: "direccion", numeros: "direccion", recepcion: "recepcion", resenas: "recepcion", cuadrantes: "equipo", restaurante: "restaurante", mantenimiento: "mantenimiento", grupos: "comercial" };
+  function areaDe(e) { return AREA[AREA_DE_AG[e.ag || e.agente]]; }
+  function nombreDe(e) { const g = AGENTE_DE_TIPO[e.tipo]; return g ? g.n : (areaDe(e) ? areaDe(e).n : ""); }
 
   // Minutos por tarea: antes (a mano, medido en el diagnóstico) y ahora (revisarlo)
   const T = {
@@ -464,9 +520,9 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
   function reg(id) { return DATOS ? DATOS.registro.find(function (x) { return x.id === id; }) : null; }
 
   const PEND = [
-    { id: "p1", ag: "resenas", cuando: "Hoy, 9:12", tit: "Respuesta a una reseña de 2 estrellas", sub: "Google · llegó hoy a las 8:55" },
-    { id: "p2", ag: "cuadrantes", cuando: "Hoy, 7:40", tit: "Baja en pisos mañana jueves", sub: "Dos formas de cubrirla" },
-    { id: "p3", ag: "grupos", cuando: "Ayer, 18:20", tit: "Propuesta para un club de senderismo", sub: "28 personas · 3 noches · 5.922 €" }
+    { id: "p1", ag: "resenas", tipo: "resena", cuando: "Hoy, 9:12", tit: "Respuesta a una reseña de 2 estrellas", sub: "Google · llegó hoy a las 8:55" },
+    { id: "p2", ag: "cuadrantes", tipo: "ausencia", cuando: "Hoy, 7:40", tit: "Baja en pisos mañana jueves", sub: "Dos formas de cubrirla" },
+    { id: "p3", ag: "grupos", tipo: "grupo", cuando: "Ayer, 18:20", tit: "Propuesta para un club de senderismo", sub: "28 personas · 3 noches · 5.922 €" }
   ];
 
   // Utilidades
@@ -514,7 +570,7 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
     return ev;
   }
 
-  let per = "oct", filtro = "todos", visibles = 14, EV = [], dias = [];
+  let per = "oct", vista = "resumen", visibles = 14, EV = [], dias = [];
 
   function pinta() {
     ajustaHoy();
@@ -539,7 +595,9 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
       x.por[e.tipo] = x.por[e.tipo] || { n: 0, min: 0 };
       x.por[e.tipo].n += e.n; x.por[e.tipo].min += e.min;
     });
-    grafico(); tablaDias(); agentes(); grupos(); chips(); registro(); pendientes();
+    pintaTabs();
+    if (vista === "resumen") { grafico(); tablaDias(); areasGrid(); avisosLista(); pendientes(); }
+    else vistaArea(vista);
   }
 
   function fechaCorta(d) { const m = PER[per].m; return DC[new Date(AÑO, m, d).getDay()] + " " + d + " " + MC[m]; }
@@ -621,38 +679,102 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
     });
   }
 
-  // Agentes
-  function agentes() {
-    const box = $("#listaAgentes"); box.textContent = "";
-    const tot = AG.map(function (a) {
-      const por = {};
-      EV.forEach(function (e) { if (e.ag === a.k && e.tipo !== "aviso") { por[e.tipo] = por[e.tipo] || { n: 0, min: 0 }; por[e.tipo].n += e.n; por[e.tipo].min += e.min; } });
-      return { a: a, por: por, min: Object.keys(por).reduce(function (s, k) { return s + por[k].min; }, 0) };
-    });
-    const max = Math.max.apply(null, tot.map(function (t) { return t.min; })) || 1;
-    tot.forEach(function (t) {
-      const b = document.createElement("button"); b.type = "button"; b.className = "ag-fila"; b.dataset.ag = t.a.k;
-      const nom = document.createElement("div"); nom.className = "ag-nom";
-      const nb = document.createElement("b"); nb.textContent = t.a.n; const ns = document.createElement("span"); ns.textContent = t.a.para;
-      nom.appendChild(nb); nom.appendChild(ns);
-      const he = document.createElement("div"); he.className = "ag-hecho";
-      const tipos = Object.keys(t.por);
-      if (!tipos.length) { const v = document.createElement("span"); v.textContent = "Nada en este periodo"; he.appendChild(v); }
-      tipos.forEach(function (k) {
-        const fila = document.createElement("div"), sp = document.createElement("span"), sm = document.createElement("small");
-        sp.textContent = unidad(k, t.por[k].n);
-        sm.textContent = "Antes " + fmtMin(T[k].antes) + ", ahora " + fmtMin(T[k].ahora);
-        fila.appendChild(sp); fila.appendChild(sm); he.appendChild(fila);
-      });
-      const ti = document.createElement("div"); ti.className = "ag-t";
-      const tb = document.createElement("b"); tb.textContent = fmtMin(t.min);
-      const br = document.createElement("span"); br.className = "barra"; const bi = document.createElement("i"); bi.style.width = (t.min / max * 100).toFixed(1) + "%"; br.appendChild(bi);
-      ti.appendChild(tb); ti.appendChild(br);
-      b.appendChild(nom); b.appendChild(he); b.appendChild(ti);
-      b.setAttribute("aria-label", t.a.n + ", " + fmtMin(t.min) + " devueltos. Ver su registro");
-      b.addEventListener("click", function () { filtro = t.a.k; visibles = 14; chips(); registro(); $("#registro").scrollIntoView({ behavior: "smooth", block: "start" }); });
+  // Resumen: una tarjeta por área y los avisos
+  function totArea(a) {
+    const r = { min: 0, n: 0, avisos: 0, pend: itemsPend().filter(function (p) { return areaDe(p) === a; }).length };
+    EV.forEach(function (e) { if (areaDe(e) !== a) return; if (e.tipo === "aviso") r.avisos++; else { r.min += e.min; r.n += e.n; } });
+    return r;
+  }
+  function el(tag, cls, txt) { const x = document.createElement(tag); if (cls) x.className = cls; if (txt != null) x.textContent = txt; return x; }
+  function areasGrid() {
+    const box = $("#areasGrid"); box.textContent = "";
+    AREAS.forEach(function (a) {
+      const t = totArea(a), b = el("button", "area-card");
+      b.type = "button";
+      b.appendChild(el("h3", "", a.n)); b.appendChild(el("span", "para", a.para));
+      b.appendChild(el("span", "t", fmtMin(t.min))); b.appendChild(el("span", "n", t.n + (t.n === 1 ? " tarea hecha" : " tareas hechas")));
+      b.appendChild(el("span", "est " + (t.pend ? "revisar" : "ok"), t.pend ? t.pend + " esperando tu OK" : "Al día"));
+      b.appendChild(el("span", "ags", a.agentes.map(function (g) { return g.n; }).join(" · ")));
+      b.addEventListener("click", function () { ir(a.k); });
       box.appendChild(b);
     });
+  }
+  function avisosLista() {
+    const ul = $("#avisosLista"); ul.textContent = "";
+    const av = EV.filter(function (e) { return e.tipo === "aviso"; }).slice(0, 6);
+    if (!av.length) { ul.appendChild(el("li", "l-vacio", "Sin avisos en este periodo.")); return; }
+    av.forEach(function (e) {
+      const li = el("li");
+      li.appendChild(el("small", "", (areaDe(e) ? areaDe(e).n : "") + " · " + fechaCorta(e.d) + ", " + e.h));
+      li.appendChild(el("p", "", e.txt));
+      ul.appendChild(li);
+    });
+  }
+
+  // La vista de un área: cabecera, lo que espera tu OK, sus agentes, grupos (en comercial) y su registro
+  function vistaArea(k) {
+    const a = AREA[k], box = $("#v-area"), t = totArea(a);
+    box.textContent = "";
+    const cab = el("section", "card area-cab");
+    cab.appendChild(el("p", "p-ag", a.para)); cab.appendChild(el("h2", "area-tit", a.n));
+    const mini = el("div", "mini mini4");
+    [[fmtMin(t.min), "tiempo devuelto"], [t.n, "tareas hechas"], [t.pend, "esperando tu OK"], [t.avisos, "avisos"]].forEach(function (c) {
+      const d = el("div"); d.appendChild(el("b", "", c[0])); d.appendChild(el("span", "", c[1])); mini.appendChild(d);
+    });
+    cab.appendChild(mini); box.appendChild(cab);
+
+    const items = itemsPend().filter(function (p) { return areaDe(p) === a; });
+    if (items.length) {
+      const s = el("section", "card pend"), c = el("div", "pend-cab");
+      c.appendChild(el("h2", "", "Esperando tu OK")); c.appendChild(el("span", "num", items.length));
+      const ul = el("ul", "lista-pend");
+      s.appendChild(c); s.appendChild(ul); box.appendChild(s);
+      listaPend(ul, items, false);
+    }
+
+    const grid = el("section", "ag-grid");
+    a.agentes.forEach(function (g) { grid.appendChild(tarjetaAgente(g)); });
+    box.appendChild(grid);
+
+    if (k === "comercial") {
+      const s = el("section", "card grupos");
+      s.innerHTML = '<h2>En qué han quedado <span class="fino">las propuestas</span></h2><p class="g-sub">Las que has aprobado y ya tiene el cliente, las aceptadas y las perdidas.</p><div class="embudo" id="embudo"></div><div class="reparto" id="reparto"></div><p class="reparto-t" id="repartoT"></p><ul id="listaGrupos"></ul>';
+      box.appendChild(s); grupos();
+    }
+
+    const r = el("section", "card");
+    r.innerHTML = '<div class="cab"><h2>Registro</h2><p class="sub"></p></div><ol id="log"></ol><button type="button" class="btn sec mas" id="mas">Ver más</button>';
+    r.querySelector(".sub").textContent = "Lo que han hecho los agentes de " + a.n.toLowerCase() + ", con día y hora.";
+    box.appendChild(r);
+    r.querySelector("#mas").addEventListener("click", function () { visibles += 20; registro(a); });
+    registro(a);
+  }
+  function tarjetaAgente(g) {
+    const c = el("article", "card ag-card"), evs = EV.filter(function (e) { return g.tipos.indexOf(e.tipo) >= 0; });
+    c.appendChild(el("h3", "", g.n));
+    c.appendChild(el("p", "ag-hace", g.hace));
+    const dl = el("dl", "ag-datos");
+    dl.appendChild(el("dt", "", "Cuándo")); dl.appendChild(el("dd", "", g.cuando));
+    dl.appendChild(el("dt", "", "Qué lee")); dl.appendChild(el("dd", "", g.lee));
+    c.appendChild(dl);
+    const ul = el("ul", "ag-tareas");
+    let total = 0;
+    g.tipos.forEach(function (tipo) {
+      const n = evs.filter(function (e) { return e.tipo === tipo; }).reduce(function (s, e) { return s + e.n; }, 0);
+      const min = n * (T[tipo].antes - T[tipo].ahora); total += min;
+      const li = el("li");
+      li.appendChild(el("b", "", n ? unidad(tipo, n) : "Ningún " + T[tipo].u[0] + " en este periodo"));
+      li.appendChild(el("small", "", "Antes " + fmtMin(T[tipo].antes) + ", ahora " + fmtMin(T[tipo].ahora) + (n ? " · " + fmtMin(min) + " devueltos" : "")));
+      ul.appendChild(li);
+    });
+    c.appendChild(ul);
+    const pie = el("div", "ag-pie"), dev = el("div", "dev"), acc = el("div", "acc");
+    dev.appendChild(el("b", "", fmtMin(total))); dev.appendChild(el("span", "", "devueltos"));
+    const ultimo = DATOS ? DATOS.registro.filter(function (x) { return g.tipos.indexOf(x.tipo) >= 0 && x.doc; }).pop() : null;
+    if (ultimo) { const v = el("button", "btn sec", "Ver lo último que hizo"); v.type = "button"; v.addEventListener("click", function () { abre(ultimo.id, ultimo.estado !== "pend"); }); acc.appendChild(v); }
+    if (VIVO) { const l = el("button", "btn lanzar", "Lanzar ahora"); l.type = "button"; l.addEventListener("click", function () { lanza({ clave: g.clave, nombre: g.n }, l); }); acc.appendChild(l); }
+    pie.appendChild(dev); pie.appendChild(acc); c.appendChild(pie);
+    return c;
   }
 
   // Propuestas a grupos
@@ -691,62 +813,86 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
     });
   }
 
-  // Registro
-  function chips() {
-    const box = $("#chips"); box.textContent = "";
-    [{ k: "todos", n: "Todos" }].concat(AG).concat([{ k: "avisos", n: "Avisos" }]).forEach(function (a) {
-      const b = document.createElement("button"); b.type = "button"; b.textContent = a.n;
-      b.setAttribute("aria-pressed", String(filtro === a.k));
-      b.addEventListener("click", function () { filtro = a.k; visibles = 14; chips(); registro(); });
-      box.appendChild(b);
-    });
-  }
-  function registro() {
-    const ol = $("#log"); ol.textContent = "";
-    const lista = EV.filter(function (e) { return filtro === "todos" || (filtro === "avisos" ? e.tipo === "aviso" : e.ag === filtro); });
-    if (!lista.length) { const li = document.createElement("li"); li.className = "l-vacio"; li.textContent = "Nada en este periodo."; ol.appendChild(li); }
+  // Registro de un área
+  function registro(a) {
+    const ol = $("#log"); if (!ol) return;
+    ol.textContent = "";
+    const lista = EV.filter(function (e) { return areaDe(e) === a; });
+    if (!lista.length) ol.appendChild(el("li", "l-vacio", "Nada en este periodo."));
     lista.slice(0, visibles).forEach(function (e) {
-      const li = document.createElement("li");
-      const f = document.createElement("div"); f.className = "l-f";
-      const fb = document.createElement("b"); fb.textContent = fechaCorta(e.d); const fs = document.createElement("span"); fs.textContent = e.h;
-      f.appendChild(fb); f.appendChild(fs);
-      const q = document.createElement("div"); q.className = "l-q";
-      const qs = document.createElement("small"); qs.textContent = NOMBRE[e.ag]; const qp = document.createElement("p"); qp.textContent = e.txt;
-      q.appendChild(qs); q.appendChild(qp);
-      const d = document.createElement("div"); d.className = "l-d";
-      const es = document.createElement("span"); es.className = "est " + e.estado; es.textContent = ESTADO[e.estado]; d.appendChild(es);
-      if (e.min) { const m = document.createElement("span"); m.className = "m"; m.textContent = fmtMin(e.min) + " devueltos"; d.appendChild(m); }
-      if (e.ref) { const v = document.createElement("button"); v.type = "button"; v.className = "ver"; v.textContent = "Ver lo que hizo"; v.addEventListener("click", function () { abre(e.ref, true); }); d.appendChild(v); }
+      const li = el("li"), f = el("div", "l-f"), q = el("div", "l-q"), d = el("div", "l-d");
+      f.appendChild(el("b", "", fechaCorta(e.d))); f.appendChild(el("span", "", e.h));
+      q.appendChild(el("small", "", nombreDe(e))); q.appendChild(el("p", "", e.txt));
+      d.appendChild(el("span", "est " + e.estado, ESTADO[e.estado]));
+      if (e.min) d.appendChild(el("span", "m", fmtMin(e.min) + " devueltos"));
+      if (e.ref) { const v = el("button", "ver", "Ver lo que hizo"); v.type = "button"; v.addEventListener("click", function () { abre(e.ref, true); }); d.appendChild(v); }
       li.appendChild(f); li.appendChild(q); li.appendChild(d); ol.appendChild(li);
     });
     const mas = $("#mas"), quedan = lista.length - visibles;
     mas.hidden = quedan <= 0;
     mas.textContent = "Ver " + Math.min(20, quedan) + " más";
   }
-  $("#mas").addEventListener("click", function () { visibles += 20; registro(); });
 
   // Pendientes
   const hechos = {};
   function hecho(id) { return !!hechos[id]; }
-  function pendientes() {
-    const ul = $("#listaPend"); ul.textContent = "";
-    const quedan = DATOS
-      ? DATOS.registro.filter(function (x) { return x.estado === "pend"; }).reverse().map(function (x) { return { id: x.id, ag: x.agente, cuando: "Hoy, " + x.h, tit: x.titulo, sub: x.detalle }; })
+  function itemsPend() {
+    return DATOS
+      ? DATOS.registro.filter(function (x) { return x.estado === "pend"; }).reverse().map(function (x) { return { id: x.id, ag: x.agente, tipo: x.tipo, cuando: "Hoy, " + x.h, tit: x.titulo, sub: x.detalle }; })
       : PEND.filter(function (p) { return !hecho(p.id); });
-    const n = $("#nPend"); n.textContent = quedan.length; n.classList.toggle("cero", !quedan.length);
-    $("#pendNota").hidden = !quedan.length;
-    if (!quedan.length) { const li = document.createElement("li"); li.className = "vacio"; li.textContent = "Todo revisado. Cuando un agente prepare algo nuevo, te llega aquí y al móvil."; ul.appendChild(li); return; }
-    quedan.forEach(function (p) {
-      const li = document.createElement("li"), t = document.createElement("div"); t.className = "p-txt";
-      const a = document.createElement("span"); a.className = "p-ag"; a.textContent = NOMBRE[p.ag] + " · " + p.cuando;
-      const ti = document.createElement("p"); ti.className = "p-tit"; ti.textContent = p.tit;
-      const s = document.createElement("p"); s.className = "p-sub"; s.textContent = p.sub;
-      t.appendChild(a); t.appendChild(ti); t.appendChild(s);
-      const b = document.createElement("button"); b.type = "button"; b.className = "btn"; b.textContent = "Revisar";
-      b.addEventListener("click", function () { abre(p.id); });
-      li.appendChild(t); li.appendChild(b); ul.appendChild(li);
+  }
+  function listaPend(ul, items, conArea) {
+    ul.textContent = "";
+    if (!items.length) { ul.appendChild(el("li", "vacio", "Todo revisado. Cuando un agente prepare algo nuevo, te llega aquí y al móvil.")); return; }
+    AREAS.forEach(function (a) {
+      const suyos = items.filter(function (p) { return areaDe(p) === a; });
+      if (!suyos.length) return;
+      if (conArea) {
+        const h = el("li", "p-area"), b = el("button", "", a.n + " · " + suyos.length);
+        b.type = "button"; b.addEventListener("click", function () { ir(a.k); });
+        h.appendChild(b); ul.appendChild(h);
+      }
+      suyos.forEach(function (p) {
+        const li = el("li"), t = el("div", "p-txt");
+        t.appendChild(el("span", "p-ag", nombreDe(p) + " · " + p.cuando));
+        t.appendChild(el("p", "p-tit", p.tit));
+        t.appendChild(el("p", "p-sub", p.sub));
+        const b = el("button", "btn", "Revisar"); b.type = "button";
+        b.addEventListener("click", function () { abre(p.id); });
+        li.appendChild(t); li.appendChild(b); ul.appendChild(li);
+      });
     });
   }
+  function pendientes() {
+    const items = itemsPend();
+    const n = $("#nPend"); n.textContent = items.length; n.classList.toggle("cero", !items.length);
+    $("#pendNota").hidden = !items.length;
+    listaPend($("#listaPend"), items, true);
+  }
+
+  // Pestañas por área, con lo que espera tu OK en cada una. Se guardan en el enlace (#recepcion…)
+  function pintaTabs() {
+    const nav = $("#areas"), items = itemsPend(); nav.textContent = "";
+    [{ k: "resumen", n: "Resumen" }].concat(AREAS).forEach(function (a) {
+      const b = el("button", "", a.n); b.type = "button"; b.setAttribute("role", "tab");
+      b.setAttribute("aria-selected", String(vista === a.k));
+      if (AREA[a.k]) { const c = items.filter(function (p) { return areaDe(p) === a; }).length; if (c) b.appendChild(el("span", "cuenta", c)); }
+      b.addEventListener("click", function () { ir(a.k); });
+      nav.appendChild(b);
+    });
+  }
+  function ir(k) {
+    if (location.hash.slice(1) === k || (k === "resumen" && !location.hash)) { muestra(k); return; }
+    location.hash = k;
+  }
+  function muestra(k) {
+    vista = AREA[k] ? k : "resumen"; visibles = 14;
+    $("#v-resumen").hidden = vista !== "resumen";
+    $("#v-area").hidden = vista === "resumen";
+    pinta();
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", function () { muestra(location.hash.slice(1)); });
 
   const DOCS = {
     p1: '<div class="d-cab"><div><small>Reseñas · hoy, 9:12</small><h3 id="docTit">Respuesta a una reseña de 2 estrellas</h3></div><button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>' +
@@ -803,7 +949,7 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
     return h;
   }
   function docHTML(x, soloVer) {
-    let h = '<div class="d-cab"><div><small>' + esc(NOMBRE[x.agente] || "") + " · hoy, " + esc(x.h) + (x.version > 1 ? " · versión " + x.version : "") + '</small><h3 id="docTit">' + esc(x.titulo) + '</h3></div><button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>';
+    let h = '<div class="d-cab"><div><small>' + esc(nombreDe(x)) + " · hoy, " + esc(x.h) + (x.version > 1 ? " · versión " + x.version : "") + '</small><h3 id="docTit">' + esc(x.titulo) + '</h3></div><button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>';
     if (x.detalle) h += '<p class="p-sub">' + esc(x.detalle) + "</p>";
     h += '<div class="doc doc-cuerpo">' + renderDoc(x.doc) + "</div>";
     const pend = x.estado === "pend" && !soloVer;
@@ -917,20 +1063,32 @@ dialog::backdrop { background: var(--velo); -webkit-backdrop-filter: blur(6px); 
       box.appendChild(b);
     });
   }
-  function lanza(a) {
-    const btns = document.querySelectorAll("#demoBtns button"), t = $("#trabajando"), ini = Date.now();
-    btns.forEach(function (b) { b.disabled = true; });
-    const pon = function () { $("#trabTxt").textContent = (a.clave === "todos" ? "Los agentes están trabajando" : a.nombre + ": el agente está trabajando") + "… " + Math.round((Date.now() - ini) / 1000) + " s"; };
-    t.hidden = false; pon(); cronoDemo = setInterval(pon, 1000);
+  function lanza(a, boton) {
+    const sel = "#demoBtns button, .lanzar", t = $("#trabajando"), ini = Date.now();
+    document.querySelectorAll(sel).forEach(function (b) { b.disabled = true; });
+    const pon = function () {
+      const s = Math.round((Date.now() - ini) / 1000) + " s";
+      if (boton) boton.textContent = "Trabajando… " + s;
+      else $("#trabTxt").textContent = (a.clave === "todos" ? "Los agentes están trabajando" : a.nombre + ": el agente está trabajando") + "… " + s;
+    };
+    if (!boton) t.hidden = false;
+    pon(); cronoDemo = setInterval(pon, 1000);
     const antes = DATOS.registro.length;
     api("/api/correr", { clave: a.clave }).then(function (d) {
+      clearInterval(cronoDemo); t.hidden = true;
       DATOS = d; per = "nov"; marcaPeriodo(); pinta();
       const pend = d.registro.slice(antes).filter(function (x) { return x.estado === "pend"; }).length;
       aviso((a.clave === "todos" ? "Han terminado." : a.nombre + " ha terminado.") + (pend ? " Tienes " + pend + " para revisar en Esperando tu OK." : " Lo tienes en el registro."));
-    }, function () {}).then(function () { clearInterval(cronoDemo); t.hidden = true; btns.forEach(function (b) { b.disabled = false; }); });
+    }, function () {}).then(function () {
+      clearInterval(cronoDemo); t.hidden = true;
+      document.querySelectorAll(sel).forEach(function (b) { b.disabled = false; });
+      if (boton && document.body.contains(boton)) boton.textContent = "Lanzar ahora";
+    });
   }
 
   if (DATOS && DATOS.registro && DATOS.registro.length) { per = "nov"; marcaPeriodo(); }
+  const h0 = location.hash.slice(1);
+  if (AREA[h0]) { vista = h0; $("#v-resumen").hidden = true; $("#v-area").hidden = false; }
   pinta();
   if (location.protocol.indexOf("http") === 0) {
     fetch("/api/datos", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
