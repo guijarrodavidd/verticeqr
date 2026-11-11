@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Panel de dirección Brisalta</title>
+<meta name="robots" content="noindex, nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}body{margin:0}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&display=swap">
+<style>
+/* Panel de dirección: resumen arriba (tiempo devuelto + lo que espera tu OK), detalle abajo (días, agentes, grupos, registro) */
+:root {
+  --bg: #F2F5F8; --card: #FFFFFF; --ink: #0B1220; --ink2: #465368; --ink3: #6F7B8F;
+  --line: #DFE5EC; --line2: #EDF1F5;
+  --marca: #0E8F89; --marca-on: #14B3AB; --marca-soft: rgba(14, 143, 137, .10);
+  --hero: #0B1220; --hero-ink: #FFFFFF; --hero-ink2: #A9B4C2; --hero-line: rgba(255, 255, 255, .12);
+  --aqua: #5EE6D8; --g1: #36C6C0; --g2: #A8D86A;
+  --ok: #17704A; --ok-bg: #E3F4EA; --esp: #8A5600; --esp-bg: #FFF1D1; --av: #B8402C; --av-bg: #FCE8E3;
+  --env: #245F9E; --env-bg: #E4EEF9; --neu: #465368; --neu-bg: #ECF0F4;
+  --sombra: 0 1px 2px rgba(11, 18, 32, .05), 0 10px 30px -18px rgba(11, 18, 32, .28);
+  --velo: rgba(11, 18, 32, .55);
+  --f: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0A101C; --card: #111A2B; --ink: #E9EEF5; --ink2: #AAB5C4; --ink3: #7D899C;
+    --line: #223049; --line2: #18233A;
+    --marca: #4FD6C9; --marca-on: #8AF0E5; --marca-soft: rgba(79, 214, 201, .12);
+    --hero: #0F1B30; --hero-line: rgba(255, 255, 255, .10);
+    --ok: #5BCB93; --ok-bg: rgba(91, 203, 147, .14); --esp: #F2B84B; --esp-bg: rgba(242, 184, 75, .14);
+    --av: #FF8A75; --av-bg: rgba(255, 138, 117, .14); --env: #86B8F2; --env-bg: rgba(134, 184, 242, .14);
+    --neu: #AAB5C4; --neu-bg: rgba(170, 181, 196, .12);
+    --sombra: 0 0 0 1px var(--line); --velo: rgba(0, 0, 0, .6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0A101C; --card: #111A2B; --ink: #E9EEF5; --ink2: #AAB5C4; --ink3: #7D899C;
+  --line: #223049; --line2: #18233A;
+  --marca: #4FD6C9; --marca-on: #8AF0E5; --marca-soft: rgba(79, 214, 201, .12);
+  --hero: #0F1B30; --hero-line: rgba(255, 255, 255, .10);
+  --ok: #5BCB93; --ok-bg: rgba(91, 203, 147, .14); --esp: #F2B84B; --esp-bg: rgba(242, 184, 75, .14);
+  --av: #FF8A75; --av-bg: rgba(255, 138, 117, .14); --env: #86B8F2; --env-bg: rgba(134, 184, 242, .14);
+  --neu: #AAB5C4; --neu-bg: rgba(170, 181, 196, .12);
+  --sombra: 0 0 0 1px var(--line); --velo: rgba(0, 0, 0, .6);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f); font-size: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, p, ul, ol { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+h1, h2, h3 { text-wrap: balance; letter-spacing: -0.025em; }
+h2 { font-size: 18px; font-weight: 650; line-height: 1.25; }
+.fino { font-weight: 300; }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--marca); outline-offset: 2px; border-radius: 6px; }
+
+.app {
+  max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px;
+  padding-block: 22px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.card { background: var(--card); border-radius: 12px; box-shadow: var(--sombra); padding: 20px; min-width: 0; }
+.cab { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; margin-bottom: 14px; }
+.sub { color: var(--ink3); font-size: 13.5px; }
+
+/* Cabecera */
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 20px; }
+.marca { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.logo { width: 42px; height: 42px; border-radius: 10px; background: var(--hero); color: var(--aqua); display: grid; place-items: center; font-weight: 700; letter-spacing: -0.04em; flex: none; }
+.marca p { color: var(--ink3); font-size: 13px; line-height: 1.2; }
+.marca h1 { font-size: 22px; font-weight: 700; line-height: 1.15; }
+.ejemplo { font-size: 12px; color: var(--esp); background: var(--esp-bg); border-radius: 6px; padding: 2px 8px; font-weight: 550; align-self: flex-start; margin-top: 2px; }
+.controles { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.periodo { display: inline-flex; background: var(--card); border-radius: 10px; padding: 3px; box-shadow: var(--sombra); }
+.periodo button { border: 0; background: none; padding: 7px 12px; border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--ink2); }
+.periodo button[aria-selected="true"] { background: var(--ink); color: var(--card); }
+.act { color: var(--ink3); font-size: 13px; }
+
+/* Fila 1 */
+.fila1 { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 16px; }
+.hero {
+  background: var(--hero); color: var(--hero-ink); border-radius: 14px; padding: 26px 26px 20px; min-width: 0;
+  background-image: radial-gradient(70% 70% at 100% 0%, rgba(94, 230, 216, .20), transparent 70%);
+  display: grid; gap: 6px; align-content: start;
+}
+.saludo { color: var(--hero-ink2); font-size: 16px; }
+.saludo b { color: var(--hero-ink); font-weight: 600; }
+.cifra { font-size: clamp(48px, 7.2vw, 78px); font-weight: 700; letter-spacing: -0.05em; line-height: 1.02; padding-block: 4px;
+  background: linear-gradient(90deg, var(--g1), var(--g2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.jornadas { font-size: 16px; color: var(--hero-ink); }
+.como { color: var(--hero-ink2); font-size: 13px; }
+.mini { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; border-top: 1px solid var(--hero-line); margin-top: 14px; padding-top: 14px; }
+.mini b { display: block; font-size: 22px; font-weight: 650; letter-spacing: -0.03em; line-height: 1.1; }
+.mini span { color: var(--hero-ink2); font-size: 13px; line-height: 1.3; display: block; }
+.copiar { justify-self: start; margin-top: 12px; border: 1px solid var(--hero-line); background: rgba(255, 255, 255, .06); color: var(--hero-ink); border-radius: 9px; padding: 8px 13px; font-size: 14px; font-weight: 500; }
+.copiar:hover { background: rgba(255, 255, 255, .12); }
+
+.pend { display: grid; align-content: start; gap: 4px; }
+.pend-cab { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.num { min-width: 26px; height: 26px; padding: 0 7px; border-radius: 8px; background: var(--esp-bg); color: var(--esp); font-weight: 650; display: grid; place-items: center; font-size: 14px; }
+.num.cero { background: var(--ok-bg); color: var(--ok); }
+#listaPend li { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line2); }
+#listaPend li:first-child { border-top: 0; }
+.p-txt { flex: 1; min-width: 0; }
+.p-ag { font-size: 12.5px; color: var(--ink3); }
+.p-tit { font-weight: 600; line-height: 1.3; }
+.p-sub { font-size: 13.5px; color: var(--ink2); }
+.btn { border: 0; border-radius: 9px; padding: 8px 14px; font-size: 14px; font-weight: 600; background: var(--ink); color: var(--card); white-space: nowrap; }
+.btn:hover { opacity: .88; }
+.btn.sec { background: var(--line2); color: var(--ink); }
+.pend-nota { color: var(--ink3); font-size: 13px; margin-top: 4px; }
+.vacio { color: var(--ink2); padding: 12px 0; }
+
+/* Gráfico */
+.graf-box { position: relative; width: 100%; min-height: 200px; }
+.graf-box svg { display: block; overflow: visible; }
+.g { stroke: var(--line2); stroke-width: 1; }
+.g.base { stroke: var(--line); }
+.ty, .tx { fill: var(--ink3); font-size: 11.5px; font-family: var(--f); font-variant-numeric: tabular-nums; }
+.ty { text-anchor: end; }
+.tx { text-anchor: middle; }
+.tv { fill: var(--ink); font-size: 12.5px; font-weight: 600; font-family: var(--f); text-anchor: middle; }
+.bar { fill: var(--marca); transition: fill .15s; }
+.bar.on { fill: var(--marca-on); }
+.hit { fill: transparent; cursor: default; outline: none; }
+.tip { position: absolute; z-index: 2; pointer-events: none; background: var(--card); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 12px 30px -12px rgba(11, 18, 32, .35); padding: 10px 12px; width: 250px; max-width: 100%; font-size: 13px; }
+.tip strong { display: block; font-size: 16px; letter-spacing: -0.02em; }
+.tip .tip-d { color: var(--ink3); margin-bottom: 6px; display: block; }
+.tip li { display: flex; justify-content: space-between; gap: 10px; color: var(--ink2); padding: 1px 0; }
+.tip li span:last-child { color: var(--ink); font-variant-numeric: tabular-nums; white-space: nowrap; }
+details.datos { margin-top: 10px; }
+details.datos summary { color: var(--ink2); font-size: 13.5px; cursor: pointer; width: fit-content; }
+.tabla-scroll { overflow-x: auto; margin-top: 8px; max-height: 280px; overflow-y: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 6px 10px 6px 0; border-bottom: 1px solid var(--line2); white-space: nowrap; }
+th { color: var(--ink3); font-weight: 500; }
+td.n { font-variant-numeric: tabular-nums; }
+
+/* Fila 2 */
+.fila2 { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+.agentes h2, .grupos h2 { margin-bottom: 6px; }
+.ag-fila { display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr) 132px; gap: 4px 16px; align-items: center; width: 100%; text-align: left; border: 0; background: none; padding: 12px 8px; margin: 0 -8px; width: calc(100% + 16px); border-top: 1px solid var(--line2); border-radius: 8px; }
+.ag-fila:first-of-type { border-top-color: transparent; }
+.ag-fila:hover { background: var(--marca-soft); }
+.ag-nom b { display: block; font-weight: 600; }
+.ag-nom span, .ag-hecho small { color: var(--ink3); font-size: 12.5px; display: block; line-height: 1.35; }
+.ag-hecho > div + div { margin-top: 4px; }
+.ag-hecho span { font-size: 14px; }
+.ag-t b { display: block; font-weight: 650; font-size: 15px; text-align: right; font-variant-numeric: tabular-nums; }
+.barra { display: block; height: 6px; border-radius: 3px; background: var(--line2); margin-top: 6px; overflow: hidden; }
+.barra i { display: block; height: 100%; background: var(--marca); border-radius: 0 3px 3px 0; }
+.nota { color: var(--ink3); font-size: 13px; margin-top: 12px; }
+
+.g-sub { color: var(--ink3); font-size: 13.5px; margin-bottom: 14px; }
+.embudo { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.embudo div b { display: block; font-size: 19px; font-weight: 650; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.embudo div span { font-size: 13px; color: var(--ink2); display: flex; align-items: center; gap: 6px; }
+.embudo i { width: 8px; height: 8px; border-radius: 2px; display: inline-block; flex: none; }
+.reparto { display: flex; gap: 2px; height: 10px; margin: 12px 0 6px; }
+.reparto span { display: block; height: 100%; }
+.reparto span:first-child { border-radius: 4px 0 0 4px; }
+.reparto span:last-child { border-radius: 0 4px 4px 0; }
+.reparto span:only-child { border-radius: 4px; }
+.c-ok { background: var(--ok); } .c-env { background: var(--env); } .c-neu { background: var(--ink3); } .c-esp { background: var(--esp); }
+.reparto-t { font-size: 12.5px; color: var(--ink3); }
+#listaGrupos { margin-top: 10px; }
+#listaGrupos li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line2); }
+#listaGrupos .gq { min-width: 0; }
+#listaGrupos .gq b { display: block; font-weight: 550; font-size: 14px; line-height: 1.35; }
+#listaGrupos .gq span { color: var(--ink3); font-size: 12.5px; }
+#listaGrupos .gd { display: grid; justify-items: end; gap: 3px; }
+#listaGrupos .gd b { font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* Estados */
+.est { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 550; padding: 2px 8px; border-radius: 6px; white-space: nowrap; }
+.est::before { content: ""; width: 6px; height: 6px; border-radius: 2px; background: currentColor; flex: none; }
+.est.ok, .est.elegido, .est.aceptada { color: var(--ok); background: var(--ok-bg); }
+.est.auto { color: var(--neu); background: var(--neu-bg); }
+.est.enviada, .est.espera { color: var(--env); background: var(--env-bg); }
+.est.aviso { color: var(--av); background: var(--av-bg); }
+.est.revisar { color: var(--esp); background: var(--esp-bg); }
+.est.perdida { color: var(--neu); background: var(--neu-bg); }
+
+/* Registro */
+.chips { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 6px; scrollbar-width: thin; }
+.chips button { border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 11px; font-size: 13.5px; white-space: nowrap; color: var(--ink2); }
+.chips button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--card); }
+#log li { display: grid; grid-template-columns: 112px minmax(0, 1fr) auto; gap: 4px 16px; align-items: center; padding: 11px 0; border-top: 1px solid var(--line2); }
+#log li:first-child { border-top: 0; }
+.l-f b { display: block; font-weight: 550; font-size: 14px; }
+.l-f span { color: var(--ink3); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.l-q { min-width: 0; }
+.l-q small { color: var(--ink3); font-size: 12.5px; display: block; }
+.l-q p { font-size: 14.5px; line-height: 1.4; }
+.l-d { display: grid; justify-items: end; gap: 3px; }
+.l-d span.m { color: var(--ink3); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.mas { margin-top: 10px; }
+.l-vacio { color: var(--ink2); padding: 14px 0; }
+
+footer { color: var(--ink3); font-size: 13px; display: grid; gap: 4px; padding-top: 4px; }
+
+/* Documento */
+dialog { border: 0; padding: 0; border-radius: 16px; background: var(--card); color: var(--ink); width: min(580px, calc(100% - 32px)); max-height: calc(100% - 48px); box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .5); }
+dialog::backdrop { background: var(--velo); }
+.d-in { padding: 22px; display: grid; gap: 14px; }
+.d-cab { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.d-cab small { color: var(--ink3); font-size: 13px; display: block; }
+.d-cab h3 { font-size: 20px; font-weight: 650; line-height: 1.25; }
+.cerrar { border: 0; background: var(--line2); width: 34px; height: 34px; border-radius: 9px; font-size: 18px; line-height: 1; flex: none; }
+.bloque small { color: var(--ink3); font-size: 12.5px; display: block; margin-bottom: 4px; }
+.bloque p { font-size: 14.5px; }
+.cita { background: var(--line2); border-radius: 10px; padding: 12px 14px; }
+.estrellas { letter-spacing: 1px; color: var(--esp); }
+.estrellas s { text-decoration: none; color: var(--ink3); opacity: .5; }
+.borrador { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+.opcion { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 8px; }
+.opcion b { font-weight: 600; }
+.opcion .reco { color: var(--ok); font-weight: 550; font-size: 12.5px; margin-left: 6px; }
+.opcion .btn { justify-self: start; }
+.lineas { width: 100%; font-size: 14px; }
+.lineas td { white-space: normal; padding: 8px 10px 8px 0; }
+.lineas td:last-child { text-align: right; white-space: nowrap; padding-right: 0; font-variant-numeric: tabular-nums; }
+.lineas tr.total td { font-weight: 650; border-bottom: 0; font-size: 15.5px; }
+.acciones { display: flex; flex-wrap: wrap; gap: 8px; }
+.cambio { display: grid; gap: 8px; }
+.cambio textarea, .copia { width: 100%; min-height: 84px; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font: inherit; font-size: 14.5px; background: var(--card); color: var(--ink); resize: vertical; }
+.privado { color: var(--ink3); font-size: 12.5px; }
+
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 20; background: var(--ink); color: var(--card); padding: 11px 16px; border-radius: 10px; font-size: 14px; width: max-content; max-width: calc(100% - 32px); box-shadow: 0 12px 30px -10px rgba(0, 0, 0, .4); }
+
+/* Documento de un agente */
+.doc { display: grid; gap: 6px; font-size: 14.5px; }
+.doc h4 { margin: 10px 0 0; font-size: 12.5px; font-weight: 650; color: var(--ink2); }
+.doc h4:first-child { margin-top: 0; }
+.doc ul { display: grid; gap: 3px; padding-left: 18px; list-style: disc; }
+.doc .tabla-scroll { margin: 2px 0; max-height: none; }
+.doc tr:first-child td { color: var(--ink3); font-size: 13px; }
+.doc-cuerpo { border: 1px solid var(--line); border-radius: 10px; padding: 14px; max-height: 52vh; overflow: auto; }
+.ver { border: 0; background: none; color: var(--marca); font-size: 12.5px; font-weight: 600; padding: 0; }
+.opcion .elegida { color: var(--ok); font-weight: 600; font-size: 13px; }
+
+/* Lanzar agentes (solo con el servidor en marcha) */
+.demo-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.demo-btns button { border: 1px solid var(--line); background: var(--card); border-radius: 10px; padding: 9px 12px; text-align: left; display: grid; gap: 1px; min-width: 0; }
+.demo-btns button:hover { border-color: var(--marca); }
+.demo-btns button b { font-weight: 600; font-size: 14px; }
+.demo-btns button small { color: var(--ink3); font-size: 12px; }
+.demo-btns button.todos { background: var(--ink); color: var(--card); border-color: var(--ink); }
+.demo-btns button.todos small { color: inherit; opacity: .7; }
+.demo-btns button:disabled { opacity: .45; cursor: progress; }
+.trabajando { display: flex; align-items: center; gap: 10px; margin-top: 12px; color: var(--ink2); font-size: 14px; }
+.trabajando i { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--line); border-top-color: var(--marca); animation: gira .9s linear infinite; flex: none; }
+@keyframes gira { to { transform: rotate(360deg); } }
+
+@media (max-width: 860px) {
+  .fila1, .fila2 { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .hero { padding: 22px 18px 18px; }
+  .card { padding: 16px; }
+  .mini b { font-size: 19px; }
+  .ag-fila { grid-template-columns: minmax(0, 1fr) auto; }
+  .ag-fila .ag-hecho { grid-column: 1 / -1; grid-row: 2; }
+  .ag-t { grid-row: 1; grid-column: 2; min-width: 96px; }
+  #log li { grid-template-columns: minmax(0, 1fr) auto; }
+  .l-f { grid-column: 1 / -1; display: flex; gap: 8px; align-items: baseline; }
+  .l-f b { display: inline; font-size: 13px; }
+  .embudo div b { font-size: 16px; }
+  .d-in { padding: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } .trabajando i { animation: none; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="marca">
+      <span class="logo" aria-hidden="true">HB</span>
+      <div><p>Panel de dirección</p><h1>Hotel Brisalta</h1></div>
+      <span class="ejemplo">Ejemplo</span>
+    </div>
+    <div class="controles">
+      <div class="periodo" role="tablist" aria-label="Periodo">
+        <button type="button" role="tab" id="p-oct" data-p="oct" aria-selected="true">Octubre</button>
+        <button type="button" role="tab" id="p-nov" data-p="nov" aria-selected="false">Noviembre, hasta hoy</button>
+      </div>
+      <p class="act" id="act">Actualizado hoy, 10:35</p>
+    </div>
+  </header>
+
+  <section class="fila1">
+    <div class="hero">
+      <p class="saludo"><b>Hola, Laura.</b> <span id="frase">En octubre</span> tus agentes os han devuelto</p>
+      <p class="cifra" id="horas">45 h 33 min</p>
+      <p class="jornadas" id="jornadas">Son 5,7 jornadas de 8 horas, entre tú y tu equipo.</p>
+      <p class="como">Lo calculamos con lo que tardabais en cada tarea antes de empezar.</p>
+      <div class="mini">
+        <div><b id="tTareas">193</b><span>tareas hechas</span></div>
+        <div><b id="tAvisos">4</b><span>avisos que te han llegado</span></div>
+        <div><b id="tPartes">28 de 30</b><span>partes del equipo recibidos</span></div>
+      </div>
+      <button type="button" class="copiar" id="copiar">Copiar el resumen para la propiedad</button>
+    </div>
+    <div class="card pend">
+      <div class="pend-cab"><h2>Esperando tu OK</h2><span class="num" id="nPend">3</span></div>
+      <ul id="listaPend"></ul>
+      <p class="pend-nota" id="pendNota">Cuando lo apruebas, el agente lo envía. Mientras tanto se queda aquí y en tu móvil.</p>
+    </div>
+  </section>
+
+  <section class="card" id="demo" hidden>
+    <div class="cab">
+      <h2>Lanzar un agente <span class="fino">ahora</span></h2>
+      <p class="sub">En el hotel se lanzan solos a su hora. Aquí lo lanzas tú para ver cómo trabaja.</p>
+    </div>
+    <div class="demo-btns" id="demoBtns"></div>
+    <p class="trabajando" id="trabajando" hidden><i aria-hidden="true"></i><span id="trabTxt"></span></p>
+  </section>
+
+  <section class="card">
+    <div class="cab">
+      <h2>Tiempo devuelto <span class="fino">cada día</span></h2>
+      <p class="sub" id="grafSub">Pasa el ratón o toca una barra para ver qué se hizo ese día.</p>
+    </div>
+    <div class="graf-box" id="grafico"></div>
+    <details class="datos">
+      <summary>Ver los datos del gráfico</summary>
+      <div class="tabla-scroll"><table id="tablaDias"></table></div>
+    </details>
+  </section>
+
+  <section class="fila2">
+    <div class="card agentes">
+      <h2>Lo que ha hecho <span class="fino">cada agente</span></h2>
+      <div id="listaAgentes"></div>
+      <p class="nota">Los minutos de antes son lo que tardabais a mano, medido contigo en el diagnóstico. Los de ahora, lo que tardas en revisarlo. Toca un agente para ver su registro.</p>
+    </div>
+    <div class="card grupos">
+      <h2>Propuestas <span class="fino">a grupos</span></h2>
+      <p class="g-sub">Cada correo de un grupo sale con su propuesta preparada. Aquí ves en qué ha quedado.</p>
+      <div class="embudo" id="embudo"></div>
+      <div class="reparto" id="reparto"></div>
+      <p class="reparto-t" id="repartoT"></p>
+      <ul id="listaGrupos"></ul>
+    </div>
+  </section>
+
+  <section class="card" id="registro">
+    <div class="cab">
+      <h2>Registro</h2>
+      <p class="sub">Todo lo que han hecho los agentes, con día y hora.</p>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por agente"></div>
+    <ol id="log"></ol>
+    <button type="button" class="btn sec mas" id="mas">Ver más</button>
+  </section>
+
+  <footer>
+    <p>Ejemplo con datos inventados del Hotel Brisalta, un hotel de 80 habitaciones en la Costa Blanca.</p>
+    <p>En este panel solo hay totales y documentos de trabajo, sin ningún dato de huéspedes.</p>
+    <p>Si una tarea os lleva más o menos tiempo del que medimos, se cambia y el panel lo recalcula todo.</p>
+  </footer>
+</div>
+
+<dialog id="doc" aria-labelledby="docTit"><div class="d-in" id="docIn"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<!-- datos:inicio -->
+<script>window.DATOS = {"hoy": {"y": 2026, "m": 11, "d": 11}, "actualizado": "12:56", "registro": [{"id": "relevo-0-20261111125242846830", "clave": "relevo", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:52", "agente": "recepcion", "tipo": "relevo", "n": 1, "titulo": "Hoja de recepción, mañana del 11 de noviembre", "detalle": "2 cosas para hoy: cuna en la 214 antes de las 12:00 y técnico del TPV del bar", "doc": "PARA HACER HOY\n- Habitación 214, antes de las 12:00. Necesitan una cuna porque llega familia con un bebé. Pedírsela a pisos y comprobar que está montada antes de esa hora.\n- Bar del lobby, antes de las 18:00, que es cuando abre. En noviembre es el único bar abierto. Hay que llamar al técnico del TPV. El audio no dice quién hace la llamada ni trae el contacto del técnico. Confirmarlo con el maître.\n\nPASA A OTRO DEPARTAMENTO\n- Pisos: cuna para la 214, montada antes de las 12:00.\n- Bar, al maître: el TPV se colgó a la 1:30. El recepcionista de noche lo reinició y ahora funciona. Es la tercera vez esta semana.\n- Mantenimiento: la máquina de hielo de la segunda planta hace un ruido raro. Que la revisen.\n\nYA RESUELTO ESTA NOCHE\n- Habitación 108: tenía taxi al aeropuerto a las 5:00 y salió sin problema.\n- Habitación 305: a las 2:15 se quejó del ruido de la 307. El recepcionista de noche subió y se arregló.", "opciones": [], "importe": 0, "estado": "auto", "previo": "", "version": 1}, {"id": "relevo-0-20261111125242846830-aviso", "clave": "relevo", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:52", "agente": "recepcion", "tipo": "aviso", "n": 0, "titulo": "El TPV del bar se ha colgado tres veces esta semana y hay que llamar al técnico antes de que abra el bar a las 18:00.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "resenas-0-20261111125303740024", "clave": "resenas", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "resenas", "tipo": "resena", "n": 3, "titulo": "Respuestas a 3 reseñas nuevas de Google", "detalle": "Una de 2 estrellas por la espera del check-in; las otras dos, de 4 y 5", "doc": "RESEÑA 1 · Google · 5 estrellas\n«La cena, de diez. El arroz a banda de lo mejor que hemos comido en la costa, y el camarero nos recomendó muy bien el vino.»\n\nRESPUESTA\nMuchas gracias por lo que cuentan de la cena. Nos alegra que el arroz a banda les pareciera de lo mejor que han comido en la costa, y se lo haremos llegar a cocina. Al equipo de sala le contaremos lo del vino, porque les hará ilusión saber que acertaron con la recomendación. Esperamos volver a verles en Salitre.\nLaura Martín, directora del Hotel Brisalta\n\nRESEÑA 2 · Google · 2 estrellas\n«25 minutos para hacer el check-in un viernes por la tarde. La habitación muy bien, pero la llegada nos dejó mal sabor de boca.»\n\nRESPUESTA\nGracias por su reseña y por lo que dicen de la habitación. Tienen razón en que 25 minutos de espera al llegar son demasiados, y sentimos que su estancia empezara con ese mal sabor de boca. Ya estamos estudiando cómo reforzar la recepción los viernes por la tarde. Nos gustaría recibirles mejor en su próxima visita.\nLaura Martín, directora del Hotel Brisalta\n\nRESEÑA 3 · Google · 4 estrellas\n«Todo muy limpio y las vistas al mar preciosas. Le quito una estrella porque el wifi de la habitación iba lento.»\n\nRESPUESTA\nMuchas gracias por lo que dice de la limpieza y de las vistas al mar. Nos alegra que disfrutara de ellas. Sentimos que el wifi de la habitación fuera lento. Lo vamos a revisar, y le agradecemos que nos lo haya contado. Le esperamos de vuelta cuando quiera.\nLaura Martín, directora del Hotel Brisalta", "opciones": [], "importe": 0, "estado": "pend", "previo": "", "version": 1}, {"id": "resenas-0-20261111125303740024-aviso", "clave": "resenas", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "resenas", "tipo": "aviso", "n": 0, "titulo": "El wifi lento de las habitaciones no aparece en ningún parte y la respuesta dice que se revisará, así que hay que encargárselo hoy a alguien.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "mantenimiento-0-20261111125322842709", "clave": "mantenimiento", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "mantenimiento", "tipo": "parte", "n": 4, "titulo": "Partes de la ronda de mantenimiento de las 11:10", "detalle": "2 urgentes: moqueta levantada ante la 312 y charco junto a la ducha de la piscina", "doc": "PARTES DE LA RONDA DE LAS 11:10\n\nURGENTE\n\nParte 1. Moqueta levantada delante de la 312\n- Sitio: pasillo, delante de la habitación 312.\n- Qué pasa: una esquina de la moqueta está levantada y se puede tropezar (foto 2).\n- Lo primero: fijar la esquina hoy, aunque sea de forma provisional, para que nadie tropiece. Después, pegarla bien o cambiar ese trozo.\n\nParte 2. Charco junto a la ducha de la piscina\n- Sitio: ducha exterior de la piscina, en el suelo de piedra de la zona de paso.\n- Qué pasa: la ducha gotea y deja un charco. La piedra mojada resbala (foto 1).\n- Lo primero: cortar el agua de la ducha, secar el charco y poner el cartel de suelo mojado. Luego, mirar de dónde sale la gota.\n- Ojo: según la ficha, la piscina abre de mayo a octubre, así que en noviembre debería estar cerrada. Si la gente sigue pasando por esa zona, el riesgo de resbalón sigue ahí.\n\nESTA SEMANA\n\nParte 3. Bombilla fundida en la segunda planta\n- Sitio: pasillo de la segunda planta, junto al ascensor.\n- Qué pasa: la bombilla está fundida (nota de voz).\n- Lo primero: cambiarla. Se tarda poco y se puede hacer hoy mismo. Si ese tramo se queda a oscuras por la noche, conviene pasarlo a urgente.\n\nParte 4. Ruido en la máquina de hielo de la segunda planta\n- Sitio: máquina de hielo de la segunda planta.\n- Qué pasa: hace un ruido raro. Lo avisó el relevo de noche, pero el aviso no dice si sigue haciendo hielo.\n- Lo primero: ir a escucharla y comprobar si hace hielo. Si ha dejado de hacerlo, pasa a urgente porque deja la planta sin ese servicio.\n\nCUANDO HAYA HUECO\n\n- Nada en esta ronda.\n\nLO QUE NO SABEMOS\n\n- Si la zona de la ducha de la piscina está abierta al paso ahora que la piscina está cerrada.\n- Si el ruido de la máquina de hielo se oye desde alguna habitación.", "opciones": [], "importe": 0, "estado": "auto", "previo": "", "version": 1}, {"id": "mantenimiento-0-20261111125322842709-aviso", "clave": "mantenimiento", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "mantenimiento", "tipo": "aviso", "n": 0, "titulo": "Hay riesgo de caída para huéspedes en dos sitios, la moqueta levantada delante de la 312 y el charco junto a la ducha de la piscina, y conviene señalizarlos hoy.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "resumen-0-20261111125326575652", "clave": "resumen", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "informes", "tipo": "resumen", "n": 1, "titulo": "Resumen de la semana del 2 al 8 de noviembre", "detalle": "Tienes 3 cosas que decidir y Comercial no ha mandado parte", "doc": "LO QUE HA IDO BIEN\n- Recepción: 14 reseñas nuevas y la nota media sube a 8,7. El parte no dice de qué nota venía.\n- Pisos: 236 habitaciones hechas sin ningún repaso, unas 34 al día (236 ÷ 7 = 33,7).\n- Restaurante y bares: 12 parejas en la cena de la terraza del sábado. Si se cobraron al precio de la ficha, son 12 × 85 € = 1.020 €. En la semana se sirvieron 298 cubiertos en cenas, unos 43 por noche (298 ÷ 7 = 42,6).\n- Cocina: el menú de grupo del jueves salió sin retrasos. En la semana salieron 64 arroces.\n\nLO QUE FALLA\n- Recepción: el viernes hubo 25 minutos de espera en el check-in entre las 15:00 y las 16:00. Llegó un grupo de 20 a la vez.\n- Cocina y Restaurante: el proveedor de pescado llegó tarde dos días y el viernes se acabó la lubina a las 21:30, con la cena abierta hasta las 22:30. Los partes no dicen si una cosa llevó a la otra.\n- Pisos: el sábado faltaron almohadas extra.\n- Mantenimiento: gotea la ducha de la piscina. Con la piscina cerrada hasta mayo es lo menos urgente, aunque sigue perdiendo agua.\n\nLO QUE QUEDA PENDIENTE\n- Fijar la moqueta delante de la 312. Lo tiene el jefe de mantenimiento. Mientras no esté fijada, un huésped puede tropezar.\n- El técnico del TPV del bar. Lo tiene la jefa de recepción. El parte no dice qué falla ni para cuándo está.\n- El pedido de lencería. Lo tiene la gobernanta.\n- La carta de cócteles con el precio nuevo del mojito. Lo tiene el maître. El parte no da el precio nuevo.\n\nLO QUE TIENES QUE DECIDIR\n- Refuerzo de recepción los viernes de 15:00 a 16:00. Recepción plantea dos opciones: poner a alguien de reservas o pagar un extra de 3 horas. El parte no dice cuánto cuesta el extra. Sin el parte de Comercial tampoco sé si vienen más grupos en viernes.\n- Bar de la piscina. Restaurante y bares plantea cerrarlo hasta mayo o abrirlo los domingos si hace bueno. En la ficha, el bar abre de mayo a octubre, igual que la piscina. Abrir los domingos pide personal en temporada baja y el parte no dice quién lo cubriría ni lo que costaría.\n- Proveedor de pescado. Cocina plantea probar el proveedor nuevo dos semanas o seguir con el actual, que esta semana llegó tarde dos días. El jefe de cocina ya tiene el cambio como pendiente, así que depende de lo que decidas.\n\nPARTES QUE FALTAN\n- Comercial", "opciones": [], "importe": 0, "estado": "auto", "previo": "", "version": 1}, {"id": "resumen-0-20261111125326575652-aviso", "clave": "resumen", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "informes", "tipo": "aviso", "n": 0, "titulo": "Comercial no ha mandado parte esta semana y la moqueta sin fijar delante de la 312 puede hacer tropezar a un huésped.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "baja-0-20261111125331758512", "clave": "baja", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "cuadrantes", "tipo": "ausencia", "n": 1, "titulo": "Falta la camarera C el jueves 12, turno de mañana", "detalle": "Quedan 6 unidades sin cubrir de 34. Las camareras A y B hacen 28", "doc": "LO QUE PASA\nMañana, jueves 12 de noviembre, falta la camarera C en el turno de mañana de pisos. Quedan la camarera A y la camarera B.\n\nTrabajo previsto del día:\nTipo | Habitaciones | Unidades\nSalidas | 22 | 22 × 1 = 22\nSiguen | 24 | 24 × 0,5 = 12\nTotal | 46 | 22 + 12 = 34\n\nLo que cubren las que quedan:\n- 2 camareras × 14 unidades = 28 unidades\n\nLo que falta:\n- 34 − 28 = 6 unidades\n\nPara pasar unidades a horas uso el ritmo del cuadrante. 14 unidades en 8 horas son 1,75 unidades por hora. Las 6 que faltan son unas 3 horas y 26 minutos de trabajo (6 ÷ 1,75 = 3,43 horas).\n\nOPCIÓN A\nEntra la camarera de refuerzo de 8:00 a 12:00.\n- Camarera A: su turno normal de 8 horas, 14 unidades.\n- Camarera B: su turno normal de 8 horas, 14 unidades.\n- Camarera de refuerzo: de 8:00 a 12:00, 4 horas. 4 × 1,75 = 7 unidades. Cubre las 6 que faltan y deja 1 de margen.\n- Gobernanta: su trabajo de siempre y el pedido de lencería.\nTotal cubierto: 14 + 14 + 7 = 35 unidades para 34 previstas.\n\nHoras de la semana:\n- Camarera de refuerzo: 26 + 4 = 30 de 40. Le quedan 10.\n- Si quieres más margen, puede quedarse hasta las 14:00. Haría 6 × 1,75 = 10,5 unidades y llegaría a 26 + 6 = 32 horas de 40.\n- Camareras A y B: sin cambios.\n\nReglas de horario:\n- 4 horas en el día, por debajo del máximo de 9.\n- Para entrar a las 8:00 con 12 horas de descanso, su último turno tiene que haber acabado el miércoles a las 20:00 como tarde. No me has pasado a qué hora termina.\n\nAntes de llamarla hay que comprobar esto:\n- Tiene contrato de fines de semana. Hay que confirmar que puede trabajar un jueves.\n- Si tiene turno el sábado y el domingo, esas horas tienen que caber en las 10 que le quedan, u 8 si se queda hasta las 14:00.\n\nOPCIÓN B\nSin refuerzo. Las camareras A y B alargan una hora y la gobernanta limpia lo que falta.\n- Camarera A: alarga 1 hora al final de su turno y hace 9 horas, el máximo. 14 + 1,75 = 15,75 unidades.\n- Camarera B: lo mismo, 9 horas y 15,75 unidades.\n- Gobernanta: 6 − 1,75 − 1,75 = 2,5 unidades. Por ejemplo, 1 salida y 3 habitaciones que siguen (1 + 3 × 0,5 = 2,5). Al ritmo de una camarera son unos 86 minutos (2,5 ÷ 1,75 = 1,43 horas). El pedido de lencería lo hace en el resto de su turno.\nTotal cubierto: 15,75 + 15,75 + 2,5 = 34 unidades. Llega justo a lo previsto, sin margen.\n\nHoras de la semana:\n- Camareras A y B: suman 1 hora cada una a lo que ya lleven. No me has pasado sus horas de la semana, así que hay que comprobar que caben en su contrato.\n- Gobernanta: si limpia dentro de su turno, no suma horas. Ese rato lo quita de supervisar y del pedido de lencería.\n\nReglas de horario:\n- Camareras A y B: 9 horas en el día, justo el máximo.\n- Descanso: si el viernes entran a la misma hora que el jueves, descansan 24 − 9 = 15 horas, por encima de 12.\n\nPOR QUÉ RECOMIENDO LA A\n- Cubre las 34 unidades con 1 de margen. La B llega justa a 34 y cualquier retraso deja habitaciones sin hacer.\n- Las camareras A y B hacen su turno normal. En la B se quedan en el tope de 9 horas y no sé cuántas llevan en la semana.\n- La gobernanta tiene el jueves para supervisar y para el pedido de lencería.\n- La camarera de refuerzo se queda en 30 de 40 horas.\nAntes de llamarla hay que hacer las comprobaciones que pongo en la opción A. Si alguna falla, la B sirve de reserva.", "opciones": [{"id": "A", "texto": "La camarera de refuerzo entra de 8:00 a 12:00 y cubre las 6 unidades que faltan."}, {"id": "B", "texto": "Las camareras A y B alargan una hora, hasta 9, y la gobernanta limpia las 2,5 unidades que quedan."}], "importe": 0, "estado": "pend", "previo": "", "version": 1}, {"id": "baja-0-20261111125331758512-aviso", "clave": "baja", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "cuadrantes", "tipo": "aviso", "n": 0, "titulo": "La camarera de refuerzo tiene contrato de fines de semana, así que hoy hay que confirmar que puede trabajar el jueves y que con el sábado y el domingo no pasa de 40 horas.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "grupos-0-20261111125345174540", "clave": "grupos", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:53", "agente": "grupos", "tipo": "grupo", "n": 1, "titulo": "Propuesta para club de senderismo", "detalle": "28 personas, 3 noches (26 al 29 de noviembre), total 5.922 €", "doc": "LO QUE PIDEN\nClub de senderismo de Albacete. Son 28 personas en 14 habitaciones dobles, del jueves 26 al domingo 29 de noviembre: 3 noches en temporada baja.\nQuieren cenar en el hotel las tres noches y el traslado del aeropuerto de Alicante, a la ida el jueves y a la vuelta el domingo.\n\nLA PROPUESTA\nConcepto | Cálculo | Importe\nHabitación doble con desayuno | 14 habitaciones x 3 noches x 78 € | 3.276 €\nMenú de grupo para cenar | 28 personas x 3 cenas x 24 € | 2.016 €\nTraslado al aeropuerto de Alicante | 28 personas entre 4 por trayecto = 7 trayectos a la ida y 7 a la vuelta. 14 trayectos x 45 € | 630 €\nTotal | 3.276 + 2.016 + 630 | 5.922 €\nPor persona | 5.922 entre 28 | 211,50 €\n\nEL CORREO DE RESPUESTA\nAsunto: Precio para su club, del 26 al 29 de noviembre\n\nBuenos días:\n\nGracias por escribirnos. Le paso el precio cerrado para 28 personas, del jueves 26 al domingo 29 de noviembre.\n\nEl total es de 5.922 €, que salen a 211,50 € por persona. Incluye:\n- 14 habitaciones dobles con desayuno durante las tres noches.\n- La cena con nuestro menú de grupo el jueves, el viernes y el sábado.\n- El traslado desde el aeropuerto de Alicante el jueves y hasta el aeropuerto el domingo. Se hace en grupos de hasta 4 personas, así que son 7 trayectos a la ida y 7 a la vuelta.\n\nMantenemos este precio hasta el 18 de noviembre. Si le encaja, indíqueme la hora de llegada y la de salida de los vuelos y organizamos los traslados.\n\nUn saludo,\nLa directora del Hotel Brisalta", "opciones": [], "importe": 5922, "estado": "pend", "previo": "", "version": 1}, {"id": "cierre-0-20261111125414686360", "clave": "cierre", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:54", "agente": "numeros", "tipo": "cuentas", "n": 1, "titulo": "Cuentas del cierre de octubre de 2026", "detalle": "Todo cuadra. Ingreso 218.736,00 €, igual al presupuesto y un 8,66 % más que en 2025", "doc": "HECHOS DEL MES DE OCTUBRE DE 2026\n1. Ocupación. 70,00 %.\n2. Precio medio. 100,00 €.\n3. Noches ocupadas. 1.736.\n4. Ingreso de habitaciones. 173.600,00 €.\n5. Restaurante y bares. 38.192,00 €, que son el 17,46 % del ingreso total.\n6. Spa. 0,00 €. Otros ingresos. 6.944,00 €.\n7. Ingreso total. 218.736,00 €. El presupuesto era de 218.736,00 €, así que la diferencia es de 0,00 €, un 0,00 %.\n8. Diferencia con octubre de 2025. En 2025 se ingresaron 201.300,00 €. Este año son 17.436,00 € más, un 8,66 % más.\n9. La partida que más se ha desviado. Con este formulario no se puede saber. El presupuesto y el dato del año pasado vienen solo como total, sin repartir por partidas. En el total, la desviación con el presupuesto es de 0,00 €.\n\nCIFRAS QUE HAY QUE COMPROBAR\n- Suma de partidas. 173.600,00 € + 38.192,00 € + 0,00 € + 6.944,00 € = 218.736,00 €. Coincide con el ingreso total.\n- Noches por precio medio. 1.736 × 100,00 € = 173.600,00 €. Coincide con el ingreso de habitaciones.\n- Ocupación. 80 habitaciones × 31 días = 2.480 noches disponibles. 1.736 / 2.480 = 70,00 %. Coincide con la ocupación del formulario.\nTodo cuadra.\n\nCUENTAS DE LOS PORCENTAJES\n- Peso de restaurante y bares. 38.192,00 € / 218.736,00 € = 17,46 %.\n- Presupuesto. 218.736,00 € − 218.736,00 € = 0,00 €, un 0,00 %.\n- Año pasado. 218.736,00 € − 201.300,00 € = 17.436,00 €. 17.436,00 € / 201.300,00 € = 8,66 %.\n\nA TENER EN CUENTA\n- El presupuesto coincide al euro con el ingreso real. Puede ser casualidad, o puede que se haya copiado el total en la casilla del presupuesto. Hay que confirmarlo antes de dar el presupuesto por cumplido.\n- El spa sale a 0,00 €. La ficha del hotel no recoge spa, así que el cero encaja.\n- El comentario de la dirección dice que el bar del lobby baja entre semana. El formulario da restaurante y bares juntos y sin separar por días, así que con estas cifras esa bajada no se puede ver ni medir.", "opciones": [], "importe": 0, "estado": "auto", "previo": "", "version": 1}, {"id": "cierre-0-20261111125414686360-aviso", "clave": "cierre", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:54", "agente": "numeros", "tipo": "aviso", "n": 0, "titulo": "El presupuesto coincide al euro con el ingreso real y no viene por partidas, así que hoy no se puede medir ninguna desviación.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "cierre-1-20261111125536537859", "clave": "cierre", "paso": 1, "y": 2026, "m": 11, "d": 11, "h": "12:55", "agente": "informes", "tipo": "informe", "n": 1, "titulo": "Informe del cierre de octubre para la propiedad", "detalle": "Ingreso total 218.736 €, 17.436 € más que en octubre de 2025 (+8,66 %)", "doc": "Asunto: Hotel Brisalta · Cierre de octubre de 2026\n\nOctubre ha sido un buen mes para el hotel. El ingreso total ha sido de 218.736 €, igual al presupuesto y 17.436 € más que en octubre de 2025, un 8,66 % más.\n\nConcepto | Octubre de 2026 | Presupuesto o año pasado\nIngreso total frente al presupuesto | 218.736 € | 218.736 € (0 €, 0,00 %)\nIngreso total frente a octubre de 2025 | 218.736 € | 201.300 € (+17.436 €, +8,66 %)\nOcupación | 70 % | Sin dato\nPrecio medio | 100 € | Sin dato\nNoches ocupadas | 1.736 | Sin dato\nIngreso de habitaciones | 173.600 € | Sin dato\nRestaurante y bares | 38.192 € | Sin dato\nOtros ingresos | 6.944 € | Sin dato\n\nLO QUE HA IDO BIEN\n- Hemos ingresado 17.436 € más que en octubre de 2025, un 8,66 % más. Hemos pasado de 201.300 € a 218.736 €.\n- Las habitaciones han aportado 173.600 €. Son 1.736 noches ocupadas, con una ocupación del 70 % y un precio medio de 100 €.\n\nLO QUE HAY QUE MIRAR\n- El bar del lobby baja entre semana. En las cifras del mes, restaurante y bares van juntos, con 38.192 €, el 17,46 % del ingreso total, y sin separar por días. Por eso esa bajada aún no se puede medir. Causa y propuesta: a explicar por la dirección.\n- Este mes no podemos decirle qué partida se ha desviado más del presupuesto. El presupuesto y el dato del año pasado los tenemos solo en total, sin repartir por partidas.\n\nLaura Martín, directora del Hotel Brisalta\n\n\nPARA REVISAR ANTES DE ENVIAR\n- 218.736 € de ingreso total. Hecho 7.\n- 218.736 € de presupuesto, con 0 € y 0,00 % de diferencia. Hecho 7.\n- 201.300 € de octubre de 2025. Hecho 8.\n- 17.436 € y 8,66 % más que el año pasado. Hecho 8. Cuenta: 218.736 € − 201.300 € = 17.436 €. 17.436 / 201.300 = 8,66 %.\n- 70 % de ocupación. Hecho 1.\n- 100 € de precio medio. Hecho 2.\n- 1.736 noches ocupadas. Hecho 3.\n- 173.600 € de habitaciones. Hecho 4. Cuenta: 1.736 × 100 € = 173.600 €.\n- 38.192 € de restaurante y bares, el 17,46 % del total. Hecho 5. Cuenta: 38.192 / 218.736 = 17,46 %.\n- 6.944 € de otros ingresos. Hecho 6.\n- Partida que más se desvía, sin dato. Hecho 9.\n- Spa, 0 €. Hecho 6. Lo he dejado fuera de la tabla porque la ficha del hotel no recoge spa.\n- Suma de partidas: 173.600 € + 38.192 € + 6.944 € = 218.736 €. Cuadra con el ingreso total.\n\nAntes de enviarlo, dos cosas:\n- El presupuesto coincide al euro con el ingreso real. Confirma que la cifra del presupuesto es la buena y que no se copió el total en esa casilla. Si cambia, hay que corregir la primera frase, la primera fila de la tabla y la segunda línea de esta lista.\n- Cambia «a explicar por la dirección» en el punto del bar del lobby por la causa y lo que propones hacer. Ese texto no puede llegar así a la propiedad.", "opciones": [], "importe": 0, "estado": "pend", "previo": "HECHOS DEL MES DE OCTUBRE DE 2026\n1. Ocupación. 70,00 %.\n2. Precio medio. 100,00 €.\n3. Noches ocupadas. 1.736.\n4. Ingreso de habitaciones. 173.600,00 €.\n5. Restaurante y bares. 38.192,00 €, que son el 17,46 % del ingreso total.\n6. Spa. 0,00 €. Otros ingresos. 6.944,00 €.\n7. Ingreso total. 218.736,00 €. El presupuesto era de 218.736,00 €, así que la diferencia es de 0,00 €, un 0,00 %.\n8. Diferencia con octubre de 2025. En 2025 se ingresaron 201.300,00 €. Este año son 17.436,00 € más, un 8,66 % más.\n9. La partida que más se ha desviado. Con este formulario no se puede saber. El presupuesto y el dato del año pasado vienen solo como total, sin repartir por partidas. En el total, la desviación con el presupuesto es de 0,00 €.\n\nCIFRAS QUE HAY QUE COMPROBAR\n- Suma de partidas. 173.600,00 € + 38.192,00 € + 0,00 € + 6.944,00 € = 218.736,00 €. Coincide con el ingreso total.\n- Noches por precio medio. 1.736 × 100,00 € = 173.600,00 €. Coincide con el ingreso de habitaciones.\n- Ocupación. 80 habitaciones × 31 días = 2.480 noches disponibles. 1.736 / 2.480 = 70,00 %. Coincide con la ocupación del formulario.\nTodo cuadra.\n\nCUENTAS DE LOS PORCENTAJES\n- Peso de restaurante y bares. 38.192,00 € / 218.736,00 € = 17,46 %.\n- Presupuesto. 218.736,00 € − 218.736,00 € = 0,00 €, un 0,00 %.\n- Año pasado. 218.736,00 € − 201.300,00 € = 17.436,00 €. 17.436,00 € / 201.300,00 € = 8,66 %.\n\nA TENER EN CUENTA\n- El presupuesto coincide al euro con el ingreso real. Puede ser casualidad, o puede que se haya copiado el total en la casilla del presupuesto. Hay que confirmarlo antes de dar el presupuesto por cumplido.\n- El spa sale a 0,00 €. La ficha del hotel no recoge spa, así que el cero encaja.\n- El comentario de la dirección dice que el bar del lobby baja entre semana. El formulario da restaurante y bares juntos y sin separar por días, así que con estas cifras esa bajada no se puede ver ni medir.", "version": 1}, {"id": "cierre-1-20261111125536537859-aviso", "clave": "cierre", "paso": 1, "y": 2026, "m": 11, "d": 11, "h": "12:55", "agente": "informes", "tipo": "aviso", "n": 0, "titulo": "El presupuesto coincide al euro con el ingreso real, 218.736 €, y hay que confirmar que no se copió el total en esa casilla antes de enviar el informe.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}, {"id": "restaurante-0-20261111125652318978", "clave": "restaurante", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:56", "agente": "restaurante", "tipo": "plan", "n": 1, "titulo": "Plan del Salitre, fin de semana del 13 al 15 de noviembre", "detalle": "Lubina justa: 30 raciones para unas 27 de consumo; propongo pedir 6 más", "doc": "EL FIN DE SEMANA EN UNA FRASE\nEl sábado es la noche fuerte, con 64 de las 80 habitaciones ocupadas, y la lubina llega muy justa para las tres noches.\n\nQUÉ EMPUJAR\n- Arroz a banda, 18,00 € por persona, mínimo 2 (36,00 € la mesa de dos). Fue lo más vendido de la semana, 64, y encaja en las mesas de pareja.\n- Croquetas caseras de jamón (8), 11,00 €. Son las segundas en ventas, 52, y se ofrecen para compartir mientras sale el arroz.\n- Entrecot de ternera, 24,00 €. Lleva 38 vendidos y es el principal más caro de la carta. Es el que se ofrece cuando no quede lubina.\n- Tarta de queso, 6,50 €. Es el postre que más sale, 47, así que se ofrece en todas las mesas al retirar los principales.\n- Lubina a la sal, 22,00 €. Se sirve, pero sala no la recomienda, porque hay 30 raciones para tres noches (cuentas abajo).\n- Bebidas. El parte no trae ventas, así que no propongo ninguna.\n\nLA CENA DEL SÁBADO EN LA TERRAZA\n- Sábado 14 a las 21:00, 85 € para dos. Es el precio de la ficha, sin descuentos.\n- La semana pasada fueron 12 parejas: 12 × 85 € = 1.020 €.\n- Propuesta: repetir por lo menos esas 12 parejas. Es la noche con más habitaciones ocupadas y recepción la anuncia en el mensaje del viernes.\n- La ficha no dice qué lleva el menú ni cuántas parejas caben en la terraza. El menú lo cierra el jefe de cocina y el tope de mesas, el maître.\n- Si el menú lleva lubina, no hay raciones. 12 parejas son 24 lubinas y el pedido entero es de 30.\n\nMENSAJE PARA LOS HUÉSPEDES\nDurante su estancia, el restaurante Salitre sirve la cena de 19:30 a 22:30. Lo que más se pide es el arroz a banda. El sábado a las 21:00 hay cena en la terraza para dos, por 85 €. Si quiere mesa, puede pedirla en recepción.\nRecepción del Hotel Brisalta\n\nOBJETIVO DE CUBIERTOS POR NOCHE\n43 cubiertos por noche, de viernes a domingo. 129 en total.\n- Es la media de la semana pasada: 298 cubiertos / 7 noches = 42,6, redondeado a 43. Las tres noches: 3 × 43 = 129.\n- El parte no trae la ocupación de la semana del 2 al 8 ni los cubiertos de cada día. Sin eso no puedo saber qué parte de los huéspedes baja a cenar, ni ajustar la cifra a las 52, 64 y 38 habitaciones de este fin de semana.\n- Por habitaciones, el sábado es la noche más llena (64) y el domingo la más floja (38), así que el domingo puede quedarse por debajo de 43.\n- El parte tampoco dice si las 12 parejas de la terraza (24 cubiertos) están dentro de los 298. Si van aparte, el sábado son 43 en sala más los de la terraza.\n- Si recepción pasa la ocupación de la semana pasada, se afina la cifra de cada noche.\n\nLO QUE HAY QUE PEDIR\nLubina a la sal\n- Semana pasada: 41 vendidas de lunes a viernes. Se acabó el viernes a las 21:30, una hora antes de cerrar la cena.\n- Noches con lubina: 4 enteras y 2 de las 3 horas del viernes, o sea 4 + 2/3 = 4,7 noches.\n- Ritmo: 41 / 4,7 = 8,7 por noche. Lo redondeo a 9, y aun así es un mínimo, porque no sabemos cuántas más habrían salido el viernes.\n- Este fin de semana: 3 noches × 9 = 27 raciones.\n- Pedido hecho: 30. Sobran 3, que es un tercio de noche de margen.\n- El sábado es la noche más llena, con 64 habitaciones, 12 más que el viernes.\n- Propuesta: subir el pedido a 36, 6 raciones más, para tener una noche entera de margen (27 + 9 = 36).\n- Si no se puede ampliar, cuando queden 5 raciones sala avisa al tomar nota y ofrece el entrecot.\nResto de la carta\n- El parte solo trae el pedido de lubina. Del arroz a banda, las croquetas, la tarta de queso y el entrecot no hay existencias ni pedidos, así que no puedo decir si llegan. Son los platos que vamos a empujar, así que cocina tiene que revisarlos antes del viernes.", "opciones": [], "importe": 0, "estado": "pend", "previo": "", "version": 1}, {"id": "restaurante-0-20261111125652318978-aviso", "clave": "restaurante", "paso": 0, "y": 2026, "m": 11, "d": 11, "h": "12:56", "agente": "restaurante", "tipo": "aviso", "n": 0, "titulo": "Hay 30 raciones de lubina para unas 27 de consumo y la semana pasada ya se acabó el viernes, así que el pedido hay que ampliarlo antes del viernes 13.", "detalle": "", "doc": "", "opciones": [], "importe": 0, "estado": "aviso", "previo": "", "version": 1}], "agentes": [{"clave": "relevo", "nombre": "Relevo del turno de noche", "cuando": "Cada día, 7:00"}, {"clave": "resenas", "nombre": "Reseñas nuevas", "cuando": "Cada día, 8:00"}, {"clave": "resumen", "nombre": "Resumen del lunes", "cuando": "Lunes, 8:00"}, {"clave": "baja", "nombre": "Baja en pisos", "cuando": "Al llegar una ausencia por el formulario"}, {"clave": "mantenimiento", "nombre": "Ronda de mantenimiento", "cuando": "Cada día, 11:30"}, {"clave": "grupos", "nombre": "Correo de un grupo", "cuando": "Al llegar un correo a grupos@"}, {"clave": "restaurante", "nombre": "Plan del restaurante", "cuando": "Jueves, 10:00"}, {"clave": "cierre", "nombre": "Cierre de mes", "cuando": "Al subir el informe del mes"}]};</script>
+<!-- datos:fin -->
+<script>
+(function () {
+  const $ = function (s) { return document.querySelector(s); };
+  const AÑO = 2026;
+  const DC = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
+  const DL = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+  const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+  const MC = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+
+  const AG = [
+    { k: "resenas", n: "Reseñas", para: "Para dirección" },
+    { k: "recepcion", n: "Recepción", para: "Para la recepción de mañana" },
+    { k: "cuadrantes", n: "Cuadrantes", para: "Para la gobernanta y los jefes de área" },
+    { k: "numeros", n: "Números", para: "Para dirección" },
+    { k: "informes", n: "Informes", para: "Para dirección" },
+    { k: "mantenimiento", n: "Mantenimiento", para: "Para el jefe de mantenimiento" },
+    { k: "grupos", n: "Grupos", para: "Para comercial" },
+    { k: "restaurante", n: "Restaurante", para: "Para el maître y el jefe de cocina" }
+  ];
+  const NOMBRE = {}; AG.forEach(function (a) { NOMBRE[a.k] = a.n; });
+
+  // Minutos por tarea: antes (a mano, medido en el diagnóstico) y ahora (revisarlo)
+  const T = {
+    resena:    { ag: "resenas",       antes: 8,   ahora: 2,  u: ["respuesta a reseña", "respuestas a reseñas"] },
+    relevo:    { ag: "recepcion",     antes: 15,  ahora: 3,  u: ["relevo del turno de noche", "relevos del turno de noche"] },
+    cuadrante: { ag: "cuadrantes",    antes: 120, ahora: 20, u: ["cuadrante de la semana", "cuadrantes de la semana"] },
+    ausencia:  { ag: "cuadrantes",    antes: 35,  ahora: 5,  u: ["ausencia cubierta", "ausencias cubiertas"] },
+    cuentas:   { ag: "numeros",       antes: 180, ahora: 30, u: ["cierre de mes comprobado", "cierres de mes comprobados"] },
+    resumen:   { ag: "informes",      antes: 60,  ahora: 10, u: ["resumen del lunes", "resúmenes del lunes"] },
+    informe:   { ag: "informes",      antes: 180, ahora: 30, u: ["informe para la propiedad", "informes para la propiedad"] },
+    parte:     { ag: "mantenimiento", antes: 5,   ahora: 1,  u: ["parte ordenado por urgencia", "partes ordenados por urgencia"] },
+    grupo:     { ag: "grupos",        antes: 60,  ahora: 15, u: ["propuesta preparada", "propuestas preparadas"] },
+    plan:      { ag: "restaurante",   antes: 45,  ahora: 10, u: ["plan del fin de semana", "planes del fin de semana"] }
+  };
+  const ORDEN_T = Object.keys(T);
+  const ESTADO = { ok: "Aprobado por ti", elegido: "Elegido por ti", auto: "Automático", enviada: "Enviada", aviso: "Aviso" };
+  const CRM = { aceptada: "Aceptada", espera: "En espera", perdida: "Perdida", revisar: "Esperando tu OK" };
+
+  const PER = {
+    oct: {
+      m: 9, dias: 31, frase: "En octubre", corto: "Octubre", partes: "28 de 30",
+      res:  [3,2,4,3,2,3,3,4,2,3,3,2,4,3,2,3,2,3,4,2,3,3,2,3,2,4,3,2,3,3,2],
+      mant: [2,1,1,1,3,2,1,2,0,1,2,1,0,2,3,1,2,1,0,2,1,2,3,1,0,2,1,2,3,1,2],
+      aus: [[6, "7:10", "pisos"], [13, "6:45", "recepción"], [15, "15:20", "sala"], [20, "7:05", "pisos"], [23, "8:30", "cocina"], [27, "6:55", "pisos"], [29, "22:10", "recepción"]],
+      cierre: { d: 2, mes: "septiembre", extra: "" },
+      grupos: [
+        { d: 6,  h: "17:45", que: "Boda · 13 de junio · 120 invitados", eur: 10200, crm: "aceptada" },
+        { d: 9,  h: "11:20", que: "Empresa · 35 personas · 2 noches", eur: 4560, crm: "aceptada" },
+        { d: 14, h: "19:05", que: "Comunión · 16 de mayo · 60 invitados", eur: 3300, crm: "espera" },
+        { d: 20, h: "10:40", que: "Club ciclista · 22 personas · 3 noches", eur: 4785, crm: "espera" },
+        { d: 23, h: "13:15", que: "Cena de Navidad · 12 de diciembre · 45 personas", eur: 2160, crm: "aceptada" },
+        { d: 28, h: "16:30", que: "Boda · 18 de septiembre · 90 invitados", eur: 7650, crm: "perdida" }
+      ],
+      avisos: [
+        [9, "19:10", "resenas", "Una reseña de 2 estrellas lleva un día sin tu OK"],
+        [19, "8:00", "informes", "Falta el parte de Comercial de la semana pasada"],
+        [22, "10:00", "restaurante", "El sábado hay 64 habitaciones ocupadas y la lubina pedida da para 30 raciones"],
+        [27, "11:30", "mantenimiento", "Tercer parte en diez días por la ducha de la piscina"]
+      ],
+      extra: []
+    },
+    nov: {
+      m: 10, dias: 11, frase: "En lo que va de noviembre", corto: "Noviembre, hasta hoy", partes: "6 de 6",
+      res:  [3,2,2,3,2,1,3,2,2,2,2],
+      mant: [1,0,2,1,2,1,2,1,2,2,0],
+      aus: [[4, "7:00", "pisos"], [9, "16:40", "sala"]],
+      cierre: { d: 2, mes: "octubre", extra: " · 218.736 €, un 8,66 % más que en octubre de 2025" },
+      grupos: [
+        { d: 5, h: "12:10", que: "Cena de Navidad · 18 de diciembre · 60 personas", eur: 2880, crm: "espera" }
+      ],
+      avisos: [
+        [2, "8:00", "informes", "Falta el parte de Comercial de la semana pasada"],
+        [10, "11:30", "mantenimiento", "Tercer parte este mes por el agua caliente de la tercera planta"]
+      ],
+      extra: []
+    }
+  };
+  const SENDERISMO = { que: "Club de senderismo · del 26 al 29 de noviembre · 28 personas", eur: 5922 };
+
+  // Lo que hacen los agentes de verdad: window.DATOS (foto publicada) o /api/datos (servidor en marcha)
+  let DATOS = window.DATOS || null, VIVO = false;
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function ajustaHoy() {
+    PER.nov.dias = 11;
+    if (!DATOS) return;
+    const h = DATOS.hoy;
+    if (h && h.y === 2026 && h.m === 11) PER.nov.dias = Math.max(1, h.d);
+    $("#act").textContent = "Actualizado hoy, " + DATOS.actualizado;
+  }
+  function diaDe(x) { return (x.y === 2026 && x.m === 11 && x.d <= PER.nov.dias) ? x.d : PER.nov.dias; }
+  function reg(id) { return DATOS ? DATOS.registro.find(function (x) { return x.id === id; }) : null; }
+
+  const PEND = [
+    { id: "p1", ag: "resenas", cuando: "Hoy, 9:12", tit: "Respuesta a una reseña de 2 estrellas", sub: "Google · llegó hoy a las 8:55" },
+    { id: "p2", ag: "cuadrantes", cuando: "Hoy, 7:40", tit: "Baja en pisos mañana jueves", sub: "Dos formas de cubrirla" },
+    { id: "p3", ag: "grupos", cuando: "Ayer, 18:20", tit: "Propuesta para un club de senderismo", sub: "28 personas · 3 noches · 5.922 €" }
+  ];
+
+  // Utilidades
+  function eur(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " €"; }
+  function fmtMin(m) { const h = Math.floor(m / 60), r = m % 60; return h ? (r ? h + " h " + r + " min" : h + " h") : r + " min"; }
+  function aMin(h) { const p = h.split(":"); return +p[0] * 60 + +p[1]; }
+  function isoWeek(dt) {
+    const d = new Date(Date.UTC(dt.getFullYear(), dt.getMonth(), dt.getDate())), day = d.getUTCDay() || 7;
+    d.setUTCDate(d.getUTCDate() + 4 - day);
+    return Math.ceil(((d - new Date(Date.UTC(d.getUTCFullYear(), 0, 1))) / 864e5 + 1) / 7);
+  }
+  function unidad(tipo, n) { return n + " " + (n === 1 ? T[tipo].u[0] : T[tipo].u[1]); }
+  function jornadas(m) { return (m / 480).toFixed(1).replace(".0", "").replace(".", ","); }
+  let reloj = 36;
+  function hora() { reloj += 3; return "10:" + String(reloj).padStart(2, "0"); }
+
+  function genera(k) {
+    const P = PER[k], ev = [];
+    function add(d, h, tipo, n, txt, estado) { ev.push({ d: d, h: h, ag: T[tipo].ag, tipo: tipo, n: n, txt: txt, estado: estado, min: n * (T[tipo].antes - T[tipo].ahora) }); }
+    const vivoHoy = !!DATOS && k === "nov";
+    for (let d = 1; d <= (vivoHoy ? P.dias - 1 : P.dias); d++) {
+      const wd = new Date(AÑO, P.m, d).getDay();
+      add(d, "7:00", "relevo", 1, "Lo que dejó el turno de noche, ordenado para recepción", "auto");
+      const r = P.res[d - 1];
+      if (r) add(d, "8:00", "resena", r, r === 1 ? "1 respuesta a una reseña preparada" : r + " respuestas a reseñas preparadas", "ok");
+      if (wd === 1 && !(vivoHoy && d >= P.dias - 7)) add(d, "8:00", "resumen", 1, "Resumen de la semana con los partes del equipo, enviado a las 8:00", "auto");
+      if (wd === 4) add(d, "10:00", "plan", 1, "Plan del restaurante para el fin de semana", "ok");
+      const mn = P.mant[d - 1];
+      if (mn) add(d, "11:30", "parte", mn, mn === 1 ? "1 parte de mantenimiento ordenado por urgencia" : mn + " partes de mantenimiento ordenados por urgencia", "auto");
+      if (wd === 5) add(d, "12:00", "cuadrante", 1, "Cuadrante de la semana " + isoWeek(new Date(AÑO, P.m, d + 3)), "ok");
+    }
+    P.aus.forEach(function (a) { add(a[0], a[1], "ausencia", 1, "Ausencia en " + a[2] + " cubierta", "elegido"); });
+    if (!vivoHoy) add(P.cierre.d, "9:00", "cuentas", 1, "Cuentas del cierre de " + P.cierre.mes + " hechas. Todo cuadra", "auto");
+    if (!vivoHoy) add(P.cierre.d, "9:04", "informe", 1, "Informe del cierre de " + P.cierre.mes + " para la propiedad" + P.cierre.extra, "ok");
+    P.grupos.forEach(function (g) { add(g.d, g.h, "grupo", 1, g.que + " · " + eur(g.eur), "enviada"); });
+    P.extra.forEach(function (e) { add(e.d, e.h, e.tipo, 1, e.txt, e.estado); });
+    P.avisos.forEach(function (a) { ev.push({ d: a[0], h: a[1], ag: a[2], tipo: "aviso", n: 0, txt: a[3], estado: "aviso", min: 0 }); });
+    if (vivoHoy) DATOS.registro.forEach(function (x) {
+      if (x.estado === "pend") return;
+      const d = diaDe(x);
+      if (x.tipo === "aviso") ev.push({ d: d, h: x.h, ag: x.agente, tipo: "aviso", n: 0, txt: x.titulo, estado: "aviso", min: 0 });
+      else if (T[x.tipo]) { add(d, x.h, x.tipo, Math.max(1, x.n | 0), x.titulo + (x.detalle ? " · " + x.detalle : ""), x.estado); ev[ev.length - 1].ref = x.id; }
+    });
+    ev.sort(function (a, b) { return b.d - a.d || aMin(b.h) - aMin(a.h); });
+    return ev;
+  }
+
+  let per = "oct", filtro = "todos", visibles = 14, EV = [], dias = [];
+
+  function pinta() {
+    ajustaHoy();
+    EV = genera(per);
+    const P = PER[per];
+    const total = EV.reduce(function (s, e) { return s + e.min; }, 0);
+    const tareas = EV.reduce(function (s, e) { return s + e.n; }, 0);
+    const avisos = EV.filter(function (e) { return e.tipo === "aviso"; }).length;
+    $("#frase").textContent = P.frase;
+    $("#horas").textContent = fmtMin(total);
+    const j = jornadas(total);
+    $("#jornadas").textContent = "Son " + j + (j === "1" ? " jornada" : " jornadas") + " de 8 horas, entre tú y tu equipo.";
+    $("#tTareas").textContent = tareas;
+    $("#tAvisos").textContent = avisos;
+    $("#tPartes").textContent = P.partes;
+
+    dias = [];
+    for (let d = 1; d <= P.dias; d++) dias.push({ d: d, min: 0, por: {} });
+    EV.forEach(function (e) {
+      if (e.tipo === "aviso") return;
+      const x = dias[e.d - 1]; x.min += e.min;
+      x.por[e.tipo] = x.por[e.tipo] || { n: 0, min: 0 };
+      x.por[e.tipo].n += e.n; x.por[e.tipo].min += e.min;
+    });
+    grafico(); tablaDias(); agentes(); grupos(); chips(); registro(); pendientes();
+  }
+
+  function fechaCorta(d) { const m = PER[per].m; return DC[new Date(AÑO, m, d).getDay()] + " " + d + " " + MC[m]; }
+  function fechaLarga(d) { const m = PER[per].m, w = DL[new Date(AÑO, m, d).getDay()]; return w.charAt(0).toUpperCase() + w.slice(1) + " " + d + " de " + MESES[m]; }
+
+  // Gráfico de columnas, una por día
+  let anchoPrevio = 0;
+  function grafico() {
+    const box = $("#grafico"), W = Math.max(280, Math.floor(box.clientWidth)), n = dias.length;
+    anchoPrevio = W;
+    const H = W < 520 ? 210 : 250, pl = 36, pr = 4, pt = 26, pb = 26, ih = H - pt - pb;
+    const max = Math.max.apply(null, dias.map(function (x) { return x.min; }));
+    const paso = max > 480 ? 240 : 120, techo = Math.max(paso * 2, Math.ceil(max / paso) * paso);
+    const slot = (W - pl - pr) / n, bw = Math.max(3, Math.min(24, slot - Math.max(3, slot * 0.3)));
+    const y = function (v) { return pt + ih * (1 - v / techo); };
+    const base = pt + ih;
+    let s = '<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Tiempo devuelto cada día">';
+    for (let v = 0; v <= techo; v += paso) {
+      s += '<line class="g' + (v ? "" : " base") + '" x1="' + pl + '" x2="' + (W - pr) + '" y1="' + y(v).toFixed(1) + '" y2="' + y(v).toFixed(1) + '"/>';
+      s += '<text class="ty" x="' + (pl - 7) + '" y="' + (y(v) + 4).toFixed(1) + '">' + (v ? v / 60 + " h" : "0") + "</text>";
+    }
+    let iMax = 0; dias.forEach(function (x, i) { if (x.min > dias[iMax].min) iMax = i; });
+    const todos = slot >= 24;
+    dias.forEach(function (x, i) {
+      const cx = pl + slot * i + slot / 2, h = ih * x.min / techo, x0 = cx - bw / 2, r = Math.min(4, bw / 2, h), t = base - h;
+      if (x.min > 0) s += '<path class="bar" data-i="' + i + '" d="M' + x0.toFixed(1) + "," + base + " V" + (t + r).toFixed(1) + " Q" + x0.toFixed(1) + "," + t.toFixed(1) + " " + (x0 + r).toFixed(1) + "," + t.toFixed(1) + " H" + (x0 + bw - r).toFixed(1) + " Q" + (x0 + bw).toFixed(1) + "," + t.toFixed(1) + " " + (x0 + bw).toFixed(1) + "," + (t + r).toFixed(1) + " V" + base + ' Z"/>';
+      const esHoy = per === "nov" && x.d === PER.nov.dias;
+      if (todos || x.d === 1 || x.d % 5 === 0 || esHoy) s += '<text class="tx" x="' + cx.toFixed(1) + '" y="' + (H - 7) + '">' + (esHoy ? "hoy" : x.d) + "</text>";
+      if (i === iMax) s += '<text class="tv" x="' + Math.min(Math.max(cx, pl + 30), W - 30).toFixed(1) + '" y="' + (t - 8).toFixed(1) + '">' + fmtMin(x.min) + "</text>";
+    });
+    dias.forEach(function (x, i) {
+      s += '<rect class="hit" data-i="' + i + '" x="' + (pl + slot * i).toFixed(1) + '" y="' + pt + '" width="' + slot.toFixed(1) + '" height="' + ih + '" tabindex="0" aria-label="' + fechaLarga(x.d) + ", " + fmtMin(x.min) + '"/>';
+    });
+    s += "</svg>";
+    box.innerHTML = s + '<div class="tip" id="tip" hidden></div>';
+    const dMax = dias[iMax];
+    $("#grafSub").textContent = dMax.por.cuentas
+      ? "El día más alto es el " + dMax.d + ", el del cierre de " + PER[per].cierre.mes + ". Toca una barra para ver qué se hizo."
+      : "Toca una barra para ver qué se hizo ese día.";
+    box._geo = { pl: pl, slot: slot, base: base, ih: ih, techo: techo, W: W };
+  }
+
+  function muestraTip(i) {
+    const box = $("#grafico"), tip = $("#tip"), x = dias[i], g = box._geo;
+    if (!tip || !x) return;
+    box.querySelectorAll(".bar.on").forEach(function (b) { b.classList.remove("on"); });
+    const bar = box.querySelector('.bar[data-i="' + i + '"]'); if (bar) bar.classList.add("on");
+    tip.textContent = "";
+    const st = document.createElement("strong"); st.textContent = x.min ? fmtMin(x.min) : "Sin tareas";
+    const dd = document.createElement("span"); dd.className = "tip-d"; dd.textContent = fechaLarga(x.d);
+    const ul = document.createElement("ul");
+    ORDEN_T.forEach(function (tipo) {
+      const p = x.por[tipo]; if (!p) return;
+      const li = document.createElement("li"), a = document.createElement("span"), b = document.createElement("span");
+      a.textContent = unidad(tipo, p.n); b.textContent = fmtMin(p.min);
+      li.appendChild(a); li.appendChild(b); ul.appendChild(li);
+    });
+    tip.appendChild(st); tip.appendChild(dd); tip.appendChild(ul);
+    tip.hidden = false;
+    const cx = g.pl + g.slot * i + g.slot / 2, tw = tip.offsetWidth, th = tip.offsetHeight;
+    const left = Math.min(Math.max(0, cx - tw / 2), g.W - tw);
+    let top = g.base - g.ih * x.min / g.techo - th - 12; if (top < -th / 2) top = 0;
+    tip.style.left = left + "px"; tip.style.top = Math.max(-20, top) + "px";
+  }
+  function ocultaTip() { const tip = $("#tip"); if (tip) tip.hidden = true; $("#grafico").querySelectorAll(".bar.on").forEach(function (b) { b.classList.remove("on"); }); }
+  const gbox = $("#grafico");
+  gbox.addEventListener("pointerover", function (e) { const h = e.target.closest(".hit"); if (h) muestraTip(+h.dataset.i); });
+  gbox.addEventListener("pointerleave", ocultaTip);
+  gbox.addEventListener("focusin", function (e) { const h = e.target.closest(".hit"); if (h) muestraTip(+h.dataset.i); });
+  gbox.addEventListener("focusout", ocultaTip);
+  if (window.ResizeObserver) new ResizeObserver(function () { if (Math.floor(gbox.clientWidth) !== anchoPrevio) grafico(); }).observe(gbox);
+
+  function tablaDias() {
+    const t = $("#tablaDias"); t.textContent = "";
+    const cab = t.insertRow(); ["Día", "Tiempo devuelto", "Tareas"].forEach(function (c) { const th = document.createElement("th"); th.textContent = c; cab.appendChild(th); });
+    dias.forEach(function (x) {
+      const r = t.insertRow(), n = Object.keys(x.por).reduce(function (s, k) { return s + x.por[k].n; }, 0);
+      [fechaCorta(x.d), fmtMin(x.min), n].forEach(function (v, i) { const c = r.insertCell(); c.textContent = v; if (i) c.className = "n"; });
+    });
+  }
+
+  // Agentes
+  function agentes() {
+    const box = $("#listaAgentes"); box.textContent = "";
+    const tot = AG.map(function (a) {
+      const por = {};
+      EV.forEach(function (e) { if (e.ag === a.k && e.tipo !== "aviso") { por[e.tipo] = por[e.tipo] || { n: 0, min: 0 }; por[e.tipo].n += e.n; por[e.tipo].min += e.min; } });
+      return { a: a, por: por, min: Object.keys(por).reduce(function (s, k) { return s + por[k].min; }, 0) };
+    });
+    const max = Math.max.apply(null, tot.map(function (t) { return t.min; })) || 1;
+    tot.forEach(function (t) {
+      const b = document.createElement("button"); b.type = "button"; b.className = "ag-fila"; b.dataset.ag = t.a.k;
+      const nom = document.createElement("div"); nom.className = "ag-nom";
+      const nb = document.createElement("b"); nb.textContent = t.a.n; const ns = document.createElement("span"); ns.textContent = t.a.para;
+      nom.appendChild(nb); nom.appendChild(ns);
+      const he = document.createElement("div"); he.className = "ag-hecho";
+      const tipos = Object.keys(t.por);
+      if (!tipos.length) { const v = document.createElement("span"); v.textContent = "Nada en este periodo"; he.appendChild(v); }
+      tipos.forEach(function (k) {
+        const fila = document.createElement("div"), sp = document.createElement("span"), sm = document.createElement("small");
+        sp.textContent = unidad(k, t.por[k].n);
+        sm.textContent = "Antes " + fmtMin(T[k].antes) + ", ahora " + fmtMin(T[k].ahora);
+        fila.appendChild(sp); fila.appendChild(sm); he.appendChild(fila);
+      });
+      const ti = document.createElement("div"); ti.className = "ag-t";
+      const tb = document.createElement("b"); tb.textContent = fmtMin(t.min);
+      const br = document.createElement("span"); br.className = "barra"; const bi = document.createElement("i"); bi.style.width = (t.min / max * 100).toFixed(1) + "%"; br.appendChild(bi);
+      ti.appendChild(tb); ti.appendChild(br);
+      b.appendChild(nom); b.appendChild(he); b.appendChild(ti);
+      b.setAttribute("aria-label", t.a.n + ", " + fmtMin(t.min) + " devueltos. Ver su registro");
+      b.addEventListener("click", function () { filtro = t.a.k; visibles = 14; chips(); registro(); $("#registro").scrollIntoView({ behavior: "smooth", block: "start" }); });
+      box.appendChild(b);
+    });
+  }
+
+  // Propuestas a grupos
+  function grupos() {
+    const lista = PER[per].grupos.map(function (g) { return g; });
+    if (per === "nov" && DATOS) DATOS.registro.forEach(function (x) {
+      if (x.tipo === "grupo") lista.push({ que: x.titulo + (x.detalle ? " · " + x.detalle : ""), eur: Math.round(Number(x.importe) || 0), crm: x.estado === "pend" ? "revisar" : "espera" });
+    });
+    else if (per === "nov" && !hecho("p3")) lista.push({ que: SENDERISMO.que, eur: SENDERISMO.eur, crm: "revisar" });
+    const suma = { aceptada: 0, espera: 0, perdida: 0, revisar: 0 }, cuenta = { aceptada: 0, espera: 0, perdida: 0, revisar: 0 };
+    lista.forEach(function (g) { suma[g.crm] += g.eur; cuenta[g.crm]++; });
+    const total = lista.reduce(function (s, g) { return s + g.eur; }, 0);
+    const em = $("#embudo"); em.textContent = "";
+    [["aceptada", "c-ok", "Aceptadas"], ["espera", "c-env", "En espera"], ["perdida", "c-neu", "Perdidas"]].forEach(function (c) {
+      const d = document.createElement("div"), b = document.createElement("b"), s = document.createElement("span"), i = document.createElement("i");
+      b.textContent = eur(suma[c[0]]); i.className = c[1]; s.appendChild(i); s.appendChild(document.createTextNode(c[2] + " (" + cuenta[c[0]] + ")"));
+      d.appendChild(b); d.appendChild(s); em.appendChild(d);
+    });
+    const rp = $("#reparto"); rp.textContent = "";
+    [["aceptada", "c-ok"], ["espera", "c-env"], ["perdida", "c-neu"], ["revisar", "c-esp"]].forEach(function (c) {
+      if (!suma[c[0]]) return;
+      const sp = document.createElement("span"); sp.className = c[1]; sp.style.flex = suma[c[0]] + " 1 0"; sp.title = CRM[c[0]] + ": " + eur(suma[c[0]]); rp.appendChild(sp);
+    });
+    $("#repartoT").textContent = lista.length + (lista.length === 1 ? " propuesta" : " propuestas") + " por " + eur(total) + (suma.revisar ? ", una esperando tu OK" : "");
+    const ul = $("#listaGrupos"); ul.textContent = "";
+    lista.slice().reverse().forEach(function (g) {
+      const li = document.createElement("li"), q = document.createElement("div"), d = document.createElement("div");
+      q.className = "gq"; d.className = "gd";
+      const partes = g.que.split(" · "), qb = document.createElement("b"), qs = document.createElement("span");
+      qb.textContent = partes[0]; qs.textContent = partes.slice(1).join(" · ");
+      q.appendChild(qb); q.appendChild(qs);
+      const db = document.createElement("b"), de = document.createElement("span");
+      db.textContent = eur(g.eur); de.className = "est " + g.crm; de.textContent = CRM[g.crm];
+      d.appendChild(db); d.appendChild(de);
+      li.appendChild(q); li.appendChild(d); ul.appendChild(li);
+    });
+  }
+
+  // Registro
+  function chips() {
+    const box = $("#chips"); box.textContent = "";
+    [{ k: "todos", n: "Todos" }].concat(AG).concat([{ k: "avisos", n: "Avisos" }]).forEach(function (a) {
+      const b = document.createElement("button"); b.type = "button"; b.textContent = a.n;
+      b.setAttribute("aria-pressed", String(filtro === a.k));
+      b.addEventListener("click", function () { filtro = a.k; visibles = 14; chips(); registro(); });
+      box.appendChild(b);
+    });
+  }
+  function registro() {
+    const ol = $("#log"); ol.textContent = "";
+    const lista = EV.filter(function (e) { return filtro === "todos" || (filtro === "avisos" ? e.tipo === "aviso" : e.ag === filtro); });
+    if (!lista.length) { const li = document.createElement("li"); li.className = "l-vacio"; li.textContent = "Nada en este periodo."; ol.appendChild(li); }
+    lista.slice(0, visibles).forEach(function (e) {
+      const li = document.createElement("li");
+      const f = document.createElement("div"); f.className = "l-f";
+      const fb = document.createElement("b"); fb.textContent = fechaCorta(e.d); const fs = document.createElement("span"); fs.textContent = e.h;
+      f.appendChild(fb); f.appendChild(fs);
+      const q = document.createElement("div"); q.className = "l-q";
+      const qs = document.createElement("small"); qs.textContent = NOMBRE[e.ag]; const qp = document.createElement("p"); qp.textContent = e.txt;
+      q.appendChild(qs); q.appendChild(qp);
+      const d = document.createElement("div"); d.className = "l-d";
+      const es = document.createElement("span"); es.className = "est " + e.estado; es.textContent = ESTADO[e.estado]; d.appendChild(es);
+      if (e.min) { const m = document.createElement("span"); m.className = "m"; m.textContent = fmtMin(e.min) + " devueltos"; d.appendChild(m); }
+      if (e.ref) { const v = document.createElement("button"); v.type = "button"; v.className = "ver"; v.textContent = "Ver lo que hizo"; v.addEventListener("click", function () { abre(e.ref, true); }); d.appendChild(v); }
+      li.appendChild(f); li.appendChild(q); li.appendChild(d); ol.appendChild(li);
+    });
+    const mas = $("#mas"), quedan = lista.length - visibles;
+    mas.hidden = quedan <= 0;
+    mas.textContent = "Ver " + Math.min(20, quedan) + " más";
+  }
+  $("#mas").addEventListener("click", function () { visibles += 20; registro(); });
+
+  // Pendientes
+  const hechos = {};
+  function hecho(id) { return !!hechos[id]; }
+  function pendientes() {
+    const ul = $("#listaPend"); ul.textContent = "";
+    const quedan = DATOS
+      ? DATOS.registro.filter(function (x) { return x.estado === "pend"; }).reverse().map(function (x) { return { id: x.id, ag: x.agente, cuando: "Hoy, " + x.h, tit: x.titulo, sub: x.detalle }; })
+      : PEND.filter(function (p) { return !hecho(p.id); });
+    const n = $("#nPend"); n.textContent = quedan.length; n.classList.toggle("cero", !quedan.length);
+    $("#pendNota").hidden = !quedan.length;
+    if (!quedan.length) { const li = document.createElement("li"); li.className = "vacio"; li.textContent = "Todo revisado. Cuando un agente prepare algo nuevo, te llega aquí y al móvil."; ul.appendChild(li); return; }
+    quedan.forEach(function (p) {
+      const li = document.createElement("li"), t = document.createElement("div"); t.className = "p-txt";
+      const a = document.createElement("span"); a.className = "p-ag"; a.textContent = NOMBRE[p.ag] + " · " + p.cuando;
+      const ti = document.createElement("p"); ti.className = "p-tit"; ti.textContent = p.tit;
+      const s = document.createElement("p"); s.className = "p-sub"; s.textContent = p.sub;
+      t.appendChild(a); t.appendChild(ti); t.appendChild(s);
+      const b = document.createElement("button"); b.type = "button"; b.className = "btn"; b.textContent = "Revisar";
+      b.addEventListener("click", function () { abre(p.id); });
+      li.appendChild(t); li.appendChild(b); ul.appendChild(li);
+    });
+  }
+
+  const DOCS = {
+    p1: '<div class="d-cab"><div><small>Reseñas · hoy, 9:12</small><h3 id="docTit">Respuesta a una reseña de 2 estrellas</h3></div><button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>' +
+      '<div class="bloque"><small>La reseña · Google, hoy a las 8:55</small><div class="cita"><p><span class="estrellas">★★<s>★★★</s></span></p><p>Buena ubicación y el desayuno muy rico, pero el aire acondicionado de la habitación hizo ruido toda la noche y casi no dormimos.</p></div></div>' +
+      '<div class="bloque"><small>Lo que sabía el agente</small><p>El parte de mantenimiento de ayer: ventilador del aire de la 214 cambiado.</p></div>' +
+      '<div class="bloque"><small>La respuesta preparada</small><div class="borrador"><p>Muchas gracias por su reseña y por lo que nos cuenta del desayuno. Sentimos mucho lo del aire acondicionado, porque una noche sin dormir bien estropea cualquier estancia. Ayer nuestro equipo de mantenimiento cambió la pieza que hacía el ruido, así que la próxima vez podrá descansar como se merece.</p><p style="margin-top:8px">Laura Martín, directora del Hotel Brisalta</p></div></div>' +
+      '<div class="acciones"><button type="button" class="btn" data-acc="aprobar">Aprobar respuesta</button><button type="button" class="btn sec" data-acc="cambio">Pedir un cambio</button></div>',
+    p2: '<div class="d-cab"><div><small>Cuadrantes · hoy, 7:40</small><h3 id="docTit">Baja en pisos mañana jueves 12</h3></div><button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>' +
+      '<div class="bloque"><small>Lo que pasa</small><p>Mañana falta una camarera del turno de mañana. Hay 46 habitaciones ocupadas, 22 salidas y 24 que siguen. Una salida cuenta 1 y una que sigue cuenta media, así que son 34. Cada camarera hace 14 y con dos quedan 6 sin cubrir.</p></div>' +
+      '<div class="opcion"><p><b>Opción A</b><span class="reco">La que recomienda el agente</span></p><p>La camarera de refuerzo entra de 8:00 a 14:00. Esta semana lleva 26 horas y se queda en 32, por debajo de las 40.</p><button type="button" class="btn" data-acc="A">Elegir la A</button></div>' +
+      '<div class="opcion"><p><b>Opción B</b></p><p>La gobernanta hace 12 habitaciones que siguen y las dos camareras hacen las otras 28, 14 cada una. El jueves la gobernanta tiene pendiente el pedido de lencería.</p><button type="button" class="btn sec" data-acc="B">Elegir la B</button></div>' +
+      '<p class="privado">El motivo de la baja no se guarda en ningún sitio.</p>',
+    p3: '<div class="d-cab"><div><small>Grupos · ayer, 18:20</small><h3 id="docTit">Propuesta para un club de senderismo</h3></div><button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>' +
+      '<div class="bloque"><small>Lo que pidieron · correo de ayer a las 17:45</small><p>28 personas del 26 al 29 de noviembre, con cena y traslado desde el aeropuerto.</p></div>' +
+      '<div class="bloque"><small>La propuesta preparada</small><table class="lineas"><tr><td>14 habitaciones dobles × 3 noches × 78 €</td><td>3.276 €</td></tr><tr><td>Cena de grupo, 28 personas × 3 noches × 24 €</td><td>2.016 €</td></tr><tr><td>Traslado al aeropuerto de Alicante, 14 trayectos × 45 €</td><td>630 €</td></tr><tr class="total"><td>Total</td><td>5.922 €</td></tr></table></div>' +
+      '<p class="privado">Precios sacados de la ficha del hotel y de la tarifa de grupos de temporada baja.</p>' +
+      '<div class="acciones"><button type="button" class="btn" data-acc="aprobar">Aprobar y enviar</button><button type="button" class="btn sec" data-acc="cambio">Pedir un cambio</button></div>'
+  };
+  const dlg = $("#doc"), dIn = $("#docIn");
+  let abierto = null;
+  function abre(id, soloVer) {
+    abierto = id;
+    const x = reg(id);
+    dIn.innerHTML = x ? docHTML(x, soloVer) : DOCS[id];
+    if (dlg.open) return;
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+  }
+
+  // El documento que ha preparado un agente: texto plano con títulos en mayúsculas, listas «- » y tablas con «|»
+  function renderDoc(t) {
+    let h = "", lista = false, tabla = [];
+    function cierraLista() { if (lista) { h += "</ul>"; lista = false; } }
+    function cierraTabla() {
+      if (!tabla.length) return;
+      h += '<div class="tabla-scroll"><table class="lineas">' + tabla.map(function (f) { return "<tr>" + f.map(function (c) { return "<td>" + esc(c) + "</td>"; }).join("") + "</tr>"; }).join("") + "</table></div>";
+      tabla = [];
+    }
+    String(t || "").split("\n").forEach(function (l) {
+      const s = l.trim();
+      if (s.charAt(0) === "|" || (s.indexOf(" | ") > 0 && !/^- /.test(s))) {
+        cierraLista();
+        const celdas = s.replace(/^\||\|$/g, "").split("|").map(function (c) { return c.trim(); });
+        if (!celdas.every(function (c) { return /^:?-{2,}:?$/.test(c); })) tabla.push(celdas);
+        return;
+      }
+      cierraTabla();
+      if (!s) { cierraLista(); return; }
+      if (/^- /.test(s)) { if (!lista) { h += "<ul>"; lista = true; } h += "<li>" + esc(s.slice(2)) + "</li>"; return; }
+      cierraLista();
+      if (s.length < 70 && s === s.toUpperCase() && /[A-ZÁÉÍÓÚÑ]/.test(s)) h += "<h4>" + esc(s) + "</h4>";
+      else h += "<p>" + esc(s) + "</p>";
+    });
+    cierraLista(); cierraTabla();
+    return h;
+  }
+  function docHTML(x, soloVer) {
+    let h = '<div class="d-cab"><div><small>' + esc(NOMBRE[x.agente] || "") + " · hoy, " + esc(x.h) + (x.version > 1 ? " · versión " + x.version : "") + '</small><h3 id="docTit">' + esc(x.titulo) + '</h3></div><button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>';
+    if (x.detalle) h += '<p class="p-sub">' + esc(x.detalle) + "</p>";
+    h += '<div class="doc doc-cuerpo">' + renderDoc(x.doc) + "</div>";
+    const pend = x.estado === "pend" && !soloVer;
+    if (x.opciones && x.opciones.length) {
+      x.opciones.forEach(function (o, i) {
+        h += '<div class="opcion"><p><b>Opción ' + esc(o.id) + "</b></p><p>" + esc(o.texto) + "</p>" +
+          (pend ? '<button type="button" class="btn' + (i ? " sec" : "") + '" data-acc="op" data-op="' + esc(o.id) + '">Elegir la ' + esc(o.id) + "</button>" : (x.elegida === o.id ? '<span class="elegida">La elegiste tú</span>' : "")) + "</div>";
+      });
+      if (pend) h += '<div class="acciones"><button type="button" class="btn sec" data-acc="cambio">Pedir un cambio</button></div>';
+    } else if (pend) {
+      h += '<div class="acciones"><button type="button" class="btn" data-acc="aprobar">' + (x.tipo === "grupo" ? "Aprobar y enviar" : "Aprobar") + '</button><button type="button" class="btn sec" data-acc="cambio">Pedir un cambio</button></div>';
+    } else {
+      h += '<p><span class="est ' + esc(x.estado) + '">' + esc(ESTADO[x.estado] || "") + "</span></p>";
+    }
+    return h;
+  }
+  function mensajeDe(x, op) {
+    if (op) return "Opción " + op + " elegida. El cuadrante se actualiza y la gobernanta recibe el aviso.";
+    return { resena: "Aprobadas. Recepción las publica en Google.", grupo: "Enviada. La tienes en Propuestas a grupos como En espera.",
+      informe: "Aprobado. Listo para mandarlo a la propiedad.", plan: "Aprobado. Le llega al maître y al jefe de cocina." }[x.tipo] || "Aprobado.";
+  }
+  function api(ruta, cuerpo) {
+    return fetch(ruta, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(cuerpo) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (d.error) throw new Error(d.error); return d; })
+      .catch(function (err) { aviso("No ha salido: " + err.message); throw err; });
+  }
+  function cierra() { if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); abierto = null; }
+  dlg.addEventListener("click", function (e) {
+    if (e.target === dlg || e.target.closest("[data-cerrar]")) return cierra();
+    const b = e.target.closest("[data-acc]"); if (!b) return;
+    const acc = b.dataset.acc;
+    if (acc === "cambio") {
+      const acc0 = dIn.querySelector(".acciones");
+      if (dIn.querySelector(".cambio")) return;
+      const c = document.createElement("div"); c.className = "cambio";
+      c.innerHTML = '<label for="cambioTxt" class="p-ag">¿Qué cambiarías?</label><textarea id="cambioTxt" placeholder="Por ejemplo, hazla más corta"></textarea><div class="acciones"><button type="button" class="btn" data-acc="mandar">Mandar al agente</button></div>';
+      acc0.after(c); c.querySelector("textarea").focus(); return;
+    }
+    if (acc === "mandar") {
+      const xm = reg(abierto), texto = ((dIn.querySelector("#cambioTxt") || {}).value || "").trim();
+      if (xm && VIVO && texto) {
+        const idm = abierto;
+        b.disabled = true; b.textContent = "El agente lo está rehaciendo…";
+        return api("/api/cambio", { id: idm, texto: texto }).then(function (d) { DATOS = d; pinta(); abre(idm); aviso("Nueva versión lista. Revísala antes de aprobar."); },
+          function () { b.disabled = false; b.textContent = "Mandar al agente"; });
+      }
+      cierra(); return aviso("Se lo hemos pasado al agente. Te avisa cuando tenga la nueva versión.");
+    }
+    if (acc === "copiado") return;
+    const x = reg(abierto);
+    if (x) {
+      const op = b.dataset.op || null, msg = mensajeDe(x, op);
+      if (VIVO) {
+        b.disabled = true;
+        return api("/api/decidir", { id: x.id, accion: op ? "opcion" : "aprobar", opcion: op }).then(function (d) { DATOS = d; cierra(); pinta(); aviso(msg); }, function () { b.disabled = false; });
+      }
+      x.estado = op ? "elegido" : (x.tipo === "grupo" ? "enviada" : "ok");
+      if (op) x.elegida = op;
+      cierra(); pinta(); return aviso(msg);
+    }
+    resuelve(abierto, acc); cierra();
+  });
+
+  function resuelve(id, acc) {
+    hechos[id] = true;
+    const N = PER.nov;
+    if (id === "p1") { N.extra.push({ d: 11, h: hora(), tipo: "resena", txt: "1 respuesta a una reseña de 2 estrellas aprobada", estado: "ok" }); aviso("Aprobada. Recepción la publica en Google."); }
+    if (id === "p2") { N.aus.push([11, hora(), "pisos"]); aviso(acc === "A" ? "Opción A elegida. La gobernanta y la camarera de refuerzo reciben el aviso." : "Opción B elegida. La gobernanta recibe el cuadrante cambiado."); }
+    if (id === "p3") { N.grupos.push({ d: 11, h: hora(), que: SENDERISMO.que, eur: SENDERISMO.eur, crm: "espera" }); aviso("Enviada al club. La tienes en Propuestas a grupos como En espera."); }
+    pinta();
+  }
+
+  let tAviso;
+  function aviso(txt) { const t = $("#toast"); t.textContent = txt; t.hidden = false; clearTimeout(tAviso); tAviso = setTimeout(function () { t.hidden = true; }, 4200); }
+
+  // Resumen para la propiedad
+  $("#copiar").addEventListener("click", function () {
+    const P = PER[per], total = EV.reduce(function (s, e) { return s + e.min; }, 0), tareas = EV.reduce(function (s, e) { return s + e.n; }, 0);
+    const acept = P.grupos.filter(function (g) { return g.crm === "aceptada"; }).reduce(function (s, g) { return s + g.eur; }, 0);
+    const esp = P.grupos.filter(function (g) { return g.crm === "espera"; }).reduce(function (s, g) { return s + g.eur; }, 0);
+    const txt = P.frase + ", en el Hotel Brisalta, los agentes han hecho " + tareas + " tareas y han devuelto al equipo " + fmtMin(total) + ", que son " + jornadas(total) + " jornadas de 8 horas. Propuestas a grupos: " + eur(acept) + " aceptados y " + eur(esp) + " en espera.";
+    const respaldo = function () {
+      abierto = null;
+      dIn.innerHTML = '<div class="d-cab"><div><small>Resumen para la propiedad</small><h3 id="docTit">Cópialo desde aquí</h3></div><button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button></div><textarea class="copia" id="copiaTxt" readonly></textarea>';
+      const ta = dIn.querySelector("textarea"); ta.value = txt;
+      if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+      ta.focus(); ta.select();
+    };
+    try {
+      navigator.clipboard.writeText(txt).then(function () { aviso("Copiado. Pégalo en tu correo o en el informe del mes."); }, respaldo);
+    } catch (e) { respaldo(); }
+  });
+
+  // Periodo
+  function marcaPeriodo() { document.querySelectorAll(".periodo button").forEach(function (o) { o.setAttribute("aria-selected", String(o.dataset.p === per)); }); }
+  document.querySelectorAll(".periodo button").forEach(function (b) {
+    b.addEventListener("click", function () { per = b.dataset.p; visibles = 14; marcaPeriodo(); pinta(); });
+  });
+
+  // Lanzar agentes desde el panel (solo con el servidor en marcha)
+  let cronoDemo;
+  function montaDemo() {
+    const box = $("#demoBtns"); box.textContent = "";
+    DATOS.agentes.concat([{ clave: "todos", nombre: "Todos a la vez", cuando: "Tarda alrededor de un minuto" }]).forEach(function (a) {
+      const b = document.createElement("button"); b.type = "button"; if (a.clave === "todos") b.className = "todos";
+      const n = document.createElement("b"); n.textContent = a.nombre;
+      const c = document.createElement("small"); c.textContent = a.cuando;
+      b.appendChild(n); b.appendChild(c);
+      b.addEventListener("click", function () { lanza(a); });
+      box.appendChild(b);
+    });
+  }
+  function lanza(a) {
+    const btns = document.querySelectorAll("#demoBtns button"), t = $("#trabajando"), ini = Date.now();
+    btns.forEach(function (b) { b.disabled = true; });
+    const pon = function () { $("#trabTxt").textContent = (a.clave === "todos" ? "Los agentes están trabajando" : a.nombre + ": el agente está trabajando") + "… " + Math.round((Date.now() - ini) / 1000) + " s"; };
+    t.hidden = false; pon(); cronoDemo = setInterval(pon, 1000);
+    const antes = DATOS.registro.length;
+    api("/api/correr", { clave: a.clave }).then(function (d) {
+      DATOS = d; per = "nov"; marcaPeriodo(); pinta();
+      const pend = d.registro.slice(antes).filter(function (x) { return x.estado === "pend"; }).length;
+      aviso((a.clave === "todos" ? "Han terminado." : a.nombre + " ha terminado.") + (pend ? " Tienes " + pend + " para revisar en Esperando tu OK." : " Lo tienes en el registro."));
+    }, function () {}).then(function () { clearInterval(cronoDemo); t.hidden = true; btns.forEach(function (b) { b.disabled = false; }); });
+  }
+
+  if (DATOS && DATOS.registro && DATOS.registro.length) { per = "nov"; marcaPeriodo(); }
+  pinta();
+  if (location.protocol.indexOf("http") === 0) {
+    fetch("/api/datos", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+      if (!d || !d.registro || !d.agentes) return;
+      DATOS = d; VIVO = true; $("#demo").hidden = false; montaDemo();
+      if (d.registro.length) { per = "nov"; marcaPeriodo(); }
+      pinta();
+    }).catch(function () {});
+  }
+})();
+</script>
+
+</body>
+</html>

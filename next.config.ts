@@ -27,6 +27,8 @@ const nextConfig: NextConfig = {
       { source: "/equipo-ia", destination: "/equipo-ia/index.html" },
       // Landing del programa Director con Claude (aparte de Vértice).
       { source: "/programa", destination: "/programa/index.html" },
+      // Panel de ejemplo del plan A medida (Hotel Brisalta, inventado). Sin enlazar.
+      { source: "/panel-agentes", destination: "/panel-agentes/index.html" },
       // Demo privada de la carta de Casa Román (app Angular): cualquier ruta
       // dentro de la demo la resuelve su index.html. Sin enlazar desde la web.
       { source: "/d/casaroman-v7k2/:path*", destination: "/d/casaroman-v7k2/index.html" },
