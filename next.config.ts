@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
       { source: "/gm", destination: "/gm/index.html" },
       { source: "/skills", destination: "/skills/index.html" },
       { source: "/equipo-ia", destination: "/equipo-ia/index.html" },
+      { source: "/despacho", destination: "/despacho/index.html" },
       // Landing del programa Director con Claude (aparte de Vértice).
       { source: "/programa", destination: "/programa/index.html" },
       // Panel de ejemplo del plan A medida (Hotel Brisalta, inventado). Sin enlazar.

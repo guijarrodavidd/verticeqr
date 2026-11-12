@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Tu despacho en automático</title>
+<meta property="og:title" content="Tu despacho en automático · Los 8 agentes">
+<meta property="og:description" content="La versión a mano de los 8 agentes del despacho de un hotel, para Claude o ChatGPT.">
+<meta property="og:image" content="https://verticeqr.com/despacho/panel.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap">
+<style>
+:root{color-scheme:light;--bg:#F3F6F6;--grid:rgba(11,18,32,.06);--card:#FFFFFF;--line:#E0E6E6;--tile:#EEF3F3;--ink:#0B1220;--text:#2A3242;--muted:#5D6678;--teal:#087F7B;--aqua:#5EE6D8;--grad:linear-gradient(90deg,#36C6C0,#A8D86A);--dark:#0D1117;--dark-t:#E6EAF2;--dark-m:#9AA4B5;--dark-l:#252C38;--naranja:#D97757;--sans:"Geist","Helvetica Neue",Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0A0E15;--grid:rgba(255,255,255,.05);--card:#121824;--line:#232B3A;--tile:#182030;--ink:#F1F4FA;--text:#D5DBE6;--muted:#98A2B5;--teal:#5EE6D8;--dark:#05070B;--dark-l:#1C2230}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0A0E15;--grid:rgba(255,255,255,.05);--card:#121824;--line:#232B3A;--tile:#182030;--ink:#F1F4FA;--text:#D5DBE6;--muted:#98A2B5;--teal:#5EE6D8;--dark:#05070B;--dark-l:#1C2230}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{background:var(--bg);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background-color:var(--bg);background-image:radial-gradient(var(--grid) 1px,transparent 1.3px);background-size:22px 22px;color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;padding-block:0 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:1040px;margin:0 auto;position:relative}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px;border-radius:6px}
+header{text-align:center;padding:52px 0 8px;position:relative}
+header::before{content:"";position:absolute;inset:-40px 0 auto;height:560px;z-index:-1;pointer-events:none;background:radial-gradient(40% 50% at 28% 40%,rgba(94,230,216,.22),transparent 70%),radial-gradient(35% 45% at 74% 35%,rgba(168,216,106,.22),transparent 70%),radial-gradient(30% 40% at 50% 75%,rgba(217,119,87,.12),transparent 70%)}
+.kick{font-size:14px;font-weight:600;color:var(--muted)}
+.fila{display:flex;justify-content:center;gap:10px;margin-top:22px;flex-wrap:wrap}
+.px{display:block;overflow:visible}
+.px-f{width:44px;height:27px;animation:bob 1.6s steps(2) infinite}
+.px-f:nth-child(2n){animation-delay:.4s} .px-f:nth-child(3n){animation-delay:.8s}
+@keyframes bob{50%{transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.px-f{animation:none}}
+h1{font-weight:800;font-size:clamp(36px,7.4vw,66px);line-height:1.02;letter-spacing:-.04em;color:var(--ink);margin-top:20px;text-wrap:balance}
+h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:640px;margin:16px auto 0;color:var(--muted);font-size:18px;text-wrap:balance}
+.stats{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:22px}
+.stats span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;color:var(--ink)}
+.stats b{font-weight:800}
+.todo{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:700;padding:12px 24px;border-radius:999px;font-size:16px;text-align:center}
+.btn:hover{opacity:.9}
+section{margin-top:56px;scroll-margin-top:20px}
+h2{font-weight:800;color:var(--ink);font-size:clamp(28px,5vw,40px);line-height:1.06;letter-spacing:-.03em;text-wrap:balance}
+.eyebrow{font-size:13px;font-weight:700;color:var(--teal)}
+.h2sub{color:var(--muted);font-size:16.5px;margin-top:8px;max-width:680px}
+.ags{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.ag{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:16px;padding:16px;display:grid;gap:8px;align-content:start;min-width:0;scroll-margin-top:20px}
+.ag-cab{display:flex;gap:12px;align-items:center}
+.ag-cab .px-s{flex:none;width:36px;height:22px}
+.ag h3{font-size:17px;font-weight:700;color:var(--ink);line-height:1.2}
+.cuando{display:inline-block;margin-top:3px;font-size:12px;font-weight:700;color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent);padding:2px 8px;border-radius:99px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cuando{color:var(--ink)}}
+:root[data-theme="dark"] .cuando{color:var(--ink)}
+.hace{font-size:15px}
+.lbl{font-size:12.5px;font-weight:700;color:var(--ink);margin-top:2px}
+.das{list-style:none;display:grid;gap:4px;font-size:14px}
+.das li{background:var(--tile);border-radius:8px;padding:6px 10px}
+details summary{cursor:pointer;font-weight:700;color:var(--teal);min-height:40px;display:flex;align-items:center;font-size:14.5px}
+.codebox{background:var(--dark);color:var(--dark-t);border-radius:12px;overflow:hidden;min-width:0;margin-top:4px}
+.codebar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:5px 5px 5px 12px;border-bottom:1px solid var(--dark-l)}
+.codebar span{font-size:12px;color:var(--dark-m);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.copy{font:700 13px var(--sans);background:var(--grad);color:#0D1117;border:0;border-radius:999px;padding:0 16px;min-height:36px;min-width:86px;cursor:pointer;flex:none}
+pre{font-family:var(--sans);font-size:13.5px;line-height:1.55;white-space:pre-wrap;word-break:break-word;padding:12px 14px;max-height:420px;overflow:auto}
+.ejs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}
+.ej{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;gap:10px;align-content:start;min-width:0}
+.ej-t{font-size:13.5px;font-weight:700;color:var(--ink)}
+.aviso{font-size:14px;background:var(--tile);border-radius:10px;padding:9px 12px}
+.aviso b{color:var(--ink)}
+.res{display:grid;gap:2px;font-size:14px}
+.res b{color:var(--teal);font-size:12.5px;margin-top:6px}
+.res b:first-child{margin-top:0}
+.cita-o{font-size:14px;color:var(--muted)}
+.cita{font-size:14.5px;border-left:3px solid var(--naranja);padding-left:12px}
+.opc{display:flex;gap:10px;align-items:flex-start;font-size:14px;border:1px solid var(--line);border-radius:10px;padding:9px 12px}
+.opc span{flex:none;width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--bg);font-weight:800;font-size:13px;display:grid;place-items:center}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:6px 6px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--muted);font-weight:600;font-size:12px}
+td:last-child,th:last-child{text-align:right}
+.tot td{font-weight:800;color:var(--ink);border-bottom:0}
+.cta{background:var(--dark);color:var(--dark-t);border-radius:22px;padding:30px 24px;position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:28px;align-items:center}
+.cta::before{content:"";position:absolute;inset:auto -20% -60% 30%;height:320px;background:radial-gradient(closest-side,rgba(94,230,216,.35),transparent);pointer-events:none}
+.cta>*{position:relative;min-width:0}
+.cta .eyebrow{color:var(--aqua)}
+.cta h2{color:#fff;margin-top:6px}
+.cta p{margin-top:12px;font-size:17px}
+.cta .btn{margin-top:20px;background:var(--grad);color:#0D1117}
+.cta .peq{font-size:14.5px;color:var(--dark-m)}
+.shot{display:block}
+.shot img{display:block;width:100%;max-width:100%;height:auto;border-radius:14px;border:1px solid var(--dark-l)}
+.shot figcaption{margin-top:10px;font-size:14.5px;color:var(--dark-m)}
+.solo{font-size:14px;background:color-mix(in srgb,var(--c) 10%,var(--card));border:1px dashed color-mix(in srgb,var(--c) 45%,transparent);border-radius:10px;padding:9px 12px}
+.solo b{color:var(--ink)}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:40px;line-height:1.5}
+@media (max-width:860px){.cta{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){
+  .ags,.ejs{grid-template-columns:minmax(0,1fr)}
+  td{white-space:normal}
+  .lead{font-size:17px}
+  .px-f{width:32px;height:20px}
+  .fila{gap:6px}
+}
+</style></head><body><div class="wrap">
+<header>
+  <p class="kick">Recurso gratis de Héctor García</p>
+  <div class="fila" aria-hidden="true"><svg class="px px-f" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><svg class="px px-f" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><svg class="px px-f" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><svg class="px px-f" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><svg class="px px-f" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><svg class="px px-f" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><svg class="px px-f" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><svg class="px px-f" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg></div>
+  <h1>Tu despacho <span>en automático</span></h1>
+  <p class="lead">Los 8 agentes que llevan el despacho de un hotel. De cada uno te dejo la versión para usar a mano en Claude, y te enseño lo que hace cuando trabaja solo.</p>
+  <div class="stats"><span><b>8</b> agentes del despacho</span><span>Para Claude o ChatGPT</span></div>
+  <div class="todo"><a class="btn" href="#agentes">Ver los 8 agentes</a></div>
+</header>
+
+<section id="agentes">
+  <p class="eyebrow">Los 8 agentes</p>
+  <h2>Uno para cada tarea que se repite</h2>
+  <p class="h2sub">Copia la versión a mano, pégala en un chat de Claude con tus datos y te deja hecha la parte básica. Tú lo revisas antes de usarlo.</p>
+  <div class="ags">
+    <article class="ag" id="relevo" style="--c:#087F7B">
+      <div class="ag-cab"><svg class="px px-s" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><div><h3>Relevo del turno de noche</h3><span class="cuando">Cada mañana</span></div></div>
+      <p class="hace">Convierte lo que deja el turno de noche en la hoja que lee recepción al entrar.</p>
+      <p class="lbl">Versión a mano</p><div class="codebox"><div class="codebar"><span>Cambia lo de los corchetes</span><button class="copy" type="button" data-t="m-relevo">Copiar</button></div><pre id="m-relevo">Pasa estas notas del turno de noche a la hoja del relevo para recepción. Tres bloques: PARA HACER HOY, con habitación y hora, PASA A OTRO DEPARTAMENTO y YA RESUELTO. Si algo se repite, ponlo al principio.
+
+Notas: [pega las notas]</pre></div>
+      <p class="solo"><b>Cuando trabaja solo.</b> El recepcionista de noche deja una nota de voz y a las 7:00 la hoja ya está hecha.</p>
+    </article>
+    <article class="ag" id="resenas" style="--c:#087F7B">
+      <div class="ag-cab"><svg class="px px-s" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><div><h3>Reseñas nuevas</h3><span class="cuando">Cada mañana</span></div></div>
+      <p class="hace">Prepara la respuesta a cada reseña nueva para que la revises antes de publicarla.</p>
+      <p class="lbl">Versión a mano</p><div class="codebox"><div class="codebar"><span>Cambia lo de los corchetes</span><button class="copy" type="button" data-t="m-resenas">Copiar</button></div><pre id="m-resenas">Responde a estas reseñas de mi hotel. De usted, entre 40 y 90 palabras cada una. Da las gracias por algo concreto que diga la reseña. Si hay una queja, reconócela sin excusas y no ofrezcas nada gratis ni descuentos. Firma: [tu nombre y cargo].
+
+Reseñas: [pega las reseñas]</pre></div>
+      <p class="solo"><b>Cuando trabaja solo.</b> Coge las reseñas nuevas cada mañana y te deja las respuestas para aprobarlas desde el móvil.</p>
+    </article>
+    <article class="ag" id="resumen-lunes" style="--c:#475569">
+      <div class="ag-cab"><svg class="px px-s" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><div><h3>Resumen del lunes</h3><span class="cuando">Cada lunes</span></div></div>
+      <p class="hace">Junta los partes de los jefes en una página y te marca lo que tienes que decidir esta semana.</p>
+      <p class="lbl">Versión a mano</p><div class="codebox"><div class="codebar"><span>Cambia lo de los corchetes</span><button class="copy" type="button" data-t="m-resumen-lunes">Copiar</button></div><pre id="m-resumen-lunes">Con estos partes de los jefes, hazme el resumen de la semana en una página: lo que ha ido bien, lo que falla, lo pendiente con el cargo que lo tiene y lo que tengo que decidir. Sin introducción.
+
+Partes: [pega los partes]</pre></div>
+      <p class="solo"><b>Cuando trabaja solo.</b> Recoge el parte de cada jefe y te avisa de quién no lo ha mandado. El lunes a las 8:00 lo tienes.</p>
+    </article>
+    <article class="ag" id="baja-pisos" style="--c:#7A5AF8">
+      <div class="ag-cab"><svg class="px px-s" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><div><h3>Baja en pisos</h3><span class="cuando">Cuando alguien no viene</span></div></div>
+      <p class="hace">Te prepara dos formas de cubrir el hueco, con las cuentas hechas, para que elijas una.</p>
+      <p class="lbl">Versión a mano</p><div class="codebox"><div class="codebar"><span>Cambia lo de los corchetes</span><button class="copy" type="button" data-t="m-baja-pisos">Copiar</button></div><pre id="m-baja-pisos">Mañana falta una camarera en el turno de mañana. Dame dos formas de cubrirlo con las cuentas hechas. Una salida cuenta 1 y una habitación que sigue, 0,5. Cada camarera hace [14] por turno.
+
+Habitaciones y cuadrante: [pega]</pre></div>
+      <p class="solo"><b>Cuando trabaja solo.</b> En cuanto alguien avisa, te llegan al móvil las dos opciones y eliges con un toque.</p>
+    </article>
+    <article class="ag" id="ronda-mantenimiento" style="--c:#C2410C">
+      <div class="ag-cab"><svg class="px px-s" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><div><h3>Ronda de mantenimiento</h3><span class="cuando">Después de cada ronda</span></div></div>
+      <p class="hace">Ordena lo que sale de la ronda en partes por urgencia, con el sitio exacto y lo primero que hay que hacer.</p>
+      <p class="lbl">Versión a mano</p><div class="codebox"><div class="codebar"><span>Cambia lo de los corchetes</span><button class="copy" type="button" data-t="m-ronda-mantenimiento">Copiar</button></div><pre id="m-ronda-mantenimiento">Ordena estas notas de la ronda de mantenimiento por urgencia: URGENTE si puede hacer daño a alguien o deja algo sin servicio, ESTA SEMANA y CUANDO HAYA HUECO. En cada parte, el sitio exacto y lo primero que hay que hacer.
+
+Notas: [pega las notas]</pre></div>
+      <p class="solo"><b>Cuando trabaja solo.</b> El jefe de mantenimiento manda fotos y audios durante la ronda, y lo urgente te llega como aviso.</p>
+    </article>
+    <article class="ag" id="correo-grupo" style="--c:#B4232A">
+      <div class="ag-cab"><svg class="px px-s" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><div><h3>Correo de un grupo</h3><span class="cuando">Cuando llega una petición</span></div></div>
+      <p class="hace">Prepara la propuesta con precio cerrado y el correo de respuesta, para que salga el mismo día.</p>
+      <p class="lbl">Versión a mano</p><div class="codebox"><div class="codebar"><span>Cambia lo de los corchetes</span><button class="copy" type="button" data-t="m-correo-grupo">Copiar</button></div><pre id="m-correo-grupo">Prepara la propuesta para este grupo: una tabla con concepto, cálculo e importe, el total y el precio por persona. Usa solo estas tarifas: [tus tarifas]. Si algo no tiene precio, dímelo.
+
+Correo del grupo: [pega el correo]</pre></div>
+      <p class="solo"><b>Cuando trabaja solo.</b> Lee el correo en cuanto llega y te deja la propuesta con el correo de respuesta, lista para aprobar.</p>
+    </article>
+    <article class="ag" id="plan-restaurante" style="--c:#A16207">
+      <div class="ag-cab"><svg class="px px-s" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><div><h3>Plan del restaurante</h3><span class="cuando">Cada jueves</span></div></div>
+      <p class="hace">Te dice qué platos empujar el fin de semana, cuántos cubiertos esperar y qué falta pedir.</p>
+      <p class="lbl">Versión a mano</p><div class="codebox"><div class="codebar"><span>Cambia lo de los corchetes</span><button class="copy" type="button" data-t="m-plan-restaurante">Copiar</button></div><pre id="m-plan-restaurante">Con estas ventas de la semana y la ocupación del fin de semana, dime qué platos de la carta empujar, cuántos cubiertos esperar por noche y qué falta pedir, con las cuentas.
+
+Ventas, ocupación y lo que queda en cámara: [pega]</pre></div>
+      <p class="solo"><b>Cuando trabaja solo.</b> Cada jueves cruza las ventas con la ocupación y te avisa si algo no llega para el fin de semana.</p>
+    </article>
+    <article class="ag" id="cierre-mes" style="--c:#475569">
+      <div class="ag-cab"><svg class="px px-s" viewBox="0 0 13 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#D97757" d="M2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM7 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM3 1h1v1h-1zM4 1h1v1h-1zM5 1h1v1h-1zM6 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM0 3h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM2 7h1v1h-1zM4 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1z"/><path fill="#B9583A" d="M2 5h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1z"/><path fill="#1F1E1D" d="M4 2h1v1h-1zM8 2h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1z"/></svg><div><h3>Cierre de mes</h3><span class="cuando">Cada mes</span></div></div>
+      <p class="hace">Comprueba que los números cuadran y te deja el informe de una página para los dueños.</p>
+      <p class="lbl">Versión a mano</p><div class="codebox"><div class="codebar"><span>Cambia lo de los corchetes</span><button class="copy" type="button" data-t="m-cierre-mes">Copiar</button></div><pre id="m-cierre-mes">Comprueba que estos totales del mes cuadran: que las partidas suman el ingreso total y que noches por precio medio da el ingreso de habitaciones. Si algo no cuadra, dime la diferencia exacta.
+
+Totales: [pega]</pre></div>
+      <p class="solo"><b>Cuando trabaja solo.</b> Además de comprobar las cifras, escribe el informe para los dueños y te lo deja listo para revisar y enviar.</p>
+    </article>
+  </div>
+</section>
+
+<section id="asi-queda">
+  <p class="eyebrow">Así queda cuando trabajan solos</p>
+  <h2>4 ejemplos hechos</h2>
+  <p class="h2sub">Con el Hotel Brisalta, un hotel inventado de 80 habitaciones en la Costa Blanca. Es lo que devolvieron los agentes, recortado para que quepa aquí.</p>
+  
+  <div class="ejs">
+    <article class="ej">
+      <p class="ej-t">Relevo del turno de noche · 11 de noviembre</p>
+      <div class="res"><b>Para hacer hoy</b><p>Habitación 214, antes de las 12:00. Cuna para una familia que llega con un bebé. Pedírsela a pisos.</p><p>Bar del lobby, antes de las 18:00. Llamar al técnico del TPV.</p><b>Pasa a otro departamento</b><p>Mantenimiento · la máquina de hielo de la segunda planta hace un ruido raro.</p><b>Ya resuelto esta noche</b><p>Habitación 305 · queja por ruido de la 307 a las 2:15. El recepcionista de noche subió y se arregló.</p></div>
+      <p class="aviso"><b>Para revisar.</b> El TPV del bar se ha colgado tres veces esta semana.</p>
+    </article>
+    <article class="ej">
+      <p class="ej-t">Reseñas nuevas · la de 2 estrellas</p>
+      <p class="cita-o">★★☆☆☆ «25 minutos para hacer el check-in un viernes por la tarde. La habitación muy bien, pero la llegada nos dejó mal sabor de boca.»</p>
+      <p class="cita">Gracias por su reseña y por lo que dicen de la habitación. Tienen razón en que 25 minutos de espera al llegar son demasiados, y sentimos que su estancia empezara con ese mal sabor de boca. Ya estamos estudiando cómo reforzar la recepción los viernes por la tarde. Nos gustaría recibirles mejor en su próxima visita.<br>Laura Martín, directora del Hotel Brisalta</p>
+    </article>
+    <article class="ej">
+      <p class="ej-t">Baja en pisos · jueves 12, turno de mañana</p>
+      <p class="aviso"><b>Lo que pasa.</b> 22 salidas × 1 + 24 que siguen × 0,5 = 34 unidades. Las 2 camareras que quedan hacen 28. Faltan 6.</p>
+      <div class="opc"><span>A</span><p>La camarera de refuerzo entra de 8:00 a 12:00 y cubre las 6 unidades que faltan.</p></div>
+      <div class="opc"><span>B</span><p>Las camareras A y B alargan una hora y la gobernanta limpia las 2,5 unidades que quedan.</p></div>
+      <p class="aviso"><b>Para revisar.</b> La de refuerzo tiene contrato de fines de semana. Hay que confirmar que puede el jueves y que no pasa de 40 horas.</p>
+    </article>
+    <article class="ej">
+      <p class="ej-t">Correo de un grupo · club de senderismo, 28 personas</p>
+      <div class="tw"><table><thead><tr><th>Concepto</th><th>Cálculo</th><th>Importe</th></tr></thead><tbody>
+        <tr><td>Doble con desayuno</td><td>14 hab. × 3 noches × 78 €</td><td>3.276 €</td></tr>
+        <tr><td>Menú de grupo</td><td>28 × 3 cenas × 24 €</td><td>2.016 €</td></tr>
+        <tr><td>Traslados</td><td>7 ida + 7 vuelta × 45 €</td><td>630 €</td></tr>
+        <tr class="tot"><td>Total</td><td>211,50 € por persona</td><td>5.922 €</td></tr>
+      </tbody></table></div>
+      <p class="aviso"><b>Y el correo.</b> Sale con el precio cerrado, lo que incluye y hasta cuándo se mantiene.</p>
+    </article>
+  </div>
+</section>
+
+<section class="cta" id="diagnostico">
+  <div>
+    <p class="eyebrow">El paso siguiente</p>
+    <h2>¿Quieres que los 8 trabajen solos cada mañana?</h2>
+    <p>A las 8:00 abres el panel, ves lo que han hecho y apruebas desde el móvil lo que necesita tu OK. Lo dejamos montado en tu hotel en 7 días, con lo que ya usáis.</p>
+    <p class="peq">En la llamada de diagnóstico vemos cómo trabajáis hoy y qué tareas se pueden dejar en automático. Sales con el plan claro.</p>
+    <a class="btn" href="https://calendly.com/vertice1/nueva-reunion-1?utm_source=recurso&amp;utm_campaign=despacho" target="_blank" rel="noopener">Reservar la llamada de diagnóstico</a>
+  </div>
+  <figure class="shot"><img src="/despacho/panel.jpg" width="1200" height="630" alt="Panel de dirección del Hotel Brisalta con las horas devueltas este mes y las tareas que esperan el OK de la directora" loading="lazy"><figcaption>El panel del hotel de ejemplo. Te lo enseño en la llamada.</figcaption></figure>
+</section>
+
+<footer>Héctor García · verticeqr.com<br>Claude es una marca de Anthropic. Este recurso es independiente de Anthropic.</footer>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var el = document.getElementById(b.dataset.t), t = el.innerText;
+    var ok = function () { b.textContent = 'Copiado'; setTimeout(function () { b.textContent = 'Copiar'; }, 1600); };
+    var sel = function () { var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Seleccionado'; };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(ok, sel); else sel();
+  });
+});
+</script>
+</body></html>

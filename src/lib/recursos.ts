@@ -259,6 +259,21 @@ export const RECURSOS: Recurso[] = [
     destino: "/skills",
     cta: "Abrir las 6 skills",
   },
+  {
+    slug: "despacho",
+    etiqueta: "Recurso gratuito",
+    titulo: "Tu despacho en automático",
+    subtitulo:
+      "Los 8 agentes que llevan el despacho de un hotel: el relevo de noche, las reseñas, el resumen del lunes, las bajas en pisos, el mantenimiento, los grupos, el restaurante y el cierre de mes.",
+    incluye: [
+      "La versión a mano de cada agente, para pegar en Claude o en ChatGPT",
+      "Lo que hace cada uno cuando trabaja solo",
+      "4 ejemplos hechos con un hotel inventado de 80 habitaciones",
+      "El panel donde la dirección aprueba lo que necesita su OK",
+    ],
+    destino: "/despacho",
+    cta: "Ver los 8 agentes",
+  },
   // Plantilla: copia este bloque, cambia el slug, el título y el enlace, y ya
   // está publicada en /recurso/<slug>.
   {
