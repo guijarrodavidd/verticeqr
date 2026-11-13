@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>El informe de tu cierre de mes</title>
+<meta property="og:title" content="El informe de tu cierre de mes, listo en 2 minutos">
+<meta property="og:description" content="Mete los totales de tu mes y sale el informe de una página para los dueños, con los 12 números calculados.">
+<meta property="og:image" content="https://verticeqr.com/informe/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap">
+<style>
+:root{color-scheme:light;--bg:#F3F6F6;--grid:rgba(11,18,32,.06);--card:#FFFFFF;--line:#E0E6E6;--tile:#EEF3F3;--ink:#0B1220;--text:#2A3242;--muted:#5D6678;--teal:#087F7B;--aqua:#5EE6D8;--grad:linear-gradient(90deg,#36C6C0,#A8D86A);--dark:#0D1117;--dark-t:#E6EAF2;--dark-m:#9AA4B5;--dark-l:#252C38;--naranja:#C2410C;--naranja-f:#FFF1E8;--verde:#15803D;--sans:"Geist","Helvetica Neue",Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0A0E15;--grid:rgba(255,255,255,.05);--card:#121824;--line:#232B3A;--tile:#182030;--ink:#F1F4FA;--text:#D5DBE6;--muted:#98A2B5;--teal:#5EE6D8;--dark:#05070B;--dark-l:#1C2230;--naranja:#FB923C;--naranja-f:#2A1A10;--verde:#4ADE80}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0A0E15;--grid:rgba(255,255,255,.05);--card:#121824;--line:#232B3A;--tile:#182030;--ink:#F1F4FA;--text:#D5DBE6;--muted:#98A2B5;--teal:#5EE6D8;--dark:#05070B;--dark-l:#1C2230;--naranja:#FB923C;--naranja-f:#2A1A10;--verde:#4ADE80}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{background:var(--bg);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background-color:var(--bg);background-image:radial-gradient(var(--grid) 1px,transparent 1.3px);background-size:22px 22px;color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;padding-block:0 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:1080px;margin:0 auto;position:relative}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px;border-radius:6px}
+header{text-align:center;padding:52px 0 8px;position:relative}
+header::before{content:"";position:absolute;inset:-40px 0 auto;height:560px;z-index:-1;pointer-events:none;background:radial-gradient(40% 50% at 28% 40%,rgba(94,230,216,.22),transparent 70%),radial-gradient(35% 45% at 74% 35%,rgba(168,216,106,.22),transparent 70%)}
+.kick{font-size:14px;font-weight:600;color:var(--muted)}
+h1{font-weight:800;font-size:clamp(34px,7vw,64px);line-height:1.03;letter-spacing:-.04em;color:var(--ink);margin-top:16px;text-wrap:balance}
+h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:660px;margin:16px auto 0;color:var(--muted);font-size:18px;text-wrap:balance}
+.stats{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:22px}
+.stats span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;color:var(--ink)}
+.stats b{font-weight:800}
+.todo{display:flex;justify-content:center;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:700;padding:12px 24px;border-radius:999px;font-size:16px;text-align:center;border:0;cursor:pointer;font-family:var(--sans)}
+.btn:hover{opacity:.9}
+section{margin-top:56px;scroll-margin-top:20px}
+h2{font-weight:800;color:var(--ink);font-size:clamp(28px,5vw,40px);line-height:1.06;letter-spacing:-.03em;text-wrap:balance}
+.eyebrow{font-size:13px;font-weight:700;color:var(--teal)}
+.h2sub{color:var(--muted);font-size:16.5px;margin-top:8px;max-width:700px}
+.calc{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px;margin-top:20px;align-items:start}
+.form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.form .ejemplo{grid-column:1/-1;font-size:13.5px;color:var(--muted);background:var(--tile);border-radius:10px;padding:8px 12px}
+.campo{display:grid;gap:4px;min-width:0}
+.campo span{font-size:13px;font-weight:600;color:var(--ink);line-height:1.3}
+.campo input{font:500 16px var(--sans);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-height:44px;width:100%;font-variant-numeric:tabular-nums}
+.campo input:focus{outline:2px solid var(--teal);outline-offset:1px}
+.campo small{font-size:12px;color:var(--muted);line-height:1.35}
+.res{display:grid;gap:14px;min-width:0}
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.k{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;min-width:0}
+.k p{font-size:12px;color:var(--muted);line-height:1.3}
+.k b{display:block;font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.02em;margin-top:4px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.k .mas{color:var(--verde)}
+.k .menos{color:var(--naranja)}
+.alerta{background:var(--naranja-f);color:var(--naranja);border-radius:12px;padding:10px 14px;font-size:14.5px;font-weight:600}
+.inf{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0}
+.inf-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 8px 8px 16px;border-bottom:1px solid var(--line);background:var(--tile)}
+.inf-bar span{font-size:13px;font-weight:700;color:var(--ink)}
+.copy{font:700 13px var(--sans);background:var(--grad);color:#0D1117;border:0;border-radius:999px;padding:0 16px;min-height:36px;min-width:86px;cursor:pointer;flex:none}
+.inf-doc{padding:18px;font-size:14.5px;display:grid;gap:10px}
+.inf-doc .asunto{font-weight:700;color:var(--ink)}
+.inf-doc h4{font-size:12.5px;letter-spacing:.02em;color:var(--teal);margin-top:4px}
+.inf-doc ul{list-style:none;display:grid;gap:4px}
+.inf-doc li{padding-left:14px;position:relative}
+.inf-doc li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--muted)}
+.explicar{background:var(--naranja-f);color:var(--naranja);font-weight:700;border-radius:6px;padding:1px 6px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:6px 6px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--muted);font-weight:600;font-size:12px}
+td+td,th+th{text-align:right}
+.firma{color:var(--muted)}
+.hueco{background:var(--dark);color:var(--dark-t);border-radius:16px;padding:16px 18px;font-size:15px}
+.hueco b{color:#fff}
+.codebox{background:var(--dark);color:var(--dark-t);border-radius:14px;overflow:hidden;min-width:0;margin-top:20px}
+.codebar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:6px 6px 6px 14px;border-bottom:1px solid var(--dark-l)}
+.codebar span{font-size:12.5px;color:var(--dark-m);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+pre{font-family:var(--sans);font-size:14px;line-height:1.6;white-space:pre-wrap;word-break:break-word;padding:14px 16px;max-height:460px;overflow:auto}
+.reglas{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
+.reglas li{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:12px;padding:12px 14px;font-size:15px}
+.reglas b{color:var(--ink);display:block}
+@media (max-width:700px){.reglas{grid-template-columns:minmax(0,1fr)}}
+.cta{background:var(--dark);color:var(--dark-t);border-radius:22px;padding:30px 24px;position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:28px;align-items:center}
+.cta::before{content:"";position:absolute;inset:auto -20% -60% 30%;height:320px;background:radial-gradient(closest-side,rgba(94,230,216,.35),transparent);pointer-events:none}
+.cta>*{position:relative;min-width:0}
+.cta .eyebrow{color:var(--aqua)}
+.cta h2{color:#fff;margin-top:6px}
+.cta p{margin-top:12px;font-size:17px}
+.cta .btn{margin-top:20px;background:var(--grad);color:#0D1117}
+.cta .peq{font-size:14.5px;color:var(--dark-m)}
+.mail{background:#fff;color:#1F2937;border-radius:14px;padding:14px 16px;font-size:14px;display:grid;gap:6px}
+.mail .de{font-size:12.5px;color:#6B7280}
+.mail .as{font-weight:700;color:#111827}
+.mail .ok{display:inline-block;margin-top:4px;font-size:12.5px;font-weight:700;color:#15803D;background:#DCFCE7;border-radius:99px;padding:2px 10px;justify-self:start}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:40px;line-height:1.5}
+@media (max-width:900px){.calc,.cta{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.form{grid-template-columns:minmax(0,1fr)}.nums{grid-template-columns:repeat(2,minmax(0,1fr))}.lead{font-size:17px}td{white-space:normal}}
+</style></head><body><div class="wrap">
+<header>
+  <p class="kick">Recurso gratis de Héctor García</p>
+  <h1>El informe de tu cierre de mes, <span>listo en 2 minutos</span></h1>
+  <p class="lead">Mete los totales de tu mes y te salen los 12 números que miran los dueños y el informe de una página para mandárselo. Después te dejo la versión para Claude y te enseño cómo llega solo cada día 1.</p>
+  <div class="stats"><span><b>12</b> números calculados</span><span><b>1</b> página para los dueños</span></div>
+  <div class="todo"><a class="btn" href="#prueba">Probar con mi mes</a></div>
+</header>
+
+<section id="prueba">
+  <p class="eyebrow">Pruébalo con tu mes</p>
+  <h2>Cambia los números por los tuyos</h2>
+  <p class="h2sub">Vienen rellenos con el Hotel Brisalta, un hotel inventado de 80 habitaciones. Lo que escribes se queda en tu navegador, no se guarda en ningún sitio.</p>
+  <div class="calc">
+    <form class="form" id="form" onsubmit="return false">
+      <p class="ejemplo">Los totales salen del programa de reservas y de contabilidad. Con los del mes pasado te vale.</p>
+      <label class="campo"><span>Nombre del hotel</span><input id="hotel" value="Hotel Brisalta" inputmode="text" autocomplete="off"></label><label class="campo"><span>Mes</span><input id="mes" value="octubre" inputmode="text" autocomplete="off"></label><label class="campo"><span>Habitaciones del hotel</span><input id="hab" value="80" inputmode="decimal" autocomplete="off"></label><label class="campo"><span>Días del mes</span><input id="dias" value="31" inputmode="decimal" autocomplete="off"></label><label class="campo"><span>Habitaciones vendidas en el mes</span><input id="vendidas" value="1.984" inputmode="decimal" autocomplete="off"><small>Las noches vendidas, sumando todas las habitaciones.</small></label><label class="campo"><span>Pernoctaciones</span><input id="pernoct" value="3.968" inputmode="decimal" autocomplete="off"><small>Huéspedes por noches. Te lo da el programa de reservas.</small></label><label class="campo"><span>Ingresos de habitaciones (€)</span><input id="ing_hab" value="178.560" inputmode="decimal" autocomplete="off"></label><label class="campo"><span>Ingresos de restaurante y bar (€)</span><input id="ing_fb" value="41.664" inputmode="decimal" autocomplete="off"></label><label class="campo"><span>Otros ingresos (€)</span><input id="ing_otros" value="9.920" inputmode="decimal" autocomplete="off"><small>Spa, parking, lavandería, extras.</small></label><label class="campo"><span>Coste de personal (€)</span><input id="personal" value="64.000" inputmode="decimal" autocomplete="off"><small>Nóminas y seguridad social del mes.</small></label><label class="campo"><span>Presupuesto de ingresos del mes (€)</span><input id="presupuesto" value="236.000" inputmode="decimal" autocomplete="off"></label><label class="campo"><span>Ingresos del mismo mes del año pasado (€)</span><input id="anterior" value="221.300" inputmode="decimal" autocomplete="off"></label>
+    </form>
+    <div class="res">
+      <p class="alerta" id="alerta" hidden></p>
+      <div class="nums" id="nums"></div>
+      <div class="inf">
+        <div class="inf-bar"><span>El informe para los dueños</span><button class="copy" type="button" id="copiar-inf">Copiar</button></div>
+        <div class="inf-doc" id="informe"></div>
+      </div>
+      <p class="hueco"><b>Lo que esta página no sabe es el porqué.</b> Por eso deja las desviaciones «a explicar por la dirección». El sistema automático lo escribe solo, cruzando los números con los partes del mes.</p>
+    </div>
+  </div>
+</section>
+
+<section id="claude">
+  <p class="eyebrow">La instrucción para Claude</p>
+  <h2>El mismo informe, con el porqué incluido</h2>
+  <p class="h2sub">Cópiala en un chat de Claude o de ChatGPT, rellena los corchetes y cuéntale en la última línea lo que ha pasado en el mes. Lleva las dos reglas que hacen que los dueños se fíen del informe.</p>
+  <ul class="reglas">
+    <li><b>Primero comprueba que cuadra.</b> Habitaciones vendidas por precio medio tiene que dar el ingreso de habitaciones. Si no da, te dice la diferencia exacta antes de escribir nada.</li>
+    <li><b>No se inventa el porqué.</b> Si no le das el motivo de una desviación, escribe «a explicar por la dirección». Un informe con una causa inventada te deja mal delante de los dueños.</li>
+  </ul>
+  <div class="codebox"><div class="codebar"><span>Cambia lo de los corchetes</span><button class="copy" type="button" data-t="prompt">Copiar</button></div><pre id="prompt">Eres el analista del cierre de mes de mi hotel. Con los totales de abajo haz tres cosas.
+
+1. Comprueba que cuadran. Que habitaciones vendidas por precio medio dé el ingreso de habitaciones y que las partidas sumen el ingreso total. Si algo no cuadra, dime la diferencia exacta.
+
+2. Calcula estos 12 números y enseña cada cuenta: ocupación, precio medio por habitación vendida, ingreso por habitación disponible, ingreso total, ingreso total por habitación disponible, ingreso por huésped y noche, gasto extra por huésped y noche, peso del restaurante y el bar en el total, coste de personal sobre ingresos, coste de personal por habitación vendida, diferencia con el presupuesto y diferencia con el mismo mes del año pasado.
+
+3. Escribe el informe de una página para los dueños, de usted. Dos frases sobre cómo ha ido el mes, una tabla con los números, LO QUE HA IDO BIEN y LO QUE HAY QUE MIRAR. No inventes causas. Si no te doy el motivo de una desviación, escribe «a explicar por la dirección».
+
+Totales del mes:
+Habitaciones del hotel: [ ]
+Días del mes: [ ]
+Habitaciones vendidas: [ ]
+Pernoctaciones: [ ]
+Ingresos de habitaciones: [ ] €
+Ingresos de restaurante y bar: [ ] €
+Otros ingresos: [ ] €
+Coste de personal: [ ] €
+Presupuesto de ingresos: [ ] €
+Ingresos del mismo mes del año pasado: [ ] €
+Lo que ha pasado este mes (si lo sabes): [ ]</pre></div>
+</section>
+
+<section class="cta" id="diagnostico">
+  <div>
+    <p class="eyebrow">El paso siguiente</p>
+    <h2>¿Te sirve tener el informe en automático?</h2>
+    <p>En automático, el día 1 el sistema recoge los totales, comprueba que cuadran con contabilidad y escribe el porqué de cada desviación con los partes del mes. Tú lo apruebas desde el móvil y el lunes a las 9:00 llega a los dueños.</p>
+    <p>En 15 minutos vemos cómo cerráis hoy el mes y de dónde salen vuestros números. Te digo si os compensa dejarlo en automático, y si no os compensa, te lo digo también.</p>
+    <p class="peq">Trabajamos desde fuera, sin acceso a vuestro programa de reservas, y firmamos confidencialidad.</p>
+    <a class="btn" href="https://calendly.com/vertice1/nueva-reunion-1?utm_source=recurso&amp;utm_campaign=informe" target="_blank" rel="noopener">Reservar los 15 minutos</a>
+  </div>
+  <div class="mail" aria-label="Ejemplo del correo que reciben los dueños">
+    <p class="de">Para: los dueños · Lunes, 9:00</p>
+    <p class="as">Hotel Brisalta · Cierre de octubre</p>
+    <p>Estimados socios: el mes cerró con 230.144 € de ingresos, un 4,0 % más que el año pasado…</p>
+    <span class="ok">Aprobado por la directora desde el móvil</span>
+  </div>
+</section>
+
+<footer>Héctor García · verticeqr.com<br>Claude es una marca de Anthropic. Este recurso es independiente de Anthropic.</footer>
+</div>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  function num(v) {
+    v = String(v || '').trim().replace(/[\s€%]/g, '');
+    if (/,\d{1,2}$/.test(v)) v = v.replace(/\./g, '').replace(',', '.');
+    else v = v.replace(/[.,]/g, '');
+    var n = parseFloat(v);
+    return isFinite(n) ? n : 0;
+  }
+  var f0 = new Intl.NumberFormat('es-ES', { maximumFractionDigits: 0 });
+  var f2 = new Intl.NumberFormat('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var f1 = new Intl.NumberFormat('es-ES', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  function eur0(x) { return f0.format(Math.round(x)) + ' €'; }
+  function eur2(x) { return f2.format(x) + ' €'; }
+  function pct(x) { return f1.format(x * 100) + ' %'; }
+  function sig(x) { return (x > 0 ? '+' : x < 0 ? '−' : '') ; }
+  function div(a, b) { return b ? a / b : 0; }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  var textoInforme = '';
+
+  function calcula() {
+    var d = {};
+    ['hab','dias','vendidas','pernoct','ing_hab','ing_fb','ing_otros','personal','presupuesto','anterior'].forEach(function (k) { d[k] = num($(k).value); });
+    var hotel = $('hotel').value.trim() || 'Tu hotel', mes = $('mes').value.trim() || 'este mes';
+    var disp = d.hab * d.dias, total = d.ing_hab + d.ing_fb + d.ing_otros;
+    var r = {
+      occ: div(d.vendidas, disp), adr: div(d.ing_hab, d.vendidas), revpar: div(d.ing_hab, disp),
+      total: total, trevpar: div(total, disp), porh: div(total, d.pernoct),
+      extra: div(d.ing_fb + d.ing_otros, d.pernoct), pesofb: div(d.ing_fb, total),
+      perspct: div(d.personal, total), pershab: div(d.personal, d.vendidas),
+      difp: total - d.presupuesto, difpp: div(total - d.presupuesto, d.presupuesto),
+      difa: div(total - d.anterior, d.anterior)
+    };
+
+    var al = [];
+    if (d.vendidas > disp && disp) al.push('Hay más habitaciones vendidas (' + f0.format(d.vendidas) + ') que disponibles (' + f0.format(disp) + '). Revisa los datos.');
+    if (d.pernoct && d.pernoct < d.vendidas) al.push('Hay menos pernoctaciones que habitaciones vendidas. Revisa los datos.');
+    $('alerta').hidden = !al.length; $('alerta').textContent = al.join(' ');
+
+    var K = [
+      ['Ocupación', pct(r.occ)], ['Precio medio por habitación', eur2(r.adr)], ['Ingreso por habitación disponible', eur2(r.revpar)],
+      ['Ingreso total', eur0(r.total)], ['Ingreso total por habitación disponible', eur2(r.trevpar)], ['Ingreso por huésped y noche', eur2(r.porh)],
+      ['Gasto extra por huésped y noche', eur2(r.extra)], ['Peso del restaurante y el bar', pct(r.pesofb)], ['Coste de personal sobre ingresos', pct(r.perspct)],
+      ['Coste de personal por habitación vendida', eur2(r.pershab)],
+      ['Frente al presupuesto', '<span class="' + (r.difp >= 0 ? 'mas' : 'menos') + '">' + sig(r.difp) + eur0(Math.abs(r.difp)) + '</span>'],
+      ['Frente al año pasado', '<span class="' + (r.difa >= 0 ? 'mas' : 'menos') + '">' + sig(r.difa) + pct(Math.abs(r.difa)) + '</span>']
+    ];
+    $('nums').innerHTML = K.map(function (k) { return '<div class="k"><p>' + k[0] + '</p><b>' + k[1] + '</b></div>'; }).join('');
+
+    var frente = r.difp >= 0 ? 'un ' + pct(Math.abs(r.difpp)) + ' por encima del presupuesto' : 'un ' + pct(Math.abs(r.difpp)) + ' por debajo del presupuesto';
+    var anio = r.difa >= 0 ? 'un ' + pct(Math.abs(r.difa)) + ' más que el año pasado' : 'un ' + pct(Math.abs(r.difa)) + ' menos que el año pasado';
+    var bien = [], mirar = [];
+    if (r.difa > 0) bien.push('Los ingresos suben un ' + pct(r.difa) + ' frente al mismo mes del año pasado.');
+    if (r.difp >= 0) bien.push('El mes supera el presupuesto en ' + eur0(r.difp) + '.');
+    bien.push('El restaurante, el bar y los extras dejan ' + eur2(r.extra) + ' por huésped y noche, el ' + pct(div(d.ing_fb + d.ing_otros, total)) + ' de lo que entra.');
+    if (r.difp < 0) mirar.push('Faltan ' + eur0(-r.difp) + ' para llegar al presupuesto.');
+    if (r.difa < 0) mirar.push('Los ingresos bajan un ' + pct(-r.difa) + ' frente al año pasado.');
+    mirar.push('El personal se lleva el ' + pct(r.perspct) + ' de los ingresos, ' + eur2(r.pershab) + ' por habitación vendida.');
+
+    var filas = [
+      ['Ingreso total', eur0(r.total), 'Presupuesto ' + eur0(d.presupuesto)],
+      ['Ocupación', pct(r.occ), ''], ['Precio medio', eur2(r.adr), ''],
+      ['Ingreso por habitación disponible', eur2(r.revpar), ''],
+      ['Gasto extra por huésped y noche', eur2(r.extra), ''],
+      ['Coste de personal', pct(r.perspct), 'de los ingresos'],
+      ['Frente al año pasado', sig(r.difa) + pct(Math.abs(r.difa)), 'Año pasado ' + eur0(d.anterior)]
+    ];
+    var X = ' <span class="explicar">A explicar por la dirección.</span>';
+    $('informe').innerHTML =
+      '<p class="asunto">Asunto: ' + esc(hotel) + ' · Cierre de ' + esc(mes) + '</p>' +
+      '<p>Estimados socios: el mes de ' + esc(mes) + ' cerró con ' + eur0(r.total) + ' de ingresos, ' + frente + ' y ' + anio + '. La ocupación fue del ' + pct(r.occ) + ', con un precio medio de ' + eur2(r.adr) + ' por habitación.</p>' +
+      '<div class="tw"><table><thead><tr><th>Concepto</th><th>Este mes</th><th>Referencia</th></tr></thead><tbody>' +
+      filas.map(function (f) { return '<tr><td>' + f[0] + '</td><td>' + f[1] + '</td><td>' + f[2] + '</td></tr>'; }).join('') +
+      '</tbody></table></div>' +
+      '<h4>LO QUE HA IDO BIEN</h4><ul>' + bien.map(function (b) { return '<li>' + b + '</li>'; }).join('') + '</ul>' +
+      '<h4>LO QUE HAY QUE MIRAR</h4><ul>' + mirar.map(function (m) { return '<li>' + m + X + '</li>'; }).join('') + '</ul>' +
+      '<p class="firma">La dirección de ' + esc(hotel) + '</p>';
+
+    textoInforme = 'Asunto: ' + hotel + ' · Cierre de ' + mes + '\n\nEstimados socios: el mes de ' + mes + ' cerró con ' + eur0(r.total) + ' de ingresos, ' + frente + ' y ' + anio + '. La ocupación fue del ' + pct(r.occ) + ', con un precio medio de ' + eur2(r.adr) + ' por habitación.\n\n' +
+      filas.map(function (f) { return f[0] + ': ' + f[1] + (f[2] ? ' (' + f[2] + ')' : ''); }).join('\n') +
+      '\n\nLO QUE HA IDO BIEN\n' + bien.map(function (b) { return '- ' + b; }).join('\n') +
+      '\n\nLO QUE HAY QUE MIRAR\n' + mirar.map(function (m) { return '- ' + m + ' A explicar por la dirección.'; }).join('\n') +
+      '\n\nLa dirección de ' + hotel;
+  }
+
+  $('form').addEventListener('input', calcula);
+  calcula();
+
+  function copiar(b, texto, el) {
+    var ok = function () { b.textContent = 'Copiado'; setTimeout(function () { b.textContent = 'Copiar'; }, 1600); };
+    var sel = function () { if (!el) return; var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Seleccionado'; };
+    if (navigator.clipboard) navigator.clipboard.writeText(texto).then(ok, sel); else sel();
+  }
+  $('copiar-inf').addEventListener('click', function () { copiar(this, textoInforme, $('informe')); });
+  document.querySelectorAll('.copy[data-t]').forEach(function (b) {
+    b.addEventListener('click', function () { var el = $(b.dataset.t); copiar(b, el.innerText, el); });
+  });
+})();
+</script>
+</body></html>
