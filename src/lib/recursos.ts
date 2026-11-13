@@ -274,6 +274,21 @@ export const RECURSOS: Recurso[] = [
     destino: "/despacho",
     cta: "Ver los 8 agentes",
   },
+  {
+    slug: "informe",
+    etiqueta: "Recurso gratuito",
+    titulo: "El informe de tu cierre de mes, listo en 2 minutos",
+    subtitulo:
+      "Mete los totales de tu mes y te salen los 12 números que miran los dueños y el informe de una página para mandárselo.",
+    incluye: [
+      "La calculadora con los 12 números del cierre de mes",
+      "El informe para los dueños, listo para copiar",
+      "La instrucción para Claude que comprueba que todo cuadra",
+      "Cómo llega solo a los dueños cada día 1",
+    ],
+    destino: "/informe",
+    cta: "Abrir el sistema de informes",
+  },
   // Plantilla: copia este bloque, cambia el slug, el título y el enlace, y ya
   // está publicada en /recurso/<slug>.
   {
