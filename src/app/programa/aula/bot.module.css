@@ -1,0 +1,52 @@
+/* El agente en 8 bits. Animaciones en pasos, para que se mueva como un píxel. */
+
+.bot { position: relative; display: inline-grid; place-items: end center; flex: none; max-width: 100%; }
+.cuerpo { display: block; overflow: visible; max-width: 100%; height: auto; filter: drop-shadow(0 10px 14px rgba(54, 198, 192, 0.35)); }
+.oscuro .cuerpo { filter: drop-shadow(0 10px 18px rgba(94, 230, 216, 0.55)); }
+
+.despierto .cuerpo { animation: flota 2.4s steps(2, jump-none) infinite; animation-delay: var(--d, 0s); }
+.ojos { transform-box: fill-box; transform-origin: center; animation: parpadea 4.6s infinite; animation-delay: var(--d, 0s); }
+.duerme .ojos { animation: none; }
+.duerme .cuerpo { filter: grayscale(0.55) drop-shadow(0 8px 12px rgba(11, 18, 32, 0.12)); opacity: 0.75; }
+.celebra .cuerpo { animation: salta 0.9s steps(3, jump-none) 3; }
+
+/* La luz de la antena parpadea. */
+.luz { animation: luz 1.6s steps(2, jump-none) infinite; }
+.duerme .luz { animation: none; opacity: 0.4; }
+
+.zetas { position: absolute; top: 4%; right: 18%; font: 700 14px/1 ui-monospace, monospace; color: #87949f; pointer-events: none; }
+.zetas i { position: absolute; font-style: normal; animation: zeta 2.4s steps(4, jump-none) infinite; }
+.zetas i:nth-child(2) { animation-delay: 1.2s; font-size: 11px; }
+
+.chispas { position: absolute; left: 50%; top: 40%; pointer-events: none; }
+.chispas i {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #a8d86a;
+  animation: chispa 0.9s steps(5, jump-none) both;
+  animation-delay: calc(var(--i) * 70ms + 0.2s);
+}
+.chispas i:nth-child(odd) { background: #5ee6d8; }
+
+@keyframes flota { 50% { transform: translateY(-4px); } }
+@keyframes parpadea { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.15); } }
+@keyframes salta { 50% { transform: translateY(-10px); } }
+@keyframes luz { 50% { fill: #a8d86a; opacity: 0.55; } }
+@keyframes chispa {
+  0% { opacity: 1; transform: translate(0, 0) scale(1); }
+  100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0.4); }
+}
+@keyframes zeta {
+  0% { opacity: 0; transform: translate(0, 0); }
+  30% { opacity: 1; }
+  100% { opacity: 0; transform: translate(10px, -16px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cuerpo,
+  .ojos,
+  .zetas i,
+  .luz,
+  .chispas i { animation: none !important; }
+}

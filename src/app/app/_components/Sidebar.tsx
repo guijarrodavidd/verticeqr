@@ -19,6 +19,10 @@ const SECTIONS: SectionItem[] = [
   { href: "/app/todos", label: "Todo List", icono: "✓", acento: "#4ade80" },
 ];
 
+// El programa Director con Claude es de Héctor, aparte de Vértice: solo lo ve él.
+const PROGRAMA: SectionItem = { href: "/app/programa", label: "Programa", icono: "◆", acento: "#5ee6d8" };
+const EMAIL_PROGRAMA = "cavani@vertice.com";
+
 export default function Sidebar({
   userNombre,
   userEmail,
@@ -76,7 +80,7 @@ export default function Sidebar({
 
         <nav className="vqr-app-nav">
           <div className="vqr-app-section-title">Workspace</div>
-          {SECTIONS.map((s) => {
+          {(userEmail === EMAIL_PROGRAMA ? [...SECTIONS, PROGRAMA] : SECTIONS).map((s) => {
             const active = isActive(s.href);
             return (
               <Link

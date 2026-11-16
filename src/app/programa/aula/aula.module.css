@@ -1,0 +1,426 @@
+/* Aula del programa Director con Claude.
+   Sale de la landing del programa (/programa), la que Héctor aprobó: Geist,
+   titulares que mezclan fino y negrita, halos aguamarina y lima, el símbolo
+   de Claude girando de fondo, números con el degradado turquesa → lima,
+   pestañas por semana y el bloque azul noche con brillo para lo importante. */
+
+.pagina {
+  --noche: #0b1220;
+  --tinta: #0e1116;
+  --gris: #5b6470;
+  --fondo: #ffffff;
+  --niebla: #f1f6f6;
+  --linea: rgba(14, 17, 22, 0.1);
+  --aqua: #5ee6d8;
+  --teal: #087f7b;
+  --lima: #a8d86a;
+  --grad: linear-gradient(90deg, #36c6c0 0%, #a8d86a 100%);
+  --halo-aqua: rgba(94, 230, 216, 0.34);
+  --halo-lima: rgba(168, 216, 106, 0.3);
+  --c-input: #30302e;
+  --c-texto: #ecece8;
+
+  min-height: 100vh;
+  background: var(--fondo);
+  color: var(--tinta);
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+}
+.pagina *,
+.pagina *::before,
+.pagina *::after { box-sizing: border-box; }
+.pagina h1,
+.pagina h2,
+.pagina h3,
+.pagina h4,
+.pagina p,
+.pagina ul,
+.pagina ol { margin: 0; }
+.pagina h1,
+.pagina h2,
+.pagina h3 { text-wrap: balance; }
+.pagina a:focus-visible,
+.pagina button:focus-visible { outline: 2px solid #36c6c0; outline-offset: 3px; }
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+
+/* ---------- Portada con halo ---------- */
+.portada {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(40% 55% at 6% 30%, var(--halo-aqua), transparent 70%),
+    radial-gradient(38% 50% at 96% 12%, var(--halo-lima), transparent 70%),
+    var(--fondo);
+}
+.portada::before {
+  content: "";
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  right: -150px;
+  top: -40px;
+  pointer-events: none;
+  background: url("/programa/claude-simbolo.svg") center / contain no-repeat;
+  opacity: 0.06;
+  animation: gira 90s linear infinite;
+}
+.portada > .wrap { position: relative; z-index: 1; padding-block: 48px 56px; display: grid; gap: 18px; }
+
+.h1 { font-size: clamp(40px, 6vw, 72px); line-height: 1; letter-spacing: -0.055em; font-weight: 400; }
+.h1 b { font-weight: 750; }
+.h2 { font-size: clamp(32px, 4.4vw, 52px); line-height: 1; font-weight: 700; letter-spacing: -0.05em; }
+.fino { font-weight: 400; }
+.entradilla { font-size: clamp(17px, 1.5vw, 20px); color: var(--gris); max-width: 36em; }
+.grad {
+  background-image: linear-gradient(90deg, #36c6c0, #a8d86a, #36c6c0);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: brillo 5s linear infinite;
+}
+
+.contador { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.contador b { font-size: clamp(44px, 6vw, 64px); font-weight: 750; letter-spacing: -0.06em; line-height: 1; font-variant-numeric: tabular-nums; }
+.contador span { color: var(--gris); font-size: 17px; }
+.barra { height: 8px; max-width: 520px; border-radius: 999px; background: rgba(14, 17, 22, 0.07); overflow: hidden; }
+.barra > i { display: block; height: 100%; border-radius: 999px; background: var(--grad); }
+
+.pildora {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-self: start;
+  align-self: flex-start;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: inset 0 0 0 1px var(--linea), 0 10px 24px -18px rgba(11, 18, 32, 0.5);
+}
+
+/* ---------- Botones ---------- */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  align-self: flex-start;
+  justify-self: start;
+  padding: 15px 26px;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  background: var(--tinta);
+  color: #fff;
+  box-shadow: 0 16px 34px -16px rgba(11, 18, 32, 0.7);
+  transition: transform 0.15s;
+}
+.boton:hover { transform: translateY(-1px); }
+.botonClaro { background: #fff; color: var(--tinta); box-shadow: 0 16px 34px -16px rgba(94, 230, 216, 0.9); }
+.botonBorde { background: transparent; color: var(--tinta); box-shadow: inset 0 0 0 2px var(--tinta); }
+
+/* ---------- Bloque azul noche ---------- */
+.noche {
+  border-radius: 28px;
+  color: #fff;
+  padding: clamp(24px, 4vw, 40px);
+  display: grid;
+  gap: 14px;
+  background:
+    radial-gradient(50% 75% at 0% 75%, rgba(94, 230, 216, 0.55), transparent 68%),
+    radial-gradient(35% 45% at 100% 0%, rgba(54, 198, 192, 0.2), transparent 70%),
+    var(--noche);
+}
+.noche .pildora { background: rgba(255, 255, 255, 0.08); color: #fff; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16); }
+.noche h2 { font-size: clamp(30px, 4.4vw, 50px); line-height: 1.02; font-weight: 400; letter-spacing: -0.05em; }
+.noche h2 b { font-weight: 750; }
+.noche p { color: #c3ccd6; max-width: 40em; font-size: 17px; }
+.nota { white-space: pre-line; color: #fff !important; font-size: 18px !important; line-height: 1.55; }
+
+/* ---------- Secciones ---------- */
+.seccion > .wrap { padding-block: 56px; display: grid; gap: 28px; }
+.cabeza { display: grid; gap: 10px; }
+
+/* Pestañas por semana, como en la landing */
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.tabs button {
+  font: inherit;
+  font-weight: 500;
+  font-size: 14.5px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  border: 0;
+  padding: 11px 16px;
+  border-radius: 999px;
+  color: var(--tinta);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: inset 0 0 0 1px var(--linea);
+  white-space: nowrap;
+}
+.tabs button b { font-weight: 700; }
+.tabs button[aria-selected="true"] { background: var(--tinta); color: #fff; box-shadow: none; }
+.tabs button.tabNoche { background: var(--noche); color: #fff; box-shadow: 0 10px 24px -14px rgba(94, 230, 216, 0.9); }
+.tabs button.tabCerrada { color: var(--gris); }
+.tabs button.tabNoche { color: #fff; }
+
+/* La semana: tarjeta blanca con su cabecera y las filas de días */
+.semana { background: #fff; border-radius: 28px; padding: 6px 30px 10px; box-shadow: inset 0 0 0 1px var(--linea), 0 30px 60px -40px rgba(11, 18, 32, 0.25); }
+.semanaCab { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 22px 0 18px; border-bottom: 1px solid var(--linea); }
+.semanaCab h3 { font-size: clamp(24px, 2.6vw, 32px); font-weight: 700; letter-spacing: -0.045em; line-height: 1.05; }
+.nivel { margin-left: auto; font-size: 14px; color: var(--teal); font-weight: 600; }
+.semanaCerrada { padding: 22px 0 18px; color: var(--gris); }
+
+.filas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; }
+.d2 {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 14px;
+  padding-block: 18px;
+  border-bottom: 1px solid var(--linea);
+  color: var(--tinta);
+  text-decoration: none;
+}
+a.d2:hover h4 { text-decoration: underline; text-decoration-color: #36c6c0; text-underline-offset: 4px; }
+.num { font-size: 26px; font-weight: 700; letter-spacing: -0.06em; line-height: 1.05; font-variant-numeric: tabular-nums; }
+.d2 h4 { font-size: 17.5px; font-weight: 650; letter-spacing: -0.035em; line-height: 1.2; }
+.d2 p { margin-top: 4px; color: var(--gris); font-size: 15.5px; line-height: 1.45; }
+.estado { display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 600; color: var(--gris); }
+.d2Hecha .num { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.d2Hecha .estado { color: var(--teal); }
+.d2ParaTi .estado { color: var(--teal); }
+.d2ParaTi .num { color: #36c6c0; }
+.d2Toca { background: linear-gradient(90deg, rgba(94, 230, 216, 0.16), transparent 70%); border-radius: 14px; padding-inline: 10px; margin-inline: -10px; border-bottom-color: transparent; }
+.d2Cerrada { opacity: 0.5; }
+
+.cierre {
+  margin: 14px 0 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: var(--niebla);
+  color: var(--tinta);
+  text-decoration: none;
+}
+.cierre b { font-weight: 650; }
+.cierre span { color: var(--gris); font-size: 14.5px; }
+
+/* Siempre a mano */
+.mano { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.tarjeta {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  padding: 22px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--linea);
+  color: var(--tinta);
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+a.tarjeta:hover { box-shadow: inset 0 0 0 2px #36c6c0; transform: translateY(-1px); }
+.tarjeta b { font-size: 19px; font-weight: 700; letter-spacing: -0.035em; }
+.tarjeta span { color: var(--gris); font-size: 15px; line-height: 1.45; }
+
+/* ---------- Lección ---------- */
+.volver { color: var(--gris); text-decoration: none; font-size: 15px; font-weight: 500; }
+.volver:hover { color: var(--tinta); }
+.titulo { font-size: clamp(36px, 5.4vw, 64px); line-height: 1.02; letter-spacing: -0.055em; font-weight: 700; }
+.consigues { font-size: clamp(17px, 1.5vw, 20px); color: var(--gris); max-width: 36em; }
+.consigues b { color: var(--tinta); font-weight: 650; }
+
+.video { position: relative; aspect-ratio: 16 / 9; max-width: 100%; border-radius: 24px; overflow: hidden; background: var(--noche); box-shadow: 0 30px 60px -36px rgba(11, 18, 32, 0.6); }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.videoVacio {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 24px;
+  color: #c3ccd6;
+  background:
+    radial-gradient(50% 75% at 0% 100%, rgba(94, 230, 216, 0.45), transparent 68%),
+    radial-gradient(35% 45% at 100% 0%, rgba(168, 216, 106, 0.18), transparent 70%),
+    var(--noche);
+}
+
+.cuerpo { display: grid; gap: 40px; font-size: 17px; line-height: 1.65; max-width: 760px; }
+.bloque { display: grid; gap: 12px; }
+.bloque h2 { font-size: clamp(24px, 2.6vw, 30px); font-weight: 700; letter-spacing: -0.045em; line-height: 1.1; }
+.bloque ol,
+.bloque ul { padding: 0; list-style: none; display: grid; gap: 10px; counter-reset: paso; }
+.bloque ul li { position: relative; padding-left: 22px; }
+.bloque ul li::before { content: ""; position: absolute; left: 2px; top: 0.62em; width: 8px; height: 8px; border-radius: 50%; background: #36c6c0; }
+.bloque ol li { position: relative; padding-left: 40px; counter-increment: paso; }
+.bloque ol li::before {
+  content: counter(paso);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.05em;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.caso { padding: 18px 20px; border-radius: 18px; background: var(--niebla); }
+.cita { margin: 0; padding: 18px 20px; border-radius: 18px; background: #fff; box-shadow: inset 0 0 0 1px var(--linea); font-size: 16px; }
+.asiQueda { padding: 28px; border-radius: 28px; background: linear-gradient(180deg, rgba(94, 230, 216, 0.12), rgba(168, 216, 106, 0.08)); }
+
+/* El prompt, como la caja de escribir de Claude */
+.prompt { border-radius: 20px; background: var(--c-input); color: var(--c-texto); overflow: hidden; box-shadow: 0 24px 50px -30px rgba(11, 18, 32, 0.7); }
+.promptCabeza { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; font-size: 14px; color: #a3a39d; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+.promptCabeza span { display: inline-flex; align-items: center; gap: 8px; }
+.promptCabeza img { width: 16px; height: 16px; }
+.promptCabeza button { border: 0; border-radius: 999px; background: #fff; color: var(--tinta); font: inherit; font-weight: 600; font-size: 13.5px; padding: 7px 14px; cursor: pointer; }
+.prompt pre { margin: 0; padding: 16px; white-space: pre-wrap; word-break: break-word; font-family: inherit; font-size: 15.5px; line-height: 1.6; }
+
+.marcar { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; padding: 20px 22px; border-radius: 22px; box-shadow: inset 0 0 0 1px var(--linea); }
+.marcar p { color: var(--gris); }
+.navegacion { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.navegacion a { color: var(--tinta); text-decoration: none; font-weight: 650; font-size: 15px; }
+.navegacion a span { display: block; font-weight: 450; color: var(--gris); font-size: 14px; }
+.aviso { padding: 18px 20px; border-radius: 18px; background: var(--niebla); color: var(--tinta); }
+
+/* Auditoría */
+.destacado { font-size: clamp(28px, 4vw, 44px); font-weight: 750; letter-spacing: -0.05em; line-height: 1.05; }
+.ficha { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.ficha > div { padding: 14px 16px; border-radius: 16px; background: var(--niebla); display: grid; gap: 2px; }
+.ficha dt { font-size: 13.5px; color: var(--gris); font-weight: 500; }
+.ficha dd { margin: 0; font-weight: 600; letter-spacing: -0.02em; }
+.recibes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.recibes > div { padding: 22px; border-radius: 22px; box-shadow: inset 0 0 0 1px var(--linea); display: grid; gap: 10px; align-content: start; }
+.recibes h3 { font-size: 20px; font-weight: 700; letter-spacing: -0.04em; }
+
+/* Recursos */
+.recurso { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--linea); }
+.recurso b { font-weight: 600; letter-spacing: -0.02em; }
+.recurso small { color: var(--gris); font-size: 14px; white-space: nowrap; }
+
+/* Biblioteca */
+.biblioteca { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; }
+
+/* Aparecer al cargar, sin quedarse escondido */
+.aparece { animation: aparece 0.8s cubic-bezier(0.2, 0.7, 0.1, 1) both; animation-delay: calc(var(--d, 0) * 90ms); }
+
+@keyframes aparece { from { opacity: 0; transform: translateY(16px); } }
+@keyframes brillo { to { background-position: -200% 0; } }
+@keyframes gira { to { transform: rotate(360deg); } }
+
+@media (max-width: 760px) {
+  .portada > .wrap { padding-block: 32px 40px; }
+  .portada::before { width: 300px; height: 300px; right: -120px; top: -20px; }
+  .seccion > .wrap { padding-block: 40px; }
+  .semana { padding: 4px 18px 8px; border-radius: 22px; }
+  .nivel { margin-left: 0; width: 100%; }
+  .filas,
+  .mano,
+  .ficha,
+  .recibes,
+  .biblioteca { grid-template-columns: 1fr; }
+  .tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * max(20px, env(safe-area-inset-left, 0px))); padding-inline: max(20px, env(safe-area-inset-left, 0px)); padding-bottom: 4px; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .asiQueda { padding: 22px; border-radius: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portada::before,
+  .grad,
+  .aparece { animation: none; }
+}
+
+.antes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+.antes .cierre { margin: 0; }
+.cierreToca { background: linear-gradient(90deg, rgba(94, 230, 216, 0.28), rgba(168, 216, 106, 0.18)); }
+@media (max-width: 760px) { .antes { grid-template-columns: 1fr; } }
+
+/* ---------- El agente y las transiciones ---------- */
+.portadaGrid { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 24px; }
+.portadaTexto { display: grid; gap: 18px; min-width: 0; }
+.botPortada { padding-right: 24px; }
+.noche { grid-template-columns: minmax(0, 1fr) auto; align-items: end; }
+.nocheTexto { display: grid; gap: 14px; min-width: 0; }
+.botCamina { animation: entra 1.4s steps(7, jump-none) both; animation-delay: 0.4s; }
+.planning { display: grid; gap: 18px; }
+.panel { animation: panel 0.45s cubic-bezier(0.2, 0.7, 0.1, 1) both; }
+.semanaCab { justify-content: space-between; align-items: flex-end; }
+.semanaTexto { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; min-width: 0; flex: 1; }
+.semanaTexto .nivel { margin-left: 0; width: 100%; }
+.semanaNoche { background: radial-gradient(60% 90% at 0% 100%, rgba(94, 230, 216, 0.35), transparent 70%), var(--noche); color: #fff; box-shadow: 0 30px 60px -30px rgba(94, 230, 216, 0.6); }
+.semanaNoche .semanaCab { border-bottom-color: rgba(255, 255, 255, 0.12); }
+.semanaNoche .pildora { background: rgba(255, 255, 255, 0.08); color: #fff; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16); }
+.semanaNoche .nivel { color: var(--aqua); }
+.semanaNoche .d2 { color: #fff; border-bottom-color: rgba(255, 255, 255, 0.12); }
+.semanaNoche .d2 p { color: #c3ccd6; }
+.cierreEstado { display: inline-flex; align-items: center; gap: 8px; }
+.estado { display: inline-flex; align-items: center; gap: 6px; }
+.tarjeta .bot { justify-self: start; }
+.barra > i { animation: llena 1.4s cubic-bezier(0.2, 0.7, 0.1, 1) both; animation-delay: 0.5s; }
+.d2 { transition: transform 0.2s cubic-bezier(0.2, 0.7, 0.1, 1); }
+a.d2:hover { transform: translateX(4px); }
+
+@keyframes panel { from { opacity: 0; transform: translateY(12px) scale(0.99); } }
+@keyframes llena { from { width: 0; } }
+@keyframes entra { from { transform: translateX(-60px); opacity: 0; } 30% { opacity: 1; } }
+
+@media (max-width: 760px) {
+  .portadaGrid { grid-template-columns: 1fr; }
+  .botPortada { position: absolute; right: 14px; top: 22px; padding: 0; transform: scale(0.5); transform-origin: top right; }
+  .portada::before { opacity: 0.04; }
+  .noche { grid-template-columns: 1fr; }
+  .botCamina { justify-self: end; margin-top: -40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .botCamina,
+  .barra > i { animation: none; }
+}
+
+/* ---------- Páginas de lección, módulo y recursos ---------- */
+.leccion { display: grid; gap: 32px; padding-block: 8px 72px; max-width: 860px; }
+.marcarTexto { display: flex; align-items: center; gap: 14px; }
+.puntos { list-style: none; padding: 0; display: grid; gap: 10px; }
+.puntos li { position: relative; padding-left: 20px; }
+.puntos li::before { content: ""; position: absolute; left: 1px; top: 0.62em; width: 8px; height: 8px; border-radius: 50%; background: #36c6c0; }
+.recibes p { color: var(--gris); }
+.palabras { display: grid; gap: 12px; }
+.palabras figure { margin: 0; padding: 18px 20px; border-radius: 20px; background: linear-gradient(180deg, rgba(94, 230, 216, 0.1), rgba(168, 216, 106, 0.06)); display: grid; gap: 6px; }
+.palabras figcaption { font-size: 13.5px; font-weight: 600; color: var(--teal); }
+.palabras blockquote { margin: 0; font-size: 17px; line-height: 1.55; white-space: pre-line; }
+.botonPeque { padding: 11px 18px; font-size: 14.5px; box-shadow: none; }
+.recurso > div { display: grid; gap: 2px; min-width: 0; }
+.recurso:last-child { border-bottom: 0; }
+.recurso small { white-space: normal; }
+.semana .d2:last-child { border-bottom: 0; }
+
+/* En el móvil, el agente de la cabecera de cada semana, más pequeño. */
+@media (max-width: 760px) {
+  .semanaCab > span:last-child { width: 92px !important; }
+  .semanaCab { align-items: center; }
+  .noche h2 { font-size: 30px; }
+  .titulo { font-size: 34px; }
+  .portadaTexto { padding-right: 96px; }
+}

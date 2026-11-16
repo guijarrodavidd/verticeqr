@@ -1,0 +1,183 @@
+/* «Tu punto de partida». Mismos colores y letra que la landing del programa
+   (public/programa/index.html): noche, aguamarina y lima sobre blanco. */
+
+.pagina {
+  --noche: #0b1220;
+  --tinta: #0e1116;
+  --gris: #5b6470;
+  --fondo: #ffffff;
+  --niebla: #f1f6f6;
+  --linea: rgba(14, 17, 22, 0.12);
+  --aqua: #5ee6d8;
+  --teal: #087f7b;
+  --lima: #a8d86a;
+  --grad: linear-gradient(90deg, #36c6c0 0%, #a8d86a 100%);
+  --error: #b42318;
+
+  min-height: 100vh;
+  background:
+    radial-gradient(60% 40% at 15% 0%, rgba(94, 230, 216, 0.28), transparent 70%),
+    radial-gradient(50% 35% at 90% 5%, rgba(168, 216, 106, 0.24), transparent 70%),
+    var(--fondo);
+  color: var(--tinta);
+  padding-bottom: 48px;
+}
+.pagina *,
+.pagina *::before,
+.pagina *::after { box-sizing: border-box; }
+
+.centro {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-top: clamp(20px, 6vh, 64px);
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+
+/* Portada y «gracias» */
+.portada { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.antetitulo { margin: 0; font-size: 0.92rem; font-weight: 600; color: var(--teal); }
+.titulo {
+  margin: 0;
+  font-size: clamp(2.1rem, 7vw, 3.1rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+.entrada { margin: 0; font-size: 1.12rem; line-height: 1.55; color: var(--gris); max-width: 34em; }
+.empezar {
+  margin-top: 8px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--noche);
+  color: #fff;
+  font: inherit;
+  font-size: 1.08rem;
+  font-weight: 600;
+  padding: 16px 34px;
+  cursor: pointer;
+}
+.empezar:hover { background: #1b2436; }
+.nota { margin: 0; font-size: 0.9rem; color: var(--gris); }
+.hecho {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--grad);
+  color: var(--noche);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Las preguntas */
+.caja { scroll-margin-top: 12px; }
+.progreso { height: 6px; border-radius: 999px; background: var(--niebla); overflow: hidden; }
+.barra { height: 100%; border-radius: 999px; background: var(--grad); transition: width 0.3s ease; }
+.contador { margin: 10px 0 0; font-size: 0.86rem; color: var(--gris); font-variant-numeric: tabular-nums; }
+
+.paso { border: 0; margin: 0; padding: 18px 0 0; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.paso[hidden] { display: none; }
+.pregunta {
+  padding: 0;
+  font-size: clamp(1.45rem, 5vw, 1.9rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  text-wrap: balance;
+  outline: none;
+}
+.ayuda { margin: 0; font-size: 0.98rem; color: var(--gris); }
+
+.opciones { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.opcion { position: relative; display: block; }
+.opcion input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.opcion span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 58px;
+  padding: 14px 18px;
+  border: 1.5px solid var(--linea);
+  border-radius: 16px;
+  background: #fff;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.3;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+.opcion span::before {
+  content: "";
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid var(--linea);
+  background: #fff;
+}
+.varias span::before { border-radius: 6px; }
+.opcion:hover span { border-color: var(--teal); }
+.opcion input:checked + span { background: var(--noche); border-color: var(--noche); color: #fff; }
+.opcion input:checked + span::before {
+  border-color: var(--aqua);
+  background: var(--aqua) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 6.5' fill='none' stroke='%230b1220' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 16px no-repeat;
+}
+.opcion input:focus-visible + span { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+.frase,
+.campo {
+  width: 100%;
+  border: 1.5px solid var(--linea);
+  border-radius: 14px;
+  padding: 15px 16px;
+  font: inherit;
+  font-size: 1.05rem;
+  background: #fff;
+  color: var(--tinta);
+}
+.frase { resize: vertical; min-height: 110px; margin-top: 8px; }
+.frase:focus,
+.campo:focus { outline: 2px solid var(--teal); outline-offset: 1px; border-color: transparent; }
+.campos { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+
+.permiso { display: flex; gap: 12px; align-items: flex-start; margin-top: 6px; font-size: 0.98rem; line-height: 1.45; cursor: pointer; }
+.permiso input { flex: none; width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--teal); }
+
+.botones { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 18px; }
+.atras {
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 0.98rem;
+  color: var(--gris);
+  padding: 12px 4px;
+  cursor: pointer;
+}
+.atras:hover { color: var(--tinta); }
+.siguiente {
+  border: 0;
+  border-radius: 999px;
+  background: var(--noche);
+  color: #fff;
+  font: inherit;
+  font-size: 1.02rem;
+  font-weight: 600;
+  padding: 14px 28px;
+  cursor: pointer;
+}
+.siguiente:disabled { background: var(--niebla); color: var(--gris); cursor: not-allowed; }
+
+.error {
+  margin: 4px 0 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #fef3f2;
+  color: var(--error);
+  font-size: 0.95rem;
+}
+.legal { margin: 14px 0 0; font-size: 0.82rem; color: var(--gris); }
+.legal a { color: inherit; }
+
+.trampa { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }

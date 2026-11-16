@@ -1,0 +1,36 @@
+/* La barra de arriba, igual que en la landing del programa. */
+.top {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(14, 17, 22, 0.1);
+}
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+  padding-block: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.marca { display: flex; align-items: center; gap: 12px; text-decoration: none; font-size: 15px; font-weight: 500; color: #5b6470; }
+.firma { font-weight: 650; font-size: 16px; letter-spacing: -0.035em; color: #0e1116; }
+.marcaC { display: flex; align-items: center; gap: 7px; padding-left: 12px; border-left: 1px solid rgba(14, 17, 22, 0.1); }
+.marcaC img { height: 16px; width: auto; display: block; }
+.nav { font-size: 15px; font-weight: 500; }
+.nav a { color: #0e1116; text-decoration: none; padding: 9px 15px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(14, 17, 22, 0.12); }
+.nav a:hover { background: #f1f6f6; }
+.marca, .firma, .marcaC { white-space: nowrap; }
+@media (max-width: 520px) {
+  .marca { gap: 9px; font-size: 13.5px; }
+  .firma { font-size: 14.5px; }
+  .marcaC { padding-left: 9px; gap: 5px; }
+  .marcaC img { height: 13px; }
+  .nav a { padding: 7px 12px; font-size: 14px; }
+}
