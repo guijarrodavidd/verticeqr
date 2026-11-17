@@ -124,7 +124,7 @@ export function FormularioAuditoria({ conocido, error }: Props) {
           </button>
         )}
         <p className={s.nota}>
-          Unos 40 minutos. Se guarda sola en este dispositivo, así que puedes dejarla a medias y seguir otro día. Si te cuesta
+          Se guarda sola en este dispositivo, así que puedes dejarla a medias y seguir otro día. Si te cuesta
           escribir, díctalo con el micrófono del teclado.
         </p>
         {error && ERRORES[error] && (

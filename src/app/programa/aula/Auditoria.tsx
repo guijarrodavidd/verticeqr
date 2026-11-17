@@ -16,7 +16,7 @@ export function Auditoria({ alumno }: { alumno: Alumno }) {
         <div className={s.recibes}>
           <div>
             <h3>Lo que me entregas</h3>
-            <p>Unos 40 minutos, con calma. Casi todo es para escribir, o dictar con el micrófono del teclado.</p>
+            <p>Siéntate con calma. Casi todo es para escribir, o dictar con el micrófono del teclado.</p>
             <ul className={s.puntos}>
               <li>Tu semana y lo que quieres tener funcionando.</li>
               <li>Hasta tres tareas que te quieres quitar de encima, contadas paso a paso.</li>
