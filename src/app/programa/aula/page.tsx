@@ -16,6 +16,7 @@ import {
   hoyMadrid,
   leccionVisible,
   leccionesAbiertas,
+  moduloVisible,
   proximoModulo,
   puedeVer,
   sumarDias,
@@ -94,7 +95,9 @@ export default async function AulaPage({ searchParams }: Props) {
 
   // Todo el recorrido a la vista: lo abierto se puede abrir y lo demás sale
   // bloqueado, sin enlace. Nunca «en preparación».
-  const semanas: SemanaPlanning[] = RECORRIDO.filter((m) => puedeVer(m, alumno.plan)).map((m): SemanaPlanning => {
+  const semanas: SemanaPlanning[] = RECORRIDO.filter(
+    (m) => puedeVer(m, alumno.plan) && (!m.soloAbierto || moduloVisible(m, alumno.fecha_alta, alumno.plan, hoy)),
+  ).map((m): SemanaPlanning => {
     const [pestana, titulo] = m.titulo.split(" · ");
     const abierta = estaAbierto(alumno.fecha_alta, m.abre, hoy);
     const estado = (l: Leccion): FilaPlanning["estado"] =>

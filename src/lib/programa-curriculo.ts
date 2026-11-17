@@ -25,6 +25,10 @@ export type Modulo = {
   abre: number;
   soloPlan?: Plan;
   compacto?: boolean; // la biblioteca: lecciones cortas, en rejilla
+  // No se enseña bloqueado en la portada: aparece el día que se abre y con algo
+  // listo dentro. Para el bloque del plan Hotel, que bloqueado parecía un gancho
+  // para venderle más (Héctor, 17-nov-2026).
+  soloAbierto?: boolean;
   lecciones: Leccion[];
 };
 
@@ -181,6 +185,7 @@ export const MODULOS: Modulo[] = [
     subtitulo: "Para ti, tu número dos y tus jefes de departamento",
     abre: 14,
     soloPlan: "hotel",
+    soloAbierto: true,
     lecciones: [
       { slug: "a-jefes", titulo: "Cada jefe con Claude en su área", resumen: "De recepción a mantenimiento, cada uno con su asistente.", listo: false },
       { slug: "a-parte", titulo: "El parte semanal de cada departamento", resumen: "Todos con el mismo formato, y tu asistente del cierre los junta.", listo: false },
