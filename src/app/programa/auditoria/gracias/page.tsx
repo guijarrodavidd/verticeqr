@@ -19,12 +19,15 @@ export default async function GraciasAuditoriaPage() {
         <div className={s.portada}>
           <div className={s.hecho} aria-hidden="true">✓</div>
           <h1 className={s.titulo}>Ya tengo tu auditoría</h1>
-          <p className={s.entrada}>
-            La leo con calma antes de nuestra llamada. Ahí repasamos juntos lo que no me quede claro, y una semana después
-            tienes el plano de tu sistema.
-          </p>
+          {!alumno && (
+            <p className={s.entrada}>
+              La leo con calma antes de nuestra llamada. Ahí repasamos juntos lo que no me quede claro, y una semana después
+              tienes el plano de tu sistema.
+            </p>
+          )}
           {alumno && (
             <>
+              <p className={s.entrada}>La leo con calma y te dejo en tu aula mis sugerencias para tu hotel.</p>
               <p className={s.entrada}>
                 {estaAbierto(alumno.fecha_alta, 1) ? "Ya tienes abiertas las bases en tu aula." : "Mañana se abren las bases en tu aula."}
               </p>

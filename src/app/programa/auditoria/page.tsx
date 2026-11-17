@@ -8,8 +8,8 @@ type Props = { searchParams: Promise<{ error?: string }> };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://verticeqr.com"),
-  title: "Tu auditoría · Implantación con Héctor",
-  description: "Antes de nuestra llamada, cuéntame tu semana, lo que buscas y las tareas que te quieres quitar de encima.",
+  title: "Tu auditoría · Héctor García",
+  description: "Cuéntame tu semana, lo que buscas y las tareas que te quieres quitar de encima.",
   robots: { index: false, follow: false },
 };
 

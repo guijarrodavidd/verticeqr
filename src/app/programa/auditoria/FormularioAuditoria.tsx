@@ -85,12 +85,19 @@ export function FormularioAuditoria({ conocido, error }: Props) {
   if (paso === -1) {
     return (
       <div className={s.portada}>
-        <p className={s.antetitulo}>Implantación con Héctor · paso 1</p>
+        <p className={s.antetitulo}>{conocido ? "Día 1 · Tu programa" : "Implantación con Héctor · paso 1"}</p>
         <h1 className={s.titulo}>Tu auditoría</h1>
-        <p className={s.entrada}>
-          Siéntate con calma y cuéntame tu semana, lo que buscas y las tareas que te quieres quitar de encima. Lo leo antes de
-          nuestra llamada y, una semana después, te entrego el plano de tu sistema.
-        </p>
+        {conocido ? (
+          <p className={s.entrada}>
+            Siéntate con calma y cuéntame tu semana, lo que buscas y las tareas que te quieres quitar de encima. Con tus
+            respuestas te dejo en tu aula mis sugerencias: por dónde empezar y qué agente te conviene montar primero.
+          </p>
+        ) : (
+          <p className={s.entrada}>
+            Siéntate con calma y cuéntame tu semana, lo que buscas y las tareas que te quieres quitar de encima. Lo leo antes de
+            nuestra llamada y, una semana después, te entrego el plano de tu sistema.
+          </p>
+        )}
         {borrador ? (
           <div className={a.seguir}>
             <button

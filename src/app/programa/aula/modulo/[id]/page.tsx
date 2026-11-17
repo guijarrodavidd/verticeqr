@@ -25,8 +25,9 @@ export default async function ModuloPage({ params }: Props) {
   const hechas = await progresoDe(alumno);
   const [arriba, titulo] = m.titulo.includes(" · ") ? m.titulo.split(" · ") : [m.titulo, m.titulo];
   const visibles = m.lecciones.filter(leccionVisible);
-  const dias = visibles.filter((l) => l.tipo !== "documento");
-  const doc = visibles.find((l) => l.tipo === "documento");
+  // Las que aún no están listas salen bloqueadas, sin enlace.
+  const dias = (m.compacto ? visibles : m.lecciones).filter((l) => l.tipo !== "documento");
+  const doc = m.lecciones.find((l) => l.tipo === "documento");
   const hechasM = visibles.filter((l) => hechas.has(l.slug)).length;
 
   return (
@@ -73,6 +74,18 @@ export default async function ModuloPage({ params }: Props) {
               <div className={s.filas}>
                 {dias.map((l, i) => {
                   const hecha = hechas.has(l.slug);
+                  if (!leccionVisible(l)) {
+                    return (
+                      <div key={l.slug} className={`${s.d2} ${s.aparece} ${s.d2Cerrada}`} style={{ ["--d" as string]: i }}>
+                        <span className={s.num}>{l.numero ?? i + 1}</span>
+                        <div>
+                          <h4>{l.titulo}</h4>
+                          {l.resumen && <p>{l.resumen}</p>}
+                          <span className={s.estado}>Bloqueada</span>
+                        </div>
+                      </div>
+                    );
+                  }
                   const etiqueta = hecha ? "Hecha" : "";
                   return (
                     <Link
@@ -96,12 +109,18 @@ export default async function ModuloPage({ params }: Props) {
                   );
                 })}
               </div>
-              {doc && (
-                <Link className={s.cierre} href={`/programa/aula/${doc.slug}`}>
-                  <b>Revisión de la semana</b>
-                  <span>{doc.resumen}</span>
-                </Link>
-              )}
+              {doc &&
+                (leccionVisible(doc) ? (
+                  <Link className={s.cierre} href={`/programa/aula/${doc.slug}`}>
+                    <b>Revisión de la semana</b>
+                    <span>{doc.resumen}</span>
+                  </Link>
+                ) : (
+                  <div className={`${s.cierre} ${s.d2Cerrada}`}>
+                    <b>Revisión de la semana</b>
+                    <span>Bloqueada</span>
+                  </div>
+                ))}
             </div>
           )}
         </div>

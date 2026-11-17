@@ -59,7 +59,7 @@ export function Planning({ semanas, inicial }: { semanas: SemanaPlanning[]; inic
           <div className={s.semanaTexto}>
             <span className={s.pildora}>{sem.pestana}</span>
             <h3>{sem.titulo}</h3>
-            <span className={s.nivel}>{sem.abierta ? sem.nivel : `Se abre el ${sem.abreEl}`}</span>
+            <span className={s.nivel}>{sem.abierta ? sem.nivel : `Bloqueada · se abre el ${sem.abreEl}`}</span>
           </div>
           <Bot traje={sem.traje} estado={sem.abierta ? "despierto" : "duerme"} tam={124} oscuro={sem.noche} />
         </div>
@@ -99,8 +99,8 @@ export function Planning({ semanas, inicial }: { semanas: SemanaPlanning[]; inic
                 ? "Hecha"
                 : f.paraTi
                   ? "Para ti, por tu auditoría"
-                  : f.estado === "prep"
-                    ? "En preparación"
+                  : f.estado === "cerrada"
+                    ? "Bloqueada"
                     : "";
             const dentro = (
               <>
@@ -111,6 +111,7 @@ export function Planning({ semanas, inicial }: { semanas: SemanaPlanning[]; inic
                   {etiqueta && (
                     <span className={s.estado}>
                       {f.estado === "hecha" && <CheckPixel tam={14} />}
+                      {f.estado === "cerrada" && <Candado />}
                       {etiqueta}
                     </span>
                   )}
@@ -132,9 +133,12 @@ export function Planning({ semanas, inicial }: { semanas: SemanaPlanning[]; inic
 
         {sem.cierre &&
           (sem.cierre.estado === "cerrada" ? (
-            <div className={s.cierre}>
+            <div className={`${s.cierre} ${s.d2Cerrada}`}>
               <b>Revisión de la semana</b>
-              <span>{sem.cierre.texto}</span>
+              <span className={s.cierreEstado}>
+                <Candado />
+                Bloqueada
+              </span>
             </div>
           ) : (
             <Link className={s.cierre} href={`/programa/aula/${sem.cierre.slug}`}>
@@ -147,5 +151,22 @@ export function Planning({ semanas, inicial }: { semanas: SemanaPlanning[]; inic
           ))}
       </div>
     </div>
+  );
+}
+
+// Un candado pequeño en píxeles, como los agentes.
+function Candado() {
+  return (
+    <svg
+      width="11"
+      height="13"
+      viewBox="0 0 11 13"
+      aria-hidden="true"
+      shapeRendering="crispEdges"
+      style={{ marginRight: 6, verticalAlign: "-1px" }}
+    >
+      <path d="M3 1h5v1H3zM2 2h1v3H2zM8 2h1v3H8zM0 5h11v8H0z" fill="currentColor" />
+      <path d="M5 8h1v2H5z" fill="#fff" />
+    </svg>
   );
 }

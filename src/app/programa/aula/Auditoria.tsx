@@ -3,9 +3,10 @@ import { Bot } from "./Bot";
 import type { Alumno } from "@/lib/programa";
 import { visibles } from "../auditoria/preguntas";
 
-// La auditoría, lo único del día 1. Antes de entregarla: qué incluye y el
-// botón al formulario largo. Después: lo que le devuelve Héctor y lo que contó,
-// con sus palabras.
+// La auditoría, lo único del día 1. En el programa el alumno lo monta todo él;
+// la auditoría le da a Héctor el contexto para sugerirle por dónde empezar.
+// Antes de entregarla: qué incluye y el botón al formulario. Después: las
+// sugerencias de Héctor y lo que contó, con sus palabras.
 
 export function Auditoria({ alumno }: { alumno: Alumno }) {
   const a = alumno.auditoria;
@@ -20,14 +21,14 @@ export function Auditoria({ alumno }: { alumno: Alumno }) {
             <ul className={s.puntos}>
               <li>Tu semana y lo que quieres tener funcionando.</li>
               <li>Hasta tres tareas que te quieres quitar de encima, contadas paso a paso.</li>
-              <li>Los programas y el correo con los que trabajáis, para montarlo sobre lo que ya tienes.</li>
+              <li>Los programas y el correo con los que trabajáis, para que lo que montes encaje con lo que ya tienes.</li>
             </ul>
           </div>
           <div>
             <h3>Lo que te devuelvo</h3>
             <ul className={s.puntos}>
-              <li>La leo antes de nuestra llamada y repasamos juntos lo que no me quede claro.</li>
-              <li>Una semana después, el plano de tu sistema, aquí en tu aula.</li>
+              <li>Mis sugerencias para tu hotel: por dónde empezar y qué agente te conviene montar primero.</li>
+              <li>Te las dejo aquí, en tu aula, para que las tengas a mano durante el programa.</li>
             </ul>
           </div>
         </div>
@@ -44,11 +45,11 @@ export function Auditoria({ alumno }: { alumno: Alumno }) {
     <div className={s.cuerpo}>
       <section className={s.noche}>
         <div className={s.nocheTexto}>
-          <span className={s.pildora}>De Héctor</span>
+          <span className={s.pildora}>Mis sugerencias para ti</span>
           {alumno.nota ? (
             <p className={s.nota}>{alumno.nota}</p>
           ) : (
-            <p>Ya tengo tu auditoría. La leo antes de nuestra llamada y una semana después tienes aquí el plano de tu sistema.</p>
+            <p>Ya tengo tu auditoría. La leo con calma y te dejo aquí mis sugerencias para tu hotel.</p>
           )}
         </div>
         <Bot traje="auditor" tam={150} oscuro estado={alumno.nota ? "despierto" : "duerme"} />

@@ -15,9 +15,10 @@ import {
   hoyMadrid,
   leccionVisible,
   leccionesAbiertas,
-  moduloVisible,
   proximoModulo,
+  puedeVer,
   sumarDias,
+  type Leccion,
 } from "@/lib/programa-curriculo";
 
 export const dynamic = "force-dynamic";
@@ -68,36 +69,38 @@ export default async function AulaPage({ searchParams }: Props) {
   const cuandoProximo = !abreProximo ? "" : abreProximo === sumarDias(hoy, 1) ? "mañana" : `el ${fechaLarga(abreProximo)}`;
   const hayRecursos = RECURSOS.some((r) => r.archivo && estaAbierto(alumno.fecha_alta, r.abre, hoy));
 
-  const semanas: SemanaPlanning[] = RECORRIDO.filter((m) => moduloVisible(m, alumno.fecha_alta, alumno.plan, hoy)).map((m): SemanaPlanning => {
+  // Todo el recorrido a la vista: lo abierto se puede abrir y lo demás sale
+  // bloqueado, sin enlace. Nunca «en preparación».
+  const semanas: SemanaPlanning[] = RECORRIDO.filter((m) => puedeVer(m, alumno.plan)).map((m): SemanaPlanning => {
     const [pestana, titulo] = m.titulo.split(" · ");
-    const visibles = m.lecciones.filter(leccionVisible);
-    const doc = visibles.find((l) => l.tipo === "documento");
+    const abierta = estaAbierto(alumno.fecha_alta, m.abre, hoy);
+    const estado = (l: Leccion): FilaPlanning["estado"] =>
+      !abierta || !leccionVisible(l) ? "cerrada" : hechas.has(l.slug) ? "hecha" : "abierta";
+    const doc = m.lecciones.find((l) => l.tipo === "documento");
     return {
       id: m.id,
       pestana,
       titulo: titulo ?? pestana,
       nivel: m.subtitulo,
       traje: TRAJE_SEMANA[m.id] ?? "botones",
-      abierta: true,
-      abreEl: "",
+      abierta,
+      abreEl: fechaLarga(fechaApertura(alumno.fecha_alta, m.abre)),
       noche: m.id === "final",
-      filas: visibles
+      filas: m.lecciones
         .filter((l) => l.tipo !== "documento")
         .map((l, i) => ({
           slug: l.slug,
           num: String(l.numero ?? i + 1),
           titulo: l.titulo,
           resumen: l.resumen,
-          estado: (hechas.has(l.slug) ? "hecha" : "abierta") as FilaPlanning["estado"],
+          estado: estado(l),
           paraTi: false,
           toca: siguiente?.leccion.slug === l.slug,
         })),
-      cierre: doc
-        ? { slug: doc.slug, estado: (hechas.has(doc.slug) ? "hecha" : "abierta") as FilaPlanning["estado"], texto: "Lo que has dejado funcionando y las horas que te devuelve." }
-        : undefined,
+      cierre: doc ? { slug: doc.slug, estado: estado(doc), texto: "Lo que has dejado funcionando y las horas que te devuelve." } : undefined,
     };
   });
-  const inicial = siguiente?.modulo.id ?? semanas[semanas.length - 1]?.id ?? "dia-1";
+  const inicial = siguiente?.modulo.id ?? [...semanas].reverse().find((x) => x.abierta)?.id ?? "dia-1";
   const trajeHoy = siguiente ? trajeDe(siguiente.leccion.slug, siguiente.modulo.id) : "graduado";
 
   return (
@@ -171,8 +174,8 @@ export default async function AulaPage({ searchParams }: Props) {
             </h2>
             <p className={`${s.entradilla} ${s.aparece}`} style={{ ["--d" as string]: 1 }}>
               {proximo && siguiente
-                ? `Esto es lo que tienes abierto. Lo siguiente se abre ${cuandoProximo}.`
-                : "Esto es lo que tienes abierto. Lo siguiente se abre solo cuando toca."}
+                ? `Lo que está bloqueado se va abriendo solo. Lo siguiente, ${cuandoProximo}.`
+                : "Lo que está bloqueado se va abriendo solo, cuando toca."}
             </p>
           </div>
           <Planning semanas={semanas} inicial={inicial} />
@@ -187,7 +190,7 @@ export default async function AulaPage({ searchParams }: Props) {
                 <Link href="/programa/aula/auditoria" className={s.tarjeta}>
                   <Bot traje="auditor" tam={92} retraso={0.3} />
                   <b>Tu auditoría</b>
-                  <span>Entregada. Con ella preparo el plano de tu sistema.</span>
+                  <span>{alumno.nota ? "Aquí tienes mis sugerencias para tu hotel." : "Entregada. Te dejo aquí mis sugerencias en cuanto la lea."}</span>
                 </Link>
               )}
               {hayRecursos && (

@@ -61,7 +61,7 @@ export const MODULOS: Modulo[] = [
       {
         slug: "auditoria",
         titulo: "Tu auditoría",
-        resumen: "Me cuentas tu semana y lo que buscas, con calma. Con ella preparo el plano de tu sistema.",
+        resumen: "Me cuentas tu semana y lo que buscas, con calma. Con ella te doy mis sugerencias para tu hotel.",
         listo: true,
         tipo: "auditoria",
       },

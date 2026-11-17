@@ -326,7 +326,7 @@ export const PREGUNTAS: Pregunta[] = [
     id: "carpeta",
     apartado: "Para acabar",
     texto: "Si ya tienes una carpeta con informes y plantillas, pega aquí el enlace.",
-    ayuda: "Si no la tienes, sáltala. Te la pido en la llamada.",
+    ayuda: "Si no la tienes, sáltala.",
     tipo: "corta",
     opcional: true,
     marcador: "https://drive.google.com/…",
