@@ -1,8 +1,8 @@
-import { headers } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { notFound, redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { getSession } from "@/lib/auth";
-import { crearAlumno, guardarNota, listarAlumnos, nuevoEnlace } from "@/lib/programa";
+import { crearAlumno, guardarNota, listarAlumnos, nuevoEnlace, ponerClaveNueva } from "@/lib/programa";
 import { TOTAL_DIAS, fechaLarga, hoyMadrid, semanaActual, type Plan } from "@/lib/programa-curriculo";
 import { Copiar } from "@/app/programa/aula/Copiar";
 import { visibles as preguntasDeLaAuditoria } from "@/app/programa/auditoria/preguntas";
@@ -14,6 +14,19 @@ export const dynamic = "force-dynamic";
 const DUENO = "cavani";
 
 type SP = { enlace?: string; para?: string };
+
+// La contraseña recién hecha solo se enseña aquí unos minutos: viaja en una
+// cookie del panel y nunca en la dirección de la página.
+const COOKIE_CLAVE = "dc_clave_nueva";
+async function recordarClave(id: number, clave: string) {
+  (await cookies()).set(COOKIE_CLAVE, `${id}:${clave}`, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "strict",
+    path: "/app/programa",
+    maxAge: 15 * 60,
+  });
+}
 
 // 600 000 000 → 34600000000, para abrir el chat de WhatsApp.
 function whatsapp(tel: string | null): string | null {
@@ -38,16 +51,26 @@ export default async function ProgramaAdminPage({ searchParams }: { searchParams
     const nombre = String(formData.get("nombre") ?? "").trim();
     const email = String(formData.get("email") ?? "").trim();
     if (!nombre || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) redirect("/app/programa");
-    const { id, token } = await crearAlumno({
+    const { id, token, clave } = await crearAlumno({
       nombre,
       email,
       telefono: String(formData.get("telefono") ?? "") || null,
       hotel: String(formData.get("hotel") ?? "") || null,
       plan: (formData.get("plan") === "hotel" ? "hotel" : "director") as Plan,
-      // Se vuelve a fijar el día que entra por primera vez con su enlace.
+      // Se vuelve a fijar el día que entra por primera vez.
       fecha_alta: hoyMadrid(),
     });
+    await recordarClave(id, clave);
     redirect(`/app/programa?enlace=${token}&para=${id}`);
+  }
+
+  async function claveNueva(formData: FormData) {
+    "use server";
+    if ((await getSession())?.id !== DUENO) notFound();
+    const id = Number(formData.get("id"));
+    const clave = await ponerClaveNueva(id);
+    await recordarClave(id, clave);
+    redirect(`/app/programa?para=${id}`);
   }
 
   async function enlaceNuevo(formData: FormData) {
@@ -65,30 +88,47 @@ export default async function ProgramaAdminPage({ searchParams }: { searchParams
     revalidatePath("/app/programa");
   }
 
-  const nuevo = sp.enlace && sp.para ? alumnos.find((a) => a.id === Number(sp.para)) : undefined;
-  const enlace = nuevo ? `${origen}/programa/entrar/${sp.enlace}` : "";
-  const mensaje = nuevo
-    ? `Hola ${nuevo.nombre.split(" ")[0]}, ya tienes acceso a Director con Claude. Este es tu enlace personal, guárdalo porque es tu llave del programa: ${enlace}\n\nEmpieza por la bienvenida y rellena tu punto de partida. Con eso te preparo tu hoja de ruta.`
-    : "";
+  const nuevo = sp.para ? alumnos.find((a) => a.id === Number(sp.para)) : undefined;
+  const enlace = nuevo && sp.enlace ? `${origen}/programa/entrar/${sp.enlace}` : "";
+  const recordada = (await cookies()).get(COOKIE_CLAVE)?.value ?? "";
+  const separador = recordada.indexOf(":");
+  const clave = nuevo && separador > 0 && Number(recordada.slice(0, separador)) === nuevo.id ? recordada.slice(separador + 1) : "";
+  const aula = `${origen.replace(/^https?:\/\//, "")}/programa/aula`;
+  const saludo = nuevo ? `Hola ${nuevo.nombre.split(" ")[0]}, ya tienes acceso a Director con Claude.` : "";
+  const mensaje = !nuevo
+    ? ""
+    : clave
+      ? `${saludo}\n\nEntra en ${aula} con tu correo y esta contraseña:\n\nCorreo: ${nuevo.email}\nContraseña: ${clave}\n\nHoy toca el día 1, tu auditoría. Tómatela con calma, porque con ella te preparo mis sugerencias para tu hotel. Al día siguiente se te abren las bases.`
+      : enlace
+        ? `${saludo}\n\nEste es tu enlace personal para entrar en tu aula: ${enlace}\n\nHoy toca el día 1, tu auditoría. Con ella te preparo mis sugerencias para tu hotel.`
+        : "";
 
   return (
     <div style={{ maxWidth: 1100, display: "flex", flexDirection: "column", gap: 24 }}>
       <div>
         <h1 style={{ margin: 0, fontSize: "1.6rem" }}>Programa · Director con Claude</h1>
         <p style={{ margin: "6px 0 0", color: "#5b6470" }}>
-          {alumnos.length === 1 ? "1 alumno" : `${alumnos.length} alumnos`}. Cada uno entra con su enlace personal. Su
-          programa empieza a contar el día que entra por primera vez, y desde ahí se le abre una semana cada 7 días.
+          {alumnos.length === 1 ? "1 alumno" : `${alumnos.length} alumnos`}. Cada uno entra en su aula con su correo y su
+          contraseña. Su programa empieza a contar el día que entra por primera vez, y desde ahí se le abre una semana cada 7 días.
         </p>
       </div>
 
-      {nuevo && (
+      {nuevo && mensaje && (
         <section style={caja("#ecfdf9", "#087f7b")}>
-          <b>Enlace de {nuevo.nombre}</b>
-          <code id="enlace-nuevo" style={{ wordBreak: "break-all", fontSize: "0.9rem" }}>
-            {enlace}
-          </code>
+          <b>Acceso de {nuevo.nombre}</b>
+          {clave && (
+            <div style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
+              Entra en <b>{aula}</b>
+              <br />
+              Correo: <b>{nuevo.email}</b>
+              <br />
+              Contraseña: <b style={{ fontFamily: "ui-monospace, monospace", fontSize: "1.05rem" }}>{clave}</b>
+            </div>
+          )}
+          <pre id="mensaje-acceso" style={{ margin: 0, whiteSpace: "pre-wrap", font: "inherit", fontSize: "0.9rem", color: "#26303b" }}>
+            {mensaje}
+          </pre>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-            <Copiar texto={enlace} destino="enlace-nuevo" style={{ ...boton, border: 0, cursor: "pointer" }} />
             {whatsapp(nuevo.telefono) && (
               <a
                 style={boton}
@@ -99,9 +139,17 @@ export default async function ProgramaAdminPage({ searchParams }: { searchParams
                 Mandárselo por WhatsApp
               </a>
             )}
+            <Copiar texto={mensaje} destino="mensaje-acceso" style={{ ...botonClaro, cursor: "pointer" }} />
           </div>
+          {enlace && (
+            <span style={{ fontSize: "0.85rem", color: "#5b6470", wordBreak: "break-all" }}>
+              También puede entrar sin contraseña con su enlace personal: {enlace}
+            </span>
+          )}
           <span style={{ fontSize: "0.85rem", color: "#5b6470" }}>
-            Si haces un enlace nuevo, el anterior deja de funcionar.
+            {clave
+              ? "La contraseña solo se ve aquí 15 minutos. Si la pierde, «Contraseña nueva» le hace otra y la anterior deja de valer."
+              : "Si haces un enlace nuevo, el anterior deja de funcionar."}
           </span>
         </section>
       )}
@@ -118,7 +166,7 @@ export default async function ProgramaAdminPage({ searchParams }: { searchParams
             <option value="hotel">Plan Hotel</option>
           </select>
           <button type="submit" style={{ ...boton, border: 0, cursor: "pointer" }}>
-            Dar de alta y sacar su enlace
+            Dar de alta y sacar su contraseña
           </button>
         </form>
       </section>
@@ -208,6 +256,9 @@ export default async function ProgramaAdminPage({ searchParams }: { searchParams
                       Abrir WhatsApp
                     </a>
                   )}
+                  <button type="submit" formAction={claveNueva} style={{ ...botonClaro, cursor: "pointer" }}>
+                    Contraseña nueva
+                  </button>
                   <button type="submit" formAction={enlaceNuevo} style={{ ...botonClaro, cursor: "pointer" }}>
                     Sacar un enlace nuevo
                   </button>

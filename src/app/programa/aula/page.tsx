@@ -5,6 +5,7 @@ import { Marca } from "../Marca";
 import { Bot, TRAJE_SEMANA, trajeDe } from "./Bot";
 import { Planning, type FilaPlanning, type SemanaPlanning } from "./Planning";
 import { alumnoActual, progresoDe } from "@/lib/programa";
+import { entrarConClave } from "./acceso";
 import {
   RECORRIDO,
   RECURSOS,
@@ -24,14 +25,14 @@ import {
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "Tu aula · Director con Claude", robots: { index: false, follow: false } };
 
-type Props = { searchParams: Promise<{ enlace?: string }> };
+type Props = { searchParams: Promise<{ enlace?: string; acceso?: string }> };
 
 
 // Portada del aula, con el lenguaje de la landing del programa: halo, titular
 // en fino y negrita, el agente en 8 bits, lo que toca ahora en azul noche y
 // lo que ya tiene abierto en pestañas. Lo que aún no toca no se enseña.
 export default async function AulaPage({ searchParams }: Props) {
-  const { enlace } = await searchParams;
+  const { enlace, acceso } = await searchParams;
   const alumno = await alumnoActual();
 
   if (!alumno) {
@@ -44,10 +45,32 @@ export default async function AulaPage({ searchParams }: Props) {
               <h1 className={`${s.h1} ${s.aparece}`}>
                 Tu <b>aula</b> del programa
               </h1>
-              {enlace === "no" && <p className={s.aviso}>Ese enlace ya no funciona. Pídeme uno nuevo por WhatsApp.</p>}
-              <p className={`${s.entradilla} ${s.aparece}`} style={{ ["--d" as string]: 1 }}>
-                Se entra con tu enlace personal, el que te mandé por WhatsApp al apuntarte. Ábrelo desde el ordenador o el
-                móvil donde vayas a hacer el programa. Si no lo encuentras, pídemelo por WhatsApp.
+              {enlace === "no" && <p className={s.aviso}>Ese enlace ya no funciona. Entra con tu correo y tu contraseña.</p>}
+              {acceso === "no" && (
+                <p className={s.aviso} role="alert">
+                  El correo o la contraseña no coinciden. Revisa que sea el correo con el que te apuntaste.
+                </p>
+              )}
+              {acceso === "espera" && (
+                <p className={s.aviso} role="alert">
+                  Demasiados intentos seguidos. Vuelve a probar en 15 minutos o pídeme la contraseña por WhatsApp.
+                </p>
+              )}
+              <form action={entrarConClave} className={`${s.acceso} ${s.aparece}`} style={{ ["--d" as string]: 1 }}>
+                <label className={s.accesoCampo}>
+                  <span>Tu correo</span>
+                  <input name="email" type="email" required autoComplete="username" inputMode="email" autoCapitalize="none" />
+                </label>
+                <label className={s.accesoCampo}>
+                  <span>Tu contraseña</span>
+                  <input name="clave" type="password" required autoComplete="current-password" autoCapitalize="none" autoCorrect="off" spellCheck={false} />
+                </label>
+                <button type="submit" className={s.boton}>
+                  Entrar a mi aula
+                </button>
+              </form>
+              <p className={`${s.entradilla} ${s.aparece}`} style={{ ["--d" as string]: 2 }}>
+                La contraseña te la mandé por WhatsApp al apuntarte. Si no la encuentras, pídemela por ahí.
               </p>
             </div>
             <Bot traje="botones" estado="duerme" tam={220} />

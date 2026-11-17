@@ -33,6 +33,7 @@ type Fila = Omit<Alumno, "punto_partida" | "auditoria" | "hechas"> & {
   punto_partida: string | null;
   auditoria?: string | null;
   token_hash: string;
+  clave_hash?: string | null;
 };
 
 const COOKIE = "dc_alumno";
@@ -46,6 +47,34 @@ const enLocal = !process.env.DB_HOST && process.env.NODE_ENV !== "production";
 const hash = (token: string) => crypto.createHash("sha256").update(token).digest("hex");
 const firmar = (id: number) => crypto.createHmac("sha256", SECRETO).update(`alumno:${id}`).digest("hex");
 const nuevoToken = () => crypto.randomBytes(24).toString("base64url");
+
+// ---------- Contraseña ----------
+// Fácil de dictar y de teclear en el móvil: dos palabras sin tildes y cuatro
+// cifras, en minúsculas (brisa-faro-4827). Se compara siempre en minúsculas y
+// sin espacios, para que la mayúscula automática del móvil no la rompa.
+const PALABRAS = [
+  "playa", "luna", "brisa", "ronda", "llave", "suite", "terraza", "jardin", "faro", "costa",
+  "isla", "palma", "cielo", "norte", "bahia", "duna", "coral", "olivo", "vela", "puerto",
+];
+const azar = (n: number) => crypto.randomInt(n);
+const nuevaClave = () =>
+  `${PALABRAS[azar(PALABRAS.length)]}-${PALABRAS[azar(PALABRAS.length)]}-${String(azar(10000)).padStart(4, "0")}`;
+const limpiarClave = (clave: string) => clave.trim().toLowerCase().split(/\s+/).join("");
+
+function cifrarClave(clave: string): string {
+  const sal = crypto.randomBytes(16);
+  const h = crypto.scryptSync(limpiarClave(clave), sal, 32);
+  return `s1$${sal.toString("hex")}$${h.toString("hex")}`;
+}
+
+function claveCorrecta(clave: string, guardada: string | null | undefined): boolean {
+  if (!guardada) return false;
+  const [v, salHex, hHex] = guardada.split("$");
+  if (v !== "s1" || !salHex || !hHex) return false;
+  const esperada = Buffer.from(hHex, "hex");
+  const h = crypto.scryptSync(limpiarClave(clave), Buffer.from(salHex, "hex"), esperada.length);
+  return crypto.timingSafeEqual(h, esperada);
+}
 
 export async function alumnoActual(): Promise<Alumno | null> {
   const valor = (await cookies()).get(COOKIE)?.value;
@@ -153,6 +182,12 @@ async function asegurarTablas() {
   } catch {
     // Ya existe.
   }
+  // Y las de antes del acceso con correo y contraseña, la suya.
+  try {
+    await pool.query(`ALTER TABLE programa_alumnos ADD COLUMN clave_hash VARCHAR(200) NULL`);
+  } catch {
+    // Ya existe.
+  }
   tablas = true;
 }
 
@@ -206,8 +241,9 @@ export async function crearAlumno(a: {
   hotel: string | null;
   plan: Plan;
   fecha_alta: string;
-}): Promise<{ id: number; token: string }> {
+}): Promise<{ id: number; token: string; clave: string }> {
   const token = nuevoToken();
+  const clave = nuevaClave();
   const fila = {
     nombre: a.nombre.trim().slice(0, 150),
     email: a.email.trim().toLowerCase().slice(0, 150),
@@ -216,20 +252,57 @@ export async function crearAlumno(a: {
     plan: a.plan,
     fecha_alta: a.fecha_alta,
     token_hash: hash(token),
+    clave_hash: cifrarClave(clave),
   };
   if (enLocal) {
     const d = await leerLocal();
     const id = Math.max(0, ...d.alumnos.map((x) => x.id)) + 1;
     d.alumnos.push({ id, ...fila, nota: null, punto_partida: null, auditoria: null, ultimo_acceso: null });
     await guardarLocal(d);
-    return { id, token };
+    return { id, token, clave };
   }
   await asegurarTablas();
   const [res] = await getPool().query(
-    `INSERT INTO programa_alumnos (nombre, email, telefono, hotel, plan, fecha_alta, token_hash) VALUES (?, ?, ?, ?, ?, ?, ?)`,
-    [fila.nombre, fila.email, fila.telefono, fila.hotel, fila.plan, fila.fecha_alta, fila.token_hash],
+    `INSERT INTO programa_alumnos (nombre, email, telefono, hotel, plan, fecha_alta, token_hash, clave_hash) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+    [fila.nombre, fila.email, fila.telefono, fila.hotel, fila.plan, fila.fecha_alta, fila.token_hash, fila.clave_hash],
   );
-  return { id: (res as { insertId: number }).insertId, token };
+  return { id: (res as { insertId: number }).insertId, token, clave };
+}
+
+// Una contraseña nueva deja sin valor la anterior.
+export async function ponerClaveNueva(id: number): Promise<string> {
+  const clave = nuevaClave();
+  const h = cifrarClave(clave);
+  if (enLocal) {
+    const d = await leerLocal();
+    const f = d.alumnos.find((x) => x.id === id);
+    if (f) f.clave_hash = h;
+    await guardarLocal(d);
+    return clave;
+  }
+  await asegurarTablas();
+  await getPool().query(`UPDATE programa_alumnos SET clave_hash = ? WHERE id = ?`, [h, id]);
+  return clave;
+}
+
+// Entrada con correo y contraseña. Si hay dos fichas con el mismo correo,
+// vale la que tenga esa contraseña.
+export async function alumnoPorCorreoYClave(email: string, clave: string): Promise<Alumno | null> {
+  const e = email.trim().toLowerCase();
+  if (!e || !clave.trim()) return null;
+  let filas: Fila[];
+  if (enLocal) {
+    filas = (await leerLocal()).alumnos.filter((a) => a.email === e);
+  } else {
+    await asegurarTablas();
+    const [rows] = await getPool().query(
+      `SELECT ${COLUMNAS}, clave_hash FROM programa_alumnos WHERE email = ? ORDER BY id DESC`,
+      [e],
+    );
+    filas = rows as Fila[];
+  }
+  const f = filas.find((x) => claveCorrecta(clave, x.clave_hash));
+  return f ? aAlumno(f) : null;
 }
 
 // Un enlace nuevo deja sin valor el anterior.

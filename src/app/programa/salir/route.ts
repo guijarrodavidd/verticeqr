@@ -1,7 +1,7 @@
-import { NextResponse, type NextRequest } from "next/server";
+import { redirect } from "next/navigation";
 import { cerrarSesion } from "@/lib/programa";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   await cerrarSesion();
-  return NextResponse.redirect(new URL("/programa/aula", req.url));
+  redirect("/programa/aula");
 }
