@@ -125,11 +125,11 @@ export const TRAJE_LECCION: Record<string, string> = {
   "dia-13": "calculadora",
   "dia-14": "informes",
   "dia-15": "calculadora",
-  "dia-16": "carpeta",
-  "dia-17": "antena",
-  "dia-18": "reloj",
-  "dia-19": "auditor",
-  "dia-20": "antena",
+  "dia-16": "lupa",
+  "dia-17": "auditor",
+  "dia-18": "llave",
+  "dia-19": "calculadora",
+  "dia-20": "informes",
 };
 
 export const TRAJE_SEMANA: Record<string, string> = {
@@ -138,7 +138,7 @@ export const TRAJE_SEMANA: Record<string, string> = {
   "semana-1": "llave",
   "semana-2": "turnos",
   "semana-3": "informes",
-  "semana-4": "antena",
+  "semana-4": "lupa",
   final: "graduado",
   avanzado: "equipo",
   biblioteca: "libro",

@@ -33,7 +33,7 @@ export const CONTENIDOS: Record<string, Contenido> = {
             tipo: "pasos",
             items: [
               "Entra en **claude.ai** con el correo que usas para trabajar.",
-              "Pasa al plan **Pro**. Con el gratuito te quedas sin mensajes en mitad de una tarea larga, y aquí vas a pasarle documentos enteros.",
+              "Para empezar te vale el plan gratis. Cuando le pases documentos enteros te quedarás sin mensajes a mitad de tarea, y ahí te compensa el plan **Pro**, de unos 20 € al mes.",
               "Descarga la app de Claude en el móvil y entra con la misma cuenta. Lo que empiezas en el despacho lo sigues durante la ronda.",
             ],
           },
