@@ -5,15 +5,17 @@ import s from "../aula.module.css";
 import { Marca } from "../../Marca";
 import { Bot } from "../Bot";
 import { alumnoActual } from "@/lib/programa";
-import { RECURSOS, estaAbierto, fechaApertura, fechaLarga } from "@/lib/programa-curriculo";
+import { RECURSOS, estaAbierto } from "@/lib/programa-curriculo";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "Recursos · Director con Claude", robots: { index: false, follow: false } };
 
-// Las plantillas y documentos del programa, ordenados por la semana en que se abren.
+// Las plantillas y documentos que el alumno ya tiene abiertos. Lo demás no se enseña.
 export default async function RecursosPage() {
   const alumno = await alumnoActual();
   if (!alumno) redirect("/programa/aula");
+  const abiertos = RECURSOS.filter((r) => r.archivo && estaAbierto(alumno.fecha_alta, r.abre));
+  if (abiertos.length === 0) redirect("/programa/aula");
 
   return (
     <main className={s.pagina}>
@@ -28,7 +30,7 @@ export default async function RecursosPage() {
               Recursos
             </h1>
             <p className={`${s.consigues} ${s.aparece}`} style={{ ["--d" as string]: 2 }}>
-              Las plantillas y los documentos del programa, para quedártelos. Cada uno se abre con su semana.
+              Las plantillas del programa, para quedártelas.
             </p>
           </div>
           <div className={`${s.aparece} ${s.botPortada}`} style={{ ["--d" as string]: 2 }}>
@@ -38,24 +40,17 @@ export default async function RecursosPage() {
       </section>
       <div className={s.wrap}>
         <div className={`${s.semana} ${s.leccion}`}>
-          {RECURSOS.map((r, i) => {
-            const abierto = estaAbierto(alumno.fecha_alta, r.abre);
-            return (
-              <div key={r.titulo} className={`${s.recurso} ${s.aparece}`} style={{ ["--d" as string]: i }}>
-                <div>
-                  <b>{r.titulo}</b>
-                  <small>{r.semana}</small>
-                </div>
-                {abierto && r.archivo ? (
-                  <a className={`${s.boton} ${s.botonPeque}`} href={`/programa/aula/descargas/${r.archivo}`}>
-                    Descargar
-                  </a>
-                ) : (
-                  <small>{abierto ? "En preparación" : `Se abre el ${fechaLarga(fechaApertura(alumno.fecha_alta, r.abre))}`}</small>
-                )}
+          {abiertos.map((r, i) => (
+            <div key={r.titulo} className={`${s.recurso} ${s.aparece}`} style={{ ["--d" as string]: i }}>
+              <div>
+                <b>{r.titulo}</b>
+                <small>{r.semana}</small>
               </div>
-            );
-          })}
+              <a className={`${s.boton} ${s.botonPeque}`} href={`/programa/aula/descargas/${r.archivo}`}>
+                Descargar
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </main>

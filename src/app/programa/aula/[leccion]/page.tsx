@@ -9,7 +9,7 @@ import { Contenido } from "../Contenido";
 import { CONTENIDOS } from "../lecciones";
 import { Auditoria } from "../Auditoria";
 import { alumnoActual, leccionesHechas, marcarLeccion, progresoDe } from "@/lib/programa";
-import { buscarLeccion, estaAbierto, fechaApertura, fechaLarga, leccionesEnOrden, puedeVer } from "@/lib/programa-curriculo";
+import { buscarLeccion, leccionesAbiertas, puedeVer } from "@/lib/programa-curriculo";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "Lección · Director con Claude", robots: { index: false, follow: false } };
@@ -28,17 +28,19 @@ export default async function LeccionPage({ params, searchParams }: Props) {
   const encontrada = buscarLeccion(slug);
   if (!encontrada || !puedeVer(encontrada.modulo, alumno.plan)) notFound();
   const { modulo, leccion } = encontrada;
-
-  const abierta = estaAbierto(alumno.fecha_alta, modulo.abre);
-  const hechas = await progresoDe(alumno);
-  const hecha = hechas.has(slug);
   const esAuditoria = leccion.tipo === "auditoria";
   const contenido = CONTENIDOS[slug];
 
-  const orden = leccionesEnOrden(alumno.plan);
+  // Solo se entra en lo que ya está abierto y escrito. Lo demás no existe para
+  // el alumno: vuelve a su aula sin ver fechas ni «en preparación».
+  const orden = leccionesAbiertas(alumno.fecha_alta, alumno.plan).map((x) => x.leccion);
   const pos = orden.findIndex((l) => l.slug === slug);
+  if (pos < 0 || (!esAuditoria && !contenido)) redirect("/programa/aula");
+
+  const hechas = await progresoDe(alumno);
+  const hecha = hechas.has(slug);
   const anterior = pos > 0 ? orden[pos - 1] : undefined;
-  const siguiente = pos >= 0 && pos < orden.length - 1 ? orden[pos + 1] : undefined;
+  const siguiente = pos < orden.length - 1 ? orden[pos + 1] : undefined;
 
   async function cambiar() {
     "use server";
@@ -51,9 +53,9 @@ export default async function LeccionPage({ params, searchParams }: Props) {
     redirect(`/programa/aula/${slug}${ya ? "" : "?hecha=1"}#hecha`);
   }
 
-  const semanaTxt = modulo.id === "inicio" ? "Antes de empezar" : modulo.titulo.split(" · ")[0];
+  const semanaTxt = modulo.titulo.split(" · ")[0];
   const pildora = leccion.numero ? `${semanaTxt} · Día ${leccion.numero}` : semanaTxt;
-  const volverA = modulo.id === "inicio" || esAuditoria ? "/programa/aula" : `/programa/aula/modulo/${modulo.id}`;
+  const volverA = modulo.id.startsWith("dia-") ? "/programa/aula" : `/programa/aula/modulo/${modulo.id}`;
   const traje = trajeDe(slug, modulo.id);
 
   return (
@@ -68,9 +70,9 @@ export default async function LeccionPage({ params, searchParams }: Props) {
             </Link>
             <span className={`${s.pildora} ${s.aparece}`}>{pildora}</span>
             <h1 className={`${s.titulo} ${s.aparece}`} style={{ ["--d" as string]: 1 }}>
-              {esAuditoria ? "Tu auditoría" : leccion.titulo}
+              {leccion.titulo}
             </h1>
-            {abierta && contenido && (
+            {contenido && (
               <p className={`${s.consigues} ${s.aparece}`} style={{ ["--d" as string]: 2 }}>
                 <b>Lo que consigues hoy.</b> {contenido.consigues}
                 {contenido.tiempo && ` Te lleva unos ${contenido.tiempo}.`}
@@ -78,41 +80,30 @@ export default async function LeccionPage({ params, searchParams }: Props) {
             )}
             {esAuditoria && (
               <p className={`${s.consigues} ${s.aparece}`} style={{ ["--d" as string]: 2 }}>
-                Antes de empezar los días, me cuentas cómo es tu hotel y tu semana. Con eso elegimos tu primer agente y te
-                preparo tu hoja de ruta.
+                Hoy solo toca esto. Siéntate con calma y cuéntame tu semana, lo que buscas y las tareas que te quieres quitar
+                de encima. Mañana se abren las bases.
               </p>
             )}
           </div>
           <div className={`${s.aparece} ${s.botPortada}`} style={{ ["--d" as string]: 2 }}>
-            <Bot traje={traje} tam={220} estado={abierta ? "despierto" : "duerme"} />
+            <Bot traje={traje} tam={220} />
           </div>
         </div>
       </section>
 
       <div className={s.wrap}>
         <div className={s.leccion}>
-          {!abierta ? (
-            <p className={s.aviso}>
-              Se abre el {fechaLarga(fechaApertura(alumno.fecha_alta, modulo.abre))}. Mientras tanto, termina lo de esta
-              semana en tu hotel.
-            </p>
-          ) : esAuditoria ? (
+          {esAuditoria ? (
             <Auditoria alumno={alumno} />
           ) : (
             <>
-              <div className={`${s.video} ${leccion.video ? "" : s.videoVacio}`}>
-                {leccion.video ? (
+              {leccion.video && (
+                <div className={s.video}>
                   <iframe src={aEmbed(leccion.video)} title={leccion.titulo} allowFullScreen />
-                ) : (
-                  <span>El vídeo de esta lección llega muy pronto.</span>
-                )}
-              </div>
-
-              {contenido ? (
-                <Contenido c={contenido} />
-              ) : (
-                <p className={s.aviso}>Esta lección está en preparación. Te aviso por WhatsApp en cuanto esté lista.</p>
+                </div>
               )}
+
+              {contenido && <Contenido c={contenido} />}
 
               <form action={cambiar} className={s.marcar} id="hecha">
                 <div className={s.marcarTexto}>
@@ -130,14 +121,14 @@ export default async function LeccionPage({ params, searchParams }: Props) {
             {anterior ? (
               <Link href={`/programa/aula/${anterior.slug}`}>
                 ← Anterior
-                <span>{anterior.tipo === "auditoria" ? "Tu auditoría" : anterior.titulo}</span>
+                <span>{anterior.titulo}</span>
               </Link>
             ) : (
               <span />
             )}
             {siguiente && (
               <Link href={`/programa/aula/${siguiente.slug}`} style={{ textAlign: "right" }}>
-                Siguiente →<span>{siguiente.tipo === "auditoria" ? "Tu auditoría" : siguiente.titulo}</span>
+                Siguiente →<span>{siguiente.titulo}</span>
               </Link>
             )}
           </nav>

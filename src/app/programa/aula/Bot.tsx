@@ -114,9 +114,8 @@ const TRAJES: Record<string, Pieza[]> = {
 
 // El traje de cada lección; si no tiene, el de su semana.
 export const TRAJE_LECCION: Record<string, string> = {
-  bienvenida: "botones",
   auditoria: "auditor",
-  "dia-01": "lupa",
+  fundamentos: "libro",
   "dia-02": "habla",
   "dia-03": "llave",
   "dia-04": "antena",
@@ -134,8 +133,9 @@ export const TRAJE_LECCION: Record<string, string> = {
 };
 
 export const TRAJE_SEMANA: Record<string, string> = {
-  inicio: "botones",
-  "semana-1": "lupa",
+  "dia-1": "auditor",
+  "dia-2": "libro",
+  "semana-1": "llave",
   "semana-2": "turnos",
   "semana-3": "informes",
   "semana-4": "antena",

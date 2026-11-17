@@ -1,7 +1,8 @@
 // Estructura del programa Director con Claude (aparte de Vértice).
-// Cada módulo se abre a los `abre` días del alta del alumno: la semana 1 al
-// entrar, la 2 a los 7, la 3 a los 14, la 4 a los 21 y el día 21 a los 28.
-// Una lección con `listo: false` sale en el índice como «En preparación».
+// Cada módulo se abre a los `abre` días del alta del alumno: el día 1 solo la
+// auditoría, el día 2 las bases y desde el día 3 la práctica, que sigue por
+// semanas. El alumno solo ve lo que ya está abierto y listo: lo que aún no
+// toca o está sin hacer no sale en ningún sitio, ni como «en preparación».
 
 export type Plan = "director" | "hotel";
 
@@ -52,15 +53,36 @@ const dia = (numero: number, titulo: string, resumen: string, listo = false): Le
 
 export const MODULOS: Modulo[] = [
   {
-    id: "inicio",
-    titulo: "Antes de empezar",
-    subtitulo: "Cómo funciona el programa",
+    id: "dia-1",
+    titulo: "Día 1 · Tu auditoría",
+    subtitulo: "Hoy solo toca esto. Me cuentas tu semana, lo que buscas y las tareas que te quieres quitar de encima.",
     abre: 0,
     lecciones: [
       {
-        slug: "bienvenida",
-        titulo: "Bienvenida",
-        resumen: "Cómo se abren las semanas y dónde está todo.",
+        slug: "auditoria",
+        titulo: "Tu auditoría",
+        resumen: "Unos 40 minutos, con calma. Con ella preparo el plano de tu sistema.",
+        listo: true,
+        tipo: "auditoria",
+      },
+    ],
+  },
+  {
+    id: "dia-2",
+    titulo: "Día 2 · Bases y fundamentos",
+    subtitulo: "Lo que tienes que saber de Claude antes de ponerlo a trabajar en tu hotel.",
+    abre: 1,
+    lecciones: [
+      {
+        slug: "fundamentos",
+        titulo: "Claude listo para trabajar",
+        resumen: "Tu cuenta, lo que le puedes pasar de tu hotel y dónde se queda cada cosa.",
+        listo: true,
+      },
+      {
+        slug: "dia-02",
+        titulo: "Cómo pedirle las cosas",
+        resumen: "Le pides las cosas para que la respuesta salga bien a la primera.",
         listo: true,
       },
     ],
@@ -92,19 +114,10 @@ export const MODULOS: Modulo[] = [
   },
   {
     id: "semana-1",
-    titulo: "Semana 1 · Tu punto de partida",
-    subtitulo: "Del nivel 1 al 3",
-    abre: 0,
+    titulo: "Práctica · Tu hotel dentro de Claude",
+    subtitulo: "Empiezas a montarlo con tu hotel delante.",
+    abre: 2,
     lecciones: [
-      {
-        slug: "auditoria",
-        titulo: "Tu auditoría",
-        resumen: "Tu punto de partida en 3 minutos. Con tus respuestas te preparo tu hoja de ruta.",
-        listo: true,
-        tipo: "auditoria",
-      },
-      dia(1, "La radiografía de tu despacho", "Sabes cuántas horas te comen los turnos y los informes, y por dónde empiezas."),
-      dia(2, "Cómo pedirle las cosas", "Le pides las cosas para que la respuesta salga bien a la primera.", true),
       dia(3, "La ficha de tu hotel", "Claude conoce tu hotel y cómo trabajas.", true),
       dia(4, "Tu primer agente", "Tu hotel queda dentro de un proyecto y creas tu primer agente."),
       dia(5, "Claude en el bolsillo", "Dictas los partes desde el móvil mientras haces la ronda."),
@@ -179,9 +192,9 @@ export const MODULOS: Modulo[] = [
 ];
 
 export const RECURSOS: Recurso[] = [
-  { titulo: "Plantilla de la ficha del hotel (Word)", semana: "Semana 1", abre: 0, archivo: "ficha-del-hotel" },
-  { titulo: "Ficha del Hotel Brisalta rellena, de ejemplo (Word)", semana: "Semana 1", abre: 0, archivo: "ficha-brisalta" },
-  { titulo: "6 asistentes por departamento", semana: "Semana 1", abre: 0 },
+  { titulo: "Plantilla de la ficha del hotel (Word)", semana: "Práctica", abre: 2, archivo: "ficha-del-hotel" },
+  { titulo: "Ficha del Hotel Brisalta rellena, de ejemplo (Word)", semana: "Práctica", abre: 2, archivo: "ficha-brisalta" },
+  { titulo: "6 asistentes por departamento", semana: "Práctica", abre: 2 },
   { titulo: "Plantilla del cuadrante", semana: "Semana 2", abre: 7 },
   { titulo: "Plantillas del informe del mes y de la presentación para los dueños", semana: "Semana 3", abre: 14 },
   { titulo: "El Excel del presupuesto del año que viene", semana: "Semana 3", abre: 14 },
@@ -245,13 +258,35 @@ export function buscarLeccion(slug: string): { modulo: Modulo; leccion: Leccion;
   return null;
 }
 
-// Las lecciones en orden de lectura, para «anterior» y «siguiente».
-export function leccionesEnOrden(plan: Plan): Leccion[] {
-  const orden = ["inicio", "semana-1", "semana-2", "semana-3", "semana-4", "final", "avanzado"];
-  return orden
-    .map((id) => MODULOS.find((m) => m.id === id)!)
-    .filter((m) => puedeVer(m, plan))
-    .flatMap((m) => m.lecciones);
+// Lo que ve el alumno: una lección lista (o su auditoría) de un módulo ya abierto.
+export const leccionVisible = (l: Leccion) => l.listo || l.tipo === "auditoria";
+
+export function moduloVisible(modulo: Modulo, alta: string, plan: Plan, hoy = hoyMadrid()): boolean {
+  return puedeVer(modulo, plan) && estaAbierto(alta, modulo.abre, hoy) && modulo.lecciones.some(leccionVisible);
+}
+
+// Los módulos del recorrido, en orden (la biblioteca va aparte).
+export const RECORRIDO = MODULOS.filter((m) => !m.compacto);
+
+// Las lecciones que el alumno tiene abiertas hoy, en orden de lectura, para la
+// portada y para «anterior» y «siguiente».
+export function leccionesAbiertas(alta: string, plan: Plan, hoy = hoyMadrid()): { modulo: Modulo; leccion: Leccion }[] {
+  return RECORRIDO.filter((m) => moduloVisible(m, alta, plan, hoy)).flatMap((modulo) =>
+    modulo.lecciones.filter(leccionVisible).map((leccion) => ({ modulo, leccion })),
+  );
+}
+
+// El siguiente módulo que se abrirá con algo listo dentro, para avisar de cuándo.
+export function proximoModulo(alta: string, plan: Plan, hoy = hoyMadrid()): Modulo | undefined {
+  return RECORRIDO.filter((m) => puedeVer(m, plan) && !estaAbierto(alta, m.abre, hoy) && m.lecciones.some(leccionVisible)).sort(
+    (a, b) => a.abre - b.abre,
+  )[0];
+}
+
+// En qué día del programa va el alumno (el de su alta es el día 1).
+export function diaDelPrograma(alta: string, hoy = hoyMadrid()): number {
+  const ms = new Date(`${hoy}T00:00:00Z`).getTime() - new Date(`${alta}T00:00:00Z`).getTime();
+  return Math.max(Math.round(ms / 86_400_000) + 1, 1);
 }
 
 // La semana en la que va el alumno según su alta (1 a 4, o 5 si ya está el día 21).

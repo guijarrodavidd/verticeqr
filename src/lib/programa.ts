@@ -332,7 +332,7 @@ export async function leccionesHechas(id: number): Promise<Set<string>> {
 // Lo hecho por el alumno. La auditoría cuenta como hecha en cuanto envía su punto de partida.
 export async function progresoDe(alumno: Alumno): Promise<Set<string>> {
   const hechas = await leccionesHechas(alumno.id);
-  if (alumno.punto_partida) hechas.add("auditoria");
+  if (alumno.auditoria) hechas.add("auditoria");
   return hechas;
 }
 

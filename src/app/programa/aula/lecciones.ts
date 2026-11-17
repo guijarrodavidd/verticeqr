@@ -1,5 +1,5 @@
 // Contenido escrito de cada lección, por bloques, en el orden en que se lee.
-// Lo que no esté aquí sale como «En preparación».
+// Una lección sin contenido aquí no se le enseña al alumno.
 
 export type Bloque =
   | { tipo: "texto"; texto: string }
@@ -22,51 +22,91 @@ export type Contenido = {
 };
 
 export const CONTENIDOS: Record<string, Contenido> = {
-  bienvenida: {
-    consigues: "Sabes cómo funciona el programa y por dónde empezar.",
-    tiempo: "5 minutos",
+  fundamentos: {
+    consigues: "Tienes Claude listo en el ordenador y en el móvil, y sabes qué le puedes pasar de tu hotel y qué no.",
+    tiempo: "20 minutos",
     secciones: [
       {
-        titulo: "Cómo se abre el programa",
-        bloques: [
-          {
-            tipo: "texto",
-            texto:
-              "La semana 1 ya la tienes abierta. La segunda se abre a los 7 días de entrar, la tercera a los 14 y así hasta el día 21. Haz una lección al día, de lunes a viernes, con tu hotel delante.",
-          },
-        ],
-      },
-      {
-        titulo: "Lo primero",
+        titulo: "Tu cuenta, en el ordenador y en el móvil",
         bloques: [
           {
             tipo: "pasos",
             items: [
-              "Entrega **tu auditoría**. Son unos 5 minutos. Lo básico se marca de un toque y en cuatro preguntas me cuentas tu semana con tus palabras. Con eso te preparo tu hoja de ruta.",
-              "Abre el día 1 y haz la radiografía de tu despacho.",
+              "Entra en **claude.ai** con el correo que usas para trabajar.",
+              "Pasa al plan **Pro**. Con el gratuito te quedas sin mensajes en mitad de una tarea larga, y aquí vas a pasarle documentos enteros.",
+              "Descarga la app de Claude en el móvil y entra con la misma cuenta. Lo que empiezas en el despacho lo sigues durante la ronda.",
             ],
           },
         ],
       },
       {
-        titulo: "Lo básico, siempre a mano",
+        titulo: "Dos ajustes antes de pasarle nada",
         bloques: [
           {
-            tipo: "texto",
-            texto: "Ve a la **Biblioteca de Claude**. Es lo básico de Claude explicado para el día a día de un hotel, en vídeos de uno a tres minutos.",
+            tipo: "pasos",
+            items: [
+              "En **Ajustes**, apartado **Privacidad**, desactiva la opción de ayudar a mejorar Claude. Así tus conversaciones no se usan para entrenarlo.",
+              "En **Ajustes**, apartado **Perfil**, escribe en dos líneas quién eres y cómo quieres que te conteste. Por ejemplo: «Soy director de un hotel de 80 habitaciones en la costa. Contéstame corto, en castellano de España y sin tecnicismos».",
+            ],
           },
         ],
       },
       {
-        titulo: "Tu progreso",
+        titulo: "Lo que le puedes pasar y lo que nunca",
         bloques: [
           {
             tipo: "texto",
-            texto:
-              "Cuando acabes una lección, márcala como hecha. Así ves cuánto llevas y yo sé en qué punto estás.",
+            texto: "Trátalo como a un consultor de fuera. Le pasas números y procesos, y nunca datos de personas.",
+          },
+          {
+            tipo: "lista",
+            items: [
+              "**Sí:** totales y porcentajes del mes, la ocupación prevista, la carta, tus procedimientos, tus borradores y los correos con los nombres quitados.",
+              "**Nunca:** nombres, DNI o pasaportes de huéspedes, tarjetas, nóminas con nombre, datos de salud ni contraseñas.",
+            ],
+          },
+          {
+            tipo: "texto",
+            texto: "Si dudas, cambia el nombre por el cargo. «Un huésped» o «la gobernanta» le sirven igual para ayudarte.",
           },
         ],
       },
+      {
+        titulo: "Dónde se queda cada cosa",
+        bloques: [
+          {
+            tipo: "lista",
+            items: [
+              "**El chat** es para algo suelto, como un correo o una duda. Cada chat nuevo empieza de cero.",
+              "**Los proyectos** son para lo que se repite. Subes la ficha de tu hotel y tus instrucciones una vez, y cada chat que abres dentro ya se lo sabe. Lo montas en la práctica.",
+              "**Los artefactos** son los documentos que te prepara en una ventana aparte, como un cuadrante o un informe. Los copias, los cambias o los descargas.",
+            ],
+          },
+        ],
+      },
+      {
+        titulo: "Tu primera prueba",
+        bloques: [
+          { tipo: "texto", texto: "Abre un chat nuevo, pega esto y rellena los corchetes. Si vas con el móvil, díctalo." },
+          {
+            tipo: "prompt",
+            texto: `Soy [tu puesto] de un hotel de [habitaciones] habitaciones en [zona]. Te cuento cómo es una semana normal en mi despacho.
+
+[cuéntalo como se lo contarías a alguien que empieza contigo: lo que haces cada día, lo que te llega cada semana y lo que te toca a fin de mes]
+
+Antes de contestar, hazme las preguntas que te falten. Después dime qué tareas de las que te he contado podrías hacer tú, cuánto tiempo me ahorrarías en cada una y qué necesitarías de mí.`,
+          },
+          { tipo: "texto", texto: "Guárdate la respuesta. Luego sigue con la siguiente lección de hoy, cómo pedirle las cosas." },
+        ],
+      },
+    ],
+    revisalo: [
+      "Que en lo que le has contado no haya nombres de personas.",
+      "Que las tareas que te propone salgan de lo que le has contado tú y no de un hotel cualquiera.",
+    ],
+    siNoTeSale: [
+      "Si te contesta largo y general, dile «más corto y solo con lo que te he contado yo».",
+      "Si no ves los ajustes en el móvil, hazlo desde claude.ai en el ordenador. Se guardan para las dos.",
     ],
   },
 
@@ -177,7 +217,7 @@ Antes de escribir nada, hazme las preguntas que necesites para hacerlo bien. Des
               "Descarga la plantilla **Ficha del hotel**, en Word, en Recursos.",
               "Rellena lo que sepas de memoria y deja en blanco lo demás. No le dediques más de 10 minutos.",
               "Abre un chat nuevo en Claude, adjunta la ficha con el clip y pega el prompt de abajo.",
-              "Contesta lo que te pregunte y pídele la ficha completa. Guárdala, porque mañana la metes en tu proyecto.",
+              "Contesta lo que te pregunte y pídele la ficha completa. Guárdala, porque con ella montas tu proyecto.",
             ],
           },
         ],
