@@ -5,7 +5,14 @@ const nextConfig: NextConfig = {
   serverExternalPackages: ["mysql2"],
   // URLs limpias para las herramientas estáticas (public/<x>/index.html)
   async rewrites() {
-    return [
+    // conectar.verticeqr.com abre el formulario de conexiones (src/app/conectar).
+    const conectar = [{ type: "host" as const, value: "conectar.verticeqr.com" }];
+    return {
+      beforeFiles: [
+        { source: "/", has: conectar, destination: "/conectar" },
+        { source: "/gracias", has: conectar, destination: "/conectar/gracias" },
+      ],
+      afterFiles: [
       { source: "/calculadora", destination: "/calculadora/index.html" },
       { source: "/diagnostico", destination: "/diagnostico/index.html" },
       { source: "/lienzo", destination: "/lienzo/index.html" },
@@ -68,7 +75,8 @@ const nextConfig: NextConfig = {
       { source: "/d/ananda-4260/:path*", destination: "/d/ananda-4260/index.html" },
       { source: "/d/stella-5f22/:path*", destination: "/d/stella-5f22/index.html" },
       { source: "/d/bordeluz-89c9/:path*", destination: "/d/bordeluz-89c9/index.html" },
-    ];
+      ],
+    };
   },
   async redirects() {
     return [
