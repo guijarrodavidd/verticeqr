@@ -16,13 +16,13 @@ export const PREGUNTAS: Pregunta[] = [
   {
     id: "reservas",
     texto: "¿Qué programa de reservas usáis?",
-    opciones: ["Cloudbeds", "Opera", "Mews", "Ulyses", "Avirato", "Sihot", "Otro"],
+    opciones: ["Avirato", "Cloudbeds", "Mews", "Opera", "Sihot", "Ulyses", "Otro"],
     otro: "Si es otro, ¿cuál?",
   },
   {
     id: "api",
-    texto: "¿Tenéis activado el acceso a la API de ese programa?",
-    ayuda: "En Cloudbeds lo ves en Cuenta › Apps & Marketplace › API Credentials. Si sale el botón «Submit API Access Form», no está activado.",
+    texto: "¿Ese programa se puede conectar con otros (API)?",
+    ayuda: "Suele verse en los ajustes, en un apartado de integraciones o API. Si no lo sabes, marca «No lo sé».",
     opciones: ["Sí", "No", "No lo sé"],
   },
   {
@@ -41,7 +41,7 @@ export const PREGUNTAS: Pregunta[] = [
   {
     id: "caja",
     texto: "¿Qué caja usáis en el restaurante o el bar?",
-    opciones: ["Infocaja", "Ágora", "Revo", "Glop", "La del programa de reservas", "No tenemos", "Otra"],
+    opciones: ["Ágora", "Glop", "Infocaja", "Revo", "La del programa de reservas", "No tenemos", "Otra"],
     otro: "Si es otra, ¿cuál?",
   },
   {
@@ -49,7 +49,7 @@ export const PREGUNTAS: Pregunta[] = [
     texto: "¿Por dónde habláis hoy con los huéspedes?",
     ayuda: "Puedes marcar varias.",
     multiple: true,
-    opciones: ["WhatsApp del hotel", "Whistle o la mensajería de Cloudbeds", "Correo", "Teléfono", "Otra herramienta"],
+    opciones: ["WhatsApp del hotel", "La mensajería del programa de reservas", "Correo", "Teléfono", "Otra herramienta"],
     otro: "Si es otra herramienta, ¿cuál?",
   },
   {

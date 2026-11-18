@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { crearLead } from "@/lib/leads";
 import { PREGUNTAS } from "./preguntas";
 
-// Guarda las respuestas del formulario de conexiones como lead (origen
+// Guarda las respuestas del formulario de conexiones y automatizaciones como lead (origen
 // "conectar"): salen en /app/leads y en la hoja de Google, como los recursos.
 // Nombre, teléfono y ciudad del hotel son obligatorios; el email es opcional.
 export async function enviarConexiones(formData: FormData) {
@@ -30,6 +30,7 @@ export async function enviarConexiones(formData: FormData) {
     respuestas[p.id] = [valores.join(", ") || "(sin marcar)", otro].filter(Boolean).join(" · ");
   }
   const mano = String(formData.get("mano") ?? "").trim().slice(0, 2000);
+  const automatizacion = String(formData.get("automatizacion") ?? "").trim().slice(0, 3000);
 
   const emailBruto = String(formData.get("email") ?? "").trim();
   const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailBruto) ? emailBruto : "";
@@ -38,6 +39,7 @@ export async function enviarConexiones(formData: FormData) {
     `Formulario de conexiones: ${hotel} (${ciudad}).`,
     ...PREGUNTAS.map((p) => `${p.texto} ${respuestas[p.id]}`),
     `Lo que pasan a mano: ${mano || "(nada)"}`,
+    `Automatización que necesitan: ${automatizacion || "(ninguna)"}`,
     `Contacto: ${nombre} · ${telefono}${email ? ` · ${email}` : ""}`,
   ].join("\n");
 
@@ -74,6 +76,7 @@ export async function enviarConexiones(formData: FormData) {
           slug: "conectar",
           ...respuestas,
           mano,
+          automatizacion,
         }),
         signal: AbortSignal.timeout(5000),
       });

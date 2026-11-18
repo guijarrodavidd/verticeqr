@@ -11,7 +11,7 @@ export const contentType = "image/png";
 
 export default async function Image() {
   const titulo = "Qué hay que conectar en tu hotel";
-  const etiqueta = "Siete preguntas";
+  const etiqueta = "Preguntas rápidas";
 
   const logo = await readFile(join(process.cwd(), "public/vertice-wordmark-light.png"));
   const fonts = join(process.cwd(), "src/app/recurso/fonts");

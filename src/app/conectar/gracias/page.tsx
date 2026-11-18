@@ -13,7 +13,7 @@ export default function GraciasConectarPage() {
           <div className={styles.ok} aria-hidden="true">✓</div>
           <h1 className={styles.titleCenter}>Recibido. Gracias.</h1>
           <p className={styles.subtitleCenter}>
-            Revisamos lo que nos cuentas y te escribimos con lo que se puede conectar en tu hotel y cuánto tarda.
+            Revisamos lo que nos cuentas y te escribimos con lo que se puede conectar o automatizar en tu hotel y cuánto tarda.
           </p>
         </div>
       </section>

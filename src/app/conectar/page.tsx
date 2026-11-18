@@ -9,7 +9,7 @@ import { enviarConexiones } from "./actions";
 type Props = { searchParams: Promise<{ error?: string; hotel?: string; ciudad?: string }> };
 
 const TITULO = "Qué hay que conectar en tu hotel";
-const SUBTITULO = "Siete preguntas sobre los programas que usáis. Con tus respuestas vemos qué se conecta desde el primer día y qué lleva más tiempo.";
+const SUBTITULO = "Unas preguntas rápidas sobre los programas que usáis y lo que queréis automatizar. Con tus respuestas vemos qué se conecta desde el primer día y qué lleva más tiempo.";
 
 const ERRORES: Record<string, string> = {
   hotel: "Escribe el nombre del hotel.",
@@ -92,7 +92,7 @@ export default async function ConectarPage({ searchParams }: Props) {
                 <span className={q.qNum}>{PREGUNTAS.length + n0}</span>
                 <label htmlFor="mano" className={q.qText}>
                   ¿Qué pasáis hoy a mano de un programa a otro?
-                  <span className={q.qHelp}>Opcional. Por ejemplo: «recepción apunta en Cloudbeds lo que se pide por WhatsApp».</span>
+                  <span className={q.qHelp}>Opcional. Por ejemplo: «recepción apunta en el programa de reservas lo que se pide por WhatsApp».</span>
                 </label>
               </div>
             </legend>
@@ -103,6 +103,19 @@ export default async function ConectarPage({ searchParams }: Props) {
             <legend>
               <div className={q.qHead}>
                 <span className={q.qNum}>{PREGUNTAS.length + n0 + 1}</span>
+                <label htmlFor="automatizacion" className={q.qText}>
+                  ¿Necesitáis alguna automatización concreta?
+                  <span className={q.qHelp}>Opcional. Cuéntala como se la contarías a alguien del equipo: qué pasa, quién lo hace hoy y qué te gustaría que pasara solo. Por ejemplo: «cuando un huésped se va, que le llegue un mensaje pidiendo su valoración».</span>
+                </label>
+              </div>
+            </legend>
+            <textarea id="automatizacion" name="automatizacion" rows={4} maxLength={3000} className={q.text} style={{ resize: "vertical", minHeight: 120 }} />
+          </fieldset>
+
+          <fieldset className={q.q}>
+            <legend>
+              <div className={q.qHead}>
+                <span className={q.qNum}>{PREGUNTAS.length + n0 + 2}</span>
                 <label htmlFor="nombre" className={q.qText}>
                   ¿Con quién hablamos?
                   <span className={q.qHelp}>Para contarte qué se puede conectar y en cuánto tiempo.</span>
@@ -115,7 +128,7 @@ export default async function ConectarPage({ searchParams }: Props) {
           </fieldset>
 
           <button type="submit" className={q.submit}>Enviar respuestas →</button>
-          <p className={q.note}>Las revisamos y te decimos qué se conecta y cuánto tarda cada cosa.</p>
+          <p className={q.note}>Las revisamos y te decimos qué se puede hacer y cuánto tarda cada cosa.</p>
         </form>
       </section>
       <Pie />
