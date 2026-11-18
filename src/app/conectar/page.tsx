@@ -9,13 +9,13 @@ import { enviarConexiones } from "./actions";
 type Props = { searchParams: Promise<{ error?: string; hotel?: string; ciudad?: string }> };
 
 const TITULO = "Qué hay que conectar en tu hotel";
-const SUBTITULO = "Unas preguntas rápidas sobre los programas que usáis y lo que queréis automatizar. Con tus respuestas vemos qué se conecta desde el primer día y qué lleva más tiempo.";
+const SUBTITULO = "Unas preguntas rápidas sobre los programas que usa el hotel y lo que quiere automatizar. Con tus respuestas vemos qué se conecta desde el primer día y qué lleva más tiempo.";
 
 const ERRORES: Record<string, string> = {
   hotel: "Escribe el nombre del hotel.",
   ciudad: "Dime en qué ciudad está el hotel.",
   nombre: "Escribe tu nombre.",
-  telefono: "Pon un teléfono válido (con prefijo si no es de España).",
+  telefono: "Pon un teléfono válido, con el prefijo del país si no es de España.",
   campos: "Te falta alguna pregunta por contestar.",
 };
 
@@ -91,7 +91,7 @@ export default async function ConectarPage({ searchParams }: Props) {
               <div className={q.qHead}>
                 <span className={q.qNum}>{PREGUNTAS.length + n0}</span>
                 <label htmlFor="mano" className={q.qText}>
-                  ¿Qué pasáis hoy a mano de un programa a otro?
+                  ¿Qué se pasa hoy a mano de un programa a otro?
                   <span className={q.qHelp}>Opcional. Por ejemplo: «recepción apunta en el programa de reservas lo que se pide por WhatsApp».</span>
                 </label>
               </div>
@@ -104,7 +104,7 @@ export default async function ConectarPage({ searchParams }: Props) {
               <div className={q.qHead}>
                 <span className={q.qNum}>{PREGUNTAS.length + n0 + 1}</span>
                 <label htmlFor="automatizacion" className={q.qText}>
-                  ¿Necesitáis alguna automatización concreta?
+                  ¿Hace falta alguna automatización concreta?
                   <span className={q.qHelp}>Opcional. Cuéntala como se la contarías a alguien del equipo: qué pasa, quién lo hace hoy y qué te gustaría que pasara solo. Por ejemplo: «cuando un huésped se va, que le llegue un mensaje pidiendo su valoración».</span>
                 </label>
               </div>

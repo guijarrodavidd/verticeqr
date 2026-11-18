@@ -15,7 +15,7 @@ export type Pregunta = {
 export const PREGUNTAS: Pregunta[] = [
   {
     id: "reservas",
-    texto: "¿Qué programa de reservas usáis?",
+    texto: "¿Qué programa de reservas usa el hotel?",
     opciones: ["Avirato", "Cloudbeds", "Mews", "Opera", "Sihot", "Ulyses", "Otro"],
     otro: "Si es otro, ¿cuál?",
   },
@@ -40,13 +40,13 @@ export const PREGUNTAS: Pregunta[] = [
   },
   {
     id: "caja",
-    texto: "¿Qué caja usáis en el restaurante o el bar?",
+    texto: "¿Qué caja o punto de venta usa el restaurante o el bar?",
     opciones: ["Ágora", "Glop", "Infocaja", "Revo", "La del programa de reservas", "No tenemos", "Otra"],
     otro: "Si es otra, ¿cuál?",
   },
   {
     id: "mensajes",
-    texto: "¿Por dónde habláis hoy con los huéspedes?",
+    texto: "¿Por dónde se habla hoy con los huéspedes?",
     ayuda: "Puedes marcar varias.",
     multiple: true,
     opciones: ["WhatsApp del hotel", "La mensajería del programa de reservas", "Correo", "Teléfono", "Otra herramienta"],
