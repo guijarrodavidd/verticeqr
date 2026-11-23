@@ -4,7 +4,9 @@
 // semanas. El alumno solo ve lo que ya está abierto y listo: lo que aún no
 // toca o está sin hacer no sale en ningún sitio, ni como «en preparación».
 
-export type Plan = "director" | "hotel";
+import { MODULOS_IMPLANTACION } from "./programa-implantacion";
+
+export type Plan = "director" | "hotel" | "implantacion";
 
 export type Leccion = {
   slug: string;
@@ -55,7 +57,7 @@ const dia = (numero: number, titulo: string, resumen: string, listo = false): Le
   listo,
 });
 
-export const MODULOS: Modulo[] = [
+const MODULOS_21: Modulo[] = [
   {
     id: "dia-1",
     titulo: "Día 1 · Tu auditoría",
@@ -196,6 +198,9 @@ export const MODULOS: Modulo[] = [
   },
 ];
 
+// Los 21 días y, aparte, la mentoría (solo para el plan Implantación).
+export const MODULOS: Modulo[] = [...MODULOS_21, ...MODULOS_IMPLANTACION];
+
 export const RECURSOS: Recurso[] = [
   { titulo: "Plantilla de la ficha del hotel (Word)", semana: "Práctica", abre: 2, archivo: "ficha-del-hotel" },
   { titulo: "Ficha del Hotel Brisalta rellena, de ejemplo (Word)", semana: "Práctica", abre: 2, archivo: "ficha-brisalta" },
@@ -252,6 +257,8 @@ export function estaAbierto(alta: string, abre: number, hoy = hoyMadrid()): bool
 }
 
 export function puedeVer(modulo: Modulo, plan: Plan): boolean {
+  // La mentoría ve su recorrido y la biblioteca de los 21 días; los 21 días no ven la mentoría.
+  if (plan === "implantacion") return modulo.soloPlan === "implantacion" || modulo.id === "biblioteca";
   return !modulo.soloPlan || modulo.soloPlan === plan;
 }
 

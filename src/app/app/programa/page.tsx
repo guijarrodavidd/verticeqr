@@ -3,7 +3,8 @@ import { notFound, redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { getSession } from "@/lib/auth";
 import { crearAlumno, guardarNota, listarAlumnos, nuevoEnlace, ponerClaveNueva } from "@/lib/programa";
-import { TOTAL_DIAS, fechaLarga, hoyMadrid, semanaActual, type Plan } from "@/lib/programa-curriculo";
+import { TOTAL_DIAS, diaDelPrograma, fechaLarga, hoyMadrid, semanaActual, type Plan } from "@/lib/programa-curriculo";
+import { TOTAL_IMPLANTACION } from "@/lib/programa-implantacion";
 import { Copiar } from "@/app/programa/aula/Copiar";
 import { visibles as preguntasDeLaAuditoria } from "@/app/programa/auditoria/preguntas";
 
@@ -56,7 +57,7 @@ export default async function ProgramaAdminPage({ searchParams }: { searchParams
       email,
       telefono: String(formData.get("telefono") ?? "") || null,
       hotel: String(formData.get("hotel") ?? "") || null,
-      plan: (formData.get("plan") === "hotel" ? "hotel" : "director") as Plan,
+      plan: (["hotel", "implantacion"].includes(String(formData.get("plan"))) ? String(formData.get("plan")) : "director") as Plan,
       // Se vuelve a fijar el día que entra por primera vez.
       fecha_alta: hoyMadrid(),
     });
@@ -164,6 +165,7 @@ export default async function ProgramaAdminPage({ searchParams }: { searchParams
           <select name="plan" style={campo} defaultValue="director">
             <option value="director">Plan Director</option>
             <option value="hotel">Plan Hotel</option>
+            <option value="implantacion">Implantación con Héctor (mentoría)</option>
           </select>
           <button type="submit" style={{ ...boton, border: 0, cursor: "pointer" }}>
             Dar de alta y sacar su contraseña
@@ -187,11 +189,11 @@ export default async function ProgramaAdminPage({ searchParams }: { searchParams
                 </div>
                 <div style={{ textAlign: "right", fontSize: "0.9rem" }}>
                   <div>
-                    Plan {a.plan === "hotel" ? "Hotel" : "Director"} ·{" "}
+                    {a.plan === "implantacion" ? "Implantación" : a.plan === "hotel" ? "Plan Hotel" : "Plan Director"} ·{" "}
                     {a.ultimo_acceso ? `empezó el ${fechaLarga(a.fecha_alta)}` : "empieza cuando entre"}
                   </div>
                   <div style={{ color: "#5b6470" }}>
-                    {semana >= 5 ? "Día 21 abierto" : `Semana ${Math.max(semana, 1)}`} · {a.hechas} de {TOTAL_DIAS} días hechos ·{" "}
+                    {a.plan === "implantacion" ? `Día ${diaDelPrograma(a.fecha_alta)} · ${a.hechas} de ${TOTAL_IMPLANTACION} lecciones hechas` : `${semana >= 5 ? "Día 21 abierto" : `Semana ${Math.max(semana, 1)}`} · ${a.hechas} de ${TOTAL_DIAS} días hechos`} ·{" "}
                     {a.ultimo_acceso ? `última entrada ${a.ultimo_acceso.slice(8, 10)}/${a.ultimo_acceso.slice(5, 7)} a las ${a.ultimo_acceso.slice(11, 16)}` : "aún no ha entrado"}
                   </div>
                 </div>

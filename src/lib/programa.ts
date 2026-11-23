@@ -119,7 +119,7 @@ function aAlumno(f: Fila, hechas = 0): Alumno {
     email: f.email,
     telefono: f.telefono,
     hotel: f.hotel,
-    plan: f.plan === "hotel" ? "hotel" : "director",
+    plan: f.plan === "hotel" ? "hotel" : f.plan === "implantacion" ? "implantacion" : "director",
     fecha_alta: f.fecha_alta,
     nota: f.nota,
     punto_partida: punto,

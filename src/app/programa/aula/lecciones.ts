@@ -1,3 +1,4 @@
+import { CONTENIDOS_IMPLANTACION } from "./lecciones-implantacion";
 // Contenido escrito de cada lección, por bloques, en el orden en que se lee.
 // Una lección sin contenido aquí no se le enseña al alumno.
 
@@ -21,7 +22,7 @@ export type Contenido = {
   recibes?: string[];
 };
 
-export const CONTENIDOS: Record<string, Contenido> = {
+const CONTENIDOS_21: Record<string, Contenido> = {
   fundamentos: {
     consigues: "Tienes Claude listo en el ordenador y en el móvil, y sabes qué le puedes pasar de tu hotel y qué no.",
     tiempo: "20 minutos",
@@ -33,7 +34,7 @@ export const CONTENIDOS: Record<string, Contenido> = {
             tipo: "pasos",
             items: [
               "Entra en **claude.ai** con el correo que usas para trabajar.",
-              "Para empezar te vale el plan gratis. Cuando le pases documentos enteros te quedarás sin mensajes a mitad de tarea, y ahí te compensa el plan **Pro**, de unos 20 € al mes.",
+              "Necesitas el plan **Pro**, de unos 20 € al mes. El gratis te vale para probar el primer día, pero en cuanto le pasas documentos enteros te quedas sin mensajes a mitad de tarea.",
               "Descarga la app de Claude en el móvil y entra con la misma cuenta. Lo que empiezas en el despacho lo sigues durante la ronda.",
             ],
           },
@@ -274,3 +275,6 @@ Antes de escribir nada, hazme las preguntas que necesites para hacerlo bien. Des
     recibes: ["La plantilla de la ficha del hotel, en Word.", "La ficha del Hotel Brisalta ya rellena, como ejemplo."],
   },
 };
+
+// Los 21 días y las lecciones de la mentoría.
+export const CONTENIDOS: Record<string, Contenido> = { ...CONTENIDOS_21, ...CONTENIDOS_IMPLANTACION };
