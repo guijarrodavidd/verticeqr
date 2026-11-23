@@ -5,7 +5,7 @@ import s from "../aula.module.css";
 import { Marca } from "../../Marca";
 import { Bot } from "../Bot";
 import { alumnoActual } from "@/lib/programa";
-import { RECURSOS, estaAbierto } from "@/lib/programa-curriculo";
+import { RECURSOS, estaAbierto, hayClases } from "@/lib/programa-curriculo";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "Recursos · Director con Claude", robots: { index: false, follow: false } };
@@ -15,7 +15,7 @@ export default async function RecursosPage() {
   const alumno = await alumnoActual();
   if (!alumno) redirect("/programa/aula");
   const abiertos = RECURSOS.filter((r) => r.archivo && estaAbierto(alumno.fecha_alta, r.abre));
-  if (abiertos.length === 0) redirect("/programa/aula");
+  if (abiertos.length === 0 || !hayClases(alumno.fecha_alta, alumno.plan)) redirect("/programa/aula");
 
   return (
     <main className={s.pagina}>

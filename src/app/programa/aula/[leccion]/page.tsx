@@ -80,8 +80,8 @@ export default async function LeccionPage({ params, searchParams }: Props) {
             )}
             {esAuditoria && (
               <p className={`${s.consigues} ${s.aparece}`} style={{ ["--d" as string]: 2 }}>
-                Hoy solo toca esto. Siéntate con calma y cuéntame tu semana, lo que buscas y las tareas que te quieres quitar
-                de encima. Mañana se abren las bases.
+                Ahora solo toca esto. Siéntate con calma y cuéntame tu semana, lo que buscas y las tareas que te quieres quitar
+                de encima. Con ella preparo por dónde empezamos.
               </p>
             )}
           </div>

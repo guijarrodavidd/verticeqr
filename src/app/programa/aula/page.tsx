@@ -12,6 +12,7 @@ import {
   diaDelPrograma,
   estaAbierto,
   fechaApertura,
+  hayClases,
   fechaLarga,
   hoyMadrid,
   leccionVisible,
@@ -91,7 +92,8 @@ export default async function AulaPage({ searchParams }: Props) {
   const proximo = proximoModulo(alumno.fecha_alta, alumno.plan, hoy);
   const abreProximo = proximo ? fechaApertura(alumno.fecha_alta, proximo.abre) : "";
   const cuandoProximo = !abreProximo ? "" : abreProximo === sumarDias(hoy, 1) ? "mañana" : `el ${fechaLarga(abreProximo)}`;
-  const hayRecursos = RECURSOS.some((r) => r.archivo && estaAbierto(alumno.fecha_alta, r.abre, hoy));
+  const hayRecursos =
+    hayClases(alumno.fecha_alta, alumno.plan, hoy) && RECURSOS.some((r) => r.archivo && estaAbierto(alumno.fecha_alta, r.abre, hoy));
 
   // Todo el recorrido a la vista: lo abierto se puede abrir y lo demás sale
   // bloqueado, sin enlace. Nunca «en preparación».
@@ -99,7 +101,10 @@ export default async function AulaPage({ searchParams }: Props) {
     (m) => puedeVer(m, alumno.plan) && (!m.soloAbierto || moduloVisible(m, alumno.fecha_alta, alumno.plan, hoy)),
   ).map((m): SemanaPlanning => {
     const [pestana, titulo] = m.titulo.split(" · ");
-    const abierta = estaAbierto(alumno.fecha_alta, m.abre, hoy);
+    // Abierta = ya le toca y tiene algo dentro. La fecha solo se enseña si en ese
+    // momento habrá algo que abrir; si no, sale «Bloqueada» sin más.
+    const conAlgo = m.lecciones.some(leccionVisible);
+    const abierta = estaAbierto(alumno.fecha_alta, m.abre, hoy) && conAlgo;
     const estado = (l: Leccion): FilaPlanning["estado"] =>
       !abierta || !leccionVisible(l) ? "cerrada" : hechas.has(l.slug) ? "hecha" : "abierta";
     const doc = m.lecciones.find((l) => l.tipo === "documento");
@@ -110,7 +115,7 @@ export default async function AulaPage({ searchParams }: Props) {
       nivel: m.subtitulo,
       traje: TRAJE_SEMANA[m.id] ?? "botones",
       abierta,
-      abreEl: fechaLarga(fechaApertura(alumno.fecha_alta, m.abre)),
+      abreEl: conAlgo && !abierta ? fechaLarga(fechaApertura(alumno.fecha_alta, m.abre)) : "",
       noche: m.id === "final",
       filas: m.lecciones
         .filter((l) => l.tipo !== "documento")

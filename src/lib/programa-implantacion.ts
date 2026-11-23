@@ -17,7 +17,7 @@ const BASE: Modulo[] = [
       { slug: "m-0-1", titulo: "0.1 · El mapa del sistema", resumen: "Saben qué tendrán en el mes 6 y en qué orden lo van a montar.", listo: true },
       { slug: "m-0-2", titulo: "0.2 · Lo que necesitas", resumen: "Tienen preparado todo lo de la lista de requisitos.", listo: true },
       { slug: "m-0-3", titulo: "0.3 · Qué datos sí y cuáles no", resumen: "Tienen el visto bueno de su dirección por escrito.", listo: true },
-      { slug: "m-0-4", titulo: "0.4 · Tu auditoría", resumen: "Entregan su auditoría antes de la llamada de 90 minutos.", listo: true },
+      { slug: "m-0-4", titulo: "0.4 · Tu auditoría", resumen: "Entregan su auditoría antes de la llamada de 90 minutos.", listo: true, tipo: "auditoria" },
     ],
   },
   {

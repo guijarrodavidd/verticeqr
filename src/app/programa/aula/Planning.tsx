@@ -25,7 +25,7 @@ export type SemanaPlanning = {
   nivel: string;
   traje: string; // cómo va vestido el agente de la semana
   abierta: boolean;
-  abreEl: string; // «viernes 20 de noviembre»
+  abreEl: string; // «viernes 20 de noviembre», o vacío si no se sabe cuándo
   noche?: boolean; // el día 21, en azul noche como en la landing
   filas: FilaPlanning[];
   // Lo que va antes de los días (la bienvenida y la auditoría en la semana 1).
@@ -59,7 +59,7 @@ export function Planning({ semanas, inicial }: { semanas: SemanaPlanning[]; inic
           <div className={s.semanaTexto}>
             <span className={s.pildora}>{sem.pestana}</span>
             <h3>{sem.titulo}</h3>
-            <span className={s.nivel}>{sem.abierta ? sem.nivel : `Bloqueada · se abre el ${sem.abreEl}`}</span>
+            <span className={s.nivel}>{sem.abierta ? sem.nivel : sem.abreEl ? `Bloqueada · se abre el ${sem.abreEl}` : "Bloqueada"}</span>
           </div>
           <Bot traje={sem.traje} estado={sem.abierta ? "despierto" : "duerme"} tam={124} oscuro={sem.noche} />
         </div>

@@ -2,7 +2,7 @@ import path from "node:path";
 import { promises as fs } from "node:fs";
 import { NextResponse } from "next/server";
 import { alumnoActual } from "@/lib/programa";
-import { DESCARGAS, RECURSOS, estaAbierto } from "@/lib/programa-curriculo";
+import { DESCARGAS, RECURSOS, estaAbierto, hayClases } from "@/lib/programa-curriculo";
 
 // Descarga privada: solo con sesión de alumno y con la semana del recurso abierta.
 export async function GET(_req: Request, { params }: { params: Promise<{ archivo: string }> }) {
@@ -10,7 +10,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ archivo
   const alumno = await alumnoActual();
   const descarga = DESCARGAS[archivo];
   const recurso = RECURSOS.find((r) => r.archivo === archivo);
-  if (!alumno || !descarga || !recurso || !estaAbierto(alumno.fecha_alta, recurso.abre)) {
+  if (!alumno || !descarga || !recurso || !estaAbierto(alumno.fecha_alta, recurso.abre) || !hayClases(alumno.fecha_alta, alumno.plan)) {
     return new NextResponse("No disponible", { status: 404 });
   }
   const datos = await fs.readFile(path.join(process.cwd(), "privado", "programa", descarga.fichero));

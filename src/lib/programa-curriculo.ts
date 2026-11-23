@@ -270,8 +270,10 @@ export function buscarLeccion(slug: string): { modulo: Modulo; leccion: Leccion;
   return null;
 }
 
-// Lo que ve el alumno: una lección lista (o su auditoría) de un módulo ya abierto.
-export const leccionVisible = (l: Leccion) => l.listo || l.tipo === "auditoria";
+// Lo que ve el alumno: su auditoría y las clases que ya tienen su vídeo grabado.
+// Una clase sin vídeo sale bloqueada, igual que las que aún no tocan, para que
+// no se vea vacía (Héctor, 23-nov-2026). Se abre sola al ponerle su Loom.
+export const leccionVisible = (l: Leccion) => l.tipo === "auditoria" || (l.listo && !!l.video);
 
 export function moduloVisible(modulo: Modulo, alta: string, plan: Plan, hoy = hoyMadrid()): boolean {
   return puedeVer(modulo, plan) && estaAbierto(alta, modulo.abre, hoy) && modulo.lecciones.some(leccionVisible);
@@ -286,6 +288,12 @@ export function leccionesAbiertas(alta: string, plan: Plan, hoy = hoyMadrid()): 
   return RECORRIDO.filter((m) => moduloVisible(m, alta, plan, hoy)).flatMap((modulo) =>
     modulo.lecciones.filter(leccionVisible).map((leccion) => ({ modulo, leccion })),
   );
+}
+
+// Si el alumno tiene ya alguna clase abierta, aparte de la auditoría. Sin
+// clases, tampoco se enseñan los recursos.
+export function hayClases(alta: string, plan: Plan, hoy = hoyMadrid()): boolean {
+  return leccionesAbiertas(alta, plan, hoy).some((x) => x.leccion.tipo !== "auditoria");
 }
 
 // El siguiente módulo que se abrirá con algo listo dentro, para avisar de cuándo.
