@@ -3,7 +3,7 @@ import type { Contenido } from "./lecciones";
 
 export const CONTENIDOS_IMPLANTACION: Record<string, Contenido> = {
   "m-0-1": {
-    "consigues": "Sabes cómo queda tu sistema en el mes 6 y en qué orden lo vas a montar, una pieza por semana.",
+    "consigues": "Sabes cómo queda tu sistema al acabar los 3 meses y en qué orden lo vas a montar, una pieza por semana.",
     "tiempo": "6 minutos de vídeo",
     "secciones": [
       {
@@ -15,9 +15,9 @@ export const CONTENIDOS_IMPLANTACION: Record<string, Contenido> = {
               "Dibuja cuatro cajas en una hoja en blanco y ponles nombre. Los agentes, el Registro, el panel de dirección y el panel de control.",
               "Une las cajas con una flecha y sigue el ejemplo del vídeo. Una camarera avisa por el formulario de que hoy no viene, el agente de bajas te prepara dos opciones y apunta su fila en el Registro.",
               "Sigue la flecha hasta el final. Tú eliges la opción A o la B en el panel de dirección, y el panel de control te dice si el agente ha trabajado.",
-              "Mira en el vídeo el centro de control del hotel de ejemplo, con sus pestañas Oficina, Errores y Consumo. Es lo que vas a tener tú en el mes 6.",
+              "Mira en el vídeo el centro de control del hotel de ejemplo, con sus pestañas Oficina, Errores y Consumo. Es lo que vas a tener tú en la semana 12.",
               "Apunta el orden de montaje. La auditoría, en la semana 1 tu mesa de trabajo y tu primer agente, de la 2 a la 6 los agentes de tu despacho, en la 7 que trabajen solos y en la 8 el panel de dirección.",
-              "Añade lo que viene después. Los meses 3 y 4, el panel de control y los avisos al móvil, y los meses 5 y 6, aprender a mantenerlo tú.",
+              "Añade lo que viene después. Las semanas 9 y 10, el panel de control y los avisos al móvil, y la 11 y la 12, aprender a mantenerlo tú.",
               "Copia en un folio las cuatro cajas y la flecha del dato, con tus palabras."
             ]
           }
@@ -2161,7 +2161,7 @@ export const CONTENIDOS_IMPLANTACION: Record<string, Contenido> = {
     ]
   },
   "m-7-3": {
-    "consigues": "Montas un agente entero tú solo, de principio a fin, en la llamada 14. Yo solo miro, y es la prueba de que sabes seguir.",
+    "consigues": "Montas un agente entero tú solo, de principio a fin, en la llamada 12. Yo solo miro, y es la prueba de que sabes seguir.",
     "tiempo": "3 minutos de vídeo",
     "secciones": [
       {
@@ -2276,7 +2276,7 @@ export const CONTENIDOS_IMPLANTACION: Record<string, Contenido> = {
     ],
     "siNoTeSale": [
       "Actualiza el mapa cada vez que enciendes o apagas un agente, para que siga describiendo el sistema que tienes.",
-      "El primero de la lista de lo siguiente es tu próximo agente. Lo montas con /nuevo-agente, igual que en la llamada 14."
+      "El primero de la lista de lo siguiente es tu próximo agente. Lo montas con /nuevo-agente, igual que en la llamada 12."
     ]
   },
 };

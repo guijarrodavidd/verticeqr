@@ -1,4 +1,4 @@
-// La mentoría «Implantación con Héctor»: 52 lecciones repartidas por llamadas en 6 meses.
+// La mentoría «Implantación con Héctor»: 52 lecciones repartidas en 12 llamadas semanales, 3 meses.
 // Generado por curso-director-con-claude/oferta/aula-mentoria/generar.py. El vídeo de cada lección
 // se añade con su enlace de Loom en `VIDEOS`.
 import type { Modulo } from "./programa-curriculo";
@@ -14,7 +14,7 @@ const BASE: Modulo[] = [
     abre: 0,
     soloPlan: "implantacion",
     lecciones: [
-      { slug: "m-0-1", titulo: "0.1 · El mapa del sistema", resumen: "Saben qué tendrán en el mes 6 y en qué orden lo van a montar.", listo: true },
+      { slug: "m-0-1", titulo: "0.1 · El mapa del sistema", resumen: "Saben qué tendrán al acabar los 3 meses y en qué orden lo van a montar.", listo: true },
       { slug: "m-0-2", titulo: "0.2 · Lo que necesitas", resumen: "Tienen preparado todo lo de la lista de requisitos.", listo: true },
       { slug: "m-0-3", titulo: "0.3 · Qué datos sí y cuáles no", resumen: "Tienen el visto bueno de su dirección por escrito.", listo: true },
       { slug: "m-0-4", titulo: "0.4 · Tu auditoría", resumen: "Entregan su auditoría antes de la llamada de 90 minutos.", listo: true, tipo: "auditoria" },
@@ -119,54 +119,36 @@ const BASE: Modulo[] = [
   },
   {
     id: "imp-8",
-    titulo: "Mes 3 · El panel de control",
+    titulo: "Semana 9 · El panel de control",
     subtitulo: "Llamada 9",
-    abre: 60,
+    abre: 58,
     soloPlan: "implantacion",
     lecciones: [
       { slug: "m-6-1", titulo: "6.1 · El estado de cada agente", resumen: "Ven quién trabaja, quién falla y quién está apagado.", listo: true },
       { slug: "m-6-2", titulo: "6.2 · La oficina en 8 bits", resumen: "Su hotel en corte, con cada agente en su mesa.", listo: true },
-    ],
-  },
-  {
-    id: "imp-9",
-    titulo: "Mes 3 · Los errores",
-    subtitulo: "Llamada 10",
-    abre: 74,
-    soloPlan: "implantacion",
-    lecciones: [
       { slug: "m-6-3", titulo: "6.3 · Los errores en llano", resumen: "Cada error dice qué ha pasado y a quién le toca.", listo: true },
       { slug: "m-6-4", titulo: "6.4 · El mapa de errores", resumen: "Ven dónde falla su sistema.", listo: true },
     ],
   },
   {
-    id: "imp-10",
-    titulo: "Mes 4 · El vigía y los avisos",
-    subtitulo: "Llamada 11",
-    abre: 90,
+    id: "imp-9",
+    titulo: "Semana 10 · El vigía y lo que gasta",
+    subtitulo: "Llamada 10",
+    abre: 65,
     soloPlan: "implantacion",
     lecciones: [
       { slug: "m-6-5", titulo: "6.5 · El vigía", resumen: "Se enteran antes que nadie si algo no salió.", listo: true },
       { slug: "m-6-6", titulo: "6.6 · Los avisos", resumen: "Avisos en el móvil.", listo: true },
       { slug: "m-6-7", titulo: "6.7 · Fallos que se arreglan solos", resumen: "Sin avisos de más.", listo: true },
-    ],
-  },
-  {
-    id: "imp-11",
-    titulo: "Mes 4 · Lo que gasta y lo que devuelve",
-    subtitulo: "Llamada 12",
-    abre: 104,
-    soloPlan: "implantacion",
-    lecciones: [
       { slug: "m-6-8", titulo: "6.8 · La revisión del lunes", resumen: "Una rutina de mejora cada semana.", listo: true },
       { slug: "m-6-9", titulo: "6.9 · Lo que gasta y lo que devuelve", resumen: "Los números de su sistema para enseñarlos.", listo: true },
     ],
   },
   {
-    id: "imp-12",
-    titulo: "Mes 5 · La revisión del mes",
-    subtitulo: "Llamada 13",
-    abre: 120,
+    id: "imp-10",
+    titulo: "Semana 11 · La revisión y lo nuevo",
+    subtitulo: "Llamada 11",
+    abre: 72,
     soloPlan: "implantacion",
     lecciones: [
       { slug: "m-7-1", titulo: "7.1 · La revisión del mes", resumen: "Su rutina mensual.", listo: true },
@@ -174,10 +156,10 @@ const BASE: Modulo[] = [
     ],
   },
   {
-    id: "imp-13",
-    titulo: "Mes 6 · Seguir solo",
-    subtitulo: "Llamada 14",
-    abre: 150,
+    id: "imp-11",
+    titulo: "Semana 12 · Seguir solo",
+    subtitulo: "Llamada 12",
+    abre: 79,
     soloPlan: "implantacion",
     lecciones: [
       { slug: "m-7-3", titulo: "7.3 · Un agente sin mí", resumen: "La prueba de que saben seguir.", listo: true },
