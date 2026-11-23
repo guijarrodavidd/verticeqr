@@ -36,6 +36,7 @@ const nextConfig: NextConfig = {
       { source: "/informe", destination: "/informe/index.html" },
       // Recurso del post CURSO (18-nov-2026): el curso de Claude, 8 líneas y 40 módulos. Abierto, sin formulario.
       { source: "/curso", destination: "/curso/index.html" },
+      { source: "/propiedad", destination: "/propiedad/index.html" },
       // Landing del programa Director con Claude (aparte de Vértice).
       { source: "/programa", destination: "/programa/index.html" },
       // Panel de ejemplo del plan A medida (Hotel Brisalta, inventado). Sin enlazar.
@@ -88,6 +89,8 @@ const nextConfig: NextConfig = {
       // Recurso abierto, sin formulario (prueba de noviembre de 2026)
       { source: "/recurso/equipo-ia", destination: "/equipo-ia", permanent: false },
       { source: "/recurso/curso", destination: "/curso", permanent: false },
+      { source: "/recurso/propiedad", destination: "/propiedad", permanent: false },
+      { source: "/recurso/guia", destination: "/propiedad", permanent: false },
     ];
   },
 };
