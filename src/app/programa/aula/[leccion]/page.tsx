@@ -8,6 +8,7 @@ import { Bot, trajeDe } from "../Bot";
 import { Contenido } from "../Contenido";
 import { CONTENIDOS } from "../lecciones";
 import { Auditoria } from "../Auditoria";
+import { VideoPropio } from "../VideoPropio";
 import { alumnoActual, leccionesHechas, marcarLeccion, progresoDe } from "@/lib/programa";
 import { buscarLeccion, leccionesAbiertas, puedeVer } from "@/lib/programa-curriculo";
 
@@ -18,6 +19,8 @@ type Props = { params: Promise<{ leccion: string }>; searchParams: Promise<{ hec
 
 // Loom: de https://www.loom.com/share/<id> a su versión para incrustar.
 const aEmbed = (url: string) => url.replace("/share/", "/embed/");
+// Vídeo propio: archivo (.mp4, .webm, .m3u8) o ruta de la propia web.
+const esArchivo = (url: string) => /\.(mp4|webm|m3u8)(\?.*)?$/i.test(url) || url.startsWith("/videos/");
 
 export default async function LeccionPage({ params, searchParams }: Props) {
   const { leccion: slug } = await params;
@@ -97,7 +100,10 @@ export default async function LeccionPage({ params, searchParams }: Props) {
             <Auditoria alumno={alumno} />
           ) : (
             <>
-              {leccion.video && (
+              {leccion.video && esArchivo(leccion.video) && (
+                <VideoPropio src={leccion.video} portada={leccion.portada} titulo={leccion.titulo} capitulos={leccion.capitulos} />
+              )}
+              {leccion.video && !esArchivo(leccion.video) && (
                 <div className={s.video}>
                   <iframe src={aEmbed(leccion.video)} title={leccion.titulo} allowFullScreen />
                 </div>

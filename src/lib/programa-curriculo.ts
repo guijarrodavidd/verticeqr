@@ -13,7 +13,9 @@ export type Leccion = {
   numero?: number; // el día del programa (1 a 21)
   titulo: string;
   resumen: string;
-  video?: string; // enlace de Loom
+  video?: string; // enlace de Loom o vídeo propio (.mp4 alojado en la web)
+  portada?: string; // imagen previa del vídeo propio
+  capitulos?: { t: number; titulo: string }[]; // segundo de inicio y título
   listo: boolean;
   // "auditoria": el punto de partida, que se marca solo al enviarlo.
   // "documento": el documento de trabajo con el que acaba cada semana.

@@ -268,6 +268,11 @@ a.tarjeta:hover { box-shadow: inset 0 0 0 2px #36c6c0; transform: translateY(-1p
 
 .video { position: relative; aspect-ratio: 16 / 9; max-width: 100%; border-radius: 24px; overflow: hidden; background: var(--noche); box-shadow: 0 30px 60px -36px rgba(11, 18, 32, 0.6); }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video video { position: absolute; inset: 0; width: 100%; height: 100%; background: var(--noche); }
+.capitulos { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 4px; }
+.capitulos button { display: flex; gap: 14px; width: 100%; padding: 10px 14px; border: 0; border-radius: 12px; background: var(--niebla); color: var(--tinta); font: inherit; font-size: 15px; text-align: left; cursor: pointer; }
+.capitulos button:hover { box-shadow: inset 0 0 0 1px var(--linea); }
+.capitulos button span { color: var(--teal); font-weight: 600; font-variant-numeric: tabular-nums; min-width: 3.2em; }
 .videoVacio {
   display: grid;
   place-items: center;

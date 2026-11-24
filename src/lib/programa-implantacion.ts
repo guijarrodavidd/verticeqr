@@ -1,10 +1,11 @@
 // La mentoría «Implantación con Héctor»: 52 lecciones repartidas en 12 llamadas semanales, 3 meses.
 // Generado por curso-director-con-claude/oferta/aula-mentoria/generar.py. El vídeo de cada lección
-// se añade con su enlace de Loom en `VIDEOS`.
+// se añade en `VIDEOS` con publicar_video.py.
 import type { Modulo } from "./programa-curriculo";
 
-// slug de la lección → enlace de Loom, cuando esté grabada.
-const VIDEOS: Record<string, string> = {};
+// slug de la lección → su vídeo (archivo editado en la web, o Loom), cuando esté grabada.
+type Video = { video: string; portada?: string; capitulos?: { t: number; titulo: string }[] };
+const VIDEOS: Record<string, Video> = {};
 
 const BASE: Modulo[] = [
   {
@@ -171,7 +172,7 @@ const BASE: Modulo[] = [
 
 export const MODULOS_IMPLANTACION: Modulo[] = BASE.map((m) => ({
   ...m,
-  lecciones: m.lecciones.map((l) => (VIDEOS[l.slug] ? { ...l, video: VIDEOS[l.slug] } : l)),
+  lecciones: m.lecciones.map((l) => (VIDEOS[l.slug] ? { ...l, ...VIDEOS[l.slug] } : l)),
 }));
 
 export const TOTAL_IMPLANTACION = 52;
