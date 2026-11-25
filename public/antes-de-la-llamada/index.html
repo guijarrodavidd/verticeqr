@@ -9,6 +9,7 @@
 <style>
 :root{--tinta:#0E1116;--gris:#5B6470;--niebla:#F1F6F6;--linea:rgba(14,17,22,.10);--aqua:#5EE6D8;--teal:#087F7B;--lima:#A8D86A;--grad:linear-gradient(90deg,#36C6C0 0%,#A8D86A 100%);--f:"Geist",Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{font-family:var(--f);color:var(--tinta);-webkit-font-smoothing:antialiased;letter-spacing:-.011em;line-height:1.5;overflow-x:hidden;
@@ -26,6 +27,11 @@ b{font-weight:750}
 h1{font-size:clamp(34px,6.4vw,66px);line-height:1.02;font-weight:400;letter-spacing:-.055em;text-wrap:balance}
 h2{font-size:clamp(28px,4.6vw,48px);line-height:1.05;font-weight:400;letter-spacing:-.05em;text-wrap:balance}
 .sub{font-size:clamp(17px,2.2vw,21px);color:var(--gris);max-width:44ch}
+.boton{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:999px;background:var(--tinta);color:#fff;font-size:18px;font-weight:600;letter-spacing:-.02em;text-decoration:none}
+.boton.claro{background:#fff;color:var(--tinta);border:1.5px solid var(--tinta)}
+.botones{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.cierre{text-align:center;display:grid;justify-items:center;gap:14px;padding:44px 24px;border-radius:28px;border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box}
+section.primero{margin-top:8px}
 /* vídeos */
 .video{position:relative;aspect-ratio:16/9;width:100%;border-radius:22px;overflow:hidden;background:#0B1220}
 .video video{position:absolute;inset:0;width:100%;height:100%;display:block;background:#0B1220}
@@ -79,58 +85,34 @@ footer a{color:inherit}
 
 <p class="marca">Héctor García</p>
 
-<div class="barra" role="img" aria-label="80 % completado"><i></i><span>80 % completado</span></div>
-
 <header class="cab">
-  <span class="pil">Un último paso</span>
-  <h1 id="titular">Tu llamada <b>todavía no está confirmada</b></h1>
-  <p class="sub" id="saludo">Mira este vídeo de dos minutos y la dejas cerrada.</p>
+  <span class="pil" id="cita">Antes de la llamada</span>
+  <h1>Antes de vernos, <b>resolvamos tus primeras dudas</b></h1>
+  <p class="sub" id="saludo">Seis vídeos de tres minutos. Empieza por el primero y sigue con el que más se parezca a tu situación.</p>
+  <a class="boton" id="cta-arriba" href="https://calendly.com/vertice1/nueva-reunion-1?utm_source=videos&amp;utm_campaign=antes-de-la-llamada">Reservar mi llamada</a>
 </header>
 
-<div class="video vacio grande" data-hueco="confirma"><span class="play" aria-hidden="true"></span><b>Confirma tu llamada</b><small>Vídeo · 2 min</small></div>
-
-<section>
-  <div class="centro">
-    <span class="pil">Paso 2</span>
-    <h2>Confírmala <b>en dos gestos</b></h2>
-    <p class="sub" id="cuando">Es un minuto, y así sé que cuento contigo.</p>
-  </div>
-  <div class="pasos">
-    <article class="paso">
-      <h3>Contesta al WhatsApp que te acabo de mandar</h3>
-      <div class="chat" aria-hidden="true">
-        <div class="burbuja">Hola, soy Héctor García. Te escribo para confirmar nuestra llamada. ¿Sigue en pie?</div>
-        <div class="burbuja tu">Sí, voy a asistir</div>
-      </div>
-      <p>Con ese mensaje queda confirmada. Si necesitas cambiar la hora, dímelo ahí mismo.</p>
-    </article>
-    <article class="paso">
-      <h3>Añade la llamada a tu calendario</h3>
-      <div class="invita" aria-hidden="true">
-        <strong>Llamada con Héctor García</strong>
-        <small id="fecha-invita">15 minutos · por videollamada</small>
-        <div class="resp"><span class="si">Sí</span><span>Quizá</span><span>No</span></div>
-      </div>
-      <p>Te ha llegado un correo con la invitación. Si no lo ves, mira en Promociones o en Spam.</p>
-    </article>
-  </div>
-</section>
-
-<hr>
-
-<section>
-  <div class="centro">
-    <span class="pil">Antes de vernos</span>
-    <h2>Mira <b>en qué punto estás</b> en este vídeo de 3 minutos</h2>
-    <p class="sub">Y antes de la llamada, mira el que más se parezca a tu situación.</p>
-  </div>
+<section class="primero">
   <div class="video vacio grande" data-hueco="punto"><span class="play" aria-hidden="true"></span><b>¿En qué punto estás?</b><small>Vídeo · 3 min</small></div>
+  <div class="centro" style="margin:44px 0 0">
+    <span class="pil">Según tu situación</span>
+    <h2>Y ahora, <b>el que más se parezca a ti</b></h2>
+  </div>
   <div class="sits">
     <article class="sit"><h3>Si lo haces <b>todo a mano</b>, este es el primero que tienes que ver</h3><div class="video vacio" data-hueco="lunes"><span class="play" aria-hidden="true"></span><b>El lunes</b><small>Vídeo · 3 min</small></div><p>Cómo pasar de una hora con el Excel a diez minutos, con el resumen de la semana ya hecho.</p></article><article class="sit"><h3>Si tienes <b>los datos y no el tiempo</b> de mirarlos</h3><div class="video vacio" data-hueco="propiedad"><span class="play" aria-hidden="true"></span><b>El informe para la propiedad</b><small>Vídeo · 3 min</small></div><p>El personal, alimentos y bebidas y la energía, explicados antes de entrar a la reunión.</p></article><article class="sit"><h3>Si lo que te come la semana es <b>el cuadrante</b></h3><div class="video vacio" data-hueco="turnos"><span class="play" aria-hidden="true"></span><b>Los turnos</b><small>Vídeo · 3 min</small></div><p>Qué días te falta gente y cómo cubrirlos, a partir de la ocupación prevista.</p></article><article class="sit"><h3>Si <b>ya usas ChatGPT o Claude</b> y quieres sacarle más</h3><div class="video vacio" data-hueco="ia"><span class="play" aria-hidden="true"></span><b>La IA suelta</b><small>Vídeo · 3 min</small></div><p>Las normas de datos de tu hotel y el paso del chat a que trabaje sola, a su hora.</p></article>
     <article class="sit ancha">
       <div><h3>Y para todos, <b>cómo sería en tu hotel</b></h3><p style="margin-top:10px">La auditoría de tu semana, el plano de tu sistema y tu primer agente en 14 días.</p></div>
       <div class="video vacio" data-hueco="hotel"><span class="play" aria-hidden="true"></span><b>Cómo sería en tu hotel</b><small>Vídeo · 3 min</small></div>
     </article>
+  </div>
+</section>
+
+<section class="cierre">
+  <h2 id="cierre-titulo">¿Te queda <b>alguna duda</b>?</h2>
+  <p class="sub" id="cierre-texto">Escríbeme y te contesto yo antes de la llamada.</p>
+  <div class="botones">
+    <a class="boton" id="cta-abajo" href="https://calendly.com/vertice1/nueva-reunion-1?utm_source=videos&amp;utm_campaign=antes-de-la-llamada">Reservar mi llamada</a>
+    <a class="boton claro" href="https://wa.me/34637289369?text=Hola%20H%C3%A9ctor%2C%20he%20visto%20los%20v%C3%ADdeos%20y%20tengo%20una%20duda" target="_blank" rel="noopener">Escribirme por WhatsApp</a>
   </div>
 </section>
 
@@ -146,21 +128,23 @@ footer a{color:inherit}
 <footer><span>Héctor García · verticeqr.com</span><span><a href="/privacidad">Privacidad</a> · <a href="/terminos">Términos</a></span></footer>
 </div>
 <script>
-// Si Calendly manda el nombre y la hora en la dirección, la página saluda y enseña la cita.
+// Si llega desde Calendly con el nombre y la hora, la página saluda, enseña la cita y deja de pedir la reserva.
 (function () {
   try {
     var q = new URLSearchParams(location.search);
     var nombre = (q.get('invitee_first_name') || q.get('nombre') || '').trim().slice(0, 40);
     var hora = q.get('event_start_time') || q.get('cuando') || '';
-    if (nombre) document.getElementById('saludo').textContent = nombre + ', mira este vídeo de dos minutos y la dejas cerrada.';
     var d = hora ? new Date(hora) : null;
     if (d && !isNaN(d)) {
       var dia = d.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
       var h = d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
-      document.getElementById('cuando').textContent = 'Nos vemos el ' + dia + ' a las ' + h + '.';
-      document.getElementById('fecha-invita').textContent = dia + ' · ' + h + ' · 15 minutos';
+      document.getElementById('cita').textContent = 'Nos vemos el ' + dia + ' a las ' + h;
+      document.getElementById('cta-arriba').hidden = true;
+      document.getElementById('cta-abajo').hidden = true;
     }
+    if (nombre) document.getElementById('saludo').textContent = nombre + ', son seis vídeos de tres minutos. Empieza por el primero y sigue con el que más se parezca a tu situación.';
   } catch (err) {}
 })();
 </script>
+
 </body></html>
