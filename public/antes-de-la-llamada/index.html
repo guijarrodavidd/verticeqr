@@ -66,7 +66,8 @@ hr{border:0;border-top:1px solid var(--linea);margin:56px 0 0}
 .sit h3+p{margin-top:8px}
 .sit p{font-size:16px;color:var(--gris)}
 .sit.ancha{grid-column:1 / -1;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:center;gap:26px;border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box}
-.sit.ancha h3{font-size:clamp(28px,4vw,42px)}
+.sit.ancha h3{font-size:clamp(24px,3.2vw,34px);margin-top:12px}
+.tarea{margin-top:14px;padding:12px 16px;border-radius:14px;background:var(--niebla);color:var(--tinta)!important;font-size:16px!important}
 .sit.ancha p{font-size:18px}
 /* recursos */
 .recs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
@@ -91,13 +92,13 @@ footer a{color:inherit}
 <header class="cab">
   <span class="pil" id="cita">Antes de la llamada</span>
   <h1>Antes de vernos, <b>resolvamos tus primeras dudas</b></h1>
-  <p class="sub" id="saludo">Las siete dudas que más me ponen los directores antes de empezar, contestadas en tres minutos cada una.</p>
+  <p class="sub" id="saludo">Tres vídeos de tres minutos. Míralos antes de la llamada y apunta lo que te pido en cada uno.</p>
   <a class="boton" id="cta-arriba" href="https://calendly.com/vertice1/nueva-reunion-1?utm_source=videos&amp;utm_campaign=antes-de-la-llamada">Reservar mi llamada</a>
 </header>
 
 <section class="primero">
   <div class="sits">
-    <article class="sit ancha"><div><h3>«No tengo tiempo para esto»</h3><p>De dónde sale el tiempo: una tarea de diez minutos, y cinco horas de vuelta cada semana.</p></div><div class="video vacio" data-hueco="tiempo"><span class="play" aria-hidden="true"></span><b>No tengo tiempo para esto</b><small>Vídeo · 3 min</small></div></article><article class="sit"><div><h3>«En mi hotel decide la propiedad»</h3><p>Funciona sin tocar nada del hotel, y arriba llegas con el informe hecho.</p></div><div class="video vacio" data-hueco="propiedad"><span class="play" aria-hidden="true"></span><b>En mi hotel decide la propiedad</b><small>Vídeo · 3 min</small></div></article><article class="sit"><div><h3>«No sé de tecnología»</h3><p>No se programa nada. Se le escribe, con tres reglas para no equivocarse.</p></div><div class="video vacio" data-hueco="tecnologia"><span class="play" aria-hidden="true"></span><b>No sé de tecnología</b><small>Vídeo · 3 min</small></div></article><article class="sit"><div><h3>«¿Y los datos de mi hotel?»</h3><p>Se trabaja con totales, nunca con personas. Qué se le pasa y qué nunca.</p></div><div class="video vacio" data-hueco="datos"><span class="play" aria-hidden="true"></span><b>¿Y los datos de mi hotel?</b><small>Vídeo · 3 min</small></div></article><article class="sit"><div><h3>«Ya uso ChatGPT»</h3><p>Lo que el chat no te da: que trabaje sola, a su hora, y tú solo apruebes.</p></div><div class="video vacio" data-hueco="chatgpt"><span class="play" aria-hidden="true"></span><b>Ya uso ChatGPT</b><small>Vídeo · 3 min</small></div></article><article class="sit"><div><h3>«¿Y si en mi hotel no funciona?»</h3><p>Empezamos por tu hotel, con dos controles: a los 14 días y el día 60.</p></div><div class="video vacio" data-hueco="mi-hotel"><span class="play" aria-hidden="true"></span><b>¿Y si en mi hotel no funciona?</b><small>Vídeo · 3 min</small></div></article><article class="sit"><div><h3>«Ahora no es el momento»</h3><p>Lo que aprendes se queda contigo, cambies de hotel o no.</p></div><div class="video vacio" data-hueco="momento"><span class="play" aria-hidden="true"></span><b>Ahora no es el momento</b><small>Vídeo · 2 min</small></div></article>
+    <article class="sit ancha"><div><span class="pil">Vídeo 1</span><h3>¿Seguir con el Excel o poner la IA a trabajar?</h3><p>4 horas a la semana durante 3 meses frente a seguir igual. Con números de ejemplo: cómo 10 horas de oficina a la semana pueden quedarse en 5.</p><p class="tarea"><b>Antes de la llamada.</b> Apunta cuántas horas se te van cada semana en informes, cierre y turnos.</p></div><div class="video vacio" data-hueco="excel-o-ia"><span class="play" aria-hidden="true"></span><b>Vídeo 1</b><small>Vídeo · 3 min</small></div></article><article class="sit ancha"><div><span class="pil">Vídeo 2</span><h3>El cierre, el informe para la propiedad y el cuadrante, no un correo mejor escrito</h3><p>Cómo elegir las tareas que de verdad te devuelven horas en tu hotel, antes de tocar nada.</p><p class="tarea"><b>Antes de la llamada.</b> Apunta las tres tareas que repites todas las semanas.</p></div><div class="video vacio" data-hueco="que-tareas"><span class="play" aria-hidden="true"></span><b>Vídeo 2</b><small>Vídeo · 3 min</small></div></article><article class="sit ancha"><div><span class="pil">Vídeo 3</span><h3>¿Por qué lo que pruebas con la IA se queda en el cajón de «para después»?</h3><p>Lo que falla cuando depende de que te acuerdes, y cómo se pasa del chat a que trabaje solo, a su hora.</p><p class="tarea"><b>Antes de la llamada.</b> Apunta la última vez que la usaste en el hotel y para qué.</p></div><div class="video vacio" data-hueco="cajon"><span class="play" aria-hidden="true"></span><b>Vídeo 3</b><small>Vídeo · 3 min</small></div></article>
   </div>
 </section>
 
@@ -136,7 +137,7 @@ footer a{color:inherit}
       document.getElementById('cta-arriba').hidden = true;
       document.getElementById('cta-abajo').hidden = true;
     }
-    if (nombre) document.getElementById('saludo').textContent = nombre + ', estas son las siete dudas que más me ponen los directores antes de empezar, contestadas en tres minutos cada una.';
+    if (nombre) document.getElementById('saludo').textContent = nombre + ', son tres vídeos de tres minutos. Míralos antes de la llamada y apunta lo que te pido en cada uno.';
   } catch (err) {}
 })();
 </script>
