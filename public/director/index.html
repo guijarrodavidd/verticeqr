@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Claude, director de hotel</title>
+<meta name="description" content="9 rutinas para directores de hotel: 5 cada semana y 4 cada mes. Cada una trae lo que le pasas a Claude, el prompt y un ejemplo hecho.">
+<meta property="og:title" content="Claude, director de hotel">
+<meta property="og:description" content="9 rutinas: la semana que viene, reseñas, turnos, grupos, la semana en números, el cierre, las desviaciones, el informe para la propiedad y los proveedores. Recurso gratis de Héctor García.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@500&display=swap">
+<style>
+:root{color-scheme:dark;--bg:#0B1530;--bg2:#0A1229;--card:rgba(14,25,54,.88);--card2:#111E40;--line:#2B3B63;--line2:#3A4C78;--ink:#FFFFFF;--text:#DCE1EC;--muted:#9AA5C0;--azul:#4F82EE;--azul-t:#6E9BF5;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;--serif:"Source Serif 4",Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg2);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:radial-gradient(70% 38% at 50% 18%,rgba(40,62,120,.38),rgba(40,62,120,0) 75%),linear-gradient(180deg,#0C1633 0%,#0A1430 40%,#0A1229 100%);background-color:var(--bg2);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;padding-block:0 0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--azul-t);outline-offset:2px;border-radius:8px}
+.top{text-align:center;padding-top:34px;display:grid;justify-items:center;gap:10px}
+.logo{display:flex;align-items:center;gap:14px}
+.logo svg{width:46px;height:46px}
+.logo span{font-family:var(--serif);font-weight:500;font-size:52px;letter-spacing:-.02em;color:#fff;line-height:1}
+.dirigido{font-family:var(--mono);font-weight:500;font-size:clamp(11.5px,1.9vw,17px);letter-spacing:.14em;color:var(--azul-t)}
+h1{font-family:var(--sans);font-weight:700;font-size:clamp(40px,8vw,84px);line-height:1;letter-spacing:.01em;color:#fff;text-wrap:balance;margin-top:4px}
+.raya{width:200px;height:5px;border-radius:3px;background:#3E6FE0;margin-top:10px}
+.lead{max-width:640px;font-size:16.5px;color:var(--text);margin-top:12px}
+.prog{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:6px;font-family:var(--mono)}
+.barrita{width:220px;height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.barrita i{display:block;height:100%;width:0;background:var(--azul);border-radius:99px;transition:width .3s}
+.prog span{font-size:14px;font-weight:600;color:#fff}
+.puesto{margin:34px auto 0;max-width:640px;border-radius:16px;border:2.5px solid #4C7FF0;background:rgba(18,30,64,.75);box-shadow:0 0 22px rgba(76,127,240,.4),inset 0 0 18px rgba(76,127,240,.12);text-align:center;padding:16px 18px 18px;font-family:var(--mono)}
+.puesto small{display:block;font-weight:500;font-size:13px;letter-spacing:.2em;color:var(--azul-t)}
+.puesto b{display:block;margin-top:6px;font-weight:700;font-size:clamp(24px,4.4vw,36px);letter-spacing:.02em;color:#fff;line-height:1.1}
+.puesto p{margin-top:8px;font-size:14.5px;color:var(--text)}
+.arbol{height:34px;position:relative;margin:0 auto;max-width:100%}
+.arbol::before{content:"";position:absolute;left:50%;top:0;height:16px;border-left:2.2px solid #4C7FF0}
+.arbol::after{content:"";position:absolute;left:10%;right:10%;top:16px;height:18px;border:2.2px solid #4C7FF0;border-bottom:0}
+.dias{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.dia{min-height:190px;border-radius:12px;border:1.6px solid var(--line2);background:var(--card);padding:14px 14px 16px;display:flex;flex-direction:column;text-decoration:none;font-family:var(--mono);position:relative;transition:border-color .15s,transform .15s}
+.dia:hover,.mesc:hover{border-color:var(--azul);transform:translateY(-2px)}
+.dia .cab{display:flex;justify-content:space-between;font-size:14px;font-weight:500}
+.dia .cab span:first-child{color:var(--azul-t);font-weight:600}
+.dia b{margin-top:12px;font-weight:700;font-size:20px;line-height:1.22;color:#fff}
+.dia .sub{margin-top:auto;padding-top:14px;font-size:13.5px;line-height:1.42;color:var(--text)}
+.tick{display:none;position:absolute;right:10px;bottom:10px;font-style:normal;font-family:var(--mono);font-size:11px;font-weight:600;color:#0B1530;background:var(--azul-t);border-radius:99px;padding:1px 8px}
+.done .tick{display:inline-block}
+.dia.done,.mesc.done{border-color:var(--azul);background:rgba(79,130,238,.14)}
+.mesl{display:flex;align-items:center;gap:18px;margin-top:28px;font-family:var(--mono);font-weight:500;font-size:13.5px;letter-spacing:.18em;color:#fff}
+.mesl i{flex:1;height:1.5px;background:var(--line)}
+.meses{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px}
+.mesc{border-radius:10px;border:1.8px dashed #8494BC;padding:14px 16px;text-decoration:none;font-family:var(--mono);position:relative;transition:border-color .15s,transform .15s}
+.mesc b{display:block;font-weight:700;font-size:20px;line-height:1.15;color:#fff}
+.mesc span{display:block;margin-top:6px;font-size:13.5px;color:var(--text)}
+.antes{margin-top:28px;border-top:1.5px solid var(--line);display:grid;grid-template-columns:1fr 1fr;font-family:var(--mono)}
+.antes>div{padding:16px 10px 0}
+.antes>div+div{border-left:1.5px solid var(--line);padding-left:26px}
+.antes small{display:block;font-weight:500;font-size:13px;letter-spacing:.18em;color:#C9CFDD}
+.antes>div+div small{color:var(--azul-t);font-weight:600}
+.antes p{margin-top:8px;font-size:17px;line-height:1.45;color:#fff}
+.aviso{margin-top:40px;display:flex;gap:14px;align-items:center;background:var(--card);border:1.5px solid var(--line2);border-radius:14px;padding:14px 18px;font-size:15px}
+.aviso b{flex:none;background:var(--azul);color:#fff;font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;border-radius:6px;padding:3px 10px}
+.aviso a{color:var(--azul-t);font-weight:600}
+section.blq{margin-top:56px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.18em;color:var(--azul-t)}
+h2{font-family:var(--sans);font-weight:700;color:#fff;font-size:clamp(28px,4.6vw,40px);line-height:1.08;letter-spacing:-.01em;margin-top:4px}
+.ruts{margin-top:16px;display:grid;gap:10px}
+.rut{background:var(--card);border:1.6px solid var(--line2);border-radius:14px;scroll-margin-top:16px}
+.rut[open]{border-color:var(--azul)}
+.rut summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:12px 18px 12px 12px;min-height:62px}
+.rut summary::-webkit-details-marker{display:none}
+.cuandob{flex:none;min-width:92px;text-align:center;font-family:var(--mono);font-weight:600;font-size:13px;letter-spacing:.06em;color:var(--azul-t);border:1.5px solid var(--line2);border-radius:8px;padding:6px 8px}
+.rut.done .cuandob{background:var(--azul);border-color:var(--azul);color:#fff}
+.tit{flex:1;min-width:0;display:grid;gap:5px}
+.tit b{font-family:var(--mono);font-weight:700;font-size:20px;color:#fff;line-height:1.15}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chips span{font-family:var(--mono);font-size:11.5px;color:var(--muted);background:var(--card2);border:1px solid var(--line);border-radius:99px;padding:1px 9px}
+.ok{flex:none;display:none;font-family:var(--mono);font-size:12px;font-weight:600;color:#0B1530;background:var(--azul-t);border-radius:99px;padding:2px 10px}
+.rut.done .ok{display:inline-block}
+.rut summary::after{content:"";flex:none;width:10px;height:10px;border-right:2.5px solid var(--muted);border-bottom:2.5px solid var(--muted);transform:rotate(45deg);margin:0 4px 4px 0;transition:transform .2s}
+.rut[open] summary::after{transform:rotate(225deg);margin:4px 4px 0 0}
+.in{padding:2px 20px 20px;display:grid;gap:10px}
+.cuando{font-family:var(--mono);font-size:13.5px;font-weight:600;color:var(--azul-t)}
+.para{font-size:16.5px;color:#fff;font-weight:500}
+h4{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-top:10px;display:flex;align-items:center;gap:9px}
+h4::before{content:"$";color:var(--azul-t)}
+.pasos{padding-left:22px;display:grid;gap:6px;font-size:15.5px}
+.pasos li::marker{color:var(--azul-t)}
+.dev{font-size:15.5px}
+.nota{font-size:14px;color:var(--muted)}
+.code{background:#060C1D;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}
+.codebar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:6px 6px 6px 14px;border-bottom:1px solid var(--line)}
+.codebar span{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.copy{font:600 14px var(--mono);background:var(--azul);color:#fff;border:0;border-radius:8px;padding:0 18px;min-height:38px;min-width:96px;cursor:pointer;flex:none}
+pre{font-family:var(--mono);font-size:13px;line-height:1.6;white-space:pre-wrap;word-break:break-word;padding:14px 16px;max-height:440px;overflow:auto;color:#DCE1EC}
+.ej{border:1.5px solid var(--line);border-radius:12px;overflow:hidden}
+.peg{font-size:14px;color:var(--muted);background:var(--card2);padding:11px 16px}
+.peg b{color:#fff;margin-right:4px}
+.res{padding:13px 16px;font-size:14.5px;display:grid;gap:2px;border-left:4px solid var(--azul)}
+.res b{font-family:var(--mono);font-size:13.5px;font-weight:600;letter-spacing:.06em;color:var(--azul-t);margin-top:8px}
+.res b:first-child{margin-top:0}
+.res .sp{height:4px}
+.rev{list-style:none;display:grid;gap:6px;font-size:15px}
+.rev li{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:9px 12px 9px 36px;position:relative}
+.rev li::before{content:"";position:absolute;left:13px;top:15px;width:10px;height:10px;border-radius:3px;border:2px solid var(--azul-t)}
+.acc{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px}
+.hecho{font:600 15px var(--mono);background:var(--azul);color:#fff;border:0;border-radius:8px;padding:0 20px;min-height:46px;cursor:pointer}
+.rut.done .hecho{background:var(--card2);color:var(--muted);border:1px solid var(--line)}
+.sig{font-family:var(--mono);font-size:13.5px;font-weight:500;color:#fff;text-decoration:none;border:1.5px solid var(--line2);border-radius:8px;padding:10px 16px;min-height:46px;display:inline-flex;align-items:center}
+.cta{margin-top:70px;scroll-margin-top:16px;display:grid;gap:14px}
+.cta p{max-width:680px;font-size:17px}
+.barra{margin:6px calc(-1 * max(16px, env(safe-area-inset-right, 0px))) 0 calc(-1 * max(16px, env(safe-area-inset-left, 0px)));background:var(--azul);text-decoration:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px max(16px,env(safe-area-inset-right,0px)) 22px max(16px,env(safe-area-inset-left,0px));font-family:var(--mono)}
+.barra span{font-weight:700;font-size:clamp(22px,4.4vw,42px);color:#fff;display:flex;align-items:center;min-width:0}
+.barra span i{display:inline-block;width:.5em;height:1.25em;margin-left:.4em;background:#fff;animation:cursor 1.1s steps(1) infinite}
+@keyframes cursor{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.barra span i{animation:none}}
+.barra small{font-size:15px;letter-spacing:.06em;color:#fff;flex:none}
+.cta .sec{font-size:15px;color:var(--muted)}
+.cta .sec a{color:var(--azul-t);font-weight:600}
+footer{text-align:center;color:var(--muted);font-size:12.5px;margin-top:40px;padding-bottom:40px;line-height:1.5}
+@media (max-width:900px){
+  .dias{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dia:last-child{grid-column:1 / -1}
+  .arbol{display:none}
+  .puesto{margin-bottom:22px}
+  .meses{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dia{min-height:150px}
+}
+@media (max-width:560px){
+  .logo span{font-size:40px}.logo svg{width:36px;height:36px}
+  .antes{grid-template-columns:1fr}
+  .antes>div+div{border-left:0;border-top:1.5px solid var(--line);padding-left:10px;margin-top:16px}
+  .aviso{flex-direction:column;align-items:flex-start}
+  .rut summary{padding:10px 12px 10px 10px;gap:10px;flex-wrap:wrap}
+  .cuandob{min-width:0}
+  .tit b{font-size:18px}
+  .in{padding:2px 14px 16px}
+  .barra{flex-direction:column;align-items:flex-start}
+}
+</style></head><body><div class="wrap">
+<header class="top">
+  <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="#FFFFFF" d="m19.6 66.5 19.7-11 .3-1-.3-.5h-1l-3.3-.2-11.2-.3L14 53l-9.5-.5-2.4-.5L0 49l.2-1.5 2-1.3 2.9.2 6.3.5 9.5.6 6.9.4L38 49.1h1.6l.2-.7-.5-.4-.4-.4L29 41l-10.6-7-5.6-4.1-3-2-1.5-2-.6-4.2 2.7-3 3.7.3.9.2 3.7 2.9 8 6.1L37 36l1.5 1.2.6-.4.1-.3-.7-1.1L33 25l-6-10.4-2.7-4.3-.7-2.6c-.3-1-.4-2-.4-3l3-4.2L28 0l4.2.6L33.8 2l2.6 6 4.1 9.3L47 29.9l2 3.8 1 3.4.3 1h.7v-.5l.5-7.2 1-8.7 1-11.2.3-3.2 1.6-3.8 3-2L61 2.6l2 2.9-.3 1.8-1.1 7.7L59 27.1l-1.5 8.2h.9l1-1.1 4.1-5.4 6.9-8.6 3-3.5L77 13l2.3-1.8h4.3l3.1 4.7-1.4 4.9-4.4 5.6-3.7 4.7-5.3 7.1-3.2 5.7.3.4h.7l12-2.6 6.4-1.1 7.6-1.3 3.5 1.6.4 1.6-1.4 3.4-8.2 2-9.6 2-14.3 3.3-.2.1.2.3 6.4.6 2.8.2h6.8l12.6 1 3.3 2 1.9 2.7-.3 2-5.1 2.6-6.8-1.6-16-3.8-5.4-1.3h-.8v.4l4.6 4.5 8.3 7.5L89 80.1l.5 2.4-1.3 2-1.4-.2-9.2-7-3.6-3-8-6.8h-.5v.7l1.8 2.7 9.8 14.7.5 4.5-.7 1.4-2.6 1-2.7-.6-5.8-8-6-9-4.7-8.2-.5.4-2.9 30.2-1.3 1.5-3 1.2-2.5-2-1.4-3 1.4-6.2 1.6-8 1.3-6.4 1.2-7.9.7-2.6v-.2H49L43 72l-9 12.3-7.2 7.6-1.7.7-3-1.5.3-2.8L24 86l10-12.8 6-7.9 4-4.6-.1-.5h-.3L17.2 77.4l-4.7.6-2-2 .2-3 1-1 8-5.5Z"/></svg><span>Claude</span></div>
+  <p class="dirigido">PARA DIRECTORES · SUBDIRECTORES · JEFES DE ÁREA</p>
+  <h1>CLAUDE,<br>DIRECTOR DE HOTEL</h1>
+  <div class="raya"></div>
+  <p class="lead">Nueve rutinas que te prepara Claude: cinco cada semana y cuatro cada mes. Abres la del día, le pasas lo que te pide y en diez minutos tienes lo que antes te costaba la mañana. Cada una trae el prompt para copiar y un ejemplo hecho con un hotel de 80 habitaciones. Recurso gratis de Héctor García.</p>
+  <div class="prog"><div class="barrita"><i id="barra"></i></div><span id="cuenta">0 de 9 rutinas hechas</span></div>
+</header>
+<div class="puesto"><small>EL PUESTO DE ARRIBA</small><b>DIRECTOR DE HOTEL</b><p>lee los números · ve lo que se tuerce · prepara la semana</p></div>
+<div class="arbol" aria-hidden="true"></div>
+<nav class="dias" aria-label="Cada semana"><a class="dia" href="#r-s1" data-r="s1"><span class="cab"><span>LUN</span><span>08:00</span></span><b>La semana<br>que viene</b><span class="sub">ocupación, llegadas y grupos</span><i class="tick">hecha</i></a><a class="dia" href="#r-s2" data-r="s2"><span class="cab"><span>MAR</span><span>09:00</span></span><b>Reseñas</b><span class="sub">las que piden respuesta hoy</span><i class="tick">hecha</i></a><a class="dia" href="#r-s3" data-r="s3"><span class="cab"><span>MIÉ</span><span>09:00</span></span><b>Turnos</b><span class="sub">dónde te falta gente</span><i class="tick">hecha</i></a><a class="dia" href="#r-s4" data-r="s4"><span class="cab"><span>JUE</span><span>09:00</span></span><b>Grupos y<br>eventos</b><span class="sub">las propuestas sin contestar</span><i class="tick">hecha</i></a><a class="dia" href="#r-s5" data-r="s5"><span class="cab"><span>VIE</span><span>16:00</span></span><b>La semana<br>en números</b><span class="sub">cinco líneas para la propiedad</span><i class="tick">hecha</i></a></nav>
+<div class="mesl"><span>CADA MES</span><i></i><span>9 RUTINAS EN TOTAL</span></div>
+<nav class="meses" aria-label="Cada mes"><a class="mesc" href="#r-m1" data-r="m1"><b>Cierre de mes</b><span>lo que no cuadra</span><i class="tick">hecha</i></a><a class="mesc" href="#r-m2" data-r="m2"><b>Desviaciones</b><span>cada una explicada</span><i class="tick">hecha</i></a><a class="mesc" href="#r-m3" data-r="m3"><b>Propiedad</b><span>informe en una página</span><i class="tick">hecha</i></a><a class="mesc" href="#r-m4" data-r="m4"><b>Proveedores</b><span>lo que ha subido</span><i class="tick">hecha</i></a></nav>
+<div class="antes"><div><small>ANTES</small><p>El lunes empieza con el Excel.<br>El viernes no sabes cómo fue.</p></div><div><small>AHORA</small><p>Claude prepara los números.<br>Las decisiones siguen siendo tuyas.</p></div></div>
+<div class="aviso"><b>ANTES DE EMPEZAR</b><span>Nada de nombres de empleados, nóminas ni datos de huéspedes en Claude. Trabaja con totales. Si nunca lo has usado, empieza por <a href="/curso">el curso de Claude para tu hotel</a>.</span></div>
+<section class="blq" id="semana"><p class="eyebrow">LUNES A VIERNES · 5 RUTINAS</p><h2>Cada semana</h2><div class="ruts">
+    <details class="rut" id="r-s1" data-r="s1">
+      <summary><span class="cuandob">LUN · 08:00</span><span class="tit"><b>La semana que viene</b><span class="chips"><span>ocupación</span><span>llegadas</span><span>grupos</span></span></span><span class="ok" aria-hidden="true">Hecha</span></summary>
+      <div class="in">
+        <p class="cuando">Cada lunes a las 8:00, antes de la reunión de jefes de departamento.</p>
+        <p class="para">Te ahorras la hora de los lunes cruzando el informe de reservas con la agenda de grupos, y llegas a la reunión con lo que tiene que preparar cada departamento día a día. Guárdalo en un Proyecto de Claude y cada lunes solo pegas los datos nuevos.</p>
+        <h4>Lo que le pasas</h4>
+        <ul class="pasos"><li>La ocupación por día de lunes a domingo, con habitaciones ocupadas, llegadas y salidas, exportada del programa de recepción a primera hora</li><li>Los grupos y eventos de la semana, de la agenda de grupos o del correo de comercial</li><li>Los festivos y lo que pase en la zona esa semana, y las noches con las que cerró la semana pasada</li></ul>
+        <h4>Lo que te devuelve</h4>
+        <p class="dev">La semana día a día con ocupación, llegadas y salidas, y una lista de lo que tiene que preparar cada departamento.</p>
+        <h4>El prompt</h4>
+        <p class="nota">Abre un chat nuevo en Claude, pégalo y cambia lo que va entre corchetes.</p>
+        <div class="code"><div class="codebar"><span>La semana que viene</span><button class="copy" type="button" data-t="p-s1">Copiar</button></div><pre id="p-s1">Soy director de un hotel de [número] habitaciones en [zona], con restaurante y bar. Cada lunes a primera hora, antes de la reunión con los jefes de departamento, quiero saber cómo viene la semana: la ocupación de cada día, las llegadas y salidas, los grupos y lo que tiene que preparar cada departamento.
+
+RESERVAS DE LA SEMANA
+[pega aquí la ocupación por día de lunes a domingo, con habitaciones ocupadas, llegadas y salidas, exportada del programa de recepción]
+
+GRUPOS Y EVENTOS
+[pega aquí los grupos de la semana: habitaciones, personas, fechas y comidas o cenas contratadas]
+
+NOTAS DE LA SEMANA
+[pega aquí festivos, eventos en la zona, habitaciones fuera de servicio y las noches con las que cerró la semana pasada]
+
+CÓMO TRABAJAS
+· Si falta algo importante, pregúntamelo todo en un solo mensaje antes de empezar. Por ejemplo, si no tienes el total de habitaciones o el precio medio previsto.
+· Devuélveme estas secciones en MAYÚSCULAS: LA SEMANA EN UNA LÍNEA, DÍA A DÍA, QUÉ PREPARAR (recepción, pisos, restaurante y cocina, bar, comercial) y PARA REVISAR.
+· Para pisos, las habitaciones por hacer cada día son las ocupadas la noche anterior (salidas más repasos). Calcula con 14 habitaciones por camarera y día, o con la cifra que te dé.
+· Que quepa en una pantalla, unas 25 líneas.
+
+REGLAS
+· Usa solo los datos que te pego.
+· No inventes cifras, nombres, precios ni fechas. Si falta algo, pon «a confirmar».
+· Muestra la cuenta de cada cifra que calcules, para que vea de dónde sale.
+· Separa lo que dicen los datos de lo que tú interpretas.
+· Si aparecen nombres de huéspedes o de empleados, trabaja sin ellos.
+· Números en formato español: 1.234,56 € y 75,00 %.
+· Sin markdown: nada de #, asteriscos ni tablas. Títulos en MAYÚSCULAS y listas con «·» o números.
+· Termina con un bloque PARA REVISAR con lo que tengo que comprobar yo antes de usarlo.</pre></div>
+        <h4>Así queda</h4>
+        <div class="ej"><p class="peg"><b>Le pegamos</b> La ocupación por día del 26 de octubre al 1 de noviembre sacada a las 8:00 del lunes (392 noches, precio medio previsto 92,00 €, 118 llegadas y 121 salidas), la ficha del grupo de una empresa (12 habitaciones y 24 personas del jueves 29 al sábado 31, con cena el viernes 30) y dos notas: el domingo 1 es festivo y la semana pasada cerramos con 434 noches.</p><div class="res"><b>LA SEMANA EN UNA LÍNEA</b><span>392 noches de 560 (392 / 560 = 70,00 %), 42 menos que la semana pasada (434 - 392). Habitaciones previstas 36.064,00 € (392 × 92,00 €).</span><span class="sp"></span><b>DÍA A DÍA</b><span>· Lunes 26: 46 ocupadas, 16 llegadas, 14 salidas.</span><span>· Martes 27: 48 ocupadas, 14 llegadas, 12 salidas.</span><span>· Miércoles 28: 52 ocupadas, 16 llegadas, 12 salidas.</span><span>· Jueves 29: 62 ocupadas, 24 llegadas (12 del grupo), 14 salidas.</span><span>· Viernes 30: 72 ocupadas (72 / 80 = 90,00 %), 22 llegadas, 12 salidas.</span><span>· Sábado 31: 71 ocupadas (71 / 80 = 88,75 %), 16 llegadas, 17 salidas (12 del grupo).</span><span>· Domingo 1, festivo: 41 ocupadas, 10 llegadas, 40 salidas.</span><span class="sp"></span><b>QUÉ PREPARAR</b><span>· Recepción: pedir a la empresa la lista de habitaciones del grupo antes del jueves. El domingo salen 40, conviene reforzar el turno de mañana.</span><span>· Pisos: el sábado tocan 72 habitaciones y el domingo 71 (40 salidas + 31 repasos). Son 6 camareras cada día (72 / 14 = 5,14 y 71 / 14 = 5,07).</span><span>· Restaurante y cocina: cena del grupo el viernes 30 para 24 personas, menú y hora a confirmar.</span><span>· Bar: grupo en casa jueves y viernes, a confirmar si quieren algo después de la cena.</span><span>· Comercial: de lunes a miércoles quedan entre 28 y 34 habitaciones libres (80 - 52 y 80 - 46) y el domingo 39 (80 - 41).</span><span class="sp"></span><b>PARA REVISAR</b><span>· Que las 392 noches sean las de esta mañana, las reservas de última hora cambian el fin de semana.</span><span>· Que la empresa haya confirmado las 12 habitaciones y el número de la cena.</span></div></div>
+        <h4>Revísalo tú</h4>
+        <ul class="rev"><li>Que el informe que exportas sea de esta mañana y cuente las habitaciones fuera de servicio.</li><li>Que las cifras del grupo (habitaciones, personas y cena) coincidan con lo último que firmó la empresa.</li></ul>
+        <div class="acc"><button class="hecho" type="button" data-r="s1">Marcar como hecha</button><a class="sig" href="#r-s2" data-abre="s2">Siguiente · Reseñas</a></div>
+      </div>
+    </details>
+    <details class="rut" id="r-s2" data-r="s2">
+      <summary><span class="cuandob">MAR · 09:00</span><span class="tit"><b>Reseñas</b><span class="chips"><span>reseñas</span><span>respuestas</span><span>mantenimiento</span></span></span><span class="ok" aria-hidden="true">Hecha</span></summary>
+      <div class="in">
+        <p class="cuando">Cada martes a las 9:00, con las reseñas que han entrado desde el martes anterior.</p>
+        <p class="para">Dejas de leer una a una las reseñas de todas las plataformas y en 10 minutos sabes cuáles contestar hoy, con el borrador escrito y el aviso para el departamento que tiene que arreglarlo. Si lo guardas en un Proyecto de Claude, cada martes solo pegas las reseñas nuevas.</p>
+        <h4>Lo que le pasas</h4>
+        <ul class="pasos"><li>Las reseñas nuevas de la semana copiadas de las plataformas de reservas y de la ficha del hotel en el buscador, con nota, fecha y texto</li><li>Las respuestas que ya hayáis dado, si alguna está contestada</li><li>Lo que se haya arreglado ya de lo que cuentan, si lo sabes (por ejemplo, un parte de mantenimiento cerrado)</li></ul>
+        <h4>Lo que te devuelve</h4>
+        <p class="dev">Las reseñas que piden respuesta hoy con su borrador, lo que hay que arreglar dentro y quién se encarga.</p>
+        <h4>El prompt</h4>
+        <p class="nota">Abre un chat nuevo en Claude, pégalo y cambia lo que va entre corchetes.</p>
+        <div class="code"><div class="codebar"><span>Reseñas</span><button class="copy" type="button" data-t="p-s2">Copiar</button></div><pre id="p-s2">Soy director de un hotel de [número] habitaciones en [zona], con restaurante y bar. Cada martes reviso las reseñas nuevas de la semana y necesito saber cuáles contestar hoy, tener un borrador de cada respuesta y una lista de lo que hay que arreglar dentro del hotel.
+
+RESEÑAS NUEVAS
+[pega aquí cada reseña con su plataforma, fecha, nota y texto]
+
+LO QUE YA SE HA HECHO
+[pega aquí lo que ya se haya arreglado o contestado, o escribe «nada»]
+
+CÓMO TRABAJAS
+· Si falta algo importante, pregúntamelo todo en un solo mensaje antes de empezar.
+· Piden respuesta hoy las de nota 3 o menos sobre 5 y las que cuentan un problema concreto aunque la nota sea buena.
+· Devuélveme estas secciones en MAYÚSCULAS: RESUMEN (número de reseñas y nota media con su cuenta), RESPONDER HOY (cada reseña en una línea y su borrador), PARA ARREGLAR DENTRO (qué y qué departamento), LAS DEMÁS y PARA REVISAR.
+· Cada borrador, de 3 a 4 frases, en el tono de un director que da la cara: agradece, reconoce lo que pasó sin excusas y dice lo que se ha hecho. Si no sé qué se ha hecho, escribe [a confirmar: lo que se haya hecho] en lugar de prometer.
+· En total, una pantalla y media como mucho.
+
+REGLAS
+· Usa solo los datos que te pego.
+· No inventes cifras, nombres, precios ni fechas. Si falta algo, pon «a confirmar».
+· Muestra la cuenta de cada cifra que calcules, para que vea de dónde sale.
+· Separa lo que dicen los datos de lo que tú interpretas.
+· Si aparecen nombres de huéspedes o de empleados, trabaja sin ellos.
+· Números en formato español: 1.234,56 € y 75,00 %.
+· Sin markdown: nada de #, asteriscos ni tablas. Títulos en MAYÚSCULAS y listas con «·» o números.
+· Termina con un bloque PARA REVISAR con lo que tengo que comprobar yo antes de usarlo.
+· En los borradores nunca pongas el nombre del huésped ni el de un empleado.</pre></div>
+        <h4>Así queda</h4>
+        <div class="ej"><p class="peg"><b>Le pegamos</b> Las 8 reseñas nuevas del 20 al 26 de octubre, copiadas de dos plataformas de reservas y de la ficha del hotel en el buscador, con su nota y su texto. Vienen con el nombre de cada huésped. En lo ya hecho, «nada».</p><div class="res"><b>RESUMEN</b><span>8 reseñas nuevas. Nota media 4,00 sobre 5 (5 + 5 + 5 + 4 + 4 + 4 + 3 + 2 = 32; 32 / 8 = 4,00). Tres piden respuesta hoy. He quitado los nombres de los huéspedes.</span><span class="sp"></span><b>RESPONDER HOY</b><span>1. Nota 2, buscador, 25 de octubre. El aire de la habitación hizo ruido toda la noche y nadie subió.</span><span>«Gracias por contárnoslo y perdona la noche que pasaste. Que avisaras y nadie subiera es lo que más nos duele. [a confirmar: lo que se haya hecho con el aparato y con el aviso de noche]. Nos gustaría que vuelvas y lo notes.»</span><span>2. Nota 3, plataforma de reservas, 24 de octubre. A las 10:15 el café estaba frío y no quedaba fruta en el desayuno.</span><span>«Gracias por el detalle de la hora, nos ayuda a encontrar el fallo. A esa hora el desayuno tiene que estar igual que a las 8:00. [a confirmar: el cambio en la reposición]. Esperamos verte pronto.»</span><span>3. Nota 4, plataforma de reservas, 23 de octubre. Todo bien, pero 25 minutos de cola al llegar el viernes por la tarde.</span><span>«Nos alegra que el resto te gustara. Esos 25 minutos no deberían pasar. [a confirmar: el refuerzo en recepción los viernes]. Gracias por volver a elegirnos.»</span><span class="sp"></span><b>PARA ARREGLAR DENTRO</b><span>· Mantenimiento: revisar el aire de esa habitación (número a confirmar) y por qué el aviso de noche se quedó sin respuesta.</span><span>· Cocina y sala: reponer café y fruta hasta el cierre del desayuno.</span><span>· Recepción: ver cuánta gente había en el mostrador el viernes 23 por la tarde.</span><span class="sp"></span><b>LAS DEMÁS</b><span>Cinco reseñas de 5 y 4. Se pueden agradecer esta semana con una frase que recoja algo de lo que cuentan.</span><span class="sp"></span><b>PARA REVISAR</b><span>· Que lo que pongas en cada [a confirmar] haya pasado de verdad antes de publicarlo.</span><span>· Que la nota de cada reseña sea la que aparece en la plataforma.</span></div></div>
+        <h4>Revísalo tú</h4>
+        <ul class="rev"><li>Que cada borrador diga solo lo que ya se ha hecho de verdad, y quita cualquier [a confirmar] antes de publicar.</li><li>Que el aviso a mantenimiento, cocina o recepción salga hoy mismo, con la fecha y la habitación de la reseña.</li></ul>
+        <div class="acc"><button class="hecho" type="button" data-r="s2">Marcar como hecha</button><a class="sig" href="#r-s3" data-abre="s3">Siguiente · Turnos</a></div>
+      </div>
+    </details>
+    <details class="rut" id="r-s3" data-r="s3">
+      <summary><span class="cuandob">MIÉ · 09:00</span><span class="tit"><b>Turnos</b><span class="chips"><span>turnos</span><span>pisos</span><span>sala</span><span>plantilla</span></span></span><span class="ok" aria-hidden="true">Hecha</span></summary>
+      <div class="in">
+        <p class="cuando">Cada miércoles a las 9:00, antes de cerrar los cuadrantes de la semana siguiente.</p>
+        <p class="para">Te quita la tarde de cruzar la previsión de ocupación con el cuadrante de cada departamento, y sabes qué días te falta gente y qué libranzas mover para cubrirlo. Guárdalo en un Proyecto de Claude con tu plantilla y cada miércoles solo pegas la previsión y los cuadrantes.</p>
+        <h4>Lo que le pasas</h4>
+        <ul class="pasos"><li>La previsión de pisos de la semana siguiente (salidas y repasos por día), exportada del programa de recepción</li><li>El cuadrante de pisos y el de sala, con cuántas personas trabajan cada día, sin nombres</li><li>Los cubiertos de cena previstos por día y los grupos con comida o cena, de la agenda del restaurante</li><li>Lo que rinde cada puesto en tu hotel (por ejemplo, 14 habitaciones por camarera y un camarero por cada 25 cubiertos)</li></ul>
+        <h4>Lo que te devuelve</h4>
+        <p class="dev">Los días en que falta o sobra gente en cada departamento, con la cuenta, y una propuesta de cambios de libranza.</p>
+        <h4>El prompt</h4>
+        <p class="nota">Abre un chat nuevo en Claude, pégalo y cambia lo que va entre corchetes.</p>
+        <div class="code"><div class="codebar"><span>Turnos</span><button class="copy" type="button" data-t="p-s3">Copiar</button></div><pre id="p-s3">Soy director de un hotel de [número] habitaciones en [zona], con restaurante y bar. Cada miércoles reviso los cuadrantes de la semana siguiente y quiero saber qué días me falta gente, cruzando la ocupación prevista con la plantilla, y cómo cubrirlo moviendo libranzas antes de pensar en contratar extras.
+
+PREVISIÓN DE LA SEMANA
+[pega aquí, por día, las salidas y los repasos de pisos y los cubiertos de cena previstos, con los grupos]
+
+CUADRANTES
+[pega aquí cuántas personas trabajan cada día en pisos y en sala, y quién está de vacaciones o de baja, sin nombres]
+
+LO QUE RINDE CADA PUESTO
+[pega aquí cuántas habitaciones hace una camarera al día y cuántos cubiertos lleva un camarero]
+
+CÓMO TRABAJAS
+· Si falta algo importante, pregúntamelo todo en un solo mensaje antes de empezar.
+· Para cada día y departamento, calcula cuántas personas hacen falta (redondea hacia arriba) y compáralo con las que hay en el cuadrante.
+· Devuélveme estas secciones en MAYÚSCULAS: PISOS, PROPUESTA PARA PISOS, SALA, PROPUESTA PARA SALA y PARA REVISAR.
+· En las propuestas, mueve libranzas de los días que sobra gente a los que falta, sin cambiar el total de turnos. Si no se puede cubrir así, dilo y calcula cuántos turnos extra hacen falta.
+· Una pantalla y media como mucho.
+
+REGLAS
+· Usa solo los datos que te pego.
+· No inventes cifras, nombres, precios ni fechas. Si falta algo, pon «a confirmar».
+· Muestra la cuenta de cada cifra que calcules, para que vea de dónde sale.
+· Separa lo que dicen los datos de lo que tú interpretas.
+· Si aparecen nombres de huéspedes o de empleados, trabaja sin ellos.
+· Números en formato español: 1.234,56 € y 75,00 %.
+· Sin markdown: nada de #, asteriscos ni tablas. Títulos en MAYÚSCULAS y listas con «·» o números.
+· Termina con un bloque PARA REVISAR con lo que tengo que comprobar yo antes de usarlo.
+· No des por bueno un cambio de turno sin recordarme que lo compruebe con el convenio y el descanso entre turnos.</pre></div>
+        <h4>Así queda</h4>
+        <div class="ej"><p class="peg"><b>Le pegamos</b> La previsión de la semana del 26 de octubre al 1 de noviembre (habitaciones por hacer y cubiertos de cena por día, con el grupo de 24 a cenar el viernes 30), el cuadrante de pisos (9 camareras, una de vacaciones, 40 turnos) y el de sala (4 camareros, 20 turnos). Rinden 14 habitaciones por camarera y un camarero por cada 25 cubiertos.</p><div class="res"><span>PISOS (14 habitaciones por camarera)</span><span>· Lunes 26: 44 habitaciones, hacen falta 4 (44 / 14 = 3,14) y hay 7. Sobran 3.</span><span>· Martes 27: 46, hacen falta 4 (3,29) y hay 7. Sobran 3.</span><span>· Miércoles 28 y jueves 29: 48 y 52, hacen falta 4 (3,43 y 3,71) y hay 6. Sobran 2 cada día.</span><span>· Viernes 30: 62, hacen falta 5 (4,43) y hay 5. Justo.</span><span>· Sábado 31: 72, hacen falta 6 (5,14) y hay 5. Con 5 se hacen 70 (5 × 14), quedan 2 sin hacer.</span><span>· Domingo 1, festivo: 71, hacen falta 6 (5,07) y hay 4. Con 4 se hacen 56 (4 × 14), quedan 15 sin hacer.</span><span class="sp"></span><b>PROPUESTA PARA PISOS</b><span>Pasar dos libranzas del lunes al domingo y una del martes al sábado. Queda lunes 5, martes 6, miércoles 6, jueves 6, viernes 5, sábado 6 y domingo 6. Siguen siendo 40 turnos (5 + 6 + 6 + 6 + 5 + 6 + 6). Trabajar el festivo se paga o se compensa según convenio, a confirmar.</span><span class="sp"></span><span>SALA (un camarero por cada 25 cubiertos, sin contar al jefe de sala)</span><span>· Lunes 26: 30 cubiertos, hacen falta 2 (1,20) y hay 4. Sobran 2.</span><span>· Viernes 30: 84 cubiertos (24 del grupo + 60), hacen falta 4 (84 / 25 = 3,36) y hay 3. Falta 1.</span><span>· Sábado 31: 70 cubiertos, hacen falta 3 (2,80) y hay 2. Falta 1.</span><span>· El resto de días está cubierto.</span><span class="sp"></span><b>PROPUESTA PARA SALA</b><span>Pasar las libranzas de un camarero del viernes y de otro del sábado al lunes. Queda lunes 2, viernes 4 y sábado 3, con los mismos 20 turnos. La cocina para la cena del grupo, a confirmar con el jefe de cocina.</span><span class="sp"></span><b>PARA REVISAR</b><span>· Que la camarera de vacaciones sea la única baja de la semana.</span><span>· Que cada cambio respete el descanso entre turnos y lo que diga el convenio.</span></div></div>
+        <h4>Revísalo tú</h4>
+        <ul class="rev"><li>Que cada cambio de libranza respete el descanso entre turnos y el convenio, y que lo hables con la gobernanta y el jefe de sala antes de publicarlo.</li><li>Que la previsión que pegas tenga las reservas de hoy, porque un grupo nuevo cambia las cuentas del fin de semana.</li></ul>
+        <div class="acc"><button class="hecho" type="button" data-r="s3">Marcar como hecha</button><a class="sig" href="#r-s4" data-abre="s4">Siguiente · Grupos y eventos</a></div>
+      </div>
+    </details>
+    <details class="rut" id="r-s4" data-r="s4">
+      <summary><span class="cuandob">JUE · 09:00</span><span class="tit"><b>Grupos y eventos</b><span class="chips"><span>grupos</span><span>eventos</span><span>propuestas</span><span>seguimiento</span></span></span><span class="ok" aria-hidden="true">Hecha</span></summary>
+      <div class="in">
+        <p class="cuando">Cada jueves a las 9:00, antes de que comercial cierre la semana.</p>
+        <p class="para">Dejas de buscar en el correo qué propuestas se han quedado colgadas y sabes por cuál empezar, con el siguiente paso de cada una y el correo de seguimiento escrito. Guárdalo en un Proyecto de Claude y cada jueves solo pegas la lista nueva.</p>
+        <h4>Lo que le pasas</h4>
+        <ul class="pasos"><li>La lista de propuestas abiertas a grupos y empresas, con fecha del evento, personas, habitaciones, precio y fecha de envío, sacada de la hoja de comercial o del correo</li><li>En cada una, si la tenemos sin contestar nosotros o esperamos respuesta del cliente</li><li>La fecha de hoy, para contar los días que lleva cada una</li></ul>
+        <h4>Lo que te devuelve</h4>
+        <p class="dev">Las propuestas ordenadas por prioridad, con lo que hay en juego, el siguiente paso y un borrador de seguimiento para la más urgente.</p>
+        <h4>El prompt</h4>
+        <p class="nota">Abre un chat nuevo en Claude, pégalo y cambia lo que va entre corchetes.</p>
+        <div class="code"><div class="codebar"><span>Grupos y eventos</span><button class="copy" type="button" data-t="p-s4">Copiar</button></div><pre id="p-s4">Soy director de un hotel de [número] habitaciones en [zona], con restaurante y bar. Cada jueves repaso las propuestas a grupos y empresas que siguen abiertas: las que no hemos contestado nosotros y las que el cliente no ha contestado. Necesito saber por cuál empezar, qué hacer con cada una y un correo de seguimiento listo para mandar.
+
+FECHA DE HOY
+[pega aquí la fecha]
+
+PROPUESTAS ABIERTAS
+[pega aquí cada propuesta: cliente (puede ser solo el tipo, por ejemplo «empresa» o «asociación»), fecha del evento, personas, habitaciones y noches, precio, fecha de envío o de la petición y quién tiene que contestar]
+
+CÓMO TRABAJAS
+· Si falta algo importante, pregúntamelo todo en un solo mensaje antes de empezar.
+· Ordena por prioridad: primero las que tenemos sin contestar nosotros, luego por cercanía de la fecha del evento y después por importe. Explica en una línea por qué va cada una en su puesto.
+· Devuélveme estas secciones en MAYÚSCULAS: RESUMEN (número de propuestas e importe total, con su cuenta), POR PRIORIDAD (cada propuesta con importe, días que lleva parada y siguiente paso), BORRADOR DE SEGUIMIENTO (para la primera que espera respuesta del cliente) y PARA REVISAR.
+· El borrador, de 3 a 5 frases, cercano y sin presionar. Usa [nombre del contacto] en lugar del nombre.
+· Una pantalla y media como mucho.
+
+REGLAS
+· Usa solo los datos que te pego.
+· No inventes cifras, nombres, precios ni fechas. Si falta algo, pon «a confirmar».
+· Muestra la cuenta de cada cifra que calcules, para que vea de dónde sale.
+· Separa lo que dicen los datos de lo que tú interpretas.
+· Si aparecen nombres de huéspedes o de empleados, trabaja sin ellos.
+· Números en formato español: 1.234,56 € y 75,00 %.
+· Sin markdown: nada de #, asteriscos ni tablas. Títulos en MAYÚSCULAS y listas con «·» o números.
+· Termina con un bloque PARA REVISAR con lo que tengo que comprobar yo antes de usarlo.</pre></div>
+        <h4>Así queda</h4>
+        <div class="ej"><p class="peg"><b>Le pegamos</b> La fecha (jueves 29 de octubre) y las 5 propuestas abiertas de la hoja de comercial: una comida de un club deportivo y un grupo de una asociación sin contestar por nuestra parte, y una cena de Navidad de empresa, una reunión de empresa y un viaje de incentivo esperando respuesta del cliente, con sus precios y fechas.</p><div class="res"><b>RESUMEN</b><span>5 propuestas abiertas por 16.775,00 € (1.050,00 + 2.800,00 + 2.700,00 + 1.675,00 + 8.550,00). Dos sin contestar por nuestra parte (3.850,00 €) y tres esperando al cliente (12.925,00 €).</span><span class="sp"></span><b>POR PRIORIDAD</b><span>1. Comida de un club deportivo, sábado 7 de noviembre, 35 personas a 30,00 € (1.050,00 €). Piden precio desde el 27 de octubre, llevan 2 días sin contestar y faltan 9 para la comida. Siguiente paso: menú y precio hoy.</span><span>2. Grupo de una asociación, 20 habitaciones del 12 al 14 de noviembre, 40 noches a 70,00 € (2.800,00 €). Piden precio desde el 26 de octubre, 3 días sin contestar. Siguiente paso: confirmar que quedan las 20 habitaciones y mandar la oferta hoy.</span><span>3. Cena de Navidad de una empresa, viernes 18 de diciembre, 60 personas a 45,00 € (2.700,00 €). Enviada el 13 de octubre, 16 días sin respuesta. Siguiente paso: llamar hoy y mandar el correo de abajo.</span><span>4. Reunión de una empresa, 19 de noviembre, 15 habitaciones a 85,00 € y la sala a 400,00 € (1.275,00 + 400,00 = 1.675,00 €). Enviada el 20 de octubre, 9 días sin respuesta. Siguiente paso: seguimiento el lunes.</span><span>5. Viaje de incentivo en marzo de 2027, 90 noches a 95,00 € (8.550,00 €). Enviada el 6 de octubre, 23 días sin respuesta. Es la mayor, pero queda lejos. Siguiente paso: preguntar si mantenemos el bloqueo y hasta cuándo (a confirmar).</span><span class="sp"></span><span>BORRADOR DE SEGUIMIENTO (cena de Navidad)</span><span>«Hola, [nombre del contacto]. Te escribo por la propuesta de la cena del viernes 18 de diciembre para 60 personas. Quería saber si seguís con la idea, para guardaros la fecha. Si queréis cambiar algo del menú, lo vemos sin problema. Un saludo.»</span><span class="sp"></span><b>PARA REVISAR</b><span>· Que las 20 habitaciones del 12 al 14 de noviembre sigan libres.</span><span>· Que cada precio sea el de la última versión que se mandó al cliente.</span></div></div>
+        <h4>Revísalo tú</h4>
+        <ul class="rev"><li>Que la disponibilidad de habitaciones y salón de cada fecha esté comprobada en el programa de recepción antes de mandar ninguna oferta.</li><li>Que los precios del resumen sean los de la última versión enviada, porque a veces hay dos versiones en el correo.</li></ul>
+        <div class="acc"><button class="hecho" type="button" data-r="s4">Marcar como hecha</button><a class="sig" href="#r-s5" data-abre="s5">Siguiente · La semana en números</a></div>
+      </div>
+    </details>
+    <details class="rut" id="r-s5" data-r="s5">
+      <summary><span class="cuandob">VIE · 16:00</span><span class="tit"><b>La semana en números</b><span class="chips"><span>propiedad</span><span>presupuesto</span><span>informe</span></span></span><span class="ok" aria-hidden="true">Hecha</span></summary>
+      <div class="in">
+        <p class="cuando">Cada viernes a las 16:00, antes de mandar el resumen de la semana a la propiedad.</p>
+        <p class="para">Te ahorras la hora de los viernes montando el resumen para la propiedad, y sales con cinco líneas que comparan la semana con el presupuesto y con el año pasado, con cada cuenta a la vista. Guárdalo en un Proyecto de Claude y cada viernes solo pegas las cifras.</p>
+        <h4>Lo que le pasas</h4>
+        <ul class="pasos"><li>La producción de la semana por líneas (habitaciones, restaurante, bar y otros) y las noches ocupadas, del programa de recepción y de la caja del restaurante</li><li>El presupuesto de esa semana por líneas, de tu Excel de presupuesto</li><li>La misma semana del año pasado por líneas, del informe de producción de entonces</li><li>Las reservas de la semana siguiente, si quieres cerrar con lo que viene</li></ul>
+        <h4>Lo que te devuelve</h4>
+        <p class="dev">Cinco líneas para la propiedad con la semana frente a presupuesto y año pasado, y las cuentas que las respaldan.</p>
+        <h4>El prompt</h4>
+        <p class="nota">Abre un chat nuevo en Claude, pégalo y cambia lo que va entre corchetes.</p>
+        <div class="code"><div class="codebar"><span>La semana en números</span><button class="copy" type="button" data-t="p-s5">Copiar</button></div><pre id="p-s5">Soy director de un hotel de [número] habitaciones en [zona], con restaurante y bar. Cada viernes mando a la propiedad un resumen de la semana en cinco líneas. Quiero comparar la semana con el presupuesto y con la misma semana del año pasado, y explicar de dónde sale cada diferencia.
+
+DATOS DE LA SEMANA
+[pega aquí noches ocupadas, habitaciones disponibles e ingresos de habitaciones, restaurante, bar y otros]
+
+PRESUPUESTO DE LA SEMANA
+[pega aquí el presupuesto por las mismas líneas, con noches y precio medio si los tienes]
+
+LA MISMA SEMANA DEL AÑO PASADO
+[pega aquí las mismas líneas del año pasado]
+
+LO QUE VIENE
+[pega aquí las noches reservadas de la semana siguiente y los grupos, o escribe «nada»]
+
+CÓMO TRABAJAS
+· Si falta algo importante, pregúntamelo todo en un solo mensaje antes de empezar.
+· Devuélveme estas secciones en MAYÚSCULAS: CINCO LÍNEAS PARA LA PROPIEDAD, CUENTAS y PARA REVISAR.
+· Las cinco líneas: total frente a presupuesto y año pasado; habitaciones con ocupación y precio medio; de dónde sale la diferencia de habitaciones (cuánto por noches y cuánto por precio); restaurante, bar y otros; lo que viene.
+· Cada línea, dos frases como mucho, escritas para alguien que no está en el hotel.
+· En CUENTAS, comprueba que la suma de las diferencias por líneas da la diferencia total.
+
+REGLAS
+· Usa solo los datos que te pego.
+· No inventes cifras, nombres, precios ni fechas. Si falta algo, pon «a confirmar».
+· Muestra la cuenta de cada cifra que calcules, para que vea de dónde sale.
+· Separa lo que dicen los datos de lo que tú interpretas.
+· Si aparecen nombres de huéspedes o de empleados, trabaja sin ellos.
+· Números en formato español: 1.234,56 € y 75,00 %.
+· Sin markdown: nada de #, asteriscos ni tablas. Títulos en MAYÚSCULAS y listas con «·» o números.
+· Termina con un bloque PARA REVISAR con lo que tengo que comprobar yo antes de usarlo.
+· Si una línea va por debajo del presupuesto, dilo y pon el motivo como «a confirmar» si no está en los datos.</pre></div>
+        <h4>Así queda</h4>
+        <div class="ej"><p class="peg"><b>Le pegamos</b> La semana del lunes 19 al domingo 25 de octubre (434 noches de 560 y 62.000,00 € repartidos en habitaciones, restaurante, bar y otros), el presupuesto por líneas (60.500,00 €, con 420 noches a 96,00 €), la misma semana de 2025 por líneas (57.350,00 €, con 413 noches a 93,00 €) y las 392 noches reservadas de la semana siguiente.</p><div class="res"><b>CINCO LÍNEAS PARA LA PROPIEDAD</b><span>1. La semana del 19 al 25 de octubre cerró en 62.000,00 €, 1.500,00 € por encima del presupuesto (62.000,00 - 60.500,00, un 2,48 % más) y 4.650,00 € más que la misma semana de 2025 (62.000,00 - 57.350,00, un 8,11 % más).</span><span>2. Habitaciones hizo 41.664,00 € con 434 noches de 560 (77,50 %) a 96,00 € de media. Frente al presupuesto son 14 noches más al mismo precio, 1.344,00 € (14 × 96,00).</span><span>3. Frente a 2025 (413 noches a 93,00 €, 38.409,00 €), habitaciones gana 3.255,00 €. De eso, 1.953,00 € vienen de 21 noches más (21 × 93,00) y 1.302,00 € de cobrar 3,00 € más por noche (434 × 3,00).</span><span>4. Restaurante 14.210,00 € (210,00 € sobre presupuesto), bar 4.380,00 € (120,00 € por debajo) y otros 1.746,00 € (66,00 € por encima). El bar es la única línea por debajo, motivo a confirmar.</span><span>5. La semana del 26 de octubre tiene 392 noches reservadas (70,00 %) y un grupo de 12 habitaciones de jueves a sábado.</span><span class="sp"></span><b>CUENTAS</b><span>· Diferencia con presupuesto por líneas: 1.344,00 + 210,00 - 120,00 + 66,00 = 1.500,00 €.</span><span>· Diferencia con 2025 por líneas: habitaciones 3.255,00 + restaurante 1.190,00 + bar 140,00 + otros 65,00 = 4.650,00 €.</span><span>· Ingreso por habitación disponible: 41.664,00 / 560 = 74,40 €.</span><span class="sp"></span><b>PARA REVISAR</b><span>· Que el presupuesto del bar (4.500,00 €) sea el de esta semana concreta.</span><span>· Que las cifras de 2025 salgan del mismo tipo de informe que las de este año.</span></div></div>
+        <h4>Revísalo tú</h4>
+        <ul class="rev"><li>Que las cifras de la semana salgan del informe cerrado, con las facturas del domingo ya metidas.</li><li>Que el presupuesto y el año pasado que pegas sean de la misma semana, de lunes a domingo. Si el presupuesto solo está por meses, díselo a Claude para que lo tenga en cuenta.</li></ul>
+        <div class="acc"><button class="hecho" type="button" data-r="s5">Marcar como hecha</button><a class="sig" href="#r-m1" data-abre="m1">Siguiente · Cierre de mes</a></div>
+      </div>
+    </details>
+</div></section>
+<section class="blq" id="mes"><p class="eyebrow">EL PRIMER DÍA LABORABLE · 4 RUTINAS</p><h2>Cada mes</h2><div class="ruts">
+    <details class="rut" id="r-m1" data-r="m1">
+      <summary><span class="cuandob">CADA MES</span><span class="tit"><b>Cierre de mes</b><span class="chips"><span>mensual</span><span>cierre</span><span>contabilidad</span></span></span><span class="ok" aria-hidden="true">Hecha</span></summary>
+      <div class="in">
+        <p class="cuando">El primer día laborable del mes a las 9:00, antes de mandar el cierre a contabilidad o a la propiedad.</p>
+        <p class="para">Te quita la mañana de cruzar a mano el programa de recepción, la caja del restaurante y la contabilidad buscando por qué no sale lo mismo. Al terminar tienes cada diferencia con su importe y a quién preguntar, y si guardas el prompt en un Proyecto de Claude, el mes que viene solo pegas los datos.</p>
+        <h4>Lo que le pasas</h4>
+        <ul class="pasos"><li>El informe de producción del mes por departamento, exportado del programa de recepción</li><li>El resumen de ventas del mes de la caja del restaurante y del bar, con lo cargado a habitación aparte</li><li>Las ventas del mes por cuenta, sacadas de la contabilidad o del Excel que te manda el gestor</li><li>Los cobros del mes: el total del datáfono y lo que ha entrado en el banco, del extracto</li></ul>
+        <h4>Lo que te devuelve</h4>
+        <p class="dev">La lista de lo que no cuadra entre las tres fuentes, de mayor a menor importe, con la causa probable y a quién preguntar.</p>
+        <h4>El prompt</h4>
+        <p class="nota">Abre un chat nuevo en Claude, pégalo y cambia lo que va entre corchetes.</p>
+        <div class="code"><div class="codebar"><span>Cierre de mes</span><button class="copy" type="button" data-t="p-m1">Copiar</button></div><pre id="p-m1">Soy director de un hotel de [habitaciones] habitaciones en [zona], con restaurante y bar. Hoy cierro el mes de [mes] y, antes de mandarlo, quiero saber qué no cuadra entre el programa de recepción, la caja del restaurante y la contabilidad.
+
+PRODUCCIÓN DEL PROGRAMA DE RECEPCIÓN
+[pega aquí el informe de producción del mes por departamento]
+
+VENTAS DE LA CAJA DEL RESTAURANTE Y DEL BAR
+[pega aquí el resumen del mes, con lo cargado a habitación aparte]
+
+VENTAS EN CONTABILIDAD
+[pega aquí las ventas del mes por cuenta]
+
+COBROS
+[pega aquí el total del datáfono del mes y los abonos del banco]
+
+CÓMO TRABAJAS
+· Si falta algo importante para cruzar las cifras (un departamento, unos días, los cobros), pregúntamelo todo en un solo mensaje antes de empezar.
+· Compara cada departamento entre las fuentes. Aparte, compara lo cargado a habitación en la caja con lo que ha recibido el programa de recepción, y el datáfono con el banco.
+· Devuelve estas secciones: LO QUE CUADRA (una línea), LO QUE NO CUADRA (cada diferencia numerada, con la cifra de cada fuente, el importe, la causa probable y a quién preguntar), ANTES DE MANDARLO (qué se corrige y quién lo corrige) y PARA REVISAR.
+· Ordena las diferencias de mayor a menor importe. Que quepa en una pantalla.
+
+REGLAS
+· Usa solo los datos que te pego. No inventes cifras, nombres, precios ni fechas; si falta algo, escribe «a confirmar».
+· Muestra la cuenta de cada cifra que calcules, con los números de los que sale.
+· Separa los hechos (lo que dicen las cifras) de las explicaciones (lo que crees que ha pasado), y marca las explicaciones como probables.
+· Si aparecen nombres de huéspedes o de empleados, o nóminas de una persona, trabaja sin ellos y usa el número de ticket, de habitación o el cargo.
+· Números en formato español: 1.234,56 € y porcentajes con coma (75,00 %).
+· Sin markdown: solo texto, MAYÚSCULAS para los títulos y «·» o números para las listas.
+· Termina siempre con un bloque PARA REVISAR con lo que tengo que comprobar yo antes de usarlo.</pre></div>
+        <h4>Así queda</h4>
+        <div class="ej"><p class="peg"><b>Le pegamos</b> Programa de recepción: habitaciones 182.280,00 €, otros 7.400,00 € y 8.190,00 € recibidos de la caja como cargos a habitación. Caja: restaurante 61.380,00 €, bar 18.940,00 €, de los que 8.460,00 € se cargaron a habitación. Contabilidad: habitaciones 181.640,00 €, restaurante 61.380,00 €, bar 19.120,00 €, otros 7.400,00 €; datáfono 96.450,00 € y banco 96.120,00 €.</p><div class="res"><b>CIERRE DE OCTUBRE DE 2026</b><span class="sp"></span><b>LO QUE CUADRA</b><span>Restaurante (61.380,00 €) y otros (7.400,00 €) dan lo mismo en las tres fuentes.</span><span class="sp"></span><b>LO QUE NO CUADRA</b><span>1. Habitaciones. Programa de recepción 182.280,00 €, contabilidad 181.640,00 €. 182.280,00 - 181.640,00 = 640,00 € de menos en contabilidad. Causa probable: una factura de empresa del 31 de octubre contabilizada en noviembre (a confirmar). Preguntar a administración.</span><span>2. Cobros. Datáfono 96.450,00 €, banco 96.120,00 €. 96.450,00 - 96.120,00 = 330,00 €. Causa probable: el cobro del último día abonado en noviembre o comisiones del banco (a confirmar). Preguntar a administración con el extracto del 2 de noviembre.</span><span>3. Cargos a habitación. Caja 8.460,00 €, programa de recepción 8.190,00 €. 8.460,00 - 8.190,00 = 270,00 €. Causa probable: tickets cargados a habitaciones ya cerradas, que nadie ha cobrado. Preguntar al jefe de sala y a recepción, ticket por ticket.</span><span>4. Bar. Caja 18.940,00 €, contabilidad 19.120,00 €. 19.120,00 - 18.940,00 = 180,00 € de más en contabilidad. Causa probable: un ticket contabilizado dos veces (a confirmar).</span><span class="sp"></span><b>ANTES DE MANDARLO</b><span>Contabilidad suma 181.640,00 + 61.380,00 + 19.120,00 + 7.400,00 = 269.540,00 €. La producción es 270.000,00 €. Diferencia neta: 640,00 - 180,00 = 460,00 €. Administración corrige el 1 y el 4; sala y recepción revisan el 3 hoy.</span><span class="sp"></span><b>PARA REVISAR</b><span>· Que el programa de recepción y la caja tienen el mismo corte, del 1 al 31 de octubre a la misma hora.</span><span>· Los tickets de los 270,00 € uno por uno antes de dar ese dinero por perdido.</span></div></div>
+        <h4>Revísalo tú</h4>
+        <ul class="rev"><li>Que los informes de las tres fuentes van del 1 al último día del mes con la misma hora de corte; si la caja cierra a las 2:00 y recepción a medianoche, salen diferencias que no existen.</li><li>Los tickets cargados a habitación que no han llegado al programa de recepción, uno por uno, antes de dar ese dinero por perdido.</li></ul>
+        <div class="acc"><button class="hecho" type="button" data-r="m1">Marcar como hecha</button><a class="sig" href="#r-m2" data-abre="m2">Siguiente · Desviaciones</a></div>
+      </div>
+    </details>
+    <details class="rut" id="r-m2" data-r="m2">
+      <summary><span class="cuandob">CADA MES</span><span class="tit"><b>Desviaciones</b><span class="chips"><span>mensual</span><span>presupuesto</span><span>desviaciones</span></span></span><span class="ok" aria-hidden="true">Hecha</span></summary>
+      <div class="in">
+        <p class="cuando">El primer martes del mes a las 9:00, con el cierre ya cuadrado y antes de hablar con la propiedad.</p>
+        <p class="para">Te ahorras la tarde con el Excel del presupuesto intentando explicar línea a línea por qué no llegas. Al terminar tienes cada desviación por departamento con su cuenta, su causa y si se recupera; guarda el prompt en un Proyecto de Claude y cada mes solo cambias los datos.</p>
+        <h4>Lo que le pasas</h4>
+        <ul class="pasos"><li>El cierre del mes por departamento (habitaciones, restaurante, bar y otros), del programa de recepción y la caja ya cuadrados</li><li>El presupuesto del mes por departamento, del Excel que mandaste a la propiedad</li><li>Las noches ocupadas y el precio medio, reales y presupuestados, del informe de producción del programa de recepción</li><li>Tus notas del mes: cancelaciones, grupos, obras o el tiempo que hizo, lo que sepas que ha pasado</li></ul>
+        <h4>Lo que te devuelve</h4>
+        <p class="dev">Cada desviación por departamento con su importe, la cuenta, la causa y si se recupera.</p>
+        <h4>El prompt</h4>
+        <p class="nota">Abre un chat nuevo en Claude, pégalo y cambia lo que va entre corchetes.</p>
+        <div class="code"><div class="codebar"><span>Desviaciones</span><button class="copy" type="button" data-t="p-m2">Copiar</button></div><pre id="p-m2">Soy director de un hotel de [habitaciones] habitaciones en [zona], con restaurante y bar. El mes de [mes] ya está cerrado y quiero explicar cada desviación frente al presupuesto antes de hablar con la propiedad.
+
+CIERRE DEL MES POR DEPARTAMENTO
+[pega aquí los ingresos reales de habitaciones, restaurante, bar y otros]
+
+PRESUPUESTO DEL MES POR DEPARTAMENTO
+[pega aquí el presupuesto de cada departamento]
+
+NOCHES Y PRECIO MEDIO
+[pega aquí las noches ocupadas y el precio medio, reales y presupuestados]
+
+LO QUE HA PASADO EN EL MES
+[pega aquí tus notas: cancelaciones, grupos, obras, tiempo, cualquier cosa que sepas]
+
+CÓMO TRABAJAS
+· Si falta algo importante (el presupuesto de un departamento, las noches presupuestadas), pregúntamelo todo en un solo mensaje antes de empezar.
+· En habitaciones, separa la parte que viene de vender más o menos noches (diferencia de noches por el precio presupuestado) de la parte que viene del precio (diferencia de precio por las noches reales).
+· Devuelve estas secciones: RESUMEN (dos líneas con la desviación total), DESVIACIÓN POR DEPARTAMENTO (cada uno numerado con el importe, la cuenta, la causa y si se recupera: sí, no o en parte, y cuándo), LO QUE SE RECUPERA y PARA REVISAR.
+· Cierra la sección de departamentos sumando las desviaciones para comprobar que dan la total. Que quepa en una pantalla.
+
+REGLAS
+· Usa solo los datos que te pego. No inventes cifras, nombres, precios ni fechas; si falta algo, escribe «a confirmar».
+· Muestra la cuenta de cada cifra que calcules, con los números de los que sale.
+· Separa los hechos (lo que dicen las cifras) de las explicaciones (lo que crees que ha pasado), y marca las explicaciones como probables.
+· Si aparecen nombres de huéspedes o de empleados, o nóminas de una persona, trabaja sin ellos y usa el número de ticket, de habitación o el cargo.
+· Números en formato español: 1.234,56 € y porcentajes con coma (75,00 %).
+· Sin markdown: solo texto, MAYÚSCULAS para los títulos y «·» o números para las listas.
+· Termina siempre con un bloque PARA REVISAR con lo que tengo que comprobar yo antes de usarlo.</pre></div>
+        <h4>Así queda</h4>
+        <div class="ej"><p class="peg"><b>Le pegamos</b> Real de octubre: habitaciones 182.280,00 €, restaurante 61.380,00 €, bar 18.940,00 €, otros 7.400,00 €, con 1.860 noches a 98,00 €. Presupuesto: 184.512,00 €, 63.500,00 €, 18.200,00 € y 9.378,00 €, con 1.922 noches a 96,00 €. Notas: el 2 de octubre se canceló un congreso de 20 habitaciones durante 3 noches, con 2 cenas de 40 personas a 26,50 € y la sala 3 días a 600,00 €, y se ha aplazado a marzo; la terraza del bar estuvo abierta hasta el día 20.</p><div class="res"><b>DESVIACIONES DE OCTUBRE DE 2026</b><span class="sp"></span><b>RESUMEN</b><span>270.000,00 - 275.590,00 = -5.590,00 € (-2,03 %; 5.590,00 / 275.590,00). Casi toda la diferencia viene del congreso cancelado.</span><span class="sp"></span><b>DESVIACIÓN POR DEPARTAMENTO</b><span>1. Habitaciones: 182.280,00 - 184.512,00 = -2.232,00 €.</span><span>· Por noches: (1.860 - 1.922) × 96,00 = -5.952,00 €. De esas 62 noches, 60 son del congreso (20 × 3).</span><span>· Por precio: (98,00 - 96,00) × 1.860 = +3.720,00 €.</span><span>· Se recupera en parte: las 60 noches, si el congreso se confirma en marzo.</span><span>2. Restaurante: 61.380,00 - 63.500,00 = -2.120,00 €. Son las cenas del congreso: 2 × 40 × 26,50 = 2.120,00 €. Se recupera en marzo.</span><span>3. Bar: 18.940,00 - 18.200,00 = +740,00 €. Explicación probable: la terraza abierta hasta el día 20. En noviembre no se repite.</span><span>4. Otros: 7.400,00 - 9.378,00 = -1.978,00 €. La sala del congreso, 3 × 600,00 = 1.800,00 €. Quedan 178,00 € sin explicar (a confirmar).</span><span>Comprobación: -2.232,00 - 2.120,00 + 740,00 - 1.978,00 = -5.590,00 €.</span><span class="sp"></span><b>LO QUE SE RECUPERA</b><span>Si el congreso se celebra en marzo a los mismos precios: 60 × 96,00 = 5.760,00 € de habitaciones, más 2.120,00 € de cenas y 1.800,00 € de sala. Total 9.680,00 € en marzo de 2027. Este año no se recupera nada.</span><span class="sp"></span><b>PARA REVISAR</b><span>· La fecha de marzo, confirmada por escrito con la empresa del congreso antes de contarla a la propiedad.</span><span>· De dónde salen los 178,00 € de otros que faltan: aparcamiento o lavandería de clientes (a confirmar).</span></div></div>
+        <h4>Revísalo tú</h4>
+        <ul class="rev"><li>Que el presupuesto que pegas es el mismo que tiene la propiedad, sin revisiones posteriores, porque si comparáis versiones distintas las desviaciones no os van a coincidir.</li><li>Cada causa que Claude marca como probable, contrastada con quien la conoce (el comercial del grupo, el jefe de sala), antes de ponerla en el informe.</li></ul>
+        <div class="acc"><button class="hecho" type="button" data-r="m2">Marcar como hecha</button><a class="sig" href="#r-m3" data-abre="m3">Siguiente · Propiedad</a></div>
+      </div>
+    </details>
+    <details class="rut" id="r-m3" data-r="m3">
+      <summary><span class="cuandob">CADA MES</span><span class="tit"><b>Propiedad</b><span class="chips"><span>mensual</span><span>propiedad</span><span>informe</span></span></span><span class="ok" aria-hidden="true">Hecha</span></summary>
+      <div class="in">
+        <p class="cuando">El primer miércoles del mes a las 9:00, con el cierre y las desviaciones ya hechos.</p>
+        <p class="para">Te quita el domingo de 4 horas montando el informe para los dueños con capturas del Excel. Al terminar tienes una página que se lee en cinco minutos, con lo que ha pasado, los números, las desviaciones y lo que vas a hacer; si la guardas en un Proyecto de Claude, cada mes sale con la misma forma.</p>
+        <h4>Lo que le pasas</h4>
+        <ul class="pasos"><li>El cierre del mes por departamento, ya cuadrado, del programa de recepción y la caja</li><li>El presupuesto del mes, el mismo mes del año pasado y el mes anterior, del Excel de seguimiento</li><li>Los gastos del mes y su presupuesto, del cierre de contabilidad</li><li>Las desviaciones explicadas (lo que te devolvió la rutina Desviaciones) y tus decisiones para el mes que viene</li></ul>
+        <h4>Lo que te devuelve</h4>
+        <p class="dev">El informe del mes en una página, listo para pegar en un correo a la propiedad.</p>
+        <h4>El prompt</h4>
+        <p class="nota">Abre un chat nuevo en Claude, pégalo y cambia lo que va entre corchetes.</p>
+        <div class="code"><div class="codebar"><span>Propiedad</span><button class="copy" type="button" data-t="p-m3">Copiar</button></div><pre id="p-m3">Soy director de un hotel de [habitaciones] habitaciones en [zona], con restaurante y bar. Tengo que mandar a la propiedad el informe de [mes] y quiero que quepa en una página que se lea en cinco minutos.
+
+CIERRE DEL MES
+[pega aquí los ingresos por departamento, las noches ocupadas, la ocupación y el precio medio]
+
+COMPARACIONES
+[pega aquí el presupuesto del mes, el mismo mes del año pasado y el mes anterior]
+
+GASTOS
+[pega aquí los gastos del mes y su presupuesto, en total]
+
+DESVIACIONES EXPLICADAS
+[pega aquí las desviaciones por departamento con su causa]
+
+LO QUE VOY A HACER
+[pega aquí tus decisiones para el mes que viene]
+
+CÓMO TRABAJAS
+· Si falta algo importante (los gastos, el presupuesto, mis decisiones), pregúntamelo todo en un solo mensaje antes de empezar.
+· Escribe para alguien que no está en el hotel cada día: frases cortas, sin jerga. El resultado operativo es ingresos menos gastos.
+· Devuelve estas secciones: LO QUE HA PASADO (tres líneas como mucho), LOS NÚMEROS, LAS DESVIACIONES (una línea por departamento), LO QUE SE VA A HACER (numerado, con fecha) y PARA REVISAR, que es solo para mí y quito antes de mandarlo.
+· Máximo una página.
+
+REGLAS
+· Usa solo los datos que te pego. No inventes cifras, nombres, precios ni fechas; si falta algo, escribe «a confirmar».
+· Muestra la cuenta de cada cifra que calcules, con los números de los que sale.
+· Separa los hechos (lo que dicen las cifras) de las explicaciones (lo que crees que ha pasado), y marca las explicaciones como probables.
+· Si aparecen nombres de huéspedes o de empleados, o nóminas de una persona, trabaja sin ellos y usa el número de ticket, de habitación o el cargo.
+· Números en formato español: 1.234,56 € y porcentajes con coma (75,00 %).
+· Sin markdown: solo texto, MAYÚSCULAS para los títulos y «·» o números para las listas.
+· Termina siempre con un bloque PARA REVISAR con lo que tengo que comprobar yo antes de usarlo.</pre></div>
+        <h4>Así queda</h4>
+        <div class="ej"><p class="peg"><b>Le pegamos</b> El cierre de octubre (270.000,00 €; 1.860 noches, 75,00 %, 98,00 €), el presupuesto (275.590,00 €), octubre de 2025 (248.416,00 €) y septiembre (296.000,00 €). Gastos 191.700,00 € frente a 192.913,00 € presupuestados, las desviaciones de la rutina anterior y el plan: confirmar el congreso en marzo antes del 15 de noviembre y abrir la terraza los fines de semana de noviembre si hace bueno.</p><div class="res"><b>INFORME DE OCTUBRE DE 2026</b><span class="sp"></span><b>LO QUE HA PASADO</b><span>Octubre cerró con 270.000,00 € de ingresos, por debajo del presupuesto y por encima de octubre de 2025. La diferencia con el presupuesto viene casi entera del congreso cancelado el 2 de octubre, aplazado a marzo.</span><span class="sp"></span><b>LOS NÚMEROS</b><span>· Ocupación 75,00 % (1.860 de 2.480 noches), precio medio 98,00 €.</span><span>· Habitaciones 182.280,00 €, restaurante 61.380,00 €, bar 18.940,00 €, otros 7.400,00 €.</span><span>· Frente al presupuesto: 270.000,00 - 275.590,00 = -5.590,00 € (-2,03 %).</span><span>· Frente a octubre de 2025: 270.000,00 - 248.416,00 = +21.584,00 € (+8,69 %).</span><span>· Frente a septiembre: 270.000,00 - 296.000,00 = -26.000,00 € (-8,78 %).</span><span>· Resultado operativo: 270.000,00 - 191.700,00 = 78.300,00 € (29,00 % de los ingresos). Presupuesto: 275.590,00 - 192.913,00 = 82.677,00 € (30,00 %). Diferencia: -4.377,00 €.</span><span class="sp"></span><b>LAS DESVIACIONES</b><span>· Habitaciones -2.232,00 €: 62 noches menos, 60 del congreso, compensadas en parte con 2,00 € más de precio medio.</span><span>· Restaurante -2.120,00 €: las dos cenas del congreso.</span><span>· Otros -1.978,00 €: la sala del congreso (1.800,00 €) y 178,00 € a confirmar.</span><span>· Bar +740,00 €: la terraza abierta hasta el día 20.</span><span class="sp"></span><b>LO QUE SE VA A HACER</b><span>1. Confirmar por escrito la fecha del congreso en marzo antes del 15 de noviembre.</span><span>2. Abrir la terraza los fines de semana de noviembre si hace bueno.</span><span class="sp"></span><b>PARA REVISAR</b><span>· Que los gastos son los del cierre de contabilidad, con todas las facturas de octubre dentro.</span><span>· Los 178,00 € de otros antes de mandarlo, o quitar la línea.</span></div></div>
+        <h4>Revísalo tú</h4>
+        <ul class="rev"><li>Que cada cifra del informe coincide con la del cierre de contabilidad que recibe la propiedad, porque una diferencia de céntimos les hace dudar del resto.</li><li>Que las fechas de LO QUE SE VA A HACER son las que de verdad puedes cumplir, porque el mes que viene te las van a preguntar.</li></ul>
+        <div class="acc"><button class="hecho" type="button" data-r="m3">Marcar como hecha</button><a class="sig" href="#r-m4" data-abre="m4">Siguiente · Proveedores</a></div>
+      </div>
+    </details>
+    <details class="rut" id="r-m4" data-r="m4">
+      <summary><span class="cuandob">CADA MES</span><span class="tit"><b>Proveedores</b><span class="chips"><span>mensual</span><span>proveedores</span><span>compras</span></span></span><span class="ok" aria-hidden="true">Hecha</span></summary>
+      <div class="in">
+        <p class="cuando">El primer jueves del mes a las 9:00, con todas las facturas de proveedores del mes ya recibidas.</p>
+        <p class="para">Te ahorras repasar factura por factura para ver quién ha subido el precio sin avisar. Al terminar tienes la lista de subidas y de cantidades raras con su importe, ordenada para llamar primero a quien más te cuesta, y guardada en un Proyecto de Claude la repites cada mes pegando solo las facturas.</p>
+        <h4>Lo que le pasas</h4>
+        <ul class="pasos"><li>Las facturas de proveedores del mes, del listado de contabilidad o del Excel de compras (proveedor, producto, cantidad y precio)</li><li>Las facturas de los mismos proveedores de los tres meses anteriores, para comparar</li><li>Las noches ocupadas de cada mes, del programa de recepción, y los cubiertos, de la caja del restaurante</li><li>Los precios pactados por contrato, si los tienes a mano (lavandería, mantenimiento, limpieza)</li></ul>
+        <h4>Lo que te devuelve</h4>
+        <p class="dev">Las subidas de precio con lo que te cuestan al mes, las cantidades que no cuadran con la ocupación y por dónde empezar a renegociar.</p>
+        <h4>El prompt</h4>
+        <p class="nota">Abre un chat nuevo en Claude, pégalo y cambia lo que va entre corchetes.</p>
+        <div class="code"><div class="codebar"><span>Proveedores</span><button class="copy" type="button" data-t="p-m4">Copiar</button></div><pre id="p-m4">Soy director de un hotel de [habitaciones] habitaciones en [zona], con restaurante y bar. Quiero comparar las facturas de proveedores de [mes] con las de los meses anteriores para ver qué ha subido, qué cantidades son raras y qué conviene renegociar.
+
+FACTURAS DEL MES
+[pega aquí proveedor, producto, cantidad y precio de cada factura]
+
+FACTURAS DE LOS MESES ANTERIORES
+[pega aquí lo mismo de los tres meses anteriores]
+
+OCUPACIÓN Y CUBIERTOS
+[pega aquí las noches ocupadas y los cubiertos del restaurante de cada mes]
+
+PRECIOS PACTADOS
+[pega aquí lo que dicen los contratos, si los tienes; si no, déjalo vacío]
+
+CÓMO TRABAJAS
+· Si falta algo importante (el precio anterior de un producto, la ocupación de un mes), pregúntamelo todo en un solo mensaje antes de empezar.
+· Compara el precio por unidad (kilo, litro, unidad o cuota). El total de la factura sube y baja con la ocupación.
+· Para las cantidades, calcula cuánto se gasta por noche ocupada o por cubierto y marca lo que se aparte del resto de meses.
+· Devuelve estas secciones: SUBIDAS DE PRECIO (con el porcentaje y lo que cuestan de más este mes), CANTIDADES RARAS, LO QUE SE MANTIENE (una línea), POR DÓNDE EMPEZAR (proveedores en orden de importe, con qué pedir) y PARA REVISAR.
+· Que quepa en una pantalla.
+
+REGLAS
+· Usa solo los datos que te pego. No inventes cifras, nombres, precios ni fechas; si falta algo, escribe «a confirmar».
+· Muestra la cuenta de cada cifra que calcules, con los números de los que sale.
+· Separa los hechos (lo que dicen las cifras) de las explicaciones (lo que crees que ha pasado), y marca las explicaciones como probables.
+· Si aparecen nombres de huéspedes o de empleados, o nóminas de una persona, trabaja sin ellos y usa el número de ticket, de habitación o el cargo.
+· Números en formato español: 1.234,56 € y porcentajes con coma (75,00 %).
+· Sin markdown: solo texto, MAYÚSCULAS para los títulos y «·» o números para las listas.
+· Termina siempre con un bloque PARA REVISAR con lo que tengo que comprobar yo antes de usarlo.</pre></div>
+        <h4>Así queda</h4>
+        <div class="ej"><p class="peg"><b>Le pegamos</b> Facturas de octubre y de julio a septiembre: lavandería de lencería a 1,32 €/kg hasta septiembre y 1,45 €/kg en octubre (4.200 kg), cuota del ascensor de 420,00 € a 462,00 €, café de 18,40 €/kg a 19,80 €/kg (60 kg), gel de baño a 0,21 € la unidad con 2.040 unidades en septiembre y 3.400 en octubre, y el resto de proveedores igual. Noches ocupadas: 2.040 en septiembre y 1.860 en octubre.</p><div class="res"><b>PROVEEDORES DE OCTUBRE DE 2026</b><span class="sp"></span><b>SUBIDAS DE PRECIO</b><span>1. Lavandería de lencería: de 1,32 € a 1,45 € el kilo. (1,45 - 1,32) / 1,32 = +9,85 %. Este mes: 0,13 × 4.200 kg = 546,00 € de más.</span><span>2. Mantenimiento del ascensor: de 420,00 € a 462,00 € al mes. 42,00 / 420,00 = +10,00 %. El contrato no está en lo pegado (a confirmar si permite esta subida).</span><span>3. Café: de 18,40 € a 19,80 € el kilo. 1,40 / 18,40 = +7,61 %. Este mes: 1,40 × 60 kg = 84,00 € de más.</span><span>Total de las subidas en octubre: 546,00 + 42,00 + 84,00 = 672,00 €.</span><span class="sp"></span><b>CANTIDADES RARAS</b><span>· Gel de baño. Septiembre: 2.040 unidades para 2.040 noches, 1 por noche. Octubre: 3.400 para 1.860 noches. Con el gasto de septiembre harían falta 1.860; sobran 3.400 - 1.860 = 1.540 unidades, 1.540 × 0,21 = 323,40 €. Explicación probable: un pedido doble o stock para noviembre (a confirmar con la gobernanta).</span><span class="sp"></span><b>LO QUE SE MANTIENE</b><span>El resto de proveedores factura a los mismos precios que de julio a septiembre.</span><span class="sp"></span><b>POR DÓNDE EMPEZAR</b><span>1. Lavandería: pedir que mantenga 1,32 € el kilo o justifique la subida por escrito.</span><span>2. Gel de baño: ver si el pedido está en el almacén o se puede devolver.</span><span>3. Ascensor: revisar qué dice el contrato sobre subidas.</span><span>4. Café: pedir precio a otro proveedor con el mismo consumo.</span><span class="sp"></span><b>PARA REVISAR</b><span>· Que los 4.200 kg de lencería son de octubre y no incluyen ropa de restaurante.</span><span>· El almacén de amenities antes de reclamar el gel.</span></div></div>
+        <h4>Revísalo tú</h4>
+        <ul class="rev"><li>Que cada precio que Claude compara es por la misma unidad (kilo con kilo, caja con caja), porque si el proveedor cambia el formato del envase, la factura sale más cara sin que haya subido el precio.</li><li>El contrato de cada proveedor que ha subido, antes de llamarle, para saber si la subida estaba pactada.</li></ul>
+        <div class="acc"><button class="hecho" type="button" data-r="m4">Marcar como hecha</button><a class="sig" href="#diagnostico">Has hecho las 9</a></div>
+      </div>
+    </details>
+</div></section>
+<section class="cta" id="diagnostico">
+  <h2>Cuando quieras que te llegue hecho</h2>
+  <p>Con estas rutinas, cada lunes y cada cierre lo preparas tú en diez minutos. El paso siguiente son agentes que te las dejan hechas a su hora, en tu correo o en tu móvil, y tú solo las revisas y decides. En una llamada corta vemos tu semana y por dónde empezaría yo.</p>
+  <a class="barra" href="https://calendly.com/vertice1/nueva-reunion-1?utm_source=recurso&amp;utm_campaign=director" target="_blank" rel="noopener"><span>$ reservar mi diagnóstico<i></i></span><small>15 minutos</small></a>
+  <p class="sec">¿Prefieres aprender a montarlos tú? <a href="/programa">Mira el programa de 21 días</a></p>
+</section>
+<footer>Héctor García · verticeqr.com<br>Claude es una marca de Anthropic. Este recurso es independiente de Anthropic.</footer>
+</div>
+<script>
+(function () {
+  var CLAVE = 'director-rutinas-hechas', hechos = {};
+  try { hechos = JSON.parse(localStorage.getItem(CLAVE) || '{}') || {}; } catch (err) { hechos = {}; }
+  var orden = ["s1", "s2", "s3", "s4", "s5", "m1", "m2", "m3", "m4"];
+  function guardar() { try { localStorage.setItem(CLAVE, JSON.stringify(hechos)); } catch (err) {} }
+  function pintar() {
+    var n = 0;
+    orden.forEach(function (id) {
+      var h = !!hechos[id]; if (h) n++;
+      document.querySelectorAll('[data-r="' + id + '"]').forEach(function (el) { el.classList.toggle('done', h); });
+      var b = document.querySelector('.hecho[data-r="' + id + '"]'); if (b) b.textContent = h ? 'Hecha · desmarcar' : 'Marcar como hecha';
+    });
+    document.getElementById('cuenta').textContent = n + ' de 9 rutinas hechas';
+    document.getElementById('barra').style.width = (n / 9 * 100) + '%';
+  }
+  function abrir(id, desplazar) {
+    var r = document.getElementById('r-' + id); if (!r) return;
+    r.open = true;
+    if (desplazar) setTimeout(function () { r.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 30);
+  }
+  document.querySelectorAll('.dia, .mesc, .sig[data-abre]').forEach(function (a) {
+    a.addEventListener('click', function (ev) {
+      var id = a.dataset.r || a.dataset.abre; ev.preventDefault();
+      abrir(id, true); try { history.replaceState(null, '', '#r-' + id); } catch (err) {}
+    });
+  });
+  document.querySelectorAll('.hecho').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var id = b.dataset.r; if (hechos[id]) delete hechos[id]; else hechos[id] = 1; guardar(); pintar();
+    });
+  });
+  document.querySelectorAll('.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var el = document.getElementById(b.dataset.t), t = el.innerText;
+      var ok = function () { b.textContent = 'Copiado'; setTimeout(function () { b.textContent = 'Copiar'; }, 1600); };
+      var sel = function () { var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Seleccionado'; };
+      if (navigator.clipboard) navigator.clipboard.writeText(t).then(ok, sel); else sel();
+    });
+  });
+  var m = location.hash.match(/^#r-([sm]\d)$/); if (m) abrir(m[1], true);
+  pintar();
+})();
+</script>
+</body></html>
