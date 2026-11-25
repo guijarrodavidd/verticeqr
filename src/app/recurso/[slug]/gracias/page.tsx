@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
 import { CALENDLY_URL } from "@/lib/site";
-import { getRecurso } from "@/lib/recursos";
+import { esDeHector, getRecurso } from "@/lib/recursos";
 import styles from "../../recurso.module.css";
 import { Cabecera, Pie } from "../../Marca";
 
@@ -19,11 +19,12 @@ export default async function GraciasPage({ params }: Props) {
   if ((await cookies()).get(`rec_${slug}`)?.value !== "1") redirect(`/recurso/${slug}#formulario`);
 
   const externo = recurso.destino.startsWith("http");
+  const hector = esDeHector(recurso);
 
   return (
     <main className={styles.page}>
       <section className={`${styles.hero} ${styles.heroShort}`}>
-        <Cabecera centrada />
+        <Cabecera centrada hector={hector} />
         <div className={styles.wrapNarrow}>
           <div className={styles.ok} aria-hidden="true">✓</div>
           <h1 className={styles.titleCenter}>Aquí lo tienes</h1>
@@ -47,18 +48,24 @@ export default async function GraciasPage({ params }: Props) {
       <section className={styles.final}>
         <div className={styles.wrapNarrow}>
           <div className={styles.eyebrow}>Siguiente paso</div>
-          <h2 className={styles.finalTitle}>¿Lo miramos con tu hotel delante?</h2>
+          <h2 className={styles.finalTitle}>{hector ? "¿Quieres aprender a montarlo con tu hotel?" : "¿Lo miramos con tu hotel delante?"}</h2>
           <p className={styles.finalText}>
-            15 minutos: me cuentas cómo pide hoy tu huésped y te digo qué se escapa y qué se tapa sin sumar
-            personal. Si no veo nada, te lo digo igual.
+            {hector
+              ? "15 minutos: me cuentas tu semana y te digo qué montarías primero y cómo aprender a hacerlo. Si veo que no te compensa, te lo digo igual."
+              : "15 minutos: me cuentas cómo pide hoy tu huésped y te digo qué se escapa y qué se tapa sin sumar personal. Si no veo nada, te lo digo igual."}
           </p>
-          <a className={styles.finalCta} href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-            Reservar mi diagnóstico <span aria-hidden="true">↗</span>
+          <a
+            className={styles.finalCta}
+            href={hector ? `${CALENDLY_URL}?utm_source=recurso&utm_campaign=${recurso.slug}` : CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {hector ? "Reservar mi llamada" : "Reservar mi diagnóstico"} <span aria-hidden="true">↗</span>
           </a>
           <p className={styles.finalNote}>Sin coste y sin compromiso.</p>
         </div>
       </section>
-      <Pie />
+      <Pie hector={hector} />
     </main>
   );
 }

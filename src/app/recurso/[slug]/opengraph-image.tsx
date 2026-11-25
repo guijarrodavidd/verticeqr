@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
-import { getRecurso } from "@/lib/recursos";
+import { esDeHector, getRecurso } from "@/lib/recursos";
 
 // Portada que sale al pegar el enlace del recurso en LinkedIn, WhatsApp o un
 // email: título del recurso con la marca Vértice y el Método Fricción 0.
@@ -15,6 +15,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const recurso = getRecurso(slug);
   const titulo = recurso?.titulo ?? "Recurso gratuito";
   const etiqueta = recurso?.etiqueta ?? "Recurso gratuito";
+  const hector = esDeHector(recurso);
 
   const logo = await readFile(join(process.cwd(), "public/vertice-wordmark-light.png"));
   const fonts = join(process.cwd(), "src/app/recurso/fonts");
@@ -40,8 +41,12 @@ export default async function Image({ params }: { params: Promise<{ slug: string
         }}
       >
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={logoSrc} height={44} alt="" />
+          {hector ? (
+            <div style={{ display: "flex", fontSize: 38, fontWeight: 800, letterSpacing: -1 }}>Héctor García</div>
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={logoSrc} height={44} alt="" />
+          )}
           <div
             style={{
               display: "flex",
@@ -53,7 +58,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
               padding: "10px 22px",
             }}
           >
-            MÉTODO FRICCIÓN 0
+            {hector ? "CLAUDE PARA DIRECTORES DE HOTEL" : "MÉTODO FRICCIÓN 0"}
           </div>
         </div>
 
@@ -77,7 +82,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
         </div>
 
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <div style={{ display: "flex", fontSize: 26, fontWeight: 500, color: "#b9b9b4" }}>Más ingreso por huésped, sin sumar personal</div>
+          <div style={{ display: "flex", fontSize: 26, fontWeight: 500, color: "#b9b9b4" }}>{hector ? "Aprende a montarlo con los datos de tu hotel" : "Más ingreso por huésped, sin sumar personal"}</div>
           <div
             style={{
               display: "flex",

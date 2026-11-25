@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import { CALENDLY_URL } from "@/lib/site";
-import { getRecurso, normalizarSlug, RECURSOS } from "@/lib/recursos";
+import { esDeHector, getRecurso, normalizarSlug, RECURSOS } from "@/lib/recursos";
 import { pedirRecurso } from "./actions";
 import styles from "../recurso.module.css";
 import { Cabecera, Pie } from "../Marca";
@@ -23,7 +23,8 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const recurso = getRecurso(normalizarSlug((await params).slug));
-  const title = recurso ? `${recurso.titulo} — Vértice` : "Recurso — Vértice";
+  const marca = esDeHector(recurso) ? "Héctor García" : "Vértice";
+  const title = recurso ? `${recurso.titulo} — ${marca}` : `Recurso — ${marca}`;
   return {
     metadataBase: new URL("https://verticeqr.com"),
     title,
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     robots: { index: false, follow: false },
     // La imagen la genera opengraph-image.tsx: es la portada que sale al
     // pegar el enlace en LinkedIn, WhatsApp o un email.
-    openGraph: { title, description: recurso?.subtitulo, type: "website", siteName: "Vértice" },
+    openGraph: { title, description: recurso?.subtitulo, type: "website", siteName: marca },
     twitter: { card: "summary_large_image", title, description: recurso?.subtitulo },
   };
 }
@@ -44,11 +45,12 @@ export default async function RecursoPage({ params, searchParams }: Props) {
   const recurso = getRecurso(slug);
   if (!recurso) notFound();
   const { error } = await searchParams;
+  const hector = esDeHector(recurso);
 
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
-        <Cabecera />
+        <Cabecera hector={hector} />
         <div className={styles.heroInner}>
           <div className={styles.heroCopy}>
 
@@ -59,7 +61,7 @@ export default async function RecursoPage({ params, searchParams }: Props) {
               </svg>
               <div>
                 <div className={styles.badgeTitle}>{recurso.etiqueta}</div>
-                <div className={styles.badgeSub}>Del Método Fricción 0 · Vértice</div>
+                <div className={styles.badgeSub}>{hector ? "De Héctor García" : "Del Método Fricción 0 · Vértice"}</div>
               </div>
             </div>
 
@@ -120,47 +122,94 @@ export default async function RecursoPage({ params, searchParams }: Props) {
         </div>
       </section>
 
-      <section className={styles.dark}>
-        <div className={styles.wrap}>
-          <div className={styles.eyebrowNum}>( 01 )</div>
-          <div className={styles.eyebrow}>Quién está detrás</div>
-          <p className={styles.lead}>
-            Este recurso sale del Método Fricción 0: el sistema con el que Vértice ayuda a directores de hotel a
-            sacar más de lo que el huésped gasta dentro, sin sumar una persona a la plantilla.
-          </p>
-          <div className={styles.pilares}>
-            <div>
-              <div className={styles.pilarTitle}>Métricas Claras</div>
-              <p>Ves lo que el huésped quiso comprar y no pudo. Ese dato no está en tu PMS ni en tu TPV.</p>
+      {hector ? (
+        <>
+          <section className={styles.dark}>
+            <div className={styles.wrap}>
+              <div className={styles.eyebrowNum}>( 01 )</div>
+              <div className={styles.eyebrow}>Quién está detrás</div>
+              <p className={styles.lead}>
+                Soy Héctor García. Enseño a directores de hotel a montar sus propios agentes con Claude para quitarse de
+                encima el trabajo de oficina: el cierre de mes, los informes para la propiedad, los turnos y las reseñas.
+              </p>
+              <div className={styles.pilares}>
+                <div>
+                  <div className={styles.pilarTitle}>Con tus datos</div>
+                  <p>Trabajas con los informes que ya sacas del programa de recepción y de la caja. Nada de datos de huéspedes.</p>
+                </div>
+                <div>
+                  <div className={styles.pilarTitle}>Lo montas tú</div>
+                  <p>Cada rutina acaba siendo un agente tuyo, que lanzas cuando toca y revisas antes de mandar nada.</p>
+                </div>
+                <div>
+                  <div className={styles.pilarTitle}>Sin programar</div>
+                  <p>Si sabes escribir un correo, sabes pedirle las cosas a Claude. El resto se aprende con tu hotel delante.</p>
+                </div>
+              </div>
             </div>
-            <div>
-              <div className={styles.pilarTitle}>Motor de Venta</div>
-              <p>Cada cosa que ofrece el hotel le llega al huésped justo cuando la está pensando, en su móvil.</p>
+          </section>
+
+          <section className={styles.final}>
+            <div className={styles.wrapNarrow}>
+              <div className={styles.eyebrowNum}>( 02 )</div>
+              <div className={styles.eyebrow}>Y esto es solo el principio</div>
+              <h2 className={styles.finalTitle}>¿Quieres aprender a montarlo con tu hotel?</h2>
+              <p className={styles.finalText}>
+                En una llamada de 15 minutos me cuentas tu semana y te digo qué montarías primero y cómo aprender a
+                hacerlo. Si veo que no te compensa, te lo digo igual.
+              </p>
+              <a className={styles.finalCta} href={`${CALENDLY_URL}?utm_source=recurso&utm_campaign=${recurso.slug}`} target="_blank" rel="noopener noreferrer">
+                Reservar mi llamada <span aria-hidden="true">↗</span>
+              </a>
+              <p className={styles.finalNote}>Sin coste y sin compromiso.</p>
             </div>
-            <div>
-              <div className={styles.pilarTitle}>Escala sin Fricción</div>
-              <p>Lo montamos nosotros. Tu equipo no suma tareas y tú no tocas nada.</p>
+          </section>
+        </>
+      ) : (
+        <>
+        <section className={styles.dark}>
+          <div className={styles.wrap}>
+            <div className={styles.eyebrowNum}>( 01 )</div>
+            <div className={styles.eyebrow}>Quién está detrás</div>
+            <p className={styles.lead}>
+              Este recurso sale del Método Fricción 0: el sistema con el que Vértice ayuda a directores de hotel a
+              sacar más de lo que el huésped gasta dentro, sin sumar una persona a la plantilla.
+            </p>
+            <div className={styles.pilares}>
+              <div>
+                <div className={styles.pilarTitle}>Métricas Claras</div>
+                <p>Ves lo que el huésped quiso comprar y no pudo. Ese dato no está en tu PMS ni en tu TPV.</p>
+              </div>
+              <div>
+                <div className={styles.pilarTitle}>Motor de Venta</div>
+                <p>Cada cosa que ofrece el hotel le llega al huésped justo cuando la está pensando, en su móvil.</p>
+              </div>
+              <div>
+                <div className={styles.pilarTitle}>Escala sin Fricción</div>
+                <p>Lo montamos nosotros. Tu equipo no suma tareas y tú no tocas nada.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className={styles.final}>
-        <div className={styles.wrapNarrow}>
-          <div className={styles.eyebrowNum}>( 02 )</div>
-          <div className={styles.eyebrow}>Y esto es solo una pieza</div>
-          <h2 className={styles.finalTitle}>¿Quieres verlo con tu hotel delante?</h2>
-          <p className={styles.finalText}>
-            En una llamada de 15 minutos me cuentas cómo pide hoy tu huésped y te digo qué se escapa y qué se
-            tapa sin sumar personal. Si no veo nada, te lo digo igual.
-          </p>
-          <a className={styles.finalCta} href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-            Reservar mi diagnóstico <span aria-hidden="true">↗</span>
-          </a>
-          <p className={styles.finalNote}>Sin coste y sin compromiso.</p>
-        </div>
-      </section>
-      <Pie />
+        </section>
+  
+        <section className={styles.final}>
+          <div className={styles.wrapNarrow}>
+            <div className={styles.eyebrowNum}>( 02 )</div>
+            <div className={styles.eyebrow}>Y esto es solo una pieza</div>
+            <h2 className={styles.finalTitle}>¿Quieres verlo con tu hotel delante?</h2>
+            <p className={styles.finalText}>
+              En una llamada de 15 minutos me cuentas cómo pide hoy tu huésped y te digo qué se escapa y qué se
+              tapa sin sumar personal. Si no veo nada, te lo digo igual.
+            </p>
+            <a className={styles.finalCta} href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+              Reservar mi diagnóstico <span aria-hidden="true">↗</span>
+            </a>
+            <p className={styles.finalNote}>Sin coste y sin compromiso.</p>
+          </div>
+        </section>
+        </>
+      )}
+      <Pie hector={hector} />
     </main>
   );
 }

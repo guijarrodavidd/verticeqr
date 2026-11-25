@@ -17,6 +17,8 @@ export type Recurso = {
   destino: string;
   // Texto del botón de la página de entrega.
   cta: string;
+  // De quién es: "vertice" (por defecto, Método Fricción 0) o "hector" (Héctor García: aprender a montarlo tú).
+  marca?: "vertice" | "hector";
 };
 
 export const RECURSOS: Recurso[] = [
@@ -289,6 +291,72 @@ export const RECURSOS: Recurso[] = [
     destino: "/informe",
     cta: "Abrir el sistema de informes",
   },
+  // Recursos que estuvieron abiertos sin formulario (prueba de noviembre de 2026).
+  // Desde el 25-nov-2026 vuelven a pedir el correo antes de abrirse.
+  {
+    slug: "director",
+    marca: "hector",
+    etiqueta: "Recurso gratuito",
+    titulo: "Claude, director de hotel",
+    subtitulo:
+      "Las 9 rutinas que te prepara Claude: cinco cada semana, del lunes con la semana que viene al viernes con los números para la propiedad, y cuatro cada mes, del cierre a los proveedores.",
+    incluye: [
+      "Lunes: la semana que viene, con ocupación, llegadas y grupos",
+      "Martes a jueves: reseñas, turnos y grupos sin contestar",
+      "Viernes: la semana en cinco líneas para la propiedad",
+      "Cada mes: cierre, desviaciones, informe para los dueños y proveedores",
+      "El prompt de cada rutina y un ejemplo ya hecho",
+    ],
+    destino: "/director",
+    cta: "Abrir las 9 rutinas",
+  },
+  {
+    slug: "propiedad",
+    marca: "hector",
+    etiqueta: "Recurso gratuito",
+    titulo: "Todo lo que pide la propiedad, hecho con Claude",
+    subtitulo:
+      "36 guías en 7 fases, del presupuesto de enero al cierre del año. Cada guía es un prompt listo para pegar, con lo que le pasas a Claude y lo que te devuelve.",
+    incluye: [
+      "El presupuesto del año y el cierre de cada mes",
+      "El informe para los dueños y la reunión con la propiedad",
+      "Las obras que hay que justificar y los costes de personal",
+      "Un ejemplo hecho en cada guía, con un hotel de 80 habitaciones",
+    ],
+    destino: "/propiedad",
+    cta: "Abrir las 36 guías",
+  },
+  {
+    slug: "curso",
+    marca: "hector",
+    etiqueta: "Recurso gratuito",
+    titulo: "El curso de Claude para tu hotel",
+    subtitulo:
+      "8 líneas y 40 módulos para dominar Claude si diriges un hotel. Cada módulo trae la lección, el prompt para copiar y un ejemplo ya hecho.",
+    incluye: [
+      "Primeros pasos, para empezar aunque no lo hayas usado nunca",
+      "Dirección, recepción, personas, números, restaurante, pisos y comercial",
+      "El prompt de cada módulo, listo para copiar",
+      "«Revísalo tú»: lo que tienes que comprobar antes de usarlo",
+    ],
+    destino: "/curso",
+    cta: "Empezar el curso",
+  },
+  {
+    slug: "equipo-ia",
+    marca: "hector",
+    etiqueta: "Recurso gratuito",
+    titulo: "Tu hotel, con el equipo de un 5 estrellas",
+    subtitulo:
+      "52 agentes de IA en los 10 departamentos del hotel: un jefe por área y los agentes que trabajan con él, listos para montar en Claude.",
+    incluye: [
+      "Los 10 departamentos, de recepción a mantenimiento",
+      "Qué hace cada agente y qué le pasas",
+      "Las instrucciones de cada uno para descargar",
+    ],
+    destino: "/equipo-ia",
+    cta: "Ver los 52 agentes",
+  },
   // Plantilla: copia este bloque, cambia el slug, el título y el enlace, y ya
   // está publicada en /recurso/<slug>.
   {
@@ -320,6 +388,8 @@ export function normalizarSlug(slug: string): string {
   }
   return s.toLowerCase().replace(/[^a-z0-9-]+$/, "");
 }
+
+export const esDeHector = (r?: Recurso) => r?.marca === "hector";
 
 export function getRecurso(slug: string): Recurso | undefined {
   return RECURSOS.find((r) => r.slug === slug);

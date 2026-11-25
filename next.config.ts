@@ -89,11 +89,7 @@ const nextConfig: NextConfig = {
       { source: "/mapa", destination: "/mapa/index.html", permanent: false },
       { source: "/biblioteca", destination: "/biblioteca/index.html", permanent: false },
       // Recurso abierto, sin formulario (prueba de noviembre de 2026)
-      { source: "/recurso/equipo-ia", destination: "/equipo-ia", permanent: false },
-      { source: "/recurso/curso", destination: "/curso", permanent: false },
-      { source: "/recurso/propiedad", destination: "/propiedad", permanent: false },
-      { source: "/recurso/guia", destination: "/propiedad", permanent: false },
-      { source: "/recurso/director", destination: "/director", permanent: false },
+      { source: "/recurso/guia", destination: "/recurso/propiedad", permanent: false },
     ];
   },
 };
