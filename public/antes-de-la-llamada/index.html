@@ -32,6 +32,7 @@ h2{font-size:clamp(28px,4.6vw,48px);line-height:1.05;font-weight:400;letter-spac
 .botones{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 .cierre{text-align:center;display:grid;justify-items:center;gap:14px;padding:44px 24px;border-radius:28px;border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box}
 section.primero{margin-top:8px}
+section.primero .sits{margin-top:0}
 /* vídeos */
 .video{position:relative;aspect-ratio:16/9;width:100%;border-radius:22px;overflow:hidden;background:#0B1220}
 .video video{position:absolute;inset:0;width:100%;height:100%;display:block;background:#0B1220}
@@ -61,10 +62,12 @@ hr{border:0;border-top:1px solid var(--linea);margin:56px 0 0}
 /* situaciones */
 .sits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
 .sit{background:#fff;border:1px solid var(--linea);border-radius:24px;padding:22px;display:grid;gap:14px;align-content:start;min-width:0}
-.sit h3{font-size:21px;font-weight:400;letter-spacing:-.04em;line-height:1.2;min-height:2.4em}
+.sit h3{font-size:24px;font-weight:750;letter-spacing:-.045em;line-height:1.15}
+.sit h3+p{margin-top:8px}
 .sit p{font-size:16px;color:var(--gris)}
 .sit.ancha{grid-column:1 / -1;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:center;gap:26px;border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box}
-.sit.ancha h3{font-size:clamp(24px,3.4vw,34px);min-height:0}
+.sit.ancha h3{font-size:clamp(28px,4vw,42px)}
+.sit.ancha p{font-size:18px}
 /* recursos */
 .recs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
 .rec{position:relative;display:grid;gap:4px;padding:20px 54px 20px 22px;border-radius:20px;background:var(--niebla);color:inherit;text-decoration:none;min-width:0}
@@ -88,22 +91,13 @@ footer a{color:inherit}
 <header class="cab">
   <span class="pil" id="cita">Antes de la llamada</span>
   <h1>Antes de vernos, <b>resolvamos tus primeras dudas</b></h1>
-  <p class="sub" id="saludo">Seis vídeos de tres minutos. Empieza por el primero y sigue con el que más se parezca a tu situación.</p>
+  <p class="sub" id="saludo">Las siete dudas que más me ponen los directores antes de empezar, contestadas en tres minutos cada una.</p>
   <a class="boton" id="cta-arriba" href="https://calendly.com/vertice1/nueva-reunion-1?utm_source=videos&amp;utm_campaign=antes-de-la-llamada">Reservar mi llamada</a>
 </header>
 
 <section class="primero">
-  <div class="video vacio grande" data-hueco="punto"><span class="play" aria-hidden="true"></span><b>¿En qué punto estás?</b><small>Vídeo · 3 min</small></div>
-  <div class="centro" style="margin:44px 0 0">
-    <span class="pil">Según tu situación</span>
-    <h2>Y ahora, <b>el que más se parezca a ti</b></h2>
-  </div>
   <div class="sits">
-    <article class="sit"><h3>Si lo haces <b>todo a mano</b>, este es el primero que tienes que ver</h3><div class="video vacio" data-hueco="lunes"><span class="play" aria-hidden="true"></span><b>El lunes</b><small>Vídeo · 3 min</small></div><p>Cómo pasar de una hora con el Excel a diez minutos, con el resumen de la semana ya hecho.</p></article><article class="sit"><h3>Si tienes <b>los datos y no el tiempo</b> de mirarlos</h3><div class="video vacio" data-hueco="propiedad"><span class="play" aria-hidden="true"></span><b>El informe para la propiedad</b><small>Vídeo · 3 min</small></div><p>El personal, alimentos y bebidas y la energía, explicados antes de entrar a la reunión.</p></article><article class="sit"><h3>Si lo que te come la semana es <b>el cuadrante</b></h3><div class="video vacio" data-hueco="turnos"><span class="play" aria-hidden="true"></span><b>Los turnos</b><small>Vídeo · 3 min</small></div><p>Qué días te falta gente y cómo cubrirlos, a partir de la ocupación prevista.</p></article><article class="sit"><h3>Si <b>ya usas ChatGPT o Claude</b> y quieres sacarle más</h3><div class="video vacio" data-hueco="ia"><span class="play" aria-hidden="true"></span><b>La IA suelta</b><small>Vídeo · 3 min</small></div><p>Las normas de datos de tu hotel y el paso del chat a que trabaje sola, a su hora.</p></article>
-    <article class="sit ancha">
-      <div><h3>Y para todos, <b>cómo sería en tu hotel</b></h3><p style="margin-top:10px">La auditoría de tu semana, el plano de tu sistema y tu primer agente en 14 días.</p></div>
-      <div class="video vacio" data-hueco="hotel"><span class="play" aria-hidden="true"></span><b>Cómo sería en tu hotel</b><small>Vídeo · 3 min</small></div>
-    </article>
+    <article class="sit ancha"><div><h3>«No tengo tiempo para esto»</h3><p>De dónde sale el tiempo: una tarea de diez minutos, y cinco horas de vuelta cada semana.</p></div><div class="video vacio" data-hueco="tiempo"><span class="play" aria-hidden="true"></span><b>No tengo tiempo para esto</b><small>Vídeo · 3 min</small></div></article><article class="sit"><div><h3>«En mi hotel decide la propiedad»</h3><p>Funciona sin tocar nada del hotel, y arriba llegas con el informe hecho.</p></div><div class="video vacio" data-hueco="propiedad"><span class="play" aria-hidden="true"></span><b>En mi hotel decide la propiedad</b><small>Vídeo · 3 min</small></div></article><article class="sit"><div><h3>«No sé de tecnología»</h3><p>No se programa nada. Se le escribe, con tres reglas para no equivocarse.</p></div><div class="video vacio" data-hueco="tecnologia"><span class="play" aria-hidden="true"></span><b>No sé de tecnología</b><small>Vídeo · 3 min</small></div></article><article class="sit"><div><h3>«¿Y los datos de mi hotel?»</h3><p>Se trabaja con totales, nunca con personas. Qué se le pasa y qué nunca.</p></div><div class="video vacio" data-hueco="datos"><span class="play" aria-hidden="true"></span><b>¿Y los datos de mi hotel?</b><small>Vídeo · 3 min</small></div></article><article class="sit"><div><h3>«Ya uso ChatGPT»</h3><p>Lo que el chat no te da: que trabaje sola, a su hora, y tú solo apruebes.</p></div><div class="video vacio" data-hueco="chatgpt"><span class="play" aria-hidden="true"></span><b>Ya uso ChatGPT</b><small>Vídeo · 3 min</small></div></article><article class="sit"><div><h3>«¿Y si en mi hotel no funciona?»</h3><p>Empezamos por tu hotel, con dos controles: a los 14 días y el día 60.</p></div><div class="video vacio" data-hueco="mi-hotel"><span class="play" aria-hidden="true"></span><b>¿Y si en mi hotel no funciona?</b><small>Vídeo · 3 min</small></div></article><article class="sit"><div><h3>«Ahora no es el momento»</h3><p>Lo que aprendes se queda contigo, cambies de hotel o no.</p></div><div class="video vacio" data-hueco="momento"><span class="play" aria-hidden="true"></span><b>Ahora no es el momento</b><small>Vídeo · 2 min</small></div></article>
   </div>
 </section>
 
@@ -142,7 +136,7 @@ footer a{color:inherit}
       document.getElementById('cta-arriba').hidden = true;
       document.getElementById('cta-abajo').hidden = true;
     }
-    if (nombre) document.getElementById('saludo').textContent = nombre + ', son seis vídeos de tres minutos. Empieza por el primero y sigue con el que más se parezca a tu situación.';
+    if (nombre) document.getElementById('saludo').textContent = nombre + ', estas son las siete dudas que más me ponen los directores antes de empezar, contestadas en tres minutos cada una.';
   } catch (err) {}
 })();
 </script>
