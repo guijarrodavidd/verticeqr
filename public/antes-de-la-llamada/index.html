@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Antes de nuestra llamada · Héctor García</title>
+<meta name="description" content="Confirma tu llamada y mira en qué punto estás antes de vernos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&display=swap">
+<style>
+:root{--tinta:#0E1116;--gris:#5B6470;--niebla:#F1F6F6;--linea:rgba(14,17,22,.10);--aqua:#5EE6D8;--teal:#087F7B;--lima:#A8D86A;--grad:linear-gradient(90deg,#36C6C0 0%,#A8D86A 100%);--f:"Geist",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--f);color:var(--tinta);-webkit-font-smoothing:antialiased;letter-spacing:-.011em;line-height:1.5;overflow-x:hidden;
+  background:radial-gradient(48% 34rem at 0% 6rem,rgba(94,230,216,.30),transparent 70%),radial-gradient(46% 30rem at 100% 0,rgba(168,216,106,.28),transparent 70%),#FFFFFF;background-repeat:no-repeat;
+  padding-block:0 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:980px;margin:0 auto}
+b{font-weight:750}
+.marca{text-align:center;padding:30px 0 22px;font-size:21px;font-weight:700;letter-spacing:-.03em}
+/* barra de progreso */
+.barra{height:38px;border-radius:999px;background:var(--niebla);border:1px solid var(--linea);overflow:hidden;position:relative}
+.barra i{position:absolute;inset:0 20% 0 0;border-radius:999px;background:repeating-linear-gradient(-45deg,rgba(255,255,255,.28) 0 12px,transparent 12px 24px),var(--grad)}
+.barra span{position:absolute;inset:0;display:grid;place-items:center;font-size:14px;font-weight:650;letter-spacing:.01em;color:var(--tinta)}
+.pil{display:inline-flex;align-items:center;padding:7px 16px;border-radius:999px;font-size:15px;font-weight:500;letter-spacing:-.02em;background:rgba(255,255,255,.85);border:1px solid var(--linea)}
+.cab{text-align:center;display:grid;justify-items:center;gap:14px;padding:34px 0 26px}
+h1{font-size:clamp(34px,6.4vw,66px);line-height:1.02;font-weight:400;letter-spacing:-.055em;text-wrap:balance}
+h2{font-size:clamp(28px,4.6vw,48px);line-height:1.05;font-weight:400;letter-spacing:-.05em;text-wrap:balance}
+.sub{font-size:clamp(17px,2.2vw,21px);color:var(--gris);max-width:44ch}
+/* vídeos */
+.video{position:relative;aspect-ratio:16/9;width:100%;border-radius:22px;overflow:hidden;background:#0B1220}
+.video video{position:absolute;inset:0;width:100%;height:100%;display:block;background:#0B1220}
+.video.vacio{display:grid;place-content:center;justify-items:center;gap:8px;text-align:center;padding:16px;border:2px solid transparent;background:linear-gradient(var(--niebla),var(--niebla)) padding-box,var(--grad) border-box;color:var(--tinta)}
+.video.vacio b{font-size:clamp(17px,2.4vw,24px);font-weight:700;letter-spacing:-.04em}
+.video.vacio small{font-size:14px;color:var(--gris)}
+.video.grande.vacio b{font-size:clamp(20px,3.2vw,32px)}
+.play{width:64px;height:64px;border-radius:50%;background:var(--tinta);position:relative;margin-bottom:6px}
+.play::after{content:"";position:absolute;left:26px;top:20px;border-left:18px solid #fff;border-top:12px solid transparent;border-bottom:12px solid transparent}
+/* paso 2 */
+section{margin-top:56px}
+.centro{text-align:center;display:grid;justify-items:center;gap:12px;margin-bottom:26px}
+.pasos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.paso{background:#fff;border:1px solid var(--linea);border-radius:24px;padding:24px;display:grid;gap:16px;align-content:start;min-width:0}
+.paso h3{font-size:23px;font-weight:700;letter-spacing:-.04em;line-height:1.15}
+.paso p{font-size:16.5px;color:var(--gris)}
+.chat{background:var(--niebla);border-radius:18px;padding:16px;display:grid;gap:10px}
+.burbuja{max-width:88%;padding:11px 14px;border-radius:16px;font-size:15.5px;line-height:1.4;background:#fff;border:1px solid var(--linea)}
+.burbuja.tu{justify-self:end;background:#DDF7E0;border-color:#BFEBC6;font-weight:600}
+.invita{background:var(--niebla);border-radius:18px;padding:16px;display:grid;gap:12px}
+.invita strong{font-size:17px;letter-spacing:-.03em}
+.invita small{font-size:14px;color:var(--gris)}
+.resp{display:flex;gap:8px;flex-wrap:wrap}
+.resp span{padding:8px 18px;border-radius:999px;font-size:14.5px;font-weight:600;border:1.5px solid var(--linea);background:#fff}
+.resp span.si{background:var(--tinta);border-color:var(--tinta);color:#fff}
+hr{border:0;border-top:1px solid var(--linea);margin:56px 0 0}
+/* situaciones */
+.sits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+.sit{background:#fff;border:1px solid var(--linea);border-radius:24px;padding:22px;display:grid;gap:14px;align-content:start;min-width:0}
+.sit h3{font-size:21px;font-weight:400;letter-spacing:-.04em;line-height:1.2;min-height:2.4em}
+.sit p{font-size:16px;color:var(--gris)}
+.sit.ancha{grid-column:1 / -1;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:center;gap:26px;border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box}
+.sit.ancha h3{font-size:clamp(24px,3.4vw,34px);min-height:0}
+/* recursos */
+.recs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.rec{position:relative;display:grid;gap:4px;padding:20px 54px 20px 22px;border-radius:20px;background:var(--niebla);color:inherit;text-decoration:none;min-width:0}
+.rec b{font-size:19px;font-weight:700;letter-spacing:-.035em}
+.rec span{font-size:15.5px;color:var(--gris)}
+.rec i{position:absolute;right:20px;top:50%;transform:translateY(-50%);font-style:normal;font-size:22px;color:var(--teal)}
+.rec:hover{background:#E7F3F2}
+a:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:12px}
+footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--linea);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--gris)}
+footer a{color:inherit}
+@media (max-width:720px){
+  .pasos,.sits,.recs{grid-template-columns:minmax(0,1fr)}
+  .sit.ancha{grid-template-columns:minmax(0,1fr)}
+  .sit h3{min-height:0}
+  section{margin-top:44px}
+}
+</style></head><body><div class="wrap">
+
+<p class="marca">Héctor García</p>
+
+<div class="barra" role="img" aria-label="80 % completado"><i></i><span>80 % completado</span></div>
+
+<header class="cab">
+  <span class="pil">Un último paso</span>
+  <h1 id="titular">Tu llamada <b>todavía no está confirmada</b></h1>
+  <p class="sub" id="saludo">Mira este vídeo de dos minutos y la dejas cerrada.</p>
+</header>
+
+<div class="video vacio grande" data-hueco="confirma"><span class="play" aria-hidden="true"></span><b>Confirma tu llamada</b><small>Vídeo · 2 min</small></div>
+
+<section>
+  <div class="centro">
+    <span class="pil">Paso 2</span>
+    <h2>Confírmala <b>en dos gestos</b></h2>
+    <p class="sub" id="cuando">Es un minuto, y así sé que cuento contigo.</p>
+  </div>
+  <div class="pasos">
+    <article class="paso">
+      <h3>Contesta al WhatsApp que te acabo de mandar</h3>
+      <div class="chat" aria-hidden="true">
+        <div class="burbuja">Hola, soy Héctor García. Te escribo para confirmar nuestra llamada. ¿Sigue en pie?</div>
+        <div class="burbuja tu">Sí, voy a asistir</div>
+      </div>
+      <p>Con ese mensaje queda confirmada. Si necesitas cambiar la hora, dímelo ahí mismo.</p>
+    </article>
+    <article class="paso">
+      <h3>Añade la llamada a tu calendario</h3>
+      <div class="invita" aria-hidden="true">
+        <strong>Llamada con Héctor García</strong>
+        <small id="fecha-invita">15 minutos · por videollamada</small>
+        <div class="resp"><span class="si">Sí</span><span>Quizá</span><span>No</span></div>
+      </div>
+      <p>Te ha llegado un correo con la invitación. Si no lo ves, mira en Promociones o en Spam.</p>
+    </article>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <div class="centro">
+    <span class="pil">Antes de vernos</span>
+    <h2>Mira <b>en qué punto estás</b> en este vídeo de 3 minutos</h2>
+    <p class="sub">Y antes de la llamada, mira el que más se parezca a tu situación.</p>
+  </div>
+  <div class="video vacio grande" data-hueco="punto"><span class="play" aria-hidden="true"></span><b>¿En qué punto estás?</b><small>Vídeo · 3 min</small></div>
+  <div class="sits">
+    <article class="sit"><h3>Si lo haces <b>todo a mano</b>, este es el primero que tienes que ver</h3><div class="video vacio" data-hueco="lunes"><span class="play" aria-hidden="true"></span><b>El lunes</b><small>Vídeo · 3 min</small></div><p>Cómo pasar de una hora con el Excel a diez minutos, con el resumen de la semana ya hecho.</p></article><article class="sit"><h3>Si tienes <b>los datos y no el tiempo</b> de mirarlos</h3><div class="video vacio" data-hueco="propiedad"><span class="play" aria-hidden="true"></span><b>El informe para la propiedad</b><small>Vídeo · 3 min</small></div><p>El personal, alimentos y bebidas y la energía, explicados antes de entrar a la reunión.</p></article><article class="sit"><h3>Si lo que te come la semana es <b>el cuadrante</b></h3><div class="video vacio" data-hueco="turnos"><span class="play" aria-hidden="true"></span><b>Los turnos</b><small>Vídeo · 3 min</small></div><p>Qué días te falta gente y cómo cubrirlos, a partir de la ocupación prevista.</p></article><article class="sit"><h3>Si <b>ya usas ChatGPT o Claude</b> y quieres sacarle más</h3><div class="video vacio" data-hueco="ia"><span class="play" aria-hidden="true"></span><b>La IA suelta</b><small>Vídeo · 3 min</small></div><p>Las normas de datos de tu hotel y el paso del chat a que trabaje sola, a su hora.</p></article>
+    <article class="sit ancha">
+      <div><h3>Y para todos, <b>cómo sería en tu hotel</b></h3><p style="margin-top:10px">La auditoría de tu semana, el plano de tu sistema y tu primer agente en 14 días.</p></div>
+      <div class="video vacio" data-hueco="hotel"><span class="play" aria-hidden="true"></span><b>Cómo sería en tu hotel</b><small>Vídeo · 3 min</small></div>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="centro">
+    <span class="pil">Y mientras tanto</span>
+    <h2>Recursos para <b>ir probando</b></h2>
+    <p class="sub">Gratis, para que veas por dentro cómo trabajo.</p>
+  </div>
+  <div class="recs"><a class="rec" href="/director"><b>Claude, director de hotel</b><span>9 rutinas, cinco cada semana y cuatro cada mes.</span><i aria-hidden="true">→</i></a><a class="rec" href="/propiedad"><b>Todo lo que pide la propiedad</b><span>36 guías, del presupuesto al cierre del año.</span><i aria-hidden="true">→</i></a><a class="rec" href="/curso"><b>El curso de Claude para tu hotel</b><span>8 líneas y 40 módulos, con el prompt de cada uno.</span><i aria-hidden="true">→</i></a><a class="rec" href="/equipo-ia"><b>El equipo de un 5 estrellas</b><span>52 agentes en los 10 departamentos del hotel.</span><i aria-hidden="true">→</i></a></div>
+</section>
+
+<footer><span>Héctor García · verticeqr.com</span><span><a href="/privacidad">Privacidad</a> · <a href="/terminos">Términos</a></span></footer>
+</div>
+<script>
+// Si Calendly manda el nombre y la hora en la dirección, la página saluda y enseña la cita.
+(function () {
+  try {
+    var q = new URLSearchParams(location.search);
+    var nombre = (q.get('invitee_first_name') || q.get('nombre') || '').trim().slice(0, 40);
+    var hora = q.get('event_start_time') || q.get('cuando') || '';
+    if (nombre) document.getElementById('saludo').textContent = nombre + ', mira este vídeo de dos minutos y la dejas cerrada.';
+    var d = hora ? new Date(hora) : null;
+    if (d && !isNaN(d)) {
+      var dia = d.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
+      var h = d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+      document.getElementById('cuando').textContent = 'Nos vemos el ' + dia + ' a las ' + h + '.';
+      document.getElementById('fecha-invita').textContent = dia + ' · ' + h + ' · 15 minutos';
+    }
+  } catch (err) {}
+})();
+</script>
+</body></html>

@@ -39,6 +39,8 @@ const nextConfig: NextConfig = {
       { source: "/propiedad", destination: "/propiedad/index.html" },
       // Recurso del post DIRECTOR (25-nov-2026): «Claude, director de hotel», 9 rutinas. Abierto, sin formulario.
       { source: "/director", destination: "/director/index.html" },
+      // Página de confirmación de la llamada (25-nov-2026): confirmar y vídeos por situación. Sin enlazar.
+      { source: "/antes-de-la-llamada", destination: "/antes-de-la-llamada/index.html" },
       // Landing del programa Director con Claude (aparte de Vértice).
       { source: "/programa", destination: "/programa/index.html" },
       // Panel de ejemplo del plan A medida (Hotel Brisalta, inventado). Sin enlazar.
