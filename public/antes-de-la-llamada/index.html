@@ -35,7 +35,7 @@ section.primero{margin-top:8px;scroll-margin-top:24px}
 section.primero .sits{margin-top:0}
 /* vídeos */
 .video{position:relative;aspect-ratio:16/9;width:100%;border-radius:22px;overflow:hidden;background:#0B1220}
-.video video{position:absolute;inset:0;width:100%;height:100%;display:block;background:#0B1220}
+.video video{position:absolute;inset:0;width:100%;height:100%;display:block;background:#0B1220;cursor:pointer}
 .video.vacio{display:grid;place-content:center;justify-items:center;gap:8px;text-align:center;padding:16px;border:2px solid transparent;background:linear-gradient(var(--niebla),var(--niebla)) padding-box,var(--grad) border-box;color:var(--tinta)}
 .video.vacio b{font-size:clamp(17px,2.4vw,24px);font-weight:700;letter-spacing:-.04em}
 .video.vacio small{font-size:14px;color:var(--gris)}
@@ -92,13 +92,13 @@ footer a{color:inherit}
 <header class="cab">
   <span class="pil" id="cita">Antes de la llamada</span>
   <h1>Antes de vernos, <b>resolvamos tus primeras dudas</b></h1>
-  <p class="sub" id="saludo">Tres vídeos de tres minutos. Míralos antes de la llamada y apunta lo que te pido.</p>
+  <p class="sub" id="saludo">Tres vídeos cortos. Míralos antes de la llamada y apunta lo que te pido.</p>
   <a class="boton" id="cta-arriba" href="#videos">Ver los vídeos</a>
 </header>
 
 <section class="primero" id="videos">
   <div class="sits">
-    <article class="sit ancha"><div><span class="pil">Vídeo 1</span><h3>¿Seguir con el Excel o poner la IA a trabajar?</h3><p>4 horas a la semana durante 3 meses frente a seguir igual. Con números de ejemplo: cómo 10 horas de oficina a la semana pueden quedarse en 5.</p><p class="tarea"><b>Antes de la llamada.</b> Apunta cuántas horas se te van cada semana en informes, cierre y turnos.</p></div><div class="video vacio" data-hueco="excel-o-ia"><span class="play" aria-hidden="true"></span><b>Vídeo 1</b><small>Vídeo · 3 min</small></div></article><article class="sit ancha"><div><span class="pil">Vídeo 2</span><h3>El cierre, el informe para la propiedad y el cuadrante, no un correo mejor escrito</h3><p>Cómo elegir las tareas que de verdad te devuelven horas en tu hotel, antes de tocar nada.</p><p class="tarea"><b>Antes de la llamada.</b> Apunta las tres tareas que repites todas las semanas.</p></div><div class="video vacio" data-hueco="que-tareas"><span class="play" aria-hidden="true"></span><b>Vídeo 2</b><small>Vídeo · 3 min</small></div></article><article class="sit ancha"><div><span class="pil">Vídeo 3</span><h3>¿Por qué lo que pruebas con la IA se queda en el cajón de «para después»?</h3><p>Lo que falla cuando depende de que te acuerdes, y cómo se pasa del chat a que trabaje solo, a su hora.</p></div><div class="video vacio" data-hueco="cajon"><span class="play" aria-hidden="true"></span><b>Vídeo 3</b><small>Vídeo · 3 min</small></div></article>
+    <article class="sit ancha"><div><span class="pil">Vídeo 1</span><h3>¿Seguir a mano o aprender a automatizarlo?</h3><p>Con números de ejemplo: las 12 horas de oficina que se le van cada semana a un director, cuántas recupera con agentes y lo que le pide aprenderlo.</p><p class="tarea"><b>Antes de la llamada.</b> Apunta las tres tareas que repites cada semana y cuánto te lleva cada una.</p></div><div class="video"><video playsinline preload="none" aria-label="Reproducir el vídeo 1" poster="/antes-de-la-llamada/video-1-3cec3819.jpg" src="/antes-de-la-llamada/video-1-3cec3819.mp4"></video></div></article><article class="sit ancha"><div><span class="pil">Vídeo 2</span><h3>¿Por qué la IA te da algo genérico?</h3><p>Los tres pasos para que trabaje con los datos de tu hotel: elegir bien la tarea, contarle tu hotel una sola vez y revisar antes de que salga.</p><p class="tarea"><b>Antes de la llamada.</b> Apunta la tarea que quieres encontrarte hecha el lunes a las 8.</p></div><div class="video vacio" data-hueco="generico"><span class="play" aria-hidden="true"></span><b>Vídeo 2</b><small>Muy pronto</small></div></article><article class="sit ancha"><div><span class="pil">Vídeo 3</span><h3>¿Por qué lo que pruebas con la IA se queda en el cajón de «para después»?</h3><p>Lo que falla cuando depende de que te acuerdes, y cómo se pasa del chat a que trabaje solo, a su hora.</p></div><div class="video vacio" data-hueco="cajon"><span class="play" aria-hidden="true"></span><b>Vídeo 3</b><small>Muy pronto</small></div></article>
   </div>
 </section>
 
@@ -136,9 +136,15 @@ footer a{color:inherit}
       document.getElementById('cita').textContent = 'Nos vemos el ' + dia + ' a las ' + h;
       document.getElementById('cta-abajo').hidden = true;
     }
-    if (nombre) document.getElementById('saludo').textContent = nombre + ', son tres vídeos de tres minutos. Míralos antes de la llamada y apunta lo que te pido.';
+    if (nombre) document.getElementById('saludo').textContent = nombre + ', son tres vídeos cortos. Míralos antes de la llamada y apunta lo que te pido.';
   } catch (err) {}
 })();
 </script>
 
+<script>
+// La portada se ve limpia; al tocarla aparecen los controles y arranca.
+document.querySelectorAll('.video video').forEach(function (v) {
+  v.addEventListener('click', function () { if (!v.controls) { v.controls = true; v.play(); } });
+});
+</script>
 </body></html>
